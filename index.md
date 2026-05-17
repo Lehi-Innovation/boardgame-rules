@@ -781,6 +781,7 @@ The same prompt works — any AI assistant that can fetch web pages will pull th
 | [Duel in the Dark](rules/duel-in-the-dark/) | 2-8 | 60-90 min | Friedemann de Pedro |
 | [Dune](rules/dune/) | 2-6 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka |
 | [Dune: Imperium](rules/dune-imperium/) | 1-4 | 60-120 min | Paul Dennen |
+| [Dune: Imperium – Uprising](rules/dune-imperium-uprising/) | 1-6 | 60-120 min | Paul Dennen |
 | [Dungeon Fighter](rules/dungeon-fighter/) | 1-6 | 45-60 min | Lorenzo Silva, Lorenzo Tucci Sorrentino, Aureliano Buonfino |
 | [Dungeon Lords](rules/dungeon-lords/) | 2-4 | 90-120 min | Vlaada Chvatil |
 | [Dungeon Petz](rules/dungeon-petz/) | 2-4 | 90-120 min | Vlaada Chvatil |
