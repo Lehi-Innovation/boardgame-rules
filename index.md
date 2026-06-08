@@ -1738,6 +1738,7 @@ The same prompt works — any AI assistant that can fetch web pages will pull th
 | [Sid Meier's Civilization: The Card Game](rules/civilization-the-card-game/) | 2-4 | 30-60 min | Uncredited |
 | [Sky Team](rules/sky-team/) | 2 | 20 min | Luc Remond |
 | [Sleeping Gods](rules/sleeping-gods/) | 1-4 | 60-1200 min (campaign) | Ryan Laukat |
+| [Solstis](rules/solstis/) | 1-2 | 15 min | Bruno Cathala, Corentin Lebrat |
 | [Speakeasy](rules/speakeasy/) | 1-4 | 90-120 min | Vital Lacerda |
 | [Splendor](rules/splendor/) | 2-4 | 30 min | Marc Andre |
 | [Star Wars: Imperial Assault](rules/star-wars-imperial-assault/) | 2-5 | 60-120 min | Justin Kemppainen, Corey Konieczka, Jonathan Ying |
