@@ -1,9 +1,9 @@
 # Discovery Summary
 
 **Date:** 2026-06-10
-**Scope:** Full inventory of the `boardgame-rules` repository, performed before drafting the marketplace document suite.
+**Scope:** Full inventory of the `boardgame-rules` repository, performed before drafting the product document suite.
 
-> **Headline conflict:** The commissioning brief asks for documentation of a **board game marketplace** (listings, transactions, sellers, payments). The codebase contains **no marketplace functionality of any kind** — no listings, sellers, buyers, prices, payments, orders, or user accounts. What exists is a mature **board game rules content pipeline**: a catalog of 2,122 games with AI-friendly rules summaries published as a static site. Every marketplace-specific section in the following documents is therefore greenfield and marked [INFERRED] or [OPEN QUESTION]; only the catalog, content, and search layers are grounded in real code.
+> **What this product is:** a **board game rules database** — a catalog of 2,122 games with AI-friendly, precision-focused rules summaries, produced by a semi-automated pipeline (BGG metadata → PDF acquisition → text extraction → LLM summarization → quality gating) and published as a static site for consumption by AI assistants and humans. The documents in this suite describe that product as it exists, plus its open design questions.
 
 ## Tech Stack
 
@@ -84,7 +84,7 @@ There is no application frontend. The only user-facing surface is the static Jek
 
 ## Apparent Intended Features (from stubs, TODOs, naming)
 
-- **Edition awareness** — `rulebook_version` frontmatter (e.g. `"PD-Verlag / Rio Grande Games Edition"` in `rules/concordia.md`) records *which printing* a summary came from, but nothing consumes it. This is the only seed of an edition concept.
+- **Edition awareness** — `rulebook_version` frontmatter (e.g. `"PD-Verlag / Rio Grande Games Edition"` in `rules/concordia.md`) records *which printing* a summary came from, but nothing consumes it.
 - **Retry of misses** — `not_found` is documented as retryable ("To retry older misses, query `not_found`"); 435 games are waiting on this.
 - **Quality tier rollout** — only 6 of 1,616 summarized games have passed `quality_check`; the calibration-then-auto-accept plan is designed but barely executed.
 - **`searching` status** — defined in `ALL_STATUSES` and the design doc's status flow but never set by any script (the find stage is manual/agentic).
@@ -92,10 +92,10 @@ There is no application frontend. The only user-facing surface is the static Jek
 
 ## Open Questions
 
-1. **Is a marketplace actually in scope for this repo?** Nothing in the code, docs, plans, commit history, or skills mentions buying, selling, listings, or transactions. [NEEDS REVIEW: confirm the marketplace is a planned new product to be built on this catalog, vs. a misdirected brief.]
-2. **Identity model** — registry writes (`update_game`, `update_status`) are keyed by case-insensitive `name`, dedup by `bgg_id`, files by `slug`. Three keys, no enforced consistency. Which becomes canonical if this grows a database?
-3. **Registry ↔ filesystem drift** — 26 rules files have no registry entry matching their slug; 20 summarized/validated entries have no rules file. No reconciliation tool exists.
-4. **Expansion linkage inconsistency** — 8 rules files carry `base_game_bgg_id` but only 2 registry entries do. Which side is authoritative?
-5. **Duplicate index generators** — `generate_index.py` vs `rebuild_index.py` implement the same job with different code paths. Which is canonical?
-6. **Quality threshold drift** — design doc says flag sections "< 50 words"; code uses `MIN_SECTION_WORDS = 20`.
-7. **Licensing of rulebook content** — summaries are derived from publisher PDFs; no license or permission policy is recorded anywhere. This becomes acute if the catalog anchors a commercial marketplace.
+1. **Identity model** — registry writes (`update_game`, `update_status`) are keyed by case-insensitive `name`, dedup by `bgg_id`, files by `slug`. Three keys, no enforced consistency. Which becomes canonical if this grows a database?
+2. **Registry ↔ filesystem drift** — 26 rules files have no registry entry matching their slug; 20 summarized/validated entries have no rules file. No reconciliation tool exists.
+3. **Expansion linkage inconsistency** — 8 rules files carry `base_game_bgg_id` but only 2 registry entries do. Which side is authoritative?
+4. **Duplicate index generators** — `generate_index.py` vs `rebuild_index.py` implement the same job with different code paths. Which is canonical?
+5. **Quality threshold drift** — design doc says flag sections "< 50 words"; code uses `MIN_SECTION_WORDS = 20`.
+6. **Licensing of rulebook content** — summaries are derived from publisher PDFs; no license or permission policy is recorded anywhere.
+7. **Quality backlog** — 1,610 summarized games have never been quality-checked, and 19 flagged games have no review tooling or workflow.
