@@ -3,7 +3,7 @@ title: "Critter Kitchen"
 bgg_id: 381167
 player_count: "2-5"
 play_time: "60-90 min"
-designer: "Nathan Meunier, Jack Caesar"
+designer: "Alex Cutler, Peter C. Hayward"
 source_pdf: "critter-kitchen-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
@@ -44,9 +44,9 @@ Each round has 5 steps:
 
 1. **Start of Round** -- Restock bisque, reveal next challenge card, restock location items from the bag, reveal new zous-chef at Chef Academy.
 2. **Planning** -- All players simultaneously place Location Cards face down to assign each chef to a different location.
-3. **Running (Shopping)** -- Flip all Location Cards. Move chefs to their locations. Resolve locations left to right. At each location, chefs pick items in queue order by carrying capacity (mouse=1 first, lizard=2, boar=3 last). Ties broken by priority track position.
-4. **Step 4 (Challenge/Critic Meals)** -- On rounds 3, 6, and 7, prepare and score meals.
-5. **End of Round** -- Return Location Cards, remove used zous-chefs, advance Round Tracker.
+3. **Running** -- Flip all Location Cards. Move chefs to their locations, placing each in the queue matching its carrying capacity.
+4. **Shopping** -- Resolve locations left to right. At each location, chefs pick items in queue order by carrying capacity (mouse=1 first, lizard=2, boar=3 last). Ties broken by priority track position.
+5. **End of Round** -- Return Location Cards, remove used zous-chefs, prepare meals (challenge meals at the end of rounds 3 and 6; the critic meal at the end of round 7), advance Round Tracker.
 
 ## Actions
 
@@ -89,10 +89,13 @@ Each round has 5 steps:
 - **Most Soup:** Player with highest total soup/bisque value earns 1 star.
 - **All 7 Courses:** Each player who serves all 7 courses earns 1 star.
 - **Best of Each Course:** For each of the 7 courses, highest quality earns 1 star. Ties award full stars to all tied players.
-- **Rumors:** Reveal all rumors; score bonus stars per their conditions.
-- **Bonus Scoring:** Critic Card may add additional scoring rules.
+- **Rumors:** Reveal all rumors; score bonus stars per their conditions. Fanatic rumors (red tops) instead modify course scoring and are applied during Final Score.
+- **Bonus Scoring:** If any cards (critic, restaurateurs, etc.) show the Bonus Scoring symbol, gain the stars shown on them now.
+- **Final Score:** Flip your Kitchen Board to its scoring side. Using your mouse chef as a marker, count up the quality of each course on the score track, starting with the leftmost ingredient and continuing right (include the effects of spice, critic rules, and Fanatic rumors). If your mouse passes the 70 space, collect 10 stars and continue back at the top of the scoring track. Then take the number of stars corresponding to your final row position on the scoring track. (Example: a total quality of 76 passes the 70 space for 10 stars, then lands on the 6 space for 1 more star — 11 stars total.) This is a major star source.
 
-**Winning:** The player with the most total stars wins. All ties are friendly (all tied players earn full stars).
+**Friendly Ties:** All ties when scoring star awards during the game are friendly — if 2 or more players tie for a star award, all tied players earn full stars.
+
+**Winning:** After the critic meal is scored, the game ends immediately and the player with the most total stars wins. Winning ties are NOT friendly: if there's a tie, the player who progressed the furthest on their score track wins; if there's still a tie, whoever is ahead on the priority track wins.
 
 ## Special Rules & Edge Cases
 
