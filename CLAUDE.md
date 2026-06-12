@@ -135,6 +135,24 @@ To test stale-claim recovery on a scratch registry:
    - `python -m scripts.process_batch --registry /tmp/games-test.yaml --stage summarize --limit 1`
 4. The stale claimed record should be reclaimed and processed.
 
+## Semantic Audit
+
+The automated `quality_check` gate verifies structure only; a separate **semantic
+audit** fact-checks each summary against its extracted source text (~half of
+gate-passing summaries contain table-misleading errors). Workflow:
+
+- Queue/state: `docs/quality/semantic-audit-manifest.json` (batches) and
+  `docs/quality/semantic-audit-results.yaml` (verdicts); evidence in
+  `docs/quality/audit-findings/<batch>.md`.
+- Toolkit: `python -m scripts.audit status|next|prefilter|record` (see module
+  docstring). `record` auto-flags MAJOR games in `games.yaml`.
+- Run waves with `/audit-rules [--waves N] [--model haiku|sonnet]` — dispatches
+  one low-cost subagent per batch following
+  `.claude/skills/audit-rules/SKILL.md`, then records, commits, and pushes.
+- Verdicts: PASS / MINOR / MAJOR. MAJOR = would mislead players at the table;
+  those games need re-summarization from the extracted text (see
+  `docs/quality/2026-06-10-semantic-audit.md` for the error taxonomy).
+
 ## Rules File Format
 YAML frontmatter (title, bgg_id, player_count, play_time, designer, source_pdf, extracted_date, summarized_date, rulebook_version) + Markdown body with sections: Overview, Components, Setup, Turn Structure, Actions, Scoring / Victory Conditions, Special Rules & Edge Cases, Player Reference.
 
