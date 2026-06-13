@@ -7,7 +7,15 @@ designer: "Creede Lambard, Sharleen Lambard"
 source_pdf: "battle-cattle-the-card-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented draw-1/7-card hand limit (source: refill to 6), winner scores 20 not 10, tie pays 10 not 5-per-survivor, hooves subsystem omitted, reshuffle rule contradicted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battle-cattle-the-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20Cattle%3A%20The%20Card%20Game&game=battle-cattle-the-card-game)
+<!-- verification:end -->
+
 
 ## Overview
 

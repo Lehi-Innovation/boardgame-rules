@@ -6,7 +6,15 @@ play_time: "60 min"
 designer: "Steve Fairnie, Willie Williams"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hype&game=hype)
+<!-- verification:end -->
+
 
 ## Overview
 

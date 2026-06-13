@@ -7,7 +7,15 @@ designer: "Inka Brand, Markus Brand"
 source_pdf: "andor-the-family-fantasy-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented sun-marker/day-track loss condition (actual: dragon reaching Rietburg), wrong combat model, invented modular board and archer ranged ability; dragon/Gor night system omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/andor-the-family-fantasy-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Andor%3A%20The%20Family%20Fantasy%20Game&game=andor-the-family-fantasy-game)
+<!-- verification:end -->
+
 
 ## Overview
 

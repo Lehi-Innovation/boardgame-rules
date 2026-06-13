@@ -8,7 +8,15 @@ source_pdf: "afrikan-t-hti-retkikunnat-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 base_game_bgg_id: 5130
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Afrikan%20t%C3%A4hti%3A%20Retkikunnat&game=afrikan-t-hti-retkikunnat)
+<!-- verification:end -->
+
 
 ## Overview
 

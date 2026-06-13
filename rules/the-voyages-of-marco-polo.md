@@ -7,9 +7,17 @@ designer: "Simone Luciani, Daniele Tascini"
 source_pdf: "the-voyages-of-marco-polo-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
 
 # The Voyages of Marco Polo
+
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Voyages%20of%20Marco%20Polo&game=the-voyages-of-marco-polo)
+<!-- verification:end -->
 
 ## Overview
 

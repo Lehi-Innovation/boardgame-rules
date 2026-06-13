@@ -7,7 +7,15 @@ designer: "Tory Niemann"
 source_pdf: "alien-frontiers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory condition inverted (most VP wins, not race), 6 of 9 facility rows wrong, invented "Colony Ship" facility, wrong colony counts and Relic Ship acquisition. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/alien-frontiers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Alien%20Frontiers&game=alien-frontiers)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Rustan Håkansson"
 source_pdf: "cities-skylines-the-board-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Exchange action's 2-money cost omitted with wrong draw pile, invented "deal new cards" milestone step, mandatory post-play card draw omitted, happiness loss conditions omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cities-skylines-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cities%3A%20Skylines%20%E2%80%93%20The%20Board%20Game&game=cities-skylines-the-board-game)
+<!-- verification:end -->
+
 
 ## Overview
 

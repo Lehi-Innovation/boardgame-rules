@@ -8,9 +8,17 @@ source_pdf: "queen-s-necklace-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Days of Wonder (2003)"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Queen's Necklace
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/queen-s-necklace-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Queen%27s%20Necklace&game=queen-s-necklace)
+<!-- verification:end -->
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Stefan Feld"
 source_pdf: "rum-pirates-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rum%20%26%20Pirates&game=rum-pirates)
+<!-- verification:end -->
+
 
 ## Overview
 

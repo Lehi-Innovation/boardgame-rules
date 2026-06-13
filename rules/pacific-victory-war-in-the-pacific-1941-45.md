@@ -7,7 +7,15 @@ designer: Tom Dalgliesh
 source_pdf: "3401-PVrules-2.5.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pacific-victory-war-in-the-pacific-1941-45-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pacific%20Victory%3A%20War%20in%20the%20Pacific%201941-45&game=pacific-victory-war-in-the-pacific-1941-45)
+<!-- verification:end -->
+
 
 ## Overview
 

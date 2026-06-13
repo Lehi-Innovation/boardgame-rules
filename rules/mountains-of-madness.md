@@ -7,9 +7,17 @@ designer: "Rob Daviau"
 source_pdf: "mountains-of-madness-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Mountains of Madness
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mountains-of-madness-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mountains%20of%20Madness&game=mountains-of-madness)
+<!-- verification:end -->
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Francis Tresham"
 source_pdf: "1830-the-game-of-railroads-and-robber-barons-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1830-the-game-of-railroads-and-robber-barons-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201830%3A%20The%20Game%20of%20Railroads%20and%20Robber%20Barons&game=1830-the-game-of-railroads-and-robber-barons)
+<!-- verification:end -->
+
 
 ## Overview
 
@@ -28,7 +36,7 @@ summarized_date: "2026-03-18"
 1. Place the game board (appropriate side for your version).
 2. Sort track tiles by color (yellow, green, brown, grey). Place board tiles as needed for scenarios.
 3. Place private company certificates and railroad certificates in organized piles.
-4. Set train cards in order by type (2, 3, 4, 5, 6, 7, diesel).
+4. Set train cards in order by type (2, 3, 4, 5, 6, diesel).
 5. Give each player starting cash based on player count (varies by version).
 6. Determine starting player (varies by version — often an auction for private companies).
 7. Place corporation charters near the board. Place station tokens on charters.
@@ -43,7 +51,7 @@ Players take turns in order (starting with the Priority Deal holder). On each tu
 1. **Sell** any number of shares (except president's certificates under certain conditions).
 2. **Buy** exactly 1 share (or start a new corporation by setting its initial price and buying the president's certificate).
 
-The Stock Round ends when all players consecutively pass.
+The Stock Round ends when all players consecutively pass. Note that passing does not permanently exclude a player — if another player buys or sells after your pass, you may act again on your next turn.
 
 ### Operating Round
 Each corporation operates in order of stock price (highest first). The president controls each corporation they lead:
@@ -52,7 +60,7 @@ Each corporation operates in order of stock price (highest first). The president
 2. **Place Station Token** — Optionally place 1 station token on a city on the corporation's route.
 3. **Run Trains** — Each train runs a route connecting cities through the corporation's track. Revenue equals the sum of city values along each route.
 4. **Pay Dividends or Withhold** — Either pay dividends (revenue distributed to shareholders proportionally, stock price rises) or withhold revenue to the corporation treasury (stock price drops).
-5. **Buy Trains** — Purchase trains from the supply or from other corporations. A corporation must own at least 1 train. If it cannot afford one, the president must pay the difference from personal funds.
+5. **Buy Trains** — Optionally purchase trains from the supply or from other corporations. A forced purchase occurs only if the corporation has a legal route but no train at the end of its operating turn; in that case the president must fund any shortfall from personal funds.
 
 The number of Operating Rounds between Stock Rounds increases as the game progresses (1 in early phases, then 2, then 3).
 
@@ -62,7 +70,7 @@ The number of Operating Rounds between Stock Rounds increases as the game progre
 - 6 private companies are auctioned at game start (in Base Game).
 - Each provides a fixed revenue per Operating Round to its owner.
 - Each has a special ability (e.g., free tile placement, station token).
-- Private companies can be sold to corporations at face value or less.
+- Private companies can be sold to corporations at a price no less than half and no more than twice the face value of the company; the price must be publicly declared.
 - Private companies close at various points during the game.
 
 ### Track Building
@@ -81,12 +89,11 @@ The number of Operating Rounds between Stock Rounds increases as the game progre
 | 4-train | 4 cities | Phase 4 |
 | 5-train | 5 cities | Phase 5 |
 | 6-train | 6 cities | Phase 6 |
-| 7-train | 7 cities | Phase 7 |
-| Diesel | Unlimited cities | Phase D |
+| Diesel | Unlimited cities | Phase 7 |
 
 - When the first train of a new type is purchased, a new phase begins.
-- Old trains become obsolete: 2-trains removed at Phase 4, 3-trains at Phase 6, 4-trains when diesel purchased.
-- A corporation must always have at least 1 train. The president must personally fund train purchases if the corporation cannot afford it.
+- Old trains become obsolete: 2-trains removed at Phase 4, 3-trains at Phase 6, 4-trains when the first diesel is purchased.
+- If a corporation has a legal route but no train at the end of its operating turn, it must immediately purchase one. If the corporation's treasury is insufficient, the president must make up the difference from personal funds. In the Base Game, if even the combined funds of the corporation and its president are not enough, the bank covers the remainder as a loan and the corporation goes into receivership until the loan is repaid. In 1830 Classic, if the president cannot raise enough money after selling all allowable shares, the president goes bankrupt and the game ends immediately.
 
 ### Stock Market
 - Share prices move up when dividends are paid, down when withheld or shares are sold.
@@ -97,11 +104,11 @@ The number of Operating Rounds between Stock Rounds increases as the game progre
 
 **Game End:** The bank runs out of money. Complete the current set of Operating Rounds.
 
-**Winner:** The player with the most total wealth wins. Wealth = personal cash + market value of all shares owned. Corporation treasuries do NOT count toward player wealth.
+**Winner:** The player with the most total wealth wins. Wealth = personal cash + market value of all shares owned + face value of any privately-owned private companies still in existence at game end. Corporation treasuries do NOT count toward player wealth.
 
 ## Special Rules & Edge Cases
 
-- **Forced Train Purchase:** If a corporation has no train at the end of its operating turn, the president must buy one — even from personal funds. If the president cannot afford any train, the corporation closes.
+- **Forced Train Purchase:** If a corporation has a legal route but no train at the end of its operating turn, the president must buy one — even from personal funds. In the Base Game, if the combined funds of the corporation and its president are still insufficient, the bank covers the shortfall as a loan and the corporation goes into receivership. In 1830 Classic, if the president cannot raise enough money, the president goes bankrupt and the game ends.
 - **Stock Certificate Limit:** Players have a maximum number of certificates they can hold (varies by player count).
 - **10-Share Limit:** Each corporation has exactly 10 shares (the president's certificate counts as 2).
 - **Presidency Transfer:** If another player holds more shares than the current president, the presidency transfers.
@@ -122,7 +129,7 @@ The number of Operating Rounds between Stock Rounds increases as the game progre
 2. Place 1 station token (optional)
 3. Run trains → calculate revenue
 4. Pay dividends (price up) or withhold (price down)
-5. Buy trains (mandatory if corporation has none)
+5. Buy trains (optional; forced only if corporation has a legal route but no train)
 
 **Phase Progression:**
 | Phase | Triggered By | Tile Colors | Trains Removed |
@@ -131,9 +138,8 @@ The number of Operating Rounds between Stock Rounds increases as the game progre
 | 3 | First 3-train bought | + Green | — |
 | 4 | First 4-train bought | + Green | 2-trains |
 | 5 | First 5-train bought | + Brown | — |
-| 6 | First 6-train bought | + Brown | 3-trains |
-| 7 | First 7-train bought | + Grey | — |
-| D | First diesel bought | + Grey | 4-trains |
+| 6 | First 6-train bought | + Grey | 3-trains |
+| 7 | First diesel bought | + Grey | 4-trains |
 
 **Starting Cash (Base Game):**
 | Players | Cash per Player |

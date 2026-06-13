@@ -7,7 +7,15 @@ designer: "Uwe Rosenberg"
 source_pdf: "a-feast-for-odin-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong start-player rule, invented breeding schedule (rounds 3/5/7) and phase 11, sheep/cattle scored 1 pt vs 2/3, invented English Crown set-scoring and silver tiebreaker, green-to-blue flip wrongly listed as free anytime action. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-feast-for-odin-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Feast%20for%20Odin&game=a-feast-for-odin)
+<!-- verification:end -->
+
 
 ## Overview
 

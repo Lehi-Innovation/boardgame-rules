@@ -7,7 +7,15 @@ designer: "D. Brad Talton Jr."
 source_pdf: "battlecon-war-of-indines-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Clash rule wrong + invented tie-break, wrong starting positions, stun threshold off by one, Overdrive Finish inverted, contradicts hop-over movement, invented 15-beat limit, Soak omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battlecon-war-of-indines-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleCON%3A%20War%20of%20Indines&game=battlecon-war-of-indines)
+<!-- verification:end -->
+
 
 ## Overview
 

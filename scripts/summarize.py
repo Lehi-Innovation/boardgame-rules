@@ -144,8 +144,8 @@ def summarize_text(
     user_prompt = build_prompt(extracted_text, game_name, **kwargs)
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=8192,
+        model="claude-sonnet-4-6",
+        max_tokens=16384,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )

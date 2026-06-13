@@ -7,7 +7,15 @@ designer: "Kevin Wilson"
 source_pdf: "descent-journeys-in-the-dark-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Aim/Dodge orders are invented mechanics (source: re-rolls), Guard has invented half-range limit, hero death wrongly strips items, spawn "within 6 spaces" rule invented; all 22 numbers correct. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/descent-journeys-in-the-dark-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Descent%3A%20Journeys%20in%20the%20Dark&game=descent-journeys-in-the-dark)
+<!-- verification:end -->
+
 
 ## Overview
 

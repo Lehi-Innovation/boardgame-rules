@@ -7,7 +7,15 @@ designer: Klaus Teuber
 source_pdf: catan-event-cards-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Road cost wrong (2 brick+1 lumber), Windmill Token criterion invented, Knight Token effect wrong, draw/hand-limit system omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/catan-event-cards-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Catan%20Card%20Game%20%28Event%20Cards%20Edition%29&game=catan-event-cards)
+<!-- verification:end -->
+
 
 ## Overview
 

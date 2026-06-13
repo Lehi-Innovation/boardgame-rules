@@ -7,7 +7,15 @@ designer: "Uwe Rosenberg"
 source_pdf: "at-the-gates-of-loyang-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two-pack action completely wrong (buying 2 vegetables vs drawing 2 Action cards), 2-Cash penalty wrongly applied to first missed delivery, Sow says buy from Shop vs take from Cart, "22 different Helpers" vs 20. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/at-the-gates-of-loyang-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20At%20the%20Gates%20of%20Loyang&game=at-the-gates-of-loyang)
+<!-- verification:end -->
+
 
 ## Overview
 

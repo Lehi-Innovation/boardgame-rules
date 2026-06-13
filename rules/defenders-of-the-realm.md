@@ -7,7 +7,15 @@ designer: "Richard Launius"
 source_pdf: "defenders-of-the-realm-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Overrun mechanic invented, Nighttime draw fixed at 2 vs 1-3 by War Status, General healing/regen system omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/defenders-of-the-realm-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Defenders%20of%20the%20Realm&game=defenders-of-the-realm)
+<!-- verification:end -->
+
 
 ## Overview
 

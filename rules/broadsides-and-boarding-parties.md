@@ -7,7 +7,15 @@ designer: "Larry Harris"
 source_pdf: "broadsides-and-boarding-parties-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "minor_issues"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/broadsides-and-boarding-parties-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Broadsides%20and%20Boarding%20Parties&game=broadsides-and-boarding-parties)
+<!-- verification:end -->
+
 
 ## Overview
 

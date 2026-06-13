@@ -1,5 +1,14 @@
 # Semantic Accuracy Audit — 2026-06-10
 
+> **Follow-up (2026-06-13):** all four MAJOR games below were subsequently
+> re-summarized (`fix: rewrite three summaries…` + the critter-kitchen fix) and
+> then re-verified against source by `scripts/verify_summary.py`. Current
+> verdicts: critter-kitchen, colosseum, a-game-of-thrones-catan → PASS;
+> pacific-typhoon → MINOR. battlecars and die-dracheninsel (MINOR here) were
+> corrected via the verify+repair loop and are now MINOR/verified. This file is
+> retained as the historical record of the original audit.
+
+
 A calibration sample for the quality pipeline: 6 games were drawn at random from summaries that **pass** the automated quality gate (`scripts/quality_check.py`), and each summary was fact-checked line-by-line against its source text in `extracted/` by an independent review agent. This is the "hallucination risk" check that the pipeline design (`docs/plans/2026-03-04-scalable-rules-pipeline-design.md`) specified but never implemented.
 
 ## Headline result

@@ -7,7 +7,15 @@ designer: "Karl-Heinz Schmiel"
 source_pdf: "die-macher-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "minor_issues"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/die-macher-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Die%20Macher&game=die-macher)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Jacob Jaskov"
 source_pdf: "fog-of-love-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/fog-of-love-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fog%20of%20Love&game=fog-of-love)
+<!-- verification:end -->
+
 
 ## Overview
 

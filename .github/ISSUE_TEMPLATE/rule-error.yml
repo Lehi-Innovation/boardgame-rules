@@ -1,0 +1,41 @@
+name: Report a rules error
+description: A rules summary gave a wrong or misleading answer at the table
+title: "[Rule error] "
+labels: ["rule-error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve the rules database! Reports are checked
+        against the original rulebook text and fixed automatically when confirmed.
+  - type: input
+    id: game
+    attributes:
+      label: Game
+      description: Game name or page slug (e.g. `catan` from .../rules/catan/)
+      placeholder: catan
+    validations:
+      required: true
+  - type: textarea
+    id: claim
+    attributes:
+      label: What the summary says
+      description: Quote or paraphrase the incorrect statement from the rules summary.
+      placeholder: "The summary says the minimum auction bid is 1 coin."
+    validations:
+      required: true
+  - type: textarea
+    id: correction
+    attributes:
+      label: What the rule actually is
+      description: What does the rulebook say, or what did your table determine? Include a page number or source if you have one.
+      placeholder: "The rulebook (p. 7) says the opening bid must be 8 coins or more."
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Where did you check? (optional)
+      placeholder: "Physical rulebook p. 7 / BGG forum link / publisher FAQ"
+    validations:
+      required: false

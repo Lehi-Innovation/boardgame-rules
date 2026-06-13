@@ -7,7 +7,15 @@ designer: "Wolfgang Lüdtke"
 source_pdf: "caesar-cleopatra-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented setup, turn structure (draw-3 option, 10-card hand), and action cards; vote resolution contradicted; philosopher/Orgy/8-card vote/game-end systems missing. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/caesar-cleopatra-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caesar%20%26%20Cleopatra&game=caesar-cleopatra)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,9 +7,17 @@ designer: "Wolfgang Kramer, Michael Kiesling"
 source_pdf: "adventure-land-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
 
 # Adventure Land
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Game-end conditions missing, "swords kept on win" contradicts source, fog creature strengths 0-4 invented (example shows 12). Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/adventure-land-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Adventure%20Land&game=adventure-land)
+<!-- verification:end -->
 
 ## Overview
 

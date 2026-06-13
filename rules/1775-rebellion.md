@@ -7,7 +7,15 @@ designer: "Beau Beckett, Jeph Stahl"
 source_pdf: "1775-rebellion-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1775-rebellion-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201775%3A%20Rebellion&game=1775-rebellion)
+<!-- verification:end -->
+
 
 ## Overview
 
@@ -61,9 +69,9 @@ Each round, all 4 factions take turns in random order determined by drawing Turn
 - Alternate rolls (Defender, Attacker, Defender...) until only one side remains.
 
 ### 4. Draw Cards Phase
-- Draw cards until you have 3 in hand (draw from your own deck).
-- If your deck is empty, shuffle your discard pile to form a new deck.
-- If you hold only Event/Special Cards, show them, reshuffle, and draw 3 new cards.
+- Discard the Movement Card played this turn, plus any Event Cards played this turn. Discarded cards are permanently removed from the game and are not used again.
+- Draw cards until you have 3 in hand.
+- If you hold only Event Cards, show them to all players, then shuffle your hand back into your Draw Deck and draw 3 new cards.
 
 ## Actions
 
@@ -77,7 +85,7 @@ Each round, all 4 factions take turns in random order determined by drawing Turn
 | **Truce** | A Movement Card — also signals potential game end when both factions on a side have played theirs |
 
 ### Event Cards
-Event Cards have special effects and are played during the Movement Phase instead of (or sometimes alongside) Movement Cards. Effects include bringing in Hessians, French Regulars, or Native American allies.
+Each faction has four unique Event Cards. You may play any number of Event Cards on your turn, in addition to playing your required Movement Card. Each Event Card's text states which Turn Phase it is played in: Reinforcement Event Cards, Movement Event Cards, or Battle Event Cards. Effects include bringing in Hessians, French Regulars, or Native American allies.
 
 ### Colony Control
 You control a colony when:
@@ -97,7 +105,7 @@ You control a colony when:
 
 ## Special Rules & Edge Cases
 
-- Allied units (Hessian, French, Native American) can control a colony on behalf of their side even if no player faction units are present.
+- French Regulars and Hessian Mercenaries can control a colony on behalf of their side even if neither player faction on that side has units present.
 - Command Moves cannot cross Water Areas (except at River Crossings).
 - The St. Lawrence River is considered part of the Atlantic Ocean for water movement.
 - If your side controls no colonies at the start of your turn, you cannot place Reinforcements or Fled Units.

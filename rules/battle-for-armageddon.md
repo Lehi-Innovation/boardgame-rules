@@ -7,7 +7,15 @@ designer: "Jervis Johnson, Bill King"
 source_pdf: "battle-for-armageddon-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory conditions wrong/omitted (Ork needs 3 of 5 hives; Imperial win needs all 5 hives + Ghazghkull dead, else draw); invented same-area attacks; supply and Ork build rules misstated. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battle-for-armageddon-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20for%20Armageddon&game=battle-for-armageddon)
+<!-- verification:end -->
+
 
 ## Overview
 

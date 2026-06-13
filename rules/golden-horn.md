@@ -7,7 +7,15 @@ designer: "Leo Colovini"
 source_pdf: "golden-horn-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Golden%20Horn&game=golden-horn)
+<!-- verification:end -->
+
 
 ## Overview
 
