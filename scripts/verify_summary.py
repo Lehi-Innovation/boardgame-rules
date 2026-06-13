@@ -21,15 +21,17 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import fcntl
 import json
 import os
 import re
 import sys
 from datetime import date
 
+import yaml
 from dotenv import load_dotenv
 
-from scripts.registry import get_games_by_status, update_game, update_status
+from scripts.registry import get_games_by_status, locked_registry, update_game, update_status
 from scripts.summarize import _find_extracted_file, parse_frontmatter
 
 load_dotenv()
@@ -38,6 +40,7 @@ MODEL = "claude-sonnet-4-6"
 MAX_REPAIR_ROUNDS = 2
 MAX_SOURCE_CHARS = 600_000  # ~150k tokens; nearly all extracted texts fit whole
 VERDICT_RANK = {"MAJOR": 0, "MINOR": 1, "PASS": 2}  # higher is better
+RESULTS_PATH = "docs/quality/semantic-audit-results.yaml"
 
 VERIFIER_SYSTEM = """You are a meticulous fact-checker auditing an AI-generated board game \
 rules summary against the game's extracted rulebook text. Roughly half of such summaries \
@@ -159,6 +162,52 @@ def repair_text(summary: str, source: str, findings: list[dict]) -> str:
     return result
 
 
+def _record_verdict(
+    slug: str,
+    verdict: str,
+    reason: str,
+    results_path: str = RESULTS_PATH,
+    batch: str = "verify-pipeline",
+) -> None:
+    """Record a verdict into the semantic-audit results tracker (locked).
+
+    Keeps the tracker that stamp_verification reads in sync with what the
+    verifier actually decided, so a later corpus-wide re-stamp cannot revert a
+    freshly verified page using a stale verdict. Locked + atomic so concurrent
+    process_batch verify workers don't clobber each other's writes.
+    """
+    os.makedirs(os.path.dirname(results_path) or ".", exist_ok=True)
+    lock_fd = open(results_path + ".lock", "w")
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+        results: dict = {}
+        if os.path.exists(results_path):
+            with open(results_path) as f:
+                results = yaml.safe_load(f) or {}
+        results[slug] = {"verdict": verdict, "batch": batch, "reason": (reason or "")[:240]}
+        tmp = results_path + ".tmp"
+        with open(tmp, "w") as f:
+            yaml.dump(results, f, default_flow_style=False, sort_keys=True,
+                      allow_unicode=True, width=120)
+        os.replace(tmp, results_path)
+    finally:
+        fcntl.flock(lock_fd, fcntl.LOCK_UN)
+        lock_fd.close()
+
+
+def _mark_verified(registry_path: str, name: str) -> None:
+    """Set status verified, stamp verified_date, and drop any stale review_notes."""
+    with locked_registry(registry_path) as (games, save):
+        for game in games:
+            if game["name"].lower() == name.lower():
+                game["status"] = "verified"
+                game["verified_date"] = date.today().isoformat()
+                game.pop("review_notes", None)
+                game.pop("claimed_at", None)
+                break
+        save(games)
+
+
 def _stamp_after_verdict(rules_path: str, verdict: str) -> None:
     """Stamp verification frontmatter + visible block to match the verdict."""
     from scripts.stamp_verification import stamp_file
@@ -234,6 +283,7 @@ def verify_game(
         with open(rules_path, "w") as f:
             f.write(best_summary)
     _stamp_after_verdict(rules_path, verdict)
+    _record_verdict(slug, verdict, "" if verdict == "PASS" else reason)
 
     if verdict == "MAJOR":
         print(f"  {name}: MAJOR after {rounds} repair round(s) — flagged")
@@ -244,11 +294,7 @@ def verify_game(
         )
         return False
 
-    update_game(
-        registry_path, name,
-        status="verified",
-        verified_date=date.today().isoformat(),
-    )
+    _mark_verified(registry_path, name)
     print(f"  {name}: {verdict} -> verified")
     return True
 
