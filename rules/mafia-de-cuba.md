@@ -82,6 +82,16 @@ When the Godfather believes they have found a Thief, they order: "Empty your poc
 - If the player has NOT stolen diamonds (they have a character token): the Godfather made a mistake! They must give a Joker to the unjustly accused player. If the Godfather has no Jokers left during an unjust accusation, the Godfather is eliminated and the investigation ends immediately.
 - If the accused player is an FBI or CIA Agent, the investigation ends and the Agent wins.
 
+## Actions
+
+The concrete choices a player makes when the cigar box reaches them (Diamond Theft), plus the Godfather's one investigation action:
+
+- **Take diamonds** — take as many diamonds as you wish (minimum 1) and pocket them, becoming a Thief.
+- **Take a character token** — take exactly 1 character token (Loyal Henchman, Agent, Driver, or Cleaner) instead of diamonds.
+- **First player only — stash a token** — before taking your own, secretly drop one character token into the felt bag and hide it until game end.
+- **Become a Street Urchin** — forced if you receive an empty box; optional for the last player. Pretend to take something and pass the box along.
+- **Godfather — "Empty your pockets!"** — during Investigation, the only valid way to force a suspected player to reveal their take. A correct call eliminates the Thief and recovers the diamonds; a wrong call costs the Godfather a Joker (or the game, if no Jokers remain).
+
 ## Scoring / Victory Conditions
 
 | Condition | Winner |
