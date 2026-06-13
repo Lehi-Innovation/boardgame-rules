@@ -7,11 +7,11 @@ designer: "Volko Ruhnke"
 source_pdf: "andean-abyss-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Three of four victory conditions wrong: Govt adds Aid (actual: Total Support >60), AUC invented (actual: more bases than FARC), Cartels stated as sum (actual: >10 bases AND >40 resources). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/andean-abyss-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Andean%20Abyss&game=andean-abyss)
 <!-- verification:end -->
@@ -24,7 +24,7 @@ Andean Abyss is a COIN (Counter-Insurgency) series game simulating the multi-fac
 ## Components
 
 - 1 Map of Colombia (departments and cities)
-- Event cards deck (72 cards)
+- Event cards deck (76 cards)
 - Faction pieces: Government (troops, police, bases), FARC (guerrillas, bases), AUC (guerrillas, bases), Cartels (guerrillas, bases)
 - Eligibility cylinders
 - Aid, Resources, and Support/Opposition markers
@@ -48,7 +48,7 @@ Each card turned reveals an event with faction order shown. Factions act in the 
 2. **Conduct an Operation** (+ optional Special Activity)
 3. **Pass** (gain resources)
 
-Only the first 2 eligible factions may act per card. After acting, a faction becomes ineligible for the next card. Passing keeps you eligible.
+Only the 1st and 2nd eligible positions execute an Operation or Event each card. However, if the 1st or 2nd eligible faction passes, the next eligible faction steps in to fill that position — so more than two factions may be eligible, but passing shifts which faction occupies each acting position. After acting, a faction becomes ineligible for the next card. Passing keeps you eligible.
 
 ## Actions
 
@@ -57,7 +57,7 @@ Only the first 2 eligible factions may act per card. After acting, a faction bec
 | Operation | Effect |
 |-----------|--------|
 | Train | Place troops/police, build bases, civic action (shift support) |
-| Patrol | Move troops along lines of communication, activate for security |
+| Patrol | Move troops or police onto LoCs, activate guerrillas on LoCs, and optionally assault one LoC |
 | Sweep | Move troops into departments to find hidden guerrillas |
 | Assault | Remove enemy pieces in departments with troops |
 
@@ -72,7 +72,7 @@ Only the first 2 eligible factions may act per card. After acting, a faction bec
 | Attack | Remove enemy pieces |
 | Terror | Place terror markers, shift opposition |
 
-**Special Activities:** Kidnap (gain resources), Extort, Ambush
+**Special Activities:** Ambush, Extort, Kidnap (transfers resources from Government or Cartels to FARC)
 
 ### AUC Operations
 
@@ -83,7 +83,7 @@ Only the first 2 eligible factions may act per card. After acting, a faction bec
 | Attack | Remove enemy pieces |
 | Terror | Place terror, shift opposition |
 
-**Special Activities:** Assassinate, Extort
+**Special Activities:** Extort, Ambush, Assassinate
 
 ### Cartel Operations
 
@@ -102,10 +102,10 @@ When a Propaganda card is drawn, check victory conditions:
 
 | Faction | Victory Condition |
 |---------|------------------|
-| Government | Support + Aid exceeds threshold |
-| FARC | Opposition + FARC bases exceeds threshold |
-| AUC | AUC bases in departments with no FARC bases |
-| Cartels | Resources + bases exceeds threshold |
+| Government | Total Support exceeds 60 |
+| FARC | Total Opposition + FARC bases exceeds 25 |
+| AUC | AUC has more Bases on the map than FARC |
+| Cartels | Cartels have more than 10 Bases AND Resources above 40 (both conditions must be met simultaneously) |
 
 If no faction wins at the final Propaganda card, the faction closest to their condition wins.
 

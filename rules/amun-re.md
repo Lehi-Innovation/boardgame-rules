@@ -7,11 +7,11 @@ designer: "Reiner Knizia"
 source_pdf: "amun-re-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring invents a "sacrifice track", misstates pyramid scoring (+1/+3 per-pyramid rules), omits final +6/+4/+2 VP gold scoring. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/amun-re-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Amun-Re&game=amun-re)
 <!-- verification:end -->
@@ -23,79 +23,95 @@ Amun-Re is an auction and area-influence game set in ancient Egypt. Players are 
 
 ## Components
 
-- 1 Game board (map of Egypt with 15 provinces, scoring track, temple of Amun-Re)
+- 1 Game board (map of Egypt with 15 provinces, scoring track, Nile Delta space)
 - 15 Province cards
-- Money cards in denominations 1, 2, 5, 10, 20
-- Building stones (pyramids) in 3 sizes
-- Power cards
+- 61 Gold cards (denominations 1, 2, 5, 10, 20)
+- Stones, Pyramids, and Double Pyramids
+- Favor cards
 - Farmer tokens
-- Sacrifice track markers
-- Player markers
+- 4 Offering tiles
+- Player markers (Scribe pawns and Victory Point markers)
 
 ## Setup
 
 1. Place the game board centrally.
-2. Separate province cards into two groups matching the two kingdom eras.
-3. Give each player starting money and player markers.
-4. Prepare the power card deck.
+2. Build a single Province deck of 3 Province cards per player; return any unused Province cards to the box unseen.
+3. Give each player 20 Gold, 1 Theft card, and 1 Architect Favor card.
+4. Prepare the Favor card deck (shuffle remaining Favor cards after dealing 1 Architect to each player).
 
 ## Turn Structure
 
-Each era consists of 3 rounds. Each round has the following phases:
+Each era consists of 3 rounds. Each round has the following 4 phases:
 
-1. **Province Cards:** Reveal province cards equal to the number of players.
-2. **Auction Phase:** Players bid on provinces using an ascending auction.
-3. **Action Phase:** Players use their acquired provinces -- buying power cards, placing farmers, and building pyramids.
-4. **Sacrifice to Amun-Re:** Players secretly commit money to the temple.
-5. **Harvest:** Based on total sacrifices, the Nile floods (or not), affecting farmers' yields.
-6. **Scoring (end of era only):** Score points for provinces, pyramids, sets, and majorities.
+1. **Auction Phase:** Reveal province cards equal to the number of players, then players bid on them.
+2. **Market Phase:** Players buy Favor cards, place Farmers, and purchase Stones.
+3. **Offering Phase:** Players secretly commit Gold to Amun-Re and reveal simultaneously.
+4. **Harvest Phase:** Players collect income from Farmers, Caravans, and Gold Mines based on the current Offering tile.
+
+After the 3rd round of each era, Intermediate Scoring occurs.
 
 ## Actions
 
-### Auction
+### Auction Phase
 
-- Province cards are laid out. Players take turns placing bid markers on provinces.
-- Bids follow specific rules: you must either bid higher on a province than the current bid or place your marker on an unclaimed province.
-- If outbid, your marker is returned and you must bid elsewhere on a future turn.
-- Once all players have won a province, they pay their bid.
+- Province cards are laid out. Beginning with the Start Player, players take turns placing a Scribe pawn on a Province's bidding space.
+- You must bid higher than the current bid if placing on a Province already contested.
+- When it is your turn and your bid is still the highest on a Province, you must pass.
+- When outbid, your next bid cannot go on the same Province; however, in subsequent turns you may return to bid on a Province where you were previously outbid.
+- The auction ends when each Province has exactly 1 Scribe pawn on it. Players then pay their bid to the Reserve and leave their Scribe pawn to mark control of that Province.
 
-### Actions in Provinces
+### Market Phase
 
-After winning provinces, players may:
-- **Buy Power Cards:** Spend money for cards that provide special abilities.
-- **Place Farmers:** Add farmer tokens to provinces to generate income during harvest.
-- **Build Pyramids:** Spend money to place pyramid building stones in provinces.
+After winning provinces, players may (in order: Favor cards, then Farmers, then Stones):
+- **Buy Favor Cards:** Up to the number allowed by the highest Favor symbol count among your Provinces.
+- **Place Farmers:** Add Farmer tokens to open Field spaces in Provinces you control to generate income during Harvest.
+- **Buy Stones:** Purchase Stones and place them immediately in your Provinces. As soon as a Province holds 3 Stones, they are automatically replaced by a Pyramid. If a single Pyramid was already present, replace it with a Double Pyramid.
 
-### Sacrifice to Amun-Re
+### Offering Phase
 
-All players secretly select money to sacrifice. Reveal simultaneously. The total determines the Nile flood level:
-- Higher total = more flooding = more income from farmers
-- Lower total = drought = less income
+All players secretly select Gold cards (or their Theft card) to offer. Reveal simultaneously. The combined total determines which Offering tile is placed on the Nile Delta space, affecting Temple scoring, Farmer income, and Caravan income.
 
-The player who sacrificed the most receives a bonus (free power card, extra building stone, etc.). The player who sacrificed the least (or nothing) may get a penalty.
+- The player who contributed the most Gold becomes the new Start Player.
+- Rewards from the supply are distributed: the top offerer collects 3 Rewards, the second-highest offerer collects 2 Rewards, and all other players collect 1 Reward each (in turn order). Rewards may be any combination of Favor cards, Stones, and/or Farmer tokens.
+- Players who played a Theft card collect no Reward, but steal 3 Gold from the Reserve.
+- If tied for highest offering, the player earliest in turn order wins the tie.
 
 ## Scoring / Victory Conditions
 
-Scoring occurs at the end of each era (after 3 rounds):
+### Intermediate Scoring (end of each era)
 
-- **Province Pyramids:** Points for the most pyramids in each province.
-- **Pyramid Majorities:** Points for having the most pyramids on each side of the Nile.
-- **Set Collection:** Points for controlling provinces with matching symbols.
-- **Temple Offerings:** Bonus points based on position on the sacrifice track.
+- **Temples:** +1, +2, +3, or +4 VP for each Temple in a Province you control; the exact value is read from the current Offering tile.
+- **Pyramids (per pyramid):** +1 VP for each Pyramid you control across all your Provinces. Double Pyramids count as 2 Pyramids.
+- **Pyramids (fewest-province bonus):** +3 VP per Pyramid in your single Province with the fewest Pyramids. If you control any Province with no Pyramids, you score no VP for this category.
+- **Nile-side majority:** +5 VP for the single Province containing the most Pyramids on each side of the Nile (east and west scored separately). Ties are broken by Stones in that Province.
+- **Yellow Favor cards:** +3 VP for each yellow Favor card whose conditions are satisfied (e.g., Master of Scribes, West Side/East Side, Master of Farmers, etc.).
 
-After the 2nd era scoring, the player with the most victory points wins.
+At the end of the Old Kingdom, remove all Scribe pawns and Farmer tokens from the board, and reshuffle the Province deck. Pyramids and Stones remain on the board but are no longer considered controlled by any player.
+
+### Final Scoring (end of New Kingdom only)
+
+After Intermediate Scoring for the New Kingdom, players reveal their Gold cards:
+
+- **+6 VP** to the player with the highest total value of Gold.
+- **+4 VP** to the player with the second highest value.
+- **+2 VP** to the player with the third highest value.
+
+In case of a tie at any level, all tied players score the tied reward and subsequent rewards are pushed down.
+
+The player with the most victory points wins. Tiebreakers: most Pyramids among controlled Provinces, then most Stones, then shared victory.
 
 ## Special Rules & Edge Cases
 
-- Provinces acquired in the Old Kingdom are lost and re-auctioned in the New Kingdom, but pyramids remain on the board.
-- Power cards have various effects: extra money, free farmers, construction bonuses, and scoring bonuses.
-- If tied for sacrifice amount, the first player in turn order breaks the tie.
-- Money paid in auctions goes to the bank, not to other players.
-- Players must bid at least 0 (free) but cannot voluntarily withdraw from the auction until they win a province.
+- Provinces acquired in the Old Kingdom are lost and re-auctioned in the New Kingdom, but Pyramids and Stones remain on the board.
+- Favor cards have various effects: auction bonuses, construction bonuses (Architect allows building a Pyramid with only 2 Stones), free Farmers, Offering adjustments, and scoring bonuses.
+- Money paid in auctions goes to the Reserve, not to other players.
+- At any time, players may discard Favor cards for 1 Gold each. The Theft card is not a Favor card and may not be discarded for Gold.
 
 ## Player Reference
 
 **Era Structure (3 rounds each):**
-Reveal provinces → Auction → Actions (cards/farmers/pyramids) → Sacrifice → Harvest → (Score at era end)
+Auction → Market (cards/farmers/stones) → Offering → Harvest → (Intermediate Scoring at era end)
 
-**Scoring Categories:** Province pyramids, Nile-side pyramid majority, set collection, temple bonuses.
+**Intermediate Scoring Categories:** Temples (per Offering tile value), Pyramids (+1 VP each), fewest-Pyramid province bonus (+3 VP per pyramid there), Nile-side Province majority (+5 VP each side), yellow Favor cards (+3 VP each if conditions met).
+
+**Final Scoring:** +6/+4/+2 VP for highest, second, and third most Gold.
