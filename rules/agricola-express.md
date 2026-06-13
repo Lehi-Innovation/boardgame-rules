@@ -7,14 +7,14 @@ designer: "Jesse McGatha"
 source_pdf: "agricola-express-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 
 # Agricola Express
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented base-Agricola scoring (begging cards -3, farmyard spaces -1) and invented 4-wood pasture cost; feeding penalty is -3 per missing food, not per unfed member. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/agricola-express-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Agricola%20Express&game=agricola-express)
 <!-- verification:end -->
@@ -61,7 +61,7 @@ Then optionally use one acquired occupation's power. Finally, choose dice to use
 
 ### Farm Actions (using Farm dice)
 - **Build Room**: Use House face + required resources to add a room
-- **Build Pasture**: Use Pasture face + 4 wood to fence a pasture
+- **Build Pasture**: Use Pasture face to build a new pasture (no cost). You may also take 1 available animal die to stock the pasture when building it.
 - **Plow Field**: Use Field face to add a field
 
 ### Resource Collection (using Resource dice)
@@ -87,16 +87,19 @@ Requires a House face on a Farm die + an empty room. Gain a baby = +1 action per
 Score after each harvest. At game end, total all 3 harvest scores.
 
 ### Scoring Categories
-Same as base Agricola:
-- Fields, Pastures, Grain, Vegetables
-- Sheep, Boar, Cattle
-- Family members, House upgrades
-- Improvements, Occupations
-- Unused farmyard spaces (-1 each)
-- Begging cards (-3 each, for unfed family)
+- House (rooms and house type upgrade)
+- Fields
+- Pastures
+- Babies (scored every harvest if you own the Midwife)
+- Grain
+- Vegetables
+- Resources (Reed, Wood, Brick, Stone — scored via their respective workshops)
+- Animals (Sheep, Boar, Cattle)
+- Improvements (scored if you own the Builder occupation)
+- Fields (scored additionally if you own the Mayor occupation)
 
 ### Feeding at Harvest
-Each family member requires 2 food. Unfed members = Begging cards.
+Each family member requires 2 food. You lose **3 points for each food you are missing**. The Midwife halves the food cost for babies only (not the original 2 family members).
 
 Highest total across all 3 harvests wins.
 
@@ -107,7 +110,7 @@ Highest total across all 3 harvests wins.
 - You may choose to reuse the previous player's dice roll instead of rolling fresh.
 - Only 1 occupation power may be used per action.
 - The Midwife occupation is an exception to standard occupation rules.
-- Animals need proper housing (pastures or stalls) or they cannot be kept.
+- Animals must be placed into a pasture to be kept. If you have no available pasture space, you must either cook them immediately using a hearth or discard them.
 
 ## Player Reference
 

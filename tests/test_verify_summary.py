@@ -159,7 +159,7 @@ def test_verify_game_no_source_flags_unverifiable(pipeline_env, monkeypatch):
     assert "Unverifiable" in entry["review_notes"]
 
 
-def test_verify_game_api_error_restores_status(pipeline_env, monkeypatch):
+def test_verify_game_api_error_restores_status_and_reraises(pipeline_env, monkeypatch):
     tmp_path, registry = pipeline_env
 
     def boom(s, src):
@@ -167,5 +167,8 @@ def test_verify_game_api_error_restores_status(pipeline_env, monkeypatch):
 
     monkeypatch.setattr(vs, "verify_text", boom)
     game = {"name": "Test Game", "bgg_id": 42}
-    assert vs.verify_game(game, registry, restore_status="validated") is False
+    # Re-raises so a batch caller can tell a real failure from a clean MAJOR,
+    # but still restores the status first.
+    with pytest.raises(RuntimeError, match="API down"):
+        vs.verify_game(game, registry, restore_status="validated")
     assert _registry_entry(registry)["status"] == "validated"

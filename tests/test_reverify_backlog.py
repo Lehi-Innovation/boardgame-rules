@@ -2,7 +2,22 @@
 
 import os
 
-from scripts.reverify_backlog import select_candidates
+from scripts.reverify_backlog import FATAL_ERROR_MARKERS, select_candidates
+
+
+def test_credit_error_is_recognized_as_fatal():
+    """The exact message that truncated the live run must be classified fatal."""
+    msg = (
+        "Error code: 400 - {'type': 'error', 'error': {'type': "
+        "'invalid_request_error', 'message': 'Your credit balance is too low "
+        "to access the Anthropic API.'}}"
+    )
+    assert any(s in msg.lower() for s in FATAL_ERROR_MARKERS)
+
+
+def test_transient_error_is_not_fatal():
+    msg = "Error code: 529 - overloaded_error: the service is temporarily overloaded"
+    assert not any(s in msg.lower() for s in FATAL_ERROR_MARKERS)
 
 
 def _make(tmp_path, slug, with_rules=True, with_source=True):

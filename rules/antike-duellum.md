@@ -7,11 +7,11 @@ designer: "Mac Gerdts"
 source_pdf: "antike-duellum-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Temple cost 5 marble (actual 6 + adjacency coins), arming 1 iron (actual 2), recruitment-box economy omitted, scholar/navigator counts wrong, production coin omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/antike-duellum-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Antike%20Duellum&game=antike-duellum)
 <!-- verification:end -->
@@ -55,17 +55,17 @@ Players alternate turns. Each turn has 3 steps:
 
 | Wedge | Type | Effect |
 |-------|------|--------|
-| Marmor | Production | Gain marble: 1 per marble city, 3 per marble city with temple |
-| Ferrum | Production | Gain iron: 1 per iron city, 3 per iron city with temple |
-| Gold | Production | Gain gold: 1 per gold city, 3 per gold city with temple |
-| Templum | Utilization | Build temples (5 marble each). Triples production/defense/arming. Max 1 per city. |
-| Militia | Utilization | Recruit units (1 iron each). 1 per city without temple, 3 per city with temple. |
-| Scientia | Utilization | Buy know-hows with gold. |
+| Marmor | Production | Gain marble: 1 per marble city, 3 per marble city with temple; also gain 1 coin. |
+| Ferrum | Production | Gain iron: 1 per iron city, 3 per iron city with temple; also gain 1 coin. |
+| Gold | Production | Gain gold: 1 per gold city, 3 per gold city with temple; also gain 1 coin. |
+| Templum | Utilization | Build temples (6 marble each, plus 1 coin per adjacent temple). Triples production/defense/arming. Max 1 per city. Also allows building town walls (1 marble each). |
+| Militia | Utilization | Arm units from recruitment box (2 iron each). 1 per city without temple, 3 per city with temple. |
+| Scientia | Utilization | Buy know-hows with gold; also recruit new legions and/or galleys from personal supply to the recruitment box (1 gold per legion, 2 gold per galley). |
 | Duellum | Military | Move and fight (appears twice on rondel). |
 
 **Military Action (Duellum):**
-- Phase 1 -- Movement: Each unit may cross 1 border (2 with Road/Navigation). Legions cross red borders; galleys cross blue borders. Opposing units of same type destroy each other 1:1.
-- Phase 2 -- Conquest: City defense = 1 (3 with temple) + town wall bonus (+1) + Res Publica (+1) + defenders in region. Attacker needs units >= defense to conquer.
+- Phase 1 -- Movement: Each unit may move to one adjacent region (2 regions with Road/Navigation). Legions cross red borders; galleys cross blue borders. Opposing units of same type destroy each other 1:1.
+- Phase 2 -- Conquest: City defense = 1 (3 with temple) + town wall bonus (+1) + Res Publica (+1) + defenders in region. Attacker needs units >= defense to conquer. If the city is conquered, the attacker loses units equal to the defense strength of the city (removed from the region and returned to the attacker's recruitment box).
 
 **Know-Hows:** Technology advances purchased with gold, providing benefits like extended movement, increased production, and improved defense.
 
@@ -79,11 +79,11 @@ First player to collect **9 personages** wins.
 
 | Personage | Requirement | Available |
 |-----------|-------------|-----------|
-| King | Every 5 cities owned | 6 |
-| Scholar | Each new know-how learned | 4 |
+| King | Every 5 cities owned (at 5, 10, 15 cities) | 6 |
+| Scholar | Each new know-how learned first | 5 |
 | General | Each enemy temple destroyed via conquest | 4 |
-| Citizen | Every 3 temples owned | 4 |
-| Navigator | Every 7 seas with your galley at turn end | 3 |
+| Citizen | Every 3 temples owned (at 3, 6, 9, 12 temples) | 4 |
+| Navigator | Control of 7 sea areas at end of turn | 2 |
 
 Once won, personages cannot be lost even if conditions are no longer met.
 
@@ -107,7 +107,8 @@ Once won, personages cannot be lost even if conditions are no longer met.
 
 | Resource Use | Cost |
 |-------------|------|
-| Temple | 5 marble |
-| Military unit | 1 iron |
+| Temple | 6 marble + 1 coin per adjacent temple |
+| Military unit (arming via Militia) | 2 iron |
+| Recruiting via Scientia | 1 gold per legion, 2 gold per galley |
 | Know-how | Gold (varies) |
 | City founding | 1M + 1I + 1G |

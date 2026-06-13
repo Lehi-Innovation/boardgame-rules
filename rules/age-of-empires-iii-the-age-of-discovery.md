@@ -7,14 +7,14 @@ designer: "Glenn Drover"
 source_pdf: "age-of-empires-iii-the-age-of-discovery-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 
 # Age of Empires III: The Age of Discovery
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong age boundaries (4-5/6-8 vs 4-6/7-8), invented specialist abilities and VP sources, missing end-of-age colony scoring (6/2 VP), mangled event boxes. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/age-of-empires-iii-the-age-of-discovery-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Age%20of%20Empires%20III%3A%20The%20Age%20of%20Discovery&game=age-of-empires-iii-the-age-of-discovery)
 <!-- verification:end -->
@@ -49,7 +49,7 @@ Players lead European colonial powers competing to explore, colonize, and exploi
 Each round:
 
 1. **Place Colonists**: Starting with first player, players take turns placing 1 colonist or specialist in an event box.
-2. **Resolve Event Boxes**: Resolve each event box from left to right.
+2. **Resolve Event Boxes**: Resolve each event box from top to bottom in this order: Initiative, Colonist Dock, Trade Goods, Merchant Shipping, Capital Building, Discovery, Specialist, Warfare.
 3. **Age Advancement**: After specific rounds, advance to the next age and reveal new capital buildings.
 
 ## Actions
@@ -58,17 +58,15 @@ Each round:
 
 **Initiative**: Claim turn order for next round.
 
-**Colonist Dock**: Gain additional colonists/specialists from your unused supply.
+**Colonist Dock**: Send colonists/specialists to a discovered New World region of the owning player's choice. The first player to have three of their colonists in a region gains that region's trade good.
 
-**Trade Goods**: Acquire trade goods from discovered regions.
+**Trade Goods**: Players with colonists here choose a trade good from a pool of 4 face-up trade goods placed at the start of the turn.
 
-**Merchant Shipping**: Place merchant ships for trade income.
+**Merchant Shipping**: The player with the highest combined value of colonists and specialists in this area gains the Merchant Ship from the box. In case of a tie, the player earliest in turn order wins.
 
 **Capital Buildings**: Purchase capital buildings for special bonuses and VP.
 
 **Discovery**: Send colonists/specialists to discover new regions. Flip discovery counter to determine outcome (success, natives encountered, plunder).
-
-**Colonize**: Place colonists in discovered regions to control them.
 
 **Warfare**: Use soldiers to attack opponents' colonies.
 
@@ -76,23 +74,23 @@ Each round:
 
 | Specialist | Ability |
 |------------|---------|
-| Captain | +1 VP per discovery; naval combat bonus |
-| Merchant | Extra income from trade goods |
-| Missionary | Convert natives; extra colonists in regions |
-| Soldier | Combat bonus; can attack other colonies |
+| Captain | Counts as 2 colonists in Merchant Shipping or Discovery event boxes |
+| Merchant | Counts as 2 colonists in Merchant Shipping, OR generates $5 one-time upon arrival in the New World via Colonist Dock |
+| Missionary | Generates 1 additional colonist for the owning player upon arrival in the New World via Colonist Dock (the Cathedral capital building increases this to 2) |
+| Soldier | Generates one-time plunder income on a successful discovery expedition; eliminates enemy colonists/specialists in warfare |
 
 ## Scoring / Victory Conditions
 
-After 8 rounds, score:
+Colony scoring (6 VP for first place, 2 VP for second place) occurs three times during the game: at the end of Age I (turn 3), Age II (turn 6), and Age III (turn 8). At least one player must have 3 or more colonists/specialists in a colony for it to be scored.
+
+After 8 rounds, also score:
 
 | Source | Points |
 |--------|--------|
-| Colonies in regions | VP based on majority |
+| Colonies in regions | 6 VP first place, 2 VP second place (scored at end of each Age) |
 | Capital buildings | VP as printed |
-| Discoveries | VP from discovery bonuses |
-| Trade good sets | VP from merchant ship + goods combinations |
-| Merchant fleet | VP from ships |
-| Money | VP conversion |
+| Discoveries | VP from discovery counter/card |
+| Economy | VP equal to $ income generated from trade goods and merchant ships on turn 8 only |
 
 Highest VP total wins.
 
@@ -102,7 +100,7 @@ Highest VP total wins.
 - After all regions are discovered, the Discovery Deck provides additional exploration opportunities.
 - Capital buildings are sorted by age and become available as the game progresses.
 - Trade goods form sets with merchant ships for income generation.
-- Warfare can displace opponents' colonists from regions.
+- Warfare can eliminate opponents' colonists/specialists from regions.
 - Each event box has limited spaces for colonists.
 
 ## Player Reference
@@ -111,8 +109,8 @@ Highest VP total wins.
 | Age | Rounds | Capital Buildings |
 |-----|--------|------------------|
 | I | 1-3 | 5 Age I buildings |
-| II | 4-5 | Age II buildings added |
-| III | 6-8 | Age III buildings added |
+| II | 4-6 | Age II buildings added |
+| III | 7-8 | Age III buildings added |
 
 ### Starting Resources
 - $10

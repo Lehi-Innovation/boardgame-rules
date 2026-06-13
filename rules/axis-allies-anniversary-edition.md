@@ -7,11 +7,11 @@ designer: "Larry Harris Jr."
 source_pdf: "axis-allies-anniversary-edition-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong costs (carrier 16 vs 14, AA gun 5 vs 6), SBR damage cap 1x IPC vs source's 2x, invented "max 3 aircraft" AA gun limit. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/axis-allies-anniversary-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%20Anniversary%20Edition&game=axis-allies-anniversary-edition)
 <!-- verification:end -->
@@ -77,12 +77,12 @@ After the US player's turn, check for victory. If neither side has won, start a 
 | Fighter | 10 | 3 | 4 | 4 | Must land on friendly territory |
 | Bomber | 12 | 4 | 1 | 6 | Strategic bombing raids |
 | Battleship | 20 | 4 | 4 | 2 | Takes 2 hits to sink; shore bombardment |
-| Aircraft Carrier | 16 | 1 | 2 | 2 | Carries 2 fighters |
+| Aircraft Carrier | 14 | 1 | 2 | 2 | Carries 2 fighters |
 | Cruiser | 12 | 3 | 3 | 2 | Shore bombardment |
 | Destroyer | 8 | 2 | 2 | 2 | Negates enemy submarine abilities |
 | Submarine | 6 | 2 | 1 | 2 | Surprise strike; can submerge |
 | Transport | 7 | 0 | 0 | 2 | Carries 1 infantry + 1 other land unit |
-| AA Gun | 5 | - | - | 1 | Fires at up to 3 aircraft per territory |
+| AA Gun | 6 | - | - | 1 | Fires at attacking aircraft; roll 1 die per attacking air unit (only one AA gun fires per territory) |
 | Industrial Complex | 15 | - | - | - | Required to mobilize new units |
 
 ### Combat Resolution
@@ -96,8 +96,8 @@ After the US player's turn, check for victory. If neither side has won, start a 
 ### Special Combat Rules
 
 - **Submarines:** Get a surprise strike (roll first; hits removed before other units fire). Can submerge to avoid further combat. Abilities negated by enemy destroyers.
-- **AA Guns:** Fire at attacking aircraft before combat. Roll 1 die per aircraft (max 3 per AA gun). Hit on 1. Hits remove aircraft immediately.
-- **Strategic Bombing Raids:** Bombers attack enemy industrial complexes. Damage = 1d6 per bomber (max damage = territory IPC value). Damaged factories must be repaired (1 IPC per damage point) before producing.
+- **AA Guns:** Fire at attacking aircraft before combat. Roll 1 die per attacking air unit (only one AA gun may fire per territory, even if multiple are present). Hit on a roll of 1. Hits remove aircraft immediately.
+- **Strategic Bombing Raids:** Bombers attack enemy industrial complexes. Damage = 1d6 per bomber. Maximum total damage to an industrial complex is twice the territory's IPC value. Each damage marker reduces that factory's production by 1 unit. Damage markers can be removed during the Purchase Units phase at 1 IPC each; a damaged factory may still produce units up to its remaining capacity without being fully repaired.
 - **Shore Bombardment:** Battleships and cruisers can support amphibious assaults. Each ship fires once at its attack value.
 - **Amphibious Assaults:** Transport units from sea to land during combat move. Defenders fire AA before landing.
 
@@ -135,11 +135,11 @@ Each power has specific historical objectives printed on the back of their setup
 - Technologies include: Advanced Artillery, Rockets, Paratroopers, Increased Factory Production, War Bonds, Mechanized Infantry, Super Submarines, Jet Fighters, Improved Shipyards, Radar, Long-Range Aircraft, Heavy Bombers.
 
 ### Capital Capture
-- When a capital (territory containing an industrial complex marked on the setup chart) is captured, the conquering player takes all of the defeated power's IPCs.
+- When a capital (Washington, Moscow, London, Berlin, Rome, or Tokyo) is captured, the conquering player takes all of the defeated power's IPCs.
 - The conquered power cannot collect income until their capital is liberated.
 
 ### Neutral Territories
-- Cannot be attacked, moved through, or flown over. Impassable.
+- Cannot be attacked, moved through, or flown over by air units. Impassable.
 
 ### Liberation
 - If an ally liberates a territory originally controlled by another ally, control reverts to the original controller.
@@ -154,6 +154,6 @@ Each power has specific historical objectives printed on the back of their setup
 
 **Combat:** Roll ≤ attack/defense value = hit. Casualties simultaneous. Attacker may retreat.
 
-**Key Costs:** Infantry 3 | Artillery 4 | Tank 5 | Fighter 10 | Bomber 12 | Destroyer 8 | Submarine 6 | Cruiser 12 | Carrier 16 | Battleship 20 | Transport 7 | AA Gun 5 | Factory 15
+**Key Costs:** Infantry 3 | Artillery 4 | Tank 5 | Fighter 10 | Bomber 12 | Destroyer 8 | Submarine 6 | Cruiser 12 | Carrier 14 | Battleship 20 | Transport 7 | AA Gun 6 | Factory 15
 
 **China:** 1 infantry per 2 territories, no IPCs, restricted movement

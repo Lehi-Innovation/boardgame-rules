@@ -7,11 +7,11 @@ designer: "Jason Matthews, Ted Torgerson"
 source_pdf: "1989-dawn-of-freedom-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented Headline Phase and Realignment ops, wrong Support Check mechanics, 6 vs 7 action rounds, held Scoring card = lose game not VP penalty, invented Power Struggle trigger, missing Communist Power scoring. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1989-dawn-of-freedom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201989%3A%20Dawn%20of%20Freedom&game=1989-dawn-of-freedom)
 <!-- verification:end -->
@@ -35,101 +35,113 @@ verification_date: "2026-06-12"
 
 1. Place the map and set the VP marker to 0 on the VP Track.
 2. Separate Strategy cards into Early, Middle, and Late decks.
-3. Place starting SPs on the map as indicated by the setup numbers on each space.
-4. Place Power markers showing Communist Power in each country.
-5. Shuffle the Early War deck and deal starting hands.
-6. Place Turn and Action Round markers at their starting positions.
+3. The Communist places SPs in specific named spaces per the rules (Bydgoszcz, Warszawa, Lublin, Dresden, Berlin, Plzen, Praha, Brno, Szombathely, Cluj-Napoca, Bucuresti, Sofia, Stara Zagora).
+4. The Democrat places SPs in specific named spaces per the rules (Polish Catholic Church, Gdansk, Krakow, East German Lutheran Church, Czech Writers, Czech Catholic Church, Budapest, Szeged, Hungarian Catholic Church, Szekesfehervar).
+5. Each player then places an additional 7 SPs in a structured alternating sequence: Communist places 2, Democrat places 3, Communist places 3, Democrat places 4, Communist places 2. These SPs may be placed in any space or spaces that do not have opponent's SPs at the time of placement.
+6. Shuffle the Early Year deck and deal each player cards to bring their hand to 8.
+7. Place Turn and Action Round markers at their starting positions; place the VP marker on zero.
 
 ## Turn Structure
 
-The game is played over 10 turns. Each turn:
+The game is played over 10 turns. Each turn follows this sequence:
 
-1. **Deal Cards** — Players receive cards from the Strategy deck (deck changes from Early to Middle to Late as turns progress).
-2. **Headline Phase** — Each player simultaneously selects 1 card to play as a Headline Event. Both are revealed and resolved.
-3. **Action Rounds** — Players alternate playing cards (typically 6 rounds each). Each card is played as an Event or for Operations.
-4. **Check for Scoring** — Scoring cards must be played during the turn they are drawn.
+1. **Deal Cards** — Players receive cards from the Strategy deck to bring their hand to 8. The Middle Year deck is shuffled in at the start of Turn 4; the Late Year deck at the start of Turn 8.
+2. **Action Rounds** — Players alternate playing cards (7 rounds each). The Communist always takes his Action Round first. Each card is played as an Event or for Operations.
+3. **Extra Support Check** — If a player has earned a free Support Check from the Tiananmen Square track, it is taken now.
+4. **Verify Held Cards** — Scoring cards may never be held; if a player holds one at this step, that player loses the game. If both players hold Scoring cards simultaneously, the game is a draw.
+5. **New Year's Eve Party** — If the New Year's Eve Party Event is in effect, the game ends and a winner is determined.
+6. **Advance Turn Marker** — Move the Turn Marker forward.
+7. **Final Scoring** — After Turn 10, perform Final Scoring if no winner has been determined.
 
 ## Actions
 
 ### Playing Cards for Operations
-Use the card's Ops value to perform operations:
-- **Place Support Points:** Add SPs to spaces on the map. Must be adjacent to a space you already have SPs in (or in certain special cases). Support Checks apply when placing into spaces controlled by the opponent — roll dice against the space's Stability Number.
-- **Remove Opponent Support:** Spend Ops to remove enemy SPs.
-- **Realignment:** Attempt to remove opponent influence through contested rolls.
+Use the card's Ops value to perform **one** of the following operations (all Ops points must be spent on a single chosen option):
+
+- **Support Point Placement:** Add SPs to spaces on the map. SPs must be placed with or adjacent to friendly SP markers already in place. It costs 1 Ops to place in a friendly-controlled or uncontrolled space; 2 Ops to place in an opponent-controlled space.
+- **Support Checks:** Each card played for Support Checks gives the phasing player **two** Support Checks, regardless of the card's Ops value. To attempt a Support Check, the target space must have opponent SPs. Roll one die, add the card's Ops value, and apply adjacency modifiers (+1 per adjacent friendly controlled space, −1 per adjacent opponent controlled space). If the modified roll exceeds the space's Stability Number doubled, the check succeeds and the phasing player removes opposing SPs equal to the difference (adding friendly SPs if there are insufficient opposing SPs to remove).
+- **Tiananmen Square Attempt:** Spend all Ops on an attempt to advance the player's marker on the Tiananmen Square track. Roll one die, add the card's Ops value and any applicable modifiers. A player may only make one Tiananmen Square Attempt per turn.
 
 ### Playing Cards as Events
-Trigger the Event text on the card. Events associated with your side are beneficial; opponent Events are harmful. When you play an opponent's card for Ops, the Event still triggers (similar to Twilight Struggle).
+Trigger the Event text on the card. Events associated with your side are beneficial; opponent Events are harmful. When you play an opponent's card for Ops, the opponent's Event still triggers.
 
 - **Red Star Events:** Communist-associated
 - **Blue Star Events:** Democrat-associated
 - **Silver Star Events:** Both sides
 - **Asterisk (*) Events:** Removed from the game after being played as Events
 - **Underlined Events:** Lasting Events with persistent effects
-- **Scoring Cards:** Must be played; trigger country scoring and Power Struggles
+- **Scoring Cards:** Must be played during the turn they are drawn; trigger a Power Struggle and country scoring
 
 ### Tiananmen Square Track
-Players advance on this track through certain Events. The track provides benefits including the ability to play Events without triggering opponent Events, and bonus dice in Power Struggles.
+Players advance on this track through Tiananmen Square Attempts or certain Events. Reaching boxes ahead of the opponent grants lasting rewards until the opponent catches up, including: Ops bonuses on certain cards, free card draws, immediate removal of opponent SPs, free Support Checks at end of turn, the ability to play a card for Operations without triggering the opponent's Event once per turn, and the ability to play a card for both its Operations value and Event once per turn.
 
 ## Scoring / Victory Conditions
 
 ### Country Scoring
-When a Scoring card is played, the corresponding country is scored:
+When a Scoring card is played, the corresponding country is scored after the Power Struggle is resolved:
 
 **Presence / Domination / Control:**
-- **Presence:** Player has SPs in at least 1 space in the country
-- **Domination:** Player controls more Battleground spaces AND has more total controlled spaces than the opponent, plus has Presence
-- **Control:** Player controls ALL Battleground spaces AND has more total controlled spaces
+- **Presence:** A player controls at least 1 space in the country.
+- **Domination:** A player controls more spaces than the opponent, controls more Battleground spaces than the opponent, and controls at least one non-Battleground space and at least one Battleground space.
+- **Control:** A player controls more spaces than the opponent and controls all Battleground spaces in the country.
 
-Each country's Scoring Box shows VP values for Presence, Domination, and Control.
+Each country's Scoring Box shows VP values for Presence, Domination, and Control. Each player also scores 1 additional VP for each Battleground space he controls. The net difference between the two players' totals is applied to the VP track.
 
 ### Power Struggles
-After country scoring, if the Democrat controls more Battleground spaces than the number of times the Communist has scored Power in that country, a Power Struggle occurs:
+Whenever a country's Scoring card is played, a Power Struggle in that country is immediately conducted:
 
-1. Players draw Power Struggle cards.
-2. Players alternate playing suited cards (Rally, Strike, March, Petition) in rounds.
-3. Leader cards can be played as any suit if the player controls a matching space type.
-4. The side that wins the Power Struggle may change the Power status of the country, scoring additional VP.
+1. Players draw Power Struggle cards based on the number of spaces they control in the country (6 cards for the first space controlled, 2 cards for each additional space).
+2. Either player may Raise the Stakes by discarding 3 Power Struggle cards, adding a +1 modifier to both aftermath die rolls.
+3. Players alternate playing suited cards (Rally in the Square, Strike, March, Petition) in rounds. The player who played the Scoring card starts with initiative (as attacker). The defender may match the suit; if matched, the defender rolls to seize initiative.
+4. Leader cards can be played as any suit if the player controls a space of the matching type in the country.
+5. Wild cards have special effects described on them.
+6. If the attacker has no playable cards, the defender wins. If the defender cannot or chooses not to match, the attacker wins.
+7. **Aftermath:** The loser rolls for Support Loss; the winner rolls for Victory Points. If the Democrat wins and rolls a modified result of 4 or more, the Communist is toppled from Power and the Scoring card is permanently removed.
+8. **Communist scoring for Power:** If the Communist retains Power, the Scoring card remains in the game (placed in the discard pile) and the Communist scores VPs equal to the country's Power Value multiplied by the number of times the Power Struggle card has been played.
 
 ### Victory Conditions
-- **Automatic Victory:** If the VP marker reaches +20 (Democrat) or -20 (Communist), that player wins immediately.
-- **End of Game:** After Turn 10, the player leading in VP wins.
-- **Scoring cards not played:** If a player fails to play a Scoring card during the turn it was drawn, the opponent gains VP.
+- **Automatic Victory:** If the VP marker reaches +20 (Democrat) or −20 (Communist) at any point outside of Final Scoring, that player wins immediately.
+- **Illegal Held Card:** If a player holds a Scoring card at the Verify Held Cards step, that player loses the game outright. If both players hold Scoring cards simultaneously, the game is a draw.
+- **New Year's Eve Party:** If this Event is activated, the game ends at the end of that turn per rule 10.3.
+- **End of Game (Final Scoring):** After Turn 10, every country is scored; no Power Struggles are conducted and the Communist does not score for Power, but does receive a bonus based on the number of countries where he retains Power (1 country = −4 VP, 2 = −8 VP, 3 = −12 VP, 4 = −16 VP, 5 = −20 VP, 6 = −24 VP). The player with the most VPs wins; positive VP = Democrat wins, negative VP = Communist wins, zero = draw.
 
 ### Space Control
 A space is controlled when a player's SPs exceed the opponent's SPs by at least the space's Stability Number.
 
 ## Special Rules & Edge Cases
 
-- **Socio-Economic Space Types:** Elite (limousine), Bureaucrat (star), Farmer (sickle), Worker (hammer), Intellectual (typewriter), Student (victory sign), Church, Minority. These affect Leader cards in Power Struggles.
+- **Socio-Economic Space Types:** Elite (limousine), Bureaucrat (star), Farmer (sickle), Worker (hammer), Intellectual (typewriter), Student (victory sign), Church, Minority. These affect which Leader cards may be played in Power Struggles.
 - **Battleground Spaces:** Have multi-colored backgrounds. Critical for scoring — Domination and Control require controlling them.
 - **Eastern Europe vs. Balkans:** East Germany, Poland, Czechoslovakia, Hungary = Eastern Europe. Romania, Bulgaria = Balkans. Some Events affect only one region.
 - **The Wall:** When the Berlin Wall Event is in effect, special rules apply to East Germany.
 - **Solidarity Legalized:** Affects Poland specifically.
-- **Support Checks:** When placing SPs in spaces controlled by the opponent, roll 2d6. If the roll exceeds the space's Stability Number, the placement succeeds.
-- **Power Struggle Initiative:** Determined by the rank of cards played. Higher rank = initiative.
+- **Power Struggle Initiative:** The defender must roll equal to or higher than the rank of the attacker's card to seize initiative. Rally in the Square cards all have rank 1, making the counterattack automatic.
 
 ## Player Reference
 
 **Turn Sequence:**
 1. Deal cards
-2. Headline Phase (simultaneous Event play)
-3. Action Rounds (alternate card plays)
-4. Check scoring requirements
+2. Action Rounds (7 per player, Communist first)
+3. Extra Support Check (if applicable)
+4. Verify Held Cards
+5. New Year's Eve Party (if applicable)
+6. Advance Turn Marker
+7. Final Scoring (after Turn 10)
 
 **Card Play Options:**
 | Option | Effect |
 |---|---|
 | Event | Trigger card's Event text |
-| Operations | Place SPs, remove opponent SPs, or realign |
-| Scoring | Mandatory — scores a country and may trigger Power Struggle |
+| Operations | Place SPs, conduct Support Checks, or attempt Tiananmen Square |
+| Scoring | Mandatory — triggers Power Struggle then scores a country |
 
 **Country Scoring Levels:**
 | Level | Requirement |
 |---|---|
-| Presence | At least 1 SP in the country |
-| Domination | More Battleground spaces + more total controlled spaces + Presence |
-| Control | ALL Battleground spaces + more total controlled spaces |
+| Presence | Controls at least 1 space in the country |
+| Domination | Controls more spaces than opponent, more Battleground spaces than opponent, and at least one non-Battleground and one Battleground space |
+| Control | Controls more spaces than opponent and controls all Battleground spaces |
 
 **Power Struggle Suits:** Rally in the Square, Strike, March, Petition
 
-**VP Track:** -20 (Communist auto-win) to +20 (Democrat auto-win)
+**VP Track:** −20 (Communist auto-win) to +20 (Democrat auto-win)

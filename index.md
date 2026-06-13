@@ -71,12 +71,12 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [12 Thieves](rules/12-thieves/) | 2-4 | 45 min | Thorsten Gimmler | ⚠️ |
 | [13 Days: The Cuban Missile Crisis](rules/13-days-the-cuban-missile-crisis/) | 2 | 45 min | Daniel Skjold Pedersen, Asger Sams Granerud | ✅ |
 | [13 Dead End Drive](rules/13-dead-end-drive/) | 2-4 | 45 min | Unknown | ⚠️ |
-| [1754: Conquest -- The French and Indian War](rules/1754-conquest-the-french-and-indian-war/) | 2-4 | 60-120 min | Beau Beckett, Jeph Stahl | ❗ |
-| [1775: Rebellion](rules/1775-rebellion/) | 2-4 | 60-120 min | Beau Beckett, Jeph Stahl | ❗ |
-| [1812: The Invasion of Canada](rules/1812-the-invasion-of-canada/) | 2-5 | 60-120 min | Beau Beckett, Jeph Stahl | ❗ |
-| [1830: The Game of Railroads and Robber Barons](rules/1830-the-game-of-railroads-and-robber-barons/) | 2-7 | 180-360 min | Francis Tresham | ❗ |
-| [1960: The Making of the President](rules/1960-the-making-of-the-president/) | 2 | 90-120 min | Christian Leonhard, Jason Matthews | ❗ |
-| [1989: Dawn of Freedom](rules/1989-dawn-of-freedom/) | 2 | 150-180 min | Jason Matthews, Ted Torgerson | ❗ |
+| [1754: Conquest -- The French and Indian War](rules/1754-conquest-the-french-and-indian-war/) | 2-4 | 60-120 min | Beau Beckett, Jeph Stahl | ✅ |
+| [1775: Rebellion](rules/1775-rebellion/) | 2-4 | 60-120 min | Beau Beckett, Jeph Stahl | ✅ |
+| [1812: The Invasion of Canada](rules/1812-the-invasion-of-canada/) | 2-5 | 60-120 min | Beau Beckett, Jeph Stahl | ✅ |
+| [1830: The Game of Railroads and Robber Barons](rules/1830-the-game-of-railroads-and-robber-barons/) | 2-7 | 180-360 min | Francis Tresham | ✅ |
+| [1960: The Making of the President](rules/1960-the-making-of-the-president/) | 2 | 90-120 min | Christian Leonhard, Jason Matthews | ✅ |
+| [1989: Dawn of Freedom](rules/1989-dawn-of-freedom/) | 2 | 150-180 min | Jason Matthews, Ted Torgerson | ✅ |
 | [20 Questions](rules/20-questions/) | 2-4 | 30 min | Unknown | ✅ |
 | [221B Baker Street: The Master Detective Game](rules/221b-baker-street-the-master-detective-game/) | 2-6 | 60-90 min | Jay Moriarty | ⚠️ |
 | [3-6-9](rules/3-6-9/) | 3-5 | 45-60 min | Reiner Stockhausen | ⚠️ |
@@ -85,27 +85,27 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [51st State: Master Set](rules/51st-state-master-set/) | 1-4 | 40-90 min | Ignacy Trzewiczek | ✅ |
 | [51st State: Ultimate Edition](rules/51st-state-ultimate-edition/) | 1-4 | 40-90 min | Ignacy Trzewiczek | ✅ |
 | [6 nimmt! Junior](rules/6-nimmt-junior/) | 2-5 | 20 min | Wolfgang Kramer | ✅ |
-| [7 Ages](rules/7-ages/) | 2-7 | 120-600 min | Harry Rowland | ❗ |
+| [7 Ages](rules/7-ages/) | 2-7 | 120-600 min | Harry Rowland | ✅ |
 | [7 Wonders](rules/7-wonders/) | 3-7 | 30 min | Antoine Bauza | ⚠️ |
-| [7 Wonders: Architects](rules/7-wonders-architects/) | 2-7 | 25 min | Antoine Bauza | ❗ |
+| [7 Wonders: Architects](rules/7-wonders-architects/) | 2-7 | 25 min | Antoine Bauza | ✅ |
 
 ### A
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
 | [A Castle for All Seasons](rules/a-castle-for-all-seasons/) | 2-4 | 45-60 min | Inka Brand, Markus Brand | ✅ |
-| [A Column of Fire](rules/a-column-of-fire/) | 2-4 | 60-90 min | Michael Rieneck | ❗ |
+| [A Column of Fire](rules/a-column-of-fire/) | 2-4 | 60-90 min | Michael Rieneck | ✅ |
 | [A Distant Plain](rules/a-distant-plain/) | 1-4 | 120-360 min | Brian Train, Volko Ruhnke | ❗ |
-| [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ❗ |
-| [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ❗ |
+| [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ✅ |
+| [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ✅ |
 | [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ✅ |
 | [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ❗ |
 | [A Game of Thrones: The Card Game](rules/a-game-of-thrones-the-card-game/) | 2-4 | 60-120 min | Eric M. Lang, Nate French, Christian T. Petersen | ❗ |
 | [A Game of Thrones: The Card Game (Second Edition)](rules/game-of-thrones-the-card-game/) | 2-6 | 60-120 min | Nate French, Eric M. Lang | ⚠️ |
-| [A House Divided: War Between the States 1861-65](rules/a-house-divided-war-between-the-states-1861-65/) | 2 | 60-120 min | Frank Chadwick | ❗ |
+| [A House Divided: War Between the States 1861-65](rules/a-house-divided-war-between-the-states-1861-65/) | 2 | 60-120 min | Frank Chadwick | ✅ |
 | [A la Carte](rules/a-la-carte/) | 2-4 | 30-40 min | Karl-Heinz Schmiel | ✅ |
-| [A Study in Emerald](rules/a-study-in-emerald/) | 2-5 | 60-90 min | Martin Wallace | ❗ |
-| [A.D.E.L.E.](rules/a-d-e-l-e/) | 1-5 | 60-90 min | Albert Reyes | ❗ |
+| [A Study in Emerald](rules/a-study-in-emerald/) | 2-5 | 60 min | Martin Wallace | ✅ |
+| [A.D.E.L.E.](rules/a-d-e-l-e/) | 1-5 | 60-90 min | Albert Reyes | ✅ |
 | [Abalone](rules/abalone/) | 2 | 30 min | Michel Lalet, Laurent Levi | ⚠️ |
 | [Abande](rules/abande/) | 2 |  | Dieter Stein | ⚠️ |
 | [ABBA Monopoly](rules/abba-monopoly/) | 2-8 | 60-180 min |  | ✅ |
@@ -126,11 +126,11 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Adji-boto](rules/adji-boto/) | 2 | 15-30 min | Traditional | ⚠️ |
 | [Admirals](rules/admirals/) | 2-4 | 60-120 min | John Bohrer | ⚠️ |
 | [Advance to Boardwalk](rules/advance-to-boardwalk/) | 2-4 | 45 min | Charles Phillips | ✅ |
-| [Advanced Civilization](rules/advanced-civilization/) | 2-8 | 360-720 min | Francis Tresham | ❗ |
+| [Advanced Civilization](rules/advanced-civilization/) | 2-8 | 360-720 min | Francis Tresham | ✅ |
 | [Advanced Squad Leader: Starter Kit #2](rules/advanced-squad-leader-starter-kit-2/) | 2 | 60-240 min | Ken Dunn | ⚠️ |
 | [Advanced Squad Leader: Starter Kit #3](rules/advanced-squad-leader-starter-kit-3/) | 2 | 60-240 min | Ken Dunn | ⚠️ |
 | [Advanced Third Reich](rules/advanced-third-reich/) | 2-6 | 180-600 min | Bruce Harper | ⚠️ |
-| [Adventure Land](rules/adventure-land/) | 2-4 | 45 min | Wolfgang Kramer, Michael Kiesling | ❗ |
+| [Adventure Land](rules/adventure-land/) | 2-4 | 45 min | Wolfgang Kramer, Michael Kiesling | ✅ |
 | [Adventurer](rules/adventurer/) | 2-6 | 60-120 min | Greg Costikyan | ⚠️ |
 | [AeroTech](rules/aerotech/) | 2-6 | 120-240 min | FASA Corporation | ⚠️ |
 | [Aether](rules/aether/) | 2 | 15-30 min | Unknown | ⚠️ |
@@ -138,24 +138,24 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | ↳ [Aether Captains: Clockwork Cabal](rules/aether-captains-clockwork-cabal/) | 1 | 20 min | Todd Sanders | ⚠️ |
 | [Affenstark](rules/affenstark/) | 2-4 | 15-20 min | Unknown | ⚠️ |
 | [Aficionado](rules/aficionado/) | 3-8 | 30-45 min | Unknown | ⚠️ |
-| [Afrika Korps](rules/afrika-korps/) | 2 | 120-240 min | Charles S. Roberts | ❗ |
+| [Afrika Korps](rules/afrika-korps/) | 2 | 120-240 min | Charles S. Roberts | ✅ |
 | [Afrikan tähti](rules/afrikan-t-hti/) | 2-6 | 30-60 min | Kari Mannerla | ✅ |
 | ↳ [Afrikan tähti: Retkikunnat](rules/afrikan-t-hti-retkikunnat/) | 2-4 | 45-60 min | Unknown | ⚠️ |
 | [After the Holocaust](rules/after-the-holocaust/) | 2-6 | 180-360 min | Irad B. Hardy, Redmond A. Simonsen | ⚠️ |
 | [Aftermath](rules/aftermath/) | 1-4 | 90 min | Jerry Hawthorne | ❗ |
 | [Age of Discovery](rules/age-of-discovery/) | 2-4 | 45 min | Alfred Viktor Schulz | ⚠️ |
-| [Age of Empires III: The Age of Discovery](rules/age-of-empires-iii-the-age-of-discovery/) | 2-5 | 120 min | Glenn Drover | ❗ |
+| [Age of Empires III: The Age of Discovery](rules/age-of-empires-iii-the-age-of-discovery/) | 2-5 | 120 min | Glenn Drover | ✅ |
 | [Age of Industry](rules/age-of-industry/) | 2-5 | 90-120 min | Martin Wallace | ⚠️ |
 | [Age of Mythology: The Boardgame](rules/age-of-mythology-the-boardgame/) | 2-4 | 120-180 min | Glenn Drover | ⚠️ |
-| [Age of Napoleon](rules/age-of-napoleon/) | 2 | 180-360 min | Renaud Verlaque | ❗ |
-| [Age of Renaissance](rules/age-of-renaissance/) | 3-6 | 120-360 min | Don Greenwood, Jared Scarborough | ❗ |
+| [Age of Napoleon](rules/age-of-napoleon/) | 2 | 180-360 min | Renaud Verlaque | ✅ |
+| [Age of Renaissance](rules/age-of-renaissance/) | 3-6 | 120-360 min | Don Greenwood, Jared Scarborough | ✅ |
 | [Age of Steam](rules/age-of-steam/) | 1-6 | 120 min | Martin Wallace | ✅ |
 | [Aggravation](rules/aggravation/) | 2-6 | 30-45 min | CO-5 Company | ⚠️ |
 | [Agincourt](rules/agincourt/) | 2 | 120 min | Jim Dunnigan | ⚠️ |
 | [Agon](rules/agon/) | 2 | 30-60 min | Unknown (traditional) | ⚠️ |
 | [Agricola](rules/agricola/) | 1-5 | 30-150 min | Uwe Rosenberg | ✅ |
-| [Agricola Express](rules/agricola-express/) | 1-4 | 45-60 min | Jesse McGatha | ❗ |
-| [Agricola: All Creatures Big and Small](rules/agricola-all-creatures-big-and-small/) | 2 | 30 min | Uwe Rosenberg | ❗ |
+| [Agricola Express](rules/agricola-express/) | 1-4 | 45-60 min | Jesse McGatha | ✅ |
+| [Agricola: All Creatures Big and Small](rules/agricola-all-creatures-big-and-small/) | 2 | 30 min | Uwe Rosenberg | ✅ |
 | [Air Assault on Crete](rules/air-assault-on-crete/) | 2 | 120-300 min | Randall Reed, Vance von Borries | ⚠️ |
 | [Air Baron](rules/air-baron/) | 2-6 | 120-180 min | G.W. "Jerry" D'Arcey | ⚠️ |
 | [Air War: Modern Tactical Air Combat](rules/air-war/) | 2+ | 60-240 min | David C. Isby | ⚠️ |
@@ -169,10 +169,10 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Alaric the Goth: Fall of the Western Roman Empire](rules/alaric-the-goth-fall-of-the-western-roman-empire/) | 1-7 | 120 min | Paul L. Van Patten, Jr. | ⚠️ |
 | [Alaska](rules/alaska/) | 2-4 | 45 min | Reinhold Wittig | ⚠️ |
 | [Alcazar](rules/alcazar/) | 2 | 15-30 min | Andrew Perkis | ⚠️ |
-| [Alchemists](rules/alchemists/) | 2-4 | 120 min | Matus Kotry | ❗ |
+| [Alchemists](rules/alchemists/) | 2-4 | 120 min | Matus Kotry | ✅ |
 | [Alemungula](rules/alemungula/) | 2 | 15-30 min | Traditional | ⚠️ |
 | [Alexander the Great](rules/alexander-the-great/) | 2 | 120-180 min | Gary Gygax | ⚠️ |
-| [Alhambra](rules/alhambra/) | 2-6 |  | Dirk Henn | ❗ |
+| [Alhambra](rules/alhambra/) | 2-6 |  | Dirk Henn | ✅ |
 | [Alias](rules/alias/) | 4+ |  | Tactic Games | ⚠️ |
 | [Alien Contact: Extraterrestrial Empires in Conflict](rules/alien-contact-extraterrestrial-empires-in-conflict/) | 2-6 | 180-360 min | Unknown | ⚠️ |
 | [Alien Contact: Extraterrestrial Empires in Conflict](rules/alien-contact/) | 2-6 | 180-360 min | Jim Deupree | ⚠️ |
@@ -187,12 +187,12 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Alpha Blitz](rules/alpha-blitz/) | 2-6 | 30 min | Mike Selinker | ⚠️ |
 | [Alpha Nature](rules/alpha-nature/) | 2-6 | 30-60 min | Unknown | ⚠️ |
 | [Alquerque](rules/alquerque/) | 2 |  |  | ⚠️ |
-| [Altiplano](rules/altiplano/) | 2-5 | 60-120 min | Reiner Stockhausen | ❗ |
+| [Altiplano](rules/altiplano/) | 2-5 | 60-120 min | Reiner Stockhausen | ✅ |
 | [Ambush!](rules/ambush/) | 1 | 120-300 min | Eric Lee Smith, John Butterfield | ⚠️ |
 | [American Megafauna](rules/american-megafauna/) | 1-4 | 120-300 min | Phil Eklund | ⚠️ |
-| [Amerigo](rules/amerigo/) | 2-4 | 90 min | Stefan Feld | ❗ |
+| [Amerigo](rules/amerigo/) | 2-4 | 90 min | Stefan Feld | ✅ |
 | [Amoeba Wars](rules/amoeba-wars/) | 2-6 | 120-180 min | Unknown | ⚠️ |
-| [Amun-Re](rules/amun-re/) | 3-5 | 90 min | Reiner Knizia | ❗ |
+| [Amun-Re](rules/amun-re/) | 3-5 | 90 min | Reiner Knizia | ✅ |
 | [AmuseAmaze](rules/amuseamaze/) | 2-6 | 30-45 min | Unknown | ⚠️ |
 | [Anachronism](rules/anachronism/) | 2-4 | 10-30 min | John Kovaleski | ⚠️ |
 | [Anagrams](rules/anagrams/) | 2+ |  |  | ⚠️ |
@@ -202,11 +202,11 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Ancient Knowledge](rules/ancient-knowledge/) | 2-4 | 60-75 min | Remi Mathieu | ⚠️ |
 | [Ancients](rules/ancients/) | 2 | 60-120 min | Bill Banks | ⚠️ |
 | [Andantino](rules/andantino/) | 2 |  | David L. Smith | ⚠️ |
-| [Andean Abyss](rules/andean-abyss/) | 1-4 | 180-360 min | Volko Ruhnke | ❗ |
-| [Andor: The Family Fantasy Game](rules/andor-the-family-fantasy-game/) | 2-4 | 30-45 min | Inka Brand, Markus Brand | ❗ |
-| [Android](rules/android/) | 3-5 | 120-240 min | Kevin Wilson, Daniel Clark | ❗ |
-| [Android: Netrunner](rules/android-netrunner/) | 2 | 45 min | Richard Garfield, Lukas Litzsinger | ❗ |
-| [Angola](rules/angola/) | 3-4 | 120-180 min | Nick Smith, Peter Wingrove, Jeremy Sherlock | ❗ |
+| [Andean Abyss](rules/andean-abyss/) | 1-4 | 180-360 min | Volko Ruhnke | ✅ |
+| [Andor: The Family Fantasy Game](rules/andor-the-family-fantasy-game/) | 2-4 | 30-45 min | Inka Brand, Markus Brand | ✅ |
+| [Android](rules/android/) | 3-5 | 120-240 min | Kevin Wilson, Daniel Clark | ✅ |
+| [Android: Netrunner](rules/android-netrunner/) | 2 | 45 min | Richard Garfield, Lukas Litzsinger | ✅ |
+| [Angola](rules/angola/) | 2-4 | 120-180 min | Phil Kendall, Roger Greenwood | ✅ |
 | [Angry Birds: Knock on Wood](rules/angry-birds-knock-on-wood/) | 2-4 | 15 min |  | ⚠️ |
 | [Animal Upon Animal](rules/animal-upon-animal/) | 2-4 | 15 min | Klaus Miltenberger | ✅ |
 | [Animal Upon Animal: Balancing Bridge](rules/animal-upon-animal-balancing-bridge/) | 2-4 | 15-20 min | Klaus Miltenberger | ⚠️ |
@@ -215,8 +215,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Anno 1701](rules/anno-1701/) | 3-4 | 90-120 min | Klaus Teuber | ⚠️ |
 | [Ant Wars](rules/ant-wars/) | 2-4 | 60-120 min | Jason McAllister | ⚠️ |
 | [Anti-Monopoly](rules/anti-monopoly/) | 2-6 | 60-120 min | Ralph Anspach | ✅ |
-| [Antike](rules/antike/) | 2-6 | 90-120 min | Mac Gerdts | ❗ |
-| [Antike Duellum](rules/antike-duellum/) | 2 | 60-90 min | Mac Gerdts | ❗ |
+| [Antike](rules/antike/) | 2-6 | 90-120 min | Mac Gerdts | ✅ |
+| [Antike Duellum](rules/antike-duellum/) | 2 | 60-90 min | Mac Gerdts | ✅ |
 | [Antler Island](rules/antler-island/) | 3-4 | 35-45 min | Fraser Lamont, Gordon Lamont | ✅ |
 | [Ants](rules/ants/) | 2-4 | 60-120 min | Simone Luciani | ⚠️ |
 | [Ants in the Pants](rules/ants-in-the-pants/) | 2-4 | 10 min | Uncredited | ⚠️ |
@@ -230,35 +230,35 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Aquatika](rules/aquatika/) | 2 | 15-20 min | Alexandre Droit | ⚠️ |
 | [Arab-Israeli Wars](rules/arab-israeli-wars/) | 2 | 60-240 min | Unknown | ⚠️ |
 | [Arbolito](rules/arbolito/) | 1-6 | 15-20 min | Arno Steinwender | ⚠️ |
-| [Arborea](rules/arborea/) | 1-5 | 60-120 min | Caezar Al Jassar, Kuly | ❗ |
+| [Arborea](rules/arborea/) | 1-5 | 60-120 min | Caezar Al Jassar, Kuly | ✅ |
 | [Arcanor](rules/arcanor/) | 2 | 20-40 min | Unknown | ⚠️ |
-| [Archipelago](rules/archipelago/) | 2-5 | 90-240 min | Christophe Boelinger | ❗ |
+| [Archipelago](rules/archipelago/) | 2-5 | 90-240 min | Christophe Boelinger | ✅ |
 | [Architects of the West Kingdom](rules/architects-of-the-west-kingdom/) | 1-5 | 60-80 min | Shem Phillips, S J MacDonald | ⚠️ |
 | [Arcs](rules/arcs/) | 2-4 | 60-120 min | Cole Wehrle | ✅ |
 | [Are You the Traitor?](rules/are-you-the-traitor/) | 4-10 | 10-30 min | Andrew Looney | ⚠️ |
 | [Arena of Death](rules/arena-of-death/) | 2-6 | 60-120 min | David James Ritchie, Redmond A. Simonsen | ⚠️ |
-| [Arena: Roma II](rules/arena-roma-ii/) | 2 | 60 min | Stefan Feld | ❗ |
-| [Argent: The Consortium](rules/argent-the-consortium/) | 2-5 | 60-150 min | Trey Chambers | ❗ |
+| [Arena: Roma II](rules/arena-roma-ii/) | 2 | 60 min | Stefan Feld | ✅ |
+| [Argent: The Consortium](rules/argent-the-consortium/) | 2-5 | 60-150 min | Trey Chambers | ✅ |
 | [Ark Nova](rules/ark-nova/) | 1-4 | 90-150 min | Mathias Wigge | ⚠️ |
-| [Arkadia](rules/arkadia/) | 2-4 | 60 min | Rüdiger Dorn | ❗ |
+| [Arkadia](rules/arkadia/) | 2-4 | 60 min | Rüdiger Dorn | ✅ |
 | [Arkham Express](rules/arkham-express/) | 1-4 | 30 min | David Willems | ⚠️ |
-| [Arkham Horror (2nd Edition)](rules/arkham-horror-2nd-edition/) | 1-8 | 120-240 min | Richard Launius, Kevin Wilson | ❗ |
-| [Arkham Horror (Third Edition)](rules/arkham-horror-third-edition/) | 1-6 | 120-180 min | Nikki Valens | ❗ |
+| [Arkham Horror (2nd Edition)](rules/arkham-horror-2nd-edition/) | 1-8 | 120-240 min | Richard Launius, Kevin Wilson | ✅ |
+| [Arkham Horror (Third Edition)](rules/arkham-horror-third-edition/) | 1-6 | 120-180 min | Nikki Valens | ✅ |
 | [Arkham Horror First Edition](rules/arkham-horror-first-edition/) | 1-8 | 120-240 min | Richard Launius | ⚠️ |
 | [Armada](rules/armada/) | 2-4 | 90-120 min | Philippe des Pallières, Patrice Pillet | ⚠️ |
 | [Armageddon](rules/armageddon/) | 3-4 | 90-120 min | Chris Marling, David Thompson | ✅ |
 | [Armies of Arcana](rules/armies-of-arcana/) | 2+ | 120-240 min | Thane Morgan | ⚠️ |
-| [Art Society](rules/art-society/) | 2-4 | 30-60 min | Pius Mayr | ❗ |
+| [Art Society](rules/art-society/) | 2-4 | 30-60 min | Mitch Wallace | ✅ |
 | [Articulate!](rules/articulate/) | 4-20+ | 60 min | Andrew Bryceson | ✅ |
 | [Artifact](rules/artifact/) | 2-5 | 60-90 min | uncredited (White Goblin Games) | ⚠️ |
-| [Artus](rules/artus/) | 2-4 | 60 min | Michael Kiesling, Wolfgang Kramer | ❗ |
+| [Artus](rules/artus/) | 2-4 | 60 min | Michael Kiesling, Wolfgang Kramer | ✅ |
 | [Arydia: The Paths We Dare Tread](rules/arydia-the-paths-we-dare-tread/) | 1-4 | 60-120 min | Brian Van Slyke, Karington Hess | ⚠️ |
 | [Asara](rules/asara/) | 2-4 | 45 min | Michael Kiesling, Wolfgang Kramer | ❗ |
 | [Ascending Empires](rules/ascending-empires/) | 2-4 | 75 min | Ian Cooper | ⚠️ |
 | [Ascension: Deckbuilding Game](rules/ascension-deckbuilding-game/) | 1-4 | 30 min | Justin Gary, Robert Dougherty, Brian Kibler | ⚠️ |
 | [ASG Baseball](rules/asg-baseball/) | 2 | 60-120 min | George Gerney | ⚠️ |
 | [Ashtapada](rules/ashtapada/) | 2-4 | 30-60 min | Traditional | ⚠️ |
-| [Asia Engulfed](rules/asia-engulfed/) | 2 | 360-540 min | Jesse Evans, Rick Young | ❗ |
+| [Asia Engulfed](rules/asia-engulfed/) | 2 | 360-540 min | Jesse Evans, Rick Young | ✅ |
 | [Assault Across the Suez](rules/assault-across-the-suez/) | 2 | 120-180 min | uncredited | ⚠️ |
 | [Assault on Hoth: The Empire Strikes Back](rules/assault-on-hoth-the-empire-strikes-back/) | 2 | 60-90 min | Paul Murphy | ❗ |
 | [Asteroid](rules/asteroid/) | 2 | 60-90 min | Marc Miller, Frank Chadwick | ⚠️ |
@@ -267,7 +267,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Astoria](rules/astoria/) | 3-5 | 45-60 min | Rüdiger Dorn | ⚠️ |
 | [Astrotime](rules/astrotime/) | 2-6 | 30-45 min | uncredited | ⚠️ |
 | [Astérix et la Potion magique](rules/ast-rix-et-la-potion-magique/) | 2-6 | 30-45 min | uncredited | ⚠️ |
-| [At the Gates of Loyang](rules/at-the-gates-of-loyang/) | 1-4 | 60-120 min | Uwe Rosenberg | ❗ |
+| [At the Gates of Loyang](rules/at-the-gates-of-loyang/) | 1-4 | 60-120 min | Uwe Rosenberg | ✅ |
 | [Atlanta](rules/atlanta/) | 3-6 | 90-120 min | John Bohrer | ⚠️ |
 | [Atlantic Wall](rules/atlantic-wall/) | 2-3 | 600+ min | Courtney F. Allen | ⚠️ |
 | [Atlas & Zeus](rules/atlas-zeus/) | 2 | 30-45 min | Reiner Knizia | ⚠️ |
@@ -291,7 +291,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Ave Caesar](rules/ave-caesar/) | 3-6 | 30 min | Wolfgang Riedesser | ✅ |
 | [Awithlaknakwe](rules/awithlaknakwe/) | 2 | 30-60 min | Traditional (Zuni) | ⚠️ |
 | [Axiom](rules/axiom/) | 2 | 30 min | Michael Seal | ⚠️ |
-| [Axis & Allies Anniversary Edition](rules/axis-allies-anniversary-edition/) | 2-6 | 360 min | Larry Harris Jr. | ❗ |
+| [Axis & Allies Anniversary Edition](rules/axis-allies-anniversary-edition/) | 2-6 | 360 min | Larry Harris Jr. | ✅ |
 | [Axis & Allies: Battle of the Bulge](rules/axis-allies-battle-of-the-bulge/) | 2 | 180-240 min | Larry Harris Jr. | ❗ |
 | [Axis & Allies: D-Day](rules/axis-allies-d-day/) | 2-3 | 120 min | Larry Harris Jr. | ✅ |
 | [Aye, Dark Overlord!](rules/aye-dark-overlord/) | 4-6 | 30 min | Fabrizio Bonifacio, Massimiliano Enrico | ✅ |

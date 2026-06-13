@@ -3,15 +3,15 @@ title: "Art Society"
 bgg_id: 395375
 player_count: "2-4"
 play_time: "30-60 min"
-designer: "Pius Mayr"
+designer: "Mitch Wallace"
 source_pdf: "art-society-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Museum exchange contradicts source ("affects prestige" vs explicit "does not affect prestige"), omits eyeline bonus and exposed-corners scoring, wrong bid-tie rule. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/art-society-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Art%20Society&game=art-society)
 <!-- verification:end -->
@@ -51,22 +51,25 @@ Art Society is an auction and tile-placement game where players are art connoiss
 Each round has phases:
 
 1. **Preparing the Auction:** Auctioneer selects paintings equal to player count +1, looking only at tile backs. Places matching value tokens, then flips paintings face up.
-2. **Placing Bids & Acquiring Paintings:** All players simultaneously select a bid card from hand and place face down. Reveal simultaneously. Highest unique bid gets first pick; process continues down. Unpicked paintings go to the museum.
+2. **Placing Bids & Acquiring Paintings:** All players simultaneously select a bid card from hand and place face down. Reveal simultaneously. Highest bid gets first pick; process continues down. Ties are broken by revealing the previous card in each tied player's bidding stack, continuing back through the stack until the tie is broken. Unpicked paintings go to the museum.
 3. **Placing Paintings:** Each player places acquired painting(s) on their gallery wall following placement rules.
 4. **Pass Gavel:** Auctioneer gavel passes to next player clockwise.
 
 ## Actions
 
-**Bidding:** Select 1 bid card from your hand, place face down. All reveal simultaneously. Higher unique bids choose paintings first.
+**Bidding:** Select 1 bid card from your hand, place face down. All reveal simultaneously. Higher bids choose paintings first. Ties are broken by revealing the card underneath the one played (going back through the bidding stack) until the tie is broken.
 
 **Placing Paintings on Wall:**
 - Newly placed tiles must touch existing tiles on the wall.
 - When painting frames match adjacent frames, gain wall decor tiles (bonus decorations).
-- Avoid placing paintings of the same type adjacent to each other (Faux Pas penalty).
+- Avoid placing paintings of the same type adjacent to each other (Faux Pas — offending paintings score 0 prestige points at end of game).
 
 **Assistant:** Can hold 1 painting or wall decor to place later.
 
-**Cannot Fit a Painting:** Either exchange it at the museum (affects prestige values) OR keep as excess painting and gain 1 wall decor.
+**Cannot Fit a Painting:** Follow these steps in order:
+1. Give the painting to your assistant (if the assistant is not already holding a tile that doesn't fit).
+2. If you don't give it to your assistant, exchange it at the museum for a painting of the same type from the museum piles that does fit (does NOT affect prestige values).
+3. If you can't exchange it, keep it as an excess painting beside your board and gain 1 decor tile.
 
 ## Scoring / Victory Conditions
 
@@ -76,18 +79,19 @@ Each round has phases:
 - A player places a 2nd excess painting
 
 **Final Scoring:**
-- Points for each painting type based on its prestige value at the museum
-- Points for decor tiles on your wall
-- Complete wall bonus if applicable
-- Penalties for faux pas (same-type paintings adjacent)
-- Excess painting penalties
+1. **Painting Prestige:** Points for each painting type based on its prestige ranking (paintings involved in a faux pas score 0 prestige points).
+2. **Decor Bonus:** Points for decor tiles on your wall (equal to number of shields shown).
+3. **Eyeline Bonus:** +3 points for each painting of the most prestigious type (x5) that is partly or fully in the eyeline region, even if part of a faux pas.
+4. **Full Gallery:** +5 points if you have no empty space on your wall.
+5. **Exposed Corners:** -2 points for each corner of your wall not covered by a tile.
+6. **Excess Paintings:** -2 points for each excess painting beside your board.
 
-Highest score wins.
+Highest score wins. **Tiebreaker:** Tied players compare the total value of bid cards remaining in their hand; highest total wins. If still tied, victory is shared.
 
 ## Special Rules & Edge Cases
 
 - Bid cards once used go to your bidding stack and are not reused.
-- Paintings exchanged at the museum adjust the prestige markers, changing how much each painting type is worth for all players.
+- Paintings exchanged at the museum do NOT affect prestige markers.
 - The Auctioneer only sees the backs of paintings when selecting (revealing size but not type).
 - The museum display affects end-game scoring for all players.
 - Matching frames between adjacent paintings earn decor tiles, which are worth points.

@@ -6,11 +6,11 @@ designer: "Dirk Henn"
 source_pdf: "alhambra-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Base game faithful (15 numbers verified), but 2-player Dirk rules invented/contradicted (Dirk has no turns, gets 6/6/one-third-of-bag tiles) and end-game tile handout to richest players omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/alhambra-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Alhambra&game=alhambra)
 <!-- verification:end -->
@@ -58,7 +58,7 @@ After your turn, refill any empty building market spaces and money card spaces f
 
 ### Take Money
 
-Take any 1 money card from the face-up display, OR take multiple money cards whose total value is 5 or less (currency does not matter).
+Take any 1 money card from the face-up display, OR take multiple money cards whose total value does not add up to more than 5 (currency does not matter).
 
 ### Buy and Position a Building Tile
 
@@ -110,7 +110,7 @@ In every scoring round, each player scores points for their longest contiguous e
 
 ### Game End
 
-The game ends when there are not enough tiles to refill the building market. Perform the 3rd scoring round. The player with the most points wins.
+The game ends when there are not enough tiles left in the bag to refill the building market back up to four. Before the 3rd scoring round, the remaining tiles on the building market are distributed: each tile goes to the player holding the most money of that tile's currency (regardless of the tile's price). If two or more players are tied for the most money of a currency, that tile remains on the building market and is not awarded to anyone. Tiles received this way may be added to a player's Alhambra according to the normal building rules. After the market has been emptied in this way, the 3rd and final scoring round takes place. The player with the most points wins.
 
 ## Special Rules & Edge Cases
 
@@ -123,7 +123,14 @@ The game ends when there are not enough tiles to refill the building market. Per
 
 ### 2-Player Rules
 
-A third "virtual" player named Dirk participates. When it is Dirk's turn, draw a tile from the bag matching the next currency in order and place it in Dirk's area. Dirk does not collect money. During scoring, count Dirk's building tiles just like a regular player.
+A third "virtual" player named Dirk participates. Dirk has no turns at all. He receives building tiles as follows:
+- **At game start:** 6 building tiles are drawn randomly from the bag and placed face up in full view of both players as Dirk's collection.
+- **After the 1st scoring round:** Dirk is given 6 more randomly drawn tiles, placed with his others.
+- **After the 2nd scoring round:** Dirk is given one-third (rounded down) of the tiles remaining in the bag.
+
+During scoring, Dirk's building tiles count toward majorities of each building type just like a real player's tiles. However, Dirk never scores points for an external wall.
+
+The only rule different for the two human players is that whenever they buy a building tile, instead of only adding it to their Alhambra or placing it on their reserve board, they may also choose to give the tile to Dirk.
 
 ## Player Reference
 

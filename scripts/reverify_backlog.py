@@ -47,6 +47,16 @@ STATE_TO_VERDICT = {
     "unverified": "MAJOR",
 }
 
+# Non-transient API failures: abort the whole run rather than churn through
+# every remaining game with the same error.
+FATAL_ERROR_MARKERS = (
+    "credit balance",
+    "authentication",
+    "invalid x-api-key",
+    "could not resolve authentication",
+    "permission",
+)
+
 
 def slugify(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
@@ -150,6 +160,7 @@ def main():
 
     counts: dict[str, int] = {}
     errors = 0
+    aborted = False
     for i, (name, slug) in enumerate(candidates, 1):
         log(f"[{i}/{len(candidates)}] {slug}")
         try:
@@ -165,11 +176,21 @@ def main():
         except Exception as e:  # one bad game must not kill the run
             errors += 1
             log(f"    -> ERROR: {e}")
+            # A credit/auth failure is not transient: every remaining game
+            # would fail identically and (worse) be miscounted. Abort cleanly
+            # so the run is resumable once the account is funded/rotated.
+            if any(s in str(e).lower() for s in FATAL_ERROR_MARKERS):
+                aborted = True
+                log(f"    FATAL: {e}\n    Aborting at game {i}/{len(candidates)}; "
+                    f"{len(candidates) - i} games left unprocessed. Re-run after "
+                    "restoring API credit — it resumes from here.")
+                break
         if args.checkpoint_every and i % args.checkpoint_every == 0:
             git_checkpoint(i, args.branch, args.push, log)
 
     git_checkpoint(len(candidates), args.branch, args.push, log)
-    log(f"=== done: processed {len(candidates)}, verdicts {counts}, errors {errors} ===")
+    status = "ABORTED" if aborted else "done"
+    log(f"=== {status}: processed {len(candidates)}, verdicts {counts}, errors {errors} ===")
     if log_fh:
         log_fh.close()
 
