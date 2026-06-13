@@ -82,6 +82,23 @@ When the Godfather believes they have found a Thief, they order: "Empty your poc
 - If the player has NOT stolen diamonds (they have a character token): the Godfather made a mistake! They must give a Joker to the unjustly accused player. If the Godfather has no Jokers left during an unjust accusation, the Godfather is eliminated and the investigation ends immediately.
 - If the accused player is an FBI or CIA Agent, the investigation ends and the Agent wins.
 
+## Actions
+
+The discrete actions players take, by phase:
+
+**Diamond Theft phase** (each player, in order, upon receiving the box):
+
+- **Examine** — open the box and memorize the number of diamonds and the remaining character tokens. This information is critical to testifying (or lying) accurately later.
+- **Take** (mandatory, done discreetly) — either as many diamonds as you wish (minimum 1) **OR** exactly 1 character token of your choice, hidden in your pocket/hand/bag. Taking nothing is forbidden, except for a Street Urchin.
+- **Pass** — once your take is hidden, pass the box to the player on your left.
+- **Dismiss a token** (first player only) — instead of taking normally, the first player may secretly drop one character token into the felt bag, keep it hidden until game end, then take normally.
+
+**Investigation phase:**
+
+- **Interrogate** (Godfather only) — question players in any order to recover the diamonds (how many diamonds were in the box, which tokens remained, what they took). Questioned players may tell the truth, lie, or stay quiet.
+- **Accuse — "Empty your pockets!"** (Godfather only) — the only valid way to force a player to reveal their take. A correct accusation eliminates a Thief (who can no longer talk) and returns the diamonds; a wrong accusation costs the Godfather a Joker, or eliminates the Godfather if none remain.
+- **Shout "OW!"** (Cleaner only, optional character) — before an accused player reveals their take, the Cleaner may intervene: if the accused is an Agent the Cleaner wins alone, otherwise the Cleaner and the accused player are both eliminated.
+
 ## Scoring / Victory Conditions
 
 | Condition | Winner |
