@@ -33,6 +33,7 @@ STAGE_ORDER = {
     "extract": "downloaded",
     "summarize": "extracted",
     "quality_check": "summarized",
+    "verify": "validated",
 }
 
 CLAIMED_STATUS = {
@@ -40,6 +41,7 @@ CLAIMED_STATUS = {
     "extract": "extracting",
     "summarize": "summarizing",
     "quality_check": "quality_checking",
+    "verify": "verifying",
 }
 CLAIM_TIMEOUT_SECONDS = 60 * 60
 
@@ -55,6 +57,8 @@ ALL_STATUSES = [
     "summarized",
     "summarizing",
     "validated",
+    "verifying",
+    "verified",
     "flagged",
     "quality_checking",
     "pending",
@@ -192,6 +196,40 @@ def run_quality_check(registry_path: str, limit: int = 0) -> dict:
     return stats
 
 
+def run_verify(registry_path: str, limit: int = 0) -> dict:
+    """Run the semantic verification stage on games with status 'validated'.
+
+    Fact-checks each summary against its extracted source via the Claude API,
+    repairing fixable findings. PASS/MINOR -> 'verified'; MAJOR -> 'flagged'.
+    """
+    from scripts.verify_summary import verify_game
+
+    print("=== Verify stage ===")
+    games = claim_games_by_status(
+        registry_path,
+        STAGE_ORDER["verify"],
+        CLAIMED_STATUS["verify"],
+        limit=limit,
+        reclaim_statuses=[CLAIMED_STATUS["verify"]],
+        reclaim_timeout_seconds=CLAIM_TIMEOUT_SECONDS,
+    )
+    stats = {"verified": 0, "flagged_or_failed": 0}
+
+    for game in games:
+        success = verify_game(
+            game,
+            registry_path,
+            restore_status=STAGE_ORDER["verify"],
+        )
+        if success:
+            stats["verified"] += 1
+        else:
+            stats["flagged_or_failed"] += 1
+
+    print(f"Verify done: {stats}")
+    return stats
+
+
 def show_status(registry_path: str) -> None:
     """Print a summary of game counts by status."""
     games = load_registry(registry_path)
@@ -215,7 +253,7 @@ def main():
     )
     parser.add_argument(
         "--stage",
-        choices=["download", "extract", "summarize", "quality_check", "all"],
+        choices=["download", "extract", "summarize", "quality_check", "verify", "all"],
         help="Pipeline stage to run",
     )
     parser.add_argument(
@@ -248,6 +286,7 @@ def main():
         run_extract(args.registry, limit=args.limit)
         run_summarize(args.registry, limit=args.limit)
         run_quality_check(args.registry, limit=args.limit)
+        run_verify(args.registry, limit=args.limit)
     elif args.stage == "download":
         run_download(args.registry, limit=args.limit)
     elif args.stage == "extract":
@@ -256,6 +295,8 @@ def main():
         run_summarize(args.registry, limit=args.limit)
     elif args.stage == "quality_check":
         run_quality_check(args.registry, limit=args.limit)
+    elif args.stage == "verify":
+        run_verify(args.registry, limit=args.limit)
 
 
 if __name__ == "__main__":
