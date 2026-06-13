@@ -7,11 +7,11 @@ designer: "Beau Beckett, Jeph Stahl"
 source_pdf: "1812-the-invasion-of-canada-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Battle initiative wrong (homeland side rolls first, not defender) and falsely claims Native Americans have no Truce Card (British side needs 3, not 2). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1812-the-invasion-of-canada-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201812%3A%20The%20Invasion%20of%20Canada&game=1812-the-invasion-of-canada)
 <!-- verification:end -->
@@ -78,19 +78,19 @@ Play exactly 1 Movement Card. Form armies and move them:
 - **Special Cards:** Up to 2 may be played alongside a Movement Card for additional effects.
 
 ### Battle
-Battles occur where both sides have units after movement. Defender rolls first.
+Battles occur where both sides have units after movement. The side in whose Homeland Area the battle takes place has the initiative and rolls first — in red (British) areas the British players roll first, in blue (American) areas the American players roll first, regardless of who is the attacker or defender.
 - Roll 1 die per unit up to faction's max dice.
 - **Hit:** Opponent removes 1 unit to Force Pool.
 - **Flee:** Your unit goes to Fled Units Space.
 - **Blank (Command Decision):** Move 1 unit to adjacent area (not across water except at crossings).
-- Alternate Defender/Attacker rolls until one side remains or retreats.
+- Alternate rolls until one side remains or retreats.
 
 ### Truce Cards
-Each faction has 1 Truce Card in their deck. It's played as a Movement Card during the Movement Phase. If it's your only Movement Card, you must play it.
+Each faction has 1 Truce Card in their deck. It is played as a Movement Card during the Movement Phase.
 
 ## Scoring / Victory Conditions
 
-**Game End:** Starting at Round 3, check at the end of each round whether either side has played all of its Truce Cards (British side: both British Regulars and Canadian Militia Truce Cards; American side: both American Regulars and American Militia Truce Cards). Native Americans do not have a Truce Card.
+**Game End:** Starting at Round 3, check at the end of each round whether either side has played all of its Truce Cards. The British side has 3 Truce Cards (British Regulars, Canadian Militia, and Native Americans); the American side has 2 Truce Cards (American Regulars and American Militia). The game ends when all 3 British Truce Cards or both 2 American Truce Cards have been played.
 
 **Winner:** The side controlling the most enemy Objectives (starred cities/forts in the opponent's homeland) wins.
 
@@ -119,6 +119,6 @@ Each faction has 1 Truce Card in their deck. It's played as a Movement Card duri
 | American Regulars | 2 |
 | American Militia | 3 |
 
-**Game End Check:** From Round 3 onward — has either side played both Truce Cards?
+**Game End Check:** From Round 3 onward — has either side played all of its Truce Cards? (British: 3 cards; American: 2 cards)
 
 **Victory:** Most enemy Objectives controlled when Truce triggers.

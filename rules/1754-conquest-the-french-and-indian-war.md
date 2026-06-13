@@ -7,11 +7,11 @@ designer: "Beau Beckett, Jeph Stahl"
 source_pdf: "1754-conquest-the-french-and-indian-war-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory scoring misstated (counts own home Victory Areas; source counts only Control Markers on opponent/Native areas), muster/fort marker counts misread, boat movement rule replaced by reference to other games. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1754-conquest-the-french-and-indian-war-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201754%3A%20Conquest%20--%20The%20French%20and%20Indian%20War&game=1754-conquest-the-french-and-indian-war)
 <!-- verification:end -->
@@ -19,7 +19,7 @@ verification_date: "2026-06-12"
 
 ## Overview
 
-1754: Conquest is a team-based area control wargame set during the French and Indian War (1754-1763). Players control factions on the French side (French Canadiens and French Regulars) or the British side (British Colonials and British Regulars), each vying for control of forts and towns across northeastern North America. Native Americans are independent but can be allied with either side. The game uses the Birth of America system with random turn order, custom battle dice, and faction-specific card decks. The side controlling the most Victory Areas when a truce is triggered wins.
+1754: Conquest is a team-based area control wargame set during the French and Indian War (1754-1763). Players control factions on the French side (French Canadiens and French Regulars) or the British side (British Colonials and British Regulars), each vying for control of forts and towns across northeastern North America. Native Americans are independent but can be allied with either side. The game uses the Birth of America system with random turn order, custom battle dice, and faction-specific card decks. The side with the most Control Markers on opponent or Native Home Areas when a truce is triggered wins.
 
 ## Components
 
@@ -30,8 +30,8 @@ verification_date: "2026-06-12"
 - 12 Purple Faction Cards + 35 Purple French Regular Unit Cubes + 2 Purple Battle Dice
 - 40 Green Native American Unit Cubes + 2 Green Native Battle Dice
 - 5 Turn Cubes (including 1 green Native cube) + Draw Bag
-- 5 Muster Markers (2 British Colonial, 2 French Canadien, 1 additional)
-- 4 Fort Markers (per side, 8 total)
+- 4 Muster Markers (2 grey British Colonial, 2 yellow French Canadien)
+- 3 Fort Markers per side (6 total)
 - Control Markers (double-sided British/French)
 - 1 Round Pawn
 
@@ -74,23 +74,23 @@ At the end of Round 3 and each subsequent round, check if either side has played
 
 ### Movement Phase
 Play 1 Movement Card to form and move armies.
-- **Form Armies:** 1 per Army Icon. Each army drawn from a single area, must include at least 1 Active Faction unit.
-- **Move Armies:** Up to the Distance Icon value. Armies stop upon entering enemy-occupied areas.
-- Water Movement and special movement cards work similarly to other Birth of America games.
+- **Form Armies:** Each army is drawn from a single area and must include at least 1 Active Faction unit.
+- **Move Armies:** Up to the number of areas shown on the Movement Card. Armies stop upon entering enemy-occupied areas or areas with independent Native units.
+- **Open Water Movement:** Only French and British Regulars Armies may move through Open Water from one Harbor Area to another. Open Water counts as one Area, so moving between two Harbor Areas costs 2 moves total (one into Open Water, one into the destination Harbor). An Army may not stop in Open Water. British Colonials, French Canadiens, and allied Native units may travel as part of a Regulars Army crossing Open Water.
 
 ### Battle Phase
 Battles occur where both sides have units after movement. Defender rolls first. Custom dice show Hit, Flee, or Command (blank) results. Alternate rolls until one side remains.
 
 ### Draw Cards Phase
-Draw until you have 3 cards in hand.
+Discard any Movement and Event Cards played this turn, then replenish hand back up to 3 cards. If the Draw Deck runs out, draw whatever remains. If after drawing the hand contains only Event Cards (no Movement Card), the player must show those cards, reshuffle them into the Draw Deck, and draw 3 new cards.
 
 ## Scoring / Victory Conditions
 
-**Victory Areas:** Areas with Victory Symbols (forts and key towns).
+**Victory Areas:** Areas with Victory Symbols on opponent or Native Home Areas.
 
 **Game End Trigger:** Both factions on one side have played their Truce Cards (checked from Round 3 onward).
 
-**Winner:** The side controlling the most Victory Areas wins. Control requires having your side's units present and no enemy units in the area.
+**Winner:** The side with the most Control Markers on the map wins. Control Markers are placed only on opponent or Native Home Areas with Victory Symbols when that side's units occupy them — a side never places Control Markers on its own Home Areas, and its own Home Areas do not count toward victory scoring. If tied, the game is a draw.
 
 ## Special Rules & Edge Cases
 
