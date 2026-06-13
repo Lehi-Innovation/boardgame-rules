@@ -7,11 +7,11 @@ designer: "Caezar Al Jassar, Kuly"
 source_pdf: "arborea-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented villager-type abilities (elders contradicted), wrong tiebreaker, missing sage/gift system, missing step-4 track-advance rule, water cost/wild rule and captivity penalty omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/arborea-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arborea&game=arborea)
 <!-- verification:end -->
@@ -52,9 +52,9 @@ Turns are taken clockwise. Each turn has 4 steps:
 1. **Pilgrimage:** You MUST either send a villager to a track OR advance a track 1 step. You may spend 3 spirit to do one of these a second time.
 2. **Activate Villagers:** Activate up to 3 villagers waiting at trail beginnings. First 2 are free; 3rd costs 2 spirit.
 3. **Complete Ecosystem Task:** You may complete 1 current ecosystem task if you have the required biomes.
-4. **Update:** Update biome reserve and advance pilgrimage tracks.
+4. **Update:** Update biome reserve and advance pilgrimage tracks. For each of your elder or young villagers on a pilgrimage track, advance that track 1 step. For each of your veteran villagers on a pilgrimage track, advance that track 2 steps.
 
-The game ends when the sun counter reaches the last time track spot, after which all players get 2 more turns.
+The triggering player takes 2 sun counters when the sun counter reaches the last time track spot. At the end of their next turn they discard one counter, and at the end of the turn after that they discard the last counter, at which point endgame scoring begins.
 
 ## Actions
 
@@ -63,31 +63,37 @@ The game ends when the sun counter reaches the last time track spot, after which
 **Advancing a Track:** Push the track tiles 1 step toward center. All players may take villagers off the track to place them at trail beginnings. After 4 total steps, the inner tile swaps to the start.
 
 **Activating a Villager:** Follow the trail from beginning to end, collecting all rewards encountered:
-- **Biome rewards:** Increase corresponding biome on the reserve (max 8).
-- **Ecosystem rewards:** Take an ecosystem card as a current task (max 3 tasks).
-- **Train villager rewards:** Move young/veteran villagers from reserves to supply.
-- **Creature rewards:** Move creatures from outer regions to borderlands, or invite creatures from borderlands to your ecosystem.
+- **Biome rewards (main reward):** Increase the **top half** of the corresponding biome tile on the reserve (max 8). The bottom half catches up during step 4, earning RP along the way.
+- **Ecosystem rewards (main reward):** Take an ecosystem card as a current task (max 3 tasks).
+- **Train villager rewards (main reward):** Move young/veteran villagers from reserves to supply.
+- **Invite creatures (main reward):** Take a creature from the borderlands and place it on your invited creatures space, gaining spirit as shown on that creature's row.
+- **Attract a creature (secondary reward):** Advance the sun counter one step and move a creature from the outer regions to the topmost empty spot on its borderlands column, gaining the printed reward (or the borderland tile reward if it is the first creature of that type attracted).
+- **Water trail cost:** Before activating a villager on a water trail, you must spend between 2 and 6 spirit depending on the trail. You cannot activate a villager on a water trail if you cannot pay the required spirit cost.
 
 **Villager Types:**
-- **Young villagers:** Standard ability.
-- **Veteran villagers:** Gain an extra reward when activated.
-- **Elder villagers:** Gain powerful extra rewards; represent experienced villagers.
+- **Elder villagers:** Return to your supply after activation and can be reused. Cannot use the bottommost sage reward.
+- **Young villagers:** Return to their reserve after activation and must be trained again before reuse.
+- **Veteran villagers:** Return to their reserve after activation and must be trained again before reuse. Advance pilgrimage tracks 2 steps (instead of 1) during step 4. Can use the bottommost sage reward.
 
-**Completing Ecosystem Tasks:** Spend the required combination of biomes (reducing the reserve) to complete a task card. The card joins your ecosystem grid, and you gain any listed rewards.
+**Completing Ecosystem Tasks:** Spend the required combination of biomes (reducing the top half of the reserve tiles) to complete a task card. The card joins your ecosystem grid, and you gain any listed rewards. Water is a wild biome that can substitute any other biome type, but only if that other biome's tile has already reached the '0' spot on the biome reserve.
 
-**Creatures:** Placed on your ecosystem grid. At game end, creatures score RP based on surrounding biome types and habitats.
+**Creatures:** Placed on your ecosystem grid at intersections between 4 habitats. At game end, creatures score RP based on surrounding biome types and adjacent habitats.
 
 ## Scoring / Victory Conditions
 
-**End-Game Scoring:**
-- RP from completed ecosystem cards
-- RP from creatures placed in your ecosystem (based on surrounding habitats)
-- RP from season tracks (positions reached)
-- RP from spirit track position
-- RP from gift cubes spent during the game
-- Bonus RP from season tiles and other objectives
+**End-Game Scoring (in order):**
+1. For each creature still in captivity, lose 3 spirit.
+2. RP from your position on the spirit track (may be negative).
+3. RP from season tiles (each tile checks its condition against your personal achievements, multiplied by your position on that season track, maximum 8 RP per tile).
+4. RP from creatures placed in your ecosystem (based on surrounding habitats and creature-specific rules).
 
-The player with the most RP wins. Tiebreaker: player furthest on the spirit track.
+Gifts affect scoring indirectly: the Wiseowl creature scores 1 RP per every 2 gifts given, where a gift on the 2nd spot counts as 2 gifts and a gift on the 3rd spot counts as 3 gifts for this scoring. One season tile also scores 1 RP per gift given to sages (with gifts at spots 2 or 3 counting as 2 or 3 gifts respectively).
+
+The player with the most RP wins. Tiebreakers in order:
+1. Most creatures on ecosystem.
+2. Most spirit.
+3. Most advancement on season tracks.
+4. Tied players share victory.
 
 ## Special Rules & Edge Cases
 
@@ -96,7 +102,8 @@ The player with the most RP wins. Tiebreaker: player furthest on the spirit trac
 - You cannot discard ecosystem tasks once taken; choose carefully.
 - When a villager reaches the last trails of a track, they must step off.
 - Players may take villagers off tracks simultaneously, but can request turn-order resolution.
-- Creatures score based on the specific habitats (biome types) adjacent to their spot in your ecosystem.
+- Creatures in captivity at game end each cost you 3 spirit. When you invite at least one new creature in a turn, you may also place one captivity creature onto your ecosystem.
+- Creatures score based on the specific habitats adjacent to their spot in your ecosystem.
 
 ## Player Reference
 
@@ -105,7 +112,7 @@ The player with the most RP wins. Tiebreaker: player furthest on the spirit trac
 | 1. Pilgrimage | Send villager OR advance track | Free (2nd: 3 spirit) |
 | 2. Activate | Activate up to 3 villagers | Free/Free/2 spirit |
 | 3. Complete | Complete 1 ecosystem task | Required biomes |
-| 4. Update | Advance tracks, update reserve | Automatic |
+| 4. Update | Update reserve; advance tracks 1 step per elder/young, 2 steps per veteran | Automatic |
 
 | Biome Types | Icon |
 |------------|------|
