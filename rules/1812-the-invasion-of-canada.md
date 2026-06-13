@@ -7,7 +7,15 @@ designer: "Beau Beckett, Jeph Stahl"
 source_pdf: "1812-the-invasion-of-canada-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Battle initiative wrong (homeland side rolls first, not defender) and falsely claims Native Americans have no Truce Card (British side needs 3, not 2). Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1812-the-invasion-of-canada-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201812%3A%20The%20Invasion%20of%20Canada&game=1812-the-invasion-of-canada)
+<!-- verification:end -->
+
 
 ## Overview
 

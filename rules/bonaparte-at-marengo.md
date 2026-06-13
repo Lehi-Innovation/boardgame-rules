@@ -7,7 +7,15 @@ designer: "Bowen Simmons"
 source_pdf: "bonaparte-at-marengo-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented maneuver-attack strength comparison; assault leading-piece/artillery-defense/pursuit system omitted; victory misstated; retreat losses wrong. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bonaparte-at-marengo-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bonaparte%20at%20Marengo&game=bonaparte-at-marengo)
+<!-- verification:end -->
+
 
 ## Overview
 

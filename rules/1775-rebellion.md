@@ -7,7 +7,15 @@ designer: "Beau Beckett, Jeph Stahl"
 source_pdf: "1775-rebellion-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented discard-reshuffle rule contradicts "discarded cards are never reused", Event Card phases misstated, allied colony control wrongly extended to Native Americans. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1775-rebellion-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201775%3A%20Rebellion&game=1775-rebellion)
+<!-- verification:end -->
+
 
 ## Overview
 

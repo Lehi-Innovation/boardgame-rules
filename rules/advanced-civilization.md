@@ -7,9 +7,17 @@ designer: "Francis Tresham"
 source_pdf: "advanced-civilization-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
 
 # Advanced Civilization
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Civ cards wrong (3 types vs 5 groups), 3 of 5 victory-point sources missing, 3 of 13 phases omitted, conflict trigger contradicts co-existence rule. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/advanced-civilization-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Civilization&game=advanced-civilization)
+<!-- verification:end -->
 
 ## Overview
 

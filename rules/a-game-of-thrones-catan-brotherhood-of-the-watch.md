@@ -7,9 +7,17 @@ designer: "Klaus Teuber"
 source_pdf: "a-game-of-thrones-catan-brotherhood-of-the-watch-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-13"
 ---
 
 # A Game of Thrones: Catan - Brotherhood of the Watch
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Base-Catan contamination: 4:1 trade vs variant 3:1, desert hex vs Ice Fields, 2-VP Longest Road vs 1, wrong win timing; wildlings/guards/heroes omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-game-of-thrones-catan-brotherhood-of-the-watch-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20Catan%20-%20Brotherhood%20of%20the%20Watch&game=a-game-of-thrones-catan-brotherhood-of-the-watch)
+<!-- verification:end -->
 
 ## Overview
 

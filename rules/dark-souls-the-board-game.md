@@ -7,7 +7,15 @@ designer: "David Carl, Alex Hall, Mat Hart, Rich Loxam"
 source_pdf: "dark-souls-the-board-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Activation order inverted (enemies act before/between each character), invented chest cost, Aggro token rule wrong. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dark-souls-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dark%20Souls%20%E2%80%93%20The%20Board%20Game&game=dark-souls-the-board-game)
+<!-- verification:end -->
+
 
 ## Overview
 

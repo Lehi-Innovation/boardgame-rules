@@ -7,7 +7,15 @@ designer: "Frédéric Henry, Pascal Bernard, Antoine Bauza"
 source_pdf: "conan-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Movement cost contradicted (claims 1 gem per area; base movement is free); the aggressive/cautious stance phase with gem recovery - the core resource loop - entirely missing. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/conan-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conan&game=conan)
+<!-- verification:end -->
+
 
 ## Overview
 

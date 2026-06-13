@@ -8,9 +8,17 @@ source_pdf: "pax-pamir-second-edition-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "Second Printing (2020)"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Pax Pamir: Second Edition
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pax-pamir-second-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pax%20Pamir%3A%20Second%20Edition&game=pax-pamir-second-edition)
+<!-- verification:end -->
 
 ## Overview
 

@@ -6,9 +6,17 @@ player_count: "2-5"
 play_time: "45 min"
 designer: "Wolfgang Warsch"
 summarized_date: "2026-03-16"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
 
 # The Quacks of Quedlinburg: The Herb Witches
+
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Quacks%20of%20Quedlinburg%3A%20The%20Herb%20Witches&game=quacks-of-quedlinburg-the-herb-witches)
+<!-- verification:end -->
 
 ## Overview
 

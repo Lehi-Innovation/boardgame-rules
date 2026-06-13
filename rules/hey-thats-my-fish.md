@@ -8,9 +8,17 @@ source_pdf: "hey-thats-my-fish-rules.pdf"
 extracted_date: "2026-03-16"
 summarized_date: "2026-03-16"
 rulebook_version: "Plan B Games 2023"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Hey, That's My Fish!
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/hey-thats-my-fish-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hey%2C%20That%27s%20My%20Fish%21&game=hey-thats-my-fish)
+<!-- verification:end -->
 
 ## Overview
 

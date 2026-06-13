@@ -7,9 +7,17 @@ designer: "Glenn Drover"
 source_pdf: "age-of-empires-iii-the-age-of-discovery-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
 
 # Age of Empires III: The Age of Discovery
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong age boundaries (4-5/6-8 vs 4-6/7-8), invented specialist abilities and VP sources, missing end-of-age colony scoring (6/2 VP), mangled event boxes. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/age-of-empires-iii-the-age-of-discovery-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Age%20of%20Empires%20III%3A%20The%20Age%20of%20Discovery&game=age-of-empires-iii-the-age-of-discovery)
+<!-- verification:end -->
 
 ## Overview
 

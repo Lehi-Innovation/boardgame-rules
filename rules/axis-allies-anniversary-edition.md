@@ -7,7 +7,15 @@ designer: "Larry Harris Jr."
 source_pdf: "axis-allies-anniversary-edition-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong costs (carrier 16 vs 14, AA gun 5 vs 6), SBR damage cap 1x IPC vs source's 2x, invented "max 3 aircraft" AA gun limit. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/axis-allies-anniversary-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%20Anniversary%20Edition&game=axis-allies-anniversary-edition)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Frank Chadwick"
 source_pdf: "a-house-divided-war-between-the-states-1861-65-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn order reversed (Union first), segment sequence wrong, "pass through captures" contradicted, victory conditions largely invented, core March die-roll system omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-house-divided-war-between-the-states-1861-65-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20House%20Divided%3A%20War%20Between%20the%20States%201861-65&game=a-house-divided-war-between-the-states-1861-65)
+<!-- verification:end -->
+
 
 ## Overview
 

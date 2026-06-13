@@ -7,7 +7,15 @@ designer: "Charles S. Roberts"
 source_pdf: "bismarck-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong designer (Jack Greene Jr., not Charles S. Roberts), invented turn structure, victory-point system replaced with wrong win conditions, shadowing and convoy systems omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bismarck-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bismarck&game=bismarck)
+<!-- verification:end -->
+
 
 ## Overview
 

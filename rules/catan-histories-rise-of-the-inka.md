@@ -7,7 +7,15 @@ designer: Klaus Teuber, Benjamin Teuber
 source_pdf: catan-histories-rise-of-the-inka-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Decline rules inverted (declining settlements DO produce, CAN be built over, roads may NOT pass them); 4/4/3 apex thresholds and all build costs omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/catan-histories-rise-of-the-inka-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Catan%20Histories%3A%20Rise%20of%20the%20Inkas&game=catan-histories-rise-of-the-inka)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Jason Matthews, Ted Torgerson"
 source_pdf: "1989-dawn-of-freedom-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented Headline Phase and Realignment ops, wrong Support Check mechanics, 6 vs 7 action rounds, held Scoring card = lose game not VP penalty, invented Power Struggle trigger, missing Communist Power scoring. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1989-dawn-of-freedom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201989%3A%20Dawn%20of%20Freedom&game=1989-dawn-of-freedom)
+<!-- verification:end -->
+
 
 ## Overview
 

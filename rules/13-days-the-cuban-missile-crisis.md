@@ -7,7 +7,15 @@ designer: "Daniel Skjold Pedersen, Asger Sams Granerud"
 source_pdf: "13-days-the-cuban-missile-crisis-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "verified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/13-days-the-cuban-missile-crisis-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2013%20Days%3A%20The%20Cuban%20Missile%20Crisis&game=13-days-the-cuban-missile-crisis)
+<!-- verification:end -->
+
 
 ## Overview
 

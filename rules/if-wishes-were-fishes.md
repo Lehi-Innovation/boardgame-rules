@@ -7,7 +7,15 @@ designer: "Peter Sarrett, Michael Adams"
 source_pdf: "if-wishes-were-fishes-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/if-wishes-were-fishes-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20If%20Wishes%20Were%20Fishes%21&game=if-wishes-were-fishes)
+<!-- verification:end -->
+
 
 ## Overview
 

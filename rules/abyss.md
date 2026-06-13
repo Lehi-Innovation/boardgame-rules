@@ -7,9 +7,17 @@ designer: "Bruno Cathala, Charles Chevallier"
 source_pdf: "abyss-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "minor_issues"
+verification_date: "2026-06-12"
 ---
 
 # Abyss
+
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/abyss-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Abyss&game=abyss)
+<!-- verification:end -->
 
 ## Overview
 
