@@ -7,14 +7,14 @@ designer: "Charles S. Roberts"
 source_pdf: "afrika-korps-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 
 # Afrika Korps
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented supply mechanic (contradicts 14.7 and supply-unit system) and wrong victory conditions (invented locations; home bases, elimination, Oct 1942 limit missing). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/afrika-korps-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Afrika%20Korps&game=afrika-korps)
 <!-- verification:end -->
@@ -33,7 +33,7 @@ A classic two-player wargame simulating the Western Desert Campaign in North Afr
 
 ## Setup
 
-Units enter the board according to the historical Order of Battle schedule. The Axis player begins with forces entering from the German Home Base (W3), and the Allied player deploys from the Allied Home Base (J62). Units arrive on specific turns as listed in the scenario setup.
+The game begins with units already placed on the board according to the March 1941 Situation Chart. Additional units enter play as reinforcements per the Order of Appearance tables printed on the mapboard. The German Home Base is at W3 and the Allied Home Base is at J62.
 
 ## Turn Structure
 
@@ -47,28 +47,31 @@ Each game turn represents half a month. The Axis player moves first, then the Al
 ### Movement
 
 - Units move through hexes, spending movement points per hex entered.
-- **Coast Road**: Units on the coast road move at enhanced speed.
-- **Escarpment**: Restricts movement; units must use passes.
-- **Qattara Depression**: Impassable to most units.
-- **Supply**: Units must trace a supply line back to their home base. Unsupplied units have halved combat values and cannot advance after combat.
+- **Coast Road**: Units on the coast road may move up to 10 additional hexes per turn above and beyond their normal movement factor.
+- **Escarpment**: A unit may enter an escarpment hex at the normal cost of one movement factor, but may move no further during that movement phase. Any unit may enter an escarpment hex; there is no requirement to use passes.
+- **Qattara Depression**: Full Qattara Depression hexes are impassable; partial Qattara hexes are treated as clear terrain.
+- **Supply**: Units must be within five hexes of a friendly supply unit (a counter on the board) to attack at odds of 1-2 or better. Attacks at odds of 1-3 or worse do not require supply. Supply is never required to defend, and a unit's defense factor is never reduced due to lack of supply.
 
 ### Combat
 
-- Combat is mandatory between adjacent opposing units.
+- A unit automatically causes combat when it moves into an enemy Zone of Control during movement. However, units adjacent to fortress hexes are not required to attack, and units inside a fortress are not required to attack adjacent enemy units either.
 - Attacker totals attack factors vs. defender's defense factors to determine odds ratio.
 - Roll on the CRT to determine results (exchanges, retreats, eliminations).
-- **Fortress defense**: Tobruk and Bengasi provide defensive bonuses.
+- **Fortress defense**: Tobruk and Bengasi provide doubled defense factors to units inside them.
 - Units may not retreat into enemy-occupied hexes or impassable terrain.
 
 ## Scoring / Victory Conditions
 
-The Axis player wins by capturing both fortress cities (Tobruk and Bengasi) and advancing to El Alamein, or by achieving specific territorial objectives. The Allied player wins by preventing these objectives or by driving the Axis back to El Agheila.
+The **Axis player wins** by eliminating all Allied combat units (supply units do not count) currently on the board, or by controlling both fortresses (Tobruk and Bengasi) and both home bases simultaneously for two consecutive Axis player turns, by his last October 1942 turn.
+
+The **Allied player wins** by eliminating all Axis combat units (supply units and the Rommel unit do not count) currently on the board, or by controlling both fortresses and both home bases simultaneously for two consecutive Allied player turns, or by avoiding the Axis victory conditions through the last October 1942 turn.
 
 ## Special Rules & Edge Cases
 
-- **Supply lines**: Critical mechanic. Units cut off from supply are severely weakened.
-- **Replacement units**: Both sides receive reinforcements on scheduled turns.
-- **Fortress rules**: Tobruk and Bengasi have special defensive properties.
+- **Supply lines**: Traced to friendly supply unit counters on the board (not to home bases). Units unable to trace a line free of enemy ZOC and impassable terrain to a friendly supply unit are isolated; a unit isolated at both the beginning and end of two consecutive friendly player turns is automatically eliminated.
+- **Reinforcements**: New units that arrive on scheduled turns per the Order of Appearance tables on the mapboard.
+- **Replacements**: A separate system starting in March 1942; replacement units are rebuilt from already-eliminated units, and are distinct from reinforcements.
+- **Fortress rules**: Tobruk and Bengasi have special defensive properties, including doubled defense factors and special rules for sea movement.
 - Unit sizes range from Battalion to Army Group, with varying combat and movement capabilities.
 - The Qattara Depression creates a natural barrier protecting the Allied southern flank.
 - Nationalities include: Australian, New Zealand, Indian, South African, Italian, German, British.
