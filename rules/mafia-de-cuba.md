@@ -84,13 +84,20 @@ When the Godfather believes they have found a Thief, they order: "Empty your poc
 
 ## Actions
 
-The concrete choices a player makes when the cigar box reaches them (Diamond Theft), plus the Godfather's one investigation action:
+The discrete actions players take, by phase:
 
-- **Take diamonds** — take as many diamonds as you wish (minimum 1) and pocket them, becoming a Thief.
-- **Take a character token** — take exactly 1 character token (Loyal Henchman, Agent, Driver, or Cleaner) instead of diamonds.
-- **First player only — stash a token** — before taking your own, secretly drop one character token into the felt bag and hide it until game end.
-- **Become a Street Urchin** — forced if you receive an empty box; optional for the last player. Pretend to take something and pass the box along.
-- **Godfather — "Empty your pockets!"** — during Investigation, the only valid way to force a suspected player to reveal their take. A correct call eliminates the Thief and recovers the diamonds; a wrong call costs the Godfather a Joker (or the game, if no Jokers remain).
+**Diamond Theft phase** (each player, in order, upon receiving the box):
+
+- **Examine** — open the box and memorize the number of diamonds and the remaining character tokens. This information is critical to testifying (or lying) accurately later.
+- **Take** (mandatory, done discreetly) — either as many diamonds as you wish (minimum 1) **OR** exactly 1 character token of your choice, hidden in your pocket/hand/bag. Taking nothing is forbidden, except for a Street Urchin.
+- **Pass** — once your take is hidden, pass the box to the player on your left.
+- **Dismiss a token** (first player only) — instead of taking normally, the first player may secretly drop one character token into the felt bag, keep it hidden until game end, then take normally.
+
+**Investigation phase:**
+
+- **Interrogate** (Godfather only) — question players in any order to recover the diamonds (how many diamonds were in the box, which tokens remained, what they took). Questioned players may tell the truth, lie, or stay quiet.
+- **Accuse — "Empty your pockets!"** (Godfather only) — the only valid way to force a player to reveal their take. A correct accusation eliminates a Thief (who can no longer talk) and returns the diamonds; a wrong accusation costs the Godfather a Joker, or eliminates the Godfather if none remain.
+- **Shout "OW!"** (Cleaner only, optional character) — before an accused player reveals their take, the Cleaner may intervene: if the accused is an Agent the Cleaner wins alone, otherwise the Cleaner and the accused player are both eliminated.
 
 ## Scoring / Victory Conditions
 
