@@ -7,7 +7,15 @@ designer: "Martin Wallace"
 source_pdf: "a-study-in-emerald-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Omits VP-target game end (28/24/22/20); wrong sanity-loss end and team-penalty rules; invents assassination-advances-track and connected-cities movement restrictions. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-study-in-emerald-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Study%20in%20Emerald&game=a-study-in-emerald)
+<!-- verification:end -->
+
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "Klaus Teuber"
 source_pdf: "barbarossa-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Sculptor scoring table misaligned: source pairs 5-6=+1, 7-8=+2, 12-13=-2 but summary gives 5-6=0, 7-8=+1 and drops the 12-13 penalty. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/barbarossa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Barbarossa&game=barbarossa)
+<!-- verification:end -->
+
 
 ## Overview
 

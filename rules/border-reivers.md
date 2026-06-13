@@ -7,7 +7,15 @@ designer: "Ed Beach"
 source_pdf: "border-reivers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented Feud loot mechanic, contradicted Turn 1 turn order and 6th-round rule, wrong event-draw count and tiebreakers, end-game scoring omits Horses, Battle combat type and Default Actions missing. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/border-reivers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Border%20Reivers&game=border-reivers)
+<!-- verification:end -->
+
 
 ## Overview
 

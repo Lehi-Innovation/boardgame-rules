@@ -7,7 +7,15 @@ designer: "Ignacy Trzewiczek, Przemysław Rymer, Jakub Łapot"
 source_pdf: "detective-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Ability frequency wrong (once per case vs once per day), Write a Report mechanic explicitly denied, mandatory Signature/matched-evidence system and its scoring omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/detective-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Detective&game=detective)
+<!-- verification:end -->
+
 
 ## Overview
 

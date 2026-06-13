@@ -6,7 +6,15 @@ play_time: "30-60 min"
 designer: "Uncredited"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Sid%20Meier%27s%20Civilization%3A%20The%20Card%20Game&game=civilization-the-card-game)
+<!-- verification:end -->
+
 
 ## Overview
 

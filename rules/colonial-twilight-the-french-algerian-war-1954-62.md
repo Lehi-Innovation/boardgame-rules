@@ -7,7 +7,15 @@ designer: "Brian Train"
 source_pdf: "colonial-twilight-the-french-algerian-war-1954-62-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented "Search" special activity, Troop Lift omitted, Subvert/Garrison/Terror effects wrong, victory thresholds 35/30 and first-Propaganda exception omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/colonial-twilight-the-french-algerian-war-1954-62-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colonial%20Twilight%3A%20The%20French-Algerian%20War%2C%201954-62&game=colonial-twilight-the-french-algerian-war-1954-62)
+<!-- verification:end -->
+
 
 ## Overview
 

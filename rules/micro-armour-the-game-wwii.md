@@ -7,9 +7,17 @@ designer: "GHQ"
 source_pdf: ""
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
 
 # Micro Armour: The Game - WWII
+
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Micro%20Armour%3A%20The%20Game%20-%20WWII&game=micro-armour-the-game-wwii)
+<!-- verification:end -->
 
 ## Overview
 

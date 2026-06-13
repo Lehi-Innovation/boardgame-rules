@@ -7,7 +7,15 @@ designer: "Florian Fay"
 source_pdf: "kitty-bitty-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kitty-bitty-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kitty%20Bitty&game=kitty-bitty)
+<!-- verification:end -->
+
 
 ## Overview
 

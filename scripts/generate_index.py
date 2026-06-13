@@ -110,6 +110,15 @@ def group_games(games: list[dict]) -> OrderedDict:
     return OrderedDict((k, groups[k]) for k in sorted_keys)
 
 
+VERIFICATION_ICONS = {
+    "verified": "✅",
+    "minor_issues": "✅",
+    "inaccurate": "❗",
+    "unverified": "⚠️",
+    "unverifiable": "⚠️",
+}
+
+
 def format_row(game: dict, is_expansion: bool = False) -> str:
     """Format a single table row."""
     title = game["title"]
@@ -118,7 +127,8 @@ def format_row(game: dict, is_expansion: bool = False) -> str:
     player_count = game.get("player_count", "")
     play_time = game.get("play_time", "")
     designer = game.get("designer", "")
-    return f"| {prefix}[{title}](rules/{slug}/) | {player_count} | {play_time} | {designer} |"
+    icon = VERIFICATION_ICONS.get(game.get("verification", ""), "⚠️")
+    return f"| {prefix}[{title}](rules/{slug}/) | {player_count} | {play_time} | {designer} | {icon} |"
 
 
 def read_preamble(index_path: Path) -> str:
@@ -160,8 +170,8 @@ def generate(rules_dir: Path, index_path: Path) -> str:
     lines.append("")
 
     # Sections
-    table_header = "| Game | Players | Time | Designer |"
-    table_sep = "|------|---------|------|----------|"
+    table_header = "| Game | Players | Time | Designer | Status |"
+    table_sep = "|------|---------|------|----------|--------|"
 
     for key, entries in groups.items():
         if key == "#":

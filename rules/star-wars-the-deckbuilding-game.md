@@ -8,9 +8,17 @@ source_pdf: "star-wars-the-deckbuilding-game-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "1st Edition"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Star Wars: The Deckbuilding Game
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/star-wars-the-deckbuilding-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Star%20Wars%3A%20The%20Deckbuilding%20Game&game=star-wars-the-deckbuilding-game)
+<!-- verification:end -->
 
 ## Overview
 

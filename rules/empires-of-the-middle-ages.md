@@ -7,7 +7,15 @@ designer: "John Young"
 source_pdf: "empires-of-the-middle-ages-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/empires-of-the-middle-ages-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Empires%20of%20the%20Middle%20Ages&game=empires-of-the-middle-ages)
+<!-- verification:end -->
+
 
 ## Overview
 

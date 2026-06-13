@@ -6,7 +6,15 @@ play_time: "15-45 min"
 source_pdf: ""
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Life%20as%20a%20BlackMan&game=life-as-a-blackman)
+<!-- verification:end -->
+
 
 ## Overview
 

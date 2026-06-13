@@ -7,7 +7,15 @@ designer: "Ekaterina Gorn, Igor Sklyuev"
 source_pdf: "master-of-orion-the-board-game-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/master-of-orion-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Master%20of%20Orion%3A%20The%20Board%20Game&game=master-of-orion-the-board-game)
+<!-- verification:end -->
+
 
 ## Overview
 

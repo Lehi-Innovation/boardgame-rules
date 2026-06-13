@@ -7,7 +7,15 @@ designer: "WizKids"
 source_pdf: "battlestar-galactica-collectable-card-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battlestar%20Galactica%20Collectable%20Card%20Game&game=battlestar-galactica-collectable-card-game)
+<!-- verification:end -->
+
 
 ## Overview
 

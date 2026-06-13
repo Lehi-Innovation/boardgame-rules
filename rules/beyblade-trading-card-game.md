@@ -7,7 +7,15 @@ designer: "Mike Mulvihill"
 source_pdf: "beyblade-trading-card-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented color-matching mechanic (source uses fixed stop order), invented draw phase and deck-out loss, wrong card types, wrong designer. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/beyblade-trading-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Beyblade%20Trading%20Card%20Game&game=beyblade-trading-card-game)
+<!-- verification:end -->
+
 
 ## Overview
 

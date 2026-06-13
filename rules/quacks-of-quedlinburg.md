@@ -8,9 +8,17 @@ source_pdf: "quacks-of-quedlinburg-rules.pdf"
 extracted_date: "2026-03-16"
 summarized_date: "2026-03-16"
 rulebook_version: "Schmidt Spiele (English)"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # The Quacks of Quedlinburg
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/quacks-of-quedlinburg-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Quacks%20of%20Quedlinburg&game=quacks-of-quedlinburg)
+<!-- verification:end -->
 
 ## Overview
 

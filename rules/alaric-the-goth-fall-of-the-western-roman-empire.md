@@ -7,7 +7,15 @@ designer: "Paul L. Van Patten, Jr."
 source_pdf: "alaric-the-goth-fall-of-the-western-roman-empire-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Alaric%20the%20Goth%3A%20Fall%20of%20the%20Western%20Roman%20Empire&game=alaric-the-goth-fall-of-the-western-roman-empire)
+<!-- verification:end -->
+
 
 ## Overview
 

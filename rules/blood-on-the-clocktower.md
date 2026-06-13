@@ -8,9 +8,17 @@ source_pdf: "blood-on-the-clocktower-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "Core Box Set (Trouble Brewing / Bad Moon Rising / Sects & Violets)"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Blood on the Clocktower
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/blood-on-the-clocktower-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blood%20on%20the%20Clocktower&game=blood-on-the-clocktower)
+<!-- verification:end -->
 
 ## Overview
 

@@ -7,7 +7,15 @@ designer: "William Attia"
 source_pdf: "caylus-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Royal favor track values contradicted (fixed values vs progressive 5-column tracks), end-game bonuses partly invented/omitted, castle batch system and entire Counts scoring/favor system missing. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/caylus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caylus&game=caylus)
+<!-- verification:end -->
+
 
 ## Overview
 

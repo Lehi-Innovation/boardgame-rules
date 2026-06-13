@@ -7,7 +7,15 @@ designer: "David Williams"
 source_pdf: "city-of-heroes-collectible-card-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented components and pass/cycle turn structure, wrong starting hand, archetype abilities contradict source; core click/tactics/react systems omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/city-of-heroes-collectible-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20City%20of%20Heroes%20Collectible%20Card%20Game&game=city-of-heroes-collectible-card-game)
+<!-- verification:end -->
+
 
 ## Overview
 

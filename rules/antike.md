@@ -7,7 +7,15 @@ designer: "Mac Gerdts"
 source_pdf: "antike-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented know-hows (Republic/Theocracy) and costs (1G/4G vs actual 7/10/3/5 gold), Market/Currency misstated as per-city, wrong conquest threshold, missing attacker unit sacrifice, invented city-founding adjacency cost. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/antike-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Antike&game=antike)
+<!-- verification:end -->
+
 
 ## Overview
 

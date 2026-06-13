@@ -7,7 +7,15 @@ designer: "Kevin Wilson, Daniel Clark"
 source_pdf: "android-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented light/dark evidence tokens and "evidence placed" VP source, fabricated daily turn structure, plot/twilight conflation; omits Time economy, twilight shifts, hits, hunch VP, token VP values. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/android-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Android&game=android)
+<!-- verification:end -->
+
 
 ## Overview
 

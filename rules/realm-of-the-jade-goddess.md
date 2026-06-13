@@ -7,9 +7,17 @@ designer: "Klaus Teuber"
 source_pdf: "realm-of-the-jade-goddess-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
 
 # Realm of the Jade Goddess
+
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Realm%20of%20the%20Jade%20Goddess&game=realm-of-the-jade-goddess)
+<!-- verification:end -->
 
 ## Overview
 

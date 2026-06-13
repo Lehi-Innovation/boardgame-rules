@@ -7,7 +7,15 @@ designer: "Lester Smith"
 source_pdf: "dragon-dice-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring invents capture mechanic contradicting the source's Eighth Face rules and omitting the eighth-face control system; Player Reference fixed face-to-action mapping unsupported; all 15 spot-checked numbers correct. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dragon-dice-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dragon%20Dice&game=dragon-dice)
+<!-- verification:end -->
+
 
 ## Overview
 

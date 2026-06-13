@@ -7,9 +7,17 @@ designer: "Jesse McGatha"
 source_pdf: "agricola-express-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
 
 # Agricola Express
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented base-Agricola scoring (begging cards -3, farmyard spaces -1) and invented 4-wood pasture cost; feeding penalty is -3 per missing food, not per unfed member. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/agricola-express-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Agricola%20Express&game=agricola-express)
+<!-- verification:end -->
 
 ## Overview
 

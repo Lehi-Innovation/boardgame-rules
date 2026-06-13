@@ -7,7 +7,15 @@ designer: "Christian Leonhard, Jason Matthews"
 source_pdf: "1960-the-making-of-the-president-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1960-the-making-of-the-president-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201960%3A%20The%20Making%20of%20the%20President&game=1960-the-making-of-the-president)
+<!-- verification:end -->
+
 
 ## Overview
 
@@ -34,7 +42,7 @@ summarized_date: "2026-03-18"
 ## Setup
 
 1. Place the board and Debate Board. Each player takes their candidate's cubes, candidate token, and candidate card.
-2. Seed the Political Capital bag with the starting cubes per the rules.
+2. Seed the Political Capital bag with twelve cubes from each player.
 3. Place State Seals on each state. Place Issue tiles on the board.
 4. Place candidate tokens at starting positions. Place Momentum and Endorsement markers nearby.
 5. Shuffle campaign cards and deal starting hands per the setup rules.
@@ -46,7 +54,7 @@ The game is played over 9 turns. Turns 1-5 and 7-8 are standard campaign turns. 
 
 ### Standard Campaign Turn (Turns 1-5, 7-8):
 1. **Initiative Phase** — Draw cubes from the Political Capital bag to determine initiative.
-2. **Activity Phases** — Players alternate playing cards (5 cards each). Each card is played as an Event, for Campaign Points, or as a Candidate Card.
+2. **Activity Phases** — Players alternate playing cards (5 phases each). Each card is played as an Event, for Campaign Points, or as a Candidate Card.
 3. **Momentum Phase** — Momentum Decay, Issue Shift, Momentum Awards & Endorsements, Issue Support Decay.
 4. **Campaign Strategy Phase** — Campaign Strategy decisions, then Rest.
 
@@ -54,7 +62,7 @@ The game is played over 9 turns. Turns 1-5 and 7-8 are standard campaign turns. 
 1. Determine Initiative
 2. Campaign Strategy
 3. Set The Stage
-4. Debate! — Players compete over issues; winning issues earns momentum and support.
+4. Debate! — Players compete over issues; winning an issue awards state support cubes (2 for the first issue won, 3 for the second, 4 for the last).
 5. After the Debates
 
 ### Election Day (Turn 9):
@@ -80,43 +88,43 @@ Spend CP on one of three operations:
 **B3. Positioning on Issues:** Place Issue Support cubes on Issue tiles (Defense, Economy, Civil Rights). Helps gain Momentum and Endorsements.
 
 ### Playing a Candidate Card
-Each player has a unique Candidate card with special abilities. Played during an Activity Phase.
+A player may play their Candidate Card for exactly 5 CP. This is resolved in exactly the same way as playing any other card for Campaign Points. After being played, the Candidate Card is flipped to its Exhausted side and is out of play until returned to its active face by specific Events.
 
 ### Support Checks
 When placing support in opponent-held states, draw cubes from the Political Capital bag. Success depends on the composition of cubes drawn.
 
 ### Triggering & Preempting Events
-When playing an opponent-associated card for CP, the opponent may trigger its Event. Players can spend Momentum markers to preempt (prevent) Events.
+When playing an opponent-associated card for CP, the opponent may trigger its Event by spending one momentum marker. Players can spend two Momentum markers to preempt (prevent) an Event on their own card before resolving their action.
 
 ## Scoring / Victory Conditions
 
-**Winning:** The player with the majority of electoral votes (270+) on Election Day wins.
+**Winning:** There are a total of 537 electoral votes available; any player who takes at least 269 of them has won the game.
 
 **Electoral Votes:** Awarded per state based on the player who has State Support cubes in that state at game's end.
 
-**Endorsements:** In the final tally, endorsement markers in a region can flip states — each endorsement affects undecided or weakly-held states.
+**Endorsements:** After Campaign Strategy cards are resolved on Election Day, any state that currently contains no state support cubes for either player will tip toward one player or the other. If either player has an endorsement marker in that state's region, that player wins the state. If neither player has an endorsement marker in that region, the empty state goes to the player indicated by that state's edge (blue edge = Kennedy, red edge = Nixon). Endorsements do not flip states that are already held by either player.
 
 **Tiebreakers:** If tied on electoral votes:
 1. Player who won the most states
 2. Player with the most total state support
 
-**Unpledged Electors:** Some states have special rules for unpledged electors.
+**Unpledged Electors:** If the Unpledged Electors Event is in play, one or more states that Kennedy is leading but not carrying (i.e., has fewer than 4 state support cubes in) may not be awarded to either player, making it possible for a player to win with fewer than 269 electoral votes and introducing the possibility of a tie.
 
 ## Special Rules & Edge Cases
 
-- **Momentum:** Earned through Issue positioning and Momentum Phase. Can be spent to trigger favorable opponent Events or preempt your own negative Events. Maximum momentum is tracked on the board.
+- **Momentum:** Earned through Issue positioning and Momentum Phase. Can be spent to trigger favorable opponent Events or preempt your own negative Events.
 - **Support Exclusivity:** Only one player may have support cubes in any given state, region, or issue at a time. Placing support first eliminates opponent cubes.
-- **Prevention Event Markers:** Mark Events that have been preempted so they cannot trigger again.
+- **Prevention Event Markers:** When a named Prevention Event card is played, its marker is placed on the board as a reminder that the event is in effect, rendering certain other Events unplayable.
 - **Persistent Events:** Some Events remain in play for the rest of the game once triggered.
-- **Initiative:** Determined by bag draws. The trailing player in cubes drawn gets initiative (plays first that turn).
-- **Rest:** Players may "rest" by holding cubes in their Rest Zone for future use.
-- **Debate Mechanics:** The Debates are a special mini-game where players compete over issues using card play and cube draws.
+- **Initiative:** Determined by bag draws. Cubes are drawn one at a time until two cubes of the same color have been drawn; the player who has two of their own color cubes drawn gains the initiative for that turn.
+- **Rest:** Players collect rest cubes indicated on their played cards and place them in their Rest Cube Zone. During the Campaign Strategy Phase, these rest cubes are deposited into the Political Capital Bag.
+- **Debate Mechanics:** The Debates are a special mini-game where players compete over issues using card play. Winning an issue awards state support cubes: 2 for the first issue won, 3 for the second, and 4 for the last.
 
 ## Player Reference
 
 **Turn Sequence (Standard):**
 1. Initiative Phase (bag draw)
-2. Activity Phases (alternate card plays, 5 each)
+2. Activity Phases (alternate card plays, 5 phases each)
 3. Momentum Phase (decay, shift, awards, endorsements, issue decay)
 4. Campaign Strategy Phase
 
@@ -127,11 +135,11 @@ When playing an opponent-associated card for CP, the opponent may trigger its Ev
 | Campaign Points → States | Place State Support cubes |
 | Campaign Points → Advertising | Place Media Support cubes |
 | Campaign Points → Issues | Place Issue Support cubes |
-| Candidate Card | Use your candidate's special ability |
+| Candidate Card | Play for exactly 5 CP like any card played for Campaign Points |
 
 **Key Numbers:**
 - 9 turns total (6 = Debates, 9 = Election Day)
-- 5 cards per player per turn
-- 270 electoral votes needed to win
+- 5 Activity Phases per turn; 6 cards dealt per turn on turns 1-5, 7 cards on turns 7-8
+- 269 electoral votes needed to win (out of 537 total)
 - 4 advertising regions (West, Midwest, South, East)
 - 3 issues (Defense, Economy, Civil Rights)

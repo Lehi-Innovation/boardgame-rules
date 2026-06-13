@@ -7,7 +7,15 @@ designer: "Chad Jensen"
 source_pdf: "combat-commander-europe-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented initiative-based turn structure contradicting alternating turns, invented "VP advantage" game end, omits Exit VPs and Surrender loss, wrong melee result, invented faction deck strengths. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/combat-commander-europe-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Combat%20Commander%3A%20Europe&game=combat-commander-europe)
+<!-- verification:end -->
+
 
 ## Overview
 

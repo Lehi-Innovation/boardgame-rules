@@ -7,7 +7,15 @@ designer: "Larry Harris Jr."
 source_pdf: "axis-allies-battle-of-the-bulge-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Stacking limit wrong (4 combat units/hex vs 12 incl. Trucks with type caps), Ongoing Campaign misdescribed, supply income (Axis 9/Allies 11) omitted. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/axis-allies-battle-of-the-bulge-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%3A%20Battle%20of%20the%20Bulge&game=axis-allies-battle-of-the-bulge)
+<!-- verification:end -->
+
 
 ## Overview
 

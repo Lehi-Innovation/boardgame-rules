@@ -8,9 +8,17 @@ source_pdf: "qwirkle-cubes-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "MindWare"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
 
 # Qwirkle Cubes
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/qwirkle-cubes-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Qwirkle%20Cubes&game=qwirkle-cubes)
+<!-- verification:end -->
 
 ## Overview
 

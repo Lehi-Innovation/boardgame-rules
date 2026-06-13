@@ -8,7 +8,15 @@ source_pdf: ""
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 base_game_bgg_id: 322708
+verification: "unverifiable"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+>
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Descent%3A%20Legends%20of%20the%20Dark%20--%20The%20Betrayer%27s%20War&game=descent-legends-of-the-dark-the-betrayer-s-war)
+<!-- verification:end -->
+
 
 ## Overview
 

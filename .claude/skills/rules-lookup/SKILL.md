@@ -76,9 +76,33 @@ Always format your answer as:
 
 ## Step 3: Auto-Update Rules Summary
 
-**Only proceed here if the answer came from Tier 2, 3, or 4** (i.e., the summary was missing this information).
+**Only proceed here if the answer came from Tier 2 or 3** (i.e., the summary was missing this information). **Tier 4 answers are NEVER written to any file** — see "Tier rules for writing" below.
 
 **If the game has no summary file (`rules/<game>.md`):** Skip this step. Tell the user the game needs to be added to the database first.
+
+### Tier rules for writing
+
+The canonical rules sections (Overview through Player Reference) may only ever
+contain claims verified against the extracted rulebook text. Anything else
+goes in a clearly labeled **`## FAQ & Rulings`** section, or nowhere:
+
+- **Tier 2 (extracted rulebook):** Update the appropriate canonical section.
+  Quote the supporting source passage in the PR body.
+- **Tier 3 (BGG forum / designer ruling):** Do NOT touch the canonical
+  sections. Append an entry to the `## FAQ & Rulings` section (create it at
+  the end of the file, before any trailing content, if absent):
+  ```markdown
+  ## FAQ & Rulings
+
+  **Q: <the question>**
+  A: <the answer>. *(Source: [BGG forum ruling](<URL>), retrieved <date> — not from the rulebook.)*
+  ```
+- **Tier 4 (intuition):** Never write it anywhere. Give the user the clearly
+  labeled unverified answer, then open a research issue instead:
+  ```bash
+  gh issue create --label needs-research --title "Unresolved rule: <game> — <short question>" \
+    --body "Question: <question>. Tiers 1-3 found no authoritative answer. Best-guess reasoning: <reasoning>"
+  ```
 
 ### Create Branch and Update
 
@@ -88,19 +112,18 @@ Always format your answer as:
    ```
    Use a short slug from the question (e.g., `catan-robber-no-cards`).
 
-2. **Edit the summary file** (`rules/<game>.md`):
-   - Add the new information to the most appropriate existing section
-   - For Tier 3 (BGG) answers, add a brief note: `<!-- Source: BGG forum <URL> -->`
-   - For Tier 4 (intuition) answers, add: `<!-- UNVERIFIED: Based on game conventions, not official rules -->`
-   - Keep the existing style and level of detail
+2. **Edit the summary file** (`rules/<game>.md`) per the tier rules above.
+   Keep the existing style and level of detail.
 
-3. **Commit:**
+3. **Validate:** `python -m scripts.validate rules/<game>.md`
+
+4. **Commit:**
    ```bash
    git add rules/<game>.md
    git commit -m "rules(<game>): add <brief description of what was added>"
    ```
 
-4. **Push and create PR:**
+5. **Push and create PR:**
    ```bash
    git push -u origin rules-update/<game>-<short-question-slug>
    gh pr create --title "rules(<game>): <brief description>" --body "$(cat <<'EOF'
@@ -110,26 +133,29 @@ Always format your answer as:
    **Question:** <user's original question>
    **Answer:** <brief answer>
    **Source:** <tier and source details>
+   **Evidence:** <for Tier 2: the exact source quote supporting the change>
 
    ### Changes
-   - Added <what was added> to the <section> section
+   - Added <what was added> to <canonical section | FAQ & Rulings>
 
    🤖 Generated with [Claude Code](https://claude.com/claude-code)
    EOF
    )"
    ```
 
-5. **Switch back to main:**
+6. **Switch back to main:**
    ```bash
    git checkout main
    ```
 
-6. **Report the PR URL** to the user.
+7. **Report the PR URL** to the user.
 
 ## Common Mistakes
 
 - **Don't skip tiers.** Always start with Tier 1, even if you think the answer won't be there.
 - **Don't update if Tier 1 answered it.** The summary already has the info.
+- **Never write Tier 3 content into canonical sections.** Forum consensus belongs in FAQ & Rulings with a visible source.
+- **Never write Tier 4 content into any file.** Unverified inference in the database is how hallucinations become canon — open a `needs-research` issue instead.
 - **Don't forget to switch back to main** after creating the PR.
 - **Don't create a PR for a game with no summary file.** Just answer the question.
 - **Always cite the source tier.** The user needs to know where the answer came from.

@@ -7,7 +7,15 @@ designer: "James F. Dunnigan"
 source_pdf: "berlin-85-the-enemy-at-the-gates-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "minor_issues"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/berlin-85-the-enemy-at-the-gates-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Berlin%20%2785%3A%20The%20Enemy%20at%20the%20Gates&game=berlin-85-the-enemy-at-the-gates)
+<!-- verification:end -->
+
 
 ## Overview
 

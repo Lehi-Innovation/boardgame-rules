@@ -6,7 +6,15 @@ play_time: "60-90 min"
 source_pdf: "commonspoly-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
+verification: "inaccurate"
+verification_date: "2026-06-12"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory condition contradicted (all-commons win), invented resources/components, Speculator wrongly called automated, 20-round limit and core point/Agora systems missing. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/commonspoly-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Commonspoly&game=commonspoly)
+<!-- verification:end -->
+
 
 ## Overview
 
