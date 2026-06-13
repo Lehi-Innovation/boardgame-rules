@@ -2,16 +2,16 @@
 title: "A Study in Emerald"
 bgg_id: 141517
 player_count: "2-5"
-play_time: "60-90 min"
+play_time: "60 min"
 designer: "Martin Wallace"
 source_pdf: "a-study-in-emerald-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Omits VP-target game end (28/24/22/20); wrong sanity-loss end and team-penalty rules; invents assassination-advances-track and connected-cities movement restrictions. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-study-in-emerald-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Study%20in%20Emerald&game=a-study-in-emerald)
 <!-- verification:end -->
@@ -54,10 +54,10 @@ On your turn: perform **2 actions**, then draw up to 5 cards from your personal 
 |--------|-------------|
 | **Place Influence Cubes** | Play cards with influence symbols. Place that many cubes from your stock into ONE city space. |
 | **Claim One Card** | First action only. Play a claim card. Take 1 card from a city where you have MORE pieces (at least 1 cube) than any single opponent. Your cubes go to Limbo; opponent cubes return to their stock. Card goes to your discard pile. |
-| **Retrieve Influence Cubes** | Play retrieve card. Take cubes back from Limbo to your available stock. |
-| **Move Agents** | Play movement cards. Move agents between connected cities. |
+| **Retrieve Influence Cubes** | Play retrieve cards. Take your cubes back from Limbo or from city spaces on the board and return them to your available stock. |
+| **Move Agents** | Play movement cards. Move agents to any other city space on the board (no connected-cities restriction). |
 | **Move Markers** | Play cards to advance the Restorationist or Loyalist track markers. |
-| **Perform Assassination** | Accumulate enough bomb points to assassinate a Royalty card in a city where you have agents. Remove the Royalty card. |
+| **Perform Assassination** | Requires having MORE total pieces (agents + influence cubes) in the city than any other single player, plus enough bomb points to meet the target value. Can assassinate an enemy agent or a Royalty card in the Royalty slot. |
 | **Discard Cards** | Discard unwanted cards from hand to your discard pile. |
 | **Card Action** | Play a card for its text effect (Action, Free Action, Benefit, or One-Use). |
 | **Pass** | Do nothing with one or both actions. |
@@ -75,27 +75,27 @@ On your turn: perform **2 actions**, then draw up to 5 cards from your personal 
 - Insanity symbols require a sanity die roll (may lose a sanity token).
 
 ### Assassination
-- Requires bomb points (from cards) equal to or exceeding the Royalty card's defense.
-- Must have agents in that city.
-- Successful assassination: Restorationist track advances; Royalty card removed.
+- Must have MORE total pieces (agents + influence cubes) in the city than any other single player.
+- Must accumulate bomb points (from agent pieces in the city and from cards) equal to the value shown above the city (for agents) or on the Royalty card (for Royalty).
+- Successful assassination of Royalty: take the Royalty card, roll the sanity die, remove your influence cubes to Limbo (opponents' cubes returned to their stock). No track advancement occurs automatically.
 
 ## Scoring / Victory Conditions
 
 ### Game End Triggers
-- A player loses all 3 sanity tokens (goes insane) -- game ends immediately.
-- The Restorationist or Loyalist track reaches its end.
-- Specific card effects may trigger end.
+- A player reaches or exceeds the following VP total: 28 (2 players), 24 (3 players), 22 (4 players), 20 (5 players).
+- The Restorationist or Loyalist track marker reaches the 10 space.
+- A player is forced to reveal their Secret Identity and they are a Restorationist (if revealed as a Loyalist, play continues and that player adds agents back to reach 3 on the board).
 
 ### Final Scoring
 1. Players reveal their Secret Identity cards.
-2. The player with the **lowest VP on each side** applies a penalty to all players on that side.
-3. Restorationists score for: assassinated Royalty, Restorationist track position, certain cards.
-4. Loyalists score for: eliminating Restorationist agents, Loyalist track position, certain cards.
+2. Loyalists retain Loyalist and neutral VPs; they lose Restorationist VPs.
+3. Restorationists retain Restorationist and neutral VPs; they lose Loyalist VPs.
+4. The player with the **lowest VP score on each side** causes all players on that same side to lose **5 victory points**.
 5. Highest VP wins overall.
 
 ## Special Rules & Edge Cases
 
-- **Sanity:** Losing all 3 sanity tokens means you go insane and the game ends. This can be devastating to your team.
+- **Sanity:** Losing all sanity tokens forces you to reveal your Secret Identity. If you are a Restorationist, the game ends immediately. If you are a Loyalist, you add agents until you have 3 on the board and play continues.
 - **Zombies:** Created by certain cards; act as agents but with special rules.
 - **Limbo:** Influence cubes used to claim cards go to Limbo (a holding area on the board). They must be retrieved via action before reuse.
 - **Deduction:** Since identities are secret, deducing who is on your side is critical. The weakest player on your team hurts everyone.

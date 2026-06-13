@@ -7,11 +7,11 @@ designer: "Michael Rieneck"
 source_pdf: "a-column-of-fire-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Selling-goods VP wrong (site number vs source's 4/2 VP), country/goods table contradicts source, end-game bonus scoring omitted, invented protection-tile use, conflict timing wrong. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-column-of-fire-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Column%20of%20Fire&game=a-column-of-fire)
 <!-- verification:end -->
@@ -78,18 +78,18 @@ Each character provides a specific benefit (goods, protection, advantage tiles, 
 ### Selling Goods (Action Track)
 - You can sell goods in countries where you have a trading house.
 - Each country accepts 2 types of goods.
-- VP earned equals the trading house site number.
+- VP earned is fixed: 4 VP for one type of good and 2 VP for the other, as specified in each country's cost of goods box. The trading house site number has no bearing on goods sale VP.
 
 ### Religious Conflicts
-- When all 4 religion spaces in a country are filled, a religious conflict erupts at end of the 2nd half-year.
-- Count religion stones: the majority religion wins.
-- Players with trading houses in that country who follow the majority religion earn VP equal to their site number.
+- When all religion spaces in a country are filled, a religious conflict erupts at the end of the current player's turn. This applies regardless of whether it is the 1st or 2nd half of the year.
+- Count religion stones: the majority religion wins (neutral stones are ignored).
+- Players with trading houses in that country who follow the majority religion earn VP equal to their trading house site number.
 - Players following the minority religion lose their trading house.
 - After conflict, remove all religion stones from that country.
 
 ### Protection Tiles
-- Can be used to avoid placing a religion stone when drawing a character.
-- Can protect your trading house during religious conflicts.
+- Can be used to counter a negative event card's effect (return the tile to the pile to avoid the effect).
+- Can be used when drawing a character card to remove the religion stone on that card instead of placing it in the country.
 
 ### Advantage Tiles
 - Provide various one-time or ongoing benefits.
@@ -98,13 +98,23 @@ Each character provides a specific benefit (goods, protection, advantage tiles, 
 
 - **End trigger:** Any player reaches 50+ VP during a round.
 - Complete the current year (through the 2nd half-year of the last player).
+- Before determining the winner, all players receive end-game bonus VP:
+  - **a)** 2 VP for each trading house the player possesses in any country
+  - **b)** 1 VP for each unused protection tile
+  - **c)** 1 VP for every 2 unsold goods tiles (rounded down)
+  - **d)** VP depicted on advantage tiles (revealed only at game end)
 - The player furthest ahead on the VP track wins.
 
+**Tiebreakers (in order):**
+1. Most unsold goods tiles
+2. Highest number currently showing on religion die
+3. If still tied, there is more than one winner
+
 **VP sources:**
-- Selling goods (site number of trading house)
-- Religious conflicts (majority religion, site number)
+- Selling goods (4 VP or 2 VP per tile depending on good type and country)
+- Religious conflicts (majority religion earns VP equal to trading house site number)
 - Character card effects
-- Some advantage tiles
+- End-game bonuses (trading houses, protection tiles, goods tiles, advantage tiles)
 
 ## Special Rules & Edge Cases
 
@@ -121,10 +131,10 @@ Each character provides a specific benefit (goods, protection, advantage tiles, 
 
 | Country | Color | Goods Sold |
 |---------|-------|------------|
-| England (Kingsbridge) | White | Book, Ore |
-| France (Paris) | Blue | Cloth, Wine |
-| Netherlands (Antwerp) | Orange | Book, Cloth |
-| Spain (Seville) | Brown | Ore, Wine |
+| England (Kingsbridge) | White | Cloth (4 VP), Wine (2 VP) |
+| France (Paris) | Blue | Book (4 VP), Ore (2 VP) |
+| Netherlands (Antwerp) | Orange | Wine (4 VP), Cloth (2 VP) |
+| Spain (Seville) | Brown | Ore (4 VP), Cloth (2 VP) |
 
 | Half-Year | Actions |
 |-----------|---------|
