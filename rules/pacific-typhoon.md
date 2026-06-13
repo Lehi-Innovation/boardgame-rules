@@ -7,14 +7,14 @@ designer: Ben Knight
 source_pdf: "PacTyphoon-final.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "inaccurate"
+verification: "minor_issues"
 verification_date: "2026-06-13"
 ---
 
 # Pacific Typhoon
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented Pass action (rules forbid passing) and VP tokens, suit-declaration mechanic absent, spoils division wrong. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pacific-typhoon-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pacific%20Typhoon&game=pacific-typhoon)
 <!-- verification:end -->

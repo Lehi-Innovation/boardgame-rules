@@ -34,7 +34,7 @@ Die Dracheninsel (The Dragon Island) is a treasure-hunting adventure game where 
 
 1. Place each of the 60 terrain disks on a board space with a matching-colored spot.
 2. Place each treasure hunter on its same-colored boat.
-3. Shuffle all terrain and action cards; deal 6 to each player. Remaining cards form the draw pile.
+3. Shuffle all terrain and action cards; deal 6 to each player. Remaining cards form the draw pile. When the draw pile is empty, shuffle the discard pile to replenish it.
 4. Place the two 100 coins on the treasure site.
 5. Place both dragons next to the board.
 6. Select the initial active player randomly.
@@ -68,11 +68,11 @@ At end of turn, draw cards to replenish hand to 6. Next player clockwise becomes
 | Tosende Elemente (Thundering Elements) | Swap any two unoccupied terrain disks |
 | Drachenpatrouille (Dragon Patrol) | Move a dragon onto any unoccupied terrain disk not adjacent to a boat |
 | Boser Fluch (Evil Curse) | Discard all cards, draw one randomly from each other player |
-| Tollkuhner Flug (Foolhardy Flight) | Jump over an adjacent space (cannot jump over dragons) |
-| Weite Reise (Long Journey) | Play a terrain card to move freely on that color for rest of turn |
+| Tollkuhner Flug (Foolhardy Flight) | Jump over an adjacent space to a space you could otherwise enter (e.g., by playing a card); normal entry requirements still apply. Cannot jump over dragons; you need not jump straight and may land on any of the three spaces on the far side of the jumped space |
+| Weite Reise (Long Journey) | Play a terrain card to move freely on that color for the rest of the turn; if the terrain card is your own color, you may select a different color instead |
 | Angst & Schrecken (Fear & Loathing) | Send any hunter/bearer back to its boat; separated bearer chooses to abandon or wait |
 | Hinterhaltiger Angriff (Sneak Attack) | Draw a random card from another player |
-| Susser Schlummer (Sweet Slumber) | Stop the active player's last action and end their turn |
+| Susser Schlummer (Sweet Slumber) | Stop the active player's last action and end their turn; cannot be played to stop treasure bearers from immediately leaving the treasure site as required |
 | Gegenzauber (Counter Magic) | Block Sneak Attack, Sweet Slumber, or Fear & Loathing |
 | Untreue (Unfaithful) | Played during treasure collection to steal both coins |
 

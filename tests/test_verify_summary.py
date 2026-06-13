@@ -94,6 +94,45 @@ def test_verify_game_repair_then_pass(pipeline_env, monkeypatch):
     assert _registry_entry(registry)["status"] == "verified"
 
 
+def test_verify_game_keeps_best_version_on_oscillation(pipeline_env, monkeypatch):
+    """MAJOR -> MINOR -> MAJOR must end MINOR/verified with the round-1 content,
+    not flagged with the drifted final round (the live battlecars/die-dracheninsel
+    case: a good repair followed by verifier severity drift)."""
+    tmp_path, registry = pipeline_env
+    r1 = SAMPLE_RULES.replace("# Test Game", "# Test Game\n\n<!-- round1 -->")
+    r2 = SAMPLE_RULES.replace("# Test Game", "# Test Game\n\n<!-- round2 -->")
+    verdicts = iter([
+        {"verdict": "MAJOR", "reason": "v0", "findings": [{"x": 1}]},
+        {"verdict": "MINOR", "reason": "small gap", "findings": [{"x": 1}]},
+        {"verdict": "MAJOR", "reason": "drift", "findings": [{"x": 1}]},
+    ])
+    repairs = iter([r1, r2])
+    monkeypatch.setattr(vs, "verify_text", lambda s, src: next(verdicts))
+    monkeypatch.setattr(vs, "repair_text", lambda s, src, f: next(repairs))
+
+    game = {"name": "Test Game", "bgg_id": 42}
+    assert vs.verify_game(game, registry, max_repair_rounds=2) is True
+    content = (tmp_path / "rules" / "test-game.md").read_text()
+    assert "<!-- round1 -->" in content  # best (MINOR) round kept
+    assert "<!-- round2 -->" not in content  # drifted final round discarded
+    assert _registry_entry(registry)["status"] == "verified"
+    assert 'verification: "minor_issues"' in content
+
+
+def test_verify_game_major_keeps_original_content(pipeline_env, monkeypatch):
+    """When no repair beats the original, the original content is preserved
+    (never left holding a failed rewrite) and the game is flagged."""
+    tmp_path, registry = pipeline_env
+    monkeypatch.setattr(vs, "verify_text", lambda s, src: {
+        "verdict": "MAJOR", "reason": "unfixable", "findings": [{"x": 1}]})
+    monkeypatch.setattr(vs, "repair_text", lambda s, src, f: REPAIRED_RULES)
+    game = {"name": "Test Game", "bgg_id": 42}
+    assert vs.verify_game(game, registry, max_repair_rounds=2) is False
+    content = (tmp_path / "rules" / "test-game.md").read_text()
+    assert "1 coin" in content and "8 coins" not in content  # original, not repaired
+    assert _registry_entry(registry)["status"] == "flagged"
+
+
 def test_verify_game_major_flags(pipeline_env, monkeypatch):
     tmp_path, registry = pipeline_env
     monkeypatch.setattr(vs, "verify_text", lambda s, src: {

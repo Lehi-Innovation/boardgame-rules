@@ -98,7 +98,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [A Distant Plain](rules/a-distant-plain/) | 1-4 | 120-360 min | Brian Train, Volko Ruhnke | ❗ |
 | [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ❗ |
 | [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ❗ |
-| [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ❗ |
+| [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ✅ |
 | [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ❗ |
 | [A Game of Thrones: The Card Game](rules/a-game-of-thrones-the-card-game/) | 2-4 | 60-120 min | Eric M. Lang, Nate French, Christian T. Petersen | ❗ |
 | [A Game of Thrones: The Card Game (Second Edition)](rules/game-of-thrones-the-card-game/) | 2-6 | 60-120 min | Nate French, Eric M. Lang | ⚠️ |
@@ -627,7 +627,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Colony Delta: Earth vs. Sigma Draconis](rules/colony-delta/) | 2 | 60-120 min | Uncredited | ⚠️ |
 | [Coloretto](rules/coloretto/) | 3-5 | 30 min | Michael Schacht | ✅ |
 | [Colorito](rules/colorito/) | 2 | 30 min |  | ✅ |
-| [Colosseum](rules/colosseum/) | 3-5 | 60-90 min | Wolfgang Kramer, Markus Lübke | ❗ |
+| [Colosseum](rules/colosseum/) | 3-5 | 60-90 min | Wolfgang Kramer, Markus Lübke | ✅ |
 | [Colt Express](rules/colt-express/) | 2-6 | 30-40 min | Christophe Raimbault | ❗ |
 | [Comanauts](rules/comanauts/) | 2-4 | 60-120 min | Jerry Hawthorne | ❗ |
 | [Combat Commander: Europe](rules/combat-commander-europe/) | 2 | 60-180 min | Chad Jensen | ❗ |
@@ -668,7 +668,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Coyote](rules/coyote/) | 3-6 | 20 min | Spartaco Albertarelli | ✅ |
 | [Cranium](rules/cranium/) | 4+ | 60 min | Richard Tait, Whit Alexander | ⚠️ |
 | [Cranium Whoonu](rules/cranium-whoonu/) | 3-6 | 30 min | Cranium Inc. | ⚠️ |
-| [Critter Kitchen](rules/critter-kitchen/) | 2-5 | 60-90 min | Alex Cutler, Peter C. Hayward | ❗ |
+| [Critter Kitchen](rules/critter-kitchen/) | 2-5 | 60-90 min | Alex Cutler, Peter C. Hayward | ✅ |
 | [Crocodile Dentist](rules/crocodile-dentist/) | 2-4 | 5 min | Unknown | ⚠️ |
 | [Crokinole](rules/crokinole/) | 2-4 | 30 min | Unknown (traditional) | ⚠️ |
 | [Crossfire](rules/crossfire/) | 2 | 5-10 min | Unknown | ⚠️ |
@@ -1517,7 +1517,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
-| [Pacific Typhoon](rules/pacific-typhoon/) | 3-7 | 60 minutes | Ben Knight | ❗ |
+| [Pacific Typhoon](rules/pacific-typhoon/) | 3-7 | 60 minutes | Ben Knight | ✅ |
 | [Pacific Victory: War in the Pacific 1941-45](rules/pacific-victory-war-in-the-pacific-1941-45/) | 2 | 120-240 minutes | Tom Dalgliesh | ⚠️ |
 | [Paco Sako](rules/paco-sako/) | 2 | 10-20 minutes | Felix Albers | ⚠️ |
 | [Pah Tum](rules/pah-tum/) | 2 | 15-30 minutes | Traditional (Assyrian) | ⚠️ |

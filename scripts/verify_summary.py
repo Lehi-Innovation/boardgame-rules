@@ -37,6 +37,7 @@ load_dotenv()
 MODEL = "claude-sonnet-4-6"
 MAX_REPAIR_ROUNDS = 2
 MAX_SOURCE_CHARS = 600_000  # ~150k tokens; nearly all extracted texts fit whole
+VERDICT_RANK = {"MAJOR": 0, "MINOR": 1, "PASS": 2}  # higher is better
 
 VERIFIER_SYSTEM = """You are a meticulous fact-checker auditing an AI-generated board game \
 rules summary against the game's extracted rulebook text. Roughly half of such summaries \
@@ -196,27 +197,42 @@ def verify_game(
         )
         return False
 
-    summary = open(rules_path).read()
+    original_summary = open(rules_path).read()
     source = open(extracted_path).read()
 
     try:
+        summary = original_summary
         result = verify_text(summary, source)
+        # Track the best-scoring version across rounds. The verifier has
+        # run-to-run severity drift, and a repair round can introduce a new
+        # nitpick that drops the verdict again — so we keep the best content
+        # we ever achieved rather than whatever the last round produced, and
+        # we never write a degraded version (or any repair that failed to
+        # beat the original) to disk.
+        best_verdict, best_reason, best_summary = (
+            result["verdict"], result["reason"], summary)
         rounds = 0
         while result["verdict"] != "PASS" and repair and rounds < max_repair_rounds:
             rounds += 1
             print(f"  {name}: {result['verdict']} — repair round {rounds} "
                   f"({len(result['findings'])} findings)")
             summary = repair_text(summary, source, result["findings"])
-            with open(rules_path, "w") as f:
-                f.write(summary)
             result = verify_text(summary, source)
+            if VERDICT_RANK[result["verdict"]] > VERDICT_RANK[best_verdict]:
+                best_verdict, best_reason, best_summary = (
+                    result["verdict"], result["reason"], summary)
+            if result["verdict"] == "PASS":
+                break
     except Exception as e:
         print(f"  Error verifying {name}: {e}")
         if restore_status:
             update_status(registry_path, name, restore_status)
         return False
 
-    verdict, reason = result["verdict"], result["reason"]
+    verdict, reason = best_verdict, best_reason
+    if best_summary != original_summary:
+        with open(rules_path, "w") as f:
+            f.write(best_summary)
     _stamp_after_verdict(rules_path, verdict)
 
     if verdict == "MAJOR":

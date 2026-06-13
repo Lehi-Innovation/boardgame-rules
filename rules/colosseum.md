@@ -7,14 +7,14 @@ designer: "Wolfgang Kramer, Markus Lübke"
 source_pdf: "colosseum-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
+verification: "verified"
 verification_date: "2026-06-13"
 ---
 
 # Colosseum
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Minimum bid 1 vs source 8 coins, 5 vs 6 nobles, Closing Ceremonies phase omitted, invented Emperor's Loge token shop and program tiers. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/colosseum-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colosseum&game=colosseum)
 <!-- verification:end -->
