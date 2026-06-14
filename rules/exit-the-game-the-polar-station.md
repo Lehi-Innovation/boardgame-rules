@@ -7,11 +7,11 @@ designer: "Inka Brand, Markus Brand"
 source_pdf: "exit-the-game-the-polar-station-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring table wrong on 7 cells: <90/1-2 shows 6 not 7 stars, <90/3-5 shows 3 not 6, >120/0 missing (source=7 stars), multiple entries wrong or invented. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/exit-the-game-the-polar-station-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Exit%3A%20The%20Game%20%E2%80%93%20The%20Polar%20Station&game=exit-the-game-the-polar-station)
 <!-- verification:end -->

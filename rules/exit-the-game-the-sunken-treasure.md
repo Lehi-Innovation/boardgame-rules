@@ -7,11 +7,11 @@ designer: "Inka Brand, Markus Brand"
 source_pdf: "exit-the-game-the-sunken-treasure-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring table: multiple wrong star values (<120min/0help: source=4 stars, summary=8 stars; <90min/1-2help: source=4 stars, summary=6 stars) and invented values for 3-5, 6-10 help columns. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/exit-the-game-the-sunken-treasure-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Exit%3A%20The%20Game%20%E2%80%93%20The%20Sunken%20Treasure&game=exit-the-game-the-sunken-treasure)
 <!-- verification:end -->

@@ -7,11 +7,11 @@ designer: "Bryan Pope"
 source_pdf: "mage-wars-arena-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Spell cards listed as 322 (source: 336); attack dice listed as "2 custom d12" (source: 9 attack dice + 1 separate d12 effect die); invented "First/Second Stage" Action Phase structure; omits 5 of 6 Ready Stage phases including Planning and Upkeep; initiative rule inverted (player chooses vs auto-alternates); "hovering" exception to Flying is invented (source: Reach trait); Guard triggers on movement which is wrong (source: melee attacks only). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mage-wars-arena-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mage%20Wars%20Arena&game=mage-wars-arena)
 <!-- verification:end -->

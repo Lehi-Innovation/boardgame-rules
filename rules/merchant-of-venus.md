@@ -7,14 +7,14 @@ designer: "Richard Hamblen"
 source_pdf: "merchant-of-venus-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Merchant of Venus
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: End-game fame x10 bonus-credit conversion (step 3 of 4) is entirely absent from summary; "selling ship equipment" at game end is invented; game is fixed 30 rounds not "varies by player count". Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/merchant-of-venus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Merchant%20of%20Venus&game=merchant-of-venus)
 <!-- verification:end -->

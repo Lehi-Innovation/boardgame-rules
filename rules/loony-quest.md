@@ -7,11 +7,11 @@ designer: "Laurent Escoffier, David Franck"
 source_pdf: "loony-quest-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Broom token effect wrong (summary: "draw with eyes closed"; source: pass a Penalty token to opponent); Mosquito wrong (summary: non-dominant hand; source: balance token on pen); Shield wrong (summary: blocks Pranks; source: cancels Trap XP loss); Cramp wrong; World structure wrong (Worlds 1-6 have 6 levels not 4). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/loony-quest-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Loony%20Quest&game=loony-quest)
 <!-- verification:end -->

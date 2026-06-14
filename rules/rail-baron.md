@@ -8,14 +8,14 @@ source_pdf: "rail-baron-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Avalon Hill"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Rail Baron
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: User fee rule wrong: summary says fees only apply to railroads you don't own, but source requires $1000 bank payment even for your own lines. Standard win amount ($200,000) omitted and falsely described as varying by player count. Declare mechanic and Rover Play entirely absent.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/rail-baron-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rail%20Baron&game=rail-baron)
 <!-- verification:end -->

@@ -7,11 +7,11 @@ designer: "Dirk Henn"
 source_pdf: "powerline-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Round count wrong: summary says 16 rounds, source says 15. Turn structure wrong: summary invents 5 phases (including fabricated "Choose Direction" phase); source has 3 phases (Roll Dice, Plan Workers, Construct Powerlines). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/powerline-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Powerline&game=powerline)
 <!-- verification:end -->

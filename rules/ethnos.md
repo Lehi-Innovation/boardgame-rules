@@ -7,11 +7,11 @@ designer: "Paolo Mori"
 source_pdf: "ethnos-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Trolls tokens described as "worth 2 Glory at game end" but source says they have no value and are Kingdom tie-breakers; Minotaur ability swapped with Wingfolk; Skeletons add +1 to scoring but source says they are discarded before scoring. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ethnos-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ethnos&game=ethnos)
 <!-- verification:end -->

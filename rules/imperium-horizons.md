@@ -7,14 +7,14 @@ designer: "Nigel Buckle, Dávid Turczi"
 source_pdf: "imperium-horizons-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Imperium: Horizons
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Power card omitted from scoring list; source explicitly scores Power card separately (Wagadou A-side has 1VP/3Progress); summary lists only Hand/Play area/Draw deck/Discard/History. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/imperium-horizons-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Imperium%3A%20Horizons&game=imperium-horizons)
 <!-- verification:end -->

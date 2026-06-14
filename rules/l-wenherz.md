@@ -7,11 +7,11 @@ designer: "Klaus Teuber"
 source_pdf: "l-wenherz-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Game-end trigger ("King is dead!" card) replaced with invented conditions; town scoring (+5 pts) and hill-space scoring entirely omitted; "action lost" on conflict instead of correct duel resolution; "castles" listed as VP source instead of region sizes. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/l-wenherz-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Lowenherz&game=l-wenherz)
 <!-- verification:end -->

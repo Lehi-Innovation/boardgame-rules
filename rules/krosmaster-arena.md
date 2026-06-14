@@ -7,11 +7,11 @@ designer: "Nicolas Degouy, Édouard Guiton"
 source_pdf: "krosmaster-arena-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: SOURCE_MISMATCH: extracted file is the F.G. Bradley's billiards/game shop website, not a Krosmaster Arena rulebook; no game rules present. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/krosmaster-arena-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Krosmaster%20Arena&game=krosmaster-arena)
 <!-- verification:end -->

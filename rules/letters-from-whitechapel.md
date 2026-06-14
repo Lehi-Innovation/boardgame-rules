@@ -7,11 +7,11 @@ designer: "Gabriele Mari, Gianluca Santopietro"
 source_pdf: "letters-from-whitechapel-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Detective action phases conflated (movement and clue/arrest are separate sequential phases, not alternatives); Coach/Alley uses shown as fixed 3/2 but decrease each night; Night 3 Double Event (2 murders) not mentioned. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/letters-from-whitechapel-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Letters%20from%20Whitechapel&game=letters-from-whitechapel)
 <!-- verification:end -->

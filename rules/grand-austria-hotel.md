@@ -7,11 +7,11 @@ designer: "Simone Luciani, Virginio Gigli"
 source_pdf: "grand-austria-hotel-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Die action mapping is wrong for 5 of 6 dice (Die 1=Strudel/Cake not Guest; Die 2=Wine/Coffee not Staff; Die 4=Emperor/Money not Cake+Strudel; Die 5=Staff not Wine+Coffee; Die 6=Wild/pay-1-krone not Money); serve costs 1 krone omitted; final scoring missing 1VP/krone+leftover-dish and -5VP/cafe-guest. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/grand-austria-hotel-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Grand%20Austria%20Hotel&game=grand-austria-hotel)
 <!-- verification:end -->

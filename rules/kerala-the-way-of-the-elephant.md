@@ -7,11 +7,11 @@ designer: "Kirsten Hiese"
 source_pdf: "kerala-the-way-of-the-elephant-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Missing-color penalty stated as -2 per color but source says -5 per color; split-color penalty stated as -2 per color but source charges -2 per tile removed (not per color), making every score computed from the summary wrong. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kerala-the-way-of-the-elephant-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kerala%3A%20The%20Way%20of%20the%20Elephant&game=kerala-the-way-of-the-elephant)
 <!-- verification:end -->
