@@ -7,11 +7,11 @@ designer: "Carl Chudyk"
 source_pdf: "glory-to-rome-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: 4 major errors: game-end trigger wrong (any one type runs out vs last single in-town site); draw pile ends immediately not after full turn cycle; missing Forum Romanum and surrender end conditions; tiebreaker is most cards in hand not most materials in Vault; Legionary demands from neighbors only not all players. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/glory-to-rome-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Glory%20to%20Rome&game=glory-to-rome)
 <!-- verification:end -->

@@ -7,11 +7,11 @@ designer: "Volko Ruhnke"
 source_pdf: "labyrinth-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn order reversed (summary: US first; source: Jihadist first); each action phase is 2 cards not 1; Caliphate condition wrong (summary: hub-and-spoke adjacency; source: 6+ total Resources over 2+ adjacent countries); invented Automatic Loss condition not in source. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/labyrinth-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Labyrinth&game=labyrinth)
 <!-- verification:end -->

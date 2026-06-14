@@ -7,11 +7,11 @@ designer: "Jordan Weisman, Kevin Barrett"
 source_pdf: "mage-knight-dungeons-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory win condition omits "successfully carried out of dungeon" requirement (only escaped gold counts); knockback mechanic invented (no source support); doors cost 2 speed points to open and 1 to close (not free actions); turn gives 2 activations and activation ends immediately after combat (not a Move-Attack-Interact sequence). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mage-knight-dungeons-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mage%20Knight%20Dungeons&game=mage-knight-dungeons)
 <!-- verification:end -->

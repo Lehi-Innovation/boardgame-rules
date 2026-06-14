@@ -7,11 +7,11 @@ designer: "Arne Lauwers"
 source_pdf: "pictureka-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Cow's Creative Combo: win condition says first to 3 mission cards (source: 4); setup says deal 5 picture cards face up (source: 3 picture cards + 1 mission card, facedown); matching requirement says 2+ cards (source: exactly 3). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pictureka-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pictureka%21&game=pictureka)
 <!-- verification:end -->

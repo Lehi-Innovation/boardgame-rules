@@ -7,11 +7,11 @@ designer: Andrea Mainini
 source_pdf: "origin-rulebook.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Innovation tile scoring completely fabricated: summary claims L1=1 L2=3 L3=6 L4=10 L5=15 but source says every tile=1pt except L5=5pts; summary also invents "Villages on the board: Various bonuses" scoring category with no source support; 3 of 4 game-end triggers omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/origin-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Origin&game=origin)
 <!-- verification:end -->

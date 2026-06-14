@@ -7,11 +7,11 @@ designer: "Tom Dalgliesh, Ron Gibson"
 source_pdf: "knights-of-camelot-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Basic Scenario VL threshold wrong (summary: VL 4 or lower; source: VL 5 or less); Advanced Scenario goal misidentified as Holy Grail quest (source: become Arthurian Knight only); designer credits fabricated (summary: Dalgliesh/Gibson; source: Glenn and Kenneth Rahman); turn structure omits Luck phase and Prayers and Requests phase. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/knights-of-camelot-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Knights%20of%20Camelot&game=knights-of-camelot)
 <!-- verification:end -->

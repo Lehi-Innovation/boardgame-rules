@@ -8,14 +8,14 @@ source_pdf: "ramses-ii-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Ravensburger"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Ramses II
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Component counts wrong: summary says 30 pyramids and 30 treasure tokens; source has 47 pyramids and 12 treasure cut-outs; player count wrong (1-5 not 2-4); search card setup wrong (ordered stacking required, not a simple shuffle); tiebreaker (card count) omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ramses-ii-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ramses%20II&game=ramses-ii)
 <!-- verification:end -->

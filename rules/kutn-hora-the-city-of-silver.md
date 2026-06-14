@@ -7,11 +7,11 @@ designer: "Ondřej Bystroň, Petr Čáslava, Pavel Jarosch"
 source_pdf: "kutn-hora-the-city-of-silver-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: SOURCE_MISMATCH: extracted file is the Czech Games Edition product page (czechgames.com), not rulebook; contains only marketing copy and component list stub, no rules. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kutn-hora-the-city-of-silver-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kutn%C3%A1%20Hora%3A%20The%20City%20of%20Silver&game=kutn-hora-the-city-of-silver)
 <!-- verification:end -->

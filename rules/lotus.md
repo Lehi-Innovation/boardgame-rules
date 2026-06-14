@@ -7,11 +7,11 @@ designer: "Jordan Goddard, Mandy Goddard"
 source_pdf: "lotus-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tie-control rule reversed (summary: no one scores; source: all tied players earn reward); petal cards as 1-VP-each scoring source entirely omitted; scoring tokens described as variable value but source says all are 5 VP; game-end trigger misdescribed as finish-current-round vs each-player-takes-one-final-turn. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/lotus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Lotus&game=lotus)
 <!-- verification:end -->

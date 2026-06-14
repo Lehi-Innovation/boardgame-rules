@@ -7,11 +7,11 @@ designer: Shem Phillips, S J Macdonald
 source_pdf: "paladins-of-the-west-kingdom-rulebook.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: King's Favours listed as end-game VP source but source says they are action spaces only; worker color system invents Silver/Gold workers and wrongly attributes wild flexibility to Black workers when source gives that to Purple/Criminal workers. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/paladins-of-the-west-kingdom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Paladins%20of%20the%20West%20Kingdom&game=paladins-of-the-west-kingdom)
 <!-- verification:end -->

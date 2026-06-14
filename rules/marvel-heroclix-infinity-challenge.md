@@ -7,11 +7,11 @@ designer: "Jordan Weisman"
 source_pdf: "marvel-heroclix-infinity-challenge-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Three contradicted rules: token removal placed at beginning of turn (source: end of turn); surviving friendly figures score their point value (entirely omitted from summary); Regeneration is d6-2 clicks healed (summary invents a 5-6 threshold); object thrown damage (2/3 clicks) replaced with close-combat bonus values (+1/+2). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/marvel-heroclix-infinity-challenge-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Marvel%20HeroClix%3A%20Infinity%20Challenge&game=marvel-heroclix-infinity-challenge)
 <!-- verification:end -->

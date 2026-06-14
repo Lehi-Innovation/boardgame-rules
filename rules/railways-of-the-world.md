@@ -8,14 +8,14 @@ source_pdf: "railways-of-the-world-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Eagle-Gryphon Games (Quick Rules)"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Railways of the World
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure invents "3 actions per turn" (source: 1 action per turn); Baron card scoring omitted from VP sources; bond restriction (only when can't afford) omitted; game-end trigger understated (must finish current round plus one more full 3-round block). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/railways-of-the-world-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Railways%20of%20the%20World&game=railways-of-the-world)
 <!-- verification:end -->

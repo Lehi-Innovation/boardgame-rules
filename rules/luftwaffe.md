@@ -6,11 +6,11 @@ play_time: "120-240 min"
 source_pdf: "luftwaffe-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Entire turn structure invented (7-phase raid model doesn't exist; source uses quarters/hex-map turns); German VP for shootdowns fabricated (source: German scores no VP in any mode); Basic Game win condition is aircraft factory city count not VP balance; victory level "substantive" doesn't exist in source. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/luftwaffe-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Luftwaffe&game=luftwaffe)
 <!-- verification:end -->

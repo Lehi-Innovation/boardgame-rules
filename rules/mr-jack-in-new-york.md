@@ -7,14 +7,14 @@ designer: "Bruno Cathala, Ludovic Maublanc"
 source_pdf: "mr-jack-in-new-york-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Mr. Jack in New York
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Detective win condition invented ("only 1 suspect remains" not in source; detective wins only by correct accusation); park tile invisibility (core mechanic: characters in parks always invisible) absent from summary; escape via steamer/port omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mr-jack-in-new-york-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mr.%20Jack%20in%20New%20York&game=mr-jack-in-new-york)
 <!-- verification:end -->

@@ -7,14 +7,14 @@ designer: "Stefan Feld"
 source_pdf: "notre-dame-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Notre Dame
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Actions table has three wrong entries: Hotel describes message-collecting (Carriage House's effect); Park says "place influence in any sector" (Trusted Friend's effect); Hospital says "back 1 per influence" but action is always exactly 1 space back regardless of markers.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/notre-dame-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Notre%20Dame&game=notre-dame)
 <!-- verification:end -->
