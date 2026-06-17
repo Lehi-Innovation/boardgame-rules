@@ -7,11 +7,11 @@ designer: Roberto Fraga, Yohan Lemonnier
 source_pdf: captain-sonar-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Surfacing penalty wrong (1 enemy turn vs 3), Engineer breakdown/repair mechanic inverted, breakdown damage rules omitted, component list misdescribed. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/captain-sonar-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Captain%20Sonar&game=captain-sonar)
 <!-- verification:end -->
@@ -23,12 +23,11 @@ Captain Sonar is a real-time team game where two submarines hunt each other on a
 
 ## Components
 
-- 2 transparent Captain screens
-- 2 transparent Radio Operator screens
-- 2 Engineer sheets
-- 2 First Mate sheets
-- 5 double-sided map boards (10 different maps)
-- Erasable markers
+- 2 screens (placed end-to-end in the center of the table)
+- 2 sets of 12 role sheets (one set per team, each two-sided: light side for turn-by-turn, dark side for real-time)
+  - Per team: 1 First Mate sheet, 1 Engineer sheet, 5 Captain sheets (1 per scenario), 5 Radio Operator sheets (1 per scenario)
+- 2 transparent Radio Operator sheets
+- 8 erasable marker pens
 
 ## Setup
 
@@ -60,7 +59,9 @@ Captain Sonar is a real-time team game where two submarines hunt each other on a
 - **Silence:** The submarine moves 0-4 spaces in one direction without announcing direction. The Radio Operator only knows "Silence was activated."
 - **Scenario-specific systems:** Some maps include unique systems.
 
-**Surfacing:** The Captain announces "Surface in sector X!" (declaring their current sector). Erase the Captain's path. The Engineer erases all breakdowns. The team cannot act during surfacing. In turn-by-turn mode, the enemy gets a free turn.
+**Surfacing:** The Captain raises a fist and announces "SURFACE," then declares the submarine's current sector aloud to the enemy.
+- **Turn-by-turn mode:** Surfacing uses the Captain's turn. The Engineer erases ALL breakdowns. The enemy team then takes **three turns in a row** (if the enemy also surfaces during those turns, any remaining turns are lost). Then play resumes normally.
+- **Real-time mode:** Teammates secure the submarine by each drawing a line around one of the four sub sections on the Engineer's sheet and writing initials, passing the sheet until all four sections are secured. The enemy Engineer confirms no lines are drawn outside the white outline. The Engineer then erases all section lines, initials, and ALL breakdowns. When complete, the Engineer announces "READY TO DIVE" and the Captain announces "DIVE." While surfaced, the enemy team continues playing. The Captain resets his route (erasing it but keeping current position and mine positions).
 
 ## Scoring / Victory Conditions
 
@@ -70,12 +71,17 @@ If a submarine surfaces, the enemy knows which sector it is in.
 
 ## Special Rules & Edge Cases
 
-- The submarine cannot cross its own path line (it must not revisit spaces before surfacing or using silence).
-- The Engineer manages 6 breakdown circuits in 4 zones (matching compass directions). When all symbols in a circuit are crossed off, that system breaks down and cannot be used until repaired (by crossing off a full radiation symbol set or surfacing).
-- The Radio Operator uses the transparent screen overlaid on a copy of the map to track the enemy sub's movements based on the enemy Captain's announced directions.
-- In real-time mode, the Captain must wait for the First Mate and Engineer to finish marking before moving again.
-- With fewer than 8 players, players can take on multiple roles. The minimum is 2 players (1 per team).
-- Self-damage: If a team's own sub is adjacent to their own detonated mine or torpedo target, they take damage too.
+- The submarine cannot cross its own path line (it must surface or use silence to reset/reposition).
+- If the Captain cannot announce a course (blocked by islands, mines, or own route), the submarine must immediately surface (BLACKOUT).
+- A team cannot activate two systems in a row; the Captain must announce a course between activations.
+- **Engineer breakdowns:** Each time the Captain announces a direction, the Engineer crosses off one symbol in the matching compass panel (North/South/East/West). A system cannot be activated if **at least one** symbol corresponding to that system is crossed out. (Each symbol corresponds to two systems: Mine+Torpedo share symbols, Drone+Sonar share symbols, Silence+Scenario share symbols.)
+- **Central Circuits self-repair:** Symbols in the Central Circuits are grouped into circuits of four (linked by colored lines). When all four symbols on a circuit are crossed out, that circuit **self-repairs** — the Engineer erases those four symbols. Surfacing also repairs all Central Circuit breakdowns.
+- **Radiation breakdowns (Reactor):** When ALL radiation symbols are crossed out, the submarine suffers 1 damage and the Engineer erases ALL breakdowns from the entire sheet. Surfacing also repairs all Reactor breakdowns.
+- **Complete area breakdown:** When all symbols in a single compass panel (both Central Circuits and Reactor) are crossed out, the submarine suffers 1 damage and the Engineer erases ALL breakdowns.
+- The Radio Operator uses the transparent sheet overlaid on the map to track the enemy sub's position using the directions announced by the enemy Captain.
+- In real-time mode, the Captain must wait for the First Mate and Engineer to announce "OK" before announcing a new course.
+- With fewer than 8 players, one player takes multiple roles (e.g., 3-player team: Captain + First Mate; 2-player team: Captain + First Mate + Engineer). In 2- or 3-player games, turn-by-turn mode is required.
+- Self-damage: A submarine can be damaged by its own torpedo or mine if it is adjacent to or on the impact space.
 
 ## Player Reference
 

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-12"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Source/summary mismatch: summary describes classic vertical-grid game but source is "Connect 4 & More" tile game (40 tiles, 6 game variants); all six games omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Source PDF is 'Connect 4 & More', not classic Connect Four; needs the correct rulebook. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/connect-four-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Connect%20Four&game=connect-four)
 <!-- verification:end -->

@@ -7,11 +7,11 @@ designer: "Creede Lambard, Sharleen Lambard"
 source_pdf: "battle-cattle-the-card-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented draw-1/7-card hand limit (source: refill to 6), winner scores 20 not 10, tie pays 10 not 5-per-survivor, hooves subsystem omitted, reshuffle rule contradicted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battle-cattle-the-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20Cattle%3A%20The%20Card%20Game&game=battle-cattle-the-card-game)
 <!-- verification:end -->
@@ -41,9 +41,9 @@ Battle Cattle: The Card Game is a humorous card combat game set in a future wher
 
 Play proceeds clockwise. On your turn:
 
-1. **Draw**: Draw 1 card from the draw pile (hand limit of 7 cards at end of turn).
-2. **Play**: Play one Attack card against any other player, OR play a Special card marked "your turn only", OR pass.
-3. **Resolve**: Target player may respond with Armor cards or appropriate Special cards.
+1. **Draw**: Draw enough cards to bring your hand up to 6 cards.
+2. **Play**: Either Attack (play an Attack card against any player), play a Special card (Fireproof Armor or Machine Gun Jams! may be played on your turn; other Specials can only be played on someone else's turn), OR Discard (place one or more cards in the discard pile if you cannot or choose not to attack or play a Special).
+3. **Resolve**: Target player may respond with Armor cards or appropriate Special cards immediately when hit. A player may not draw cards at any time except the beginning of their turn.
 
 ## Actions
 
@@ -84,31 +84,34 @@ When only one cow remains (or time runs out), the duel ends.
 
 | Achievement | Points |
 |-------------|--------|
-| Kill (destroying another cow) | 10 points |
-| Sole Survivor bonus | 10 points |
-| Each cow still alive at duel end | 5 points |
+| Winner (last cow in arena, not killed) | 20 points |
+| Kill (each opponent reduced to hamburger) | 10 points per kill |
+| Tie (each player still in duel when it ends in a tie) | 10 points |
+| Prestige Bonus (awarded by majority vote of other players for exceptional play) | 5 points |
 
 ### Winning the Game
-Play multiple duels. The first player to accumulate 60 points is the Ace and wins the overall game.
+Play multiple duels. The first player to reach 60 points **at the end of a duel** is the Chief Beef and wins. If two or more players reach 60 points simultaneously, the player with the highest total wins. If tied at the end of a duel, play continues until someone breaks the tie at the end of a duel.
 
 ## Special Rules & Edge Cases
 
 - **Methane attacks** bypass armor entirely.
-- **Escaping**: Some Special cards allow movement to avoid attacks.
+- **Escaping**: At the end of their turn, a player may announce they are escaping. If their cow is still operating at the beginning of their next turn AND its hooves have not been destroyed, they leave the arena with no kill credited. On the turn they escape, they do nothing else. If their hooves are gone, they cannot escape and take their turn normally.
 - If a player is eliminated by a Skid (not an Attack card), kill points go to whoever played the Attack card the player was trying to avoid.
-- **Hand limit**: Maximum 7 cards at end of turn; discard down if over.
-- When the draw pile is empty, shuffle the discard pile to form a new draw pile.
-- A cow that is destroyed returns for the next duel.
+- **T-Bone**: Slam your cow into an opponent's side. After T-Boning, you may also play one Attack card targeting the same side you rammed.
+- **Reshuffling**: If the deck runs out, shuffle the discard pile to make a new draw pile. If the deck runs out a **second** time without a winner, do not reshuffle — all players still in the duel share equally in a tie (10 points each).
+- **2- or 3-player game**: Remove one each of Machine Gun Jams!, Fireproof Armor, Autocannon Backfires!, and Dud Milk Bomb! from the deck before play.
+- A cow that is destroyed returns fully repaired for the next duel.
 
 ## Player Reference
 
 ### Armor Thresholds
-- Side armor breach: 12+ damage on one side
+- Side armor breach: 12+ cumulative damage on one side
 - Body destruction: 5+ body damage
-- Armor card protection: 3 points per card
+- Armor card protection: 3 points per card (may play 2 at once for 6 total)
 
 ### Scoring Quick Reference
-- Kill: 10 pts
-- Last cow standing: +10 pts
-- Alive at duel end: 5 pts
-- Win game: First to 60 pts
+- Win duel (last operating cow): 20 pts
+- Kill (each): 10 pts
+- Tie (still in duel at end): 10 pts each
+- Prestige Bonus (majority vote): 5 pts
+- Win game: First to 60 pts at end of a duel (highest total if tied at 60)

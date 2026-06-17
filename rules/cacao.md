@@ -7,11 +7,11 @@ designer: "Phil Walker-Harding"
 source_pdf: "cacao-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Setup tile removal wrong: 2-player removal attributed to 3 players; 2-player worker/jungle removals left unspecified despite source enumeration. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cacao-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cacao&game=cacao)
 <!-- verification:end -->
@@ -36,10 +36,11 @@ In Cacao, players are tribal chiefs leading their people to prosperity through t
 
 1. Each player takes their Village board, water carrier, and Worker tiles in their chosen color.
 2. Place water carrier on the "-10" water field of the Village board.
-3. **Tile removal by player count:**
-   - 2 players: Remove specified tiles from each player's supply and from the Jungle
-   - 3 players: Remove 1x 1-1-1-1 and 1x 2-1-0-1 per player
+3. **Tile removal by player count (Worker tiles each player removes from their own supply):**
+   - 2 players: Remove 1x 1-1-1-1 and 1x 2-1-0-1 per player
+   - 3 players: Remove 1x 1-1-1-1 per player
    - 4 players: No removal
+   - **2-player Jungle tile removal (return these to the box before play):** 2x single plantation, 1x water, 1x market (selling price 3), 1x Sun worshiping site, 1x gold mine (value 1), 1x temple
 4. Each player shuffles their Worker tiles into a face-down draw pile; draws 3 as starting hand.
 5. Place the 2 starting Jungle tiles (1 single plantation + 1 market, selling price 2) face-up diagonally in the center.
 6. Shuffle remaining Jungle tiles into a face-down draw pile; draw 2 face-up as the Jungle display.
@@ -118,7 +119,7 @@ Leftover cacao fruits are worth nothing.
 - You may freely make change at the bank at any time.
 - The Jungle display is only refilled at end of turn, not during filling.
 - Storage on Village boards holds maximum 5 cacao fruits.
-- In a 2-player game, specific Jungle and Worker tiles are removed before play.
+- In a 2-player game, specific Jungle tiles (2x single plantation, 1x water, 1x market price 3, 1x Sun worshiping site, 1x gold mine value 1, 1x temple) and Worker tiles (1x 1-1-1-1 and 1x 2-1-0-1 per player) are removed before play.
 
 ## Player Reference
 

@@ -7,11 +7,11 @@ designer: "Dominique Ehrhard"
 source_pdf: "condottiere-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong victory conditions for 2/5/6 players; Bishop/Scarecrow/Courtesan effects wrong; Spring +3 omitted; variant capture rule stated as base rule; redraw/round structure wrong. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/condottiere-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Condottiere&game=condottiere)
 <!-- verification:end -->
@@ -40,14 +40,16 @@ Condottiere is a card-driven area control game set in Renaissance Italy. Players
 ## Turn Structure
 
 ### Battle Round
-1. The Condottiere holder chooses a region for battle (places the figure there).
+1. The Condottiere holder places the token in a region of their choice (not one with a control marker or the Favor of the Pope token).
 2. Starting with the Condottiere holder, players take turns clockwise. Each turn, a player either plays one card or passes.
-3. Once a player passes, they cannot play more cards that round.
-4. The round ends when all players have passed.
-5. The player with the highest total mercenary strength wins the region and places their control marker.
-6. The winner takes the Condottiere figure and chooses the next battle location.
-7. All played cards are discarded. Remaining hand cards are kept.
-8. If the draw pile has enough cards, each player draws back up to a hand of cards. If not, reshuffle the discard pile.
+3. Once a player passes, they may not play more cards that battle, but they may still win if their battle line is strongest.
+4. The battle ends when all players have passed or a Surrender card is played.
+5. The player with the highest total strength wins the region and places a control marker; the player who won receives the Condottiere token. (Exception: if any player has the most Courtesan cards, that player receives the Condottiere token instead of the battle winner.)
+6. If two or more players tie for highest strength, no control marker is placed, and the Condottiere token passes left.
+7. All battle-line cards are discarded. If a player has no Mercenary cards in hand, they may choose to discard their remaining hand.
+
+### End of a Round
+A round ends when, after the discard step, only one player (or no player) has cards remaining. The player with the Condottiere token shuffles all remaining cards and deals each player 10 cards, plus 1 additional card per region they control. If one player has cards left, they may keep up to two and must discard the rest.
 
 ## Actions
 
@@ -55,39 +57,41 @@ Condottiere is a card-driven area control game set in Renaissance Italy. Players
 Play face up in front of you. Their values sum to determine your battle strength.
 
 ### Special Cards
-- **Heroine (10):** Cannot be affected by other special cards. Always worth exactly 10.
-- **Drummer:** Doubles the value of all your mercenary cards (not Heroines).
-- **Bishop:** Prevents the battle from being resolved. The region remains unconquered; no one wins. A new battle begins elsewhere.
-- **Scarecrow:** Allows you to retrieve all your played mercenary cards back to hand (not special cards). Then you must pass.
-- **Winter:** Reduces ALL players' mercenary cards to a value of 1 each. Heroines are unaffected.
-- **Spring:** Cancels the effect of a previously played Winter card.
-- **Surrender:** Forces the battle to end immediately. Resolve as if all players had passed.
-- **Courtesan:** When played, the player with the Favour of the Pope token gains its bonus. The Courtesan then goes to a different player.
+- **Heroine (3):** Has strength 10 but is not a Mercenary card — unaffected by Winter, Spring, Drummer, or Scarecrow.
+- **Drummer (6):** When a battle concludes, all Mercenary cards in the same battle line have their printed strength doubled. Multiple Drummers have no further effect (no tripling). With Winter in play, each Mercenary in a Drummer line is worth 2 instead of 1.
+- **Bishop (6):** When played, all highest-strength Mercenary cards currently in play are immediately discarded (including your own). Ties: all tied cards are discarded. The Bishop card is then discarded. The player who played the Bishop receives the Favor of the Pope token and may place it on any region without a control marker (or leave it off the board). The Condottiere token may not be placed on a region with the Favor of the Pope.
+- **Scarecrow (16):** Allows you to retrieve ONE of your own Mercenary cards from your battle line back to your hand. You may choose not to retrieve any card. Cannot retrieve special cards or cards from other players' battle lines. The Scarecrow card is then discarded.
+- **Winter (3):** When played, immediately discard all Spring cards in play. If Winter is in play at battle resolution, all Mercenary cards count as strength 1 (including your own). Multiple Winters have no additional effect.
+- **Spring (3):** When played, immediately discard all Winter cards in play. If Spring is in play at battle resolution, each player adds 3 strength to each of their highest-strength Mercenary cards. Ties for highest strength: all tied cards gain +3. Multiple Springs have no additional effect.
+- **Surrender (3):** Immediately ends the battle; the player with the strongest battle line at that moment wins the region.
+- **Courtesan (12):** Has strength 1 but is not a Mercenary card — unaffected by Winter, Spring, Drummer, or Scarecrow. At the "Compare Strength" step, if a player's battle line has the most Courtesan cards, that player receives the Condottiere token instead of the actual battle winner (the winner still places their control marker). If two or more players tie for most Courtesan cards, the battle winner receives the token. If both strength and Courtesans are tied, the token passes left.
 
 ## Scoring / Victory Conditions
 
-Victory depends on the number of players:
-- **2 players:** Control 5 adjacent regions
-- **3 players:** Control 4 adjacent regions or any 6 regions
-- **4 players:** Control 3 adjacent regions or any 5 regions
-- **5 players:** Control 3 adjacent regions or any 4 regions
-- **6 players:** Control 3 adjacent regions or any 4 regions
+Victory is checked at the end of the "Compare Strength" step after each battle.
+
+- **2 or 3 players:** First to control **4 adjacent regions** or **6 total regions** wins.
+- **4, 5, or 6 players:** First to control **3 adjacent regions** or **5 total regions** wins.
+
+**All regions conquered (tiebreaker):** If all available regions are conquered without meeting the above conditions (e.g., the last uncaptured region has the Favor of the Pope), the player controlling the most regions wins. If tied, a final battle is fought among the tied players only: all discard their hands, the Condottiere token holder deals each tied player 10 cards plus 1 per region they control, and the winner of that battle wins the game. If the final battle is also tied, tied players share victory.
 
 ## Special Rules & Edge Cases
 
-- A region already controlled by a player can be attacked again; the attacker must win the battle to take it.
-- If two or more players tie for highest strength, no one wins the region.
-- If only one player remains in a battle (all others passed), that player wins regardless of strength.
-- The Bishop card prevents resolution but the played cards are still discarded.
-- Players may play zero cards and simply pass.
-- Hand management is critical: you keep unplayed cards between rounds.
+- The Condottiere token may not be placed on a region with a control marker or the Favor of the Pope token.
+- A player may not be placed the Condottiere token on a region they already control.
+- If two or more players tie for highest strength, no control marker is placed on the board.
+- A player who has passed may still win the battle if their battle line ends up strongest.
+- Players may play zero cards and simply pass at any time, including at the very start of a battle.
+- If a player has no cards in hand, their only option is to pass (they do not participate until the next round).
+- If a player wins a battle with their last card, they still take the Condottiere token and choose the next battle site.
+- Deals and showing cards are allowed; card exchanges are not. Players need not honor agreements.
 
 ## Player Reference
 
 | Players | Adjacent Regions to Win | Total Regions to Win |
 |---------|------------------------|---------------------|
-| 2 | 5 | -- |
+| 2 | 4 | 6 |
 | 3 | 4 | 6 |
 | 4 | 3 | 5 |
-| 5 | 3 | 4 |
-| 6 | 3 | 4 |
+| 5 | 3 | 5 |
+| 6 | 3 | 5 |

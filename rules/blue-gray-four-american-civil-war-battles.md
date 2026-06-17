@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-12"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Source is only a S&T variants article; Components/Setup/Turn Structure/Scoring largely unsupported (4 maps, 400 counters, 1:6 diversionary odds invented; night-turn claim wrong). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Source is only a magazine variants article, not the full rulebook; core rules unverifiable. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/blue-gray-four-american-civil-war-battles-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blue%20%26%20Gray%3A%20Four%20American%20Civil%20War%20Battles&game=blue-gray-four-american-civil-war-battles)
 <!-- verification:end -->

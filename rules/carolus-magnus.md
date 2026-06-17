@@ -7,11 +7,11 @@ designer: Leo Colovini
 source_pdf: carolus-magnus-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented game-end condition (all discs played) replaces the real one (fewer than 4 territories remain, most castles wins). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/carolus-magnus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carolus%20Magnus&game=carolus-magnus)
 <!-- verification:end -->
@@ -73,7 +73,9 @@ Each round has an Opening Phase and an Action Phase.
 
 ## Scoring / Victory Conditions
 
-The first player to place all of their castles (10 in a 2-player game) wins immediately. If the game ends with all discs played (after every 5th round, discs reset), the player with fewer remaining castles wins.
+The game ends in one of two ways:
+- **Instant win:** The first player to have **10 castles in play in the territories** wins immediately (8 castles in the 3-player game).
+- **Fewer than 4 territories:** When the board has fewer than 4 territories remaining (due to merging), the game ends. The player with the **most castles in play in the territories** wins.
 
 ## Special Rules & Edge Cases
 
