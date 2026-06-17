@@ -7,11 +7,11 @@ designer: "Kevin Russ"
 source_pdf: "calico-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: "Each cat only once" contradicts source (2 Millies/2 Tibbits scored); rainbow button and standard setup rules wrong; design-goal color/pattern dual scoring omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/calico-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Calico&game=calico)
 <!-- verification:end -->
@@ -49,7 +49,7 @@ Calico is a competitive tile-laying puzzle game where players draft and place co
 9. Most recent cat-petter goes first.
 
 ### Standard Game
-Use all 6 Cat Scoring Tiles and choose which 3 Design Goal Tiles to place on your board from your set of 6.
+Select 1 Cat Scoring Tile from each of the three dot-groups (randomly or by choice), randomly determine which side to use, and place them in the center with their Cat Tokens. Each player shuffles their 6 Design Goal Tiles face down, reveals 4, then chooses 3 of those 4 to place on their board (return unused tiles to box).
 
 ## Turn Structure
 
@@ -66,36 +66,37 @@ The game ends when all players have filled their quilt boards.
 Choose any empty space on your board. Orientation does not matter since tiles have a single color and pattern.
 
 ### Attracting Cats
-Each cat has a specific pattern requirement shown on its Cat Scoring Tile. When you create a group of adjacent tiles matching that cat's pattern requirement, place a Cat Token on those tiles.
+Each cat has two preferred patterns (assigned randomly during setup via Black & White Patch Tiles) and a preferred group size or shape. When you create a group of adjacent tiles of the required size/shape using one of that cat's two preferred patterns, take the matching Cat Token and place it on a tile in the group.
 
-**Cat requirements** vary — some need a specific arrangement of patterns (e.g., 3 tiles of pattern A and 3 of pattern B adjacent, any colors), while others require specific combinations.
-
-Each cat can only be attracted **once** per board. A group of tiles can only attract **one** cat.
+You may attract the same type of cat more than once, but only by forming a **new, separate group** that does not touch any previously scored group of the same pattern. A given pattern area can attract only one cat token.
 
 ### Sewing Buttons
-When you create a group of **3 or more** adjacent tiles of the **same color**, place a Button Token matching that color on the group. Each group scores 3 points per button.
+When you create a group of **3 or more** adjacent tiles of the **same color**, place a Button Token matching that color on a tile in the group. Each button is worth 3 points. Expanding a color group to 6 or more tiles does not earn a second button; a second button of the same color requires a separate, new group.
 
-**Rainbow buttons:** If all 8 buttons of a color are taken, use rainbow buttons instead.
+**Rainbow button:** If you sew at least one button of **each** color onto your quilt, you may take a rainbow button and place it on any Patch Tile. It is also worth 3 points.
 
 ### Design Goal Tiles
-Each design goal tile sits on a specific space and defines a requirement for the 6 tiles surrounding it. Requirements involve specific patterns or color combinations. Points are awarded at game end if requirements are met.
+Each Design Goal Tile sits on a specific space and defines a requirement for the 6 Patch Tiles surrounding it. A Design Goal Tile can be completed using **colors OR patterns**. Completing it one way (color or pattern) scores the lower point value (blue circle). If you complete it both ways — once with colors and once with patterns — you score the higher point value (yellow circle) instead. There is no penalty for not completing a Design Goal Tile.
 
 ## Scoring / Victory Conditions
 
 ### End-Game Scoring
-1. **Design Goal Tiles:** Score each goal tile based on whether surrounding tiles meet its requirement. Point values vary by goal (shown on tile).
-2. **Cats:** Score points shown on the Cat Scoring Tile for each cat attracted (typically 3-11 points each).
-3. **Buttons:** 3 points per button placed on your quilt.
+1. **Design Goal Tiles:** Score each goal tile. Completing the requirement with color or pattern only scores the blue-circle value; completing it with both color and pattern scores the yellow-circle value (higher). Point values vary by goal.
+2. **Cats:** Score the points shown on the Cat Scoring Tile for each Cat Token on your quilt.
+3. **Buttons:** 3 points per button (including the rainbow button) placed on your quilt.
 4. Sum all points. **Highest total wins.**
+
+**Tiebreakers:** In case of a tie, the player with the most Cat Tokens wins. If still tied, the player with the most Button Tokens wins. If still tied, the victory is shared.
 
 ## Special Rules & Edge Cases
 
 - Adjacent means sharing a side on the hex-like quilt grid (not diagonal).
-- A tile group can only satisfy one cat — you cannot attract the same cat twice.
+- You can attract the same type of cat more than once, but each new scoring group must be a separate area that does not touch a previously scored group of the same pattern.
 - You must always place a tile and draft a tile; no passing.
-- In the beginner game, specific Design Goal Tiles and Cat Scoring Tiles are used to simplify play.
+- Edge tiles printed on the Quilt Board (partial and whole) count as part of groups for cats and buttons.
+- In the beginner game, specific Design Goal Tiles (not-equal, AA-BB-CC, AAA-BBB) and Cat Scoring Tiles (Millie, Tibbit, Coconut) are used.
 - The Master Quilter Tile variant adds an additional challenge for experienced players.
-- Solo mode is supported with specific solo rules.
+- Solo mode is supported; after drafting from the market, discard the furthest tile from the supply, then slide and refill conveyor-belt style.
 - Tiles have 6 colors and 6 patterns, creating 36 unique color-pattern combinations.
 
 ## Player Reference
@@ -110,9 +111,14 @@ Each design goal tile sits on a specific space and defines a requirement for the
 | Cats | Varies (per cat scoring tile, typically 3-11 each) |
 | Buttons | 3 points per button |
 
-**Cats (Beginner Game):**
-| Cat | Requirement |
-|-----|-------------|
-| Millie | See Cat Scoring Tile |
-| Tibbit | See Cat Scoring Tile |
-| Coconut | See Cat Scoring Tile |
+**Cat Group Size Requirements (from Cat Scoring Tiles):**
+| Cat | Group Size / Shape |
+|-----|--------------------|
+| Millie | 3 or more |
+| Tibbit | 4 or more |
+| Coconut | 5 or more |
+| Cira / Almond | 6 or more |
+| Gwenivere / Leo | 7 or more |
+| Callie / Rumi / Tecolote | Specific shape (see tile) |
+
+**Design Goal Tile Scoring:** Color or pattern only → blue-circle points; both color and pattern → yellow-circle points only (not both added together).

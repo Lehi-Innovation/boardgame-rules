@@ -7,11 +7,11 @@ designer: "Maurice Suckling"
 source_pdf: "chancellorsville-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Omits attacker must-retreat/must-occupy combat outcomes (breaks nearly every attack), garbles solitaire victory conditions, omits the entire BOT system; all 16 spot-checked numbers correct. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/chancellorsville-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chancellorsville%201863&game=chancellorsville)
 <!-- verification:end -->
@@ -83,11 +83,15 @@ The Union player takes the first turn each round, followed by the Confederate pl
 
 **General Jackson (Confederate, sequential):** First ability: Move AP Hill up to 3 locations at any time during a turn (no cost, not into combat, in addition to normal activation). Second ability (different turn): AP Hill gets a major activation instead of a minor at no additional cost.
 
-**Combat:** The attacker rolls dice (number shown on formation area). The defender does not roll. Results: double 1s or 2s = attacker loses 1 cohesion; 3 = gain 1 Momentum cube; double 4s or 5s = defender loses 1 cohesion; double 6s = defender loses 2 cohesion and must retreat. Terrain modifiers: green double-headed arrows give +2 dice. Defender may spend redoubt cubes to set die faces before the roll.
+**Combat:** The attacker rolls dice (number shown on formation area). The defender does not roll. Results: double 1s or 2s = attacker loses 1 cohesion; each 3 = gain 1 Momentum cube; double 4s or 5s = defender loses 1 cohesion; double 6s = defender loses 2 cohesion and must retreat. Terrain modifiers: attacking along double-headed green arrows = +2 dice. Defender may spend redoubt cubes to set die faces before the roll.
+
+**Combat outcomes — attacker movement:**
+- If the **defender is forced to retreat**, the **attacker MUST occupy** the attacked location.
+- If the **defender is NOT forced to retreat**, the **attacker must retreat** back to the location they came from (one location back if they moved 2 locations).
 
 **Re-rolls:** Spend 3 Momentum cubes to re-roll any/all dice, OR reduce the active formation's cohesion by 1 to re-roll.
 
-**Defender Retreat:** Must move away from the attacker's origin. Cannot retreat into enemy locations. Confederate formations retreat toward location 22; Union formations retreat away from location 22 and preferring north/over the river.
+**Defender Retreat:** Must move away from the attacker's origin. Cannot retreat into enemy locations. Confederate formations always try to retreat closer to location 22; Union formations always try to retreat away from location 22, preferring north/over the river.
 
 **Tactics Cards:** Purchased with Momentum cubes from the face-up tableau. Single use unless stated "Ongoing." At end of turn, if no card is purchased, the rightmost card is discarded. Any 3 Tactics cards can be cashed in for 1 Momentum cube.
 
@@ -99,17 +103,54 @@ The Union player takes the first turn each round, followed by the Confederate pl
 
 **Confederate Victory:** The Confederate player wins if the Union player does not achieve their victory conditions. OR immediately win by breaking 3+ Union formations.
 
-**Solitaire Victory:** Union must hold all 3 objectives (not just 2) and/or destroy 3 Confederate formations. Confederate BOT must hold 2 objectives or destroy 3 Union formations. If the player's side has 3 formations destroyed, they automatically lose.
+**Solitaire Victory (playing as Union):** Destroy 3 or more Confederate formations for an immediate automatic win. Otherwise, you must hold all 3 objectives by the end of the game to win; if you have not destroyed 3 Confederate formations and do not hold all 3 objectives when the game ends, you lose. If 3 of your own formations are destroyed at any point, you automatically lose.
+
+**Solitaire Victory (playing as Confederate):** Destroy 3 or more Union BOT formations for an immediate automatic win. The Union BOT wins if it holds 2 objectives (matching the two-player Union victory condition) by end of game. If you (the Confederate player) stop the Union BOT from winning, you win. If 3 of your own formations are destroyed, you automatically lose.
 
 ## Special Rules & Edge Cases
 
-- **Hidden Movement:** Formations on the Hidden Movement Map are revealed when adjacent to an enemy unit on the main board, or when entering specially colored locations (red = deep Confederate lines, blue = deep Union lines). Red-hashed locations along the Union march route are tracked by JEB Stuart's cavalry; the lead Union formation is visible.
+- **Hidden Movement:** Formations on the Hidden Movement Map are revealed when adjacent to an enemy unit on the main board, or when entering specially colored locations (red = deep Confederate lines, blue = deep Union lines). Red-hashed locations along the Union march route are tracked by JEB Stuart's cavalry; the lead Union formation is visible. If the enemy moves away, formations that are no longer adjacent may return to the Hidden Movement Map.
 - **Cohesion Test:** When cohesion drops to 5 or below, roll 1d6. If the result is higher than current cohesion, the formation is destroyed. Cannot re-roll a failed cohesion test.
 - **Stacking:** Maximum 2 friendly formations per location (except during combat when 2 defenders and 1 attacker may temporarily share a location).
 - **Destroyed Formations:** Permanently removed; cannot be reassembled. Activation cards for destroyed formations still earn Momentum cubes.
 - **Combat vs. 2 Defenders:** Cohesion losses apply to ALL defending formations in the location.
 - **Simultaneous Destruction:** If attacker and defender are both destroyed, the defender is considered destroyed first. If both must take cohesion tests, the defender tests first.
 - **Component Limits:** 9 dice, 25 Momentum cubes, 12 redoubt cubes, 12 reinforcements per side are hard limits.
+- **Objectives:** Objectives are assumed Confederate-controlled unless a Union control marker occupies them. A Union formation does not need to remain for the objective to stay Union-controlled, but if a Confederate formation occupies the location at the end of a Confederate turn, the Union marker is removed.
+
+## Solitaire BOT Rules
+
+In solitaire, the player always takes the first turn regardless of side. The screens and Hidden Movement Maps are not used; BOT formations with optional starting locations are placed on the Hidden Movement Track (HMT) on the game board. Reinforcement cards are not used in solitaire.
+
+**BOT special rules:**
+- The BOT never pays an activation cost.
+- The BOT never receives Momentum cubes.
+- The BOT's General abilities never feature.
+- The Tactics deck is never cycled during the BOT's turn.
+
+**BOT turn:** Turn over the top card of the BOT activation draw deck and apply the directions top to bottom. If no conditions apply, the formation does nothing.
+
+**Hidden Movement Track (HMT):** BOT formations not yet on the main board are placed on the HMT. Their card instructs when to advance them along the track and at which HMT position they move onto the main board to attack. A formation attacking off the HMT has no green-arrow combat modifiers but is affected by redoubts.
+
+**BOT combat:** The BOT rolls the number of dice shown on its activation card (modified by terrain). BOT terrain modifier: green double-headed arrows = +1 die (not +2). The BOT always attacks with at least 1 die. The BOT uses the **BOT combat results table** (each die read individually, not in pairs):
+
+| Die | Result |
+|-----|--------|
+| 1 | Attacker (BOT) −2 Cohesion |
+| 2 | Attacker (BOT) −1 Cohesion |
+| 3 | Defender −1 Cohesion |
+| 4 | Defender −2 Cohesion |
+| 5 | Defender −2 Cohesion |
+| 6 | Defender −3 Cohesion + must retreat |
+
+**BOT redoubts (when BOT attacks player):** The BOT rolls 1 fewer die for each redoubt the player has in the attacked location (redoubts are consumed after red-arrow modifiers are applied); minimum 1 die always. **When player attacks BOT:** Each redoubt sets one die face to 1 (as in the two-player game).
+
+**BOT difficulty settings:**
+- Standard: no changes.
+- Hard: remove 1 card from the top of your activation deck (face-down, unseen). BOT gets 1 extra turn at game end.
+- Hardest: remove 2 cards. BOT gets 2 extra turns.
+
+**BOT target priority:** If adjacent to multiple enemy formations, the BOT attacks a formation in an objective first; if multiple objectives, the one with fewest redoubts. If no objective adjacent, attack the formation with fewest redoubts. Confederate BOT never attacks over the river.
 
 ## Player Reference
 

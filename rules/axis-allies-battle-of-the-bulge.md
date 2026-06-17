@@ -7,11 +7,11 @@ designer: "Larry Harris Jr."
 source_pdf: "axis-allies-battle-of-the-bulge-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Stacking limit wrong (4 combat units/hex vs 12 incl. Trucks with type caps), Ongoing Campaign misdescribed, supply income (Axis 9/Allies 11) omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/axis-allies-battle-of-the-bulge-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%3A%20Battle%20of%20the%20Bulge&game=axis-allies-battle-of-the-bulge)
 <!-- verification:end -->
@@ -102,7 +102,8 @@ Infantry, Tank, and Artillery exert a zone of control in a 1-hex radius. Enemy g
 - Trucks move for free along roads. Trucks carry up to 6 units/tokens.
 - Reinforcements arrive per the reinforcement chart row matching the current turn colour.
 - Free Trucks on board may return to off-board area before movement begins.
-- Stacking limit: 4 combat units per hex.
+- Stacking limit: 12 units per hex total (Infantry, Tanks, Artillery, and Trucks each count as 1; any number of Supply tokens in a hex counts as 1). Sub-limits: maximum 6 Infantry, 6 Tanks, and 3 Artillery per hex.
+- **Supply income:** Each turn, Axis receives 9 Supply tokens and Allies receive 11 Supply tokens (placed in off-board area).
 
 ## Scoring / Victory Conditions
 
@@ -116,15 +117,15 @@ Infantry, Tank, and Artillery exert a zone of control in a 1-hex radius. Enemy g
 - **First turn surprise attack:** On turn 1 (Red), only the Axis player attacks during Ground Combat. The Allies cannot attack.
 - **River barriers:** Only Infantry can cross river barriers (including when retreating). Tanks and Artillery cannot.
 - **Blitz:** Pay an extra Supply token when activating a hex to give all Tanks in that hex an additional 1-hex move after their normal move. The blitz move can be on-road or off-road and can enter/leave enemy zones of control.
-- **Stacking limit:** Maximum 4 combat units (Infantry, Tanks, Artillery) per hex. Trucks, Supply tokens, and air units do not count.
+- **Stacking limit:** Maximum 12 units per hex (Infantry, Tanks, Artillery, and Trucks each count as 1 unit; any number of Supply tokens in a hex counts as 1 unit). Sub-limits: maximum 6 Infantry, maximum 6 Tanks, maximum 3 Artillery per hex. Air units do not count toward the stacking limit.
 - **Retreating:** Units that take 1 hit must retreat 1 hex. If unable to retreat (zone of control, stacking limit, river barrier), the unit is destroyed instead.
 - **Rolling more than 12 dice:** Roll all 12, assign hits using chips, then reroll remaining dice as needed.
 - **More than 6 defending units:** Count hits first, then reroll just those dice to assign them on the expanded combat strips (up to 12 boxes).
 
 ### Optional Rules
 
-- **Ongoing Campaign:** Continue playing beyond turn 8.
-- **Custom Setup:** Players set up their own units instead of using the printed setup.
+- **Ongoing Campaign:** Keep records of your games. Track the best Axis or Allied score each player can achieve; reverse roles and compare results; maintain a running tally of Axis scores across multiple games to see who comes out ahead over time.
+- **Custom Setup:** The Allies player sets up their starting units (including Supply tokens) in any hexes on their side of the front line, provided combat units cover every hex on the Axis side of the front line with zone of control. Then the Axis player sets up their units with the same supply-coverage requirement, but Axis starting units cannot be placed outside their army's designated starting areas (6th Panzer, 5th Panzer, and 7th Army sections).
 
 ## Player Reference
 
@@ -138,6 +139,8 @@ Infantry, Tank, and Artillery exert a zone of control in a 1-hex radius. Enemy g
 
 **Victory:** Axis needs 24 VP from cities/towns. Allies need to hold until end of turn 8.
 
-**Stacking:** 4 combat units per hex
+**Stacking:** 12 units/hex (max 6 Infantry, 6 Tanks, 3 Artillery; Supply tokens count as 1 unit collectively; air units exempt)
+
+**Supply income:** Axis 9 tokens/turn; Allies 11 tokens/turn
 
 **Weather:** No air units on turns 1-4; air units available on turns 5-8

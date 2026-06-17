@@ -7,11 +7,11 @@ designer: "Bill Eberle, Jack Kittredge, Bill Norton, Peter Olotka, Kevin Wilson"
 source_pdf: "cosmic-encounter-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Cosmic Zap misdescribed (it cancels alien powers), alien-power loss threshold wrong (fewer than 3 home colonies, not all), Regroup wrongly restricted to home colonies. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cosmic-encounter-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cosmic%20Encounter&game=cosmic-encounter)
 <!-- verification:end -->
@@ -57,13 +57,14 @@ Cosmic Encounter is a social negotiation and hand-management game where each pla
 
 The active player (offense) takes a turn consisting of these phases:
 
-1. **Regroup:** Retrieve 1 ship from the Warp to any home colony.
-2. **Destiny:** Draw the top card of the destiny deck. The color shown determines the defense player (whose system you must encounter). Wild and Special cards have unique effects.
-3. **Launch:** Place the hyperspace gate aimed at any planet in the defense player's system. Place 1-4 ships from any of your colonies onto the gate.
-4. **Alliance:** Offense and defense each invite other players to ally. Allies commit 1-4 ships.
-5. **Planning:** Offense and defense each select 1 card from hand and place it face down.
-6. **Reveal:** Both encounter cards are revealed simultaneously and resolved.
-7. **Resolution:** Determine the outcome based on the revealed cards.
+1. **Start Turn:** If the offense has no encounter cards, discard hand and draw 8 new cards; repeat until they have at least one encounter card.
+2. **Regroup:** Retrieve 1 ship from the Warp to any of your home or foreign colonies.
+3. **Destiny:** Draw the top card of the destiny deck. The color shown determines the defense player (whose system you must encounter). Wild and Special cards have unique effects.
+4. **Launch:** Place the hyperspace gate aimed at any planet in the defense player's system. Place 1-4 ships from any of your colonies onto the gate.
+5. **Alliance:** Offense and defense each invite other players to ally. Allies commit 1-4 ships.
+6. **Planning:** Offense and defense each select 1 card from hand and place it face down.
+7. **Reveal:** Both encounter cards are revealed simultaneously and resolved.
+8. **Resolution:** Determine the outcome based on the revealed cards.
 
 If the offense wins or makes a successful deal, they may have a second encounter (max 2 encounters per turn).
 
@@ -96,11 +97,10 @@ If the offense wins or makes a successful deal, they may have a second encounter
 
 - **Alien Powers:** Each alien has a unique game-breaking power. Powers are used at specific times as stated on the alien sheet. Some powers are mandatory; others are optional.
 - **The Warp:** Ships sent to the Warp are out of play until retrieved through Regroup, deals, or card effects.
-- **Home System Defense:** If you lose all ships from a home planet, you lose that colony. Losing all home colonies means you may not use your alien power until you regain one.
-- **Cosmic Zap:** An artifact that negates another artifact or flare card as it is played.
+- **Home System Defense:** If you lose all ships from a home planet, you lose that colony. If you ever have fewer than three home colonies, you lose your alien power; you regain it immediately if you reach three or more home colonies again.
+- **Cosmic Zap:** An artifact that cancels one use of any alien's power (including your own). That power cannot be used again for the rest of the current encounter.
 - **Card Zap:** Negates a flare or artifact card as a player attempts to use it.
-- **Mobius Tubes:** An artifact that frees all of a player's ships from the Warp.
-- **Empty Hand:** If you have no encounter cards in hand at the start of the Planning phase, discard your entire hand and draw 8 new cards.
+- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies. **Empty Hand (Defense):** If the defense has no encounter cards when they must play one, they reveal their remaining hand, discard it, and draw 8 new cards, repeating until they have an encounter card.
 - **Destiny Deck Exhausted:** Shuffle the discard pile to form a new destiny deck.
 - **Alliances are voluntary:** Players may decline invitations. Only invited players may ally.
 
@@ -108,7 +108,8 @@ If the offense wins or makes a successful deal, they may have a second encounter
 
 | Phase | Action |
 |-------|--------|
-| Regroup | Retrieve 1 ship from Warp |
+| Start Turn | Draw new hand if offense has no encounter cards |
+| Regroup | Retrieve 1 ship from Warp to any home or foreign colony |
 | Destiny | Draw destiny card to determine opponent |
 | Launch | Aim gate, place 1-4 ships |
 | Alliance | Invite allies; allies commit 1-4 ships |
