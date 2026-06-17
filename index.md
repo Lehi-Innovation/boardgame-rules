@@ -100,7 +100,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ✅ |
 | [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ✅ |
 | [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ✅ |
-| [A Game of Thrones: The Card Game](rules/a-game-of-thrones-the-card-game/) | 2-4 | 60-120 min | Eric M. Lang, Nate French, Christian T. Petersen | ❗ |
+| [A Game of Thrones: The Card Game](rules/a-game-of-thrones-the-card-game/) | 2-4 | 60-120 min | Eric M. Lang, Nate French, Christian T. Petersen | ✅ |
 | [A Game of Thrones: The Card Game (Second Edition)](rules/game-of-thrones-the-card-game/) | 2-6 | 60-120 min | Nate French, Eric M. Lang | ⚠️ |
 | [A House Divided: War Between the States 1861-65](rules/a-house-divided-war-between-the-states-1861-65/) | 2 | 60-120 min | Frank Chadwick | ✅ |
 | [A la Carte](rules/a-la-carte/) | 2-4 | 30-40 min | Karl-Heinz Schmiel | ✅ |
@@ -346,7 +346,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battleground](rules/battleground/) | 2 | 60-120 min | Robert Dougherty, Chad Ellis | ⚠️ |
 | [Battleground: Crossbows & Catapults](rules/battleground-crossbows-catapults/) | 2 | 15-30 min | Uncredited | ⚠️ |
 | [Battlelords](rules/battlelords/) | 2 | 30-60 min | Lawrence R. Sims | ⚠️ |
-| [BattleLore](rules/battlelore/) | 2 | 60-90 min | Richard Borg | ❗ |
+| [BattleLore](rules/battlelore/) | 2 | 60-90 min | Richard Borg | ✅ |
 | [Battles for a Continent](rules/battles-for-a-continent/) | 2 | 60-120 min | Perry Moore | ⚠️ |
 | [Battles for the Ardennes](rules/battles-for-the-ardennes/) | 2 | 60-180 min | Danny S. Parker | ⚠️ |
 | [Battles of the Third Age](rules/battles-of-the-third-age/) | 2 | 120-180 min | Roberto Di Meglio, Marco Maggi, Francesco Nepitello | ✅ |
@@ -434,7 +434,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Boom, Bang, Gold](rules/boom-bang-gold/) | 2-4 | 20 min | Alexandre Emerit | ✅ |
 | [Boomtown](rules/boomtown/) | 3-5 | 30 min | Bruno Cathala, Bruno Faidutti | ✅ |
 | [Boonlake](rules/boonlake/) | 1-4 | 90-120 min | Alexander Pfister | ✅ |
-| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ❗ |
+| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ✅ |
 | [Borderlands](rules/borderlands/) | 2-4 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ⚠️ |
 | [Borneo](rules/borneo/) | 3-5 | 45-60 min | Marco Pranzo | ⚠️ |
 | [Borodino](rules/borodino/) | 2 | 240-480 min | Richard Berg | ✅ |
@@ -456,7 +456,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Breakthru](rules/breakthru/) | 2 | 30 min | Alex Randolph | ⚠️ |
 | [Brew](rules/brew/) | 2-4 | 45-90 min | Stevo Torres | ✅ |
 | [Brilliant Lances](rules/brilliant-lances/) | 2 | 120-240 min | Frank Chadwick, Dave Nilsen | ⚠️ |
-| [Britannia](rules/britannia/) | 3-5 | 180-300 min | Lewis Pulsipher | ❗ |
+| [Britannia](rules/britannia/) | 3-5 | 180-300 min | Lewis Pulsipher | ✅ |
 | [Broadsides and Boarding Parties](rules/broadsides-and-boarding-parties/) | 2 | 60 min | Larry Harris | ✅ |
 | [Broker](rules/broker/) | 2-5 | 30-45 min | Urs Hostettler | ⚠️ |
 | [Broom Service](rules/broom-service/) | 2-5 | 45-75 min | Andreas Pelikan, Alexander Pfister | ✅ |
@@ -576,7 +576,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Chunky Fighters](rules/chunky-fighters/) | 2-4 | 15-30 min | Nick Hayes | ⚠️ |
 | [Cineplexity](rules/cineplexity/) | 4-10 | 30-60 min | Alan R. Moon, Aaron Weissblum | ⚠️ |
 | [Circus Imperium](rules/circus-imperium/) | 2-6 | 60-120 min | L. Ross Babcock III, Sam Lewis, Jordan Weisman | ⚠️ |
-| [Circus Maximus](rules/circus-maximus/) | 2-12 | 120-180 min | Avalon Hill | ❗ |
+| [Circus Maximus](rules/circus-maximus/) | 2-12 | 120-180 min | Avalon Hill | ✅ |
 | [Citadel of Blood](rules/citadel-of-blood/) | 1-6 | 60-120 min | Mike McCulley, Dave Weller | ⚠️ |
 | [Citadels](rules/citadels/) | 2-8 | 20-60 min | Bruno Faidutti | ✅ |
 | [Cities](rules/cities/) | 2-4 | 45-60 min | Steve Finn, Phil Walker-Harding | ✅ |
@@ -588,7 +588,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [City of the Great Machine](rules/city-of-the-great-machine/) | 1-4 | 45-90 min | German Tikhomirov | ✅ |
 | [City States of Arklyrell](rules/city-states-of-arklyrell/) | 2-6 | 90-120 min | Lance Gutteridge | ⚠️ |
 | [Civil War](rules/civil-war/) | 2 | 120-240 min | Eric Lee Smith | ⚠️ |
-| [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ❗ |
+| [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ✅ |
 | [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ✅ |
 | [Claim It!](rules/claim-it/) | 2-5 | 30-45 min | Günter Burkhardt | ⚠️ |
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
@@ -647,13 +647,13 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Concordia](rules/concordia/) | 2-5 | 100 min | Mac Gerdts | ✅ |
 | [Condottiere](rules/condottiere/) | 2-6 | 45 min | Dominique Ehrhard | ✅ |
 | [Conflict](rules/conflict/) | 2-4 | 60 min | Unknown | ⚠️ |
-| [Conflict of Heroes: Awakening the Bear! – Russia 1941-42](rules/conflict-of-heroes-awakening-the-bear-russia-1941-42/) | 2-4 | 60-120 min | Uwe Eickert | ❗ |
+| [Conflict of Heroes: Awakening the Bear! – Russia 1941-42](rules/conflict-of-heroes-awakening-the-bear-russia-1941-42/) | 2-4 | 60-120 min | Uwe Eickert | ✅ |
 | [Conflict of Heroes: Storms of Steel! – Kursk 1943](rules/conflict-of-heroes-storms-of-steel-kursk-1943/) | 2-4 | 60-120 min | Uwe Eickert | ⚠️ |
 | [ConHex](rules/conhex/) | 2 | 20-40 min | Michail Antonow | ⚠️ |
 | [Connect 4x4](rules/connect-4x4/) | 2 | 10 min | Howard Wexler, Ned Strongin | ⚠️ |
 | [Connect Four](rules/connect-four/) | 2 | 10 min | Howard Wexler, Ned Strongin | ❗ |
 | [Conquest of the Empire](rules/conquest-of-the-empire/) | 2-6 | 180 min | Larry Harris Jr. | ⚠️ |
-| [Conquistador: The Age of Exploration](rules/conquistador-the-age-of-exploration/) | 1-3 | 240-480 min | Richard Berg | ❗ |
+| [Conquistador: The Age of Exploration](rules/conquistador-the-age-of-exploration/) | 1-3 | 240-480 min | Richard Berg | ✅ |
 | [Consentacle](rules/consentacle/) | 2 | 15-30 min | Naomi Clark | ✅ |
 | [Conspirateurs](rules/conspirateurs/) | 2-4 | 30-45 min | Unknown (traditional French game) | ✅ |
 | [Contrario](rules/contrario/) | 2-8 | 30 min | Didier L'Hérisson, Roberto Fraga, Matthieu Fraga | ⚠️ |
@@ -745,7 +745,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Demons: The Game of Evil Spirits](rules/demons/) | 2-4 | 60-120 min | Jim Dunnigan | ⚠️ |
 | [Der wahre Walter](rules/der-wahre-walter/) | 4-10 | 45 min | Urs Hostettler | ⚠️ |
 | [Descent: Journeys in the Dark](rules/descent-journeys-in-the-dark/) | 2-5 | 120-240 min | Kevin Wilson | ✅ |
-| [Descent: Journeys in the Dark (Second Edition)](rules/descent-journeys-in-the-dark-second-edition/) | 2-5 | 120-180 min | Daniel Clark, Corey Konieczka, Adam Sadler, Kevin Wilson | ❗ |
+| [Descent: Journeys in the Dark (Second Edition)](rules/descent-journeys-in-the-dark-second-edition/) | 2-5 | 120-180 min | Daniel Clark, Corey Konieczka, Adam Sadler, Kevin Wilson | ✅ |
 | [Descent: Legends of the Dark](rules/descent-legends-of-the-dark/) | 1-4 | 120-180 min | Kara Centell-Dunk, Nathan I. Hajek | ✅ |
 | ↳ [Descent: Legends of the Dark -- The Betrayer's War](rules/descent-legends-of-the-dark-the-betrayer-s-war/) | 1-4 | 180-240 min | Kara Centell-Dunk | ⚠️ |
 | [Destination London](rules/destination/) | 2-4 | 30-60 min | Rachel Lowe | ⚠️ |

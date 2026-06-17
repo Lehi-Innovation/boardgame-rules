@@ -7,11 +7,11 @@ designer: "Daniel Clark, Corey Konieczka, Adam Sadler, Kevin Wilson"
 source_pdf: "descent-journeys-in-the-dark-second-edition-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented "all heroes KO'd = Overlord wins" rule, wrong Stand Up recovery, contradicted large-monster movement/terrain rules, 4 invented conditions. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/descent-journeys-in-the-dark-second-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Descent%3A%20Journeys%20in%20the%20Dark%20%28Second%20Edition%29&game=descent-journeys-in-the-dark-second-edition)
 <!-- verification:end -->
@@ -66,13 +66,13 @@ The Overlord:
 | **Attack** | Choose a weapon, target a monster in range/LOS. Roll attack dice, target rolls defense dice. Deal damage = hearts minus shields |
 | **Search** | Adjacent to a Search token: flip token, draw a Search card (item) |
 | **Rest** | Recover all Fatigue at end of turn. Cannot be performed twice |
-| **Stand Up** | If knocked out: stand up, recover damage to half health. Counts as both actions |
-| **Revive** | Adjacent to a knocked-out hero: that hero recovers damage and stands |
+| **Stand Up** | Only action a knocked-out hero may take: roll 2 red power dice, recover damage equal to hearts rolled and fatigue equal to surges rolled, then turn ends (no additional action) |
+| **Revive** | Adjacent to a knocked-out hero: that hero rolls 2 red power dice, recovers damage equal to hearts rolled and fatigue equal to surges rolled, then stands up |
 | **Special** | Quest-specific actions or class ability actions |
 
 ### Overlord Actions
 - **Play Overlord Cards**: Spend cards for traps, buffs, or events.
-- **Activate Monsters**: Each monster gets 1 move action (up to Speed) and 1 attack action per activation.
+- **Activate Monsters**: Each monster may perform up to 2 actions per activation; each monster may only perform 1 attack action per activation. All monsters of one group must be activated before moving to the next group.
 
 ### Combat
 1. Attacker declares weapon, target, and dice.
@@ -84,7 +84,7 @@ The Overlord:
 7. For ranged attacks, total range rolled must equal or exceed distance to target.
 
 ### Conditions
-Combat can apply conditions: Poisoned, Diseased, Immobilized, Stunned, Bleeding, Cursed, Terrified, Weakened. Each has specific ongoing effects and methods to remove.
+Some abilities and attacks can inflict conditions. The conditions named in the rulebook are: Poisoned (Poison), Diseased (Disease), Immobilized (Immobilize), and Stunned (Stun). An attack with a surge ability featuring one of these conditions inflicts it if the attack deals at least 1 damage after defense. A figure cannot be affected by the same condition more than once at a time. Refer to the Condition cards for specific effects.
 
 ## Scoring / Victory Conditions
 
@@ -97,10 +97,10 @@ In campaigns, quest results affect the overall story and determine which quests 
 ## Special Rules & Edge Cases
 
 - **Line of Sight (LOS)**: Draw a line from corner of attacker's space to any corner of target's space. If unobstructed by walls, blocked terrain, or doors, LOS exists.
-- **Large Monsters**: Occupy multiple spaces. Can move through but not end on heroes. Are affected by terrain in any space they occupy.
+- **Large Monsters**: Occupy multiple spaces. When moving, they "shrink" to move as a normal-sized figure (overlord chooses one occupied space and counts movement from it), then "expand" when they stop. The monster is only considered to have entered the one space where it ended its movement. When entering a terrain space during movement, large monsters are affected just like a single-spaced figure. When a large monster ends its movement and its base covers terrain it did not move through, refer to individual terrain rules for any effect. Special water rule: a large monster ending movement adjacent to a water space may freely place its base in those water spaces without penalty.
 - **Familiars**: Some classes summon familiars (e.g., Reanimate). Familiars activate during the hero's turn.
 - **Fatigue**: Heroes can suffer fatigue to gain extra movement points (1 fatigue = 1 space). Also spent to trigger abilities. Max fatigue = Stamina value; excess becomes damage.
-- **Knocked Out**: When a hero's damage equals or exceeds Health, they are knocked out (not dead). They lie on their space until revived or they stand up. If all heroes are knocked out simultaneously, the Overlord wins.
+- **Knocked Out**: When a hero's damage equals or exceeds Health, they are knocked out (not dead). The hero figure is replaced with a hero token; the hero player discards all Condition cards and the overlord draws one Overlord card. A knocked-out hero cannot use skills or receive conditions, and is immune to attacks. The space is treated as empty for movement and does not block line of sight. Unless revived, a knocked-out hero may only perform one action on their next turn: Stand Up. Victory conditions are quest-specific; the rulebook does not state that knocking out all heroes causes an automatic Overlord win.
 - **Master vs. Minion Monsters**: Red (master) figures have better stats and additional abilities compared to tan (minion) figures.
 - **Campaign Rules**: Between quests, heroes spend gold at the shop. Overlord gains XP to buy new Overlord cards. Heroes gain XP for class cards. After Act I quests, the Interlude quest determines the transition to Act II with stronger monsters and items.
 
