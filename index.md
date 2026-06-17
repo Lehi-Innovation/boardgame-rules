@@ -95,11 +95,11 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 |------|---------|------|----------|--------|
 | [A Castle for All Seasons](rules/a-castle-for-all-seasons/) | 2-4 | 45-60 min | Inka Brand, Markus Brand | ✅ |
 | [A Column of Fire](rules/a-column-of-fire/) | 2-4 | 60-90 min | Michael Rieneck | ✅ |
-| [A Distant Plain](rules/a-distant-plain/) | 1-4 | 120-360 min | Brian Train, Volko Ruhnke | ❗ |
+| [A Distant Plain](rules/a-distant-plain/) | 1-4 | 120-360 min | Brian Train, Volko Ruhnke | ✅ |
 | [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ✅ |
 | [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ✅ |
 | [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ✅ |
-| [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ❗ |
+| [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ✅ |
 | [A Game of Thrones: The Card Game](rules/a-game-of-thrones-the-card-game/) | 2-4 | 60-120 min | Eric M. Lang, Nate French, Christian T. Petersen | ❗ |
 | [A Game of Thrones: The Card Game (Second Edition)](rules/game-of-thrones-the-card-game/) | 2-6 | 60-120 min | Nate French, Eric M. Lang | ⚠️ |
 | [A House Divided: War Between the States 1861-65](rules/a-house-divided-war-between-the-states-1861-65/) | 2 | 60-120 min | Frank Chadwick | ✅ |
@@ -176,7 +176,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Alias](rules/alias/) | 4+ |  | Tactic Games | ⚠️ |
 | [Alien Contact: Extraterrestrial Empires in Conflict](rules/alien-contact-extraterrestrial-empires-in-conflict/) | 2-6 | 180-360 min | Unknown | ⚠️ |
 | [Alien Contact: Extraterrestrial Empires in Conflict](rules/alien-contact/) | 2-6 | 180-360 min | Jim Deupree | ⚠️ |
-| [Alien Frontiers](rules/alien-frontiers/) | 2-4 | 60-90 min | Tory Niemann | ❗ |
+| [Alien Frontiers](rules/alien-frontiers/) | 2-4 | 60-90 min | Tory Niemann | ✅ |
 | [Alien Space Battle Manual](rules/alien-space-battle-manual/) | 2 | 60-120 min | Lou Zocchi | ⚠️ |
 | [Aliens](rules/aliens/) | 1-2 | 60-120 min | Barry Nakazono, David McKenzie | ⚠️ |
 | [All The King's Men](rules/all-the-king-s-men/) | 2 | 15-30 min | Unknown | ⚠️ |
@@ -332,7 +332,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Bataclan](rules/bataclan/) | 2-6 | 20 min |  | ⚠️ |
 | [Batik](rules/batik/) | 2 | 10-15 min | Kris Burm | ⚠️ |
 | [Battle Cattle: The Card Game](rules/battle-cattle-the-card-game/) | 2-6 | 30-60 min | Creede Lambard, Sharleen Lambard | ✅ |
-| [Battle for Armageddon](rules/battle-for-armageddon/) | 2 | 120-180 min | Jervis Johnson, Bill King | ❗ |
+| [Battle for Armageddon](rules/battle-for-armageddon/) | 2 | 120-180 min | Jervis Johnson, Bill King | ✅ |
 | [Battle for Germany](rules/battle-for-germany/) | 2 | 120-180 min | James F. Dunnigan | ⚠️ |
 | [Battle for Rokugan](rules/battle-for-rokugan/) | 2-5 | 60-90 min |  | ✅ |
 | [Battle of the Bulge](rules/battle-of-the-bulge/) | 2 | 120-240 min | James F. Dunnigan | ⚠️ |
@@ -353,7 +353,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battleship](rules/battleship/) | 2 | 30 min |  | ⚠️ |
 | [BattleSpace](rules/battlespace/) | 2 | 120-240 min | FASA Corporation | ⚠️ |
 | [Battlestar Galactica Collectable Card Game](rules/battlestar-galactica-collectable-card-game/) | 2 | 30-60 min | WizKids | ⚠️ |
-| [Battlestar Galactica: The Board Game](rules/battlestar-galactica-the-board-game/) | 3-6 | 120-180 min | Corey Konieczka | ❗ |
+| [Battlestar Galactica: The Board Game](rules/battlestar-galactica-the-board-game/) | 3-6 | 120-180 min | Corey Konieczka | ✅ |
 | [Battlesuit](rules/battlesuit/) | 2 | 60-120 min | Steve Jackson | ⚠️ |
 | [BattleTech](rules/battletech/) | 2+ | 60-180 min | Jordan Weisman, L. Ross Babcock III | ❗ |
 | [BattleTech Collectible Card Game](rules/battletech-collectible-card-game/) | 2 | 30-60 min | Richard Garfield | ⚠️ |
@@ -392,7 +392,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Big Kini](rules/big-kini/) | 2-4 | 60-90 min | Lorenz Kutschke | ⚠️ |
 | [Billabong](rules/billabong/) | 2 | 30-45 min | Eric Solomon | ⚠️ |
 | [Bindle Rails](rules/bindle-rails/) | 2-6 | 120-180 min | Jack Neal | ⚠️ |
-| [Bismarck](rules/bismarck/) | 2 | 120-240 min | Charles S. Roberts | ❗ |
+| [Bismarck](rules/bismarck/) | 2 | 120-240 min | Charles S. Roberts | ✅ |
 | [Bitin' Off Hedz](rules/bitin-off-hedz/) | 2-8 | 20-30 min | James Ernest | ✅ |
 | [Bits](rules/bits/) | 1-4 | 20-30 min | Ariel Laden | ⚠️ |
 | [Bizingo](rules/bizingo/) | 2 | 30-45 min | Uncredited | ⚠️ |
@@ -437,7 +437,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ❗ |
 | [Borderlands](rules/borderlands/) | 2-4 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ⚠️ |
 | [Borneo](rules/borneo/) | 3-5 | 45-60 min | Marco Pranzo | ⚠️ |
-| [Borodino](rules/borodino/) | 2 | 240-480 min | Richard Berg | ❗ |
+| [Borodino](rules/borodino/) | 2 | 240-480 min | Richard Berg | ✅ |
 | [Bosworth](rules/bosworth/) | 2-4 | 30-45 min | Ben Grossman | ⚠️ |
 | [Bottle Imp](rules/bottle-imp/) | 2-6 | 30 min | Gunter Cornett | ✅ |
 | [Bowl Bound](rules/bowl-bound/) | 2 | 120-180 min | Thomas R. Nicely | ✅ |
@@ -558,7 +558,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Chainsaw Warrior](rules/chainsaw-warrior/) | 1 | 30-60 min | Stephen Hand | ⚠️ |
 | [Chancellorsville 1863](rules/chancellorsville/) | 1-2 | 60-120 min | Maurice Suckling | ✅ |
 | [Chandragupta](rules/chandragupta/) | 2 | 120-360 min | Stephen R. Welch | ❗ |
-| [Chaos in the Old World](rules/chaos-in-the-old-world/) | 3-4 | 60-120 min | Eric M. Lang | ❗ |
+| [Chaos in the Old World](rules/chaos-in-the-old-world/) | 3-4 | 60-120 min | Eric M. Lang | ✅ |
 | [Chapayev](rules/chapayev/) | 2 | 15-30 min |  | ⚠️ |
 | [Chase](rules/chase/) | 2 | 30-60 min | Tom Kruszewski | ✅ |
 | [Chaturanga](rules/chaturanga/) | 2 | 30-60 min |  | ⚠️ |
@@ -589,7 +589,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [City States of Arklyrell](rules/city-states-of-arklyrell/) | 2-6 | 90-120 min | Lance Gutteridge | ⚠️ |
 | [Civil War](rules/civil-war/) | 2 | 120-240 min | Eric Lee Smith | ⚠️ |
 | [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ❗ |
-| [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ❗ |
+| [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ✅ |
 | [Claim It!](rules/claim-it/) | 2-5 | 30-45 min | Günter Burkhardt | ⚠️ |
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
 | [Clank!: A Deck-Building Adventure](rules/clank-a-deck-building-adventure/) | 2-4 | 30-60 min | Paul Dennen | ✅ |
@@ -622,7 +622,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cold War: CIA vs KGB](rules/cold-war-cia-vs-kgb/) | 2 | 30-60 min | Jérémy Pinget | ✅ |
 | [Colomino](rules/colomino/) | 2-4 | 30 min | Haim Shafir | ⚠️ |
 | [Colonial Diplomacy](rules/colonial-diplomacy/) | 2-7 | 240-360 min | Avalon Hill | ⚠️ |
-| [Colonial Twilight: The French-Algerian War, 1954-62](rules/colonial-twilight-the-french-algerian-war-1954-62/) | 1-2 | 120-180 min | Brian Train | ❗ |
+| [Colonial Twilight: The French-Algerian War, 1954-62](rules/colonial-twilight-the-french-algerian-war-1954-62/) | 1-2 | 120-180 min | Brian Train | ✅ |
 | [Colony](rules/colony/) | 1-4 | 45-60 min | Ted Alspach, Toryo Hojo, Yoshihisa Nakatsu | ⚠️ |
 | [Colony Delta: Earth vs. Sigma Draconis](rules/colony-delta/) | 2 | 60-120 min | Uncredited | ⚠️ |
 | [Coloretto](rules/coloretto/) | 3-5 | 30 min | Michael Schacht | ✅ |
@@ -634,7 +634,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Combat Commander: Pacific](rules/combat-commander-pacific/) | 2 | 60-180 min | Chad Jensen | ⚠️ |
 | [Comet](rules/comet/) | 2-4 | 30-60 min | Daryl Andrews, Adrian Adamescu | ⚠️ |
 | [Commander Chess](rules/commander-chess/) | 2 | 30-60 min | Hải Quý Nguyễn | ⚠️ |
-| [Commands & Colors: Ancients](rules/commands-colors-ancients/) | 2 | 60 min | Richard Borg | ❗ |
+| [Commands & Colors: Ancients](rules/commands-colors-ancients/) | 2 | 60 min | Richard Borg | ✅ |
 | [Commands & Colors: Napoleonics](rules/commands-colors-napoleonics/) | 2 | 60 min | Richard Borg | ⚠️ |
 | [Commonspoly](rules/commonspoly/) | 3-6 | 60-90 min |  | ✅ |
 | [Complots](rules/complots/) | 2-8 | 15 min | Rikki Tahta | ⚠️ |
@@ -678,7 +678,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cthulhu 500](rules/cthulhu-500/) | 3-8 | 30-60 min | Jeff Tidball | ✅ |
 | [Cthulhu Dice](rules/cthulhu-dice/) | 2-6 | 5-10 min | Steve Jackson | ✅ |
 | [Cuba](rules/cuba/) | 2-5 | 75-120 min | Michael Rieneck, Stefan Stadler | ✅ |
-| [Cuba Libre](rules/cuba-libre/) | 1-4 | 60-180 min | Jeff Grossman, Volko Ruhnke | ❗ |
+| [Cuba Libre](rules/cuba-libre/) | 1-4 | 60-180 min | Jeff Grossman, Volko Ruhnke | ✅ |
 | [Cuboro Tricky Ways](rules/cuboro-tricky-ways/) | 2-4 | 20-50 min | Johannes Guischard | ✅ |
 | [Cutthroat Caverns](rules/cutthroat-caverns/) | 3-6 | 90 min | Curt Covert | ✅ |
 | [Cyclades](rules/cyclades/) | 2-5 | 90 min | Bruno Cathala, Ludovic Maublanc | ✅ |
@@ -703,7 +703,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Dark Future](rules/dark-future/) | 2+ | 60-120 min | Games Workshop Design Team | ⚠️ |
 | [Dark Millennium](rules/dark-millennium/) | 2 | 30-60 min | Unknown | ⚠️ |
 | [Dark Moon](rules/dark-moon/) | 3-7 | 60-75 min | Evan Derrick | ✅ |
-| [Dark Souls – The Board Game](rules/dark-souls-the-board-game/) | 1-4 | 90-120 min | David Carl, Alex Hall, Mat Hart, Rich Loxam | ❗ |
+| [Dark Souls – The Board Game](rules/dark-souls-the-board-game/) | 1-4 | 90-120 min | David Carl, Alex Hall, Mat Hart, Rich Loxam | ✅ |
 | [Dark Tower](rules/dark-tower/) | 1-4 | 60-120 min | Roger Burten, Alan Coleman, Vincent Erato | ⚠️ |
 | [Darkest Crusade](rules/darkest-crusade/) | 1-2 | 120-360 min | Unknown | ⚠️ |
 | [Darkover](rules/darkover/) | 2-4 | 60-120 min | Eon Products | ⚠️ |
@@ -744,7 +744,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Demonlord](rules/demonlord/) | 2 | 120 min | Tom Moldvay | ⚠️ |
 | [Demons: The Game of Evil Spirits](rules/demons/) | 2-4 | 60-120 min | Jim Dunnigan | ⚠️ |
 | [Der wahre Walter](rules/der-wahre-walter/) | 4-10 | 45 min | Urs Hostettler | ⚠️ |
-| [Descent: Journeys in the Dark](rules/descent-journeys-in-the-dark/) | 2-5 | 120-240 min | Kevin Wilson | ❗ |
+| [Descent: Journeys in the Dark](rules/descent-journeys-in-the-dark/) | 2-5 | 120-240 min | Kevin Wilson | ✅ |
 | [Descent: Journeys in the Dark (Second Edition)](rules/descent-journeys-in-the-dark-second-edition/) | 2-5 | 120-180 min | Daniel Clark, Corey Konieczka, Adam Sadler, Kevin Wilson | ❗ |
 | [Descent: Legends of the Dark](rules/descent-legends-of-the-dark/) | 1-4 | 120-180 min | Kara Centell-Dunk, Nathan I. Hajek | ✅ |
 | ↳ [Descent: Legends of the Dark -- The Betrayer's War](rules/descent-legends-of-the-dark-the-betrayer-s-war/) | 1-4 | 180-240 min | Kara Centell-Dunk | ⚠️ |

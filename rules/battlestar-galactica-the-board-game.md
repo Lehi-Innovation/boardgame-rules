@@ -7,11 +7,11 @@ designer: "Corey Konieczka"
 source_pdf: "battlestar-galactica-the-board-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented/wrong mechanics: FTL Control die results, raider-vs-viper thresholds, nuke effect, Hangar Deck "repair" action, Sickbay movement ban contradicted, swapped Sympathizer Brig outcome. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battlestar-galactica-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battlestar%20Galactica%3A%20The%20Board%20Game&game=battlestar-galactica-the-board-game)
 <!-- verification:end -->
@@ -94,13 +94,14 @@ If the Crisis Card has the jump preparation icon, advance the fleet marker one s
 
 ### Key Location Actions
 - **Command (Galactica)**: Launch up to 2 unmanned vipers
-- **FTL Control (Galactica)**: Risk an early jump (roll die; on 6-8 jump normally, on 3-5 lose 1 population, on 1-2 lose 3 population)
+- **FTL Control (Galactica)**: Force an early jump if the fleet marker is on a blue space. Roll die; on 7-8 no penalty, on 6 or lower lose population equal to the number printed on the current space of the Jump Preparation track.
 - **Weapons Control (Galactica)**: Attack a Cylon ship (roll die)
 - **Communications (Galactica)**: Look at back of 2 civilian ships; may move them
 - **Admiral's Quarters (Galactica)**: Attempt to send a player to the brig
 - **Armory (Galactica)**: Attack a centurion on the boarding track
-- **Hangar Deck (Galactica)**: Repair 1 damaged viper if a pilot is here
-- **Sickbay/Brig (Galactica)**: Hazard locations; reduced skill draws, no actions or movement
+- **Hangar Deck (Galactica)**: Pilot a viper — move character token to this location to launch and pilot a viper (character token is removed from the board and placed on the character sheet while piloting)
+- **Sickbay (Galactica)**: Hazard location; draw only 1 Skill Card per turn; players may move out freely.
+- **Brig (Galactica)**: Hazard location; draw only 1 Skill Card per turn; may only leave by passing a difficulty-7 politics/tactics skill check.
 - **Press Room (Colonial One)**: Draw Quorum Card (President only)
 - **Administration (Colonial One)**: Gives president title to another player
 
@@ -114,10 +115,10 @@ If the Crisis Card has the jump preparation icon, advance the fleet marker one s
 7. If total meets or exceeds difficulty, the check passes; otherwise it fails.
 
 ### Combat
-- Vipers attack raiders: Roll die; 3-6 destroys raider, 7-8 also destroys raider.
-- Raiders attack vipers: Roll die; 1-4 miss, 5-6 damage viper, 7-8 destroy viper.
-- Weapons Control: Roll die against target (varies by target type).
-- Nuke: Admiral plays to destroy up to 2 basestars or all ships in one area.
+- Vipers attack raiders: Roll die; 3-8 destroys raider.
+- Raiders attack unmanned vipers: Roll die; 1-4 miss, 5-7 damage viper, 8 destroy viper. Raiders attack piloted vipers: 1-6 miss, 7-8 destroy viper.
+- Weapons Control: Roll die against target; result varies by target type (see Attack Table).
+- Nukes: The Admiral may use nuke tokens to attack a basestar; consult the Attack Table for die results. Vipers may also be used to attack Cylon Basestars (Weapons Control location: 3-6 destroys basestar, 7-8 destroys basestar and 3 raiders in same area).
 
 ## Scoring / Victory Conditions
 
@@ -126,14 +127,14 @@ Travel at least 8 units of distance (shown on Destination Cards), then jump one 
 
 ### Cylon Victory (any of these)
 - Any resource (Food, Fuel, Morale, Population) reaches 0
-- Galactica is destroyed (6+ damage tokens without unfilled locations)
+- Galactica is destroyed (6 or more locations on Galactica have damage tokens at the same time)
 - Centurion marker reaches the end of the boarding track
 
 ### Sleeper Agent Phase
-At the halfway point (distance 4+), deal another Loyalty Card to each player from the remaining deck. Players who now hold a Cylon card may choose to reveal immediately or continue as a sleeper agent.
+At the halfway point (distance 4+), deal another Loyalty Card to each player (including revealed Cylon players) from the remaining deck. Players who now hold a "You Are a Cylon" card may choose to reveal immediately or continue as a sleeper agent. If a player receives a Sympathizer card, it must be immediately revealed and resolved; a revealed Cylon player who receives it may first pass it to any other player.
 
 ### Sympathizer Card
-When dealt, if humans are behind (any resource at half or less), the Sympathizer stays human. If resources are fine, the Sympathizer becomes a revealed Cylon (sent to brig, plays for Cylons).
+When dealt, the player must immediately reveal it. If at least 1 resource is half full or lower (in the red zone), the player is sent to the Brig and the card is treated as "You Are Not a Cylon" (stays human). If every resource is more than half full, the player becomes a revealed Cylon for the remainder of the game (but may never activate the Cylon Fleet location or play Super Crisis Cards).
 
 ## Special Rules & Edge Cases
 
@@ -141,7 +142,7 @@ When dealt, if humans are behind (any resource at half or less), the Sympathizer
 - **Jumping**: Admiral chooses from 2 Destination Cards; distance and possible crises vary.
 - **Galactica Damage**: Damage tokens destroy locations; characters in destroyed locations go to Sickbay.
 - **Resource Zero**: If any resource reaches 0 at the end of a player's turn, humans lose immediately.
-- **Sickbay**: Draw only 1 Skill Card on your turn. Cannot move to another location or take actions.
+- **Sickbay**: Draw only 1 Skill Card on your turn. Players may move out of Sickbay freely (it is not a locked location).
 - **Brig**: Draw only 1 Skill Card. Can only attempt a skill check to escape (difficulty 7, politics/tactics).
 - **Civilian Ships**: Destroyed civilian ships lose the resources shown on their backs.
 

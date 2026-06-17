@@ -7,11 +7,11 @@ designer: "Kevin Wilson"
 source_pdf: "descent-journeys-in-the-dark-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Aim/Dodge orders are invented mechanics (source: re-rolls), Guard has invented half-range limit, hero death wrongly strips items, spawn "within 6 spaces" rule invented; all 22 numbers correct. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/descent-journeys-in-the-dark-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Descent%3A%20Journeys%20in%20the%20Dark&game=descent-journeys-in-the-dark)
 <!-- verification:end -->
@@ -82,17 +82,17 @@ Each hero player's turn has 3 steps:
 | **Ready** | Move up to Speed OR 1 attack | Place 1 Hero Order token |
 
 ### Hero Orders (placed during Ready action)
-- **Aim**: +1 range and +1 damage on one future attack (exhaust to use).
-- **Dodge**: Roll power dice; cancel 1 wound per power enhancement rolled (when attacked).
-- **Guard**: Interrupt a nearby enemy's movement to make 1 attack (within half your range).
-- **Rest**: Recover all fatigue at the start of your next turn.
+- **Aim**: Before rolling dice for an attack, declare an aimed attack. After rolling, re-roll any number of dice (including miss results); must keep the second result. Aim is removed if the hero takes wounds, moves one or more spaces, changes equipped items, or uses it to make an aimed attack. (Note: if both Aim and Dodge apply to the same attack, both are ignored.)
+- **Dodge**: When attacked, force the attacker to re-roll any number of dice rolled for the attack; can only do this once per attack and must accept the second result. Dodge stays until the start of the hero's next turn, so it can protect against multiple attacks.
+- **Guard**: At any point during the overlord player's turn (not during a hero's turn), interrupt the overlord's turn to immediately make one attack following all normal line-of-sight and combat rules. Guard is removed if the hero takes wounds, at the start of the hero's next turn, or when used to make an interrupt attack.
+- **Rest**: At the start of the hero's next turn, restore fatigue to its maximum value. Rest is removed at the start of the hero's next turn when used.
 
 ### Combat Sequence
 1. **Declare Attack**: Choose target space and weapon (heroes) or monster type.
 2. **Confirm Line of Sight**: Trace uninterrupted line from attacker center to target center. Blocked by walls, closed doors, figures, blocking obstacles.
 3. **Count Range & Roll Dice**: Roll attack dice listed on weapon/monster card. Heroes add power dice equal to the relevant trait (melee/ranged/magic).
-4. **Determine Success**: Miss result = automatic failure. Otherwise, total rolled range must meet or exceed distance to target.
-5. **Spend Surges, Enhancements, Fatigue**: Power enhancements add +1 range or +1 damage each. Power surges trigger weapon abilities. Heroes may spend fatigue for extra power dice (max 5 total power dice per attack).
+4. **Determine Success**: Miss result = automatic failure. Otherwise, total rolled range must meet or exceed distance to target. (Melee attacks ignore range results; they only miss on a miss result.)
+5. **Spend Surges, Enhancements, Fatigue**: Power enhancements add +1 range or +1 damage each. Power surges trigger weapon special abilities (heroes) or earn the overlord 1 threat token per 2 surges. Heroes may spend fatigue after rolling to add extra power dice (1 fatigue = 1 die); max 5 total power dice per attack.
 6. **Inflict Wounds**: Total damage minus target's armor = wounds dealt. Place/remove wound tokens accordingly.
 
 ### Attack Types
@@ -111,13 +111,13 @@ Each hero player's turn has 3 steps:
 
 - **Movement through figures**: Friendly figures can be passed through but you must end in an empty space. Enemy figures and blocking obstacles completely block movement.
 - **Large Monsters**: Occupy 2, 4, or 6 spaces. Move using special rules; all occupied spaces must be empty (of enemies/obstacles). Can end overlapping friendly monster spaces.
-- **Hero Death**: When a hero's last wound token is removed, the hero is killed. The hero is moved to town, loses all items not in pack, and the Overlord removes conquest tokens equal to the hero's conquest value. The hero respawns in town.
+- **Hero Death**: When a hero's last wound token is removed, the hero is killed. The hero moves to town, loses half of his money (rounded down to the nearest 25 coins), but does NOT lose any items or skill cards. Wounds and fatigue are immediately restored to maximum and all lingering effects are removed. The hero players lose conquest tokens equal to the killed hero's conquest rating. The hero takes his turn normally next round and may return to the board via a glyph.
 - **Glyphs**: Must be activated by walking across them. Once active, heroes can teleport between town and any activated glyph. Monsters may not end movement on a glyph.
 - **Fatigue**: Heroes may spend fatigue tokens to gain extra movement points (1 fatigue = 1 space) or add power dice to attacks. Cannot exceed maximum fatigue; excess fatigue becomes wounds.
 - **Doors**: Anyone can open/close normal doors (costs 2 movement points). Rune-locked doors require the matching runekey. Opening a door reveals the area beyond.
-- **Spawning**: The Overlord can spawn monsters from spawn cards. Monsters must be placed within 6 spaces of a hero, not in line of sight of any hero, and in a legal empty space.
+- **Spawning**: The Overlord can spawn monsters from spawn cards (1 per turn). Monsters may not be placed in a space that is in line of sight of any hero (other monster figures do not block a hero's line of sight for this purpose), in a space containing a figure or obstacle, or in an unrevealed area. If no legal space exists for a monster, it cannot be placed.
 - **Town**: Heroes in town can shop, heal (costs movement), and purchase training tokens to increase traits.
-- **Pits**: Deal 1 wound when a figure enters or begins activation in a pit space. Do not block line of sight.
+- **Pits**: If a figure moves so that it is only occupying pit spaces, it falls in and immediately suffers 1 wound that cannot be reduced by armor. A figure in a pit may climb out for 2 movement points, placed adjacent to the pit. While in a pit, the figure has no line of sight to any other spaces. Figures may jump over a pit for 3 movement points per space crossed. Pits do not block line of sight.
 - **Water & Rubble**: Water blocks movement but not line of sight. Rubble blocks both.
 
 ## Player Reference
@@ -130,7 +130,7 @@ Each hero player's turn has 3 steps:
 - Advance = Speed movement + 1 attack
 - Ready = Speed movement OR 1 attack + place Order token
 
-**Combat:** Declare → LOS → Roll → Check miss/range → Surges/Enhancements/Fatigue → Damage minus Armor = Wounds
+**Combat:** Declare → LOS → Roll → Check miss/range (step 4) → Surges/Enhancements/Fatigue (step 5) → Damage minus Armor = Wounds
 
 **Overlord Turn:** Collect Threat (1/hero) + Draw 2 → Spawn (1 card) → Activate all monsters
 

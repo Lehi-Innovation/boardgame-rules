@@ -7,11 +7,11 @@ designer: "Richard Berg"
 source_pdf: "borodino-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory conditions invented (objectives/VP targets/levels vs actual collapse-VP system + hex 3417); invented Combined Arms bonus contradicting 9.23; Reserve mechanic misdescribed. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/borodino-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Borodino&game=borodino)
 <!-- verification:end -->
@@ -83,7 +83,7 @@ Each player may move their Overall Commander.
 - **Under Orders:** Commands operate normally with full movement and combat ability.
 - **No Orders:** Commands are restricted; may attempt to convert to Under Orders when their Activation Marker is drawn.
 - **Orders Delay:** At the start of each turn, players roll to see if corps commanders delay receiving orders (representing communication difficulties). Modified by the Orders Commander's Delay Rating.
-- **Reserve:** Units designated as Reserve activate during the special Reserve Phase, not during normal activation draws.
+- **Reserve:** In the Reserve Phase, each player may activate one Orders Command. To be eligible, at least one unit in the command must be within the Overall Commander's Orders Range, and no unit in the command may be adjacent to an enemy unit. Units activated as Reserves function as if they have No Orders; they may not roll to change orders, nor may they Rally. Each non-artillery unit that moves during a Reserve Activation must roll for possible Disorder (if roll > Cohesion, the unit is Disordered; already Disordered units Withdraw). The Initiative Player chooses which side activates first during the Reserve Phase.
 
 ### Movement
 - Movement points vary by unit type (infantry, cavalry, artillery).
@@ -100,9 +100,9 @@ Each player may move their Overall Commander.
 ### Shock Combat
 - Occurs when units move adjacent to or into enemy hexes.
 - Compare Shock Strength plus die roll plus modifiers.
-- Results include Disorder, Withdrawal, Rout, or Elimination.
+- Results include Disorder, Retreat (Cohesion Check), Withdrawal, or Elimination. Rout is not used in this version; it has been replaced by Withdrawal.
 - **Commitment:** Individual units have a Commitment rating determining their ability to engage.
-- **Combined Arms:** Infantry and cavalry attacking together gain bonuses.
+- **Multi-Group Shock (9.23):** Infantry, Charging Cavalry, and non-Charging Cavalry may NOT combine their strengths when attacking the same unit. Each group's attack is resolved separately in the order: Cavalry Charge, Cavalry Shock, then Infantry Shock. There is no combined-arms bonus for mixed attacks.
 
 ### Cavalry Charge
 - Special form of Shock initiated by cavalry units.
@@ -120,13 +120,12 @@ Each player may move their Overall Commander.
 Victory conditions vary by scenario:
 
 ### Schevardino Scenario
-- French win by capturing the Schevardino Redoubt and maintaining control.
-- Russian win by holding the redoubt or inflicting sufficient casualties.
+- The player who occupies the Schevardino Redoubt at the end of Turn 5 wins.
 
 ### Borodino Scenario
-- Victory is determined by a combination of geographic objectives (controlling the Fleches, Great Redoubt, Utitza) and enemy casualties.
-- Each side has specific VP targets; the side meeting its objectives wins.
-- Levels of victory (Decisive, Substantive, Marginal) based on degree of objective completion.
+- Victory is determined by Victory Points (VP) totaled at the end of the game. The player with the most VP wins; the larger the margin, the greater the victory.
+- **Group Collapse VP:** The French earn 3 VP for each Russian Activation Group (other than the Russian Imperial Guard/V Corps) that Collapses, and 10 VP for the Russian Imperial Guard. The Russians earn 4 VP for each French Activation Group (other than the French Imperial Guard) that Collapses, and 10 VP for the French Imperial Guard.
+- **Geographic VP:** The side occupying hex 3417 at game end earns 10 VP. (Both sides can earn this if the occupying side changes; only the occupier at game end earns it.) The game ends at the conclusion of the 1945 game-turn.
 
 ## Special Rules & Edge Cases
 

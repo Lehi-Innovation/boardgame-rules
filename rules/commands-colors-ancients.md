@@ -7,11 +7,11 @@ designer: "Richard Borg"
 source_pdf: "commands-colors-ancients-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Core retreat rule contradicted (says "retreat 1 hex" per flag vs one full movement, e.g. 4 hexes for light cavalry), war machine and retreat-elimination errors. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/commands-colors-ancients-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Commands%20%26%20Colors%3A%20Ancients&game=commands-colors-ancients)
 <!-- verification:end -->
@@ -57,23 +57,25 @@ Commands & Colors: Ancients is a card-driven light wargame covering ancient batt
 ### Movement
 | Unit Type | Movement (hexes) | Battle After Move? |
 |-----------|------------------|--------------------|
-| Light Infantry | 2 | Yes |
+| Light Infantry | 1 or 2 | Yes |
+| Auxilia Infantry | 1 and battle, or 2 and no battle | Conditional |
 | Medium Infantry | 1 | Yes |
+| Warrior Infantry | 1 (or 2 to charge into close combat) | Yes |
 | Heavy Infantry | 1 | Yes |
-| Light Cavalry | 4 | Yes |
-| Medium Cavalry | 3 | Yes |
-| Heavy Cavalry | 2 | Yes |
-| War Machine | 1 | No (fires instead) |
-| Elephants | 2 | Yes |
-| Leaders | 3 (attached to unit) | -- |
+| Light Cavalry | 1–4 | Yes |
+| Medium Cavalry | 1–3 | Yes |
+| Heavy Cavalry | 1–2 | Yes |
+| War Machine | 1 (may not fire after moving; may close combat from position) | Close combat only |
+| Elephants | 1–2 | Yes |
+| Leaders (alone) | 1–3 | N/A |
 
 ### Combat
 1. Determine number of battle dice based on unit type and situation.
 2. Roll dice. Each symbol matches a unit type:
-   - Matching symbol = 1 hit on that unit type
-   - Swords = hit on any unit (some restrictions)
-   - Flag = force target to retreat 1 hex
-   - Leader = hit if leader present
+   - Matching color/shape symbol = 1 hit on that unit type
+   - Swords = 1 hit in close combat on most units (exceptions: light infantry, light cavalry, war machines do NOT score hits on sword symbols in close combat)
+   - Flag = force target to retreat its full maximum movement allowance per flag (e.g., 1 flag forces light cavalry to retreat 4 hexes, medium cavalry 3 hexes, light infantry 2 hexes; warriors and auxilia retreat only 1 hex per flag)
+   - Leader helmet = 1 hit if a friendly leader is attached to or adjacent to the battling unit (not in ranged combat; not for elephants)
 3. Remove blocks for each hit. When a unit loses its last block, it is eliminated.
 4. Eliminated units earn the attacker 1 victory banner.
 
@@ -83,21 +85,38 @@ Collect victory banners by eliminating enemy units. The victory banner target is
 
 ## Special Rules & Edge Cases
 
-- **Leaders** increase adjacent units' effectiveness and can absorb hits, but if killed they give the opponent a victory banner.
-- **Retreating** into impassable terrain or off the board eliminates the unit.
-- **Battle back:** Units that survive an attack may immediately counter-attack.
-- **Close combat:** Melee-range attacks use more dice than ranged attacks.
-- **Evasion:** Light units may evade before being attacked by heavier units.
-- **Elephants** can rampage when hit, potentially damaging friendly units.
-- **Terrain** modifies movement, line of sight, and defensive capabilities.
+- **Leaders** convert helmet symbols into hits in close combat for attached/adjacent friendly units; a unit with an attached leader may also ignore 1 flag (bolster morale). If a leader is killed the opponent earns 1 victory banner.
+- **Retreat distance:** Each flag forces the target unit to retreat its full maximum movement allowance toward its own side (not just 1 hex). A light cavalry unit facing 1 flag retreats 4 hexes; facing 2 flags it retreats 8 hexes. Warriors and auxilia retreat only 1 hex per flag regardless of movement rate.
+- **Retreating** onto impassable terrain, off the board, or onto a hex occupied by any unit costs 1 block per unfulfilled hex of retreat. If the unit is left with no blocks it is eliminated.
+- **Battle back:** The defending unit may battle back if it survived the close combat attack without retreating from its hex. A unit that was forced to retreat (even if it ends adjacent to the attacker) may not battle back.
+- **Close combat dice:** Light infantry and light cavalry use 2 dice; auxilia 3 dice; medium infantry 4 dice; heavy infantry 5 dice; light cavalry 2 dice; medium cavalry 3 dice; heavy cavalry 4 dice; war machine 2 dice (stays in position only; may not move and close combat); elephant rolls the same number of dice as the unit it is attacking normally rolls against it.
+- **War machines:** May move 1 hex OR stay and close combat; if they move they may not use ranged combat. They may evade and, if not eliminated, are removed from the board (crew escapes, no victory banner).
+- **Evasion:** Light units (light infantry, light sling infantry, light bow infantry, light cavalry, light bow cavalry, barbarian chariots), war machines, and some mounted units may evade close combat. The evading unit moves 2 hexes toward its own baseline; the attacker rolls dice but only matching unit symbols score hits (swords, flags, and helmets are ignored). Auxilia, medium infantry, warrior, heavy infantry, and elephants may never evade.
+- **Elephants** rampage when forced to retreat: before moving, roll 2 dice against each adjacent unit (friend and foe); a matching symbol scores 1 hit, a helmet eliminates a lone leader. After rampage, the elephant retreats; if its path is blocked, units in the path each lose 1 block per hex the elephant cannot fulfill.
+- **Terrain** modifies movement, line of sight, and the number of battle dice rolled.
 
 ## Player Reference
 
-| Battle Dice Symbols |
-|--------------------|
-| Light = Hit on light units |
-| Medium = Hit on medium units |
-| Heavy = Hit on heavy units |
-| Sword = Hit on any unit |
-| Flag = Force retreat |
-| Leader = Hit on leader |
+| Battle Dice Symbols | Effect |
+|---------------------|--------|
+| Light (green circle) | 1 hit on light units (green circle symbol, with or without white border) |
+| Medium (blue triangle) | 1 hit on medium units (blue triangle symbol, with or without white border) |
+| Heavy (red square) | 1 hit on heavy units (red square symbol, with or without white border) |
+| Sword (crossed swords) | 1 hit in close combat on most units; NO hit from light infantry, light cavalry, or war machines in close combat; ignored entirely in ranged combat |
+| Flag | Force retreat of full maximum movement per flag (not 1 hex); does not score a hit |
+| Leader (helmet) | 1 hit if a friendly leader is attached to or adjacent to the battling unit (close combat only; not ranged combat; not effective for elephants) |
+
+**Close Combat Dice by Unit Type**
+
+| Unit | Dice |
+|------|------|
+| Light infantry / light bow / light sling | 2 |
+| Auxilia | 3 |
+| Medium infantry | 4 |
+| Warrior infantry | 3 (4 at full strength) |
+| Heavy infantry | 5 |
+| War machine | 2 (position only; cannot move and close combat) |
+| Light cavalry / light bow cavalry | 2 |
+| Medium cavalry | 3 |
+| Heavy cavalry (regular or cataphracted) | 4 |
+| Elephant | same as target unit's normal dice vs. elephants |
