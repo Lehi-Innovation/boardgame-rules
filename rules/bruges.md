@@ -7,11 +7,11 @@ designer: "Stefan Feld"
 source_pdf: "bruges-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Threat penalty table almost entirely wrong, canal cost/scoring wrong, threat discard gives 1 point not 1 guilder, persons need not match house color, missing house/person/canal end-game scoring. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bruges-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bruges&game=bruges)
 <!-- verification:end -->
@@ -79,43 +79,47 @@ Play 1 card. Take 2 workers of the played card's color from supply.
 Play 1 card. Take guilders from the bank equal to the value shown on the matching-color die (1-6 guilders).
 
 ### III. Discard 1 Threat Marker
-Play 1 card. Discard 1 Threat marker of the played card's color. Gain 1 guilder each time you discard a threat.
+Play 1 card. Discard 1 Threat marker of the played card's color. Gain 1 point (advance scoring pawn 1 space) each time you discard a threat.
 
 ### IV. Build 1 Canal Token
-Play 1 card. Pay guilders equal to the matching-color die value (1-6). Place 1 canal token in the next empty canal space. Advance your scoring pawn according to the VP shown on that canal space.
+Play 1 card matching the color of the canal space you wish to build on. Pay the number of guilders shown on that canal space. Place 1 canal token on that space. If a player reaches space 3 of a section, they score 3 points at game end. Completing a full canal section earns the topmost Statue token (max 2 statues per player).
 
 ### V. Build 1 House
 Play 1 card. Pay 1 worker of the played card's color. Place the card face-down in your play area as a house of that color.
 
 ### VI. Recruit 1 Person
-Play 1 card. Pay guilders equal to the person's recruitment cost (0-12). The person card is placed face-up in a house of matching color (you must have an empty house). Each person has a unique ability (immediate, ongoing, activated, or end-game).
+Play 1 card onto one of your empty houses (the person may be a different color than the house). Pay the guilder cost shown in the top-left corner of the person card. Each house accommodates exactly 1 person. Each person has a unique ability (immediate, ongoing, activated, or end-game) and is worth points at game end equal to one-third of their recruitment cost.
 
 ## Scoring / Victory Conditions
 
 ### Threat Penalties (3rd marker of a color)
-| Color | Penalty |
-|-------|---------|
-| Blue | Lose 3 VP |
-| Brown | Discard 1 canal token from end of your canal |
-| Red | Discard 1 person of your choice |
-| Purple | Lose 3 guilders |
-| Yellow | Discard 1 worker of your choice |
+| Color | Threat Name | Penalty |
+|-------|-------------|---------|
+| Blue | Flood | Return ALL your workers to the supply |
+| Brown | Plague | Discard 1 person of your choice from your play area |
+| Red | Fire | Discard 1 built house OR 1 built canal token (if you have neither, no loss); if a house with a person is discarded, take that person back into hand |
+| Purple | Intrigue | Lose 3 points (score cannot go below 0) |
+| Yellow | Raid | Return ALL your guilders to the bank |
+
+After resolving the penalty, return all 3 threat markers of that color to the supply. Players do not score points when returning threat markers after suffering damage.
 
 ### End-Game Scoring
-1. **Majority bonuses** (for each of the 3 categories you lead): VP per the number shown on the Majority marker
-2. **Reputation track:** VP based on your position (0-12 VP)
-3. **Statues:** During the game, players can claim Statue tokens for meeting conditions
-4. **Person end-game bonuses:** Various VP from person card abilities
-5. **Remaining resources:** No VP for leftover guilders, workers, or cards
+Score in any order:
+1. **Person points:** Each person in your play area scores points equal to one-third of their recruitment cost (shown on the card below the price).
+2. **Houses:** 1 point per built house (occupied or not).
+3. **Person end-game bonuses:** Each person with a "laurel" icon scores the VP indicated on that card.
+4. **Majority markers:** Each Majority marker you flipped to its colored side is worth **4 points**.
+5. **Canal milestones:** Each canal section space 3 you built scores **3 points**. Each Statue token you collected scores the points printed on it (2–7).
+6. **Reputation track:** Score the number of points shown on the step your reputation pawn has reached.
 
-**Highest VP total wins.** Tiebreaker: most guilders remaining.
+**Highest VP total wins.** Tiebreaker: most guilders remaining. If still tied, those players share the victory.
 
 ## Special Rules & Edge Cases
 
 - Players can make change at any time (3-guilder piece = 3 single guilders).
 - The 5th unplayed card each round stays in hand but may not be used for actions.
 - Multiple actions of the same type can be performed in a single round.
-- Persons must be placed in a matching-color house. You cannot recruit without an available house.
+- A person may be placed in a house of any color — the person need not match the house color. You cannot recruit without an available empty house.
 - Person types: Immediate (activates on recruitment), Ongoing (always active), Activated (use once per round), End-game (scores at game end).
 - Guard houses: each has a round box for player seals. Some person abilities interact with guard house positions.
 
@@ -127,14 +131,13 @@ Play 1 card. Pay guilders equal to the person's recruitment cost (0-12). The per
 | # | Action | Cost | Effect |
 |---|--------|------|--------|
 | I | Take workers | Card | 2 workers of card color |
-| II | Take guilders | Card | Guilders = matching die value |
-| III | Remove threat | Card | Discard 1 matching-color threat, gain 1 guilder |
-| IV | Build canal | Card + guilders (die value) | Place canal token, score VP |
-| V | Build house | Card + 1 matching worker | Place card as house |
-| VI | Recruit person | Card + guilders (person cost) | Place person in matching house |
+| II | Take guilders | Card | Guilders = value on matching-color die |
+| III | Remove threat | Card | Discard 1 matching-color threat; gain 1 point |
+| IV | Build canal | Card (matching canal space color) + guilders shown on that space | Place canal token on chosen space |
+| V | Build house | Card + 1 matching worker | Place card face-down as house (scores 1 VP at end) |
+| VI | Recruit person | Card onto empty house + guilders (person's printed cost) | Person may differ from house color; scores VP at end |
 
 **Dice values:**
-- 1-2: Determine reputation advance cost
+- 1-2: Determine reputation advance cost (sum of all dice showing 1 or 2)
 - 3-4: No effect in Phase 2
-- 5-6: Trigger threat markers
-- 1-6: Determine guilder income (Action II) and canal cost (Action IV)
+- 5-6: Each player receives 1 threat marker of that die's color

@@ -7,11 +7,11 @@ designer: "Alain Rivollet, Gaëtan Beaujannot"
 source_pdf: "concept-kids-animals-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure inverts guesser/clue-giver roles vs source (kids clue, adult guesses); invents scoring track/marker; misses 12-card deck setup. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/concept-kids-animals-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Concept%20Kids%3A%20Animals&game=concept-kids-animals)
 <!-- verification:end -->
@@ -19,53 +19,63 @@ verification_date: "2026-06-12"
 
 ## Overview
 
-Concept Kids: Animals is a cooperative guessing game for children aged 4 and up, adapted from the original Concept. Players work together to guess animals by placing rings on icons on the game board. The active player(s) place rings to describe the animal's characteristics (habitat, color, size, diet, etc.) while other players try to guess the animal. The team aims to guess 12 animals successfully.
+Concept Kids: Animals is a cooperative guessing game for children aged 4 and up, adapted from the original Concept. The children place rings on icons on the game board to describe an animal, while the adult tries to guess which animal it is. Everyone plays together with the goal of finding 12 animals.
+
+Note: Throughout the rules, "You" always refers to the adult player.
 
 ## Components
 
 - 1 game board with universal icons
-- 110 animal cards (divided into two difficulty levels)
-- Ring tokens for placing on icons
-- Scoring track
+- 110 animal cards (blue-framed for common animals; red-framed for less common animals)
+- 16 rings
+- 1 card holder
+- 1 quick rules sheet
+- This rulebook
 
 ## Setup
 
-1. Place the game board in the center of the table.
-2. Shuffle the animal cards and place them face down.
-3. Place ring tokens within reach of all players.
-4. The youngest player starts as the active player.
+1. Place the game board in the middle of the table so all players can see it clearly.
+2. For your first few games, use only blue-framed cards. Return the red-framed cards to the box.
+3. Shuffle all blue-framed cards and randomly take 12 to form a face-down deck next to the game board. Return the remaining cards to the box.
+4. Place the card holder in front of the adult (you).
+5. Place all rings near the board.
 
 ## Turn Structure
 
-1. The active player draws an animal card and looks at the animal without showing others.
-2. The active player places rings on icons on the game board to describe the animal's characteristics (where it lives, its color, size, what it eats, how it moves, etc.).
-3. Other players call out guesses at any time.
-4. When someone guesses correctly, the team scores. Move the scoring marker.
-5. The next player clockwise becomes the active player.
+1. Take the top card of the deck without looking at it and place it in the card holder so all kids can see the animal.
+2. Taking turns, the children each place a ring on an icon on the game board to help you guess the animal. They can help each other choose the best icons.
+3. You may make as many guesses as you want. The children can only answer "yes" or "no" to your guesses.
+4. **If you correctly guess the animal:** place the card face up next to the deck (worth 1 point at the end of the game).
+5. **If you cannot guess and give up:** the children reveal the animal to you. Place that card in the box — it will not count for the final score. You must give up if the children cannot place any more rings and you still cannot identify the animal.
+6. Draw a new card and try to guess a new animal.
 
 ## Actions
 
-### Giving Clues
-- Place rings on icons representing the animal's features: habitat, color, size, number of legs, diet, behavior, etc.
-- Multiple rings can be placed on different icons.
-- The active player can only say "yes" or "no" to guesses but cannot give verbal hints.
-- Rings can be added, removed, or rearranged at any time.
+### Giving Clues (Children)
+- Each child, taking turns, places one ring on an icon that characterizes the animal (habitat, color, size, diet, body features, movement, etc.).
+- Children may help each other choose the best icons.
+- Children can only answer "yes" or "no" to the adult's guesses; no other verbal hints.
 
-### Guessing
-- All other players may guess at any time with no limit on attempts.
-- Cooperation is encouraged; players may discuss ideas together.
+### Guessing (Adult)
+- The adult may guess as many times as desired during a turn.
+- The adult must give up if rings are exhausted and the animal has not been identified.
 
 ## Scoring / Victory Conditions
 
-The game is cooperative. The goal is to correctly guess 12 animals. Each correctly guessed animal earns 1 point on the scoring track. The team's performance is measured by how many animals are guessed within the allotted cards.
+The game ends when the deck of 12 cards is empty. Count the number of correctly guessed cards (face-up pile). Compare that score to the scale printed in the rulebook:
+
+| Score | Rating |
+|-------|--------|
+| 10–11 | Admirable Panther / Legendary Lion |
+| 8–9   | Clever Leopard / Majestic Tiger |
+| (lower scores) | lower ratings |
+
+Try to do better each game!
 
 ## Special Rules & Edge Cases
 
-- If no one can guess the animal, the card is set aside and no point is earned.
-- The two difficulty levels on the cards allow adaptation for younger or older children.
 - There is no time limit per card; play at a comfortable pace.
-- For younger children, showing the card options or giving additional hints is encouraged.
-- The game works with any number of players; larger groups can have multiple active players collaborating.
+- The two difficulty levels allow adaptation: blue-framed cards show common animals; red-framed cards show less common animals. To increase difficulty, mix in red-framed cards or play with red-framed cards only.
 
 ## Player Reference
 
@@ -77,3 +87,7 @@ The game is cooperative. The goal is to correctly guess 12 animals. Each correct
 | Diet | Plants, meat, insects, fish |
 | Movement | Walking, swimming, flying |
 | Body features | Legs, wings, tail, shell |
+
+**Variant — Role Reversal:** A child can take the adult's role. Place the card holder in front of that child (who puts a card in it without looking). You and the other children must then get that child to guess the animal.
+
+**Variant — For ages 6 and up:** One single player (not the group) makes all other players guess. Take 24 cards instead of 12. At the start of each turn, a player takes two cards, chooses one, and returns the other to the box. That player makes all others guess using only the icons. As soon as any player finds the animal or the group gives up, the turn ends; the next player then takes a turn.

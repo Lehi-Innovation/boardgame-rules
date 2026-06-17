@@ -7,11 +7,11 @@ designer: "Leo Colovini"
 source_pdf: "clans-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Player Reference epoch chart fabricates favorable/hostile terrains; Epoch III directly contradicts source (steppe is favorable +3, not hostile). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/clans-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Clans&game=clans)
 <!-- verification:end -->
@@ -61,7 +61,7 @@ On your turn you perform exactly one action: move all huts from one area to an a
   3. Scoring disks for each clan color represented advance on the scoring strip.
 
 ### Dispute
-- If all 5 colors are represented in a village when it forms, a dispute occurs first: all colors with only 1 hut in the village are removed **before** scoring. Those colors receive no points for that village.
+- If all 5 colors are represented in a village when it forms, a dispute occurs first: all colors represented in the village by only one hut are removed **before** scoring. Those colors receive no points for that village.
 
 ## Scoring / Victory Conditions
 
@@ -72,7 +72,7 @@ On your turn you perform exactly one action: move all huts from one area to an a
 - The 12th village always receives a 5-point terrain bonus regardless of terrain type.
 
 ### Epochs
-The game spans 5 epochs. In epochs I-IV, one terrain is favorable (bonus points) and one is hostile (zero points). In epoch V, all terrains are favorable. The number of villages per epoch equals the number of bonus chips: 4 in epoch I, 3 in epoch II, etc. When the last bonus chip of an epoch is taken, the next epoch begins.
+The game spans 5 epochs. In epochs I–IV, one terrain is favorable (bonus points) and one is hostile (zero points). In epoch V, all terrains are favorable. The number of villages per epoch equals the number of bonus chips placed in that epoch on the epoch chart (4 in epoch I, 3 in epoch II, etc.). When the last bonus chip of an epoch is taken, the next epoch begins.
 
 ### End of Game
 The game ends when the 12th village is established. Players reveal their secret clan cards. Each player adds their collected bonus chips to their clan's scoring disk position. The player whose clan's scoring disk is farthest along the strip wins.
@@ -87,12 +87,14 @@ The game ends when the 12th village is established. Players reveal their secret 
 
 ## Player Reference
 
+**Epoch terrain guide** — consult the epoch chart on the gameboard for the full table. The source explicitly confirms the following:
+
 | Epoch | Villages | Favorable Terrain | Hostile Terrain | Bonus |
 |-------|----------|-------------------|-----------------|-------|
 | I     | 4        | Forest            | Mountains       | +1    |
-| II    | 3        | Steppes           | Grassland       | +2    |
-| III   | 2        | Mountains         | Steppes         | +3    |
-| IV    | 1        | Grassland         | Forest          | +4    |
+| II    | 3        | (see board)       | Grassland       | +2    |
+| III   | 2        | Steppes           | (see board)     | +3    |
+| IV    | 1        | (see board)       | (see board)     | +4    |
 | V     | 2        | All               | None            | +5    |
 
 | Village Score = Total huts in village + terrain bonus (if favorable) |

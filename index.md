@@ -383,7 +383,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Bermuda Triangle](rules/bermuda-triangle/) | 2-4 | 45-60 min |  | ✅ |
 | [Bermude](rules/bermude/) | 2-4 | 20-30 min | Unknown | ⚠️ |
 | [Betrayal at House on the Hill](rules/betrayal-at-house-on-the-hill/) | 3-6 | 60 min | Bruce Glassco | ❗ |
-| [Beyblade Trading Card Game](rules/beyblade-trading-card-game/) | 2 | 15-30 min | Mike Mulvihill | ❗ |
+| [Beyblade Trading Card Game](rules/beyblade-trading-card-game/) | 2 | 15-30 min | Mike Mulvihill | ✅ |
 | [Bezzerwizzer](rules/bezzerwizzer/) | 2-4 teams | 30-60 min | Jes Moller | ✅ |
 | [Biblios](rules/biblios/) | 2-4 | 30 min | Steve Finn | ⚠️ |
 | [Big Adventure](rules/big-adventure/) | 2-4 | 30-60 min | Unknown | ⚠️ |
@@ -398,7 +398,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Bizingo](rules/bizingo/) | 2 | 30-45 min | Uncredited | ⚠️ |
 | [Black Book: The Board Game](rules/black-book-the-board-game/) | 1-4 | 60-120 min | Unknown | ⚠️ |
 | [Black Box](rules/black-box/) | 1-2 | 30 min | Eric Solomon | ⚠️ |
-| [Black Friday](rules/black-friday/) | 2-5 | 45-60 min | Friedemann Friese | ❗ |
+| [Black Friday](rules/black-friday/) | 2-5 | 45-60 min | Friedemann Friese | ✅ |
 | [Black Hole](rules/black-hole/) | 2 | 10-15 min | Wal Joris | ⚠️ |
 | [Blackbeard](rules/blackbeard/) | 1-5 | 120-300 min | Richard H. Berg | ❗ |
 | [Bladestorm](rules/bladestorm/) | 2+ | 60-180 min | Bruce Neidlinger | ⚠️ |
@@ -460,8 +460,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Broadsides and Boarding Parties](rules/broadsides-and-boarding-parties/) | 2 | 60 min | Larry Harris | ✅ |
 | [Broker](rules/broker/) | 2-5 | 30-45 min | Urs Hostettler | ⚠️ |
 | [Broom Service](rules/broom-service/) | 2-5 | 45-75 min | Andreas Pelikan, Alexander Pfister | ✅ |
-| [Bruges](rules/bruges/) | 2-4 | 60 min | Stefan Feld | ❗ |
-| [Bruxelles 1893](rules/bruxelles-1893/) | 2-5 | 50-125 min | Etienne Espreman | ❗ |
+| [Bruges](rules/bruges/) | 2-4 | 60 min | Stefan Feld | ✅ |
+| [Bruxelles 1893](rules/bruxelles-1893/) | 2-5 | 50-125 min | Etienne Espreman | ✅ |
 | [Bubble Stories](rules/bubble-stories/) | 1-2 | 15 min | Matthew Dunstan | ✅ |
 | [Buccaneer](rules/buccaneer/) | 3-5 | 30 min | Stefan Dorra | ✅ |
 | [Buck Rogers](rules/buck-rogers/) | 2-4 | 15-30 min | Uncredited | ⚠️ |
@@ -540,7 +540,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | ↳ [Catan Scenarios: Frenemies](rules/catan-scenarios-frenemies/) | 3-6 | 45-90 min | Benjamin Teuber | ✅ |
 | ↳ [Catan: Crop Trust](rules/catan-scenario-crop-trust/) | 3-4 | 75 minutes | Klaus Teuber, Benjamin Teuber | ❗ |
 | [Catan Card Game (Event Cards Edition)](rules/catan-event-cards/) | 2 | 60-120 minutes | Klaus Teuber | ❗ |
-| [Catan Dice Game](rules/catan-dice-game/) | 1-4 | 15-30 minutes | Klaus Teuber | ❗ |
+| [Catan Dice Game](rules/catan-dice-game/) | 1-4 | 15-30 minutes | Klaus Teuber | ✅ |
 | [Catan Geographies: Germany](rules/catan-geographies-germany/) | 3-4 | 60-90 minutes | Klaus Teuber, Benjamin Teuber | ⚠️ |
 | [Catan Histories: Merchants of Europe](rules/catan-histories-merchants-of-europe/) | 3-4 | 90-120 minutes | Klaus Teuber | ⚠️ |
 | [Catan Histories: Rise of the Inkas](rules/catan-histories-rise-of-the-inka/) | 3-4 | 90 minutes | Klaus Teuber, Benjamin Teuber | ❗ |
@@ -580,7 +580,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Citadel of Blood](rules/citadel-of-blood/) | 1-6 | 60-120 min | Mike McCulley, Dave Weller | ⚠️ |
 | [Citadels](rules/citadels/) | 2-8 | 20-60 min | Bruno Faidutti | ✅ |
 | [Cities](rules/cities/) | 2-4 | 45-60 min | Steve Finn, Phil Walker-Harding | ✅ |
-| [Cities: Skylines – The Board Game](rules/cities-skylines-the-board-game/) | 1-4 | 40-70 min | Rustan Håkansson | ❗ |
+| [Cities: Skylines – The Board Game](rules/cities-skylines-the-board-game/) | 1-4 | 40-70 min | Rustan Håkansson | ✅ |
 | [Citizen X](rules/citizen-x/) | 4-12 | 30-45 min | Uncredited | ⚠️ |
 | [City of Chaos](rules/city-of-chaos/) | 1-6 | 120-180 min | Martyn Oliver, Colin Thornton | ⚠️ |
 | [City of Heroes Collectible Card Game](rules/city-of-heroes-collectible-card-game/) | 2 | 30 min | David Williams | ❗ |
@@ -593,7 +593,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Claim It!](rules/claim-it/) | 2-5 | 30-45 min | Günter Burkhardt | ⚠️ |
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
 | [Clank!: A Deck-Building Adventure](rules/clank-a-deck-building-adventure/) | 2-4 | 30-60 min | Paul Dennen | ✅ |
-| [Clans](rules/clans/) | 2-4 | 30 min | Leo Colovini | ❗ |
+| [Clans](rules/clans/) | 2-4 | 30 min | Leo Colovini | ✅ |
 | [Clans of Caledonia](rules/clans-of-caledonia/) | 1-4 | 30-120 min | Juma Al-JouJou | ❗ |
 | [Clash of the Gladiators](rules/clash-of-the-gladiators/) | 2-5 | 45 min | Reiner Knizia | ⚠️ |
 | [Class Struggle](rules/class-struggle/) | 2-6 | 90 min | Bertell Ollman | ⚠️ |
@@ -619,7 +619,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Codenames](rules/codenames/) | 4-8+ | 15 min | Vlaada Chvátil | ✅ |
 | [Coerceo](rules/coerceo/) | 2 | 20-40 min | Mark Steere | ⚠️ |
 | [Coffee Rush](rules/coffee-rush/) | 2-4 | 15-30 min |  | ⚠️ |
-| [Cold War: CIA vs KGB](rules/cold-war-cia-vs-kgb/) | 2 | 30-60 min | Jérémy Pinget | ❗ |
+| [Cold War: CIA vs KGB](rules/cold-war-cia-vs-kgb/) | 2 | 30-60 min | Jérémy Pinget | ✅ |
 | [Colomino](rules/colomino/) | 2-4 | 30 min | Haim Shafir | ⚠️ |
 | [Colonial Diplomacy](rules/colonial-diplomacy/) | 2-7 | 240-360 min | Avalon Hill | ⚠️ |
 | [Colonial Twilight: The French-Algerian War, 1954-62](rules/colonial-twilight-the-french-algerian-war-1954-62/) | 1-2 | 120-180 min | Brian Train | ❗ |
@@ -642,7 +642,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ❗ |
 | [Conan Collectible Card Game](rules/conan-collectible-card-game/) | 2 | 30-60 min | Jason Robinette | ⚠️ |
 | [Concept](rules/concept/) | 4-12+ | 40 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
-| [Concept Kids: Animals](rules/concept-kids-animals/) | 2-12 | 20 min | Alain Rivollet, Gaëtan Beaujannot | ❗ |
+| [Concept Kids: Animals](rules/concept-kids-animals/) | 2-12 | 20 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
 | [Concilium Urbis](rules/concilium-urbis/) | 1-6 |  | Daniel Fuster | ⚠️ |
 | [Concordia](rules/concordia/) | 2-5 | 100 min | Mac Gerdts | ✅ |
 | [Condottiere](rules/condottiere/) | 2-6 | 45 min | Dominique Ehrhard | ✅ |
@@ -677,7 +677,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cryptid](rules/cryptid/) | 3-5 | 30-50 min | Hal Duncan, Ruth Veevers | ⚠️ |
 | [Cthulhu 500](rules/cthulhu-500/) | 3-8 | 30-60 min | Jeff Tidball | ✅ |
 | [Cthulhu Dice](rules/cthulhu-dice/) | 2-6 | 5-10 min | Steve Jackson | ✅ |
-| [Cuba](rules/cuba/) | 2-5 | 75-120 min | Michael Rieneck, Stefan Stadler | ❗ |
+| [Cuba](rules/cuba/) | 2-5 | 75-120 min | Michael Rieneck, Stefan Stadler | ✅ |
 | [Cuba Libre](rules/cuba-libre/) | 1-4 | 60-180 min | Jeff Grossman, Volko Ruhnke | ❗ |
 | [Cuboro Tricky Ways](rules/cuboro-tricky-ways/) | 2-4 | 20-50 min | Johannes Guischard | ✅ |
 | [Cutthroat Caverns](rules/cutthroat-caverns/) | 3-6 | 90 min | Curt Covert | ✅ |
