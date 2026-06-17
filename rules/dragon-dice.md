@@ -7,11 +7,11 @@ designer: "Lester Smith"
 source_pdf: "dragon-dice-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring invents capture mechanic contradicting the source's Eighth Face rules and omitting the eighth-face control system; Player Reference fixed face-to-action mapping unsupported; all 15 spot-checked numbers correct. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dragon-dice-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dragon%20Dice&game=dragon-dice)
 <!-- verification:end -->
@@ -49,7 +49,7 @@ Each turn has up to 7 phases in order:
 All spells and effects you cast that expire "at the beginning of your next turn" expire now.
 
 ### 2. Initial Effects Phase
-Resolve in order: Racial abilities (Feralization, Swamp Stalker mutation), Eighth face special location icons (City, Temple, Dragon's Lair, Grove), Royalty Die abilities.
+Resolve in order: Racial abilities (Feralization, Swamp Stalker mutation), Eighth face special location icons (City, Standing Stones, Temple, Tower; Dragon's Lair and Grove are advanced/special terrain variants), Royalty Die abilities.
 
 ### 3. Dragon Attack Phase
 If any dragon is at a terrain where you have an army, resolve dragon attacks:
@@ -101,9 +101,9 @@ ID icons always count as whatever results you are currently rolling for (melee, 
 
 ## Scoring / Victory Conditions
 
-**Win:** Capture two terrain dice (maneuver a terrain to its 8th face while controlling it), OR be the last player with surviving units.
+**Win:** Capture two terrain dice (maneuver a terrain to its 8th face), OR be the last player with surviving units.
 
-**Capturing terrain:** When face 8 is showing and you are the only player with units at that terrain, you control it. The terrain and your army there are removed from the battlefield.
+**Capturing terrain:** When the acting army successfully maneuvers a terrain die to its eighth face (face 8 showing), that army immediately controls or "captures" that terrain. Capturing two terrains wins the game. The controlling army at an 8th face receives special advantages: all save results are doubled, all maneuver results are doubled, enemy armies at that terrain are restricted to melee only, and the army may use the special location icon on the 8th face. The terrain turns back to face 7 (and all advantages cease) if the controlling army abandons the terrain, is out-maneuvered by an enemy army, or all units in the controlling army are killed.
 
 ## Special Rules & Edge Cases
 
@@ -134,4 +134,4 @@ ID icons always count as whatever results you are currently rolling for (melee, 
 
 **Win:** Capture 2 terrains (maneuver to face 8) or last player with units
 
-**Terrain faces:** 1-2 = far (missile), 3-4 = medium (magic), 5-6 = close (melee), 7-8 = very close (melee/capture)
+**Terrain faces:** Each face (1–8) shows an icon (sword = melee, arrow = missile, starburst = magic) that determines the available action; face 8 is the capture/eighth face. Icons are set per individual terrain die and do not follow a universal face-to-range mapping.

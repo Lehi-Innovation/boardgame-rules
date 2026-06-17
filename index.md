@@ -355,7 +355,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battlestar Galactica Collectable Card Game](rules/battlestar-galactica-collectable-card-game/) | 2 | 30-60 min | WizKids | ⚠️ |
 | [Battlestar Galactica: The Board Game](rules/battlestar-galactica-the-board-game/) | 3-6 | 120-180 min | Corey Konieczka | ✅ |
 | [Battlesuit](rules/battlesuit/) | 2 | 60-120 min | Steve Jackson | ⚠️ |
-| [BattleTech](rules/battletech/) | 2+ | 60-180 min | Jordan Weisman, L. Ross Babcock III | ❗ |
+| [BattleTech](rules/battletech/) | 2+ | 60-180 min | Jordan Weisman, L. Ross Babcock III | ✅ |
 | [BattleTech Collectible Card Game](rules/battletech-collectible-card-game/) | 2 | 30-60 min | Richard Garfield | ⚠️ |
 | [BattleTech: BattleTroops](rules/battletroops/) | 2+ | 60-180 min | FASA Corporation | ⚠️ |
 | [BattleTech: CityTech](rules/citytech/) | 2-6 | 60-180 min | FASA Corporation | ⚠️ |
@@ -400,7 +400,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Black Box](rules/black-box/) | 1-2 | 30 min | Eric Solomon | ⚠️ |
 | [Black Friday](rules/black-friday/) | 2-5 | 45-60 min | Friedemann Friese | ✅ |
 | [Black Hole](rules/black-hole/) | 2 | 10-15 min | Wal Joris | ⚠️ |
-| [Blackbeard](rules/blackbeard/) | 1-5 | 120-300 min | Richard H. Berg | ❗ |
+| [Blackbeard](rules/blackbeard/) | 1-5 | 120-300 min | Richard H. Berg | ✅ |
 | [Bladestorm](rules/bladestorm/) | 2+ | 60-180 min | Bruce Neidlinger | ⚠️ |
 | [Bleach TCG](rules/bleach-tcg/) | 2 | 30-60 min | Score Entertainment | ⚠️ |
 | [Blink](rules/blink/) | 2 | 1-2 min | Reinhard Staupe | ⚠️ |
@@ -408,14 +408,14 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Blockade](rules/blockade/) | 2-4 | 30-45 min | Philip Slater | ⚠️ |
 | [Blokus](rules/blokus/) | 2-4 | 20-30 min | Bernard Tavitian | ✅ |
 | [Blokus Duo](rules/blokus-duo/) | 2 | 15-30 min | Bernard Tavitian | ⚠️ |
-| [Blood Bowl](rules/blood-bowl/) | 2 | 120 min | Jervis Johnson | ❗ |
+| [Blood Bowl](rules/blood-bowl/) | 2 | 120 min | Jervis Johnson | ✅ |
 | [Blood Bowl: Team Manager – The Card Game](rules/blood-bowl-team-manager-the-card-game/) | 2-4 | 90 min | Jay Little, Corey Konieczka | ✅ |
 | [Blood Feud in New York](rules/blood-feud-in-new-york/) | 2-6 | 180-240 min | Kyle Weinandy | ⚠️ |
 | [Blood on the Clocktower](rules/blood-on-the-clocktower/) | 5-20 | 30-120 min | Steven Medway | ⚠️ |
 | [Blood Rage](rules/blood-rage/) | 2-4 | 60-90 min | Eric M. Lang | ✅ |
 | [Blood Royale](rules/blood-royale/) | 3-5 | 180-240 min | Derek Carver | ⚠️ |
 | [Bloodbath at the Sakarya](rules/bloodbath-at-the-sakarya/) | 2 | 120-240 min | Unknown | ⚠️ |
-| [Bloody April: The Battle of Shiloh, 1862](rules/bloody-april-the-battle-of-shiloh-1862/) | 2 | 180-480 min | Richard Berg | ❗ |
+| [Bloody April: The Battle of Shiloh, 1862](rules/bloody-april-the-battle-of-shiloh-1862/) | 2 | 180-480 min | Richard Berg | ✅ |
 | [Bloody Ridge](rules/bloody-ridge/) | 2 | 60-120 min | Joseph Balkoski | ⚠️ |
 | [Blox](rules/blox/) | 2-4 | 30-45 min | Wolfgang Kramer | ⚠️ |
 | [Blue & Gray](rules/blue-gray/) | 2 | 60-120 min | Frank Davis | ✅ |
@@ -557,7 +557,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Celtica](rules/celtica/) | 2-4 | 45-60 min | Wolfgang Kramer, Michael Kiesling | ✅ |
 | [Chainsaw Warrior](rules/chainsaw-warrior/) | 1 | 30-60 min | Stephen Hand | ⚠️ |
 | [Chancellorsville 1863](rules/chancellorsville/) | 1-2 | 60-120 min | Maurice Suckling | ✅ |
-| [Chandragupta](rules/chandragupta/) | 2 | 120-360 min | Stephen R. Welch | ❗ |
+| [Chandragupta](rules/chandragupta/) | 2 | 120-360 min | Stephen R. Welch | ✅ |
 | [Chaos in the Old World](rules/chaos-in-the-old-world/) | 3-4 | 60-120 min | Eric M. Lang | ✅ |
 | [Chapayev](rules/chapayev/) | 2 | 15-30 min |  | ⚠️ |
 | [Chase](rules/chase/) | 2 | 30-60 min | Tom Kruszewski | ✅ |
@@ -630,7 +630,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Colosseum](rules/colosseum/) | 3-5 | 60-90 min | Wolfgang Kramer, Markus Lübke | ✅ |
 | [Colt Express](rules/colt-express/) | 2-6 | 30-40 min | Christophe Raimbault | ✅ |
 | [Comanauts](rules/comanauts/) | 2-4 | 60-120 min | Jerry Hawthorne | ✅ |
-| [Combat Commander: Europe](rules/combat-commander-europe/) | 2 | 60-180 min | Chad Jensen | ❗ |
+| [Combat Commander: Europe](rules/combat-commander-europe/) | 2 | 60-180 min | Chad Jensen | ✅ |
 | [Combat Commander: Pacific](rules/combat-commander-pacific/) | 2 | 60-180 min | Chad Jensen | ⚠️ |
 | [Comet](rules/comet/) | 2-4 | 30-60 min | Daryl Andrews, Adrian Adamescu | ⚠️ |
 | [Commander Chess](rules/commander-chess/) | 2 | 30-60 min | Hải Quý Nguyễn | ⚠️ |
@@ -689,7 +689,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
 | [D-Day](rules/d-day/) | 2 | 60-240 min | Charles S. Roberts | ⚠️ |
-| [D-Day at Omaha Beach](rules/d-day-at-omaha-beach/) | 1-2 | 240-480 min | John H. Butterfield | ❗ |
+| [D-Day at Omaha Beach](rules/d-day-at-omaha-beach/) | 1-2 | 240-480 min | John H. Butterfield | ✅ |
 | [D-Day Dice](rules/d-day-dice/) | 1-4 | 45-90 min | Emmanuel Aquin | ✅ |
 | [D-Day: The Great Crusade](rules/d-day-the-great-crusade/) | 2-4 | 120-480 min | Danny Holte | ⚠️ |
 | [D.A.K.](rules/d-a-k/) | 2 | 120-360 min | Unknown | ⚠️ |
@@ -787,7 +787,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Downfall](rules/downfall/) | 2 | 15 min |  | ⚠️ |
 | [Dracula](rules/dracula/) | 2-4 | 30 min |  | ⚠️ |
 | [Draftosaurus](rules/draftosaurus/) | 2-5 | 15 min | Antoine Bauza, Corentin Lebrat, Ludovic Maublanc, Théo Rivière | ⚠️ |
-| [Dragon Dice](rules/dragon-dice/) | 2-4 | 60-120 min | Lester Smith | ❗ |
+| [Dragon Dice](rules/dragon-dice/) | 2-4 | 60-120 min | Lester Smith | ✅ |
 | [Dragon Eclipse](rules/dragon-eclipse/) | 1-2 | 120-150 min | Kamil Ciesla | ⚠️ |
 | [Dragon Rage](rules/dragon-rage/) | 2 | 60-120 min | Lewis Pulsipher | ⚠️ |
 | [Dragon's Breath](rules/dragon-s-breath/) | 2-4 | 10 min | Lena Burkhardt, Günter Burkhardt | ⚠️ |

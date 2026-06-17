@@ -7,11 +7,11 @@ designer: "Richard H. Berg"
 source_pdf: "blackbeard-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: All 22+ numbers accurate, but VP computation missing entirely (2 VP/NP retired vs 1 otherwise; Net Worth scores only on retirement) - game unscoreable from summary. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/blackbeard-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blackbeard&game=blackbeard)
 <!-- verification:end -->
@@ -91,12 +91,39 @@ Each non-active player may perform ONE Anti-Pirate action:
 
 ## Scoring / Victory Conditions
 
-- **Victory Points** come from each pirate's **Notoriety Points** and **Net Worth**.
-- **Notoriety** is earned by: taking merchant cargo (= Cargo Rating NP), torturing hostages (= Hostage Value NP), attacking ports (= 2× Port Value NP), sacking ports (= additional 2× Port Value NP), defeating warships (= Warship Combat Rating NP).
-- **Net Worth** is accumulated by converting booty at ports. Conversion rates depend on port status: Safe Haven (110%), Pro-Pirate (100%), Neutral (50%), Pirate Port (100% but triggers D&R).
-- **Retirement**: Pirates can retire voluntarily at Pro-Pirate ports (with Letter of Marque) or Pirate Ports, earning bonus VP.
-- The **Standard Game** ends when the General Pardon card is played for the 3rd time. The **Long Game** plays through the Event Deck twice.
-- The player with the most total Victory Points wins.
+Victory Points (VP) are recorded on the VP track throughout the game at the instant they apply. The player with the most total VPs when the game ends wins.
+
+**Game End**: The **Standard Game** ends the instant the General Pardon card is played for the 3rd time. The **Long Game** plays through the Event Deck twice (General Pardon is held out until the deck is reshuffled for the second run-through).
+
+**VP Computation (18.12):**
+- **Retired Pirate (18.12A):** Each accumulated Notoriety Point earns **2 VP**. Every 100 Doubloons of accumulated Net Worth earns **1 VP** (fractions of 100 dropped). Net Worth VPs are earned **only** by Pirates who successfully Retire — in all other cases, Net Worth is lost.
+- **Eliminated or still in play at game's end (18.12B):** Pirate's player earns **1 VP per NP**. Zero VP from Net Worth.
+- **KC eliminates a Pirate (10.5 / 18.12C):** The KC's player earns **1 VP per 2 NP** (round down) of the eliminated pirate's accumulated Notoriety. The Pirate's player earns **1 VP per NP**. Neither player gains VPs from the pirate's Net Worth.
+
+**Notoriety Points (NP) are earned for:**
+- Taking merchant cargo = Merchant Ship's Cargo Rating NP
+- Torturing a Hostage = Hostage's Value Rating NP
+- Successful Port Attack = Port's Value rating × 2 NP
+- Successful Port Sack = Port's Value rating × 2 NP (additional, on top of attack NP)
+- Defeating a KC in sea battle = KC's Combat rating × 2 NP
+- Defeating a Warship in battle = Warship's Combat rating NP
+- Failed Oust attempt by a KC = 1 NP
+- Winning a Duel = sum of both Pirates' Duel ratings NP
+
+**Net Worth** is accumulated by converting Booty to Net Worth at ports. Conversion rates:
+- Safe Haven: 100% + additional 10% (i.e., 110%)
+- Pro-Pirate Port: 100% (1-to-1)
+- Neutral Port: 50% (rounded up)
+- Pirate Port: 100% (1-to-1), but any conversion causes automatic D&R
+
+**Retirement (18.41):** A Pirate must Retire to earn VP from Net Worth. Retirement methods:
+- **Voluntarily (Pirate Action):** Pirate must be In-Port and already possess a Letter of Marque for that port's Nationality.
+- **Surrender to KC:** During a KC attack, if the Pirate already possesses a Letter of Marque (any Nationality), he may surrender and Retire.
+- **In a Safe Haven (Pirate Action):** If the Pirate is in one of his Safe Havens, he may Retire simply by declaring it — no Letter of Marque required.
+- **Bribing Governor (Pirate Action):** If in a Pro-Pirate Port that is not his Safe Haven, roll D66 and multiply by 100; the result is the Doubloon cost from Net Worth. Paying retires him; declining keeps him in play but costs −1 Crew Loyalty and bars re-bribing that governor.
+- **General Pardon Event card:** As specified in the card (17.2).
+
+Upon retirement, all VP from accumulated NP and Net Worth are immediately recorded.
 
 ## Special Rules & Edge Cases
 

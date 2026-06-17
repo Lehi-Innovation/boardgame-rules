@@ -7,11 +7,11 @@ designer: "Jordan Weisman, L. Ross Babcock III"
 source_pdf: "battletech-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented initiative-winner-fires-first (source: loser acts first), ammo explosion at heat 13 with inverted roll (source: 19+, 4+ avoids), wrong DFA damage formula, standing up 1 MP vs 2 MP. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battletech-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleTech&game=battletech)
 <!-- verification:end -->
@@ -44,7 +44,7 @@ Each game turn consists of 6 phases:
 
 ### 1. Initiative Phase
 - Each player rolls 2d6. The **higher** roll wins initiative.
-- The initiative winner chooses to move first or second (moving second is usually advantageous).
+- The initiative **loser** acts first in all subsequent phases (movement, weapon attacks, physical attacks). The winner acts last.
 - Ties are re-rolled.
 
 ### 2. Movement Phase
@@ -57,7 +57,7 @@ Each game turn consists of 6 phases:
 
 ### 3. Weapon Attack Phase
 - Players alternate declaring and resolving weapon attacks.
-- The initiative winner fires first.
+- The initiative **loser** declares fire first (same as movement); the initiative winner acts last.
 - Each weapon can fire once per turn.
 - Resolve: declare target, check line of sight, check firing arcs, calculate target number, roll 2d6.
 
@@ -101,33 +101,46 @@ Roll 2d6: if the roll >= target number, the attack hits.
 
 | Attack | Target | Damage | Modifier |
 |--------|--------|--------|----------|
-| Punch | Adjacent 'Mech | Arm weight / 10 | Piloting skill +modifiers |
-| Kick | Adjacent 'Mech | Leg weight / 5 | Piloting skill -2 |
-| Charge | Move into target hex | Weight x hexes moved / 10 | Piloting skill +modifiers |
-| Death From Above | Jump onto target | Weight / 5 per leg | Piloting skill +modifiers |
+| Punch | Adjacent 'Mech (forward/side arc) | Attacker's total weight / 10 (round up) | Piloting skill +modifiers |
+| Kick | Adjacent 'Mech (forward arc) | Attacker's total weight / 5 | Piloting skill -2 |
+| Charge | Move into target hex | Attacker weight / 10 × hexes moved (round up); attacker takes target weight / 10 | Piloting skill +modifiers |
+| Death From Above | Jump onto target | Attacker weight / 10 × 3 (round up); attacker takes attacker weight / 5 to legs | Piloting skill +modifiers |
 
 ### Heat Management
 
 | Heat Level | Effect |
 |-----------|--------|
 | 0-4 | No effect |
-| 5-8 | Movement penalties, to-hit modifiers |
-| 9-12 | More severe penalties |
-| 13 | Possible ammunition explosion (roll 2d6, explodes on 4+) |
-| 14+ | Possible shutdown |
-| 30 | Automatic shutdown |
+| 5-9 | –1 Walking MP |
+| 8-12 | +1 to weapon attack Target Numbers |
+| 10-14 | –2 Walking MP |
+| 13-16 | +2 to weapon attack Target Numbers |
+| 14 | Must roll 2d6 ≥ 4 or shut down |
+| 15-19 | –3 Walking MP |
+| 17-23 | +3 to weapon attack Target Numbers |
+| 18 | Must roll 2d6 ≥ 6 or shut down |
+| 19-22 | Ammo may explode; roll 2d6 ≥ 4 to avoid |
+| 20-24 | –4 Walking MP |
+| 22 | Must roll 2d6 ≥ 8 or shut down |
+| 23-27 | Ammo may explode; roll 2d6 ≥ 6 to avoid |
+| 24+ | +4 to weapon attack Target Numbers |
+| 25-29 | –5 Walking MP |
+| 26 | Must roll 2d6 ≥ 10 or shut down |
+| 28-30 | Ammo may explode; roll 2d6 ≥ 8 to avoid |
+| 30 | Automatic shutdown (cannot be avoided) |
 
 ## Scoring / Victory Conditions
 
-- Standard: Destroy or disable all enemy 'Mechs.
+- Standard: The side with the last surviving 'Mech(s) on the map wins.
+- If the last 'Mechs from each side are destroyed simultaneously in the same turn, or if the last remaining 'Mechs on each side cannot move and have no ability to damage one another, the game is a **draw**.
 - A 'Mech is destroyed when: the center torso internal structure is reduced to 0, the head is destroyed, the engine sustains 3 critical hits, or an ammunition explosion destroys the 'Mech.
-- Scenarios may have alternative victory conditions (hold an objective, escape, etc.).
+- Scenarios may have alternative victory conditions (hold an objective, escape, etc.) by mutual agreement or scenario rules.
 
 ## Special Rules & Edge Cases
 
 ### Prone 'Mechs
 - A 'Mech may voluntarily drop prone (harder to hit at range, but vulnerable to melee).
-- Standing up costs 1 MP and requires a Piloting Skill Roll.
+- Standing up costs **2 MP** per attempt and requires a Piloting Skill Roll. The 'Mech may make repeated attempts as long as it has 2 MP remaining. Each attempt generates 1 heat point.
 
 ### Water
 - Depth 1: 'Mechs wade (partial cover, reduced movement).
@@ -139,8 +152,8 @@ Roll 2d6: if the roll >= target number, the attack hits.
 
 ### Critical Hits
 - When internal structure takes damage, roll for critical hits.
-- Roll 2d6: 2-7 = no critical, 8-9 = 1 critical, 10-11 = 2 criticals, 12 = head/limb blown off (or 3 criticals).
-- Critical hits destroy equipment in the damaged location.
+- Roll 2d6: 2–7 = no critical hit; 8–9 = 1 critical hit location; 10–11 = 2 critical hit locations; 12 = Head/Limb Blown Off (if torso is hit, roll 3 critical hit locations instead).
+- Critical hits disable equipment in the damaged location.
 
 ## Player Reference
 

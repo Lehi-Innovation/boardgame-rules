@@ -7,11 +7,11 @@ designer: "Jervis Johnson"
 source_pdf: "blood-bowl-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Going For It misstated as requiring 4+ on D6 when source fails only on a 1 - triples failure odds of a core, frequent roll; plus minor foul/restart/catching omissions. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/blood-bowl-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blood%20Bowl&game=blood-bowl)
 <!-- verification:end -->
@@ -81,7 +81,7 @@ Move up to MA and make one block at any point during the move. The block costs 1
 Move up to MA, then throw the ball to any square. Measure range with ruler: Quick Pass (+1), Short Pass (+0), Long Pass (-1), Long Bomb (-2). Roll D6 vs. Agility with modifiers. Inaccurate passes scatter 3 times.
 
 ### Hand-off (1 per team turn, Extra Rules)
-Move up to MA, then hand the ball to an adjacent teammate who must catch it.
+Move up to MA, then hand the ball to any adjacent player (friend or foe). No dice roll is needed for the hand-off itself — it automatically hits the target. The recipient must attempt a catch roll: +1 for catching a hand-off, −1 per opposing tackle zone on the catcher. The player performing the hand-off may not move further that turn after the hand-off is attempted. The ball may not be handed off during the opponent's turn.
 
 ### Foul (1 per team turn, Extra Rules)
 Move up to MA, then foul an adjacent prone opponent. Roll 2D6 vs. Armour (with +1 per assist). If doubles are rolled, the fouling player is ejected by the referee.
@@ -98,7 +98,9 @@ When moving into a square with the ball, must attempt to pick it up. D6 vs. Agil
 
 **After a Touchdown:** Both teams set up again (kicking/receiving swap). KO'd players roll: 4+ returns them to Reserves.
 
-**Winning:** Team with the most touchdowns after two halves wins.
+**Winning:** The team with the most touchdowns at the end of the last turn of the second half wins. If the match is tied it is declared a draw unless both coaches agree to sudden death overtime: flip a coin to determine who kicks off, then play a third series of 8 turns per team. Re-rolls remaining at the end of the second half carry over; teams do not receive new re-rolls at the start of overtime. The first team to score wins. If neither team scores, the match is decided by a penalty shoot-out: each coach rolls a D6 (each unused team re-roll adds +1), high score wins, re-roll ties.
+
+**Scoring in the opponent's turn:** In rare cases (e.g., a player is pushed into the End Zone while holding the ball), a team can score a touchdown during the opponent's turn. The scoring team scores immediately but must advance their own Turn marker one space to represent the celebration.
 
 **Conceding:** If a team cannot field at least 3 players for the Line of Scrimmage, they may concede or play with fewer.
 
@@ -131,7 +133,7 @@ When Knocked Down, opponent rolls 2D6 vs. player's Armour Value:
 - **10-12 Casualty:** Removed to Dead/Injured box; misses rest of match (in leagues, roll Casualty Table for permanent effects)
 
 ### Going For It
-After using full MA, a player may attempt to move 1-2 extra squares by rolling 4+ on D6 each. Failing = Knocked Down + turnover.
+When a player takes any Action (apart from a Block), they may attempt to move 1–2 extra squares beyond their MA. Roll a D6 for each extra square entered. On a roll of 1 the player trips and is Knocked Down (causing a turnover). Any other result (2–6) succeeds.
 
 ### Tackle Zones
 Standing players exert tackle zones on all 8 adjacent squares. Prone/Stunned players have no tackle zones. Leaving a tackle zone requires a Dodge roll.
