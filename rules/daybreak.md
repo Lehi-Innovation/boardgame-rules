@@ -7,11 +7,11 @@ designer: "Matt Leacock, Matteo Menapace"
 source_pdf: "daybreak-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Omits Round-6 lose condition entirely; says all players grow Demand by 1 (source: US/EU +1, China +2, Majority World +3); Crisis-card-per-band table contradicts source. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/daybreak-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Daybreak&game=daybreak)
 <!-- verification:end -->
@@ -78,9 +78,8 @@ Players independently draw 5 Local Project cards to hand (public), then perform 
 - **Resolve Crisis Cards**: Resolve all face-up Crisis cards. Crises can put Communities in Crisis, remove ecological tokens, or cause other negative effects.
 
 ### 5. Growth Stage
-- **Check for Victory**: If total Carbon produced this round ≤ total sequestered, players reach Drawdown and win.
-- **Increase Energy Demand**: Each player increases their Demand by 1.
-- Advance Round marker.
+- **Check for Victory**: If the round marker shows Drawdown (set during the Emissions Stage), players win. Otherwise, advance the round marker. If the round marker reaches the end of Round 6 without Drawdown, all players lose.
+- **Increase Energy Demand**: Each player increases their Demand by the amount shown on their Reference card: United States and Europe grow by 1, China by 2, the Majority World by 3. (Solo: grow by 2.)
 
 ## Actions
 
@@ -94,11 +93,12 @@ Card actions typically: remove Dirty Energy/Emissions tokens, add Clean Energy t
 ## Scoring / Victory Conditions
 
 ### Win Condition
-Players win by achieving **Drawdown**: in the Emissions Stage, if total Carbon cubes produced this round (from all players combined) is less than or equal to the total sequestered by Trees, Oceans, and DAC tokens.
+Players win by achieving **Drawdown**: in the Emissions Stage, after sequestering Carbon, if there are 0 Carbon cubes left in the Recent Emissions area and uncovered Trees, Oceans, or DAC tokens remain, the round marker is flipped to Drawdown. Players then win if they survive one final Crisis Stage.
 
 ### Lose Conditions (any one)
-- **Temperature**: 8 Temperature Bands are placed on the Thermometer.
+- **Temperature**: The Thermometer reaches 2.0°C (8 Temperature Bands are placed).
 - **Communities in Crisis**: Any single player has 12 or more Communities in Crisis tokens.
+- **Time**: Players have not won by the end of Round 6.
 
 ## Special Rules & Edge Cases
 
@@ -121,13 +121,7 @@ Players win by achieving **Drawdown**: in the Emissions Stage, if total Carbon c
 4. Crisis (Planetary Effects → Resolve Crises)
 5. Growth (Check Drawdown → Increase Demand)
 
-**Lose if:** 8 Temperature Bands OR any player has 12+ Communities in Crisis
-**Win if:** Drawdown (emissions ≤ sequestration)
+**Lose if:** 8 Temperature Bands OR any player has 12+ Communities in Crisis OR Round 6 ends without Drawdown
+**Win if:** Drawdown reached during Emissions Stage and players survive the following Crisis Stage
 
-**Starting Crisis Cards by Temperature Bands:**
-| Bands | Crisis Cards |
-|-------|-------------|
-| 0-1 | 3 |
-| 2-3 | 4 |
-| 4-5 | 5 |
-| 6-7 | 6 |
+**Crisis Cards per Temperature Bands:** The exact number is indicated on the Thermometer on the board. In the first round (0 bands) players draw 3 Crisis cards. The rulebook example shows that going from 5 to 6 Temperature Bands increases the draw from 3 to 4 cards. Consult the Thermometer legend for the full table.

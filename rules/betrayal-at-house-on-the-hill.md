@@ -7,11 +7,11 @@ designer: "Bruce Glassco"
 source_pdf: "betrayal-at-house-on-the-hill-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Attack rule contradicted (defender winning inflicts damage on attacker, summary says no damage); omits pre-haunt death immunity, haunt turn order, monster stunning. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/betrayal-at-house-on-the-hill-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Betrayal%20at%20House%20on%20the%20Hill&game=betrayal-at-house-on-the-hill)
 <!-- verification:end -->
@@ -91,20 +91,21 @@ After drawing an omen card, you must make a **haunt roll** at the end of your tu
 
 ### Attacking (After Haunt)
 - Attack once per turn against an opponent in the same room.
-- Both sides roll dice: attacker rolls Might dice; defender rolls Might dice (or as specified by the haunt).
-- If attacker's total > defender's: defender takes physical damage equal to the difference.
-- If defender's total >= attacker's: no damage.
-- **Physical damage:** Defender chooses to reduce Speed or Might.
-- **Mental damage:** Defender chooses to reduce Knowledge or Sanity.
-- If any trait reaches the **skull symbol**, the explorer dies.
+- Both sides roll dice equal to their Might (or another trait as specified by the haunt or a card).
+- Whoever rolls **higher** inflicts physical damage on the other equal to the **difference** between the two rolls. If there is a tie, no one is hurt.
+- **Physical damage (Might or Speed attacks):** The damaged player reduces their Might and/or Speed by the total damage taken.
+- **Mental damage (Sanity or Knowledge attacks):** The damaged player reduces their Sanity and/or Knowledge by the total damage taken.
+- After the haunt starts, if any trait reaches the **skull symbol**, the explorer dies.
+- **Before the haunt starts**, no explorer can die — traits cannot go below the lowest printed number on the character card.
 
 ## Scoring / Victory Conditions
 
-- After the haunt begins, consult the haunt chart to determine which haunt scenario plays out and who becomes the traitor.
+- After the haunt begins, consult the haunt chart (inside front cover of either haunt book) using the omen card drawn and the room the haunt revealer was in, to determine which scenario plays and who becomes the traitor.
 - The **traitor** reads their scenario in the Traitor's Tome.
 - The **heroes** read their scenario in Secrets of Survival.
 - Each side has a unique **victory condition** specific to the haunt scenario.
-- The game ends when one side completes their victory condition.
+- The game ends when one side completes their victory condition ("You Win When" section of the haunt).
+- **At least one hero must survive for the heroes to win.** Some haunts allow the traitor's monsters to win even after the traitor dies.
 
 ## Special Rules & Edge Cases
 
@@ -123,13 +124,22 @@ After drawing an omen card, you must make a **haunt roll** at the end of your tu
 - If any trait reaches the **skull symbol**, the explorer **dies**.
 
 ### After an Explorer Dies
-- If a hero dies, the explorer's items are dropped in their room.
-- If the traitor dies, the haunt may end or the traitor's monsters may continue.
+- When an explorer dies, their items drop to the floor (place an Item Pile token). Companions (Dog, Girl, Madman) stay in the room; if another explorer enters, they gain custody of the companion.
+- If the traitor dies, the monsters still get their turn as long as they can complete the haunt's goals; the traitor still controls them.
 
-### Monster Movement
-- Monsters are controlled by the traitor.
-- Most monsters move and attack but cannot carry items.
-- Monsters are not stopped by room effects that stop explorer movement.
+### Haunt Turn Order
+- After the haunt begins, the first turn starts with the player to the **traitor's left** and goes clockwise (away from the traitor).
+- Each hero takes a hero turn in order; then the traitor takes a traitor turn; then the traitor takes a monster turn (moving and attacking with all monsters).
+- Heroes and traitor are still explorers and may do the same things as before, except haunt rolls are no longer made.
+- The traitor must tell the heroes what they are doing each turn, but not why (and vice versa).
+
+### Monster Movement and Combat
+- Monsters are controlled by the traitor after all heroes have taken their turns.
+- At the start of the monster turn, roll dice equal to each monster's Speed to determine how many spaces it can move.
+- **Monsters cannot be killed.** When a monster takes any damage, it is **stunned** (flip its token over) and misses its next turn. A stunned monster does not slow explorer movement.
+- Monsters attack once per turn and often use traits other than Might.
+- Monsters ignore all non-damaging room effects and barriers.
+- Monsters cannot explore new rooms or carry items (unless the haunt specifies otherwise).
 
 ## Player Reference
 
@@ -144,8 +154,9 @@ After drawing an omen card, you must make a **haunt roll** at the end of your tu
 
 | Dice | Values: 0, 1, or 2 per die |
 |------|---------------------------|
-| Damage | Attacker total - Defender total = damage |
-| Death | Any trait reaches skull symbol |
+| Damage | Higher roller inflicts damage = difference in totals (both sides can deal damage) |
+| No damage | Tie roll |
+| Death | Any trait reaches skull symbol (only after haunt starts; before haunt, traits stay at minimum) |
 
 | Haunt Trigger | Roll 6 dice < number of omen cards drawn |
 |-------------|----------------------------------------|

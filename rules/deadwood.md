@@ -7,11 +7,11 @@ designer: "Loïc Lamy"
 source_pdf: "deadwood-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: End-game fine is a progressive table not $1/poster, Final Shootout tiebreaker replaced with invented tiebreakers, Train Station "$5 per adjacent building" payout invented. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/deadwood-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deadwood&game=deadwood)
 <!-- verification:end -->
@@ -121,12 +121,12 @@ When annexing Town Hall, place 1 railroad tile extending the route into town. If
 ## Scoring / Victory Conditions
 
 ### Game End Triggers (any one):
-1. **Train Station built**: After all 4 railroad tiles placed, next Town Hall annex builds it on a red-row plot. Builder earns $5 per building adjacent to the Train Station.
+1. **Train Station built**: After all 4 railroad tiles placed, next Town Hall annex builds it on a red-row plot. Every cowboy at a building adjacent to the Train Station may immediately annex that building twice. (The Hotel controller still receives $4.)
 2. **Crime Pool empty**: No wanted posters remain in Crime Pool.
 3. **Player eliminated**: Any player has no living cowboys.
 
 ### Final Scoring:
-Each player pays a **fine** of $1 per wanted poster they hold. The player with the most money wins. Ties: fewer wanted posters wins. Still tied: player with fewer cowboys on Boot Hill.
+Each player pays a **fine** based on a progressive table for the wanted posters they hold (from the worked examples in the rulebook: 0 posters = $0, 1 = $1, 2 = $3, 3 = $6, 4 = $10 — each additional poster costs more than the last). The player with the most money wins. **Tiebreaker**: All tied players face off in The Final Shootout. Each chooses one surviving cowboy; there is no limit to cartridges used. The highest-strength cowboy rolls first; with more than two participants, the first roller may divide dice among multiple targets. The last cowboy standing wins. If all Final Shootout cowboys die, the richest player who was not in the shootout wins; if all players were involved and none survive, all players lose.
 
 ## Special Rules & Edge Cases
 
@@ -156,4 +156,4 @@ Each player pays a **fine** of $1 per wanted poster they hold. The player with t
 **Turn:** Head Back to Ranch OR Hit the Town (place 1 cowboy)
 
 **End Game Triggers:** Train Station built / Crime Pool empty / Player eliminated
-**Final:** Pay $1 per wanted poster → most money wins
+**Final:** Pay progressive fine per wanted poster (0=$0, 1=$1, 2=$3, 3=$6, 4=$10…) → most money wins; ties go to The Final Shootout

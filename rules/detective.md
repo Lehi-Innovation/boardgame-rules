@@ -7,11 +7,11 @@ designer: "Ignacy Trzewiczek, Przemysław Rymer, Jakub Łapot"
 source_pdf: "detective-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Ability frequency wrong (once per case vs once per day), Write a Report mechanic explicitly denied, mandatory Signature/matched-evidence system and its scoring omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/detective-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Detective&game=detective)
 <!-- verification:end -->
@@ -80,10 +80,10 @@ When you see the "@" symbol, search the online Antares Database for information 
 When you see the wifi icon, use real internet searches (Google Maps, Wikipedia, etc.) for additional information. **No time cost.**
 
 ### Write a Report
-Organize and discuss clues gathered. No specific mechanics beyond team discussion.
+Once per day, spend one working hour at any location to write a report and receive 1 Authority token. Move the Time marker one space forward and add 1 Authority token to the Token pool. Cannot be done during Overtime. (Jack Coleman's ability adds 2 Authority tokens instead of 1 when this action is taken.)
 
 ### Use Investigator Ability
-Each investigator has a unique ability (once per case unless otherwise noted). Flip the Used Ability token when activated.
+Each investigator has a unique ability usable **once per day**. After using the ability, place 1 Used Ability token on the investigator tile. Remove all Used Ability tokens at the start of each new day.
 
 ### Spend Authority Tokens
 Some card actions require spending Authority tokens.
@@ -91,10 +91,16 @@ Some card actions require spending Authority tokens.
 ## Scoring / Victory Conditions
 
 ### Final Report
-At the end of a case, navigate to the case's Final Report on the Antares Database website. Answer questions about the case. Each correct answer earns victory points.
+At the end of the final day, log into the Antares Database and choose "Final Report." Answer questions in two sections: (1) main questions about the case goal (worth the most points); (2) additional questions about the metaplot (worth the least points). Each "I don't know" answer is worth 0 points; each wrong answer is worth −1 point.
+
+### Matching Evidence (Signatures)
+When you encounter a Signature on a lead card, you **must** enter it into the Antares Database (Signatures section). The system matches signatures to fingerprints, DNA, or material evidence. Matched evidence that is significant to the case automatically adds bonus points to the final score (worth more than metaplot questions, but less than main questions).
+
+### Stress Penalty
+For each Stress token in the pool at the end of the case, lose 1 point from the final score.
 
 ### Scoring Thresholds
-Score determines success level. Exact thresholds vary by case.
+Each case has a predetermined point total required to win. Exact thresholds vary by case.
 
 ### Campaign
 The 5 cases form a connected narrative. Clues found in earlier cases may be relevant to later ones. Play all cases in order. Take notes across cases.
@@ -109,9 +115,12 @@ Working Overtime adds Stress tokens. If Stress accumulates too much, it can end 
 - **No "You Won" card**: The game doesn't tell you the answer. You must deduce it from scattered clues.
 - **Lead cards**: Only read the front when first drawn. Read the back only when instructed.
 - **Further Leads**: Found on the back of some cards; they unlock access to additional lead card numbers.
-- **Real internet research** is expected and encouraged ("Breaking the Fourth Wall").
-- **Overtime**: After 4:00 PM, each extra hour adds Stress. Essential for tight cases but risky.
+- **Real internet research** is expected and encouraged ("Breaking the Fourth Wall"), but only when the wifi icon instructs you to.
+- **Overtime**: After 4:00 PM, each extra hour adds 1 Stress token. If Stress tokens reach or exceed the case's Stress limit, the investigation ends immediately.
 - **IT marker movement**: Traveling to a new Location costs 1 hour.
+- **Signatures are mandatory**: You must enter every Signature encountered into the Antares Database. They match evidence (fingerprints, DNA, material) and add automatic scoring bonuses.
+- **Investigator abilities reset daily**: Used Ability tokens are removed at the start of each new day; each ability may be used once per day.
+- **Skill tokens do not refresh**: The pool of Skill tokens is the team's total supply for the entire case — they are not replenished at the end of each day.
 - Each case takes approximately 2-3+ hours of real time.
 
 ## Player Reference
@@ -131,7 +140,8 @@ Working Overtime adds Stress tokens. If Stress accumulates too much, it can end 
 - Dig Deeper (costs Skill token)
 - Antares Database (free)
 - Internet Research (free)
-- Use Ability (once per case)
+- Write a Report (costs 1 hour; gains 1 Authority token; once per day; not during Overtime)
+- Use Ability (once per day; resets each new day)
 
 **Three Types of Clues:**
 1. Lead cards (#)

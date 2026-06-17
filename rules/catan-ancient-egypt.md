@@ -7,11 +7,11 @@ designer: Klaus Teuber
 source_pdf: catan-ancient-egypt-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Base-Catan costs imported: oxcart is brick+cattle not brick+papyrus, dev card is stone+grain+papyrus not wool; pasture produces cattle not wool. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/catan-ancient-egypt-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Catan%3A%20Ancient%20Egypt&game=catan-ancient-egypt)
 <!-- verification:end -->
@@ -23,15 +23,15 @@ Catan: Ancient Egypt is a re-themed version of Settlers of Catan set in ancient 
 
 ## Components
 
-- 19 terrain hexes (quarry/stone, alluvial land/brick, fields/grain, pasture/wool, papyrus grove/papyrus, desert/oasis)
+- 19 terrain hexes (quarry/stone, alluvial land/brick, fields/grain, pasture/cattle, papyrus grove/papyrus, desert/oasis)
 - Frame pieces (border)
 - Number tokens
-- Resource cards (stone, brick, grain, wool, papyrus)
+- Resource cards (stone, brick, grain, cattle, papyrus)
 - Development cards
 - Oxcarts (roads), settlements, temple cities (cities) in 4 player colors
 - 2 dice
 - Robber figure
-- Longest Road and Largest Army cards
+- Longest Trade Route and Largest Mercenary Army special cards
 - "Help from the Gods" cards (optional)
 - Great Pyramid scenario components
 
@@ -46,47 +46,49 @@ Catan: Ancient Egypt is a re-themed version of Settlers of Catan set in ancient 
 
 ## Turn Structure
 
-Standard Catan turn structure:
+The oldest player goes first. On your turn, take the following steps in order:
 
-**1. Roll Dice:** Roll 2 dice. All hexes matching the rolled number produce resources for adjacent settlements/temple cities.
+**1. Roll Dice:** Roll 2 dice. All hexes matching the rolled number produce resources. Each adjacent settlement earns 1 resource card; each adjacent temple city earns 2.
 
-**2. Trade:** Trade resources with other players or via harbor trading (4:1 standard, or better rates at harbors).
+**2. Trade:** Trade resources with other players (only the active player may trade), or via foreign trade with the supply (4:1 standard; 3:1 at a 3:1 harbor or oasis; 2:1 at a matching special harbor or oasis).
 
-**3. Build:** Spend resources to build oxcarts, settlements, temple cities, or buy development cards.
+**3. Build:** Spend resources to build oxcarts, settlements, temple cities, or buy development cards. You may also play 1 development card at any time during your turn (including before rolling), except on the turn you bought it.
 
 ## Actions
 
-**Building costs (Egyptian-themed Catan equivalents):**
-- **Oxcart (road):** 1 brick + 1 papyrus (wood equivalent)
-- **Settlement:** 1 brick + 1 papyrus + 1 grain + 1 wool
-- **Temple City (city):** 3 stone (ore) + 2 grain
-- **Development Card:** 1 stone + 1 grain + 1 wool
+**Building costs:**
+- **Oxcart (road):** 1 brick + 1 cattle
+- **Settlement:** 1 brick + 1 cattle + 1 grain + 1 papyrus
+- **Temple City (city):** 3 stone + 2 grain
+- **Development Card:** 1 stone + 1 grain + 1 papyrus
 
-**Rolling a 7:** Move the robber to any hex. Steal 1 resource from an adjacent player. Players with more than 7 cards must discard half.
+**Rolling a 7:** Players with more than 7 resource cards must discard half (round down, e.g., 9 cards → discard 4). Then move the robber to any other hex and steal 1 resource at random from one opponent adjacent to that hex. (See also Special Rules.)
 
 ## Scoring / Victory Conditions
 
 First player to reach 10 victory points wins:
 - Settlement = 1 VP
 - Temple City = 2 VP
-- Longest Road (5+ oxcarts) = 2 VP
-- Largest Army (3+ knight cards) = 2 VP
+- Longest Trade Route (5+ oxcarts, uninterrupted) = 2 VP
+- Largest Mercenary Army (3+ mercenary cards played face-up) = 2 VP
 - Victory Point development cards = 1 VP each
 
 ## Special Rules & Edge Cases
 
-- **Help from the Gods (optional):** Special cards that provide divine assistance, adding new strategic options. Can be added to the base game or used in the Great Pyramid scenario.
-- **The Great Pyramid Scenario:** A cooperative-competitive variant where players must collectively build a Great Pyramid while competing for individual victory points.
-- **Harbors:** Special trading ratios available at harbor locations around the coast.
-- **Distance Rule:** Settlements must be at least 2 intersections apart.
+- **Development card types:** Mercenary cards (move robber; 3+ played face-up = Largest Mercenary Army), Progress cards (follow instructions, then remove from game), and Victory Point cards (kept secret; may only be revealed when a player reaches 10 VP).
+- **Help from the Gods (optional):** 10 god cards, each with an "A" side (first use) and a "B" side (second use). After using a god card, you may flip it to its B side for a second use later, or return it to the display and take a different god card. God cards can be added to the base game or used in the Great Pyramid scenario.
+- **The Great Pyramid Scenario:** A variant in which players also build a shared pyramid by spending 1 stone + 1 cattle per block. The game ends at 11 VP (not 10), or when all pharaoh pyramid blocks are used or the pyramid is complete — in which case the player with the most VP wins. Victory Point cards remain secret until 10+ VP is reached.
+- **Harbors and Oases:** Special trading ratios (3:1 general or 2:1 for specific resources) available at harbor and oasis locations.
+- **Distance Rule:** Settlements must be placed so that all adjacent intersections are unoccupied (at least 2 intersections apart from any other settlement or city).
+- **Rolling a 7:** Players with more than 7 resource cards discard half (round down). The active player then moves the robber to any other hex and steals 1 resource at random from one opponent adjacent to that hex.
 
 ## Player Reference
 
 | Building | Cost | VP |
 |----------|------|----|
-| Oxcart | 1 brick + 1 papyrus | 0 |
-| Settlement | 1 brick + 1 papyrus + 1 grain + 1 wool | 1 |
+| Oxcart | 1 brick + 1 cattle | 0 |
+| Settlement | 1 brick + 1 cattle + 1 grain + 1 papyrus | 1 |
 | Temple City | 3 stone + 2 grain | 2 |
-| Development Card | 1 stone + 1 grain + 1 wool | varies |
+| Development Card | 1 stone + 1 grain + 1 papyrus | varies |
 
 **Win condition:** First to 10 VP

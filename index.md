@@ -341,7 +341,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battle Sheep](rules/battle-sheep/) | 2-4 | 15 min | Francesco Rotta | ✅ |
 | [Battle-Sphere](rules/battle-sphere/) | 2 | 60-120 min | Unknown | ⚠️ |
 | [Battlecars](rules/battlecars/) | 2-6 | 60-120 min | Gary Chalk, Ian Livingstone | ✅ |
-| [BattleCON: War of Indines](rules/battlecon-war-of-indines/) | 2 | 20-60 min | D. Brad Talton Jr. | ❗ |
+| [BattleCON: War of Indines](rules/battlecon-war-of-indines/) | 2 | 20-60 min | D. Brad Talton Jr. | ✅ |
 | [BattleForce](rules/battleforce/) | 2 | 60-180 min | FASA Corporation | ⚠️ |
 | [Battleground](rules/battleground/) | 2 | 60-120 min | Robert Dougherty, Chad Ellis | ⚠️ |
 | [Battleground: Crossbows & Catapults](rules/battleground-crossbows-catapults/) | 2 | 15-30 min | Uncredited | ⚠️ |
@@ -382,7 +382,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Berlin '85: The Enemy at the Gates](rules/berlin-85-the-enemy-at-the-gates/) | 2 | 120-240 min | James F. Dunnigan | ✅ |
 | [Bermuda Triangle](rules/bermuda-triangle/) | 2-4 | 45-60 min |  | ✅ |
 | [Bermude](rules/bermude/) | 2-4 | 20-30 min | Unknown | ⚠️ |
-| [Betrayal at House on the Hill](rules/betrayal-at-house-on-the-hill/) | 3-6 | 60 min | Bruce Glassco | ❗ |
+| [Betrayal at House on the Hill](rules/betrayal-at-house-on-the-hill/) | 3-6 | 60 min | Bruce Glassco | ✅ |
 | [Beyblade Trading Card Game](rules/beyblade-trading-card-game/) | 2 | 15-30 min | Mike Mulvihill | ✅ |
 | [Bezzerwizzer](rules/bezzerwizzer/) | 2-4 teams | 30-60 min | Jes Moller | ✅ |
 | [Biblios](rules/biblios/) | 2-4 | 30 min | Steve Finn | ⚠️ |
@@ -418,7 +418,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Bloody April: The Battle of Shiloh, 1862](rules/bloody-april-the-battle-of-shiloh-1862/) | 2 | 180-480 min | Richard Berg | ❗ |
 | [Bloody Ridge](rules/bloody-ridge/) | 2 | 60-120 min | Joseph Balkoski | ⚠️ |
 | [Blox](rules/blox/) | 2-4 | 30-45 min | Wolfgang Kramer | ⚠️ |
-| [Blue & Gray](rules/blue-gray/) | 2 | 60-120 min | Frank Davis | ❗ |
+| [Blue & Gray](rules/blue-gray/) | 2 | 60-120 min | Frank Davis | ✅ |
 | [Blue & Gray: Four American Civil War Battles](rules/blue-gray-four-american-civil-war-battles/) | 2 | 60-120 min | John Young | ❗ |
 | [Blue Max](rules/blue-max/) | 2-6 | 60-120 min | Phil Hall, John Harshman | ⚠️ |
 | [Blue Moon City](rules/blue-moon-city/) | 2-4 | 60 min | Reiner Knizia | ✅ |
@@ -539,14 +539,14 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | ↳ [Catan Geographies: Settlers of Hesse](rules/catan-geographies-settlers-of-hesse/) | 3-4 | 60-90 min | Klaus Teuber | ⚠️ |
 | ↳ [Catan Scenarios: Frenemies](rules/catan-scenarios-frenemies/) | 3-6 | 45-90 min | Benjamin Teuber | ✅ |
 | ↳ [Catan: Crop Trust](rules/catan-scenario-crop-trust/) | 3-4 | 75 minutes | Klaus Teuber, Benjamin Teuber | ✅ |
-| [Catan Card Game (Event Cards Edition)](rules/catan-event-cards/) | 2 | 60-120 minutes | Klaus Teuber | ❗ |
+| [Catan Card Game (Event Cards Edition)](rules/catan-event-cards/) | 2 | 60-120 minutes | Klaus Teuber | ✅ |
 | [Catan Dice Game](rules/catan-dice-game/) | 1-4 | 15-30 minutes | Klaus Teuber | ✅ |
 | [Catan Geographies: Germany](rules/catan-geographies-germany/) | 3-4 | 60-90 minutes | Klaus Teuber, Benjamin Teuber | ⚠️ |
 | [Catan Histories: Merchants of Europe](rules/catan-histories-merchants-of-europe/) | 3-4 | 90-120 minutes | Klaus Teuber | ⚠️ |
-| [Catan Histories: Rise of the Inkas](rules/catan-histories-rise-of-the-inka/) | 3-4 | 90 minutes | Klaus Teuber, Benjamin Teuber | ❗ |
+| [Catan Histories: Rise of the Inkas](rules/catan-histories-rise-of-the-inka/) | 3-4 | 90 minutes | Klaus Teuber, Benjamin Teuber | ✅ |
 | [Catan Junior](rules/catan-junior/) | 2-4 | 30 minutes | Klaus Teuber | ✅ |
 | [Catan: 3D Collector's Edition](rules/catan-3d-collector-s-edition/) | 3-4 | 60-90 minutes | Klaus Teuber | ⚠️ |
-| [Catan: Ancient Egypt](rules/catan-ancient-egypt/) | 3-4 | 60-90 minutes | Klaus Teuber | ❗ |
+| [Catan: Ancient Egypt](rules/catan-ancient-egypt/) | 3-4 | 60-90 minutes | Klaus Teuber | ✅ |
 | [Catan: Portable Edition](rules/catan-portable-edition/) | 3-4 | 60-90 minutes | Klaus Teuber | ✅ |
 | [Catapult Feud](rules/catapult-feud/) | 2 | 20 min | Kristian Fosh | ⚠️ |
 | [Cathedral](rules/cathedral/) | 2 | 20 min |  | ✅ |
@@ -629,7 +629,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Colorito](rules/colorito/) | 2 | 30 min |  | ✅ |
 | [Colosseum](rules/colosseum/) | 3-5 | 60-90 min | Wolfgang Kramer, Markus Lübke | ✅ |
 | [Colt Express](rules/colt-express/) | 2-6 | 30-40 min | Christophe Raimbault | ✅ |
-| [Comanauts](rules/comanauts/) | 2-4 | 60-120 min | Jerry Hawthorne | ❗ |
+| [Comanauts](rules/comanauts/) | 2-4 | 60-120 min | Jerry Hawthorne | ✅ |
 | [Combat Commander: Europe](rules/combat-commander-europe/) | 2 | 60-180 min | Chad Jensen | ❗ |
 | [Combat Commander: Pacific](rules/combat-commander-pacific/) | 2 | 60-180 min | Chad Jensen | ⚠️ |
 | [Comet](rules/comet/) | 2-4 | 30-60 min | Daryl Andrews, Adrian Adamescu | ⚠️ |
@@ -639,7 +639,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Commonspoly](rules/commonspoly/) | 3-6 | 60-90 min |  | ✅ |
 | [Complots](rules/complots/) | 2-8 | 15 min | Rikki Tahta | ⚠️ |
 | [Composio](rules/composio/) | 2-6 | 30 min | Heinz Meister | ⚠️ |
-| [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ❗ |
+| [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ✅ |
 | [Conan Collectible Card Game](rules/conan-collectible-card-game/) | 2 | 30-60 min | Jason Robinette | ⚠️ |
 | [Concept](rules/concept/) | 4-12+ | 40 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
 | [Concept Kids: Animals](rules/concept-kids-animals/) | 2-12 | 20 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
@@ -673,7 +673,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Crokinole](rules/crokinole/) | 2-4 | 30 min | Unknown (traditional) | ⚠️ |
 | [Crossfire](rules/crossfire/) | 2 | 5-10 min | Unknown | ⚠️ |
 | [Crows](rules/crows/) | 2-4 | 30-45 min | Tyler Sigman | ✅ |
-| [Cry Havoc](rules/cry-havoc/) | 2-4 | 90-120 min | Grant Rodiek, Michal Oracz, Michal Walczak | ❗ |
+| [Cry Havoc](rules/cry-havoc/) | 2-4 | 90-120 min | Grant Rodiek, Michal Oracz, Michal Walczak | ✅ |
 | [Cryptid](rules/cryptid/) | 3-5 | 30-50 min | Hal Duncan, Ruth Veevers | ⚠️ |
 | [Cthulhu 500](rules/cthulhu-500/) | 3-8 | 30-60 min | Jeff Tidball | ✅ |
 | [Cthulhu Dice](rules/cthulhu-dice/) | 2-6 | 5-10 min | Steve Jackson | ✅ |
@@ -715,7 +715,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Das kaufmannische Talent](rules/das-kaufmannische-talent/) | 3-6 | 60-120 min | Unknown | ⚠️ |
 | [Das Kleine Gespenst](rules/das-kleine-gespenst/) | 2-4 | 15-25 min | Kai Haferkamp | ⚠️ |
 | [Dawn of the Dead](rules/dawn-of-the-dead/) | 2 | 60-120 min | John H. Butterfield | ⚠️ |
-| [Daybreak](rules/daybreak/) | 1-4 | 60-90 min | Matt Leacock, Matteo Menapace | ❗ |
+| [Daybreak](rules/daybreak/) | 1-4 | 60-90 min | Matt Leacock, Matteo Menapace | ✅ |
 | [DDR-Reise](rules/ddr-reise/) | 2-6 | 30-60 min | Unknown | ⚠️ |
 | [De Bellis Magistrorum Militum](rules/de-bellis-magistrorum-militum/) | 2 | 120-240 min | Phil Barker | ⚠️ |
 | [De Kolonisten van de Lage Landen](rules/de-kolonisten-van-de-lage-landen/) | 3-5 | 75 min | Klaus Teuber | ⚠️ |
@@ -723,7 +723,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [De Ontembare Stad](rules/de-ontembare-stad/) | 2-5 | 90 min | Unknown | ⚠️ |
 | [De Vulgari Eloquentia](rules/de-vulgari-eloquentia/) | 2-5 | 120 min | Mario Papini | ✅ |
 | [Dead of Winter: A Crossroads Game](rules/dead-of-winter-a-crossroads-game/) | 2-5 | 60-210 min | Jonathan Gilmour, Isaac Vega | ❗ |
-| [Deadwood](rules/deadwood/) | 2-5 | 40 min | Loïc Lamy | ❗ |
+| [Deadwood](rules/deadwood/) | 2-5 | 40 min | Loïc Lamy | ✅ |
 | [Deal Me In](rules/deal-me-in/) | 2-4 | 30-60 min | Unknown | ⚠️ |
 | [Death Stacks](rules/death-stacks/) | 2 | 20 min | Stephen Euin Cobb | ⚠️ |
 | [Deathwing](rules/deathwing/) | 1-2 | 120-180 min | Richard Halliwell, Jervis Johnson | ⚠️ |
@@ -731,11 +731,11 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Deckscape: Behind the Curtain](rules/deckscape-behind-the-curtain/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
 | [Deckscape: Dracula's Castle](rules/deckscape-dracula-s-castle/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
 | [Deckscape: Escape from Alcatraz](rules/deckscape-escape-from-alcatraz/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
-| [Decktet](rules/decktet/) | 1-4 | 15-60 min | P.D. Magnus | ❗ |
+| [Decktet](rules/decktet/) | 1-4 | 15-60 min | P.D. Magnus | ✅ |
 | [Deconnaissance](rules/deconnaissance/) | 2-6 | 30-60 min | Unknown | ⚠️ |
 | [Deep Sea Adventure](rules/deep-sea-adventure/) | 2-6 | 30 min | Jun Sasaki, Goro Sasaki | ✅ |
 | [Deep Space Navigator](rules/deep-space-navigator/) | 2+ | 60 min | Unknown | ⚠️ |
-| [Defenders of the Realm](rules/defenders-of-the-realm/) | 1-4 | 90-150 min | Richard Launius | ❗ |
+| [Defenders of the Realm](rules/defenders-of-the-realm/) | 1-4 | 90-150 min | Richard Launius | ✅ |
 | [Defenders of the Wild](rules/defenders-of-the-wild/) | 1-4 | 60-120 min | T. Alex Davis | ⚠️ |
 | [Defifoo](rules/defifoo/) | 3-18 | 20 min | Unknown | ⚠️ |
 | [Delir'phone](rules/delir-phone/) | 4-10 | 30-45 min | Unknown | ⚠️ |
@@ -750,7 +750,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | ↳ [Descent: Legends of the Dark -- The Betrayer's War](rules/descent-legends-of-the-dark-the-betrayer-s-war/) | 1-4 | 180-240 min | Kara Centell-Dunk | ⚠️ |
 | [Destination London](rules/destination/) | 2-4 | 30-60 min | Rachel Lowe | ⚠️ |
 | [Destinies](rules/destinies/) | 1-3 | 90-150 min | Michal Golebiowski, Filip Milunski | ⚠️ |
-| [Detective](rules/detective/) | 1-5 | 120-180 min | Ignacy Trzewiczek, Przemysław Rymer, Jakub Łapot | ❗ |
+| [Detective](rules/detective/) | 1-5 | 120-180 min | Ignacy Trzewiczek, Przemysław Rymer, Jakub Łapot | ✅ |
 | [Detective Charlie](rules/detective-charlie/) | 1-5 | 20 min | Théo Rivière | ✅ |
 | [Deus](rules/deus/) | 2-4 | 60-90 min | Sébastien Dujardin | ✅ |
 | [Deutschlandreise](rules/deutschlandreise/) | 2-6 | 45-60 min | Unknown | ⚠️ |
@@ -773,7 +773,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Dixit Journey](rules/dixit-journey/) | 3-8 | 30 min | Jean-Louis Roubira | ✅ |
 | [Djambi](rules/djambi/) | 3-4 | 60 min | Jean Anesto | ⚠️ |
 | [Dobutsu shogi](rules/d-butsu-sh-gi/) | 2 | 5-15 min |  | ⚠️ |
-| [DOG](rules/dog/) | 2-6 | 45 min |  | ❗ |
+| [DOG](rules/dog/) | 2-6 | 45 min |  | ✅ |
 | [Dominant Species](rules/dominant-species/) | 2-6 | 120-240 min | Chad Jensen | ❗ |
 | [Domination](rules/domination/) | 2-4 |  |  | ⚠️ |
 | [Don't Break the Ice](rules/don-t-break-the-ice/) | 2-4 | 10 min |  | ⚠️ |

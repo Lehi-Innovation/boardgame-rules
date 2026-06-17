@@ -7,11 +7,11 @@ designer: "P.D. Magnus"
 source_pdf: "decktet-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Nonesuch bid scoring wrong: "Most" bid misdefined with wrong penalty, "None" bid scores invented. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/decktet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Decktet&game=decktet)
 <!-- verification:end -->
@@ -95,9 +95,9 @@ On your turn: play a card to the grid (Explore), optionally place an influence t
 - Highest total score wins.
 
 ### Nonesuch
-- **Some** bid: expect to win at least 1 trick. Score 1 per trick won.
-- **Lots** bid: expect to win the most tricks. Score 2 per trick if you win the most; lose 2 per trick if you don't.
-- **None** bid: expect to win zero tricks. Score 5 if successful; lose 5 if you win any trick.
+- **Some** bid: expect to win at least 1 trick. Score 1 point per trick won.
+- **Most** bid: expect to win at least half the tricks (at least 6 with 3 players; at least 5 with 4 players). If you meet or exceed that threshold, score 2 points per trick won. If you fall short, lose 1 point per trick you are below half (i.e., per trick fewer than the threshold you needed).
+- **None** bid: expect to win zero tricks. If successful, score points equal to the total number of tricks in the hand (12 with 3 players; 9 with 4 players). If you win any tricks, lose 1 point per trick taken.
 
 ## Special Rules & Edge Cases
 
