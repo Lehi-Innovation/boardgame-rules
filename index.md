@@ -121,7 +121,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Acronymble](rules/acronymble/) | 3-8 | 30-60 min | Steven May | ⚠️ |
 | [Across Suez: The Battle of the Chinese Farm](rules/across-suez-the-battle-of-the-chinese-farm/) | 2 | 60-120 min | Jim Dunnigan, Mark Herman | ⚠️ |
 | [Activity](rules/activity/) | 3-16 | 60 min | Paul Catty, Ernst Führer | ⚠️ |
-| [Ad Astra](rules/ad-astra/) | 3-5 | 60 min | Bruno Faidutti, Serge Laget | ❗ |
+| [Ad Astra](rules/ad-astra/) | 3-5 | 60 min | Bruno Faidutti, Serge Laget | ✅ |
 | [Adaptoid](rules/adaptoid/) | 2 | 20 min | Nestor Romeral Andres | ✅ |
 | [Adji-boto](rules/adji-boto/) | 2 | 15-30 min | Traditional | ⚠️ |
 | [Admirals](rules/admirals/) | 2-4 | 60-120 min | John Bohrer | ⚠️ |
@@ -260,7 +260,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Ashtapada](rules/ashtapada/) | 2-4 | 30-60 min | Traditional | ⚠️ |
 | [Asia Engulfed](rules/asia-engulfed/) | 2 | 360-540 min | Jesse Evans, Rick Young | ✅ |
 | [Assault Across the Suez](rules/assault-across-the-suez/) | 2 | 120-180 min | uncredited | ⚠️ |
-| [Assault on Hoth: The Empire Strikes Back](rules/assault-on-hoth-the-empire-strikes-back/) | 2 | 60-90 min | Paul Murphy | ❗ |
+| [Assault on Hoth: The Empire Strikes Back](rules/assault-on-hoth-the-empire-strikes-back/) | 2 | 60-90 min | Paul Murphy | ✅ |
 | [Asteroid](rules/asteroid/) | 2 | 60-90 min | Marc Miller, Frank Chadwick | ⚠️ |
 | [Asteroid Pirates](rules/asteroid-pirates/) | 2-4 | 60-120 min | Stephen V. Cole | ⚠️ |
 | [Asteroyds](rules/asteroyds/) | 2-6 | 60 min | Guillaume Blossier, Frédéric Henry | ✅ |
@@ -373,7 +373,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Beda Fomm](rules/beda-fomm/) | 2 | 120 min | Frank Chadwick | ⚠️ |
 | [Beer Empire](rules/beer-empire/) | 2-4 | 60-90 min | Filip Glowacz | ⚠️ |
 | [Before the Wind](rules/before-the-wind/) | 2-4 | 75-90 min | Torsten Landsvogt | ⚠️ |
-| [Belfort](rules/belfort/) | 2-5 | 90-120 min | Jay Cormier, Sen-Foong Lim | ❗ |
+| [Belfort](rules/belfort/) | 2-5 | 90-120 min | Jay Cormier, Sen-Foong Lim | ✅ |
 | [Belratti](rules/belratti/) | 3-7 | 20-40 min | Michael Loth | ⚠️ |
 | [Belter](rules/belter/) | 2-4 | 120-240 min | Frank Chadwick, Marc Miller | ⚠️ |
 | [Bendomino](rules/bendomino/) | 2-4 | 10-20 min | Thierry Denoual | ⚠️ |
@@ -445,8 +445,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Brainstonz](rules/brainstonz/) | 2 | 15-30 min | Philippe Trudel | ⚠️ |
 | [Brainstorm](rules/brainstorm/) | 2-6 | 30-45 min | Uncredited | ⚠️ |
 | [Brandon the Brave](rules/brandon-the-brave/) | 2-4 | 15-20 min | Michael Kallauch | ⚠️ |
-| [Brass: Birmingham](rules/brass-birmingham/) | 2-4 | 60-120 min | Martin Wallace, Gavan Brown, Matt Tolman | ❗ |
-| [Brass: Lancashire](rules/brass-lancashire/) | 2-4 | 60-120 min | Martin Wallace | ❗ |
+| [Brass: Birmingham](rules/brass-birmingham/) | 2-4 | 60-120 min | Martin Wallace, Gavan Brown, Matt Tolman | ✅ |
+| [Brass: Lancashire](rules/brass-lancashire/) | 2-4 | 60-120 min | Martin Wallace | ✅ |
 | [Brawl](rules/brawl/) | 2 | 1-5 min | James Ernest | ⚠️ |
 | [Brax](rules/brax/) | 2 | 30-45 min | Frederic B. Denham | ⚠️ |
 | [Breakaway Rider](rules/breakaway-rider/) | 2-6 | 45-60 min | Tom Dalgliesh, Lance Gutteridge | ⚠️ |
@@ -454,7 +454,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Breakscore](rules/breakscore/) | 2-4 | 20-45 min | Uncredited | ⚠️ |
 | [Breakthrough](rules/breakthrough/) | 2 | 20 min | Dan Troyka | ⚠️ |
 | [Breakthru](rules/breakthru/) | 2 | 30 min | Alex Randolph | ⚠️ |
-| [Brew](rules/brew/) | 2-4 | 45-90 min | Stevo Torres | ❗ |
+| [Brew](rules/brew/) | 2-4 | 45-90 min | Stevo Torres | ✅ |
 | [Brilliant Lances](rules/brilliant-lances/) | 2 | 120-240 min | Frank Chadwick, Dave Nilsen | ⚠️ |
 | [Britannia](rules/britannia/) | 3-5 | 180-300 min | Lewis Pulsipher | ❗ |
 | [Broadsides and Boarding Parties](rules/broadsides-and-boarding-parties/) | 2 | 60 min | Larry Harris | ✅ |
@@ -532,13 +532,13 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cascadia](rules/cascadia/) | 1-4 | 30-45 minutes | Randy Flynn | ✅ |
 | [Castle Flutterstone](rules/castle-flutterstone/) | 2-4 | 15-25 min | Guido Hoffmann, Jens-Peter Schliemann | ⚠️ |
 | [Castle of Magic](rules/castle-of-magic/) | 3-6 | 60-90 minutes | Mark Acres | ✅ |
-| [Castle Panic](rules/castle-panic/) | 1-6 | 60 minutes | Justin De Witt | ❗ |
+| [Castle Panic](rules/castle-panic/) | 1-6 | 60 minutes | Justin De Witt | ✅ |
 | [Castle Risk](rules/castle-risk/) | 2-6 | 90-120 minutes | Uncredited (Parker Brothers) | ⚠️ |
 | [Cat in the Box: Deluxe Edition](rules/cat-in-the-box-deluxe-edition/) | 2-5 | 30 minutes | Muneyuki Yokouchi | ⚠️ |
 | [Catan](rules/catan/) | 3-4 | 60-120 min | Klaus Teuber | ⚠️ |
 | ↳ [Catan Geographies: Settlers of Hesse](rules/catan-geographies-settlers-of-hesse/) | 3-4 | 60-90 min | Klaus Teuber | ⚠️ |
 | ↳ [Catan Scenarios: Frenemies](rules/catan-scenarios-frenemies/) | 3-6 | 45-90 min | Benjamin Teuber | ✅ |
-| ↳ [Catan: Crop Trust](rules/catan-scenario-crop-trust/) | 3-4 | 75 minutes | Klaus Teuber, Benjamin Teuber | ❗ |
+| ↳ [Catan: Crop Trust](rules/catan-scenario-crop-trust/) | 3-4 | 75 minutes | Klaus Teuber, Benjamin Teuber | ✅ |
 | [Catan Card Game (Event Cards Edition)](rules/catan-event-cards/) | 2 | 60-120 minutes | Klaus Teuber | ❗ |
 | [Catan Dice Game](rules/catan-dice-game/) | 1-4 | 15-30 minutes | Klaus Teuber | ✅ |
 | [Catan Geographies: Germany](rules/catan-geographies-germany/) | 3-4 | 60-90 minutes | Klaus Teuber, Benjamin Teuber | ⚠️ |
@@ -552,7 +552,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cathedral](rules/cathedral/) | 2 | 20 min |  | ✅ |
 | [Caverna: The Cave Farmers](rules/caverna-the-cave-farmers/) | 1-7 | 30-210 min | Uwe Rosenberg | ❗ |
 | [Cavum](rules/cavum/) | 2-4 | 75-120 min | Wolfgang Kramer | ⚠️ |
-| [Caylus](rules/caylus/) | 2-5 | 60-150 min | William Attia | ❗ |
+| [Caylus](rules/caylus/) | 2-5 | 60-150 min | William Attia | ✅ |
 | [Celestia](rules/celestia/) | 2-6 | 30 min | Aaron Weissblum | ✅ |
 | [Celtica](rules/celtica/) | 2-4 | 45-60 min | Wolfgang Kramer, Michael Kiesling | ✅ |
 | [Chainsaw Warrior](rules/chainsaw-warrior/) | 1 | 30-60 min | Stephen Hand | ⚠️ |
@@ -594,11 +594,11 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
 | [Clank!: A Deck-Building Adventure](rules/clank-a-deck-building-adventure/) | 2-4 | 30-60 min | Paul Dennen | ✅ |
 | [Clans](rules/clans/) | 2-4 | 30 min | Leo Colovini | ✅ |
-| [Clans of Caledonia](rules/clans-of-caledonia/) | 1-4 | 30-120 min | Juma Al-JouJou | ❗ |
+| [Clans of Caledonia](rules/clans-of-caledonia/) | 1-4 | 30-120 min | Juma Al-JouJou | ✅ |
 | [Clash of the Gladiators](rules/clash-of-the-gladiators/) | 2-5 | 45 min | Reiner Knizia | ⚠️ |
 | [Class Struggle](rules/class-struggle/) | 2-6 | 90 min | Bertell Ollman | ⚠️ |
 | [Classical Diplomacy](rules/classical-diplomacy/) | 5-7 | 240-360 min | Andy Schwarz, Vincent Mous | ⚠️ |
-| [Claustrophobia](rules/claustrophobia/) | 2 | 45 min | Croc | ❗ |
+| [Claustrophobia](rules/claustrophobia/) | 2 | 45 min | Croc | ✅ |
 | [Cleopatra and the Society of Architects](rules/cleopatra-and-the-society-of-architects/) | 3-5 | 60 min | Bruno Cathala, Ludovic Maublanc | ✅ |
 | [Click Clack](rules/click-clack/) | 2-4 | 15-20 min | Uncredited | ⚠️ |
 | [Clobber](rules/clobber/) | 2 | 15 min | Michael H. Albert, J.P. Grossman, Richard Nowakowski | ⚠️ |
@@ -636,7 +636,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Commander Chess](rules/commander-chess/) | 2 | 30-60 min | Hải Quý Nguyễn | ⚠️ |
 | [Commands & Colors: Ancients](rules/commands-colors-ancients/) | 2 | 60 min | Richard Borg | ❗ |
 | [Commands & Colors: Napoleonics](rules/commands-colors-napoleonics/) | 2 | 60 min | Richard Borg | ⚠️ |
-| [Commonspoly](rules/commonspoly/) | 3-6 | 60-90 min |  | ❗ |
+| [Commonspoly](rules/commonspoly/) | 3-6 | 60-90 min |  | ✅ |
 | [Complots](rules/complots/) | 2-8 | 15 min | Rikki Tahta | ⚠️ |
 | [Composio](rules/composio/) | 2-6 | 30 min | Heinz Meister | ⚠️ |
 | [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ❗ |

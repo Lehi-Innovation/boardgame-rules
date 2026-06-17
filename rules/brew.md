@@ -7,11 +7,11 @@ designer: "Stevo Torres"
 source_pdf: "brew-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Trained-Creature limit wrong (says 4, rulebook says 3), tiebreaker falsely claimed unspecified, potion power list missing 4 of 7 effects. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/brew-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brew&game=brew)
 <!-- verification:end -->
@@ -70,7 +70,7 @@ When you have no dice left, your turn is skipped for the rest of the round. You 
 
 **Gathering Ingredients:** Place on an ingredient space to take 1 matching token (Herb, Shroom, or Crystal).
 
-**Training Creatures:** Place on a Creature space to take any faceup Creature from the 4 piles. Place it near your Character board (max 4 active Creatures).
+**Training Creatures:** Place on a Creature space to take any faceup Creature from the 4 piles. Place it near your Character board (max 3 active Creatures).
 
 ### Element Dice Powers (Forest only)
 When placing an Element die in a Forest, you may also use its power:
@@ -93,9 +93,13 @@ Pay the ingredient cost in the top-left corner of a Potion card. Energy Berries 
 Reveal a Potion from your hand, resolve its power, then tuck it facedown behind your Character board. Each Potion can only be drunk once. Drunk Potions still score VP.
 
 **Potion Powers:**
-- **Move:** Move any placed Forage die to a different empty space (no gathering).
-- **Change:** Rotate one of your unplaced dice to any face.
-- **Swap:** Swap any 2 placed Forage dice with the same symbol.
+- **Move:** Move any placed Forage die to a different empty space (no gathering, no powers triggered).
+- **Change:** Rotate one of the dice in your dice pool to a different face of your choice.
+- **Swap:** Swap any 2 placed Forage dice with the same symbol (no gathering, no powers triggered).
+- **Remove:** Remove any placed Element die (or a placed die of any type) and set it aside; it cannot be placed again until the start of the next round.
+- **Reroll:** Choose any number of dice in your dice pool and reroll them.
+- **Return:** Remove one of your own placed Forage dice and return it to your dice pool (gives you an extra turn later in the round).
+- **Place:** Choose any die from your dice pool and place it normally (uses up a future turn).
 
 ### Reserving Potions
 Some Village actions let you reveal the top Potion and choose it or one from the market to reserve. Reserved Potions can only be brewed by you.
@@ -110,7 +114,7 @@ Some Village actions let you reveal the top Potion and choose it or one from the
 - VP from Creature bonuses (paired with matching-season Forests)
 - VP from remaining ingredient tokens (varies)
 
-**Winner:** Most VP. Tiebreakers not specified (shared victory if tied).
+**Winner:** Most VP. Tiebreaker: the tied player with the most leftover ingredient tokens (including Energy Berries) wins. If still tied, those players share victory.
 
 ## Special Rules & Edge Cases
 
@@ -129,7 +133,7 @@ Ties = no one controls. Element dice count against ALL players (even the one who
 Placed on empty Forest spaces via certain powers. Scorched spaces cannot be used.
 
 ### Releasing Creatures
-Creatures paired with a claimed Forest of matching season score bonus VP.
+You may never have more than 3 trained Creatures at a time. If you train a new Creature while already at the limit of 3, you must immediately release one. Released Creatures can no longer use their powers but still score VP. Creatures paired with a claimed Forest of matching season score 3 VP; Creatures not in a matching Forest score 1 VP.
 
 ### Character Powers
 Optional asymmetric abilities on the Character board's power side. All players must agree to use them.

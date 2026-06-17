@@ -7,14 +7,14 @@ designer: "Bruno Faidutti, Serge Laget"
 source_pdf: "ad-astra-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-17"
 ---
 
 # Ad Astra
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ad-astra-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ad%20Astra&game=ad-astra)
 <!-- verification:end -->
@@ -101,7 +101,7 @@ Owner moves 1 starship first. Then each other player (clockwise) moves 1 starshi
 When entering a system, the player may secretly view all face-down planets, then either land on a face-up planet or reveal a face-down planet and land there.
 
 - Cannot land on a planet with another player's pawns.
-- Discovering an alien planet grants 1 alien artifact card (drawn randomly).
+- Discovering an alien planet: when a player **reveals** an alien planet and lands there, they draw 1 alien artifact card at random. If the alien planet was already face-up (revealed by another player earlier), moving there does not grant an artifact card.
 - The starting system (Sol) cannot be moved to (it does not appear on movement cards).
 
 ### Build
@@ -112,7 +112,7 @@ Card owner may build **any number** of items. Other players may build **1 item**
 |------|------|-------------|
 | Colony | Water + Food + 1 any Ore | Starship on planet OR terraformed planet |
 | Factory | Water + Food + Energy | Colony already on that planet (colony is removed) |
-| Terraformer | Energy + Food | Colony, Factory, or Starship on a non-alien planet |
+| Terraformer | Energy + Food | Colony, Factory, or Starship on a terraformable planet type (only 2 of the 6 non-alien types; see rulebook) |
 | Starship | Water + Energy + Food + 1 any Ore | Placed in deep space |
 
 - Only 1 colony or factory per planet.
@@ -156,7 +156,7 @@ Points come from: scoring card actions, building on alien planets (colonies +3, 
 
 ## Special Rules & Edge Cases
 
-- Alien artifact cards are kept secret until used. Each can only be used once, then removed from the game. "Repositorium Alienum" must be revealed and applied immediately.
+- Alien artifact cards are kept secret until used. Each can only be used once, then removed from the game. "Repositorium Alienum" (Alien Warehouse) must be revealed and applied immediately upon drawing it.
 - A player has only 6 of the 8 non-Sol systems on their movement cards, requiring use of other players' cards to reach the remaining 2.
 - Maximum hand size: 10 resource cards (discard excess at end of round).
 - Each player has only 4 usable pawns of each type.
