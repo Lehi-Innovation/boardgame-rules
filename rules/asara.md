@@ -7,11 +7,11 @@ designer: "Michael Kiesling, Wolfgang Kramer"
 source_pdf: "asara-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Re-audit+fix: Setup invents a buyer-card distribution ('cards of their color') contradicting the source's shared reshuffled 45-card deck. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/asara-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Asara&game=asara)
 <!-- verification:end -->
@@ -36,7 +36,7 @@ Asara is a card-driven worker-placement and tower-building game set in a magical
 2. Each player takes a screen and buyer cards of their color.
 3. Distribute starting Asari to each player.
 4. Deal starting tower sections per the setup rules.
-5. Youngest player starts.
+5. The starting player begins; how the starting player is chosen is specified on the crib sheet, which is not included in the extracted text.
 
 ## Turn Structure
 
@@ -87,7 +87,7 @@ Play proceeds clockwise. Each turn:
 
 **Final evaluation** (after the 4th year, immediately following end-of-year scoring):
 - Per color (Brown, Green, Red, Black, White): highest tower (most sections) earns 4/6/8/10/12 points; second highest earns 2/3/4/5/6 points.
-- Highest tower overall (regardless of color): 4 points for 1st, 2 points for 2nd.
+- Highest tower overall (regardless of color): the source text covering this figure is garbled — the only clearly legible number ("4 prestige points") is tied to the *second* highest tower overall, not the first; the points for the first-place tower overall are missing from the extracted text. Verify the exact 1st/2nd-place values against the original rulebook (page 6 diagram) before relying on this figure.
 - Largest total number of towers: 12 points for 1st, 6 points for 2nd.
 - 1 prestige point for every 10 Asari remaining.
 - Gold decorations and Caliph's Patronage do **not** earn points in the final evaluation.
@@ -109,11 +109,11 @@ Highest prestige total after final evaluation wins.
 
 | Color | Section Cost | Per-color Final Evaluation (1st / 2nd) |
 |-------|-------------|----------------------------------------|
-| Brown | Cheapest | 4 / 2 pts |
-| Green | Low | 6 / 3 pts |
-| Red | Medium | 8 / 4 pts |
-| Black | High | 10 / 5 pts |
-| White | Most expensive | 12 / 6 pts |
+| Brown | Not given in text — see board / inner right-hand side of screens | 4 / 2 pts |
+| Green | Not given in text — see board / inner right-hand side of screens | 6 / 3 pts |
+| Red | Not given in text — see board / inner right-hand side of screens | 8 / 4 pts |
+| Black | Not given in text — see board / inner right-hand side of screens | 10 / 5 pts |
+| White | Not given in text — see board / inner right-hand side of screens | 12 / 6 pts |
 
 | Tower Requirement | Rule |
 |------------------|------|
@@ -132,6 +132,7 @@ Highest prestige total after final evaluation wins.
 | Final Evaluation Bonus | Points |
 |----------------------|--------|
 | Highest/2nd highest tower per color | see table above |
-| Highest tower overall | 4 / 2 |
+| Highest tower overall (1st place) | not stated in extracted text — source page is garbled; verify against rulebook PDF (page 6 diagram) |
+| Second highest tower overall | 4 |
 | Most / 2nd most towers | 12 / 6 |
 | Every 10 Asari remaining | 1 |

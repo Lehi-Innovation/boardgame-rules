@@ -142,7 +142,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Afrikan tähti](rules/afrikan-t-hti/) | 2-6 | 30-60 min | Kari Mannerla | ✅ |
 | ↳ [Afrikan tähti: Retkikunnat](rules/afrikan-t-hti-retkikunnat/) | 2-4 | 45-60 min | Unknown | ⚠️ |
 | [After the Holocaust](rules/after-the-holocaust/) | 2-6 | 180-360 min | Irad B. Hardy, Redmond A. Simonsen | ⚠️ |
-| [Aftermath](rules/aftermath/) | 1-4 | 90 min | Jerry Hawthorne | ✅ |
+| [Aftermath](rules/aftermath/) | 1-4 | 90 min | Jerry Hawthorne | ❗ |
 | [Age of Discovery](rules/age-of-discovery/) | 2-4 | 45 min | Alfred Viktor Schulz | ⚠️ |
 | [Age of Empires III: The Age of Discovery](rules/age-of-empires-iii-the-age-of-discovery/) | 2-5 | 120 min | Glenn Drover | ✅ |
 | [Age of Industry](rules/age-of-industry/) | 2-5 | 90-120 min | Martin Wallace | ⚠️ |
@@ -253,7 +253,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Artifact](rules/artifact/) | 2-5 | 60-90 min | uncredited (White Goblin Games) | ⚠️ |
 | [Artus](rules/artus/) | 2-4 | 60 min | Michael Kiesling, Wolfgang Kramer | ✅ |
 | [Arydia: The Paths We Dare Tread](rules/arydia-the-paths-we-dare-tread/) | 1-4 | 60-120 min | Brian Van Slyke, Karington Hess | ⚠️ |
-| [Asara](rules/asara/) | 2-4 | 45 min | Michael Kiesling, Wolfgang Kramer | ✅ |
+| [Asara](rules/asara/) | 2-4 | 45 min | Michael Kiesling, Wolfgang Kramer | ❗ |
 | [Ascending Empires](rules/ascending-empires/) | 2-4 | 75 min | Ian Cooper | ⚠️ |
 | [Ascension: Deckbuilding Game](rules/ascension-deckbuilding-game/) | 1-4 | 30 min | Justin Gary, Robert Dougherty, Brian Kibler | ⚠️ |
 | [ASG Baseball](rules/asg-baseball/) | 2 | 60-120 min | George Gerney | ⚠️ |
@@ -434,7 +434,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Boom, Bang, Gold](rules/boom-bang-gold/) | 2-4 | 20 min | Alexandre Emerit | ✅ |
 | [Boomtown](rules/boomtown/) | 3-5 | 30 min | Bruno Cathala, Bruno Faidutti | ✅ |
 | [Boonlake](rules/boonlake/) | 1-4 | 90-120 min | Alexander Pfister | ✅ |
-| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ❗ |
+| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ✅ |
 | [Borderlands](rules/borderlands/) | 2-4 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ⚠️ |
 | [Borneo](rules/borneo/) | 3-5 | 45-60 min | Marco Pranzo | ⚠️ |
 | [Borodino](rules/borodino/) | 2 | 240-480 min | Richard Berg | ✅ |

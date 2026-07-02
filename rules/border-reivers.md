@@ -7,11 +7,11 @@ designer: "Ed Beach"
 source_pdf: "border-reivers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
+verification: "minor_issues"
 verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Independent re-audit: Recruit action reversed - summary says gain +1 Cattle, source says Recruit costs Cattle and only Hold grants +1 (source example 7 to 5). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/border-reivers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Border%20Reivers&game=border-reivers)
 <!-- verification:end -->
@@ -47,7 +47,7 @@ Border Reivers is a card-driven strategy game about the raids and battles along 
 2. Family Selection: Draft or assign families per the rules.
 3. Place Family Sheets and set Sheep on Map tracker to 4.
 4. Place initial cubes on Notoriety Tracks (level 3 in home March).
-5. Set up randomization cups for livestock and card draws.
+5. Set up the Turn Order cube container and the Defense Token container.
 6. Prepare card decks: Summer cards, Event cards, Warden cards, Target cards.
 
 ## Turn Structure
@@ -56,8 +56,8 @@ The game plays over **3 turns**, each with 4 seasons:
 
 ### Summer (Card Drafting)
 Six rounds of card drafting. Each round, families simultaneously select 1 card from their hand and pass the remaining cards to an adjacent family (left on Turn 1, right on Turn 2, randomly on Turn 3). The selected card is then played with one of four actions:
-- **Recruit:** Play the card face-up on your Family Sheet (Reiver, Warden, Allied Grayne, or Office slot). May knock out a previously recruited card. Gain +1 Cattle from the bank.
-- **Play:** Use the card's immediate effect (Defense Token, Livestock, Permanent Defense, or Bastle card). Then add to Out-of-Play pile.
+- **Recruit:** Play the card face-up on your Family Sheet (Reiver, Warden, Allied Grayne, or Office slot). May knock out a previously recruited card. Pay the card's Cattle cost (if any) to the bank.
+- **Play:** Use the card's immediate effect (Defense Token, Livestock, Permanent Defense, or Bastle card). Pay the card's Cattle cost (if any) to the bank. Then add to Out-of-Play pile.
 - **Hold:** Place the card facedown in your Held Card box for use during an upcoming Winter or Spring. Gain +1 Cattle from the bank.
 - **Discard:** Any Summer Card may be discarded to take one Default Action instead. Place card in Summer Cards Discards (may reenter play later).
 
@@ -97,7 +97,7 @@ There are four types of combat: Raid, Feud, Gaolbreak, and Battle. The terms are
 - **Raid:** Attack a Farm Region. Attack dice include 1 per unprotected (unbastled) Sheep in the target. Successful hits steal Cattle (roll 3–4: Cattle hit, 1 VP) or Sheep (roll 5–6: Sheep hit, 2 VP). Defense roll of 5: Block; 6: Capture (attacker loses 1 Horse, 1 Cube to Gaol); 7+: Hanged (attacker loses 1 Horse, defender gains 6 VP). If the attacker gained at least 1 VP, the defender adds one of their Cubes to the attacker's Family Seat Feud box.
 - **Feud:** Attack a Family Seat where one or more of your own Feud Cubes are present. Each such Cube adds 1 attack die (Cubes returned after computing dice). Feud hits award 3 VP each. The side scoring more hits gains 2 Notoriety in the March (4 if Ill Week event); loser drops 1 Notoriety (not below 0).
 - **Gaolbreak:** Attack a Town where your Cubes are in the Reivers in Gaol box. Each captive Cube adds 1 attack die. Each hit frees 1 Cube, awards 2 VP, and gains the attacker 1 Horse from the bank. Defense roll of 7: Hanged (attacker loses 1 Horse, defender gains 6 VP). If any Cube was freed, attacker gains 2 Notoriety in the March (4 if Ballad of Kinmont Willie event); defender drops 1.
-- **Battle:** Requires the matching Event card to be in play at a Battlefield. First attacker's hits are recorded but Post-Combat Awards are not yet granted. Once a second attacker resolves the same Battle, the side with more unblocked hits gains Notoriety. If never contested by a second family, the first attacker wins (see 7.9). Battles between English and Scottish families can be targeted twice (once by each side).
+- **Battle:** Requires the matching Event card to be in play at a Battlefield. Battle hits (roll 5–6, if not blocked) award VP as specified on the Event card, in addition to any Notoriety awarded once both sides have attacked. First attacker's hits are recorded but Post-Combat Awards are not yet granted. Once a second attacker resolves the same Battle, the side with more unblocked hits gains Notoriety. If never contested by a second family, the first attacker wins (see 7.9). Battles between English and Scottish families can be targeted twice (once by each side).
 
 ### Defenses
 - **Permanent Defenses:** Castles (2 defense dice, protect 2 adjacent Farm Regions) and Peels (1 defense die, protect 2 adjacent Farm Regions). Activated by playing Summer cards.
@@ -165,7 +165,7 @@ Highest VP total wins. In a 2- or 3-player game, sum both families' VP for each 
 
 **Combat Resolution:** Roll attack dice vs. defense dice. Die results determine outcomes by combat type (Raid/Feud/Gaolbreak/Battle). Defense dice can Block, Capture, or Hang attackers.
 
-**VP Sources:** Notoriety rankings (Spring each turn), combat hits (Cattle hit 1VP, Sheep hit 2VP, Feud/Gaolbreak hits 3VP/2VP), Reivers in Gaol (2VP per Cube), Spring Cards (Turn 3), end-game Livestock scores.
+**VP Sources:** Notoriety rankings (Spring each turn), combat hits (Cattle hit 1VP, Sheep hit 2VP, Feud/Gaolbreak hits 3VP/2VP), Battle hits (VP as specified on the Event card, in addition to any Notoriety awarded once both sides have attacked), Reivers in Gaol (2VP per Cube), Spring Cards (Turn 3), end-game Livestock scores.
 
 **End-Game Livestock VP:** Horses 3VP/pair; Sheep 2VP/pair; Cattle 1VP/pair.
 

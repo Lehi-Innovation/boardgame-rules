@@ -7,14 +7,14 @@ designer: "Jerry Hawthorne"
 source_pdf: "aftermath-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-02"
 ---
 
 # Aftermath
 
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Re-audit+fix: omits the entire Enemy Turn combat-resolution phase and Defeated Enemy/Character rules that Turn Structure invokes. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/aftermath-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Aftermath&game=aftermath)
 <!-- verification:end -->
@@ -58,8 +58,8 @@ Players take individual turns in clockwise order. Each player's turn consists of
 
 ### Player Actions
 - **Move**: Play action cards; total value = movement points. Spend 1 point to cross a dashed line; 3 points to cross a solid colored line (unless all played cards match that line's color).
-- **Melee Attack**: Target an enemy in your space. Resolve an opposed Strength skill test against the enemy's defense value. Success inflicts 1 wound.
-- **Ranged Attack**: Target an enemy up to 1 space away (or farther with a ranged weapon) within line of sight. Resolve an opposed Agility skill test against the enemy's defense value. Success inflicts 1 wound.
+- **Melee Attack**: If the situation is hostile, target an enemy in your space. Resolve an opposed Strength skill test against the enemy's defense value. Success inflicts 1 wound.
+- **Ranged Attack**: If the situation is hostile, target an enemy up to 1 space away (or farther with a ranged weapon) within line of sight. Resolve an opposed Agility skill test against the enemy's defense value. Success inflicts 1 wound.
 - **Scavenge**: Target a Scavenge token on your space. Resolve an Instinct skill test at the token's difficulty. Success gains the listed prize.
 - **Communicate**: Only when the situation is safe. Target an enemy sharing your space. Resolve an opposed Instinct skill test at that enemy's communication value. Success removes the enemy and 1 threat card from play and increases the Morale dial by 1. Failure makes the situation hostile.
 - **Recover**: Attempt to remove a negative status effect by resolving the skill test on that status card.
