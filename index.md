@@ -1641,6 +1641,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Ready Set Bet](rules/ready-set-bet/) | 2-9 | 45-60 min | John D. Clair | ⚠️ |
 | [Realm of the Jade Goddess](rules/realm-of-the-jade-goddess/) | 2-4 | 60-90 min | Klaus Teuber | ⚠️ |
 | [Rebirth](rules/rebirth/) | 2-4 | 45-60 min | Reiner Knizia | ⚠️ |
+| [Red Notice: A Million or Prison](rules/red-notice/) | 2 | 30 min | Gautier de Cottreau, Baptiste Laurent | ⚠️ |
 | [Red November](rules/red-november/) | 3-8 | 60-120 min | Bruno Faidutti, Jef Gontier | ⚠️ |
 | [Red vs White vs Blue: A Russian Civil War 1918-1922](rules/red-vs-white-vs-blue-a-russian-civil-war-1918-1922/) | 2 | 120-180 min | Unknown | ⚠️ |
 | [Reds!](rules/reds/) | 2 | 180-480 min | Ted Raicer | ⚠️ |
