@@ -434,7 +434,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Boom, Bang, Gold](rules/boom-bang-gold/) | 2-4 | 20 min | Alexandre Emerit | ✅ |
 | [Boomtown](rules/boomtown/) | 3-5 | 30 min | Bruno Cathala, Bruno Faidutti | ✅ |
 | [Boonlake](rules/boonlake/) | 1-4 | 90-120 min | Alexander Pfister | ✅ |
-| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ✅ |
+| [Border Reivers](rules/border-reivers/) | 1-6 | 90-150 min | Ed Beach | ❗ |
 | [Borderlands](rules/borderlands/) | 2-4 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ⚠️ |
 | [Borneo](rules/borneo/) | 3-5 | 45-60 min | Marco Pranzo | ⚠️ |
 | [Borodino](rules/borodino/) | 2 | 240-480 min | Richard Berg | ✅ |
@@ -514,7 +514,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Capitol](rules/capitol/) | 2-4 | 45-60 min | Alan R. Moon, Aaron Weissblum | ⚠️ |
 | [Captain Flip](rules/captain-flip/) | 2-5 | 20 min | Paolo Mori, Remo Conzadori | ✅ |
 | [Captain Silver](rules/captain-silver/) | 2-4 | 20 minutes | Wolfgang Dirscherl, Manfred Reindl | ✅ |
-| [Captain Sonar](rules/captain-sonar/) | 2-8 | 45-60 minutes | Roberto Fraga, Yohan Lemonnier | ✅ |
+| [Captain Sonar](rules/captain-sonar/) | 2-8 | 45-60 minutes | Roberto Fraga, Yohan Lemonnier | ❗ |
 | [Carabande](rules/carabande/) | 2-8 | 30 minutes | Bill Payne | ✅ |
 | [Carcassonne: The Castle](rules/carcassonne-the-castle/) | 2 | 30-45 min | Reiner Knizia | ⚠️ |
 | [Carcassonne: The City](rules/carcassonne-the-city/) | 2-4 | 45-60 min | Klaus-Jurgen Wrede | ⚠️ |
@@ -588,7 +588,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [City of the Great Machine](rules/city-of-the-great-machine/) | 1-4 | 45-90 min | German Tikhomirov | ✅ |
 | [City States of Arklyrell](rules/city-states-of-arklyrell/) | 2-6 | 90-120 min | Lance Gutteridge | ⚠️ |
 | [Civil War](rules/civil-war/) | 2 | 120-240 min | Eric Lee Smith | ⚠️ |
-| [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ✅ |
+| [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ❗ |
 | [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ✅ |
 | [Claim It!](rules/claim-it/) | 2-5 | 30-45 min | Günter Burkhardt | ⚠️ |
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
@@ -622,7 +622,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cold War: CIA vs KGB](rules/cold-war-cia-vs-kgb/) | 2 | 30-60 min | Jérémy Pinget | ✅ |
 | [Colomino](rules/colomino/) | 2-4 | 30 min | Haim Shafir | ⚠️ |
 | [Colonial Diplomacy](rules/colonial-diplomacy/) | 2-7 | 240-360 min | Avalon Hill | ⚠️ |
-| [Colonial Twilight: The French-Algerian War, 1954-62](rules/colonial-twilight-the-french-algerian-war-1954-62/) | 1-2 | 120-180 min | Brian Train | ✅ |
+| [Colonial Twilight: The French-Algerian War, 1954-62](rules/colonial-twilight-the-french-algerian-war-1954-62/) | 1-2 | 120-180 min | Brian Train | ❗ |
 | [Colony](rules/colony/) | 1-4 | 45-60 min | Ted Alspach, Toryo Hojo, Yoshihisa Nakatsu | ⚠️ |
 | [Colony Delta: Earth vs. Sigma Draconis](rules/colony-delta/) | 2 | 60-120 min | Uncredited | ⚠️ |
 | [Coloretto](rules/coloretto/) | 3-5 | 30 min | Michael Schacht | ✅ |

@@ -7,11 +7,11 @@ designer: Roberto Fraga, Yohan Lemonnier
 source_pdf: captain-sonar-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Independent re-audit: Player Reference system charge costs (Torpedo=3 etc.) not supported by the extracted source (gauge values OCR-lost); verify against a clean rulebook. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/captain-sonar-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Captain%20Sonar&game=captain-sonar)
 <!-- verification:end -->
