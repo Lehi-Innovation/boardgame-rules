@@ -1,5 +1,21 @@
 # PRD-04 — Quality & Trust
 
+> **Status update (2026-07-03).** Several gaps flagged below are now closed and the
+> current-state counts are historical. What shipped since: a `validate` CI workflow
+> runs `validate.py` on every PR; the semantic audit **completed all 171 batches**;
+> an **accuracy gate** (`scripts/verify_summary.py`) fact-checks each summary against
+> its source and an **automated repair loop** fixes what it can; every page carries a
+> machine-managed **verification banner** (verified / minor_issues / inaccurate /
+> unverified / unverifiable) with rulebook-text and report-error links; and a
+> user-facing **feedback loop** (`rule-error` issue form → `rule-error-triage`
+> workflow) turns reports into source-verified PRs.
+>
+> **Key open finding:** a single agent that both audits and repairs a summary
+> over-claims — an independent measurement put **~27–35% of "verified" summaries
+> still MAJOR**. `verified` now requires an *independent* re-verification pass; see
+> `docs/quality/2026-07-03-independent-reaudit.md`. The "6 validated / gate barely
+> run / no CI" figures in "Current reality" below predate all of this.
+
 The product's promise is *accurate* rules at answer time, so quality machinery is a first-class subsystem. It exists in code today, in two layers: structural validation and content quality gating, plus provenance/confidence conventions in the Q&A loop.
 
 ## Layer 1 — Structural validation (`scripts/validate.py`)
