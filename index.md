@@ -292,7 +292,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Awithlaknakwe](rules/awithlaknakwe/) | 2 | 30-60 min | Traditional (Zuni) | ⚠️ |
 | [Axiom](rules/axiom/) | 2 | 30 min | Michael Seal | ⚠️ |
 | [Axis & Allies Anniversary Edition](rules/axis-allies-anniversary-edition/) | 2-6 | 360 min | Larry Harris Jr. | ✅ |
-| [Axis & Allies: Battle of the Bulge](rules/axis-allies-battle-of-the-bulge/) | 2 | 180-240 min | Larry Harris Jr. | ✅ |
+| [Axis & Allies: Battle of the Bulge](rules/axis-allies-battle-of-the-bulge/) | 2 | 180-240 min | Larry Harris Jr. | ❗ |
 | [Axis & Allies: D-Day](rules/axis-allies-d-day/) | 2-3 | 120 min | Larry Harris Jr. | ✅ |
 | [Aye, Dark Overlord!](rules/aye-dark-overlord/) | 4-6 | 30 min | Fabrizio Bonifacio, Massimiliano Enrico | ✅ |
 | [Ayoayo](rules/ayoayo/) | 2 | 15-30 min | Traditional (Yoruba) | ⚠️ |
@@ -346,10 +346,10 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battleground](rules/battleground/) | 2 | 60-120 min | Robert Dougherty, Chad Ellis | ⚠️ |
 | [Battleground: Crossbows & Catapults](rules/battleground-crossbows-catapults/) | 2 | 15-30 min | Uncredited | ⚠️ |
 | [Battlelords](rules/battlelords/) | 2 | 30-60 min | Lawrence R. Sims | ⚠️ |
-| [BattleLore](rules/battlelore/) | 2 | 60-90 min | Richard Borg | ✅ |
+| [BattleLore](rules/battlelore/) | 2 | 60-90 min | Richard Borg | ❗ |
 | [Battles for a Continent](rules/battles-for-a-continent/) | 2 | 60-120 min | Perry Moore | ⚠️ |
 | [Battles for the Ardennes](rules/battles-for-the-ardennes/) | 2 | 60-180 min | Danny S. Parker | ⚠️ |
-| [Battles of the Third Age](rules/battles-of-the-third-age/) | 2 | 120-180 min | Roberto Di Meglio, Marco Maggi, Francesco Nepitello | ✅ |
+| [Battles of the Third Age](rules/battles-of-the-third-age/) | 2 | 120-180 min | Roberto Di Meglio, Marco Maggi, Francesco Nepitello | ❗ |
 | [Battleship](rules/battleship/) | 2 | 30 min |  | ⚠️ |
 | [BattleSpace](rules/battlespace/) | 2 | 120-240 min | FASA Corporation | ⚠️ |
 | [Battlestar Galactica Collectable Card Game](rules/battlestar-galactica-collectable-card-game/) | 2 | 30-60 min | WizKids | ⚠️ |
@@ -383,7 +383,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Bermuda Triangle](rules/bermuda-triangle/) | 2-4 | 45-60 min |  | ✅ |
 | [Bermude](rules/bermude/) | 2-4 | 20-30 min | Unknown | ⚠️ |
 | [Betrayal at House on the Hill](rules/betrayal-at-house-on-the-hill/) | 3-6 | 60 min | Bruce Glassco | ✅ |
-| [Beyblade Trading Card Game](rules/beyblade-trading-card-game/) | 2 | 15-30 min | Mike Mulvihill | ✅ |
+| [Beyblade Trading Card Game](rules/beyblade-trading-card-game/) | 2 | 15-30 min | Mike Mulvihill | ❗ |
 | [Bezzerwizzer](rules/bezzerwizzer/) | 2-4 teams | 30-60 min | Jes Moller | ✅ |
 | [Biblios](rules/biblios/) | 2-4 | 30 min | Steve Finn | ⚠️ |
 | [Big Adventure](rules/big-adventure/) | 2-4 | 30-60 min | Unknown | ⚠️ |
@@ -456,7 +456,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Breakthru](rules/breakthru/) | 2 | 30 min | Alex Randolph | ⚠️ |
 | [Brew](rules/brew/) | 2-4 | 45-90 min | Stevo Torres | ✅ |
 | [Brilliant Lances](rules/brilliant-lances/) | 2 | 120-240 min | Frank Chadwick, Dave Nilsen | ⚠️ |
-| [Britannia](rules/britannia/) | 3-5 | 180-300 min | Lewis Pulsipher | ✅ |
+| [Britannia](rules/britannia/) | 3-5 | 180-300 min | Lewis Pulsipher | ❗ |
 | [Broadsides and Boarding Parties](rules/broadsides-and-boarding-parties/) | 2 | 60 min | Larry Harris | ✅ |
 | [Broker](rules/broker/) | 2-5 | 30-45 min | Urs Hostettler | ⚠️ |
 | [Broom Service](rules/broom-service/) | 2-5 | 45-75 min | Andreas Pelikan, Alexander Pfister | ✅ |
