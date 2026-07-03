@@ -7,11 +7,11 @@ designer: "Jérémy Pinget"
 source_pdf: "cold-war-cia-vs-kgb-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cold-war-cia-vs-kgb-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cold%20War%3A%20CIA%20vs%20KGB&game=cold-war-cia-vs-kgb)
 <!-- verification:end -->
@@ -87,7 +87,7 @@ A player with no group cards must always recruit (cannot pass or activate). The 
 |---------|-------|
 | Military | Destroy any other group card in play (on either player's side); cannot destroy itself |
 | Political | Steal a group from opponent or give them one of yours; cannot make either player exceed the population limit, nor make the opponent exceed Stability (but you may move an opponent's group to your own side even if it would cause you to exceed Stability — risky but legal); groups retain their ready/mobilized state |
-| Economic | Switch the state of any other group card in play — turn a ready card mobilized or a mobilized card ready; cannot affect another economic card |
+| Economic | Switch the state of any other group card in play — turn a ready card mobilized or a mobilized card ready (if turning a ready card mobilized, that group's power does not take effect); cannot affect another economic card |
 | Media | Look at the top card of the group deck, then choose to: recruit it (place it faceup in front of you), discard it, or leave it on top of the deck |
 
 ### Agent Abilities (resolved in initiative order, lowest first)
@@ -115,8 +115,7 @@ Some agendas have different effects depending on which player's domination token
 - Agents on leave skip one turn, then return to headquarters at the end of the Planning phase of the following turn.
 - A player with no groups must recruit (cannot pass or activate).
 - The population limit on objective cards restricts the maximum number of groups a player may have.
-- Event objectives have special abilities detailed on the cards. Using an event card's special ability costs that card's VP — the player must discard it and update their score token immediately.
-- If the objective deck runs out, shuffle all discarded objectives into a new deck.
+- Event objectives have special abilities detailed on the cards. Using an event card's special ability costs that card's VP — the player must discard it to the objective deck's discard pile and update their score token immediately. The rulebook does not describe any procedure for reshuffling this discard pile back into the objective deck, nor address what happens if the objective deck runs out.
 
 ## Player Reference
 

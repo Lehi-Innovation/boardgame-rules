@@ -95,7 +95,7 @@ Each Design Goal Tile sits on a specific space and defines a requirement for the
 - You must always place a tile and draft a tile; no passing.
 - Edge tiles printed on the Quilt Board (partial and whole) count as part of groups for cats and buttons.
 - In the beginner game, specific Design Goal Tiles (not-equal, AA-BB-CC, AAA-BBB) and Cat Scoring Tiles (Millie, Tibbit, Coconut) are used.
-- The Master Quilter Tile variant adds an additional challenge for experienced players.
+- The Master Quilter Tile is a badge awarded to the winner for a photo/social-media moment at game end — it is not a gameplay variant or challenge mode.
 - Solo mode is supported; after drafting from the market, discard the furthest tile from the supply, then slide and refill conveyor-belt style.
 - Tiles have 6 colors and 6 patterns, creating 36 unique color-pattern combinations.
 
@@ -117,8 +117,8 @@ Each Design Goal Tile sits on a specific space and defines a requirement for the
 | Millie | 3 or more |
 | Tibbit | 4 or more |
 | Coconut | 5 or more |
-| Cira / Almond | 6 or more |
-| Gwenivere / Leo | 7 or more |
-| Callie / Rumi / Tecolote | Specific shape (see tile) |
+| Cira | 6 or more |
+| Gwenivere | 7 or more |
+| Callie / Rumi / Leo / Tecolote / Almond | Specific shape (see tile) |
 
 **Design Goal Tile Scoring:** Color or pattern only → blue-circle points; both color and pattern → yellow-circle points only (not both added together).

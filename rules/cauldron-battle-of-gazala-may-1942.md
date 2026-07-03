@@ -7,11 +7,11 @@ designer: "Revolution Games"
 source_pdf: "cauldron-battle-of-gazala-may-1942-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cauldron-battle-of-gazala-may-1942-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gazala%3A%20The%20Cauldron&game=cauldron-battle-of-gazala-may-1942)
 <!-- verification:end -->
@@ -67,7 +67,7 @@ Each game turn follows this sequence:
 
 **Movement:** Activated units move individually, expending movement points per terrain cost. After completing movement, flip unit to used side. Units move hex-to-hex; roads reduce terrain costs. Three movement types: tracked (armor), wheeled, and foot (infantry with MA 6).
 
-**Combat:** Combat is voluntary for the attacker. The active unit must have movement points remaining to attack. Both Hard and Soft combat values are used. The attacker selects a target hex, declares all attacking units, and resolves using the Combat Results Table (CRT). Die roll modifiers include supply status, terrain, minefields, and tactical chits.
+**Combat:** Combat is optional — the active unit is not required to attack — but once it attacks, targeting is not selective: the active unit must attack ALL enemy units in every hex adjacent to it, combined into a single combat (e.g., a unit adjacent to four enemy units must attack all four; it may not choose to attack just one hex). Other friendly units adjacent to any of the units being attacked may also be added to the attack, at the attacker's discretion, whether or not they were activated; the defender's side of the combat includes only the units adjacent to the active (initiating) unit. The active unit must have movement points remaining to attack, and no unit may attack across an escarpment hexside except where crossed by a road or track. Attacks are declared at one of three intensities — Light, Medium, or Heavy — each with its own movement-point cost and its own die-roll modifier (both listed on the Player Chart); a heavier attack costs more movement points but grants a more favorable modifier. Hard combat values are used by the attacker if any defending unit is armor, otherwise the attacker uses Soft values; the defender uses Hard values if any attacking unit is armor, otherwise Soft values. Infantry units may not initiate or participate in any attack in which a defending unit is armor — since the active unit must attack all adjacent enemies, an infantry unit adjacent to enemy armor may not initiate an attack at all. Anti-Tank units may never be the active/initiating unit, and may not participate in an attack against infantry-only defenders (they may join an attack where a defending unit is armor). Die roll modifiers are cumulative and include supply status, terrain (if attacking multiple hexes, the terrain most beneficial to the defender is used), minefields (maximum one minefield modifier per combat), disruption, and tactical chits; resolve the total on the Combat Results Table (CRT).
 
 **Combat Results:** Results on the CRT include step losses and retreats. Most units have 1 step. Allied and Italian armor units have 2 steps; German armor units have 3 steps. Losing a step means replacing the unit with the next lower step counter (3→2→1→eliminated). The first step loss for the attacker must come from the active unit.
 
@@ -97,8 +97,8 @@ Each game turn follows this sequence:
 
 ## Special Rules & Edge Cases
 
-- **Supply:** Trace supply path of any length from unit to supply source (Axis: west map edge south of 0105; Allies: north/east map edge) avoiding enemy units and impassable terrain. Out of Supply: -1/3 movement, -2 attack modifier. Isolated (2 turns unsupplied): -2/3 movement, cannot attack, +2 to attacker's die roll when defending.
-- **Minefields:** Axis units cannot cross unbreached minefields. Allied units cross at 12 MP cost. Breaching requires Axis infantry adjacent to minefield; takes 1 full turn. A successful breach can clear both sides of the minefield hex if no Allied units are adjacent. Limited breach markers.
+- **Supply:** Trace supply path of any length from unit to supply source (Axis: west map edge south of 0105; Allies: north/east map edge) avoiding enemy units and impassable terrain. Minefield hexsides block Axis supply tracing unless breached; Allied supply may be traced across a minefield hexside whether breached or not. Out of Supply: -1/3 movement, -2 attack modifier. Isolated (2 turns unsupplied): -2/3 movement, cannot attack, +2 to attacker's die roll when defending.
+- **Minefields:** Axis units cannot cross unbreached minefields. Allied units cross at 12 MP cost. Axis supply may not be traced across an unbreached minefield hexside (Allied supply may be traced across regardless). Breaching requires Axis infantry adjacent to minefield; takes 1 full turn. A successful breach can clear both sides of the minefield hex if no Allied units are adjacent. Limited breach markers.
 - **Axis LOC Requirement:** Starting May 29, Axis must trace a Line of Communication through breached minefields to at least 8 units or lose 1 action. Starting June 1-2, two LOCs are required.
 - **Zones of Control (ZOC):** Non-Disrupted units (including Out of Supply and Isolated units) exert ZOC into all 6 surrounding hexes, except units do not exert ZOC up an escarpment. Leaving a hex in an enemy ZOC costs 2 extra movement points (in addition to normal terrain cost); entering a ZOC hex does not by itself cost extra. A unit may not move from one enemy ZOC hex directly into another enemy ZOC hex. ZOC does not block supply. Friendly units negate enemy ZOC for purposes of retreat.
 - **Stacking:** Maximum 2 units per hex. Exception: no unit may stack with a Pavia or Brescia Division unit (those fill the hex alone). Stacking is checked at the end of all movement and combat in a player's action phase, at end of retreat, after advance after combat, and at the moment of combat. Excess units are eliminated by the owning player.

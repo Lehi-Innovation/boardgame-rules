@@ -7,11 +7,11 @@ designer: "Christophe Raimbault"
 source_pdf: "colt-express-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Events reference table scrambles the Train Station events: it merges two distinct events ("Swivel Arm" and "Angry Marshal") into one, and gives "Braking" the wrong effect.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/colt-express-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colt%20Express&game=colt-express)
 <!-- verification:end -->
@@ -71,7 +71,7 @@ There are **5 Rounds**. Each round has two phases:
 | **Move** | If **inside** the train: move 1 car forwards or backwards. If **on the roof**: move 1 to 3 cars (your choice) forwards or backwards. The Locomotive counts as a car. You must move — you cannot stay in place. |
 | **Floor Change** | Move your bandit between the interior and the roof of their current car. |
 | **Fire** | Give one of your Bullet cards to a target bandit. **Inside:** target must be in an adjacent car (not your own car or the same spot). **On roof:** target any bandit on the roof in your line of sight (not your own car; no other bandit between you and the target). If no valid target exists, keep your Bullet card. |
-| **Punch** | Choose a bandit on the same car and same floor. That bandit loses one loot token (placed on the floor where you are); if no loot, nothing is dropped. Then move the targeted bandit to the same floor of an adjacent car (your choice of direction, except backwards from the Locomotive or forwards from the Caboose). |
+| **Punch** | Choose a bandit on the same car and same floor. That bandit loses one loot token (placed on the floor where you are); if no loot, nothing is dropped. Then move the targeted bandit to the same floor of an adjacent car (either forwards or backwards, your choice in most cars; forced backwards if you are in the Locomotive, forced forwards if you are in the Caboose). |
 | **Rob** | Take one loot token of your choice from your current location (same floor). Place it face-down on your Character card. No effect if no loot is present. |
 | **Marshal** | Move the Marshal 1 car in the direction of your choice. Any bandit in the car where the Marshal arrives (or is already present when a bandit enters) must immediately flee to the roof of that car, and receives 1 Neutral Bullet card placed on top of their personal deck. |
 

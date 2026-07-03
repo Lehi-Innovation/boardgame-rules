@@ -7,11 +7,11 @@ designer: "Phil Walker-Harding"
 source_pdf: "cacao-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The entire "Actions" section (Gold Mine, Water, Sun Worshiping, and the single/double Plantation distinction) states specific per-worker payout numbers that the extracted rulebook text never gives — it explicitly defers all Jungle-tile acti. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cacao-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cacao&game=cacao)
 <!-- verification:end -->
@@ -81,7 +81,7 @@ Actions on one edge must be completed before actions on another edge. Players ma
 ## Actions
 
 ### Plantation
-For each worker on the adjacent edge, take 1 cacao fruit from the supply. Store on your Village board (max 5 storage spaces).
+For each worker on the adjacent edge, take 1 cacao fruit from the supply. Store it in the storage spaces for cacao fruit on your Village board (the extracted rulebook text does not state a storage capacity limit).
 
 ### Market
 For each worker on the adjacent edge, sell 1 cacao fruit from your storage at the price shown (2, 3, or 4 gold per fruit).
@@ -106,7 +106,7 @@ The game ends after the round in which all players have placed their last Worker
 ### Final Scoring
 1. **Temples:** Scored individually. The player in 1st place gets the higher gold reward; 2nd place gets the lower reward. (Flip scored temples over.)
 2. **Sun tokens:** 1 gold each.
-3. **Water track:** Add or subtract the value of the water field where your carrier stands (ranges from -10 to +16).
+3. **Water track:** Add or subtract the value of the water field where your carrier stands (the carrier starts the game on the "-10" field; other track values are not given in the extracted rulebook text).
 4. **Add up all gold.**
 
 Leftover cacao fruits are worth nothing.
@@ -118,7 +118,7 @@ Leftover cacao fruits are worth nothing.
 - Workers activate exactly once — either when their tile is placed or when an adjacent Jungle tile is filled later.
 - You may freely make change at the bank at any time.
 - The Jungle display is only refilled at end of turn, not during filling.
-- Storage on Village boards holds maximum 5 cacao fruits.
+- No storage capacity limit for cacao fruit is stated in the extracted rulebook text (a number may appear only on the separate overview sheet for Jungle tiles, which is not part of this extracted source).
 - In a 2-player game, specific Jungle tiles (2x single plantation, 1x water, 1x market price 3, 1x Sun worshiping site, 1x gold mine value 1, 1x temple) and Worker tiles (1x 1-1-1-1 and 1x 2-1-0-1 per player) are removed before play.
 
 ## Player Reference
@@ -132,7 +132,7 @@ Leftover cacao fruits are worth nothing.
 | Sun Worshiping | Take 1 sun token |
 | Temple | End-game scoring only |
 
-**Water Track Values:** -10, -4, -1, 0, +2, +4, +7, +11, +16
+**Water Track:** The water carrier starts on the "-10" field; no other track values are given in the extracted rulebook text.
 
 **Worker Tile Distributions:**
 - 4x 1-1-1-1 (one worker per edge)

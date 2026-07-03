@@ -7,11 +7,11 @@ designer: Mark Acres
 source_pdf: castle-of-magic-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/castle-of-magic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20of%20Magic&game=castle-of-magic)
 <!-- verification:end -->
@@ -66,11 +66,11 @@ Each turn has three parts in order:
 - **Crown/Amulet/Scepter (die roll):** Gain one point for that item.
 - **Learn Country (die roll):** Look at one face-down Country square.
 
-**The Keep (accessible once Ritual begins):** Once any Ritual Indicator disk has been moved, the barrier to the Keep drops. At the start of your turn you may move from the Castle Wall into any unoccupied Keep space (counts as movement; you finish your turn there). You cannot return to the Castle Wall once in the Keep. Spells available in the Keep:
+**The Keep (accessible once Ritual begins):** Once any Ritual Indicator disk has been moved, the barrier to the Keep drops. At the start of your turn you may move from the Castle Wall into any unoccupied Keep space (counts as movement; you finish your turn there). You cannot return to the Castle Wall once in the Keep. The Keep's new spell:
 - **+1 Combat (Automatic):** Add 1 to your Combat Value.
-- **Count Down (Optional — no die roll):** Move the Large Black Pawn down one space toward the "Ritual Spell" space.
 
-**Wizard's Tower (accessible from Keep once all three Ritual Indicators have been moved):** When all three disks (Bell, Book, Candle) have been moved off their start spaces, the barrier to the Tower drops. As movement, you may move into any unoccupied Tower space and finish your turn there. Once in the Tower you must remain there until the end of the game. Spell details for the Tower are on the board.
+**Wizard's Tower (accessible from Keep once all three Ritual Indicators have been moved):** When all three disks (Bell, Book, Candle) have been moved off their start spaces, the barrier to the Tower drops. As movement, you may move into any unoccupied Tower space and finish your turn there. Once in the Tower you must remain there until the end of the game. The Tower's new spell:
+- **Count Down (Optional — no die roll):** Move the Large Black Pawn down one space toward the "Ritual Spell" space.
 
 **Controlling Items:** The player with the most points for an Item controls it. Ties mean no one controls the item.
 
@@ -91,7 +91,7 @@ At game end, one of 8 Ritual Results occurs based on the final positions of Bell
 7. Monster devours Scepter holder, then is banished
 8. Monster devours all, rampages through Countries
 
-Players score points based on their Wizard card's goals: ruling the right country, controlling the right item, achieving the desired Ritual Result, and guild bonuses/penalties. A controlled monster cannot be banished. If the Monster is controlled by an item that nobody owns, the Monster rampages (Ritual Result 8). If a player controlling an item is devoured, the item is lost and that country has no ruler.
+Players score points based on their Wizard card's goals: ruling the right country, controlling the right item, achieving the desired Ritual Result, and guild bonuses/penalties. A controlled monster cannot be banished. If the Monster is controlled by an item that nobody owns, the Monster rampages. If a player controlling an item is devoured, the item is lost and that country has no ruler.
 
 **Winner:** The player with the most positive points wins. All players who have more than half the high score are also winners (co-winners).
 
@@ -111,8 +111,8 @@ Players score points based on their Wizard card's goals: ruling the right countr
 | Area | Spells Available |
 |------|-----------------|
 | Castle Wall | +1 Spell, Move Card, Secret, Learn Ritual (die roll), Bell/Book/Candle (die roll), Crown/Amulet/Scepter (die roll), Learn Country (die roll) |
-| The Keep | +1 Combat (automatic), Count Down (optional, no roll) |
-| Wizard's Tower | Spells listed on board (accessible after all 3 disks moved) |
+| The Keep | +1 Combat (automatic) |
+| Wizard's Tower | Count Down (optional, no roll) (accessible after all 3 disks moved) |
 
 **Ritual Results:** 8 possible outcomes based on Bell (ringing/silent), Book (open/closed), Candle (lit/unlit) — learned by landing on Learn Ritual spaces.
 

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Independent re-audit: Terror op wrongly says it won't shift Opposition spaces; source 3.3.4 sets any untagged space to Neutral (that exception is Neutralize's, 4.2.3). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory-scoring terms are underspecified: "Total Support"/"Total Opposition" are never defined as Population-Value sums, and Commitment gains/losses from Assault, Attack, and Ambush (all of which feed the French victory total) are omitted.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/colonial-twilight-the-french-algerian-war-1954-62-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colonial%20Twilight%3A%20The%20French-Algerian%20War%2C%201954-62&game=colonial-twilight-the-french-algerian-war-1954-62)
 <!-- verification:end -->
@@ -53,10 +53,11 @@ The game is card-driven. Each turn:
 
 ### Propaganda Rounds
 Periodically (when a Propaganda card is drawn), a Propaganda Round occurs:
-1. Check victory conditions.
-2. Conduct resource phase (both factions gain resources).
-3. Conduct support phase (adjust population attitudes).
-4. Reset pieces and prepare for the next period.
+1. Victory Phase: check victory conditions (skipped on the first Propaganda Round).
+2. Resources and Commitment Adjustment Phase: both factions gain Resources; adjust French Commitment.
+3. Support Phase: players spend Resources on Pacification/Agitation; if this is the final Propaganda Round, the game ends here and victory is determined (Redeploy and Reset are skipped).
+4. Redeploy Phase: the Government redeploys Troops/Police on the map, then the FLN redeploys Guerrillas within a Wilaya to a space with a friendly Base, then Control is adjusted to reflect the moves.
+5. Reset Phase: resolve Casualties (one-third of French pieces and one-third of Guerrillas, rounded down, go Out of Play; the rest return to their Available boxes), advance the France Track and Border Zone markers, remove all Terror markers, flip all Guerrillas Underground, and set the FLN as First Eligible for the next card.
 
 ## Actions
 
@@ -73,7 +74,7 @@ Periodically (when a Propaganda card is drawn), a Propaganda Round occurs:
 |----------|--------|
 | **Deploy** | Move up to 6 French pieces between Available box and up to 3 spaces (Cities or sectors with Gov Base/Control); OR Resettle one Pop 1 Sector (permanently converts it to Pop 0, making it always Neutral) |
 | **Troop Lift** | Move any French Troops among any 3 Algerian spaces |
-| **Neutralize** | In up to 2 spaces with both Government Troops and Police: remove up to 2 total Active enemy pieces (Bases only if no other FLN pieces remain); shift each selected space one level toward Opposition |
+| **Neutralize** | In up to 2 spaces with both Government Troops and Police (Control not required): remove up to 2 total Active enemy pieces among selected spaces (Bases only from a space where no other FLN pieces remain; Underground Guerrillas cannot be removed); shift each selected space one level toward Opposition — if a space is already at Oppose, it stays at Oppose but place a Terror marker there if none is present; for each Base removed, add 1 Commitment |
 
 ### FLN Operations
 | Operation | Effect |
@@ -81,7 +82,7 @@ Periodically (when a Propaganda card is drawn), a Propaganda Round occurs:
 | **Rally** | In selected Algerian Sectors, Cities (Neutral or Opposition), Morocco/Tunisia (if independent), or France Track: place 1 Guerrilla or replace 2 Guerrillas with a Base; if space has a Base, may instead place Guerrillas up to (Pop + number of Bases) or flip all to Underground. In one selected space may Agitate (spend Resources to remove Terror markers or shift toward Opposition). |
 | **March** | Move Guerrillas into adjacent spaces; pay 1 Resource per destination space. Guerrillas may continue within the same Wilaya; crossing a Wilaya or International Border stops the group. Guerrillas flip Active if moving into a Support space or crossing International Border when group + Government cubes (+ Border Zone status for borders) exceeds 3. |
 | **Attack** | In spaces with Guerrillas and enemy pieces: Activate all Guerrillas, roll 1d6; if roll ≤ number of Guerrillas, remove up to 2 enemy pieces (Police first, then Troops, then Bases); for each French piece removed, FLN also loses 1 Guerrilla (Attrition). |
-| **Terror** | Requires at least 1 Underground Guerrilla in selected space; Activate one Underground Guerrilla; if no Terror marker present, place one and set the space to Neutral (does not shift spaces already at Opposition) |
+| **Terror** | Select spaces with at least 1 Underground Guerrilla; pay 1 Resource per space; Activate one Underground Guerrilla in each space; if the space has no Terror marker, place one and set the space to Neutral (no marker is placed — and the space is left unaffected — if it already has a Terror marker, or if all 12 Terror markers are already on the map) |
 
 ### FLN Special Activities
 | Activity | Effect |
@@ -104,7 +105,7 @@ If no winner is determined through a Propaganda Round victory check, the game en
 ## Special Rules & Edge Cases
 
 - **Guerrilla hiding:** FLN guerrillas can be Underground (hidden) or Active (revealed). Only Active Guerrillas can be targeted by Assault or Neutralize. New Guerrillas always enter Underground. The Reset Phase of each Propaganda Round flips all Guerrillas back Underground.
-- **Commitment track:** Represents French political will. Affects Resource income, Government operations, and French victory condition. Losing French casualties or withdrawing French forces lowers Commitment.
+- **Commitment track:** Represents French political will. Adds directly to Government Resources each Propaganda Round and caps the Government's Pacification spending for that round; also a direct input to the French victory total (Support + Commitment > 35). Adjusted during each Propaganda Round's Resources and Commitment Adjustment Phase: French casualties in the Casualties box lower Commitment (one-third of the pieces there, rounded down); withdrawing French forces from Available to Out of Play raises Commitment (one-third of pieces moved, rounded down); moving French forces from Out of Play back to Available (committing more forces to theater) lowers Commitment (one-third of pieces moved, rounded up); the France Track's current "-Commit" number is also subtracted.
 - **Morocco and Tunisia:** Only accessible to FLN after the "Morocco and Tunisia Independent" Pivotal Event is played. Once independent, FLN may Rally, March, and Extort there; Government pieces may never enter.
 - **Population control:** A player Controls a space if they have more pieces there than the other player. Control affects certain operations (e.g. Pacify requires Government Control; Agitate requires FLN Base or FLN Control).
 - **Eligibility:** If the First Eligible player conducts an Op with Special Activity or Op in multiple locations, the Second Eligible player becomes First Eligible next card. Otherwise First Eligible stays First Eligible.

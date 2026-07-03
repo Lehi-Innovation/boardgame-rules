@@ -492,7 +492,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
-| [Cacao](rules/cacao/) | 2-4 | 45 min | Phil Walker-Harding | ✅ |
+| [Cacao](rules/cacao/) | 2-4 | 45 min | Phil Walker-Harding | ❗ |
 | [Caesar](rules/caesar/) | 2 | 120-180 min | Robert Bradley | ⚠️ |
 | [Caesar & Cleopatra](rules/caesar-cleopatra/) | 2 | 30-40 min | Wolfgang Lüdtke | ✅ |
 | [Caesar's Legions](rules/caesar-s-legions/) | 2 | 120-240 min | James Dunnigan | ⚠️ |
@@ -525,14 +525,14 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Carla Caramel](rules/carla-caramel/) | 1-6 | 10 minutes | Sara Zarian | ⚠️ |
 | [Carnuta](rules/carnuta/) | 2-4 | 30-45 min | Yohan Goh, Hope S. Hwang, Gary Kim | ✅ |
 | [Carolus Magnus](rules/carolus-magnus/) | 2-4 | 60 minutes | Leo Colovini | ✅ |
-| [Carpe Diem](rules/carpe-diem/) | 2-4 | 45-75 minutes | Stefan Feld | ✅ |
+| [Carpe Diem](rules/carpe-diem/) | 2-4 | 45-75 minutes | Stefan Feld | ❗ |
 | [Carson City](rules/carson-city/) | 2-5 | 90 minutes | Xavier Georges | ✅ |
 | [Cartagena](rules/cartagena/) | 2-5 | 30-45 minutes | Leo Colovini | ✅ |
 | [Cartographers: A Roll Player Tale](rules/cartographers-a-roll-player-tale/) | 1-100 | 30-45 minutes | Jordy Adan | ✅ |
 | [Cascadia](rules/cascadia/) | 1-4 | 30-45 minutes | Randy Flynn | ✅ |
 | [Castle Flutterstone](rules/castle-flutterstone/) | 2-4 | 15-25 min | Guido Hoffmann, Jens-Peter Schliemann | ⚠️ |
 | [Castle of Magic](rules/castle-of-magic/) | 3-6 | 60-90 minutes | Mark Acres | ✅ |
-| [Castle Panic](rules/castle-panic/) | 1-6 | 60 minutes | Justin De Witt | ✅ |
+| [Castle Panic](rules/castle-panic/) | 1-6 | 60 minutes | Justin De Witt | ❗ |
 | [Castle Risk](rules/castle-risk/) | 2-6 | 90-120 minutes | Uncredited (Parker Brothers) | ⚠️ |
 | [Cat in the Box: Deluxe Edition](rules/cat-in-the-box-deluxe-edition/) | 2-5 | 30 minutes | Muneyuki Yokouchi | ⚠️ |
 | [Catan](rules/catan/) | 3-4 | 60-120 min | Klaus Teuber | ⚠️ |
@@ -550,7 +550,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Catan: Portable Edition](rules/catan-portable-edition/) | 3-4 | 60-90 minutes | Klaus Teuber | ✅ |
 | [Catapult Feud](rules/catapult-feud/) | 2 | 20 min | Kristian Fosh | ⚠️ |
 | [Cathedral](rules/cathedral/) | 2 | 20 min |  | ✅ |
-| [Caverna: The Cave Farmers](rules/caverna-the-cave-farmers/) | 1-7 | 30-210 min | Uwe Rosenberg | ✅ |
+| [Caverna: The Cave Farmers](rules/caverna-the-cave-farmers/) | 1-7 | 30-210 min | Uwe Rosenberg | ❗ |
 | [Cavum](rules/cavum/) | 2-4 | 75-120 min | Wolfgang Kramer | ⚠️ |
 | [Caylus](rules/caylus/) | 2-5 | 60-150 min | William Attia | ✅ |
 | [Celestia](rules/celestia/) | 2-6 | 30 min | Aaron Weissblum | ✅ |
@@ -576,7 +576,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Chunky Fighters](rules/chunky-fighters/) | 2-4 | 15-30 min | Nick Hayes | ⚠️ |
 | [Cineplexity](rules/cineplexity/) | 4-10 | 30-60 min | Alan R. Moon, Aaron Weissblum | ⚠️ |
 | [Circus Imperium](rules/circus-imperium/) | 2-6 | 60-120 min | L. Ross Babcock III, Sam Lewis, Jordan Weisman | ⚠️ |
-| [Circus Maximus](rules/circus-maximus/) | 2-12 | 120-180 min | Avalon Hill | ✅ |
+| [Circus Maximus](rules/circus-maximus/) | 2-12 | 120-180 min | Avalon Hill | ❗ |
 | [Citadel of Blood](rules/citadel-of-blood/) | 1-6 | 60-120 min | Mike McCulley, Dave Weller | ⚠️ |
 | [Citadels](rules/citadels/) | 2-8 | 20-60 min | Bruno Faidutti | ✅ |
 | [Cities](rules/cities/) | 2-4 | 45-60 min | Steve Finn, Phil Walker-Harding | ✅ |
@@ -589,7 +589,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [City States of Arklyrell](rules/city-states-of-arklyrell/) | 2-6 | 90-120 min | Lance Gutteridge | ⚠️ |
 | [Civil War](rules/civil-war/) | 2 | 120-240 min | Eric Lee Smith | ⚠️ |
 | [Civilization](rules/civilization/) | 2-4 | 120-240 min | Kevin Wilson | ❗ |
-| [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ✅ |
+| [Civilization: The Boardgame](rules/civilization-the-boardgame/) | 2-6 | 120-240 min | Glenn Drover | ❗ |
 | [Claim It!](rules/claim-it/) | 2-5 | 30-45 min | Günter Burkhardt | ⚠️ |
 | [Clan War](rules/clan-war/) | 2 | 60-120 min | Alderac Entertainment Group | ⚠️ |
 | [Clank!: A Deck-Building Adventure](rules/clank-a-deck-building-adventure/) | 2-4 | 30-60 min | Paul Dennen | ✅ |
@@ -598,8 +598,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Clash of the Gladiators](rules/clash-of-the-gladiators/) | 2-5 | 45 min | Reiner Knizia | ⚠️ |
 | [Class Struggle](rules/class-struggle/) | 2-6 | 90 min | Bertell Ollman | ⚠️ |
 | [Classical Diplomacy](rules/classical-diplomacy/) | 5-7 | 240-360 min | Andy Schwarz, Vincent Mous | ⚠️ |
-| [Claustrophobia](rules/claustrophobia/) | 2 | 45 min | Croc | ✅ |
-| [Cleopatra and the Society of Architects](rules/cleopatra-and-the-society-of-architects/) | 3-5 | 60 min | Bruno Cathala, Ludovic Maublanc | ✅ |
+| [Claustrophobia](rules/claustrophobia/) | 2 | 45 min | Croc | ❗ |
+| [Cleopatra and the Society of Architects](rules/cleopatra-and-the-society-of-architects/) | 3-5 | 60 min | Bruno Cathala, Ludovic Maublanc | ❗ |
 | [Click Clack](rules/click-clack/) | 2-4 | 15-20 min | Uncredited | ⚠️ |
 | [Clobber](rules/clobber/) | 2 | 15 min | Michael H. Albert, J.P. Grossman, Richard Nowakowski | ⚠️ |
 | [Clomping Creatures](rules/clomping-creatures/) | 2-4 | 15-30 min | Uncredited | ⚠️ |
@@ -628,7 +628,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Coloretto](rules/coloretto/) | 3-5 | 30 min | Michael Schacht | ✅ |
 | [Colorito](rules/colorito/) | 2 | 30 min |  | ✅ |
 | [Colosseum](rules/colosseum/) | 3-5 | 60-90 min | Wolfgang Kramer, Markus Lübke | ✅ |
-| [Colt Express](rules/colt-express/) | 2-6 | 30-40 min | Christophe Raimbault | ✅ |
+| [Colt Express](rules/colt-express/) | 2-6 | 30-40 min | Christophe Raimbault | ❗ |
 | [Comanauts](rules/comanauts/) | 2-4 | 60-120 min | Jerry Hawthorne | ✅ |
 | [Combat Commander: Europe](rules/combat-commander-europe/) | 2 | 60-180 min | Chad Jensen | ✅ |
 | [Combat Commander: Pacific](rules/combat-commander-pacific/) | 2 | 60-180 min | Chad Jensen | ⚠️ |

@@ -87,15 +87,15 @@ The game ends when the 12th village is established. Players reveal their secret 
 
 ## Player Reference
 
-**Epoch terrain guide** — consult the epoch chart on the gameboard for the full table. The source explicitly confirms the following:
+**Epoch terrain guide** — consult the epoch chart on the gameboard for the full table. Cells marked "(see board)" are not stated in the extracted rulebook text; only the values below are explicitly confirmed by the source:
 
-| Epoch | Villages | Favorable Terrain | Hostile Terrain | Bonus |
-|-------|----------|-------------------|-----------------|-------|
-| I     | 4        | Forest            | Mountains       | +1    |
-| II    | 3        | (see board)       | Grassland       | +2    |
-| III   | 2        | Steppes           | (see board)     | +3    |
-| IV    | 1        | (see board)       | (see board)     | +4    |
-| V     | 2        | All               | None            | +5    |
+| Epoch | Villages    | Favorable Terrain | Hostile Terrain | Bonus       |
+|-------|-------------|--------------------|------------------|-------------|
+| I     | 4           | Forest             | Mountains        | +1          |
+| II    | 3           | (see board)        | Grassland        | +2          |
+| III   | (see board) | Steppes            | (see board)      | +3          |
+| IV    | (see board) | (see board)        | (see board)      | (see board) |
+| V     | (see board) | All                | None             | (see board) |
 
 | Village Score = Total huts in village + terrain bonus (if favorable) |
 |---------------------------------------------------------------------|

@@ -7,11 +7,11 @@ designer: "Glenn Drover"
 source_pdf: "civilization-the-boardgame-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary entirely omits the Advanced Rules' "Happiness"/"Productivity" subsystem, which is what actually determines how much gold each settlement produces in the Advanced Production Phase — a whole economic subsystem, not a minor detail.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/civilization-the-boardgame-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Civilization%3A%20The%20Boardgame&game=civilization-the-boardgame)
 <!-- verification:end -->
@@ -91,13 +91,13 @@ Unless the game ends by total conquest, all players tally victory points; the pl
 - Bonus points if military victory: every player gets +1 point per military unit they own
 - Bonus points if technology/space victory: every player gets +1 point per technology card they own
 
-Note: Technologies are NOT worth victory points in the Advanced rules except via seminal discoveries and the technology/space victory bonus.
+Note: Owning a technology that is not a seminal discovery is not worth victory points by itself in the Advanced rules — the source's scoring rule lists only settlements, wonders, seminal discoveries, and the applicable end-condition bonus. The source's own worked scoring example does add each player's technology count directly to their score, but that is because the example game specifically ends via a technology/space victory (Brad deliberately triggers that ending rather than a military or diplomatic one "in order to...give bonus points for technologies," per the source) — i.e., what's being added is the "+1 point per technology card owned" technology/space victory bonus below, applied once, not a separate always-on technology rate stacked on top of it. If the game instead ends by conquest, diplomatic victory, or military victory, technologies you own give no victory points unless they are seminal discoveries.
 
 ## Special Rules & Edge Cases
 
 - **Standard vs. Advanced Rules:** The standard rules treat all same-era technologies as identical (no prerequisites, generic bonuses) and wonders as milestone achievements. The advanced rules give each technology a specific cost, prerequisites via a tech tree, individual owner bonuses, and fee charges to non-owners who build associated units or improvements.
 - **Eras:** The game is divided into four eras (Ancient, Medieval, Gunpowder/Industrial, Modern). In Standard rules an era ends when any player purchases the third technology of the current era or the last remaining technology in the era. In Advanced rules an era ends when a player purchases the first technology of the next era. Units, technologies, and wonders from ended eras become unavailable.
-- **Terrain exploration markers:** Desert (cannot build settlements), Mountains (village only, cannot grow), Jungle/Forest (town maximum), Fertile/Productive (settlement counts as one size larger for Standard rules production, or uses the parenthetical value in Advanced rules). Terrain effects do not prevent settling but restrict growth.
+- **Terrain exploration markers:** Desert (cannot build settlements), Mountains (village only, cannot grow), Jungle/Forest (town maximum), Fertile/Productive (settlement counts as one size larger for Standard rules production, or uses the parenthetical value in Advanced rules). Desert prevents settling entirely (villages cannot be placed there); Mountains, Jungle/Forest, and Fertile/Productive terrain do not prevent initial settling but cap or modify growth/production.
 - **Minimum gold production:** A civilization can never receive less than 10 gold per production phase.
 - **Wonders (Standard rules):** Only one player may own each wonder. Wonders are earned by announcing a milestone first — any late announcement loses the wonder to the faster player.
 - **Wonders (Advanced rules):** Wonders come as owner bonuses when specific technologies are purchased; they are not separately constructed or announced.

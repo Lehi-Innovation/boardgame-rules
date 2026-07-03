@@ -7,11 +7,11 @@ designer: "Croc"
 source_pdf: "claustrophobia-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary omits the entire combat-resolution system (hit determination and all three death/removal conditions) and the Talents system, both essential to actually playing out combat and determining the elimination-based victory conditions.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/claustrophobia-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Claustrophobia&game=claustrophobia)
 <!-- verification:end -->
@@ -81,8 +81,8 @@ Each Demon player warrior (Troglodytes and Demons) activates. They may move (spe
 
 ### Human Actions
 - **Move:** Move a warrior through connected tunnels (movement points from assigned die).
-- **Explore:** When reaching an unexplored tunnel exit, draw and place a new tunnel tile.
-- **Attack:** Roll combat dice against adjacent troglodytes.
+- **Explore:** When reaching an unexplored tunnel exit, the Human player draws a new tunnel tile from the stack and gives it to the Demon player, who places it in contact with the explored opening (any way they like, as long as the new tile remains accessible to the exploring warrior); the Human player then places their warrior on the new tile.
+- **Attack:** Choose a target among the enemies on the warrior's own tile (all Troglodytes on the same tile count as a single target) and roll combat dice against it. Exception: warriors wielding a Grenade or Blunderbuss (Ranged Combat talent) may instead target an adjacent tile, provided their tile and the target's tile are connected by an opening.
 - **Use Equipment:** Play equipment cards for special effects.
 - **Special Abilities:** Some stat lines grant special abilities when their die is assigned.
 
@@ -104,7 +104,7 @@ Victory conditions are scenario-dependent:
 - **Stat Line Degradation:** As warriors take damage, dice are placed on crossed-out stat lines. With fewer available lines, warriors become less effective.
 - **Redeemer** is more powerful than condemned warriors but losing him often means losing the game.
 - **Tunnel exploration** creates a random dungeon layout each game.
-- **Line of sight** matters for some abilities and ranged attacks.
+- **Ranged attacks (Grenade, Blunderbuss):** these weapons can target an adjacent tile instead of the attacker's own tile, but only if the attacker's tile and the target's tile are connected by an opening.
 - Troglodytes are individually weak but can overwhelm through numbers.
 - Some scenarios introduce unique rules, special enemies, or time pressures.
 - The Demon player's resource of Threat Points comes from the Board of Destiny (Sounds From The Deep result) and can be accumulated across rounds.

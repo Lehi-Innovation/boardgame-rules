@@ -7,11 +7,11 @@ designer: "Avalon Hill"
 source_pdf: "circus-maximus-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Combat/Actions section mischaracterizes Sideslip as an attack forcing an opponent into a wall and invents a "sideswiping" attack type that does not exist in the rulebook.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/circus-maximus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Circus%20Maximus&game=circus-maximus)
 <!-- verification:end -->
@@ -56,7 +56,7 @@ Movement is planned in advance using notation that specifies:
 - **Forward movement:** Number of spaces to advance
 - **Lane changes:** Moving left or right across lanes (costs movement points)
 - **Straining:** Pushing horses beyond normal speed (risks endurance loss)
-- **Braking:** Reducing speed (risks to chariot structure)
+- **Braking:** Reducing speed by expending Endurance Factors (1 endurance box per movement factor braked; 2 to brake away from an attack); no endurance remaining = can no longer brake
 
 ### Cornering
 Corners are the most dangerous part of the track. Chariots in inner lanes risk **flipping** if going too fast. Corner strain resolution involves dice rolls based on speed, lane position, and chariot condition. Failing a corner check can result in a chariot flip (crash).
@@ -67,19 +67,18 @@ Corners are the most dangerous part of the track. Chariots in inner lanes risk *
 - **Evading:** Attempting to dodge incoming attacks.
 
 ### Chariot Flip
-A chariot flips (crashes) when:
-- It fails a corner strain check
-- It takes too much structural damage
-- It collides with a flipped chariot or debris
+A chariot is in danger of flipping under two separate conditions (each checked independently; a chariot straining in a corner with an already-damaged wheel must check both):
+- It fails a corner strain check (Corner Strain Chart result of "FP")
+- It has a damaged wheel and fails a wheel-damage flip check (see Damage below)
 
-Flipped chariots may scatter debris on the track, creating additional hazards.
+A flipped chariot crashes and is eliminated from the race; in the Basic Game it is simply removed from the board. (In the Advanced Game, the wrecked car instead lands elsewhere on the track as an obstacle — see Advanced Game rules.)
 
 ### Damage
 Damage is tracked on the Race Log across categories:
 - **Horse Speed/Damage:** Each horse has a speed rating; damage reduces individual horse speed and thus total Team Speed.
 - **Team Endurance:** Depleted by straining; tracked as endurance factor boxes.
 - **Driver Hits:** The driver has a set number of hit boxes determined at setup; when all are lost the driver is dead and can no longer win.
-- **Car (Wheel Damage):** Each wheel has ten hit boxes; when all boxes of a wheel are checked off, the wheel is destroyed and the chariot flips. Car type (light, normal, heavy) influences damage sustained in ram attacks.
+- **Car (Wheel Damage):** Each wheel has ten damage boxes (all car types). A wheel with 2+ damage points triggers a flip check (roll 2d6 against the wheel's current total damage) immediately whenever new damage is taken, and also at the start of any movement phase in which the chariot uses 14+ MFs or is straining in a corner (both apply and require two separate checks if straining at 14+ MFs in a corner). A roll greater than the damage total has no effect; a roll equal to the damage total inflicts one more damage point; a roll less than the damage total means the wheel flies off and the chariot flips, eliminating it from the race. If all ten damage boxes on a wheel are checked off, the wheel is destroyed and the chariot flips automatically. If both wheels are damaged, each is checked separately. Car type (light, normal, heavy) influences damage sustained in ram attacks.
 - **Current Driver Modifier (CDM):** The driver's effective skill rating for the current turn; can be reduced by attacks, affecting all dice rolls.
 
 ## Scoring / Victory Conditions
@@ -99,7 +98,7 @@ Chariots that flip or are destroyed are eliminated. A driver being dragged who c
 - Multiple chariots in the same space create collision risks.
 - Debris from flipped chariots remains on the track as obstacles.
 - A chariot can attempt to run over a downed driver.
-- Whipping attacks target the opposing driver specifically.
+- Lash (whip) attacks target either the driver or the horse team, depending on which is alongside the attacker's car.
 - The Racing Steward resolves disputes about simultaneous movement and unclear situations.
 - Optional rules include: a more detailed 32-point Preparation specification method, Special Weapons, Horse Carcasses, First Turn Acceleration, Voluntary Straining, and Weather (Rain and Mud) effects.
 - The "Wreckus Maximus" advanced variant adds rear attacks, bolting, and front ram attacks.
@@ -114,7 +113,7 @@ Chariots that flip or are destroyed are eliminated. A driver being dragged who c
 - Team Speed: combined horse speeds; reduced by horse damage
 - Team Endurance: depleted by straining
 - Driver Hits: driver's health; all lost = driver dead, eliminated
-- Car Wheel Damage: 10 boxes per wheel; all lost = flip
+- Car Wheel Damage: 10 boxes per wheel; a wheel with 2+ damage triggers a flip check (2d6 vs. current wheel damage total) when new damage is taken or when using 14+ MFs / straining in a corner — rolling under the damage total flips the chariot; all 10 boxes checked off destroys the wheel and flips the chariot automatically
 - Current Driver Modifier (CDM): driver skill this turn; affects all rolls
 
 **Win:** First chariot to cross the finish line after completing three laps (tracked by Egg/Dolphin counters). Tiebreak 1: more remaining movement factors. Tiebreak 2: faction counter drawn from cup first.

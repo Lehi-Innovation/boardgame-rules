@@ -7,11 +7,11 @@ designer: "Uwe Rosenberg"
 source_pdf: "caverna-the-cave-farmers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring table gives Grain as a flat "0.5 Gold" each, omitting the source's explicit total-then-round-up rule.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/caverna-the-cave-farmers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caverna%3A%20The%20Cave%20Farmers&game=caverna-the-cave-farmers)
 <!-- verification:end -->
@@ -123,7 +123,7 @@ The player with the most Gold points wins. In case of a tie, there are multiple 
 
 - Each Action space can hold only 1 Dwarf (first come, first served), except for specific spaces noted otherwise.
 - Animals must be housed in valid spaces: Dwellings with room for animals, Pastures, Stables (1 animal per Stable on any space), Mines with special furnishings. Animals without valid housing are returned to supply.
-- Dogs can guard Sheep in non-pasture spaces (1 Dog per space can guard Sheep equal to Dogs present).
+- Dogs can watch Sheep only when placed on a Meadow or Pasture space, replacing that space's normal animal-capacity rule: the space can then hold one more Sheep than the number of Dogs on it (1 Dog → 2 Sheep, 2 Dogs → 3 Sheep, 3 Dogs → 4 Sheep, etc.). Dogs cannot watch Sheep on Forest spaces or Fields, cannot watch any other animal type, and cannot watch Sheep in a Pasture that also holds another type of Farm animal. If a Stable is on the space, using Dogs to watch Sheep there means the Stable's capacity may not additionally be used.
 - Newborn Dwarfs require only 1 Food instead of 2 during their first Harvest.
 - Harvest schedule: Round 3 = normal harvest; Round 4 = feeding only (1 Food per Dwarf, no Field or Breeding phase); Rounds 5–12 = normal harvest by default, subject to Harvest Events. Harvest markers (placed face-down on rounds 6–12) may show a green leaf (normal harvest) or a red question mark (special event per the Harvest Events card).
 - The Introductory game uses fewer Furnishing tiles for a simpler experience.

@@ -53,7 +53,7 @@ Each time a player has priority they must choose exactly one of the following ac
 Choose a power, enhancement, or sidekick card from hand and put it into play. Powers and enhancements attach to a chosen super (discarded if requirements not met or a copy is already attached). Only one sidekick may be in play at a time.
 
 ### Act
-Choose an edge card from hand, an innate ability on a super you control, or a ready power attached to a super you control. Pay costs (including charging the power), choose targets, and resolve effects. Attack abilities (Melee or Ranged) follow a specific resolution sequence: pay costs → charge power → declare targets and pay any chasing costs → compare accuracy vs. defense to determine hit or miss.
+Choose an edge card from hand, an innate ability on a super you control, or a ready power attached to a super you control. Pay costs (including charging the power), choose targets, and resolve effects. Attack abilities (Melee or Ranged) follow a specific resolution sequence: pay costs → charge power → declare targets and pay any chasing costs → compare accuracy vs. defense (accuracy ≥ defense = hit; accuracy < defense = miss).
 
 ### Move
 Choose one of your supers. That super switches tactics mode between Toe-to-Toe and Run-'n'-Gun.
@@ -112,8 +112,8 @@ Archetypes (Blaster, Scrapper, Defender, Controller, Tanker) and travel powers (
 
 ### Status Effects
 There are three status effects: Stun, Knockdown, and Immobilize.
-- **Stun:** The super may not be chosen for Move or Act actions.  Receiving Stun also turns off all toggle powers.
-- **Knockdown:** Controller must discard 2 cards as an additional cost to choose this super for Move or Act actions.
+- **Stun:** The super may not be chosen for Move, and none of its powers may be chosen for an Act action (innate abilities are still usable). Receiving Stun also turns off all toggle powers.
+- **Knockdown:** Controller must discard 2 cards as an additional cost to choose this super for Move, or to choose one of its powers for an Act action (innate abilities are unaffected).
 - **Immobilize:** The super may not be chosen for Move; chasing costs during its attacks cannot be paid.
 
 Status effects have a duration measured in actions of the affected player. Multiple instances of the same status effect do not combine durations.

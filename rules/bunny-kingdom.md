@@ -82,12 +82,12 @@ Place one of your Rabbit figurines on the matching Territory on the board (ident
 
 ### Playing Building Cards
 - **City cards:** Place the corresponding City figurine on a Territory you control. Strength-3 Cities can only be placed on Mountains.
-- **Farm cards:** Place a Farm token on a Territory you control. The Farm produces the depicted Resource. Luxury Farms have placement requirements (specific terrain types).
+- **Farm cards:** Place a Farm token on a Territory you control. The Farm produces the depicted Resource. Luxury Farms have placement requirements (specific terrain types). A Territory with a Farm/Building still produces its base terrain Resource (if any) in addition to the Building's Resource, when computing a Fief's Wealth.
 - **Sky Tower cards:** Place both tokens of a Sky Tower pair on two Territories you control. These Territories are now connected for Fief purposes regardless of distance.
 - **Camp cards:** Place the card in front of you; place the Camp token on the board during the Construction Phase on any empty Territory (no Rabbit or Building). Each Camp card has a priority number — lower priority plays first. Place one of your Rabbits on the Camp to show control. If an opponent later plays a Territory card for that Territory, the Camp is removed and your Rabbit replaced by theirs.
 
 ### Playing Provision Cards
-Take 2 extra cards from the draw pile and add them to the cards you are currently drafting.
+Immediately draw and play 2 cards from the deck (they are NOT added to your hand or drafting pool). Resolve each drawn card exactly as if it had been chosen in the draft: place a Rabbit for a Territory card, place the City/token for a Building card, keep a Parchment card face-down and secret, or — if a second Provisions card is drawn — immediately draw and play 2 more cards. Put the played Provisions card in your discard pile.
 
 ### Playing Parchment Cards
 Keep Parchments secret until end of Round 4. They score bonus Golden Carrots based on various conditions (e.g., producing 7+ of a Resource, controlling specific territories).
@@ -102,7 +102,7 @@ A Fief with 0 Strength or 0 Wealth scores 0.
 ### Parchment Scoring (End of Round 4)
 Reveal all Parchments and score their bonus conditions. Examples include bonuses for producing large quantities of specific Resources, controlling many Territories, or having high-Strength Fiefs.
 
-**The player with the most Golden Carrots wins.**
+**The player with the most Golden Carrots wins.** In case of a tie, the tied players share the victory.
 
 ## Special Rules & Edge Cases
 

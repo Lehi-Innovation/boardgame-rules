@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Independent re-audit: Player Reference system charge costs (Torpedo=3 etc.) not supported by the extracted source (gauge values OCR-lost); verify against a clean rulebook. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Turn Structure section wrongly presents move/surface/system-use as three mutually exclusive single-turn choices, contradicting the source's actual turn economy (and contradicting the summary's own Special Rules section).. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/captain-sonar-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Captain%20Sonar&game=captain-sonar)
 <!-- verification:end -->
@@ -56,7 +56,7 @@ Captain Sonar is a real-time team game where two submarines hunt each other on a
 - **Mine (deploy + detonate):** Deploy a mine on an adjacent space. Later, detonate by announcing coordinates. Same damage as torpedo.
 - **Drone:** The Captain names a sector. The enemy Captain must truthfully answer whether their sub is in that sector.
 - **Sonar:** The enemy Captain must give 2 pieces of information about their position (row, column, or sector) — one must be true, one must be false.
-- **Silence:** The submarine moves 0-4 spaces in one direction without announcing direction. The Radio Operator only knows "Silence was activated."
+- **Silence:** The submarine moves up to 4 spaces in a straight line without announcing direction, still subject to the normal movement restrictions (cannot cross an island or its own route). The Radio Operator only knows "Silence was activated."
 - **Scenario-specific systems:** Some maps include unique systems.
 
 **Surfacing:** The Captain raises a fist and announces "SURFACE," then declares the submarine's current sector aloud to the enemy.
@@ -71,7 +71,7 @@ If a submarine surfaces, the enemy knows which sector it is in.
 
 ## Special Rules & Edge Cases
 
-- The submarine cannot cross its own path line (it must surface or use silence to reset/reposition).
+- The submarine cannot cross its own path line; the Captain can erase his route only by surfacing. Silence is not a way around this — silence movement is likewise forbidden from crossing an island or the submarine's own route.
 - If the Captain cannot announce a course (blocked by islands, mines, or own route), the submarine must immediately surface (BLACKOUT).
 - A team cannot activate two systems in a row; the Captain must announce a course between activations.
 - **Engineer breakdowns:** Each time the Captain announces a direction, the Engineer crosses off one symbol in the matching compass panel (North/South/East/West). A system cannot be activated if **at least one** symbol corresponding to that system is crossed out. (Each symbol corresponds to two systems: Mine+Torpedo share symbols, Drone+Sonar share symbols, Silence+Scenario share symbols.)
@@ -79,7 +79,7 @@ If a submarine surfaces, the enemy knows which sector it is in.
 - **Radiation breakdowns (Reactor):** When ALL radiation symbols are crossed out, the submarine suffers 1 damage and the Engineer erases ALL breakdowns from the entire sheet. Surfacing also repairs all Reactor breakdowns.
 - **Complete area breakdown:** When all symbols in a single compass panel (both Central Circuits and Reactor) are crossed out, the submarine suffers 1 damage and the Engineer erases ALL breakdowns.
 - The Radio Operator uses the transparent sheet overlaid on the map to track the enemy sub's position using the directions announced by the enemy Captain.
-- In real-time mode, the Captain must wait for the First Mate and Engineer to announce "OK" before announcing a new course.
+- In both real-time and turn-by-turn modes, the Captain must wait for the First Mate and Engineer to announce "OK" before announcing a new course.
 - With fewer than 8 players, one player takes multiple roles (e.g., 3-player team: Captain + First Mate; 2-player team: Captain + First Mate + Engineer). In 2- or 3-player games, turn-by-turn mode is required.
 - Self-damage: A submarine can be damaged by its own torpedo or mine if it is adjacent to or on the impact space.
 
@@ -92,6 +92,6 @@ If a submarine surfaces, the enemy knows which sector it is in.
 | Engineer | Manage breakdowns (one mark per move, in matching zone) |
 | Radio Operator | Track enemy position using announced directions |
 
-**Systems charge costs:** Torpedo = 3, Mine = 3, Drone = 4, Sonar = 3, Silence = 6
+**Systems charge costs:** The rulebook does not give fixed gauge lengths for Torpedo, Mine, Drone, or Sonar (the First Mate marks a space on the chosen gauge after each move; a system activates once its gauge is full, but no space count is specified). Scenario system gauge = 4 spaces. Silence gauge = 4 or 6 spaces, depending on the scenario.
 
 **Damage:** Direct hit = 2, Adjacent = 1, Health = 4 total

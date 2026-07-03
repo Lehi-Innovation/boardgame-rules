@@ -7,11 +7,11 @@ designer: Stefan Feld
 source_pdf: carpe-diem-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two scoring-relevant definitions are misstated: the fountain-card rule is given as a blanket "draw 2, keep 1" when that only applies to a player's first fountain, and villa completion drops the source's explicit "at least two tiles" minimum. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/carpe-diem-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carpe%20Diem&game=carpe-diem)
 <!-- verification:end -->
@@ -70,7 +70,7 @@ The game has 4 phases of 7 rounds each. After each phase, there is a scoring per
   - **Baker (brown):** Receive 2 bread tokens. Bread uses: spend 1 to move meeple anywhere; spend 3 to auto-fulfill one scoring card.
   - **Administrator (blue):** Advance 2 spaces on banderole bar.
   - **Craftsman (green):** Take any dark green tile from bottom margin and place it immediately.
-- **Markets:** Place for 1 coin. **Bakeries:** Place for 1 bread. **Fountains:** Place to draw 2 fountain cards, keep 1.
+- **Markets:** Place to receive 1 coin. **Bakeries:** Place to receive 1 bread. **Fountains:** Place to draw 2 fountain cards, keep 1.
 
 ## Scoring / Victory Conditions
 

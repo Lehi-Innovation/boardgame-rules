@@ -60,7 +60,7 @@ The player who just completed an Orders Phase may attempt a Momentum die roll to
 
 **D. Rout and Recovery Phase**
 1. Remove "Rallied" markers.
-2. Rout Movement: Routed units move two hexes toward their Retreat Edge.
+2. Rout Movement: All currently-Routed units move their full printed Movement Allowance toward their Retreat Edge (11.24) — this is distinct from the initial 2-hex move a unit makes the instant it first Routs (11.22), which happens earlier in the turn (e.g., during the Shock Combat Segment).
 3. Reload Segment: Eligible missile units may replenish missiles.
 4. Resolve Breach Attempts.
 5. Flip all "Moved" units and "Finished" leaders to their front (active) sides.
@@ -94,7 +94,7 @@ Units move through hexes paying Movement Point costs for each hex entered and so
 | Hasti (Elephants) | Dominant assault units; Rampage instead of routing |
 | Ashva (Cavalry) | Mobile flanking forces |
 
-**Orderly Withdrawal (OW):** Faster, lighter units may withdraw up to (attacker MA − defender MA) Movement Points when an enemy unit moves within two hexes. Foot units and Chariots incur 1 Cohesion Hit automatically after withdrawing; Skirmishers, Cavalry, and Elephants do not. All withdrawing units take a TQ check at the conclusion.
+**Orderly Withdrawal (OW):** A friendly (unrouted) unit not in an enemy ZOC may avoid contact with an approaching enemy unit the instant that enemy moves within two hexes of it, as long as the withdrawing unit's own Movement Allowance is higher than the approaching unit's MA. It may withdraw up to a number of Movement Points equal to (withdrawing unit's MA − approaching unit's MA) — e.g., an Elephant unit (MA 7) approached by a Phalanx (MA 4) may withdraw up to 3 Clear hexes (7−4=3 MP). Foot units and Chariots incur 1 Cohesion Hit automatically after withdrawing; Skirmishers, Cavalry, and Elephants do not. All withdrawing units take a TQ check at the conclusion.
 
 ### Leadership
 Combat units may not move or fire missiles without receiving an Individual Order, Line Command, or Wing Command from a leader. Units within a leader's Command Range that received orders may also conduct Shock Combat.
@@ -124,7 +124,8 @@ Each leader has: Command Range, Initiative (determines activation order and numb
 - A unit **Routs** when its accumulated Cohesion Hits equal or exceed its TQ rating.
   - **Exception:** Chariots, Skirmishers, and Artillery are **eliminated** (not routed) when their TQ is exceeded.
   - **Exception:** Elephants do **not** rout; they **Rampage** instead (see Special Rules).
-- A Routed unit moves 2 hexes toward its Retreat Edge (taking the path of least resistance). If it cannot retreat the full distance, it is eliminated. Place a "Routed" marker on it.
+- A Routed unit is immediately moved 2 hexes toward its Retreat Edge the instant it Routs (taking the path of least resistance). If it cannot retreat the full distance, it is eliminated. Place a "Routed" marker on it.
+- Later, during the Rout Movement step of the Rout and Recovery Phase, all currently-Routed units move again — this time their full printed Movement Allowance toward the Retreat Edge — even if they already moved earlier in the turn.
 - Routed units have a TQ of "1" for all purposes.
 - A leader may use an Individual Order to attempt to Rally a Routed unit.
 
@@ -166,7 +167,7 @@ A Rampaging elephant moves 3 hexes per Rampage die roll, attacking all units in 
 - Cavalry and Chariots always take 2 hits when attacked by a rampaging elephant.
 - Any unprotected leader in the elephant's path is automatically eliminated.
 
-Rampage repeats (rolling again) until: the elephant moves 3 hexes without encountering any unit, the mahout stops it (7–9 roll), it is 8+ hexes from the nearest unit (eliminated), or after the 4th consecutive Rampage roll (eliminated). Rampaging elephants have no ZOC and may not be rallied. Only one Rampaging Elephant may be active at a time. Rampaging elephants do not draw Reaction Fire of any kind.
+Rampage repeats (rolling again) until: the Elephant exits the map, the mahout stops it (7–9 roll, eliminated), it is 8+ hexes from the nearest unit (eliminated), or after the 4th consecutive Rampage roll (eliminated). Rampaging elephants have no ZOC and may not be rallied. Only one Rampaging Elephant may be active at a time. Rampaging elephants do not draw Reaction Fire of any kind.
 
 **Elephant Proximity (10.16):** If an Elephant moves adjacent to an enemy Cavalry or Chariot unit, that unit must attempt Orderly Withdrawal if possible; if it cannot, it undergoes an immediate TQ check.
 
@@ -176,7 +177,7 @@ Rampage repeats (rolling again) until: the elephant moves 3 hexes without encoun
 
 **Grades and Command:** Only Indian units have grade designations. Maula and Bhrta units can be combined with Elephant or Chariot units in Combined Lines. Guild (Sreni) forces are independent; Tribals are unpredictable.
 
-**Chariots:** Powerful shock troops; when their TQ is exceeded, they are **eliminated** (not routed). Dismounted chariot crews use the counter's reverse side. Cavalry may Orderly Withdraw 1 MP before an Elephant unit even though they share the same Movement Allowance.
+**Chariots:** Powerful shock troops; when their TQ is exceeded, they are **eliminated** (not routed). Dismounted chariot crews use the counter's reverse side. Chariots may Orderly Withdraw 1 MP before an Elephant unit even though they have the same Movement Allowance.
 
 **Terrain:** Movement Point costs and possible Cohesion Hit penalties apply to most terrain types. Indian Elephant units may avoid forest Cohesion Hits by moving at half or less of their printed MA through forest hexes. Units in Column have their TQ reduced by –2.
 

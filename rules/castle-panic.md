@@ -7,11 +7,11 @@ designer: Justin De Witt
 source_pdf: castle-panic-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's Castle-ring movement rule contradicts the source: it implies a monster stops once it reaches a wall/tower, but the rulebook explicitly says towers do NOT stop monster movement and a surviving monster keeps advancing clockwise . Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20Panic&game=castle-panic)
 <!-- verification:end -->
@@ -97,7 +97,7 @@ Choose a first player; play proceeds clockwise. Each turn has 6 phases:
 - Boss Monsters have special abilities that trigger when drawn (e.g., extra movement, destroying walls).
 - Monster Effects (like Plague, which forces all players to discard a card type) resolve immediately and are discarded.
 - **Giant Boulder:** A special Monster token that is never placed on the board. Roll the die to determine the arc. All monsters in that numbered arc are destroyed (including in the Forest ring; these are not kept as trophies in Master Slayer). The boulder rolls across the board and stops only when it hits and destroys the first Wall, Tower, or Fortify token in its path. If no structure is present in that arc, the boulder continues through the Castle ring and into the opposite arc, destroying any monsters there. After resolving, the Giant Boulder token is discarded.
-- **Master Slayer variant:** Cooperative with individual scoring. The player who slays the most monsters is the Master Slayer.
+- **Master Slayer variant:** Cooperative with individual scoring via trophies. Players keep monsters they personally slay by hits as trophies; monsters slain by other means (Walls, Giant Boulders) are discarded rather than kept. Each monster's printed top point value is its worth; Boss Monsters are worth 4 points. If at least 1 Tower is standing when the last monster is slain, each player totals the point value of their trophies, and the player with the most points is the Master Slayer. In case of a tie, the player who slayed the most monsters wins.
 - **Overlord variant:** One player controls the monsters against the other players.
 - **Solitaire variant:** One player defends the castle alone with a hand of 6 cards. During the Discard and Draw phase, the player may discard up to 2 cards at once and draw 2 replacements. There is no Trade Cards phase.
 

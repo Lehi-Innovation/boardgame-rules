@@ -7,11 +7,11 @@ designer: "Klaus Teuber"
 source_pdf: "candamir-the-first-settlers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/candamir-the-first-settlers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Candamir%3A%20The%20First%20Settlers&game=candamir-the-first-settlers)
 <!-- verification:end -->
@@ -19,7 +19,7 @@ verification_date: "2026-06-17"
 
 ## Overview
 
-Candamir: The First Settlers is an adventure game set on the island of Catan. Players are settlers who must explore the wilderness, collect resources and ingredients, complete adventures, and deliver goods to the village founders (Candamir, Osmund, and Jared) in exchange for victory points. Each character has unique abilities that improve through experience. The first player to earn 10 victory points wins.
+Candamir: The First Settlers is an adventure game set on the island of Catan. Players are settlers who must explore the wilderness, collect resources and ingredients, complete adventures, and deliver goods and animals to the village settlers (Candamir, Osmund, Jared, and Brigitta) in exchange for victory points. Each character has unique abilities that improve through experience. The first player to earn 10 victory points wins.
 
 ## Components
 
@@ -55,7 +55,7 @@ At the start of your turn you may **trade** (with other players or 3-for-1 with 
 ### Option A: Explore
 **A. Prepare to Set Out:** You may only begin exploring from the village if you have 5 or fewer resource cards AND 5 or fewer ingredient cards. Excess cards must be discarded before exploring.
 
-**B. Choose Your Destination:** If your goal token is not on the board, you may secretly peek at any 2 face-down exploration tiles (anywhere), then place your goal token on any exploration tile (not necessarily one you just peeked at). Once claimed, no other player may take that tile.
+**B. Choose Your Destination:** If your goal token is not on the board, you may secretly peek at any 2 face-down exploration tiles (anywhere), then place your goal token on any exploration tile (not necessarily one you just peeked at) — or, instead of an exploration tile, on one of the three camps shown on the board (Lumberjack, Hunter, or Miner) for a guaranteed resource. Once claimed, no other player may take that tile or camp.
 
 **C. Move:** Move your figure square-to-square (horizontally or vertically, never diagonally). Your maximum moves per turn equal your current **endurance** (starts at 4; tracked on your Character Board). Before each move, flip the top movement card and point it toward the board — check if the direction you move shows an event. You may move up to your endurance in cards/steps per turn.
 
@@ -63,13 +63,14 @@ At the start of your turn you may **trade** (with other players or 3-for-1 with 
 - **Success:** Gain the listed reward (e.g., bear defeated with Prowess → up to 2 hides).
 - **Failure:** Immediately lose 1 or 2 endurance. If your endurance drops to or below 0, your turn ends (unless you drink a healing potion). You still move into the new space even on failure.
 
-**E. Reaching Your Destination:** Your exploration ends when you have moved a number of spaces equal to your endurance, or when you reach your goal token. If you reach your goal token: return to the village, remove your goal token from the board, take the exploration tile face-up and collect its reward (resources, VP for goats/cattle, experience or equipment as shown).
+**E. Reaching Your Destination:** Your exploration ends when you have moved a number of spaces equal to your endurance, or when you reach your goal token. If you reach your goal token: return to the village, remove your goal token from the board, and either (a) take the exploration tile face-up and collect its reward (resources, VP for goats/cattle, experience or equipment as shown), or (b) if your goal token was on one of the camps, simply take one resource card of the type shown on that camp space (no tile is collected).
 
 ### Option B: Build and Brew (village only)
 Only available if your figure is in the village **and** your goal token is not currently on the board.
 
-- **Build:** Pay resource costs to manufacture goods (sword: 2 ore + 1 lumber; chest: 1 hide + 1 ore + 1 lumber; window cover: 2 hide + 1 lumber) and place a VP cube on the matching space in a settler's wish list. Only the topmost open space in each column is currently desired.
+- **Build:** Pay resource costs to manufacture goods (sword: 2 ore + 1 lumber; chest: 1 hide + 1 ore + 1 lumber; window cover: 2 hide + 1 lumber) and place a VP cube on the matching space in a settler's wish list (Candamir, Osmund, Jared, or Brigitta). Only the topmost open space in each column is currently desired.
 - **Brew:** Pay ingredient costs to create potions/mead: Brigitta's Potion (1 mushroom + 1 herb), Healing Potion (1 honey + 1 mushroom), Mead (1 honey + 1 herb).
+- **Rewards for Manufacturing Wanted Goods:** Placing a VP cube on a wish list grants an additional reward. Placing on **Brigitta's** list gives you 1 Brigitta's Potion and 1 Mead tile (no additional reward if you already hold 2 drinks of that type). Placing on **Jared's**, **Osmund's**, or **Candamir's** list gives a flavor-only reward (a bag of seed, a sheep, or help building your house, respectively) — these have no physical card or tile and are simply represented by the number of VP cubes you currently have on that settler's list.
 
 ## Actions
 
@@ -95,7 +96,7 @@ The 3 face-up adventure cards each require a die test (sometimes two sequential 
 ## Scoring / Victory Conditions
 
 VP (victory point cubes) are earned by:
-- **Building goods:** Placing a VP cube on a settler's wish list by paying resource costs (sword, chest, or window cover for Candamir, Osmund, or Jared).
+- **Building goods:** Placing a VP cube on a settler's wish list by paying resource costs (sword, chest, or window cover for Candamir, Osmund, Jared, or Brigitta).
 - **Finding goats or cattle:** Reaching an exploration tile that shows a goat or cattle — place a VP cube on the matching wish-list space immediately.
 - **Completing adventure cards:** Each card shows its own reward on success (which may include resources, ingredients, or other benefits as printed on the card).
 - **Special VP:** The first player to place a **third** VP cube on a given settler's wish list (Jared, Osmund, or Candamir) earns 1 special VP (placed in the matching box at the bottom of the village section). This special VP is stolen if another player later has more cubes on that settler's list.
@@ -106,13 +107,13 @@ VP (victory point cubes) are earned by:
 ## Special Rules & Edge Cases
 
 - **Character skills:** Each character has 2 individual skills. One is typically a terrain-based bonus move (Rider: bonus move in grassland; Climber: mountains; Forester: forest; Swimmer: river spaces) — usable only if endurance is at least 1 when normal movement ends. The other is a unique ability (Herbalist: collect hidden parenthetical ingredients; Inga's Friend: take any ingredient on a successful snake catch; Goods Trader: exchange 2 resources for 1 other resource once per turn; Scout: peek at 3 tiles instead of 2 when setting destination).
-- **Peeking at tiles:** Before placing your goal token, you may secretly examine any 2 face-down exploration tiles and return them face-down. You may then place your goal token on any tile (not necessarily one examined).
+- **Peeking at tiles:** Before placing your goal token, you may secretly examine any 2 face-down exploration tiles and return them face-down. You may then place your goal token on any tile (not necessarily one examined) — or on one of the three camps (Lumberjack, Hunter, or Miner) instead of a tile.
 - **Endurance:** Maximum endurance is 4; minimum is -1. You can forfeit your entire turn (no movement, no building/brewing) to restore endurance to 4. Failing an event test reduces endurance by 1 or 2 (as shown on the event); this may end your turn if you have no more moves remaining at your new endurance level.
 - **Failed encounter:** You still move into the new space and continue moving if endurance permits; you do NOT automatically return to the village. You only return to the village when you reach your goal token.
 - **Hand limit:** Maximum 5 resource cards AND 5 ingredient cards at all times while moving. You cannot discard to make room for new gains.
 - **Resources and ingredients** in hand are kept secret from other players. Trade is allowed at any time at the start of your turn.
 - **Building restrictions:** You cannot build and brew if your goal token is currently on the board (even if your figure is in the village).
-- **Adventure cards increase in difficulty:** Deck 1 is on top (easiest); deck 3 is on the bottom (hardest). As cards are completed, replacements come from the next card in the stack.
+- **Adventure card stacking order:** The three decks are shuffled separately, then stacked with deck 3 on the bottom, deck 2 in the middle, and deck 1 on top. As cards are completed, replacements are drawn from the top of this combined stack (so deck 1's cards come up first, then deck 2's, then deck 3's).
 
 ## Player Reference
 

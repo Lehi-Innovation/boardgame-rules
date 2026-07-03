@@ -7,11 +7,11 @@ designer: "Eric M. Lang"
 source_pdf: "chaos-in-the-old-world-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/chaos-in-the-old-world-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chaos%20in%20the%20Old%20World&game=chaos-in-the-old-world)
 <!-- verification:end -->
@@ -49,13 +49,13 @@ Chaos in the Old World is an asymmetric area-control strategy game set in the Wa
 Each game round has 6 phases:
 
 ### Phase 1: Old World Phase
-Draw a new Old World card and place it face-up on the Old World track. Apply effects of expiring cards. Populate regions with tokens as indicated.
+Draw a new Old World card and place it face-up on the Old World track. Apply effects of expiring cards. Populate regions with tokens as indicated. The player with the lowest Threat carries out the card's instructions and makes any required decisions (e.g., where new tokens are placed).
 
 ### Phase 2: Draw Phase
 Each player draws Chaos cards according to his Power sheet's draw phase instruction. There is no hand size limit. Each player also resets his power marker to the highlighted starting space on his power point track (unused power points do not carry over).
 
 ### Phase 3: Summoning Phase
-Players take turns (Khorne > Nurgle > Tzeentch > Slaanesh) spending power points to summon followers and play Chaos cards in regions. Each follower and card has a power point cost. Continue until all players pass.
+Players take turns (Khorne > Nurgle > Tzeentch > Slaanesh) spending power points to summon followers and play Chaos cards in regions. Each follower and card has a power point cost. A follower may only be placed in a region where that player already has a figure, or in a region adjacent to one where they do; the only exception is a player's very first figure on the board, which may go anywhere. Continue until all players pass.
 
 - **Cultists:** Cheap; place corruption tokens
 - **Warriors:** Mid-cost; strong in battle
@@ -85,7 +85,7 @@ Start player does not rotate — Power order (Khorne, Nurgle, Tzeentch, Slaanesh
 ## Actions
 
 ### Summoning
-Spend power points to place figures on the board or play Chaos cards from hand.
+Spend power points to place figures on the board or play Chaos cards from hand. A follower may only be placed in a region where that player already has a figure, or in a region adjacent to one where they do; the only exception is a player's very first figure on the board, which may go anywhere.
 
 | Follower Type | Typical Cost | Role |
 |---------------|-------------|------|

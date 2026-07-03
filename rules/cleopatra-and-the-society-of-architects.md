@@ -7,11 +7,11 @@ designer: "Bruno Cathala, Ludovic Maublanc"
 source_pdf: "cleopatra-and-the-society-of-architects-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Market replenishment mechanic is misstated: the summary has all 3 drawn cards refill only the stall just emptied, but the source refills all three stalls, one card each.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cleopatra-and-the-society-of-architects-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cleopatra%20and%20the%20Society%20of%20Architects&game=cleopatra-and-the-society-of-architects)
 <!-- verification:end -->
@@ -24,7 +24,7 @@ Cleopatra and the Society of Architects is a game where players are architects c
 ## Components
 
 - 3D palace model (built during play): 9 Column walls, 6 Sphinxes, 2 Door frames, 1 Throne & 1 Pedestal, 2 Obelisks, 12 Mosaics of the Gods
-- A deck of 110 cards: 75 Standard Resource cards (Artisans, Stone Blocks, Marble Slabs, Wooden Logs, Lapis Lazuli, Trompe-l'oeil) and 23 Tainted Resource cards (corrupt versions worth double), plus 11 Character cards (all Tainted): 2 Beggars, 2 Courtesans, 2 Envoys, 2 Scribes, 2 Smugglers, 1 Vizier
+- A deck of 110 cards: 75 Standard Resource cards (Artisans, Stone Blocks, Marble Slabs, Wooden Logs, Lapis Lazuli) and 23 Tainted Resource cards (3 doubled-value copies of each standard resource, worth double, plus 8 Trompe-l'oeil), plus 11 Character cards (all Tainted): 2 Beggars, 2 Courtesans, 2 Envoys, 2 Scribes, 2 Smugglers, 1 Vizier
 - 89 Corruption Amulets
 - 5 Pyramids of Corruption (one per player, hides amulets)
 - 108 Talents (32×1, 32×2, 24×5, 20×10)
@@ -94,7 +94,7 @@ Discard the card onto the Market discard pile, apply the effect, and add the sta
 |-------|-----|------|----------------|
 | Sphinxes | 6 | 1 Artisan | 2 Talents (1st of each pair); 5 Talents (2nd Sphinx placed directly across from the first in the pair) |
 | Column Walls | 9 | 1 Artisan + 1 Wood | 3 Talents + 1 Talent per adjacent Mosaic square |
-| Door Frames | 2 | 2 Artisans + 1 Lapis Lazuli | 4 Talents + 1 Talent per Column Wall directly connected to that Door frame's corner |
+| Door Frames | 2 | 2 Artisans + 1 Wood + 1 Lapis Lazuli | 4 Talents + 1 Talent per Column Wall directly connected to that Door frame's corner |
 | Obelisks | 2 | 3 Artisans + 2 Woods + 2 Stones | 12 Talents each |
 | Throne + Pedestal | 2 | 3 Artisans + 2 Marbles + 2 Lapis Lazuli | 12 Talents each |
 | Mosaics of the Gods | 12 | 2 Artisans + 1 Lapis Lazuli | 4 Talents + 1 Talent per palm square covered; right to form Sanctuary |

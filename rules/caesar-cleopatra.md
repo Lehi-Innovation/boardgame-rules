@@ -87,7 +87,7 @@ Each player may play at most one action card per turn (before, between, or after
 
 ### Philosopher Card Rules
 
-- A philosopher has value 0; the player with the **smaller total wins** the vote. The losing player (higher total) discards their highest influence card; the winning player (philosopher holder) discards the philosopher card.
+- A philosopher has value 0; the player with the **smaller total wins** the vote. The losing player (higher total) discards their highest influence card; the winning player (philosopher holder) discards their **lowest**-numbered influence card (if they have one on that group) **and** the philosopher card. If the philosopher is the winning player's only card in that group, only the philosopher card is discarded.
 - If only philosopher cards are on both sides, no decision is made; philosopher cards remain face-up.
 - If equal philosopher cards are on both sides (1 vs. 1, or 2 vs. 2), they cancel out and the player with the **higher** numbered influence wins normally. Both philosopher cards are discarded with the appropriate numbered cards.
 - If one player has 1 philosopher card and the other has 2, the player with **smaller** influence wins. All philosopher cards and appropriate numbered cards are discarded.

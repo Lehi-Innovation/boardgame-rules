@@ -23,7 +23,7 @@ Catan: Ancient Egypt is a re-themed version of Settlers of Catan set in ancient 
 
 ## Components
 
-- 19 terrain hexes (quarry/stone, alluvial land/brick, fields/grain, pasture/cattle, papyrus grove/papyrus, desert/oasis)
+- 19 terrain hexes (quarry/stone, alluvial land/brick, fields/grain, pasture/cattle, papyrus grove/papyrus, desert (produces nothing))
 - Frame pieces (border)
 - Number tokens
 - Resource cards (stone, brick, grain, cattle, papyrus)
@@ -61,6 +61,7 @@ The oldest player goes first. On your turn, take the following steps in order:
 - **Settlement:** 1 brick + 1 cattle + 1 grain + 1 papyrus
 - **Temple City (city):** 3 stone + 2 grain
 - **Development Card:** 1 stone + 1 grain + 1 papyrus
+- **Papyrus Boat:** 2 papyrus + 1 cattle (Great Pyramid scenario; required before building pyramid blocks; crosses the Nile; counts toward Longest Trade Route)
 
 **Rolling a 7:** Players with more than 7 resource cards must discard half (round down, e.g., 9 cards → discard 4). Then move the robber to any other hex and steal 1 resource at random from one opponent adjacent to that hex. (See also Special Rules.)
 
@@ -77,7 +78,7 @@ First player to reach 10 victory points wins:
 
 - **Development card types:** Mercenary cards (move robber; 3+ played face-up = Largest Mercenary Army), Progress cards (follow instructions, then remove from game), and Victory Point cards (kept secret; may only be revealed when a player reaches 10 VP).
 - **Help from the Gods (optional):** 10 god cards, each with an "A" side (first use) and a "B" side (second use). After using a god card, you may flip it to its B side for a second use later, or return it to the display and take a different god card. God cards can be added to the base game or used in the Great Pyramid scenario.
-- **The Great Pyramid Scenario:** A variant in which players also build a shared pyramid by spending 1 stone + 1 cattle per block. The game ends at 11 VP (not 10), or when all pharaoh pyramid blocks are used or the pyramid is complete — in which case the player with the most VP wins. Victory Point cards remain secret until 10+ VP is reached.
+- **The Great Pyramid Scenario:** A variant in which players also build a shared pyramid by spending 1 stone + 1 cattle per block. You may not build pyramid blocks until you have built at least 1 Papyrus Boat across the Nile. Each player starts this scenario holding a "Pharaoh's Curse" card, which reduces their VP total by 1 (so each player starts with 1 VP, not 2). As long as you have built more pyramid blocks than another player, flip your pharaoh card to its "Pharaoh's Blessing" side, worth +1 VP instead of the -1 from the Curse; "Pharaoh's Curse" affects only the player(s) with the fewest pyramid blocks built (or everyone, if all players are tied). The game ends when a player reaches 11 VP (not 10) on their turn, in which case that player wins; or when all pharaoh (gold) pyramid blocks are used or the pyramid is complete, in which case the player with the most VP wins. If there is a tie in either of the latter two cases, the tying player who has contributed the most pyramid blocks wins; if still tied, the tied player holding the "Vizier's Favor" card wins; if no tied player holds it, the tied players share the win. Victory Point cards remain secret until 10+ VP is reached.
 - **Harbors and Oases:** Special trading ratios (3:1 general or 2:1 for specific resources) available at harbor and oasis locations.
 - **Distance Rule:** Settlements must be placed so that all adjacent intersections are unoccupied (at least 2 intersections apart from any other settlement or city).
 - **Rolling a 7:** Players with more than 7 resource cards discard half (round down). The active player then moves the robber to any other hex and steals 1 resource at random from one opponent adjacent to that hex.
@@ -90,5 +91,6 @@ First player to reach 10 victory points wins:
 | Settlement | 1 brick + 1 cattle + 1 grain + 1 papyrus | 1 |
 | Temple City | 3 stone + 2 grain | 2 |
 | Development Card | 1 stone + 1 grain + 1 papyrus | varies |
+| Papyrus Boat (Great Pyramid scenario) | 2 papyrus + 1 cattle | 0 |
 
 **Win condition:** First to 10 VP

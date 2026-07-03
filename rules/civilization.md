@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Independent re-audit: omits the Building New Cities subsystem (scout-founded, max 2-3 cities) and Army/Scout figure production. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary conflates "Devote to the Arts" (culture-token gain) with advancing on the culture track, omitting the actual escalating-cost spend mechanic that is the core system for the Cultural victory path.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/civilization-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Civilization&game=civilization)
 <!-- verification:end -->
@@ -49,13 +49,13 @@ Sid Meier's Civilization: The Board Game (Fantasy Flight Games edition) lets pla
 Each round, players take turns in order. On your turn, perform these phases:
 
 ### Phase 1: Start of Turn
-Activate start-of-turn abilities.
+The new first player performs any start-of-turn abilities (usually from wonders or culture cards), builds any new cities (see Building New Cities under Actions), and changes government if desired. Play then passes to the left until all players have completed this phase.
 
 ### Phase 2: Trade
 Collect trade from all cities (increase trade dial by total trade symbols in all city outskirts). Players may also negotiate and trade resources with each other during this phase.
 
 ### Phase 3: City Management
-For each city, choose one action: produce an item (building, unit card, or wonder), devote to the arts (gain culture), or harvest a resource.
+For each city, choose one action: produce a figure, unit, building, or wonder, devote to the arts (gain culture), or harvest a resource.
 
 ### Phase 4: Movement
 Move your figures (scouts and armies) on the map. Scouts explore tiles; armies can attack.
@@ -65,13 +65,27 @@ Spend trade to research one technology and add it to the tech pyramid. Technolog
 
 ## Actions
 
+### Building New Cities
+
+During the Start of Turn Phase, if a player has fewer built cities than their maximum (two total normally — the capital plus one more; three total if the player has researched the Irrigation tech — the capital plus two more), they may build one or more new cities, as long as doing so does not exceed the maximum.
+
+To build a new city, the player must have a scout figure in the square where the city marker will be placed, and that square must meet all of the following requirements:
+- It is not a water square.
+- It has eight revealed (face-up) squares adjacent to it (a city cannot be placed on the edge of the map or next to a facedown map tile).
+- It is not adjacent to a hut or village token.
+- It is not adjacent to an enemy figure (army or scout); friendly figures may be adjacent to it, or even share the square.
+- It is at least three squares away from any other city marker, including diagonally, so the new city's outskirts cannot overlap another city's outskirts.
+
+If all requirements are met, the player sacrifices the scout — removing it from the board and returning it to their civilization sheet — and places a city marker on the square, unwalled side up. That square becomes the city center (which itself generates nothing) and the eight adjacent squares become the new city's outskirts. Any other friendly figures on the square move to an adjacent square where they can legally end their movement.
+
 ### City Management
 
 Each city takes exactly one action per City Management Phase. The three possible city actions are:
 
-- **Produce an Item:** A city may produce a building, unit card, or wonder from the market, paying a production cost in production symbols from that city's outskirts. Cities cannot combine production; the entire cost must be paid by a single city. Excess production is wasted.
+- **Produce a Figure, Unit, Building, or Wonder:** A city may produce one item, paying a production cost in production symbols from that city's outskirts. Cities cannot combine production; the entire cost must be paid by a single city. Excess production is wasted.
+  - *Figures*: an Army figure (cost 4 production) or Scout figure (cost 6 production), taken from the player's unbuilt figure supply and placed in the outskirts of the producing city, provided the player has at least one unbuilt figure of that type. Army figures are the only figures that can fight battles and explore huts/villages. Scout figures can be used to build new cities or to gather resources, but cannot enter squares containing huts or villages and are killed immediately if attacked by an army (unless escorted by a friendly army).
+  - *Unit cards* (artillery, infantry, mounted, aircraft) are drawn at random from the appropriate deck and added to the player's standing forces pile. Rank 1 units cost 5 production, Rank 2 cost 7, Rank 3 cost 9, and Rank 4 cost 11; aircraft always cost 12 production and require the Flight tech to unlock.
   - *Buildings* provide ongoing bonuses (trade, production, culture, etc.) and are placed in the city's outskirts. Some buildings are "limited" (marked with stars); a city may have at most one limited building.
-  - *Unit cards* (artillery, infantry, mounted, aircraft) are added to the player's standing forces.
   - *Wonders* are built once globally; the first player to complete a wonder claims it.
 - **Devote to Arts:** Gain one culture token plus one additional token per culture icon in the city's outskirts. Advance on the culture track.
 - **Harvest Resource:** If the city's outskirts contain a resource icon and that resource type is still available on the market board, take one resource token of that type and place it on the civilization sheet. A city may only harvest one resource per action.
