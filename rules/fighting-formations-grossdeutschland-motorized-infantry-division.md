@@ -7,11 +7,11 @@ designer: "Chad Jensen"
 source_pdf: "fighting-formations-grossdeutschland-motorized-infantry-division-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented 40-point initiative pool; wrong turn-end condition (matrix empty not pass/balance); invented Command order; Advance and Sniper orders omitted; Support misnamed Command. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/fighting-formations-grossdeutschland-motorized-infantry-division-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fighting%20Formations%3A%20Grossdeutschland%20Motorized%20Infantry%20Division&game=fighting-formations-grossdeutschland-motorized-infantry-division)
 <!-- verification:end -->

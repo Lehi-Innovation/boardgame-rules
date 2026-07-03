@@ -7,11 +7,11 @@ designer: "Richard Launius, Kevin Wilson"
 source_pdf: "elder-sign-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary claims monsters must be defeated before other adventure tasks; source says tasks can be completed in any order (arrow adventures excepted). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/elder-sign-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Elder%20Sign&game=elder-sign)
 <!-- verification:end -->

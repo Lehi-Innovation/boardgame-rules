@@ -7,11 +7,11 @@ designer: Bill Slavicsek, Mike Mearls, Peter Lee
 source_pdf: dungeons-dragons-castle-ravenloft-board-game-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Level-up requires natural 20 + 5 XP (summary omits natural 20); Villain Phase black-triangle trigger omitted; healing surges are shared group resource not per-hero. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dungeons-dragons-castle-ravenloft-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dungeons%20%26%20Dragons%3A%20Castle%20Ravenloft%20Board%20Game&game=dungeons-dragons-castle-ravenloft-board-game)
 <!-- verification:end -->

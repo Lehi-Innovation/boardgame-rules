@@ -7,14 +7,14 @@ designer: "Justin De Witt"
 source_pdf: "my-first-castle-panic-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # My First Castle Panic
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: "Super Monster requires 2 hits" is invented; source has no Super Monster. Source "Marcher" (moves all monsters + draws extra monster) is omitted entirely. Runner placement rule also wrong.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/my-first-castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20My%20First%20Castle%20Panic&game=my-first-castle-panic)
 <!-- verification:end -->

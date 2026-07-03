@@ -7,14 +7,14 @@ designer: "Matt Wilson"
 source_pdf: "monsterpocalypse-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Monsterpocalypse
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure wrong: summary describes Unit Turn + Monster Turn each turn, but source says choose ONE activation per turn; also "Screen" unit action invented with no source support. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/monsterpocalypse-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Monsterpocalypse&game=monsterpocalypse)
 <!-- verification:end -->

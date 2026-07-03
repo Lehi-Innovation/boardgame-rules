@@ -7,14 +7,14 @@ designer: "Carl Chudyk"
 source_pdf: "innovation-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Innovation
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tiebreaker when score is tied: summary says "first in order of play" but source says tied score goes to most achievements, then draw — no turn-order tiebreaker exists. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/innovation-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Innovation&game=innovation)
 <!-- verification:end -->

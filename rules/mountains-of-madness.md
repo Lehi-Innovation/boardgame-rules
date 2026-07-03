@@ -7,14 +7,14 @@ designer: "Rob Daviau"
 source_pdf: "mountains-of-madness-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Mountains of Madness
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong equipment count (30 vs source 48), win condition invents "reach City" and "Madness/Injury threshold" (source: Relics >= Injuries in deck+discard+hands), loss condition invents "player injury limit" (no such rule exists), turn structure omits MOVEMENT and DRAW phases, cards played asynchronously not simultaneously. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mountains-of-madness-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mountains%20of%20Madness&game=mountains-of-madness)
 <!-- verification:end -->

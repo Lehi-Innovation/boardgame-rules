@@ -7,11 +7,11 @@ designer: "Uwe Rosenberg"
 source_pdf: "le-havre-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Feeding cost source wrong: summary says pay amount on Food production token; source says pay amount on Round card cooking pot symbol (tokens track ship benefits, not owed food). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/le-havre-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Le%20Havre&game=le-havre)
 <!-- verification:end -->

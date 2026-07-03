@@ -7,11 +7,11 @@ designer: "Brad Andres, Erik Dahlman, Nate French"
 source_pdf: "legend-of-the-five-rings-the-card-game-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Win condition wrong: summary says "Break 3 provinces wins"; source says breaking 3 non-stronghold provinces only unlocks access to stronghold, which must then be broken to win. Setup claims first player set by honour bid (lowest wins); source says first player is randomly selected. Fate collection from Stronghold placed in Fate Phase; source places it in Dynasty Phase. Ring return placed in Fate Phase; source places it in Regroup Phase.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/legend-of-the-five-rings-the-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Legend%20of%20the%20Five%20Rings%3A%20The%20Card%20Game&game=legend-of-the-five-rings-the-card-game)
 <!-- verification:end -->

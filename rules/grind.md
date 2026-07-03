@@ -7,11 +7,11 @@ designer: "Michael Faciane"
 source_pdf: "grind-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: White and red dice destinations reversed: summary says white go to dice well and red go to opponent's pool, but source says white (action dice) go to opponent's pool and red (power dice) go to your dice well; invented alternate win condition "reaching target goals ends game immediately" unsupported. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/grind-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Grind&game=grind)
 <!-- verification:end -->

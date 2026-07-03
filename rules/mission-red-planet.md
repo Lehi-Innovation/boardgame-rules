@@ -7,14 +7,14 @@ designer: "Bruno Faidutti, Bruno Cathala"
 source_pdf: "mission-red-planet-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Mission: Red Planet
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Card recycling mechanic invented: summary says "after round 5 all cards return to hand"; source says cards only return when the Recruiter card is played; production tie rule also wrong (remainders stay in zone, not rounded down). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mission-red-planet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mission%3A%20Red%20Planet&game=mission-red-planet)
 <!-- verification:end -->

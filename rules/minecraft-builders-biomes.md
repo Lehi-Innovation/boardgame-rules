@@ -7,14 +7,14 @@ designer: "Ulrich Blum"
 source_pdf: "minecraft-builders-biomes-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Minecraft: Builders & Biomes
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: 3rd scoring round criterion wrong (summary says "biome OR material"; source says "type": decoration/dwelling/animal house/bridge); same-action rule inverted (summary says allowed; source forbids it); "Collect blocks" is a choosable action not a mandatory post-action; end-of-game mob scoring omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/minecraft-builders-biomes-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Minecraft%3A%20Builders%20%26%20Biomes&game=minecraft-builders-biomes)
 <!-- verification:end -->

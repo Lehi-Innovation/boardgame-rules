@@ -7,11 +7,11 @@ designer: "Reiner Knizia"
 source_pdf: "lord-of-the-rings-the-confrontation-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn order reversed (summary: Fellowship goes first; source: Sauron takes first turn); four Fellowship character abilities stripped to "No special ability" (Merry defeats Witch King, Legolas defeats Flying Nazgul, Gimli defeats Orcs, Aragorn can move sideways/backwards to attack); setup placement wrong (summary puts all 9 pieces in home territory; source: 4 home + 5 in forward regions); Gandalf ability misidentified; Flying Nazgul restriction omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/lord-of-the-rings-the-confrontation-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Lord%20of%20the%20Rings%3A%20The%20Confrontation&game=lord-of-the-rings-the-confrontation)
 <!-- verification:end -->

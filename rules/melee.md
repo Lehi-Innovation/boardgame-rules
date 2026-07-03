@@ -7,14 +7,14 @@ designer: "Steve Jackson"
 source_pdf: "melee-rules.pdf"
 extracted_date: "2026-03-21"
 summarized_date: "2026-03-21"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 
 # Melee
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Plate armor MA stated as 4 but source says 6; roll of 3 gives triple damage (not double like roll of 4); 5+ hits causes DX penalty not a fall-avoidance roll; fall threshold is 8 not 5; roll of 16 also auto-misses (omitted). Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/melee-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Melee&game=melee)
 <!-- verification:end -->

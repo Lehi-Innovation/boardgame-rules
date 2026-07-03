@@ -7,11 +7,11 @@ designer: "Travis Jones"
 source_pdf: "pendulum-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Timer durations swapped (green=2min not 45s; black=45s not 2min) and victory condition wrong: summary invents "minimum threshold on all 4 tracks then highest legendary wins" and "most votes" tiebreaker; source requires all tracks into parchment section, uses legendary only in fallback, tiebreaks by most VP in parchment then privilege order. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pendulum-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pendulum&game=pendulum)
 <!-- verification:end -->
