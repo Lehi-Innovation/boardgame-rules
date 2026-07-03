@@ -78,10 +78,10 @@ When a Propaganda card is drawn, all factions execute a sequence:
 
 | Faction | Special Activities |
 |---------|-------------------|
-| **Coalition** | Surge, Transport, Airstrike |
+| **Coalition** | Surge, Air Lift, Air Strike |
 | **Government** | Govern, Transport, Eradicate |
-| **Taliban** | Infiltrate, Suborn, Extort |
-| **Warlords** | Cultivate, Suborn, Traffic |
+| **Taliban** | Extort, Infiltrate, Ambush |
+| **Warlords** | Cultivate, Traffic, Suborn |
 
 ### Key Operations
 - **Train:** Place Government/Coalition forces; build bases.
@@ -89,7 +89,7 @@ When a Propaganda card is drawn, all factions execute a sequence:
 - **Sweep/Patrol:** Activate (reveal) underground guerrillas.
 - **March:** Move insurgent forces.
 - **Assault/Attack:** Remove enemy forces from spaces.
-- **Terror:** Place Terror markers; shift population toward Opposition.
+- **Terror:** Place Terror markers (or Sabotage markers on LoCs); if executed by the Taliban, shift the space 1 level toward Opposition; if executed by Warlords, instead remove any Support or Opposition (set the space to Neutral).
 
 ## Scoring / Victory Conditions
 
@@ -107,10 +107,10 @@ If no faction wins after the final Propaganda card, the faction with the highest
 ## Special Rules & Edge Cases
 
 - **Control:** A Province or Kabul is COIN-Controlled if the Coalition and Government pieces together exceed all other Factions combined; it is Taliban-Controlled if Taliban pieces alone exceed all others combined. If neither applies, the space is uncontrolled. Warlords cannot Control spaces.
-- **Support/Opposition:** Population spaces range from Active Support through Neutral to Active Opposition.
+- **Support/Opposition:** Kabul and each Province with at least 1 Population always shows one of 3 discrete levels -- Support, Neutral, or Opposition -- that can shift during play. LoCs and 0-Population or Pakistan spaces never have Support or Opposition (always Neutral).
 - **Underground vs. Active:** Guerrillas start underground (hidden) and must be Activated (revealed) before they can be targeted by Assault.
 - **Lines of Communication (LoCs):** Roads that can hold forces; important for economic value and government control.
-- **Patronage:** Represents corruption; Government gains resources but Coalition loses support.
+- **Patronage:** A level (0 to 40) representing the Government's success in diverting wealth (e.g., foreign aid) to reward its friends; adds directly to Government victory margin (Total COIN-Controlled Population + Patronage). The Government may voluntarily transfer Patronage to Warlord Resources 1-for-1.
 - **Pakistan:** Neighboring provinces where Taliban can safely base.
 - **Non-Player rules:** Detailed flowcharts for running AI-controlled factions.
 
@@ -118,8 +118,8 @@ If no faction wins after the final Propaganda card, the faction with the highest
 
 | Faction | Color | Force Types |
 |---------|-------|-------------|
-| Coalition | Medium blue | Troops, Bases |
-| Government | Light blue | Troops, Police, Bases |
+| Coalition | Tan | Troops, Bases |
+| Government | Medium blue (Troops) / Light blue (Police) | Troops, Police, Bases |
 | Taliban | Black | Guerrillas, Bases |
 | Warlords | Green | Guerrillas, Bases |
 

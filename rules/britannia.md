@@ -102,7 +102,8 @@ Some major powers (Romans, Angles) can accept submission from weaker nations, ga
 - **Occupying Areas:** Some nations score VP for being the sole occupant of specified areas at any time during certain rounds (including non-scoring rounds).
 - **Eliminating Units:** Some nations score for eliminating specific enemy unit types during specified rounds.
 - **Bretwalda (Rounds 8, 9, 10):** At the end of these rounds, nations vote for Bretwalda. Each nation gets one vote per English area it occupies. The nation that receives a majority (more than half) of all votes cast claims Bretwalda and earns **4 VP**. A nation may only be voted for if it controls at least one English area.
-- **King (Rounds 11, 12, 13, 14, and 16):** If any nation occupies twice as many English areas as any other nation (minimum 4 areas), that nation is King and earns **8 VP** plus a free infantry unit. There is no King in Round 15. Special rules apply in Round 16 (only certain leaders are eligible).
+- **King (Rounds 11, 12, 13, and 14):** If any nation occupies twice as many English areas as any other nation (minimum 4 areas), that nation is King and earns **8 VP** plus a free infantry unit. There is no King in Round 15.
+- **King in Round 16 (endgame kingship):** Determined the same way, but only Harold, William, Harald Hardrada, and Svein Estrithson (if alive) are eligible; if all but one of these leaders are dead, the survivor automatically becomes King. If some other nation holds twice as many English areas as the prospective King's nation, there is no King in Round 16. This endgame kingship earns **10 VP** (no free infantry unit).
 - **Submission:** Romans and Angles gain VP for nations that submit to their rule.
 - **Special objectives:** Nation-specific goals listed on Nation Cards.
 

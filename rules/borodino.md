@@ -31,20 +31,24 @@ Borodino is a two-player hex-and-counter wargame covering the famous 1812 battle
 
 ## Setup
 
-Setup varies by scenario:
+Setup and initial procedures differ significantly between the two scenarios.
 
 ### Battle of Schevardino Redoubt (Introductory)
-Smaller scenario using a portion of the map. French attack Russian advance positions.
+Smaller scenario using a portion of the map. French attack Russian advance positions. This scenario does **not** use the Command and Activation systems of the full game: it uses no Activation Markers and no Orders system — all units are considered "Under Orders" throughout. See the distinct Schevardino turn sequence under Turn Structure below.
 
 ### Battle of Borodino (Full)
-Full map deployment. Russian forces set up in defensive positions along the Kolocha River and around the Fleches and Great Redoubt. French deploy opposite.
+Full map deployment. Units are placed according to a detailed hex-by-hex Order of Battle for each corps/command as given in the scenario's deployment listing; the rulebook specifies hex coordinates only and does not narrate terrain features beyond that.
 
-For each scenario:
-1. Place units per the scenario setup instructions.
-2. Place Activation Markers per scenario. Place Orders Markers on the Orders Track.
-3. The scenario specifies which Activation Groups start Under Orders vs. No Orders.
+For the Borodino scenario, at the start of play:
+1. Place units per the scenario's Order-of-Battle hex listing.
+2. Each player secretly assigns Orders status (Under Orders vs. No Orders) to each Orders Command, marking each with an Orders marker placed near the command on the map or in the Command/Orders box printed on the map. The number of commands a player may place Under Orders is limited by the Overall Commander's Orders Rating for that scenario (5.21-5.23).
+3. Proceed to the Turn Structure below (Activation Markers for all on-map units and reinforcements are placed in The Pool each turn, as part of the Initiative Determination Phase, 5.32).
 
 ## Turn Structure
+
+The sequence below is used by the **Borodino** scenario (the full Command and Activation system). The **Schevardino** scenario uses a distinct, simpler sequence with no Activation Markers, Orders, or Pool — see the "Schevardino Scenario Sequence" subsection at the end of this section.
+
+### Borodino Scenario Sequence
 
 Each game turn follows a fixed sequence:
 
@@ -77,17 +81,24 @@ Each player may activate one Reserve Group.
 ### F. Overall Commander Movement Phase
 Each player may move their Overall Commander.
 
+### Schevardino Scenario Sequence
+This scenario does not use Activation Markers, the Orders system, or The Pool; all units are considered "Under Orders." It consists of five (5) Turns. In each Turn, the French move and fight with all their "active" units, followed by the Russians doing the same with theirs; each side gets to "go" only once per Turn, but may use all of its currently active units.
+
+- **French activation:** Only Compans' Division starts active. At the beginning of each Turn (including the first), the French player may activate one (and only one) additional, previously inactive, command — from Morand's Division, Friant's Division, I Cavalry Corps, II Cavalry Corps, or V Corps. Once activated, a command remains active for the rest of the battle. Exception: V Corps may not be activated until the 3rd Turn at the earliest.
+- **Russian activation:** All Russian units start active and available, except the 2nd Grenadiers and their accompanying VIII Corps infantry, which become active and available starting Turn 2.
+- Victory is determined at the end of Turn 5 (see Scoring / Victory Conditions).
+
 ## Actions
 
 ### Orders and Activation
 - **Under Orders:** Commands operate normally with full movement and combat ability.
 - **No Orders:** Commands are restricted; may attempt to convert to Under Orders when their Activation Marker is drawn.
 - **Orders Delay:** At the start of each turn, players roll to see if corps commanders delay receiving orders (representing communication difficulties). Modified by the Orders Commander's Delay Rating.
-- **Reserve:** In the Reserve Phase, each player may activate one Orders Command. To be eligible, at least one unit in the command must be within the Overall Commander's Orders Range, and no unit in the command may be adjacent to an enemy unit. Units activated as Reserves function as if they have No Orders; they may not roll to change orders, nor may they Rally. Each non-artillery unit that moves during a Reserve Activation must roll for possible Disorder (if roll > Cohesion, the unit is Disordered; already Disordered units Withdraw). The Initiative Player chooses which side activates first during the Reserve Phase.
+- **Reserve:** In the Reserve Phase, each player may activate one Orders Command (the Initiative Player, if any, chooses who goes first; otherwise each player rolls a die, high roll going first). To be eligible, at least one unit of the Orders Command must be within the Overall Commander's Orders Range. Within an activated command, only units not adjacent to an enemy unit may actually be activated as Reserves — units adjacent to an enemy are excluded from acting, but the rest of the command's eligible (non-adjacent) units may still be activated. The Reserve Phase may not be used to activate commands that did not have an Activation Marker in the Pool. Units activated as Reserves function as if they have No Orders; they may not roll to change orders, nor may they Rally. Each non-artillery unit that moves during a Reserve Activation must roll for possible Disorder (Disordered if roll > Cohesion; an already-Disordered unit that fails this roll instead Withdraws). Artillery does not roll for Disorder when moving as a Reserve, but does roll if it fires.
 
 ### Movement
 - Movement points vary by unit type (infantry, cavalry, artillery).
-- Terrain affects movement costs (woods, rivers, villages, fieldworks, etc.).
+- Terrain affects movement costs (woods, cultivated ground, villages, roads/paths, streams/fords, elevation, redoubts, etc.).
 - **Horse Artillery:** Movement allowance of 8 (most mobile artillery).
 - **Zones of Control (ZOC):** Combat units exert ZOC into adjacent hexes, affecting enemy movement and retreat.
 
@@ -131,21 +142,23 @@ Victory conditions vary by scenario:
 
 - **Kutuzov's Orders Rating:** Varies depending on which Russian army he is activating.
 - **Napoleon's Orders:** Napoleon does not roll for Orders Delay (he issues orders directly).
-- **Fieldworks:** The Fleches and Great Redoubt provide significant defensive bonuses. Once captured, they provide reduced bonuses to the occupier.
+- **Redoubts, Villages & Castles:** Infantry units (only) in these hexes have frontal facing into all six hexes surrounding them, meaning they may fire/shock in any direction rather than only through their normal Frontal hexsides (6.11).
 - **Cohesion:** The most important unit rating, representing morale, training, and weaponry combined. Used for rally, recovery, and combat resolution.
 - **Stacking:** Generally 2 units per hex, except brigades from the same parent unit plus 1 artillery (3 units total).
-- **Facing:** Units have a facing that affects combat and ZOC. Flank and rear attacks gain significant bonuses.
+- **Facing:** Facing affects combat only (it has no effect on movement or Zones of Control, and a unit may change facing freely during or after movement). A unit may fire or shock only from its Frontal hexsides; a unit attacked through its Rear hexes suffers negative effects.
 - **Group Morale/Collapse:** When an Activation Group takes sufficient losses, it may Collapse, causing all units in the group to become Disordered and potentially withdraw.
 
 ## Player Reference
 
-**Sequence of Play:**
+**Sequence of Play (Borodino scenario):**
 1. Orders Phase (delay rolls, assign orders)
 2. Initiative Phase (roll D10 + Commander rating; winner picks first activation)
 3. Activation Phase (draw markers, execute: Fire -> Move -> Shock -> Rally)
 4. Reserve Phase (activate 1 reserve group each)
 5. Group Morale Phase (check collapse, recovery attempts)
 6. Overall Commander Movement
+
+**Sequence of Play (Schevardino scenario):** No AM/Orders/Pool — 5 Turns, each Turn the French move and fight with all active units, then the Russians do the same (see Turn Structure for the command-activation-by-turn details).
 
 **Unit Types:**
 

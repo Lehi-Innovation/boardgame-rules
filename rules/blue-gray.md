@@ -50,7 +50,7 @@ Each Game-Turn consists of alternating Player-Turns:
 
 - **Movement**: All units have a Movement Allowance of 6 Movement Points. Clear terrain costs 1 MP per hex. Other terrain types cost more (see Terrain Effects Chart). Road-to-road movement costs only 1 MP regardless of terrain. Trail-to-trail costs 2 MP in forest/rough or 1 MP in clear. Movement is consecutive hex by hex; no skipping hexes. Unused MPs cannot be saved or transferred.
 - **Zones of Control (ZOC)**: The six hexes surrounding a unit are its Zone of Control. Units cannot exit enemy ZOC during movement (only during retreat/advance from combat). Units in enemy ZOC must attack during Combat Phase.
-- **Combat**: The Phasing Player totals attacking strength points against defending strength points to determine odds ratio. Roll one die on the CRT. Results: AE (Attacker Eliminated), AR (Attacker Retreats), EX (Exchange), DR (Defender Retreats), DE (Defender Eliminated).
+- **Combat**: The Phasing Player totals attacking strength points against defending strength points and expresses the comparison as a ratio (attacking Strength Points divided by defending Strength Points), simplified by rounding down to the nearest odds ratio on the Combat Results Table — rounding is always in favor of the defender (e.g., 13 attacking Strength Points vs. 4 defending Strength Points is 3.25-to-1, rounded down to 3-to-1, never up). Roll one die on the CRT. Results: AE (Attacker Eliminated), AR (Attacker Retreats), EX (Exchange), DR (Defender Retreats), DE (Defender Eliminated).
 - **Multiple Unit Combat**: Multiple units can attack a single hex; a single unit can only participate in one attack per Combat Phase. All units attacking a single hex must combine their strengths.
 - **Diversionary Attacks**: A unit may attack at poor odds so that the bulk of the attacking force can be concentrated against another target at higher odds. These are called "Diversionary" or "Holding Attacks."
 - **Artillery**: May conduct Bombardment Attacks at range up to 3 hexes (requires Line of Sight, not forced to attack when in range), Combined Attacks with adjacent friendly units, or Adjacent Attacks when in an enemy controlled hex. Combat odds are determined the same way as any other attack. When bombarding from a non-adjacent hex, artillery units are never destroyed or forced to retreat by combat results (they do not suffer combat results). Adjacent artillery is treated like infantry and suffers all combat results. Artillery defends normally when attacked.
@@ -84,7 +84,7 @@ Victory conditions are specified in the Exclusive Rules for each specific battle
 |---|---|
 | AE | Attacker eliminated |
 | AR | Attacker retreats 1 hex |
-| EX | Both sides lose equal strength |
+| EX | Defender's entire stack eliminated; Attacker must eliminate his own participating units whose combined printed Strength is at least equal to (may exceed) the eliminated defender's total Strength |
 | DR | Defender retreats 1 hex |
 | DE | Defender eliminated |
 

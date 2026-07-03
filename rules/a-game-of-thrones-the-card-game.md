@@ -45,20 +45,19 @@ Each game round consists of 7 phases:
 ### 1. Plot Phase
 - Each player simultaneously selects and reveals 1 plot card from their plot deck.
 - Compare initiative values; the player with the highest initiative wins initiative and **chooses which player becomes first player** (need not choose themselves). Tiebreaker: tied player with the lowest power total wins initiative; if still tied, break randomly.
-- Collect gold equal to plot card's gold value (modified by locations/abilities).
 - Resolve "When Revealed" effects.
 
 ### 2. Draw Phase
 - Each player draws 2 cards from their draw deck.
 
 ### 3. Marshalling Phase
-- Starting with first player, players alternate playing cards from hand by paying gold costs.
-- Characters, locations, and attachments enter play.
+- Starting with the first player, players take turns becoming the active player, one at a time (not simultaneously); when a player becomes active, they first collect gold (income) equal to their revealed plot card's gold value (modified by locations/abilities).
+- During each player's turn as active player, all players may use actions, but only the active player may marshal (play) a character, location, or attachment card from hand by paying its gold cost.
 - Limited cards (one per round).
 
 ### 4. Challenges Phase
 - Starting with first player, each player may initiate up to 3 challenges (1 of each type):
-  - **Military:** Win to choose and kill defending player's characters (claim value).
+  - **Military:** Win forces the defending player to choose and kill a number of their own characters equal to the claim value.
   - **Intrigue:** Win to force defender to randomly discard cards from hand (claim value).
   - **Power:** Win to move power tokens from opponent to your faction card (claim value).
 - Attacker kneels (exhausts) characters to attack; defender kneels characters to defend.
@@ -114,9 +113,9 @@ Each game round consists of 7 phases:
 
 | Phase Order | Phase |
 |---|---|
-| 1 | Plot (reveal, initiative, gold) |
+| 1 | Plot (reveal, initiative) |
 | 2 | Draw (2 cards) |
-| 3 | Marshalling (play cards) |
+| 3 | Marshalling (collect gold per active player, play cards) |
 | 4 | Challenges (Military, Intrigue, Power) |
 | 5 | Dominance (standing STR + gold) |
 | 6 | Standing (ready all) |

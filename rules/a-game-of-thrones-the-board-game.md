@@ -41,7 +41,7 @@ Each game round consists of three phases:
 
 ### 1. Westeros Phase (skipped in Round 1)
 Draw 1 card from each of the 3 Westeros decks. Resolve in order:
-- Deck I: Mustering, Supply
+- Deck I: Mustering (recruit new units — see "Mustering" below), Supply (adjust army-size limits — see "Supply" below)
 - Deck II: Game of Thrones (collect Power), Clash of Kings (bid for influence)
 - Deck III: Wildlings attack, special events
 
@@ -84,6 +84,15 @@ Resolve orders in this sequence:
 
 ## Special Rules & Edge Cases
 
+### Mustering
+- Resolved by the "Mustering" Westeros card (Deck I): each player, in turn order, may recruit new units into each area he controls that contains a Castle or Stronghold.
+- Each Castle or Stronghold provides mustering points, spendable only in its own area: Strongholds provide 2 points of mustering; Castles provide 1 point of mustering.
+- Mustering costs: Footman costs 1 point; Ship costs 1 point; Knight costs 2 points (or 1 point if upgraded from a Footman); Siege Engine costs 2 points (or 1 point if upgraded from a Footman).
+- A Footman already in a mustering area may be upgraded to (replaced by) a Knight or Siege Engine for a cost of 1 mustering point.
+- A player may never muster or upgrade a unit that would create or expand an army beyond his actual Supply limit. Any mustering points not spent in an area are lost and do not carry over to a future Mustering card.
+- Each player must resolve all his mustering (for every area he controls containing a Castle or Stronghold) before the next player in turn order begins his own mustering.
+- Ship units may only be mustered into a port connected to the mustering area or into an adjacent sea area (never directly into a land area), and never into a sea area containing one or more enemy Ships. If a Castle/Stronghold area has no port and no eligible adjacent sea area, no Ships can be mustered there.
+
 ### Three Influence Tracks
 | Track | Holder of #1 Position |
 |-------|----------------------|
@@ -125,14 +134,16 @@ Resolve orders in this sequence:
 | Siege Engine | 4 when attacking/supporting an attack against a Castle or Stronghold; 0 otherwise |
 | Ship | 1 |
 
-| House | Starting Area |
+| House | Home Area |
 |-------|--------------|
-| Stark | North |
-| Lannister | Westerlands |
-| Baratheon | Dragonstone |
-| Greyjoy | Iron Islands |
-| Martell | Dorne |
-| Tyrell | Highgarden |
+| Stark | Winterfell |
+| Lannister | Westerlands* |
+| Baratheon | Dragonstone* |
+| Greyjoy | Iron Islands* |
+| Martell | Dorne* |
+| Tyrell | Highgarden* |
+
+*Only House Stark's home area (Winterfell) is explicitly named in the extracted rulebook text ("Winterfell is the home area of House Stark"). Each House's starting units and home area are otherwise detailed on that House's individual player screen, which is not part of the extracted rulebook text — the other rows above are unconfirmed against the source and should be treated as low-confidence.
 
 | Victory | 7 Castles/Strongholds = Instant Win |
 |---------|------|

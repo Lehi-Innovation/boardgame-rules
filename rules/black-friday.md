@@ -118,8 +118,9 @@ Triggered when a track (share purchase, gold purchase, or share sale) reaches it
 - Its assets (cash and shares) are always visible to all players.
 - **Action priority:**
   1. **Buy shares or buy gold** — chosen as long as it has enough cash to buy the maximum allowed by the current limit. It always buys the cheaper offer (shares vs. gold bars). When buying shares it buys the cheapest color first.
-  2. **Sell shares** — chosen when it cannot afford the maximum buy limit; sells the most expensive color(s) first.
-  3. **Market manipulation** — if it has no shares to sell and cannot afford anything, it places 1 share from the market on the gold purchase track.
+  2. **Sell shares** — chosen when it cannot afford the maximum buy limit, as long as it still has shares available to sell; sells the most expensive color(s) first.
+  3. **Partial buy** — if it has sold all its shares and still cannot afford the maximum, it buys as much as possible of the cheapest offer (shares or gold) with its remaining cash.
+  4. **Market manipulation** — if there is not enough cash to buy anything at all (not even a partial amount), it places 1 share from the market on the gold purchase track (cheapest color first).
 - The M.I.B.S. sells all remaining shares at game end.
 
 ### Black Shares

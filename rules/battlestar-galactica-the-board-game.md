@@ -93,17 +93,16 @@ If the Crisis Card has the jump preparation icon, advance the fleet marker one s
 ## Actions
 
 ### Key Location Actions
-- **Command (Galactica)**: Launch up to 2 unmanned vipers
+- **Command (Galactica)**: Activate an unmanned viper — launch one from the Reserves, move it to an adjacent space area, or attack with it (roll die). Each viper may be activated any number of times during a player's turn, but players may not activate a viper piloted by another player; piloted vipers are activated via the Hangar Deck / normal turn actions instead, not Command.
 - **FTL Control (Galactica)**: Force an early jump if the fleet marker is on a blue space. Roll die; on 7-8 no penalty, on 6 or lower lose population equal to the number printed on the current space of the Jump Preparation track.
 - **Weapons Control (Galactica)**: Attack a Cylon ship (roll die)
-- **Communications (Galactica)**: Look at back of 2 civilian ships; may move them
-- **Admiral's Quarters (Galactica)**: Attempt to send a player to the brig
+- **Admiral's Quarters (Galactica)**: The current player accuses any character; a difficulty-7 leadership/tactics skill check is resolved — if it passes, the accused character is moved to the Brig
 - **Armory (Galactica)**: Attack a centurion on the boarding track
 - **Hangar Deck (Galactica)**: Pilot a viper — move character token to this location to launch and pilot a viper (character token is removed from the board and placed on the character sheet while piloting)
-- **Sickbay (Galactica)**: Hazard location; draw only 1 Skill Card per turn; players may move out freely.
-- **Brig (Galactica)**: Hazard location; draw only 1 Skill Card per turn; may only leave by passing a difficulty-7 politics/tactics skill check.
-- **Press Room (Colonial One)**: Draw Quorum Card (President only)
-- **Administration (Colonial One)**: Gives president title to another player
+- **Sickbay (Galactica)**: Hazard location — characters are sent here by game effects (e.g. from a damaged location, or when a piloted viper is destroyed); players never move here voluntarily, but may move out freely on a later turn.
+- **Brig (Galactica)**: Hazard location — characters are sent here by game effects; players never move here voluntarily, and may only leave by passing a difficulty-7 politics/tactics skill check.
+- **President's Office (Colonial One)**: Draw a Quorum Card (President only; the President Title Card itself also grants this same ability)
+- **Administration (Colonial One)**: The current player nominates any player for the presidency; a difficulty-5 politics/leadership skill check is resolved — if it passes, the nominee claims the President title
 
 ### Skill Checks
 1. Read the Crisis Card aloud.
@@ -142,8 +141,9 @@ When dealt, the player must immediately reveal it. If at least 1 resource is hal
 - **Jumping**: Admiral chooses from 2 Destination Cards; distance and possible crises vary.
 - **Galactica Damage**: Damage tokens destroy locations; characters in destroyed locations go to Sickbay.
 - **Resource Zero**: If any resource reaches 0 at the end of a player's turn, humans lose immediately.
-- **Sickbay**: Draw only 1 Skill Card on your turn. Players may move out of Sickbay freely (it is not a locked location).
-- **Brig**: Draw only 1 Skill Card. Can only attempt a skill check to escape (difficulty 7, politics/tactics).
+- **Sickbay**: Hazard location — characters are sent here by game effects and never move here voluntarily. Players may move out of Sickbay freely (it is not a locked location).
+- **Brig**: Hazard location — characters are sent here by game effects and never move here voluntarily. Can only leave by passing a skill check to escape (difficulty 7, politics/tactics).
+- **Skill Card Draws**: Players always draw all Skill Cards indicated on their character sheet at the start of their turn, regardless of current hand size — there is no per-location or per-turn draw cap.
 - **Civilian Ships**: Destroyed civilian ships lose the resources shown on their backs.
 
 ## Player Reference
@@ -163,15 +163,6 @@ When dealt, the player must immediately reveal it. If at least 1 resource is hal
 | Fuel | 8 |
 | Morale | 10 |
 | Population | 12 |
-
-### Skill Check Colors
-| Type | Color |
-|------|-------|
-| Leadership | Purple |
-| Tactics | Red |
-| Politics | Yellow |
-| Piloting | Orange |
-| Engineering | Blue |
 
 ### Key Thresholds
 - Distance to win: 8+ then final jump

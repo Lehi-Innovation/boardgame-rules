@@ -46,7 +46,7 @@ French at-start pieces are inactive (cannot move) until activated:
 - Automatically activated if an adjacent locale is enemy-occupied at the start of the French player's turn.
 - French player may select pieces for activation: 1 piece on the very first turn; 2 pieces per turn thereafter, provided a French setup locale was ever enemy-occupied or it is 11:00 AM or later.
 
-Once activated, a piece stays activated. French reinforcements enter already activated.
+Once activated, a piece stays activated. French reinforcements do not need to be activated; they can move normally when they enter play. An inactive (unactivated) piece may still block or retreat from maneuver attacks even though it cannot move.
 
 ## Turn Structure
 
@@ -66,18 +66,25 @@ After each round, advance the Time Track marker by one space.
 
 ### Movement
 - Each piece may either move within its locale (reserve ↔ blocking) or move to an adjacent locale.
-- Moving to a non-adjacent locale in one turn requires road movement (up to 3 locales along a road; road moves are always single pieces).
+- Moving to a non-adjacent locale in one turn requires road movement: the piece must start its turn in reserve in a locale with a road, and every approach/locale it passes through must be connected by an unbroken road and not occupied by enemy pieces. Road moves are always single pieces; a piece is in reserve at the end of a road move.
+- **Road capacity:** only 3 pieces may cross any one approach by any one road in a single turn. The first piece to cross is on its first move of the turn and may move 3 locales; the second piece is on its second move and may move 2 locales; the third piece is on its third move and may move 1 locale. Moves must be made in order (a piece on an earlier move cannot cross after a piece on a later move) and in the same direction; a piece may wait on one of its moves so another piece can use the road. An approach crossed by more than one road has independent capacity per road.
 - **Primary road movement:** unlimited per turn; does not count against the command limit.
 - Cannot exceed a locale's printed capacity limit (applies to the entire locale — no sub-limits for reserve vs. blocking).
 - A piece may block an approach only if the locale opposite that approach is enemy-occupied. If enemy pieces leave, the blocking pieces must move into reserve.
 - Cannot move across an impassable approach or an approach blocked by enemy pieces (blocked approaches may only be crossed by assault).
 
+### Reinforcement Entry
+- A reinforcement piece enters the map using road movement from its entry point, following the same road-capacity rule as normal road movement: the first piece to enter from a given entry point in a turn is on its first move and may move 3 locales, the second is on its second move and may move 2 locales, and the third is on its third move and may move 1 locale.
+- A piece may not enter if the entry locale is at its capacity limit or enemy-occupied; it must wait until the condition no longer applies. If more pieces are waiting than can enter in one turn, the remainder enter in later turns.
+- Order of entry among a player's own reinforcements is up to that player, and entry is entirely optional each turn — a player is never required to bring in reinforcements just because he is able to.
+- **Austrian pontoon bridge exception:** in addition to road entry, the Austrian player may bring in one additional piece per turn using non-road movement (representing the historical Bormida pontoon bridge). This piece is likewise barred from entering if the entry locale is at capacity or enemy-occupied, and it counts as its own separate group for the command limit.
+
 ### Maneuver Attacks
 A maneuver attack occurs when friendly pieces move into an enemy-occupied locale across an approach that is **not** blocked by enemy pieces:
-- The **defender** may choose to block the attack by moving one or more reserve pieces in that locale to block the approach. (This does not count against the defender's command limit.)
+- **Blocking is possible only if both conditions hold:** (1) the attacking pieces started their turn in reserve — if the attacking pieces started their turn already blocking the approach, the attack cannot be blocked; and (2) the enemy (defending) player has one or more pieces in reserve in the locale. Only when both conditions are met may the defender choose to block, by moving one or more of those reserve pieces to block the approach. (This does not count against the defender's command limit.)
 - **Blocked result:** The attacker may leave pieces in place, advance to block the opposite approach, or split the group (costs an extra command). No strength comparison — the block simply stops the advance.
-- **Successful result:** If the defender cannot or does not block, all defending pieces in the locale must retreat (see Retreats). The attacking pieces then move into reserve in that locale.
-- *Note: There is no strength comparison in a maneuver attack. The attack either is blocked by the defender's choice or it succeeds and forces a retreat.*
+- **Successful result:** If the two conditions above are not both met, or the defender chooses not to block, all defending pieces in the locale must retreat (see Retreats). The attacking pieces then move into reserve in that locale.
+- *Note: There is no strength comparison in a maneuver attack. The attack either is blocked by the defender's choice (only possible when both gating conditions are met) or it succeeds and forces a retreat.*
 
 ### Artillery Bombardment
 - Declared at the end of a turn (step 4); resolved at the start of the next turn (step 1). Artillery can fire only every other turn (may not declare while a bombardment is still pending).
@@ -103,6 +110,11 @@ Assault resolution sequence:
 10. **Outcome:** If defenders won: attacking pieces withdraw into reserve in their own locale; defenders remain. If attackers won: all defending player's pieces in the locale must retreat; attacking pieces advance into reserve in the assaulted locale (cavalry may then use continuation).
 
 *Losses are applied first to leading pieces, then to non-leaders. The enemy player distributes losses among leaders; the friendly player distributes among non-leaders. Losses cannot exceed the strength of participating pieces.*
+
+**Movement restrictions around assaults:**
+- A piece may not conduct an assault and move in the same turn; if a piece conducts an assault, it may not move until the next turn.
+- If a locale is taken by assault, no other friendly pieces may move into that locale that turn other than those that participated in the assault (assaulting cavalry may still use continuation into that locale as usual).
+- If the attacking pieces are defeated in an assault, no friendly pieces may move across that same approach for the rest of that turn, even if the defending pieces blocking it were eliminated by the assault. Friendly pieces may still assault or move into the locale across other approaches.
 
 ### Retreats
 Forced retreat (from maneuver attack or lost assault) requires all of the affected player's pieces in the locale to retreat. Retreats do not count against the command limit. Pieces are turned face-up at the start of the retreat.
@@ -185,4 +197,4 @@ A cavalry piece that ends its move in reserve may continue and block an approach
 | Austrian holds ≥2 objectives from ≥2 colors | Austrian |
 | Austrian fails territorial condition | French |
 
-**Game Length:** 16 rounds (6:00 AM – 9:00 PM)
+**Game Length:** 16 rounds, each representing one hour of the day of battle; the Time Track marker starts on 6:00 AM at setup (the source does not state an explicit end time).

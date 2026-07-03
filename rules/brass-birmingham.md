@@ -42,7 +42,7 @@ Brass: Birmingham is an economic strategy game set during the Industrial Revolut
 1. Place board, set up Merchant tiles, fill Coal Market and Iron Market.
 2. Each player takes: Player Mat, 17 pounds, Character tile, Link tiles, Industry tiles (stacked on mat slots with black side down), VP marker on 0, Income marker on 10.
 3. Deal 8 cards to each player.
-4. Draw 1 additional card facedown (Scout pile) in Birmingham variant.
+4. Each player draws 1 additional card from the Draw Deck and places it face down in their player area (mandatory step for every player).
 5. Shuffle Character tiles randomly on Turn Order Track.
 6. Remove Location cards by player count: 2P remove blue + teal; 3P remove teal; 4P use all.
 
@@ -148,7 +148,11 @@ Two locations are connected if a route of Link tiles (any player's) connects the
 - Consumed from your own breweries or connected breweries (any player's).
 
 ### Overbuilding
-You may build a higher-level Industry tile on top of an existing tile (yours or opponent's) if certain conditions are met (must be your own tile or a lower-level tile).
+You may replace an already-placed Industry tile with a higher-level tile of the same industry type (still paying the normal build cost):
+- **Your own tile:** You may Overbuild any Industry tile of yours. Any iron/coal cubes on the tile being replaced go back into the general supply.
+- **An opponent's tile:** You may Overbuild only a Coal Mine or an Iron Works of theirs, and only if there are zero resource cubes of that same type anywhere on the board, including in its Market. Overbuilding an opponent's Cotton Mill, Manufacturer, Pottery, or Brewery is never allowed, regardless of level.
+
+Overbuilt Industry tiles are removed from the game (returned to the box) and never score VPs; the owner does not lose income or VPs when their tile is overbuilt.
 
 ### Negative Income
 If your income is negative, you must pay that amount. If unable, sell Industry tiles from board at half cost. If still short, lose 1 VP per pound short.
@@ -157,7 +161,9 @@ If your income is negative, you must pay that amount. If unable, sell Industry t
 Two special brewery locations that cannot be built with Wild Location cards.
 
 ### Market Mechanics
-When Coal Mines or Iron Works are built connected to markets, cubes move to market spaces (most expensive first), earning money for the builder.
+- **Coal Mine:** Only if connected to any Merchant space (even one without a Merchant tile) does building it trigger moving cubes from the tile to the Coal Market.
+- **Iron Works:** Always triggers the market move immediately upon being built, regardless of network connection.
+- When triggered, move as many cubes as possible from the Industry tile to available Market spaces (filling the most expensive spaces first), collecting the money shown for each cube moved. If the last cube is moved from the tile, flip it and advance the Income Marker by the amount shown on the tile.
 
 ## Player Reference
 

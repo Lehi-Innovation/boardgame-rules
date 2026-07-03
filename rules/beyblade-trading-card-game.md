@@ -24,9 +24,9 @@ The Beyblade Trading Card Game is a collectible card game published by Decipher 
 ## Components
 
 - **Blade cards** — one per deck; your Beyblade with a spin strength value and a color bar showing battle sequence
-- **Action cards** — played to start a battle; one of four colors (red, yellow, green, blue)
-- **Character cards** — support cards showing characters; tested before use
-- **Event cards** — one-time effect cards; tested before use
+- **Action cards** — one of four colors (red, yellow, green, blue); in Basic play works like any other card (starts a battle); in Advanced play, only Actions start a battle
+- **Character cards** — support cards showing characters; in Basic play works like any other card (starts a battle); in Advanced play, must be tested instead of starting a battle
+- **Event cards** — one-time effect cards; in Basic play works like any other card (starts a battle); in Advanced play, must be tested instead of starting a battle
 - Spin pile — a face-down stack of cards (sized by Blade's spin strength) representing your Beyblade's spinning energy
 
 ## Setup
@@ -41,8 +41,8 @@ The Beyblade Trading Card Game is a collectible card game published by Decipher 
 
 On your turn:
 1. **Play a card** from your hand (this is mandatory; you may pass instead — see Passing).
-   - **Action card** → starts a battle with an opponent of your choice.
-   - **Character or Event card** → must be tested (see Advanced Rules).
+   - **In Basic play:** any card — Action, Character, or Event alike — is played face up to start a battle with an opponent of your choice; card type doesn't matter, and there is no testing mechanic.
+   - **In Advanced play:** only an **Action** card starts a battle. If you play a Character or an Event instead, it must be tested rather than starting a battle (see Testing a Character or Event, under Actions).
 2. **Battle resolves** (if started): attacker and defender alternate playing cards in color sequence until one player cannot or chooses not to stop; that player loses the battle.
 3. **Refill hands**: every player (not just the active player) draws cards from their own deck until they have 5 cards in hand. If you have more than 5 (from game text effects), discard down to 5.
 4. Turn passes to the next player to the left.
@@ -54,7 +54,7 @@ On your turn:
 ## Actions
 
 ### Starting a Battle (Attacker)
-- Play an Action card face-up in front of you to form your **battle pile** and declare a defender.
+- Play a card face-up in front of you to form your **battle pile** and declare a defender. In Basic play, any card (Action, Character, or Event) can be played this way; in Advanced play, only an Action card starts a battle this way — Characters and Events are tested instead (see Testing a Character or Event, below).
 - The defender must play a card of the correct next color from the Blade's color bar to stop you; if they cannot (or choose not to), you win the battle.
 
 ### Color Sequence
@@ -75,8 +75,15 @@ When one player cannot (or chooses not to) play the required color:
 When comparing battle edges after a battle, only the top card of each player's battle pile is used for the comparison.
 
 ### Basic vs. Advanced Rules
-- **Basic game:** ignore all game text on cards; battles are purely color-sequence and battle-edge matching. Anyone can play even without reading the cards.
-- **Advanced game:** game text on cards is used. Characters are tested and may remain in front of you providing ongoing bonuses. Events are tested for a one-time effect. Action game text may trigger "when played" (π symbol) or "when you win with this card on top" (∑ symbol).
+- **Basic game:** ignore all game text on cards; any card (Action, Character, or Event) can be played to start a battle in exactly the same way, and there is no testing mechanic at all. Battles are purely color-sequence and battle-edge matching. Anyone can play even without reading the cards.
+- **Advanced game:** game text on cards is used, and playing a card works differently depending on its type — only an **Action** starts a battle; a **Character** or **Event** is tested instead (see Testing a Character or Event, below). Characters that pass their test remain in front of you providing ongoing bonuses; Events that pass their test resolve immediately, one time only. Action game text may trigger "when played" (π symbol) or "when you win with this card on top" (∑ symbol).
+
+### Testing a Character or Event (Advanced)
+- Instead of starting a battle, show the Character or Event to your opponent; they take and show the top card of their own deck (if you have more than one opponent, you choose one to do this).
+- Line your card up against the opponent's card and compare battle edges, looking for your card to score a hit on the opponent's card.
+- **Character:** if it scores a hit, it passes the test — put it face up in front of you, where its game text stays active until it is removed (placed in its owner's discard pile). If it fails to score a hit, discard it; you get no bonus. You cannot test a Character if you already have another Character with the same title in front of you.
+- **Event:** if it scores a hit, it passes the test — resolve its one-time effect immediately, then discard it. If it fails to score a hit, discard it with no effect.
+- Either way, your opponent discards the test card they drew, and you then proceed to refill your hand — testing a card does not start a battle.
 
 ## Scoring / Victory Conditions
 
@@ -92,7 +99,7 @@ When comparing battle edges after a battle, only the top card of each player's b
 - **Characters in front of you:** in the advanced game, Characters that pass their test stay in front of you and their game text remains active until the Character is removed (placed in its owner's discard pile).
 - **Deck building:** minimum 60 cards; exactly one Blade; no more than four copies of any card with the same title; no color restriction, but a balanced mix of all four colors is recommended.
 - **Competitive play (best-of-three):** loser of the previous game goes first in the next game.
-- **Multiple opponents:** when you have more than one opponent, you choose which one is the defender when you start a battle.
+- **Multiple opponents:** when you have more than one opponent, you choose which one is the defender when you start a battle, and (in Advanced play) which one shows a card when you test a Character or Event.
 
 ## Player Reference
 

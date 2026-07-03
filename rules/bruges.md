@@ -53,7 +53,7 @@ Each round has 4 phases:
 ### Phase 1: Draw Cards
 Starting with the start player, each player draws cards (one at a time from either draw pile) until they have 5 cards in hand. Only look at cards once your hand is full.
 
-**Extra draw pile trigger:** When one draw pile empties, immediately replace it with the extra draw pile. The round in which this happens is the **final round**.
+**Extra draw pile trigger:** When one draw pile empties, immediately replace it with the extra draw pile. The round in which this happens is the **final round**. Exception: a pile usually runs out during Phase 1, but some person cards let you draw cards during Phase 3 — if a pile empties then, the extra draw pile enters play immediately, and the following round is the final round.
 
 ### Phase 2: Roll Dice
 The start player rolls all 5 dice and places them on the board.
@@ -82,7 +82,9 @@ Play 1 card. Take guilders from the bank equal to the value shown on the matchin
 Play 1 card. Discard 1 Threat marker of the played card's color. Gain 1 point (advance scoring pawn 1 space) each time you discard a threat.
 
 ### IV. Build 1 Canal Token
-Play 1 card matching the color of the canal space you wish to build on. Pay the number of guilders shown on that canal space. Place 1 canal token on that space. If a player reaches space 3 of a section, they score 3 points at game end. Completing a full canal section earns the topmost Statue token (max 2 statues per player).
+Each player's guard house has 2 canal sections leading out from it (one heading left, one heading right), each with 5 spaces, for a total of 10 canal spaces per player. **A player's canal sections may only be built on by their owner** (the player whose seal is on that guard house) — you cannot build on another player's canals. A player's first built canal must be in one of her own 2 sections (adjacent to her seal). On each subsequent canal-building action, the player may continue building in the direction she started or switch to her other section — she always has 2 options for where to build, unless one of her sections is already completed.
+
+To build, play 1 card matching the color of the canal space you wish to build on (among your own available spaces). Pay the number of guilders shown on that canal space. Place 1 canal token on that space. If a player reaches space 3 of a section, they score 3 points at game end. Completing a full canal section earns the topmost Statue token (max 2 statues per player).
 
 ### V. Build 1 House
 Play 1 card. Pay 1 worker of the played card's color. Place the card face-down in your play area as a house of that color.
@@ -93,15 +95,17 @@ Play 1 card onto one of your empty houses (the person may be a different color t
 ## Scoring / Victory Conditions
 
 ### Threat Penalties (3rd marker of a color)
+Each color has its own penalty. The source text confirms only two color-to-penalty pairings explicitly (via worked examples): **Red = Fire** and **Yellow = Raid**. The extracted text never states which color corresponds to Flood, Plague, or Intrigue — those mappings below are unconfirmed and should be re-checked against the physical rulebook's color-coded icons before relying on them.
+
 | Color | Threat Name | Penalty |
 |-------|-------------|---------|
-| Blue | Flood | Return ALL your workers to the supply |
-| Brown | Plague | Discard 1 person of your choice from your play area |
-| Red | Fire | Discard 1 built house OR 1 built canal token (if you have neither, no loss); if a house with a person is discarded, take that person back into hand |
-| Purple | Intrigue | Lose 3 points (score cannot go below 0) |
-| Yellow | Raid | Return ALL your guilders to the bank |
+| Unconfirmed | Flood | Return ALL your workers to the supply |
+| Unconfirmed | Plague | Discard 1 person of your choice from your play area (not from hand) |
+| Red (confirmed) | Fire | Discard 1 built house OR 1 built canal token (if you have neither, no loss); if a house with a person is discarded, take that person back into hand |
+| Unconfirmed | Intrigue | Lose 3 points (score cannot go below 0) |
+| Yellow (confirmed) | Raid | Return ALL your guilders to the bank |
 
-After resolving the penalty, return all 3 threat markers of that color to the supply. Players do not score points when returning threat markers after suffering damage.
+After resolving the penalty, return all 3 threat markers of that color to the supply (the next marker of that color received will count as the player's "first" again). Players do not score points when returning threat markers after suffering damage. A player may suffer multiple penalties in the same turn; if so, that player chooses the order in which they are applied.
 
 ### End-Game Scoring
 Score in any order:
@@ -121,7 +125,7 @@ Score in any order:
 - Multiple actions of the same type can be performed in a single round.
 - A person may be placed in a house of any color — the person need not match the house color. You cannot recruit without an available empty house.
 - Person types: Immediate (activates on recruitment), Ongoing (always active), Activated (use once per round), End-game (scores at game end).
-- Guard houses: each has a round box for player seals. Some person abilities interact with guard house positions.
+- Guard houses: each has a round box for the player's small seal, marking the guard house from which that player's 2 personal canal sections extend (one left, one right).
 
 ## Player Reference
 
@@ -133,7 +137,7 @@ Score in any order:
 | I | Take workers | Card | 2 workers of card color |
 | II | Take guilders | Card | Guilders = value on matching-color die |
 | III | Remove threat | Card | Discard 1 matching-color threat; gain 1 point |
-| IV | Build canal | Card (matching canal space color) + guilders shown on that space | Place canal token on chosen space |
+| IV | Build canal | Card (matching canal space color) + guilders shown on that space | Place canal token on one of your own 2 available canal spaces (owner-only; first build adjacent to your seal, then continue that section or switch to the other) |
 | V | Build house | Card + 1 matching worker | Place card face-down as house (scores 1 VP at end) |
 | VI | Recruit person | Card onto empty house + guilders (person's printed cost) | Person may differ from house color; scores VP at end |
 

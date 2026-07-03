@@ -108,13 +108,16 @@ When a unit takes flag results, it must retreat 1 hex per flag toward its own si
 Some units may advance into the vacated hex after forcing a retreat or eliminating a unit.
 
 ### Terrain Effects
+There are only four basic Terrain Types in the core game: Countryside, Wooded Terrain, Elevated Terrain, and Waterways (Fords and Bridges are waterway features). Retreat moves are not subject to terrain movement restrictions.
+
 | Terrain | Effect |
 |---------|--------|
-| Forest | Blocks line of sight; limits combat dice |
-| Hills | Combat bonus; blocks line of sight |
-| River | Costs extra movement; may prevent battle after crossing |
-| Buildings | Defensive bonus; may ignore flags |
-| Waterways | Impassable |
+| Countryside | Default open terrain; no movement or battle restrictions |
+| Wooded Terrain | A unit entering must stop and may move no further that turn (follow-on moves are subject to the same restriction), but may still battle that turn; an attacker targeting an enemy unit on a Wooded Terrain hex battles with a maximum of 2 dice; blocks line of sight |
+| Elevated Terrain | A unit on Elevated Terrain battles with a maximum of 3 dice; a unit not on Elevated Terrain attacking an enemy unit on Elevated Terrain battles with a maximum of 2 dice; blocks line of sight except between contiguous Elevated Terrain hexes of the same height |
+| Waterways | Impassable except at Fords and Bridges; does not block line of sight |
+| Ford (Waterways) | A unit must stop when entering a Ford (gaining ground and pursuits remain possible); a unit may enter a Ford hex and still battle, capped at a maximum of 2 dice; a unit attacking an enemy unit on a Ford hex battles with no dice restriction; does not block line of sight |
+| Bridge (Waterways) | No movement or battle restrictions; a unit on a Bridge is Bold and may ignore 1 flag; does not block line of sight |
 
 ## Scoring / Victory Conditions
 
@@ -123,8 +126,8 @@ Each Adventure specifies a target number of Victory Banners (typically 4-7, vari
 ## Special Rules & Edge Cases
 
 ### Mercenaries (Advanced)
-- **Iron Dwarves**: Tough infantry with high combat values; slow movement.
-- **Goblinoids**: Numerous but weaker; special retreat rules (may panic).
+- **Iron Dwarves** (Green/Blue/Red Banner foot units — Crossbowman, Swordsman, Swordsman (Heavy) — moving and battling per the normal per-banner rules like any other unit): Special power **Iron Morale** — all Iron Dwarf foot units are Bold: they may ignore 1 flag rolled against them in battle, making them a fearsome foe even when caught alone and unsupported. If a dwarf unit is supported, it becomes even bolder and may ignore 2 flags rolled against it in any battle dice roll — effectively Bold2 for as long as it remains supported.
+- **Goblinoids**: Two special powers. **Goblin Rush** — all Goblinoid foot units (including Blue and Red Banner units) may rush up to two hexes to engage an enemy unit in Melee, and must then engage that enemy in battle the same turn (unless the enemy dies first); if they don't rush, they're subject to the usual movement and battle restrictions of their banner color. **Goblin Run** — all Goblinoid units are considered Frightened the moment they are forced to retreat: they must retreat 2 hexes for each flag rolled against them that they turn out unable to ignore, and must always check for Panic Losses during that retreat.
 
 ### Creatures (Advanced)
 Creatures are single-figure units (neither foot nor mounted) with special rules:

@@ -19,14 +19,14 @@ verification_date: "2026-06-17"
 
 ## Overview
 
-BattleCON: War of Indines is a two-player card game inspired by 2D fighting video games. Each player selects a unique character and fights duels by simultaneously selecting attack pairs (a Style card + a Base card). Attacks are revealed simultaneously, and priority determines who strikes first. Characters move along a 7-space linear board, using positioning, timing, and their unique abilities to reduce their opponent's life to zero. A match consists of best-of-three duels.
+BattleCON: War of Indines is a two-player card game inspired by 2D fighting video games. Each player selects a unique character and fights duels by simultaneously selecting attack pairs (a Style card + a Base card). Attacks are revealed simultaneously, and priority determines who strikes first. Characters move along a linear board bounded by a wall at each end, using positioning, timing, and their unique abilities to reduce their opponent's life to zero. A match consists of best-of-three duels.
 
 ## Components
 
-- 18 Unique character cards with special abilities
+- 4 playable characters in this preview set (Khadath, Kallistar, Cadenza, Hikaru), each with a character card and Unique Ability (the complete retail game features 18 characters, not included in this preview document)
 - Style cards (unique per character)
 - Base cards (shared generic set per character)
-- 7-space linear game board
+- Linear game board bounded by a wall at each end
 - Life trackers (20 life points per player)
 - Tokens and counters
 
@@ -79,23 +79,15 @@ Both players resolve End of Beat effects (active player first; stunned players m
 - Provide modifiers to Priority, Range, Power, and Stun Guard.
 - May include special abilities (Before Activating, On Hit, After Activating, etc.).
 
-**Base Cards** (shared set):
-| Base | Priority | Range | Power | Special |
-|------|----------|-------|-------|---------|
-| Strike | 3 | 1-2 | 4 | Standard attack |
-| Shot | 2 | 3-5 | 3 | Ranged attack |
-| Drive | 4 | 1 | 3 | Advance 1-2 spaces |
-| Burst | 1 | 2-3 | 3 | Retreat 1-2 spaces |
-| Grasp | 5 | 1 | 2 | Move opponent 1 space |
-| Dash | 9 | - | - | Move 1-3 spaces; no attack |
+**Base Cards** (shared set): each character uses 6 generic bases — Strike, Shot, Drive, Burst, Grasp, and Dash — plus one base unique to that character. Every base card has a Name, Range, Power, Priority, and Effects, but the source text does not tabulate exact Range/Power/Priority values for the generic bases on their own; it only shows the combined Style+Base totals in worked examples (e.g., "Blazing Strike (4 priority)," "Battery Drive (3 priority)," "Mechanical Shot (priority 0, Stun Guard 2)"), so those per-base numbers cannot be reconstructed from this document.
 
 ### Movement
-- Movement is along the 7-space linear board.
+- Movement is along a linear board bounded by a wall at each end; starting positions are spaces 2 and 6, four spaces (range 4) apart. The exact total length of the board is not stated in the source text.
 - "Advance" (forwards) = move toward opponent.
 - "Retreat" (backwards) = move away from opponent.
 - When moving, characters **hop over** opponents — the space occupied by the opponent is not counted against movement. A character can pass through or end up on the other side of the opponent.
-- If a movement effect specifies a fixed number of spaces (e.g., "move 1 or 2 spaces forwards"), it is mandatory; the player must take a legal movement option. "Move up to X" allows choosing zero.
-- Characters cannot move past space 1 or space 7 (board edges). If a move is fully blocked by a wall, it is ignored.
+- If a movement effect specifies a fixed number of spaces (e.g., "move 1 or 2 spaces forwards"), it is mandatory; the player must take a legal movement option. "Move up to X" allows choosing zero. Negative movement is never allowed.
+- If a move is fully or partially blocked by a wall, the character moves as far as possible and stops; if no legal movement is possible at all, the move is ignored.
 
 ### Stun and Stun Guard
 A character is stunned whenever they take damage **greater than** their Stun Guard value. Attacks with no Stun Guard specified have an implied Stun Guard of 0. A hit for zero damage does not stun.
@@ -120,7 +112,7 @@ Some attacks or abilities provide a **Soak** value (e.g., Soak 3). Whenever that
 - **Cancel**: Special Action + Grasp or Shot. Return the paired base to hand, remove Cancel from the game, then select a new attack pair. Tokens anted still apply.
 - **Clash**: Occurs when both players' priority values tie at reveal. Both players play a new base face-down; the new base overlays the old one. This continues until no tie. All cards beneath the final top card return to hand.
 - **Special Actions**: Each player receives one Special Action card at the start of a duel. After use, it is removed from the game until the end of the duel.
-- **Board Edges**: Characters cannot move past space 1 or space 7.
+- **Board Edges**: The board is a linear track bounded by a wall at each end (starting positions are spaces 2 and 6); the source text does not state the total number of spaces. Characters cannot move past a wall — a blocked move goes as far as possible, and a fully blocked move is ignored.
 
 ## Player Reference
 
@@ -145,7 +137,7 @@ Some attacks or abilities provide a **Soak** value (e.g., Soak 3). Whenever that
 ### Quick Reference
 - Starting life: 20
 - Starting positions: spaces 2 and 6
-- Board size: 7 spaces
+- Board: linear track bounded by a wall at each end (total spaces not stated in source)
 - Match: First to 2 match points (each duel won = 1 match point)
 - Card cycle: 2-beat cooldown (discard 1 unavailable, discard 2 unavailable)
 - Overdrive Finish: requires 7 or fewer life points

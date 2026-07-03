@@ -111,8 +111,9 @@ Some Village actions let you reveal the top Potion and choose it or one from the
 **Final Scoring:**
 - VP from brewed Potions (in hand or drunk)
 - VP from claimed Forest cards
-- VP from Creature bonuses (paired with matching-season Forests)
-- VP from remaining ingredient tokens (varies)
+- VP from released Creatures: 3 VP for each Creature paired with a matching-season claimed Forest, 1 VP for each Creature not in a matching Forest
+- VP tokens: score all VP tokens collected during the game (e.g. from certain Creature powers such as Fall Creatures, or from returning drunk Potions when the Potion deck runs out)
+- Leftover ingredients: 1 VP for every 3 leftover ingredient tokens (including Energy Berries)
 
 **Winner:** Most VP. Tiebreaker: the tied player with the most leftover ingredient tokens (including Energy Berries) wins. If still tied, those players share victory.
 

@@ -77,7 +77,7 @@ Place an Industry tile from your Player Mat onto a board location. Discard one c
 ### Network
 Place a Link tile for canal (Canal Era) or rail (Rail Era).
 - Canal: costs 3 pounds. 1 Link per route.
-- Rail: costs 5 pounds + 1 coal per link. 1 or 2 Links per route.
+- Rail: 1 Link costs 5 pounds; a maximum of 2 Links may be built in one Network action for 15 pounds total. 1 coal must be consumed per Link built.
 
 ### Develop
 Remove 1 or 2 Industry tiles from Player Mat (consuming iron), to access higher-level tiles.
@@ -141,7 +141,10 @@ Traced through Link tiles (any player's). Required for Industry card builds, coa
 - You may repeat the process for each of your remaining unflipped Cotton Mills in the same Sell action.
 
 ### Overbuilding
-You may overbuild your own lower-level tiles or opponent's lower-level Coal Mines in your network.
+Replacing an already-placed Industry tile with a higher-level tile of the same industry type (still paying the build cost) is Overbuilding.
+- **Your own tile:** You may Overbuild any Industry tile. Any iron/coal cubes on the replaced tile are removed from it.
+- **Opponent's tile:** You may Overbuild only a Coal Mine or an Iron Works, and only if there are no resource cubes anywhere on the entire board (including in its Market) of the same type as the Industry tile being replaced.
+- Overbuilt Industry tiles are removed from the game and returned to the box (they do not score VPs). Players do not lose income or VPs when their tiles are overbuilt.
 
 ### Negative Income
 Pay the negative amount to the Bank. If unable, remove Industry tiles from board at half cost. If still short, lose 1 VP per pound.
@@ -154,7 +157,7 @@ During Rail Era, the Deck tile is inserted near the bottom of the Draw Deck (2 c
 - Rail Era allows multiple tiles per location.
 
 ### Market Mechanics
-When Coal Mines or Iron Works are built connected to market trade icons, cubes move to market spaces (most expensive first), earning money.
+When you build a Coal Mine that is connected to the market trade icon, or an Iron Works (regardless of whether it is connected to the market trade icon), immediately move as many cubes as possible from the Industry tile to available spaces in its associated Market (filling the most expensive spaces first). For each cube moved, collect the money shown on that Market space. If the last cube is moved from the tile, flip it and advance your Income Marker by the amount shown on the tile.
 
 ## Player Reference
 
@@ -171,7 +174,7 @@ When Coal Mines or Iron Works are built connected to market trade icons, cubes m
 |--------|------|--------------|
 | Build | Tile cost + resources | Location or Industry card |
 | Network (Canal) | 3 pounds | Any card |
-| Network (Rail) | 5 pounds + 1 coal per link | Any card |
+| Network (Rail) | 5 pounds (1 link) or 15 pounds (2 links) + 1 coal per link | Any card |
 | Develop | Iron (1-2) | Any card |
 | Sell | None (may need Port connection) | Any card |
 | Loan | -1/-2/-3 income levels | Any card |

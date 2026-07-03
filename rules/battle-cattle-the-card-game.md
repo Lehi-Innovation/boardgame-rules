@@ -58,12 +58,20 @@ Play proceeds clockwise. On your turn:
 - Must be played immediately when hit -- cannot save for later.
 - You may play 2 Armor cards simultaneously (blocking up to 6 damage).
 - Armor does NOT protect against Methane attacks.
+- Armor can also reduce damage from any Specials that do damage, such as Autocannon Backfires! and Skid Into A Fence.
 
 ### Special Cards
 - Follow the instructions on each card.
 - Some are played only on your turn (like Hoof Shot).
 - Some may be played at any time.
 - Some are played in response to an opponent's card.
+- **Hoof Shot**: Play simultaneously with any Attack card to redirect that attack's damage to the target's hooves instead of the location the Attack card shows.
+- **Moo-ve**: Play immediately after being attacked to discard the Attack card -- it missed! Instead, take 2 points of damage to your own hooves.
+- **Skid Into A Fence**: An opponent may play this immediately after your Moo-ve to say your moo-ve ended in a collision -- you take 3 points of damage to whichever side the opponent chooses. Armor can be used to protect against this damage.
+- **Steer Clear**: Move damage from one side to an adjacent side by maneuvering your Battle Cattle to control where you are hit. You may play more than one Steer Clear at once to move the damage to the opposite side. Armor can be used to reduce the damage on the side where it finally ends up.
+- **Autocannon Backfires!**: Play only immediately after being hit by an Autocannon attack. Instead of damaging you, the autocannon explodes and damages the attacker on the side he was trying to hit; he cannot avoid this with a Moo-ve or Steer Clear. If he is eliminated by the backfire, nobody gets credit for the kill.
+- **Fireproof Armor**: May be played at any time during the duel, not just your turn. You may only play it on yourself if you have not yet taken any damage this duel from a Flamethrower or Cattle-pult card (avoiding such damage earlier by playing two Armor cards at once, or by a Moo-ve, does not disqualify you). It protects your body from Flamethrower and Cattle-pult damage even after the armor has been breached, and it also protects your hooves against Flamethrower/Cattle-pult damage -- an exception to the general Hoof Shot rule.
+- **Machine Gun Jams!**: May be played at any time during the duel, not just your turn, on any foe who has just played a Machine Gun attack on anyone -- that attack fails and his turn is over. The only way for the victim to "unjam" his guns is to discard his entire hand on his turn, doing nothing else that turn; he then draws 6 fresh cards at the start of his next turn.
 
 ### Breached Armor
 When one side of a Battle Cattle takes 12 or more points of cumulative damage, that side is breached:
@@ -95,9 +103,10 @@ Play multiple duels. The first player to reach 60 points **at the end of a duel*
 ## Special Rules & Edge Cases
 
 - **Methane attacks** bypass armor entirely.
+- **Hooves**: A Battle Cattle's hooves are treated as a single unit, separate from its armor and body. Hooves are destroyed if they take 9 or more points of damage; this is not considered a breach, and Armor cannot be used to protect the hooves. A Battle Cattle whose hooves are destroyed may no longer use Ramming, Moo-ve, T-Bone, or Steer Clear cards, nor may it Escape -- but it may still shoot, and can still win.
 - **Escaping**: At the end of their turn, a player may announce they are escaping. If their cow is still operating at the beginning of their next turn AND its hooves have not been destroyed, they leave the arena with no kill credited. On the turn they escape, they do nothing else. If their hooves are gone, they cannot escape and take their turn normally.
 - If a player is eliminated by a Skid (not an Attack card), kill points go to whoever played the Attack card the player was trying to avoid.
-- **T-Bone**: Slam your cow into an opponent's side. After T-Boning, you may also play one Attack card targeting the same side you rammed.
+- **T-Bone**: Slam your cow into an opponent's side (this does not damage your own cow). After T-Boning, you may also play one Attack card that same turn targeting the same side you rammed. You may not T-Bone an opponent if your own front is breached or if you have lost your hooves. If your target responds with a Steer Clear, you may still follow up with a weapon attack, but it must target the side you actually hit. If your target responds with a Moo-ve, you missed and may not follow up with a weapon attack; if he does not Moo-ve, he cannot then swerve away from your follow-up attack.
 - **Reshuffling**: If the deck runs out, shuffle the discard pile to make a new draw pile. If the deck runs out a **second** time without a winner, do not reshuffle — all players still in the duel share equally in a tie (10 points each).
 - **2- or 3-player game**: Remove one each of Machine Gun Jams!, Fireproof Armor, Autocannon Backfires!, and Dud Milk Bomb! from the deck before play.
 - A cow that is destroyed returns fully repaired for the next duel.
@@ -107,7 +116,8 @@ Play multiple duels. The first player to reach 60 points **at the end of a duel*
 ### Armor Thresholds
 - Side armor breach: 12+ cumulative damage on one side
 - Body destruction: 5+ body damage
-- Armor card protection: 3 points per card (may play 2 at once for 6 total)
+- Hooves destroyed: 9+ cumulative damage to hooves (not a breach; Armor cannot protect hooves)
+- Armor card protection: 3 points per card (may play 2 at once for 6 total); also reduces damage from harmful Specials (e.g. Autocannon Backfires!, Skid Into A Fence)
 
 ### Scoring Quick Reference
 - Win duel (last operating cow): 20 pts

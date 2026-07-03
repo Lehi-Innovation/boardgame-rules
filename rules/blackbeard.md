@@ -134,10 +134,12 @@ Upon retirement, all VP from accumulated NP and Net Worth are immediately record
 
 ### Crew Loyalty
 - Starts at 7. Increases from successful looting, D&R, and port attacks. Decreases from scurvy, failed actions, and damage.
-- Low loyalty can trigger mutiny when a Mutiny Conspiracy card is played.
+- Mutiny (14.1) occurs in one of three ways: (1) an AP player plays a Mutiny Conspiracy Event Card and rolls 2d6 — if the result is higher than the active Pirate's current Crew Loyalty, a Mutiny occurs; (2) an AP player plays a Piratical Ambition Event Card, using an In-Hand Pirate to lead a Mutiny, resolved as a Duel (15.0) for control of the ship; or (3) automatically, the instant a ship's Crew Loyalty Level reaches 0 — if Loyalty remains at 0 without the Mutiny having an effect, the crew mutinies again every time that Pirate activates (before any other Actions) until Loyalty is raised above 0.
 
 ### Debauchery & Revelry (D&R)
-- Triggered voluntarily or involuntarily. Pirates in D&R cannot act until a D&R Recovery Action is spent.
+- Triggered voluntarily or involuntarily. A Pirate bearing a D&R marker may take only two Action types: **Movement** (7.0) — including moving into a port, or even deliberately into a Pirate Port to increase D&R benefits — and **D&R Recovery** (16.0), which can occur only In-Port. All other action types are barred until the D&R marker is removed.
+- Removing the marker: Voluntary D&R is removed by spending one D&R Recovery Action while In-Port. Involuntary D&R requires two consecutive D&R Recovery Actions while In-Port.
+- If a D&R'd Pirate is attacked while at sea, subtract 2 from its Speed and Combat Ratings.
 - D&R increases Crew Loyalty (+1 at most ports, +3 at Pirate Ports).
 
 ### Cunning
