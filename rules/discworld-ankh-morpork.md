@@ -7,11 +7,11 @@ designer: "Martin Wallace"
 source_pdf: "discworld-ankh-morpork-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Scoring/Victory Conditions section omits the demon-occupied-area scoring exception, so the summary's point formulas overstate scores whenever a demon remains on the board at game end.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/discworld-ankh-morpork-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Discworld%3A%20Ankh-Morpork&game=discworld-ankh-morpork)
 <!-- verification:end -->
@@ -51,10 +51,10 @@ Discworld: Ankh-Morpork is a card-driven area control game set in Terry Pratchet
 
 Starting with the first player, each player takes a turn:
 
-1. **Play a card** from your hand. Follow all instructions on the card (symbols and text).
-2. Cards may chain -- some allow you to play additional cards.
-3. After finishing all card plays, **draw cards** to bring your hand to 5 (do not discard if you have more than 5).
-4. You may check your personality victory condition at any time on your turn and declare victory.
+1. **Check your Personality's victory condition** at the start of your turn, before playing any card (all Personalities except Commander Vimes are checked this way — Commander Vimes instead wins only if nobody else has won by the time the draw pile is exhausted). If your condition is met, declare victory.
+2. **Play a card** from your hand. Follow all instructions on the card (symbols and text).
+3. Cards may chain -- some allow you to play additional cards.
+4. After finishing all card plays, **draw cards** to bring your hand to 5 (do not discard if you have more than 5).
 
 ## Actions
 
@@ -90,7 +90,7 @@ All Personality conditions (except Vimes) are checked at the **start of your tur
 - **Chrysoprase:** Your net worth (cash + monetary cost of each building you have, minus $12 per loan) is $50 or more. (Note: Chrysoprase is removed in 2-player games.)
 - **Commander Vimes:** Wins if nobody else wins by the time the draw pile is exhausted.
 
-**Tiebreaker/draw-pile end (no Vimes):** The player with the most points wins. Each minion on the board = 5 points; each building = its monetary cost; each $1 in cash = 1 point; each loan card = −$12. If tied, the tied player with the highest-value City Area card wins. If still tied, those players share victory.
+**Tiebreaker/draw-pile end (no Vimes):** The player with the most points wins. Each minion on the board = 5 points; each building = its monetary cost; each $1 in cash = 1 point. If you hold the Dent card or the Bank card, you must pay back the amount noted on that card; if you cannot, you lose 15 points each. If tied, the tied player with the highest-value City Area card wins. If still tied, those players share victory.
 
 ## Special Rules & Edge Cases
 

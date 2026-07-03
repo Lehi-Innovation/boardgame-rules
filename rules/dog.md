@@ -6,11 +6,11 @@ play_time: "45 min"
 source_pdf: "dog-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary invents a "cannot pass through occupied home spaces" restriction in the Home area that has no support in the source text.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dog-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20DOG&game=dog)
 <!-- verification:end -->
@@ -64,8 +64,8 @@ The game is played in rounds. Each round:
 - **Leaving the kennel:** Requires a 1/11, 13, or Joker. Place pawn on your start space.
 - **Landing on an occupied space:** If you land on a space occupied by any other pawn (including your own or partner's), that pawn is sent back to its kennel.
 - **Start space blocking:** A pawn on its own start space cannot be affected by other pawns in any way — it cannot be landed upon, passed, or swapped by any player (including its owner). There is no exception for the 7 card. A pawn on another player's start space is treated as a normal space.
-- **Home area:** Pawns enter the home stretch after completing a lap. Must enter by exact count. Cannot pass through or land on occupied home spaces.
-- **Cannot move backward out of home.**
+- **Home area:** Pawns enter the home stretch after completing a lap. Must enter by exact count. Cannot pass through or land on occupied home spaces. No pawn may ever enter an opponent's or partner's home area, so pawns in home areas are safe from being landed upon or swapped.
+- **4 ± and the home area:** The 4 ± card CAN move a pawn backward out of the home area onto the main track — this is not flatly forbidden. Exception: if a player's only playable card is the 4 ± and all her remaining pawns are in the home area or kennel, she is not required to move a pawn out of the home area and may discard her hand instead (see Special Rules & Edge Cases).
 
 ## Scoring / Victory Conditions
 
@@ -76,7 +76,7 @@ Once a player has all 4 of their own pawns home, they use their remaining turns 
 ## Special Rules & Edge Cases
 
 - If a player cannot play any card legally, they must show their hand to prove it, then discard all remaining cards and sit out the rest of the round.
-- A player must play a card if any legal move exists, even if disadvantageous.
+- A player must play a card if any legal move exists, even if disadvantageous — she may not voluntarily forfeit her turn. **Exception:** if a player's only playable card is the 4 ± card and all her remaining pawns are in the home area or kennel, she is not required to move a pawn out of the home area — she may discard her hand instead. This is the only situation where a player may decline an available legal play.
 - The 7 card must use all 7 movement points (split among pawns of your color). Any pawn that is passed during any partial or full movement of the 7 — including your own pawns and your partner's pawns — is sent back to its kennel ("burned"). The 7 may not be used to move a pawn out of the kennel.
 - The Swap card cannot be used on pawns in kennels, on start spaces, or in home areas.
 - When starting a new round, deal from the remaining draw pile first; only shuffle the discard pile into the draw pile when needed to complete the current deal.

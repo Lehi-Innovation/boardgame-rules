@@ -634,18 +634,18 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Combat Commander: Pacific](rules/combat-commander-pacific/) | 2 | 60-180 min | Chad Jensen | ⚠️ |
 | [Comet](rules/comet/) | 2-4 | 30-60 min | Daryl Andrews, Adrian Adamescu | ⚠️ |
 | [Commander Chess](rules/commander-chess/) | 2 | 30-60 min | Hải Quý Nguyễn | ⚠️ |
-| [Commands & Colors: Ancients](rules/commands-colors-ancients/) | 2 | 60 min | Richard Borg | ✅ |
+| [Commands & Colors: Ancients](rules/commands-colors-ancients/) | 2 | 60 min | Richard Borg | ❗ |
 | [Commands & Colors: Napoleonics](rules/commands-colors-napoleonics/) | 2 | 60 min | Richard Borg | ⚠️ |
 | [Commonspoly](rules/commonspoly/) | 3-6 | 60-90 min |  | ✅ |
 | [Complots](rules/complots/) | 2-8 | 15 min | Rikki Tahta | ⚠️ |
 | [Composio](rules/composio/) | 2-6 | 30 min | Heinz Meister | ⚠️ |
-| [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ✅ |
+| [Conan](rules/conan/) | 2-5 | 60-90 min | Frédéric Henry, Pascal Bernard, Antoine Bauza | ❗ |
 | [Conan Collectible Card Game](rules/conan-collectible-card-game/) | 2 | 30-60 min | Jason Robinette | ⚠️ |
 | [Concept](rules/concept/) | 4-12+ | 40 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
 | [Concept Kids: Animals](rules/concept-kids-animals/) | 2-12 | 20 min | Alain Rivollet, Gaëtan Beaujannot | ✅ |
 | [Concilium Urbis](rules/concilium-urbis/) | 1-6 |  | Daniel Fuster | ⚠️ |
 | [Concordia](rules/concordia/) | 2-5 | 100 min | Mac Gerdts | ✅ |
-| [Condottiere](rules/condottiere/) | 2-6 | 45 min | Dominique Ehrhard | ✅ |
+| [Condottiere](rules/condottiere/) | 2-6 | 45 min | Dominique Ehrhard | ❗ |
 | [Conflict](rules/conflict/) | 2-4 | 60 min | Unknown | ⚠️ |
 | [Conflict of Heroes: Awakening the Bear! – Russia 1941-42](rules/conflict-of-heroes-awakening-the-bear-russia-1941-42/) | 2-4 | 60-120 min | Uwe Eickert | ✅ |
 | [Conflict of Heroes: Storms of Steel! – Kursk 1943](rules/conflict-of-heroes-storms-of-steel-kursk-1943/) | 2-4 | 60-120 min | Uwe Eickert | ⚠️ |
@@ -653,7 +653,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Connect 4x4](rules/connect-4x4/) | 2 | 10 min | Howard Wexler, Ned Strongin | ⚠️ |
 | [Connect Four](rules/connect-four/) | 2 | 10 min | Howard Wexler, Ned Strongin | ❗ |
 | [Conquest of the Empire](rules/conquest-of-the-empire/) | 2-6 | 180 min | Larry Harris Jr. | ⚠️ |
-| [Conquistador: The Age of Exploration](rules/conquistador-the-age-of-exploration/) | 1-3 | 240-480 min | Richard Berg | ✅ |
+| [Conquistador: The Age of Exploration](rules/conquistador-the-age-of-exploration/) | 1-3 | 240-480 min | Richard Berg | ❗ |
 | [Consentacle](rules/consentacle/) | 2 | 15-30 min | Naomi Clark | ✅ |
 | [Conspirateurs](rules/conspirateurs/) | 2-4 | 30-45 min | Unknown (traditional French game) | ✅ |
 | [Contrario](rules/contrario/) | 2-8 | 30 min | Didier L'Hérisson, Roberto Fraga, Matthieu Fraga | ⚠️ |
@@ -673,7 +673,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Crokinole](rules/crokinole/) | 2-4 | 30 min | Unknown (traditional) | ⚠️ |
 | [Crossfire](rules/crossfire/) | 2 | 5-10 min | Unknown | ⚠️ |
 | [Crows](rules/crows/) | 2-4 | 30-45 min | Tyler Sigman | ✅ |
-| [Cry Havoc](rules/cry-havoc/) | 2-4 | 90-120 min | Grant Rodiek, Michal Oracz, Michal Walczak | ✅ |
+| [Cry Havoc](rules/cry-havoc/) | 2-4 | 90-120 min | Grant Rodiek, Michal Oracz, Michal Walczak | ❗ |
 | [Cryptid](rules/cryptid/) | 3-5 | 30-50 min | Hal Duncan, Ruth Veevers | ⚠️ |
 | [Cthulhu 500](rules/cthulhu-500/) | 3-8 | 30-60 min | Jeff Tidball | ✅ |
 | [Cthulhu Dice](rules/cthulhu-dice/) | 2-6 | 5-10 min | Steve Jackson | ✅ |
@@ -689,7 +689,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
 | [D-Day](rules/d-day/) | 2 | 60-240 min | Charles S. Roberts | ⚠️ |
-| [D-Day at Omaha Beach](rules/d-day-at-omaha-beach/) | 1-2 | 240-480 min | John H. Butterfield | ✅ |
+| [D-Day at Omaha Beach](rules/d-day-at-omaha-beach/) | 1-2 | 240-480 min | John H. Butterfield | ❗ |
 | [D-Day Dice](rules/d-day-dice/) | 1-4 | 45-90 min | Emmanuel Aquin | ✅ |
 | [D-Day: The Great Crusade](rules/d-day-the-great-crusade/) | 2-4 | 120-480 min | Danny Holte | ⚠️ |
 | [D.A.K.](rules/d-a-k/) | 2 | 120-360 min | Unknown | ⚠️ |
@@ -703,7 +703,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Dark Future](rules/dark-future/) | 2+ | 60-120 min | Games Workshop Design Team | ⚠️ |
 | [Dark Millennium](rules/dark-millennium/) | 2 | 30-60 min | Unknown | ⚠️ |
 | [Dark Moon](rules/dark-moon/) | 3-7 | 60-75 min | Evan Derrick | ✅ |
-| [Dark Souls – The Board Game](rules/dark-souls-the-board-game/) | 1-4 | 90-120 min | David Carl, Alex Hall, Mat Hart, Rich Loxam | ✅ |
+| [Dark Souls – The Board Game](rules/dark-souls-the-board-game/) | 1-4 | 90-120 min | David Carl, Alex Hall, Mat Hart, Rich Loxam | ❗ |
 | [Dark Tower](rules/dark-tower/) | 1-4 | 60-120 min | Roger Burten, Alan Coleman, Vincent Erato | ⚠️ |
 | [Darkest Crusade](rules/darkest-crusade/) | 1-2 | 120-360 min | Unknown | ⚠️ |
 | [Darkover](rules/darkover/) | 2-4 | 60-120 min | Eon Products | ⚠️ |
@@ -715,14 +715,14 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Das kaufmannische Talent](rules/das-kaufmannische-talent/) | 3-6 | 60-120 min | Unknown | ⚠️ |
 | [Das Kleine Gespenst](rules/das-kleine-gespenst/) | 2-4 | 15-25 min | Kai Haferkamp | ⚠️ |
 | [Dawn of the Dead](rules/dawn-of-the-dead/) | 2 | 60-120 min | John H. Butterfield | ⚠️ |
-| [Daybreak](rules/daybreak/) | 1-4 | 60-90 min | Matt Leacock, Matteo Menapace | ✅ |
+| [Daybreak](rules/daybreak/) | 1-4 | 60-90 min | Matt Leacock, Matteo Menapace | ❗ |
 | [DDR-Reise](rules/ddr-reise/) | 2-6 | 30-60 min | Unknown | ⚠️ |
 | [De Bellis Magistrorum Militum](rules/de-bellis-magistrorum-militum/) | 2 | 120-240 min | Phil Barker | ⚠️ |
 | [De Kolonisten van de Lage Landen](rules/de-kolonisten-van-de-lage-landen/) | 3-5 | 75 min | Klaus Teuber | ⚠️ |
 | [De l'Orc pour les braves](rules/de-l-orc-pour-les-braves/) | 4-7 | 40 min | Bruno Faidutti | ⚠️ |
 | [De Ontembare Stad](rules/de-ontembare-stad/) | 2-5 | 90 min | Unknown | ⚠️ |
 | [De Vulgari Eloquentia](rules/de-vulgari-eloquentia/) | 2-5 | 120 min | Mario Papini | ✅ |
-| [Dead of Winter: A Crossroads Game](rules/dead-of-winter-a-crossroads-game/) | 2-5 | 60-210 min | Jonathan Gilmour, Isaac Vega | ✅ |
+| [Dead of Winter: A Crossroads Game](rules/dead-of-winter-a-crossroads-game/) | 2-5 | 60-210 min | Jonathan Gilmour, Isaac Vega | ❗ |
 | [Deadwood](rules/deadwood/) | 2-5 | 40 min | Loïc Lamy | ✅ |
 | [Deal Me In](rules/deal-me-in/) | 2-4 | 30-60 min | Unknown | ⚠️ |
 | [Death Stacks](rules/death-stacks/) | 2 | 20 min | Stephen Euin Cobb | ⚠️ |
@@ -731,7 +731,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Deckscape: Behind the Curtain](rules/deckscape-behind-the-curtain/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
 | [Deckscape: Dracula's Castle](rules/deckscape-dracula-s-castle/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
 | [Deckscape: Escape from Alcatraz](rules/deckscape-escape-from-alcatraz/) | 1-6 | 60 min | Martino Chiacchiera, Silvano Sorrentino | ⚠️ |
-| [Decktet](rules/decktet/) | 1-4 | 15-60 min | P.D. Magnus | ✅ |
+| [Decktet](rules/decktet/) | 1-4 | 15-60 min | P.D. Magnus | ❗ |
 | [Deconnaissance](rules/deconnaissance/) | 2-6 | 30-60 min | Unknown | ⚠️ |
 | [Deep Sea Adventure](rules/deep-sea-adventure/) | 2-6 | 30 min | Jun Sasaki, Goro Sasaki | ✅ |
 | [Deep Space Navigator](rules/deep-space-navigator/) | 2+ | 60 min | Unknown | ⚠️ |
@@ -744,7 +744,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Demonlord](rules/demonlord/) | 2 | 120 min | Tom Moldvay | ⚠️ |
 | [Demons: The Game of Evil Spirits](rules/demons/) | 2-4 | 60-120 min | Jim Dunnigan | ⚠️ |
 | [Der wahre Walter](rules/der-wahre-walter/) | 4-10 | 45 min | Urs Hostettler | ⚠️ |
-| [Descent: Journeys in the Dark](rules/descent-journeys-in-the-dark/) | 2-5 | 120-240 min | Kevin Wilson | ✅ |
+| [Descent: Journeys in the Dark](rules/descent-journeys-in-the-dark/) | 2-5 | 120-240 min | Kevin Wilson | ❗ |
 | [Descent: Journeys in the Dark (Second Edition)](rules/descent-journeys-in-the-dark-second-edition/) | 2-5 | 120-180 min | Daniel Clark, Corey Konieczka, Adam Sadler, Kevin Wilson | ✅ |
 | [Descent: Legends of the Dark](rules/descent-legends-of-the-dark/) | 1-4 | 120-180 min | Kara Centell-Dunk, Nathan I. Hajek | ✅ |
 | ↳ [Descent: Legends of the Dark -- The Betrayer's War](rules/descent-legends-of-the-dark-the-betrayer-s-war/) | 1-4 | 180-240 min | Kara Centell-Dunk | ⚠️ |
@@ -768,12 +768,12 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Dimension](rules/dimension/) | 1-4 | 30 min | Lauge Luchau | ⚠️ |
 | [Dipole](rules/dipole/) | 2 |  | Mark Steere | ⚠️ |
 | [Dirtside II](rules/dirtside-ii/) | 2+ | 120-240 min | Jon Tuffley | ⚠️ |
-| [Discworld: Ankh-Morpork](rules/discworld-ankh-morpork/) | 2-4 | 60 min | Martin Wallace | ✅ |
+| [Discworld: Ankh-Morpork](rules/discworld-ankh-morpork/) | 2-4 | 60 min | Martin Wallace | ❗ |
 | [Distilled](rules/distilled/) | 1-5 | 60-90 min | Dave Beck | ✅ |
 | [Dixit Journey](rules/dixit-journey/) | 3-8 | 30 min | Jean-Louis Roubira | ✅ |
 | [Djambi](rules/djambi/) | 3-4 | 60 min | Jean Anesto | ⚠️ |
 | [Dobutsu shogi](rules/d-butsu-sh-gi/) | 2 | 5-15 min |  | ⚠️ |
-| [DOG](rules/dog/) | 2-6 | 45 min |  | ✅ |
+| [DOG](rules/dog/) | 2-6 | 45 min |  | ❗ |
 | [Dominant Species](rules/dominant-species/) | 2-6 | 120-240 min | Chad Jensen | ✅ |
 | [Domination](rules/domination/) | 2-4 |  |  | ⚠️ |
 | [Don't Break the Ice](rules/don-t-break-the-ice/) | 2-4 | 10 min |  | ⚠️ |

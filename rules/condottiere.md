@@ -7,11 +7,11 @@ designer: "Dominique Ehrhard"
 source_pdf: "condottiere-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The "End of a Round" reshuffle-and-deal step misstates the card math and reverses the step order relative to the source.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/condottiere-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Condottiere&game=condottiere)
 <!-- verification:end -->
@@ -32,10 +32,10 @@ Condottiere is a card-driven area control game set in Renaissance Italy. Players
 ## Setup
 
 1. Place the board in the center of the table.
-2. Shuffle all cards and deal 10 to each player.
-3. Place the Condottiere figure on any region.
-4. Each player takes control markers of their color.
-5. The starting player is chosen randomly.
+2. Each player takes control markers of their color.
+3. The youngest player takes the Condottiere token and becomes the starting player.
+4. The starting player shuffles all cards and deals 10 to each player (including themselves).
+5. The starting player places the Condottiere token on a region of their choice; this is the site of the first battle.
 
 ## Turn Structure
 

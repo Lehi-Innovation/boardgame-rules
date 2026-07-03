@@ -7,11 +7,11 @@ designer: "Matt Leacock, Matteo Menapace"
 source_pdf: "daybreak-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Special Rules & Edge Cases asserts an Energy Demand floor rule not found anywhere in the source text.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/daybreak-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Daybreak&game=daybreak)
 <!-- verification:end -->
@@ -106,7 +106,7 @@ Players win by achieving **Drawdown**: in the Emissions Stage, after sequesterin
 - **Limit**: Some actions can only be taken a limited number of times per round (indicated on the card). Use Carbon cubes as trackers.
 - **Energy Demand**: Cannot go below 0. If Demand exceeds 30, use player board extenders.
 - **4+ Communities in Crisis**: Reduces the number of Local Project cards drawn each round.
-- **Geoengineering**: Some cards use the Geoengineering die, which provides variable carbon sequestration.
+- **Geoengineering die**: Used only to break ties for which player is targeted by a Crisis card. When checking who is targeted, if players are ever tied, they each roll the Geoengineering die: the single player with the lowest die roll is targeted (re-roll if still tied).
 - **Challenge Cards** (advanced variant): Add additional difficulty and objectives.
 - **Solo play**: Remove cards marked with the "Not for Solo Play" symbol from all decks.
 - Hands are public — players discuss strategy openly.
@@ -124,4 +124,4 @@ Players win by achieving **Drawdown**: in the Emissions Stage, after sequesterin
 **Lose if:** 8 Temperature Bands OR any player has 12+ Communities in Crisis OR Round 6 ends without Drawdown
 **Win if:** Drawdown reached during Emissions Stage and players survive the following Crisis Stage
 
-**Crisis Cards per Temperature Bands:** The exact number is indicated on the Thermometer on the board. In the first round (0 bands) players draw 3 Crisis cards. The rulebook example shows that going from 5 to 6 Temperature Bands increases the draw from 3 to 4 cards. Consult the Thermometer legend for the full table.
+**Crisis Cards per Temperature Bands:** The exact number is indicated on the Thermometer on the board. In the first round (0 bands) players draw 3 Crisis cards. The rulebook example shows that going from 1.5°C to 1.6°C increases the draw from 3 to 4 Crisis cards. Consult the Thermometer legend for the full table.

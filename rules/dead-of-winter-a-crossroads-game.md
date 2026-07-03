@@ -7,11 +7,11 @@ designer: "Jonathan Gilmour, Isaac Vega"
 source_pdf: "dead-of-winter-a-crossroads-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary misrepresents the Request action (omits that a given item must be revealed and immediately played, not simply handed to your hand) and omits the core rule for what happens when a player's last survivor or group leader is killed/. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dead-of-winter-a-crossroads-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dead%20of%20Winter%3A%20A%20Crossroads%20Game&game=dead-of-winter-a-crossroads-game)
 <!-- verification:end -->
@@ -61,7 +61,7 @@ Each round has 2 phases:
 ### Phase 2: Colony Phase
 1. **Pay Food**: Remove 1 food token for every 2 survivors in the Colony (rounded up; helpless survivors count). If food is insufficient: do not remove any food, add 1 Starvation token to the food supply, then lose 1 Morale per starvation token currently in the supply.
 2. **Check Waste**: For every 10 cards in the waste pile (rounded down), lose 1 Morale.
-3. **Resolve Crisis**: Reveal contributed cards one at a time. Each matching-symbol card adds 1 point; each non-matching card subtracts 1 point. If combined total ≥ number of players → crisis prevented. If total < number of players → crisis effect occurs. If total exceeds players by 2 or more → colony also gains 1 Morale. After resolving, remove all contributed cards from the game.
+3. **Resolve Crisis**: Reveal contributed cards one at a time. Each matching-symbol card adds 1 point; each non-matching card subtracts 1 point. If combined total ≥ number of non-exiled players → crisis prevented. If total < number of non-exiled players → crisis effect occurs. If total exceeds the number of non-exiled players by 2 or more → colony also gains 1 Morale. After resolving, remove all contributed cards from the game.
 4. **Add Zombies**: Add 1 zombie per 2 survivors (including helpless, rounded up) at the Colony. Add 1 zombie per 1 survivor at each non-colony location. Then, for each noise token at any location, remove the token and roll an action die — on a result of 3 or lower, add 1 zombie to that location. Zombies are placed at entrances in numbered order.
 5. **Check Main Objective**: See if completed.
 6. **Move Round Marker**: Advance round track. If it reaches 0, game ends immediately.
@@ -106,7 +106,7 @@ When the game ends for any reason, any player who has completed their Secret Obj
 One Secret Objective may be a Betrayal card. The Betrayer wins if their Secret Objective is completed when the game ends (typically requiring the colony to fail). The Betrayer can sabotage crises, waste resources, and undermine the colony.
 
 ### Exile
-If voted out, a player draws an Exiled Secret Objective. They can no longer enter the Colony but still take turns at outside locations. They have new win conditions.
+If voted out, a player draws an Exiled Secret Objective, which adjusts their Secret Objective. The exiled player must immediately move all survivors they control that are in the Colony to non-colony locations of their choice (this move does not count as their once-per-turn survivor move). Additional rules apply to the exiled player: cannot add cards to a crisis; helpless survivor tokens they'd be directed to add to the Colony are not added; a new survivor from a played survivor item card goes to a non-colony location of their choice instead of the Colony; cannot spend food tokens to boost action die results (may still play food cards for +1 each instead of the card's listed effect); cannot vote; the Colony does not lose Morale when a survivor they control is killed; and when they play a card, it is removed from the game instead of going to the waste pile.
 
 ## Special Rules & Edge Cases
 
@@ -142,5 +142,5 @@ If voted out, a player draws an Exiled Secret Objective. They can no longer ente
 - Zombies added (Colony): 1 per 2 survivors (rounded up)
 - Zombies added (non-colony locations): 1 per 1 survivor
 - Noise zombie spawn: roll action die per token; add zombie on 3 or lower
-- Crisis threshold: combined point total ≥ number of players = prevented; +2 over = also gain 1 Morale
+- Crisis threshold: combined point total ≥ number of non-exiled players = prevented; +2 over = also gain 1 Morale
 - 3 wounds on a survivor = that survivor is killed

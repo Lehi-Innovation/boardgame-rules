@@ -7,11 +7,11 @@ designer: "Jerry Hawthorne"
 source_pdf: "comanauts-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/comanauts-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Comanauts&game=comanauts)
 <!-- verification:end -->
@@ -66,7 +66,7 @@ On each player's turn (the Bookkeeper goes first; play proceeds clockwise):
 6. **Discard Dice**: Discard all remaining dice.
 7. **Check Threat**:
    - If the situation is "hostile": when the number of threat dice on the track equals or exceeds the number of enemies in play, the enemies take a turn (Enemy Turn).
-   - If the situation is "safe": when there are 4 or more dice on the threat track, resolve the comazone's Morass entry; if enemies come into play, flip the Situation Token to "hostile" and take an Enemy Turn. Then discard all dice from the track and refresh the Dice Bag.
+   - If the situation is "safe": when there are 4 or more dice on the threat track, resolve the current page's designated effect (per the Adventure Book); if enemies come into play, flip the Situation Token to "hostile" and take an Enemy Turn. Then discard all dice from the track and refresh the Dice Bag.
    - After Check Threat, the next player (to the left) takes their turn.
 
 ## Actions
@@ -97,7 +97,7 @@ After all enemies activate, discard remaining threat dice and refresh the Dice B
 ## Scoring / Victory Conditions
 
 ### Win
-Players win if they find and defeat the **Prime I.D. Entity**. To defeat the Prime I.D., attack it repeatedly: each time it would be defeated, remove 1 Life Force token from its card instead. When it has no Life Force tokens, it is defeated.
+Players win if they find and defeat the **Prime I.D. Entity**. When the Prime I.D. Entity is encountered and added to play, place Life Force tokens on its card equal to the number of players. To defeat the Prime I.D., attack it repeatedly: each time it would be defeated, remove 1 Life Force token from its card instead. When it has no Life Force tokens, it is defeated.
 
 ### Lose (any one condition)
 - The **Flatline** Vital Signs Card is revealed.
@@ -131,6 +131,6 @@ Reveal Clue Cards by collecting 3 Insight tokens (discard 3 Insight tokens → d
 7. Check Threat (trigger Enemy Turn if threshold met)
 
 **Lose if:** Flatline Vital Signs card revealed / any player's 3rd avatar enters Morass / all avatars in Morass simultaneously
-**Win if:** Prime I.D. Entity defeated (all Life Force tokens removed from it)
+**Win if:** Prime I.D. Entity defeated (place Life Force tokens on its card equal to the number of players when encountered; defeated once all Life Force tokens are removed from it)
 
 **Insight → Clues:** Every 3 Insight tokens collected (discard 3) → reveal 1 Clue Card

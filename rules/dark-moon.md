@@ -7,11 +7,11 @@ designer: "Evan Derrick"
 source_pdf: "dark-moon-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dark-moon-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dark%20Moon&game=dark-moon)
 <!-- verification:end -->
@@ -106,7 +106,22 @@ Choose another player to either: retrieve 2 spent dice OR perform any 2 actions 
 Roll up to 3 dice, submit 2. If both positive, add 1 Event cube to current Event/Final Event. May complete the Event.
 
 ### Reveal as Infected
-Infected players may reveal their Status card to switch to the Infected team publicly, gaining different action options.
+A player holding an Infected Status card may reveal it to publicly switch to the Infected team. Revealing triggers all of the following, in order:
+- If the player is not quarantined, they immediately execute the Infection Power on their Status card. They then roll any available die; if the result is positive, they may execute the Infection Power a second time.
+- They discard their Character card, their Quarantine token (if they were quarantined), any Die tokens, and their Uninfected player screen, and take an Infected player screen instead. If the revealing player was the Commander, the Commander card passes to the first player to their left and the Commander die is placed in the Available Resources pool.
+- Observing their new (lower) die limit on the Infected player screen, they discard down to two dice, returning any extra dice to the Available Resources pool.
+- Their turn ends immediately — unless the reveal was their first action after being issued an order, in which case they may immediately take an Infected action.
+
+Once revealed, an Infected player no longer has access to the normal actions above; instead they choose from five Infected-only actions (see below). Revealed Infected players also no longer draw Task cards at the end of their turn, can no longer participate in votes, and can no longer be voted on, quarantined, or fatigued. They still choose IN or OUT and submit dice normally during Malfunction Tasks (passing still lets them take up to two dice from the Available Resources pool), and they are unaffected by the Command Outpost token (they always retrieve two dice when passing).
+
+### Infected-Only Actions
+Available only to a player who has revealed as Infected; these replace that player's access to the normal actions above.
+
+- **Sabotage** — Place the Sabotage token on the Shield Control, Outpost Status, or Life Support label to make repairs there harder (see Special Rules & Edge Cases), or move an existing Sabotage token to a different area. Only one area may be sabotaged at a time.
+- **Test Commander** — The Commander must roll all of their active dice and submit one. Positive = success, nothing happens. Negative = the Infected player may draw a Damage token of their choice. If the Commander has no active dice, it is an automatic failure.
+- **Demoralize** — Beginning with the first player to the Infected player's left, all players must replace all of their active black Strong dice with red Weak dice, until there are no more Weak dice left in the Available Resources pool.
+- **Interference** — Draw three Task cards. Discard as many as desired and return the remaining cards to the top of the Task deck in any order chosen.
+- **Energy Spike** — If there are 0-1 Shield tokens on the board, add one Shield token and, if applicable, test the shields. If there are two or more Shield tokens on the board, roll any die to test the shields; if it matches the Failure Condition, draw either a Fatigue or Outpost token.
 
 ## Scoring / Victory Conditions
 
@@ -150,7 +165,14 @@ The Infected win **instantly** when any condition is met.
 - Call a Vote (quarantine/release)
 - Issue Order (costs no dice, target does 2 actions)
 - Lone Wolf (roll ≤3, submit 2, both must be positive)
-- Reveal as Infected
+- Reveal as Infected (see Actions section for transition effects)
+
+**Infected-Only Actions (replace normal actions after revealing):**
+- Sabotage (place/move Sabotage token; repairing a sabotaged area costs 2 extra dice)
+- Test Commander (Commander rolls & submits 1 die; negative = Infected player draws a Damage token; no active dice = automatic failure)
+- Demoralize (players from the Infected player's left replace Strong dice with Weak dice until the pool has none left)
+- Interference (draw 3 Tasks, discard any number, return the rest to top of deck in any order)
+- Energy Spike (add/test a Shield token if 0-1 on board; otherwise roll to test shields, drawing a Fatigue/Outpost token on a match)
 
 **Infected Win Conditions (any one):**
 - 6 Shield tokens placed

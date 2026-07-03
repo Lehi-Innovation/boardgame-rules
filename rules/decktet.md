@@ -7,11 +7,11 @@ designer: "P.D. Magnus"
 source_pdf: "decktet-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Nonesuch's Scoring/Victory Conditions section describes per-hand bid scoring but never states the game's actual win condition (cumulative score target and overall winner).. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/decktet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Decktet&game=decktet)
 <!-- verification:end -->
@@ -80,9 +80,13 @@ On your turn: play a card to the grid (Explore), optionally place an influence t
 ## Scoring / Victory Conditions
 
 ### Adaman
-- **Win**: Control all face cards (-).
-- **Lose**: Cannot make any move with face cards remaining, or 6+ face cards in the Palace.
-- **Score**: If you win, total all face card ranks + resource ranks (base 66+). If you lose, total only controlled face card ranks.
+- **Win**: Control all face cards (-) (all moved to the discard pile).
+- **Lose**: Cannot make any further moves, but face cards (-) remain in the palace or capital rows.
+- **Lose utterly**: 6+ face cards (-) (more than five) end up in the Palace row — the game ends immediately.
+- **Score**:
+  - Win: total the ranks of all face cards (66 in the basic deck) plus the ranks of the cards remaining in your resource row.
+  - Lose: total only the ranks of the face cards you control (will be less than 66).
+  - Lose utterly: score 0, regardless of how many cards you control.
 
 ### Emu Ranchers
 - When the draw pile is exhausted, play remaining cards onto existing birds.

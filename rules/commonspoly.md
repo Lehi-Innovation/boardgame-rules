@@ -6,11 +6,11 @@ play_time: "60-90 min"
 source_pdf: "commonspoly-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/commonspoly-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Commonspoly&game=commonspoly)
 <!-- verification:end -->
@@ -127,7 +127,7 @@ Welfare Points and Legitimacy Points cannot go below 0; any excess deduction is 
 | Bureaucracy | Change one Private Good to Public for 6 WF |
 | Tragedy of the Commons | 3 goods of your choice drop one status level |
 | Crowdfunding | Donate WF to any player; you gain 2 LP per WF donated |
-| Mortgage | Lose 2 Welfare Points automatically |
+| Mortgage | Lose 4 Welfare Points automatically |
 | Detention Centre | Miss 1 round; cannot move |
 | Casino | Lose 4 Legitimacy Points |
 | Inalienable Common Goods (pink) | Gain 2 WF and 2 LP; status cannot change |

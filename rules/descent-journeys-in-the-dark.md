@@ -7,11 +7,11 @@ designer: "Kevin Wilson"
 source_pdf: "descent-journeys-in-the-dark-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Special Rules & Edge Cases invents a Large Monster movement exception ("can end overlapping friendly monster spaces") that has no support in the source and contradicts the source's general movement rule.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/descent-journeys-in-the-dark-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Descent%3A%20Journeys%20in%20the%20Dark&game=descent-journeys-in-the-dark)
 <!-- verification:end -->
@@ -113,7 +113,7 @@ Each hero player's turn has 3 steps:
 - **Large Monsters**: Occupy 2, 4, or 6 spaces. Move using special rules; all occupied spaces must be empty (of enemies/obstacles). Can end overlapping friendly monster spaces.
 - **Hero Death**: When a hero's last wound token is removed, the hero is killed. The hero moves to town, loses half of his money (rounded down to the nearest 25 coins), but does NOT lose any items or skill cards. Wounds and fatigue are immediately restored to maximum and all lingering effects are removed. The hero players lose conquest tokens equal to the killed hero's conquest rating. The hero takes his turn normally next round and may return to the board via a glyph.
 - **Glyphs**: Must be activated by walking across them. Once active, heroes can teleport between town and any activated glyph. Monsters may not end movement on a glyph.
-- **Fatigue**: Heroes may spend fatigue tokens to gain extra movement points (1 fatigue = 1 space) or add power dice to attacks. Cannot exceed maximum fatigue; excess fatigue becomes wounds.
+- **Fatigue**: Heroes spend fatigue tokens (1 fatigue = 1 movement point, or 1 fatigue = 1 extra power die on an attack after rolling). Once out of fatigue tokens, a hero cannot spend more until he uses a Rest order, drinks a Vitality Potion, or dies (fatigue is then restored to maximum).
 - **Doors**: Anyone can open/close normal doors (costs 2 movement points). Rune-locked doors require the matching runekey. Opening a door reveals the area beyond.
 - **Spawning**: The Overlord can spawn monsters from spawn cards (1 per turn). Monsters may not be placed in a space that is in line of sight of any hero (other monster figures do not block a hero's line of sight for this purpose), in a space containing a figure or obstacle, or in an unrevealed area. If no legal space exists for a monster, it cannot be placed.
 - **Town**: Heroes in town can shop, heal (costs movement), and purchase training tokens to increase traits.

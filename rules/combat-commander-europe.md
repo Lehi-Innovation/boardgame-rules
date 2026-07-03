@@ -112,7 +112,7 @@ VPs are tracked on the VP Track. The VP marker moves toward a player as that pla
 
 **3. Objective VPs (7.3):** Each of the five map Objectives can be worth VPs based on which Objective chits are in play. Open Objectives award VPs immediately when they change control (subtract from former controller, add to new controller). Secret Objectives are typically scored at game end. Some special Objective chits may double Elimination VPs or Exit VPs for both players, or grant an automatic win to a player controlling all five Objectives prior to each Sudden Death Roll.
 
-**Time Marker Advancement (6.1.2):** Each time the Time marker advances, the Defender gains 1 VP.
+**Time Marker Advancement (6.1.2):** Each time the Time marker advances, the triggering player first shuffles their deck and makes a Sudden Death Roll if appropriate; only if that roll does not end the game does the Defender then gain 1 VP — if the Sudden Death Roll ends the game, this VP is not awarded.
 
 ### Game End (6.3)
 
@@ -135,7 +135,7 @@ The Initiative card is never part of a player's hand and does not count against 
 
 - **No physical dice:** All die rolls are made by revealing the top card of the rolling player's draw pile and reading the two dice icons (added together; multiplied only for Targeting Rolls).
 - **Die triggers:** Rolls enclosed in a red box trigger an Event!, Jammed!, Sniper!, or Time! pause; triggers are resolved entirely before the roll result is applied. A roll during a die trigger cannot itself produce a trigger.
-- **Reshuffling / Time Advance:** Whenever a player draws the last card of their deck (during any draw or die roll), the Time marker advances one space. Only that player shuffles their discard and draw piles; the Defender gains 1 VP; and the triggering player makes a Sudden Death Roll if the marker is at or past the Sudden Death marker.
+- **Reshuffling / Time Advance:** Whenever a player draws the last card of their deck (during any draw or die roll), the Time marker advances one space. First, only that player shuffles their discard and draw piles together, and then makes a Sudden Death Roll if the marker is at or past the Sudden Death marker. Only if the game does not end from that roll do the remaining steps occur, in order: the Defender gains 1 VP; the triggering player removes one Smoke marker from the map; reinforcements (if any) enter play; and both players may play "Dig In" Actions.
 - **Broken units:** A broken unit has a red bar across the top and white Morale number. Broken units cannot fire Weapons. A broken unit that breaks again is eliminated.
 - **Suppressed units:** Have −1 FP, −1 Range, −1 Movement, and −1 Morale; cannot fire any Weapon. Suppressed markers are removed at the start of a Recover Order.
 - **Leader Command:** A Leader's Command number extends its activation radius to friendly units within that many hexes. It also directly adds to the FP, Range, Movement, and Morale of all friendly Squads and Teams in the same hex (not other Leaders). It also adds to FP and Range of non-Ordnance Weapons carried by units in the same hex.

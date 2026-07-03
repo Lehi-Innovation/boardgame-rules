@@ -7,11 +7,11 @@ designer: "John H. Butterfield"
 source_pdf: "d-day-at-omaha-beach-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary directly contradicts the source rule on disrupted US units: it claims disrupted units can attack, but the rulebook explicitly forbids any action except removing disruption.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/d-day-at-omaha-beach-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20D-Day%20at%20Omaha%20Beach&game=d-day-at-omaha-beach)
 <!-- verification:end -->
@@ -62,7 +62,7 @@ The extended game sequence adds a Second Event Phase (after German Fire), replac
 **German Fire:**
 - Controlled by fire cards (not event cards). Each fire card shows position colors; all non-disrupted occupied positions of those colors fire at US units in their fields of fire.
 - **Fields of Fire:** Each German WN has defined fire dots (intense, steady, sporadic) indicating hexes it can fire into. Fire effectiveness depends on the fire dot type and the US unit's target symbol.
-- **Hit Limits:** A German position may hit a number of US units equal to the number of German units and depth markers in the position per fire.
+- **Hit Limits (6.31):** A German position may hit a number of US units equal to the number of German units and depth markers in the position per fire. This limit doubles starting Turn 17 in the Extended Game (see Extended Game Additions, 14.11).
 - **Disruption (US units, 6.33):** A US unit hit by fire may become disrupted instead of or in addition to losing a step. An already-disrupted unit that incurs another disruption result is NOT further affected (it may still lose a step from a different position in the same phase).
 - **Step Loss Limit (6.34):** A given US unit may not lose more than one step in a single German Fire Phase (this limit does not apply in the extended game).
 - **German Artillery (Turn 4+):** If the fire card shows an artillery result, check whether the number of undisrupted artillery units in the sector meets the threshold; if so, one US unit with the matching target symbol loses a step.
@@ -85,6 +85,7 @@ The extended game sequence adds a Second Event Phase (after German Fire), replac
 
 **Extended Game Additions:**
 - **German Actions:** German positions may now perform actions (Re-Occupy, Re-Supply, Redeploy, Reinforce, Mortar, Patrol, Artillery Fire, Advance, Ambush) as called for by action letters on fire cards, in addition to or instead of firing.
+- **Doubled German Hit Limit (14.11):** Starting Turn 17, the 6.31 hit limit is doubled — a position occupied by a single unit without a depth marker can hit 2 US units per fire (instead of 1), and a position with a unit and a depth marker can hit 4 (instead of 2).
 - **Artillery Barrage (US, Turn 17+):** Artillery and SP artillery units may barrage if: in range but not adjacent to target; target is a WN or revealed reinforcement position; unit is in command of an HQ or CP (not a General); an observer (the artillery unit itself or an undisrupted infantry unit) is in the target's field of fire and in command of the same HQ or CP.
 - **US Command Posts:** HQ units may convert to CPs (starting Turn 17) to extend command range up to four hexes. CPs do not move but provide free actions to all units within command range.
 - **Engineer Bases:** Established by engineer units on the beach; enable non-infantry units to move off the beach and provide traffic management; range increases over time.
@@ -92,9 +93,9 @@ The extended game sequence adds a Second Event Phase (after German Fire), replac
 ## Scoring / Victory Conditions
 
 **Control Definition (for VP purposes, rule 13.22):**
-A hex counts as US-controlled for VP purposes only if: (a) it is occupied or controlled by a US unit AND in US communication AND NOT in any German unit's field of fire; OR (b) US communication can be traced to it, German communication cannot, and it is not in a German field of fire. Simply occupying a hex is not enough — it must also be safe from German fire.
+A hex counts as US-controlled for VP purposes only if: (a) it is occupied or controlled by a US unit AND in US communication AND NOT in any German unit's field of fire, including a disrupted German unit's field of fire; OR (b) US communication can be traced to it, German communication cannot, and it is not in a German field of fire (again including disrupted German units). Simply occupying a hex is not enough — it must also be safe from German fire, and a disrupted German unit's field of fire still counts as unsafe for this purpose.
 
-**US Communication (12.3):** A hex is in US communication if a path of hexes of any length can be traced from it to any beach hex, not passing through hexes occupied by or in the field of fire of a German unit, nor through rough hexes or across bluff/cliff hexsides.
+**US Communication (12.3):** A hex is in US communication if a path of hexes of any length can be traced from it to any beach hex, not passing through hexes occupied by or in the field of fire of a German unit (a disrupted German unit's field of fire still blocks the path per 12.31; an empty German position, however, has no field of fire for tracing purposes), nor through rough hexes or across bluff/cliff hexsides.
 
 **Catastrophic Loss:**
 - Turns 1–16: If 8 regular infantry units (full-strength counter) from either division have been reduced to one-step, the division suffers catastrophic loss — you lose immediately.
@@ -144,7 +145,7 @@ Victory levels (Extended Game end):
 - **Headquarters (11.2):** Each HQ commands all US units in its hex and all adjacent hexes at the start of the Action Phase. Commanded units act for free; units attacking from an adjacent hex while commanded by an HQ are considered to possess a radio. HQs move for free, one hex per turn. Starting Turn 17, HQs may convert to Command Posts.
 - **Generals (11.3):** Similar command radius to HQs. Can enable tanks, anti-tank, and anti-air units in command to conduct ranged fire (not artillery units). A General alone in a hex does not block German fire or communication.
 - **US Communication (12.3):** During play, US units are NOT affected by being out of communication. Communication only matters at end-of-scenario for VP purposes (see Scoring section).
-- **German Communication (12.2):** German positions must trace communication (path to any exit hex A–G, not passing through US-occupied or US-controlled hexes) to receive reinforcements, receive depth markers, withdraw after defeat, or perform certain extended game actions. A disrupted German unit does not fire and projects no field of fire (6.4).
+- **German Communication (12.2):** German positions must trace communication (path to any exit hex A–G, not passing through US-occupied or US-controlled hexes) to receive reinforcements, receive depth markers, withdraw after defeat, or perform certain extended game actions. A disrupted German unit does not fire and, for purposes of firing and hit-limit determination, projects no field of fire (6.4). However, per 12.31, a German position's field of fire extends into all hexes with fire dots emanating from that position even if the occupying unit is disrupted — a disrupted German unit's field of fire still blocks tracing of US communication (an empty German position, by contrast, has no field of fire for this purpose). Per 13.22, a disrupted German unit's field of fire likewise still counts against US control of a hex for VP purposes — a hex in a disrupted German unit's field of fire is NOT safe from German fire for VP scoring.
 - **Disrupted US Units (7.7):** A disrupted unit has a disrupted marker; it may perform the "Remove disruption" action (for free, since it counts as having a disrupted marker) to recover. Disruption from a single fire event does not add up — an already-disrupted unit receiving another disruption result is unaffected (but may still lose a step from a separate position). Disrupted units CAN attack (disruption is not a prohibition on attacking per se), but they act as normal units for combat purposes.
 - **Beach Obstacles:** Block landing craft; US engineers clear beach obstacle hexes during the US Engineer Phase. All beach obstacles in mid-tide waterline hexes are automatically considered cleared beginning on Turn 24.
 - **Terrain:** Bocage terrain provides defensive advantage (German strength modifier). Bluff and cliff hexsides restrict movement and attack eligibility. US low-ground units cannot conduct ranged fire against high-ground German positions unless that position projects a field of fire into at least one beach hex.

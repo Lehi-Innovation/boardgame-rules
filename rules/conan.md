@@ -7,11 +7,11 @@ designer: "Frédéric Henry, Pascal Bernard, Antoine Bauza"
 source_pdf: "conan-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary invents a universal "time limit / running out the clock" victory mechanism that never appears anywhere in the extracted source, which explicitly defers all win conditions to the scenario.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/conan-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conan&game=conan)
 <!-- verification:end -->
@@ -66,11 +66,13 @@ Each hero moves all gems from their action spaces, ally tiles, and spell cards t
 
 ### Overlord Turn
 The Overlord uses the Book of Skelos energy system:
-1. The Overlord has a track of tiles representing minion groups.
-2. To activate a tile, the Overlord spends gems to slide the tile, activating that minion group.
-3. Tiles at the far end of the track are cheaper to activate; recently used tiles cost more.
-4. Activated minions can move, attack heroes, and perform special actions.
+1. The Overlord has tiles representing minion groups in the River.
+2. On their turn, the Overlord may activate 0, 1, or 2 tiles in the River to move their units and attack the heroes. Each tile represents a model or group of models the Overlord takes control of when activating it.
+3. Activated minions can move, attack heroes, and perform special actions.
+4. Once the Overlord has completed their activations, the heroes take their turn.
 5. The turn marker advances one space at the start of the Overlord's turn.
+
+(The detailed rules for Overlord activation costs/mechanics are in the separate Overlord's Book, which is not part of this extracted source — only the 0-2 tile/turn cap above is sourced here.)
 
 ## Actions
 
@@ -85,7 +87,7 @@ The Overlord uses the Book of Skelos energy system:
 | **Reroll** | Spend gems to reroll dice |
 
 ### Overlord Actions
-- Activate minion groups by spending gems and sliding tiles.
+- May activate 0, 1, or 2 tiles from the River per turn to move and attack.
 - Minions move and attack heroes per their stats.
 - Play event cards for special effects.
 - Use monster special abilities.
@@ -113,7 +115,7 @@ Scenario-dependent. Typically:
 - **Line of sight** matters for ranged attacks; models do not block LoS but can hinder ranged attacks.
 - **Equipment cards** provide permanent or one-use bonuses (weapons, shields, items).
 - **Spells** are cast by assigning gems to the spell card; gems on spell cards are moved to Fatigue at the end of each turn (End Phase).
-- The Overlord's tile sliding mechanic means recently activated groups are expensive to reactivate, forcing strategic rotation.
+- **Overlord activation:** Each Overlord turn, the Overlord may activate 0, 1, or 2 tiles from the River to move units and attack heroes; each tile represents a model or group of models taken control of on activation. Detailed activation costs/mechanics are covered in the separate Overlord's Book, which is not part of this extracted source.
 - Some scenarios have special rules for reinforcements, traps, or environmental effects.
 
 ## Player Reference

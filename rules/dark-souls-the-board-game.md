@@ -7,11 +7,11 @@ designer: "David Carl, Alex Hall, Mat Hart, Rich Loxam"
 source_pdf: "dark-souls-the-board-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two combat/setup mechanics are misstated: trap tokens are wrongly described as terrain (placed on terrain nodes) when the source places them on basic nodes, and the Attack action omits that a character can attack once with EACH weapon held . Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dark-souls-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dark%20Souls%20%E2%80%93%20The%20Board%20Game&game=dark-souls-the-board-game)
 <!-- verification:end -->
@@ -43,7 +43,7 @@ Dark Souls: The Board Game is a cooperative dungeon crawl for 1-4 players based 
 4. Separate encounter cards by level; place 1 facedown per tile matching boss data card's difficulty progression (lower near Bonfire, higher farther).
 5. Each player selects a character, takes model, player board, starting equipment. Place 1 Estus Flask, 1 Heroic Action, 1 Luck token on board. Place Level Up tokens at Base stats.
 6. Build Treasure Deck from common + class-specific cards; place on Bonfire tile.
-7. Set up all remaining tokens within reach.
+7. Set up all remaining tokens within reach. Soul Cache starts at 0 souls (2-4 players) or 16 souls (solo play).
 
 ## Turn Structure
 
@@ -61,7 +61,7 @@ Encounters alternate between enemy activations and individual character activati
 6. Third character activates.
 7. Return to step 1.
 
-Characters activate one at a time in clockwise order around the table. In the very first character activation of the encounter, players choose which character goes first. All enemy models activate together during each enemy activation, in order from highest to lowest threat level.
+Characters activate one at a time in clockwise order around the table. Only during the very first character activation of the entire game do players choose which character goes first; from then on, turn order is fixed. When a new encounter begins, the first character to activate is whichever character would have activated next in turn order when the previous encounter ended — tracked via the First Activation token, which is handed to the player next in turn order after the last player who activated whenever an encounter ends (win or lose), and which that player then uses to activate first in the next encounter. All enemy models activate together during each enemy activation, in order from highest to lowest threat level.
 
 ### After Encounters
 - **Victory**: If all enemies are defeated, remove all cubes from characters' endurance bars. Add 2 souls per character to the soul cache (for regular encounters) or 1 soul per character per remaining Spark (for boss encounters).
@@ -102,7 +102,7 @@ At the start of each character's activation: gain 2 Stamina, gain the Aggro toke
 - **Node Limit**: Max 3 models per node. If exceeded, push 1 model. Only 1 boss per node.
 - **Range**: Measured in nodes. Range 0 = same node. Range ∞ = unlimited.
 - **Aggro Token**: Goes to the character who is currently activating (at the start of each character's activation). Some enemies target the aggro holder; some target the nearest character (with the aggro holder as a tiebreaker).
-- **Ember Tokens**: Found in treasure deck. While held, reduce damage by 1 if suffering 3+ from a single attack. Discarded when resting at Bonfire.
+- **Ember Tokens**: Found in treasure deck. While held, reduce damage by 1 if suffering 3+ from a single attack. Discarded only when the party is defeated and forced to rest at the Bonfire (not lost on voluntary rests). A character can never hold more than one Ember token at a time.
 - **Conditions**: Bleed, Poison, Frostbite, Stagger each have specific effects that persist until cleared.
 - **Pushing**: When a node exceeds its limit, the active player chooses which model to push to an adjacent node.
 - **Terrain**: Barrels, Gravestones, Trap tokens placed on terrain nodes during encounter setup. Traps trigger when models move onto them.
@@ -131,7 +131,7 @@ At the start of each character's activation: gain 2 Stamina, gain the Aggro toke
 6. Explore new tiles, defeat Main Boss → WIN
 
 **Key Resources:**
-- Souls: Currency for leveling and buying gear
+- Souls: Currency for leveling and buying gear. Soul Cache starts at 0 souls (2-4 players) or 16 souls (solo play).
 - Sparks: Limited lives/rests
 - Estus Flask: Full heal (once per rest)
 - Luck: Reroll (once per rest)

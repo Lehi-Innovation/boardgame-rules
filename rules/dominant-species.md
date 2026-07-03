@@ -63,7 +63,7 @@ APs are removed from the action display one at a time in top-to-bottom, left-to-
 - Eliminate all endangered species (Extinction). Mammals may save 1.
 - Score Survival card (bonus VPs for tundra tiles occupied by the holder's species).
 - Refill Dominance card display to 5.
-- Shift Glaciation APs left. Cascade elements: Adaptation -> Regression Box, Abundance -> Wasteland Box, Wasteland Box -> Depletion Box. Clear Regression, Depletion, and Wanderlust sections.
+- Shift Glaciation APs left. Clear Regression, Depletion, and Wanderlust sections (elements return to bag). Then cascade: Wasteland Box -> Depletion Box, Abundance -> Wasteland Box, Adaptation -> Regression Box.
 - Draw 4 new elements each for Adaptation, Abundance, and Wanderlust.
 - Flip top tiles of Wanderlust stacks face-up.
 

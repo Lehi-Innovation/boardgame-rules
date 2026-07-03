@@ -7,11 +7,11 @@ designer: "Richard Berg"
 source_pdf: "conquistador-the-age-of-exploration-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "verified"
-verification_date: "2026-06-17"
+verification: "inaccurate"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The "Land Phase" bullets under Actions invent movement/combat mechanics (Zones of Control, terrain-varied movement cost, terrain+fortification combat modifiers) that the rulebook explicitly negates or never mentions.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/conquistador-the-age-of-exploration-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conquistador%3A%20The%20Age%20of%20Exploration&game=conquistador-the-age-of-exploration)
 <!-- verification:end -->
@@ -107,8 +107,8 @@ Only one Player may control a given Area; if no Player satisfies all five condit
 - **Native Uprisings:** Areas may experience uprisings; the Uprising Level for the check is affected by the Conversion Rating of any Missionaries present (plus ratings help Spain, minus ratings hurt).
 - **Treaty of Tordesillas (Optional):** Historical treaty dividing the New World between Spain and Portugal. Affects which areas each nation may claim. Cannot be used if the Portugal option (23.0) is in play.
 - **Portuguese Fourth Player (Optional, rule 23.0):** Adds Portugal as a playable nation. There are no Portuguese counters in the base game; players must supply their own.
-- **German Bankers (Optional, rule 24.0):** A non-national player (requires at least 3 active country players) controls German Banking Houses. The Banker player cannot send expeditions or make active moves on the map; he earns 3 Victory Points for each Area he controls and per any Discovery.
-- **Solitaire Scenario:** Spain-only; non-player countries colonize via abstract rules using the Random Events Table.
+- **German Bankers (Optional, rule 24.0):** A non-national player (requires at least 3 active country players) controls German Banking Houses. The Banker player cannot send expeditions or make active moves on the map. At game end he receives 3 Victory Points for every Ducat in his Treasury; he receives NO Discovery credit for any Discovery. He is considered the winner if he has the most Victory Points at game end. In addition, regardless of his Victory Point total, if his Treasury is greater than the combined Treasuries of any two other countries, he has scored a "technical victory." Separately (24.3), if the Banker receives at least 50% of an Area's profits (Gold + Resources) via loan agreements, he — not the Player who otherwise satisfies Political Control there — is considered "in Control" of that Area for Victory purposes (the standard 150 VP/Area rate, not a per-Area VP bonus).
+- **Solitaire Scenario (21.2):** Spain-only; the Non-Player countries (England, France, and Portugal) do not roll for Random Events, send no Expeditions, and have no land units — instead they colonize Areas via an abstract Non-Player Colonization Table keyed to the Random Events roll. The Spanish Player scores Victory Points as per Section 20.0, except he receives no Discovery credit for North America, Hudson's Bay, the St. Lawrence and Mississippi Rivers, or the Great Lakes. In the Solitaire Scenario, the Player is considered to "control" an Area only if its European Level has been reduced to "0". If the Player has 4500 or more Victory Points at the end of the Game, he is considered to have won.
 - **Attrition:** Both naval and land units face attrition. For naval attrition, Players purchase Bounds (spending limits) that define how far expeditions may travel without increased attrition risk; unused Bounds do not carry over between turns.
 - **Gold Transportation:** Gold must be physically loaded onto ships (during the Resource Segment) and transported back to Europe (Final Naval Phase) to be added to the national treasury and count toward Victory.
 - **Treasure and Looting:** Conquering native Treasure Cities may yield loot.

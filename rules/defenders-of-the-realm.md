@@ -95,6 +95,12 @@ Each action costs 1 Life Token unless noted:
 ### Combat vs. Generals
 Play Hero Cards bearing the General's portrait. Roll dice shown on cards. Each hit (meeting the General's combat requirement) moves the wound marker. Multiple attacks may be needed. Failure triggers the General's Failure Penalty.
 
+**General-Specific Combat Skills:** Each General has a unique combat skill that changes how attack dice resolve:
+- **Lord Balazarg (Demons)**: After deciding how many Red Cards will be used in the battle, players must roll a die for each of those cards. A card is corrupted and lost (discarded without contributing to the attack) each time a 1 is rolled.
+- **Gorgutt the Savage (Orcs)**: Any 1's rolled by the heroes become parries for Gorgutt, each blocking a successful attack (regardless of which hero rolled the 1 or which attack it would have blocked).
+- **Varkolak (Undead)**: No re-rolls are allowed in battle with the Champion of the Undead.
+- **Sapphire (Dragons)**: See General Healing below — she immediately returns to full health if not defeated, unless her skill is negated by a quest card.
+
 ## Scoring / Victory Conditions
 
 ### Win
@@ -117,7 +123,7 @@ While all players win/lose together, the player with the most completed Quest Ca
 - **Suffering Wounds**: End your turn at a location with minions = 1 wound per minion (+ Fear for Undead). Lost Life Tokens go face down beside your card. If all lost, hero is eliminated; player picks a new hero starting at Monarch City with 1 Quest and 2 Hero Cards.
 - **War Status**: Progresses as Generals are defeated: Early War (1 card/night) → Mid War after 1st General (2 cards; 1st places minions + advances a General, 2nd only advances a General) → Late War after 3rd General (3 cards; 1st two place minions + advance the remaining General, 3rd only advances). The War Status Token advances one box each time a General is defeated.
 - **General Movement**: Generals move toward Monarch City via Darkness Spreads Cards. Some cards move specific or all Generals. A General with a Major Wound (Wound Marker on a red space) will not advance when a Darkness Spreads Card is drawn.
-- **General Healing**: If a General is not defeated in battle, it begins to heal. A General with a **Minor Wound** (light space) starts healing at the end of the next player's turn after the attack. A General with a **Major Wound** (red space) does not heal until a full round of turns has been completed. Once healing, a General recovers 1 wound point per player turn. Exception: **Sapphire** (Dragon General) immediately returns to full health if not defeated.
+- **General Healing**: If a General is not defeated in battle, it begins to heal. A General with a **Minor Wound** (light space) starts healing at the end of the next player's turn after the attack. A General with a **Major Wound** (red space) does not heal until a full round of turns has been completed. Once healing, a General recovers 1 wound point per player turn. Exception: **Sapphire** (Dragon General) immediately returns to full health if not defeated, unless her skill is negated by a quest card.
 - **Slayer Ability**: The hero that lands the final blow on a General receives that General's Character Card and a Slayer ability: when in the same location as minions of the defeated General, the Slayer may spend 1 action to defeat all minions there without rolling dice. Slaying a General also earns 3 Hero Cards as a reward.
 - **Hand limit**: 10 Hero Cards.
 - **Cooperative attacks on Generals**: Multiple heroes at the same location can combine attacks against a General.
