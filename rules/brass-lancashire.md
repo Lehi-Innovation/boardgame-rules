@@ -7,11 +7,11 @@ designer: "Martin Wallace"
 source_pdf: "brass-lancashire-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Link scoring cites "beer barrel icons" but Lancashire has no beer; Distant Cotton Market misdescribed; Double Action Build omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/brass-lancashire-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brass%3A%20Lancashire&game=brass-lancashire)
 <!-- verification:end -->
@@ -67,24 +67,25 @@ Brass: Lancashire is an economic strategy game set during the Industrial Revolut
 ## Actions
 
 ### Build
-Place an Industry tile from your Player Mat onto a board location.
+Place an Industry tile from your Player Mat onto a board location. Discard one card:
 - **Location card:** build at named location (even outside network).
 - **Industry card:** build matching industry at a location in your network.
+- **Double Action Build:** Discard any 2 cards instead of the normal 1, using both of your turn's actions. Treat them as any 1 Location card — build any industry tile in any location with a space for that industry. Still refill your hand with 2 cards.
 - Pay money cost. Consume required coal and/or iron.
-- Coal Mines/Iron Works: place resource cubes. Shipyards: flip immediately when built.
+- Coal Mines/Iron Works: place resource cubes on the tile when built. Shipyards: flip immediately when built.
 
 ### Network
 Place a Link tile for canal (Canal Era) or rail (Rail Era).
 - Canal: costs 3 pounds. 1 Link per route.
-- Rail: costs 5 pounds + 1 coal per link. 1 or 2 Links per route.
+- Rail: 1 Link costs 5 pounds; a maximum of 2 Links may be built in one Network action for 15 pounds total. 1 coal must be consumed per Link built.
 
 ### Develop
 Remove 1 or 2 Industry tiles from Player Mat (consuming iron), to access higher-level tiles.
 
 ### Sell (Cotton)
-Flip Cotton Mill tiles by selling to the Distant Cotton Market or through connected Ports.
-- **Distant Cotton Market:** Draw a tile; if the arrow points down, the market price drops. Cotton sells if the marker hasn't passed the red zone.
-- **Port:** Flip a connected Port tile to sell cotton through it.
+Flip Cotton Mill tiles by selling to the Distant Cotton Market or through connected Ports. The Cotton Mill must be connected to the market trade icon (shown on all Port tiles and some board edges).
+- **Distant Cotton Market:** The Cotton Mill must be connected to the market trade icon. Flip the topmost Distant Cotton Market tile; move the Distant Cotton Market Marker along its track by the number of spaces shown on the tile. Advance your Income Marker by the number of spaces shown next to the marker's new position. If the marker reaches the "X" space, cotton cannot be sold to the Distant Market and the Sell action ends immediately (the Cotton Mill is not flipped). Otherwise flip your Cotton Mill and advance your Income Marker by its flip bonus.
+- **Port:** Flip a connected unflipped Port tile (any player's); that Port's owner advances their Income Marker. Then flip your Cotton Mill and advance your Income Marker.
 
 ### Loan
 Take 10, 20, or 30 pounds. Move Income Marker back 1, 2, or 3 income levels respectively.
@@ -96,7 +97,7 @@ Skip an action but must still discard a card.
 
 **Scoring at end of each era:**
 
-1. **Score Links:** Each Link tile scores 1 VP per beer barrel icon in adjacent locations. Remove Links after scoring.
+1. **Score Links:** Each Link tile scores 1 VP per merchant/trade icon displayed in adjacent locations. Remove Links after scoring.
 2. **Score Flipped Industry Tiles:** Score VPs from bottom-left of flipped tiles.
 
 **End of Canal Era additional steps:**
@@ -133,12 +134,17 @@ Traced through Link tiles (any player's). Required for Industry card builds, coa
 - If none available, purchase from Iron Market.
 
 ### Distant Cotton Market
-- When selling cotton, draw a Distant Cotton Market tile.
-- If the arrow points down, move the market marker down one space.
-- If the marker passes the red line, cotton cannot be sold to the Distant Market.
+- When selling cotton to the Distant Market, flip the topmost Distant Cotton Market tile.
+- Move the Distant Cotton Market Marker along the track by the number of spaces shown on the bottom centre of the tile.
+- Advance your Income Marker by the number of spaces shown next to the marker's current position.
+- If the marker reaches the "X" space, the Sell action ends immediately and cotton is not sold to the Distant Market.
+- You may repeat the process for each of your remaining unflipped Cotton Mills in the same Sell action.
 
 ### Overbuilding
-You may overbuild your own lower-level tiles or opponent's lower-level Coal Mines in your network.
+Replacing an already-placed Industry tile with a higher-level tile of the same industry type (still paying the build cost) is Overbuilding.
+- **Your own tile:** You may Overbuild any Industry tile. Any iron/coal cubes on the replaced tile are removed from it.
+- **Opponent's tile:** You may Overbuild only a Coal Mine or an Iron Works, and only if there are no resource cubes anywhere on the entire board (including in its Market) of the same type as the Industry tile being replaced.
+- Overbuilt Industry tiles are removed from the game and returned to the box (they do not score VPs). Players do not lose income or VPs when their tiles are overbuilt.
 
 ### Negative Income
 Pay the negative amount to the Bank. If unable, remove Industry tiles from board at half cost. If still short, lose 1 VP per pound.
@@ -151,7 +157,7 @@ During Rail Era, the Deck tile is inserted near the bottom of the Draw Deck (2 c
 - Rail Era allows multiple tiles per location.
 
 ### Market Mechanics
-When Coal Mines or Iron Works are built connected to market trade icons, cubes move to market spaces (most expensive first), earning money.
+When you build a Coal Mine that is connected to the market trade icon, or an Iron Works (regardless of whether it is connected to the market trade icon), immediately move as many cubes as possible from the Industry tile to available spaces in its associated Market (filling the most expensive spaces first). For each cube moved, collect the money shown on that Market space. If the last cube is moved from the tile, flip it and advance your Income Marker by the amount shown on the tile.
 
 ## Player Reference
 
@@ -168,7 +174,7 @@ When Coal Mines or Iron Works are built connected to market trade icons, cubes m
 |--------|------|--------------|
 | Build | Tile cost + resources | Location or Industry card |
 | Network (Canal) | 3 pounds | Any card |
-| Network (Rail) | 5 pounds + 1 coal per link | Any card |
+| Network (Rail) | 5 pounds (1 link) or 15 pounds (2 links) + 1 coal per link | Any card |
 | Develop | Iron (1-2) | Any card |
 | Sell | None (may need Port connection) | Any card |
 | Loan | -1/-2/-3 income levels | Any card |

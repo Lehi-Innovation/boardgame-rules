@@ -7,11 +7,11 @@ designer: "Richard Launius"
 source_pdf: "defenders-of-the-realm-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Overrun mechanic invented, Nighttime draw fixed at 2 vs 1-3 by War Status, General healing/regen system omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/defenders-of-the-realm-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Defenders%20of%20the%20Realm&game=defenders-of-the-realm)
 <!-- verification:end -->
@@ -60,7 +60,9 @@ Refresh all face-down Life Tokens. Perform actions equal to your active Life Tok
 Draw 2 Hero Cards (hand limit: 10 cards).
 
 ### 3. Nighttime (Draw Darkness Spreads Cards)
-Draw 2 Darkness Spreads Cards and resolve them in order. These add minions, move Generals, or trigger special events.
+Draw **1, 2, or 3** Darkness Spreads Cards depending on the War Status (Early War: 1 card; Mid War: 2 cards; Late War: 3 cards) and resolve them in order. For each card:
+1. **Place Minions**: Add the appropriate number and color of minions to the locations shown.
+2. **A General Advances**: If the General shown is one space away from the location on the card, it advances to that location and gains new minions. Generals never move away from Monarch City.
 
 ## Actions
 
@@ -93,6 +95,12 @@ Each action costs 1 Life Token unless noted:
 ### Combat vs. Generals
 Play Hero Cards bearing the General's portrait. Roll dice shown on cards. Each hit (meeting the General's combat requirement) moves the wound marker. Multiple attacks may be needed. Failure triggers the General's Failure Penalty.
 
+**General-Specific Combat Skills:** Each General has a unique combat skill that changes how attack dice resolve:
+- **Lord Balazarg (Demons)**: After deciding how many Red Cards will be used in the battle, players must roll a die for each of those cards. A card is corrupted and lost (discarded without contributing to the attack) each time a 1 is rolled.
+- **Gorgutt the Savage (Orcs)**: Any 1's rolled by the heroes become parries for Gorgutt, each blocking a successful attack (regardless of which hero rolled the 1 or which attack it would have blocked).
+- **Varkolak (Undead)**: No re-rolls are allowed in battle with the Champion of the Undead.
+- **Sapphire (Dragons)**: See General Healing below — she immediately returns to full health if not defeated, unless her skill is negated by a quest card.
+
 ## Scoring / Victory Conditions
 
 ### Win
@@ -109,18 +117,20 @@ While all players win/lose together, the player with the most completed Quest Ca
 
 ## Special Rules & Edge Cases
 
-- **Overrun**: When a 4th minion would be placed at a location, an Overrun occurs. The 4th minion is placed, then all minions at that location move 1 space toward Monarch City (along the path shown). If the destination also has 4, chain overruns. Place a Tainted Crystal at the overrun location.
+- **Overrun**: The maximum number of minions in any location outside Monarch City is 3. When a 4th minion would be placed at a location, an Overrun occurs: the 4th minion is NOT placed; instead a Tainted Crystal is placed on that location, and 1 minion of the same color that caused the overrun is added to each adjacent (connected by a line) location. If any such "overrun minion" would push an adjacent location beyond 3 minions, it taints that location (another Tainted Crystal is placed) but does NOT cause further chain overruns and no additional minions spread from it. A location can be overrun and tainted multiple times. Inns cannot be overrun or tainted.
 - **Demons special rule**: Demons taint the land at 3 minions (not 4). Place Tainted Crystal when a 3rd Demon arrives.
 - **Undead Fear**: If ending your turn at a location with Undead, suffer 1 additional wound beyond the normal wound-per-minion.
 - **Suffering Wounds**: End your turn at a location with minions = 1 wound per minion (+ Fear for Undead). Lost Life Tokens go face down beside your card. If all lost, hero is eliminated; player picks a new hero starting at Monarch City with 1 Quest and 2 Hero Cards.
-- **War Status**: Progresses from Early War to Late War as Generals are defeated. Later stages make Darkness Spreads cards more dangerous.
-- **General Movement**: Generals move toward Monarch City via Darkness Spreads Cards. Some cards move specific or all Generals.
+- **War Status**: Progresses as Generals are defeated: Early War (1 card/night) → Mid War after 1st General (2 cards; 1st places minions + advances a General, 2nd only advances a General) → Late War after 3rd General (3 cards; 1st two place minions + advance the remaining General, 3rd only advances). The War Status Token advances one box each time a General is defeated.
+- **General Movement**: Generals move toward Monarch City via Darkness Spreads Cards. Some cards move specific or all Generals. A General with a Major Wound (Wound Marker on a red space) will not advance when a Darkness Spreads Card is drawn.
+- **General Healing**: If a General is not defeated in battle, it begins to heal. A General with a **Minor Wound** (light space) starts healing at the end of the next player's turn after the attack. A General with a **Major Wound** (red space) does not heal until a full round of turns has been completed. Once healing, a General recovers 1 wound point per player turn. Exception: **Sapphire** (Dragon General) immediately returns to full health if not defeated, unless her skill is negated by a quest card.
+- **Slayer Ability**: The hero that lands the final blow on a General receives that General's Character Card and a Slayer ability: when in the same location as minions of the defeated General, the Slayer may spend 1 action to defeat all minions there without rolling dice. Slaying a General also earns 3 Hero Cards as a reward.
 - **Hand limit**: 10 Hero Cards.
 - **Cooperative attacks on Generals**: Multiple heroes at the same location can combine attacks against a General.
 
 ## Player Reference
 
-**Turn Sequence:** Daytime (Actions) → Evening (Draw 2 Hero Cards) → Nighttime (Draw 2 Darkness Spreads Cards)
+**Turn Sequence:** Daytime (Actions) → Evening (Draw 2 Hero Cards) → Nighttime (Draw 1/2/3 Darkness Spreads Cards based on War Status)
 
 **Minion Defeat Rolls:**
 | Color | Enemy | Needed |

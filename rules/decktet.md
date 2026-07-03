@@ -8,10 +8,10 @@ source_pdf: "decktet-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Nonesuch bid scoring wrong: "Most" bid misdefined with wrong penalty, "None" bid scores invented. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Nonesuch's Scoring/Victory Conditions section describes per-hand bid scoring but never states the game's actual win condition (cumulative score target and overall winner).. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/decktet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Decktet&game=decktet)
 <!-- verification:end -->
@@ -80,9 +80,13 @@ On your turn: play a card to the grid (Explore), optionally place an influence t
 ## Scoring / Victory Conditions
 
 ### Adaman
-- **Win**: Control all face cards (-).
-- **Lose**: Cannot make any move with face cards remaining, or 6+ face cards in the Palace.
-- **Score**: If you win, total all face card ranks + resource ranks (base 66+). If you lose, total only controlled face card ranks.
+- **Win**: Control all face cards (-) (all moved to the discard pile).
+- **Lose**: Cannot make any further moves, but face cards (-) remain in the palace or capital rows.
+- **Lose utterly**: 6+ face cards (-) (more than five) end up in the Palace row — the game ends immediately.
+- **Score**:
+  - Win: total the ranks of all face cards (66 in the basic deck) plus the ranks of the cards remaining in your resource row.
+  - Lose: total only the ranks of the face cards you control (will be less than 66).
+  - Lose utterly: score 0, regardless of how many cards you control.
 
 ### Emu Ranchers
 - When the draw pile is exhausted, play remaining cards onto existing birds.
@@ -95,9 +99,9 @@ On your turn: play a card to the grid (Explore), optionally place an influence t
 - Highest total score wins.
 
 ### Nonesuch
-- **Some** bid: expect to win at least 1 trick. Score 1 per trick won.
-- **Lots** bid: expect to win the most tricks. Score 2 per trick if you win the most; lose 2 per trick if you don't.
-- **None** bid: expect to win zero tricks. Score 5 if successful; lose 5 if you win any trick.
+- **Some** bid: expect to win at least 1 trick. Score 1 point per trick won.
+- **Most** bid: expect to win at least half the tricks (at least 6 with 3 players; at least 5 with 4 players). If you meet or exceed that threshold, score 2 points per trick won. If you fall short, lose 1 point per trick you are below half (i.e., per trick fewer than the threshold you needed).
+- **None** bid: expect to win zero tricks. If successful, score points equal to the total number of tricks in the hand (12 with 3 players; 9 with 4 players). If you win any tricks, lose 1 point per trick taken.
 
 ## Special Rules & Edge Cases
 

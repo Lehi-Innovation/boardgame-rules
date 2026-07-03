@@ -8,10 +8,10 @@ source_pdf: "claustrophobia-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented "threat level" economy replaces the Board of Destiny dice system; round structure wrong; events falsely cost threat points. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary omits the entire combat-resolution system (hit determination and all three death/removal conditions) and the Talents system, both essential to actually playing out combat and determining the elimination-based victory conditions.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/claustrophobia-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Claustrophobia&game=claustrophobia)
 <!-- verification:end -->
@@ -23,14 +23,20 @@ Claustrophobia is an asymmetric two-player tactical survival game set in the cat
 
 ## Components
 
-- Modular tunnel tiles
-- Painted miniatures (human warriors and troglodytes)
-- Character dashboards with stat lines
-- Dice (action dice, combat dice)
-- Event cards (Demon player)
-- Equipment cards (Human player)
-- Threat tokens
-- Scenario booklet
+- 36 Tunnel and Room tiles (modular dungeon)
+- Miniatures: 1 Redeemer, 2 Condemned Brutes, 2 Condemned Blades for Hire, 11 Troglodytes, 1 Demon
+- 5 Reference cards for Human warriors (with Lines of Action, stat lines, Damage squares) and 5 card stands
+- 25 plastic Damage tokens
+- 1 Board of Destiny (Demon player tracks Troglodyte stats and special abilities)
+- 7 Reference cards for Demons
+- 6 Gift cards (Redeemer's special powers)
+- 6 Object cards (equipment for Human warriors)
+- 15 Advantage cards (temporary abilities for Human warriors)
+- 16 Event cards (Demon player)
+- 20 Threat Point (TP) tokens
+- 10 Wound tokens (for Demons)
+- 12 six-sided dice (Action Dice, Combat Dice, Dice of Destiny) + 1 ten-sided die
+- Scenario booklet (included in rulebook)
 
 ## Setup
 
@@ -42,35 +48,50 @@ Claustrophobia is an asymmetric two-player tactical survival game set in the cat
 
 ## Turn Structure
 
-Each round has phases:
+Each round has 4 phases, carried out in order:
 
-### Phase 1: Human Player Initiative
-1. Roll action dice (number depends on surviving warriors).
-2. Assign each die to a warrior's stat line. Each line provides different bonuses (combat, movement, defense, special abilities).
-3. Activate warriors: move, explore new tunnels, attack, use equipment.
+### Phase 1: Initiative Phase
+The Human player rolls one Action Die (six-sided) per active warrior. Each die is assigned to one warrior's Reference card, placing it on the space marked for the current round. This determines which Line of Action that warrior uses for the round — setting their MVT, CBT, and DEF statistics until the next Initiative phase.
 
-### Phase 2: Demon Player
-1. Gain threat points based on current threat level.
-2. Spend threat points to: play event cards, spawn troglodytes, activate special abilities.
-3. Activate troglodytes: move and attack human warriors.
+If a warrior receives a die score that matches a canceled Line of Action, that warrior is **Exhausted**: MVT 0, CBT 0, DEF 3, no Talents, no Object benefits (except the Scepter of Command). Unused dice (if more dice rolled than warriors) are set aside.
 
-### Phase 3: Combat Resolution
-Attacks are resolved with combat dice. Each hit reduces the defender's health. Warriors have multiple stat lines; as they take damage, lines are crossed off, reducing their capabilities.
+### Phase 2: Human Player's Action Phase
+Each Human warrior activates in sequence, one at a time. During activation, a warrior may move then attack, or attack then move (but not move-attack-move). Movement and combat are both optional.
+
+Advantage cards may be used at the time stated on each card.
+
+### Phase 3: Threat Phase
+The Demon player rolls **3 Dice of Destiny** (six-sided) and assigns them to squares on the Board of Destiny, following placement restrictions. All dice must be placed before any effects are resolved. The Board of Destiny squares have various effects, including:
+- **Sounds From The Deep**: grants Threat Points (TP) that can be saved or spent to deploy warriors later.
+- **The Calm Before The Storm**: grants 1 extra Die of Destiny on the next Threat phase.
+- **Supernatural Speed / They Are Legion / Sharpened Claws**: improves Troglodyte stats (MVT, numbers, combat).
+- **Dark Destiny**: the Demon player draws 1 or more Event cards from the deck.
+- **A Taste For Blood / Burrowing Monsters**: relaxes restrictions on where warriors can enter play.
+- **Resistance Is Futile**: limits Human movement while improving Troglodyte movement.
+- **Trap**: causes damage to a Human warrior.
+
+Abilities printed in red can only be selected once per game. After all dice are placed and effects resolved, the Demon player may spend Threat Points to deploy warriors. Each Troglodyte costs 1 TP; each Demon costs 5 TP. Warriors can only be placed on tiles that have at least one unexplored opening and contain no Human warriors (Tunnel Size Rule applies).
+
+Event cards are drawn via the Dark Destiny result on the Board of Destiny and can be kept in hand until used at the time stated in the card's description.
+
+### Phase 4: Demon Player's Action Phase
+Each Demon player warrior (Troglodytes and Demons) activates. They may move (spending MVT) or attack, but cannot explore new tunnel openings. The same movement restrictions apply (Tunnel Size Rule: max 3 warriors per side per tile; Blocking Rule: must have at least as many warriors as enemies to leave a tile).
 
 ## Actions
 
 ### Human Actions
 - **Move:** Move a warrior through connected tunnels (movement points from assigned die).
-- **Explore:** When reaching an unexplored tunnel exit, draw and place a new tunnel tile.
-- **Attack:** Roll combat dice against adjacent troglodytes.
+- **Explore:** When reaching an unexplored tunnel exit, the Human player draws a new tunnel tile from the stack and gives it to the Demon player, who places it in contact with the explored opening (any way they like, as long as the new tile remains accessible to the exploring warrior); the Human player then places their warrior on the new tile.
+- **Attack:** Choose a target among the enemies on the warrior's own tile (all Troglodytes on the same tile count as a single target) and roll combat dice against it. Exception: warriors wielding a Grenade or Blunderbuss (Ranged Combat talent) may instead target an adjacent tile, provided their tile and the target's tile are connected by an opening.
 - **Use Equipment:** Play equipment cards for special effects.
 - **Special Abilities:** Some stat lines grant special abilities when their die is assigned.
 
 ### Demon Actions
-- **Spawn Troglodytes:** Pay threat points to place new troglodytes on spawn points.
-- **Play Event Cards:** Pay threat points for powerful one-time effects.
-- **Move Troglodytes:** Each troglodyte can move through tunnels.
-- **Attack:** Troglodytes attack adjacent human warriors.
+- **Roll Dice of Destiny:** During the Threat Phase, roll 3 dice and assign them to the Board of Destiny squares to trigger various effects.
+- **Deploy Warriors:** Spend Threat Points (TP) gained from the Board of Destiny to place Troglodytes (1 TP each) or a Demon (5 TP) on eligible tiles.
+- **Play Event Cards:** Use Event cards drawn via the Dark Destiny result at the time stated on each card (no TP cost to play events).
+- **Move:** Troglodytes and Demons move through connected tunnel openings (costs 1 MVT per tile crossed).
+- **Attack:** Troglodytes and Demons attack Human warriors on the same tile.
 
 ## Scoring / Victory Conditions
 
@@ -83,15 +104,16 @@ Victory conditions are scenario-dependent:
 - **Stat Line Degradation:** As warriors take damage, dice are placed on crossed-out stat lines. With fewer available lines, warriors become less effective.
 - **Redeemer** is more powerful than condemned warriors but losing him often means losing the game.
 - **Tunnel exploration** creates a random dungeon layout each game.
-- **Line of sight** matters for some abilities and ranged attacks.
+- **Ranged attacks (Grenade, Blunderbuss):** these weapons can target an adjacent tile instead of the attacker's own tile, but only if the attacker's tile and the target's tile are connected by an opening.
 - Troglodytes are individually weak but can overwhelm through numbers.
 - Some scenarios introduce unique rules, special enemies, or time pressures.
-- The Demon player's threat level increases as the game progresses, creating escalating danger.
+- The Demon player's resource of Threat Points comes from the Board of Destiny (Sounds From The Deep result) and can be accumulated across rounds.
 
 ## Player Reference
 
 | Phase | Human Player | Demon Player |
 |-------|-------------|-------------|
-| 1 | Roll and assign action dice | Gain threat points |
-| 2 | Activate warriors | Spend threat, spawn, play events |
-| 3 | Resolve combat | Activate troglodytes, attack |
+| 1: Initiative | Roll Action Dice; assign 1 die per warrior to determine stats | — |
+| 2: Human Action | Activate warriors (move/attack in any order; one at a time) | — |
+| 3: Threat | — | Roll 3 Dice of Destiny; place on Board of Destiny; resolve effects; spend TP to deploy warriors |
+| 4: Demon Action | — | Move and attack with Troglodytes and Demons (no exploration) |

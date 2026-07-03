@@ -7,11 +7,11 @@ designer: "Ed Beach"
 source_pdf: "border-reivers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented Feud loot mechanic, contradicted Turn 1 turn order and 6th-round rule, wrong event-draw count and tiebreakers, end-game scoring omits Horses, Battle combat type and Default Actions missing. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/border-reivers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Border%20Reivers&game=border-reivers)
 <!-- verification:end -->
@@ -47,7 +47,7 @@ Border Reivers is a card-driven strategy game about the raids and battles along 
 2. Family Selection: Draft or assign families per the rules.
 3. Place Family Sheets and set Sheep on Map tracker to 4.
 4. Place initial cubes on Notoriety Tracks (level 3 in home March).
-5. Set up randomization cups for livestock and card draws.
+5. Set up the Turn Order cube container and the Defense Token container.
 6. Prepare card decks: Summer cards, Event cards, Warden cards, Target cards.
 
 ## Turn Structure
@@ -55,29 +55,34 @@ Border Reivers is a card-driven strategy game about the raids and battles along 
 The game plays over **3 turns**, each with 4 seasons:
 
 ### Summer (Card Drafting)
-Six rounds of card play. Each round, each player draws 1 Summer card and must choose one action:
-- **Recruit:** Play the card face-up on your Family Sheet (Reiver, Warden, Allied Grayne, or Office slot). May knock out a previously recruited card.
-- **Play:** Use the card's immediate effect (then discard to Out-of-Play pile).
-- **Hold:** Place the card facedown in your Held Card box for later use during Winter or Spring.
-- **Discard:** Place facedown in the Summer Cards Discards pile (may reenter play later).
+Six rounds of card drafting. Each round, families simultaneously select 1 card from their hand and pass the remaining cards to an adjacent family (left on Turn 1, right on Turn 2, randomly on Turn 3). The selected card is then played with one of four actions:
+- **Recruit:** Play the card face-up on your Family Sheet (Reiver, Warden, Allied Grayne, or Office slot). May knock out a previously recruited card. Pay the card's Cattle cost (if any) to the bank.
+- **Play:** Use the card's immediate effect (Defense Token, Livestock, Permanent Defense, or Bastle card). Pay the card's Cattle cost (if any) to the bank. Then add to Out-of-Play pile.
+- **Hold:** Place the card facedown in your Held Card box for use during an upcoming Winter or Spring. Gain +1 Cattle from the bank.
+- **Discard:** Any Summer Card may be discarded to take one Default Action instead. Place card in Summer Cards Discards (may reenter play later).
 
-In the 6th round, pass your drawn card to the next player instead of keeping it.
+**Default Actions (taken when a card is Discarded):** Choose exactly one: Add 1 Horse; Add 1 Sheep; Add 3 Cattle; Add 1 Notoriety to your Home March; Bastle 1 Sheep (2 if Turn 2 or later).
+
+**6th Round:** Each family receives a two-card hand from their neighbor. Select one card and play it normally; add the remaining card to the Summer Cards Discards pile (no passing). Exception: With Traits Advanced Rule, on Turns 1 and 2 the player with the Tireless trait may play both cards.
 
 ### Autumn (Preparation)
-1. **Economic Update:** Gain Cattle and Horses based on Sheep on Map total. Adjust card hand limits.
-2. **Draw Events:** Draw 2 Event cards per turn; resolve immediately or place for later.
-3. **Place Defenses:** Allocate Defense Tokens to Farm Regions, Towns, and Family Seats.
+1. **Economic Update:** Check Horse Limit, Hand Size, and Cattle Income — all based on each family's Sheep on Map count (and any Office modifier). Enforce limits, then gain Cattle Income.
+2. **Draw Events:** Flip 3 Event cards in a 3- or 6-player game; 2 Event cards in a 2- or 4-player game. Battle Events (tied to a specific March) are placed on the Battlefield; other Events go in the Current Events area and alter attack resolution for the rest of the turn.
+3. **Place Defenses:** Allocate Defense Tokens face-down to Defense Token boxes in your March (one token per box).
 
 ### Winter (Raiding)
-Each player conducts up to 2 raids (attacks) in sequence:
-1. **Determine Order:** Based on VP standings (lowest VP goes first on Turn 1; VP order on Turns 2-3).
-2. **Select Target Card:** Choose a Target card for your raid, indicating which March to attack.
-3. **Place Notoriety:** Advance your Notoriety in the target March.
-4. **Select Final Target:** Choose specific target within the March (Farm Region, Town/Gaolbreak, or Family Seat/Feud).
-5. **Compute Combat Dice:** Calculate attack and defense dice based on cards, horses, notoriety, and defenses.
-6. **Resolve Combat:** Roll dice; compare hits to determine raid success or failure.
-7. **Repeat for second combat.**
-8. **Battle Awards:** VP for successful raids.
+Two rounds of combat. Each round follows these steps:
+1. **Determine Order:**
+   - Turn 1: Draw Cubes at random (exception: skip if using Traits Advanced Rule). Before the second round of Turn 1 combat, the random draw is repeated (7.7).
+   - Turn 2: Reverse VP order (lowest VP = box 1, goes first). Turn order holds for both rounds.
+   - Turn 3: Same as Turn 2, then apply any Lord Warden of the Marches / Warden-General of All Marches Office effects.
+2. **Select Target Card:** All families simultaneously choose a Target Card face-down; flip all simultaneously.
+3. **Place Notoriety (Round 1 only):** In reverse turn order, families place Notoriety based on Held Notoriety cards and Recruited Offices/Allied Graynes.
+4. **Select Final Target:** In turn order, each family chooses an exact target: Farm Region (Raid), Family Seat (Feud), Town (Gaolbreak), or Battlefield (Battle — requires the matching Event card be in play).
+5. **Compute Combat Dice:** Each attacker and defender calculates dice based on cards, Horses, Notoriety placement, defenses, and Feud/Gaolbreak Cubes.
+6. **Resolve Combats:** In turn order, roll all dice and apply results (see Actions for outcome tables).
+7. **Repeat for second combat round** (steps 2, 4, 5, 6 only).
+8. **Battle Awards:** Battles not contested by two sides are resolved here.
 
 ### Spring (Scoring and Reset)
 1. **Reset:** Return cards and tokens to starting positions.
@@ -86,10 +91,13 @@ Each player conducts up to 2 raids (attacks) in sequence:
 
 ## Actions
 
-### Raiding (Winter Combat)
-- **Farm Region Raid:** Steal sheep from an opponent's Farm Region. Successful raids move sheep to your March.
-- **Gaolbreak:** Free your reivers held captive in an opponent's Town Gaol.
-- **Feud Attack:** Target an opponent's Family Seat to steal livestock stored from previous feuds.
+### Combat Types (Winter)
+There are four types of combat: Raid, Feud, Gaolbreak, and Battle. The terms are distinct — cards that apply to one type never apply to another.
+
+- **Raid:** Attack a Farm Region. Attack dice include 1 per unprotected (unbastled) Sheep in the target. Successful hits steal Cattle (roll 3–4: Cattle hit, 1 VP) or Sheep (roll 5–6: Sheep hit, 2 VP). Defense roll of 5: Block; 6: Capture (attacker loses 1 Horse, 1 Cube to Gaol); 7+: Hanged (attacker loses 1 Horse, defender gains 6 VP). If the attacker gained at least 1 VP, the defender adds one of their Cubes to the attacker's Family Seat Feud box.
+- **Feud:** Attack a Family Seat where one or more of your own Feud Cubes are present. Each such Cube adds 1 attack die (Cubes returned after computing dice). Feud hits award 3 VP each. The side scoring more hits gains 2 Notoriety in the March (4 if Ill Week event); loser drops 1 Notoriety (not below 0).
+- **Gaolbreak:** Attack a Town where your Cubes are in the Reivers in Gaol box. Each captive Cube adds 1 attack die. Each hit frees 1 Cube, awards 2 VP, and gains the attacker 1 Horse from the bank. Defense roll of 7: Hanged (attacker loses 1 Horse, defender gains 6 VP). If any Cube was freed, attacker gains 2 Notoriety in the March (4 if Ballad of Kinmont Willie event); defender drops 1.
+- **Battle:** Requires the matching Event card to be in play at a Battlefield. Battle hits (roll 5–6, if not blocked) award VP as specified on the Event card, in addition to any Notoriety awarded once both sides have attacked. First attacker's hits are recorded but Post-Combat Awards are not yet granted. Once a second attacker resolves the same Battle, the side with more unblocked hits gains Notoriety. If never contested by a second family, the first attacker wins (see 7.9). Battles between English and Scottish families can be targeted twice (once by each side).
 
 ### Defenses
 - **Permanent Defenses:** Castles (2 defense dice, protect 2 adjacent Farm Regions) and Peels (1 defense die, protect 2 adjacent Farm Regions). Activated by playing Summer cards.
@@ -111,11 +119,21 @@ Special ally cards that provide ongoing bonuses. Some allow intelligence gatheri
 - Battle awards for combat victories.
 
 ### End Game Scoring (after Turn 3)
-- Livestock Scores: VP based on total Cattle and Sheep holdings.
-- Final Notoriety scoring.
+Livestock Scores (added before winner is determined):
+- **Horses:** 3 VP per 2 Horses (odd Horse ignored).
+- **Sheep:** 2 VP per 2 Sheep (odd Sheep ignored).
+- **Cattle:** 1 VP per 2 Cattle (odd Cattle ignored).
+
+No separate final Notoriety scoring occurs — Notoriety VP is only scored in Spring of each turn.
 
 ### Winner
-Highest VP total. Tiebreakers: most Cattle, then most Sheep on map.
+Highest VP total wins. In a 2- or 3-player game, sum both families' VP for each player's total.
+
+**Tiebreakers (in order; stop at first difference):**
+1. Most Horses
+2. Most Sheep
+3. Most Cattle
+4. Highest-numbered Recruit Summer Card on Family Sheet
 
 ## Special Rules & Edge Cases
 
@@ -131,10 +149,10 @@ Highest VP total. Tiebreakers: most Cattle, then most Sheep on map.
 ## Player Reference
 
 **Turn Structure:**
-1. Summer: 6 rounds of card drafting (Recruit/Play/Hold/Discard)
-2. Autumn: Economic update, draw Events, place Defenses
-3. Winter: Up to 2 raids per player (select target, compute dice, resolve combat)
-4. Spring: Score VP, bonus actions, reset
+1. Summer: 6 rounds of card drafting (Recruit/Play/Hold/Discard; 6th round no passing — discard remaining card)
+2. Autumn: Economic update (Horse Limit, Hand Size, Cattle Income); draw Events (3 for 3/6 players, 2 for 2/4 players); place Defenses
+3. Winter: 2 rounds of combat per turn (Raid / Feud / Gaolbreak / Battle); Turn 1 order is random, Turns 2–3 order is lowest VP first
+4. Spring: Score Reivers in Gaol VP, Score Notoriety VP, Play Spring Cards (Turn 3 only), Bonus Actions (Turns 1 & 2 only), Reset
 
 **Player Count:**
 
@@ -145,8 +163,12 @@ Highest VP total. Tiebreakers: most Cattle, then most Sheep on map.
 | 4 | 1 each | Grey, Hume |
 | 6 | 1 each | None |
 
-**Combat Resolution:** Roll attack dice vs. defense dice. Each hit scored based on die results vs. target thresholds.
+**Combat Resolution:** Roll attack dice vs. defense dice. Die results determine outcomes by combat type (Raid/Feud/Gaolbreak/Battle). Defense dice can Block, Capture, or Hang attackers.
 
-**VP Sources:** Notoriety rankings, successful raids, battle awards, livestock holdings.
+**VP Sources:** Notoriety rankings (Spring each turn), combat hits (Cattle hit 1VP, Sheep hit 2VP, Feud/Gaolbreak hits 3VP/2VP), Battle hits (VP as specified on the Event card, in addition to any Notoriety awarded once both sides have attacked), Reivers in Gaol (2VP per Cube), Spring Cards (Turn 3), end-game Livestock scores.
+
+**End-Game Livestock VP:** Horses 3VP/pair; Sheep 2VP/pair; Cattle 1VP/pair.
+
+**Tiebreakers:** 1. Most Horses; 2. Most Sheep; 3. Most Cattle; 4. Highest-numbered Recruit Summer Card.
 
 **Game Length:** 3 turns (each ~30 years of border history)

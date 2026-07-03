@@ -273,10 +273,13 @@ def verify_game(
             if result["verdict"] == "PASS":
                 break
     except Exception as e:
+        # Restore status, then re-raise so the caller can distinguish a real
+        # failure (API/credit/network) from a clean MAJOR verdict. Swallowing
+        # it here made errors masquerade as MAJOR in batch reporting.
         print(f"  Error verifying {name}: {e}")
         if restore_status:
             update_status(registry_path, name, restore_status)
-        return False
+        raise
 
     verdict, reason = best_verdict, best_reason
     if best_summary != original_summary:

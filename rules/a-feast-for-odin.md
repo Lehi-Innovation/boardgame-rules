@@ -7,11 +7,11 @@ designer: "Uwe Rosenberg"
 source_pdf: "a-feast-for-odin-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong start-player rule, invented breeding schedule (rounds 3/5/7) and phase 11, sheep/cattle scored 1 pt vs 2/3, invented English Crown set-scoring and silver tiebreaker, green-to-blue flip wrongly listed as free anytime action. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-feast-for-odin-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Feast%20for%20Odin&game=a-feast-for-odin)
 <!-- verification:end -->
@@ -58,15 +58,15 @@ Each round has 12 phases:
 |-------|--------|
 | 1. New Viking | Move leftmost Viking from Banquet Table to Thing Square |
 | 2. Harvest | Receive orange crop goods based on round number |
-| 3. Exploration Boards | Turn/flip exploration boards per schedule; place 2 silver on unclaimed boards |
+| 3. Exploration Boards | Turn/flip exploration boards per schedule; place 2 silver on unclaimed boards not being turned. **This phase does not occur in rounds 1 and 7 (long game) or rounds 1 and 6 (short game)** — no boards are turned and no silver is placed in those rounds. |
 | 4. Draw Weapon | Each player draws 1 weapon card |
 | 5. Actions | Worker placement: place Vikings on action spaces (1-4 Vikings per space) |
-| 6. Determine Start Player | Player with fewest Vikings on action board gets start player moose |
-| 7. Income | Receive silver equal to smallest visible income value on home board |
-| 8. Breeding | Every other round (rounds 3, 5, 7 in long game): sheep/cattle breed |
-| 9. Feast | Feed your Vikings: must pay food equal to round's feast requirement |
-| 10. Bonus | Receive goods for completely enclosed bonus spaces on home board |
-| 11. Exploration Board Bonus | Receive bonuses from claimed exploration boards |
+| 6. Determine Start Player | The player who placed Vikings **last** in the action phase receives the start player moose |
+| 7. Income | Receive silver equal to smallest visible income value on home board (exploration board income handled the same way) |
+| 8. Breeding | Each round: sheep/cattle may breed. An animal must first be turned to its pregnant side; it produces one offspring the following breeding phase. Sheep and cattle can therefore breed every 2 rounds. |
+| 9. Feast | Cover empty Banquet Table spaces with food tiles or silver coins; take a Thing Penalty tile for each space left uncovered |
+| 10. Bonus | Receive goods for completely enclosed bonus spaces on home board and exploration boards. **No bonus is received in the final round.** |
+| 11. Update Mountain Strips | Remove the leftmost resource from each face-up strip; turn a new strip face up. **In the 4-player long game, no new mountain strip is added in round 7.** |
 | 12. Return Vikings | Return all Vikings from action board to Thing Square |
 
 ## Actions
@@ -78,25 +78,35 @@ Action spaces require 1-4 Vikings (columns 1-4). Each space can only be used onc
 | **Hunting/Whaling** | Use weapons to gain food; roll dice for whaling |
 | **Raiding/Pillaging** | Gain goods tiles through raiding |
 | **Exploration** | Claim exploration boards using ships |
-| **Trading/Overseas** | Exchange goods; upgrade green to blue via overseas trading |
+| **Trading/Overseas** | Exchange goods; upgrade green to blue via overseas trading action |
 | **Crafting** | Convert raw goods into higher-value goods |
 | **Building** | Build ships, houses, sheds |
 | **Livestock** | Buy/breed sheep and cattle |
 | **Occupations** | Play occupation cards for ongoing or one-time effects |
-| **Mountain Strips** | Claim mountain strips and their goods |
-| **Emigration** | Use longships to emigrate (flip for points) |
+| **Mountain Strips** | Claim resources from mountain strips |
+| **Emigration** | Use longships or knarrs to emigrate (flip for points) |
 
 ### Goods Tile Placement
 - Green (craft) and blue (luxury) goods can be placed on home board, exploration boards, houses.
-- Orange (food) and red (equipment) can only go in stone houses and long houses.
-- Ore and silver can fill gaps anywhere.
+- Orange (food) and red (animal products) can go in stone houses and long houses; orange and red food tiles are also placed on the Banquet Table during the Feast phase.
+- Ore and silver can fill gaps in placement areas. **Ore cannot be placed on the Banquet Table; silver coins can.**
 - Once placed, tiles cannot be removed.
-- Tiles must fit tetris-style; no overlapping.
+- Tiles must fit within the placement area; no overlapping.
 
 ### Anytime Actions (free, no Vikings needed)
 - Place goods from supply onto boards at any time.
-- Upgrade goods: flip green to blue side (craft to luxury).
-- Exchange weapons for goods.
+- Buy ships by paying their silver cost.
+- Place ore on whaling boats or longships.
+- Make change with silver coins.
+
+### Overseas Trading (requires an action space)
+- Located in columns 1 and 2 of the action board.
+- Costs 1 Viking placement + 1 silver; requires at least one knarr in your bay.
+- Allows you to flip any number of **different** green goods tiles to their blue side in a single action.
+- Green tiles already placed on your boards may not be flipped.
+
+### Weapon Cards
+When the weapon draw pile runs out of cards, shuffle the discard pile to form a new face-down draw pile.
 
 ## Scoring / Victory Conditions
 
@@ -106,41 +116,46 @@ At end of final round, score:
 |--------|--------|
 | Goods on home/exploration boards | Cover negative-point spaces to avoid penalties |
 | Uncovered spaces | Negative points as printed |
-| Ships | Face-up value (emigrated ships worth more) |
-| Houses | Value minus uncovered negative spaces |
-| Exploration boards | Printed value minus uncovered negatives |
+| Ships (face-up) | Whaling boat 3 pts, knarr 5 pts, longship 8 pts |
+| Emigrated ships | Knarr 18 pts, longship 21 pts |
+| Houses | Value minus uncovered negative spaces (shed 8, stone house 10, long house 17) |
+| Exploration boards | Printed value (4–38 pts) minus uncovered negatives |
 | Occupation cards | Printed VP (can be negative) |
-| Sheep/cattle | 1 point each; pregnant = 1 extra |
-| Silver | 1 point per silver |
-| English Crown (special tile) | Points for sets of goods |
+| Sheep | 2 points each; 3 points if pregnant |
+| Cattle | 3 points each; 4 points if pregnant |
+| Silver (supply only) | Face value total; silver on boards is worthless |
+| Final income | Income value of final round written down instead of being paid out |
+| English Crown (special tile) | Owner receives 2 additional points |
 
-Highest total wins. Ties broken by most silver remaining.
+Highest total wins. **In case of a tie, there are multiple winners.**
 
 ## Special Rules & Edge Cases
 
-- **Feast requirement:** If you cannot feed your Vikings, take "Thing Penalty" tiles (negative points) to make up the difference.
-- **Breeding:** Only occurs in specific rounds. Pregnant animals (flipped) produce offspring next breeding phase.
-- **Overseas trading:** In a single action, convert any number of green goods to their blue side.
-- **Exploration:** Each board requires specific ship types. Claimed boards provide placement area and bonuses.
-- **Mountain strips:** Revealed each round; goods on them can be claimed via action spaces.
-- **Solo game:** Special rules with a "waiting space" mechanic and modified action restrictions.
+- **Feast:** Each round, cover every empty Banquet Table space with orange or red food tiles and/or silver coins (following placement rules: same-color tiles cannot be orthogonally adjacent). Ore cannot be placed on the Banquet Table. For each space you cannot or do not cover, take a Thing Penalty tile (−3 points each at end of game).
+- **Breeding:** Phase 8 occurs every round. A non-pregnant animal must first be turned to its pregnant side; it produces one offspring the following breeding phase. This means animals can effectively breed every 2 rounds.
+- **Overseas trading:** Requires an Overseas Trading action space (Viking placement), 1 silver, and at least one knarr. In a single action, you may flip any number of different green goods tiles to their blue side.
+- **Exploration:** Each board requires specific ships and Viking counts: Shetland or Faroe Islands need any ship type (whaling boat, knarr, or longship) and 1 Viking; Iceland, Greenland, and Bear Island need a knarr or longship and 2 Vikings; American continent boards (Baffin Island, Labrador, Newfoundland) need a longship and 3 Vikings. Claimed boards provide additional placement area and income/bonuses.
+- **Mountain strips:** Present throughout the game; resources claimed via action spaces left to right. Phase 11 removes the leftmost resource from each face-up strip and adds a new strip. In the 4-player long game, no new strip is added in round 7.
+- **Final round:** The game ends immediately after the Feast phase of the final round. No bonus is received in the final round.
+- **Solo game:** Special rules with a "waiting space" mechanic and blocking Vikings from previous rounds.
 - **Short game (6 rounds):** Start with 1 extra Viking; some timing shifts for exploration boards.
 
 ## Player Reference
 
 | Goods Colors | Placement |
 |---|---|
-| Green (craft) | Home board, exploration, houses |
-| Blue (luxury) | Home board, exploration, houses |
-| Orange (food) | Stone houses, long houses only |
-| Red (equipment) | Stone houses, long houses only |
-| Ore/Silver | Any placement area |
+| Green (craft) | Home board, exploration boards, houses |
+| Blue (luxury) | Home board, exploration boards, houses |
+| Orange (food) | Stone houses, long houses, and Banquet Table (feast) |
+| Red (animal products) | Stone houses, long houses, and Banquet Table (feast) |
+| Ore | Any placement area (ore cannot go on Banquet Table) |
+| Silver | Any placement area and Banquet Table (silver on boards is worthless at scoring) |
 
 | Ship Types | |
 |---|---|
-| Whaling boat | Whaling actions |
-| Knarr | Exploration (medium range) |
-| Longship | Exploration (long range), Emigration, Pillaging |
+| Whaling boat | Whaling actions; Shetland/Faroe exploration |
+| Knarr | Overseas trading, exploration (medium range), emigration |
+| Longship | Exploration (long range), emigration, pillaging, raiding, plundering |
 
 | Game Length | Rounds |
 |---|---|

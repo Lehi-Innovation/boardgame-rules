@@ -7,11 +7,11 @@ designer: "Christian T. Petersen"
 source_pdf: "a-game-of-thrones-the-board-game-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: End-game tie-breaker contradicted (omits Strongholds/Supply order) and core systems missing: Iron Throne turn order, ship transport, combat casualties. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-game-of-thrones-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20The%20Board%20Game&game=a-game-of-thrones-the-board-game)
 <!-- verification:end -->
@@ -41,7 +41,7 @@ Each game round consists of three phases:
 
 ### 1. Westeros Phase (skipped in Round 1)
 Draw 1 card from each of the 3 Westeros decks. Resolve in order:
-- Deck I: Mustering, Supply
+- Deck I: Mustering (recruit new units — see "Mustering" below), Supply (adjust army-size limits — see "Supply" below)
 - Deck II: Game of Thrones (collect Power), Clash of Kings (bid for influence)
 - Deck III: Wildlings attack, special events
 
@@ -57,11 +57,13 @@ Resolve orders in this sequence:
 3. **Consolidate Power Orders** - Gain Power tokens.
 
 ### Combat Resolution
-1. Calculate initial combat strength (unit strength + March/Defense order bonus).
-2. Each player selects and reveals 1 House Card (unique character with strength and abilities).
-3. Add Support orders from adjacent friendly areas.
-4. Optionally draw Tides of Battle cards.
-5. Highest total wins. Loser retreats or is destroyed.
+1. **Call for Support:** Both sides may receive support from adjacent areas with a Support Order.
+2. **Calculate Initial Combat Strength:** Units + Defense order bonus (defender) or March order modifier (attacker) + supporting units + Garrison token (defender's home area).
+3. **Choose and Reveal House Cards:** Each player secretly plays 1 House Card (adds its printed Combat Strength and ability).
+4. **Use Valyrian Steel Blade:** Holder may apply +1 to their final Combat Strength (once per round; flip to faded side).
+5. **Highest total wins.** Ties broken by Fiefdoms track position.
+6. **Casualties:** Only the defeated player takes casualties. Count victor's Sword icons minus defeated player's Fortification icons; defeated player destroys that many units in the embattled area.
+7. **Retreat and Routing:** Losing army retreats to an adjacent area; retreated units are routed (laid on side), providing no Combat Strength. Routed units destroyed if forced to retreat again. Siege Engines cannot retreat and are destroyed instead.
 
 ## Actions
 
@@ -69,39 +71,56 @@ Resolve orders in this sequence:
 |-------|--------|
 | **March** | Move units to adjacent area. Triggers combat if enemy present. +0 or +1 bonus. |
 | **March -1** | Move with -1 penalty. |
-| **Defense** | +1 or +2 bonus if attacked. |
-| **Support** | Add military strength to an adjacent combat (+1). Does not move units. |
+| **Defense** | +1 Combat Strength bonus if attacked (Special Defense Order gives +2). |
+| **Support** | Add the full combat strength of units in this area to an adjacent combat. Does not move units. Special Support Order adds +1 to that strength. |
 | **Raid** | Remove adjacent enemy Support, Consolidate Power, or Raid orders. |
-| **Consolidate Power** | Gain 1 Power token (+1 if in area with Crown icon). |
+| **Consolidate Power** | Gain 1 Power token (+1 per Power icon printed on the area). |
 
 ## Scoring / Victory Conditions
 
 - **Immediate victory:** Control 7 areas with Castles/Strongholds at any time.
 - **End of Round 10:** Player controlling the most Castle/Stronghold areas wins.
-- **Tie-breaker:** Strongest position on influence tracks, then most Power tokens.
+- **Tie-breaker (in order):** Most Strongholds controlled → higher Supply track position → most available Power tokens → higher position on the Iron Throne track.
 
 ## Special Rules & Edge Cases
+
+### Mustering
+- Resolved by the "Mustering" Westeros card (Deck I): each player, in turn order, may recruit new units into each area he controls that contains a Castle or Stronghold.
+- Each Castle or Stronghold provides mustering points, spendable only in its own area: Strongholds provide 2 points of mustering; Castles provide 1 point of mustering.
+- Mustering costs: Footman costs 1 point; Ship costs 1 point; Knight costs 2 points (or 1 point if upgraded from a Footman); Siege Engine costs 2 points (or 1 point if upgraded from a Footman).
+- A Footman already in a mustering area may be upgraded to (replaced by) a Knight or Siege Engine for a cost of 1 mustering point.
+- A player may never muster or upgrade a unit that would create or expand an army beyond his actual Supply limit. Any mustering points not spent in an area are lost and do not carry over to a future Mustering card.
+- Each player must resolve all his mustering (for every area he controls containing a Castle or Stronghold) before the next player in turn order begins his own mustering.
+- Ship units may only be mustered into a port connected to the mustering area or into an adjacent sea area (never directly into a land area), and never into a sea area containing one or more enemy Ships. If a Castle/Stronghold area has no port and no eligible adjacent sea area, no Ships can be mustered there.
 
 ### Three Influence Tracks
 | Track | Holder of #1 Position |
 |-------|----------------------|
-| **Iron Throne** | Breaks all non-combat ties; decides Wildling tie penalties |
-| **Fiefdoms (Valyrian Steel Blade)** | Breaks combat ties; once per round +1 to combat |
-| **King's Court (Messenger Raven)** | May use starred (*) order tokens; may swap 1 order or look at Wildling deck top card |
+| **Iron Throne** | Determines turn order for all mechanics that resolve in turn order; breaks all non-combat ties (including ties in bidding) |
+| **Fiefdoms (Valyrian Steel Blade)** | Breaks combat ties; once per round may grant +1 to own combat strength |
+| **King's Court (Messenger Raven)** | Determines number of Special Order tokens available (more stars = more specials); holder may swap 1 placed order or look at Wildling deck top card |
 
 ### Supply
 - Supply track limits how many and how large army groups you can maintain.
 - Armies exceeding supply limits must disband excess units.
 
 ### Wildlings
-- Wildling Threat increases through Westeros cards.
-- When Wildlings attack, all players secretly bid Power tokens.
-- If total bids exceed Wildling strength: highest bidder gains bonus.
-- If bids fail: lowest bidder suffers worst penalty; all suffer partial penalty.
+- Wildling Threat increases through Westeros cards (up to 3 per Westeros Phase). Reaching position 12 immediately triggers an attack.
+- When Wildlings attack, all players secretly bid Power tokens. All bids are spent regardless of outcome.
+- If total bids equal or exceed Wildling strength (Night's Watch victory): highest bidder gains the Wildling card reward; Wildling Threat resets to 0.
+- If bids fail (Wildling victory): lowest bidder suffers the severe penalty; all others suffer the lesser penalty; Wildling Threat moves back only 2 spaces.
 
-### Ports and Ships
-- Ships support adjacent land areas and sea zones.
-- Ports allow mustering ships and connecting land to sea.
+### Ship Transport
+- Two land areas are considered adjacent for marching and retreating if connected by consecutively adjacent sea areas each containing at least one friendly Ship unit.
+- This allows Footmen, Knights, and Siege Engines to move directly between coastal areas in one March Order.
+- Ships cannot themselves move via ship transport; only land units use it.
+- Ship transport does not make areas adjacent for supporting, raiding, or any other purpose.
+
+### Ports
+- Ports are areas between a land area and an adjacent sea area; only Ships may occupy them.
+- The owner of the connected land area controls the port and may muster Ships directly into the port even if the adjacent sea is occupied by enemy Ships.
+- Ships in a port may support combat in the adjacent sea area but NOT in any adjacent land area.
+- A port may hold at most 3 Ship units.
 
 ### Neutral Forces
 - Some areas start with Neutral garrisons that must be defeated.
@@ -112,17 +131,19 @@ Resolve orders in this sequence:
 |------|----------------|
 | Footman | 1 |
 | Knight | 2 |
-| Siege Engine | 4 (only against Castles/Strongholds) |
-| Ship | 1 (naval combat) |
+| Siege Engine | 4 when attacking/supporting an attack against a Castle or Stronghold; 0 otherwise |
+| Ship | 1 |
 
-| House | Starting Area |
+| House | Home Area |
 |-------|--------------|
-| Stark | North |
-| Lannister | Westerlands |
-| Baratheon | Dragonstone |
-| Greyjoy | Iron Islands |
-| Martell | Dorne |
-| Tyrell | Highgarden |
+| Stark | Winterfell |
+| Lannister | Westerlands* |
+| Baratheon | Dragonstone* |
+| Greyjoy | Iron Islands* |
+| Martell | Dorne* |
+| Tyrell | Highgarden* |
+
+*Only House Stark's home area (Winterfell) is explicitly named in the extracted rulebook text ("Winterfell is the home area of House Stark"). Each House's starting units and home area are otherwise detailed on that House's individual player screen, which is not part of the extracted rulebook text — the other rows above are unconfirmed against the source and should be treated as low-confidence.
 
 | Victory | 7 Castles/Strongholds = Instant Win |
 |---------|------|

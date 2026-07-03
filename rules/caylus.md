@@ -7,11 +7,11 @@ designer: "William Attia"
 source_pdf: "caylus-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Royal favor track values contradicted (fixed values vs progressive 5-column tracks), end-game bonuses partly invented/omitted, castle batch system and entire Counts scoring/favor system missing. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/caylus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caylus&game=caylus)
 <!-- verification:end -->
@@ -72,10 +72,53 @@ In passing order, each player may pay 1 denier per space to move the provost 1-3
 Buildings activate in road order from first building after the bridge up to and including the provost's position. Buildings beyond the provost do NOT activate; workers there return without effect. A player may decline a building's effect (except production buildings).
 
 ### Phase 6: Build the Castle
-Workers placed in the castle contribute resources. Each castle section requires specific resources. Contributors earn prestige points and may gain royal favors. The castle has 3 sections built in order: Dungeon, Walls, Towers.
+Workers placed in the castle contribute batches of resources. A batch must be composed of exactly 3 different cubes, one of which must be a food cube. A player may contribute as many batches as they choose. For each batch contributed, the player places one of their houses in the current castle section and scores prestige points:
+
+- Dungeon: **5 prestige points** per batch
+- Walls: **4 prestige points** per batch
+- Towers: **3 prestige points** per batch
+
+If a section fills up mid-turn, the player may begin filling the next section. A player who placed a worker in the castle but cannot or will not give a batch loses 2 prestige points (cannot go below 0), except if the Towers section is full.
+
+After all batches are given, the player who contributed the most batches (most houses placed) gains 1 royal favor. Ties are broken by castle order (position 1 wins). Players then retrieve their castle workers.
+
+**Counts:** When the bailiff reaches or passes the designated count space for a section, or when a section is fully built, that section is counted. Each player consults the count table for the relevant section:
+
+**Dungeon count:**
+| Houses built | Result |
+|---|---|
+| 0 | −2 prestige points |
+| 1 | 0 |
+| 2 or more | 1 royal favor |
+
+**Walls count:**
+| Houses built | Result |
+|---|---|
+| 0 | −3 prestige points |
+| 1 | 0 |
+| 2 | 1 royal favor |
+| 3 or 4 | 2 royal favors |
+| 5 or more | 3 royal favors |
+
+**Towers count:**
+| Houses built | Result |
+|---|---|
+| 0 | −4 prestige points |
+| 1 | 0 |
+| 2 or 3 | 1 royal favor |
+| 4 or 5 | 2 royal favors |
+| 6 or more | 3 royal favors |
+
+After a section is counted, players must move to the next section even if the previous section has empty spaces. When the Towers section is counted, the game ends.
+
+The castle has 3 sections: Dungeon (6 parts), Walls (10 parts), Towers (14 parts).
 
 ### Phase 7: End of Turn
-The bailiff advances along the road. Check if game ends. Return to Phase 1.
+The bailiff advances along the road. Movement distance depends on the provost's position relative to the bailiff:
+- Provost is ahead of the bailiff (farther from the castle): bailiff moves **2 spaces** forward.
+- Provost is behind the bailiff or on the same space: bailiff moves **1 space** forward.
+
+After the bailiff moves, place the provost on the bailiff's new space. Then check if a Count is triggered (if the bailiff reached or passed a Count space, or if a section was completed this turn). Then begin a new turn.
 
 ## Actions
 
@@ -91,14 +134,18 @@ The bailiff advances along the road. Check if game ends. Return to Phase 1.
 **The Lawyer:** Transform neutral or your own craft buildings into residential buildings (cost: 1 cloth + 1 denier; gain 2 prestige). Residential buildings produce 1 denier income per turn.
 
 ### Royal Favors
-Gained from castle contributions, the joust field, and certain prestige buildings. Choose one track:
+Gained from castle contributions (best builder each turn, Counts), the joust field, and certain prestige buildings (Church, Statue, Theater, University grant 1 favor each; Monument grants 2 favors). Multiple favors in the same phase must be spent on different lines. Maximum of 4 favors can be gained in a single phase.
 
-| Favor Track | Benefit |
-|-------------|---------|
-| Resources | Take 2 resource cubes (food, wood, stone, or cloth) |
-| Money | Take 6 deniers |
-| Building | Build one building without using a construction building |
-| Prestige | Gain prestige points (2/3/4/5 for positions 1/2/3/4 on track) |
+The King's favor table has 4 lines, each with 5 columns of increasing power. The first 2 columns are available from the game's start. Columns 3–4 become available after the Dungeon Count. Column 5 becomes available after the Walls Count.
+
+When earning a favor, advance the marker on the chosen line (if possible), then use any effect up to and including the current marker level. Once a marker reaches column 5, it stays there but can still be used.
+
+| Line | Column 1 | Column 2 | Column 3 | Column 4 | Column 5 |
+|------|----------|----------|----------|----------|----------|
+| a) Prestige | 1 PP | 2 PP | 3 PP | 4 PP | 5 PP |
+| b) Deniers | 3 deniers | 4 deniers | 5 deniers | 6 deniers | 7 deniers |
+| c) Resources | 1 food | 1 wood or stone | 1 cloth | Exchange 1 cube for 2 cubes (no gold) | 1 gold cube |
+| d) Buildings | (no effect) | Build wood building (−1 wood cost) | Build stone building (−1 stone cost) | Lawyer effect (pay only 1 cloth) | Build prestige building on your residential |
 
 ### Special Buildings Summary
 
@@ -113,14 +160,19 @@ Gained from castle contributions, the joust field, and certain prestige building
 
 ## Scoring / Victory Conditions
 
-The game ends when the bailiff reaches a designated space on the road. The player with the most prestige points wins.
+The game ends immediately after the count of the Towers section (when the bailiff reaches the Towers count space or when all 14 parts of the Towers are built). The player with the most prestige points wins. In the case of a tie for first place, all tied players win.
 
-Prestige is earned by:
-- Having others use your buildings (1 point per worker)
-- Building new buildings (varies by tile)
-- Contributing to the castle
-- Royal favor (prestige track)
-- End-game bonuses for gold cubes (3 prestige each) and favor track positions
+Prestige is earned throughout the game by:
+- Having others use your buildings (1 point per worker placed by an opponent)
+- Building new buildings (prestige printed on tile)
+- Contributing batches to the castle (5/4/3 PP per batch for Dungeon/Walls/Towers)
+- Royal favor prestige line (1–5 PP per favor)
+- Lawyer actions (2 PP per residential building built)
+
+**End-game bonuses** (added after the Towers Count):
+- 3 PP per gold cube remaining
+- 1 PP per 3 non-gold resource cubes remaining
+- 1 PP per 4 deniers remaining
 
 ## Special Rules & Edge Cases
 
@@ -142,9 +194,11 @@ Prestige is earned by:
 | Where | Cost |
 |-------|------|
 | Own building | 1 denier |
-| Other/neutral/castle | = smallest empty number on passing scale |
-| First to pass | +1 denier bonus |
+| Other player's building | = smallest empty number on passing scale (1–5) |
+| Neutral / special / basic / castle | = smallest empty number on passing scale (1–5) |
+
+Note: The first player to pass receives 1 denier from the stock immediately.
 
 **Resources:** Food (pink), Wood (brown), Stone (gray), Cloth (purple), Gold (yellow)
 
-**Castle sections:** Dungeon > Walls > Towers (built in order)
+**Castle sections:** Dungeon (6 parts) > Walls (10 parts) > Towers (14 parts) — built in order; PP per batch: 5/4/3

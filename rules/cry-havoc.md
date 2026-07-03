@@ -8,10 +8,10 @@ source_pdf: "cry-havoc-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Recruit wrongly allowed to any controlled region (HQ only), Enable Scoring misdescribed, Attrition objective misdescribed, battle VP awards omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's Battle Resolution rules omit a core step present in every battle: adding a Crystal to the Battle Region before objectives are resolved, which affects the game's primary scoring resource.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cry-havoc-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cry%20Havoc&game=cry-havoc)
 <!-- verification:end -->
@@ -59,30 +59,36 @@ Each round has 6 phases:
 
 **Move:** Discard cards for Movement Points (equal to movement icons shown). Each point moves 1 Unit to an adjacent Region. Units entering a Region with opponents or Trog tokens must stop. After moving: reveal Exploration tokens, resolve Trog War Party/Nest tokens, gain Control of uncontested Regions, place Battle tokens on contested Regions.
 
-**Recruit:** Discard cards for Recruitment Points. Place Units from Reserve onto Regions you control (including HQ). Must pay matching points per card shown.
+**Recruit:** Discard cards for Recruitment Points. Place Units from your Reserve into your **Headquarters Region only**. If your Reserve is empty, you cannot Recruit.
 
 **Build Structure(s) and/or Activate Structure(s):** Discard cards for Build Points. Build Structures on your Structure tiles (each has specific terrain and placement rules). OR Activate an already-built Structure's ability. May do a mix of building and activating.
 
-**Draw 2 Tactics Cards, Keep 1:** Draw 2 cards from any available Terrain Tactics piles and/or your personal deck. Keep 1, discard the other.
+**Draw 2 Tactics Cards, Keep 1:** Draw 2 cards from any available Terrain Tactics piles and/or your personal deck. Keep 1, reshuffle the other back into the deck/pile it came from.
 
-**Enable Scoring:** Place your Scoring Enabled marker to indicate you will score during the Scoring Phase this round. A player cannot score crystals unless they have enabled scoring.
+**Enable Scoring:** Each player has a single card in their deck that, when played as an action, enables scoring for the round. Place your Scoring Enabled token on the Scoring Enabled space as a reminder. Scoring can only be enabled once per round. At the end of the round, the player who enabled scoring scores **1 VP per Region they control**; then **all players** score 1 VP per Crystal in every Region they control. (The Enable Scoring card cannot be used for Movement, Recruit, or Build actions.)
 
 ## Scoring / Victory Conditions
 
-- **Crystals:** During Scoring Phases (if enabled), score VP for Crystals in Regions you control: Green = 1 VP, Yellow = 3 VP, Red = 5 VP.
-- **Territories:** Some cards and effects score VP for controlled Regions.
-- **Prisoners:** During the Prisoners Phase, score VP for captured enemy Units.
-- **Battle and Skills:** Various Tactics cards and Skills award VP.
-- After 5 rounds (or fewer, if triggered by Events), the game ends. Highest VP total wins.
+- **Crystals:** When Scoring is enabled, all players score 1 VP per Crystal in every Region they control (not only the player who enabled scoring). Exception: in 4-player games, the Trog player scores only HALF the crystal VP total in their controlled Regions (rounded up), while all other factions score the full per-crystal value (1/3/5).
+- **Region Control (Enable Scoring bonus):** The player who enabled scoring also scores 1 VP for every Region they control that round. In the final round, nobody scores VP for Region Control (all players still score for Crystals).
+- **Battle — Region Control Objective:** The winner of the Region Control objective scores **2 VP immediately** when the battle is resolved.
+- **Battle — Attrition Objective:** Each player scores **1 VP per enemy Unit killed** via the Attrition objective.
+- **Prisoners Phase:** Score 1 VP for each Prisoner you hold. Players may also spend 2 VP to return one of their own captured Units to their Reserve.
+- **Tactics and Skills:** Various cards and Skills award additional VP.
+- The game ends after 5 rounds, or sooner if the "Enable Final Scoring" Event is triggered. Highest VP total wins.
+- **Tiebreaker:** In a tie, the player with the most Prisoners wins. If still tied, the player who went later in Initiative order wins.
 
 ## Special Rules & Edge Cases
 
-- **Battle Resolution:** Battles are resolved on the Battle board. Each player in a contested Region places their Units in three objective areas: Region Control, Capture Prisoners, or Kill Units. Players play Tactics cards for bonuses. The side with the most units in each area wins that objective. Region Control determines who controls the territory; Capture takes prisoners; Kill eliminates units.
+- **Battle Resolution:** Battles are resolved on the Battle board in numbered Battle token order. The Attacker places all their Units in the three objective areas first; the Defender places second. The three objectives are resolved top to bottom:
+  1. **Region Control** — Player with the most Units wins; Defender wins ties. Winner scores **2 VP immediately** and keeps control even if all their units are later eliminated. Winner's surviving units return to the region; loser's surviving units retreat to an adjacent controlled region (or return to Reserve if none).
+  2. **Capture Prisoners** — Player with the most Units takes 1 enemy Unit (from any objective) as a Prisoner. Tie = no capture.
+  3. **Attrition** — Simultaneously, each player kills 1 enemy Unit per Unit they placed in this objective. Each player scores **1 VP per enemy Unit killed**. Killed Units return to their owner's Reserve.
 - **Terrain Tactics:** When fighting in a specific terrain type, players can use matching Terrain Tactics cards from the communal piles for additional bonuses.
-- **Skills:** Each faction has unique Skill cards. Using a Skill exhausts it (rotate 90 degrees). Skills refresh at the start of each round after round 1.
+- **Skills:** Each faction has unique Skill cards. Using a Skill does NOT count as one of your 3 actions per round; each Skill may be used only once per round (unless it states otherwise), and must be used before or after an Action, never during one. Using a Skill exhausts it (rotate 90 degrees). Skills refresh at the start of each round after round 1.
 - **Structures:** Each faction has unique Structures with different effects (e.g., Human Artillery, Pilgrim structures, Machine structures). Structure tokens are placed on their tiles to show they are built.
 - **Trogs (2-3 players):** Trogs are non-player forces. Trog War Party tokens spawn Trog Units when a player enters their Region. If no Trog Unit is available to spawn, the invading player loses 1 Unit.
-- **Trogs (4 players):** One player controls the Trogs as a playable faction with Tunnels, unique Skills, and their own Tactics deck.
+- **Trogs (4 players):** One player controls the Trogs as a playable faction with Tunnels, unique Skills, and their own Tactics deck. During the Scoring phase, the Trog player scores only HALF the total crystal VP in Regions they control (rounded up); Trogs score normally (same as other players) for Battle Objectives, Prisoners, and other VP sources.
 - **Cannot move into enemy HQ or Battle Regions.**
 - **Discarding for Movement/Recruit/Build:** Ignore any Tactic Text on the discarded cards (only the resource icons matter). Some cards have bonus icons that trigger additional effects when discarded.
 - **Initiative:** Can be changed by playing specific Tactics cards. The changed player pushes others right on the Upcoming Initiative Track.
@@ -92,10 +98,10 @@ Each round has 6 phases:
 | Action | Cost | Effect |
 |--------|------|--------|
 | Move | Discard for Movement Points | Move Units to adjacent Regions |
-| Recruit | Discard for Recruitment Points | Place Units from Reserve |
+| Recruit | Discard for Recruitment Points | Place Units from Reserve into HQ only |
 | Build/Activate | Discard for Build Points | Build or use Structures |
-| Draw 2, Keep 1 | Free | Draw 2 Terrain/Faction Tactics, keep 1 |
-| Enable Scoring | Free | Allow crystal scoring this round |
+| Draw 2, Keep 1 | Free | Draw 2 Tactics (any Terrain or personal deck), keep 1, reshuffle the other back into its deck/pile |
+| Enable Scoring | Specific Enable Scoring card | Score regions this round (1 VP/region for enabler; all players score crystals) |
 
 | Crystal | Color | VP Value |
 |---------|-------|----------|
@@ -105,5 +111,7 @@ Each round has 6 phases:
 
 - 3 actions per player per round
 - Max 7 cards in hand
-- 5 rounds maximum
-- Must Enable Scoring to score crystals
+- 5 rounds maximum (may end earlier via Events)
+- Region Control battle win = 2 VP immediately; Attrition = 1 VP per kill
+- Enable Scoring: enabler scores 1 VP/region; all players score 1 VP/crystal in controlled regions (Trog player in 4-player games scores only half crystal VP, rounded up)
+- Tiebreaker: most Prisoners, then later Initiative order

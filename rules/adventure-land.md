@@ -7,14 +7,14 @@ designer: "Wolfgang Kramer, Michael Kiesling"
 source_pdf: "adventure-land-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 
 # Adventure Land
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Game-end conditions missing, "swords kept on win" contradicts source, fog creature strengths 0-4 invented (example shows 12). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/adventure-land-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Adventure%20Land&game=adventure-land)
 <!-- verification:end -->
@@ -47,7 +47,7 @@ King Agamis calls adventurers to protect his kingdom from fog creatures. Players
    - 2 players: 0 removed, 8 of each companion/sword removed
    - 3 players: 2 of each color removed, 5 of each companion/sword removed
    - 4 players: 2 of each color removed, 2 of each companion/sword removed
-6. Place adventurers in starting areas (outside rows 1-4 and columns A-D).
+6. Place adventurers in starting areas (outside rows 1-4 and columns A-D). In a 2-player game, each player also places an additional adventurer in the starting area outside row 5 and column E.
 7. Draw 8 terrain cards and place items on the board.
 
 ## Turn Structure
@@ -86,7 +86,7 @@ When an adventurer enters a fog creature's space, combat occurs.
 
 **Combat strength** = 1 (adventurer) + 1 per companion + sword dice rolls (up to 3 swords, roll 1 die each) + sword bonus values + herbs used + gold used.
 
-**Using gold in combat**: Either gain +1 strength per gold, or reroll one die per gold spent.
+**Using gold in combat**: Either gain +1 strength per gold returned to the stockpile, or reroll one die per gold returned to the stockpile.
 
 - **Win** (strength >= fog creature value): Take the fog creature tile. Adventurer stays.
 - **Lose**: Adventurer, companions, used swords, herbs, and gold are removed from the game.
@@ -108,9 +108,9 @@ Highest score wins.
 ## Special Rules & Edge Cases
 
 - An adventurer already on a space where an item appears collects it immediately.
-- If the terrain card deck runs out, shuffle the discard pile.
+- If there are no sword tiles left in the stockpile on the table, shuffle the discarded ones from the box face-down and draw one. If there are no companions left on the table, take one from the box.
 - Fog creatures that appear on an occupied field trigger immediate combat (even if it is not that player's turn).
-- Swords are not lost in victorious combat; only herbs and gold spent are consumed.
+- Swords are not lost in victorious combat; only herbs used are removed from the game, and gold used in combat is returned to the stockpile.
 - Companions permanently join an adventurer and move with them.
 - An adventurer can have any number of companions.
 - Maximum 3 swords used per combat.

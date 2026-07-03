@@ -8,10 +8,10 @@ source_pdf: "battles-of-the-third-age-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Character/faction entry wrongly attributed to Event cards (source: Muster dice), invented Smeagol taming/betrayal mechanic, siege engines wrongly excluded from strategic game. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Fabricates an entire "Scoring / Victory Conditions" section with zero support anywhere in the extracted text, and scrambles the Sméagol-Guide corruption-point exception onto the wrong trigger condition.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battles-of-the-third-age-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battles%20of%20the%20Third%20Age&game=battles-of-the-third-age)
 <!-- verification:end -->
@@ -48,12 +48,12 @@ The expansion follows War of the Ring's existing turn structure with added eleme
 
 ## Actions
 
-- **Smeagol**: Joins the Fellowship when Frodo and Sam separate. The Free Peoples player can attempt to "tame" Gollum. If tamed, Smeagol becomes a companion; if untamed, he may betray the Ring-bearers during Hunt resolution. Smeagol tiles in the Hunt Pool add special outcomes.
-- **Galadriel**: Enters play through Event cards. Provides powerful support to Free Peoples, influencing the Fellowship and the Elven realms.
-- **The Balrog**: Activated by the Shadow player through Event cards. A devastating combat character that can emerge from Moria.
-- **The Witch-King (Chief of the Ringwraiths)**: An upgraded version replacing the standard Witch-king, with enhanced combat abilities and the power to lead Nazgul more effectively.
-- **New Factions**: Hillmen of Dunland (fight for Shadow, threatening Rohan), Corsairs of Umbar (naval threat to Gondor for Shadow), and Ents of Fangorn (powerful Free Peoples force that can devastate Isengard).
-- **Siege Engines**: Towers and Trebuchets add new tactical options during sieges in the Battles of the War of the Ring mode.
+- **Smeagol**: Enters play when a Sméagol tile is drawn from the Hunt Pool — Hunt Damage is 0 and Sméagol immediately becomes the Guide of the Fellowship. He acts as any other Companion (always as Guide), uses Level X (equal to the highest-level Companion), and counts toward the number of Action Dice the Shadow player may place in the Hunt Box. If Sméagol is eliminated, the "We Shall Get It" Shadow Event card immediately enters play. If Sméagol is ever the only Companion remaining, he is replaced by Gollum. There is no "taming" mechanic; Sméagol enters play automatically on a tile draw.
+- **Galadriel**: Entered by the Free Peoples player using a **Muster die** (not an Event card) if Sauron or the Elves are "At War" and Gandalf the White is not in play. She is placed in Lórien. Key abilities: cancel one Eye tile per turn using an Elven Ring token (Lady of Light); recruit in Lórien even under siege (Valour of the Elven People). She adds one die to the Free Peoples Action Pool (unless Gandalf the White is in play). She can never leave Lórien and is removed if Lórien falls to the Shadow.
+- **The Balrog**: Entered by the Shadow player using a **Muster die** (not an Event card) in Moria, along with one Sauron unit, provided the Witch-King is not already in play. Entering the Balrog advances the Elf, Dwarf, and North Nation one step on the Political Track. The Balrog adds one die to the Shadow Action Pool (unless the Witch-King is in play). Key abilities: Fire and Shadow — if the Fellowship moves through, from, or into a region with the Balrog, draw a Hunt tile (ignoring any Reveal icon); if an Eye tile is drawn, the Balrog and the Guide are eliminated (unless Gollum is the Guide, in which case the Eye tile is discarded with no effect). Flame of Udûn: +2 Combat Strength to a Shadow Army containing the Balrog.
+- **The Witch-King (Chief of the Ringwraiths)**: Entered by the Shadow player using a **Muster die** (not an Event card) in the region with the Fellowship, provided the Fellowship is not in a Free Peoples stronghold and The Witch-King: The Black Captain is not in play. Adds one die to the Shadow Action Pool. Key abilities: Shadow of Despair (Nazgûl in the Fellowship's last-known region each grant one Hunt re-roll); He Sees, He Knows (move Witch-King to the Fellowship if declared in a non-stronghold region). Once either version of the Witch-King has been brought into play, the other version can never be brought into play for the rest of the game, even if the first is later eliminated.
+- **New Factions**: Hillmen of Dunland (Shadow/Isengard — mustered via Muster die if Isengard is At War; placed in Dunland settlements; one hit eliminates two Dunlendings), Corsairs of Umbar (Shadow/Southrons — mustered via Muster die if Southrons & Easterlings At War; placed in Umbar as Ships; transport armies between coastal regions), and Ents of Fangorn (Free Peoples — mustered via Muster die if Saruman is in play and a Companion is in Fangorn; move and attack only when activated by Ents Awake Event cards; attack rolls 5 dice hitting on 5+, one Ent removed from Fangorn per attack).
+- **Siege Engines**: Part of the standard Twilight of the Third Age rules (strategic game), not limited to the Battles tactical mode. The Shadow player musters **Siege Towers** (Muster die; placed in front of a besieged Stronghold). The Free Peoples player musters **Trebuchets** (Muster die; placed inside any controlled Stronghold of an active Nation, even under siege). At the start of a siege battle, compare Siege Engine counts: the side with more has superiority. Shadow superiority: -1 to Free Peoples combat roll in round 1; may extend battle one round without reducing an Elite unit. Free Peoples superiority: +1 to Free Peoples combat roll in round 1; Shadow may not extend battle by reducing Elite units. On a tie, Free Peoples may claim superiority by immediately removing one of their Siege Engines.
 
 ## Scoring / Victory Conditions
 
@@ -61,23 +61,23 @@ Victory conditions remain the same as War of the Ring: the Shadow player wins by
 
 ## Special Rules & Edge Cases
 
-- **Smeagol Hunt Tiles**: When drawn during the Hunt, these tiles trigger special events rather than standard Hunt damage. They may cause Smeagol to reveal his treacherous nature or provide the Free Peoples player with useful guidance.
-- **Faction Activation**: New factions (Hillmen, Corsairs, Ents) are activated through specific Event cards and have their own rules for mustering, movement, and combat.
-- **Card Replacement**: Three existing Event cards per deck must be replaced, not supplemented, to maintain balance. The replaced cards are obsolete under expansion rules.
+- **Sméagol Hunt Tiles**: When a Sméagol tile is drawn from the Hunt Pool, Hunt Damage is 0 and Sméagol enters as Guide. After Sméagol leaves the game, any subsequent Sméagol tile draw is discarded and a new tile drawn. If Gollum enters play before Sméagol, Sméagol tiles are simply discarded. Sméagol is discarded if separated from the Fellowship or if the Fellowship is declared in a Free Peoples City or Stronghold. While Sméagol guides the Fellowship, a Character die result is required to declare the Fellowship; declaring in Minas Morgul or Morannon immediately moves it into Mordor without removing a Corruption point.
+- **Faction Entry**: All three new factions (Hillmen of Dunland, Corsairs of Umbar, Ents of Fangorn) enter play via **Muster die actions**, not Event cards. Each has specific conditions (see Actions section).
+- **Card Replacement**: Three existing Event cards per deck (those with a number + "b" suffix) must be replaced by their expansion counterparts, as the old cards are obsolete under expansion rules. The remaining eight new Event cards are added to the appropriate decks.
 - **Mixing Elements**: Using only separate expansion elements (rather than all at once) is possible but may alter game balance.
-- **Siege Engine Rules**: Apply only in the Battles of the War of the Ring tactical mode, not in the standard strategic game.
+- **Siege Engines are part of the strategic game**: Trebuchets and Towers can never leave the region where they were built. Eliminated Siege Engines may always be rebuilt. If an army is eliminated or moves out, all its Siege Engines are eliminated.
 
 ## Player Reference
 
-| New Character | Player | Key Ability |
-|---|---|---|
-| Smeagol | Free Peoples (potentially) | Guide for Ring-bearers; may betray |
-| Galadriel | Free Peoples | Powerful Elven support |
-| The Balrog | Shadow | Devastating combat unit from Moria |
-| Witch-King (Chief) | Shadow | Enhanced Nazgul leader |
-
-| New Faction | Player | Units | Threat Area |
+| New Character | Player | Entry Condition | Entry Method |
 |---|---|---|---|
-| Hillmen of Dunland | Shadow | 12 figures | Rohan |
-| Corsairs of Umbar | Shadow | 6 figures | Gondor (naval) |
-| Ents of Fangorn | Free Peoples | 8 figures | Isengard |
+| Sméagol | Free Peoples | Sméagol tile drawn from Hunt Pool | Automatic on tile draw |
+| Galadriel | Free Peoples | Sauron or Elves At War; Gandalf the White not in play | Muster die; placed in Lórien |
+| The Balrog | Shadow | Witch-King not in play | Muster die; placed in Moria with one Sauron unit |
+| Witch-King (Chief) | Shadow | Fellowship not in FP stronghold; Black Captain not in play | Muster die; placed in Fellowship's region |
+
+| New Faction | Player | Entry Condition | Entry Method | Units |
+|---|---|---|---|---|
+| Hillmen of Dunland | Shadow (Isengard) | Isengard At War | Muster die | 12 figures; 1 hit = 2 eliminated |
+| Corsairs of Umbar | Shadow (Southrons) | Southrons & Easterlings At War | Muster die | 6 Ships; transport armies between coastal regions |
+| Ents of Fangorn | Free Peoples | Saruman in play; Companion in Fangorn | Muster die | 8 figures; attack/move only when Ents Awake cards played |

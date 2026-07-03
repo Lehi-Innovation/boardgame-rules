@@ -7,11 +7,11 @@ designer: "Jervis Johnson, Bill King"
 source_pdf: "battle-for-armageddon-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory conditions wrong/omitted (Ork needs 3 of 5 hives; Imperial win needs all 5 hives + Ghazghkull dead, else draw); invented same-area attacks; supply and Ork build rules misstated. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battle-for-armageddon-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20for%20Armageddon&game=battle-for-armageddon)
 <!-- verification:end -->
@@ -68,26 +68,29 @@ The game is played over 8 turns. Each turn has 6 segments:
 - A counter that moves cannot move again until the next movement phase.
 
 ### Combat Phase
-- Attacking is voluntary. A player may attack enemy units in adjacent areas or in the same area.
-- Total the Attack Strength of all attacking units; compare to the total Defense Strength of all defending units to get an odds ratio.
-- Consult the Combat Results Table on the reference sheet. Roll 1D6 and cross-reference with the odds column.
+- Attacking is voluntary. A player may attack enemy stacks in adjacent areas only; you may not attack units in the same area.
+- Attacks are made by and against entire stacks, not individual counters. If one counter in a stack attacks, all others must join that attack.
+- Combined attacks are permitted: two or more of your stacks may attack the same enemy stack, as long as all attacking stacks are adjacent to the target. Ork stacks from different tribes may NOT attack together.
+- Each stack may make only one attack per combat phase. You may not attack the same enemy-held area more than once per combat phase.
+- Total the Attack Strength of all attacking units; divide by the total Defense Strength of all defending units to get an odds ratio (round fractions down). Consult the Combat Results Table on the reference sheet. Roll 1D6 and cross-reference with the odds column.
 - Apply results (retreats, eliminations, etc.).
-- **Retreats:** Defending units forced to retreat move to an adjacent area. If no retreat path exists, the unit is eliminated.
+- **Retreats:** Retreating counters are moved one area immediately by the player that controls them. Counters with a movement value of 0 are eliminated if forced to retreat. Counters that have already retreated once and are forced to retreat a second time are eliminated; they also have a defence value of 0 for any attacks made against them after their first retreat.
 
 ### Build Phase
-- **Imperial Build Phase:** The Imperial player spends build points to bring new units into play, rebuild destroyed units, or construct fortifications. Build points are tracked on the build point track.
-- **Ork Build Phase:** The Ork player may rebuild destroyed units. Ork units return to the Ork territory border.
+- **Imperial Build Phase:** The Imperial player spends build points to buy new counters or rebuild destroyed ones. Build points depend on how many hives and factories are still intact — each hive or factory produces build points equal to its defence value; when one is reduced to smoking ruins, the track marker drops by that value. New counters are placed on the production track; all counters on the track advance one space toward the "ready" box each build phase. Counters entering the ready box are placed on the map with a hive or factory (subject to stacking). Any unspent build points are lost. Counters not on the reference sheet (e.g., Space Marine Chapters) cannot be rebuilt.
+- **Ork Build Phase:** The Ork player may rebuild one counter for each two smoking ruins he controls. (A smoking ruin is controlled by the Orks if it is stacked with an Ork counter; an odd ruin does not contribute to a pair.) The Warlord Ghazghkull counter may not be rebuilt. Rebuilt counters are placed on a garrisoned smoking ruin or an Ork supply area, subject to stacking rules.
 
 ### Supply
-- After each action segment, check if any of your counters are out of supply. A unit is in supply if it can trace a path back to a supply source without passing through enemy-occupied areas.
-- Out-of-supply units may be eliminated or have reduced combat effectiveness.
+- After each action segment, check if any of your counters are out of supply. A unit is in supply if it can trace a path of any length back to one of its own side's supply areas without passing through (a) an area occupied by enemy counters, (b) a mountain area, or (c) a sea area. Supply lines may pass through ash wastes.
+- Out-of-supply counters are eliminated, unless the stack includes a hive or fortification. If a stack includes a hive or fortification, it is only destroyed on a D6 roll of 1–3. If a stack includes both a hive and a fortification, roll twice; the stack is only eliminated if both rolls fail.
 
 ## Scoring / Victory Conditions
 
-Victory is determined by the number of hive cities the Ork player controls at the end of each turn. The reference sheet lists specific victory conditions checked during the Victory Segment:
+Victory is checked at the end of every turn (the Victory Segment). If neither player has won by the end of turn 8, the game is a draw.
 
-- **Ork Victory:** The Ork player controls a sufficient number of hive cities as specified on the reference sheet.
-- **Imperial Victory:** The Imperial player prevents the Ork player from achieving their victory conditions through all 8 turns.
+- **Ork Victory:** The Ork player wins by capturing any three of the five Imperial hives. A hive is captured if it has been flipped to its "smoking ruins" side AND is stacked with an Ork counter during the victory segment.
+- **Imperial Victory:** The Imperial player wins if he controls all five hives AND the Warlord Ghazghkull counter has been removed from play. The Imperial player controls a hive if it is face up, or if an Imperial counter is stacked with its smoking ruins during the victory segment.
+- **Draw:** If neither condition is met by the end of turn 8.
 - Named hive cities: Acheron, Hades, Tartarus, Hellsreach, and Infernus.
 
 ## Special Rules & Edge Cases
@@ -106,9 +109,17 @@ Victory is determined by the number of hive cities the Ork player controls at th
 
 **Turn Sequence:**
 1. Strategy Segment (choose 2 cards, roll initiative, draw special card)
-2-5. Four Action Segments (alternate starting with initiative winner)
-6. Victory Segment (check hive control)
+2–5. Four Action Segments (alternate starting with initiative winner)
+6. Victory Segment (check hive control; draw if neither side wins by end of turn 8)
+
+**Victory:** Ork wins = any 3 of 5 hives as smoking ruins stacked with Ork counter. Imperial wins = all 5 hives controlled + Ghazghkull removed from play.
 
 **Stacking:** Max 3 per area (special characters and structures exempt). No cross-tribe stacking for Orks.
 
-**First Turn:** Ork initiative auto-win, +1 Ork attack, halved Imperial build points.
+**Combat:** Attacks are made against adjacent stacks only. Each stack attacks once per combat phase; same area may not be attacked twice.
+
+**Supply:** Out-of-supply stacks eliminated on a D6 roll (no roll needed unless a hive or fortification is in the stack; hive or fort = eliminated only on 1–3; both = must fail two rolls).
+
+**Ork builds:** 1 rebuild per 2 Ork-controlled smoking ruins. Ghazghkull cannot be rebuilt.
+
+**First Turn:** Ork initiative auto-win, +1 Ork attack (attacking only), halved Imperial build points.

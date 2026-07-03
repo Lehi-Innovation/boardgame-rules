@@ -7,11 +7,11 @@ designer: "Hisashi Hayashi"
 source_pdf: "bomb-busters-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Special Rules bullet claims incorrectly pointing at a red wire does NOT explode the bomb, contradicting source (and its own Turn Structure) on the core loss condition. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bomb-busters-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bomb%20Busters&game=bomb-busters)
 <!-- verification:end -->
@@ -117,8 +117,8 @@ When all 4 wires of the same value have been cut, place a Validation token on th
 - **"1 out of 2/3" wire setup:** When partially known wires are used, reveal the specified number, place markers with "?" side up, then randomly include only some of them facedown with the blue tiles.
 - **No More Wires:** When a player's stands are empty, their turn is skipped; play continues with remaining players.
 - **Detonator Dial:** Different starting positions based on player count (more players = more room for error).
-- **Red wire pointed at incorrectly during Dual Cut:** If a yellow wire is incorrectly guessed as something else, a yellow Info token is placed and the dial advances. A red wire that is incorrectly pointed at (teammate says it's not the guessed value) does NOT explode — the bomb only explodes if the active player points at a red wire and the action would succeed (i.e., the teammate confirms it).
-- **Double Detector and red wires:** If one of the 2 chosen wires is red and the other is not, the bomb does not explode. The teammate places an Info token in front of the non-red wire without revealing which was red.
+- **Red wire during Dual Cut:** If the action fails and the pointed-at wire is red, the bomb explodes immediately and the mission ends in failure. There is no reprieve — any wrong guess on a red wire detonates the bomb.
+- **Double Detector and red wires:** If one of the 2 chosen wires is red and the other is not, the bomb does not explode. The teammate does not reveal which wire is red; they simply place an Info token in front of the non-red wire (their choice).
 
 ## Player Reference
 

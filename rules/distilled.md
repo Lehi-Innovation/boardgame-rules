@@ -7,11 +7,11 @@ designer: "Dave Beck"
 source_pdf: "distilled-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Endgame bottle-collection scoring garbled (wrong values, same-region track missing); sale money omits recipe sell value. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/distilled-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Distilled&game=distilled)
 <!-- verification:end -->
@@ -87,8 +87,8 @@ If the remaining stack matches multiple recipes, choose one. If it matches none 
 
 ### 3. Sell Phase
 In turn order, sell one spirit per turn (multiple turns possible). For each spirit sold:
-1. Lay out the spirit stack + barrel + add a bottle from storeroom.
-2. Collect money equal to total sell value on all cards.
+1. Lay out the spirit stack + barrel + any flavor cards + add a bottle from storeroom.
+2. Collect money equal to the total sell value on all cards, plus the recipe sell value (Moonshine, Vodka, and signature recipes only).
 3. Score SP from cards + recipe + aged spirit flavor bonus (if aged).
 4. Place the spirit label on an empty label bonus space on your distillery board; gain that bonus immediately.
 5. Return starting items to storeroom; display premium bottles for collection.
@@ -133,7 +133,7 @@ SP are earned throughout the game by:
 
 **Endgame scoring (after round 7):**
 - SP from unsold spirits aging in warehouse (all card SP + recipe SP + 1 SP per flavor card).
-- Bottle collection: SP for displaying bottles from multiple regions (1 region = 0; 2 = 2 SP; 3 = 5 SP).
+- Bottle collection: Two separate scoring tracks. (1) Same-region track: SP for bottles of the same region (example: 3 same-region bottles = 4 SP; exact values for other counts are in a graphic on the board). Bottles without a region icon do not count. (2) Multi-region bonus: score 5 SP if you have at least one bottle from three different regions. Both bonuses can be earned simultaneously.
 - Distillery upgrade SP values.
 - Distillery goal SP (if achieved; cannot be achieved by scoring zero).
 - Money: 1 SP per 5 money remaining (rounded down).
@@ -167,6 +167,6 @@ Highest SP wins. Tiebreaker: most money remaining. Further tie: shared victory.
 
 | Aged Flavor Bonus | 1 flavor: 1 SP, 2: 3 SP, 3: 6 SP, 4: 10 SP |
 |---|---|
-| Bottle Collection | 2 regions: 2 SP, 3 regions: 5 SP |
+| Bottle Collection | Same-region track: SP by count (3 same-region = 4 SP; see board graphic); 3+ different regions: 5 SP bonus |
 | Endgame Money | 1 SP per 5 money |
 | Tasting (no sell round) | Spend up to 4 SP, gain that much money |

@@ -8,10 +8,10 @@ source_pdf: carpe-diem-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tiebreaker reversed (source: last on banderole bar wins) and final scoring omits banderole-bar VP and frame achievements. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two scoring-relevant definitions are misstated: the fountain-card rule is given as a blanket "draw 2, keep 1" when that only applies to a player's first fountain, and villa completion drops the source's explicit "at least two tiles" minimum. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/carpe-diem-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carpe%20Diem&game=carpe-diem)
 <!-- verification:end -->
@@ -70,7 +70,7 @@ The game has 4 phases of 7 rounds each. After each phase, there is a scoring per
   - **Baker (brown):** Receive 2 bread tokens. Bread uses: spend 1 to move meeple anywhere; spend 3 to auto-fulfill one scoring card.
   - **Administrator (blue):** Advance 2 spaces on banderole bar.
   - **Craftsman (green):** Take any dark green tile from bottom margin and place it immediately.
-- **Markets:** Place for 1 coin. **Bakeries:** Place for 1 bread. **Fountains:** Place to draw 2 fountain cards, keep 1.
+- **Markets:** Place to receive 1 coin. **Bakeries:** Place to receive 1 bread. **Fountains:** Place to draw 2 fountain cards, keep 1.
 
 ## Scoring / Victory Conditions
 
@@ -86,9 +86,14 @@ After each phase, players score in order of banderole bar progress (highest firs
 
 **Bread shortcut:** Pay 3 bread to fulfill any scoring card's requirements without actually meeting them.
 
-**End of game (after 4th scoring):** Final scoring for completed villas, fountain cards, and remaining resources.
+**End of game (after 4th scoring):** Final scoring covers:
+1. **Completed villas:** VP based on the number of chimneys in each completed villa (per the overview board chart). Incomplete villas score nothing.
+2. **Remaining items:** Total wares + coins + bread tokens + stored building tiles, divided by 2, rounded down, = VP.
+3. **Banderole bar:** VP equal to the value shown on your disc's current position on the banderole bar.
+4. **Fountain cards:** Reveal and score all fountain cards based on your achievements.
+5. **Frame achievements:** Each of your 4 frame parts has 2 goals. A goal is achieved if an imaginary line from the golden arrow intersects at least one completed building or landscape of the shown type.
 
-Most VP wins. Tiebreaker: highest position on banderole bar.
+Most VP wins. Tiebreaker: the tied player who is **last** (lowest) on the banderole bar wins.
 
 ## Special Rules & Edge Cases
 

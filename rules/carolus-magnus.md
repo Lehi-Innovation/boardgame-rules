@@ -7,11 +7,11 @@ designer: Leo Colovini
 source_pdf: carolus-magnus-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented game-end condition (all discs played) replaces the real one (fewer than 4 territories remain, most castles wins). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/carolus-magnus-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carolus%20Magnus&game=carolus-magnus)
 <!-- verification:end -->
@@ -19,7 +19,7 @@ verification_date: "2026-06-12"
 
 ## Overview
 
-Carolus Magnus is an area-control game where players compete to build castles in territories circling the board while Emperor Charlemagne travels among them. Players bid for turn order and movement distance using numbered discs, then place colored paladin cubes to gain control of color clans and territories. When the Emperor visits a territory, the player controlling the majority of paladins there builds a castle. Territories merge when adjacent ones share the same controller, and the first player to place all their castles wins.
+Carolus Magnus is an area-control game where players compete to build castles in territories circling the board while Emperor Charlemagne travels among them. Players bid for turn order and movement distance using numbered discs, then place colored paladin cubes to gain control of color clans and territories. When the Emperor visits a territory, the player controlling the majority of paladins there builds a castle. Building a new castle or completing a takeover can trigger a merge with adjacent territories where that same player already has a castle, combining paladins and castles into one larger territory. The first player to place all their castles wins.
 
 ## Components
 
@@ -53,7 +53,7 @@ Each round has an Opening Phase and an Action Phase.
 
 1. **Play 3 Paladins:** Place 3 paladins from your reserve onto your court (gaining/maintaining color control) and/or onto territories (strengthening territorial control). Any split is allowed.
 
-2. **Move the Emperor:** Move the Emperor clockwise 1 to N spaces (N = your disc number). Check the territory where the Emperor stops for control. The player controlling the majority of paladins there may place a castle.
+2. **Move the Emperor:** Move the Emperor clockwise 1 to N spaces (N = your disc number). A merged territory always counts as only one step when moving the Emperor, regardless of how many original territories it contains. Check the territory where the Emperor stops for control. The player controlling the majority of paladins there may place a castle.
 
 3. **Replenish Paladins:** Roll 3 dice and take 3 matching paladins from the center (crown = any color). If a color is depleted, both players return equal numbers of that color from their courts.
 
@@ -69,11 +69,13 @@ Each round has an Opening Phase and an Action Phase.
 - If a territory already has an opponent's castle(s), and the majority has shifted, replace all existing castles with the new controller's castles.
 - Existing castles count toward majority as if they were paladins of their owner.
 
-**Territory Merging:** Whenever two adjacent territories are both controlled by the same player, they merge into one larger territory. All paladins and castles combine.
+**Territory Merging:** Merging is triggered when a player builds a new castle or completes a takeover in a territory that is adjacent to one or more territories where that same player already has a castle; those territories merge into one, combining all paladins and castles. Paladin majority alone, without an existing castle, does not merge territories. Once merged, a territory cannot be split apart again and is treated as a single territory from then on, including for Emperor movement (see Turn Structure).
 
 ## Scoring / Victory Conditions
 
-The first player to place all of their castles (10 in a 2-player game) wins immediately. If the game ends with all discs played (after every 5th round, discs reset), the player with fewer remaining castles wins.
+The game ends in one of two ways:
+- **Instant win:** The first player to have **10 castles in play in the territories** wins immediately (8 castles in the 3-player game).
+- **Fewer than 4 territories:** When the board has fewer than 4 territories remaining (due to merging), the game ends. The player with the **most castles in play in the territories** wins.
 
 ## Special Rules & Edge Cases
 
@@ -81,6 +83,7 @@ The first player to place all of their castles (10 in a 2-player game) wins imme
 - If both players play the same number on their last disc, the first player from the previous round is considered to have the lower number.
 - Paladins in a player's reserve are not in play; only those placed on courts or territories count.
 - Color control can shift dramatically, instantly changing who controls multiple territories.
+- A newly merged territory is not checked for a change in majority immediately after the merge occurs.
 - In a 3-player game, a neutral gray disc set and third player color are added with modified rules. In a 4-player game, teams of 2 play with shared castle pools.
 
 ## Player Reference

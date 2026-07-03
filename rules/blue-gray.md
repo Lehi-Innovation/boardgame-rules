@@ -7,11 +7,11 @@ designer: "Frank Davis"
 source_pdf: "blue-gray-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Night turns contradicted (source: no combat phase at night; summary: modified-odds combat) and Attack Effectiveness recovery rule invented. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/blue-gray-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blue%20%26%20Gray&game=blue-gray)
 <!-- verification:end -->
@@ -50,10 +50,10 @@ Each Game-Turn consists of alternating Player-Turns:
 
 - **Movement**: All units have a Movement Allowance of 6 Movement Points. Clear terrain costs 1 MP per hex. Other terrain types cost more (see Terrain Effects Chart). Road-to-road movement costs only 1 MP regardless of terrain. Trail-to-trail costs 2 MP in forest/rough or 1 MP in clear. Movement is consecutive hex by hex; no skipping hexes. Unused MPs cannot be saved or transferred.
 - **Zones of Control (ZOC)**: The six hexes surrounding a unit are its Zone of Control. Units cannot exit enemy ZOC during movement (only during retreat/advance from combat). Units in enemy ZOC must attack during Combat Phase.
-- **Combat**: The Phasing Player totals attacking strength points against defending strength points to determine odds ratio. Roll one die on the CRT. Results: AE (Attacker Eliminated), AR (Attacker Retreats), EX (Exchange), DR (Defender Retreats), DE (Defender Eliminated).
+- **Combat**: The Phasing Player totals attacking strength points against defending strength points and expresses the comparison as a ratio (attacking Strength Points divided by defending Strength Points), simplified by rounding down to the nearest odds ratio on the Combat Results Table — rounding is always in favor of the defender (e.g., 13 attacking Strength Points vs. 4 defending Strength Points is 3.25-to-1, rounded down to 3-to-1, never up). Roll one die on the CRT. Results: AE (Attacker Eliminated), AR (Attacker Retreats), EX (Exchange), DR (Defender Retreats), DE (Defender Eliminated).
 - **Multiple Unit Combat**: Multiple units can attack a single hex; a single unit can only participate in one attack per Combat Phase. All units attacking a single hex must combine their strengths.
-- **Diversionary Attacks**: Units forced to attack (in enemy ZOC) may make soak-off attacks at any odds, satisfying the combat requirement.
-- **Artillery**: May conduct Bombardment Attacks at range (requires Line of Sight), Combined Attacks with adjacent friendly units, or Adjacent Attacks at full strength. Bombardment uses its own column on the CRT. Artillery defends normally when attacked.
+- **Diversionary Attacks**: A unit may attack at poor odds so that the bulk of the attacking force can be concentrated against another target at higher odds. These are called "Diversionary" or "Holding Attacks."
+- **Artillery**: May conduct Bombardment Attacks at range up to 3 hexes (requires Line of Sight, not forced to attack when in range), Combined Attacks with adjacent friendly units, or Adjacent Attacks when in an enemy controlled hex. Combat odds are determined the same way as any other attack. When bombarding from a non-adjacent hex, artillery units are never destroyed or forced to retreat by combat results (they do not suffer combat results). Adjacent artillery is treated like infantry and suffers all combat results. Artillery defends normally when attacked.
 - **Retreat**: Units forced to retreat move one hex away from the attacker. If retreat is blocked by enemy units, enemy ZOC, or impassable terrain, the unit is eliminated. The owning player chooses the retreat path.
 - **Advance After Combat**: After combat, attacking units may advance into a hex vacated by a retreating or eliminated defender.
 
@@ -64,9 +64,9 @@ Victory conditions are specified in the Exclusive Rules for each specific battle
 ## Special Rules & Edge Cases
 
 - **Displacement**: If a retreating unit must enter a friendly-occupied hex at stacking limits, the stationary unit is displaced one hex (owning player's choice of direction).
-- **Voluntary Reduction of Odds**: The attacking player may voluntarily reduce combat odds (but not below 1:6) to avoid potentially catastrophic results at low odds.
-- **Night Game-Turns**: Some scenarios include night turns. During night, combat is affected (reduced odds or modified CRT column) and movement may be restricted.
-- **Optional Attack Effectiveness Rule**: Units suffering AR results lose attack effectiveness, preventing them from attacking or entering enemy ZOC until effectiveness is recovered. Recovery occurs at the start of the owning player's turn for units outside enemy ZOC.
+- **Voluntary Reduction of Odds**: The attacking player may voluntarily reduce combat odds before rolling the die. The decision is irrevocable once announced (cannot be changed after the die roll).
+- **Night Game-Turns**: Tinted Game-Turns on the Turn Record Track are Night Game-Turns. **There is no Combat Phase during a Night Game-Turn; no combat is allowed at all** (including artillery bombardment). Movement during Night Game-Turns follows the same restrictions as Day Game-Turns, with one addition: units may not enter Enemy controlled hexes, nor may units already in Enemy controlled hexes exit them.
+- **Optional Attack Effectiveness Rule**: Units that receive an **Attacker Retreat (AR)** result lose Attack Effectiveness — their counter is inverted (turned face-down). Ineffective units may not attack and may not enter an Enemy controlled hex, but they may still move and defend normally and retain their Zone of Control. **Recovery occurs at the end of any Night Game-Turn**, at which point all face-down units are immediately flipped face-up and resume full Attack Effectiveness in the following Game-Turn. If no Night Game-Turn ensues, the unit remains ineffective until the end of the game. Attack Effectiveness is lost only when units attack from an Enemy controlled hex and receive an AR result.
 - **Stacking**: Specific stacking limits apply (typically two units per hex). Stacking limits are checked at the end of movement and combat.
 - **Unit Identification**: Confederate units identified by commander name; Union units by numerical designation (brigade/division/corps).
 - **Game Scale**: Each hex represents 400 meters. Each Strength Point represents 250-350 men.
@@ -84,7 +84,7 @@ Victory conditions are specified in the Exclusive Rules for each specific battle
 |---|---|
 | AE | Attacker eliminated |
 | AR | Attacker retreats 1 hex |
-| EX | Both sides lose equal strength |
+| EX | Defender's entire stack eliminated; Attacker must eliminate his own participating units whose combined printed Strength is at least equal to (may exceed) the eliminated defender's total Strength |
 | DR | Defender retreats 1 hex |
 | DE | Defender eliminated |
 

@@ -7,11 +7,11 @@ designer: "Nikki Valens"
 source_pdf: "arkham-horror-third-edition-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Core actions wrong: Move is up to 2 spaces not 1, Research places clues on scenario sheet, invented test "difficulty" comparison, focus tokens reroll dice not +1. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/arkham-horror-third-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arkham%20Horror%20%28Third%20Edition%29&game=arkham-horror-third-edition)
 <!-- verification:end -->
@@ -69,33 +69,33 @@ Each investigator draws 2 tokens from the mythos cup and resolves their effects 
 
 | Action | Effect |
 |--------|--------|
-| **Move** | Move to an adjacent connected space |
+| **Move** | Move up to two spaces; spend up to $2 to move up to two additional spaces (one extra per dollar spent) |
 | **Gather Resources** | Gain $1 |
-| **Focus** | Place 1 focus token on a skill of your choice (max focus per skill) |
-| **Ward** | Attempt to remove a doom token from your space (test lore) |
-| **Attack** | Attack an engaged monster (test strength or other skill) |
-| **Evade** | Attempt to evade an engaged monster (test observation or agility) |
-| **Research** | Attempt to discover a clue at your space (test observation) |
-| **Trade** | Exchange items/money with another investigator in your space |
+| **Focus** | Place 1 focus token on a skill of your choice; you may hold focus tokens up to your investigator's total focus limit (shown on their sheet) |
+| **Ward** | Test lore; remove one doom from your space per success rolled. Removing two or more doom with a single ward action also grants one remnant |
+| **Attack** | Engage a monster in your space and test strength (modified by the monster's attack modifier); deal one damage per success |
+| **Evade** | Test observation (modified by the monster's evade modifier) to disengage and exhaust monsters; evading all engaged monsters lets you perform one additional action |
+| **Research** | Test observation; for each success, place one of your clues onto the scenario sheet |
+| **Trade** | Exchange any number of allies, items, spells, money, clues, and/or remnants with other investigators in your space |
 | **Component Actions** | Use special abilities on cards/items that say "Action:" |
 
-**Skill Tests:** Roll dice equal to your skill value (plus modifiers). Each 5+ is a success. Compare successes to the test's difficulty.
+**Skill Tests:** Roll dice equal to your skill value (plus any modifiers). Each 5 or 6 is a success. If you roll at least one success, you pass the test. If you roll zero successes, you fail. The total number of successes is your test result, which may be used by card effects.
 
 ## Scoring / Victory Conditions
 
 Victory and defeat are determined by the active scenario:
-- **Win:** Complete the scenario's objective (varies by scenario -- typically involves gathering clues, closing anomalies, and defeating key threats).
-- **Lose:** If the scenario's doom track fills, or if all investigators are defeated, or if a specific failure condition triggers.
+- **Win:** Complete the scenario's objectives (varies by scenario — typically involves researching clues onto the scenario sheet and completing a series of codex-driven goals).
+- **Lose:** Determined by scenario-specific failure conditions described on the scenario sheet and codex cards.
 
 ## Special Rules & Edge Cases
 
 - **Engagement:** When a monster is in your space, you become engaged. While engaged, you cannot Move, Ward, Research, Trade, or have encounters. You may only Focus, Attack, or Evade.
-- **Damage & Horror:** If damage equals or exceeds your health, or horror equals or exceeds your sanity, you are defeated. Your investigator is eliminated from the game.
-- **Focus Tokens:** Spent during skill tests to add +1 to the result per token spent.
-- **Doom:** Doom tokens advance the Ancient One's plans. Accumulating too much doom triggers catastrophic events.
-- **Anomalies:** Spatial rifts that spawn monsters and spread doom. Can be closed through specific scenario actions.
-- **Conditions:** Status effects (e.g., injured, haunted) that affect investigators.
-- **Remnants:** Special tokens placed by certain effects that interact with scenario mechanics.
+- **Damage & Horror:** If damage equals or exceeds your health, or horror equals or exceeds your sanity, you are defeated. When defeated, you must place one doom on the scenario sheet, lose your investigator, and must choose a new one from those not yet played this game; you are not permanently eliminated from play.
+- **Focus Tokens:** Each focus token spent during a skill test allows you to reroll one die. They do not add +1 to the result.
+- **Doom:** Doom tokens advance the Ancient One's plans. Accumulating too much doom triggers catastrophic events as described in the codex.
+- **Anomalies:** Strange occurrences (such as gateways to other dimensions) that result from doom spreading out of control. An anomaly token is placed in a neighborhood when any single space in that neighborhood has three doom, or when the neighborhood has a total of five doom. When an anomaly is present in a neighborhood, any doom that would be placed in that neighborhood is placed on the scenario sheet instead. Investigators in an anomaly neighborhood must resolve anomaly encounters rather than normal encounters.
+- **Conditions:** Status effects (e.g., blessed, cursed, dark pact) that affect investigators.
+- **Remnants:** Tokens gained through ward actions (removing two or more doom at once), defeating certain monsters, or other effects. They can be spent instead of suffering horror when casting spells, or exchanged during certain encounters.
 
 ## Player Reference
 

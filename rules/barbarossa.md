@@ -7,11 +7,11 @@ designer: "Klaus Teuber"
 source_pdf: "barbarossa-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Sculptor scoring table misaligned: source pairs 5-6=+1, 7-8=+2, 12-13=-2 but summary gives 5-6=0, 7-8=+1 and drops the 12-13 penalty. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/barbarossa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Barbarossa&game=barbarossa)
 <!-- verification:end -->
@@ -99,18 +99,19 @@ When you correctly guess an object, stick an arrow in it.
 - You may never guess your own objects.
 
 ### Sculptor Scoring
-When an object is guessed, the sculptor also scores (or loses) points based on the total number of arrows on ALL objects currently on the board:
+When an object is guessed, the sculptor also scores (or loses) points based on the total number of arrows on ALL objects currently on the board (including the one just placed):
 
 | Total Arrows on Board | Sculptor's Magic Hat Move |
 |----------------------|--------------------------|
 | 1-2 | 2 backwards |
-| 3-4 | 1 backwards |
-| 5-6 | No move |
-| 7-8 | 1 forward |
-| 9-10 | 2 forwards |
-| 11 | 1 forward |
-| 12 | No move |
-| 13 | 1 backwards |
+| 3 | 1 backwards |
+| 4 | No move |
+| 5-6 | 1 forward |
+| 7-8 | 2 forwards |
+| 9 | 1 forward |
+| 10 | No move |
+| 11 | 1 backwards |
+| 12-13 | 2 backwards |
 
 This encourages making sculptures of moderate difficulty -- too easy and they are guessed when few arrows are on the board (penalty), too hard and they remain unguessed at game end (penalty).
 
@@ -146,7 +147,7 @@ After final scoring, the player closest to the end space wins.
 - Guess 1st: +5 points
 - Guess 2nd: +3 points
 - Max 2 arrows per object
-- Sculptor scores based on total arrows on all objects
+- Sculptor scores based on total arrows on all objects (see Sculptor Scoring table)
 - End-game: -5 per unguessed object, -2 per single-arrow object (optional but recommended)
 
 ### Resource Limits

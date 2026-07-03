@@ -7,11 +7,11 @@ designer: "Jay Cormier, Sen-Foong Lim"
 source_pdf: "belfort-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Gnome hire cost wrong (1 vs 3 Gold), income misattributed to Gnomes instead of Income Coins, Actions phase contradicted, invented "points increase in later rounds," wrong tiebreaker, Build Walls/Guilds omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/belfort-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Belfort&game=belfort)
 <!-- verification:end -->
@@ -84,38 +84,39 @@ Resolve the Collection board left-to-right, top-to-bottom. Workers collect resou
 
 **King's Camp:** Players swap turn order crests based on placement order.
 
-**Income:** Collect 1 Gold per Gnome assigned to your buildings.
+**Income:** Collect 1 Gold from the supply for each **Income Coin** showing on your built Property cards.
 
 **Taxes:** Pay taxes based on your score position (higher scores pay more).
 
 ### Phase 4: Actions
-Starting with first player, players take turns performing **one action** each cycle. Continue until all players pass. See the Actions section below for details.
+In turn order, each player completes **all** of the actions they want to perform before the next player takes their turn. See the Actions section below for details.
 
 ### Phase 5: Scoring
-Scoring occurs **3 times** during the game (at specific calendar months, not every round).
+Scoring occurs **3 times** during the game (when the Calendar marker lands on a red X — once at the end of each season).
 
-**District scoring:** In each of the 5 districts, the player with the most property markers scores points. Second place also scores. Points increase in later scoring rounds.
+**District scoring:** In each of the 5 districts, count all property markers (on Property, Wall, and Guild symbols). Most markers: **5 points**; second-most: **3 points**; in 4–5 player games, third-most: **1 point**. Tied players are bumped down to the next rank.
 
-**Worker majority scoring:** The player with the most of each worker type (Elves, Dwarves, Gnomes) scores points.
+**Worker majority scoring:** The player with the most of each worker type (Elves, Dwarves, Gnomes) scores **3 points**; second-most scores **1 point**. Tied players are bumped down to the next rank. Master Elves/Dwarves count as 1 Elf/Dwarf respectively for majority. Gnomes counted are those on built Property cards.
 
 ## Actions
 
-During Phase 4, starting with first player, players take turns performing one action per cycle until all pass.
+During Phase 4, in turn order each player completes all actions they want before the next player acts. A player must activate and reclaim every one of their placed workers at some point during their turn. Actions may be taken in any order and any number of times unless otherwise noted:
 
-- **Build a Property** -- Pay the card's resource cost in Wood, Stone, Metal, and/or Gold. Place a property marker in a chosen district. Draw a replacement property card.
-- **Hire a Gnome** -- Pay 1 Gold to place a Gnome from the supply onto one of your built properties. This unlocks the property's Gnome-locked action plank.
-- **Upgrade a Worker** -- Flip an Elf or Dwarf to its Master side (requires having built the relevant building). Master Elves count as 2 Elves for resource collection; Master Dwarves count as 2 Dwarves.
-- **Resolve a Property/Guild Action** -- Use the action of a property card or Guild tile where you placed a worker during the Placement phase.
-- **Visit the Trading Post** -- Buy or sell resources at fixed prices listed on the Calendar board.
-- **Recruit from Property Cards** -- Draw a property card from the face-up pool or the deck.
+- **Build a Property** -- Pay the card's resource cost. Place the card face-up in front of you and place one property marker on an unclaimed matching Property symbol on the board. The built property is now active (planks available in future Placement phases, Gnome Locks can be staffed, Income Coins earned).
+- **Build a Wall** -- Pay 3 Wood + 3 Stone to the supply and place one property marker on any unclaimed Wall symbol on the board. No Property card is required. A player may build as many Walls as they can afford per turn.
+- **Build a Guild** -- Pay the cost shown on the Guild tile and place one property marker on its Guild symbol to own that Guild. No Property card is required. A player may build as many Guilds as they can afford per turn. Once owned, you pay no fee to place workers there; other players pay the fee to you instead of the supply.
+- **Hire a Gnome** (once per turn) -- Pay **3 Gold** to the supply to take a Gnome from the stockpile and place it on an unoccupied Gnome Lock on one of your built properties. The locked action plank is immediately unlocked. Requires an available Gnome Lock to place it on.
+- **Activate a Previously-placed Worker** -- Activate a worker you placed on a plank (on a Property card or at a Guild) during the Placement phase. Resolve that plank's action and reclaim the worker.
+- **Visit the Trading Post** (once per turn) -- Make up to 1 Buy and up to 1 Sell action at prices listed on the Calendar board.
+- **Buy a Property Card** (once per turn, must be the last action of your turn) -- Pay 1 Gold to take a card from the face-up draw pool or the top of the draw deck. Replenish the draw pool as needed. Hand limit: discard down to 5 cards at the end of your turn.
 
 ## Scoring / Victory Conditions
 
-- Points are scored in 3 scoring rounds during the 7-round game.
-- **District influence:** Count property markers in each district. Most = points, 2nd = points.
-- **Worker majorities:** Most Elves, most Dwarves, most Gnomes each award points.
+- Points are scored 3 times during the 7-round game (at the end of each season, when the Calendar marker lands on a red X).
+- **District influence (each district scored separately):** Count all property markers (on Property, Wall, and Guild symbols). Most markers: **5 points**; second-most: **3 points**; in 4–5 player games, third-most: **1 point**. Tied players share the next rank down.
+- **Worker majorities (each type scored separately — Elves, Dwarves, Gnomes):** Most of a type: **3 points**; second-most: **1 point**. Tied players share the next rank down. Master workers count as 1 (not 2) for majority purposes. Gnomes counted are those assigned to built Property cards.
 - After 7 rounds, the player with the **most total points** wins and receives the Key to the City.
-- Tiebreaker: Most Gold remaining.
+- **Tiebreaker:** Most total resources (Wood + Stone + Metal + Gold, with Metal counting as 2). If still tied, the tied players share the victory.
 
 ## Special Rules & Edge Cases
 
@@ -124,7 +125,7 @@ During Phase 4, starting with first player, players take turns performing one ac
 - The 2-player game has special setup and rule modifications (see appendix in rulebook).
 - Guild fees: Free if you own it, 1 Gold to supply if unowned, 1 Gold to the owner if someone else owns it.
 - A worker placed on a plank cannot be moved once placed.
-- Master Workers count as 2 for collection bonuses but occupy only 1 plank space.
+- Master Workers count as 2 workers of their type for resource collection yield (e.g., a Master Dwarf in the Quarry collects 2 Stone) but count as only 1 when determining who wins the collection bonus. They still occupy only 1 plank space.
 - Tax levels increase as players score more points.
 
 ## Player Reference

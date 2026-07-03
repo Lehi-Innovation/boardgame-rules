@@ -7,11 +7,11 @@ designer: "Richard Garfield"
 source_pdf: "bunny-kingdom-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Construction Phase replaced with invented "verify" step; Camp priority system, one-building-per-territory, and 2-player Reserve draft omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bunny-kingdom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bunny%20Kingdom&game=bunny-kingdom)
 <!-- verification:end -->
@@ -32,12 +32,12 @@ Bunny Kingdom is a drafting and territory control game where players are Rabbit 
 
 ## Setup
 
-1. Place the New World board in the center. Each player chooses a color.
-2. Place one Rabbit per player on the 0 space of the Score Track.
-3. Sort City figurines and Building tokens near the board.
-4. Shuffle all 182 Exploration cards.
+1. Place the New World board in the center. Place one Strength 1 City on each City space on the board.
+2. Each player chooses a color, takes 36 Rabbit figurines of that color, and places one Rabbit on space 0 of the Score Track.
+3. Place remaining Cities and Building tokens near the board.
+4. Shuffle all 182 Exploration cards into a face-down deck.
 5. Deal cards based on player count:
-   - **2 players:** 10 cards each
+   - **2 players:** 10 cards each (plus 10 face-down Reserve cards per player)
    - **3 players:** 12 cards each
    - **4 players:** 10 cards each
 
@@ -46,14 +46,26 @@ Bunny Kingdom is a drafting and territory control game where players are Rabbit 
 The game plays over **4 Rounds**, each with 3 phases:
 
 ### Phase 1: Exploration (Card Drafting)
-1. Each player simultaneously selects **2 cards** from their hand.
-2. Place selected cards face-down in front of you.
-3. Pass remaining hand to the neighbor (left in Rounds 1 and 3, right in Rounds 2 and 4).
-4. All players simultaneously reveal and resolve their 2 cards.
-5. Repeat until all cards are drafted.
+
+**Standard (3- and 4-player):**
+1. Each player simultaneously selects **2 cards** from their hand and places them face-down in front of them.
+2. Pass remaining hand face-down to the neighbor (left in Rounds 1 and 3, right in Rounds 2 and 4).
+3. All players simultaneously reveal and play their 2 chosen cards.
+4. Repeat (draft + play) until all cards have been played.
+
+**2-player special rules:**
+- Each round, deal both players 10 cards and place 10 additional cards face-down in front of each player as their **Reserve**.
+- Each drafting step: draw 1 card from your Reserve and add it to your hand. Then choose 1 card to play and 1 to discard (face-down). Pass the remaining cards to your opponent.
+- The Play Cards step proceeds normally.
 
 ### Phase 2: Construction
-After all cards are played, verify that all Buildings and Rabbits are correctly placed.
+After all cards are drafted and played, players may now place Buildings (Cities, Farms, Sky Towers, Camps) from their played Building cards onto the New World board. Rules:
+- Buildings can only be placed on Territories you control, **except** Camps, which can only be placed on **empty** Territories (no Rabbit or Building).
+- There can **never be more than one Building** on a single Territory.
+- Buildings cannot be moved once placed.
+- Luxury Resource Farms and Strength 3 Cities have placement requirements (specific terrain types, shown on the card).
+- **Camp priority:** Announce the Camp's priority number before placing. Any player with a lower priority number may interrupt and place their Camp first. After they resolve or pass, you may place yours or save it.
+- You are never required to place a Building; you may save it for a future Round.
 
 ### Phase 3: Harvest
 Calculate Golden Carrots for each Fief:
@@ -70,12 +82,12 @@ Place one of your Rabbit figurines on the matching Territory on the board (ident
 
 ### Playing Building Cards
 - **City cards:** Place the corresponding City figurine on a Territory you control. Strength-3 Cities can only be placed on Mountains.
-- **Farm cards:** Place a Farm token on a Territory you control. The Farm produces the depicted Resource. Luxury Farms have placement requirements (specific terrain types).
+- **Farm cards:** Place a Farm token on a Territory you control. The Farm produces the depicted Resource. Luxury Farms have placement requirements (specific terrain types). A Territory with a Farm/Building still produces its base terrain Resource (if any) in addition to the Building's Resource, when computing a Fief's Wealth.
 - **Sky Tower cards:** Place both tokens of a Sky Tower pair on two Territories you control. These Territories are now connected for Fief purposes regardless of distance.
-- **Camp cards:** Place a Camp token and a Rabbit on any empty (uncontrolled) Territory.
+- **Camp cards:** Place the card in front of you; place the Camp token on the board during the Construction Phase on any empty Territory (no Rabbit or Building). Each Camp card has a priority number — lower priority plays first. Place one of your Rabbits on the Camp to show control. If an opponent later plays a Territory card for that Territory, the Camp is removed and your Rabbit replaced by theirs.
 
 ### Playing Provision Cards
-Take 2 extra cards from the draw pile and add them to the cards you are currently drafting.
+Immediately draw and play 2 cards from the deck (they are NOT added to your hand or drafting pool). Resolve each drawn card exactly as if it had been chosen in the draft: place a Rabbit for a Territory card, place the City/token for a Building card, keep a Parchment card face-down and secret, or — if a second Provisions card is drawn — immediately draw and play 2 more cards. Put the played Provisions card in your discard pile.
 
 ### Playing Parchment Cards
 Keep Parchments secret until end of Round 4. They score bonus Golden Carrots based on various conditions (e.g., producing 7+ of a Resource, controlling specific territories).
@@ -90,7 +102,7 @@ A Fief with 0 Strength or 0 Wealth scores 0.
 ### Parchment Scoring (End of Round 4)
 Reveal all Parchments and score their bonus conditions. Examples include bonuses for producing large quantities of specific Resources, controlling many Territories, or having high-Strength Fiefs.
 
-**The player with the most Golden Carrots wins.**
+**The player with the most Golden Carrots wins.** In case of a tie, the tied players share the victory.
 
 ## Special Rules & Edge Cases
 
@@ -106,7 +118,7 @@ Reveal all Parchments and score their bonus conditions. Examples include bonuses
 
 **Round Summary:**
 1. Draft 2 cards → Pass hand → Reveal and play → Repeat
-2. Verify construction
+2. Construction Phase: place Buildings (one per Territory; Camps on empty Territories only; Camp priority rules apply)
 3. Harvest: Strength x Wealth per Fief
 
 **Passing Direction:**

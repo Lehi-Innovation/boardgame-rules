@@ -7,11 +7,11 @@ designer: "Martin Wallace, Gavan Brown, Matt Tolman"
 source_pdf: "brass-birmingham-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Link scoring wrongly stated as "1 VP per beer barrel icon" (source: link icons); omits Merchant Beer Bonuses and £15+beer double-rail-link cost. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/brass-birmingham-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brass%3A%20Birmingham&game=brass-birmingham)
 <!-- verification:end -->
@@ -42,7 +42,7 @@ Brass: Birmingham is an economic strategy game set during the Industrial Revolut
 1. Place board, set up Merchant tiles, fill Coal Market and Iron Market.
 2. Each player takes: Player Mat, 17 pounds, Character tile, Link tiles, Industry tiles (stacked on mat slots with black side down), VP marker on 0, Income marker on 10.
 3. Deal 8 cards to each player.
-4. Draw 1 additional card facedown (Scout pile) in Birmingham variant.
+4. Each player draws 1 additional card from the Draw Deck and places it face down in their player area (mandatory step for every player).
 5. Shuffle Character tiles randomly on Turn Order Track.
 6. Remove Location cards by player count: 2P remove blue + teal; 3P remove teal; 4P use all.
 
@@ -78,21 +78,26 @@ Place an Industry tile from your Player Mat onto a location on the board.
 ### Network
 Place a Link tile to expand your canal (Canal Era) or rail (Rail Era) network.
 - Canal: costs 3 pounds. 1 Link per canal route.
-- Rail: costs 5 pounds + 1 coal. 1 or 2 Links per rail route.
+- Rail: costs £5 + 1 coal per link. You may build 1 rail link for £5 + 1 coal; or 2 rail links for £15 + 1 beer (plus 1 coal per link). The beer for the double-link must come from a Brewery (not a Merchant beer); if consuming from an opponent's brewery, it must be connected to the second link after it is placed.
 
 ### Develop
 Remove 1 or 2 Industry tiles from your Player Mat (consuming iron), advancing to higher-level industries.
 
 ### Sell
 Flip Cotton Mills, Manufacturers, and/or Potteries by selling to connected Merchants.
-- Must consume beer for each sell action (from your breweries or connected breweries).
+- Must consume beer for each sell action (amount shown on tile; from your own breweries — no connection needed — or connected opponents' breweries).
 - Some Merchant tiles require specific goods.
+- If there is a beer barrel on the space beside the Merchant tile you are selling to, you may consume it as part of the Sell action. Doing so earns you the **Merchant Beer Bonus** for that location:
+  - **Gloucester:** Remove 1 of the lowest level tiles of any industry from your Player Mat (cannot remove a Pottery tile showing a lightbulb icon).
+  - **Oxford:** Advance your Income Marker 2 spaces along the Progress Track.
+  - **Nottingham / Shrewsbury:** Advance your VP Marker by the number of spaces indicated.
+  - **Warrington:** Receive £5 from the Bank.
 
 ### Loan
 Take 30 pounds from the Bank. Move Income Marker back 3 income levels.
 
 ### Scout
-Discard 2 cards from hand. Receive 1 Wild Industry + 1 Wild Location card.
+Discard 3 cards from hand. Receive 1 Wild Industry + 1 Wild Location card.
 - Cannot use if you already have a Wild card in hand.
 
 ### Pass
@@ -102,7 +107,7 @@ Skip an action but must still discard a card.
 
 **Scoring occurs at the end of each era:**
 
-1. **Score Links:** Each Link tile scores 1 VP per beer barrel icon in adjacent locations. Remove Links from board after scoring.
+1. **Score Links:** Each Link tile scores 1 VP for each merchant/link icon displayed in adjacent locations on the board. Remove Link tiles from board after scoring.
 2. **Score Flipped Industry Tiles:** Score VPs shown on bottom-left of flipped tiles. Unflipped tiles score nothing.
 
 **End of Canal Era additional steps:**
@@ -143,7 +148,11 @@ Two locations are connected if a route of Link tiles (any player's) connects the
 - Consumed from your own breweries or connected breweries (any player's).
 
 ### Overbuilding
-You may build a higher-level Industry tile on top of an existing tile (yours or opponent's) if certain conditions are met (must be your own tile or a lower-level tile).
+You may replace an already-placed Industry tile with a higher-level tile of the same industry type (still paying the normal build cost):
+- **Your own tile:** You may Overbuild any Industry tile of yours. Any iron/coal cubes on the tile being replaced go back into the general supply.
+- **An opponent's tile:** You may Overbuild only a Coal Mine or an Iron Works of theirs, and only if there are zero resource cubes of that same type anywhere on the board, including in its Market. Overbuilding an opponent's Cotton Mill, Manufacturer, Pottery, or Brewery is never allowed, regardless of level.
+
+Overbuilt Industry tiles are removed from the game (returned to the box) and never score VPs; the owner does not lose income or VPs when their tile is overbuilt.
 
 ### Negative Income
 If your income is negative, you must pay that amount. If unable, sell Industry tiles from board at half cost. If still short, lose 1 VP per pound short.
@@ -152,7 +161,9 @@ If your income is negative, you must pay that amount. If unable, sell Industry t
 Two special brewery locations that cannot be built with Wild Location cards.
 
 ### Market Mechanics
-When Coal Mines or Iron Works are built connected to markets, cubes move to market spaces (most expensive first), earning money for the builder.
+- **Coal Mine:** Only if connected to any Merchant space (even one without a Merchant tile) does building it trigger moving cubes from the tile to the Coal Market.
+- **Iron Works:** Always triggers the market move immediately upon being built, regardless of network connection.
+- When triggered, move as many cubes as possible from the Industry tile to available Market spaces (filling the most expensive spaces first), collecting the money shown for each cube moved. If the last cube is moved from the tile, flip it and advance the Income Marker by the amount shown on the tile.
 
 ## Player Reference
 
@@ -173,7 +184,7 @@ When Coal Mines or Iron Works are built connected to markets, cubes move to mark
 | Develop | Iron (1-2) | Any card |
 | Sell | Beer | Any card |
 | Loan | -3 income levels | Any card |
-| Scout | 2 extra cards | Any card |
+| Scout | 3 cards total discarded | Any card |
 | Pass | Nothing | Any card (still discard) |
 
 **Rounds per Era:** 2P=10, 3P=9, 4P=8

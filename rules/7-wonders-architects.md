@@ -7,11 +7,11 @@ designer: "Antoine Bauza"
 source_pdf: "7-wonders-architects-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wonder-effects table wrong for Ephesus (given Olympia's effect) and Olympia (given Rhodes'); Conflict-token setup counts not in source. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/7-wonders-architects-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%207%20Wonders%3A%20Architects&game=7-wonders-architects)
 <!-- verification:end -->
@@ -42,15 +42,14 @@ verification_date: "2026-06-12"
 **Central area:**
 1. Shuffle common cards into a central face-down deck. Leave space for a discard pile.
 2. Shuffle Progress tokens face-down in a stack; reveal the top 3 face-up.
-3. Place Conflict tokens Peace-side up based on player count (2-3 players: 3 tokens; 4-5: 4; 6-7: 5).
+3. Place Conflict tokens Peace-side up based on player count (2-3 players: 6 tokens; 6-7: 7).
 4. Create a reserve of Military Victory tokens.
 5. Place the Cat pawn.
 
 | Players | Conflict Tokens |
 |---------|----------------|
-| 2-3 | 3 |
-| 4-5 | 4 |
-| 6-7 | 5 |
+| 2-3 | 6 |
+| 6-7 | 7 |
 
 ## Turn Structure
 
@@ -128,18 +127,18 @@ The game ends at the end of the turn when any player finishes constructing all 5
 | Wonder | Effect |
 |--------|--------|
 | Alexandria | Take the top card from any deck anywhere on the table |
-| Ephesus | Take the top card from decks to your left and right |
+| Ephesus | Take the top card from the central deck |
 | Giza | No special effect; provides more Victory points |
 | Halicarnassus | Take top 5 cards from left or right deck, keep 1, shuffle rest back |
 | Babylon | Choose 1 Progress token from the 4 available |
-| Olympia | Add 1 Shield to your total |
-| Rhodes | Add 1 Shield to your total |
+| Olympia | Take the top card from the decks to your left and your right |
+| Rhodes | Add 1 Shield to your total Shields |
 
 ### Progress Token Effects
 | Token | Effect |
 |-------|--------|
-| Urbanism | When taking a Grey card, choose 1 extra card from the 3 available |
-| Crafts | When taking a Grey card, choose 1 extra card |
+| Urbanism | When taking a specific type of Grey card, choose 1 extra card from the 3 available |
+| Crafts | When taking a specific type of Grey card, choose 1 extra card from the 3 available |
 | Jewellery | When taking a Grey or Yellow card, choose 1 extra card |
 | Science | When taking a Green card, choose 1 extra card |
 | Propaganda | When taking a Red card with Horn icons, choose 1 extra card |

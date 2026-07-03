@@ -7,14 +7,14 @@ designer: "Francis Tresham"
 source_pdf: "advanced-civilization-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-13"
 ---
 
 # Advanced Civilization
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Civ cards wrong (3 types vs 5 groups), 3 of 5 victory-point sources missing, 3 of 13 phases omitted, conflict trigger contradicts co-existence rule. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/advanced-civilization-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Civilization&game=advanced-civilization)
 <!-- verification:end -->
@@ -27,7 +27,7 @@ A grand strategy game covering the development of ancient civilizations from agr
 
 - 4-panel Mapboard (Mediterranean and Near East) + optional Western Expansion
 - 9 sets of playing pieces (population tokens and cities)
-- 24 Civilization cards (8 each of 3 types)
+- 24 Civilization cards across 5 groups (Arts, Crafts, Sciences, Civics, Religion)
 - 114 Commodity trade cards + 12 Calamity cards
 - Archaeological Succession Track (A.S.T.)
 
@@ -37,18 +37,21 @@ Each nation begins with a single token in one of its designated start areas. Tra
 
 ## Turn Structure
 
-Each turn represents a period of time. The sequence is:
+Each turn represents a period of time. The full sequence has 13 phases:
 
 1. **Tax Collection**: Collect tokens from stock into treasury based on cities.
 2. **Population Expansion**: Add 1 token to areas with 1 token; add 2 tokens to areas with 2+ tokens.
-3. **Movement**: Move tokens by land or sea to new areas.
-4. **Conflict Resolution**: Resolve overpopulation and battles in contested areas.
-5. **City Construction**: Build cities in areas with sufficient population.
-6. **Trade Card Collection**: Draw 1 trade card per city.
-7. **Trade**: Exchange commodity and calamity cards between players.
-8. **Calamity Resolution**: Resolve calamity effects.
-9. **Civilization Card Acquisition**: Spend commodity sets and treasury tokens for civilization cards.
-10. **A.S.T. Advancement**: Move tokens along the Archaeological Succession Track.
+3. **Census**: Count tokens on the board to determine movement order.
+4. **Ship Construction and Maintenance**: Build new ships or pay upkeep on existing ships.
+5. **Movement**: Move tokens by land or sea to new areas.
+6. **Conflict Resolution**: Resolve overpopulation and battles in contested areas.
+7. **City Construction**: Build cities in areas with sufficient population.
+8. **Remove Surplus Population**: Remove excess tokens; check for city support.
+9. **Trade Card Collection**: Draw 1 trade card per city.
+10. **Trade**: Exchange commodity and calamity cards between players.
+11. **Calamity Resolution**: Resolve calamity effects; check for city support.
+12. **Civilization Card Acquisition**: Spend commodity sets and treasury tokens for civilization cards.
+13. **A.S.T. Advancement**: Move markers along the Archaeological Succession Track.
 
 ## Actions
 
@@ -59,11 +62,12 @@ Each turn represents a period of time. The sequence is:
 
 ### Movement
 - Tokens move by land between adjacent areas or by sea using ships
-- Sea movement requires boarding ships in coastal areas
+- Tokens board ships by moving onto any area the ship currently occupies
 
 ### Conflict
-- When areas are overpopulated, excess tokens are removed
-- Combat occurs when opposing tokens share an area
+- Conflict occurs only when the total number of tokens in an area exceeds that area's population limit
+- If tokens from multiple nations share an area without exceeding the population limit, they co-exist peacefully without conflict
+- When conflict does occur, tokens are removed one at a time, starting with the player who has fewer tokens
 - Defenders have advantages in cities
 
 ### City Construction
@@ -79,7 +83,7 @@ Each turn represents a period of time. The sequence is:
 - All diplomacy must occur openly at the table
 
 ### Civilization Cards
-- 24 civilization cards across 3 types (Crafts, Sciences, Arts/Civics)
+- 24 civilization cards across 5 groups: Arts, Crafts, Sciences, Civics, and Religion
 - Cards cost commodity sets + treasury tokens
 - Cards provide special abilities, immunities, and VP
 - Credits from cheaper cards reduce costs of expensive ones
@@ -87,12 +91,15 @@ Each turn represents a period of time. The sequence is:
 
 ## Scoring / Victory Conditions
 
-Victory points come from:
-- Position on the Archaeological Succession Track
-- Civilization card point values
-- Other scoring factors
+Victory points come from all five of the following sources:
 
-The player with the greatest number of victory points wins. The winner is not necessarily the first to reach the end of the A.S.T. or the player with the most civilization card points.
+- **Civilization cards**: total face value of all cards held
+- **Commodity cards**: total value of sets plus the face value of individual cards
+- **Treasury**: one point per token in treasury
+- **A.S.T. position**: 100 points for each space occupied on the A.S.T.
+- **Cities on the board**: 50 points for each city currently in play
+
+The player with the highest point total wins. The winner is not necessarily the first to reach the end of the A.S.T. or the player with the most civilization card points. If two or more players have the same number of points, the game is a tie.
 
 For shorter games, play to a fixed time limit.
 
@@ -111,16 +118,21 @@ For shorter games, play to a fixed time limit.
 ### Turn Sequence
 1. Tax Collection
 2. Population Expansion (+1 per single token area, +2 per multi-token area)
-3. Movement
-4. Conflict Resolution
-5. City Construction
-6. Trade Card Collection (1 per city)
-7. Trade
-8. Calamity Resolution
-9. Civilization Card Acquisition
-10. A.S.T. Advancement
+3. Census
+4. Ship Construction and Maintenance
+5. Movement
+6. Conflict Resolution
+7. City Construction
+8. Remove Surplus Population (check city support)
+9. Trade Card Collection (1 per city)
+10. Trade
+11. Calamity Resolution (check city support)
+12. Civilization Card Acquisition
+13. A.S.T. Advancement
 
-### Civilization Card Types
+### Civilization Card Groups
+- Arts
 - Crafts
 - Sciences
-- Arts/Civics
+- Civics
+- Religion

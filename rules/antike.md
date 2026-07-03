@@ -7,11 +7,11 @@ designer: "Mac Gerdts"
 source_pdf: "antike-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-06-13"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented know-hows (Republic/Theocracy) and costs (1G/4G vs actual 7/10/3/5 gold), Market/Currency misstated as per-city, wrong conquest threshold, missing attacker unit sacrifice, invented city-founding adjacency cost. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/antike-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Antike&game=antike)
 <!-- verification:end -->
@@ -52,7 +52,7 @@ Antike is a civilization-building strategy game set in the ancient world. Player
 Each turn has 3 steps in order:
 
 1. **Action Selection (Rondel):** Move your game stone clockwise on the 8-wedge rondel. The first 1-3 wedges are free; each additional wedge costs 1 resource of any type. You cannot stay on the same wedge two turns in a row (repeating costs 8 wedges = 5 resources).
-2. **Found Cities (optional):** Found cities in provinces where you have military units. Cost: 1 marble + 1 iron + 1 gold per city, plus 1 coin per adjacent city producing the same resource.
+2. **Found Cities (optional):** Found cities in provinces where you have military units. Cost: 1 marble + 1 iron + 1 gold per city.
 3. **Win Personages:** Collect any personages whose requirements you now meet.
 
 ## Actions
@@ -66,38 +66,50 @@ The rondel has 8 wedges in 3 categories:
 | **Iron** | Gain 1 iron per iron city (3 per iron city with temple) |
 | **Gold** | Gain 1 gold per gold city (3 per gold city with temple) |
 
-Production can be increased by know-hows: Market (+1 per city) and Currency (+2 per city).
+Production can be increased by know-hows: Market (+1 total per production action) and Currency (+2 total per production action).
 
 ### Utilization Actions
 | Wedge | Effect |
 |-------|--------|
 | **Temple** | Build temples: 5 marble each. Triples city production, arming capacity, and defense. Max 1 temple per city. Max 20 temples on board. |
 | **Arming** | Recruit legions/galleys: 1 iron each. Place in provinces with your cities. 1 unit per city without temple, 3 per city with temple. |
-| **Know-How** | Buy advances with gold. 8 know-hows across 3 tracks (see below). |
+| **Know-How** | Buy advances with gold. 8 know-hows across 2 rows (see below). |
 
 ### Military Action
 | Wedge | Effect |
 |-------|--------|
-| **Maneuver** (appears twice) | Phase 1: Move all units 1 border (2 with Road/Navigation know-how). Phase 2: Conquer enemy cities. |
+| **Maneuver** (appears twice) | Phase 1: Move units across borders. Phase 2: Conquer enemy cities. |
 
 **Movement Rules:**
 - Legions cross red (land) borders; galleys cross blue (sea) borders. Some borders are both.
-- Each unit moves up to 1 border (2 with Road for legions, Navigation for galleys).
+- By default each unit may carry out 1 maneuver action per turn. With Wheel, legions get 2 actions; with Roads, legions get 3. With Sailing, galleys get 2 actions; with Navigation, galleys get 3.
 - If a legion and enemy legion meet, or galley and enemy galley, they destroy each other 1:1.
 
 **Conquest:**
-- A city's defense = 1 (3 with temple). Attackers need more legions/galleys than the defense value.
-- Defending military units in the province add to the defense.
-- Conquering destroys the temple (if any) and replaces the city stone with the attacker's color.
+- A city's defense strength = 1 (without temple) or 3 (with temple), plus the number of defending military units in the province, plus 1 if the defender has Monarchy or 2 if the defender has Democracy.
+- The attacking nation's active (still standing erect) units in the province must be at least equal to the defense strength.
+- The conquering nation removes its own active units equal to the defense strength of the city.
+- The defending nation removes its city stone, temple (if any), and all its military units from the province. The destroyed temple returns to the bank.
+- The conquering nation places its city stone on the city.
 
 ### Know-How Track (8 advances)
-| Track | Know-Hows | Cost |
-|-------|-----------|------|
-| Technical | Road (legions move +1), Navigation (galleys move +1) | 1st: 1G, 2nd: 4G |
-| Economic | Market (production +1), Currency (production +2) | 1st: 3G, 2nd: 8G |
-| Political | Democracy, Republic, Theocracy (and more) | Various gold costs |
 
-Exact costs increase along each track. Owning all 8 know-hows earns a bonus personage.
+There are two rows: **Basic know-hows** (top row) and **Secondary know-hows** (bottom row). A nation must own a basic know-how before obtaining the corresponding secondary know-how.
+
+| Basic Know-How | Secondary Know-How | Effect |
+|----------------|--------------------|--------|
+| Wheel | Roads | Wheel: legions get 2 maneuver actions. Roads: legions get 3 maneuver actions. |
+| Sailing | Navigation | Sailing: galleys get 2 maneuver actions. Navigation: galleys get 3 maneuver actions. |
+| Market | Currency | Market: +1 unit per production action. Currency: +2 units per production action. |
+| Monarchy | Democracy | Monarchy: +1 to city defense strength. Democracy: +2 to city defense strength. |
+
+**Know-how costs:**
+- 7 gold for a new basic know-how (no other nation has it yet)
+- 10 gold for a new secondary know-how (no other nation has it yet)
+- 3 gold for a basic know-how that one or more other nations already possess
+- 5 gold for a secondary know-how that one or more other nations already possess
+
+A nation acquiring a know-how that no other nation yet has earns 1 ancient scholar. Owning all 8 know-hows earns a bonus ancient personage (from the stack with the most remaining).
 
 ## Scoring / Victory Conditions
 
@@ -136,11 +148,11 @@ If all 35 personages are awarded with no winner, the first nation to destroy a t
 
 | Action | Cost | Effect |
 |--------|------|--------|
-| Found city | 1M + 1I + 1G + coins for adjacency | Place city stone |
+| Found city | 1M + 1I + 1G | Place city stone |
 | Build temple | 5M | Triple production/defense/arming at city |
 | Recruit unit | 1I each | Place at city (1 per city, 3 with temple) |
 | Buy know-how | Gold (varies) | Permanent nation advance |
-| Military move | Free (on Maneuver) | Move all units 1-2 borders |
+| Military move | Free (on Maneuver) | Move units per maneuver actions available |
 
 | Rondel Movement | Cost |
 |-----------------|------|

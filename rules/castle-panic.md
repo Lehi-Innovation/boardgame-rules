@@ -8,10 +8,10 @@ source_pdf: castle-panic-rules.pdf
 extracted_date: 2026-03-18
 summarized_date: 2026-03-18
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong hand sizes (solo 7 vs source 6), monsters' 1-damage from destroying walls/towers omitted, Giant Boulder token omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's Castle-ring movement rule contradicts the source: it implies a monster stops once it reaches a wall/tower, but the rulebook explicitly says towers do NOT stop monster movement and a surviving monster keeps advancing clockwise . Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20Panic&game=castle-panic)
 <!-- verification:end -->
@@ -39,7 +39,7 @@ Castle Panic is a cooperative tower defense game where players work together to 
 2. Place one wall on each line between the Castle ring and Swordsman ring.
 3. Draw 3 goblins, 2 orcs, and 1 troll from the monster tokens. Place one in each arc of the Archer ring (setup only; normally monsters start in the Forest).
 4. Separate Order of Play cards and give one to each player.
-5. Shuffle Castle cards and deal a hand face-up to each player (hand size: 1 player = 7, 2 players = 6, 3 players = 5, 4 players = 5, 5 players = 4, 6 players = 3).
+5. Shuffle Castle cards and deal a hand face-up to each player (hand size: 1 player = 6, 2 players = 6, 3 players = 5, 4 players = 5, 5 players = 4, 6 players = 3).
 6. Turn remaining monster tokens face down and mix them into the monster pile.
 7. Place tar and fortify tokens nearby.
 8. Place remaining Castle cards as a face-down draw pile.
@@ -86,7 +86,7 @@ Choose a first player; play proceeds clockwise. Each turn has 6 phases:
 
 **Lose:** All 6 towers are destroyed (regardless of remaining walls).
 
-**Monster interactions with structures:** When a monster moves into a wall, the wall is destroyed and the monster stays in that space. When a monster moves into a tower, the tower is destroyed and the monster stays in the Castle ring.
+**Monster interactions with structures:** When a monster moves into a wall, the wall is destroyed and the monster takes 1 point of damage and stays in the Swordsman ring. When a monster moves into a tower, the tower is destroyed and the monster takes 1 point of damage and stays in the Castle ring. If the monster still has points remaining after destroying the structure, it continues moving on subsequent turns.
 
 ## Special Rules & Edge Cases
 
@@ -96,9 +96,10 @@ Choose a first player; play proceeds clockwise. Each turn has 6 phases:
 - When the monster pile is empty, skip phase 6.
 - Boss Monsters have special abilities that trigger when drawn (e.g., extra movement, destroying walls).
 - Monster Effects (like Plague, which forces all players to discard a card type) resolve immediately and are discarded.
-- **Master Slayer variant:** Cooperative with individual scoring. The player who slays the most monsters is the Master Slayer.
+- **Giant Boulder:** A special Monster token that is never placed on the board. Roll the die to determine the arc. All monsters in that numbered arc are destroyed (including in the Forest ring; these are not kept as trophies in Master Slayer). The boulder rolls across the board and stops only when it hits and destroys the first Wall, Tower, or Fortify token in its path. If no structure is present in that arc, the boulder continues through the Castle ring and into the opposite arc, destroying any monsters there. After resolving, the Giant Boulder token is discarded.
+- **Master Slayer variant:** Cooperative with individual scoring via trophies. Players keep monsters they personally slay by hits as trophies; monsters slain by other means (Walls, Giant Boulders) are discarded rather than kept. Each monster's printed top point value is its worth; Boss Monsters are worth 4 points. If at least 1 Tower is standing when the last monster is slain, each player totals the point value of their trophies, and the player with the most points is the Master Slayer. In case of a tie, the player who slayed the most monsters wins.
 - **Overlord variant:** One player controls the monsters against the other players.
-- **Solitaire variant:** One player defends the castle alone.
+- **Solitaire variant:** One player defends the castle alone with a hand of 6 cards. During the Discard and Draw phase, the player may discard up to 2 cards at once and draw 2 replacements. There is no Trade Cards phase.
 
 ## Player Reference
 

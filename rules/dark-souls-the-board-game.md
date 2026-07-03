@@ -8,10 +8,10 @@ source_pdf: "dark-souls-the-board-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Activation order inverted (enemies act before/between each character), invented chest cost, Aggro token rule wrong. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two combat/setup mechanics are misstated: trap tokens are wrongly described as terrain (placed on terrain nodes) when the source places them on basic nodes, and the Attack action omits that a character can attack once with EACH weapon held . Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dark-souls-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dark%20Souls%20%E2%80%93%20The%20Board%20Game&game=dark-souls-the-board-game)
 <!-- verification:end -->
@@ -43,7 +43,7 @@ Dark Souls: The Board Game is a cooperative dungeon crawl for 1-4 players based 
 4. Separate encounter cards by level; place 1 facedown per tile matching boss data card's difficulty progression (lower near Bonfire, higher farther).
 5. Each player selects a character, takes model, player board, starting equipment. Place 1 Estus Flask, 1 Heroic Action, 1 Luck token on board. Place Level Up tokens at Base stats.
 6. Build Treasure Deck from common + class-specific cards; place on Bonfire tile.
-7. Set up all remaining tokens within reach.
+7. Set up all remaining tokens within reach. Soul Cache starts at 0 souls (2-4 players) or 16 souls (solo play).
 
 ## Turn Structure
 
@@ -51,32 +51,38 @@ Dark Souls: The Board Game is a cooperative dungeon crawl for 1-4 players based 
 Characters move from the Bonfire tile through doorways to explore. When entering a tile with a facedown encounter card, an encounter begins.
 
 ### Encounter Structure
-Encounters alternate between character activations and enemy activations:
+Encounters alternate between enemy activations and individual character activations. Enemies activate first, then one character activates, then enemies activate again, then the next character activates, and so on. For example, in a three-character game:
 
-1. **Character Activations**: Each character activates once per round. During activation, a character can move, attack, use items, dodge, and block. Characters use Stamina from their endurance bar to perform actions.
-2. **Enemy Activations**: After all characters activate, enemies activate based on their data cards. Enemies follow specific AI targeting (closest character, highest taunt, etc.).
-3. Repeat until all enemies are defeated or a character dies.
+1. All enemies activate.
+2. First character activates.
+3. All enemies activate.
+4. Second character activates.
+5. All enemies activate.
+6. Third character activates.
+7. Return to step 1.
+
+Characters activate one at a time in clockwise order around the table. Only during the very first character activation of the entire game do players choose which character goes first; from then on, turn order is fixed. When a new encounter begins, the first character to activate is whichever character would have activated next in turn order when the previous encounter ended — tracked via the First Activation token, which is handed to the player next in turn order after the last player who activated whenever an encounter ends (win or lose), and which that player then uses to activate first in the next encounter. All enemy models activate together during each enemy activation, in order from highest to lowest threat level.
 
 ### After Encounters
-- Defeated enemies drop Souls (currency for leveling up and buying equipment).
-- If all enemies are defeated, place treasure chests and gravestones for rewards.
-- If a character dies, the party resets to the Bonfire and loses 1 Spark.
+- **Victory**: If all enemies are defeated, remove all cubes from characters' endurance bars. Add 2 souls per character to the soul cache (for regular encounters) or 1 soul per character per remaining Spark (for boss encounters).
+- **Defeat**: If any character is killed, the party is defeated. All soul tokens from the soul cache are dropped on the node where the character died. The party must rest at the Bonfire (costs 1 Spark). Dropped souls can be retrieved by moving a character onto that node in the next run; if another character dies before retrieval, the souls are discarded.
 
 ## Actions
 
 ### Character Actions (during activation)
-- **Move**: Move 1 node per movement point. Costs Stamina.
-- **Attack**: Use a weapon's action. Place Stamina cubes on endurance bar equal to the attack's cost, then roll dice. Damage equals dice results after modifiers.
-- **Block**: When attacked, spend Stamina to block. Roll dice matching shield's block value.
-- **Dodge**: When attacked, spend Stamina to dodge. Roll green dodge dice; successes avoid damage.
+At the start of each character's activation: gain 2 Stamina, gain the Aggro token, and optionally swap items between backup and hand slots.
+- **Move**: Three methods: Walk (free, 1 node, once per activation), Run (1 Stamina, 1 node, any number of times), Dodge (1 Stamina, move 1 node and roll to avoid an incoming attack — only during an enemy's attack against you). A character may move before or after attacking, but not both.
+- **Attack**: Choose one weapon in a hand slot, target an enemy within range, spend Stamina equal to that attack option's cost, then roll the indicated dice. Physical damage is reduced by the enemy's Block value; magical damage is reduced by its Resist value.
+- **Block**: When attacked by an enemy, roll dice equal to the Block icons on equipped armour/weapons and subtract the total from the attack's strength. An alternative to dodging.
+- **Dodge**: When targeted by an enemy attack, spend 1 Stamina and move 1 node. Roll dice equal to Dodge icons on equipped items. If successes meet or exceed the attack's dodge difficulty, take 0 damage and are not affected by any push or conditions.
 - **Use Estus Flask**: Remove all black (Stamina) and red (Damage) cubes from endurance bar. One use per Bonfire rest.
 - **Use Heroic Action**: Class-specific powerful ability. One use per Bonfire rest.
 - **Use Luck Token**: Reroll 1 die in any attack, block, or dodge roll. One use per Bonfire rest.
 
 ### Bonfire Actions
-- **Rest**: All characters return to Bonfire. Estus Flasks, Heroic Actions, and Luck refill. All enemies and encounters reset. Costs 1 Spark.
-- **Visit Blacksmith Andre**: Spend Souls to purchase equipment from Treasure Deck or add Upgrades.
-- **Visit Firekeeper**: Spend Souls to level up stats (Strength, Dexterity, Intelligence, Faith).
+- **Rest**: The party may choose to rest at the Bonfire any time they are on the Bonfire tile (or they must rest when defeated). Costs 1 Spark. Refills all Estus Flasks, Heroic Actions, and Luck tokens, and turns all encounter cards face-down (resetting all enemies).
+- **Visit Blacksmith Andre**: Spend 1 Soul to draw the top card of the Treasure Deck; any character meeting stat requirements may equip it (otherwise it goes to the inventory). Equipment can also be swapped with the inventory here at no cost. Upgrading weapons or armour has no Soul cost (weapon upgrades are permanent; armour upgrades can be freely removed or swapped).
+- **Visit Firekeeper**: Spend Souls to increase a character stat (Base→Tier 1: 2 Souls; Tier 1→Tier 2: 4 Souls; Tier 2→Tier 3: 8 Souls). Also spend 1 Soul to restore a Luck token.
 
 ## Scoring / Victory Conditions
 
@@ -95,13 +101,13 @@ Encounters alternate between character activations and enemy activations:
 - **Endurance Bar**: Stamina (black cubes) and Damage (red cubes) share the same bar. When the bar fills completely, the character dies.
 - **Node Limit**: Max 3 models per node. If exceeded, push 1 model. Only 1 boss per node.
 - **Range**: Measured in nodes. Range 0 = same node. Range ∞ = unlimited.
-- **Aggro Token**: Goes to the character who attacked most recently. Some enemies target the aggro holder.
-- **Ember Tokens**: Found in treasure deck. While held, reduce damage by 1 if suffering 3+ from a single attack. Discarded when resting at Bonfire.
+- **Aggro Token**: Goes to the character who is currently activating (at the start of each character's activation). Some enemies target the aggro holder; some target the nearest character (with the aggro holder as a tiebreaker).
+- **Ember Tokens**: Found in treasure deck. While held, reduce damage by 1 if suffering 3+ from a single attack. Discarded only when the party is defeated and forced to rest at the Bonfire (not lost on voluntary rests). A character can never hold more than one Ember token at a time.
 - **Conditions**: Bleed, Poison, Frostbite, Stagger each have specific effects that persist until cleared.
 - **Pushing**: When a node exceeds its limit, the active player chooses which model to push to an adjacent node.
 - **Terrain**: Barrels, Gravestones, Trap tokens placed on terrain nodes during encounter setup. Traps trigger when models move onto them.
 - **Sparks by player count**: 1P=5, 2P=4, 3P=3, 4P=2. Each rest or party wipe costs 1 Spark.
-- **Treasure Chests**: After clearing an encounter, spend Souls to draw from Treasure Deck (2 Souls per draw).
+- **Treasure Chests**: After clearing an encounter, flip the chest token to the opened side and immediately draw two cards from the Treasure Deck for free (no Soul cost). Characters who meet stat requirements may equip them immediately; others go to the inventory. Chests are never re-closed.
 - **Campaign Rules**: Optional multi-session play with progression tracking.
 
 ## Player Reference
@@ -118,14 +124,14 @@ Encounters alternate between character activations and enemy activations:
 
 **Game Flow:**
 1. Explore tiles from Bonfire outward
-2. Encounter enemies on each tile
-3. Defeat all enemies → collect Souls and treasure
+2. Encounter enemies on each tile (enemies activate first, then characters alternate one at a time with enemy activations between each)
+3. Defeat all enemies → gain Souls, open free chests (draw 2 cards)
 4. Return to Bonfire to rest/shop/level up (costs 1 Spark, resets enemies)
-5. Defeat Mini Boss → reset, add better treasure
+5. Defeat Mini Boss → reset, add Transposed + Legendary treasure
 6. Explore new tiles, defeat Main Boss → WIN
 
 **Key Resources:**
-- Souls: Currency for leveling and buying gear
+- Souls: Currency for leveling and buying gear. Soul Cache starts at 0 souls (2-4 players) or 16 souls (solo play).
 - Sparks: Limited lives/rests
 - Estus Flask: Full heal (once per rest)
 - Luck: Reroll (once per rest)

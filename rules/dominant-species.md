@@ -7,11 +7,11 @@ designer: "Chad Jensen"
 source_pdf: "dominant-species-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "verified"
+verification_date: "2026-06-17"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Player Reference lists one default element instead of two for 4 of 6 animals (corrupts matching/dominance math). Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dominant-species-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dominant%20Species&game=dominant-species)
 <!-- verification:end -->
@@ -63,7 +63,7 @@ APs are removed from the action display one at a time in top-to-bottom, left-to-
 - Eliminate all endangered species (Extinction). Mammals may save 1.
 - Score Survival card (bonus VPs for tundra tiles occupied by the holder's species).
 - Refill Dominance card display to 5.
-- Shift Glaciation APs left. Cascade elements: Adaptation -> Regression Box, Abundance -> Wasteland Box, Wasteland Box -> Depletion Box. Clear Regression, Depletion, and Wanderlust sections.
+- Shift Glaciation APs left. Clear Regression, Depletion, and Wanderlust sections (elements return to bag). Then cascade: Wasteland Box -> Depletion Box, Abundance -> Wasteland Box, Adaptation -> Regression Box.
 - Draw 4 new elements each for Adaptation, Abundance, and Wanderlust.
 - Flip top tiles of Wanderlust stacks face-up.
 
@@ -120,11 +120,11 @@ VPs are earned throughout the game from:
 
 | Animal | Default Elements | Special Ability |
 |--------|-----------------|-----------------|
-| Mammal | Meat | Save 1 endangered species from Extinction each turn |
+| Mammal | Meat, Meat | Save 1 endangered species from Extinction each turn |
 | Reptile | Sun, Sun | Free AP in Regression section |
-| Bird | Seed | Migration up to 2 tiles away |
-| Amphibian | Water | (No inherent special ability) |
-| Arachnid | Grub | Free Competition on any single tile each turn |
+| Bird | Seed, Seed | Migration up to 2 tiles away |
+| Amphibian | Water, Water | (No inherent special ability) |
+| Arachnid | Grub, Grub | Free Competition on any single tile each turn |
 | Insect | Grass, Grass | Free Speciation of 1 species on any tile each turn |
 
 | Terrain | Speciation Limit | Scoring (1st/2nd/3rd/4th) |

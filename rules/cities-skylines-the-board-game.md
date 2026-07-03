@@ -7,11 +7,11 @@ designer: "Rustan Håkansson"
 source_pdf: "cities-skylines-the-board-game-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Exchange action's 2-money cost omitted with wrong draw pile, invented "deal new cards" milestone step, mandatory post-play card draw omitted, happiness loss conditions omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cities-skylines-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cities%3A%20Skylines%20%E2%80%93%20The%20Board%20Game&game=cities-skylines-the-board-game)
 <!-- verification:end -->
@@ -60,10 +60,14 @@ On their turn, the active player performs one of three actions:
 3. **End a Milestone** - Trigger milestone ending (requires at least one tile in each city district)
 
 ### End of a Milestone
-- Check utility capacities: for each step below "0" (red range), Happiness drops by 1
-- Pay 1 money for each step away from "0" on the employment bar (both above and below)
-- Transfer current Happiness value to the overall Happiness display (Skyline)
-- Deal new construction cards for the next stage
+The player who ends the milestone takes the starting player token and performs these steps in order:
+
+1. **Utility bars (Power, Water, Garbage):** For each step below "0" (red range), move the Happiness marker back by 1. The utility markers themselves are not changed.
+2. **Transfer Happiness:** Transfer the current Happiness bar value to the overall Happiness display (Skyline). Do not reset the Happiness bar to zero afterward.
+3. **Employment bar:** Pay 1 money from the treasury for each step away from "0" (whether above or below). The employment marker is not changed.
+4. **New Milestone:** Flip a new adjacent game board piece face up and pay its development cost. If a choice exists, players decide together (starting player has final word).
+5. **Exchange construction cards:** Starting with the starting player, each player may place any number of their cards on the Exchange Pile and draw an equal number from any of the stage piles I, II, or III (not the exchange pile). Pay 1 money per exchanged card.
+6. **Resume play:** The player with the starting player token goes first.
 
 ## Actions
 
@@ -75,28 +79,35 @@ On their turn, the active player performs one of three actions:
 - **Stage I adjacency:** New zone must be directly adjacent (not diagonal) to the required service building.
 - **Stage II/III adjacency:** New zone just needs to be in the same city district as the required service building.
 - Benefits only apply if the service building is already on the board (not retroactive).
+- After playing the card, the active player draws one card from any of the three face-down stage piles (I, II, or III) of their choice, or takes any card from the face-up Exchange Pile. The played card goes back into the box.
+- **All draw piles empty:** If all three stage piles are empty, the next player must immediately end the current milestone and the game ends — even if prerequisites are not met and some board pieces are still face down.
 
 ### Exchange a Construction Card
-Swap one of your cards with a new one from the current stage's draw pile.
+Pay 2 money from the city treasury to exchange exactly one card. Place the exchanged card face up on the Exchange Pile (a shared face-up pile next to the stage piles). Then draw one card from any of the three face-down stage piles (I, II, or III), or take any card from the Exchange Pile. You may look at the Exchange Pile at any time.
 
 ### End a Milestone
 Can only be called when every city district has at least one building or zone tile.
 
 ## Scoring / Victory Conditions
 
-**Winning:** Complete all milestones without running out of money.
-**Losing:** If the city treasury runs out of money, all players lose.
+**Winning:** Complete all milestones. The final milestone requires all board pieces to be revealed and each district to have at least two tiles of any kind. After the last milestone is assessed, reduce overall Happiness by 1 for each step above "0" on the pollution, traffic, and crime bars, then consult the success table. All results in the green range count as a successful game.
 
-**Final Scoring:**
-- At game end, reduce overall Happiness for each step above "0" on pollution, traffic, and crime bars.
-- Consult the success table to determine your final result based on overall Happiness.
-- Higher happiness = better result. Players win or lose together.
+**Losing:** Players lose immediately if any of the following occur:
+- Costs must be paid but there is not enough money in the treasury.
+- A player cannot perform any of the three possible actions on their turn.
+- The Happiness marker on the administration board drops to "-5" or below.
+- The overall Happiness on the Skyline display reaches "-10" or below.
+
+**Final Scoring:** Consult the success table based on overall Happiness. Higher happiness = better result. Players win or lose together.
+
+**Happiness bar limits:** If the Happiness marker must move past "25," it stays at "25" and the remaining points are immediately transferred to the Skyline. If it must move to "-5" or beyond, all players immediately lose.
 
 ## Special Rules & Edge Cases
 
-- **Administration Board Utilities (Power, Water, Garbage):** Each step in the red range (below 0) reduces Happiness by 1 at milestone end.
-- **Employment Bar:** "0" = full employment. Above 0 = job shortage; below 0 = labor shortage. Pay 1 money per step away from 0 at milestone end.
-- **Pollution, Traffic, Crime:** These negative values accumulate during the game. At game end, each point above 0 reduces overall Happiness.
+- **Administration Board Utilities (Power, Water, Garbage):** Each step in the red range (below 0) reduces Happiness by 1 at milestone end. Utility markers are not reset.
+- **Employment Bar:** "0" = full employment. Above 0 = job shortage; below 0 = labor shortage. Pay 1 money per step away from 0 at milestone end. Employment marker is not reset.
+- **Pollution, Traffic, Crime:** These values accumulate during the game. At game end, each point above 0 reduces overall Happiness by 1.
+- **Marker limits:** Power/Water/Garbage markers cannot be moved past the last red square (card cannot be played). Pollution/Traffic/Crime markers cannot go below 0 (stays at 0) or past their last red square (card cannot be played). Employment marker cannot go beyond -5 or +5 (card cannot be played).
 - Tiles, once placed, cannot be moved for the rest of the game.
 - Players may plan and consult freely; the active player makes final decisions on disputes.
 

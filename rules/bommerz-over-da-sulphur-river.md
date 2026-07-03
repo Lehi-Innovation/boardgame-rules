@@ -7,11 +7,11 @@ designer: "Andy Chambers"
 source_pdf: "bommerz-over-da-sulphur-river-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory table misassigned: two Ork Major cells plus invented "no damage" row vs source's six cells; 1-wave/bridges-damaged is an Imperial Major win, not Ork Minor. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/bommerz-over-da-sulphur-river-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bommerz%20over%20da%20Sulphur%20River&game=bommerz-over-da-sulphur-river)
 <!-- verification:end -->
@@ -99,21 +99,12 @@ Roll D6 and equal or beat the craft's Speed to dodge successfully. Used for lase
 
 ## Scoring / Victory Conditions
 
-After all Fighta-Bommerz are destroyed or leave the map, check the result:
+After all Fighta-Bommerz are destroyed or leave the map, check the result using the chart below. If more than one Ork player participated, the Ork player who scored the most bridge hits is the individual winner (assuming the Orks gained a victory).
 
-**1 wave of Bommerz:**
-| Bridges Damaged | 1 Bridge Destroyed | 2 Bridges Destroyed |
-|-----------------|-------------------|-------------------|
-| Ork Minor Victory | Ork Major Victory | Ork Major Victory |
-
-**2 waves of Bommerz:**
-| Bridges Damaged | 1 Bridge Destroyed | 2 Bridges Destroyed |
-|-----------------|-------------------|-------------------|
-| Imperial Minor Victory | Ork Minor Victory | Ork Minor Victory |
-
-If no bridges are damaged: Imperial Major Victory (1 wave) or Imperial Minor Victory (2 waves).
-
-If multiple Ork players, the one who scored the most bridge hits is the individual winner.
+| | Bridges Damaged Only | 1 Bridge Destroyed | 2 Bridges Destroyed |
+|---|---|---|---|
+| **1 wave of Bommerz** | Imperial Major Victory | Ork Minor Victory | Ork Major Victory |
+| **2 waves of Bommerz** | Imperial Minor Victory | Imperial Minor Victory | Ork Minor Victory |
 
 ### The Second Wave
 After all Bommerz are destroyed or leave the map, Ork player(s) may bring on a second wave of 4 new Fighta-Bommerz in the starting spaces. In multi-player games, the Imperial player shuffles remaining defence counters (including destroyed ones) facedown and draws 1 new counter to place on any board. In solo games, place replacements on empty Imperial starting spaces.

@@ -8,10 +8,10 @@ source_pdf: "caverna-the-cave-farmers-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
 verification: "inaccurate"
-verification_date: "2026-06-12"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Wrong harvest schedule, invented cooking-furnishing requirement, Ruby=1 Food (should be 2), missing -2/missing-animal-type scoring, invented tiebreaker. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring table gives Grain as a flat "0.5 Gold" each, omitting the source's explicit total-then-round-up rule.. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/caverna-the-cave-farmers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caverna%3A%20The%20Cave%20Farmers&game=caverna-the-cave-farmers)
 <!-- verification:end -->
@@ -45,19 +45,31 @@ Caverna is a worker-placement development strategy game where players take the r
 
 ## Turn Structure
 
-The game lasts **12 rounds**. Each round has 3 phases:
+The game lasts **12 rounds** (11 rounds in the 2-player game). Each round has 5 phases:
 
 ### Phase 1: Add New Action Space
-Reveal the top Action space card and place it on the corresponding round space. Replenish accumulating resources on action spaces.
+Reveal the top Action space card and place it on the corresponding round space. From round 6 on, also reveal the Harvest marker on that space face-up.
 
-### Phase 2: Work Phase
-Starting with the start player and proceeding clockwise, each player places one Dwarf on an unoccupied Action space and immediately performs that action. Continue until all players have placed all their Dwarfs. Each Action space can only hold one Dwarf (with minor exceptions).
+### Phase 2: Replenish Accumulating Spaces
+Add goods from the general supply to accumulating Action spaces (those marked with an arrow). This happens even if goods remain from previous rounds.
 
-### Phase 3: Return Home
-All Dwarfs return to their Home boards. If the round has a Harvest marker, resolve the Harvest:
-1. **Field phase:** Harvest 1 Grain/Vegetable from each sown Field.
-2. **Feeding phase:** Pay 2 Food per Dwarf (1 Food per newborn Dwarf born this round). Food sources: Food markers, Grain (1 Food each), Vegetables (2 Food each), Ruby (trade for 1 Food), animals (varies by cooking method). Unpaid Food = -3 Gold begging marker per missing Food.
-3. **Breeding phase:** Each animal type with at least 2 of that type produces 1 offspring (if you have room).
+### Phase 3: Work Phase
+Starting with the start player and proceeding clockwise, each player places one Dwarf on an unoccupied Action space and immediately performs that action. Dwarfs must be placed in ascending Weapon strength order (unarmed first, then armed in ascending order). Continue until all players have placed all their Dwarfs.
+
+### Phase 4: Return Home
+All Dwarfs return to their Dwellings.
+
+### Phase 5: Harvest Time
+Harvest occurs at the end of specific rounds:
+- Rounds 1–2: No harvest.
+- Round 3: Normal harvest (Field phase → Feeding phase → Breeding phase).
+- Round 4: Feeding only — pay 1 Food per Dwarf (including newborns); no Field or Breeding phase.
+- Rounds 5–12: Normal harvest by default; modified if a Harvest marker shows a red question mark (Harvest Events card determines effect).
+
+**Normal harvest sub-phases:**
+1. **Field phase:** Remove 1 Grain or Vegetable token from each sown Field and place it in your supply.
+2. **Feeding phase:** Pay 2 Food per Dwarf (1 Food for a newborn Dwarf in the round it was born). Food sources: Food markers, Grain (1 Food each), Vegetables (2 Food each), Ruby (worth 2 Food directly), Sheep (1 Food), single Donkey (1 Food), 2 Donkeys (3 Food), Wild boar (2 Food), Cattle (3 Food). Unpaid Food = -3 Gold Begging marker per missing Food.
+3. **Breeding phase:** If you have at least 2 Farm animals of the same type and room on your board, gain 1 offspring of that type. Dogs do not breed.
 
 ## Actions
 
@@ -81,7 +93,7 @@ Arm a Dwarf with a Weapon (costs Ore). Armed Dwarfs can go on Expeditions when u
 Use "Wish for Children" or similar action spaces to add a new Dwarf (from supply to a Dwelling). You must have an available Dwelling space.
 
 ### Ruby Trading
-Rubies can be traded at any time (even during another action) for various goods: 1 Ruby = 1 Food, 1 resource of any type, 1 landscape tile, certain Furnishing tiles.
+Rubies can be traded at any time (even during another action) for various goods: 1 Ruby = 1 animal/building material/Grain/Vegetable/Gold (getting Cattle costs 1 Ruby + 1 Food), 1 single Field or Meadow tile, 1 single Tunnel tile; 2 Rubies = 1 single Cavern tile. Rubies can also be converted into 2 Food directly (by exchanging for a Wild boar or Vegetable worth 2 Food). Spend 1 Ruby to play an armed Dwarf out of its normal Weapon strength order.
 
 ## Scoring / Victory Conditions
 
@@ -89,47 +101,53 @@ At game end (after Round 12), score Gold points:
 
 | Category | Points |
 |----------|--------|
-| Animals (each, all types) | 1 Gold per animal |
+| Animals (each, including Dogs) | 1 Gold per animal |
 | Grain (each) | 0.5 Gold |
 | Vegetables (each) | 1 Gold |
 | Rubies (each) | 1 Gold |
 | Gold coins | Face value |
 | Dwarfs (each) | 1 Gold |
 | Furnished Caverns | Varies by tile |
-| Pastures | 2 Gold each (Small); varies (Large) |
+| Pastures | 2 Gold (Small), 4 Gold (Large) |
 | Ore Mines | 3 Gold each |
-| Ruby Mines | Variable |
-| Fields with crops | Variable |
+| Ruby Mines | 4 Gold each |
+| Furnishing tile bonus points (Parlors/Storages/Chambers) | Varies by tile |
 | Unused Forest spaces | -1 Gold each |
 | Unused Mountain spaces | -1 Gold each |
+| Missing Farm animal type (Sheep/Donkey/Wild Boar/Cattle) | -2 Gold per missing type |
 | Begging markers | -3 Gold each |
 
-The player with the most Gold points wins. Tiebreaker: most Rubies, then most Gold coins, then most Farm animals, then most Grain/Vegetables.
+The player with the most Gold points wins. In case of a tie, there are multiple winners (no tiebreaker).
 
 ## Special Rules & Edge Cases
 
 - Each Action space can hold only 1 Dwarf (first come, first served), except for specific spaces noted otherwise.
 - Animals must be housed in valid spaces: Dwellings with room for animals, Pastures, Stables (1 animal per Stable on any space), Mines with special furnishings. Animals without valid housing are returned to supply.
-- Dogs can guard Sheep in non-pasture spaces (1 Dog per space can guard Sheep equal to Dogs present).
+- Dogs can watch Sheep only when placed on a Meadow or Pasture space, replacing that space's normal animal-capacity rule: the space can then hold one more Sheep than the number of Dogs on it (1 Dog → 2 Sheep, 2 Dogs → 3 Sheep, 3 Dogs → 4 Sheep, etc.). Dogs cannot watch Sheep on Forest spaces or Fields, cannot watch any other animal type, and cannot watch Sheep in a Pasture that also holds another type of Farm animal. If a Stable is on the space, using Dogs to watch Sheep there means the Stable's capacity may not additionally be used.
 - Newborn Dwarfs require only 1 Food instead of 2 during their first Harvest.
-- Harvest does not occur every round -- only when a Harvest marker appears (typically rounds 6-12, randomized).
+- Harvest schedule: Round 3 = normal harvest; Round 4 = feeding only (1 Food per Dwarf, no Field or Breeding phase); Rounds 5–12 = normal harvest by default, subject to Harvest Events. Harvest markers (placed face-down on rounds 6–12) may show a green leaf (normal harvest) or a red question mark (special event per the Harvest Events card).
 - The Introductory game uses fewer Furnishing tiles for a simpler experience.
 - Solo and 2-player games have special setup rules (removed Action space cards, adjusted Harvest markers).
 
 ## Player Reference
 
-**Round structure:** Reveal Action Card > Workers place (clockwise, 1 at a time) > Return Home + Harvest (if applicable)
+**Round structure:** Reveal Action Card > Replenish accumulating spaces > Workers place (Weapon strength order, 1 at a time) > Return Home > Harvest (if applicable)
 
-**Harvest:** Fields produce > Feed Dwarfs (2 Food each, 1 for newborns) > Animals breed (2+ of a type = +1)
+**Harvest:** Fields produce > Feed Dwarfs (2 Food each; 1 Food for newborns in their birth round) > Animals breed (2+ of a type = +1, dogs excluded)
 
 **Key conversions:**
 | Item | Food Value |
 |------|-----------|
 | Grain | 1 Food |
 | Vegetable | 2 Food |
-| Ruby | 1 Food (or other trades) |
-| Animals | Requires cooking furnishing |
+| Ruby | 2 Food (directly, or trade for other goods) |
+| Sheep | 1 Food |
+| Donkey (1) | 1 Food |
+| Donkeys (2) | 3 Food |
+| Wild boar | 2 Food |
+| Cattle | 3 Food |
+| Gold | Pay 1 more Gold than Food desired (e.g., 2 Gold = 1 Food) |
 
-**Scoring negatives:** -1 per unused Forest/Mountain space, -3 per Begging marker.
+**Scoring negatives:** -1 per unused Forest/Mountain space, -2 per missing Farm animal type (Sheep/Donkey/Wild Boar/Cattle), -3 per Begging marker.
 
 **Game length:** 12 rounds. ~30 min per player.

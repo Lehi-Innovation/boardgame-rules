@@ -7,11 +7,11 @@ designer: "Emmanuel Aquin"
 source_pdf: "d-day-dice-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "inaccurate"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory rules contradicted: invents "play one more full turn" in Bunker, omits units-are-safe-on-entry and Specialist DEF-reduction endgame rules. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/d-day-dice-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20D-Day%20Dice&game=d-day-dice)
 <!-- verification:end -->
@@ -133,14 +133,14 @@ If 3 dice of **different colors** show the **same result**, you earn an RWB bonu
 ### Phase 5: Combat
 
 - Each Unit loses Soldiers equal to the **DEF** value of their current Sector.
-- **Machine Gun Fire**: If applicable, roll the indicated number of d6. The total is additional Soldiers lost. Machine Gun Fire affects all Units in the same Sector individually.
+- **Machine Gun Fire**: If applicable, one player rolls the indicated number of d6. The total is added to the Sector's DEF value for that Combat phase (so total Soldiers lost = DEF + MGF result). If something modifies MGF, all Units in the Sector are affected equally.
 - Players choose which Soldiers (including Specialists) are lost.
 
 ## Scoring / Victory Conditions
 
-- **Winning**: All players must reach the Bunker (final Sector). When all Units are in the Bunker, play one more full turn. If all Units survive that final Combat, players win.
-- **Losing**: If any Unit runs out of Soldiers at any time, all players lose immediately.
-- **Entering the Bunker**: Costs Courage (printed on Bunker). Any Sector requirements must be met. Units cannot stay more than 1 turn in the Bunker.
+- **Winning**: All players must enter the Bunker and survive with at least 1 Soldier to win. When a Unit successfully enters the Bunker, it is considered safe and no longer in harm's way — it stops rolling dice. That player places their surviving Specialists beside the Bunker; each surviving Specialist reduces the Bunker's DEF by 1 for the remaining Units still trying to enter. The game ends when the last Unit successfully enters the Bunker.
+- **Losing**: If any Unit runs out of Soldiers (including Specialists) at any time, all players lose immediately. Also, if a Unit must move and cannot do so, it is wiped out and all players lose.
+- **Entering the Bunker**: Costs Courage (printed on Bunker icon on the map). The Bunker counts as Advancing.
 
 ## Special Rules & Edge Cases
 
