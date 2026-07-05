@@ -169,6 +169,25 @@ gate-passing summaries contain table-misleading errors). Workflow:
   `verify` stage (`scripts/verify_summary.py`) with an automatic repair loop —
   the retroactive audit waves are for the pre-existing backlog.
 
+### Independent Re-Audit (the second gate)
+
+**A repairer cannot grade its own work.** The `verify` stage and the manual
+repair passes have one agent both find an error and fix it, then call it
+`verified` — with no independent check. A 2026-07-03 measurement (random
+sample, then a full pass) found this over-claims: **~27–35% of "verified"
+summaries still contained a MAJOR error** on independent re-audit. Treat any
+self-graded `verified` as provisional — necessary but not sufficient.
+
+The remedy is a three-stage pipeline run by **separate** agents —
+**audit → repair (only if MAJOR) → re-verify (fresh auditor)** — so a repair
+that didn't actually work is re-flagged instead of stamped `verified`. Only
+games that pass the independent re-verify keep `verified`; the rest stay
+`flagged` with the specific finding in `review_notes`. Re-run it over any set
+of `verified` games as a standing second gate. See
+`docs/quality/2026-07-03-independent-reaudit.md` for the method, the measured
+residual rates, and why ~1/3 of the hardest games (OCR-degraded sources,
+omitted subsystems, invented mechanics) resist automated fixing.
+
 ## Verification & Trust Stamping
 
 Every rules file carries `verification` / `verification_date` frontmatter and
