@@ -298,6 +298,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Ayoayo](rules/ayoayo/) | 2 | 15-30 min | Traditional (Yoruba) | ⚠️ |
 | [Aztec](rules/aztec/) | 2-4 | 45-60 min | Victor Melo Barbero | ✅ |
 | [Azul](rules/azul/) | 2-4 | 30-45 min | Michael Kiesling | ✅ |
+| [Azul: Queen's Garden](rules/azul-queens-garden/) | 2-4 | 45-60 min | Michael Kiesling | ⚠️ |
 
 ### B
 
