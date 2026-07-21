@@ -933,6 +933,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Flash Point: Fire Rescue](rules/flash-point-fire-rescue/) | 2-6 | 45 min | Kevin Lanzing | ❗ |
 | [Flashback: Zombie Kidz](rules/flashback-zombie-kidz/) | 1-4 | 30 min | Baptiste Derrez, Marc-Antoine Doyon | ✅ |
 | [Flintloque](rules/flintloque/) | 2+ | 120 min | Gavin Syme, Mike White | ✅ |
+| [FlipToons](rules/fliptoons/) | 1-4 | 15-30 min | Jordy Adan, Renato Simões | ⚠️ |
 | [Focus](rules/focus/) | 2-4 | 30 min | Sid Sackson | ✅ |
 | [Fog of Love](rules/fog-of-love/) | 2 | 60-120 min | Jacob Jaskov | ❗ |
 | [Food Chain Magnate](rules/food-chain-magnate/) | 2-5 | 120-240 min | Jeroen Doumen, Joris Wiersinga | ✅ |
