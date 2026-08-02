@@ -3,7 +3,7 @@
 AI-friendly board game rules, built for one job: **asking an AI assistant a
 rules question in the middle of a game and getting a trustworthy answer.**
 
-Published site: https://jonnyallred.github.io/boardgame-rules/
+Published site: https://lehi-innovation.github.io/boardgame-rules/
 
 ## What's in the box
 
@@ -26,7 +26,7 @@ the extracted rulebook text. Every summary page carries a verification banner:
 
 ## Using it mid-game
 
-**Simplest:** paste the prompt from the [site landing page](https://jonnyallred.github.io/boardgame-rules/)
+**Simplest:** paste the prompt from the [site landing page](https://lehi-innovation.github.io/boardgame-rules/)
 into Claude (works great with voice mode at the table). It teaches the
 assistant to resolve games via `games.json`, answer from the summary, and fall
 back to the full rulebook text for high-stakes questions.

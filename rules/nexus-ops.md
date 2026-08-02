@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Combat system wrong: summary invents alternating rounds and retreat mechanic; source says both sides roll simultaneously once per unit type in descending power order; no retreat exists. Tiebreaker rules (most hexes/units/rubium) entirely omitted.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/nexus-ops-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Nexus%20Ops&game=nexus-ops)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/nexus-ops-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Nexus%20Ops&game=nexus-ops)
 <!-- verification:end -->
 
 ## Overview

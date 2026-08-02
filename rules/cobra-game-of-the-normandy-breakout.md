@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cobra-game-of-the-normandy-breakout-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cobra%3A%20Game%20of%20the%20Normandy%20Breakout&game=cobra-game-of-the-normandy-breakout)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cobra-game-of-the-normandy-breakout-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cobra%3A%20Game%20of%20the%20Normandy%20Breakout&game=cobra-game-of-the-normandy-breakout)
 <!-- verification:end -->
 
 

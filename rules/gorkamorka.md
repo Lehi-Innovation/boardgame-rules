@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Injury table wrong (3-4 Down/5-6 OOA vs source 3-5 Down/6 OOA); Recovery phase missing from turn sequence; pinning uses Initiative not Leadership; cover modifiers wrong (-1 vs -2 for full cover). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/gorkamorka-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gorkamorka&game=gorkamorka)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/gorkamorka-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gorkamorka&game=gorkamorka)
 <!-- verification:end -->
 
 

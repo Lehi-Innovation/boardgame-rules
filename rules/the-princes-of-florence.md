@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Building WV bonus is +4 (summary says +3); Profession/Recruiting cards each add +1 WV (omitted from summary); players need not buy auction item (summary says must buy exactly 1); tiebreaker (most money) missing; Recruit action is not a standard Action phase action. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/the-princes-of-florence-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Princes%20of%20Florence&game=the-princes-of-florence)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/the-princes-of-florence-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Princes%20of%20Florence&game=the-princes-of-florence)
 <!-- verification:end -->
 
 

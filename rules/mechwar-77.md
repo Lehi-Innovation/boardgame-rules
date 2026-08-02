@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mechwar-77-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20MechWar%20%2777&game=mechwar-77)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mechwar-77-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20MechWar%20%2777&game=mechwar-77)
 <!-- verification:end -->
 
 

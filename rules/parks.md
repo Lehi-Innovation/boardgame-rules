@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Three MAJOR errors: tiebreaker is "most Parks visited then shared" not "most unspent tokens"; Gear purchase requires Sunshine tokens specifically not generic tokens; Campfire relights when a Hiker reaches Trail End (mid-season) not "at the start of each season"; First Hiker Marker (1 pt) omitted from scoring. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/parks-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20PARKS&game=parks)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/parks-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20PARKS&game=parks)
 <!-- verification:end -->
 
 

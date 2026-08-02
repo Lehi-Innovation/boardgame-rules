@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure is wrong: Phase 1 is "Combat Phase" (not "Direct Fire Phase"), mandatory Phase 2 "Air Phase" is entirely omitted from turn sequence and buried as an optional special rule, and Opportunity Fire (Phase 3 in summary) is explicitly an Optional Rule in the source. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/panzer-leader-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Panzer%20Leader&game=panzer-leader)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/panzer-leader-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Panzer%20Leader&game=panzer-leader)
 <!-- verification:end -->
 
 

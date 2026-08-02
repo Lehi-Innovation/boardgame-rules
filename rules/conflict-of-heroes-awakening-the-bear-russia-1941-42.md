@@ -13,7 +13,7 @@ verification_date: "2026-06-17"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/conflict-of-heroes-awakening-the-bear-russia-1941-42-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conflict%20of%20Heroes%3A%20Awakening%20the%20Bear%21%20%E2%80%93%20Russia%201941-42&game=conflict-of-heroes-awakening-the-bear-russia-1941-42)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/conflict-of-heroes-awakening-the-bear-russia-1941-42-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conflict%20of%20Heroes%3A%20Awakening%20the%20Bear%21%20%E2%80%93%20Russia%201941-42&game=conflict-of-heroes-awakening-the-bear-russia-1941-42)
 <!-- verification:end -->
 
 

@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Card recycling mechanic invented: summary says "after round 5 all cards return to hand"; source says cards only return when the Recruiter card is played; production tie rule also wrong (remainders stay in zone, not rounded down). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mission-red-planet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mission%3A%20Red%20Planet&game=mission-red-planet)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mission-red-planet-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mission%3A%20Red%20Planet&game=mission-red-planet)
 <!-- verification:end -->
 
 ## Overview

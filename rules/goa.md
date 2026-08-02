@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: 4 major errors: expedition scoring is per identical symbol set not 1 VP per card; colony VP is by total count not sets of different types; auction order reversed (starts token 1/flag not highest token); colony founding requires only colonists not ships; scoring omits most-ducats 3 VP bonus. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/goa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goa&game=goa)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/goa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goa&game=goa)
 <!-- verification:end -->
 
 

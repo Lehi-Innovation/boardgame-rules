@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Grande piece: summary wrongly states it is immovable and counts for scoring in standard game (both are variant-only); also missing Home Bonus scoring source (+2 pts for home-region majority). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/el-grande-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20El%20Grande&game=el-grande)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/el-grande-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20El%20Grande&game=el-grande)
 <!-- verification:end -->
 
 

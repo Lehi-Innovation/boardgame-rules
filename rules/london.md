@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tiebreaker is wrong: summary says "most money remaining" but source gives least poverty then most borough cards then highest-prestige city card; game-end trigger also misdescribed as "finish current round" vs source's "each other player takes one final turn". Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/london-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20London&game=london)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/london-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20London&game=london)
 <!-- verification:end -->
 
 

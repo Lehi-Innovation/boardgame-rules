@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Victory threshold stated as "varies by player count" but source fixes it at 9 FP; "attacker wins ties" directly contradicts source ("In the case of a tie, the defender is the winner"); no round-limit end condition exists in source. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kemet-blood-and-sand-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kemet%3A%20Blood%20and%20Sand&game=kemet-blood-and-sand)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/kemet-blood-and-sand-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kemet%3A%20Blood%20and%20Sand&game=kemet-blood-and-sand)
 <!-- verification:end -->
 
 

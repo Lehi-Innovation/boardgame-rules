@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/finspan-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Finspan&game=finspan)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/finspan-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Finspan&game=finspan)
 <!-- verification:end -->
 
 

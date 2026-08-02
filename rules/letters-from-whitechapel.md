@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Detective action phases conflated (movement and clue/arrest are separate sequential phases, not alternatives); Coach/Alley uses shown as fixed 3/2 but decrease each night; Night 3 Double Event (2 murders) not mentioned. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/letters-from-whitechapel-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Letters%20from%20Whitechapel&game=letters-from-whitechapel)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/letters-from-whitechapel-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Letters%20from%20Whitechapel&game=letters-from-whitechapel)
 <!-- verification:end -->
 
 

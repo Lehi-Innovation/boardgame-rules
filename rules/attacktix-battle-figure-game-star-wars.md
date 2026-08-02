@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/attacktix-battle-figure-game-star-wars-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Attacktix%20Battle%20Figure%20Game%3A%20Star%20Wars&game=attacktix-battle-figure-game-star-wars)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/attacktix-battle-figure-game-star-wars-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Attacktix%20Battle%20Figure%20Game%3A%20Star%20Wars&game=attacktix-battle-figure-game-star-wars)
 <!-- verification:end -->
 
 

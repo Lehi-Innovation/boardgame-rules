@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Twin card mechanic invented: summary says "play Twin as a copy of another card placed adjacent" but source says Twin can only enter play through the Prince's ability; most listed card names (Poisoner, Traitor, Smuggler, Duchess, Banker, Guardian, Herald) have no support in source. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/oriflamme-ablaze-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Oriflamme%3A%20Ablaze&game=oriflamme-ablaze)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/oriflamme-ablaze-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Oriflamme%3A%20Ablaze&game=oriflamme-ablaze)
 <!-- verification:end -->
 
 

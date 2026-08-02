@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary directly contradicts the source rule on disrupted US units: it claims disrupted units can attack, but the rulebook explicitly forbids any action except removing disruption.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/d-day-at-omaha-beach-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20D-Day%20at%20Omaha%20Beach&game=d-day-at-omaha-beach)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/d-day-at-omaha-beach-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20D-Day%20at%20Omaha%20Beach&game=d-day-at-omaha-beach)
 <!-- verification:end -->
 
 

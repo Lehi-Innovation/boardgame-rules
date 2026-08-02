@@ -17,7 +17,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure has 5 errors: phase 1 named "Mandatory Events" instead of Mandated Offensive (die-roll attack phase); Replacement Phase and War Status Phase order reversed; action rounds stated as "6-7" vs always exactly 6; AP player goes first every round but summary says CP goes first in Turn 1; "capturing Constantinople" invented as Allied win condition with no source support; both Automatic Victory VP thresholds (0/20) and entire Armistice victory table (14+/10-13/7-9/6-or-fewer) absent from summary. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pursuit-of-glory-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pursuit%20of%20Glory&game=pursuit-of-glory)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/pursuit-of-glory-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pursuit%20of%20Glory&game=pursuit-of-glory)
 <!-- verification:end -->
 
 ## Overview

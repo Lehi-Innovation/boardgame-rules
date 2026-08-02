@@ -264,7 +264,7 @@ python -m pytest tests/ -v
 ```
 
 ## GitHub Pages Site
-The rules are published at `https://jonnyallred.github.io/boardgame-rules/`. GitHub Pages builds automatically from the `main` branch using Jekyll. The `_config.yml` excludes non-site directories (scripts, source_pdfs, extracted, tests, etc.). When adding a new game, update `index.md` with the new entry in alphabetical order.
+The rules are published at `https://lehi-innovation.github.io/boardgame-rules/`. GitHub Pages builds automatically from the `main` branch using Jekyll. The `_config.yml` excludes non-site directories (scripts, source_pdfs, extracted, tests, etc.). When adding a new game, update `index.md` with the new entry in alphabetical order.
 
 ## Requirements
 - Python 3.10+

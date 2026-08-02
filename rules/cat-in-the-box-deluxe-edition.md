@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cat-in-the-box-deluxe-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cat%20in%20the%20Box%3A%20Deluxe%20Edition&game=cat-in-the-box-deluxe-edition)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cat-in-the-box-deluxe-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cat%20in%20the%20Box%3A%20Deluxe%20Edition&game=cat-in-the-box-deluxe-edition)
 <!-- verification:end -->
 
 

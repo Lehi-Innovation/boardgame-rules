@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented "adjacent" rule for treasure collection (summary: "on that tile (or adjacent)"; source: adventurers must be on that tile only); Horus tile action omits key option (player can take a key OR a Horus card, not just a Horus card); tiebreaker (more valuable sarcophagus wins ties) missing from victory conditions. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/luxor-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Luxor&game=luxor)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/luxor-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Luxor&game=luxor)
 <!-- verification:end -->
 
 

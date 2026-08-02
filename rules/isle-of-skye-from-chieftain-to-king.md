@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/isle-of-skye-from-chieftain-to-king-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Isle%20of%20Skye%3A%20From%20Chieftain%20to%20King&game=isle-of-skye-from-chieftain-to-king)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/isle-of-skye-from-chieftain-to-king-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Isle%20of%20Skye%3A%20From%20Chieftain%20to%20King&game=isle-of-skye-from-chieftain-to-king)
 <!-- verification:end -->
 
 ## Overview

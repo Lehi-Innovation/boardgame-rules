@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Player card flow inverted: source slides cards toward slot 4 with new cards entering slot 1, summary reverses it; Fatigue is gained on Enemy deck reshuffle in source, summary attaches it to reshuffling your own deck. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dragon-eclipse-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dragon%20Eclipse&game=dragon-eclipse)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dragon-eclipse-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dragon%20Eclipse&game=dragon-eclipse)
 <!-- verification:end -->
 
 

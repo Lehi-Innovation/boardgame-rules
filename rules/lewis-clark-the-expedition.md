@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Village Actions table wrong: Hunting gives Food+Fur not just Food; Horse Trade costs 3 different resources not 1Fur+1Food; Canoe Mfg costs 2 Wood not 1 Wood; Scout movement table wrong: 1 Canoe moves 4 River spaces not 1; 4 Village Actions omitted entirely. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/lewis-clark-the-expedition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Lewis%20%26%20Clark%3A%20The%20Expedition&game=lewis-clark-the-expedition)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/lewis-clark-the-expedition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Lewis%20%26%20Clark%3A%20The%20Expedition&game=lewis-clark-the-expedition)
 <!-- verification:end -->
 
 

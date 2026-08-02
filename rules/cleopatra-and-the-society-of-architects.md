@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Market replenishment mechanic is misstated: the summary has all 3 drawn cards refill only the stall just emptied, but the source refills all three stalls, one card each.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cleopatra-and-the-society-of-architects-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cleopatra%20and%20the%20Society%20of%20Architects&game=cleopatra-and-the-society-of-architects)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cleopatra-and-the-society-of-architects-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cleopatra%20and%20the%20Society%20of%20Architects&game=cleopatra-and-the-society-of-architects)
 <!-- verification:end -->
 
 

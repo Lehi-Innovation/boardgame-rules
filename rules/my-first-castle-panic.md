@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: "Super Monster requires 2 hits" is invented; source has no Super Monster. Source "Marcher" (moves all monsters + draws extra monster) is omitted entirely. Runner placement rule also wrong.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/my-first-castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20My%20First%20Castle%20Panic&game=my-first-castle-panic)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/my-first-castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20My%20First%20Castle%20Panic&game=my-first-castle-panic)
 <!-- verification:end -->
 
 ## Overview

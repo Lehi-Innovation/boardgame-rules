@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: SOURCE_MISMATCH: extracted file is the F.G. Bradley's billiards/game shop website, not a Krosmaster Arena rulebook; no game rules present. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/krosmaster-arena-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Krosmaster%20Arena&game=krosmaster-arena)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/krosmaster-arena-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Krosmaster%20Arena&game=krosmaster-arena)
 <!-- verification:end -->
 
 

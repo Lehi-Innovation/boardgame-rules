@@ -17,7 +17,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Town Actions list is scrambled: Long House says "Hire crew" (actually Barracks); Armoury says "Collect Provisions" (actually grants Armour); Barracks says "Collect Provisions + Silver" (actually hires crew); Treasury says "Collect Silver" (actually costs hand cards). Armoury Track scoring also omitted.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/raiders-of-the-north-sea-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Raiders%20of%20the%20North%20Sea&game=raiders-of-the-north-sea)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/raiders-of-the-north-sea-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Raiders%20of%20the%20North%20Sea&game=raiders-of-the-north-sea)
 <!-- verification:end -->
 
 ## Overview

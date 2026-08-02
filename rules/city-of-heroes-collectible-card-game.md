@@ -13,7 +13,7 @@ verification_date: "2026-06-17"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/city-of-heroes-collectible-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20City%20of%20Heroes%20Collectible%20Card%20Game&game=city-of-heroes-collectible-card-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/city-of-heroes-collectible-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20City%20of%20Heroes%20Collectible%20Card%20Game&game=city-of-heroes-collectible-card-game)
 <!-- verification:end -->
 
 

@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Card table scramble: summary assigns Juliet an incorrect context-dependent ability (value 5 alone / 15 with 10+ card) when source shows Juliet has fixed value 14 and that ability belongs to Kardinal and Alchemist. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/gambit-royale-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gambit%20Royale&game=gambit-royale)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/gambit-royale-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gambit%20Royale&game=gambit-royale)
 <!-- verification:end -->
 
 

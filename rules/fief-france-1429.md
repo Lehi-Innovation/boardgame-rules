@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Bishops and Cardinals falsely assigned 1 VP each (source gives VP only to Fief Titles Pope King); 7-phase turn order scrambled with elections moved from Phase 1 to Phase 5. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/fief-france-1429-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fief%3A%20France%201429&game=fief-france-1429)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/fief-france-1429-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fief%3A%20France%201429&game=fief-france-1429)
 <!-- verification:end -->
 
 

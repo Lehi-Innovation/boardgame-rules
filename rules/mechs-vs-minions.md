@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scrap effects contain invented numbers (6 fire / 9 metal requirements unsupported); Fire and Metal repair types wrongly distinguished; Electric/Computery described as "other immediate effects" rather than "swap two undamaged slots". Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mechs-vs-minions-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mechs%20vs.%20Minions&game=mechs-vs-minions)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mechs-vs-minions-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mechs%20vs.%20Minions&game=mechs-vs-minions)
 <!-- verification:end -->
 
 

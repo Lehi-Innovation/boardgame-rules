@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Investor card starts with player left of Austria-Hungary (not Russia); rondel extra spaces cost flat 2M (not 1+PowerFactor); taxation formula invents "unoccupied home provinces" component not in source. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/imperial-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Imperial&game=imperial)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/imperial-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Imperial&game=imperial)
 <!-- verification:end -->
 
 ## Overview

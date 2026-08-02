@@ -14,7 +14,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/catan-scenarios-frenemies-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Catan%20Scenarios%3A%20Frenemies&game=catan-scenarios-frenemies)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/catan-scenarios-frenemies-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Catan%20Scenarios%3A%20Frenemies&game=catan-scenarios-frenemies)
 <!-- verification:end -->
 
 

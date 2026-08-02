@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented action: "Shuttle Flight" listed but source explicitly says this action does not exist in Season 0; Mop Up step described as "resolve end-of-action effects" instead of "remove all agents in cities with active teams". Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/pandemic-legacy-season-0-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pandemic%20Legacy%3A%20Season%200&game=pandemic-legacy-season-0)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/pandemic-legacy-season-0-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pandemic%20Legacy%3A%20Season%200&game=pandemic-legacy-season-0)
 <!-- verification:end -->
 
 

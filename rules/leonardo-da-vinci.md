@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: 5-type variety bonus stated as 10 Florins but source says 20; lab described as "large 8-space" but source shows 4/6-space sides; decoded from Caesar-shifted source. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/leonardo-da-vinci-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Leonardo%20da%20Vinci&game=leonardo-da-vinci)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/leonardo-da-vinci-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Leonardo%20da%20Vinci&game=leonardo-da-vinci)
 <!-- verification:end -->
 
 
