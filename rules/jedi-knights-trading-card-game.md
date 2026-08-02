@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/jedi-knights-trading-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jedi%20Knights%20Trading%20Card%20Game&game=jedi-knights-trading-card-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/jedi-knights-trading-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jedi%20Knights%20Trading%20Card%20Game&game=jedi-knights-trading-card-game)
 <!-- verification:end -->
 
 

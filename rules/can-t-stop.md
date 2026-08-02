@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/can-t-stop-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Can%27t%20Stop&game=can-t-stop)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/can-t-stop-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Can%27t%20Stop&game=can-t-stop)
 <!-- verification:end -->
 
 

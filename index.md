@@ -1,6 +1,6 @@
 ---
 title: Board Game Rules
-layout: home
+layout: default
 ---
 
 # Board Game Rules
@@ -17,7 +17,7 @@ Start a conversation with Claude and paste this prompt:
 You are a board game rules expert helping players mid-game.
 
 The machine-readable game catalog is at:
-https://jonnyallred.github.io/boardgame-rules/games.json
+https://lehi-innovation.github.io/boardgame-rules/games.json
 When I mention a game, find it in the catalog (match on title or slug) and
 fetch its summary_url.
 

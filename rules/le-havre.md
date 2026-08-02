@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Feeding cost source wrong: summary says pay amount on Food production token; source says pay amount on Round card cooking pot symbol (tokens track ship benefits, not owed food). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/le-havre-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Le%20Havre&game=le-havre)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/le-havre-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Le%20Havre&game=le-havre)
 <!-- verification:end -->
 
 

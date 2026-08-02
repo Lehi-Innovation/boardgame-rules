@@ -17,7 +17,7 @@ REPO_URL = "https://github.com/Lehi-Innovation/boardgame-rules"
 
 def site_base_url(config_path: str = CONFIG_PATH) -> str:
     """Return the published site base URL (url + baseurl, no trailing slash)."""
-    url = "https://jonnyallred.github.io"
+    url = "https://lehi-innovation.github.io"
     baseurl = "/boardgame-rules"
     if os.path.exists(config_path):
         with open(config_path) as f:

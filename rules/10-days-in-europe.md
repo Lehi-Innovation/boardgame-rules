@@ -13,7 +13,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/10-days-in-europe-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2010%20Days%20in%20Europe&game=10-days-in-europe)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/10-days-in-europe-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2010%20Days%20in%20Europe&game=10-days-in-europe)
 <!-- verification:end -->
 
 

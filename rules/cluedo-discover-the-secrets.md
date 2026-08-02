@@ -12,7 +12,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cluedo-discover-the-secrets-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cluedo%3A%20Discover%20the%20Secrets&game=cluedo-discover-the-secrets)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cluedo-discover-the-secrets-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cluedo%3A%20Discover%20the%20Secrets&game=cluedo-discover-the-secrets)
 <!-- verification:end -->
 
 

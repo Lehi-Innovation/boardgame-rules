@@ -15,7 +15,7 @@
   - `source_pdfs/*.pdf` — gitignored
 - **Libraries:** PyMuPDF (fitz), pdfplumber, PyYAML, requests, beautifulsoup4, python-dotenv, anthropic SDK (`requirements.txt`)
 - **External APIs:** BoardGameGeek XML API2 (bearer token, `scripts/bgg.py`); Anthropic API (`claude-sonnet-4-20250514`, `scripts/summarize.py`); BGG files-page HTML scraping (`scripts/bgg_files.py`)
-- **Publishing:** Jekyll + GitHub Pages (`_config.yml`, theme `jekyll-theme-leap-day`, pretty permalinks), published at `https://jonnyallred.github.io/boardgame-rules/`
+- **Publishing:** Jekyll + GitHub Pages (`_config.yml`, theme `jekyll-theme-leap-day`, pretty permalinks), published at `https://lehi-innovation.github.io/boardgame-rules/`
 - **Concurrency:** `fcntl.flock` file locking + atomic temp-file writes in `scripts/registry.py`; atomic work-claiming with 1-hour stale-claim reclamation in `scripts/process_batch.py`
 - **Agent tooling:** Claude Code skills in `.claude/skills/` (`game`, `rules-lookup`, `research-games`) and slash commands in `.claude/commands/`
 - **Tests:** pytest suite in `tests/` (10 test modules covering registry, BGG client, download, extract, summarize, quality check, validate, import, batch)

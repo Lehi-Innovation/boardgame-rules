@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Impair means "cannot use items" not "cannot gain positive conditions"; summons act BEFORE summoner not at end of turn; battle goals drawn is 3 not 2; Ward is single-use not ongoing; looting requires a Loot ability not automatic at end of turn; conditions are removed at end of figure's turn not end of round. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/frosthaven-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Frosthaven&game=frosthaven)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/frosthaven-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Frosthaven&game=frosthaven)
 <!-- verification:end -->
 
 

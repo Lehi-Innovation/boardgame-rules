@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Detective win condition invented ("1 suspect remaining" is not in source; detective must accuse correctly); characters DO NOT block movement (summary says opposite -- source: "the characters do not block movement"); escape timing wrong (Jack must be invisible at END of previous round, not during the escape round). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mr-jack-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mr.%20Jack&game=mr-jack)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mr-jack-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mr.%20Jack&game=mr-jack)
 <!-- verification:end -->
 
 ## Overview

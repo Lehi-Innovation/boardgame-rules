@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented VP sources: "points per controlled hex" (pheromones score once at placement) and "points for expanded tunnels" (no VP; tunnels earn earth cube). "Unfed ants die" wrong; source says lose 3 VP per missing food cube.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/myrmes-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Myrmes&game=myrmes)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/myrmes-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Myrmes&game=myrmes)
 <!-- verification:end -->
 
 ## Overview

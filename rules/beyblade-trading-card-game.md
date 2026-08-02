@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's battle-resolution rule omits the source's explicit rule for an unanswered first attack, where hits must be counted against the Blade's battle edge instead of a (nonexistent) defender battle pile.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/beyblade-trading-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Beyblade%20Trading%20Card%20Game&game=beyblade-trading-card-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/beyblade-trading-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Beyblade%20Trading%20Card%20Game&game=beyblade-trading-card-game)
 <!-- verification:end -->
 
 

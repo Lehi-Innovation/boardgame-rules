@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Combat system is wrong (summary invents dice-pool vs monster defense; source uses Combat Card draw system); movement uses invented speed stat instead of fixed 2 Movement Steps; insane investigators get no secret objective (1st ed Keeper plays Trauma cards; secret condition is 2nd ed feature). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mansions-of-madness-first-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mansions%20of%20Madness%3A%20First%20Edition&game=mansions-of-madness-first-edition)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mansions-of-madness-first-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mansions%20of%20Madness%3A%20First%20Edition&game=mansions-of-madness-first-edition)
 <!-- verification:end -->
 
 

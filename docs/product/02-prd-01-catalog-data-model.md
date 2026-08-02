@@ -59,7 +59,7 @@ Body: 8 fixed `##` sections for base games (Overview, Components, Setup, Turn St
 
 ## Search/indexing considerations visible in the code
 
-- **The slug-URL contract is load-bearing.** `index.md` instructs AI assistants to fetch `https://jonnyallred.github.io/boardgame-rules/rules/{slug}/` directly — slugs are a public API. Renaming a game breaks inbound links and saved AI prompts. Slugs must be treated as immutable once published.
+- **The slug-URL contract is load-bearing.** `index.md` instructs AI assistants to fetch `https://lehi-innovation.github.io/boardgame-rules/rules/{slug}/` directly — slugs are a public API. Renaming a game breaks inbound links and saved AI prompts. Slugs must be treated as immutable once published.
 - **Browse index is fully regenerated, never patched** — `generate_index.py` / `rebuild_index.py` rebuild from `rules/*.md` frontmatter. Two overlapping implementations exist. [NEEDS REVIEW: consolidate]
 - **Lookup today is grep-based**: the `rules-lookup` skill Globs `rules/<slug>*.md` and Greps keywords. There is no inverted index or embeddings, although the original design doc names "RAG/embedding pipelines" as a primary consumer.
 - **Faceted metadata exists** for player count, play time, and designer in both registry and frontmatter — but as display strings (`"2-5"`, `"45-90 min"`), not parsed numbers (see PRD-03).

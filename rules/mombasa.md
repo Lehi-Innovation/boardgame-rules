@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two invented scoring elements: "Bonus tiles As printed" category does not exist; "1 VP per 5 coins" is fabricated (source: cash counts 1 pound = 1 point directly). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mombasa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mombasa&game=mombasa)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mombasa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mombasa&game=mombasa)
 <!-- verification:end -->
 
 ## Overview

@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented components (no US map board, no campaign tokens, no money/resource tokens); invented turn mechanics (no dice, no resource allocation -- game is a simultaneous card-play auction); "closest to 270 wins" contradicts source (default is replay; plurality is optional only); publication year wrong (1965 not 1967). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mr-president-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mr.%20President&game=mr-president)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mr-president-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mr.%20President&game=mr-president)
 <!-- verification:end -->
 
 ## Overview

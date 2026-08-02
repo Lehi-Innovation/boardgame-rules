@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Chapel building described as "change 1 die to 6 per season" but source shows Chapel triggers an all-dice reroll when total is 7 or less — an entirely different and invented mechanic. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kingsburg-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kingsburg&game=kingsburg)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/kingsburg-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kingsburg&game=kingsburg)
 <!-- verification:end -->
 
 

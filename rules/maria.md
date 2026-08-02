@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Frederick controls Prussia + Saxony + Pragmatic Army (source), summary omits Saxony entirely; France/Bavaria win condition is "9 fortresses in Austria" not "conquer Netherlands/install Bavarian emperor"; Austria win condition is "end of turn 9 if no one else won" not territory retention; turn structure (politics, hussar stage, 3 action stages each with 5 phases) replaced with invented Card Draw/Activation Rounds/Supply/Political/Winter phases. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/maria-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Maria&game=maria)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/maria-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Maria&game=maria)
 <!-- verification:end -->
 
 

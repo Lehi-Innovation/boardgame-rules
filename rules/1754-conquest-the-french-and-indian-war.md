@@ -13,7 +13,7 @@ verification_date: "2026-06-13"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/1754-conquest-the-french-and-indian-war-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201754%3A%20Conquest%20--%20The%20French%20and%20Indian%20War&game=1754-conquest-the-french-and-indian-war)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/1754-conquest-the-french-and-indian-war-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%201754%3A%20Conquest%20--%20The%20French%20and%20Indian%20War&game=1754-conquest-the-french-and-indian-war)
 <!-- verification:end -->
 
 

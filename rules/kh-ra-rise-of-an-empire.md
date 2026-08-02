@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kh-ra-rise-of-an-empire-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kh%C3%B4ra%3A%20Rise%20of%20an%20Empire&game=kh-ra-rise-of-an-empire)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/kh-ra-rise-of-an-empire-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kh%C3%B4ra%3A%20Rise%20of%20an%20Empire&game=kh-ra-rise-of-an-empire)
 <!-- verification:end -->
 
 

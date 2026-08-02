@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary states Roman forts persist and pass their abilities to the Romano-British after Round 5, but the source says all Roman forts are removed/converted at that point.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/britannia-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Britannia&game=britannia)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/britannia-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Britannia&game=britannia)
 <!-- verification:end -->
 
 

@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn phases completely fabricated (summary: Resource/Diplomacy/Action/Combat/Event; source: Withdraw units/Enter production points/Events/Headquarters/Command units/Battle); victory conditions fabricated as vague dominant-position scoring instead of 3 specific immediate-win paths. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/leaders-the-combined-strategy-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20LEADERS%3A%20The%20Combined%20Strategy%20Game&game=leaders-the-combined-strategy-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/leaders-the-combined-strategy-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20LEADERS%3A%20The%20Combined%20Strategy%20Game&game=leaders-the-combined-strategy-game)
 <!-- verification:end -->
 
 

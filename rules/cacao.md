@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The entire "Actions" section (Gold Mine, Water, Sun Worshiping, and the single/double Plantation distinction) states specific per-worker payout numbers that the extracted rulebook text never gives — it explicitly defers all Jungle-tile acti. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/cacao-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cacao&game=cacao)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cacao-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cacao&game=cacao)
 <!-- verification:end -->
 
 

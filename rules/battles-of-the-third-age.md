@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Fabricates an entire "Scoring / Victory Conditions" section with zero support anywhere in the extracted text, and scrambles the Sméagol-Guide corruption-point exception onto the wrong trigger condition.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/battles-of-the-third-age-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battles%20of%20the%20Third%20Age&game=battles-of-the-third-age)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/battles-of-the-third-age-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battles%20of%20the%20Third%20Age&game=battles-of-the-third-age)
 <!-- verification:end -->
 
 

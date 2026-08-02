@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Initiative winner chooses first player (not auto-becomes); tie-break is lowest power total not current first player; taxation omits mandatory hand-discard step (reserve value governs hand size not gold return). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/game-of-thrones-the-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20The%20Card%20Game%20%28Second%20Edition%29&game=game-of-thrones-the-card-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/game-of-thrones-the-card-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20The%20Card%20Game%20%28Second%20Edition%29&game=game-of-thrones-the-card-game)
 <!-- verification:end -->
 
 

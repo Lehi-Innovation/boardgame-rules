@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/goblins-drool-fairies-rule-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goblins%20Drool%2C%20Fairies%20Rule%21&game=goblins-drool-fairies-rule)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/goblins-drool-fairies-rule-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goblins%20Drool%2C%20Fairies%20Rule%21&game=goblins-drool-fairies-rule)
 <!-- verification:end -->
 
 

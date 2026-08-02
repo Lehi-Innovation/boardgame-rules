@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary omits the Board Upkeep front-line auto-claim rule — the actual mechanism that determines Axis territorial/VP gains each turn — so a reader could not correctly update the front line or score the game from the summary alone.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/axis-allies-battle-of-the-bulge-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%3A%20Battle%20of%20the%20Bulge&game=axis-allies-battle-of-the-bulge)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/axis-allies-battle-of-the-bulge-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%3A%20Battle%20of%20the%20Bulge&game=axis-allies-battle-of-the-bulge)
 <!-- verification:end -->
 
 

@@ -16,7 +16,7 @@ verification_date: "2026-06-13"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/a-game-of-thrones-catan-brotherhood-of-the-watch-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20Catan%20-%20Brotherhood%20of%20the%20Watch&game=a-game-of-thrones-catan-brotherhood-of-the-watch)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/a-game-of-thrones-catan-brotherhood-of-the-watch-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Game%20of%20Thrones%3A%20Catan%20-%20Brotherhood%20of%20the%20Watch&game=a-game-of-thrones-catan-brotherhood-of-the-watch)
 <!-- verification:end -->
 
 ## Overview

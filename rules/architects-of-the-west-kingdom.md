@@ -17,7 +17,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/architects-of-the-west-kingdom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Architects%20of%20the%20West%20Kingdom&game=architects-of-the-west-kingdom)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/architects-of-the-west-kingdom-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Architects%20of%20the%20West%20Kingdom&game=architects-of-the-west-kingdom)
 <!-- verification:end -->
 
 ## Overview

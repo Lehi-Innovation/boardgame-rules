@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Missing game-end trigger (11-card Print threshold absent), season-sequence scoring (1 HP per longest identical Season run) and per-Print-card scoring and Grand Master pawn bonus (2 HP) entirely omitted from scoring, and tiebreaker "most Lesson cards in Print" has no source support (source says tied players share victory). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/kanagawa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kanagawa&game=kanagawa)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/kanagawa-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kanagawa&game=kanagawa)
 <!-- verification:end -->
 
 

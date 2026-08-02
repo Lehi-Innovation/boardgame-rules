@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Combat dice reversed (summary: Hero 1d6 vs Zombie 2d6; source: Heroes 2 Fight Dice, Zombies 1 Fight Dice); Zombie Turn step order wrong (summary omits Sun Track step and final spawn-placement step; misplaces Sun Track advance into Hero Turn). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/last-night-on-earth-the-zombie-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Last%20Night%20on%20Earth%3A%20The%20Zombie%20Game&game=last-night-on-earth-the-zombie-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/last-night-on-earth-the-zombie-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Last%20Night%20on%20Earth%3A%20The%20Zombie%20Game&game=last-night-on-earth-the-zombie-game)
 <!-- verification:end -->
 
 

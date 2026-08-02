@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tiebreaker reversed: summary says "placed cubes first" wins ties but source says "passed first" wins. Museum card-multiplier scoring and Series (5-card set = 5 pts) omitted entirely.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mykerinos-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mykerinos&game=mykerinos)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mykerinos-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mykerinos&game=mykerinos)
 <!-- verification:end -->
 
 ## Overview

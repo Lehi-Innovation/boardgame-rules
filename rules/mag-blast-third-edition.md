@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Blast targeting zone reversed: summary says "target must be in the zone directly opposite the firing ship's zone" but source says "you may only target an enemy ship in the same zone as the firing ship". Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mag-blast-third-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mag%20Blast%3A%20Third%20Edition&game=mag-blast-third-edition)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mag-blast-third-edition-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mag%20Blast%3A%20Third%20Edition&game=mag-blast-third-edition)
 <!-- verification:end -->
 
 

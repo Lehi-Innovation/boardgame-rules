@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Poisoned condition wrong: summary says Speed reduced but source says 1 damage at start of Hero Phase; level-up trigger (natural 20) omitted. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dungeons-dragons-the-legend-of-drizzt-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dungeons%20%26%20Dragons%3A%20The%20Legend%20of%20Drizzt%20Board%20Game&game=dungeons-dragons-the-legend-of-drizzt-board-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dungeons-dragons-the-legend-of-drizzt-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dungeons%20%26%20Dragons%3A%20The%20Legend%20of%20Drizzt%20Board%20Game&game=dungeons-dragons-the-legend-of-drizzt-board-game)
 <!-- verification:end -->
 
 

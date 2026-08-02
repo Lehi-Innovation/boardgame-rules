@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn sequence inverted (Restoration is last not first; Discard is first not last); nightfall is a draw per summary but source has three further tiebreakers (never a draw); combat outcome wrong (attack merely exceeding defense gives retreat/hit choice, not elimination; 4x required for elimination). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/manoeuvre-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Manoeuvre&game=manoeuvre)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/manoeuvre-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Manoeuvre&game=manoeuvre)
 <!-- verification:end -->
 
 

@@ -13,7 +13,7 @@ verification_date: "2026-06-13"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/andor-the-family-fantasy-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Andor%3A%20The%20Family%20Fantasy%20Game&game=andor-the-family-fantasy-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/andor-the-family-fantasy-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Andor%3A%20The%20Family%20Fantasy%20Game&game=andor-the-family-fantasy-game)
 <!-- verification:end -->
 
 

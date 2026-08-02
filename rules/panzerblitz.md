@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn sequence is reversed: source states "Attack takes place before the movement portion of a player's turn" (combat-then-movement), but summary lists Movement Phase first then Combat Phase; also Russian stacking limit is 2 units not 3. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/panzerblitz-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20PanzerBlitz&game=panzerblitz)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/panzerblitz-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20PanzerBlitz&game=panzerblitz)
 <!-- verification:end -->
 
 

@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: "Buy a Landscape" listed as one of three mutually exclusive main actions; source explicitly labels it an "Extra Action" separate from the three main action options - players would never combine it with another action. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ora-et-labora-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ora%20et%20Labora&game=ora-et-labora)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ora-et-labora-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ora%20et%20Labora&game=ora-et-labora)
 <!-- verification:end -->
 
 

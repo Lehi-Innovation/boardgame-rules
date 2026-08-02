@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two scoring-relevant definitions are misstated: the fountain-card rule is given as a blanket "draw 2, keep 1" when that only applies to a player's first fountain, and villa completion drops the source's explicit "at least two tiles" minimum. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/carpe-diem-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carpe%20Diem&game=carpe-diem)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/carpe-diem-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carpe%20Diem&game=carpe-diem)
 <!-- verification:end -->
 
 

@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Events reference table scrambles the Train Station events: it merges two distinct events ("Swivel Arm" and "Angry Marshal") into one, and gives "Braking" the wrong effect.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/colt-express-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colt%20Express&game=colt-express)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/colt-express-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colt%20Express&game=colt-express)
 <!-- verification:end -->
 
 

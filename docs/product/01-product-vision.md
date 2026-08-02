@@ -2,7 +2,7 @@
 
 ## What this product is and who it's for
 
-A **board game rules database**: structured, precision-focused rules summaries for 1,600+ board games, produced by a semi-automated pipeline and published as a static site (`https://jonnyallred.github.io/boardgame-rules/`) designed to be **read by AI assistants at runtime**.
+A **board game rules database**: structured, precision-focused rules summaries for 1,600+ board games, produced by a semi-automated pipeline and published as a static site (`https://lehi-innovation.github.io/boardgame-rules/`) designed to be **read by AI assistants at runtime**.
 
 The landing page states the value proposition directly [code-backed, `index.md`]: *"AI-friendly rules summaries for board games. Use these with Claude, ChatGPT, or any AI assistant to get instant rules answers — including via voice."*
 

@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Exhaustion rule wrong: summary requires no cards in hand AND fewer than 2 in discard pile, but source says exhausted when fewer than 2 in hand (regardless of discard). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/gloomhaven-jaws-of-the-lion-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gloomhaven%3A%20Jaws%20of%20the%20Lion&game=gloomhaven-jaws-of-the-lion)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/gloomhaven-jaws-of-the-lion-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gloomhaven%3A%20Jaws%20of%20the%20Lion&game=gloomhaven-jaws-of-the-lion)
 <!-- verification:end -->
 
 

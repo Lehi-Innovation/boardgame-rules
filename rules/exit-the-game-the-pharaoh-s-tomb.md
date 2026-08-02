@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/exit-the-game-the-pharaoh-s-tomb-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Exit%3A%20The%20Game%20%E2%80%93%20The%20Pharaoh%27s%20Tomb&game=exit-the-game-the-pharaoh-s-tomb)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/exit-the-game-the-pharaoh-s-tomb-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Exit%3A%20The%20Game%20%E2%80%93%20The%20Pharaoh%27s%20Tomb&game=exit-the-game-the-pharaoh-s-tomb)
 <!-- verification:end -->
 
 

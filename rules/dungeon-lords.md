@@ -13,7 +13,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring values all wrong: source says +2/room, +1/monster, +2/adventurer, +5/paladin; summary inverts these to +1/+3/+5/+2. Also missing 3 titles, wrong title point values for Imps and Riches, fixed fatigue value wrong, Pay Day sequenced after Adventurers instead of inside Event Phase.. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dungeon-lords-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dungeon%20Lords&game=dungeon-lords)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dungeon-lords-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dungeon%20Lords&game=dungeon-lords)
 <!-- verification:end -->
 
 

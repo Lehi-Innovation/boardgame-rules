@@ -6,7 +6,7 @@ or app can resolve a game name to exact URLs without guessing slugs:
 
     {
       "generated": "2026-06-12",
-      "site": "https://jonnyallred.github.io/boardgame-rules",
+      "site": "https://lehi-innovation.github.io/boardgame-rules",
       "games": [
         {
           "title": "Catan",

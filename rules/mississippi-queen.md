@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Running out of coal eliminates the player per source; summary says it does not eliminate. Passenger pickup requires moving onto boarding platform (not just adjacent). Components list wrong coal count (2 per player vs 6). Finish requires speed 1 (omitted from summary).. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/mississippi-queen-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mississippi%20Queen&game=mississippi-queen)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mississippi-queen-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mississippi%20Queen&game=mississippi-queen)
 <!-- verification:end -->
 
 ## Overview

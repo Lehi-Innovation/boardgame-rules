@@ -16,7 +16,7 @@ verification_date: "2026-06-14"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Game-end scoring omits mandatory rent payout from bank to all players (source: "all players receive rent for all their inventions from the bank" before winner is declared); summary adds nonexistent "invention values" scoring; Headquarters do not follow classic Monopoly building conventions (one HQ replaces both houses and hotels, max 1 per property, cannot be sold). Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ms-monopoly-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ms.%20Monopoly&game=ms-monopoly)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ms-monopoly-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ms.%20Monopoly&game=ms-monopoly)
 <!-- verification:end -->
 
 ## Overview

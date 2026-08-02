@@ -13,7 +13,7 @@ verification_date: "2026-07-03"
 <!-- verification:begin -->
 > ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary misrepresents the Request action (omits that a given item must be revealed and immediately played, not simply handed to your hand) and omits the core rule for what happens when a player's last survivor or group leader is killed/. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/dead-of-winter-a-crossroads-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dead%20of%20Winter%3A%20A%20Crossroads%20Game&game=dead-of-winter-a-crossroads-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dead-of-winter-a-crossroads-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dead%20of%20Winter%3A%20A%20Crossroads%20Game&game=dead-of-winter-a-crossroads-game)
 <!-- verification:end -->
 
 
