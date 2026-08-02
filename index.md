@@ -724,6 +724,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [De Vulgari Eloquentia](rules/de-vulgari-eloquentia/) | 2-5 | 120 min | Mario Papini | ✅ |
 | [Dead of Winter: A Crossroads Game](rules/dead-of-winter-a-crossroads-game/) | 2-5 | 60-210 min | Jonathan Gilmour, Isaac Vega | ❗ |
 | [Deadwood](rules/deadwood/) | 2-5 | 40 min | Loïc Lamy | ✅ |
+| [Deadwood 1876](rules/deadwood-1876/) | 2-9 | 20-40 min | Travis Hancock | ⚠️ |
 | [Deal Me In](rules/deal-me-in/) | 2-4 | 30-60 min | Unknown | ⚠️ |
 | [Death Stacks](rules/death-stacks/) | 2 | 20 min | Stephen Euin Cobb | ⚠️ |
 | [Deathwing](rules/deathwing/) | 1-2 | 120-180 min | Richard Halliwell, Jervis Johnson | ⚠️ |
