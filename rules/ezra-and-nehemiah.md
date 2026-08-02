@@ -8,14 +8,14 @@ source_pdf: "ezra-and-nehemiah-rules.pdf"
 extracted_date: "2026-08-02"
 summarized_date: "2026-08-02"
 rulebook_version: "Garphill Games 2023"
-verification: "unverified"
+verification: "verified"
 verification_date: "2026-08-02"
 ---
 
 # Ezra and Nehemiah
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://jonnyallred.github.io/boardgame-rules/extracted/ezra-and-nehemiah-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ezra%20and%20Nehemiah&game=ezra-and-nehemiah)
 <!-- verification:end -->
@@ -85,7 +85,7 @@ Ezra and Nehemiah is a thematic worker-placement/hand-management game for 1-4 pl
 The game runs 3 Rounds, each a 7-day week: 6 work days followed by a Sabbath.
 
 **Work days:** Starting with the Shofar holder and proceeding clockwise, each player takes one turn per day until all players have taken 6 turns. On each turn, in order:
-1. Play 1 Character Card from hand to 1 of the 3 piles on the Player Board (must happen before the Main Action; each pile holds at most 2 Character Cards — the top card is hidden/covered, but players may look at their own covered cards anytime).
+1. Play 1 Character Card from hand to 1 of the 3 piles on the Player Board (must happen before the Main Action; each pile holds at most 2 Character Cards — the older (bottom) card in a pile becomes hidden/covered when a second is played on top, but players may look at their own covered cards anytime).
 2. Take 1 of the 3 Main Actions.
 3. Draw 1 Character Card from the Draw Pile, if possible (in the final Round, players may run out and simply not draw).
 
@@ -119,7 +119,7 @@ Additionally, at any point during the turn, a player may also: take 1 Auxiliary 
   - *Using Levites:* Each Levite may be used once, either to place 1 Resource (in the Temple or on the Altar) or to grant 1 additional Red Banner this turn (using it for a Banner means it can't also place a Resource).
   - *Temple placement:* Requires 1-5 Red Banners (shown down the Temple's side) per Resource; place only Stone, Wood, or Gold (not Cinders) into the left-most empty column of the chosen row. Stone/Wood = 1VP each, Gold = 2VP each, plus the reward printed for that row: 5-Banner row = 1 Worker; 4-Banner row = 1 Tent movement; 3-Banner row = 1 Food; 2-Banner row = 1 Silver; 1-Banner row = no reward. Once full, no more Resources may be placed in the Temple.
   - *Filling a Temple Sector* (3 Sectors total, resolved immediately when the last space in a Sector is filled): (1) the player who placed the final Resource gains 2 Food; (2) the player with the most Levites gains 2VP (ties broken by Altar Track position, further ahead wins); (3) the player with the fewest Levites loses 1VP (ties broken by Altar Track position, further behind loses; ignored in 1-2 player games); (4) every player gains 1 Silver per Levite they have.
-  - *Altar placement:* Requires 1 or 3 Red Banners (shown above the Altar) and only Wood or Cinders. Each Wood costs 3 Red Banners and moves 2 spaces on the Altar Track; each Cinders costs 1 Red Banner and moves 1 space. Placed Resources may be returned to the Main Supply immediately or kept for theme. Moving onto/past a space grants all rewards shown there; landing on another player's Altar Marker places yours on top. If already at the Altar Track's end, gain 1 Silver per movement instead of moving. Altar Track position is the game's universal tie-break rule (a marker on top of a stack is considered ahead of markers beneath it).
+  - *Altar placement:* Requires 1 or 3 Red Banners (shown above the Altar) and only Wood or Cinders. Each Wood costs 3 Red Banners and moves 2 spaces on the Altar Track; each Cinders costs 1 Red Banner and moves 1 space. Placed Resources may be returned to the Main Supply immediately or kept for theme. Moving onto/past a space grants all rewards shown there; landing on another player's Altar Marker places yours on top. If already at the Altar Track's end, gain 1 Silver per movement instead of moving. Altar Track position is the game's universal tie-break rule (a marker below in a stack is considered ahead of markers on top of it).
 
 - **Rubble, Walls, and Gates (Grey Banners):** Choose exactly 1 Wall or Gate space per turn; may both clear rubble from it and build on it in the same turn.
   - *Clearing rubble:* Costs Grey Banners per Resource — Cinders 1, Stone/Wood 2, Gold 3. Clear as much or as little as affordable; cleared Resources go straight to the player's Supply and may be used immediately, even to build the same space. Fully clearing a Wall space's rubble grants a Blessing of the indicated colour (partial clearing does not; clearing a Gate never grants a Blessing).
@@ -151,7 +151,7 @@ Additionally, at any point during the turn, a player may also: take 1 Auxiliary 
 The game ends after the 3rd Sabbath. End-game scoring:
 1. Convert all remaining Gold, Stone, Wood, Cinders, and Food into Silver value (does not need to happen physically): Gold = 3 Silver; Stone/Wood/Food = 2 Silver; Cinders = 1 Silver.
 2. Score, on the Score Track: 1VP per 5 Silver; 2VP per flipped Development Tile; 3VP for the Altar Leader (furthest right on the Altar Track); all printed VP on built Walls and Gates; all VP from Scribes (per their row's value); all VP from top-row Scroll Tile unique scoring conditions.
-3. Highest total VP wins. Ties are broken by Altar Track position (furthest right wins; a marker on top of a stack counts as ahead of markers beneath it).
+3. Highest total VP wins. Ties are broken by Altar Track position (furthest right wins; a marker below in a stack counts as ahead of markers on top of it).
 
 There are two VP icon types printed throughout the game: a Silver-coloured icon scores immediately when triggered, and a Gold-coloured icon scores only at game end. Scores may exceed 99VP — continue circling the Score Track while tracking the extra 100s.
 

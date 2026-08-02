@@ -882,6 +882,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Exit: The Game – The Secret Lab](rules/exit-the-game-the-secret-lab/) | 1-6 | 45-90 min | Inka Brand, Markus Brand | ✅ |
 | [Exit: The Game – The Sunken Treasure](rules/exit-the-game-the-sunken-treasure/) | 1-4 | 45-90 min | Inka Brand, Markus Brand | ❗ |
 | [Eye Know](rules/eye-know/) | 2+ | 30 min | Uncredited | ❗ |
+| [Ezra and Nehemiah](rules/ezra-and-nehemiah/) | 1-4 | 90-120 min | Shem Phillips, S J Macdonald | ✅ |
 
 ### F
 
