@@ -127,10 +127,11 @@ def main():
 
     # Update registry if we can match the game
     if not args.no_registry:
+        pdf_slug = re.sub(r"-(rules|rulebook)$", "", pdf_stem.lower())
         games = load_registry(args.registry)
         for game in games:
             slug = re.sub(r"[^a-z0-9]+", "-", game["name"].lower()).strip("-")
-            if slug in pdf_stem.lower():
+            if slug == pdf_slug:
                 update_status(args.registry, game["name"], "extracted")
                 print(f"  Updated registry: {game['name']} → extracted")
                 break
