@@ -13,6 +13,12 @@ verification_date: "2026-08-05"
 
 # Ark Nova
 
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ark-nova-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ark%20Nova&game=ark-nova)
+<!-- verification:end -->
+
 ## Overview
 
 In Ark Nova you plan and build a modern, scientifically managed zoo. You build enclosures according to the animals' way of life and support conservation projects to ensure the preservation of animal species. Gathering diverse animals increases the attractiveness of your zoo, advancing you on the **Appeal track** and generating higher revenues; careful stewardship lets you support conservation projects, advancing you on the **Conservation track** with corresponding bonuses. These two tracks progress in **opposite directions** — if your counters meet, the game ends. Whoever achieves the best combination of appeal and conservation has built the most successful zoo and wins.
