@@ -5,542 +5,204 @@ player_count: "1-4"
 play_time: "90-150 min"
 designer: "Mathias Wigge"
 source_pdf: "ark-nova-rules.pdf"
-extracted_date: "2026-03-03"
-summarized_date: "2026-03-03"
-rulebook_version: "Version 1.0 (2021)"
+extracted_date: "2026-08-05"
+summarized_date: "2026-08-05"
 verification: "unverified"
-verification_date: "2026-06-12"
+verification_date: "2026-08-05"
 ---
 
 # Ark Nova
 
-<!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
->
-> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ark-nova-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ark%20Nova&game=ark-nova)
-<!-- verification:end -->
-
 ## Overview
 
-In Ark Nova, players plan and build modern, scientifically managed zoos. Players build enclosures to accommodate animals, play sponsor cards for ongoing benefits, partner with zoos and universities around the world, and support conservation projects to protect animal species. The game is driven by 5 action cards that slide along a track of slots numbered 1-5, with the slot position determining the strength of the action performed.
+In Ark Nova you plan and build a modern, scientifically managed zoo. You build enclosures according to the animals' way of life and support conservation projects to ensure the preservation of animal species. Gathering diverse animals increases the attractiveness of your zoo, advancing you on the **Appeal track** and generating higher revenues; careful stewardship lets you support conservation projects, advancing you on the **Conservation track** with corresponding bonuses. These two tracks progress in **opposite directions** — if your counters meet, the game ends. Whoever achieves the best combination of appeal and conservation has built the most successful zoo and wins.
 
-Two tracks -- Appeal and Conservation -- progress in **opposite directions** along the board. When a player's counters on these two tracks meet or pass each other (occupy the same scoring area), the end of game is triggered. The player with the highest Victory Points (Appeal value minus the target number derived from their Conservation position) wins.
+Association work in different zoo associations allows you to partner with zoos and universities around the world; together with specialists and sponsors, they help you manage the tasks needed to achieve your goals.
 
-There are no fixed rounds; players take turns in clockwise order, one action at a time, with periodic breaks triggered by the Break track.
+Ark Nova does not play in formal rounds: players simply take turns (clockwise), one turn at a time, until the end of the game is triggered. In between there are **breaks** — administration phases in which you discard down to your hand limit, recall workers, and gain income. On your turn you always perform one action using one of the 5 Action cards displayed below your zoo map; the position (card slot) of the Action card determines how much you can do with that action.
 
 ## Components
 
-### Cards
-- **212 Zoo cards** total:
-  - 128 Animal cards
-  - 64 Sponsor cards
-  - 20 Conservation Project cards
+**Cards**
+- 212 Zoo cards: 128 Animal cards, 64 Sponsor cards, 20 Conservation Project cards
 - 12 Base Conservation Project cards
 - 11 Final Scoring cards
-- 20 double-sided Action cards (5 per player set: Cards, Build, Animals, Association, Sponsors; each has Side I and Side II)
+- 20 double-sided Action cards (5 per set: Build, Cards, Animals, Association, Sponsors — each with side I and side II)
 
-### Tiles & Tokens
-- **82 Standard Enclosures:**
-  - 28x 1-space
-  - 24x 2-space
-  - 15x 3-space
-  - 13x 4-space
-  - 10x 5-space
-- **12 Special Enclosures** (4 of each type):
-  - 4x Petting Zoo (size 3)
-  - 4x Reptile House (size 5)
-  - 4x Large Bird Aviary (size 5)
-- 24 Kiosk / Pavilion tiles (double-sided)
-- 15 Unique Buildings
-- 20 Partner Zoos
-- 12 Universities
+**Tiles & tokens**
+- 82 standard enclosures in various sizes (1–5 spaces; both sides of a given size are the same shape — occupied side vs. empty side showing the size number)
+- 12 special enclosures: 4× Petting Zoo, 4× Reptile House, 4× Large Bird Aviary
+- 24 kiosk / pavilion tiles (kiosk and pavilion are opposite sides of the same tile)
+- 20 partner zoos, 12 universities, 15 unique buildings
 - 9 Bonus tiles
-- 55 money tokens (40x 1, 10x 5, 10x 10, 10x 20)
-- 20 X-tokens
-- 8 Venom tokens
-- 8 Constriction tokens
-- 8 Multiplier tokens
+- 55 money tokens, 20 X-tokens
+- 8 Venom tokens, 8 Constriction tokens, 8 Multiplier tokens
 - 1 Break token
 
-### Boards & Mats
-- 1 Game board (with Appeal track, Break track, Reputation track, and display area)
+**Boards & mats**
+- 1 game board (Zoo card deck and 6-card display, Reputation track, Appeal track, Conservation track, Break track, Bonus spaces)
 - 1 Association board
-- 8 Player zoo maps:
-  - 4x Map A (easy, identical, recommended for first game; includes starting 3-space enclosure)
-  - 4x Map 0 (intermediate, identical)
-  - 8x Maps 1-8 on reverse sides (advanced, all different, each with a unique special ability)
+- 8 player mats (zoo maps): 4× Map A (map for first-time players with a starting advantage — easy), 4× Map 0 (more bonus spaces — intermediate), and Maps 1–8 on the reverse sides (advanced, each with an individual special ability)
 
-### Player Components (per player, in 4 colors: black, blue, red, yellow)
-- 3 Counters (Appeal, Conservation, Reputation)
-- 25 Player tokens
-- 4 Association workers
-- 1 Solo tile
+**Per player color** (black, blue, red, yellow): 3 counters (appeal, conservation, reputation), 1 tile for solo play, 25 player tokens, 4 association workers
 
-### Other
-- 2 Organizers
-- 1 Glossary
-- 1 Icon overview
+**Other:** 2 organizers (general supply), 1 glossary, 1 icon overview, rulebook
 
 ## Setup
 
-### Global Setup
-
-1. Place the game board in the center of the table.
-2. Place the Break token on the start space of the Break track corresponding to your player count (e.g., space marked "3" for 3 players).
-3. Shuffle the 9 Bonus tiles; place 1 face-up on each of the 4 blank yellow Bonus spaces on the board (do not place tiles on the two yellow spaces that already have icons). Return the remaining 5 to the box.
-4. Shuffle the Zoo cards to form a face-down deck on the marked deck space. Deal 6 face-down cards to the display spaces on the board.
-5. Place the Association board next to the game board.
-   - **5a.** Place 1 partner zoo of each continent and 1 university of each kind on the Association board spaces.
-   - **5b.** Shuffle the Base Conservation Project cards face-down. In a 4-player game, place the top 4 face-up below the board; otherwise place the top 3.
-   - **5c. (2-player only):** Take 6 tokens of an unused color and cover: the left level on the left Base Conservation card, the middle level on the middle card, and the right level on the right card. Also cover the three spaces in the left column of the donation area. These spaces are blocked for the entire game.
-6. Shuffle the Final Scoring cards and place them face-down next to the Association board.
+**Global setup**
+1. Place the game board in the center. Place the **Break token** on the start space of the Break track corresponding to your player count (e.g., with three players, the space marked 3).
+2. Shuffle the 9 **Bonus tiles** and place a random tile face up on each of the 4 blank yellow Bonus spaces on the board. Do not place tiles on the two yellow spaces with icons. Return the remaining 5 tiles to the box (unused).
+3. Shuffle the **Zoo cards** into a face-down deck on its board space. Deal 6 face-down cards to the display spaces on the board.
+4. Place the 2 organizers next to the board as the general supply.
+5. Place the **Association board** next to the game board, leaving room for one row of cards above and one row below.
+   - 5a. Place 1 partner zoo of each continent and 1 university of each kind on the spaces provided on the Association board.
+   - 5b. Shuffle the **Base Conservation Project cards** and keep them face down next to the board. In a 4-player game place the 4 topmost face up below the board; otherwise the 3 topmost.
+   - 5c. **2-player game only:** take 6 player tokens of an unused color and cover: on the face-up Base Conservation Project cards, the left level on the left card, the middle level on the middle card, and the right level on the right card; and on the Association board, the three spaces in the left column of the donation area. Covered levels/spaces are blocked and cannot be used by either player.
+6. Shuffle the **Final Scoring cards** and place them face down next to the Association board.
 7. Randomly determine a start player. Turn order is clockwise.
-8. Place the 2 organizers next to the board as general supply.
 
-### Player Setup
+**Personal setup (each player)**
+- **A.** Take a random Map A zoo map and place it that side up (recommended for the first game; all Map A copies are identical). Map 0 suits beginners after the first game. Maps 1–8 (reverse sides) are advanced maps, each with an individual special ability: with these, take 2 random zoo maps and choose 1 of the advanced maps — or lay out player count +1 advanced maps and choose 1 each in reverse order of play. Return unselected maps to the box. Map A's ability (same for all players): at the beginning of the game, place a 3-space enclosure on the indicated spaces with the side showing the number 3 (the empty side) up.
+- **B.** Take one set of Action cards (Build, Cards, Animals, Association, Sponsors). Place one card **side I up** under each of the five card slots on your zoo map: the **Animals** card under the leftmost slot (showing 1), the remaining 4 randomly under the other slots.
+- **C.** Choose a color and take all its components.
+  - **C1.** Place your appeal, conservation, and reputation counters on the first spaces of their tracks. On the **Appeal track**, stagger by turn order: start player on space 0, second player on space 1, third on space 2, fourth on space 3.
+  - **C2.** Place 7 player tokens on the designated spaces at the left edge of your zoo map; keep the rest next to your map for later use.
+  - **C3.** Place 1 association worker on the notepad of your zoo map (the active worker) and the remaining 3 lying down on the designated spaces below the notepad.
+- **D.** Take 25 money and put it on your notepad.
+- **E.** Draw 2 Final Scoring cards and place them next to your zoo map. You may look at them at any time, but keep them hidden from other players.
+- **F.** Draw 8 Zoo cards; keep 4 as hand cards and discard the other 4 to a face-up discard pile on the board. Keep hand cards hidden. (Tip from the rulebook: choose 1–2 Sponsor and 2–3 Animal cards without conditions you cannot fulfill early, ideally matching the Base Conservation Projects on display.)
+- **G.** After everyone has chosen their hand cards, reveal the 6 cards of the display.
 
-Each player performs these steps:
-
-- **A.** Take a zoo map. For first game: use Map A. For intermediate: Map 0. For advanced: take 2 random maps and choose 1 advanced side, OR draft from (player count + 1) advanced maps in reverse player order.
-- **B.** Take one set of 5 Action cards (Build, Cards, Animals, Association, Sponsors). Place each with Side I up under the 5 card slots. The **Animals** card goes under slot 1 (leftmost); the remaining 4 are distributed randomly under slots 2-5.
-- **C.** Choose a color and take all components of that color.
-  - **C1.** Place counters on starting spaces: Conservation counter on space 0, Reputation counter on space 1. Place Appeal counter based on turn order: 1st player on space 0, 2nd on space 1, 3rd on space 2, 4th on space 3.
-  - **C2.** Place 7 player tokens on the designated spaces at the left edge of your zoo map. Keep remaining tokens nearby.
-  - **C3.** Place 4 association workers: 1 upright on the notepad (active), 3 lying down on the designated spaces below the notepad.
-- **D.** Take 25 money from the supply, place on notepad.
-- **E.** Draw 2 Final Scoring cards; keep them hidden from other players.
-- **F.** Draw 8 Zoo cards. Choose 4 to keep as hand cards; discard the other 4 face-up to the discard pile.
-- **G.** After all players have chosen hand cards, reveal the 6 display cards.
-- **Map A special:** Place a 3-space enclosure (empty side up) on the indicated spaces of Map A.
+**Your zoo map:** buildings go in the large central area. You may not build on rock and water spaces (some animals need an enclosure next to rock or water). A built-on space is "covered." Spaces with a special icon may not be built on until you upgrade your Build Action card. Some spaces show a **placement bonus**, gained immediately when you cover them. The left edge holds the 7 player tokens used to support conservation projects (each grants a bonus when taken — always immediately, and some again in each break). The bottom has 5 card slots for your Action cards; the number above each slot is that card's strength. The right side has spaces for partner zoos (5 continents exist, but you can partner with a maximum of 4 — the third requires an upgraded Association action) and universities (3 different ones); fill each column bottom-up and take any bonus printed on a space you cover immediately. Workers, money, and X-tokens live on the notepad.
 
 ## Turn Structure
 
-Ark Nova has no formal rounds. Players take turns clockwise, one action per turn, until the end of game is triggered. Breaks occur periodically when the Break track fills up.
+**Taking a turn.** On your turn, choose one of your 5 Action cards, shift it lower than the others to show it is in use, and perform its action with the strength of its card slot (1 = far left through 5 = far right; the further right, the more powerful). After completing the action, remove the card from its slot, shift all Action cards left of the now-empty slot one slot to the right, and place the used card in slot 1.
 
-### On Your Turn
+**X-tokens.** You may use X-tokens to increase an action's strength: each token spent adds +1 strength, then returns to the supply. You may spend any number in one action (for some actions, strength above 5 no longer improves the action). You can never hold more than 5 X-tokens. You set the strength **before** performing the action — X-tokens gained while performing an action cannot boost that same action.
 
-1. **Choose an Action card** from your 5 slots below your zoo map.
-2. **Optionally spend X-tokens** to increase the action's strength (1 X-token = +1 strength). You may spend multiple X-tokens. Maximum 5 X-tokens held at any time. Strength is set before performing the action; you cannot spend X-tokens gained during the action.
-3. **Perform the action** at the strength indicated by the card's slot number (1-5) plus any X-tokens spent. Some actions have no benefit above strength 5.
-4. **Slide the used Action card out**, shift all cards that were to its left one slot to the right, then place the used card into the now-empty slot 1.
-5. Resolve any "after finishing" effects from cards.
-6. Replenish the display if you took cards from it during your turn.
+**"After finishing" effects.** If a card effect says "after finishing" your action, complete the action — including moving the Action cards — before executing the effect.
 
-### Action Card Upgrades
+**Upgrading Action cards.** All Action cards start on side I. When you receive a card upgrade, flip one Action card of your choice from side I to side II (it stays in its slot); its action is more powerful for the rest of the game. There are **4 ways to upgrade** an Action card: on the Conservation track, on the Reputation track, and when you gain your second partner zoo or your second partner university. One of them allows you to choose an alternative — so you cannot upgrade all of your Action cards.
 
-All Action cards start on Side I. When you receive a card upgrade, flip any one Action card from Side I to Side II. It stays in its current slot. Side II provides a more powerful version of the action for the rest of the game.
+**The Break track.** At the start of the game and after each break, the Break token sits on the starting space for your player count. Various actions and card effects advance it toward the end of the track. When it reaches the **last space**, you call a break for everyone: the break takes place after the end of your current turn, and you get **1 X-token** for reaching the last space. Ignore any additional steps beyond the last space. After the break, the token returns to its starting space.
 
-**There are exactly 4 upgrade opportunities in the game:**
-1. Reaching 2 on the Conservation track (upgrade OR hire a worker -- choose one)
-2. Reaching a specific space on the Reputation track
-3. Gaining your 2nd partner zoo
-4. Gaining your 2nd partner university
-
-Since one of these offers an alternative choice, you can upgrade **at most 3** Action cards per game.
+**Break procedure** (all players, in order):
+1. **Hand card limit:** discard cards of your choice down to your hand limit — normally 3, or 5 with a particular university.
+2. **Tokens on Action cards:** return any Multiplier, Venom, and/or Constriction tokens on your Action cards to the supply; they no longer have any effect.
+3. **Association board:** return all your association workers to your notepad (active again — all tasks are again available at 1 worker). Replenish partner zoos and universities so each is available exactly once (skip any that all players already have).
+4. **Replenish display:** discard the two bottom cards of the display (folders 1 and 2), move the remaining cards down, and refill the display.
+5. **Take income** (usually simultaneous; if effects require an order, begin with the player who initiated the break — or the affected player closest to them — and proceed clockwise):
+   - a. Money according to your zoo's **appeal** (the amount printed next to your counter on the Appeal track; e.g., space 7 pays 11 money).
+   - b. **Kiosk income:** for each kiosk, take 1 money per unique building, special enclosure, **occupied** standard enclosure, and pavilion adjacent to it (sharing at least one side of a space). An empty standard enclosure provides no income, but an empty special enclosure does.
+   - c. All income marked with the break-income icon on your Sponsor cards and on your **activated** zoo-map bonuses (those uncovered by supporting conservation projects).
+6. **Break track:** return the Break token to the starting space for your player count. Play then continues clockwise with the next player.
 
 ## Actions
 
-### 1. Cards Action
+The position of the Action card sets its strength; each card has a stronger side II once upgraded.
 
-**Side I -- Draw cards from the deck OR snap:**
+### CARDS action
+- **Side I:** Advance the Break token **2 spaces** (you do not gain money for this). Then either **draw from the deck** — compare the strength of the slot with the table on the card and draw up to the indicated number of cards (maximum 3), after which you might have to discard a card from your hand (one just drawn or one already held) — or **snap**: with strength **5 or more**, instead take exactly **1 card of your choice from the display** into your hand, regardless of your reputation. Replenish the display at the end of your turn. There is no in-turn hand limit; you only discard to your limit during breaks.
+- **Side II:** Advance the Break token 2 spaces, then draw cards from the deck **and/or from within reputation range** (the display up to your Reputation counter), in any order, using the upgraded table on the card (e.g., at strength 5 you take 4 cards and discard 1). The display is not replenished until your turn is complete. Snapping now works from strength **3** (strength above 3 makes no difference to a snap). Upgrading the Cards action also lets you progress **past 9 reputation** on the Reputation track.
 
-First, advance the Break token 2 spaces (do not gain money for this).
+**Reputation track and display:** whenever you increase reputation, advance your counter 1 step. Reaching a space with a bonus grants that bonus immediately, once. Reputation 10+ requires the upgraded Cards action (reminder icon on space 10 / folder 5). If your counter is on space 15 and you gain more reputation, it stays on 15 and you take **1 appeal per remaining reputation step**. "Within reputation range" = the display card on the folder matching your counter plus all lower-numbered folders. After a turn in which display cards were taken: move cards from higher-numbered folders down (keeping their order), then fill empty spaces from the deck. You may not look through the discard pile during the game.
 
-**Drawing from the Deck:**
+### BUILD action
+- **Side I:** Build **exactly 1 building** of your choice, of size up to the action's strength. Pay **2 money per space** (cost = size × 2) into the supply before placing. Available: kiosk (size 1), pavilion (size 1), standard enclosures (sizes 1–5), and the Petting Zoo (special enclosure, size 3; maximum 1 per zoo — other buildings can be built more than once).
+- **Placement rules:** build adjacent to an existing building (at least 1 edge touching); your **first building** must instead have at least 1 space on a border space of your zoo map. Build only on empty spaces; buildings may not extend beyond the map, overlap buildings, or cover water/rock spaces. Spaces with the restricted icon require the upgraded Build action. A kiosk must be at least 3 spaces from every other kiosk (at least 2 spaces between kiosks). If you cannot legally build the desired building, you must choose a different building. Build standard enclosures **empty side up** (yellow edge, showing the size); the Petting Zoo is the same on both sides. Covering a placement-bonus space grants that bonus immediately, once. Each pavilion immediately (and only once) increases your zoo's appeal by 1; kiosks grant income in every break; enclosures house animals.
+- **Side II:** Build **as many different buildings as you like** with a **maximum total size equal to the strength** — but never 2 identical buildings in the same Build action. Newly available: **Large Bird Aviary** and **Reptile House** (special enclosures, both size 5, maximum 1 each per zoo, both sides the same). When you build the Reptile House or Large Bird Aviary you may immediately — and only once per building — move suitable animals from standard enclosures into it. Build the buildings one after the other, paying for each separately before placing it; take placement bonuses before building the next building, but hold "after finishing" bonuses until the whole Build action is complete. Side II also lets you build on the restricted-icon spaces, so you can completely cover your zoo map: if you cover every space except water and rock spaces (by any effect, not just the Build action), immediately gain **7 appeal**. Unique buildings can never be built with this action — they only come into play via their Sponsor cards.
 
-| Strength | Cards Drawn | Cards Discarded |
-|----------|-------------|-----------------|
-| 1        | 1           | 0               |
-| 2        | 2           | 1               |
-| 3        | 3           | 1               |
-| 4        | 3           | 1               |
-| 5+       | (snap instead, see below) | -- |
+### ANIMALS action
+- **Side I:** Compare the strength of the slot with the table on the card and play up to the indicated number of Animal cards from your hand (e.g., at strength 5 you can play 2 animals). For each animal, in order:
+  1. **Check conditions** (left side of the card — e.g., a specific partner zoo, animal category, or continent icons). You may only play the card if you fulfill all conditions.
+  2. **Pay the cost** (upper-left corner) into the supply. A partner zoo on the animal's continent reduces the cost by **3 money per continent icon on the card**. Effects that gain you money for playing the animal pay out later — you must be able to pay the full cost first.
+  3. **Fill an empty enclosure:** any animal except Petting Zoo animals can go on its own into an empty **standard enclosure** of at least the required size (hexagon number); flip the enclosure to its occupied side. Some animals additionally require the enclosure to be next to one or two water and/or rock spaces. Petting Zoo animals go **only** in the Petting Zoo. All reptiles and some birds can instead go in their special enclosure (Reptile House / Large Bird Aviary) — such cards show both enclosure requirements and you choose (water/rock requirements apply to the special enclosure too). To house an animal in a special enclosure, mark the number of spaces shown on the card with player tokens from your supply; if not enough free spaces remain in the special enclosure, it cannot go there. Special enclosures are never flipped.
+  4. **Place the Animal card** next to your zoo map, overlapping so the information at the top edge stays visible.
+  5. **Execute effects:** advance your Appeal counter by the amount shown; some animals also give conservation points or reputation. "After finishing" effects wait until the entire Animals action is done; all other effects execute immediately, even before playing another Animal card (likewise effects on other cards triggered by the play). If multiple effects are simultaneous, you choose the order.
+  - When playing 2 animals, complete all steps for the first (except "after finishing" effects) before the second; you may decline to play a second. Execute "after finishing" effects only after moving the Animals card to slot 1.
+- **Side II:** You may also play Animal cards **from the display** within your reputation range, paying an additional cost equal to the folder number the card is on (2 animals may be any mix of hand/display; the display is not replenished until your turn ends). If you perform this action with strength **5 or more**, you may first increase your reputation by 1 — at the very beginning of the action, so your reputation range is already higher. You may also play animals whose conditions include the upgrade-required icon.
 
-Draw the indicated number of cards from the deck. Then discard back to net gain (may discard a drawn card or one already in hand).
+**Animal card layout:** hexagon = minimum standard-enclosure size; adjacent rock/water icons = required adjacent spaces; alternative special enclosure (with spaces occupied) shown beside it; money cost below; extra play conditions lower-left; category and continent icons upper-right (Petting Zoo animals have no continent); appeal gain (plus any conservation/reputation bonuses) lower-right; play effects per the glossary. If an effect refers to an icon that appears on the card itself, that icon counts. Some animals have an **interactive effect**, which can only apply to you if your zoo has **5 or more appeal** (space 5 on the Appeal track is marked as a reminder). Some cards carry a solo-mode replacement effect in a blue box.
 
-**Snapping (strength 5+):** Instead of drawing, take exactly 1 card from the display into your hand, regardless of reputation range. Replenish display at end of turn.
+**Animal categories (7):** bird, herbivore, predator, primate, reptile, bear, and Petting Zoo animal. Bear and Petting Zoo animal are special cases (black icon on white background). Bears are more of a subcategory, mostly combined with the herbivore or predator icon. When the game asks for animal categories it includes bear and Petting Zoo animals unless they are explicitly excluded.
 
-**Side II -- Draw from deck or within reputation range OR snap:**
+### ASSOCIATION action
+- **Side I:** Perform **exactly one association task**. You need at least 1 active association worker: place it on the chosen task on the Association board. If 1 of your workers is already on that task, you must place **2** workers instead; if 3 of your workers are already there, you cannot perform it again until after the break. Other players' workers on a task do not matter. Each task has a strength number: your action's strength must be **at least** the task's strength.
+- **The tasks:**
+  - **Increase reputation:** increase your zoo's reputation by **2**, taking any track bonuses you reach.
+  - **Gain partner zoo:** take a partner zoo from the Association board onto the lowest empty partner-zoo space of your map (take any printed bonus immediately). All your partner zoos must be from different continents, maximum 4 total; the third (or fourth) requires the upgraded Association action. If every zoo currently on the board is one you already have, or you cannot place it, you cannot perform this task. Each partner zoo reduces the cost of Animal cards from its continent by 3 money per continent icon, provides 1 icon of that continent (usable for card effects and conservation projects), and some Animal cards require one.
+  - **Gain university:** take a university from the Association board onto the lowest available university space (take any printed bonus; advance your Reputation counter if the university shows it). You cannot take a duplicate university. Universities grant reputation and research icons and are the only way to increase your hand limit to 5.
+  - **Conservation project work:** either support a conservation project already in play, or play a Conservation Project card from your hand and support it immediately. A new card goes on the leftmost space above the Association board, pushing existing cards one place right. Depending on player count there can only be up to 2, 3, or 4 cards above the board (e.g., 3 with three players); if the new card exceeds the limit, discard the rightmost card and return any player tokens on it to their owners' supplies (not to their zoo maps). The Base Conservation Projects below the board are never moved, even when fully supported, and no new base projects are added during the game.
+    - To **support** a project: fulfill a condition on the card that has no player token on it, and place 1 player token of your choice from the left edge of your zoo map on that condition. You may support each project only **once** (never one already holding your token). As a reward, advance your Conservation counter (and Reputation counter, if shown) per the depicted award. If you fulfill several conditions, you choose one. Taking a token off your zoo map activates its bonus — gained immediately, and for some bonuses again in each break; you choose whether to take it before or after the project reward.
+    - **Release into the wild** projects work differently: instead of counting icons, discard 1 Animal card with the specific icon from your zoo; the animal must require a **standard enclosure of the depicted size** (whether it could also live in a special enclosure is irrelevant). Move your **Appeal counter back** as many steps as the animal's appeal value; flip the smallest occupied standard enclosure meeting the animal's requirements back to its empty side (or remove the appropriate player tokens from your special enclosure); place the Animal card on the discard pile.
+    - **Icon-count** projects: count the icons on the top edge of all your cards — Animal and Sponsor (including the water or rock space requirements, but not the conditions on the left side) — plus your partner zoos and universities.
+- **Side II:** Perform **one or more different** association tasks with one action (1 or 2 of your workers per task, as above). The **total value** of the tasks may not exceed your action's strength (it may be less). When doing conservation project work you may also play the new Conservation Project card directly **from the display** (within reputation range, paying the folder number as an additional cost; no replenish until turn end). In addition you may make exactly **1 donation**: pay the smallest amount of money still visible in the donation area, cover that space with a player token from your supply, and gain **1 conservation point**. Once all spaces but the last are covered, each subsequent donation costs **12 money** (no further tokens placed). A donation requires having performed at least 1 association task in the same action, needs no worker, and is limited to 1 per Association action.
 
-The Break token still advances 2 spaces first.
+### SPONSORS action
+- **Side I:** Play **exactly 1 Sponsor card** from your hand: the action's strength must be at least the card's **level**, and you must meet any conditions on the card's left side. Execute its instant effect and/or its recurring effect (if triggered by the card's own icon), then place it next to your zoo map. **OR:** advance the Break token a number of steps equal to the strength and take that much money — you take the full money even if the Break token doesn't need all the steps to reach the final space.
+- **Side II:** Play **one or more** Sponsor cards: the action's strength **+1** must be at least the sum of the levels of all played cards (X-tokens can push strength beyond 5). Play them one after another, fully executing each card's instant effects (except "after finishing" effects) before the next. Cards may come from your hand or from the display within reputation range (paying the folder number as an additional cost; no replenish until turn end). If you instead use the action to advance the Break token, you take the money **twice**. You may also play Sponsor cards whose conditions include the upgrade-required icon.
 
-| Strength | Cards Drawn | Cards Discarded |
-|----------|-------------|-----------------|
-| 1        | 2           | 1               |
-| 2        | 3           | 1               |
-| 3        | (snap instead) | --           |
-| 4        | 4           | 1               |
-| 5        | 4           | 1               |
+**Sponsor card layout:** level in the upper-left corner (with any build-adjacency water/rock requirement beside it); play conditions on the left; the card's own icon in the upper-right corner. A recurring effect appears at the top on a blue background — purple if it is income in every break. A one-off play effect has a yellow background (lower-left); a final-scoring effect has a brown background (lower-right), with a vertical brown strip behind the level as a reminder once cards are overlapped. If a Sponsor card's effect refers to an icon on the card itself, it counts — but only icons in the upper-right corners of cards are used (plus the rock and water icons in the upper-left). Some Sponsor cards place **unique buildings** (from the 15 tiles) into your zoo, subject to any water/rock adjacency shown; a certain minimum reputation is required to play certain Sponsor cards.
 
-- You may draw cards from the display (within reputation range) and/or the deck, in any order. Display is not replenished until end of turn.
-- **Snapping** available from strength 3+ (take exactly 1 card from the display regardless of reputation).
-- Upgrading Cards also allows your Reputation counter to progress past space 9 on the Reputation track.
-
-**Hand limit:** No limit during play, but during breaks you must discard down to 3 cards (or 5 with the appropriate university).
-
-### 2. Build Action
-
-**Side I -- Build exactly 1 building:**
-
-Build 1 building with a maximum size equal to the action's strength. Pay **2 money per space** (cost = size x 2).
-
-**Available buildings:**
-| Building | Size | Cost | Notes |
-|----------|------|------|-------|
-| Kiosk | 1 | 2 | Generates income during breaks. Must be at least 3 spaces from every other kiosk (at least 2 empty spaces between). |
-| Pavilion | 1 | 2 | Immediately gain 1 Appeal (one-time). Shares tile with Kiosk (opposite sides). |
-| Standard Enclosure (1-space) | 1 | 2 | Holds animals of any category (except Petting Zoo). |
-| Standard Enclosure (2-space) | 2 | 4 | Same as above. |
-| Standard Enclosure (3-space) | 3 | 6 | Same as above. |
-| Standard Enclosure (4-space) | 4 | 8 | Same as above. |
-| Standard Enclosure (5-space) | 5 | 10 | Same as above. |
-| Petting Zoo | 3 | 6 | Special enclosure. Max 1 per zoo. Holds only Petting Zoo animals. |
-
-**Placement rules:**
-- Must be adjacent to an existing building (sharing at least 1 edge). First building must have at least 1 space on a border space of the zoo map.
-- Cannot overlap other buildings, extend beyond map edges, or cover water (W) or rock (R) spaces.
-- Cannot build on spaces marked with the building-restriction icon until Build action is upgraded to Side II.
-- Build standard enclosures with the empty side (yellow edge, showing size number) face-up.
-- If you cover a placement bonus space, take the bonus immediately.
-
-**Side II -- Build multiple different buildings:**
-
-Build as many **different** buildings as you like with a maximum total size equal to the action's strength. You may NOT build 2 identical buildings in the same action.
-
-**Additional buildings now available:**
-| Building | Size | Cost | Notes |
-|----------|------|------|-------|
-| Large Bird Aviary | 5 | 10 | Special enclosure. Max 1 per zoo. |
-| Reptile House | 5 | 10 | Special enclosure. Max 1 per zoo. |
-
-- Build and pay for each building one at a time. Placement bonuses are taken immediately after each building before building the next.
-- "After finishing" bonuses wait until the entire Build action is complete.
-- You may now build on spaces with the building-restriction icon.
-- **When building a Reptile House or Large Bird Aviary:** You may immediately (and only this once) move qualifying animals from standard enclosures into the new special enclosure. Flip vacated standard enclosures back to their empty side; mark the special enclosure with player tokens.
-- **Covering every space** on your zoo map (except water and rock) immediately gains 7 Appeal.
-
-**Note:** Unique buildings cannot be built with this action -- they come into play only via Sponsor cards.
-
-### 3. Animals Action
-
-**Side I -- Play animal cards from your hand:**
-
-| Strength | Animals Played |
-|----------|----------------|
-| 1        | 1 (limited selection) |
-| 2        | 1              |
-| 3        | 1              |
-| 4        | 1              |
-| 5        | 2              |
-
-For each animal, follow these steps in order:
-
-1. **Check conditions:** Verify all conditions on the left side of the card (partner zoos, continent icons, animal categories, etc.).
-2. **Pay cost:** Pay the money cost shown in the upper-left corner. Each matching partner zoo reduces the cost by 3 money per continent icon on the Animal card. You must have enough money before any effects grant you money.
-3. **Fill an empty enclosure:** Place the animal in an empty enclosure of at least the required size. Flip the standard enclosure to its occupied side. Some animals require the enclosure to be adjacent to water and/or rock spaces.
-   - **Petting Zoo animals** can only go in the Petting Zoo (special enclosure).
-   - **Reptiles** and **some birds** can go in either a standard enclosure OR their respective special enclosure (Reptile House / Large Bird Aviary). For special enclosures, mark spaces with player tokens instead of flipping.
-4. **Place the Animal card** next to your zoo map (overlapping previous cards to save space; top-edge icons must remain visible).
-5. **Execute effects:** Gain Appeal (advance on Appeal track). Some animals also grant Conservation points and/or Reputation. Execute any card ability immediately unless it says "after finishing."
-
-If playing 2 animals, complete all steps for the first (except "after finishing" effects) before starting the second. Resolve all "after finishing" effects only after the Action card has been moved to slot 1.
-
-**Interactive effects** (marked with a special icon): Only apply if your zoo has 5+ Appeal.
-
-**Side II -- Play animals from hand or display:**
-
-- You may play Animal cards directly from the display (within reputation range). Pay the animal's cost PLUS the folder number as an additional cost.
-- At strength 5+, you may increase your Reputation by 1 at the very start of the action (before playing animals).
-- You may now play animals with the upgraded-Animals-required condition icon.
-- Display is not replenished until end of turn.
-
-### 4. Association Action
-
-**Side I -- Perform exactly 1 association task:**
-
-You need at least 1 active association worker. Place the worker on the desired task on the Association board.
-
-**Worker placement rules:**
-- 0 of your workers already on the task: place 1 worker
-- 1 of your workers already on the task: must place 2 workers
-- 3 of your workers already on the task: cannot perform this task again until break
-- Other players' workers do not matter
-
-**Association tasks:**
-
-| Task | Strength Required | Effect |
-|------|-------------------|--------|
-| Increase Reputation | 2 | Gain 2 Reputation (advance counter 2 steps; take any bonuses on passed spaces). |
-| Gain Partner Zoo | 5 | Take 1 partner zoo from the Association board; place on lowest empty partner zoo space on your zoo map. Must be a different continent from ones you already have. Max 4 partner zoos total. Need upgraded Association (Side II) for 3rd and 4th. |
-| Gain Partner University | 5 | Take 1 university from the Association board; place on lowest empty university space. Cannot duplicate a university you already have. |
-| Conservation Project Work | 3 | Support an existing conservation project OR play a Conservation Project card from your hand and support it immediately. |
-
-**Partner Zoo benefits:** Reduces cost of animals from that continent by 3 money per continent icon on the Animal card. Provides 1 continent icon for conservation project requirements.
-
-**Partner University benefits:** Grants reputation, research icons, and one specific university increases hand limit from 3 to 5.
-
-**Conservation Project support:**
-- You must fulfill one of the 3 depicted conditions (icon counts) that does not already have one of your player tokens.
-- Place 1 player token from the left edge of your zoo map onto the fulfilled condition.
-- Gain the corresponding Conservation points and Reputation (if applicable) as reward.
-- Removing the player token from your zoo map activates the bonus on that space (immediate, and sometimes recurring each break).
-- You may only support each project once (1 token per player per project).
-
-**Release into the Wild projects:** Instead of counting icons, discard 1 Animal card from your zoo with the specified continent icon and enclosure size. Lose Appeal equal to the animal's appeal value. Flip the enclosure back to empty (or remove tokens from a special enclosure). Gain the conservation reward.
-
-**Conservation Project card placement:** New projects go to the leftmost space above the Association board, pushing existing projects right. Maximum projects above the board: 2 players = 2, 3 players = 3, 4 players = 4. Excess rightmost project is discarded (return any player tokens on it to their owner's supply, not zoo map). Base Conservation Projects below the board are never moved or replaced.
-
-**Side II -- Perform multiple different tasks and donate:**
-
-- Perform multiple different association tasks in one action. The total strength values of chosen tasks must not exceed the action's strength.
-- You may play Conservation Project cards from the display (within reputation range) for an additional cost equal to the folder number.
-- **Donation:** You may make exactly 1 donation per Association action (requires performing at least 1 task first). Pay the lowest visible money amount in the donation area and cover that space with a player token from your supply. Gain 1 Conservation point. Once all spaces except the last are covered, subsequent donations cost 12 money each (no more tokens placed).
-- May now take a 3rd and 4th partner zoo.
-
-### 5. Sponsors Action
-
-**Side I -- Play 1 Sponsor card OR advance Break and take money:**
-
-**Playing a Sponsor card:** Play exactly 1 Sponsor card from your hand. The action's strength must be at least equal to the card's level. You must also meet any conditions on the card. Execute instant and/or recurring effects, then place the card next to your zoo map.
-
-**Alternative -- Break and money:** Advance the Break token by the action's strength and take money equal to the action's strength.
-
-**Side II -- Play multiple Sponsors OR advance Break and take double money:**
-
-- Play multiple Sponsor cards in one action. The action's strength +1 must be at least as high as the sum of all played cards' levels. Play cards one at a time, resolving instant effects (except "after finishing") before the next.
-- You may play Sponsor cards from the display (within reputation range) for an additional cost equal to the folder number.
-- You may now play Sponsor cards with the upgraded-Sponsors-required condition icon.
-- **Alternative -- Break and money:** Advance Break token by strength and take money equal to strength **twice** (2x money).
-
-### 6. X-Token Action (Alternative Action)
-
-If you cannot or do not want to perform any of the 5 actions, you may take exactly 1 X-token. You must still choose an Action card, move it to slot 1, and shift others right. The slot's strength is irrelevant. Cannot perform this if you already have 5 X-tokens.
+### X-TOKEN action (alternative action)
+If you cannot or do not want to perform any of the 5 actions, take exactly **1 X-token** instead. You must still select an Action card, move it to slot 1, and shift the intervening cards right; the slot's strength and the card's upgrade state are irrelevant. If you already have 5 X-tokens, you cannot perform this action.
 
 ## Scoring / Victory Conditions
 
-### Appeal and Conservation Tracks
+**During the game.** Your appeal determines your money income each break. The Conservation track has 4 spaces with a one-time effect when you reach or pass them:
+- **2 conservation points:** either upgrade one of your Action cards (flip it) or activate an additional association worker (take a lying worker from the lowest space below the notepad onto the notepad). Each player who reaches space 2 gets this choice.
+- **5 and 8 conservation points:** take either 5 money or one of the Bonus tokens next to that space (execute immediately; a taken Bonus token is then removed from the game). The 5-money option remains even after both Bonus tokens are gone.
+- **10 conservation points:** the first time any player reaches or exceeds 10, **all players** choose and discard one of their Final Scoring cards (face down under the remaining pile). If no one reaches 10 conservation points before the game ends, all players must discard one Final Scoring card before end-game scoring begins.
 
-The **Appeal track** and **Conservation track** run in opposite directions along the board. They are divided into shared **scoring areas**, where each scoring area contains one Conservation space and several adjacent Appeal spaces.
+**End of the game.** If a player's Conservation counter and Appeal counter are ever **in the same scoring area, or pass one another**, the end of the game is triggered. A *scoring area* is one space on the Conservation track together with the adjacent spaces on the Appeal track. The triggering player completes their turn and all other players take **one more turn**; if the end is triggered during a break, **all** players take one more turn.
 
-**Appeal track:**
-- Determines income during each break (higher Appeal = more money).
-- Advanced by playing animals, building pavilions, and various card effects.
+**Final scoring.**
+1. Score your Final Scoring card(s) and all your cards with the end-of-game icon. Each Final Scoring card grants 1–4 additional conservation points (by table or text, counting your universities, the cards in front of you, and their icons); you can never gain more than **4 conservation points from a single Final Scoring card**.
+2. Compute Victory Points: look at the scoring area where your Conservation counter is located and find the **lowest Appeal value in that scoring area** — this is your **Target Number**. **Victory Points = your Appeal value − your Target Number.**
+3. The player with the highest positive Victory Point total wins. **Tiebreaker:** the tied player who supported the most conservation projects wins (count the player tokens removed from the left side of the zoo map). If still tied, the tied players share the victory.
 
-**Conservation track milestones (immediate one-time bonuses):**
-
-| Conservation Points | Bonus |
-|--------------------|-------|
-| 2 | Choose one: Upgrade 1 Action card OR hire 1 association worker (take lying worker from lowest space, place on notepad as active). |
-| 5 | Choose one: Take 5 money OR take 1 of the 2 Bonus tokens next to this space (execute immediately, then remove token from game). 5-money option remains even after both tokens are taken. |
-| 8 | Same as 5 (separate set of 2 Bonus tokens). |
-| 10 | First player to reach 10: ALL players must choose and discard 1 of their 2 Final Scoring cards. If no one reaches 10 before game end, players discard 1 Final Scoring card before final scoring. |
-
-### Reputation Track
-
-- Tracks your zoo's reputation (starts at 1).
-- Determines which display cards are within your "reputation range" (your counter's folder number and all lower folders).
-- Maximum space is 15. Cannot progress past 9 until the Cards Action card is upgraded to Side II. At 15, each additional reputation step grants 1 Appeal instead.
-- Bonuses on certain spaces are gained immediately and only once.
-
-### End of Game Trigger
-
-The game ends when any player's **Conservation counter and Appeal counter** occupy the **same scoring area** or have passed each other. The triggering player completes their turn, then every other player takes **one more turn**. If triggered during a break, all players take one more turn after the break.
-
-### Final Scoring
-
-1. Gain Conservation points from your remaining Final Scoring card(s) (max 4 points each).
-2. Gain points from all cards with end-of-game effects.
-3. **Calculate Victory Points:**
-   - Find the scoring area where your Conservation counter sits.
-   - Identify the **lowest Appeal value** in that scoring area -- this is your **Target Number**.
-   - **Victory Points = Your Appeal value - Target Number.**
-4. The player with the highest positive Victory Point total wins.
-
-**Tiebreaker:** The tied player who supported the most Conservation Projects (count player tokens removed from the left side of zoo map). If still tied, tied players share the victory.
-
-### Break Procedure
-
-A break is triggered when the Break token reaches the final space of the Break track. The triggering player gains 1 X-token. Complete the current turn, then all players perform these steps in order:
-
-1. **Hand card limit:** Discard down to 3 cards (or 5 with the appropriate university).
-2. **Tokens on Action cards:** Return all Multiplier, Venom, and Constriction tokens to supply.
-3. **Association board:** Return all your association workers to your notepad (active). Replenish partner zoos and universities so each is available once (skip any all players already have).
-4. **Replenish display:** Discard the 2 bottom cards (folders 1 and 2). Slide remaining cards down. Fill empty spaces from the deck.
-5. **Take income:**
-   - **a.** Collect money based on your position on the Appeal track.
-   - **b.** Collect kiosk income: For each kiosk, gain 1 money for each adjacent unique building, special enclosure, occupied standard enclosure, or pavilion (must share at least 1 edge). Empty standard enclosures do NOT provide kiosk income, but empty special enclosures DO.
-   - **c.** Collect any recurring income from Sponsor cards and activated bonuses on the left side of your zoo map.
-6. **Break track:** Return the Break token to the starting space for your player count.
-
-The game continues with the next player in clockwise order.
+Note from the rulebook: to have a positive score, your Appeal counter and Conservation counter have to cross one another.
 
 ## Special Rules & Edge Cases
 
-### Animal Categories
-There are 7 animal categories: Bird, Herbivore, Predator, Primate, Bear, Reptile, and Petting Zoo animal. Bear and Petting Zoo animal are special sub-categories (black icon on white background). Bears often appear in combination with Herbivore or Predator icons. When the game references "animal categories," Bear and Petting Zoo animals are included unless explicitly excluded.
+- **Reputation cap:** reputation 10+ requires the upgraded Cards action; on space 15, further reputation converts to 1 appeal per step instead.
+- **Interactive effects** on Animal cards apply to you only if your zoo has **5 or more appeal**.
+- **Full zoo map:** covering every space except water and rock spaces immediately grants 7 appeal (requires the upgraded Build action to reach the restricted spaces; can also trigger from other effects that build in your zoo).
+- **Display timing:** whenever you take cards from the display (snap, or upgraded Cards/Animals/Association/Sponsors plays), do not replenish it until your entire turn is complete; then slide cards down folders in order and refill from the deck. During each break the folder 1 and 2 cards are discarded before refilling.
+- **Hand size:** unlimited during play; enforced only at breaks (limit 3, or 5 with the specific university).
+- **Money-gain timing:** you must be able to pay an animal's full cost before any "gain money" effect from the play pays out.
+- **Kiosk spacing** (at least 3 spaces from every other kiosk) applies to every new kiosk, including free ones from card effects (e.g., "Each time you play an Americas icon into your zoo, you may build 1 kiosk for free").
+- **Moving animals into a new special enclosure:** allowed only immediately when you build the Reptile House / Large Bird Aviary, once per building. For each animal moved, flip the smallest occupied standard enclosure that meets its requirements (including water/rock) back to empty and mark the special enclosure with the suitable number of player tokens; decide per animal.
+- **Discarded conservation projects:** tokens on a project card pushed off the display return to the owners' **supply**, not to the bonus spaces on their zoo maps (the bonuses stay activated).
+- **2-player game:** one level on each face-up Base Conservation Project and the left column of the donation area are blocked for both players.
+- **Multiple simultaneous effects** (appeal, reputation, conservation points, card abilities): the owning player chooses the order of execution.
+- **Break trigger from effects:** an Action card, Sponsor card, or Animal card effect can advance the Break token to the last space; the break happens after the current turn ends, the triggering player gains 1 X-token, and extra steps beyond the last space are ignored.
+- **Association worker supply:** hire workers from the lowest supply space upward; certain zoo maps reward conservation points for hiring your last worker.
+- **Cards that clog:** if you cannot perform any action, the X-token action is always available — unless you already hold 5 X-tokens.
+- **Component shortage:** the rulebook suggests keeping a few standard enclosures and kiosks/pavilions in reserve and using a suitable substitute if a component runs out.
 
-### Special Enclosures
-- **Petting Zoo (size 3):** Only Petting Zoo animals can go here. Max 1 per zoo. Both sides of the tile are identical.
-- **Reptile House (size 5):** Holds reptiles (and only reptiles). Max 1 per zoo. Available only after upgrading Build action.
-- **Large Bird Aviary (size 5):** Holds qualifying birds. Max 1 per zoo. Available only after upgrading Build action.
-- Animals in special enclosures are tracked with player tokens (1 token per enclosure space the animal requires), NOT by flipping the tile.
-- Water/rock adjacency requirements for standard enclosures also apply to the special enclosure.
-- When building Reptile House or Large Bird Aviary, you may immediately move qualifying animals from standard enclosures -- this is the ONLY time you may do so.
-
-### Display and Reputation Range
-- The display has 6 cards on folders numbered 1-6.
-- Your reputation range includes the folder matching your Reputation counter and all lower-numbered folders.
-- When taking cards from the display, do NOT replenish until the end of your entire turn.
-- When replenishing, slide cards from higher folders down to fill gaps (maintaining order), then draw new cards from the deck for empty top folders.
-- You may not look through the discard pile during the game.
-
-### X-Tokens
-- Max 5 X-tokens at any time.
-- Each X-token spent increases an action's strength by 1.
-- Strength is locked in before performing the action -- X-tokens gained during the action cannot be spent on that action.
-- Gained by: reaching the end of the Break track, various card effects, and the X-token alternative action.
-
-### Kiosk Spacing
-Kiosks must be at least 3 spaces apart from every other kiosk on your zoo map (at least 2 empty spaces between any two kiosks).
-
-### Zoo Map Coverage
-If you cover every building space on your zoo map (all spaces except water and rock), immediately gain 7 Appeal. This can happen through any effect that places a building.
-
-### Partner Zoos
-- Max 4 partner zoos (5 continents exist but only 4 spaces on zoo map).
-- All partner zoos must be from different continents.
-- 3rd and 4th require upgraded Association action.
-- Cost reduction: 3 money per continent icon on the Animal card per matching partner zoo.
-
-### Conservation Projects -- Maximum Above Board
-| Player Count | Max Projects Above Board |
-|-------------|--------------------------|
-| 2           | 2                        |
-| 3           | 3                        |
-| 4           | 4                        |
-
-If a new project is played and the limit is exceeded, the rightmost project is discarded. Any player tokens on the discarded project go to their owner's supply (NOT back to the zoo map).
-
-### 2-Player Adjustments
-- 3 Base Conservation Projects (not 4).
-- Block specific levels on Base Conservation cards with unused-color tokens (left level on left card, middle on middle, right on right).
-- Block the 3 left-column donation spaces on the Association board.
-
-### Solo Game (1 Player)
-- Use 3 Base Conservation Projects (as in 3-player setup) with no blocking tokens.
-- Replace the Break token with a solo tile: 7 tokens in the left column. After each turn, move the topmost left-column token to the right column. When the last token moves right (revealing the break icon), resolve a break.
-- After each break, place the topmost token on the lowest open donation space on the Association board, then move remaining tokens back to the left column.
-- Game ends after 6 rounds (when only 2 tokens remain and the bottom one moves right). No final break -- proceed directly to final scoring.
-- Start with 20 Appeal (beginner), 10 Appeal (intermediate), or 0 Appeal (expert).
-- Cards with interactive effects use their solo-mode replacement effect (blue stripe with solo icon).
-- Max 2 Conservation Project cards above the Association board.
-- Break token advancement from cards/actions has no effect, but you still collect any associated money.
-- Win condition: achieve at least 0 Victory Points (Appeal and Conservation counters in the same scoring area or past each other).
-
-### Multiplier, Venom, and Constriction Tokens
-Some animal abilities place these tokens on Action cards. They modify the action in specific ways until the next break, at which point they are returned to the supply.
-
-### "After Finishing" Effects
-Some card effects say "after finishing." These are executed only after the entire action is completed and the Action card has been moved to slot 1. If multiple "after finishing" effects exist, the player chooses the order.
+### Solo game
+- **Setup:** lay out 3 Base Conservation Project cards with no blocking tokens (like a 3-player setup). Do not use the Break token; instead place 7 player tokens of an unused color on the left column of the solo tile. Start the game with **20 appeal**.
+- **Cards:** interactive effects are replaced by the solo effect in the blue stripe with the solo icon (found on 1 Final Scoring card and a number of Animal cards). Up to **2** Conservation Project cards may be above the Association board.
+- **Break token:** actions that would advance the Break token simply don't, but you still take any money for moving it (e.g., the Cougar's "Jumping 3" still pays 3 money; the upgraded Sponsors break option at strength 4 still pays 8 money). You do not get an X-token for triggering a break.
+- **Breaks:** at the end of each of your turns, move the topmost token in the solo tile's left column to the right column. Moving the last token (revealing the break icon) immediately resolves a break. At the end of the break, place the topmost token on the open donation space with the smallest number on the Association board (if all spaces except space 12 are occupied, place it next to space 12 even though this has no effect), then move the remaining tokens back to the left column — one more row now stays empty each round.
+- **Game end:** after 6 rounds — when only 2 tokens are left and you moved the bottom one right — do not trigger another break; go straight to final scoring. You **win with at least 0 Victory Points** (your Appeal and Conservation counters reached the same scoring area or passed each other).
+- **Difficulty:** start with 20 appeal (beginner), or 10 or even 0 appeal for a challenge. **Solo challenge:** play 3 games in a row without reshuffling; after each game remove all cards used in it (discard pile, display, your cards, the conservation projects), the two zoo maps you chose between, and the 4 Bonus tiles (reuse a random 3 of the removed Bonus tiles for the third game). Out-of-play cards are inaccessible except via the animal abilities Assertion and Dominance. Total the 3 scores; a sum of at least 0 passes the challenge.
 
 ## Player Reference
 
-### Action Card Strength (Slot Position)
-
-| Slot | Strength |
-|------|----------|
-| 1 (leftmost) | 1 |
-| 2 | 2 |
-| 3 | 3 |
-| 4 | 4 |
-| 5 (rightmost) | 5 |
-
-### Building Costs
-
-| Building | Size | Cost (money) |
-|----------|------|-------------|
-| Kiosk | 1 | 2 |
-| Pavilion | 1 | 2 |
-| Standard Enclosure (any) | 1-5 | Size x 2 |
-| Petting Zoo | 3 | 6 |
-| Reptile House | 5 | 10 |
-| Large Bird Aviary | 5 | 10 |
-
-### Cards Action Quick Reference (Side I / Side II)
-
-**Side I:**
-| Strength | Draw | Discard |
-|----------|------|---------|
-| 1 | 1 | 0 |
-| 2 | 2 | 1 |
-| 3-4 | 3 | 1 |
-| 5+ | Snap 1 from display | -- |
-
-**Side II:**
-| Strength | Draw | Discard |
-|----------|------|---------|
-| 1 | 2 | 1 |
-| 2 | 3 | 1 |
-| 3 | Snap 1 from display | -- |
-| 4-5 | 4 | 1 |
-
-### Animals Action Quick Reference
-
-| Strength (Side I) | Animals Played |
-|-------------------|----------------|
-| 1-4 | 1 |
-| 5 | 2 |
-
-Side II: Same table, plus may play from display, gain +1 Reputation at strength 5+.
-
-### Key Numbers
-
-| Item | Value |
-|------|-------|
-| Starting money | 25 |
-| Hand limit (default) | 3 |
-| Hand limit (with university) | 5 |
-| Max X-tokens | 5 |
-| Max partner zoos | 4 |
-| Max universities | 3 |
-| Max association workers | 4 (1 starting + 3 hirable) |
-| Appeal for covering entire zoo map | +7 |
-| Partner zoo cost reduction | 3 money per continent icon |
-| Reputation track maximum | 15 (each step beyond 15 = 1 Appeal) |
-| Reputation needed for display access past 9 | Upgraded Cards action |
-| Max conservation points from 1 Final Scoring card | 4 |
-
-### Conservation Track Milestones
-
-| Space | Bonus |
-|-------|-------|
-| 2 | Upgrade 1 Action card OR hire 1 worker |
-| 5 | Take 5 money OR 1 Bonus token |
-| 8 | Take 5 money OR 1 Bonus token |
-| 10 | All players discard 1 Final Scoring card |
-
-### Upgrade Opportunities (4 total, max 3 upgrades)
-
-1. Conservation track space 2 (upgrade OR hire worker -- choose one)
-2. Reputation track bonus space
-3. 2nd partner zoo gained
-4. 2nd partner university gained
-
-### Break Procedure Checklist
-
-1. Discard to hand limit (3 or 5)
-2. Return Multiplier/Venom/Constriction tokens
-3. Return association workers; replenish partner zoos and universities
-4. Discard folders 1-2 from display; slide down; refill
-5. Collect income: Appeal track + kiosks + recurring effects
-6. Reset Break token
-
-### Income from Kiosks (per kiosk)
-
-+1 money for each adjacent:
-- Occupied standard enclosure
-- Special enclosure (even if empty)
-- Unique building
-- Pavilion
-
-(Empty standard enclosures do NOT count.)
+- **Your turn:** pick 1 of your 5 Action cards → perform it at its slot's strength (1–5, +1 per X-token spent beforehand) → move it to slot 1, sliding the cards left of its slot one step right.
+- **The 5 actions (side I → side II):**
+  - **CARDS:** advance Break token 2; draw from deck per table (max 3, maybe discard 1), or snap 1 display card at strength 5+ → also draw within reputation range; snap from strength 3; reputation past 9 unlocked.
+  - **BUILD:** 1 building, size ≤ strength, 2 money/space (kiosk, pavilion, standard enclosure, Petting Zoo) → several *different* buildings, total size ≤ strength; adds Reptile House & Large Bird Aviary and the restricted map spaces; full map = +7 appeal.
+  - **ANIMALS:** play animals from hand per table (conditions → cost, −3/icon with matching partner zoo → empty enclosure of required size → effects) → also from display (pay folder number); at strength 5+, +1 reputation first.
+  - **ASSOCIATION:** exactly 1 task (worker required; strength ≥ task value): +2 reputation / partner zoo / university / conservation project work → multiple different tasks, total value ≤ strength, plus max 1 donation (smallest visible amount, +1 conservation point).
+  - **SPONSORS:** play 1 Sponsor card (strength ≥ level) OR advance Break token = strength and take that much money → play multiple (strength +1 ≥ total levels), also from display; break option pays double money.
+  - **X-TOKEN (always available):** move a card to slot 1 and take 1 X-token (impossible with 5 X-tokens held).
+- **Costs & limits:** buildings cost size × 2 money · max 1 each of Petting Zoo / Reptile House / Large Bird Aviary · kiosks ≥3 spaces apart · max 4 partner zoos (3rd needs upgraded Association) · hand limit 3 (5 with university), checked only at breaks · max 5 X-tokens.
+- **Break:** discard to hand limit → clear Multiplier/Venom/Constriction tokens → recall workers, restock zoos/universities → discard display folders 1–2 and refill → income (appeal money + 1 money per building adjacent to each kiosk [occupied standard enclosures, special enclosures, pavilions, unique buildings] + break-income icons) → reset Break token.
+- **Upgrades (4, choose wisely):** Conservation track space 2 (or extra worker) · Reputation track · 2nd partner zoo · 2nd university.
+- **Game end:** a player's Appeal and Conservation counters in the same scoring area (or crossed) → finish turn, everyone else gets one more turn (during a break: everyone gets one more turn).
+- **Score:** discard a Final Scoring card if no one hit 10 conservation points → score end-game cards and Final Scoring cards (max 4 conservation points each) → **VP = Appeal − lowest Appeal value in your Conservation counter's scoring area**. Highest positive VP wins; ties: most conservation projects supported, then shared victory.
