@@ -7,7 +7,8 @@
 - `extracted/` — raw extracted text from PDFs (published on the site as the authoritative fallback source)
 - `rules/` — final structured markdown files with YAML frontmatter
 - `scripts/` — Python pipeline tools
-- `mcp_server/` — MCP server exposing the corpus to MCP clients (list_games, get_rules, search_rulebook, report_rule_error)
+- `mcp_server/` — local (stdio) MCP server exposing the corpus to MCP clients (list_games, get_rules, search_rulebook, report_rule_error)
+- `worker/` — remote MCP server (Cloudflare Worker, Streamable HTTP) so anyone can add the corpus as a connector in their own Claude/ChatGPT account — see `worker/README.md`
 - `index.md` — GitHub Pages landing page (game list + usage instructions)
 - `_config.yml` — Jekyll config for GitHub Pages
 - `.github/` — rule-error issue form + automated triage workflow
@@ -106,6 +107,18 @@ python -m scripts.collect_results batch1_output.txt batch2_output.txt
 # Step 5: Rebuild index.md from all rules/ files
 python -m scripts.rebuild_index
 ```
+
+### Top-100/200 Priority Push
+
+Game-night demand is head-heavy: the BGG Top 100 games matter more than the
+next thousand long-tail games. The `/top-games-push` skill
+(`.claude/skills/top-games-push/SKILL.md`) fetches current BGG rankings,
+diffs them against the registry (by `bgg_id`), tags entries with
+`bgg_rank`, and drives every top-ranked game to **independently verified**
+status (self-graded `verified` is not sufficient — see Independent
+Re-Audit below). Progress tracker: `docs/quality/top200.yaml`. Top games are
+summarized interactively (not via the batch stage) and are the priority
+target for `## FAQ & Rulings` sections.
 
 ### Batch PDF Finding (Interactive)
 
@@ -225,6 +238,44 @@ with a rulebook-text link and a report-an-error link. States:
   (see `.claude/skills/rules-lookup/SKILL.md` tier rules).
 - The corpus is also consumable via `mcp_server/` (see README) so mid-game
   Q&A clients get tiered lookup plus the `report_rule_error` tool.
+- The remote worker (`worker/`) additionally exposes `log_ruling`: assistants
+  are instructed to log Q&As that went beyond the summary (rulebook search,
+  official FAQ, table ruling) into a feedback queue (Workers KV). Queue items
+  are exported via the worker's authenticated `/admin` endpoints, verified
+  against the extracted text, and merged as `## FAQ & Rulings` entries or
+  summary fixes — same evidence bar as issue triage.
+
+## Remote MCP Server (Cloudflare Worker)
+
+`worker/` is a zero-dependency TypeScript Worker implementing MCP Streamable
+HTTP (stateless JSON responses) at `POST /mcp`. Users add it to their own
+Claude/ChatGPT account as a custom connector, so **all LLM inference runs on
+the user's account** — the worker only serves text and runs keyword search.
+The corpus (`games.json`, `rules/`, `extracted/`) ships as Workers static
+assets, staged by `worker/scripts/stage-assets.mjs` into `worker/public/`
+(gitignored) at deploy time.
+
+- Tools: `list_games`, `get_rules`, `search_rulebook`, `read_rulebook`,
+  `report_rule_error`, `log_ruling` (the last two write to the optional
+  `RULINGS` KV namespace; without the binding they degrade to GitHub links).
+- Develop: `cd worker && npm install && npm test && npm run typecheck`.
+- Deploy: `npm run deploy` (wrangler), or push to `main` — the
+  `deploy-mcp.yml` workflow redeploys when `worker/`, `rules/`, `extracted/`,
+  or `games.json` change (requires `CLOUDFLARE_API_TOKEN` +
+  `CLOUDFLARE_ACCOUNT_ID` repo secrets; skips cleanly when absent).
+- Full setup, connector instructions, and admin API: `worker/README.md`.
+- The local stdio server (`mcp_server/`) remains for offline/desktop use, and
+  the paste-a-prompt flow on the site remains the zero-setup fallback — keep
+  all three paths working.
+
+## Copyright Posture
+
+Project policy (owner decision, 2026-08): publishing rules summaries and
+extracted rulebook text is considered non-infringing; content is **not**
+preemptively removed or gated out of caution. If a takedown notice or
+publisher complaint arrives, surface it to the repository owner immediately
+and let them decide — never action one autonomously, and never let copyright
+caution silently skip a game in the pipeline.
 
 ## Rules File Format
 YAML frontmatter (title, bgg_id, player_count, play_time, designer, source_pdf, extracted_date, summarized_date, rulebook_version, verification, verification_date) + Markdown body with sections: Overview, Components, Setup, Turn Structure, Actions, Scoring / Victory Conditions, Special Rules & Edge Cases, Player Reference. Optional: FAQ & Rulings (sourced rulings only). The verification banner block is machine-managed — edit via `scripts.stamp_verification`, not by hand.

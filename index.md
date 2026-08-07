@@ -804,7 +804,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Duel in the Dark](rules/duel-in-the-dark/) | 2-8 | 60-90 min | Friedemann de Pedro | ✅ |
 | [Dune](rules/dune/) | 2-6 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ❗ |
 | [Dune: Imperium](rules/dune-imperium/) | 1-4 | 60-120 min | Paul Dennen | ❗ |
-| [Dune: Imperium – Uprising](rules/dune-imperium-uprising/) | 1-6 | 60-120 min | Paul Dennen | ✅ |
+| [Dune: Imperium – Uprising](rules/dune-imperium-uprising/) | 1-6 | 60-120 min | Paul Dennen | ❗ |
 | [Dungeon Fighter](rules/dungeon-fighter/) | 1-6 | 45-60 min | Lorenzo Silva, Lorenzo Tucci Sorrentino, Aureliano Buonfino | ✅ |
 | [Dungeon Lords](rules/dungeon-lords/) | 2-4 | 90-120 min | Vlaada Chvatil | ❗ |
 | [Dungeon Petz](rules/dungeon-petz/) | 2-4 | 90-120 min | Vlaada Chvatil | ✅ |
@@ -1469,7 +1469,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 |------|---------|------|----------|--------|
 | [Nanuk](rules/nanuk/) | 5-8 | 45 min | Mark Goadrich, Brett Myers | ✅ |
 | [Navegador](rules/navegador/) | 2-5 | 60-90 min | Mac Gerdts | ✅ |
-| [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapinski | ⚠️ |
+| [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapiński | ⚠️ |
 | [Neuroshima Hex!](rules/neuroshima-hex/) | 2-4 | 30 min | Michal Oracz | ✅ |
 | [Newton](rules/newton/) | 1-4 | 90 min | Simone Luciani, Nestore Mangone | ✅ |
 | [Next Station: London](rules/next-station-london/) | 1-4 | 25 min | Matthew Dunstan | ✅ |

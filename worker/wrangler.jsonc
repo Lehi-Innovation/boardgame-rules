@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "boardgame-rules-mcp",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-11-01",
+  // The corpus (games.json, rules/*.md, extracted/*.txt) is staged into
+  // ./public by `npm run stage` before every dev/deploy. Asset requests are
+  // served directly (free, don't count as Worker invocations); the Worker
+  // reads them through the ASSETS binding.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+  // OPTIONAL — feedback queue (log_ruling / report_rule_error storage).
+  // Without this binding the tools degrade gracefully to GitHub issue links.
+  //   1. npx wrangler kv namespace create RULINGS
+  //   2. paste the printed id below and uncomment
+  //   3. npx wrangler secret put ADMIN_TOKEN   (protects /admin endpoints)
+  // ,"kv_namespaces": [
+  //   { "binding": "RULINGS", "id": "<paste-namespace-id-here>" }
+  // ]
+}

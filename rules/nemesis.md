@@ -3,13 +3,12 @@ title: "Nemesis"
 bgg_id: 167355
 player_count: "1-5"
 play_time: "90-180 min"
-designer: "Adam Kwapinski"
+designer: "Adam Kwapiński"
 source_pdf: "nemesis-rules.pdf"
-extracted_date: "2026-03-02"
-summarized_date: "2026-03-02"
-rulebook_version: "1st Edition (Kickstarter, 2018)"
+extracted_date: "2026-08-05"
+summarized_date: "2026-08-05"
 verification: "unverified"
-verification_date: "2026-06-12"
+verification_date: "2026-08-05"
 ---
 
 # Nemesis
@@ -22,536 +21,379 @@ verification_date: "2026-06-12"
 
 ## Overview
 
-Nemesis is a semi-cooperative survival horror board game set on a spaceship infested with hostile alien organisms called Intruders. Players take on the roles of crew members who wake from hibernation to find one crewmate dead and the ship compromised. Each player is dealt two secret Objective cards (one Corporate, one Personal) and must choose one when the first Intruder appears. To win, a player must both fulfill their chosen Objective and survive -- either by hibernating aboard the ship (which must have working engines and correct coordinates) or by evacuating in an Escape Pod. Multiple players can win, but each player pursues their own agenda, and some objectives may require other players to die or the ship's destination to be changed. The game plays over a series of turns until an end condition is met: the ship jumps to hyperspace, the ship explodes, or the last active character leaves the board.
+Nemesis is a semi-cooperative survival game for 1–5 players by Adam Kwapiński. You and your crewmates wake from hibernation on a spaceship infested with hostile organisms the ship's AI calls "Intruders." To win, you must complete one of the two secret Objectives dealt to you at the start of the game **and** get back to Earth in one piece — either by hibernating aboard a functioning ship jumping to Earth, or by escaping in an Escape Pod.
+
+The game may have multiple winners, but it is **not** a cooperative game: each player has their own Objective, and other players achieving their goals is irrelevant to your own victory. Obstacles include the Intruders, the deteriorating ship (fire, malfunctions, damaged engines, self-destruct), the other players' hidden agendas, and plain bad luck.
+
+The game is played over a series of turns, each split into a Player Phase (players act) and an Event Phase (intruders attack and move, the ship situation develops), and ends when any end-of-game condition is met.
 
 ## Components
 
-### Board and Tiles
-- 1 two-sided game board (basic side marked with a red arrow icon; alternate side designed for campaign play with double Technical Corridors)
-- 11 Room tiles "1" (Basic Rooms, all used every game)
-- 9 Room tiles "2" (Additional Rooms, only 5 randomly chosen per game)
-- 2 Room sheets (reference for Room Actions)
-
-### Miniatures
-- 6 Character miniatures (Captain, Pilot, Scientist, Scout, Soldier, Mechanic)
-- 6 Larvae
-- 3 Creepers
-- 8 Adult Intruders (4 different sculpts)
-- 2 Breeders
-- 1 Queen
-- 6 colored plastic rings (for Character miniatures)
-
-### Cards
-- 60 Action cards (10 per Character, each Character has a unique deck)
-- 18 Objective cards (9 Personal, 9 Corporate)
-- 27 Contamination cards (share a card back with Action cards but form a separate deck)
-- 20 Intruder Attack cards
-- 16 Serious Wound cards
-- 20 Event cards
-- 5 Help cards
-- 8 Intruder Weakness cards (3 used per game, chosen randomly)
-- 8 Coordinates cards (1 used per game, chosen randomly)
-- 30 Green (Medical) Item cards
-- 30 Yellow (Technical) Item cards
-- 30 Red (Military) Item cards
-- 12 Blue (Crafted) Item cards
-- 6 Character Starting Item cards (Weapons, 1 per Character)
-- 12 Character Quest Item cards (2 per Character)
-- 6 Character Draft cards
-
-### Tokens and Markers
-- 1 First Player token
-- 18 Status markers (used as Light Wounds, Slime, Signal, Self-Destruct, Time, Destination markers)
-- 30 Noise markers
-- 12 Door tokens
-- 4 Escape Pod tokens
-- 20 Exploration tokens
-- 1 Blue Character Corpse token (starting dead body)
-- 5 Red Character Corpse tokens
-- 8 Intruder Egg tokens
-- 27 Intruder tokens (8 Larvae, 12 Adult Intruders, 3 Creepers, 2 Breeders, 1 Queen, 1 Blank)
-- 8 Intruder Carcass tokens
-- 50 Ammo/Injury markers
-- 8 Fire markers
-- 8 Malfunction markers
-- 6 Engine tokens (3 Working, 3 Damaged -- one pair per engine)
-- 2 "Five Injury" tokens (for tracking large Injury counts on Queen/Breeders)
-- 1 Airlock Procedure token
-- 5 Plastic card holders (Inventories)
-- 1 Intruder bag
-- 1 Scanner (red foil viewer for Contamination cards)
-- 1 Intruder board
-
-### Dice
-- 2 d6 Combat (Attack) dice
-- 2 d10 Noise dice
-
-### Advanced Mode Components (not used in basic game)
-- 7 Solo/Coop Objective cards
-- 10 Intruder Action cards
+- 1 two-sided board (basic side marked with a red arrow icon in its upper left corner; the alternative back side was a crowdfunding unlock, primarily for campaign play)
+- 6 Character boards (Captain, Pilot, Scientist, Scout, Soldier, Mechanic)
+- 11 Room tiles "1", 9 Room tiles "2"
+- Miniatures: 6 Characters, 6 Larvae, 3 Creepers, 8 Adult Intruders (4 sculpts), 2 Breeders, 1 Queen
+- 6 colored plastic rings; 5 plastic card holders (Inventories)
+- 2 d6 Attack (Combat) dice and 2 d10 Noise dice
+- 1 Intruder bag, 1 Scanner, 1 Intruder board
+- Cards: 60 Action cards (10 per Character); 18 Objective cards (9 Personal, 9 Corporate); 27 Contamination cards (share a back with Action cards but form a separate deck); 20 Intruder Attack cards; 16 Serious Wound cards; 20 Event cards; 5 Help cards; 8 Intruder Weakness cards; 8 Coordinates cards; 30 Green (Medical), 30 Yellow (Technical), and 30 Red (Military) Item cards; 12 Blue (Crafted) Item cards; 6 Character Starting Item cards (Weapons); 12 Character Quest Item cards; 6 Character Draft cards
+- Advanced-mode components (not used in the basic game): 7 Solo/Coop Objective cards, 10 Intruder Action cards
+- Markers and tokens: 2 Room sheets; 1 First Player token; 18 Status markers; 30 Noise markers; 12 Doors; 4 Escape Pods; 20 Exploration tokens; 1 blue + 5 red Character Corpse tokens; 8 Intruder Egg tokens; 27 Intruder tokens (8 Larvae, 12 Adult Intruders, 3 Creeper, 2 Breeder, 1 Queen, 1 Blank); 8 Intruder Carcass tokens; 50 Ammo/Injury markers; 8 Fire markers; 8 Malfunction markers; 6 Engine tokens (3 Working, 3 Damaged); 2 "Five Injuries" tokens; 1 Airlock Procedure token
 
 ## Setup
 
-### Board Setup (Steps 1-13)
+### Board setup (steps 1–13)
 
-1. Place the board on the table, basic side up (red arrow icon in upper left corner).
-2. Shuffle all Room tiles "2" face down. Place 1 face-down Room tile "2" on each "2" slot on the board. Return remaining Room tiles "2" to the box without looking at them.
-3. Shuffle all Room tiles "1" face down. Place 1 face-down Room tile "1" on each "1" slot on the board.
-4. Shuffle all Exploration tokens face down. Place 1 face-down token on each Room tile. Return remaining tokens to the box without looking.
-5. Place 1 random Coordinates card face down on its space next to the Cockpit. Return remaining Coordinates cards to the box.
-6. Place 1 Status marker on the "B" space of the Destination Track (this is the Destination marker).
-7. Place Escape Pod tokens based on player count:
-   - 1-2 players: 2 Escape Pods
-   - 3-4 players: 3 Escape Pods
-   - 5 players: 4 Escape Pods
-   Place the lowest-numbered pod in Section "A", next in Section "B", alternating. All pods start Locked (Locked side face up). Return remaining pods to box.
-8. For each of the 3 Engines: take both Engine tokens for that engine (1 Damaged, 1 Working), shuffle them face down, and stack them on the corresponding Engine slot. The top token indicates the true status. Players must not see the fronts.
-9. Place the Intruder board next to the main board. On it, place:
-   - 5 Egg tokens (on the Egg slots)
-   - 3 random Weakness cards face down (1 per slot, corresponding to Character Corpse, Intruder Egg, Intruder Carcass). Return remaining Weakness cards to box.
-10. Fill the Intruder bag with: 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 3 Adults, plus 1 additional Adult Intruder token per player. Place remaining Intruder tokens and Intruder Carcass tokens next to the board.
-11. Shuffle and place the following decks face down next to the board: 3 Item decks (Red, Yellow, Green), Event deck, Intruder Attack deck, Contamination deck, Serious Wound deck. Place the Crafted Item (Blue) deck next to the Item decks. Place the Scanner next to the Contamination deck.
-12. Place next to the board: Fire markers, Malfunction markers, Noise markers, Ammo/Injury markers, Status markers, Door tokens, Red Character Corpse tokens, 2 Combat dice, 2 Noise dice, First Player token.
-13. Place 1 Status marker on the green space of the Time Track (this is the Time marker).
+1. Place the board with the **basic side** up (red arrow icon in the upper left corner).
+2. Shuffle all Room tiles "2" without looking at their fronts and randomly place one face down on each Room slot marked "2". Return the rest to the box unseen (there are more tiles than slots — players never know exactly which Rooms are on the ship).
+3. Place all Room tiles "1" the same way on the slots marked "1".
+4. Shuffle the Exploration tokens (unseen) and place one face down on each Room tile. Return the rest to the box.
+5. Place 1 random Coordinates card face down on its space next to the Cockpit. Return the rest to the box.
+6. Place 1 Status marker on the "B" space of the Destination Track — this is the Destination marker.
+7. Take randomly chosen Escape Pod tokens: **2 pods for 1–2 players, 3 for 3–4 players, 4 for 5 players.** Place the lowest-numbered pod in Section "A", the next (in numerical order) in Section "B", then alternate A/B. All pods start with their **Locked** side face up. Return the rest to the box.
+8. For each Engine (1, 2, 3): take its two Engine tokens (1 Damaged, 1 Working), shuffle them face down, and stack them face down on the matching Engine slot. **The top token indicates the true status of that Engine.** Players must not see the token fronts.
+9. Place the Intruder board next to the board with **5 Egg tokens** and **3 random Weakness cards face down** in their slots. Return remaining Weakness cards to the box.
+10. Put these Intruder tokens in the Intruder bag: **1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 3 Adults, plus 1 additional Adult per player.** Place the remaining Intruder tokens and the Intruder Carcass tokens next to the board.
+11. Shuffle and place face down next to the board: the 3 colored Item decks, Event, Intruder Attack, Contamination, and Serious Wound decks. Place the Craft Item deck next to the 3 Item decks.
+12. Place the Scanner next to the Contamination deck. Return all Intruder Player Action cards and Solo/Coop Objective cards to the box (advanced modes only). Place the remaining markers, tokens, dice, and the First Player token next to the board.
+13. Place 1 Status marker on the green space of the Time Track — this is the Time marker.
 
-### Crew Setup (Steps 14-20)
+### Crew setup (steps 14–20)
 
-14. Deal Help cards (numbered 1 through player count) randomly to determine player order for Character drafting. The number is the Player Number, important for some Objectives.
-15. Each player takes the plastic Inventory card holder matching their Help card number.
-16. Remove from both Objective decks (Corporate and Personal) all cards showing a player count higher than the current game. Shuffle each deck separately. Deal each player 1 Corporate Objective and 1 Personal Objective. Keep both secret.
-17. Shuffle all Character Draft cards. In player number order (Player 1 first), each player draws 2 Draft cards, reveals them, chooses 1 Character, and shuffles the other back. Continue until all players have chosen.
-18. Each player takes:
-   - A) Their Character board
-   - B) Their Character miniature, placed in the Hibernatorium with a colored ring
-   - C) Their Character's 10 Action cards, shuffled face down on the left side of the Character board
-   - D) Their Character's Starting Weapon, placed in one Hand slot, loaded with Ammo markers equal to the weapon's Ammo capacity
-   - E) Their 2 Quest Item cards, placed horizontal side up (inactive) next to the Character board
-19. Player 1 receives the First Player token.
-20. Place the blue Character Corpse token in the Hibernatorium (represents the dead body found at game start).
+14. Deal 1 Help card at random to each player (use cards numbered 1 to the player count). The number on the Help card and Inventory is the **Player Number** — it sets the character-choice order and matters for some Objectives.
+15. Each player takes the plastic Inventory card holder matching their number (keeps non-Heavy Item cards hidden).
+16. Remove from both Objective decks (Corporate and Personal) all cards showing a player count higher than the actual number of players. Shuffle the two decks separately and deal each player **1 Corporate and 1 Personal Objective card**, kept hidden. (You receive Objectives before the Character draft on purpose — pick a Character suited to your Objective.)
+17. Character draft: shuffle the Character draft cards. Player 1 draws 2, reveals them, keeps 1, and shuffles the other back; then Player 2, Player 3, etc. You may only control the Character you drafted. Return unused draft cards to the box.
+18. Each player takes: (A) their Character board; (B) their miniature (in a colored plastic ring), placed in the **Hibernatorium**; (C) their 10-card Action deck, shuffled, face down at the left of their board; (D) their Starting Item card (Weapon) in one of their two Hand slots, loaded with Ammo markers equal to that Weapon's Ammo capacity; (E) their 2 Quest Items, horizontal side up, next to the board (NOT active at the start — they unlock via mini-quests). Return unused Character boards to the box. (F) Leave a spot for your Action discard pile — used Action cards and Contamination cards go there.
+19. Player 1 takes the First Player token.
+20. Place the **blue Character Corpse token in the Hibernatorium** — a dead crew member. During the game treat it as a Character Corpse Object; the blue token is always assigned to the first dead body found on the ship.
+
+### Discard piles
+
+Leave a discard space next to the Items, Event, Intruder Attack, and Serious Wound decks. Each Character board has a marked Action discard spot; Contamination cards go to the player's Action discard pile until removed from the game. All cards are discarded face up; markers return to their appropriate pools.
 
 ## Turn Structure
 
-The game is played over consecutive turns. Each turn has two phases:
+Each turn has two phases:
 
-### Phase I: Player Phase
+### I: Player Phase
 
-**Step 1 -- Draw Action Cards:** All players draw from their Action deck until they have 5 cards in hand. If the Action deck is empty, shuffle the discard pile to form a new deck, then draw.
+1. **Draw Action cards** — every player draws from their Action deck up to a hand of **5 cards**. Whenever you must draw and your Action deck is empty, shuffle your discard pile into a new Action deck, then draw.
+2. **First Player token** — after drawing, pass the token to the player on the left (do NOT pass it on the first turn of the game). Whenever players do anything "in order," start with the First Player and go clockwise.
+3. **Player rounds** — starting with the First Player and going clockwise, each player performs a **round of 2 Actions**. Series of rounds repeat as long as at least one player has not passed. Rules:
+   - If you cannot perform any Actions, or choose not to, you must pass.
+   - If you perform only 1 Action instead of two, you must pass.
+   - Once you pass you may perform NO further Actions this Phase (flip your Help card to its "Pass" side).
+   - When passing, you may discard any number of cards from your hand.
+   - A Character who **ends their round in a Room with a Fire marker suffers 1 Light Wound** (every round; only after finishing their own round — passing players take it once at the end of their round and no more that turn).
 
-**Step 2 -- Pass First Player Token:** The current holder passes the First Player token to the player on their left. Exception: Do not pass the token on the first turn of the game.
+### II: Event Phase
 
-**Step 3 -- Player Rounds:** Starting with the First Player and going clockwise, each player performs a round of exactly 2 Actions. After all players have taken a round (or passed), another series of rounds begins. This continues as long as at least 1 player has not passed.
-
-- A player who cannot or chooses not to perform any Actions must pass.
-- A player who performs only 1 Action instead of 2 must pass.
-- Once a player has passed, they cannot perform any more Actions for the rest of this Player Phase.
-- When passing, a player may discard any number of cards from their hand. Flip the Help card to the "Pass" side.
-- If a Character ends their round in a Room with a Fire marker, they suffer 1 Light Wound.
-
-### Phase II: Event Phase
-
-**Step 4 -- Time Track:** Move the Time marker 1 space to the right. If the Self-Destruct Sequence is active, also move its marker 1 space to the right.
-
-**Step 5 -- Intruder Attack:** Each Intruder in Combat with a Character attacks that Character.
-
-**Step 6 -- Fire Damage:** Each Intruder in a Room with a Fire marker suffers 1 Injury.
-
-**Step 7 -- Resolve Event Card:** Draw and resolve 1 Event card:
-- **Intruder Movement:** All Intruders matching the symbol on the Event card that are NOT in a Room with any Characters move through the Corridor with the number shown on the card. If the number indicates a Technical Corridor, the Intruder is removed from the board and its token returns to the Intruder bag.
-- **Event Effect:** Resolve the text effect on the card, then discard it (unless the card says otherwise).
-
-**Step 8 -- Intruder Bag Development:** Draw 1 Intruder token from the bag:
-- **Larva:** Remove this token from the bag. Add 1 Adult token to the bag.
-- **Creeper:** Remove this token from the bag. Add 1 Breeder token to the bag.
-- **Adult:** All players roll for Noise in order (skip players in Combat). Return the Adult token to the bag.
-- **Breeder:** All players roll for Noise in order (skip players in Combat). Return the Breeder token to the bag.
-- **Queen:** If any Characters are in the Nest Room, place the Queen miniature there and resolve an Encounter. Otherwise, add 1 Egg token to the Intruder board. Return the Queen token to the bag.
-- **Blank:** Add 1 Adult token to the bag (if available; otherwise nothing happens). Return the Blank token to the bag.
-
-**Step 9 -- End of Turn:** All Encounters, Surprise Attacks, etc. from Step 8 must be fully resolved before starting the next turn.
+4. **Time Track** — move the Time marker 1 space right. If the Self-Destruct Sequence is active, also move the Self-Destruct marker 1 space right.
+5. **Intruder Attack** — each Intruder in Combat with a Character attacks them.
+6. **Fire Damage** — each Intruder in a Room with a Fire marker suffers 1 Injury.
+7. **Resolve 1 Event card**:
+   - *Intruder movement:* all Intruders showing the card's Intruder symbol that are NOT in a Room with any Characters move to a neighboring Room through the Corridor matching the number on the card. If the number indicates a Technical Corridor, remove that Intruder's miniature from the board and put its token back in the Intruder bag.
+   - *Event effect:* after the movement step, resolve the effect described on the card.
+   - Then discard the Event card (unless the card says otherwise). If the Event deck ever runs out (rare), shuffle the Event discards into a new deck.
+8. **Intruder bag development** — draw 1 Intruder token from the bag:
+   - **Larva** — remove this token from the bag; add 1 Adult token to the bag.
+   - **Creeper** — remove this token from the bag; add 1 Breeder token to the bag.
+   - **Adult** — all players roll for Noise in order (a player whose Character is in Combat does not roll). Return the token to the bag.
+   - **Breeder** — same as Adult: all players roll for Noise in order (skip players in Combat). Return the token to the bag.
+   - **Queen** — if any Characters are in the Nest Room, place the Queen miniature there and resolve an Encounter. If no Characters are in the Nest (or it hasn't been discovered), add 1 Egg token to the Intruder board. Return the token to the bag.
+   - **Blank** — add 1 Adult Intruder token to the bag (if none are available, nothing happens). Return the Blank token to the bag.
+9. **End of the turn** — a new turn starts. The turn only ends once the bag development step is fully resolved (all Encounters, Surprise Attacks, etc. played out).
 
 ## Actions
 
-Each round, a player performs 2 Actions (or fewer, then passes). There are 4 sources of Actions:
+There are 4 groups of Actions: Basic Actions, Actions from Action cards, Actions from Item cards, and Actions from Room tiles.
 
-### Action Costs
+**Action Cost:** each Action's icon shows a number — discard exactly that many Action cards from your hand (face up) to pay. **Contamination cards are not Action cards: they can never be discarded to pay any Action cost.**
 
-Each Action displays a cost icon with a number. To pay the cost, discard that many Action cards from your hand. Contamination cards cannot be used to pay Action costs.
+**In Combat / Out of Combat:** some Actions and Items are marked "In Combat only" or "Out of Combat only." You are **in Combat** whenever an Intruder is in your Room (Eggs do not count as Intruders). Unmarked Actions work in or out of Combat.
 
-### Basic Actions (available to all Characters)
+### Basic Actions (available to every Character; cost 1 Action card, except Careful Movement which costs 2)
 
-**Movement (Cost 1):** Move your Character to a neighboring Room (connected by 1 Corridor). After entering:
-1. If the Room is unexplored (face down), flip it face up and reveal the Exploration token.
-2. If the Room is empty (no Characters or Intruders), perform a Noise roll. If someone is already in the Room, skip the Noise roll.
-- Closed Doors block movement through a Corridor.
-- To leave a Room containing an Intruder, you must use the Escape rule.
+- **Movement** — move your miniature to a neighboring Room, applying all Movement rules (see below).
+- **Careful Movement** (cost 2) — as Movement, but instead of a Noise roll after moving, place a Noise marker in a chosen Corridor connected to the Room you enter. You cannot Carefully Move if all Corridors connected to the destination already hold Noise markers, and you cannot use it while in Combat.
+- **Shoot** — attack an Intruder in your Room with a Weapon in your Hand, discarding 1 Ammo from that Weapon's card.
+- **Melee Attack** — attack an Intruder in your Room with bare hands or improvised means.
+- **Pick Up Heavy Object** — pick up 1 Heavy Object in your Room (Character Corpse, Intruder Carcass, or Intruder Egg). (Heavy Items found by Searching do not require this Action — it applies to Objects only.)
+- **Trade** — trade with all Characters in your Room. Players show each other any Item cards/Objects they wish; exchanges happen if both parties agree. Only the initiator spends the Action. You may give an Item/Object for nothing. **Characters cannot exchange Ammo.**
+- **Craft Item** — discard 2 Item cards showing the appropriate blue Craft (Component) icons to take the Crafted Item card showing those same icons in gray. A Crafted Item cannot be built if its card is not available, even with the right components.
 
-**Careful Movement (Cost 2, Out of Combat Only):** Works like Movement, but instead of a Noise roll, place a Noise marker in a chosen Corridor connected to the destination Room. Cannot be performed if all Corridors connected to the destination already have Noise markers.
+### Actions from Action cards
 
-**Shoot (Cost 1, In Combat Only):** Attack an Intruder in your Room with a Weapon in your Hand slot. Discard 1 Ammo from the Weapon, then roll the Combat die:
-- Miss: No effect.
-- 1 Hit (small symbol): Hits only Larvae or Creepers (1 Injury). Misses larger Intruders.
-- 1 Hit (medium symbol): Hits Larvae, Creepers, or Adults (1 Injury). Misses Breeders and Queen.
-- 1 Hit (large symbol): Hits any Intruder (1 Injury).
-- 2 Hits: Deals 2 Injuries to any Intruder.
-Some Weapons have special rules modifying the Shoot action.
+Each Character has a partially unique deck of 10 Action cards. To use one, discard that card face up **and** pay its cost by discarding the required number of additional Action cards. If a card has two sections separated by "OR," choose one.
 
-**Melee Attack (Cost 1, In Combat Only):** Attack an Intruder with bare hands/improvised weapons.
-1. Draw 1 Contamination card, place in your Action discard pile.
-2. Choose 1 Intruder target.
-3. Roll the Combat die:
-   - Miss: You suffer 1 Serious Wound.
-   - 1 Hit (small): Hits Larvae/Creepers (1 Injury); otherwise miss and 1 Serious Wound.
-   - 1 Hit (medium): Hits Larvae/Creepers/Adults (1 Injury); otherwise miss and 1 Serious Wound.
-   - 1 Hit (large): 1 Injury to any Intruder.
-   - 2 Hits: 1 Injury (not 2) to any Intruder.
+### Actions from Item cards
 
-**Pick Up Heavy Object (Cost 1):** Pick up 1 Heavy Object (Character Corpse, Intruder Carcass, or Intruder Egg) in your Room. Place it in a Hand slot.
+Some Items grant Actions, described on their cards; discard the required number of Action cards to perform them. "One Use Only" Items are discarded after use.
 
-**Trade (Cost 1, Out of Combat Only):** Initiate a trade with all Characters in the same Room. Players may show Item cards and Objects, and exchange them if both parties agree. A player can give items without receiving anything. Characters cannot exchange Ammo.
+### Room Actions
 
-**Craft Item (Cost 1):** Discard 2 Item cards showing the matching blue Craft icons to gain the corresponding Crafted Item card (with grey icons). The 4 Crafted Items are:
-- Antidote
-- Taser
-- Flamethrower
-- Molotov Cocktail
-A Crafted Item cannot be built if its card is unavailable.
+Most Rooms grant a specific Action (see Player Reference). **Cost: 2 Action cards.** You must be in the Room, you cannot perform a Room Action while in Combat, and you cannot perform one in a Room with a Malfunction marker.
 
-### Action Card Actions
+### Movement, Rooms, and Corridors
 
-Each Character has a unique deck of 10 Action cards. To use one, discard the card from your hand and pay its cost (additional Action cards discarded). If a card has two sections separated by [OR], choose one.
+- Characters and Intruders may only occupy Rooms (Special Rooms — Hibernatorium, Cockpit, Engines — count as Rooms; Escape Pod tokens are the only exception for Characters). Corridors connect Rooms; no one may ever stop in a Corridor. Effects of moving through a Corridor are resolved AFTER moving into the Room.
+- Two Rooms are **neighboring** when directly connected by 1 Corridor. A Closed Door blocks the "neighboring" status for players' Movement.
+- **After entering a Room:** (1) if the Room tile was unexplored (face down), flip it face up and reveal its Exploration token; (2) if the Room is empty (no Characters, no Intruders), perform a **Noise roll**. If anyone — Character or Intruder — is already there, do NOT roll for Noise.
+- To leave a Room containing an Intruder you must use the **Escape** rule (see Special Rules).
+- During Movement, Special Rooms are treated as already-explored Rooms.
 
-### Room Actions (Cost 2)
+### Exploration tokens
 
-Most Rooms allow a specific Action. A Character must be in the Room, not in Combat, and the Room must not have a Malfunction marker. See the Room descriptions below.
+The token's front shows (1) a number = the amount of Items obtainable in that Room, and (2) a special effect symbol.
 
-### Item Card Actions
+1. **Set the Item count:** rotate the Room tile until the token's number faces the Item Counter symbol printed on the board next to the slot. (Do not set an Item count for the Nest or the Room Covered In Slime.)
+2. **Resolve the effect:**
+   - **Silence** — nothing happens; do NOT perform a Noise roll for this Movement. If your Character has a Slime marker, resolve "Danger" instead.
+   - **Danger** — do NOT perform a Noise roll for this Movement. If there is an Intruder in a neighboring Room (not in Combat with any Character), move it into this Room — move ALL eligible Intruders. If there are none (or they are all in Combat), place a Noise marker in every Corridor connected to this Room that lacks one (counting Technical Corridors if the Room has an Entrance).
+   - **Slime** — place a Slime (Status) marker on your Character board.
+   - **Fire** — place a Fire marker in this Room.
+   - **Malfunction** — place a Malfunction marker in this Room.
+   - **Doors** — place a Door token in the Corridor by which you entered.
 
-Some Item cards provide Actions. Their cost and effects are described on the cards. "One Use Only" items are discarded after use.
+After resolving an Exploration token, remove it from the game (each is resolved only once, on first entry).
 
-## Scoring / Victory Conditions
+### Noise roll
 
-### Winning the Game
+Roll a Noise die (d10) and resolve:
 
-A player wins if they meet both conditions:
-1. **Fulfill their chosen Objective** (the Objective card kept after the First Encounter).
-2. **Survive** -- either:
-   - Hibernate in the Hibernatorium (the ship must survive, have at least 2 working engines, and be heading to Earth -- or Mars if the player's Objective requires it), OR
-   - Evacuate in a launched Escape Pod (always treated as arriving on Earth).
+- **Result 1, 2, 3, or 4:** place a Noise marker in the Corridor with that number connected to the Room you entered (counting Technical Corridors if the Room has an Entrance). **A Corridor may never hold more than 1 Noise marker — if instructed to place a marker where one already is, resolve an Encounter instead.**
+- **Danger:** if there is an Intruder in a neighboring Room (and it is not in Combat with any Character), move it into this Room — all eligible Intruders move. If there are no Intruders in neighboring Rooms (or they are in Combat), place a Noise marker in each connected Corridor that lacks one (counting Technical Corridors if there is an Entrance).
+- **Silence:** nothing happens; no marker. If your Character has a Slime marker, resolve "Danger" instead.
 
-Multiple players can win. Other players achieving their goals is irrelevant to your victory.
-
-### End of Game Triggers
-
-The game ends when any of these occur:
-
-1. **Time Track reaches the final red space:** The ship jumps to hyperspace. All Characters on board who are not hibernating die from g-force. Intruders are unaffected.
-2. **Self-Destruct marker reaches the skull space, OR a 9th Fire marker or 9th Malfunction marker would be placed:** The ship explodes. All Characters on board (awake and hibernating) die. All Intruders on board also die.
-3. **The last alive, non-hibernating Character on board dies, hibernates, or uses an Escape Pod:** If Self-Destruct is active, move its marker to the final red space (ship explodes). Otherwise, move the Time marker to the final red space (ship jumps).
-
-### Victory Check (performed at game end if at least 1 Character survived)
-
-**1) Engines Check:** Reveal all top Engine tokens. If 2 or 3 show Damaged status, the ship explodes -- all hibernating Characters die. Everything on board (including Intruders) also dies. A Malfunction marker in an Engine Room does NOT make a Working engine count as Damaged.
-
-**2) Coordinates Check:** Reveal the Coordinates card and check the Destination marker position. If the ship is not headed to Earth, all Characters in the Hibernatorium die. Exception: Characters with the Quarantine Objective survive if the destination is Mars. Intruders are unaffected. The ship is not destroyed.
-
-**3) Contamination Check:** Each surviving Character (hibernating or in an Escape Pod) checks their Contamination cards:
-- A) Scan all Contamination cards in your Action deck, discard pile, and hand.
-- B) If at least 1 is "INFECTED," shuffle all your cards (Action and Contamination) into a new deck, then draw the top 4 cards. If at least 1 Contamination card appears among those 4, your Character dies. If none appear, you survive.
-- If there is a Larva on your Character board, skip step A and go directly to step B.
-
-**4) Objective Check:** Each surviving Character reveals their Objective card. If all requirements are met, that player wins.
-
-### Ending the Game Early
-
-If a Character uses an Escape Pod, hibernates, or dies, they can no longer actively participate. At game end, surviving Characters check their Objectives. The first player to die may optionally continue as the Intruder player.
-
-## Special Rules & Edge Cases
-
-### Critical Gameplay Moments
-
-**First Encounter:** When the first Intruder miniature (of any type) appears on the board, every player immediately chooses 1 of their 2 Objective cards and removes the other face down from the game. Eggs are not Intruders for this purpose.
-
-**First Character Death:** When the first Character dies, all Escape Pods are automatically unlocked (flipped to Unlocked side). They may be locked/unlocked normally afterward. The dead player may optionally play as the Intruder.
-
-**Hibernation Chambers Open:** When the Time Track reaches any blue space, the Hibernation chambers open. Characters cannot enter them before this point.
-
-**Self-Destruct Critical:** When the Self-Destruct Track reaches any yellow space, all Escape Pods are automatically unlocked and the Self-Destruct sequence can no longer be stopped.
-
-### Movement and Exploration
-
-**Exploration Tokens:** When entering an unexplored Room, flip the Room tile and reveal the Exploration token. The token shows:
-1. A number indicating Items available in the Room (rotate the tile so the number faces the Item Counter on the board).
-2. A special effect:
-   - **Silence:** Nothing happens. No Noise roll for this movement. (If the Character has a Slime marker, resolve "Danger" instead.)
-   - **Danger:** No Noise roll. If any Intruder in a neighboring Room is not in Combat, move it to this Room (all eligible Intruders move). If no eligible Intruders exist, place a Noise marker in every connected Corridor that does not already have one.
-   - **Slime:** Place a Slime Status marker on the Character board.
-   - **Fire:** Place a Fire marker in this Room.
-   - **Malfunction:** Place a Malfunction marker in this Room.
-   - **Doors:** Place a Door token (Closed) in the Corridor you entered through.
-After resolving, remove the Exploration token from the game.
-
-**Noise Roll:** Roll a Noise die when entering an empty Room (no Characters or Intruders present):
-- **Result 1-4:** Place a Noise marker in the Corridor with the matching number connected to the Room you entered (including Technical Corridors if there is an Entrance). If that Corridor already has a Noise marker, resolve an Encounter instead.
-- **Danger symbol:** If there is an Intruder in a neighboring Room not in Combat, move it to this Room (all eligible move). Otherwise, place a Noise marker in every connected Corridor without one.
-- **Silence symbol:** Nothing happens. (If the Character has a Slime marker, resolve "Danger" instead.)
-
-**Noise Markers:** A Corridor may never hold more than 1 Noise marker. Noise markers in the Technical Corridors space count as being in every Technical Corridors Entrance on the board. Noise markers are unaffected by Door tokens.
+Remember: never roll for Noise when moving into a Room containing another Character or an Intruder. (Moving in groups avoids Noise rolls but is risky: some game effects make ALL Characters roll for Noise, and groups sharing a Room can be in trouble.)
 
 ### Technical Corridors
 
-- Characters cannot enter Technical Corridors (exceptions: Mechanic's Technical Corridors Action card, Technical Corridor Plans Item card).
-- If a Noise roll result points to a Technical Corridors Entrance, place the marker on the Technical Corridors space.
-- If an Intruder moves to a Technical Corridors Entrance, it disappears: discard all its Injury markers, return its token to the bag, remove its miniature. Any Noise marker on the Technical Corridors space remains.
+- Some Rooms have Technical Corridors Entrances, all linked to the single Technical Corridors space. Characters can never use them (the only exceptions: the Mechanic's "Technical Corridors" Action card and the "Technical Corridor Plans" Item card).
+- If a Noise marker's number leads to a Technical Corridors Entrance, place the marker on the Technical Corridors space. A Noise marker there is treated as if it were in **every** Technical Corridors Entrance on the whole board. The 1-marker limit applies: placing a second one there resolves an Encounter instead.
 - Door tokens can never be placed in Technical Corridors.
+- If an Intruder moves to a Technical Corridors Entrance, it disappears into the ducts: discard all its Injury markers, return its token to the Intruder bag, and remove its miniature from the board. A Noise marker on the Technical Corridors space is NOT removed by this.
 
-### Doors
+## Scoring / Victory Conditions
 
-- **Open:** No Door token in the Corridor. Default at game start.
-- **Closed:** Standing Door token. Blocks Character and Intruder movement. When an Intruder tries to move through a Closed Door, it does not move but destroys the Door instead. If multiple Intruders move from the same Room simultaneously, they all destroy the Door and stay.
-- **Destroyed:** Lying Door token. Movement allowed. A Destroyed Door can never be Closed again (exception: Plasma Torch Item).
-- If a Noise roll causes an Intruder to come from a Corridor with a Closed Door, the Intruder appears regardless.
-- If no Door tokens remain in the pool, take any Door token from the board.
+### Winning
 
-### Encounters and Combat
+There is no scoring. A player wins if, at the end of the game, they meet BOTH conditions:
 
-**Encounter:** Triggered when an Intruder token is drawn from the bag and placed in a Room with a Character (from Noise rolls, Events, etc.). An Intruder moving into a Character's Room is NOT an Encounter.
+1. **Fulfill their Objective** (the single Objective card they kept at the First Encounter).
+2. **Survive**, meaning one of: **(a)** hibernate in the Hibernatorium with the ship still functioning and jumping to Earth, or **(b)** evacuate in an Escape Pod. (Some Objectives instead require redirecting the ship — e.g., to Mars.)
 
-Encounter resolution:
-1. Remove all Noise markers from Corridors connected to this Room (including Technical Corridors).
-2. Draw 1 Intruder token from the bag.
-3. Place the corresponding Intruder miniature in the Room.
-4. Compare the number on the Intruder token to the number of cards in the player's hand (Action + Contamination). If the player has fewer cards, a Surprise Attack occurs (resolve an Intruder Attack). If equal or more, no Surprise Attack.
-5. Set the drawn token aside.
+Multiple players can win; other players' success is irrelevant to yours.
 
-**Blank Token in Encounter:** Place a Noise marker in each Corridor connected to the Room. If the Blank was the last token in the bag, add 1 Adult token (if available) and return the Blank. The Encounter ends (no Intruder appears).
+### End of the game
 
-**Combat:** Whenever a Character and an Intruder are in the same Room. Some Actions have "Out of Combat Only" restrictions.
+The game ends when any of these occurs:
 
-**Escape (Cost 1, special Movement):** To leave a Room with an Intruder, resolve an Intruder Attack before moving. If multiple Intruders are present, resolve a separate attack for each. If you survive, move to the neighboring Room and resolve movement normally (Exploration, Noise roll). If you die, your Corpse stays in the Room you tried to leave.
+- **The Time marker reaches the final red space of the Time Track** — the ship jumps to hyperspace immediately; every Character on board who is not hibernating dies from g-force. Intruders are unharmed by the hyperjump (so objectives like killing the Queen/a Breeder or destroying the Nest fail if not already done).
+- **The Self-Destruct marker reaches the final red ("skull") space of its Track, OR you are instructed to place a 9th Fire marker, OR a 9th Malfunction marker** — the ship explodes / loses hull integrity: ALL Characters on board (awake and hibernated) die, and everything else aboard dies too, including Intruders (relevant to some Objectives).
+- **The last alive, non-hibernating Character on board dies, hibernates, or uses an Escape Pod.** Then: if the Self-Destruct sequence was active, move its marker to its final red space; if not, move the Time marker to its final red space — and resolve those effects as above.
 
-### Intruder Attacks
+### Victory Check (run if at least 1 Character survived — hibernating or escaped)
 
-Intruder Attacks occur during: Surprise Attacks, Event Phase Step 5, and Character Escapes.
+Resolve in this order:
 
-1. Target selection: The Character with the fewest cards in hand. Ties go to the Character with (or nearest to) the First Player token. Surprise Attacks target the triggering Character. Escape attacks target the escaping Character.
-2. Draw 1 Intruder Attack card. If the card displays a symbol matching the attacking Intruder type, resolve the effect. Otherwise, the attack misses. Ignore the "blood" icon during attacks.
-3. Discard the card. If the deck runs out, reshuffle the discard pile.
+1. **Engines check:** reveal the top Engine token of all three Engines. If **2 or 3** show Damaged, the ship explodes: all hibernating Characters die, and everything else aboard (including Intruders) dies. (A Malfunction marker in an Engine Room only disables the Room Action — it never makes a Working Engine count as Damaged.)
+2. **Coordinates check:** reveal the Coordinates card and check the Destination marker's space. If the ship is not headed to Earth, all Characters asleep in the Hibernatorium die (the ship itself is not destroyed, and Intruders do not die). Exception: a Character with the **Quarantine** Objective (which requires jumping to Mars) survives hibernation if the destination is Mars.
+3. **Contamination check:** each surviving Character (hibernating or evacuated) checks their Contamination cards: **(A)** Scan every Contamination card in their Action deck, discard pile, and hand; **(B)** if at least 1 card is "INFECTED," shuffle ALL their cards (Action + Contamination) into a new deck and draw the top 4 — if at least 1 Contamination card (Infected or not) is among them, the Character dies; otherwise they survive. **If there is a Larva on the Character's board, skip step A and resolve step B directly.**
+4. **Objective check:** every Character still alive reveals their Objective card; they win if all its requirements are met.
 
-**Larva Infest:** Larva attacks do not draw Intruder Attack cards. Instead: remove the Larva from the board, place it on the target's Character board, and give the target 1 Contamination card.
+### Leaving the game early
 
-### Intruder Injuries and Death
+A Character who escapes, hibernates, or dies no longer actively participates and can only spectate; their victory is determined at the end of the game. Optionally, the first player whose Character dies may continue playing as the Intruders (see Special Rules).
 
-When an Intruder suffers Injuries, place Injury markers on its base, then check the Injury Effect:
+### Objective types (from the rulebook's guidance)
 
-- **Larva/Egg:** 1 Injury kills them. Remove the miniature/token.
-- **Creeper/Adult:** Draw 1 Intruder Attack card. Check only the "blood" icon number. If the number is equal to or lower than the current Injury markers, the Intruder is killed -- remove the miniature, place an Intruder Carcass token. If higher, the Intruder survives.
-- **Breeder/Queen:** Draw 2 Intruder Attack cards. Add their "blood" icon numbers together. Compare the total to Injury markers. Same kill/survive logic.
+- Regardless of Objective, **your Character must survive** (Escape Pod or hibernation).
+- *"Player X's Character cannot survive"* — that Character must simply be dead at game's end (not hibernated, not escaped); you don't have to kill them with your own Actions.
+- *"Your Character is the only survivor"* — no other Character may survive.
+- *"Send the Signal"* — perform the Comms Room Action (a Comms Room is always aboard).
+- *"The ship must reach Earth/Mars"* — the right Coordinates must be set in the Cockpit AND at least 2 of the 3 Engines must be Working.
+- *"Discover a Weakness"* — a corresponding Object must be researched in the Laboratory by anyone before game end.
+- *"Destroy the Nest"* — no Intruder Eggs may remain in it.
 
-**Intruder Retreat:** If any drawn Intruder Attack card (during Injury Effect check) shows a Retreat arrow in the "blood" icon, the Intruder flees. Draw an Event card and move the Intruder through the Corridor with the matching number, then discard the Event card.
+## Special Rules & Edge Cases
 
-**Adult Intruder Overflow:** If you need to place an Adult Intruder but all 8 models are on the board, remove all Adults not in Combat (return tokens to bag), then place the new Adult.
+### Critical gameplay moments
 
-### Character Wounds and Death
+- **First Encounter:** the first time an Intruder miniature (of any type) appears on the board, every player immediately chooses 1 of their 2 Objective cards and removes the other from the game face down (unseen by anyone — players may never look at others' removed Objectives). Then the triggering Encounter is resolved. Eggs are not Intruders and do not trigger this.
+- **First dead Character:** all Escape Pods are automatically Unlocked (flip tokens). For the rest of the game they may be Locked/Unlocked normally (e.g., via the Hatch Control System). The first dead player may optionally continue as the Intruder player.
+- **Hibernation opens:** Characters CANNOT hibernate until the Time marker reaches any **blue** space of the Time Track.
+- **Self-Destruct point of no return:** when the Self-Destruct marker reaches any **yellow** space, all Escape Pods unlock automatically (they can be Locked again) and the sequence can no longer be stopped.
 
-**Light Wounds:** Tracked on the Character board's Light Wound Track (2 spaces). First Light Wound places a marker on the upper space. Second moves it to the lower space. A third Light Wound converts to a Serious Wound (discard the Light Wound marker).
+### Encounters
 
-**Serious Wounds:** Draw 1 Serious Wound card and place it next to your Character board. Each type has a unique ongoing effect. Multiple copies of the same Serious Wound do not stack effects but are harder to remove. A Character with 3 Serious Wounds who suffers any additional Wound (Light or Serious) dies instantly.
+An **Encounter** is any instance of an Intruder appearing (via an Intruder-bag draw) in a Room where a Character is present. Some Event cards (e.g., Hatching) and Intruder Attack cards can also trigger Encounters. An Intruder merely *moving* into a Room with a Character is NOT an Encounter (they are simply in Combat). Resolve:
 
-**Character Death:** Remove the miniature, place a Character Corpse token in the Room. The Character drops all Heavy Objects in that Room.
+1. Discard ALL Noise markers from all Corridors connected to the Room (including Technical Corridors if there's an Entrance).
+2. Draw 1 Intruder token from the bag (symbol on one side, number on the other).
+3. Place the matching Intruder miniature in the Room.
+4. Compare the token's number to the number of cards in the triggering player's hand (Action AND Contamination cards both count). **Fewer cards than the number → Surprise Attack** (an Intruder Attack against that Character). Equal or more → nothing happens.
 
-**Dressing Wounds:** Flip a Serious Wound card face down. Its effect is ignored, but it still counts toward the 3-wound death limit.
+Set the drawn token aside — it may return to the bag if an Intruder of that type later hides by entering the Technical Corridors.
 
-**Healing:** Remove a Light Wound marker, or discard a Dressed (face-down) Serious Wound card entirely.
+**Blank token in an Encounter:** place a Noise marker in each Corridor connected to that Room. If the Blank was the LAST token in the bag: add 1 Adult token to the bag (if any are available; otherwise nothing). Return the Blank token to the bag. The Encounter ends (no miniature appears).
 
-### Contamination Cards
+**Adult overflow:** if you must place an Adult Intruder but all 8 models are on the board, the Adults retreat — remove all Adult models NOT in Combat and return their tokens to the bag (if possible), then place an Adult model in the Encounter Room.
 
-- Drawn from the Contamination deck and placed on the player's Action discard pile.
-- Mixed into the Action deck. They count as cards in hand but cannot pay Action costs.
-- Each card is either INFECTED or not (hidden by colored patterns; revealed only by Scanning with the red foil Scanner).
-- **Scanning:** Place the Scanner's red foil over the coded field. The word "INFECTED" may appear.
-  - If INFECTED: Place a Larva miniature on the Character board (do not remove the card). If a Larva is already on the board, the Character dies and place 1 Creeper in the Room.
-  - If not INFECTED: Various Actions may allow removal of non-Infected cards.
-- Ways to Scan/remove Contamination: Rest Action card, Canteen Room Action, Shower Room Action, Surgery Room Action, Antidote Item.
+**Intruders in unexplored Rooms:** if an Intruder ends its movement in an unexplored Room, do not remove it and do not reveal the Room or its Exploration token.
 
-### Intruder Weakness Cards
+### Combat
 
-3 random Weakness cards are placed face down on the Intruder board during setup, corresponding to 3 Object types (Character Corpse, Intruder Egg, Intruder Carcass). To discover a Weakness, bring the corresponding Object to the Laboratory and perform its Room Action. Discovered Weaknesses are flipped face up and modify Intruder rules for all players.
+Whenever a Character and an Intruder share a Room, they are in Combat. Characters attack or Escape during their rounds; Intruders attack during the Event Phase.
 
-### Items and Inventory
+**Shoot (cost 1):** requires a Weapon in Hand with at least 1 Ammo. (1) Choose a Weapon and 1 target Intruder in your Room; (2) discard 1 Ammo from the Weapon card; (3) roll the Combat die. The die's results (per the rulebook; die faces are symbols): one result misses; one deals 1 Injury only if the target is a Larva or Creeper (otherwise miss); one deals 1 Injury if the target is a Larva, Creeper, or Adult (otherwise miss); one deals 1 Injury to any target; one deals 2 Injuries to any target. Some Weapons modify Shooting (e.g., the Scientist's Pistol treats a 2-Hit roll as 1 Hit).
 
-**Normal Items:** Kept secretly in the player's Inventory (plastic card holder). Other players can see card backs/colors but not the specific items. No limit to Inventory size.
+**Melee Attack (cost 1):** (1) draw 1 Contamination card and add it to your Action discard pile; (2) choose 1 target Intruder in your Room; (3) roll the Combat die. Results mirror Shooting with two changes: **any miss also inflicts 1 Serious Wound on your Character**, and the 2-Injury result deals only 1 Injury (in melee, rolls of 2 Hits are treated as 1 Hit).
 
-**Heavy Items (Hand icon):** Cannot go in the Inventory. Must be placed in one of 2 Hand slots on the Character board. A Character can carry at most 2 Heavy Items/Objects. To take a new one when both slots are full, you must Drop one first.
+**Intruder Injuries and death:** place Injury markers on the Intruder's base, then check the Injury Effect:
+- **Larva or Egg:** 1 Injury kills it — remove the miniature.
+- **Creeper or Adult:** draw 1 Intruder Attack card and read ONLY the "blood" icon number. If it is **equal to or lower than** the Intruder's current Injury markers, it dies — remove the miniature and place an Intruder Carcass token in the Room. If higher, it lives.
+- **Breeder or Queen:** draw 2 Intruder Attack cards, ADD their blood values, and compare the total to the Injury markers the same way.
+- The blood icon represents the Intruder's current endurance and varies with each check. Two "Five Injuries" tokens help track big Intruders' wounds. Carcass tokens are placed for any dead Intruder EXCEPT Larvae.
 
-**Heavy Objects:** Intruder Eggs, Intruder Carcasses, Character Corpses. These are tokens, not cards. They occupy a Hand slot like Heavy Items. Used for Lab research.
+**Intruder Retreat:** during an Injury Effect check, if any drawn card's blood icon contains the Retreat arrow, the Intruder flees: draw an Event card and move the Intruder through the Corridor whose number appears in that card's Intruder movement section, then discard that Event card. The Queen and Breeders retreat if EITHER of their 2 drawn cards shows the Retreat symbol.
 
-**Weapons:** Each Character starts with 1 Starting Weapon (loaded to capacity). Weapons found by Searching come loaded with 1 Ammo. A Weapon can never exceed its printed Ammo capacity.
+**Character Escape:** to leave a Room containing Intruders, perform a Movement Action (cost 1) to a neighboring Room (explored or unexplored). BEFORE moving, resolve an Intruder Attack — one separate Attack per Intruder in the Room. If you survive, complete the move (Noise roll if the destination is empty; explore normally if unexplored). If you die, your Corpse stays in the Room you tried to Escape from. Some Actions (e.g., Suppressive Fire, Covering Fire) modify the Escape rule.
 
-**Quest Items:** Start the game horizontal (inactive/quest side up). When the quest condition is met, flip to vertical (active) and treat as a normal Item.
+**Intruder Attack** (happens on a Surprise Attack, in the Event Phase's Intruder Attack step, and on a Character's Escape):
+1. Choose the target: the Intruder attacks a Character in its Room — with several Characters present, the one whose player has the FEWEST Action cards in hand; on a tie, the Character with the First Player token (or the next player in turn order). A Surprise Attack targets the Character who triggered the Encounter; an Escape attack targets the escaper.
+2. Draw 1 Intruder Attack card: if it shows a symbol matching the attacking Intruder's type, resolve the card's effect; otherwise the attack misses. Ignore the blood icon during attacks. Discard the card to the Intruder Attack discard pile; if the deck runs out, reshuffle the discard pile into a new deck.
 
-**Drop:** A Character may freely Drop any Item or Object during their turn without using an Action. Dropped Objects remain in the Room. Dropped Item cards are discarded.
+**Infest (Larva attack):** a Larva does not draw Attack cards. Instead: remove the Larva miniature from the board and place it on the target's Character board (on the miniature picture), and the target gains 1 Contamination card.
 
-**Duct Tape:** Allows combining 2 Heavy Items into 1 Hand slot (does not apply to Objects).
+### Contamination cards and Infection
 
-### Searching
+- When a Character "gets a Contamination card," draw it from the Contamination deck and place it **on top of their Action discard pile**. It then cycles into their deck and hand like an Action card, but grants no Actions and cannot pay Action costs.
+- Each Contamination card hides whether you are INFECTED, revealed only with the Scanner: place the Scanner's red foil over the card's coded text field — the word "INFECTED" may appear in one line (beware similar-looking words). Unscanned cards remain unknown until the end of the game and can lose you the game at the Contamination check.
+- Scanning happens via specific effects (e.g., Rest Action card, Canteen/Shower/Surgery Room Actions, the Antidote Item; some Event cards also force Scans); each effect describes its own procedure.
+- **If a Scan shows INFECTED:** place a Larva miniature on your Character board and do NOT remove that Contamination card. **If a Larva is already on your board, your Character dies — and place 1 Creeper in the Room where you died.**
+- When a rule removes a Contamination card, remove it from the game.
 
-Three Item decks (Red/Military, Yellow/Technical, Green/Medical) can be searched. The item color found must match the Room color. White Rooms allow drawing from any deck. Each Search reduces the Room's Item Counter by 1. When the counter reaches 0, the Room cannot be searched further.
+### Character Wounds and death
 
-### Fire Markers
+- **Light Wounds:** track on your Character board — 1st marker on the upper space, 2nd on the lower space (= 2 Light Wounds); on a 3rd, clear the track and suffer a **Serious Wound**.
+- **Serious Wounds:** draw a Serious Wound card and place it by your board; its effect applies immediately. Duplicate Serious Wound cards are NOT cumulative (but are harder to get rid of).
+- **Death:** a Character with 3 Serious Wounds dies instantly upon suffering ANY additional Wound (Light or Serious). Remove the miniature, place a Character Corpse token in the Room (now a Character Corpse Object), and drop all their Heavy Objects there.
+- **Dress a Serious Wound:** flip the card face down — its effect is ignored, but it still counts toward the 3-wound limit. **Heal:** remove a Light Wound or discard a Dressed Serious Wound card, as the healing effect specifies. (Sources include Clothes, Bandages, MedKit Items and the Emergency Room.)
 
-- Characters ending their round in a Room with Fire suffer 1 Light Wound (only once per round, even if they pass).
-- During Event Phase Fire Damage step, each Intruder in a Room with Fire suffers 1 Injury.
-- Only 8 Fire markers exist. If a 9th would be placed, the ship explodes and the game ends.
-- A Room can hold at most 1 Fire marker. Duplicate placement has no effect.
-- Discarded Fire markers return to the pool.
-- Room Actions and Search still function in Rooms on Fire.
+### Fire, Malfunction, Doors, Slime and Noise markers
 
-### Malfunction Markers
+- **Fire markers:** (1) a Character ending their round in a burning Room suffers 1 Light Wound (see Turn Structure); (2) each Event Phase, each Intruder in a burning Room suffers 1 Injury; (3) there are only 8 Fire markers — if instructed to place one when the pool is empty, **the ship explodes and the game ends**. Max 1 per Room (extra placements do nothing); discarded markers return to the pool. Room Actions and Searching still work in burning Rooms. Some Events spread Fire or add Malfunctions to burning Rooms.
+- **Malfunction markers:** (1) the Room's Action is unavailable (Searching still works); repair effects (Repair Action cards, Tools Item) can discard the marker; (2) only 8 exist — if instructed to place one when the pool is empty, **the ship loses hull integrity and the game ends**. Max 1 per Room. Never placed in the Nest or the Room Covered In Slime. They disable Special Rooms too (a Malfunction in the Hibernatorium doesn't affect already-hibernated Characters; Engine status is never affected, only the Room Action). A Malfunction makes a Room's Computer unavailable.
+- **Door tokens:** live only in Corridors, max 1 per Corridor; they never affect Noise markers. **Open** = no token (all Doors start Open). **Closed** = standing token: blocks Character and Intruder movement (and Grenade throws). An Intruder trying to move through a Closed Door does not move — it destroys the Door instead (several Intruders moving from the same Room destroy it simultaneously and all stay put). **Destroyed** = lying token: movement allowed; can never be Closed again (only exception: the Plasma Torch Item). If the Door pool is empty, move any Door token from elsewhere on the board. If a Noise roll causes an Intruder to come through a Corridor with a Closed Door, it appears regardless of the Door.
+- **Slime marker:** while on your board, every "Silence" result (Noise roll or Exploration token) becomes "Danger." Max 1 (further Slime does nothing). Removed by the Clothes Item or the Shower Room Action.
+- **Noise markers:** only mark Corridors for the Noise roll rule; a marker in a Corridor with a Closed Door still affects the WHOLE Corridor (never just one side of the Door).
 
-- Prevent use of the Room's Action (Search still works).
-- Disable Computers in the Room.
-- Cannot be placed in the Nest or Room Covered in Slime.
-- Only 8 Malfunction markers exist. If a 9th would be placed, the ship loses hull integrity and the game ends.
-- A Room can hold at most 1 Malfunction marker. Duplicate placement has no effect.
-- Discarded markers return to the pool.
-- A Malfunction in an Engine Room does NOT affect the Engine's Working/Damaged status.
-- A Malfunction in the Hibernatorium does not affect already-hibernating Characters.
+### Items and Objects
 
-### Slime Marker
+- **Sources:** starting Weapon; 2 Quest Items (start horizontal/inactive — fulfill the condition on the card to flip them into normal Items); Searching; Crafting.
+- **Inventory (normal Items):** hidden in your card holder — others see only card backs/colors. No Inventory size limit. Any Item used must be shown to all players.
+- **Heavy Items and Objects (Hand icon):** never hidden; must occupy one of your 2 Hand slots (max 2 carried). To take a third, Drop one first. Weapons found by Searching come loaded with 1 Ammo; a Weapon can never exceed its printed Ammo capacity. "Add"-type Items (Extended Magazine, Autoloader) attach to another card and act as one. Duct Tape combines 2 Heavy ITEMS into 1 Hand slot (never Objects).
+- **Heavy Objects:** Intruder Egg (mostly found in the Nest), Character Corpse, Intruder Carcass tokens — carried in Hand slots, needed for Laboratory research; no rules of their own.
+- **Drop:** free, any time during your turn, no Action. Dropped Objects stay in the Room; dropped Items are lost (discarded).
+- **Searching:** Items come in Red (Military), Yellow (Technical), Green (Medical) — findable via the Search Action (an Action card) — plus Blue (Crafted, never found by searching). The Item drawn must match the searched Room's color (background color under its name); in a **white** Room, choose any of the 3 decks. Per the rulebook's example: a Search draws 2 cards from one deck, keeps 1, and discards the other face down back into that deck. Each Search lowers the Room's Item Counter by 1; at 0 the Room is emptied and cannot be searched (exception: the Scout's Scavenging Action).
+- **Crafting:** you may look through the Craft deck at any time; its cards are only ever taken via the Craft Item Basic Action (discard 2 Items whose blue Component icons match the Crafted card's 2 gray icons). The four Crafted Items are: **Antidote, Taser, Flamethrower, Molotov Cocktail.**
 
-- While a Character has a Slime marker, all "Silence" Noise roll results and "Silence" Exploration tokens are treated as "Danger" instead.
-- A Character can have at most 1 Slime marker. Additional Slime has no effect.
-- Removed via: Clothes Item card or Shower Room Action.
+### Attacking other players
 
-### Attacking Other Players
+Characters can never directly attack other Characters (anti-aggression implants) — but they may harm them indirectly: locking someone in a burning Room, activating Self-Destruct with people aboard, throwing a Grenade into a Room with other crew, etc.
 
-Characters cannot directly attack other Characters (anti-aggression implants). However, indirect harm is possible: cutting someone off in a burning Room, activating Self-Destruct, throwing grenades at Intruders in Rooms with other crew members, sabotaging Engines, changing Coordinates, etc.
+### Eggs and the Nest
 
-### Restrictions on Hibernation, Destination, and Self-Destruct
-
-- You cannot change the Destination or start the Self-Destruct sequence when any Character is already hibernating.
-- You may never Set Destination if there is an Intruder in the Cockpit.
-- You may never enter a hibernation chamber if there is any Intruder in the Hibernatorium.
-- You cannot start the Self-Destruct when Characters are hibernating.
-- If a hyperspace jump happens while Self-Destruct is active, the ship is still destroyed.
-
-### Room Descriptions
-
-#### Basic Rooms "1" (all present every game)
-
-| Room | Action |
-|---|---|
-| **Armory** | Recharge Energy Weapon: Add 2 Ammo to 1 Energy Weapon (not Classic Weapons). Cannot exceed Ammo capacity. |
-| **Comms Room** | Send a Signal: Place a Status marker on the Signal space of your Character board. Required for some Objectives. |
-| **Emergency Room** | Treat Wounds: Dress all Serious Wounds OR Heal 1 Dressed Serious Wound OR Heal all Light Wounds. |
-| **Evacuation Section A** | Enter Escape Pod: Only if a Pod in Section A is Unlocked with free space. Perform a Noise roll first -- if an Intruder appears, the attempt fails. Cannot enter if any Intruder is in the Room. Each Pod holds up to 2 Characters. |
-| **Evacuation Section B** | Same as Section A, but for Section B Pods. |
-| **Fire Control System** | Choose any 1 Room: discard its Fire marker (if any). All Intruders in that Room flee (draw 1 Event card per Intruder for direction). Can be used even without Fire to make Intruders flee. |
-| **Generator** | Start/Stop Self-Destruct: Place a marker on the first green space. It advances with the Time marker each turn. Can be stopped (remove marker) unless it has reached a yellow space. Ship explodes when it reaches the skull space. |
-| **Laboratory** | Analyse 1 Object (Character Corpse, Intruder Carcass, or Egg must be in the Room). Discover the corresponding Intruder Weakness card. The Object is not consumed. |
-| **Nest** | Take 1 Egg from the Intruder board, then perform a Noise roll. When all Eggs are removed/destroyed, the Nest is destroyed (place 1 Injury marker). Fire in the Nest destroys 1 uncarried Egg per Fire Damage step. Eggs can be attacked with Shoot, Melee (no Contamination/Wound penalty on miss), Grenades (destroy 2), or Molotov Cocktails (destroy 1). Each attempt requires a Noise roll. |
-
-#### Additional Rooms "2" (5 random per game, out of 9 available)
-
-| Room | Action |
-|---|---|
-| **Airlock Control** | Emergency Airlock: Choose 1 other Yellow Room whose Corridors have no Destroyed Doors. Close all Doors in its Corridors. Place the Airlock Procedure token. If all Doors remain Closed through end of Player Phase, everything in that Room dies (Characters and Intruders). Remove Fire marker if present. If any Door is opened before then, remove the token. |
-| **Cabins** | Passive: At the start of a new turn, if your Character is here with no Intruders and no Malfunction, draw 1 extra Action card (6 instead of 5). |
-| **Canteen** | Heal 1 Light Wound. Optionally Scan all Contamination cards in hand and remove all non-Infected cards. If any is Infected, place a Larva on your board (if already present, you die and place 1 Creeper). |
-| **Command Center** | Choose any 1 Room: Open/Close any Doors in Corridors connected to it (choose individually). |
-| **Engine Control Room** | Check the status of all 3 Engines. Cannot change Engine status here. Works even with a Malfunction in the Engine Rooms. |
-| **Hatch Control System** | Lock or Unlock 1 Escape Pod (flip its token). |
-| **Monitoring Room** | Secretly look at any 1 unexplored Room tile and its Exploration token, then replace them. You do not have to tell the truth. |
-| **Room Covered with Slime** | Passive: Entering this Room automatically gives a Slime marker. No Room Action. Cannot receive Malfunction markers. |
-| **Shower Room** | Discard your Slime marker. Optionally Scan all Contamination cards in hand and remove non-Infected. Same Infection rules as Canteen. |
-| **Storage** | Draw 2 cards from any 1 Item deck (Red, Yellow, or Green). Keep 1, put the other at the bottom of the deck. |
-| **Surgery** | Scan ALL Contamination cards (deck, hand, discard). Remove all Infected cards. Remove Larva from Character board if present. After Scanning, suffer 1 Light Wound, automatically pass, and shuffle all Action cards into your deck (hand is empty until next turn). |
-
-#### Special Rooms (fixed positions, always explored)
-
-| Room | Action |
-|---|---|
-| **Hibernatorium** | Hibernate: Only when Time Track is on a blue space. Perform a Noise roll -- if an Intruder appears, the attempt fails. Cannot enter if any Intruder is present. If successful, remove your miniature from the game. Survival determined at End of Game. |
-| **Cockpit** | Check Coordinates (secretly view the card) OR Set Destination (move the Destination marker). Cannot Set Destination with an Intruder present or with Characters hibernating. |
-| **Engine #1 / #2 / #3** | **Check Engine (Room Action, Cost 2):** Secretly view the top token to see the current status. **Repair/Break Engine:** Performed via a Repairs Action card or Tools Item card (not a Room Action). Take both tokens, secretly view them, replace in order of your choice. You must announce if you changed the order but not which status is on top. Repair/Break works even with a Malfunction marker. |
+- Egg tokens on the Intruder board represent the Eggs in the Nest; taking or destroying Eggs removes them from the Intruder board. When no Eggs remain (all carried away or destroyed), the Nest is destroyed — mark it with 1 Injury marker.
+- **Destroying Eggs:** in a Room with uncarried Eggs, resolve a Shoot or Melee Attack against them — each Injury (of any type) destroys 1 Egg; a missed Melee here causes no Contamination card and no Wound. Grenades may be thrown at Rooms with uncarried Eggs as if an Intruder were there: a Grenade destroys 2 Eggs, a Molotov Cocktail 1 Egg. **After every single attempt to destroy an Egg, perform a Noise roll.**
+- A Fire marker in a Room with uncarried Eggs destroys 1 uncarried Egg during each Fire Damage step.
 
 ### Escape Pods
 
-- Start Locked. Can be unlocked via: Hatch Control System Room Action, certain Items, first Character death (auto-unlock all), Self-Destruct reaching yellow space (auto-unlock all).
-- To enter: perform the Evacuation Section Room Action. Requires the Pod to be Unlocked, have free space (max 2 Characters per Pod), no Intruders in the Evacuation Section Room, no Malfunction marker in the Room. A Noise roll is required first.
-- After entering, choose to launch immediately or wait:
-  - **Launch:** Remove your miniature and the Pod token from the game. You are treated as having arrived on Earth.
-  - **Wait:** At the start of your round each Player Phase, choose to launch, exit (return to Evacuation Section Room), or stay (automatically pass this turn). If an Intruder appears in the Evacuation Section, all Characters in that Section's Pods are returned to the Room.
-  - Another Character entering your Pod can launch it immediately.
-- Heavy Objects do not take up Character spaces in a Pod.
+- All Pods start Locked. They unlock manually (Items, Hatch Control System) or automatically (first Character death; Self-Destruct reaching a yellow space).
+- To enter: use the Evacuation Section A/B Room Action (see Player Reference) — a Noise roll is required first, and you cannot enter if any Intruder or a Malfunction token is in the Evacuation Section Room. Each Pod holds up to 2 Characters.
+- After entering, either **launch immediately** or **wait**. Launching (now or on a later turn) removes your miniature and the Pod token from the game — you no longer participate; a launched Pod's occupants are always treated as having arrived on Earth. While waiting: you may launch at the start of your first round in each Player Phase, or exit voluntarily (free, no Action — place your miniature back in the Room for that Pod); if you don't launch in your round, you automatically pass the turn. If an Intruder appears in the Evacuation Section Room while you wait, ALL Characters in its Pods return to that Room. Another Character entering your Pod may launch it immediately. Heavy Objects take no Character space in a Pod.
 
-### Game Modes
+### Self-Destruct sequence (Generator Room)
 
-**Solo Mode:** Use Solo/Coop Objectives (draw 2, choose 1 at First Encounter). Item availability in each Room is halved (round up): 1-2 items become 1, 3-4 items become 2. Win by fulfilling your Objective and surviving.
+- Starting it places a Status marker on the first (green) space of the Self-Destruct Track; the marker advances 1 space every time the Time marker advances. Any Character stopping the sequence removes the marker (a new sequence restarts from green).
+- On any **yellow** space: the sequence can no longer be aborted, and all Escape Pods unlock instantly (they can be re-Locked).
+- On the final ("skull") space: the ship explodes.
+- You cannot start Self-Destruct while any Character is hibernating. If a hyperspace jump happens while Self-Destruct is active, the ship is still considered destroyed.
 
-**Fully Cooperative Mode:** Use Solo/Coop Objectives (draw 1 per player). ALL Objectives must be fulfilled and at least 1 Character must survive. Includes Revive mechanic: a dead Character's Corpse can be carried to a working Emergency Room (no Intruder or Malfunction) to revive them at the start of the next turn (Light Wounds removed, Serious Wounds Dressed).
+### Game modes and variants
 
-**Playing as the Intruder (optional):** The first eliminated player controls the Intruders. They draw 3 cards per turn (hand limit 4), take 1 Action per round using Intruder Action cards (Move, Attack, or Effect). During Event Phase, only Time Track and Fire Damage apply (no Event cards, no Intruder Bag Development, no automatic Intruder Attacks -- though Surprise Attacks and Escape attacks still occur). The Intruder player's goal is to ensure no other player wins.
+- **Alternative board side** (crowdfunding unlock; harder, meant primarily for campaign play but usable anywhere): two SEPARATE Technical Corridors networks (red and blue — Noise markers in one are separate from the other); some Room pairs are linked by two parallel Corridors (a Closed Door in one doesn't affect the other); Evacuation Sections A and B are placed face up on marked spots with face-down Exploration tokens (standard exploration on first entry).
+- **Solo mode:** draw 2 Solo/Coop Objectives instead of regular Objectives (choose 1 at the First Encounter). Item counts in each Room are halved, rounding up (1–2 → 1; 3–4 → 2). Win by fulfilling your objective and surviving.
+- **Fully Cooperative mode:** draw 1 Solo/Coop Objective per player; ALL of them must be fulfilled and at least 1 Character must survive. (Two "send the Signal" cards means two different Characters must send it.) **Revive:** carry a dead Character's Corpse token to a working Emergency Room; that player puts their miniature there at the start of the turn with all Light Wounds discarded and all Serious Wounds Dressed (doesn't work with an Intruder or Malfunction token in the Room).
+- **Playing as an Intruder** (optional): the FIRST player to lose their Character controls the Intruders (simultaneous deaths → lower Player Number). They remove their old components and use the Intruder Player Action deck; changes apply from the start of the next Player Phase. Player Phase: they draw 3 cards (hand limit 4), never take the First Player token, and each round either play 1 card or pass (when passing they may keep 1 card and discard the rest). A played card does ONE of: **Move** any Intruder through the Corridor number on the card; **Attack** with any Intruder sharing a Room with a Character (draw Intruder Attack cards equal to the number on the played card, resolve 1, rest to the bottom of the deck); or resolve the card's **Effect**. Event Phase: ONLY the Time Track and Fire Damage steps happen — no end-of-turn Intruder attacks (Surprise/Escape attacks still occur), no Event cards (except via card effects), no Intruder bag development. The Intruder player cannot win — their goal is that no one else wins.
 
 ## Player Reference
 
-### Action Costs
-| Action | Cost |
-|---|---|
-| Movement | 1 Action card |
-| Careful Movement | 2 Action cards |
-| Shoot | 1 Action card + 1 Ammo |
-| Melee Attack | 1 Action card + 1 Contamination card drawn |
-| Pick Up Heavy Object | 1 Action card |
-| Trade | 1 Action card |
-| Craft Item | 1 Action card + 2 matching component Items |
-| Room Action | 2 Action cards |
-| Action Card Action | Card itself + cost shown on card |
-| Item Action | Cost shown on Item card |
+### Turn sequence
 
-### Turn Sequence Summary
-**Player Phase:**
-1. All players draw to 5 cards
-2. Pass First Player token left (skip on Turn 1)
-3. Player rounds (2 Actions each, clockwise, repeat until all pass)
+- **I. Player Phase:** 1) draw up to 5 Action cards; 2) pass First Player token left (not on turn 1); 3) rounds of 2 Actions (or 1 Action + pass, or pass) clockwise until all players pass — after passing you sit out the rest of the Phase.
+- **II. Event Phase:** 4) advance Time (and Self-Destruct if active); 5) Intruders in Combat attack; 6) Intruders in Fire take 1 Injury; 7) resolve 1 Event card (Intruder movement, then event effect); 8) Intruder bag development.
 
-**Event Phase:**
-4. Advance Time Track (+Self-Destruct if active)
-5. Intruder Attacks (all Intruders in Combat attack)
-6. Fire Damage (Intruders in Fire Rooms take 1 Injury each)
-7. Event Card (Intruder Movement, then Event Effect)
-8. Intruder Bag Development (draw 1 token, resolve)
-9. End of Turn
+### Action costs
 
-### Intruder Toughness
-| Intruder Type | Injuries to Kill | Injury Check |
-|---|---|---|
-| Larva | 1 (automatic kill) | None needed |
-| Egg | 1 (automatic kill) | None needed |
-| Creeper | Variable | Draw 1 Attack card, compare "blood" icon to Injury markers |
-| Adult | Variable | Draw 1 Attack card, compare "blood" icon to Injury markers |
-| Breeder | Variable | Draw 2 Attack cards, sum "blood" icons, compare to Injury markers |
-| Queen | Variable | Draw 2 Attack cards, sum "blood" icons, compare to Injury markers |
+- Basic Action: discard 1 Action card (Careful Movement: 2).
+- Action card: discard the card + its printed cost in extra cards.
+- Room Action: discard 2 Action cards (not in Combat; not in a Malfunctioning Room).
+- Item Action: discard the printed number of cards ("One Use Only" Items are also discarded).
+- Contamination cards can never pay costs.
 
-### End-of-Game Victory Checklist
-1. Engines Check: 2+ Working engines required or ship explodes
-2. Coordinates Check: Ship must be heading to Earth (or Mars for Quarantine Objective)
-3. Contamination Check: Scan all Contamination cards; if Infected, draw 4 from shuffled deck -- any Contamination card means death
-4. Objective Check: Reveal Objective; if requirements met and Character alive, you win
+### Combat quick reference
 
-### Key Numbers
-- Characters per game: up to 5 (from 6 available)
-- Action cards per Character: 10
-- Hand size: 5 cards (draw up each turn)
-- Actions per round: 2
-- Hand slots (Heavy Items/Objects): 2 per Character
-- Serious Wounds to die: 3 (any additional Wound after 3 kills)
-- Light Wounds before conversion: 3rd Light Wound becomes a Serious Wound
-- Fire markers in game: 8 (9th ends the game)
-- Malfunction markers in game: 8 (9th ends the game)
-- Working Engines needed for ship survival: at least 2 of 3
-- Escape Pod capacity: 2 Characters each
-- Starting Intruder bag: 1 Blank + 4 Larvae + 1 Creeper + 1 Queen + 3 Adults + 1 Adult per player
-- Egg tokens at start: 5 (on Intruder board)
-- Weakness cards per game: 3 (from 8 available)
-- Adult Intruder miniatures: 8 maximum on board
+- **Shoot (1):** pick Weapon + target, discard 1 Ammo, roll Combat die; on a hit, add Injury marker(s), then draw an Intruder Attack card and check the Injury Effect (blood icon vs. Injury markers).
+- **Melee (1):** draw 1 Contamination card, pick target, roll (2 Hits count as 1); on a miss you take 1 Serious Wound.
+- **Escape (special Move, 1):** choose a neighboring Room; resolve 1 Intruder Attack per Intruder present; survive → move (explore/Noise roll as usual); die → Corpse stays behind.
+- **Intruder Attack:** target = Character with fewest cards in hand; draw 1 Attack card — matching Intruder symbol = hit (resolve effect), otherwise miss.
+- Intruder kill check: Larva/Egg die at 1 Injury; Creeper/Adult draw 1 card (blood ≤ Injuries = dead); Breeder/Queen draw 2 and add. Retreat arrow on a drawn card = Intruder flees via an Event card's Corridor number.
+
+### Room Actions (cost 2)
+
+**Basic Rooms "1"** (all 11 in every game): 
+
+- **Armory** — add 2 Ammo to 1 of your Energy Weapons (never Classic Weapons; never above capacity).
+- **Comms Room** — Send a Signal: place a Status marker on your board's Signal space (only used for Objectives).
+- **Emergency Room** — Dress ALL your Serious Wounds OR Heal 1 Dressed Serious Wound OR Heal all your Light Wounds.
+- **Evacuation Section A / B** — try to enter an Unlocked Escape Pod with space in that Section: make a Noise roll; if any Intruder appears (or is present) in this Room, the attempt fails; otherwise board the Pod (2 spaces per Pod).
+- **Fire Control System** — choose any 1 Room: discard its Fire marker (if any) and ALL Intruders there run away in random directions (draw 1 Event card per Intruder). Works even with no Fire, to scatter Intruders.
+- **Generator** — initiate (or stop) the Self-Destruct sequence (cannot start while anyone is hibernating).
+- **Laboratory** — Analyse 1 Object (Character Corpse, Intruder Carcass, or Egg present in the Room): discover the corresponding Weakness card. The Object is not consumed.
+- **Nest** — take 1 Egg token from the Intruder board, then make a Noise roll.
+- **Storage** — draw 2 cards from a chosen Item deck (Red/Yellow/Green), keep 1, other to the bottom of that deck.
+- **Surgery** — Scan ALL your Contamination cards (deck, hand, discard); remove all Infected ones; remove a Larva from your board if present. Then suffer 1 Light Wound and automatically pass, shuffling all your Action cards (hand included) into your deck.
+
+**Additional Rooms "2"** (5 of the 9 appear each game):
+
+- **Airlock Control** — pick any 1 OTHER Yellow Room whose connected Corridors contain no Destroyed Doors: automatically Close every Door around it and place the Airlock Procedure token there. If all those Doors are still Closed when the current Player Phase ends (all players passed), EVERYTHING in that Room dies (Characters and Intruders) and any Fire marker there is removed; if any of the Doors is opened first, the procedure is cancelled.
+- **Cabins** — passive: at the start of a new turn, a Character here with no Intruders present draws 1 extra Action card (hand of 6 instead of 5). Disabled by a Malfunction token.
+- **Canteen** — Heal 1 Light Wound; you may also Scan all Contamination cards in your HAND and remove all non-Infected ones (an Infected result places a Larva on your board — with a Larva already there, you die and a Creeper appears in your Room).
+- **Command Center** — choose any 1 Room and Open/Close any of the Doors in its connected Corridors (your choice which).
+- **Engine Control Room** — check the status of all 3 Engines (works even if an Engine Room has a Malfunction marker; you cannot CHANGE Engine status here).
+- **Hatch Control System** — flip 1 Escape Pod token to Locked or Unlocked.
+- **Monitoring Room** — secretly look at any 1 unexplored Room tile and its Exploration token, then replace them (you may lie about what you saw).
+- **Room Covered With Slime** — no Action: entering automatically gives you a Slime marker (no Item count is set here; Malfunction markers can never be placed here).
+- **Shower Room** — discard your Slime marker; you may also Scan all Contamination cards in your HAND and remove all non-Infected ones (Infected → Larva, as in the Canteen). Fire can exist here normally and is NOT removed by showering.
+
+**Special Rooms** (printed on the board, start explored, no Searching; Fire/Malfunction apply normally):
+
+- **Cockpit** — Check Coordinates (secretly look at the Coordinates card; you may lie; remember it) OR Set Destination (move the Destination marker). You can never Set Destination with an Intruder in the Cockpit, or change Destination once anyone is hibernating.
+- **Engines #1–#3** — Check the Engine (secretly look at the TOP token; you may lie). Repair/Break Engine (via a Repairs Action or Tools Item): secretly examine both tokens and restack them in any order — you needn't say whether you repaired it, but you MUST say if you changed the order. Works even with a Malfunction marker and without checking first.
+- **Hibernatorium** — Try to hibernate (only when the Time marker is on a blue space): Noise roll; if an Intruder shows up (or is present), the attempt fails; otherwise remove your miniature — you are safely hibernating and out of the game until the end.
+
+### Key numbers
+
+- Hand refills to 5 Action cards each turn (6 via Cabins).
+- 2 Actions per round; Room Actions cost 2 cards; Careful Movement 2; most everything else 1.
+- Intruder bag starts with: 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 3 Adults + 1 Adult per player.
+- Escape Pods: 2 (1–2 players) / 3 (3–4) / 4 (5 players); 2 Character spaces each.
+- 5 Eggs start on the Intruder board; 3 face-down Weakness cards (Corpse / Egg / Carcass).
+- 8 Fire markers, 8 Malfunction markers — a 9th of either ends the game with everyone dead.
+- 2 of 3 Engines must be Working for a safe jump.
+- 3 Serious Wounds + any further Wound kills a Character; 3 Light Wounds convert to a Serious Wound.
+- Victory Check order: Engines → Coordinates → Contamination → Objectives.

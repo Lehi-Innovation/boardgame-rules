@@ -26,14 +26,23 @@ the extracted rulebook text. Every summary page carries a verification banner:
 
 ## Using it mid-game
 
-**Simplest:** paste the prompt from the [site landing page](https://lehi-innovation.github.io/boardgame-rules/)
+**Zero setup:** paste the prompt from the [site landing page](https://lehi-innovation.github.io/boardgame-rules/)
 into Claude (works great with voice mode at the table). It teaches the
 assistant to resolve games via `games.json`, answer from the summary, and fall
-back to the full rulebook text for high-stakes questions.
+back to the full rulebook text for high-stakes questions. Works with any
+assistant that can fetch web pages, on any plan.
 
-**Better — MCP server:** this repo ships an MCP server that gives any
-MCP-capable client direct tools (`list_games`, `get_rules`,
-`search_rulebook`, `report_rule_error`):
+**Best — remote MCP connector:** add the hosted MCP server to your own
+Claude or ChatGPT account once (Settings → Connectors → Add custom connector
+→ `https://boardgame-rules-mcp.<account>.workers.dev/mcp`), then just ask
+rules questions from your phone at the table — voice mode included. Your
+assistant gets direct tools (`list_games`, `get_rules`, `search_rulebook`,
+`read_rulebook`, `log_ruling`, `report_rule_error`) and all AI inference runs
+on **your** account; the server only serves rules text. Self-hosting your own
+copy on Cloudflare's free tier takes ~5 minutes — see [worker/README.md](worker/README.md).
+
+**Local/offline — stdio MCP server:** the original local server for Claude
+Desktop and development:
 
 ```bash
 pip install mcp
