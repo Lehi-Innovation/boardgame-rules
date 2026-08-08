@@ -60,7 +60,9 @@ Auf Achse is a trucking and transportation-contract trading game for 2-6 players
    - If one of the dice shows a 6, the player may instead choose any value from 1 to 6 for that die. This makes it easier to land on a city by exact count in order to acquire public contracts.
    - It is permitted to drive through spaces occupied by trucks. No more than 2 trucks can occupy a highway space at the end of a turn; city spaces have no limit.
    - The two ferries can be used like normal road spaces at no extra cost: Rotterdam-Flensburg counts as 3 spaces, and Flensburg-Rostock counts as 2 spaces.
-3. **Resolve exact-count arrivals**: if the truck's final position was reached by exact count (not by forfeiting excess movement), resolve any applicable space effect — drawing an event card, placing/moving the construction sign, initiating or delivering a contract, or selecting a public contract (see Actions).
+3. **Resolve the space the truck stopped on** (see Actions):
+   - *Initiate or deliver your own contracts*: allowed whenever the truck ends on the contract's start/destination city — any excess rolled movement is ignored, so you may overshoot and still stop there (exact count is not required).
+   - *Exact-count-only effects*: drawing an event card and selecting a public contract require arriving by exact count. If the player had to forfeit excess movement to stop on the city, or arrived via an event card, they may not select a public contract that turn.
 4. **End of turn**: once a player has finished their turn, the next player clockwise takes their turn. Note that successfully initiating a contract ends a player's turn immediately (see Actions).
 
 ## Actions
@@ -97,7 +99,7 @@ The game ends immediately once there are no more public contracts on the board *
 - **Public contract cycling:** whenever a player arrives at a city by exact count (without forfeiting any movement points) and is not interested in any of the current public contracts, the public contract closest to the loading dock is removed from the game. The remaining contracts then slide in the direction of the arrows, and a new contract card is drawn to fill the freed-up public contract space in the corner. This release mechanic is specifically designed to help end the game and speeds play up.
 - A contract must always be fully executed — partial loading is not allowed.
 - Initiating a contract ends the acting player's turn immediately, even if movement was still available.
-- Landing on a space by exact count matters throughout the game: it is required to draw event cards, to select public contracts, and to initiate/deliver contracts. Being forced to stop early (forfeiting excess movement) or arriving via an event card specifically disqualifies a player from selecting a public contract that turn.
+- Landing on a space by exact count is required to draw event cards and to select public contracts, but **not** to initiate or deliver your own contracts: for both initiating and delivering, any excess rolled movement is ignored, so a player may overshoot and still stop at the start/destination city. Being forced to stop early (forfeiting excess movement) or arriving via an event card specifically disqualifies a player from selecting a public contract that turn.
 - Rolling a 6 lets a player treat that die as any value from 1 to 6, which is the main tool for landing exactly on a desired city.
 - Trailers, once purchased, are kept for the rest of the game (they don't need to be re-bought) and can be sold back at any time during a player's turn for a flat €500, regardless of trailer size.
 
@@ -129,4 +131,4 @@ The basic rules apply, with the following changes:
 | Win condition | Most money when the game ends |
 | Game end trigger | No public contracts remain on the board AND a player has completed all contracts in hand |
 
-**Turn checklist:** Roll both dice → move truck the full value of one chosen die (or stop early at a sign/contract city/forfeit) → resolve any exact-count space effect (event card, construction sign, contract initiation/delivery, public contract selection) → optionally buy/sell trailers → turn passes clockwise.
+**Turn checklist:** Roll both dice → move truck the full value of one chosen die (or stop early at a sign/contract city/forfeit) → initiate/deliver any of your own contracts at the start/destination city (excess movement ignored) → if you arrived by exact count, resolve exact-count effects (draw event card, select public contract) → optionally buy/sell trailers → turn passes clockwise.
