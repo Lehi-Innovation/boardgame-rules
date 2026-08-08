@@ -279,7 +279,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Attangle](rules/attangle/) | 2 | 20 min | Dieter Stein | ✅ |
 | [Attika](rules/attika/) | 2-4 | 60 min | Marcel-André Casasola Merkle | ⚠️ |
 | [Attila](rules/attila/) | 2-5 | 45 min | Karl-Heinz Schmiel | ✅ |
-| [Auf Achse](rules/auf-achse/) | 2-6 |  | Wolfgang Kramer | ❗ |
+| [Auf Achse](rules/auf-achse/) | 2-6 |  | Wolfgang Kramer | ✅ |
 | [Auf die Nüsse!](rules/auf-die-n-sse/) | 2-4 | 20 min | uncredited | ⚠️ |
 | [Aurignac](rules/aurignac/) | 2-3 | 60-90 min | uncredited (Oka Luda Editions) | ⚠️ |
 | [Ausbrecher AG](rules/ausbrecher-ag/) | 2-6 | 30-45 min | Michael Antonow, Jörg Rüdenauer | ⚠️ |
@@ -1630,7 +1630,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
-| [Ra](rules/ra/) | 2-5 | 45-60 min | Reiner Knizia | ❗ |
+| [Ra](rules/ra/) | 2-5 | 45-60 min | Reiner Knizia | ✅ |
 | [Race for the Galaxy](rules/race-for-the-galaxy/) | 2-4 | 30-60 min | Tom Lehmann | ✅ |
 | [Raid on Iran](rules/raid-on-iran/) | 2 | 60-120 min | Steve Jackson | ⚠️ |
 | [Raiders of the North Sea](rules/raiders-of-the-north-sea/) | 2-4 | 60-80 min | Shem Phillips | ❗ |

@@ -8,14 +8,14 @@ source_pdf: "ra-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Rio Grande Games (2008)"
-verification: "inaccurate"
+verification: "minor_issues"
 verification_date: "2026-08-08"
 ---
 
 # Ra
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Setup and Player Reference say 3-player games get 3 suns each; source's sun-value range (2-13 shared with 4p) and group table both show 3-player groups have 4 suns each. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ra-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ra&game=ra)
 <!-- verification:end -->
