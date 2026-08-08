@@ -7,11 +7,11 @@ source_pdf: "axis-allies-europe-rules.pdf"
 extracted_date: "2026-08-07"
 summarized_date: "2026-08-07"
 rulebook_version: "1999 (Avalon Hill / Hasbro)"
-verification: "unverified"
+verification: "verified"
 verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/axis-allies-europe-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Axis%20%26%20Allies%3A%20Europe&game=axis-allies-europe)
 <!-- verification:end -->

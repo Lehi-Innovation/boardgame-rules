@@ -5,7 +5,15 @@ source_pdf: "carcassonne-wheel-of-fortune-rules.pdf"
 extracted_date: "2026-08-07"
 summarized_date: "2026-08-07"
 rulebook_version: "Hans im Glück, originally released 2009 (rules text drawn from a fan-compiled 'Complete Annotated Rules' edition covering multiple Carcassonne expansions)"
+verification: "verified"
+verification_date: "2026-08-08"
 ---
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/carcassonne-wheel-of-fortune-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carcassonne%3A%20Wheel%20of%20Fortune&game=carcassonne-wheel-of-fortune)
+<!-- verification:end -->
+
 
 ## Overview
 

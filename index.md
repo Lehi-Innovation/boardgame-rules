@@ -86,7 +86,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [51st State: Ultimate Edition](rules/51st-state-ultimate-edition/) | 1-4 | 40-90 min | Ignacy Trzewiczek | ✅ |
 | [6 nimmt! Junior](rules/6-nimmt-junior/) | 2-5 | 20 min | Wolfgang Kramer | ✅ |
 | [7 Ages](rules/7-ages/) | 2-7 | 120-600 min | Harry Rowland | ✅ |
-| [7 Wonders](rules/7-wonders/) | 3-7 | 30 min | Antoine Bauza | ⚠️ |
+| [7 Wonders](rules/7-wonders/) | 3-7 | 30 min | Antoine Bauza | ✅ |
 | [7 Wonders: Architects](rules/7-wonders-architects/) | 2-7 | 25 min | Antoine Bauza | ✅ |
 
 ### A
@@ -96,7 +96,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [A Castle for All Seasons](rules/a-castle-for-all-seasons/) | 2-4 | 45-60 min | Inka Brand, Markus Brand | ✅ |
 | [A Column of Fire](rules/a-column-of-fire/) | 2-4 | 60-90 min | Michael Rieneck | ✅ |
 | [A Distant Plain](rules/a-distant-plain/) | 1-4 | 120-360 min | Brian Train, Volko Ruhnke | ✅ |
-| [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ✅ |
+| [A Feast for Odin](rules/a-feast-for-odin/) | 1-4 | 30-120 min | Uwe Rosenberg | ❗ |
 | [A Few Acres of Snow](rules/a-few-acres-of-snow/) | 2 | 60-120 min | Martin Wallace | ✅ |
 | [A Game of Thrones: Catan - Brotherhood of the Watch](rules/a-game-of-thrones-catan-brotherhood-of-the-watch/) | 3-4 | 60-90 min | Klaus Teuber | ✅ |
 | [A Game of Thrones: The Board Game](rules/a-game-of-thrones-the-board-game/) | 3-6 | 120-240 min | Christian T. Petersen | ✅ |
@@ -233,13 +233,13 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Arborea](rules/arborea/) | 1-5 | 60-120 min | Caezar Al Jassar, Kuly | ✅ |
 | [Arcanor](rules/arcanor/) | 2 | 20-40 min | Unknown | ⚠️ |
 | [Archipelago](rules/archipelago/) | 2-5 | 90-240 min | Christophe Boelinger | ✅ |
-| [Architects of the West Kingdom](rules/architects-of-the-west-kingdom/) | 1-5 | 60-80 min | Shem Phillips, S J MacDonald | ⚠️ |
+| [Architects of the West Kingdom](rules/architects-of-the-west-kingdom/) | 1-5 | 60-80 min | Shem Phillips, S J MacDonald | ✅ |
 | [Arcs](rules/arcs/) | 2-4 | 60-120 min | Cole Wehrle | ✅ |
 | [Are You the Traitor?](rules/are-you-the-traitor/) | 4-10 | 10-30 min | Andrew Looney | ⚠️ |
 | [Arena of Death](rules/arena-of-death/) | 2-6 | 60-120 min | David James Ritchie, Redmond A. Simonsen | ⚠️ |
 | [Arena: Roma II](rules/arena-roma-ii/) | 2 | 60 min | Stefan Feld | ✅ |
 | [Argent: The Consortium](rules/argent-the-consortium/) | 2-5 | 60-150 min | Trey Chambers | ✅ |
-| [Ark Nova](rules/ark-nova/) | 1-4 | 90-150 min | Mathias Wigge | ⚠️ |
+| [Ark Nova](rules/ark-nova/) | 1-4 | 90-150 min | Mathias Wigge | ✅ |
 | [Arkadia](rules/arkadia/) | 2-4 | 60 min | Rüdiger Dorn | ✅ |
 | [Arkham Express](rules/arkham-express/) | 1-4 | 30 min | David Willems | ⚠️ |
 | [Arkham Horror (2nd Edition)](rules/arkham-horror-2nd-edition/) | 1-8 | 120-240 min | Richard Launius, Kevin Wilson | ✅ |
@@ -279,6 +279,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Attangle](rules/attangle/) | 2 | 20 min | Dieter Stein | ✅ |
 | [Attika](rules/attika/) | 2-4 | 60 min | Marcel-André Casasola Merkle | ⚠️ |
 | [Attila](rules/attila/) | 2-5 | 45 min | Karl-Heinz Schmiel | ✅ |
+| [Auf Achse](rules/auf-achse/) | 2-6 |  | Wolfgang Kramer | ❗ |
 | [Auf die Nüsse!](rules/auf-die-n-sse/) | 2-4 | 20 min | uncredited | ⚠️ |
 | [Aurignac](rules/aurignac/) | 2-3 | 60-90 min | uncredited (Oka Luda Editions) | ⚠️ |
 | [Ausbrecher AG](rules/ausbrecher-ag/) | 2-6 | 30-45 min | Michael Antonow, Jörg Rüdenauer | ⚠️ |
@@ -294,6 +295,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Axis & Allies Anniversary Edition](rules/axis-allies-anniversary-edition/) | 2-6 | 360 min | Larry Harris Jr. | ✅ |
 | [Axis & Allies: Battle of the Bulge](rules/axis-allies-battle-of-the-bulge/) | 2 | 180-240 min | Larry Harris Jr. | ❗ |
 | [Axis & Allies: D-Day](rules/axis-allies-d-day/) | 2-3 | 120 min | Larry Harris Jr. | ✅ |
+| [Axis & Allies: Europe](rules/axis-allies-europe/) | 2 to 4 |  | Larry Harris | ✅ |
+| [Axis & Allies: Guadalcanal](rules/axis-allies-guadalcanal/) | 2 | 120-180 min | Larry Harris | ✅ |
 | [Aye, Dark Overlord!](rules/aye-dark-overlord/) | 4-6 | 30 min | Fabrizio Bonifacio, Massimiliano Enrico | ✅ |
 | [Ayoayo](rules/ayoayo/) | 2 | 15-30 min | Traditional (Yoruba) | ⚠️ |
 | [Aztec](rules/aztec/) | 2-4 | 45-60 min | Victor Melo Barbero | ✅ |
@@ -334,6 +337,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battle Cattle: The Card Game](rules/battle-cattle-the-card-game/) | 2-6 | 30-60 min | Creede Lambard, Sharleen Lambard | ✅ |
 | [Battle for Armageddon](rules/battle-for-armageddon/) | 2 | 120-180 min | Jervis Johnson, Bill King | ✅ |
 | [Battle for Germany](rules/battle-for-germany/) | 2 | 120-180 min | James F. Dunnigan | ⚠️ |
+| [Battle for Moscow](rules/battle-for-moscow/) | 2 |  |  | ❗ |
 | [Battle for Rokugan](rules/battle-for-rokugan/) | 2-5 | 60-90 min |  | ✅ |
 | [Battle of the Bulge](rules/battle-of-the-bulge/) | 2 | 120-240 min | James F. Dunnigan | ⚠️ |
 | [Battle Over Britain](rules/battle-over-britain/) | 2 | 120-240 min | David C. Isby | ⚠️ |
@@ -350,6 +354,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Battles for a Continent](rules/battles-for-a-continent/) | 2 | 60-120 min | Perry Moore | ⚠️ |
 | [Battles for the Ardennes](rules/battles-for-the-ardennes/) | 2 | 60-180 min | Danny S. Parker | ⚠️ |
 | [Battles of the Third Age](rules/battles-of-the-third-age/) | 2 | 120-180 min | Roberto Di Meglio, Marco Maggi, Francesco Nepitello | ❗ |
+| [Battles of Westeros](rules/battles-of-westeros/) | 2 |  | Robert A. Kouba (game design and development); inspired by the game system created by Richard Borg | ✅ |
 | [Battleship](rules/battleship/) | 2 | 30 min |  | ⚠️ |
 | [BattleSpace](rules/battlespace/) | 2 | 120-240 min | FASA Corporation | ⚠️ |
 | [Battlestar Galactica Collectable Card Game](rules/battlestar-galactica-collectable-card-game/) | 2 | 30-60 min | WizKids | ⚠️ |
@@ -411,7 +416,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Blood Bowl](rules/blood-bowl/) | 2 | 120 min | Jervis Johnson | ✅ |
 | [Blood Bowl: Team Manager – The Card Game](rules/blood-bowl-team-manager-the-card-game/) | 2-4 | 90 min | Jay Little, Corey Konieczka | ✅ |
 | [Blood Feud in New York](rules/blood-feud-in-new-york/) | 2-6 | 180-240 min | Kyle Weinandy | ⚠️ |
-| [Blood on the Clocktower](rules/blood-on-the-clocktower/) | 5-20 | 30-120 min | Steven Medway | ⚠️ |
+| [Blood on the Clocktower](rules/blood-on-the-clocktower/) | 5-20 | 30-120 min | Steven Medway | ❗ |
 | [Blood Rage](rules/blood-rage/) | 2-4 | 60-90 min | Eric M. Lang | ✅ |
 | [Blood Royale](rules/blood-royale/) | 3-5 | 180-240 min | Derek Carver | ⚠️ |
 | [Bloodbath at the Sakarya](rules/bloodbath-at-the-sakarya/) | 2 | 120-240 min | Unknown | ⚠️ |
@@ -515,14 +520,17 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Captain Flip](rules/captain-flip/) | 2-5 | 20 min | Paolo Mori, Remo Conzadori | ✅ |
 | [Captain Silver](rules/captain-silver/) | 2-4 | 20 minutes | Wolfgang Dirscherl, Manfred Reindl | ✅ |
 | [Captain Sonar](rules/captain-sonar/) | 2-8 | 45-60 minutes | Roberto Fraga, Yohan Lemonnier | ❗ |
+| [Car Wars](rules/car-wars/) | 1-8 (best with 4-6) |  | Chad Irby and Steve Jackson | ✅ |
 | [Carabande](rules/carabande/) | 2-8 | 30 minutes | Bill Payne | ✅ |
 | [Carcassonne: The Castle](rules/carcassonne-the-castle/) | 2 | 30-45 min | Reiner Knizia | ⚠️ |
 | [Carcassonne: The City](rules/carcassonne-the-city/) | 2-4 | 45-60 min | Klaus-Jurgen Wrede | ⚠️ |
+| [Carcassonne: Wheel of Fortune](rules/carcassonne-wheel-of-fortune/) |  |  |  | ✅ |
 | [Cardino](rules/cardino/) | 2-4 | 30 minutes | Uncredited (Milton Bradley) | ⚠️ |
 | [Cardline: Animals](rules/cardline-animals/) | 2-8 | 15 minutes | Frédéric Henry | ✅ |
 | [Careers](rules/careers/) | 2-6 | 60 minutes | James Cooke Brown | ⚠️ |
 | [Caribbean](rules/caribbean/) | 2-4 | 30 minutes | Michail Antonow, Jens-Peter Schliemann | ✅ |
 | [Carla Caramel](rules/carla-caramel/) | 1-6 | 10 minutes | Sara Zarian | ⚠️ |
+| [Carnegie](rules/carnegie/) | 2-4 |  | Xavier Georges | ❗ |
 | [Carnuta](rules/carnuta/) | 2-4 | 30-45 min | Yohan Goh, Hope S. Hwang, Gary Kim | ✅ |
 | [Carolus Magnus](rules/carolus-magnus/) | 2-4 | 60 minutes | Leo Colovini | ✅ |
 | [Carpe Diem](rules/carpe-diem/) | 2-4 | 45-75 minutes | Stefan Feld | ❗ |
@@ -535,7 +543,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Castle Panic](rules/castle-panic/) | 1-6 | 60 minutes | Justin De Witt | ❗ |
 | [Castle Risk](rules/castle-risk/) | 2-6 | 90-120 minutes | Uncredited (Parker Brothers) | ⚠️ |
 | [Cat in the Box: Deluxe Edition](rules/cat-in-the-box-deluxe-edition/) | 2-5 | 30 minutes | Muneyuki Yokouchi | ⚠️ |
-| [Catan](rules/catan/) | 3-4 | 60-120 min | Klaus Teuber | ⚠️ |
+| [Catacombs](rules/catacombs/) | 2-5 |  | Aron West (Lead Designer, Third Edition); original edition co-designed by Ryan Amos and Marc Kelsey | ✅ |
+| [Catan](rules/catan/) | 3-4 | 60-120 min | Klaus Teuber | ✅ |
 | ↳ [Catan Geographies: Settlers of Hesse](rules/catan-geographies-settlers-of-hesse/) | 3-4 | 60-90 min | Klaus Teuber | ⚠️ |
 | ↳ [Catan Scenarios: Frenemies](rules/catan-scenarios-frenemies/) | 3-6 | 45-90 min | Benjamin Teuber | ✅ |
 | ↳ [Catan: Crop Trust](rules/catan-scenario-crop-trust/) | 3-4 | 75 minutes | Klaus Teuber, Benjamin Teuber | ✅ |
@@ -568,7 +577,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Chicago](rules/chicago/) | 2-4 | 30-45 min | Unknown | ⚠️ |
 | [Chicken Chicken](rules/chicken-chicken/) | 2-8 | 15 min | Charles Bossart | ✅ |
 | [Chill: Black Morn Manor](rules/chill-black-morn-manor/) | 2-8 | 60-120 min | Troy Denning | ⚠️ |
-| [Chinatown](rules/chinatown/) | 2-5 | 60-90 min | Karsten Hartwig | ⚠️ |
+| [Chinatown](rules/chinatown/) | 2-5 | 60-90 min | Karsten Hartwig | ❗ |
 | [Chinese Checkers](rules/chinese-checkers/) | 2-6 | 30 min |  | ✅ |
 | [Chopstick Dexterity MegaChallenge 3000](rules/chopstick-dexterity-megachallenge-3000/) | 2-3 | 15-30 min | Seth Hiatt | ⚠️ |
 | [Chromino](rules/chromino/) | 1-8 | 30 min | Louis Abraham | ✅ |
@@ -615,7 +624,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cobra: Game of the Normandy Breakout](rules/cobra-game-of-the-normandy-breakout/) | 2 | 120-240 min | James Dunnigan | ⚠️ |
 | [Cockroach Duel](rules/cockroach-duel/) | 2 | 15-20 min | Jacques Zeimet | ⚠️ |
 | [Coda](rules/coda/) | 2-4 | 15-30 min | Alex Randolph, Susumu Kawasaki | ⚠️ |
-| [Codename: Kids Next Door TCG](rules/codename-kids-next-door-tcg/) | 2 | 20-40 min | Uncredited | ⚠️ |
+| [Codename: Kids Next Door TCG](rules/codename-kids-next-door-trading-card-game/) | 2 | 20-40 min | Uncredited | ⚠️ |
 | [Codenames](rules/codenames/) | 4-8+ | 15 min | Vlaada Chvátil | ✅ |
 | [Coerceo](rules/coerceo/) | 2 | 20-40 min | Mark Steere | ⚠️ |
 | [Coffee Rush](rules/coffee-rush/) | 2-4 | 15-30 min |  | ⚠️ |
@@ -674,7 +683,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Crossfire](rules/crossfire/) | 2 | 5-10 min | Unknown | ⚠️ |
 | [Crows](rules/crows/) | 2-4 | 30-45 min | Tyler Sigman | ✅ |
 | [Cry Havoc](rules/cry-havoc/) | 2-4 | 90-120 min | Grant Rodiek, Michal Oracz, Michal Walczak | ❗ |
-| [Cryptid](rules/cryptid/) | 3-5 | 30-50 min | Hal Duncan, Ruth Veevers | ⚠️ |
+| [Cryptid](rules/cryptid/) | 3-5 | 30-50 min | Hal Duncan, Ruth Veevers | ✅ |
 | [Cthulhu 500](rules/cthulhu-500/) | 3-8 | 30-60 min | Jeff Tidball | ✅ |
 | [Cthulhu Dice](rules/cthulhu-dice/) | 2-6 | 5-10 min | Steve Jackson | ✅ |
 | [Cuba](rules/cuba/) | 2-5 | 75-120 min | Michael Rieneck, Stefan Stadler | ✅ |
@@ -682,6 +691,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cuboro Tricky Ways](rules/cuboro-tricky-ways/) | 2-4 | 20-50 min | Johannes Guischard | ✅ |
 | [Cutthroat Caverns](rules/cutthroat-caverns/) | 3-6 | 90 min | Curt Covert | ✅ |
 | [Cyclades](rules/cyclades/) | 2-5 | 90 min | Bruno Cathala, Ludovic Maublanc | ✅ |
+| [Cytosis: A Cell Biology Board Game](rules/cytosis-a-cell-biology-board-game/) | 2-5 |  |  | ✅ |
 | [Cytosis: A Cell Biology Board Game](rules/cytosis/) | 2-5 | 60-90 min | John J. Coveyou | ⚠️ |
 
 ### D
@@ -724,7 +734,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [De Vulgari Eloquentia](rules/de-vulgari-eloquentia/) | 2-5 | 120 min | Mario Papini | ✅ |
 | [Dead of Winter: A Crossroads Game](rules/dead-of-winter-a-crossroads-game/) | 2-5 | 60-210 min | Jonathan Gilmour, Isaac Vega | ❗ |
 | [Deadwood](rules/deadwood/) | 2-5 | 40 min | Loïc Lamy | ✅ |
-| [Deadwood 1876](rules/deadwood-1876/) | 2-9 | 20-40 min | Travis Hancock | ⚠️ |
+| [Deadwood 1876](rules/deadwood-1876/) | 2-9 | 20-40 min | Travis Hancock | ✅ |
 | [Deal Me In](rules/deal-me-in/) | 2-4 | 30-60 min | Unknown | ⚠️ |
 | [Death Stacks](rules/death-stacks/) | 2 | 20 min | Stephen Euin Cobb | ⚠️ |
 | [Deathwing](rules/deathwing/) | 1-2 | 120-180 min | Richard Halliwell, Jervis Johnson | ⚠️ |
@@ -803,7 +813,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [duck! duck! Go!](rules/duck-duck-go/) | 2-4 | 20-40 min | Kevin G. Nunn | ❗ |
 | [Duel in the Dark](rules/duel-in-the-dark/) | 2-8 | 60-90 min | Friedemann de Pedro | ✅ |
 | [Dune](rules/dune/) | 2-6 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka | ❗ |
-| [Dune: Imperium](rules/dune-imperium/) | 1-4 | 60-120 min | Paul Dennen | ❗ |
+| [Dune: Imperium](rules/dune-imperium/) | 1-4 | 60-120 min | Paul Dennen | ✅ |
 | [Dune: Imperium – Uprising](rules/dune-imperium-uprising/) | 1-6 | 60-120 min | Paul Dennen | ❗ |
 | [Dungeon Fighter](rules/dungeon-fighter/) | 1-6 | 45-60 min | Lorenzo Silva, Lorenzo Tucci Sorrentino, Aureliano Buonfino | ✅ |
 | [Dungeon Lords](rules/dungeon-lords/) | 2-4 | 90-120 min | Vlaada Chvatil | ❗ |
@@ -935,7 +945,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Flash Point: Fire Rescue](rules/flash-point-fire-rescue/) | 2-6 | 45 min | Kevin Lanzing | ❗ |
 | [Flashback: Zombie Kidz](rules/flashback-zombie-kidz/) | 1-4 | 30 min | Baptiste Derrez, Marc-Antoine Doyon | ✅ |
 | [Flintloque](rules/flintloque/) | 2+ | 120 min | Gavin Syme, Mike White | ✅ |
-| [FlipToons](rules/fliptoons/) | 1-4 | 15-30 min | Jordy Adan, Renato Simões | ⚠️ |
+| [FlipToons](rules/fliptoons/) | 1-4 | 15-30 min | Jordy Adan, Renato Simões | ✅ |
 | [Focus](rules/focus/) | 2-4 | 30 min | Sid Sackson | ✅ |
 | [Fog of Love](rules/fog-of-love/) | 2 | 60-120 min | Jacob Jaskov | ❗ |
 | [Food Chain Magnate](rules/food-chain-magnate/) | 2-5 | 120-240 min | Jeroen Doumen, Joris Wiersinga | ✅ |
@@ -958,7 +968,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Friedrich](rules/friedrich/) | 3-4 | 180-240 min | Richard Sivel | ✅ |
 | [Friends Trivia Game](rules/friends-trivia-game/) | 2-6 | 30 min | Uncredited | ⚠️ |
 | [Fromage](rules/fromage/) | 1-4 | 40 min | Ben Rosset & Matthew O'Malley | ✅ |
-| [Frosthaven](rules/frosthaven/) | 1-4 | 30-120 min | Isaac Childres | ❗ |
+| [Frosthaven](rules/frosthaven/) | 1-4 | 30-120 min | Isaac Childres | ✅ |
 | [Fruit Spy](rules/fruit-spy/) | 3-5 | 20 min | Reinhard Staupe | ⚠️ |
 | [Fruttirelli](rules/fruttirelli/) | 2-4 | 20 min | Uncredited | ⚠️ |
 | [Fujian Trader](rules/fujian-trader/) | 2-4 | 60-120 min | Patrick Rosendaal | ⚠️ |
@@ -1020,8 +1030,8 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Glik](rules/glik/) | 2-4 | 20-30 min | Uncredited | ⚠️ |
 | [Globalissimo](rules/globalissimo/) | 2-6 | 45 min | Günter Burkhardt | ⚠️ |
 | [Globbo!](rules/globbo/) | 2 | 30-60 min | Steve Jackson | ⚠️ |
-| [Gloomhaven](rules/gloomhaven/) | 1-4 | 60-120 min | Isaac Childres | ❗ |
-| [Gloomhaven: Jaws of the Lion](rules/gloomhaven-jaws-of-the-lion/) | 1-4 | 30-120 min | Isaac Childres | ❗ |
+| [Gloomhaven](rules/gloomhaven/) | 1-4 | 60-120 min | Isaac Childres | ✅ |
+| [Gloomhaven: Jaws of the Lion](rules/gloomhaven-jaws-of-the-lion/) | 1-4 | 30-120 min | Isaac Childres | ✅ |
 | [Glory to Rome](rules/glory-to-rome/) | 2-5 | 60 min | Carl Chudyk | ❗ |
 | [Go Cuckoo!](rules/go-cuckoo/) | 2-5 | 15 min | Josep M. Allue, Viktor Bautista i Roca | ⚠️ |
 | [Go for Broke!](rules/go-for-broke/) | 2-5 | 30 min |  | ⚠️ |
@@ -1047,7 +1057,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Grav-Ball](rules/grav-ball/) | 2 | 60-90 min | Jordan Weisman | ⚠️ |
 | [Grave Robbers from Outer Space](rules/grave-robbers-from-outer-space/) | 2-6 | 30-60 min | Stephen Tassie | ⚠️ |
 | [Gravwell: Escape from the 9th Dimension](rules/gravwell-escape-from-the-9th-dimension/) | 2-4 | 20-35 min | Corey Young | ✅ |
-| [Great Western Trail](rules/great-western-trail/) | 2-4 | 75-150 min | Alexander Pfister | ❗ |
+| [Great Western Trail](rules/great-western-trail/) | 2-4 | 75-150 min | Alexander Pfister | ✅ |
 | [Green Ghost](rules/green-ghost/) | 2-4 | 30 min |  | ⚠️ |
 | [Greyhawk Adventures: Wars](rules/greyhawk-wars/) | 2-6 | 120-180 min | David 'Zeb' Cook | ⚠️ |
 | [GridIron Master](rules/gridiron-master/) | 2 | 60-120 min | Paul Morin, Jordan Sampson | ⚠️ |
@@ -1063,7 +1073,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Gulf Strike](rules/gulf-strike/) | 2 | 120-360 min | Mark Herman | ⚠️ |
 | [Gumball Rally](rules/gumball-rally/) | 3-8 | 10-15 min | Ted Cheatham | ⚠️ |
 | [Gumshoe](rules/gumshoe/) | 1-4 | 60-120 min |  | ✅ |
-| [Gunfight in the Valley of Tears, October 9, 1973](rules/gunfight-in-the-valley-of-tears/) | 2 | 120-240 min | Perry Moore | ⚠️ |
+| [Gunfight in the Valley of Tears, October 9, 1973](rules/gunfight-in-the-valley-of-tears-october-9-1973/) | 2 | 120-240 min | Perry Moore | ⚠️ |
 | [Gute Freunde](rules/gute-freunde/) | 2-4 | 20 min | Virginia Charves | ⚠️ |
 | [Gwyddbwyll](rules/gwyddbwyll/) | 2 | 30-60 min |  | ⚠️ |
 
@@ -1078,7 +1088,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Hamburgum](rules/hamburgum/) | 1-5 | 75-150 min | Stefan Feld | ✅ |
 | [Hammer of the Scots](rules/hammer-of-the-scots/) | 2 | 120-240 min | Jerry Taylor, Tom Dalgliesh | ✅ |
 | [Hannibal: Rome vs. Carthage](rules/hannibal-rome-vs-carthage/) | 2 | 120-240 min | Mark Simonitch | ❗ |
-| [Hansa Teutonica](rules/hansa-teutonica/) | 2-5 | 45-90 min | Andreas Steding | ⚠️ |
+| [Hansa Teutonica](rules/hansa-teutonica/) | 2-5 | 45-90 min | Andreas Steding | ❗ |
 | [Happy City](rules/happy-city/) | 2-5 | 20-30 min | Toshiki Sato, Airu Sato | ✅ |
 | [Hare and Tortoise](rules/hare-and-tortoise/) | 2-5 | 30-60 min | Iello | ❗ |
 | [Harmonies](rules/harmonies/) | 1-4 | 30 min | Johan Benvenuto | ✅ |
@@ -1183,12 +1193,12 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 |------|---------|------|----------|--------|
 | [Jamaica](rules/jamaica/) | 2-6 | 30-60 min | Malcolm Braff, Bruno Cathala, Sébastien Pauchon | ⚠️ |
 | [Jambo](rules/jambo/) | 2 | 45 min | Rüdiger Dorn | ✅ |
-| [James Clavell's Tai-Pan](rules/james-clavells-tai-pan/) | 2-4 | 90 min | Ian Bailey, Albie Fiore | ⚠️ |
+| [James Clavell's Tai-Pan](rules/james-clavell-s-tai-pan/) | 2-4 | 90 min | Ian Bailey, Albie Fiore | ⚠️ |
 | [Jantaris](rules/jantaris/) | 2-5 | 60 min | Czech Board Games | ⚠️ |
 | [Jarnac](rules/jarnac/) | 2 | 45 min | Emile Lombard | ⚠️ |
 | [Java](rules/java/) | 2-4 | 90-120 min | Wolfgang Kramer, Michael Kiesling | ⚠️ |
 | [Jedi Knights Trading Card Game](rules/jedi-knights-trading-card-game/) | 2 or 4 | 45-90 min | Tom Lischke | ✅ |
-| [Jena-Auerstadt](rules/jena-auerstadt/) | 2 | 60-120 min | SPI Design Staff | ⚠️ |
+| [Jena-Auerstadt](rules/jena-auerstadt-the-battle-for-prussia-14-october-1806/) | 2 | 60-120 min | SPI Design Staff | ⚠️ |
 | [Jerusalem](rules/jerusalem/) | 2-4 | 90 min | Michele Mura | ⚠️ |
 | [Jeson Mor](rules/jeson-mor/) | 2 | 20 min | Traditional (Mongolian) | ⚠️ |
 | [Jinsei Game](rules/jinsei-game/) | 2-6 | 60 min | Takara (based on The Game of Life by Reuben Klamer) | ⚠️ |
@@ -1204,7 +1214,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Junta: Viva el Presidente!](rules/junta-viva-el-presidente/) | 3-5 | 45 min | Sebastian Resl, Christoph Reiser | ❗ |
 | [Jurassic Parts](rules/jurassic-parts/) | 2-5 | 30-45 min | Kevin Lanzing | ✅ |
 | [Jurassic Snack](rules/jurassic-snack/) | 2 | 15 min | Bruno Cathala | ✅ |
-| [Jurassic World: The Legacy of Isla Nublar](rules/jurassic-world-legacy-of-isla-nublar/) | 2-4 | 90 min per session | Prospero Hall | ⚠️ |
+| [Jurassic World: The Legacy of Isla Nublar](rules/jurassic-world-the-legacy-of-isla-nublar/) | 2-4 | 90 min per session | Prospero Hall | ⚠️ |
 | [Just4Fun](rules/just-4-fun/) | 2-4 | 30 min | Jürgen P. K. Grunau | ⚠️ |
 | [Just4Fun Colours](rules/just4fun-colours/) | 2-4 | 30 min | Jürgen P. K. Grunau | ⚠️ |
 
@@ -1469,7 +1479,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 |------|---------|------|----------|--------|
 | [Nanuk](rules/nanuk/) | 5-8 | 45 min | Mark Goadrich, Brett Myers | ✅ |
 | [Navegador](rules/navegador/) | 2-5 | 60-90 min | Mac Gerdts | ✅ |
-| [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapiński | ⚠️ |
+| [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapiński | ✅ |
 | [Neuroshima Hex!](rules/neuroshima-hex/) | 2-4 | 30 min | Michal Oracz | ✅ |
 | [Newton](rules/newton/) | 1-4 | 90 min | Simone Luciani, Nestore Mangone | ✅ |
 | [Next Station: London](rules/next-station-london/) | 1-4 | 25 min | Matthew Dunstan | ✅ |
@@ -1529,7 +1539,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Paleo](rules/paleo/) | 2-4 | 45-60 minutes | Peter Rustemeyer | ❗ |
 | [Pandemic](rules/pandemic/) | 2-4 | 45 min | Matt Leacock | ✅ |
 | [Pandemic Legacy: Season 0](rules/pandemic-legacy-season-0/) | 2-4 | 45-60 minutes per session | Matt Leacock, Rob Daviau | ❗ |
-| [Pandemic Legacy: Season 1](rules/pandemic-legacy-season-1/) | 2-4 | 60 minutes per session | Matt Leacock, Rob Daviau | ❗ |
+| [Pandemic Legacy: Season 1](rules/pandemic-legacy-season-1/) | 2-4 | 60 minutes per session | Matt Leacock, Rob Daviau | ✅ |
 | [Pandemic Legacy: Season 2](rules/pandemic-legacy-season-2/) | 2-4 | 60 minutes per session | Matt Leacock, Rob Daviau | ❗ |
 | [Panzer Leader](rules/panzer-leader/) | 2 | 60-180 minutes | James Dunnigan | ❗ |
 | [PanzerBlitz](rules/panzerblitz/) | 2 | 60-180 minutes | James Dunnigan | ❗ |
@@ -1537,7 +1547,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [PARKS](rules/parks/) | 1-5 | 40-70 minutes | Henry Audubon | ❗ |
 | [Patchwork](rules/patchwork/) | 2 | 15-30 minutes | Uwe Rosenberg | ✅ |
 | [Paths of Glory](rules/paths-of-glory/) | 2 | 360-480 minutes | Ted Raicer | ❗ |
-| [Pax Pamir: Second Edition](rules/pax-pamir-second-edition/) | 1-5 | 45-120 min | Cole Wehrle | ⚠️ |
+| [Pax Pamir: Second Edition](rules/pax-pamir-second-edition/) | 1-5 | 45-120 min | Cole Wehrle | ✅ |
 | [Pax Romana](rules/pax-romana/) | 2-4 | 360-600 minutes | Richard H. Berg | ❗ |
 | [Pay Day](rules/pay-day/) | 2-4 | 60-120 minutes | Paul J. Gruen | ⚠️ |
 | [Peek-a-Mouse](rules/peek-a-mouse/) | 2-6 | 15-20 minutes | Emilie Gleason, Yohan Servais | ⚠️ |
@@ -1601,7 +1611,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
-| [QE](rules/qe/) | 3-5 | 45 min | Gavin Birnbaum | ⚠️ |
+| [QE](rules/qe/) | 3-5 | 45 min | Gavin Birnbaum | ✅ |
 | [Qin](rules/qin/) | 2-4 | 20-30 min | Reiner Knizia | ✅ |
 | [Quacks & Co.: Quedlinburg Dash](rules/quacks-co-quedlinburg-dash/) | 2-4 | 25 min | Wolfgang Warsch | ✅ |
 | [Quarriors!](rules/quarriors/) | 2-4 | 30 min | Mike Elliott, Eric M. Lang | ❗ |
@@ -1620,7 +1630,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
-| [Ra](rules/ra/) | 2-5 | 45-60 min | Reiner Knizia | ⚠️ |
+| [Ra](rules/ra/) | 2-5 | 45-60 min | Reiner Knizia | ❗ |
 | [Race for the Galaxy](rules/race-for-the-galaxy/) | 2-4 | 30-60 min | Tom Lehmann | ✅ |
 | [Raid on Iran](rules/raid-on-iran/) | 2 | 60-120 min | Steve Jackson | ⚠️ |
 | [Raiders of the North Sea](rules/raiders-of-the-north-sea/) | 2-4 | 60-80 min | Shem Phillips | ❗ |
@@ -1641,10 +1651,10 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Rave](rules/rave/) | 2-6 | 45-90 min | Patrick Treloar | ⚠️ |
 | [Razzia!](rules/razzia/) | 3-5 | 40-60 min | Reiner Knizia | ⚠️ |
 | [Razzo Raketo](rules/razzo-raketo/) | 2-4 | 15-20 min | Christoph Cantzler | ⚠️ |
-| [Ready Set Bet](rules/ready-set-bet/) | 2-9 | 45-60 min | John D. Clair | ⚠️ |
+| [Ready Set Bet](rules/ready-set-bet/) | 2-9 | 45-60 min | John D. Clair | ✅ |
 | [Realm of the Jade Goddess](rules/realm-of-the-jade-goddess/) | 2-4 | 60-90 min | Klaus Teuber | ⚠️ |
 | [Rebirth](rules/rebirth/) | 2-4 | 45-60 min | Reiner Knizia | ⚠️ |
-| [Red Notice: A Million or Prison](rules/red-notice/) | 2 | 30 min | Gautier de Cottreau, Baptiste Laurent | ⚠️ |
+| [Red Notice: A Million or Prison](rules/red-notice/) | 2 | 30 min | Gautier de Cottreau, Baptiste Laurent | ✅ |
 | [Red November](rules/red-november/) | 3-8 | 60-120 min | Bruno Faidutti, Jef Gontier | ⚠️ |
 | [Red vs White vs Blue: A Russian Civil War 1918-1922](rules/red-vs-white-vs-blue-a-russian-civil-war-1918-1922/) | 2 | 120-180 min | Unknown | ⚠️ |
 | [Reds!](rules/reds/) | 2 | 180-480 min | Ted Raicer | ⚠️ |
@@ -1666,7 +1676,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Revolver](rules/revolver/) | 2 | 30-60 min | Mark Chaplin | ⚠️ |
 | [Rex: Final Days of an Empire](rules/rex-final-days-of-an-empire/) | 3-6 | 120-180 min | Bill Eberle, Jack Kittredge, Peter Olotka, Corey Konieczka, Christian T. Petersen | ⚠️ |
 | [Rheinlander](rules/rheinl-nder/) | 3-5 | 45-60 min | Reiner Knizia | ⚠️ |
-| [Rhino Hero](rules/rhino-hero/) | 2-5 | 5-15 min | Scott Frisco, Steven Strumpf | ⚠️ |
+| [Rhino Hero](rules/rhino-hero/) | 2-5 | 5-15 min | Scott Frisco, Steven Strumpf | ✅ |
 | [Rhino Hero: Super Battle](rules/rhino-hero-super-battle/) | 2-4 | 10-20 min | Scott Frisco, Steven Strumpf | ⚠️ |
 | [Ribbit](rules/ribbit/) | 2-5 | 15-20 min | Reiner Knizia | ⚠️ |
 | [Rich Uncle](rules/rich-uncle/) | 2-4 | 30-60 min | Unknown | ⚠️ |
@@ -1755,7 +1765,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Savannah Cafe](rules/savannah-caf/) | 2-5 | 30 min | Henri Kermarrec | ⚠️ |
 | [Save Doctor Lucky](rules/save-doctor-lucky/) | 3-7 | 20-40 min | James Ernest | ⚠️ |
 | [Savernake Forest](rules/savernake-forest/) | 2-4 | 30-45 min | Ruben Monteiro | ⚠️ |
-| [Schotten Totten](rules/schotten-totten/) | 2 | 30 min | Reiner Knizia | ⚠️ |
+| [Schotten Totten](rules/schotten-totten/) | 2 | 30 min | Reiner Knizia | ❗ |
 | [Scotland Yard](rules/scotland-yard/) | 2-6 | 45-60 min | Manfred Burggraf, Dorothy Garrels, Wolf Hoermann, Fritz Ifland, Werner Scheerer, Werner Schlegel | ⚠️ |
 | [Scythe](rules/scythe/) | 1-5 | 90-115 min | Jamey Stegmaier | ⚠️ |
 | [SETI: Search for Extraterrestrial Intelligence](rules/seti-search-for-extraterrestrial-intelligence/) | 1-4 | 90-150 min | Tomas Holek | ⚠️ |
@@ -1766,10 +1776,10 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Sleeping Gods](rules/sleeping-gods/) | 1-4 | 60-1200 min (campaign) | Ryan Laukat | ⚠️ |
 | [Solstis](rules/solstis/) | 1-2 | 15 min | Bruno Cathala, Corentin Lebrat | ⚠️ |
 | [Speakeasy](rules/speakeasy/) | 1-4 | 90-120 min | Vital Lacerda | ⚠️ |
-| [Splendor](rules/splendor/) | 2-4 | 30 min | Marc Andre | ⚠️ |
+| [Splendor](rules/splendor/) | 2-4 | 30 min | Marc Andre | ✅ |
 | [Star Wars: Imperial Assault](rules/star-wars-imperial-assault/) | 2-5 | 60-120 min | Justin Kemppainen, Corey Konieczka, Jonathan Ying | ⚠️ |
 | [Star Wars: Rebellion](rules/star-wars-rebellion/) | 2-4 | 180-240 min | Corey Konieczka | ⚠️ |
-| [Star Wars: The Deckbuilding Game](rules/star-wars-the-deckbuilding-game/) | 2 | 30 min | Caleb Grace | ⚠️ |
+| [Star Wars: The Deckbuilding Game](rules/star-wars-the-deckbuilding-game/) | 2 | 30 min | Caleb Grace | ✅ |
 | [Summoner Wars (Second Edition)](rules/summoner-wars-second-edition/) | 2 | 40-60 min | Colby Dauch | ⚠️ |
 | [Sushi Go!](rules/sushi-go/) | 2-5 | 15 min | Phil Walker-Harding | ⚠️ |
 
@@ -1786,9 +1796,9 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [The Omega Virus](rules/the-omega-virus/) | 1-4 | 60 minutes | Joe Huber | ⚠️ |
 | [The Oregon Trail Card Game](rules/the-oregon-trail-card-game/) | 2-6 | 30 minutes | Pressman Toy | ✅ |
 | [The Princes of Florence](rules/the-princes-of-florence/) | 3-5 | 75-100 minutes | Richard Ulrich, Wolfgang Kramer | ❗ |
-| [The Quacks of Quedlinburg](rules/quacks-of-quedlinburg/) | 2-4 | 45 min | Wolfgang Warsch | ⚠️ |
-| ↳ [The Quacks of Quedlinburg: The Alchemists](rules/quacks-of-quedlinburg-the-alchemists/) | 2-4 | 45 min | Wolfgang Warsch | ⚠️ |
-| ↳ [The Quacks of Quedlinburg: The Herb Witches](rules/quacks-of-quedlinburg-the-herb-witches/) | 2-5 | 45 min | Wolfgang Warsch | ⚠️ |
+| [The Quacks of Quedlinburg](rules/the-quacks-of-quedlinburg/) | 2-4 | 45 min | Wolfgang Warsch | ✅ |
+| ↳ [The Quacks of Quedlinburg: The Alchemists](rules/the-quacks-of-quedlinburg-the-alchemists/) | 2-4 | 45 min | Wolfgang Warsch | ❗ |
+| ↳ [The Quacks of Quedlinburg: The Herb Witches](rules/the-quacks-of-quedlinburg-the-herb-witches/) | 2-5 | 45 min | Wolfgang Warsch | ❗ |
 | [The Quest for El Dorado](rules/the-quest-for-el-dorado/) | 2-4 | 30-60 min | Reiner Knizia | ✅ |
 | [The Voyages of Marco Polo](rules/the-voyages-of-marco-polo/) | 2-4 | 40-100 min | Simone Luciani, Daniele Tascini | ⚠️ |
 | [The White Castle](rules/the-white-castle/) | 1-4 | 80 min | Sheila Santos, Israel Cendrero | ⚠️ |

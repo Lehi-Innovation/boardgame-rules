@@ -7,14 +7,14 @@ source_pdf: "battles-of-westeros-rules.pdf"
 extracted_date: "2026-08-07"
 summarized_date: "2026-08-07"
 rulebook_version: "Fantasy Flight Games, 2010"
-verification: "unverified"
+verification: "verified"
 verification_date: "2026-08-08"
 ---
 
 # Battles of Westeros
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/battles-of-westeros-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battles%20of%20Westeros&game=battles-of-westeros)
 <!-- verification:end -->

@@ -6,11 +6,11 @@ designer: "Xavier Georges"
 source_pdf: "carnegie-rules.pdf"
 extracted_date: "2026-08-07"
 summarized_date: "2026-08-07"
-verification: "unverified"
+verification: "inaccurate"
 verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Entire Donation Chart scoring system (named donation types each with distinct VP formulas, e.g. Welfare=7VP flat, Human Rights=4VP/Infrastructure) is omitted; only a generic 12VP cap is given. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/carnegie-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Carnegie&game=carnegie)
 <!-- verification:end -->

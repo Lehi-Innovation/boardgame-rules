@@ -7,7 +7,15 @@ source_pdf: "auf-achse-rules.pdf"
 extracted_date: "2026-08-07"
 summarized_date: "2026-08-07"
 rulebook_version: "Schmidt Spiele (Postfach 470437, D-12313 Berlin)"
+verification: "inaccurate"
+verification_date: "2026-08-08"
 ---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Contract initiate/deliver wrongly requires exact-count arrival (Turn Structure, Special Rules, checklist) vs source "excess/extra movement is ignored" for both; contradicts summary's own Actions section. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/auf-achse-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Auf%20Achse&game=auf-achse)
+<!-- verification:end -->
+
 
 ## Overview
 

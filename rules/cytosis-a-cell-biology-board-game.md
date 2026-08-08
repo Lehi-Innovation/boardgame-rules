@@ -5,14 +5,14 @@ player_count: "2-5"
 source_pdf: "cytosis-a-cell-biology-board-game-rules.pdf"
 extracted_date: "2026-08-08"
 summarized_date: "2026-08-08"
-verification: "unverified"
+verification: "verified"
 verification_date: "2026-08-08"
 ---
 
 # Cytosis: A Cell Biology Board Game
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cytosis-a-cell-biology-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cytosis%3A%20A%20Cell%20Biology%20Board%20Game&game=cytosis-a-cell-biology-board-game)
 <!-- verification:end -->
