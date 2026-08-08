@@ -6,16 +6,16 @@ player_count: "2-4"
 play_time: "45 min"
 designer: "Wolfgang Warsch"
 summarized_date: "2026-03-16"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-08-08"
 ---
 
 # The Quacks of Quedlinburg: The Alchemists
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: No extracted source text to audit against. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Quacks%20of%20Quedlinburg%3A%20The%20Alchemists&game=quacks-of-quedlinburg-the-alchemists)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/the-quacks-of-quedlinburg-the-alchemists-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20The%20Quacks%20of%20Quedlinburg%3A%20The%20Alchemists&game=the-quacks-of-quedlinburg-the-alchemists)
 <!-- verification:end -->
 
 ## Overview

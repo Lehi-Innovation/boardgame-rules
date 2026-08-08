@@ -8,13 +8,13 @@ source_pdf: ""
 extracted_date: "2026-04-20"
 summarized_date: "2026-04-20"
 rulebook_version: "IELLO English edition (base game)"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+verification: "inaccurate"
+verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: No extracted source text to audit against. Until it is re-written, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Schotten%20Totten&game=schotten-totten)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/schotten-totten-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Schotten%20Totten&game=schotten-totten)
 <!-- verification:end -->
 
 

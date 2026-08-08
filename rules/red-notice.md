@@ -8,14 +8,14 @@ source_pdf: "red-notice-rules.pdf"
 extracted_date: "2026-07-02"
 summarized_date: "2026-07-02"
 rulebook_version: "English (web edition)"
-verification: "unverified"
-verification_date: "2026-07-02"
+verification: "minor_issues"
+verification_date: "2026-08-08"
 ---
 
 # Red Notice: A Million or Prison
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/red-notice-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Red%20Notice%3A%20A%20Million%20or%20Prison&game=red-notice)
 <!-- verification:end -->
