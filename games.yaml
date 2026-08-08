@@ -27,8 +27,11 @@ games:
   name: Hansa Teutonica
   play_time: 45-90 min
   player_count: 2-5
-  status: validated
+  status: flagged
   bgg_rank: 147
+  review_notes: 'Semantic audit (b172): Bonus Marker scoring table (1/3/6/10/15/21
+    PP) has no source support; the source table lost its entire point-value column
+    during extraction -- see docs/quality/audit-findings/b172.md'
 - bgg_id: 266830
   designer: Gavin Birnbaum
   name: QE
@@ -66,8 +69,11 @@ games:
   name: Blood on the Clocktower
   play_time: 30-120 min
   player_count: 5-20
-  status: validated
+  status: flagged
   bgg_rank: 65
+  review_notes: 'Semantic audit (b172): Character Distribution table (Townsfolk/Outsiders/Minions/Demon
+    by player count) has zero source support; deferred to a physical setup sheet not
+    in the extracted text -- see docs/quality/audit-findings/b172.md'
 - bgg_id: 148228
   designer: Marc Andre
   name: Splendor
@@ -376,6 +382,8 @@ games:
 - bgg_id: 357726
   name: '51st State: Ultimate Edition'
   status: validated
+  notes: "extracted source is byte-identical to 51st-state-master-set's \u2014 Ultimate\
+    \ Edition was never separately sourced; audited MINOR against the shared source"
 - bgg_id: 4920
   name: '5th Fleet: Modern Naval Combat in the Indian Ocean'
   notes: Only paywalled copies found
@@ -412,9 +420,12 @@ games:
   verified_date: '2026-07-03'
 - bgg_id: 177736
   name: A Feast for Odin
-  status: verified
+  status: flagged
   verified_date: '2026-06-13'
   bgg_rank: 27
+  review_notes: 'Semantic audit (top-002): Ore cannot be placed in stone/long houses
+    per source (l.379-381, l.746-747) but summary says ore fits "any placement area"
+    except Banquet Table -- see docs/quality/audit-findings/top-002.md'
 - bgg_id: 79828
   name: A Few Acres of Snow
   status: verified
@@ -1122,7 +1133,10 @@ games:
   status: extracted
 - bgg_id: 1262
   name: 'Axis & Allies: Pacific'
-  status: extracted
+  status: not_found
+  notes: extracted file was retailer-website boilerplate (billiards store nav/cookie
+    banner), byte-identical across three games; deleted 2026-08-08; needs real rulebook
+    source
 - bgg_id: 18723
   name: Aye, Dark Overlord!
   status: verified
@@ -1320,7 +1334,10 @@ games:
   status: extracted
 - bgg_id: 93538
   name: Battleship Galaxies
-  status: extracted
+  status: not_found
+  notes: extracted file was retailer-website boilerplate (billiards store nav/cookie
+    banner), byte-identical across three games; deleted 2026-08-08; needs real rulebook
+    source
 - bgg_id: 2425
   name: Battleship
   status: flagged
@@ -1865,7 +1882,9 @@ games:
     turn economy (and contradicting the summary''s own Special Rules section).'
 - bgg_id: 2795
   name: Car Wars
-  status: extracted
+  status: validated
+  notes: summarized from full SJG rulebook; several column-scrambled tables described
+    in prose with unverifiable cells omitted
 - bgg_id: 150
   name: Carabande
   status: validated
@@ -1953,7 +1972,10 @@ games:
   status: not_found
 - bgg_id: 19237
   name: Ca$h 'n Guns
-  status: extracted
+  status: not_found
+  notes: extracted file was retailer-website boilerplate (billiards store nav/cookie
+    banner), byte-identical across three games; deleted 2026-08-08; needs real rulebook
+    source
 - bgg_id: 98189
   name: Casse-toi pov' con
   notes: No English rulebook PDF found
@@ -4253,6 +4275,8 @@ games:
     auto-becomes); tie-break is lowest power total not current first player; taxation
     omits mandatory hand-discard step (reserve value governs hand size not gold return)
     -- see docs/quality/audit-findings/b103.md'
+  notes: "extracted source is byte-identical to a-game-of-thrones-the-card-game (bgg\
+    \ 39953) \u2014 likely wrong-edition source for this entry"
 - bgg_id: 1408
   name: Gammarauders
   status: summarized
@@ -5734,6 +5758,8 @@ games:
   review_notes: 'Semantic audit (b130): Skull die face says "lose 1 health" but source
     says lose Health equal to monster''s strength; two Shield faces (melee/ranged)
     conflated into one; Sword and Sword+Skull die faces omitted entirely -- see docs/quality/audit-findings/b130.md'
+  notes: extracted source is the generic multi-set Heroica rules sheet, byte-identical
+    to heroica-fortaan's (the sheet ships with every Heroica set)
 - name: Leinen los!
   bgg_id: 10508
   status: not_found
@@ -6410,7 +6436,9 @@ games:
 - name: MindTrap
   bgg_id: 1923
   status: flagged
-  review_notes: 'Section too short/thin: Components (19 words)'
+  review_notes: "source was retailer-website boilerplate (deleted 2026-08-08) \u2014\
+    \ the existing summary was necessarily written from outside knowledge and has\
+    \ no source to verify against; needs re-sourcing and re-summarization"
 - name: Mine a Million
   bgg_id: 1920
   status: summarized
@@ -6786,8 +6814,9 @@ games:
   notes: Image-based PDF, text extraction failed
 - name: Nightfall
   bgg_id: 88408
-  status: flagged
-  notes: Downloaded file was webpage, not rules PDF
+  status: not_found
+  notes: extracted file was the same retailer-website boilerplate found on 3 other
+    games; deleted 2026-08-08; needs real rulebook source
 - name: Nightmare
   bgg_id: 5641
   status: not_found
