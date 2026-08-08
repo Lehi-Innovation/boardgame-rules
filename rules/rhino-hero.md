@@ -8,14 +8,14 @@ source_pdf: "rhino-hero-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "HABA Edition (2012, Rev. 2/2016, Art. Nr. 4789)"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-08-08"
 ---
 
 # Rhino Hero
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/rhino-hero-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rhino%20Hero&game=rhino-hero)
 <!-- verification:end -->

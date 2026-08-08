@@ -8,14 +8,14 @@ source_pdf: "ra-rules.pdf"
 extracted_date: "2026-03-22"
 summarized_date: "2026-03-22"
 rulebook_version: "Rio Grande Games (2008)"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "minor_issues"
+verification_date: "2026-08-08"
 ---
 
 # Ra
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ra-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ra&game=ra)
 <!-- verification:end -->
@@ -41,8 +41,11 @@ Ra is an auction game spanning three epochs of ancient Egyptian history. Players
 
 1. Place board centrally. Put tiles in the bag and shuffle.
 2. Each player takes VP tokens worth 10 points (face down).
-3. Distribute sun token groups based on player count:
-   - 2 players: 4 suns each; 3-4 players: 3 suns each; 5 players: 3 suns each
+3. Distribute sun token groups based on player count. Each player randomly receives one group and places its suns face-up:
+   - 2 players: 4 suns each (values 2–9). Groups: [9,6,5,2], [8,7,4,3]
+   - 3 players: 4 suns each (values 2–13). Groups: [13,8,5,2], [12,9,6,3], [11,10,7,4]
+   - 4 players: 3 suns each (values 2–13). Groups: [13,6,2], [12,7,3], [11,8,4], [10,9,5]
+   - 5 players: 3 suns each (values 2–16). Groups: [16,7,2], [15,8,3], [14,9,4], [13,10,5], [12,11,6]
 4. Place sun #1 face-up on the board's sun space.
 5. Ra track spaces: skip first 4 (2p), 2 (3p), or 1 (4p) spaces.
 
@@ -110,7 +113,7 @@ After the third epoch's scoring, the player with the most total fame wins. Tiebr
 | Player Count | Suns per Player | Ra Track Spaces |
 |---|---|---|
 | 2 | 4 | 6 |
-| 3 | 3 | 8 |
+| 3 | 4 | 8 |
 | 4 | 3 | 9 |
 | 5 | 3 | 10 |
 

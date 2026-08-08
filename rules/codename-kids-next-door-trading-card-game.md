@@ -12,7 +12,7 @@ verification_date: "2026-06-12"
 <!-- verification:begin -->
 > ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Codename%3A%20Kids%20Next%20Door%20TCG&game=codename-kids-next-door-tcg)
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Codename%3A%20Kids%20Next%20Door%20TCG&game=codename-kids-next-door-trading-card-game)
 <!-- verification:end -->
 
 

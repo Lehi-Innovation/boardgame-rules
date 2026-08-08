@@ -7,14 +7,14 @@ designer: "Mathias Wigge"
 source_pdf: "ark-nova-rules.pdf"
 extracted_date: "2026-08-05"
 summarized_date: "2026-08-05"
-verification: "unverified"
-verification_date: "2026-08-05"
+verification: "verified"
+verification_date: "2026-08-08"
 ---
 
 # Ark Nova
 
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ark-nova-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ark%20Nova&game=ark-nova)
 <!-- verification:end -->

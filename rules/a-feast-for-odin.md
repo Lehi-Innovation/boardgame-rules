@@ -7,11 +7,11 @@ designer: "Uwe Rosenberg"
 source_pdf: "a-feast-for-odin-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
-verification: "minor_issues"
-verification_date: "2026-06-13"
+verification: "inaccurate"
+verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Ore cannot be placed in stone/long houses per source (l.379-381, l.746-747) but summary says ore fits "any placement area" except Banquet Table. Until it is re-written, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/a-feast-for-odin-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Feast%20for%20Odin&game=a-feast-for-odin)
 <!-- verification:end -->

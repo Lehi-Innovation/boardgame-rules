@@ -7,11 +7,11 @@ designer: "Alexander Pfister"
 source_pdf: "great-western-trail-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-08-05"
-verification: "inaccurate"
-verification_date: "2026-06-14"
+verification: "verified"
+verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Game end trigger wrong: summary says "last train station token placed or job market can't refill" but source says game ends when job market token moves out via red arrow (last worker placed); invented penalty "workers not hired = negative VP from job market" has no source support. Until it is re-written, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/great-western-trail-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Great%20Western%20Trail&game=great-western-trail)
 <!-- verification:end -->
