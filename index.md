@@ -1849,6 +1849,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | Game | Players | Time | Designer | Status |
 |------|---------|------|----------|--------|
 | [Zenith](rules/zenith/) | 2 | 30 min | David Bernal | ⚠️ |
+| [Zombicide](rules/zombicide/) | 1-6 | 20-180 min | Raphaël Guiton, Jean-Baptiste Lullien, Nicolas Raoult | ✅ |
 | [Zooloretto](rules/zooloretto/) | 2-5 | 45 min | Michael Schacht | ⚠️ |
 
 *{{ site.time | date: "%B %Y" }} · {{ site.pages | where_exp: "p", "p.path contains 'rules/'" | size }} games available*
