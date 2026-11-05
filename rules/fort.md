@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Macaroni Sculpture VP wrong (2 vs 4); 2 of 3 game-end triggers missing (25VP and empty Park deck); tiebreaker invents Pack resources comparison instead of shared victory. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to game-end triggers, scoring, recruitment, and card rewards; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/fort-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fort&game=fort)
 <!-- verification:end -->
@@ -63,7 +63,8 @@ You may **add cards** from your hand matching the suit icon next to an "x" to im
 ### Phase 3: Recruit
 You may recruit 1 Kid card from:
 - The face-up Park (3 cards), OR
-- Any opponent's Yard.
+- Any player's Yard, including your own, OR
+- The top of the Park deck.
 
 Add the recruited card to your discard pile. If from the Park, replace from the deck.
 
@@ -94,30 +95,27 @@ Draw 5 cards from your personal deck. If your deck runs out, shuffle your discar
 | 5 | 6 | 5 resources (specific) | Gain Macaroni Sculpture |
 
 ### Made-Up Rules
-One-time or ongoing benefits gained at Fort Level 1 and when drawn.
+At Fort Level 1, privately choose one Made-Up Rule from the central stack. It scores points at game end.
 
 ### Perks
-Persistent abilities gained at Fort Level 2 (choose from face-up row).
+At Fort Level 2, choose a Perk from the face-up row. Some Perks have persistent effects; others can be used once per game.
 
 ### Macaroni Sculpture
-The first player to reach Fort Level 5 takes the Macaroni Sculpture (worth 2 VP at game end).
+The first player to reach Fort Level 5 takes the Macaroni Sculpture (worth 4 VP at game end).
 
 ## Scoring / Victory Conditions
 
-The game ends at the end of the round when any player reaches Fort Level 5 (all players get equal turns).
+The game end triggers when any player has 25 or more VP on the Victory Track, any player reaches Fort Level 5, or the Park deck is empty (even if face-up Park cards remain). The leader finishes their turn, then finish the current round so all players have equal turns.
 
 **Final Scoring:**
 | Source | Points |
 |--------|--------|
 | Fort Level | VP per level (printed on player board) |
-| Pack | 1 VP per resource in Pack |
-| Lookout | 1 VP per card in Lookout |
-| Made-Up Rules | VP as indicated |
-| Perks | VP as indicated |
-| Macaroni Sculpture | 2 VP (if held) |
+| Made-Up Rule | VP as indicated by your card, if any |
+| Macaroni Sculpture | 4 VP (if held) |
 | Victory Track | VP accumulated during game |
 
-Highest total VP wins. Tiebreaker: highest Fort Level, then most resources in Pack.
+Highest total VP wins. Tiebreaker: highest Fort Level; if still tied, share the victory.
 
 ## Special Rules & Edge Cases
 
@@ -142,4 +140,4 @@ Highest total VP wins. Tiebreaker: highest Fort Level, then most resources in Pa
 Skateboard, Shovel, Glue, Squirtgun, Crown, Book (+ wild Coin)
 
 ### Game End Trigger
-Any player reaches Fort Level 5 (finish the round)
+Any player reaches 25 VP on the track, any player reaches Fort Level 5, or the Park deck is empty (finish the round)

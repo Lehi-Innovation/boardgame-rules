@@ -7,13 +7,13 @@ designer: "Uwe Eickert"
 source_pdf: "conflict-of-heroes-storms-of-steel-kursk-1943-rules.pdf"
 extracted_date: "2026-03-19"
 summarized_date: "2026-03-19"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "unverifiable"
+verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
 >
-> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/conflict-of-heroes-storms-of-steel-kursk-1943-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conflict%20of%20Heroes%3A%20Storms%20of%20Steel%21%20%E2%80%93%20Kursk%201943&game=conflict-of-heroes-storms-of-steel-kursk-1943)
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Conflict%20of%20Heroes%3A%20Storms%20of%20Steel%21%20%E2%80%93%20Kursk%201943&game=conflict-of-heroes-storms-of-steel-kursk-1943)
 <!-- verification:end -->
 
 

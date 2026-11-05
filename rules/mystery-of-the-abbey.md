@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # Mystery of the Abbey
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Correct revelation worth +4 pts in summary but source says +2; "most suspect cards at game end: Bonus" is invented with no source support. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Correct revelation worth +4 pts in summary but source says +2; "most suspect cards at game end: Bonus" is invented with no source support. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mystery-of-the-abbey-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mystery%20of%20the%20Abbey&game=mystery-of-the-abbey)
 <!-- verification:end -->

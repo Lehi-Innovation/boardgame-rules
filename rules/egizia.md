@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Joker crew rule reversed (summary: alone only; source: never alone, must combine); Final Scoring stone rate wrong (summary: 1pt/stone; source: 2 stones/1pt). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to Joker crews, stone conversion, and unsupported final scoring; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/egizia-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Egizia&game=egizia)
 <!-- verification:end -->
@@ -131,10 +131,9 @@ Each round space has a unique action:
 - Co-operation bonus (1/3/6 points for 1/2/3 building sites used).
 
 ### Final Scoring
-1. **Stone market conversion:** If a player's marker is on one of the bottom two spaces, they may sell remaining stones for 1 point per stone (up to 10, rounded down).
-2. **Grave tiles:** Sum the values and score per table (1-10 = 2 points, 11-20 = 5 points, 21+ = 9 points).
+1. **Stone market conversion:** If a player's marker is on one of the bottom two spaces, they may sell remaining stones for 1 point per 2 stones, rounding the points down.
+2. **Grave tiles:** Sum their values and use the printed final-scoring table in the rulebook; the extracted text omits its point values.
 3. **Sphinx cards:** Check each sphinx card for fulfilled conditions and score accordingly. Categories include: building conditions ("X is built"), having stones in certain buildings, reaching last levels, having productive quarries/fields, and construction crew conditions.
-4. **Scarab bonus:** For each 10 points already scored (on the scoring table), gain an additional point.
 
 The player with the most points wins. Tiebreaker: the player whose stone is in front on the scoring track.
 
@@ -142,7 +141,7 @@ The player with the most points wins. Tiebreaker: the player whose stone is in f
 
 - A player can use each construction crew in each round only once. After use, turn it over; it returns at the beginning of the next round.
 - Construction crews are used but not consumed.
-- The Joker construction crew can only be used alone, never with another crew.
+- The Joker construction crew can never be used alone; it may be combined with another crew once per round.
 - If a player does not build, they take their ship back from the building site.
 - A player building on speculation (no ship at site) can do so if another player with a ship chose not to build.
 - The water ring must always stay on one of the 3 round fields on the board.

@@ -12,7 +12,7 @@ verification: "inaccurate"
 verification_date: "2026-08-05"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented CHOAM rules: Shaddam's "Sardaukar Commander" set-aside exclusive contracts and multi-contract completion rule (cited to FAQ) have no source support; components say 20 contracts total (10 standard + 10 RoI) vs source 20 standard + 10 Rise-of-Ix.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented CHOAM rules: Shaddam's "Sardaukar Commander" set-aside exclusive contracts and multi-contract completion rule (cited to FAQ) have no source support; components say 20 contracts total (10 standard + 10 RoI) vs source 20 standard + 10 Rise-of-Ix.. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dune-imperium-uprising-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dune%3A%20Imperium%20%E2%80%93%20Uprising&game=dune-imperium-uprising)
 <!-- verification:end -->

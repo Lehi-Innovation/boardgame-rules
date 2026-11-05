@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Production formula omits 6 PP per capital; win condition omits required capital-control check. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Production formula omits 6 PP per capital; win condition omits required capital-control check. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dust-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dust&game=dust)
 <!-- verification:end -->

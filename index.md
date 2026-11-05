@@ -1766,7 +1766,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Savannah Cafe](rules/savannah-caf/) | 2-5 | 30 min | Henri Kermarrec | ⚠️ |
 | [Save Doctor Lucky](rules/save-doctor-lucky/) | 3-7 | 20-40 min | James Ernest | ⚠️ |
 | [Savernake Forest](rules/savernake-forest/) | 2-4 | 30-45 min | Ruben Monteiro | ⚠️ |
-| [Schotten Totten](rules/schotten-totten/) | 2 | 30 min | Reiner Knizia | ❗ |
+| [Schotten Totten](rules/schotten-totten/) | 2 | 30 min | Reiner Knizia | ⚠️ |
 | [Scotland Yard](rules/scotland-yard/) | 2-6 | 45-60 min | Manfred Burggraf, Dorothy Garrels, Wolf Hoermann, Fritz Ifland, Werner Scheerer, Werner Schlegel | ⚠️ |
 | [Scythe](rules/scythe/) | 1-5 | 90-115 min | Jamey Stegmaier | ⚠️ |
 | [SETI: Search for Extraterrestrial Intelligence](rules/seti-search-for-extraterrestrial-intelligence/) | 1-4 | 90-150 min | Tomas Holek | ⚠️ |

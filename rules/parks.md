@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Three MAJOR errors: tiebreaker is "most Parks visited then shared" not "most unspent tokens"; Gear purchase requires Sunshine tokens specifically not generic tokens; Campfire relights when a Hiker reaches Trail End (mid-season) not "at the start of each season"; First Hiker Marker (1 pt) omitted from scoring. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to Campfire timing, Gear costs, First Hiker, scoring, and tiebreaker; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/parks-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20PARKS&game=parks)
 <!-- verification:end -->
@@ -55,7 +55,7 @@ The player with the First Hiker Marker goes first. On your turn:
 2. If the site has a Weather token, take it as a bonus.
 3. Perform the site's action.
 
-**Campfire rule:** If another Hiker (even your own) occupies a site, you cannot visit it UNLESS you flip your Campfire to the extinguished side. Your Campfire resets (re-lights) at the start of each season.
+**Campfire rule:** If another Hiker (even your own) occupies a site, you cannot visit it UNLESS you flip your Campfire to the extinguished side. Your Campfire relights immediately whenever one of your Hikers reaches Trail End.
 
 ### Season End
 A Season ends when all Hikers reach the Trail End. The player with the Camera may take a Photo at the reduced cost. Shuffle in one more Advanced Site for the next Season's Trail (making trails progressively longer).
@@ -81,7 +81,7 @@ A Season ends when all Hikers reach the Trail End. The player with the Camera ma
 At Trail End, you may perform ONE of these:
 - **Visit a Park:** Spend the tokens shown on a face-up Park card to claim it.
 - **Reserve a Park:** Take a Park card to reserve for a future visit.
-- **Buy Gear:** Spend tokens shown on a Gear card to claim it and gain its ongoing ability.
+- **Buy Gear:** Spend Sunshine equal to the Gear card’s cost to claim it and gain its ability. At Trail End, the first Hiker to Buy Gear gets a 1-Sunshine discount; in 4+ player games, the first two Hikers get this discount.
 
 ### Wildlife Tokens
 Wildlife tokens are wild and can substitute for any other token when visiting Parks or taking Photos. They CANNOT be used in Canteens or for buying Gear.
@@ -98,8 +98,9 @@ At the end of the 4th Season, tally points:
 - Points from visited Park cards
 - 1 point per Photo taken
 - Points from your Personal Bonus (Year card)
+- 1 point for holding the First Hiker Marker
 
-**Highest total wins.** Tiebreaker: most unspent tokens.
+**Highest total wins.** Tiebreaker: most visited Parks. If still tied, share the win.
 
 ## Special Rules & Edge Cases
 
@@ -110,7 +111,7 @@ At the end of the 4th Season, tally points:
 - The Trail grows by 1 site each Season (new Advanced Site added).
 - Gear cards provide persistent abilities for the rest of the game.
 - At the end of the game, unvisited reserved Parks score 0 points.
-- The First Hiker Marker passes to the player who reached the Trail End first each Season.
+- The first Hiker to choose Reserve a Park at Trail End gains the First Hiker Marker.
 
 ## Player Reference
 

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Artisan Dragon hand limit wrong (summary says 7; source says 6); tiebreaker order reversed (summary Coins/Goods/Dragons; source Dragons/Goods/shared). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to hand and Goods limits, final turns, scoring, and tiebreakers; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/flamecraft-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Flamecraft&game=flamecraft)
 <!-- verification:end -->
@@ -62,7 +62,7 @@ Move your dragon to any Shop different from your last visit. If other players ar
 
 ### 3. End of Turn
 - **Expand Town**: If you filled a Shop's last slot, draw a new Shop face-down on an empty Town space. Reveal it now.
-- **Discard**: Discard down to 7 Artisan Dragons and 7 Goods tokens in hand/supply.
+- **Limits**: Return excess Artisan Dragons to the bottom of their deck until you have at most 6 in hand; return excess Goods to the supply until you have at most 7 tokens of each type.
 - **Refresh**: Refill face-up Enchantments and Artisan Dragons in the Park to 5 each.
 
 ## Actions
@@ -81,15 +81,13 @@ Each Artisan Dragon type has a unique fire-up ability based on its Goods icon:
 Enchantments grant Reputation, Fancy Dragons, Artisan Dragons, or Coins when cast. They also add a permanent Good production to the Shop.
 
 ### Fancy Dragons
-Secret goal cards that score Reputation when fulfilled (e.g., "have 3 Enchantments at Shops you visited" or "have placed Dragons at 4 different Shops"). Reveal and score at any time during your turn when conditions are met.
+Fancy Dragons have secret goals. Sun Dragons may be revealed and scored once during your turn when their goals are met. Moon Dragons score fulfilled goals at game end; if an ability scores one earlier, it cannot score again. Turn in Coins for Reputation before scoring end-game Fancy Dragons.
 
 ## Scoring / Victory Conditions
 
-The game ends immediately when either:
-- The Artisan Dragon deck runs out, OR
-- The Enchantment deck runs out.
+Drawing or revealing the last card of the Artisan Dragon deck or Enchantment deck triggers the game end. Finish that turn, then each player gets one final turn, including the player who triggered the end.
 
-Finish the current round so all players have equal turns. The player furthest ahead on the Reputation track wins. Ties broken by: most unspent Coins (each worth 1 Reputation), then most Goods, then most Artisan Dragons in hand.
+For final scoring, add 1 Reputation per leftover Coin and the rewards for fulfilled end-game Fancy Dragons. Highest Reputation wins. Ties are broken by most Artisan Dragons in hand, then most leftover Goods; if still tied, share the victory.
 
 ## Special Rules & Edge Cases
 
@@ -98,7 +96,7 @@ Finish the current round so all players have equal turns. The player furthest ah
 - **Town Capacity**: 12 Shop spaces in 1-2 player games; up to 14 in 3-5 player games. If Town is full, ignore "Filling a Shop."
 - **Enchantment Limit**: Each Shop can have at most 3 Enchantments.
 - **Visiting Occupied Shops**: You must have enough Goods/Coins to pay each opponent 1 Good/Coin to visit their Shop.
-- **Dragon/Goods Limits**: Max 7 Artisan Dragons in hand; max 7 Goods tokens in supply.
+- **Dragon/Goods Limits**: At end of turn, max 6 Artisan Dragons in hand and max 7 Goods tokens of each type. Coins and Fancy Dragons have no limit.
 
 ## Player Reference
 

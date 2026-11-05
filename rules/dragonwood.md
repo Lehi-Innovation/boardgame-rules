@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Failed capture: summary discards all played cards; source returns played cards to hand (minus the 1-card wound) - changes the risk economy of every capture attempt. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to failed-capture card returns; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dragonwood-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dragonwood&game=dragonwood)
 <!-- verification:end -->
@@ -71,9 +71,9 @@ There are three capture methods:
 4. Compare dice total (+ Enhancement bonuses) to the target value for that method on the card.
 5. If your total equals or exceeds the value, you capture the card.
 
-**Creatures:** Captured Creatures go face down in your victory pile. If you fail, the Creature stays in the Landscape and you discard 1 card from your hand as a wound. Either way, all played Adventurer cards go to the discard pile.
+**Creatures:** Captured Creatures go face down in your victory pile, and the Adventurer cards used are discarded. If you fail, the Creature stays in the Landscape: discard 1 Adventurer card as a wound and return the rest of the played Adventurer cards to your hand.
 
-**Enhancements:** Captured Enhancements go face up in front of you for ongoing use (unless the card specifies single use). On failure, discard 1 card as a wound. Enhancements **cannot** be used to capture other Enhancements.
+**Enhancements:** Captured Enhancements go face up in front of you for ongoing use (unless the card specifies single use). On failure, discard 1 card as a wound and return the other played Adventurer cards to your hand. Enhancements **cannot** be used to capture other Enhancements.
 
 **Events:** When an Event card enters the Landscape, read it immediately, apply its effect to all players, then remove it from the game and draw a replacement.
 

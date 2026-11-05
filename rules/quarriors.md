@@ -15,7 +15,7 @@ verification_date: "2026-06-14"
 # Quarriors!
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Missing second game-end condition (4 empty Creature Power Cards triggers highest-Glory wins with Ready Area tiebreaker); turn structure shows 6 phases but source has 5. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to five-phase turn, summoning costs, and empty-market game end; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/quarriors-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Quarriors%21&game=quarriors)
 <!-- verification:end -->
@@ -43,12 +43,11 @@ Quarriors! is a dice-building game (like deck-building, but with dice). Players 
 
 ## Turn Structure
 
-1. **Score Creatures** in your Ready Area that survived since your last turn (+Glory).
-2. **Draw and Roll** 6 dice from your bag.
-3. **Ready Spells and Summon Creatures** from your roll.
-4. **Attack** opponents' creatures with your creatures.
-5. **Capture** one die from the Wilds by spending Quiddity.
-6. **Move to Used Pile** all dice in your Active Pool.
+1. **Score Creatures** in your Ready Area (+Glory); move scored creatures and attached spells to Used.
+2. **Draw, Roll, and Ready Dice**: draw and roll 6 dice, ready spells, and pay Quiddity to summon creatures.
+3. **Attack** opponents’ creatures with your creatures.
+4. **Capture** one die from the Wilds by spending Quiddity (optional).
+5. **Move Dice to Used**: clear your Active Pool and Spent Pile.
 
 ## Actions
 
@@ -59,7 +58,7 @@ Any creatures in your Ready Area that survived from your previous turn score the
 Draw 6 dice from your bag and roll them. This is your Active Pool. If your bag has fewer than 6 dice, draw what remains, move your Used Pile into your bag, then draw and roll the rest.
 
 ### Ready Spells and Summon Creatures
-Dice showing a creature or spell icon can be moved to your Ready Area. Spells may have immediate effects. Creatures enter play with their rolled attack and defense values.
+Spells showing their icon can be readied for free. To summon a creature showing its icon, pay Quiddity equal to its rolled level, then move it to your Ready Area with the rolled attack and defense values.
 
 ### Attack
 Total the attack values of all your summoned creatures. Each opponent totals their creatures' defense. Apply your attack to each opponent's creatures independently. If damage meets or exceeds a creature's defense, it is destroyed (sent to opponent's Used Pile). Excess damage carries over within each opponent's creatures.
@@ -78,7 +77,9 @@ Move all remaining dice from your Active Pool to your Used Pile.
 | 3 | 15 |
 | 4 | 12 |
 
-Score Glory when your creatures survive a full round (from your turn to the start of your next turn). First to reach the target wins immediately.
+Score Glory for creatures in your Ready Area at the start of your turn. Reaching the target wins immediately.
+
+The game also ends immediately if 4 or more Creature Power Cards in the Wilds are empty after a player captures a Quarry die. In that case, highest Glory wins; ties are broken by most dice in the Ready Area, then shared victory.
 
 ## Special Rules & Edge Cases
 
@@ -102,8 +103,7 @@ Score Glory when your creatures survive a full round (from your turn to the star
 | Phase | Action |
 |---|---|
 | 1. Score | Glory for surviving creatures |
-| 2. Draw & Roll | Draw 6 dice from bag |
-| 3. Summon | Ready creatures and spells |
-| 4. Attack | Total attack vs. each opponent |
-| 5. Capture | Buy 1 die from Wilds |
-| 6. Cleanup | All dice to Used Pile |
+| 2. Draw, Roll & Ready | Draw 6 dice; ready spells and pay to summon creatures |
+| 3. Attack | Total attack vs. each opponent |
+| 4. Capture | Buy 1 die from Wilds (optional) |
+| 5. Cleanup | Active Pool and Spent Pile dice to Used Pile |

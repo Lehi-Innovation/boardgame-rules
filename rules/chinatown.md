@@ -15,7 +15,7 @@ verification_date: "2026-08-08"
 # Chinatown
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Building Cards per Round table states specific deal/keep counts for Rounds 2-6 and the 5-player column (16 of 18 cells) with no support in extracted text; only Round1 3p and 4p confirmed.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Building Cards per Round table states specific deal/keep counts for Rounds 2-6 and the 5-player column (16 of 18 cells) with no support in extracted text; only Round1 3p and 4p confirmed.. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/chinatown-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chinatown&game=chinatown)
 <!-- verification:end -->

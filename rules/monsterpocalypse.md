@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # Monsterpocalypse
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure wrong: summary describes Unit Turn + Monster Turn each turn, but source says choose ONE activation per turn; also "Screen" unit action invented with no source support. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Turn structure wrong: summary describes Unit Turn + Monster Turn each turn, but source says choose ONE activation per turn; also "Screen" unit action invented with no source support. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/monsterpocalypse-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Monsterpocalypse&game=monsterpocalypse)
 <!-- verification:end -->

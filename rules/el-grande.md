@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Grande piece: summary wrongly states it is immovable and counts for scoring in standard game (both are variant-only); also missing Home Bonus scoring source (+2 pts for home-region majority). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to Grande movement and Home Bonus; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/el-grande-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20El%20Grande&game=el-grande)
 <!-- verification:end -->
@@ -91,6 +91,8 @@ Each region shows three scoring values on its scoreboard:
 
 Ties: Tied players each receive the points for the lower position and the higher position is eliminated.
 
+**Home Bonus:** When a region is scored, its sole Caballero-majority holder gains +2 points if their Grande is in that region. No Home Bonus is awarded for a tied majority.
+
 ### Game End
 After 9 rounds (or 6 for shorter game: skip rounds 1, 4, 7). Player with the most points wins.
 
@@ -99,7 +101,7 @@ After 9 rounds (or 6 for shorter game: skip rounds 1, 4, 7). Player with the mos
 - Power cards are permanently discarded after use (can only be recovered via certain action cards).
 - All power card values played in a round must be unique.
 - If provinces run out, a player may remove their own Caballeros from the board to their court.
-- The Grande always remains in its home region and counts for scoring there.
+- In the standard game, a Grande marks the region eligible for its owner’s +2 Home Bonus and does not count as a Caballero. Certain action cards can move it, subject to the King’s Region restriction. Counting the Grande as 1 Caballero is an optional Home Region Advantages variant.
 - Action cards include various special effects: move the King, rearrange Caballeros, score specific regions, retrieve power cards, etc.
 - The King card (5-pile) is turned face up every round and never permanently discarded.
 - Shorter game (6 rounds): Skip rounds 1, 4, and 7; play only rounds 2-3, 5-6, 8-9 with scoring after 3 and 6.

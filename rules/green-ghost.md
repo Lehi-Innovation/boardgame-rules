@@ -6,13 +6,13 @@ play_time: "30 min"
 source_pdf: "green-ghost-rules.pdf"
 extracted_date: "2026-03-20"
 summarized_date: "2026-03-20"
-verification: "unverified"
-verification_date: "2026-06-12"
+verification: "unverifiable"
+verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
 >
-> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/green-ghost-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Green%20Ghost&game=green-ghost)
+> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Green%20Ghost&game=green-ghost)
 <!-- verification:end -->
 
 

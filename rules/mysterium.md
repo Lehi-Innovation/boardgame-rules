@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # Mysterium
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Crow token mechanic invented: summary says Ghost gives extra Vision card to Psychics; source says Crow tokens let Ghost discard their own hand and draw replacements.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to Crow tokens, visions, timed guesses, and the final vote; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mysterium-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mysterium&game=mysterium)
 <!-- verification:end -->
@@ -51,7 +51,7 @@ Each round (hour) has two phases:
 
 ### Phase 1: Vision
 
-1. The Ghost distributes Vision cards face down to each Psychic who has not yet solved their current clue type (suspect/location/object).
+1. The Ghost gives each active Psychic one vision of one or more face-up Vision cards, then immediately refills their own hand to 7 before giving the next vision.
 2. Psychics simultaneously examine their Vision cards and discuss amongst themselves.
 3. Each Psychic places their Intuition pawn on the card they believe matches their clue.
 4. Other Psychics may place Clairvoyancy tokens (approve/reject) on each guess.
@@ -60,7 +60,7 @@ Each round (hour) has two phases:
 
 1. The Ghost reveals whether each Psychic's guess is correct or incorrect.
 2. **Correct**: The Psychic advances to the next clue type (suspect -> location -> object).
-3. **Incorrect**: The Psychic stays on the same clue type. The Ghost may spend a Crow token to give an extra Vision card.
+3. **Incorrect**: The Psychic stays on the same clue type and keeps their Vision cards for the next hour.
 4. Advance the clock 1 hour.
 
 ## Actions
@@ -68,7 +68,7 @@ Each round (hour) has two phases:
 ### Ghost Actions
 
 - Distribute 1+ Vision cards to each active Psychic (trying to hint at the correct suspect/location/object).
-- Spend Crow tokens to give additional Vision cards to struggling Psychics.
+- Use a Crow token at any time to discard up to 7 Vision cards from the Ghost’s own hand and draw the same number of replacements; uses are limited by difficulty.
 - Cannot speak or gesture; communication is only through Vision cards.
 
 ### Psychic Actions
@@ -93,12 +93,12 @@ All Psychics must correctly identify their suspect, location, and object within 
 2. The Ghost places 3 Vision cards (representing the true culprit) face down.
 3. Based on Clairvoyancy Level, Psychics can see 1, 2, or all 3 of these cards.
 4. Each Psychic secretly votes for which suspect group they believe is the true culprit.
-5. Majority vote wins. If correct, all players win. If incorrect, all players lose.
+5. The group with the most votes is selected. If groups tie, the vote of the Psychic with the highest Clairvoyancy Level determines the choice among them; age breaks a tie in Clairvoyancy Level. If the selected group is correct, all players win; otherwise all lose.
 
 ## Special Rules & Edge Cases
 
 - **Difficulty levels**: Easy (more Crow tokens, fewer suspect cards), Medium, Hard (fewer Crow tokens, more suspect cards).
-- The Ghost may use the hourglass to limit discussion time.
+- After giving the last Psychic their vision, the Ghost starts the 2-minute hourglass. Guesses and Clairvoyancy tokens must be finalized before time runs out.
 - Vision cards used are discarded; the Ghost draws replacements.
 - If the Vision card deck runs out, reshuffle discards.
 - In 2-3 player games, the Clairvoyancy system is not used.
@@ -111,5 +111,5 @@ All Psychics must correctly identify their suspect, location, and object within 
 | Revelation | Ghost confirms correct/incorrect; advance or stay |
 | Clock | Advance 1 hour per round; 7 hours maximum |
 | Final | Ghost plays 3 cards for true culprit; Psychics vote |
-| Win | All Psychics solve their 3 clues AND majority identifies true culprit |
+| Win | All Psychics solve their 3 clues AND the selected final group identifies the true culprit |
 | Lose | Any Psychic unsolved after 7 hours, or wrong final vote |

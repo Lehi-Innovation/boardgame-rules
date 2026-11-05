@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # Nuns on the Run
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Movement distances wrong throughout: Walking=2 spaces (source: 3-4 dots), Running=3 spaces (source: up to 5 dots). Guard win condition wrong: summary says "all novices caught"; source says guards win when capture points equal number of players (same novice can be caught multiple times).. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Movement distances wrong throughout: Walking=2 spaces (source: 3-4 dots), Running=3 spaces (source: up to 5 dots). Guard win condition wrong: summary says "all novices caught"; source says guards win when capture points equal number of players (same novice can be caught multiple times).. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/nuns-on-the-run-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Nuns%20on%20the%20Run&game=nuns-on-the-run)
 <!-- verification:end -->

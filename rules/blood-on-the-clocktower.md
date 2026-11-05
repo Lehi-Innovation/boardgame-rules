@@ -15,7 +15,7 @@ verification_date: "2026-08-08"
 # Blood on the Clocktower
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Character Distribution table (Townsfolk/Outsiders/Minions/Demon by player count) has zero source support; deferred to a physical setup sheet not in the extracted text. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Character Distribution table (Townsfolk/Outsiders/Minions/Demon by player count) has zero source support; deferred to a physical setup sheet not in the extracted text. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/blood-on-the-clocktower-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blood%20on%20the%20Clocktower&game=blood-on-the-clocktower)
 <!-- verification:end -->

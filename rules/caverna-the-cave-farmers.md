@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Scoring table gives Grain as a flat "0.5 Gold" each, omitting the source's explicit total-then-round-up rule.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to grain scoring rounding; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/caverna-the-cave-farmers-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caverna%3A%20The%20Cave%20Farmers&game=caverna-the-cave-farmers)
 <!-- verification:end -->
@@ -102,7 +102,7 @@ At game end (after Round 12), score Gold points:
 | Category | Points |
 |----------|--------|
 | Animals (each, including Dogs) | 1 Gold per animal |
-| Grain (each) | 0.5 Gold |
+| Grain (total in supply and on Fields) | Divide the total by 2 and round up to whole Gold points |
 | Vegetables (each) | 1 Gold |
 | Rubies (each) | 1 Gold |
 | Gold coins | Face value |

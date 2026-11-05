@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two combat/setup mechanics are misstated: trap tokens are wrongly described as terrain (placed on terrain nodes) when the source places them on basic nodes, and the Attack action omits that a character can attack once with EACH weapon held . Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Two combat/setup mechanics are misstated: trap tokens are wrongly described as terrain (placed on terrain nodes) when the source places them on basic nodes, and the Attack action omits that a character can attack once with EACH weapon held . Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dark-souls-the-board-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dark%20Souls%20%E2%80%93%20The%20Board%20Game&game=dark-souls-the-board-game)
 <!-- verification:end -->

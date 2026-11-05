@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's Castle-ring movement rule contradicts the source: it implies a monster stops once it reaches a wall/tower, but the rulebook explicitly says towers do NOT stop monster movement and a surviving monster keeps advancing clockwise . Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary's Castle-ring movement rule contradicts the source: it implies a monster stops once it reaches a wall/tower, but the rulebook explicitly says towers do NOT stop monster movement and a surviving monster keeps advancing clockwise . Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/castle-panic-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20Panic&game=castle-panic)
 <!-- verification:end -->

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented action: "Shuttle Flight" listed but source explicitly says this action does not exist in Season 0; Mop Up step described as "resolve end-of-action effects" instead of "remove all agents in cities with active teams". Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to flight and team actions and Mop Up; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/pandemic-legacy-season-0-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pandemic%20Legacy%3A%20Season%200&game=pandemic-legacy-season-0)
 <!-- verification:end -->
@@ -53,24 +53,26 @@ For each month:
 Each player turn has 5 steps:
 
 ### 1. Check Surveillance
-Check if your current city has enemy surveillance that affects your alias.
+If you start your turn in a city with surveillance, lose 1 cover per surveillance symbol (maximum 3). Ignore surveillance if there is a safehouse in your city.
 
 ### 2. Do 4 Actions
-Choose 4 actions from the available options:
+Choose up to 4 actions from the available options:
 
 | Action | Description |
 |--------|-------------|
 | **Drive/Ferry** | Move to a connected city |
-| **Direct Flight** | Discard a City card to fly to that city |
-| **Charter Flight** | Discard the card matching your city to fly anywhere |
-| **Shuttle Flight** | Move between cities with safe houses |
+| **Commercial Flight** | Reveal an Allied City card or discard a Neutral City card to move to its city; cannot fly to a Soviet city this way |
+| **Unrecorded Flight** | Discard the card matching your city to move to any city, including Soviet cities |
 | **Build Safe House** | Discard matching City card to place a safe house |
 | **Remove Agent** | Remove 1 agent from your city |
-| **Acquire Team** | Gain a team token for special abilities |
+| **Assemble Team** | At a safehouse, discard 5 City cards matching your city’s affiliation to place a team of that affiliation there |
+| **Drive/Ferry Team** | Move a team to an adjacent city; your pawn need not be with it |
+| **Identify Target City** | At a safehouse, discard 3 City cards matching the region of an unknown target objective to identify its city |
+| **Acquire Targets** | Resolve a target objective using an active team in the target city; follow the objective and debrief instructions |
 | **Share Knowledge** | Exchange City cards with another player in the same city |
 
 ### 3. Mop Up
-Resolve any end-of-action effects.
+Remove all agents in each city with an active team.
 
 ### 4. Draw 2 Player Cards
 Draw from the Player deck. If an Escalation card is drawn, escalation occurs.

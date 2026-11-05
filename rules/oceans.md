@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # Oceans
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Second scoring category missing: "1 point for each population on surviving species" is absent from summary's scoring section, causing systematic underscoring; tiebreaker (most trait cards) also omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to surviving population scoring and the trait-card tiebreaker; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/oceans-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Oceans&game=oceans)
 <!-- verification:end -->
@@ -84,7 +84,7 @@ Triggered when the 1st Ocean zone runs out of population. Flip the Cambrian Expl
 
 **Last round triggers** when the final (3rd) Ocean zone runs out of population. Complete the round so all players have equal turns.
 
-Score: 1 point per population token behind your screen + bonus token value. **Highest score wins.**
+Score 1 point per population token behind your screen, plus 1 point per population token on your surviving species, plus your Bonus Token value. **Highest score wins.** Ties are broken by most trait cards on surviving species. The rulebook’s final tie clause is the first tied player to get a fishing-boat job in Alaska.
 
 ## Special Rules & Edge Cases
 

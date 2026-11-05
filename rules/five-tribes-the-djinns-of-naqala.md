@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Market tile actions omit gold coin costs (3 GC small / 6 GC large); Sacred Places cost wrong (1-2 Elders vs required 2 Elders or 1+Fakir); invented Gold Coin tiebreaker. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to market actions, Djinn costs, Fakirs, sales, and game end; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/five-tribes-the-djinns-of-naqala-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Five%20Tribes%3A%20The%20Djinns%20of%20Naqala&game=five-tribes-the-djinns-of-naqala)
 <!-- verification:end -->
@@ -76,7 +76,7 @@ Each player performs these steps in sequence:
 
 **2.5 Tile Actions** -- Perform the action of the tile where you ended your move.
 
-**2.6 Merchandise Sale (if applicable)** -- Fill the Resource card display back to 9 cards.
+**2.6 Merchandise Sale (optional)** -- Sell one or more sets of distinct Merchandise cards for Gold Coins using the set-value table. Fakirs cannot be sold. Then clean up by refilling the Resource display to 9 and the Djinn display to 3.
 
 ## Actions
 
@@ -88,17 +88,17 @@ Each player performs these steps in sequence:
 | **Elders** | White | Keep them. Score 2 VP each at game end. May spend to invoke Djinns. |
 | **Merchants** | Green | Return to bag. Take an equal number of Resource cards from the display (left to right). |
 | **Builders** | Blue | Return to bag. Score Gold Coins equal to number of blue Builders collected x number of blue-valued tiles surrounding (and including) the final tile. |
-| **Assassins** | Red | Return to bag. Kill (remove from the game) 1 meeple on the final tile or a tile within range (# of Assassins collected). May kill another player's Vizier/Elder (returns to their supply). If killing empties a tile, place your Camel there. |
+| **Assassins** | Red | Return to bag. Kill 1 meeple within range (number of Assassins collected, orthogonal distance), returning it to the bag; alternatively, kill 1 Vizier or Elder held by an opponent, also returning it to the bag. If killing empties a tile, place your Camel there. |
 
 ### Tile Actions
 
 | Tile | Action |
 |------|--------|
-| **Small Market** (compulsory) | Draw top 3 Resource cards; keep 1, discard others face-up. |
-| **Large Market** (compulsory) | Draw top 6 Resource cards; keep 2, discard others face-up. |
+| **Small Market** (optional) | Pay 3 Gold Coins to choose 1 of the first 3 visible Resource cards. |
+| **Large Market** (optional) | Pay 6 Gold Coins to choose 2 of the first 6 visible Resource cards; if only 1 remains, the cost is still 6. |
 | **Oasis** | Place 1 Palm Tree on this tile (adds 3 VP for tile owner at end). |
 | **Village** | Place 1 Palace on this tile (adds 5 VP for tile owner at end). |
-| **Sacred Place** | Pay 1 or 2 Elders (or Fakirs as wild) to take 1 face-up Djinn or draw 2 to pick 1. |
+| **Sacred Place** (optional) | Pay 2 Elders OR 1 Elder + 1 Fakir to take 1 visible Djinn. Return Elders to the bag and discard the Fakir. |
 
 ### Djinns
 
@@ -106,9 +106,7 @@ Djinn cards have VP values and special powers. Acquired by paying Elders/Fakirs 
 
 ## Scoring / Victory Conditions
 
-The game ends when:
-- A player places their last Camel, OR
-- No legal meeple move exists for any player.
+The game ends at the end of the turn in which a player places their last Camel or no legal meeple move remains. Finish all players’ remaining actions in that turn before scoring; players unable to move may still use applicable Djinn powers.
 
 Players sum their Victory Points:
 
@@ -129,16 +127,16 @@ Players sum their Victory Points:
 |----------|---|---|---|---|---|---|---|---|---|
 | VP | 1 | 3 | 7 | 13 | 21 | 30 | 40 | 50 | 60 |
 
-Fakirs are wild: each Fakir may substitute for any 1 Merchandise in a set.
+Fakirs are not Merchandise and do not score in Merchandise sets. They can enhance Builders and Assassins or be combined with an Elder to acquire a Djinn.
 
-The player with the highest total VP wins. Ties broken by most Gold Coins remaining.
+The player with the highest total VP wins. Tied players share victory.
 
 ## Special Rules & Edge Cases
 
 - **2-Player Game**: Each player uses 2 Turn markers and 11 Camels. Both markers are bid separately, meaning a player can play twice per turn or even back-to-back.
 - **Assassins and Tile Control**: It is possible to control 2 tiles in 1 turn: the tile where you end your move (if emptied) and a tile emptied by Assassin kills. You must take the first tile; the second requires having Camels left.
 - **Resource Display**: After Merchants collect cards, gaps are NOT refilled until that player's Clean-Up step. The next Merchant action in the same turn may have fewer choices.
-- **Fakirs**: Count as wild for Merchandise sets and for paying for Djinns (substitute for Elders).
+- **Fakirs**: Do not score in Merchandise sets. Discard to enhance Builders or Assassin range, or pay 1 Elder + 1 Fakir for a visible Djinn.
 - **Tile Control**: Once a Camel is placed, that tile's ownership never changes, even if new meeples are dropped on it.
 - **Last Meeple Rule**: You can pass through empty tiles (dropping meeples), but you can NEVER end on an empty tile.
 - **Loops**: Require at least 5 meeples to complete. No immediate backtracking, but returning to a tile after an intervening tile is allowed.

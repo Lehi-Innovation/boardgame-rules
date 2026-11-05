@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented loss condition: "Infection deck runs out" listed as loss but source says to reshuffle when deck is exhausted; also omits turn step 1 "Check for Exposure". Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to exposure, plague placement, and Infection-deck exhaustion; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/pandemic-legacy-season-2-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pandemic%20Legacy%3A%20Season%202&game=pandemic-legacy-season-2)
 <!-- verification:end -->
@@ -51,32 +51,34 @@ Pandemic Legacy: Season 2 is a cooperative legacy campaign game set 71 years aft
 
 On your turn, perform these steps in order:
 
-### 1. Do 4 Actions
-Choose from available actions (see below).
+### 1. Check for Exposure
+If you start your turn in a location with one or more Plague cubes, gain one exposure.
 
-### 2. Draw 2 Player Cards
+### 2. Do 4 Actions
+Choose up to 4 actions from the available options (see below).
+
+### 3. Draw 2 Player Cards
 Resolve any Epidemics immediately. Discard down to 7 cards if over limit.
 
-### 3. Infect Cities
-Draw Infection cards equal to the infection rate. For each city drawn, remove 1 supply cube. If a city has no supply cubes, place an Incident marker (like an outbreak in Season 1).
+### 4. Infect Cities
+Draw Infection cards equal to the infection rate. For each city drawn, remove 1 supply cube. If a city has no Supply cubes, place a Plague cube and advance the Incident marker 1 space. If it already has 3 Plague cubes, resolve an outbreak instead of adding a fourth.
 
 ## Actions
 
 | Action | Description |
 |--------|-------------|
-| **Drive/Sail** | Move to an adjacent connected location |
-| **Direct Flight** | Discard a card to fly to the named city |
-| **Charter Flight** | Discard the card matching your city to fly anywhere |
+| **Drive/Ferry** | Move to an adjacent location connected by a line |
+| **Sail** | Discard a City card to move to its city along a sea route; both locations need anchor symbols |
+| **Charter Boat** | Discard the card matching your current city to move along a sea route to another location with an anchor symbol |
 | **Deliver Supplies** | Place supply cubes from your character card onto your current location |
-| **Pick Up Supplies** | Take supply cubes from your location onto your character card |
-| **Make Supplies** | Take 1 supply cube from the stockpile onto your character card (must be at a supply center) |
+| **Make Supplies** | Take 1 Supply cube from the stockpile onto your Character card; no supply center is required |
+| **Produce Supplies** | At a haven or supply center, discard a Produce Supplies card for Local Production or System-Wide Production (the latter is unavailable in the prologue) |
 | **Share Knowledge** | Give/take a City card matching your current city to/from another player in the same city |
 | **Build Supply Center** | Discard 5 cards of your city's color to build a supply center |
 | **Recon** | Discard specific cards at a supply center location to explore new areas of the world (reveal hidden map sections) |
 
 ### Free Actions
-- Transfer supply cubes between players at the same location
-- Play Event cards
+During the Do Actions step, before, between, or after paid actions, you may pick up any number of Supply cubes from your location or transfer supplies to or from a consenting player there. These free actions cannot interrupt another action. Event cards can be played at any time subject to their own restrictions.
 
 ## Scoring / Victory Conditions
 
@@ -84,20 +86,21 @@ Draw Infection cards equal to the infection rate. For each city drawn, remove 1 
 
 **Lose conditions:**
 - 8 incidents occur
-- Infection deck runs out
-- Player deck runs out
+- A player cannot draw 2 Player cards after their actions
 
 **Campaign structure:** Same as Season 1 -- win a month to advance; lose and get one retry before moving on. Each game ends with production units spent on upgrades.
 
 ## Special Rules & Edge Cases
 
-**Supply cubes vs. Disease cubes:** The core mechanic is inverted from Season 1. Instead of removing disease cubes, you add supply cubes to cities. When the infection deck draws a city, supplies are consumed (removed). Cities without supplies suffer incidents.
+**Supply cubes vs. Disease cubes:** The core mechanic is inverted from Season 1. Instead of removing disease cubes, you add supply cubes to cities. When the infection deck draws a city, supplies are consumed (removed). Cities without supplies gain a Plague cube and cause an incident; a city already containing 3 Plague cubes has an outbreak instead.
 
 **Recon:** This action lets players discover new parts of the world. Specific card combinations at supply centers unlock packages that reveal new map sections, cities, and game content.
 
-**Produce Supplies cards:** Special Player cards that, when drawn, allow a system-wide production phase where supply cubes are distributed to cities.
+**Produce Supplies cards:** Spend an action to discard one while at a haven or supply center. Local Production fills that location to its population. System-Wide Production fills all havens and supply centers to their populations, marks a checkbox, and destroys the card when its last box is filled. System-Wide Production is unavailable in the prologue.
 
-**Exposure:** Characters can become exposed to the plague under certain conditions, gaining exposure marks that carry forward between games.
+**Exposure:** At the start of your turn, gain one exposure if your location has one or more Plague cubes. Scratch the next exposure box, resolving any scar or skull revealed.
+
+**Infection deck exhaustion:** Reshuffle the exhausted Infection deck and advance the Infection Rate marker 1 space. If this changes the rate during the Infect step, finish drawing at the old rate.
 
 **Havens:** Starting locations on the sea that serve as safe bases of operations.
 
@@ -111,8 +114,9 @@ Draw Infection cards equal to the infection rate. For each city drawn, remove 1 
 
 | Phase | Action |
 |-------|--------|
-| 1. Actions | Perform 4 actions |
-| 2. Draw | Draw 2 Player cards; resolve Epidemics |
-| 3. Infect | Draw Infection cards; remove supply cubes from drawn cities |
+| 1. Exposure | Gain one exposure if your location has any Plague cubes |
+| 2. Actions | Perform up to 4 actions |
+| 3. Draw | Draw 2 Player cards; resolve Epidemics |
+| 4. Infect | Draw Infection cards; remove supplies or add Plague cubes and record incidents; resolve outbreaks at 3 Plague cubes |
 
 **Core difference from Season 1:** You ADD supplies to cities (good). Infection REMOVES supplies (bad). No supplies = incidents (like outbreaks).

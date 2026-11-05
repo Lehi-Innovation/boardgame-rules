@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Scoring/Victory Conditions section omits the demon-occupied-area scoring exception, so the summary's point formulas overstate scores whenever a demon remains on the board at game end.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Scoring/Victory Conditions section omits the demon-occupied-area scoring exception, so the summary's point formulas overstate scores whenever a demon remains on the board at game end.. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/discworld-ankh-morpork-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Discworld%3A%20Ankh-Morpork&game=discworld-ankh-morpork)
 <!-- verification:end -->

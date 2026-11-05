@@ -14,7 +14,7 @@ verification_date: "2026-06-14"
 # My City
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Win condition wrong: summary says "most cumulative VP after 24 episodes" but source says "most progress symbols after 24 episodes"; cumulative VP is never tracked. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to campaign progress scoring and passing; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/my-city-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20My%20City&game=my-city)
 <!-- verification:end -->
@@ -55,7 +55,7 @@ Each episode consists of multiple rounds:
 - Each building tile must be placed on empty spaces on your game board.
 - Tiles cannot overlap previously placed tiles or extend off the board.
 - Tiles must be placed in valid positions following the episode's placement rules.
-- If you cannot or choose not to place a tile, you pass and set it aside.
+- If you cannot or choose not to place a tile, you may pass, setting it aside and losing 1 point. At 0 points you cannot pass: you must end your participation in the episode. You may also end participation voluntarily without losing a point.
 
 ### Scoring Elements (Evolve Over Episodes)
 
@@ -66,7 +66,7 @@ Each episode consists of multiple rounds:
 
 ## Scoring / Victory Conditions
 
-At the end of each episode, players score based on the current episode's rules. Scores are tracked on the scoring track across all 24 episodes.
+At the end of each episode, score using that episode’s rules. Episode scores determine who colors in progress symbols; the scoring track is used for the current episode, not a cumulative campaign score.
 
 ### Legacy Elements
 
@@ -76,7 +76,7 @@ Each chapter introduces permanent changes:
 - Stickers that modify the game board
 - Story developments that change rules
 
-The player with the most cumulative victory points after all 24 episodes wins the campaign.
+The player with the most colored-in progress symbols after all 24 episodes wins the campaign.
 
 ### Eternal Game
 
@@ -98,4 +98,4 @@ After completing the campaign (or for non-legacy play), use the other side of th
 | Place | All players simultaneously place matching tile or pass |
 | Score | End of episode: score according to current rules |
 | Chapter | Open envelope for new rules and components |
-| Campaign | 24 episodes across 8 chapters; track cumulative score |
+| Campaign | 24 episodes across 8 chapters; most progress symbols wins |

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Parking Lot zombies require vote per zombie (not automatic feeding); Little Girl omitted from 3-player setup; extra-zombie placement in Phase F omitted. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Parking Lot zombies require vote per zombie (not automatic feeding); Little Girl omitted from 3-player setup; extra-zombie placement in Phase F omitted. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mall-of-horror-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mall%20of%20Horror&game=mall-of-horror)
 <!-- verification:end -->

@@ -37,3 +37,16 @@ def test_build_manifest(tmp_path):
     assert alpha["rulebook_text_url"].endswith("/extracted/alpha-rules.txt")
     assert "rulebook_text_url" not in beta  # no source on disk
     assert beta["verification"] == "unverifiable"
+
+
+def test_manifest_omits_empty_rulebook_link(tmp_path):
+    rules = tmp_path / "rules"
+    extracted = tmp_path / "extracted"
+    rules.mkdir()
+    extracted.mkdir()
+    (rules / "empty.md").write_text(
+        SAMPLE.format(title="Empty", bgg_id=3, verification="unverifiable"))
+    (extracted / "empty-rules.txt").write_text(" \n\t\f")
+
+    entry = build_manifest(rules, str(extracted))["games"][0]
+    assert "rulebook_text_url" not in entry

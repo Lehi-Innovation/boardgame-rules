@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-03"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary omits the game's "Support" flag-ignoring mechanic (units supported by two adjacent friendly units/leader, and full-strength warriors/barbarian chariots, may disregard one flag) — only leader-attachment flag-ignoring is documented, w. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Summary omits the game's "Support" flag-ignoring mechanic (units supported by two adjacent friendly units/leader, and full-strength warriors/barbarian chariots, may disregard one flag) — only leader-attachment flag-ignoring is documented, w. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/commands-colors-ancients-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Commands%20%26%20Colors%3A%20Ancients&game=commands-colors-ancients)
 <!-- verification:end -->

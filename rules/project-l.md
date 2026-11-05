@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Completing puzzles: pieces return to personal supply (source) not the reserve (summary); Finishing Touches phase entirely omitted and incomplete puzzle penalty wrong (0 pts vs deduction equal to point value); tiebreaker invented (turn order vs most-completed-puzzles then most-pieces-left). Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to piece returns, Finishing Touches, penalties, and tiebreakers; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/project-l-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Project%20L&game=project-l)
 <!-- verification:end -->
@@ -63,26 +63,31 @@ Place 1 piece from your supply into each of your unfinished puzzles simultaneous
 ## Actions
 
 ### Completing Puzzles
-When all spaces in a puzzle are filled with correctly colored pieces, the puzzle is complete.
-- Gain the new piece shown on the puzzle tile (take it from the reserve and add to your supply).
-- The puzzle is set aside for end-game scoring (points shown on the tile).
-- All pieces used to fill the puzzle return to the reserve.
+At the end of an action, a puzzle is complete when its recessed area is completely filled with pieces.
+1. Return all pieces from the puzzle to your personal supply.
+2. Take the reward piece shown on the puzzle from the reserve and add it to your personal supply.
+3. Set the completed puzzle aside for end-game scoring.
 
 ## Scoring / Victory Conditions
 
 ### Game End
 The game ends when the Black puzzle deck runs out. Complete the current round, then play one additional full round.
 
+### Finishing Touches
+After the final round, you may place any number of pieces from your supply into your puzzles, losing 1 point per piece placed. Make all these placements before resolving any completions, so pieces cannot be reused between puzzles during this step. Puzzles completed this way give no reward piece.
+
 ### Final Scoring
-- Each completed puzzle scores its printed point value.
-- Each unfinished puzzle scores 0 points.
-- The player with the most points wins. Tiebreaker: the player who went later in turn order.
+- Add each completed puzzle’s printed points.
+- Subtract each unfinished puzzle’s printed points.
+- Subtract 1 point per piece placed during Finishing Touches.
+- Highest score wins. Ties are broken by most completed puzzles, then most leftover pieces. If still tied, share the victory.
 
 ## Special Rules & Edge Cases
 
 - Maximum 4 unfinished puzzles at any time. You cannot take a new puzzle if you already have 4.
 - The Master Action can only be used once per turn.
-- Once a piece is placed in a puzzle, it cannot be moved or removed.
+- Once a piece is placed in a puzzle, it cannot be moved or removed until the puzzle is completed.
+- After the Black deck empties, each player may take at most 1 Black puzzle per turn; Black puzzles taken before the trigger do not count toward that turn’s limit.
 - If a level has no pieces remaining in the reserve when upgrading, take from the next available level.
 - When refilling puzzle rows, if the deck runs out, fill as many spots as possible.
 

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: "Buy a Landscape" listed as one of three mutually exclusive main actions; source explicitly labels it an "Extra Action" separate from the three main action options - players would never combine it with another action. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to landscape extra actions, harvesting, and building placement; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ora-et-labora-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ora%20et%20Labora&game=ora-et-labora)
 <!-- verification:end -->
@@ -46,16 +46,16 @@ Ora et Labora (Latin for "Pray and Work") is a resource management and building 
 The game is played over a set number of rounds. On each turn, a player must perform exactly **one** of the following actions:
 
 ### 1. Cut Peat / Fell Trees
-Take peat or wood resources from your estate. Place landscape tiles.
+Remove one moor card to cut peat or one forest card to fell trees. Take the indicated resource quantity from the production wheel, then move that resource indicator to 0.
 
 ### 2. Build a Building
-Pay the required resources and place a building card on your estate. Buildings must be placed adjacent to existing buildings following placement rules.
+Pay the required resources and place a building on a permitted empty landscape space. Cloister buildings must be orthogonally adjacent to another cloister building; other buildings follow their printed terrain requirements.
 
 ### 3. Use a Building
 Place one of your Clergy members on a building (yours or another player's) and activate its production ability.
 
-### 4. Buy a Landscape
-Purchase additional land strips to expand your estate.
+### Extra Action: Buy a Landscape
+In addition to your main action, you may buy one landscape per turn and one per settlement phase. Pay for the topmost district or plot and place it immediately.
 
 After all players have taken their turns, the production wheel advances, increasing all resource availability.
 
@@ -63,11 +63,11 @@ After all players have taken their turns, the production wheel advances, increas
 
 | Action | Description |
 |--------|-------------|
-| **Cut Peat** | Gain peat resources, place moor tiles |
-| **Fell Trees** | Gain wood resources, place forest tiles |
+| **Cut Peat** | Remove a moor card; take peat from the production wheel |
+| **Fell Trees** | Remove a forest card; take wood from the production wheel |
 | **Build** | Pay resources to construct a building on your estate |
 | **Use Building** | Assign Clergy to activate a building's production |
-| **Buy Landscape** | Expand your estate with new land |
+| **Buy Landscape (extra action)** | Buy and immediately place new land; once per turn and once per settlement phase |
 
 **Using buildings:** You may use your own buildings for free or pay another player to use theirs. The Prior can use any building; the Lay Brother has restrictions. After use, Clergy return at specific times.
 
@@ -96,7 +96,7 @@ Highest total VP wins.
 
 ## Player Reference
 
-**Turn:** Choose 1 action: Cut Peat / Fell Trees / Build / Use Building / Buy Landscape
+**Turn:** Choose 1 main action: Cut Peat or Fell Trees / Build / Use Building. You may also buy 1 landscape as an extra action.
 
 **Production wheel:** Advances each round; resources accumulate
 

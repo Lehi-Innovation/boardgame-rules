@@ -9,6 +9,7 @@ from scripts.stamp_verification import (
     VERIFICATION_BEGIN,
     VERIFICATION_END,
     compute_state,
+    has_extracted_source,
     promote_registry,
     stamp_file,
 )
@@ -54,6 +55,32 @@ def test_compute_state_no_audit(game_env):
     _, extracted = game_env
     assert compute_state("test-game", {}, extracted)[0] == "unverified"
     assert compute_state("missing-game", {}, extracted)[0] == "unverifiable"
+
+
+@pytest.mark.parametrize("source_text", [None, "", " \n\t\f"])
+@pytest.mark.parametrize("verdict", ["PASS", "MINOR", "MAJOR"])
+def test_unusable_source_overrides_historical_verdict(game_env, source_text, verdict):
+    path, extracted = game_env
+    source = os.path.join(extracted, "test-game-rules.txt")
+    if source_text is None:
+        os.remove(source)
+    else:
+        with open(source, "w") as handle:
+            handle.write(source_text)
+    results = {"test-game": {"verdict": verdict, "reason": "old audit"}}
+    assert compute_state("test-game", results, extracted) == ("unverifiable", "")
+    stamp_file(str(path), results, extracted_dir=extracted)
+    assert "Full rulebook text" not in path.read_text()
+    assert "**Unverifiable**" in path.read_text()
+
+
+def test_empty_canonical_source_allows_nonempty_legacy_source(game_env):
+    _, extracted = game_env
+    with open(os.path.join(extracted, "test-game-rules.txt"), "w") as handle:
+        handle.write("")
+    with open(os.path.join(extracted, "test-game_rules.txt"), "w") as handle:
+        handle.write("A readable rulebook.")
+    assert has_extracted_source("test-game", extracted)
 
 
 def test_stamp_file_adds_frontmatter_and_block(game_env):

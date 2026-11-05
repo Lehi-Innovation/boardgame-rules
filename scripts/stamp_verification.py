@@ -54,7 +54,7 @@ VERDICT_TO_STATE = {
 BADGES = {
     "verified": "✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.",
     "minor_issues": "✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.",
-    "inaccurate": "❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players{reason}. Until it is re-written, prefer the full rulebook text linked below.",
+    "inaccurate": "❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players{reason}. Until corrections pass a new audit, prefer the full rulebook text linked below.",
     "unverified": "⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.",
     "unverifiable": "⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.",
 }
@@ -73,20 +73,24 @@ def load_audit_results(path: str = RESULTS_PATH) -> dict[str, dict]:
 
 
 def has_extracted_source(slug: str, extracted_dir: str = EXTRACTED_DIR) -> bool:
+    """Require readable text, rather than accepting an empty extraction file."""
     for pattern in (f"{slug}-rules.txt", f"{slug}_rules.txt", f"{slug}.txt"):
-        if os.path.exists(os.path.join(extracted_dir, pattern)):
-            return True
+        path = os.path.join(extracted_dir, pattern)
+        if os.path.isfile(path):
+            with open(path, errors="replace") as source:
+                if source.read().strip():
+                    return True
     return False
 
 
 def compute_state(slug: str, audit_results: dict[str, dict], extracted_dir: str = EXTRACTED_DIR) -> tuple[str, str]:
     """Return (state, reason) for a game slug."""
+    if not has_extracted_source(slug, extracted_dir):
+        return "unverifiable", ""
     entry = audit_results.get(slug)
     if entry and entry.get("verdict") in VERDICT_TO_STATE:
         return VERDICT_TO_STATE[entry["verdict"]], entry.get("reason") or ""
-    if has_extracted_source(slug, extracted_dir):
-        return "unverified", ""
-    return "unverifiable", ""
+    return "unverified", ""
 
 
 def build_block(slug: str, title: str, state: str, reason: str, base_url: str | None = None) -> str:

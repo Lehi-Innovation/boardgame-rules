@@ -15,14 +15,14 @@ verification_date: "2026-06-14"
 # Rajas of the Ganges
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Tiebreaker wrong: summary says "compare total advancement" but source requires comparing fame-point gap between markers then first-to-cross; game-end also not immediate — current stage completes and later players in stage can still win. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to final-stage timing and fame-gap tiebreaker; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/rajas-of-the-ganges-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rajas%20of%20the%20Ganges&game=rajas-of-the-ganges)
 <!-- verification:end -->
 
 ## Overview
 
-A dice-placement and worker-placement game set in 16th-century India. Players are Indian nobles (Rajas/Ranis) developing their province by constructing buildings, trading goods, and navigating the Ganges River. The game features two scoring tracks (fame and money) that advance toward each other -- when they meet or cross, that player wins immediately. Dice serve as workers and currency throughout.
+A dice-placement and worker-placement game set in 16th-century India. Players are Indian nobles (Rajas/Ranis) developing their province by constructing buildings, trading goods, and navigating the Ganges River. The game features two scoring tracks (fame and money) that advance toward each other -- when they meet or cross, the end of the game is triggered and the current stage is completed. Dice serve as workers and currency throughout.
 
 ## Components
 
@@ -72,9 +72,9 @@ The game has **two scoring tracks** running in opposite directions:
 - **Fame track** (advances forward)
 - **Money track** (advances forward from the other end)
 
-**Immediate win:** The game ends immediately when a player's fame marker and money marker **meet or cross** on the tracks. That player wins.
+**Game end:** When a player’s fame and money markers meet or cross, finish the current stage. Players between that player and the current starting player may each place one more worker, if they have one, and resolve its action.
 
-If multiple players would cross simultaneously (unlikely), compare total advancement.
+If more than one player’s markers have crossed, compare the gap between their markers in fame points. The largest gap wins; if tied, the first player whose markers crossed wins.
 
 ## Special Rules & Edge Cases
 

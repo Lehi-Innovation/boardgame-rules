@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-08-08"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Ore cannot be placed in stone/long houses per source (l.379-381, l.746-747) but summary says ore fits "any placement area" except Banquet Table. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to ore placement restrictions; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/a-feast-for-odin-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20A%20Feast%20for%20Odin&game=a-feast-for-odin)
 <!-- verification:end -->
@@ -87,9 +87,9 @@ Action spaces require 1-4 Vikings (columns 1-4). Each space can only be used onc
 | **Emigration** | Use longships or knarrs to emigrate (flip for points) |
 
 ### Goods Tile Placement
-- Green (craft) and blue (luxury) goods can be placed on home board, exploration boards, houses.
+- Green (craft) and blue (luxury) goods can be placed on the home board, exploration boards, stone houses, and long houses. Sheds instead take wood and stone.
 - Orange (food) and red (animal products) can go in stone houses and long houses; orange and red food tiles are also placed on the Banquet Table during the Feast phase.
-- Ore and silver can fill gaps in placement areas. **Ore cannot be placed on the Banquet Table; silver coins can.**
+- Ore and silver can fill gaps on the home board and exploration boards. **Ore cannot be placed in stone houses, long houses, or on the Banquet Table.** Stone and long houses accept silver; sheds require wood and stone.
 - Once placed, tiles cannot be removed.
 - Tiles must fit within the placement area; no overlapping.
 
@@ -144,11 +144,11 @@ Highest total wins. **In case of a tie, there are multiple winners.**
 
 | Goods Colors | Placement |
 |---|---|
-| Green (craft) | Home board, exploration boards, houses |
-| Blue (luxury) | Home board, exploration boards, houses |
+| Green (craft) | Home board, exploration boards, stone houses, long houses |
+| Blue (luxury) | Home board, exploration boards, stone houses, long houses |
 | Orange (food) | Stone houses, long houses, and Banquet Table (feast) |
 | Red (animal products) | Stone houses, long houses, and Banquet Table (feast) |
-| Ore | Any placement area (ore cannot go on Banquet Table) |
+| Ore | Home board and exploration boards; also upgrades whaling boats and longships. Not in houses or on the Banquet Table. |
 | Silver | Any placement area and Banquet Table (silver on boards is worthless at scoring) |
 
 | Ship Types | |

@@ -15,7 +15,7 @@ verification_date: "2026-06-14"
 # Raids
 
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Goods scoring inverted: summary lists "Goods remaining on your Longship" as scoring source but source explicitly states Goods tiles still on Longship give zero Glory points (only sold Goods score). Mjollnir scoring (1-2 Glory per Viking on Longship) entirely omitted from Scoring section.. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to sold Goods, Mjöllnir scoring, and tied victory; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/raids-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Raids&game=raids)
 <!-- verification:end -->
@@ -92,11 +92,12 @@ Glory points come from:
 - Coins collected during the game
 - Pennant tiles on your Longship
 - Rune tile sets
-- Goods remaining on your Longship
+- Sold Goods tiles beside your Longship, worth their printed Glory; unsold Goods still on your Longship score 0
+- Mjöllnir tiles: 1 Glory per Viking on your Longship for each simple Mjöllnir, or 2 per Viking for each double Mjöllnir
 - Harbor tile bonuses each Voyage
 - Defeating Monsters
 
-After 4 Voyages, total all Glory. The player with the most Glory wins.
+After 4 Voyages, total all Glory. The player with the most Glory wins; tied players share the victory.
 
 ## Special Rules & Edge Cases
 

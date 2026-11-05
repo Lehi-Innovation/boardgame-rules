@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-07-02"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Turn Structure section wrongly presents move/surface/system-use as three mutually exclusive single-turn choices, contradicting the source's actual turn economy (and contradicting the summary's own Special Rules section).. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Turn Structure section wrongly presents move/surface/system-use as three mutually exclusive single-turn choices, contradicting the source's actual turn economy (and contradicting the summary's own Special Rules section).. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/captain-sonar-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Captain%20Sonar&game=captain-sonar)
 <!-- verification:end -->

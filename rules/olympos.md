@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Development/Wonder cost stated as 2 AP but source says 7 AP; Star tokens listed as universally worth 3 Prestige each but source says 3 pts only with Engineering discovery; Time Track final position scoring (0-5 pts) omitted entirely. Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to development costs, Wonder requirements, final turns, and scoring; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/olympos-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Olympos&game=olympos)
 <!-- verification:end -->
@@ -67,11 +67,11 @@ Move a Settler on the map to conquer territory.
 5. **Pay:** Advance on Time Track by total APs spent.
 
 ### Action B: Development
-Make a Discovery or build a Wonder using Territory tokens and/or Resource cubes. Territory tokens are permanent (not consumed); Resource cubes are spent.
+Make a Discovery by satisfying its resource requirements with Territory tokens and/or Resource cubes. Territory tokens are retained; Resource cubes are spent. Wonders instead require the printed number of Stars from tokens, discoveries, relevant column bonuses, and cards.
 
 - Take the Discovery tile and gain its power.
 - Claim a bonus from below the Discovery on the development board.
-- Development costs **2 AP** on the Time Track.
+- Making a Discovery or building a Wonder costs **7 AP** on the Time Track before applicable discovery discounts.
 
 ## Actions
 
@@ -83,17 +83,20 @@ Make a Discovery or build a Wonder using Territory tokens and/or Resource cubes.
 
 ## Scoring / Victory Conditions
 
-Game ends when **all players** have reached or passed the mandatory end space on the Time Track.
+After passing the last Zeus space, a player may pass or take one final action on their next turn. That action must not move them past the Cross space. Score after every player has finished.
 
 **Scoring:**
-- Discovery tiles: Prestige value printed on each
-- Wonder tiles: Prestige value
-- Star tokens (from Tribes): 3 Prestige each
-- Destiny card bonuses
-- Territory tokens: some end-game scoring
-- Atlantis territories: additional Prestige
+- Final Time Track position: 0–5 Prestige
+- Prestige tokens: their face values
+- Controlled normal territories: 1 point each; Atlantis territories: 2 each (conquered settlers do not score)
+- Discoveries: 2 points each; Wonders: 8–12 points each
+- Poetry and Philosophy: 3 and 5 bonus points respectively, in addition to the 2 points per Discovery tile
+- Bonuses from Absolutism, City, Science, and Engineering; Engineering awards 3 points per Star token
+- Each unplayed Destiny card: 1 point
+- Keres penalty: −2 points for each affected player
+- Resource cubes and Hourglass tokens: 0 points
 
-Highest total Prestige wins.
+Highest total Prestige wins. Ties are broken by most Discovery and Wonder tiles combined.
 
 ## Special Rules & Edge Cases
 
@@ -112,8 +115,8 @@ Highest total Prestige wins.
 
 **Expansion:** Create Settler (2 AP) + Move (1 AP/land, 2 AP/sea) + Combat (1-3 AP) → Advance on Track
 
-**Development:** Pay resources → Take Discovery tile + Bonus → Advance 2 AP
+**Development:** Satisfy Discovery resources or Wonder Stars → Take tile and applicable bonus → Advance 7 AP before discounts
 
 **Hourglass:** 1 token = 1 free AP (use before advancing)
 
-**Game end:** All players pass end space on Time Track
+**Game end:** After passing the last Zeus space, optionally take one final action that does not pass the Cross space; score once all players finish

@@ -11,7 +11,7 @@ verification: "inaccurate"
 verification_date: "2026-06-14"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invents loss condition "draw pile runs out" replacing actual 4th loss "Abandoned: rocket takes off before all players on launch pad". Until it is re-written, prefer the full rulebook text linked below.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Corrections applied to launch requirements, abandonment loss, and wind movement; independent re-audit pending. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/forbidden-sky-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Forbidden%20Sky&game=forbidden-sky)
 <!-- verification:end -->
@@ -55,7 +55,7 @@ Choose any combination:
 ### 2. Draw and Resolve Storm Cards
 
 Draw Storm cards equal to the Storm Intensity level. Resolve each:
-- **High Winds**: Blow all unprotected pawns in the indicated direction. If blown off the platform, lose 1 rope. If rope runs out, game over. Wind Shelter tiles protect from this.
+- **High Winds**: Blow all unprotected pawns in the indicated direction. If the wind would push a pawn off the platform or across an unconnected cloud gap, the pawn stays in place and loses 1 rope. If rope runs out, game over. Wind Shelter tiles protect from this.
 - **Lightning Strikes!**: All lightning rods get struck. Any pawn on a tile connected to a lightning rod by wires (physical or printed) loses 1 health. Faraday Cage tiles protect from this.
 - **Storm Intensifies**: Increase Storm meter by 1.
 
@@ -86,20 +86,20 @@ Each adventurer has a unique ability (e.g., extra actions, protection, movement 
 
 ## Scoring / Victory Conditions
 
-**Win**: Complete the circuit shown on your Blueprint card. All components (required capacitors, lightning rods, and launch pad) must be wired into one continuous circuit. Then the rocket launches automatically.
+**Win**: Wire the required Blueprint components into a series circuit, leaving one wire unconnected. Place the rocket on the launch pad and get every player onto one of its four tiles. Add the final wire to complete the circuit and launch the rocket.
 
 **Lose** (any of these):
 - Any player's health reaches 0
 - Any player's rope meter reaches 0 (blown off the platform)
 - Storm meter reaches the skull
-- Draw pile runs out before circuit is complete
+- The rocket launches before every player is on a launch pad tile
 
 ## Special Rules & Edge Cases
 
 - **Real Circuit**: The game includes real wire components that must form an actual electrical circuit. The rocket lights up and makes sound when the circuit is complete.
 - **Lightning Propagation**: Lightning travels through ALL connected wires (physical and printed on tiles). Be careful about connecting lightning rods to tiles where players stand.
 - **Wind Direction**: The compass on the starting grid indicates the direction of wind. High Winds cards reference this compass.
-- **Falling Off**: If blown off the platform edge, lose 1 rope and return to the nearest tile. If rope runs out, everyone loses.
+- **Falling Off**: If wind movement would take a pawn off the platform or across an unconnected cloud gap, leave the pawn in place and reduce its rope meter by 1. If the rope snaps, everyone loses.
 - **Component Placement**: You may place more components than your Blueprint requires, but you cannot exceed the total supply.
 - **Equipment Sharing**: Equipment cards can be passed to players on the same tile for free.
 
@@ -118,4 +118,4 @@ Each adventurer has a unique ability (e.g., extra actions, protection, movement 
 | Wire | Connect 2 adjacent components with a wire |
 
 ### Win Condition
-- Complete the Blueprint circuit with all required components wired together
+- Get everyone onto launch pad tiles before connecting the last wire of the required Blueprint circuit
