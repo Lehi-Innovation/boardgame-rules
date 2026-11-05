@@ -35,14 +35,15 @@ Heat: Pedal to the Metal is a racing game where players drive cars around a trac
 
 ## Setup
 
-1. Place the game board in the center (USA track recommended for first game).
+1. Place the game board in the center (USA track recommended for first game). Use the number of laps printed on the selected board. For a first USA learning race, you may race just 1 lap instead of its normal 2.
 2. Each player chooses a color and takes: car, player mat, Gear pawn, 12 Speed cards, and 3 Starting Upgrade cards.
 3. Check the board for how many Heat and Stress cards each player adds (typically 6 Heat and 3 Stress).
 4. Place player mat in front of you. Shuffle your 12 Speed cards, 3 Starting Upgrade cards, and 3 Stress cards together as your draw deck (left spot on mat).
 5. Place 6 Heat cards face up on the Engine spot (middle of mat).
 6. Set Gear pawn to 1st gear.
-7. Randomly place all cars on the starting grid in ascending order.
-8. Draw 7 cards into your hand.
+7. Place the remaining Stress cards face up near the board as a reserve.
+8. Randomly place all cars on the starting grid in ascending order.
+9. Draw 7 cards into your hand.
 
 ## Turn Structure
 

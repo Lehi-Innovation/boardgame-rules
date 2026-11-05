@@ -201,6 +201,25 @@ of `verified` games as a standing second gate. See
 residual rates, and why ~1/3 of the hardest games (OCR-degraded sources,
 omitted subsystems, invented mechanics) resist automated fixing.
 
+### Rules Summary Question Answering
+
+Use [docs/quality/summary-qa/README.md](docs/quality/summary-qa/README.md) to
+evaluate whether readers can answer table questions from a summary alone.
+Prepare 20 questions and a source-backed answer key before dispatching two
+fresh-context reader subagents. Readers see only a frozen summary and questions;
+they must not see the source, key, earlier answers, grades, or parent chat.
+Set the requested model explicitly and retain actual model provenance.
+
+Grade every requested part against the unchanged key. Repair partial or incorrect
+answers using the authoritative source, then repeat with two new readers until
+both score 20/20. A separate source auditor must cover the final summary; the
+repairer cannot supply that independent sign-off. Preserve snapshots, hashes,
+raw responses, grades, findings, and all failed iterations. A fixed-question
+pass measures regression coverage and does not replace semantic verification.
+
+The guide includes reusable prompts, completion checks, and the Heat pilot's
+gpt-6.1-sol and gpt-6-luna results.
+
 ## Verification & Trust Stamping
 
 Every rules file carries `verification` / `verification_date` frontmatter and

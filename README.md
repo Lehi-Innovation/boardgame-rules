@@ -76,3 +76,8 @@ python -m pytest tests/ -v
 
 The full pipeline, batch tooling, verification gate, and audit workflow are
 documented in [CLAUDE.md](CLAUDE.md).
+
+To test whether assistants can answer questions from a summary alone, use the
+[rules summary question answering workflow](docs/quality/summary-qa/README.md).
+It covers the fixed 20-question test, independent readers, source-backed repairs,
+model comparisons, and the Heat pilot results.
