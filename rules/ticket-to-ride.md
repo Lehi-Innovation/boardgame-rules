@@ -7,6 +7,7 @@ designer: "Alan R. Moon"
 source_pdf: "ticket-to-ride-rules.pdf"
 extracted_date: "2026-03-17"
 summarized_date: "2026-03-17"
+permalink: /rules/ticket-to-ride/
 ---
 
 # Ticket to Ride

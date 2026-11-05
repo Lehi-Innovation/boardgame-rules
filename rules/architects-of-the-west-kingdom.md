@@ -8,6 +8,7 @@ source_pdf: "architects-of-the-west-kingdom-rules.pdf"
 extracted_date: "2026-03-11"
 summarized_date: "2026-03-11"
 rulebook_version: "Garphill Games 2018"
+permalink: /rules/architects-of-the-west-kingdom/
 ---
 
 # Architects of the West Kingdom

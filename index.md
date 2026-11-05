@@ -41,11 +41,11 @@ The same prompt works — any AI assistant that can fetch web pages will pull th
 | Game | Players | Time | Designer |
 |------|---------|------|----------|
 | [7 Wonders](rules/7-wonders/) | 3-7 | 30 min | Antoine Bauza |
-| [Architects of the West Kingdom](rules/architects-of-the-west-kingdom/) | 1-5 | 60-80 min | S J Macdonald, Shem Phillips |
+| [Architects of the West Kingdom](rules/architects-of-the-west-kingdom/) | 1-5 | 60-80 min | Shem Phillips, S J MacDonald |
 | [Arcs](rules/arcs/) | 2-4 | 60-120 min | Cole Wehrle |
 | [Ark Nova](rules/ark-nova/) | 1-4 | 90-150 min | Mathias Wigge |
 | [Azul](rules/azul/) | 2-4 | 30-45 min | Michael Kiesling |
-| [Blood on the Clocktower](rules/blood-on-the-clocktower/) | 5-20 | 30-120 min | Steven Medway |
+| [Blood on the Clocktower](rules/blood-on-the-clocktower/) | 5-20 | 30-90 min | Steven Medway |
 | [Catan](rules/catan/) | 3-4 | 60-120 min | Klaus Teuber |
 | [Chinatown](rules/chinatown/) | 2-5 | 60-90 min | Karsten Hartwig |
 | [Concordia](rules/concordia/) | 2-5 | 100 min | Mac Gerdts |
@@ -55,13 +55,13 @@ The same prompt works — any AI assistant that can fetch web pages will pull th
 | [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapiński |
 | [Pandemic](rules/pandemic/) | 2-4 | 45 min | Matt Leacock |
 | [Pax Pamir: Second Edition](rules/pax-pamir-second-edition/) | 1-5 | 45-120 min | Cole Wehrle |
-| [QE](rules/qe/) | 3-5 | 45-45 min | Gavin Birnbaum |
+| [QE](rules/qe/) | 3-5 | 45 min | Gavin Birnbaum |
 | [The Quacks of Quedlinburg](rules/quacks-of-quedlinburg/) | 2-4 | 45 min | Wolfgang Warsch |
 | ↳ [The Herb Witches](rules/quacks-of-quedlinburg-the-herb-witches/) | 2-5 | 45 min | Wolfgang Warsch |
 | ↳ [The Alchemists](rules/quacks-of-quedlinburg-the-alchemists/) | 2-4 | 45 min | Wolfgang Warsch |
 | [Ready Set Bet](rules/ready-set-bet/) | 2-9 | 45-60 min | John D. Clair |
 | [Rhino Hero](rules/rhino-hero/) | 2-5 | 5-15 min | Scott Frisco, Steven Strumpf |
-| [Splendor](rules/splendor/) | 2-4 | 30 min | Marc Andre |
+| [Splendor](rules/splendor/) | 2-4 | 30 min | Marc André |
 | [Star Wars: The Deckbuilding Game](rules/star-wars-the-deckbuilding-game/) | 2 | 30 min | Caleb Grace |
 | [Ticket to Ride](rules/ticket-to-ride/) | 2-5 | 30-60 min | Alan R. Moon |
 | [Watergate](rules/watergate/) | 2 | 30-60 min | Matthias Cramer |

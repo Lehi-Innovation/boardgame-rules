@@ -7,6 +7,7 @@ designer: "Michael Kiesling"
 source_pdf: "azul-rules.pdf"
 extracted_date: "2026-03-17"
 summarized_date: "2026-03-17"
+permalink: /rules/azul/
 ---
 
 # Azul

@@ -104,3 +104,34 @@ title: "Catan"
     path.write_text(incomplete)
     errors = validate_rules_file(str(path))
     assert any("bgg_id" in e for e in errors)
+
+
+def test_validate_expansion_sections(tmp_path):
+    from scripts.validate import EXPANSION_SECTIONS
+
+    path = tmp_path / "expansion.md"
+    path.write_text(
+        '---\ntitle: "Expansion"\nbgg_id: 2\nbase_game_bgg_id: 1\n---\n\n'
+        + "\n\n".join(f"## {heading}\nExpansion details." for heading in EXPANSION_SECTIONS)
+    )
+    assert validate_rules_file(str(path)) == []
+    path.write_text(path.read_text().replace("## Rule Changes", "## Rules"))
+    assert any("Rule Changes" in error for error in validate_rules_file(str(path)))
+
+
+def test_validate_non_mapping_frontmatter(tmp_path):
+    path = tmp_path / "invalid.md"
+    path.write_text("---\n- not a mapping\n---\n")
+    assert any("mapping" in error for error in validate_rules_file(str(path)))
+
+
+def test_validate_rejects_heading_prefix(tmp_path):
+    path = tmp_path / "catan.md"
+    path.write_text(VALID_RULES.replace("## Actions", "## ActionsExtra"))
+    assert any("Missing section: Actions" in error for error in validate_rules_file(str(path)))
+
+
+def test_validate_rejects_duplicate_identity(tmp_path):
+    path = tmp_path / "catan.md"
+    path.write_text(VALID_RULES.replace("bgg_id: 13", "bgg_id: 13\nbgg_id: 42"))
+    assert any("duplicate frontmatter key: bgg_id" in error for error in validate_rules_file(str(path)))

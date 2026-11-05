@@ -15,6 +15,8 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
+import yaml
+
 from scripts.registry import get_games_by_status, update_game, update_status
 from scripts.validate import validate_rules_file
 
@@ -96,21 +98,26 @@ def check_batch(
 
     for game in games:
         name = game["name"]
-        slug = slugify(name)
+        slug = game.get("slug") or slugify(name)
         rules_path = os.path.join(rules_dir, f"{slug}.md")
-        extracted_path = os.path.join(extracted_dir, f"{slug}-rules.txt")
 
         if not os.path.exists(rules_path):
             print(f"  SKIP {name}: rules file not found ({rules_path})")
             stats["errors"] += 1
             continue
 
-        if not os.path.exists(extracted_path):
-            print(f"  SKIP {name}: extracted file not found ({extracted_path})")
-            stats["errors"] += 1
-            continue
-
         try:
+            text = Path(rules_path).read_text()
+            match = re.match(r"^---\n(.+?)\n---", text, re.DOTALL)
+            metadata = yaml.safe_load(match.group(1)) if match else {}
+            if not isinstance(metadata, dict) or metadata.get("bgg_id") != game["bgg_id"]:
+                raise ValueError("rules frontmatter does not match registry BGG ID")
+            source = metadata.get("source_pdf") or f"{slug}-rules.pdf"
+            extracted_path = os.path.join(extracted_dir, Path(source).stem + ".txt")
+            if not os.path.exists(extracted_path):
+                print(f"  SKIP {name}: extracted file not found ({extracted_path})")
+                stats["errors"] += 1
+                continue
             result = check_quality(rules_path, extracted_path)
         except Exception as e:
             print(f"  ERROR {name}: {e}")

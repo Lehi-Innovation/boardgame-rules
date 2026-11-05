@@ -7,6 +7,7 @@ designer: "Matt Leacock"
 source_pdf: "pandemic-rules.pdf"
 extracted_date: "2026-03-17"
 summarized_date: "2026-03-17"
+permalink: /rules/pandemic/
 ---
 
 # Pandemic

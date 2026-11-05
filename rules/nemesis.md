@@ -3,11 +3,12 @@ title: "Nemesis"
 bgg_id: 167355
 player_count: "1-5"
 play_time: "90-180 min"
-designer: "Adam Kwapinski"
+designer: "Adam Kwapiński"
 source_pdf: "nemesis-rules.pdf"
 extracted_date: "2026-03-02"
 summarized_date: "2026-03-02"
 rulebook_version: "1st Edition (Kickstarter, 2018)"
+permalink: /rules/nemesis/
 ---
 
 # Nemesis

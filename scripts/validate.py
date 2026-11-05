@@ -29,6 +29,34 @@ EXPECTED_SECTIONS = [
     "Player Reference",
 ]
 
+EXPANSION_SECTIONS = [
+    "Overview",
+    "New Components",
+    "Setup Changes",
+    "Rule Changes",
+    "Special Rules & Edge Cases",
+    "Player Reference",
+]
+
+
+class _FrontmatterLoader(yaml.SafeLoader):
+    """Reject duplicate keys instead of silently accepting the last value."""
+
+    def construct_mapping(self, node, deep=False):
+        keys = set()
+        for key_node, _ in node.value:
+            key = self.construct_object(key_node, deep=deep)
+            if not isinstance(key, str):
+                raise yaml.constructor.ConstructorError(
+                    None, None, "frontmatter keys must be strings", key_node.start_mark
+                )
+            if key in keys:
+                raise yaml.constructor.ConstructorError(
+                    None, None, f"duplicate frontmatter key: {key}", key_node.start_mark
+                )
+            keys.add(key)
+        return super().construct_mapping(node, deep=deep)
+
 
 def validate_rules_file(path: str) -> list[str]:
     """Validate a rules markdown file. Returns list of error messages."""
@@ -43,10 +71,13 @@ def validate_rules_file(path: str) -> list[str]:
         return errors
 
     try:
-        frontmatter = yaml.safe_load(fm_match.group(1))
+        frontmatter = yaml.load(fm_match.group(1), Loader=_FrontmatterLoader)
     except yaml.YAMLError as e:
         errors.append(f"{filename}: Invalid YAML frontmatter: {e}")
         return errors
+
+    if not isinstance(frontmatter, dict):
+        return [f"{filename}: YAML frontmatter must be a mapping"]
 
     # Check required fields
     for field in REQUIRED_FRONTMATTER:
@@ -55,8 +86,9 @@ def validate_rules_file(path: str) -> list[str]:
 
     # Check sections
     body = content[fm_match.end():]
-    for section in EXPECTED_SECTIONS:
-        pattern = rf"^## {re.escape(section)}"
+    sections = EXPANSION_SECTIONS if "base_game_bgg_id" in frontmatter else EXPECTED_SECTIONS
+    for section in sections:
+        pattern = rf"^## {re.escape(section)}\s*$"
         if not re.search(pattern, body, re.MULTILINE):
             errors.append(f"{filename}: Missing section: {section}")
 

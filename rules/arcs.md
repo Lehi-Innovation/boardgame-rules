@@ -8,6 +8,7 @@ source_pdf: "arcs-rules.pdf"
 extracted_date: "2026-03-02"
 summarized_date: "2026-03-02"
 rulebook_version: "1st Edition (August 27, 2025)"
+permalink: /rules/arcs/
 ---
 
 # Arcs

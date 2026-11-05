@@ -144,3 +144,39 @@ def test_uncertainty_phrases_flagged(tmp_path):
     result = check_quality(str(path), str(extracted))
     assert result.passed is False
     assert any("unclear" in issue.lower() for issue in result.issues)
+
+
+def test_batch_respects_catalog_slug_and_original_source_filename(tmp_path):
+    import yaml
+    from scripts.quality_check import check_batch
+
+    rules = tmp_path / "rules"
+    extracted = tmp_path / "extracted"
+    rules.mkdir()
+    extracted.mkdir()
+    content = GOOD_RULES.replace('title: "QE"', 'title: "The QE"\nsource_pdf: "original_rules.pdf"')
+    (rules / "qe.md").write_text(content)
+    (extracted / "original_rules.txt").write_text("Rules about auctions and companies. " * 100)
+    registry = tmp_path / "games.yaml"
+    registry.write_text(yaml.safe_dump({"games": [
+        {"name": "The QE", "bgg_id": 266830, "slug": "qe", "status": "summarized"}
+    ]}))
+    assert check_batch(str(registry), str(rules), str(extracted)) == {
+        "validated": 1, "flagged": 0, "errors": 0
+    }
+    assert yaml.safe_load(registry.read_text())["games"][0]["status"] == "validated"
+
+
+def test_batch_rejects_summary_for_different_game(tmp_path):
+    import yaml
+    from scripts.quality_check import check_batch
+
+    rules = tmp_path / "rules"
+    rules.mkdir()
+    (rules / "qe.md").write_text(GOOD_RULES)
+    registry = tmp_path / "games.yaml"
+    registry.write_text(yaml.safe_dump({"games": [
+        {"name": "QE", "bgg_id": 1, "status": "summarized"}
+    ]}))
+    assert check_batch(str(registry), str(rules), str(tmp_path))["errors"] == 1
+    assert yaml.safe_load(registry.read_text())["games"][0]["status"] == "summarized"

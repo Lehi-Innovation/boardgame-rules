@@ -8,6 +8,7 @@ source_pdf: "concordia-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "PD-Verlag / Rio Grande Games Edition"
+permalink: /rules/concordia/
 ---
 
 # Concordia

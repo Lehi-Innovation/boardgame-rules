@@ -126,8 +126,15 @@ find_base_game("games.yaml", 325)  # returns Catan entry
 ## Testing
 ```bash
 source .venv/bin/activate
+python -m pip install -r requirements-dev.txt
 python -m pytest tests/ -v
+python -m scripts.validate
+python -m scripts.catalog
 ```
+
+`scripts.catalog` is read-only. It checks that published summaries match the registry's IDs, statuses, metadata, catalog links, saved extraction sources, and explicit Jekyll permalinks. A `validated` status means the structural and automated quality checks have passed; it does not certify every rule against the original PDF.
+
+Each rules page needs `permalink: /rules/<slug>/` in its frontmatter so its directory-style catalog link resolves in Jekyll. If an established page slug differs from the game's generated name slug (for example, `quacks-of-quedlinburg`), record that slug in `games.yaml`. Batch quality checks use this override and resolve the extraction filename from the summary's `source_pdf` field, including historical names such as `catan_rules.pdf`.
 
 ## GitHub Pages Site
 The rules are published at `https://jonnyallred.github.io/boardgame-rules/`. GitHub Pages builds automatically from the `main` branch using Jekyll. The `_config.yml` excludes non-site directories (scripts, source_pdfs, extracted, tests, etc.). When adding a new game, update `index.md` with the new entry in alphabetical order.

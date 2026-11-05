@@ -8,6 +8,7 @@ source_pdf: "catan_rules.pdf"
 extracted_date: "2026-03-02"
 summarized_date: "2026-03-02"
 rulebook_version: "5th Edition (2020)"
+permalink: /rules/catan/
 ---
 
 # Catan

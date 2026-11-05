@@ -8,6 +8,7 @@ source_pdf: "qe-rules.pdf"
 extracted_date: "2026-03-02"
 summarized_date: "2026-03-02"
 rulebook_version: "Boardcade Games Edition (2019)"
+permalink: /rules/qe/
 ---
 
 # QE

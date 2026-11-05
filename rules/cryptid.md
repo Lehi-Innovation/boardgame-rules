@@ -8,6 +8,7 @@ source_pdf: "cryptid-rules.pdf"
 extracted_date: "2026-03-02"
 summarized_date: "2026-03-02"
 rulebook_version: "1st Edition (2018)"
+permalink: /rules/cryptid/
 ---
 
 # Cryptid

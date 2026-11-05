@@ -8,6 +8,7 @@ source_pdf: "chinatown-rules.pdf"
 extracted_date: "2026-03-10"
 summarized_date: "2026-03-10"
 rulebook_version: "2014 Z-Man Games Edition"
+permalink: /rules/chinatown/
 ---
 
 # Chinatown

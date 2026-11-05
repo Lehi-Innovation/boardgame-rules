@@ -8,6 +8,7 @@ source_pdf: "watergate-rules.pdf"
 extracted_date: "2026-03-18"
 summarized_date: "2026-03-18"
 rulebook_version: "Capstone Games (2019)"
+permalink: /rules/watergate/
 ---
 
 ## Overview
