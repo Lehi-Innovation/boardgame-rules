@@ -144,8 +144,8 @@ def summarize_text(
     user_prompt = build_prompt(extracted_text, game_name, **kwargs)
 
     message = client.messages.create(
-        model="claude-sonnet-4-20250514",
-        max_tokens=8192,
+        model="claude-sonnet-4-6",
+        max_tokens=16384,
         system=SYSTEM_PROMPT,
         messages=[{"role": "user", "content": user_prompt}],
     )
@@ -172,6 +172,7 @@ def summarize_game(
     registry_path: str,
     extracted_dir: str = "extracted",
     rules_dir: str = "rules",
+    restore_status: str | None = None,
 ) -> bool:
     """Summarize a single game from its registry entry.
 
@@ -186,6 +187,8 @@ def summarize_game(
     extracted_path = _find_extracted_file(slug, extracted_dir)
     if not extracted_path:
         print(f"  Skipping {name}: no extracted text file found in {extracted_dir}/")
+        if restore_status:
+            update_status(registry_path, name, restore_status)
         return False
 
     with open(extracted_path) as f:
@@ -193,6 +196,8 @@ def summarize_game(
 
     if len(extracted_text) < 500:
         print(f"  Skipping {name}: extracted text too short ({len(extracted_text)} chars)")
+        if restore_status:
+            update_status(registry_path, name, restore_status)
         return False
 
     print(f"  Summarizing {name}...")
@@ -207,6 +212,8 @@ def summarize_game(
         )
     except Exception as e:
         print(f"  Error summarizing {name}: {e}")
+        if restore_status:
+            update_status(registry_path, name, restore_status)
         return False
 
     os.makedirs(rules_dir, exist_ok=True)

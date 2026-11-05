@@ -1,168 +1,329 @@
 ---
 title: "Star Wars: The Deckbuilding Game"
 bgg_id: 374173
-permalink: /rules/star-wars-the-deckbuilding-game/
 player_count: "2"
 play_time: "30 min"
 designer: "Caleb Grace"
 source_pdf: "star-wars-the-deckbuilding-game-rules.pdf"
-source_url: "https://cdn.1j1ju.com/medias/62/18/30-star-wars-the-deckbuilding-game-rulebook.pdf"
-extracted_date: "2026-11-04"
-summarized_date: "2026-11-04"
-rulebook_version: "Fantasy Flight Games original Empire/Rebel base game (2023), 32-page English rulebook"
+extracted_date: "2026-03-03"
+summarized_date: "2026-03-03"
+rulebook_version: "1st Edition"
+verification: "verified"
+verification_date: "2026-08-08"
 ---
+
+# Star Wars: The Deckbuilding Game
+
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/star-wars-the-deckbuilding-game-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Star%20Wars%3A%20The%20Deckbuilding%20Game&game=star-wars-the-deckbuilding-game)
+<!-- verification:end -->
 
 ## Overview
 
-Two players control the **Empire** and **Rebels**, improving their ten-card starter decks by buying cards from a shared market. Units generate resources, attack, and Force; capital ships remain in play to provide recurring benefits and protect bases. Attack enemy bases to win, or defeat opposing units in the market to deny purchases and receive rewards.
+Star Wars: The Deckbuilding Game is a competitive 2-player deckbuilding game in which one player controls the Galactic Empire and the other controls the Rebel Alliance. Each player begins with a weak 10-card starter deck and uses resources to purchase more powerful cards from a shared galaxy row. Players build up attack power to assault their opponent's bases, which are protected by capital ships. The first player to destroy **three** of their opponent's bases wins the game. The Empire always takes the first turn.
 
-The beginner game ends immediately when a player destroys **three enemy bases**. The Empire takes the first turn, while the Force begins fully on the Rebel side. This summary covers the **original 2023 Empire/Rebel game**, not the Clone Wars Edition. [English rulebook](https://cdn.1j1ju.com/medias/62/18/30-star-wars-the-deckbuilding-game-rulebook.pdf), pages 2–30.
+A central mechanic is the **Balance of the Force** track, which shifts between factions as cards are played, unlocking conditional abilities and granting bonus resources when fully on your side.
 
 ## Components
 
-- **142 cards:** 10 Rebel starter cards, 10 Empire starter cards, 90 galaxy cards, 20 base cards (10 per faction), 10 Outer Rim Pilots, and 2 reference cards.
-- **1 Balance of the Force track**, **1 white Force marker**, **20 yellow resource counters**, and **50 purple damage counters**.
-- Rulebook.
+| Component | Quantity |
+|---|---|
+| Galaxy Cards | 90 |
+| Rebel Starter Cards | 10 (7 Alliance Shuttle, 2 Rebel Trooper, 1 Temple Guardian) |
+| Empire Starter Cards | 10 (7 Imperial Shuttle, 2 Stormtrooper, 1 Inquisitor) |
+| Base Cards | 20 (10 Rebel, 10 Empire) |
+| Outer Rim Pilot Cards | 10 |
+| Reference Cards | 2 |
+| Balance of the Force Track | 1 |
+| Force Marker (White) | 1 |
+| Resource Counters (Yellow) | 20 |
+| Damage Counters (Purple) | 50 |
 
-Cards are units, capital ships, or bases. Galaxy cards are Rebel, Empire, or neutral. Unit target values and rewards apply while those units are in the galaxy row; they are separate from purchase costs. Bases and capital ships instead have hit points for damage suffered in play. See pages 3, 10–12.
+### Icons
+
+| Icon | Meaning |
+|---|---|
+| Attack | Damage dealt to targets, capital ships, or bases |
+| Resources | Currency used to purchase cards |
+| Force | Moves the Force marker toward your side of the Balance of the Force track |
+| Unique | Indicates the card is unique and may be referenced by other cards |
+
+### Key Terms
+
+- **Cost:** Number of resources required to purchase a card (upper left of units and capital ships).
+- **Target Value:** Amount of attack required to defeat a card in the galaxy row via bounty hunting/sabotage. Printed upside-down facing the opponent who can attack it.
+- **Hit Points:** Amount of damage required to destroy a base or capital ship (bottom of card).
+- **Reward:** Benefit gained by the player who defeats the corresponding target in the galaxy row. Rewards are **optional**.
+- **Exile:** Immediately remove a card from the game and return it to the box.
+- **Card Abilities:** All card abilities are **optional** -- you can choose not to resolve them.
+
+### Card Types
+
+| Card Type | Description |
+|---|---|
+| **Unit** | Played from hand into your play area. Provides attack, resources, Force, and/or abilities. Discarded at end of turn. Can commit to attacks on bases or bounty hunt/sabotage targets in the galaxy row. |
+| **Capital Ship** | Stays in play across turns until destroyed (damage >= hit points). Provides resources at the start of your turn. Can commit to base attacks but **cannot** bounty hunt/sabotage. Destroyed capital ships go to their owner's discard pile. |
+| **Base** | Each player has a base deck. Your current base is faceup. When destroyed, the attacker places it in their victory pile. You choose a new base from your remaining base cards at the start of your next turn. |
+
+### Faction Affiliation
+
+- **Empire cards:** Only the Empire player can purchase them.
+- **Rebel cards:** Only the Rebel player can purchase them.
+- **Neutral cards:** Either player can purchase them.
+- A card belonging to your opponent's faction is an **enemy card**.
 
 ## Setup
 
-1. Choose Empire or Rebels. For the beginner game, use the following **five bases per faction** and put the others away:
-   - Rebels: **Dantooine** (starting base), Hoth, Mon Cala, Sullust, Yavin IV.
-   - Empire: **Lothal** (starting base), Corellia, Coruscant, Death Star, Endor.
-2. Put your starting base face up, with your other four bases face down underneath. Their order does not matter: replacements will be chosen rather than drawn randomly.
-3. Build and shuffle each starter deck:
-   - Rebels: **7 Alliance Shuttles, 2 Rebel Troopers, 1 Temple Guardian**.
-   - Empire: **7 Imperial Shuttles, 2 Stormtroopers, 1 Inquisitor**.
-4. Shuffle the **90 galaxy cards** into one face-down deck. Reveal **6 cards** in a row. Face each faction card toward its owner; turn neutral cards sideways.
-5. Put the **10 Outer Rim Pilots** face up as a separate purchase deck at the other end of the row. Make shared resource and damage supplies nearby.
-6. Place the Force track with its light side toward the Rebels. Put the marker **all the way to the Rebel end**.
-7. Each player draws **5 cards**. The **Empire starts**.
+1. **Choose factions:** One player takes Empire, the other takes Rebel.
+2. **Prepare base decks (beginner game):** Find the 5 Rebel bases and 5 Empire bases listed below. Return the remaining 10 bases to the box (used only in advanced modes).
+3. **Place starting base:** Place your starting base faceup in front of you. Place the remaining 4 base cards facedown underneath it (order does not matter).
+4. **Build starter decks:** Take your faction's 10 starter cards, shuffle them, and place them facedown near your base deck.
+5. **Create galaxy row:** Shuffle all 90 galaxy cards together to form the galaxy deck. Deal the top 6 cards in a line to create the galaxy row. Orient Empire cards facing the Empire player, Rebel cards facing the Rebel player, and neutral cards sideways. Place the galaxy deck facedown at one end of the galaxy row.
+6. **Outer Rim Pilots:** Place the 10 Outer Rim Pilot cards in a faceup stack at the opposite end of the galaxy row.
+7. **Supply:** Place damage counters and resource counters near the galaxy deck within reach of both players.
+8. **Balance of the Force track:** Unfold the track and place it next to the Outer Rim Pilot stack with the Rebel symbol facing the Rebel player. Place the Force marker on the space **all the way to the Rebel side**.
+9. **Draw hands:** Each player draws the top 5 cards of their deck. The Empire player takes the first turn.
 
-Both starting bases have **8 hit points**. See pages 4–5.
+### Beginner Base Decks
+
+| Rebel Bases | Empire Bases |
+|---|---|
+| **Dantooine** (starting base) | **Lothal** (starting base) |
+| Hoth | Corellia |
+| Mon Cala | Coruscant |
+| Sullust | Death Star |
+| Yavin IV | Endor |
 
 ## Turn Structure
 
-### Beginning of your turn
+The game alternates turns between the Empire player (first) and the Rebel player. Each turn follows this structure:
 
-Resolve these steps in order:
+### Beginning of Turn
 
-1. If you have no base, choose and reveal one of your remaining bases. Resolve applicable reveal abilities at that timing.
-2. If the Force marker is at the **extreme space on your side**, gain **1 resource**.
-3. Gain the printed resources of each capital ship you already have in play.
+1. **Reveal new base (if needed):** If your base was destroyed on your opponent's previous turn, look at your remaining base cards and choose one to reveal as your new base. Resolve any "When you reveal this base..." abilities.
+2. **Force bonus:** If the Force marker is **all the way** to your side of the Balance of the Force track, gain 1 resource (take a resource counter from the supply).
+3. **Capital ship resources:** Gain resources from each capital ship you have in play (take resource counters equal to each capital ship's resource value). These resources plus any gained from the Force bonus form your initial **resource pool**.
 
-### During your turn
+### Main Phase (any order, any number of times)
 
-In any order, and as often as legally possible, play cards from hand, purchase cards, use available abilities, commit cards to attacks, and resolve attacks. You can interleave purchases, attacks, and plays; rewards and newly revealed market cards may enable additional actions. Each card's individual values, ability limits, and attack allowance still apply.
+You may perform any of the following actions in any order, as many times as you are able and wish to:
 
-### End your turn
+- **Play a card** from your hand
+- **Purchase a card** from the galaxy row or Outer Rim Pilot deck
+- **Use a card ability** on a card you have in play
+- **Commit** units and/or capital ships to an attack on the enemy base
+- **Commit** units to a bounty hunt (Empire) / sabotage (Rebel) attack on a target in the galaxy row
+- **Resolve an attack**
 
-Discard your units in play, all cards still in your hand, and all unused resource counters. Keep capital ships and your base in play, including their damage. Draw **5 new cards**. Your opponent then takes a turn. See pages 13–21.
+### End of Turn
+
+1. Discard all unit cards from play (to your discard pile).
+2. Return your base and each capital ship in play to their proper orientation.
+3. Discard any remaining cards in your hand (to your discard pile).
+4. Return all resource counters from your resource pool to the supply.
+5. Draw 5 cards from your deck. If your deck is empty when you need to draw, shuffle your discard pile to reform your deck, then continue drawing.
 
 ## Actions
 
-### Play cards and gain values
+### Play a Card
 
-Play a hand card face up. Immediately gain its printed resources and shift the Force marker toward your side by its Force value. Its ability may now be used at the permitted timing, and its attack may be committed to an attack.
+- Take a card from your hand and place it faceup in your play area. It is now **in play**.
+- Immediately collect resource counters equal to the card's resource value.
+- Move the Force marker toward your side of the Balance of the Force track by the card's Force value.
+- Once in play, you may use the card's ability and/or commit it to an attack.
 
-Units stay until turn end unless removed earlier. Capital ships stay until destroyed or otherwise removed. A capital ship generates resources when played, then again at the beginnings of your later turns while it remains in play. Each card's values are usable **once each turn**; printed attack is attached to that card rather than being freely divided among targets.
+### Purchase a Card
 
-### Purchase cards
+Cards in the **galaxy row** and the **Outer Rim Pilot deck** are available for purchase.
 
-Spend resources equal to the price of one card in the galaxy row or the Outer Rim Pilot stack. You may purchase **your faction's cards and neutral cards**, never the opposing faction's cards. Put purchased cards on top of your **discard pile**, unless an ability specifies a different destination.
+- Spend resources equal to the card's cost (return resource counters to the supply).
+- Place the purchased card faceup on top of your discard pile.
+- **Faction restriction:** You can only purchase cards from your own faction or neutral cards. You cannot purchase enemy faction cards.
+- When a card is removed from the galaxy row, **immediately** replace it with the top card of the galaxy deck.
 
-Immediately fill any gap in the galaxy row from the galaxy deck. This replacement happens whenever a card leaves the row, regardless of the reason. Further purchases during the same turn may use newly revealed eligible cards. Outer Rim Pilots cost **2 resources** each. See page 15.
+### Use a Card Ability
 
-### Use abilities
+- You may use the ability of each card you have in play **once per turn**.
+- Card abilities can be used the same turn the card was played.
+- Abilities are **optional** -- you never have to use them.
+- If you choose to resolve an ability, you must resolve as much of it as you are able (you cannot partially resolve an ability by choice).
+- After using a card's ability, tilt the card slightly as a reminder.
+- You cannot choose a "choose" option that you cannot resolve.
 
-Ordinary abilities on cards in play are optional and normally usable **once per turn**, including on the turn the card enters play. You can use a card's ability and attack with it in the same turn. Mark ability use separately from attack commitment.
+### Commit to an Attack
 
-If you elect to resolve an ability, perform **as much as possible**. Do not voluntarily omit an achievable part. An ability requiring a choice must use an option that can actually be resolved. Triggered and constant abilities follow their stated timing rather than the ordinary once-per-turn rule. See pages 16, 24–27.
+#### Attacking the Enemy Base
 
-### Attack the enemy base
+- Group units and/or capital ships together in your play area to indicate they are committed to attacking the enemy base.
+- Each card can commit to **one attack per turn**.
+- Committing does not immediately resolve the attack -- multiple cards can be committed before resolution.
 
-Commit one or more of your units and/or capital ships to a base attack. Committing does not immediately resolve it: multiple cards may join before resolution. A card can commit to **only one attack per turn**.
+#### Bounty Hunting (Empire) / Sabotage (Rebels)
 
-When resolving, total the committed attack values and apply that much damage:
+- Commit units to attack an **enemy card** in the galaxy row by placing them in front of the target card.
+- **Capital ships cannot** be committed to bounty hunting or sabotage attacks.
+- Each card can commit to **one attack per turn**.
 
-1. Damage must first be assigned to enemy capital ships. If there are several, **you choose** how to distribute it.
-2. Destroy any ship with damage at least equal to its hit points and put it in its owner's discard pile.
-3. Only after **all** protecting capital ships are destroyed may remaining damage reach the base.
-4. A base with damage at least equal to its hit points is destroyed. Put it in your victory pile and return its damage counters to the supply.
+### Resolve an Attack
 
-Damage on surviving ships and bases persists between turns. A destroyed base is replaced only at the **beginning of its owner's next turn**. Excess damage does not carry to that next base. Keep used attackers grouped to show they cannot attack again this turn. You may resolve further attacks with other, unused attackers. See pages 17–18.
+#### Resolving a Base Attack
 
-### Bounty hunt or sabotage
+1. Total the attack value of all units and capital ships committed to the attack.
+2. Take that many damage counters from the supply.
+3. **Capital ships first:** Each capital ship your opponent has in play **must** be destroyed before any damage can be applied to their base. You choose how to distribute damage among multiple capital ships. A capital ship is destroyed when damage on it equals or exceeds its hit points; it goes to its owner's discard pile.
+4. **Remaining damage to base:** After all enemy capital ships are destroyed, apply remaining damage counters to the opponent's base. Damage counters stay on the base unless repaired.
+5. **Base destroyed:** When damage on a base equals or exceeds its hit points, the base is destroyed. Place it in the attacker's **victory pile** (at their end of the Balance of the Force track). Return all damage counters on that base to the supply. **Excess damage is lost** -- it does not carry over to the next base.
+6. The destroyed player chooses a new base from their remaining cards at the start of their next turn.
+7. Keep committed cards grouped as a reminder they have attacked and cannot attack again this turn.
 
-Empire bounty hunting and Rebel sabotage use the same rules. Commit **units only** against one **opposing-faction unit** in the galaxy row. Capital ships cannot participate; neither neutral units nor capital ships are legal targets for this normal attack.
+#### Resolving Bounty Hunting / Sabotage
 
-Resolve with a combined attack at least equal to the target value. Discard the defeated unit to the **galaxy discard**, immediately refill its row space, then optionally gain its printed reward. Reward resources and Force are available that turn. An ability triggered by defeating the target resolves after the reward.
-
-Attack exceeding the target is lost. If attack falls short, nothing happens: row targets do not accumulate damage. Participating units have still used their attack for the turn, even if the attempt fails. See pages 19–20.
-
-### Manage the Force
-
-The track has **three Empire spaces, one neutral middle space, and three Rebel spaces**. The Force is with you whenever the marker is on any of your three spaces; it is with neither player in the middle. Gain Force by moving the marker toward your side, stopping at your end of the track.
-
-An ability conditional on the Force being with you checks that condition when resolved. The extra starting resource requires the marker at your **furthest** space at the beginning-of-turn check; merely being anywhere on your side is insufficient. See page 9.
+1. Total the attack value of all units committed to the attack against a target in the galaxy row.
+2. If the total **equals or exceeds** the target value, the attack is successful:
+   - Discard the defeated card to the **galaxy discard pile**.
+   - Replace it with the top card of the galaxy deck.
+   - You **may** choose to receive the reward printed on the defeated card (rewards are optional).
+3. If the total is **less than** the target value, nothing happens.
+4. **Excess attack is lost** -- it does not carry over.
+5. **No damage counters** are placed on bounty hunt/sabotage targets.
+6. Keep committed cards grouped to the side as a reminder they cannot attack again this turn.
 
 ## Scoring / Victory Conditions
 
-There is no point score. Each destroyed enemy base goes into the attacker's victory pile. In the beginner game, the **first player to destroy 3 enemy bases wins immediately**, including when the decisive destruction is caused by an ability rather than an ordinary attack.
-
-Before setup, players may agree to a different victory target: **2 bases** for a shorter game or **4–5** for a longer one. The rulebook recommends **4** for Full Galaxy and Secret Bases modes. Do not change the target mid-game. See pages 2, 28–29.
+- **Winning:** The first player to destroy **3** of their opponent's bases wins the game.
+- The game **immediately ends** the moment a third base is destroyed. No other cards, abilities, Force, attack, or resources are resolved after that point.
+- Destroyed bases are placed in the attacker's victory pile for tracking.
+- **Optional rule -- Adjustable Game Length:** Players may agree before the game to change the number of bases required to win (2 for a shorter game, 4 or 5 for a longer/more strategic game).
 
 ## Special Rules & Edge Cases
 
-### Card terms and timing
+### The Balance of the Force
 
-- **Exile:** remove the card from the game to the box. When a card can exile itself, you may first use its attack, resources, and Force, then exile it. If exiling from your hand/discard, the selected card must actually be in that specified zone. A hand card exiled before being played cannot also be played.
-- **Discard:** put the card into the matching player or galaxy discard pile. Discarding a row unit through an ability does **not** give its bounty/sabotage reward.
-- **Destroy:** a destroyed capital ship goes to its owner's discard if in play, or the galaxy discard if in the row. Destruction and exile are different destinations.
-- **Deal damage:** ability damage explicitly directed to an enemy base **bypasses capital ships**. This exception does not apply to ordinary attack damage.
-- **Repair:** remove damage up to the stated amount. Repairing three when only two damage exists removes two.
-- **Look:** secretly inspect, then return as instructed. **Reveal:** show both players, then put the card back face down on the deck unless instructed to move it elsewhere.
-- **When:** resolve at the stated trigger, potentially multiple times in a turn if its trigger recurs. If such an ability conflicts with reward timing, **reward first**.
-- **While:** a continuous effect persists only while its condition remains true. When its source leaves play, its bonus ends immediately.
-- **If:** the stated condition must currently be met. This can matter when another action shifts the Force before you use an ability.
+- The Force track has 7 spaces: 3 dark side (Empire), 1 neutral (center), 3 light side (Rebel).
+- The Force marker starts **all the way on the Rebel side**.
+- When you gain Force, move the marker toward your side by the indicated amount.
+- **"If the Force is with you"** abilities can only be used when the Force marker is on one of the **3 spaces on your side** of the track. If the marker is on the neutral center space, the Force is with **neither** player.
+- If the Force is **all the way** to your side at the start of your turn, gain 1 bonus resource.
 
-### Decks, information, and optional actions
+### Ability Keywords
 
-- Reshuffle a deck's own discard only when a draw or row refill is required and that deck is empty; do not reshuffle merely because its last card was drawn. Apply this to player decks and the galaxy deck.
-- All **three discard piles** are open information, but inspecting them does not permit rearranging their order.
-- You need not play every hand card. Unplayed cards are nevertheless discarded at turn end.
-- Abilities and defeat rewards are optional. Once an ability is chosen, resolve as much as possible; when selecting between alternatives, you cannot deliberately select an impossible one.
-- An opponent required by Duros Spy to choose between discarding a card or granting Force cannot choose a Force gain that cannot be performed because the marker is already at that receiving player's extreme.
-- Scout Trooper revealing a neutral card has no special effect; return it face down to the deck.
-- If an ability destroys the base first, you can still resolve a base attack to damage protecting capital ships. Any damage that would reach the absent base is lost.
+- **Choose:** Pick one of the listed options. You **must** pick an option you can fully resolve; you cannot choose an option you cannot resolve.
+- **Deal Damage:** Damage dealt directly to the enemy base by an ability **ignores capital ships**.
+- **Destroy:** Immediately discard a capital ship (from opponent's play area to their discard pile, or from galaxy row to galaxy discard pile).
+- **Discard:** Cards discarded from your hand go to your discard pile. Cards discarded from opponent's hand go to their discard pile. Cards discarded from the galaxy row go to the galaxy discard pile. When a card ability discards a card from the galaxy row, you do **not** gain any reward from that card.
+- **Exile:** Remove a card from the game permanently (return to box). When you play a card that exiles itself, you may use its attack, resources, and Force **before** exiling it. Exiled cards from your hand must be in your hand at the time you resolve the exile ability.
+- **Gain:** Gain additional attack, resources, or Force as described. Each value on a card can only be used **once per turn**.
+- **If (Conditional):** The ability can only be used when the stated condition is met (e.g., "If the Force is with you").
+- **Look:** Look at a card secretly (opponent cannot see it), then return it to its original position.
+- **Repair:** Remove the indicated number of damage counters from your base.
+- **Reveal:** Flip a card faceup so all players can see it. If not instructed to discard it, return it to its original position facedown.
+- **When (Triggered):** Triggered abilities resolve at the specific moment described (e.g., "When you reveal this base..."). Triggered abilities are **not** limited to once per turn -- they resolve each time their trigger condition is met. If a "when" ability conflicts with a Reward, resolve the **Reward first**.
+- **While (Constant):** The effect is always active as long as the stated condition is true. When the card with a constant ability leaves play, its effect immediately ends.
 
-### Advanced and optional modes
+### Outer Rim Pilots
 
-- **Full Galaxy:** each player begins with **all 10 faction bases**, including their starting base; choose replacements as usual. A four-base victory target is recommended.
-- **Secret Bases:** each player starts with their normal starting base and secretly chooses **4 of the other 9 bases**. Hide unselected bases and choose replacements from the selected four. A four-base victory target is recommended.
-- **Paying off neutrals:** if agreed, spend a neutral row card's purchase cost to discard it to the galaxy discard **without acquiring it**. Refill the row immediately. This is an optional resource action, not permission to attack neutral cards.
-- **2v2:** requires two copies and separate multiplayer rules from the publisher; the two-player turn rules above are the scope of this summary.
+- Available for purchase by either player from the Outer Rim Pilot deck (separate from galaxy row).
+- Purchased like any other card (spend resources equal to cost, place on discard pile).
 
-See pages 24–30 for terms, advanced modes, options, and the rulebook FAQ.
+### Empty Deck Rules
+
+- **Player deck empty:** Do **not** shuffle your discard pile just because your deck is empty. Wait until you actually need to draw a card, then shuffle your discard pile to reform your deck.
+- **Galaxy deck empty:** Wait until a card needs to be added to the galaxy row, then shuffle the galaxy discard pile to reform the galaxy deck.
+
+### Galaxy Row Replacement
+
+- Whenever a card leaves the galaxy row (purchased, defeated via bounty hunt/sabotage, or discarded by an ability), **immediately** replace it with the top card of the galaxy deck.
+
+### Discard Pile Visibility
+
+- All three discard piles (both player discard piles and the galaxy discard pile) are **open information**. Any player may look at them at any time, but you **cannot change the order** of the cards.
+
+### Capital Ship Persistence
+
+- Capital ships remain in play across turns. They are **not** discarded at end of turn.
+- Capital ships are only removed from play when they have damage equal to or greater than their hit points (destroyed).
+- Destroyed capital ships go to their **owner's discard pile** (not the galaxy discard pile).
+
+### Attacking After Base Destruction
+
+- You **can** resolve an attack against an opponent's base even if it has already been destroyed this turn. This allows you to damage their capital ships. Any damage that would be applied to the (already destroyed) base is lost.
+
+### Unplayed Cards
+
+- You do **not** have to play every card in your hand. Cards you choose not to play are still discarded at the end of your turn.
+
+### FAQ Clarifications
+
+- You do not have to resolve a card's ability immediately after playing it (unless it is a "when" triggered ability).
+- If an exile ability says "exile from your hand or discard pile," you can exile from both places (a combination).
+- If the Force is all the way to the Rebel side and an opponent plays Duros Spy (which forces a choice between discarding a card or gaining Force), the opponent with no room to gain Force must choose the option they can fully resolve (discard a card).
+
+### Advanced Game Modes
+
+- **Full Galaxy:** Use all 10 bases per faction instead of 5. Recommended to play to **4 bases** for victory.
+- **Secret Bases:** Start with your starting base, then secretly choose 4 more from your remaining 9. Return unchosen bases to the box facedown. Neither player knows the other's base lineup. Recommended to play to **4 bases** for victory.
+- **2v2 Multiplayer:** Requires two copies of the game. Rules available at FantasyFlightGames.com.
+
+### Optional Rules
+
+- **Adjustable Game Length:** Change the number of bases required to win (2 for shorter, 4-5 for longer). Agree before the game begins.
+- **Paying Off Neutral Cards:** Spend resources equal to a neutral card's cost to discard it from the galaxy row (to the galaxy discard pile) without adding it to your deck. You cannot bounty hunt or sabotage neutral cards normally -- this optional rule provides a way to remove unwanted neutral cards.
 
 ## Player Reference
 
-| Item | Rule |
-|---|---|
-| Starting decks / starting hands | 10 cards / 5 cards each |
-| First player | Empire |
-| Initial Force | Extreme Rebel space |
-| Galaxy row | 6 face-up cards, replaced immediately |
-| Purchase eligibility | Own faction or neutral |
-| Purchased-card destination | Own discard unless text overrides |
-| Outer Rim Pilot cost | 2 resources |
-| Force condition | Any of your 3 spaces |
-| Force resource bonus | 1, only at your extreme at start of turn |
-| Attack allowance | Each card commits once per turn |
-| Row attacks | Units against opposing-faction units only |
-| Base protection | Destroy all capital ships before ordinary base damage |
-| End-of-turn hand | Draw 5 after discarding units, hand, resources |
-| Beginner victory | Destroy 3 enemy bases |
+### Key Numbers
 
-Turn checklist: reveal replacement base if needed; check extreme-Force bonus; collect ship resources; interleave plays, abilities, purchases, and attacks; discard units, hand, and resources; draw five. Keep capital ships, the active base, and their damage in play.
+| Item | Value |
+|---|---|
+| Starting deck size | 10 cards |
+| Hand size | 5 cards |
+| Galaxy row size | 6 cards |
+| Bases to destroy to win (beginner) | 3 |
+| Bases to destroy to win (advanced, recommended) | 4 |
+| Force track spaces | 7 (3 dark side + 1 neutral + 3 light side) |
+| Starting Force position | All the way to Rebel side |
+| First turn | Empire |
+
+### Starter Deck Composition
+
+| Rebel | Empire |
+|---|---|
+| Alliance Shuttle x7 | Imperial Shuttle x7 |
+| Rebel Trooper x2 | Stormtrooper x2 |
+| Temple Guardian x1 | Inquisitor x1 |
+
+### Turn Sequence Quick Reference
+
+1. **Start of turn:** Reveal new base if needed -> Gain 1 resource if Force is all the way to your side -> Gain resources from capital ships in play.
+2. **Main phase (any order, repeat as able):** Play cards -> Purchase cards -> Use abilities -> Commit to attacks -> Resolve attacks.
+3. **End of turn:** Discard units from play -> Straighten base/capital ships -> Discard hand -> Return resource counters to supply -> Draw 5 cards.
+
+### Attack Rules Summary
+
+| Rule | Base Attack | Bounty Hunt / Sabotage |
+|---|---|---|
+| Who can commit | Units + Capital Ships | Units only |
+| Target | Opponent's base (capital ships must be destroyed first) | Enemy faction card in galaxy row |
+| Success condition | Damage dealt = attack total | Attack total >= target value |
+| Excess damage/attack | Lost (does not carry to next base) | Lost |
+| Damage counters placed? | Yes (on capital ships and base) | No |
+| Reward? | N/A | Optional (printed on defeated card) |
+| Defeated card goes to | Attacker's victory pile (bases) / owner's discard (capital ships) | Galaxy discard pile |
+
+### Purchasing Rules
+
+| Card Type | Empire Can Buy? | Rebel Can Buy? |
+|---|---|---|
+| Empire cards | Yes | No |
+| Rebel cards | No | Yes |
+| Neutral cards | Yes | Yes |
+| Outer Rim Pilots | Yes | Yes |
+
+### Force Quick Reference
+
+- Gain Force = move marker toward your side.
+- Force on your 3 spaces = "Force is with you" (enables conditional abilities).
+- Force on neutral center = with neither player.
+- Force all the way to your side at start of turn = +1 resource.

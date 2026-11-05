@@ -1,179 +1,395 @@
 ---
 title: "7 Wonders"
 bgg_id: 68448
-permalink: /rules/7-wonders/
 player_count: "3-7"
 play_time: "30 min"
 designer: "Antoine Bauza"
 source_pdf: "7-wonders-rules.pdf"
-source_url: "https://cdn.1j1ju.com/medias/c8/d6/88-7-wonders-rule.pdf"
-extracted_date: "2026-11-04"
-summarized_date: "2026-11-04"
-rulebook_version: "Original edition, Repos Production English rulebook ©2012"
+extracted_date: "2026-03-03"
+summarized_date: "2026-03-03"
+rulebook_version: "Second Edition (2020)"
+verification: "verified"
+verification_date: "2026-08-08"
 ---
+
+# 7 Wonders
+
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/7-wonders-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%207%20Wonders&game=7-wonders)
+<!-- verification:end -->
 
 ## Overview
 
-Develop an ancient city over **three Ages** by simultaneously drafting cards. Cards produce resources, earn money or points, strengthen armies, and improve science. Any selected card can instead build the next stage of your Wonder or be discarded for money. After each Age, compare military strength with both neighbors; after Age III, the most victory points wins.
-
-This summary follows the **original edition** associated with BGG 68448, using the English ©2012 rulebook. It includes that edition's optional expert two-player variant. Later editions change some Wonder effects and other details; use the components and rules from the same edition. [Source rulebook](https://cdn.1j1ju.com/medias/c8/d6/88-7-wonders-rule.pdf), printed/PDF pages 2–12.
+Players lead one of the seven greatest cities of the ancient world, developing it over three Ages by simultaneously drafting cards to construct buildings, erect stages of their Wonder, or sell cards for coins. Each Age, 7 cards are dealt to each player; players choose 1 card per turn, then pass the remaining hand to a neighbor (left in Ages I and III, right in Age II). At the end of each Age, players compare military strength with their immediate neighbors. After three Ages, victory points are tallied from military conflicts, coins, blue cards, green cards (science), yellow cards, purple cards (guilds), and Wonder stages. The player with the most victory points wins.
 
 ## Components
 
-- **7 double-sided Wonder boards** and **7 Wonder selection cards**.
-- **148 Age cards:** 49 Age I, 49 Age II, 50 Age III, including 10 purple Guilds.
-- **46 military conflict tokens:** defeats worth −1 and victories worth +1, +3, or +5.
-- **70 coins:** 46 value-1 and 24 value-3.
-- Score booklet, rulebook, and **2 cards for the expert two-player variant**: Border and Free City.
+- **7 Wonder boards** (each double-sided: Day side and Night side, showing 2-4 construction stages)
+- **148 Age cards:**
+  - 49 Age I cards
+  - 49 Age II cards
+  - 50 Age III cards
+- **78 Coins:** 54 coins worth 1, 24 coins worth 3
+- **48 Military Conflict tokens:**
+  - 24 Defeat tokens (-1 each)
+  - 24 Victory tokens: 8 per Age (+1 for Age I, +3 for Age II, +5 for Age III)
+- **1 score pad**
+- **3 Description of Effects sheets**
+- **1 List of cards and chains sheet**
+- **1 rulebook**
 
-Card colors identify their functions: brown raw materials; gray manufactured goods; blue direct points; green science; yellow commerce; red military; purple Guilds. A card's upper-left area gives its price, lower-center number gives its minimum player count, and chain references show free construction links. The Wonder board supplies an initial resource independently of cards. See pages 2–3.
+### Card Types
+
+| Color | Name | Function |
+|---|---|---|
+| Brown | Basic Materials | Produce common resources: Clay, Stone, Ore, Wood |
+| Grey | Manufactured Products | Produce rare resources: Glass, Cloth, Papyrus |
+| Blue | Civil Buildings | Provide victory points directly |
+| Yellow | Commercial Buildings | Provide commercial advantages (cheaper trading, coins, resources, or VP) |
+| Red | Military Buildings | Increase military strength (shield symbols) |
+| Green | Science Buildings | Provide science symbols in three domains (Tablet, Compass, Gear) |
+| Purple | Guilds (Age III only) | Provide victory points based on specific conditions |
+
+### Wonder Board Anatomy
+
+Each Wonder board shows:
+- **Name** of the Wonder
+- **Day or Night side** indicator
+- **Starting resource** (produced for free every turn)
+- **Construction stages** (2, 3, or 4 stages depending on the board/side), each with a cost and an effect
+
+### Card Anatomy
+
+Each card shows:
+- **Cost zone** (upper left) — resources, coins, or blank (free)
+- **Effect** (center)
+- **Building name** (bottom)
+- **Minimum players required** (bottom right number, e.g., 3+, 4+, 5+, 6+, 7+)
+- **Chain symbols** (optional, upper right) — one or two symbols enabling free construction of later cards
+- **Colorblind-friendly symbol** (identifies card type)
+- **Back:** Age number and passing direction arrow
 
 ## Setup
 
-1. For each Age, retain only cards whose player-count threshold is no greater than the number of players. For example, with four players use 3+ and 4+ cards.
-2. Remove all **10 Guilds** from Age III, randomly select **players + 2** without revealing the selection, and shuffle those into the eligible Age III cards. Thus use 5/6/7/8/9 Guilds with 3/4/5/6/7 players.
-3. Deal Wonder cards randomly to determine boards and sides, or agree to choose them. Side A is recommended for first games. Both A and B sides may appear together.
-4. Each player takes **3 coins**. Put remaining coins and military tokens in shared supplies.
-5. Shuffle Age I and deal **7 cards each**. Prepare the later Age decks separately; deal them only when their Age begins.
-
-Each prepared Age deck has exactly seven cards per player. Everyone begins with their board's printed resource available. See page 3.
+1. **Wonder boards:** Each player randomly takes 1 Wonder board and chooses their preferred side (Day or Night). For first games, use the Day side.
+2. **Starting treasure:** Each player takes 3 coins (value 1 each) and places them on their Wonder board.
+3. **Reserves:** Place remaining coins and all Military Conflict tokens in the center of the table.
+4. **Prepare Age cards:**
+   - Separate cards into three decks by Age (I, II, III).
+   - For each Age, remove cards whose minimum player number exceeds the current player count. (Example: in a 5-player game, keep all cards marked 3+, 4+, and 5+; remove 6+ and 7+ cards.)
+   - **Age III Guilds (Purple cards):** Remove all Purple cards from the Age III deck. Randomly draw (number of players + 2) Purple cards and shuffle them into the Age III deck. Return the rest to the box. (Example: 5 players = 7 Purple cards.)
+   - Shuffle each deck and place face down in the center.
 
 ## Turn Structure
 
-Each Age normally lasts **six simultaneous turns**:
+Each Age consists of **6 turns** played simultaneously by all players. Each turn has three phases:
 
-1. Choose one card secretly from your current hand and place it face down.
-2. Everyone reveals and resolves one action with their chosen card.
-3. Pass the remaining hand **left in Ages I and III**, **right in Age II**; take the hand arriving from the other neighbor.
+### 1. Choose a Card
 
-On turn six, choose one of the last two cards and discard the other face down **without compensation**. Resolve the chosen card. Then compare shields separately with each neighboring city. More shields wins a victory token worth **+1/+3/+5** in Ages I/II/III; fewer takes **−1**; equality awards nothing. Include all shield sources, including Wonder abilities.
+Look at your hand of cards (without showing them to others). Choose 1 card and place it face down in front of you. Set the remaining cards aside face down.
 
-Deal the next Age's seven-card hands and continue. End the game after Age III's military resolution. Babylon B can modify the normal last-card discard. See page 5.
+### 2. Play the Card
+
+When all players have chosen, reveal simultaneously. Each player performs **exactly one** of three actions with their chosen card:
+
+- **A. Construct the Building** — Pay the card's cost and place it face up above your Wonder board. It remains in your City for the rest of the game.
+- **B. Construct a Wonder Stage** — Pay the cost shown on your Wonder board for the next uncompleted stage. Tuck the card face down under your board beneath that stage. The card's printed effect is irrelevant; only the Wonder stage's effect activates.
+- **C. Sell the Card** — Discard the card face down to the discard pile and take 3 coins from the reserve.
+
+**Important:** You can never construct two Buildings with the same name (no duplicate cards in your City).
+
+**Card placement:** Stack cards of the same color, keeping effects visible. Stack resource cards above your starting resource.
+
+### 3. Pass Your Hand
+
+After all players complete their action, pass your remaining cards to:
+- **Ages I and III:** Neighbor on your **left**
+- **Age II:** Neighbor on your **right**
+
+The direction is shown on the back of the Age cards.
+
+### Sixth (Last) Turn
+
+On the last turn, you receive a hand of only 2 cards. Choose 1 to play; discard the other face down (no coins gained from this discard). Play the chosen card normally, then proceed to Military Conflict resolution.
+
+### Resolution of Military Conflicts (End of Each Age)
+
+After the 6th turn of each Age:
+
+1. Each player totals their military strength (shield symbols on constructed Red cards and Wonder stages).
+2. Compare your strength with **each** neighbor (left and right) separately:
+
+| Comparison | Result |
+|---|---|
+| Your strength **>** neighbor's | Take a Victory token for the current Age |
+| Your strength **<** neighbor's | Take a Defeat token (-1) |
+| Your strength **=** neighbor's | Neither player takes a token |
+
+**Victory token values by Age:**
+
+| Age | Victory Token Value |
+|---|---|
+| Age I | +1 |
+| Age II | +3 |
+| Age III | +5 |
+
+Each player can gain 0, 1, or 2 Victory tokens and 0, 1, or 2 Defeat tokens per Age (one comparison per neighbor). After resolution, proceed to the next Age (or end of game after Age III).
 
 ## Actions
 
-### Construct the selected building
+### A. Construct a Building
 
-Pay its printed cost and place the card face up in your city. You cannot build a second structure with the **same name**, even if it would be free. Cards with no cost are free. A coin cost is paid to the bank. If you already own the prerequisite structure named beside a card's cost, its chain lets you construct it free instead of paying resources.
+Pay the construction cost shown in the card's cost zone and place the card face up in your City. There are four types of costs:
 
-**Resources are production capacity, not stored tokens.** Each turn your Wonder's starting resource, brown and gray cards, and appropriate yellow cards/Wonder powers produce their displayed quantities. Reuse that capacity next turn; never discard a production card as payment. A choice symbol produces one of its alternatives, not all of them at once.
+#### No Cost (Free)
+If the cost zone is empty, the card is free.
 
-**Trade:** buy missing production from your immediate left and/or right neighbor for **2 coins per resource**, unless a discount applies. You may buy their starting board resource and brown/gray production. You cannot buy the private production granted by yellow cards or special Wonder abilities. A neighbor cannot refuse a legal purchase, and selling production does not diminish what that neighbor or their other neighbor can use that turn. For choice production, each buyer can select the alternative they need independently.
+#### Coin Cost
+Some cards cost 1 coin. Pay 1 coin from your Treasure to the reserve.
 
-Use only money held **at the start of the turn** to pay construction or trade. Money received from another player's simultaneous trade is available next turn. A newly built production or discount card likewise becomes available for future turns, rather than financing its own construction. See page 4.
+#### Resource Cost
+Cards may require one or more resources. Resources can come from:
 
-### Build the next Wonder stage
+**Your own City (free to use):**
+- Starting resource on your Wonder board
+- Brown cards (common resources)
+- Grey cards (rare resources)
+- Yellow cards that produce resources
+- Wonder stages that produce resources
 
-Use the chosen card face down beneath the next unbuilt stage and pay the **stage's** cost. Ignore the card's cost, color, points, and ability. Stages must be built from **left to right**, once each. They need not correspond to the current Age: several stages may be built in one Age, or none until Age III. Building a Wonder is optional. Hidden cards under it are not structures and do not count for card-counting effects. See page 5.
+Each resource symbol can only be used **once per turn**, but resources are **never consumed** — they remain available every turn for the entire game.
 
-### Discard for coins
+**Buying from neighbors (2 coins per resource):**
+- You may buy resources from your immediate neighbors (left and right only).
+- Pay **2 coins per resource** to the owner of the resource.
+- You can only buy resources from their: starting Wonder resource, Brown cards, and Grey cards.
+- You **cannot** buy resources produced by Yellow cards or Wonder stages.
+- The neighbor keeps their card and can still use the bought resource themselves.
+- Each resource symbol can only be bought **once per turn** by the same player.
+- Bought resources must be used the same turn.
+- If a neighbor's card produces a choice of resources, you choose which to buy regardless of what they chose.
+- You cannot prevent a player from buying your resources.
+- Both neighbors can buy the same resource from your City.
+- You must spend coins at the beginning of your turn; you cannot use coins received from other players during the same turn.
+- You cannot buy resources from a Building your neighbor constructed that same turn.
 
-Discard the selected card face down and take **3 coins from the bank**. If you selected a card you cannot legally construct or use for a Wonder stage, discard it for these three coins. This paid discard differs from the uncompensated seventh-card discard at Age end.
+#### Free Construction via Chains
+Starting in Age II, some cards show a chain symbol in the cost zone. If you have previously constructed a card with the matching chain symbol in the upper right corner, you can construct the new card for free (ignoring its resource cost). If you lack the chain symbol, you may still construct the card by paying its normal resource cost.
 
-### Yellow commerce cards
+Some cards grant access to two chains (two symbols in the upper right corner).
 
-- Trading Posts reduce the specified neighbor's raw-material prices to **1 coin**. Marketplace reduces manufactured-good prices from both neighbors to **1 coin**. Arrows indicate affected neighbor(s).
-- Caravansery supplies one chosen raw material per turn; Forum supplies one chosen manufactured good. This production is private.
-- Tavern gives its printed one-time money. Vineyard gives **1 coin per brown card** in your city and both neighbors; Bazaar gives **2 coins per gray card** in those cities. Include cards built simultaneously by neighbors.
-- Haven gives **1 coin now and 1 final point per brown card** in your city. Lighthouse gives **1 coin now and 1 final point per yellow card**, including itself. Chamber of Commerce gives **2 coins now and 2 final points per gray card**. Arena gives **3 coins now and 1 final point per built Wonder stage**.
+### B. Construct a Wonder Stage
 
-For these Age III cards, calculate coins when built and points using the final city. See page 12.
+Pay the cost shown on your Wonder board for the next stage (not the cost on the card). Tuck any card from your hand face down under the board at that stage. The card is consumed — its printed effect and name do not matter.
+
+**Rules:**
+- Wonder stages must be constructed **left to right** (stage 1 before 2, stage 2 before 3, etc.).
+- You may construct a stage in **any Age** (e.g., stage 1 in Age III is legal).
+- Constructing Wonder stages is **optional** — you do not have to build any or all stages.
+- Once constructed, the stage's effect is available for the rest of the game.
+
+### C. Sell a Card
+
+Discard your chosen card face down to the central discard pile. Take **3 coins** from the reserve.
 
 ## Scoring / Victory Conditions
 
-After Age III's military conflict, total seven categories:
+The game ends after the Resolution of Military Conflicts at the end of Age III. Use the score pad to tally victory points in these categories:
 
-1. **Military:** add all victory and defeat tokens; a negative total is possible.
-2. **Coins:** **1 point per complete 3 coins**; ignore remainders.
-3. **Wonder:** printed points on completed stages.
-4. **Civilian:** printed points on blue cards.
-5. **Science:** if the three symbols have counts `a`, `b`, and `c`, score **a² + b² + c² + 7 × min(a,b,c)**. Identical-symbol points and mixed-set points both apply. Choose any wild science symbols at scoring to maximize the total.
-6. **Commerce:** end-game points from applicable yellow cards.
-7. **Guilds:** use the scoring conditions below.
+### 1. Military Conflicts
 
-Highest total wins. Break a tie using **most remaining coins**; if coins are also equal, the tie remains. See page 6.
+Sum all your Military Conflict tokens (both Victory and Defeat). The total may be negative.
 
-### Guild scoring
-
-Unless stated otherwise, count structures in **both neighboring cities**, not your own:
-
-| Guild | Points |
+| Token | Value |
 |---|---|
-| Workers | 1 per brown neighbor card |
-| Craftsmens | 2 per gray neighbor card |
-| Traders | 1 per yellow neighbor card |
-| Philosophers | 1 per green neighbor card |
-| Spies | 1 per red neighbor card |
-| Magistrates | 1 per blue neighbor card |
-| Strategists | 1 per defeat token held by neighbors |
-| Builders | 1 per built Wonder stage in your city **and both neighbors** |
-| Shipowners | 1 per brown, gray, or purple card in **your** city; includes itself |
-| Scientists | One science symbol of your choice at final scoring |
+| Defeat | -1 each |
+| Age I Victory | +1 each |
+| Age II Victory | +3 each |
+| Age III Victory | +5 each |
 
-Board production is never a brown or gray card. See page 12.
+**Maximum possible military score:** +18 (6 Victory tokens: +1, +1, +3, +3, +5, +5)
+**Minimum possible military score:** -6 (6 Defeat tokens at -1 each)
+
+### 2. Treasure (Coins)
+
+**1 victory point per 3 coins** in your Treasure (rounded down, remainder is lost).
+
+### 3. Wonder Board
+
+Add victory points from constructed Wonder stages (varies by Wonder).
+
+### 4. Blue Cards (Civil Buildings)
+
+Sum the victory point values printed on all Blue cards in your City.
+
+### 5. Yellow Cards (Commercial Buildings)
+
+Some Yellow cards provide victory points based on specific conditions (see Description of Effects sheet). Add these.
+
+### 6. Green Cards (Science)
+
+Science symbols provide victory points in **two ways that are added together:**
+
+#### A. Identical Symbols (Squared)
+
+For each type of science symbol, score the **square** of the number you have:
+
+| Number of Identical Symbols | Victory Points |
+|---|---|
+| 1 | 1 (1^2) |
+| 2 | 4 (2^2) |
+| 3 | 9 (3^2) |
+| 4 | 16 (4^2) |
+
+**Formula: VP = (count of symbol A)^2 + (count of symbol B)^2 + (count of symbol C)^2**
+
+#### B. Sets of 3 Different Symbols
+
+For each **complete set** of all 3 different science symbols, score **7 victory points**.
+
+**Combined formula:** VP = (Tablets)^2 + (Compasses)^2 + (Gears)^2 + (7 x number of complete sets of 3)
+
+**Examples:**
+- 3 Tablets, 2 Compasses, 1 Gear = 9 + 4 + 1 + 7 = **21 VP**
+- 2 Tablets, 2 Compasses, 2 Gears = 4 + 4 + 4 + 14 = **26 VP**
+- 4 Tablets, 0 Compasses, 0 Gears = 16 + 0 + 0 + 0 = **16 VP**
+
+Note: Science symbols on constructed Wonder stages count toward science scoring.
+
+### 7. Purple Cards (Guilds)
+
+Score victory points according to each Guild card's specific condition (see Description of Effects sheet). Guilds typically award VP based on what you and/or your neighbors have built.
+
+### Tiebreaker
+
+If tied on total victory points, the player with the **most coins in their Treasure** wins. If still tied, all tied players **share the victory**.
 
 ## Special Rules & Edge Cases
 
-### Wonder abilities in the original edition
+### Card Drafting Direction
 
-Pay the costs shown on your physical board; the following are the original rulebook's stage rewards, in left-to-right order. Starting resources remain available throughout the game.
-
-All **A sides** award **3 points** at stage one and **7 points** at stage three. Stage two gives:
-
-| Wonder A | Middle-stage reward |
+| Age | Pass cards to |
 |---|---|
-| Giza | 5 points |
-| Rhodes | 2 shields |
-| Alexandria | One chosen raw material per turn, private production |
-| Ephesus | 9 coins immediately |
-| Babylon | One chosen science symbol at final scoring |
-| Olympia | Construct one building free per Age |
-| Halicarnassus | Choose and build a discarded structure free |
+| Age I | Left |
+| Age II | Right |
+| Age III | Left |
 
-**B sides:**
+### Duplicate Building Rule
 
-- **Giza:** four stages scoring **3, 5, 5, 7 points**.
-- **Rhodes:** stage one gives **1 shield + 3 coins + 3 points**; stage two gives **1 shield + 4 coins + 4 points**.
-- **Alexandria:** private choice of one raw material each turn; then private choice of one manufactured good each turn; then **7 points**.
-- **Ephesus:** stages give **4 coins + 2 points**, **4 coins + 3 points**, and **4 coins + 5 points**. Money is received once per stage.
-- **Babylon:** **3 points**; then permission to play the seventh Age card rather than discarding it; then one chosen final science symbol. The seventh card may be constructed, used for a Wonder stage, or discarded for **3 coins**. If you build the second stage on turn six, the seventh card can already be used that Age.
-- **Olympia:** raw materials cost **1 coin each** from both neighbors; then **5 points**; then copy one neighbor's Guild for final scoring. The trading benefit does not stack with Trading Posts. Choose the copied Guild at the end; its owner is unaffected.
-- **Halicarnassus:** the first stage gives **2 points** and a free discard construction; the second gives **1 point** and a free discard construction; the third gives another free discard construction.
+You can **never** construct two Buildings with the same name. If you already have a card named "Barracks" in your City, you cannot construct another "Barracks." You may still use a duplicate card to build a Wonder stage or sell it.
 
-Resolve Halicarnassus after the current turn, including cards discarded on that turn and the unselected seventh cards at Age end. Duplicate structures remain prohibited. Wild science choices are delayed until scoring; copying a Scientists Guild therefore grants another flexible science symbol. See pages 8–9.
+### Minimum Player Count on Cards
 
-### Expert two-player variant
+Cards have a minimum player count (3+, 4+, 5+, 6+, 7+). Only cards whose minimum is less than or equal to the actual number of players are included in the game. This scales the game for different player counts.
 
-Use the **three-player decks** and three Wonder boards: one per human and one for the **Free City**. Each city starts with **3 coins**. Place the Border card between the humans. At each Age's start deal seven cards to each human and place the other seven in a face-down Free City draw pile. Give the Free City card to the player **left of that city in Ages I/III**, and **right of it in Age II**.
+### Purple Card (Guild) Distribution
 
-The holder draws the top Free City card into their hand and chooses **their own card first**, then a card for the Free City. Their opponent chooses one normally. Place remaining hands on the appropriate sides of the Border card. Resolve the Free City's choice before the controller's own action; then the two humans exchange remaining hands, transferring the Free City card so control alternates.
+In Age III, Purple cards are not all used. Randomly draw (number of players + 2) Purple cards to include; return the rest to the box. This adds variability between games.
 
-The Free City follows ordinary costs and trade. It **must use a chain** when applicable, and may discard for three coins **only if unable to play a card legally** as a structure or Wonder stage. When either neighbor can supply a purchased resource, its controller chooses the seller regardless of which price is cheaper. During turn six, discard the Free City's final undrawn card along with the humans' unused last cards. Military resolution remains the same as a three-city game. The humans compare final points, then coins. See page 7.
+### Resource Production and Trading
 
-### Commonly missed limits
+- Resources are **never consumed**. A resource card produces its resource every single turn.
+- Each resource symbol may only be used **once per turn** (either by you or sold to one neighbor who buys it).
+- Both neighbors may buy the same resource from you in the same turn.
+- You cannot buy resources produced by Yellow cards or Wonder stages from neighbors — only starting resources, Brown cards, and Grey cards.
+- Coins received from other players during a turn cannot be spent that same turn.
+- You cannot buy resources from a card a neighbor just constructed that turn.
 
-- A finished Wonder is not required to win, and stage construction has no Age restriction.
-- Shield comparisons use immediate neighbors only. Defeat is always −1, while victory increases by Age.
-- Resource production is reusable each turn; it is neither consumed by your own construction nor denied to you when sold.
-- Chains avoid resource costs but do not waive the duplicate-building prohibition.
-- Your board's starting production and tucked construction cards do not count as brown or gray buildings for money or Guilds.
-- The last unselected card earns no coins unless an ability lets you actively play it as a paid-discard action.
+### Wonder Stage Construction
+
+- Stages must be built in order (left to right) but can be built in any Age.
+- Any card can be used to construct a Wonder stage — the card's type, cost, and effect are irrelevant.
+- Building Wonder stages is optional. You are not required to complete your Wonder.
+- Wonder stages that produce resources or provide other effects are active for the rest of the game once built.
+
+### Last Turn Discard
+
+On the 6th turn of each Age, you receive 2 cards. You play 1 and discard the other face down. The discarded card does **not** earn you 3 coins (unlike selling, which is a deliberate action with a different card).
+
+### Coin Values
+
+When the rules say "take x coins," it means take coins totaling that value (using any combination of 1-value and 3-value coins). Coins are worth 1 or 3 but represent abstract wealth.
+
+### Day vs. Night Sides
+
+Wonder boards have a Day (simpler) and Night (more complex/varied) side. Players may freely mix sides at the table. Day side is recommended for new players.
+
+### Selling a Card
+
+Selling always yields exactly **3 coins**, regardless of the card's type or value.
 
 ## Player Reference
 
-| Item | Rule |
-|---|---|
-| Ages / regular turns | 3 Ages, 6 turns each |
-| Hand at Age start | 7 cards |
-| Passing direction | Left, right, left |
-| Starting money | 3 coins |
-| Discard action | Gain 3 coins |
-| Basic trade price | 2 coins per resource |
-| Guilds in Age III | Player count + 2 |
-| Military wins | +1 / +3 / +5 by Age |
-| Military loss / tie | −1 / 0 |
-| Science | Sum of three squares, plus 7 per three-symbol set |
-| Final coin points | 1 per full 3 coins |
-| Final tiebreak | Most coins |
+### Turn Summary
 
-Turn checklist: select secretly; reveal; construct, build a stage, or discard; settle purchases from start-of-turn funds; pass hands in the current direction. After turn six, discard the unplayed card and resolve both military borders. Score all seven categories after Age III.
+1. Choose 1 card from hand (face down)
+2. Simultaneously reveal and perform one action: Construct Building / Construct Wonder Stage / Sell (3 coins)
+3. Pass remaining hand left (Ages I & III) or right (Age II)
+
+### Key Numbers
+
+| Item | Value |
+|---|---|
+| Starting coins | 3 |
+| Cards dealt per Age | 7 per player |
+| Turns per Age | 6 |
+| Total Ages | 3 |
+| Coins from selling a card | 3 |
+| Cost to buy 1 neighbor resource | 2 coins |
+| Coins per VP (treasure scoring) | 3 coins = 1 VP |
+| VP per complete science set | 7 VP |
+| Purple cards included in Age III | Players + 2 |
+| Player count range | 3-7 |
+
+### Military Victory Token Values
+
+| Age | Victory | Defeat |
+|---|---|---|
+| I | +1 | -1 |
+| II | +3 | -1 |
+| III | +5 | -1 |
+
+### Science Scoring Quick Reference
+
+**Formula:** (Tablets)^2 + (Compasses)^2 + (Gears)^2 + (7 x complete sets)
+
+| Identical Symbols | Points |
+|---|---|
+| 1 | 1 |
+| 2 | 4 |
+| 3 | 9 |
+| 4 | 16 |
+| 5 | 25 |
+
+Each complete set of all 3 different symbols = 7 additional VP.
+
+### Card Passing Direction
+
+| Age | Direction |
+|---|---|
+| I | Left |
+| II | Right |
+| III | Left |
+
+### Resource Trading Summary
+
+| Source | Cost | Available to buy? |
+|---|---|---|
+| Neighbor's starting resource | 2 coins | Yes |
+| Neighbor's Brown cards | 2 coins | Yes |
+| Neighbor's Grey cards | 2 coins | Yes |
+| Neighbor's Yellow cards | — | No |
+| Neighbor's Wonder stages | — | No |
+| Your own resources | Free | N/A (always available) |
+
+### Scoring Categories Checklist
+
+1. Military Conflict tokens (sum all, may be negative)
+2. Treasure (1 VP per 3 coins)
+3. Wonder stages (VP printed on stages)
+4. Blue cards (VP printed on cards)
+5. Yellow cards (conditional VP per card effects)
+6. Green cards (science formula)
+7. Purple cards (conditional VP per card effects)

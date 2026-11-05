@@ -1,0 +1,119 @@
+---
+title: "Argent: The Consortium"
+bgg_id: 144797
+player_count: "2-5"
+play_time: "60-150 min"
+designer: "Trey Chambers"
+source_pdf: "argent-the-consortium-rules.pdf"
+extracted_date: "2026-03-18"
+summarized_date: "2026-03-18"
+verification: "minor_issues"
+verification_date: "2026-06-13"
+---
+<!-- verification:begin -->
+> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/argent-the-consortium-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Argent%3A%20The%20Consortium&game=argent-the-consortium)
+<!-- verification:end -->
+
+
+## Overview
+
+Argent: The Consortium is a cutthroat worker-placement game set at Argent University, a school of magic. The university chancellor has announced he will relinquish his post, and a secret consortium of voters will elect a new one. Each voter has a hidden criterion for their vote, and players must figure out what the voters value and position themselves to win the most votes. Players deploy mage workers with unique powers, cast spells, gather resources, acquire vault cards, and use influence to gain advantages.
+
+## Components
+
+- Game board (university rooms -- modular)
+- Room tiles
+- Mage workers in multiple colors (each color has different powers)
+- Consortium voter cards (hidden vote criteria)
+- Vault cards
+- Spell cards
+- Treasure cards
+- Mark tokens
+- Influence tokens
+- Mana crystals
+- Gold coins
+- Research points
+- Merit badges
+- Bell tower track
+- Player boards
+- Candidate cards (player characters)
+- Various other tokens
+
+## Setup
+
+1. Arrange the university rooms on the board (modular -- varies each game).
+2. Place resources, marks, and treasures.
+3. Shuffle and deal consortium voter cards (hidden criteria that determine the winner).
+4. Each player selects a candidate (asymmetric starting powers) and takes their player board, starting mages, and starting resources.
+5. Place round tracker and bell tower tokens.
+6. Determine first player.
+
+## Turn Structure
+
+The game is played over 5 rounds. Each round:
+
+1. **Setup Phase:** Refresh exhausted Spell and Vault cards, return all Tableau cards to the bottom of their decks and reveal new ones, return Bell Tower Offerings to their place, and perform any room-specific setup effects. (Skip this phase on the first round of the game.)
+2. **Errands Phase:** Players take turns placing mage workers on room spaces to claim actions. The round ends immediately when the last Bell Tower Offering card is taken.
+3. **Resolution Phase:** Resolve each room in order, performing the actions claimed by placed workers. Return mages to their owners' offices.
+
+After 5 rounds, the consortium votes and a winner is determined.
+
+## Actions
+
+Room actions vary by room configuration but commonly include:
+
+- **Gather Resources:** Collect gold, mana, or influence from specific rooms.
+- **Cast Spells:** Learn and cast spell cards for powerful effects.
+- **Gain Marks:** Place a Mark token on a Consortium Voter card to secretly look at that voter's hidden criteria; you may re-reference it at any time for the rest of the game.
+- **Gain Supporters:** Recruit allies and supporters who provide ongoing benefits.
+- **Collect Treasures:** Gain treasure cards for points or abilities.
+- **Recruit Mages:** Hire new mage workers of various types.
+- **Use Influence:** Spend influence for special actions and advantages.
+
+**Mage Types (each color has a unique power):**
+- **Red mages:** When placing, may spend 1 mana to wound an opposing mage and take its slot.
+- **Blue mages:** Cannot be affected by Spells cast by rival candidates (still susceptible to Sorcery Mage powers, Vault Cards, and Supporters).
+- **Green mages:** Can never be wounded, making them reliable holders of important slots.
+- **Grey mages:** Whenever their owner takes the Cast a Spell action during the Errands Phase, they may also place a Mysticism mage after the spell is completed.
+- Other colors have their own abilities.
+
+## Scoring / Victory Conditions
+
+After 5 rounds, the consortium votes:
+
+1. Reveal all consortium voter cards (hidden criteria).
+2. Each voter awards their vote to the player who best meets their specific criterion (e.g., most gold, most spell cards, most influence, most supporters, etc.).
+3. The player with the most votes becomes the new chancellor and wins.
+4. **Tiebreakers:** For individual voter ties, the player with a Mark on that voter wins. If multiple players have a Mark, Influence breaks the tie. If Influence is also tied, the player at the bottom of the Influence stack (the one who reached that value first) wins. For a final vote tally tie, the player with the most Influence wins.
+
+## Special Rules & Edge Cases
+
+- **Wounding:** Red mages and certain spells can wound (remove) opposing mages already placed on the board, a key aggressive tactic.
+- **Shielded Mages:** Blue mages are immune to rival candidates' Spells. Green mages can never be wounded.
+- **Bell Tower:** The round ends immediately when the last Bell Tower Offering card is taken.
+- **Marks:** Placing a Mark on a Consortium Voter card lets you secretly look at that voter's hidden criteria now and re-reference it at any time for the rest of the game.
+- **Asymmetric Candidates:** Each candidate has unique starting abilities and special powers.
+- **Modular Rooms:** The university layout changes each game, creating different action availability.
+
+## Player Reference
+
+| Phase | Action |
+|-------|--------|
+| 1. Setup | Refresh exhausted cards, rebuild Tableaus, return Bell Tower Offerings (skip round 1) |
+| 2. Errands | Place mages on room spaces; round ends when last Bell Tower Offering is taken |
+| 3. Resolution | Resolve rooms in order; return mages to offices |
+
+| Voter Criteria Examples | |
+|------------------------|---|
+| Most gold | Most spells known |
+| Most influence | Most supporters |
+| Most marks | Most treasures |
+
+| Mage Color | Special Power |
+|-----------|--------------|
+| Red | When placing, may spend 1 mana to wound an opponent's mage and take its slot |
+| Blue | Immune to rival candidates' Spells (still susceptible to Sorcery Mage powers, Vault Cards, and Supporters) |
+| Green | Can never be wounded |
+| Grey | Owner may also place a Mysticism mage after taking the Cast a Spell action |

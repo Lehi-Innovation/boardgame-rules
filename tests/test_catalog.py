@@ -27,12 +27,12 @@ def catalog(tmp_path):
 
 
 def test_consistent_catalog(catalog):
-    assert validate_catalog(catalog) == []
+    assert validate_catalog(catalog, strict_registry=True) == []
 
 
 def test_missing_validated_summary_and_broken_link(catalog):
     (catalog / "rules/qe.md").unlink()
-    errors = validate_catalog(catalog)
+    errors = validate_catalog(catalog, strict_registry=True)
     assert any("validated but rules file is missing" in error for error in errors)
     assert any("Catalog links to missing" in error for error in errors)
 
@@ -40,7 +40,7 @@ def test_missing_validated_summary_and_broken_link(catalog):
 def test_wrong_metadata_and_missing_permalink(catalog):
     path = catalog / "rules/qe.md"
     path.write_text(path.read_text().replace("permalink: /rules/qe/\n", "").replace("45 min", "90 min"))
-    errors = validate_catalog(catalog)
+    errors = validate_catalog(catalog, strict_registry=True)
     assert any("permalink" in error for error in errors)
     assert any("play_time differs from registry" in error for error in errors)
     assert any("Catalog metadata differs" in error for error in errors)
@@ -50,7 +50,7 @@ def test_stale_status_and_missing_extraction(catalog):
     path = catalog / "games.yaml"
     path.write_text(path.read_text().replace("validated", "extracted"))
     (catalog / "extracted/qe-rules.txt").unlink()
-    errors = validate_catalog(catalog)
+    errors = validate_catalog(catalog, strict_registry=True)
     assert any("stale status extracted" in error for error in errors)
     assert any("missing extraction" in error for error in errors)
 
@@ -62,28 +62,54 @@ def test_duplicate_ids_and_catalog_entries(catalog):
     path.write_text(yaml.safe_dump(data))
     index = catalog / "index.md"
     index.write_text(index.read_text() * 2)
-    errors = validate_catalog(catalog)
+    errors = validate_catalog(catalog, strict_registry=True)
     assert any("Duplicate registry BGG ID" in error for error in errors)
     assert any("Duplicate catalog link" in error for error in errors)
 
 
 def test_validated_status_requires_passing_quality(catalog):
     (catalog / "extracted/qe-rules.txt").write_text("Incomplete extraction.")
-    assert any("Extracted text too small" in error for error in validate_catalog(catalog))
+    assert any("Extracted text too small" in error for error in validate_catalog(catalog, strict_registry=True))
 
 
 def test_wrong_catalog_title(catalog):
     path = catalog / "index.md"
     path.write_text(path.read_text().replace("[QE]", "[Catan]"))
-    assert any("Catalog title differs" in error for error in validate_catalog(catalog))
+    assert any("Catalog title differs" in error for error in validate_catalog(catalog, strict_registry=True))
 
 
 def test_orphan_summary_and_unlisted_summary(catalog):
     (catalog / "index.md").write_text("No games listed.\n")
-    assert any("Summary missing from catalog" in error for error in validate_catalog(catalog))
+    assert any("Summary missing from catalog" in error for error in validate_catalog(catalog, strict_registry=True))
     (catalog / "games.yaml").write_text("games: []\n")
-    assert any("absent from registry" in error for error in validate_catalog(catalog))
+    assert any("absent from registry" in error for error in validate_catalog(catalog, strict_registry=True))
 
 
 def test_repository_catalog_is_consistent():
     assert validate_catalog(Path(__file__).resolve().parents[1]) == []
+
+
+def test_manifest_identity_and_page_url(catalog):
+    import json
+
+    manifest = {"site": "", "count": 1, "games": [{
+        "title": "QE", "slug": "qe", "bgg_id": 266830,
+        "player_count": "3-5", "play_time": "45 min",
+        "summary_url": "/rules/qe/",
+    }]}
+    path = catalog / "games.json"
+    path.write_text(json.dumps(manifest))
+    assert validate_catalog(catalog) == []
+    manifest["games"][0]["bgg_id"] = 42
+    manifest["games"][0]["summary_url"] = "/rules/wrong/"
+    path.write_text(json.dumps(manifest))
+    errors = validate_catalog(catalog)
+    assert any("Manifest bgg_id differs" in error for error in errors)
+    assert any("Manifest summary URL differs" in error for error in errors)
+
+
+def test_pretty_site_urls_without_explicit_page_permalink(catalog):
+    path = catalog / "rules/qe.md"
+    path.write_text(path.read_text().replace("permalink: /rules/qe/\n", ""))
+    (catalog / "_config.yml").write_text("permalink: pretty\n")
+    assert validate_catalog(catalog) == []

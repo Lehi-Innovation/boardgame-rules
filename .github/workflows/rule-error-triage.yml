@@ -1,0 +1,39 @@
+# Automated triage of user-reported rules errors.
+#
+# When an issue is opened with the `rule-error` label (the "Report a rules
+# error" form applies it automatically), Claude verifies the report against
+# the extracted rulebook text and, if confirmed, opens a PR fixing the
+# summary. Unconfirmed reports get a comment with the evidence found.
+#
+# Requires the ANTHROPIC_API_KEY repository secret.
+name: Rule error triage
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  triage:
+    if: contains(github.event.issue.labels.*.name, 'rule-error')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            A user reported a rules error in issue #${{ github.event.issue.number }}.
+            Follow the triage-rule-error skill at
+            .claude/skills/triage-rule-error/SKILL.md exactly: verify the
+            report against the extracted rulebook text, fix the summary on a
+            branch and open a PR if confirmed, or comment with your evidence
+            if not. Issue title: ${{ github.event.issue.title }}
+          claude_args: |
+            --allowedTools "Bash(git:*),Bash(gh:*),Bash(python:*),Read,Grep,Glob,Edit,Write"

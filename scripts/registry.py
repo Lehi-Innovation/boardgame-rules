@@ -1,23 +1,90 @@
-"""Game registry management -- reads/writes games.yaml."""
+"""Game registry management -- reads/writes games.yaml.
+
+All writes go through save_registry(), which uses fcntl.flock() to prevent
+concurrent processes from corrupting the file. The lock is held for the
+entire read-modify-write cycle via the locked_registry() context manager.
+"""
 
 from __future__ import annotations
 
+import contextlib
+import fcntl
+import os
+import tempfile
+from datetime import datetime, timedelta, timezone
 import yaml
 
 DEFAULT_REGISTRY = "games.yaml"
 
+LOCK_SUFFIX = ".lock"
+CLAIMED_AT_FIELD = "claimed_at"
 
-def load_registry(path: str = DEFAULT_REGISTRY) -> list[dict]:
-    """Load games list from registry YAML file."""
+
+@contextlib.contextmanager
+def locked_registry(path: str):
+    """Context manager that yields (games_list, save_fn) under an exclusive file lock.
+
+    Usage:
+        with locked_registry("games.yaml") as (games, save):
+            for g in games:
+                if g["name"] == target:
+                    g["status"] = "summarized"
+            save(games)
+
+    The lock is held from entry until exit, ensuring the full read-modify-write
+    is atomic with respect to other processes using the same lock file.
+    """
+    lock_path = path + LOCK_SUFFIX
+    lock_fd = open(lock_path, "w")
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+        # Read inside the lock
+        games = _load_unlocked(path)
+
+        def save(updated_games: list[dict]) -> None:
+            _save_unlocked(path, updated_games)
+
+        yield games, save
+    finally:
+        fcntl.flock(lock_fd, fcntl.LOCK_UN)
+        lock_fd.close()
+
+
+def _load_unlocked(path: str) -> list[dict]:
+    """Load games list (no locking -- caller must hold the lock)."""
     with open(path) as f:
         data = yaml.safe_load(f)
     return data.get("games", []) or []
 
 
+def _save_unlocked(path: str, games: list[dict]) -> None:
+    """Atomic write via temp file + rename (no locking -- caller must hold the lock)."""
+    dir_name = os.path.dirname(path) or "."
+    fd, tmp_path = tempfile.mkstemp(dir=dir_name, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w") as f:
+            yaml.dump({"games": games}, f, default_flow_style=False, sort_keys=False)
+        os.replace(tmp_path, path)
+    except BaseException:
+        os.unlink(tmp_path)
+        raise
+
+
+def load_registry(path: str = DEFAULT_REGISTRY) -> list[dict]:
+    """Load games list from registry YAML file (read-only, no lock)."""
+    return _load_unlocked(path)
+
+
 def save_registry(path: str, games: list[dict]) -> None:
-    """Write games list back to registry YAML file."""
-    with open(path, "w") as f:
-        yaml.dump({"games": games}, f, default_flow_style=False, sort_keys=False)
+    """Write games list back to registry YAML file (locked, atomic)."""
+    lock_path = path + LOCK_SUFFIX
+    lock_fd = open(lock_path, "w")
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX)
+        _save_unlocked(path, games)
+    finally:
+        fcntl.flock(lock_fd, fcntl.LOCK_UN)
+        lock_fd.close()
 
 
 def find_game(path: str, name: str) -> dict | None:
@@ -31,34 +98,37 @@ def find_game(path: str, name: str) -> dict | None:
 
 def add_game(path: str, *, name: str, bgg_id: int, **extra) -> dict:
     """Add a game to the registry. Skips if already exists (by bgg_id)."""
-    games = load_registry(path)
-    for game in games:
-        if game["bgg_id"] == bgg_id:
-            return game
-    entry = {"name": name, "bgg_id": bgg_id, "status": "pending", **extra}
-    games.append(entry)
-    save_registry(path, games)
-    return entry
+    with locked_registry(path) as (games, save):
+        for game in games:
+            if game["bgg_id"] == bgg_id:
+                return game
+        entry = {"name": name, "bgg_id": bgg_id, "status": "pending", **extra}
+        games.append(entry)
+        save(games)
+        return entry
 
 
 def update_status(path: str, name: str, status: str) -> None:
     """Update a game's pipeline status."""
-    games = load_registry(path)
-    for game in games:
-        if game["name"].lower() == name.lower():
-            game["status"] = status
-            break
-    save_registry(path, games)
+    with locked_registry(path) as (games, save):
+        for game in games:
+            if game["name"].lower() == name.lower():
+                game["status"] = status
+                game.pop(CLAIMED_AT_FIELD, None)
+                break
+        save(games)
 
 
 def update_game(path: str, name: str, **fields) -> None:
     """Update arbitrary fields on a game entry (case-insensitive name match)."""
-    games = load_registry(path)
-    for game in games:
-        if game["name"].lower() == name.lower():
-            game.update(fields)
-            break
-    save_registry(path, games)
+    with locked_registry(path) as (games, save):
+        for game in games:
+            if game["name"].lower() == name.lower():
+                if "status" in fields and CLAIMED_AT_FIELD not in fields:
+                    game.pop(CLAIMED_AT_FIELD, None)
+                game.update(fields)
+                break
+        save(games)
 
 
 def get_games_by_status(path: str, status: str, limit: int = 0) -> list[dict]:
@@ -68,3 +138,67 @@ def get_games_by_status(path: str, status: str, limit: int = 0) -> list[dict]:
     if limit > 0:
         return matched[:limit]
     return matched
+
+
+def claim_games_by_status(
+    path: str,
+    from_status: str,
+    to_status: str,
+    limit: int = 0,
+    reclaim_statuses: list[str] | None = None,
+    reclaim_timeout_seconds: int = 0,
+    now: datetime | None = None,
+) -> list[dict]:
+    """Atomically claim games by moving them from one status to another.
+
+    Also optionally reclaims stale games already sitting in transient statuses.
+    Returns copies of the claimed game dicts in registry order.
+    """
+    claim_time = now or datetime.now(timezone.utc)
+
+    def is_reclaimable(game: dict) -> bool:
+        if not reclaim_statuses or game.get("status") not in reclaim_statuses:
+            return False
+        if reclaim_timeout_seconds <= 0:
+            return False
+        raw_claimed_at = game.get(CLAIMED_AT_FIELD)
+        if not raw_claimed_at:
+            return True
+        try:
+            claimed_at = datetime.fromisoformat(raw_claimed_at)
+        except ValueError:
+            return True
+        if claimed_at.tzinfo is None:
+            claimed_at = claimed_at.replace(tzinfo=timezone.utc)
+        return claim_time - claimed_at >= timedelta(seconds=reclaim_timeout_seconds)
+
+    with locked_registry(path) as (games, save):
+        claimed: list[dict] = []
+        for game in games:
+            if game.get("status") != from_status and not is_reclaimable(game):
+                continue
+            game["status"] = to_status
+            game[CLAIMED_AT_FIELD] = claim_time.isoformat()
+            claimed.append(dict(game))
+            if limit > 0 and len(claimed) >= limit:
+                break
+        if claimed:
+            save(games)
+        return claimed
+
+
+def find_expansions(path: str, base_bgg_id: int) -> list[dict]:
+    """Return all expansions for a given base game BGG ID."""
+    games = load_registry(path)
+    return [g for g in games if g.get("base_game_bgg_id") == base_bgg_id]
+
+
+def find_base_game(path: str, bgg_id: int) -> dict | None:
+    """Given an expansion's bgg_id, find its base game entry."""
+    games = load_registry(path)
+    # First find the expansion to get its base_game_bgg_id
+    expansion = next((g for g in games if g["bgg_id"] == bgg_id), None)
+    if not expansion or "base_game_bgg_id" not in expansion:
+        return None
+    base_bgg_id = expansion["base_game_bgg_id"]
+    return next((g for g in games if g["bgg_id"] == base_bgg_id), None)

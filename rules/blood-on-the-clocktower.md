@@ -1,255 +1,435 @@
 ---
 title: "Blood on the Clocktower"
 bgg_id: 240980
-permalink: /rules/blood-on-the-clocktower/
 player_count: "5-20"
-play_time: "30-90 min"
+play_time: "30-120 min"
 designer: "Steven Medway"
 source_pdf: "blood-on-the-clocktower-rules.pdf"
-source_url: "https://botclinks.page/MainRulebook"
-extracted_date: "2026-11-04"
-summarized_date: "2026-11-04"
-rulebook_version: "The Pandemonium Institute, official 48-page English main rulebook"
+extracted_date: "2026-03-03"
+summarized_date: "2026-03-03"
+rulebook_version: "Core Box Set (Trouble Brewing / Bad Moon Rising / Sects & Violets)"
+verification: "inaccurate"
+verification_date: "2026-08-08"
 ---
+
+# Blood on the Clocktower
+
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Character Distribution table (Townsfolk/Outsiders/Minions/Demon by player count) has zero source support; deferred to a physical setup sheet not in the extracted text. Until it is re-written, prefer the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/blood-on-the-clocktower-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Blood%20on%20the%20Clocktower&game=blood-on-the-clocktower)
+<!-- verification:end -->
 
 ## Overview
 
-A social deduction game for **5–20 character players plus a Storyteller**. Players secretly receive characters and belong to either the good or evil team. By day they discuss, bluff, and vote on executions. By night they close their eyes while the Storyteller privately resolves character abilities. Good normally wins when no Demon remains alive; evil normally wins when only two non-Traveller players remain alive. Character abilities can change those conditions.
+Blood on the Clocktower is a social deduction game for 5-20 players. Players sit in a circle, each secretly assigned a unique character with a special ability. Most players are good Townsfolk or Outsiders trying to identify and execute the Demon. A few players are evil -- a Demon and its Minions -- who kill by night and spread lies by day. One additional person serves as the Storyteller (game master), who runs the game, manages the Grimoire, resolves abilities, and communicates secretly with players at night via hand signals.
 
-Death does **not** eliminate a player: dead players keep discussing, retain one final execution vote, and win or lose with their team. Character identities remain secret after death.
+The game alternates between Night phases (eyes closed; characters wake individually to use abilities or receive information) and Day phases (open discussion, nominations, and a public vote to execute one player). Good wins if the Demon is executed. Evil wins if only 2 non-Traveler players remain alive. Dead players lose their abilities but may still talk and retain one final vote for the rest of the game.
 
-**Scope:** this is a summary of the [official main rulebook](https://botclinks.page/MainRulebook), which redirects to the publisher's [48-page English PDF](https://drive.google.com/file/d/1kZYrIq4P6l4IOcm70-hZE-jPrnq8EeMk/edit). It covers the shared rules, states, Travellers, Fabled, and Storyteller procedures. It does **not** replace the chosen edition's character sheet, night sheet, or character almanac. Those are needed to select characters and run their individual abilities and interactions. Printed page references below are **two less than PDF page numbers**: printed page 14 is PDF page 16. The main rulebook gives a usual duration of **30–90 minutes** (printed p4).
+Games typically last 30-90 minutes. The box includes three editions (scenarios) of increasing complexity: Trouble Brewing (beginner), Bad Moon Rising (intermediate), and Sects & Violets (intermediate).
 
 ## Components
 
-The box inventory in the source (printed p6 / PDF p8) lists:
+### Core Components
+- 1 Grimoire (2 pieces) -- the game box that stores secret game state
+- 1 Grimoire stand (2 pieces)
+- 1 Town Square board -- placed on the floor in the center of the circle
+- 4 Plastic sleeves
+- 1 Setup sheet (rules sheet on reverse)
+- 1 Traveler sheet (rules sheet on reverse)
+- 1 Bag (for distributing character tokens)
+- 18 Shroud tokens (mark dead players in Grimoire)
+- 30 Night tokens (mark which characters act tonight on the night sheet)
+- 4 Info tokens (rectangular; shown to players at night, e.g., "This Is the Demon")
+- 2 Metal clips (hold Grimoire together)
+- 20 Life tokens (parchment = alive, black = dead; grey for Travelers)
+- 18 Vote tokens (placed on life token when a player dies; removed when dead player uses their one remaining vote)
 
-| Shared components | Quantity |
-|---|---:|
-| Grimoire | 1, in 2 pieces |
-| Grimoire stand | 1, in 2 pieces |
-| Town Square board | 1 |
-| Plastic sleeves | 4 |
-| Setup sheet, rules explanation on reverse | 1 |
-| Traveller sheet, rules explanation on reverse | 1 |
-| Bag | 1 |
-| Shroud tokens | 18+ |
-| Night tokens | 25+ |
-| Info tokens | 4 |
-| Metal clips | 2 |
-| Life tokens | 20 |
-| Vote tokens | 18+ |
+### Travelers & Fabled
+- 1 Travelers & Fabled character almanac
+- 1 Travelers & Fabled token box
+- 15 Traveler character tokens
+- 14 Traveler reminder tokens
+- 12 Fabled character tokens
+- 12 Fabled reminder tokens
 
-| Character collection | Almanac | Box | Night sheets | Character sheets | Character tokens | Reminder tokens |
-|---|---:|---:|---:|---:|---:|---:|
-| Trouble Brewing | 1 | 1 | 1 | 20 | 25 | 16 |
-| Bad Moon Rising | 1 | 1 | 1 | 20 | 25 | 42 |
-| Sects & Violets | 1 | 1 | 1 | 20 | 26 | 37 |
-| Travellers & Fabled | 1 | 1 token box | — | Traveller sheet above | 15 Travellers + 12 Fabled | 14 Traveller + 11 Fabled |
+### Trouble Brewing (Beginner Edition)
+- 1 Character almanac, 1 edition box, 1 night sheet
+- 20 Character sheets, 25 character tokens, 18 reminder tokens
 
-The **Town Square** publicly tracks alive/dead status, remaining dead votes, and Traveller status. The **Grimoire** privately tracks actual characters, seating, deaths, conditions, reminders, and night order. Players cannot inspect the Grimoire or each other's character tokens. See printed pp7–9.
+### Bad Moon Rising (Intermediate Edition)
+- 1 Character almanac, 1 edition box, 1 night sheet
+- 20 Character sheets, 25 character tokens, 41 reminder tokens
+
+### Sects & Violets (Intermediate Edition)
+- 1 Character almanac, 1 edition box, 1 night sheet
+- 20 Character sheets, 25 character tokens, 37 reminder tokens
 
 ## Setup
 
-1. **Seat the players in a definite circle order**, leaving a safe gap for the Storyteller to enter. The Storyteller is additional to the character-player count.
-2. Clip the Grimoire halves together and put it on its stand where players cannot see inside. Prepare info, shroud, and night tokens.
-3. **Choose one edition/script.** The core set offers Trouble Brewing, Bad Moon Rising, and Sects & Violets. Trouble Brewing is the recommended starting edition and supports five or more players. The rulebook recommends seven or more for the other two. Provide its character sheets and use its night sheet and almanac.
-4. Put the Town Square centrally with one life token per player, arranged to match seating, a supply of vote tokens, and the Traveller sheet visible underneath.
-5. Explain the basic rules and demonstrate the night signals. Explain voting when nominations first open if that is easier for newcomers.
-6. Secretly choose the required character tokens using the baseline table below. **Exclude Travellers from the setup-count calculation.** Above 15 regular players, excess players must be Travellers.
-7. Apply setup changes in **square brackets** on the chosen abilities, using the almanac. For example, Baron adds two Outsiders **in place of two Townsfolk**, preserving total player count. The Drunk requires its specific setup procedure; do not simply give a player the Drunk token to reveal their identity.
-8. Add the relevant reminder tokens. Shuffle the tokens to be distributed in the bag, let each regular player draw and secretly read one, then collect them face down into the Grimoire in seating order. Mark any actual character/state required by setup.
-9. Prepare the **First Night** side of the night sheet. The game begins with night, not a discussion day.
+1. **Arrange seating.** Place one chair per player in a rough circle or square, with a definite clockwise/counterclockwise order. Leave a gap for the Storyteller to enter/exit. Keep the center clear of tables or obstacles.
 
-### Baseline character distribution
+2. **Prepare the Grimoire.** Clip the two metal clips near the upper and lower corners. Place the Grimoire on its stand, positioned where players walking around will not accidentally see inside. Stock info, night, and shroud tokens inside (bottom-left of the right side is recommended).
 
-This table is transcribed from the Traveller-sheet illustration on **printed p7 / PDF p9**, visually checked because it is not in the PDF's extracted text. Setup-changing abilities can alter it.
+3. **Choose an edition.** Select Trouble Brewing (5+ players), Bad Moon Rising (7+ players), or Sects & Violets (7+ players). Place its edition box in the bottom-left of the Grimoire.
 
-| Regular players | Townsfolk | Outsiders | Minions | Demons |
-|---|---:|---:|---:|---:|
-| 5 | 3 | 0 | 1 | 1 |
-| 6 | 3 | 1 | 1 | 1 |
-| 7 | 5 | 0 | 1 | 1 |
-| 8 | 5 | 1 | 1 | 1 |
-| 9 | 5 | 2 | 1 | 1 |
-| 10 | 7 | 0 | 2 | 1 |
-| 11 | 7 | 1 | 2 | 1 |
-| 12 | 7 | 2 | 2 | 1 |
-| 13 | 9 | 0 | 3 | 1 |
-| 14 | 9 | 1 | 3 | 1 |
-| 15 | 9 | 2 | 3 | 1 |
+4. **Prepare the Town Square.** Place the Town Square board on the floor in the center. Add life tokens equal to the number of players. Place a pile of vote tokens in the center. Tuck the Traveler sheet partially under the Town Square so the Townsfolk/Outsider/Minion count is visible.
 
-Townsfolk and Outsiders begin good; Minions and Demons begin evil. Townsfolk usually help good, while Outsider abilities usually hinder good. Character type and alignment may later differ. Setup procedure: printed pp10–11.
+5. **Read rules to new players.** Use the rules sheet (or have a veteran read the duplicate on the Traveler sheet's reverse). Demonstrate hand signals. Nomination/execution rules can be deferred until the first nomination.
+
+6. **Secretly choose characters.** Referring to the setup sheet for the correct distribution by player count, select the appropriate number of Townsfolk, Outsiders, Minions, and the Demon from the edition box. Place chosen tokens in the left side of the Grimoire. Return all unchosen tokens. Players with 16+ participants must volunteer excess players as Travelers.
+
+   **Character Distribution by Player Count:**
+
+   | Players | Townsfolk | Outsiders | Minions | Demon |
+   |---------|-----------|-----------|---------|-------|
+   | 5       | 3         | 0         | 1       | 1     |
+   | 6       | 3         | 1         | 1       | 1     |
+   | 7       | 5         | 0         | 1       | 1     |
+   | 8       | 5         | 1         | 1       | 1     |
+   | 9       | 5         | 2         | 1       | 1     |
+   | 10      | 7         | 0         | 2       | 1     |
+   | 11      | 7         | 1         | 2       | 1     |
+   | 12      | 7         | 2         | 2       | 1     |
+   | 13      | 9         | 0         | 3       | 1     |
+   | 14      | 9         | 1         | 3       | 1     |
+   | 15      | 9         | 2         | 3       | 1     |
+
+   For 16-20 players, use the 15-player distribution and excess players become Travelers.
+
+7. **Add and remove characters (orange leaf).** If any chosen character token shows an orange leaf, add or remove character tokens as described in the almanac. After adjustments, the total number of character tokens must still equal the number of players. Example: the Baron adds 2 Outsiders and removes 2 Townsfolk.
+
+8. **Add reminder tokens (green leaves).** For each chosen character with green leaves on top of its token, add the corresponding number of reminder tokens beside it in the Grimoire.
+
+9. **Distribute character tokens.** Shuffle all chosen character tokens and place them in the bag. Each player draws 1 token, looks at it secretly, then passes the bag onward.
+
+10. **Collect tokens into Grimoire.** Have players hold out their tokens felt-side up. Collect them and place them in the Grimoire matching seating positions. Maintain the same clockwise/counterclockwise order as physical seating.
 
 ## Turn Structure
 
-### First night
+The game alternates between Night and Day phases. The very first phase is always a Night.
 
-Everyone closes their eyes. Resolve the First Night sheet from top to bottom, waking only the relevant players and communicating privately.
+### Night Phase
 
-With **seven or more regular players**, perform the setup information steps:
+**Preparation (before eyes close):**
+- Place the correct night sheet side: "First Night" for the opening night, "Other Nights" for all subsequent nights.
+- Position reminder tokens as needed (left side of Grimoire = active tonight; right side = inactive).
+- Place night tokens on the night sheet next to each character acting tonight and by the "Dawn" line.
+- If first night with 7+ players, add night tokens for "Minion info" and "Demon info."
+- If not the first night and Travelers are in play, add a night token by "Dusk."
+- Plan ahead: decide what bluff tokens to show the Demon, what misinformation to give drunk/poisoned players.
 
-- Wake the Minions together so they see each other, then identify the Demon to them. Put them back to sleep.
-- Wake the Demon, identify the Minions, then show **three good characters not in play** as possible bluffs. These bluffs are given to the Demon, not ordinarily to the Minions.
+**Execution (eyes closed):**
 
-With **five or six players**, omit those Minion/Demon information steps: evil players do not automatically learn each other, and the Demon receives no automatic three-character bluff list. Other first-night character abilities still occur. Any script-specific modification takes precedence.
+1. Say "All players, eyes closed" and verify compliance.
 
-### Night resolution
+2. **First Night only (7+ players) -- Minion Info:**
+   - Wake all Minions simultaneously.
+   - Let Minions make eye contact to learn each other's identities.
+   - Show the "This Is the Demon" info token and point at the Demon player.
+   - Put all Minions back to sleep.
 
-Use the appropriate night-sheet side: First Night initially, **Other Nights** afterward. Abilities occur in their order, with immediate triggers resolved when their text requires. Place reminders as actions happen. A player killed before their scheduled action normally does not wake later, unless their ability specifically triggers from death or works while dead.
+3. **First Night only (7+ players) -- Demon Info:**
+   - Wake the Demon.
+   - Show "These are your Minions" info token and point to each Minion.
+   - Show "These characters are not in play" info token and display 3 good character tokens not in play (typically 2 Townsfolk + 1 Outsider) as bluff options.
+   - Put the Demon to sleep.
 
-Wake a player with two gentle taps; confirm their selected target; use nod/shake for yes/no, thumbs up/down for good/evil, fingers for numbers, and tokens or character-sheet icons for character names. Signal eyes closed when finished. At dawn, pause briefly and then wake everyone. Announce **which players died**, or that nobody died, without revealing characters or causes. See printed pp12–13, 20.
+4. **Resolve character abilities** from top to bottom on the night sheet:
+   - Tap the player twice on shoulder or knee to wake them.
+   - Resolve their ability (they choose a player, receive information via hand signals, etc.).
+   - Use the "eyes closed" hand signal (hand over your own eyes) to put them back to sleep.
+   - Place/move reminder tokens as needed.
+   - If a character dies before their turn on the night sheet, skip them -- they do not wake.
 
-### Day
+5. **Dawn:** Wait 5-10 seconds at the dawn marker (prevents meta-gaming about who acted last). Then say "All players, eyes open." Immediately declare which players died during the night (do not reveal how or why).
 
-Allow public or private discussion, questions to the Storyteller, and legal daytime abilities. Then open nominations, conduct votes, close nominations, and execute the qualifying leader if one exists. Prepare reminders and the next night's order, then call for eyes closed. Alternate nights and days until a victory condition is met.
+### Day Phase
 
-The rulebook suggests around **5–10 minutes of discussion** before nominations and **10–30 seconds of defense** for a nominee; these are Storyteller pacing guidance, **not fixed time limits**. See printed pp14–15.
+**Discussion:**
+- Players talk freely: publicly, in whispers, or in private conversations away from the group.
+- Good players typically reveal characters and share information; evil players bluff as good characters with false information.
+- Answer player questions about rules either publicly or privately. Be careful not to reveal character identities when answering publicly.
+- Allow 5-10 minutes of discussion before calling for nominations (adjust to group preference).
+
+**Nominations and Voting:**
+
+1. Say "I now call for nominations."
+2. Any alive player may nominate any other player (alive or dead) by name. Repeat the nomination aloud. Dead players cannot nominate.
+3. Each player may nominate only once per day. Each player may be nominated only once per day.
+4. Only one nomination can be pending at a time.
+5. Give the nominee 10-30 seconds to defend themselves.
+6. **Tally votes:** Stand in the center, extend one hand toward the nominee, and slowly spin clockwise, counting raised hands aloud. The nominee votes last and may vote for themselves.
+   - Alive players may vote for as many nominees as they wish per day.
+   - Dead players may vote only once for the rest of the entire game (then remove their vote token).
+7. **Declare result:**
+   - The vote **succeeds** if: (a) votes >= half the number of alive players, AND (b) more votes than any previous nominee today.
+   - If it succeeds, that player is "about to die" (pending execution) unless a later nominee gets even more votes.
+   - If it ties with a previous nominee, neither is executed; future nominees must exceed the tied count.
+   - If it fails, the player is not executed.
+8. Call for further nominations or give a last call: "Last call for nominations! Three... two... one..."
+9. If nominations close and a player is "about to die," execute them.
+
+**Execution:**
+- Maximum 1 execution per day. Execution is not required -- the day can end with no execution.
+- When a player is executed and dies: place a shroud on their token in the Grimoire, remove their night token from the night sheet, have them flip their life token to black and place a vote token on it.
+
+**After execution:** Take ~30 seconds to prepare the next night phase (reposition reminders, add/remove night tokens). Then declare the day over and begin the next Night.
 
 ## Actions
 
-### Discuss, bluff, and use character abilities
+### Character Types
 
-Good and evil players may speak publicly or privately, tell the truth, lie, withhold information, or make false character claims. A player may privately ask the Storyteller about rules or abilities without their identity being publicly confirmed. Dead players remain full participants in discussion.
+| Type | Alignment | Role |
+|------|-----------|------|
+| **Townsfolk** | Good (blue) | Abilities that help the good team. Most in-play characters are Townsfolk. |
+| **Outsider** | Good (blue) | Abilities that are unhelpful or harmful to the good team. |
+| **Minion** | Evil (red) | Abilities that help the evil team. Usually 1-3 per game. |
+| **Demon** | Evil (red) | The primary villain. Kills at night. If the Demon dies, good wins. |
+| **Traveler** | Varies (chosen by Storyteller) | For late arrivals / early departures. Powerful abilities, little information. Exiled, not executed. |
+| **Fabled** | Neutral (Storyteller's) | Special rules characters used to solve real-world game issues (accessibility, time constraints, balance). Cannot die or lose abilities. |
 
-Use the chosen character's actual ability text and almanac. If an ability says **choose**, the player makes that choice; otherwise the Storyteller makes the specified choice. Any player, including oneself or a dead player, can be a target unless the ability restricts it. Correct an illegal choice rather than quietly substituting another target. Follow an ability's timing and limits, such as once per game, each night, or **each night except the first** (the `*` notation).
+### Ability Rules
 
-### Nominate for execution
+- Abilities are described on character tokens, character sheets, and in detail in the character almanac. The almanac text is definitive.
+- **Abilities resolve immediately.** Example: if the Demon attacks the Fortune Teller, the Fortune Teller dies immediately and does not wake later that night.
+- **"Choose" means the player decides.** If the word "choose" is absent from an ability, the Storyteller decides.
+- **Abilities are lost immediately upon death, poisoning, or drunkenness.** Persistent effects of an ability also end when the ability is lost. Example: if a Poisoner poisons the Slayer at night, then the Poisoner dies later that same night, the Slayer is no longer poisoned.
+- **Exception:** Some characters retain part of their ability when dead (ability text says "even if dead" or implies post-death function). This retained ability is still lost if the player becomes drunk or poisoned.
+- **"Once per game" abilities:** If used while drunk or poisoned, the ability is still spent and cannot be used again.
+- **Character abilities break core rules.** If a character ability contradicts a core rule, follow the ability. Exception: abilities cannot affect Traveler exiles.
+- **Only tell the player what their ability says they learn.** Do not reveal collateral information (e.g., if Scarlet Woman becomes the Imp, other players are not informed).
+- If a player tries to use their ability incorrectly (e.g., Monk choosing themselves), shake your head and prompt them to choose again.
 
-After the Storyteller opens nominations:
+### Storyteller Hand Signals (Night Communication)
 
-- **Only living players may nominate.**
-- Each player may nominate **once per day**, and each player may be nominated **once per day**.
-- Only one accepted nomination is pending at a time. Finish its defense and vote before taking another.
-- A player may nominate or vote for themselves. Dead non-Traveller players may be nominated, although executing them does not kill them again.
-- A player currently leading the execution vote remains alive and may still nominate if they have not used their nomination.
-- Travellers are handled by **exile**, not ordinary execution nominations.
+| Signal | Meaning |
+|--------|---------|
+| Tap twice (shoulder/knee) | Wake up (eyes open) |
+| Hand over own eyes | Go back to sleep (eyes closed) |
+| Nod | Yes |
+| Shake head | No |
+| Thumbs up | Good alignment |
+| Thumbs down | Evil alignment |
+| Fingers held up | A number (0 = thumb touching fingertips in "O" shape) |
+| Point at player | Indicate a specific player |
+| Show character token | Indicate a specific character |
 
-The Storyteller repeats an accepted nomination and gives the nominee an opportunity to defend themselves. A vote is not an immediate execution: later nominations can change the result. See printed p14.
+### States
 
-### Vote and determine the leader
+**Alive / Dead:**
+- Dead players lose their ability immediately. Any persistent effects of their ability end.
+- Dead players cannot nominate. They may vote only once more for the rest of the game.
+- Dead players still close their eyes at night and may talk freely during the day.
+- Dead players' identities are NOT revealed upon death.
+- A dead player cannot die again. If attacked by the Demon, nothing happens and it is not announced.
+- Execution is different from death -- a player can be executed but remain alive (via certain abilities). Dead players can also be executed again.
 
-Starting just after the nominee, the Storyteller counts raised hands **clockwise**, ending with the nominee. A hand counts if raised **when the count reaches that player**, rather than because it was raised earlier.
+**Good / Evil (Alignment):**
+- Generally matches character type (Townsfolk/Outsiders = good, Minions/Demons = evil), but abilities can change alignment.
+- Alignment is independent of character. Changing alignment does not change character, and vice versa.
+- Players learn of alignment or character changes at the earliest opportunity, in secret. Exception: some characters (Drunk, Lunatic) are designed to not know their true identity.
+- Flip the character token upside down in the Grimoire to indicate a player whose alignment differs from their character type's default.
 
-- Living players may vote on **any number of nominations** per day.
-- Dead players have **one execution vote for the rest of the game**. Voting uses their token even if that nominee is not ultimately executed. Dead players without a token cannot vote.
-- A nominee qualifies only with **at least half the living players**, rounded up, and a **strictly higher vote total than every other nominee that day**. Dead voters may supply those votes; they do not increase the living-player threshold.
-- A tie for the highest total removes the execution leader. A later nominee must **exceed that tied total** to become the leader. Merely meeting the minimum threshold is insufficient.
+**Drunk / Poisoned:**
+- Being drunk and being poisoned have identical mechanical effects.
+- A drunk or poisoned player has NO ability, but the Storyteller acts as if they do.
+- They are not told they are drunk/poisoned. They still wake at night, make choices, and receive (possibly false) information.
+- The Storyteller MAY give false information to drunk/poisoned players receiving information (and usually should to maximize the handicap).
+- Drunkenness and poisoning do NOT cancel each other out. A poisoned drunk is both poisoned and drunk.
+- Abilities used ON a drunk/poisoned player work normally (e.g., Empath correctly detects a drunk neighbor's alignment).
+- Always give correct rules information, even to drunk/poisoned players.
+- Tip: support evil players' bluffs with drunk/poisoned misinformation where possible.
 
-Examples: with six alive, **3** votes meet the minimum; with seven alive, **4** are needed. If Alice has 4 votes, Bob's 4 creates a tie and neither is due to be executed. Carol needs **5 or more**, not just the minimum, to overtake that tie.
+**Madness (Sects & Violets and beyond):**
+- A player who is "mad about" something is trying to convince the group that something is true.
+- If instructed to be mad but not making a genuine effort, the Storyteller may apply a penalty (often execution).
+- If instructed to not be mad but actively trying to convince the group, the Storyteller may apply a penalty.
+- Players are never forced to say anything -- but they are incentivized. Saying "I am mad" or heavily implying it counts as accepting the penalty.
+- Once a player is no longer mad, they may freely discuss their former madness without penalty.
+- The Storyteller is the final judge of whether a player is behaving "madly." Consider player experience level when judging effort.
 
-Count living Travellers for the ordinary execution threshold; their special exclusion concerns evil's two-survivor victory condition. See printed pp14–15, 24.
+### Travelers
 
-### Close nominations and execute
+Travelers are for players who arrive late or need to leave early. They have powerful abilities but gain little information.
 
-Give a final opportunity for nominations, then close them. Execute the single qualifying leader. If nobody reached the minimum, nobody was nominated, or the highest total is tied, there is **no execution**.
+**Adding a Traveler:**
+1. Let the player choose a Traveler from the Traveler sheet (5 recommended per edition).
+2. Tell them privately whether they are good or evil. Evil Travelers learn which player is the Demon (but not Minions).
+3. Place their token in the Grimoire (upside-down if evil).
+4. Place a grey life token on the Town Square.
+5. Announce publicly which Traveler character is now in play and what its ability is (do NOT reveal alignment).
 
-There is normally **at most one execution per day**. An ability can cause that execution outside the usual vote procedure; follow its text. Execution and death are distinct: an executed player might survive because of an ability, or already be dead, but that still uses the day's execution. Do not continue ordinary nominations to obtain a second execution.
+**Traveler Rules:**
+- May enter at any time (even before the first night). Not recommended if fewer than 7 players remain alive.
+- For 16+ player games, excess players MUST be Travelers.
+- Travelers do NOT count toward evil's "2 alive players" win condition.
+- Travelers are **exiled, not executed.** Any player (alive or dead) may call for exile at any time during the day. This is not a nomination. Exile requires support from at least half of ALL players (total, not just alive). Dead players supporting exile do not lose their vote token. Exile is not affected by character abilities. Multiple exiles may occur per day, and an execution may still occur on the same day.
+- Make Travelers good most of the time (~2/3 good). An evil Traveler getting an extra vote is very powerful.
 
-On death, turn over the public life token, add a dead-vote token, and place a shroud on the character in the Grimoire. The player normally loses their ability and nomination right immediately. Keep their character secret. See printed pp15, 21.
+### Fabled
+
+Fabled are special rules characters for the Storyteller. They fix real-world problems: accessibility, time constraints, custom script balance, new-player protection, etc.
+
+- Chosen publicly by the Storyteller. Can be added/removed at any time.
+- Cannot die or lose their ability (immune to all game effects).
+- Do not count for the "2 alive players" win condition.
+- Use only when needed -- not every game.
 
 ## Scoring / Victory Conditions
 
-There are no points. Each player wins or loses with their **current alignment**, alive or dead.
+| Condition | Winner |
+|-----------|--------|
+| The Demon is executed (dies) | **Good wins** |
+| Only 2 non-Traveler players remain alive | **Evil wins** |
+| Both conditions met simultaneously | **Good wins** (good takes priority) |
 
-- **Good normally wins when every Demon is dead.** A Demon may be good-aligned; its character type still matters to this condition.
-- **Evil normally wins when only two non-Traveller players remain alive.** Living Travellers do not delay this condition. Fabled and the Storyteller are not counted as surviving players.
-- If good and evil would win **simultaneously**, **good wins**. For example, killing the last Demon while leaving only two survivors ordinarily gives good the victory.
-- **Character abilities override ordinary conditions.** Scarlet Woman can keep a game running after a Demon dies by providing a replacement. Multiple-Demon games continue until all Demons are dead. Other characters can introduce alternative victory, defeat, or continuation conditions: consult their actual almanacs rather than assuming every Demon death immediately ends play.
+**Important details:**
+- All good players win together (alive and dead). All evil players win together (alive and dead).
+- There are never neutral players.
+- Some characters (e.g., Scarlet Woman) can keep the game going after the Demon dies, without the good team knowing.
+- In advanced editions, multiple Demons can be alive at once. ALL Demons must die for good to win.
+- Some Demons may be good-aligned, but good still wins only when all Demons are dead.
 
-Announce the winning team and reveal the game afterward. A Storyteller may end a game early only when victory is **certain**. Do not assume three remaining players guarantee evil a night kill if protection or another legal outcome still gives good a chance. See printed pp16, 28.
+**Early game ending:** The Storyteller can declare a winner when victory is certain. Common case: with 4 players alive, if good executes a non-Demon, evil will usually win (Demon kills 1 at night, leaving 2 alive). However, if a Monk or Soldier could prevent the night kill, continue play. If there is ANY chance for the losing team, keep going.
 
 ## Special Rules & Edge Cases
 
-### Ability precedence, death, and character changes
+### General Principles
+- **If the rulebook doesn't say you can't, you can.** Players can nominate themselves, vote for themselves, the Demon can attack dead players, good players can lie, characters choosing "any player" can choose themselves or dead players.
+- **Dead players cannot nominate** and may only vote once more (using their vote token).
+- **The Storyteller's word is law.** When rules are ambiguous, the Storyteller makes the final call and tells the players.
 
-Character abilities can break core rules; their almanac entries explain difficult interactions. The Storyteller makes and communicates rulings where needed, but this discretion does not permit inventing deaths, secretly changing setup counts without an ability, or giving unrestricted false information.
+### Night Phase Edge Cases
+- If a character dies before their turn on the night sheet, do not wake them (they have no ability).
+- Wait 5-10 seconds at dawn before opening eyes -- prevents meta-gaming about who was last to act.
+- Declare deaths immediately at dawn -- prevents players from shouting "I died! I wasn't woken!" as proof of identity.
+- If you forget to wake a player, you can either briefly put everyone back to sleep and resolve it, or handle it privately during the day.
 
-- A character's ability normally ends immediately on death, including persistent effects it was maintaining. Death-triggered or explicitly post-death abilities are exceptions.
-- Actual character and alignment are **independent**. A good player becoming a Minion remains good unless the effect also changes alignment. An evil Townsfolk is still that character but belongs to evil.
-- Tell a player about an actual character or alignment change privately at the earliest appropriate opportunity. This notification is not ordinary ability information corrupted by drunkenness/poisoning. Characters such as the Drunk or Lunatic specifically create exceptions to knowing one's true character.
-- Gaining a new character grants its ability immediately and removes the previous ability and its ongoing effects. A newly acquired once-per-game ability can be used afresh; a normally first-night ability functions at the appropriate new-character timing. Resurrection likewise restores ability use as described in the source.
-- Becoming a Demon or Minion mid-game does **not** automatically grant the initial evil-team introductions. Setup text in square brackets does not reapply mid-game.
-- **Registering as** a different character/alignment affects the relevant detection or interaction; it does not actually change the player or grant the registered character's ability.
+### Execution Edge Cases
+- Maximum 1 execution per day. Execution is optional.
+- A vote succeeds only if it gets >= half the alive player count AND exceeds all previous nominees' vote totals that day.
+- A tie between two nominees means neither is executed. Future nominees must exceed the tied count.
+- A player "about to die" can still nominate (if they haven't already) and may be saved if a later nominee gets more votes.
+- Dead players can be nominated and executed again (it still counts as the day's one execution).
+- Execution is distinct from death: some abilities allow a player to be executed without dying.
 
-See printed pp19–22, 42–44.
+### Drunk / Poisoned Interactions
+- A drunk/poisoned player's persistent effects end. Example: if the Innkeeper protects a player, and the Innkeeper becomes drunk, the protection ends.
+- If a Poisoner poisons Player A, then someone else poisons the Poisoner, Player A is no longer poisoned (the Poisoner lost their ability).
+- Give drunk/poisoned players false information that supports evil's bluffs whenever possible.
+- Abilities used on a drunk/poisoned player still function normally (the targeting ability works; only the target's own ability is suppressed).
 
-### Drunkenness and poisoning
+### Registration
+- A player who "registers as" a character or alignment counts as that for all game-rule and ability purposes, but does not gain that character's ability.
+- Example: if a good player "registers as evil," they are still good (win with good) but detect as evil to abilities like the Empath.
 
-Drunk/sober and poisoned/healthy are independent player states; either drunkenness or poisoning disables that player's ability. They do not cancel each other, and the state stays with the **player** through a character change or character swap.
+### Minion/Demon Info (First Night, 7+ Players)
+- Minions learn each other and the Demon. The Demon learns its Minions and receives 3 not-in-play good characters as bluff suggestions.
+- With fewer than 7 players, Minion/Demon info is NOT given on the first night.
+- The 3 bluff tokens shown to the Demon are typically 2 Townsfolk + 1 Outsider, but the Storyteller chooses.
 
-- Keep acting toward that player as though their ability works: wake them when expected, accept choices, and supply apparent information. Their disabled ability has **no mechanical effect**.
-- If that player's own ability would give information, the Storyteller may give true or false information. A sober, healthy ability normally supplies correct information subject to its explicit rules, misregistration, or other active effects.
-- Always answer **rules questions truthfully**, including questions from drunk or poisoned players. Information corruption does not authorize lying about the rules.
-- A once-per-game ability attempted while drunk or poisoned is **spent**, even though it does nothing. Becoming sober/healthy does not refund it.
-- An ability triggered or used while disabled remains wasted; later recovery does not retroactively activate it. Conversely, an ongoing effect previously established while sober/healthy is suspended while its source is disabled and can resume if still otherwise applicable after recovery.
-- Death, drunkenness, or poisoning of a source normally stops its maintained effects. For example, disabling a Poisoner ends the poisoning it was providing while that source remains disabled.
-- Other players' functioning abilities still affect and detect a drunk/poisoned target normally. A poisoned Demon is still a Demon; a healthy Fortune Teller's interaction is not automatically invalidated by that target being poisoned.
-- Dead players can also be drunk or poisoned, which matters for abilities that would otherwise work after death.
+### Storyteller Best Practices
+- Help the weaker team subtly: give drunk players correct info if evil is dominant, or devastating misinformation if good is dominant.
+- Support evil bluffs: if an evil player claims to be a character, make Grimoire movements and game actions consistent with that claim.
+- Never break core rules (wrong number of Minions/Outsiders, no Demon in play, etc.). Over 200 characters exist to create unusual situations fairly.
+- Let players make their own choices, even seemingly bad ones.
+- Do not reveal dead players' identities.
 
-See printed pp20–22.
-
-### Madness
-
-Madness concerns a player's **sincere-looking attempt to convince others of a claim**, not a hidden token state and not actual belief. An ability supplies the incentive or penalty, and the Storyteller judges compliance from behavior and context.
-
-A player is never forced to speak or lie; they may accept a stated penalty instead. A token declaration with obvious intent to be disbelieved may fail the requirement. They need not successfully persuade anyone, but must make a credible effort. Revealing or strongly implying an active madness instruction may itself violate it. Once that requirement ends, the player may discuss having been mad without that old penalty. Use the character's exact text and apply appropriate latitude for beginners. See printed pp22–23.
-
-### Travellers
-
-Travellers support late arrivals, early departures, and games above fifteen regular players. The player chooses an offered Traveller; the Storyteller privately chooses good or evil alignment. Announce the **character and ability publicly**, but keep alignment secret. An evil Traveller learns the Demon, not automatically the Minions. Choose characters appropriate for the script and avoid late additions that would decide an almost-finished game unfairly.
-
-Travellers otherwise interact normally: they can use abilities, nominate while alive, vote, die, be drunk/poisoned, and receive a dead vote. They do **not** count toward evil's two-survivor condition. A Traveller leaving the session is removed from the Grimoire and Town Square. The source recommends most Travellers be good; this is a balancing guideline, not a compulsory alignment quota.
-
-**Exile procedure:**
-
-1. Any player, **alive or dead**, can call for a Traveller's exile during the day, even before ordinary nominations open. This does not use their nomination.
-2. Count support in a hand-counting procedure similar to execution voting, but **support is not a game vote**. Every player may support, including dead players with no vote token; no dead token is spent.
-3. Support of **at least half of all players in the game**, rounded up, succeeds. This counts **alive and dead**, including Travellers, rather than only the living.
-4. Voting abilities and restrictions cannot alter the exile decision. For example, voting-weight abilities do not change support, and Butler's voting restriction does not apply. However, an ability that prevents the exiled Traveller's **death** may still keep them alive.
-5. Each Traveller may face an exile call **once per day**, but any number of different Travellers can be exiled. Exile is not execution and does not use the day's execution.
-
-Normally, Travellers cannot change into non-Traveller characters or vice versa. The rulebook describes Storyteller experimentation allowing this as an optional departure, requiring public Traveller status and the appropriate life token; do not assume it is standard play. See printed pp24–25.
-
-### Fabled, scripts, and Teensyville
-
-**Fabled** are publicly announced Storyteller rules rather than characters assigned to ordinary players. They can support accessibility, pacing, or unusual script interactions. Use the appropriate almanac and timing; more than one may be present. Fabled do not die or lose their abilities to drunkenness, poisoning, or other player effects, and do not add survivors to victory counts. See printed p25.
-
-A **script** lists possible characters; it does not reveal the selected in-play subset. Use its matching character and night sheets and account for unusual interactions openly when making rulings. The main rulebook's Script Tool section describes creating custom lists; their balance depends on the chosen abilities.
-
-**Teensyville** is for **five or six regular players**. The main rulebook suggests short scripts containing **6 Townsfolk, 2 Outsiders, 2 Minions, and 1 Demon** as the possible-character pool. These are **script options**, not all simultaneously in play: actual setup still uses the five-/six-player distribution and relevant modifiers. Use the short script's own night sheet and omit the normal seven-plus evil introductions and automatic Demon bluffs. See printed p36 and the first-night rules on p12.
-
-### Storyteller guidance and information boundaries
-
-Prepare reminders and night order before calling for eyes closed; confirm targets clearly and avoid noises or hand movements that identify real character actions. Give convincing bluffs the same outward handling as genuine attempted abilities without inventing mechanical effects. Announce death, not cause or identity. Answer sensitive questions privately so an answer does not publicly verify a character claim.
-
-Keep discussion, defense, and votes orderly; stop nominations after the day's execution. The Storyteller may decide whether a daytime ability is still allowed in the brief transition after execution but **before** night has been called; after eyes closed, it is too late for a daytime action. Handle mistakes candidly while protecting secrets rather than secretly granting the other team a compensating benefit. If a missed night action can be resolved privately or by briefly putting everyone back to sleep, the source allows that correction.
-
-Use discretion only where rules and abilities permit. Let players make legal choices even if they seem strategically odd; support new players without taking control of their strategy. Preserve participation for dead or quiet players and keep accusations within friendly game play. A possible win, however unlikely, is reason to continue rather than declare a foregone conclusion. See printed pp28–32, 37–38.
+### Discouraged Behaviors
+- Talking about characters before the first night (Demon hasn't received bluff tokens yet). Use the Fabled "Hell's Librarian" if it becomes an issue.
+- Narrating own abilities during the night ("I am waking now..."). This makes it nearly impossible for evil to bluff.
 
 ## Player Reference
 
-| Situation | Shared rule |
-|---|---|
-| Player count | 5–20 character players, plus Storyteller |
-| More than 15 regular players | Excess players are Travellers |
-| Game starts | First night |
-| Normal evil introductions/bluffs | 7+ regular players only |
-| Nominations | Living nominator; once per player per day |
-| Nomination targets | Each non-Traveller once per day; dead targets legal |
-| Execution minimum | Ceiling of half the living players |
-| Execution leader | Unique highest total meeting the minimum |
-| Tied highest vote | No leader; later nominee must beat the tie |
-| Living votes | Unlimited nominations may be voted on |
-| Dead execution votes | One for the rest of the game |
-| Exile support | Ceiling of half **all** players, alive and dead |
-| Exile and dead votes | No token spent; even tokenless dead can support |
-| Execution allowance | At most one per day unless an ability overrides |
-| Good normally wins | All Demons dead |
-| Evil normally wins | Two non-Traveller players alive |
-| Simultaneous ordinary win conditions | Good wins |
-| Dead identities | Stay secret |
-| Drunk/poisoned | Own ability disabled; apparent info may be false |
-| Rules answers | Always truthful |
+### Quick Setup Checklist
+1. Chairs in circle, gap for Storyteller, center clear
+2. Grimoire clipped and on stand
+3. Choose edition, place edition box in Grimoire
+4. Town Square with life tokens and vote tokens
+5. Read rules to new players
+6. Select characters per setup sheet, add/remove per orange leaves
+7. Add reminder tokens per green leaves
+8. Bag, draw, collect tokens into Grimoire
+9. Begin first Night
 
-Storyteller cycle: prepare the night; resolve the correct sheet and immediate triggers; announce dawn deaths; allow discussion; accept nominations and count votes; close nominations and resolve any execution; check victory throughout as abilities require. Use the actual script's character almanacs whenever a role modifies these shared rules.
+### Character Distribution
+
+| Players | Townsfolk | Outsiders | Minions | Demon |
+|---------|-----------|-----------|---------|-------|
+| 5       | 3         | 0         | 1       | 1     |
+| 6       | 3         | 1         | 1       | 1     |
+| 7       | 5         | 0         | 1       | 1     |
+| 8       | 5         | 1         | 1       | 1     |
+| 9       | 5         | 2         | 1       | 1     |
+| 10      | 7         | 0         | 2       | 1     |
+| 11      | 7         | 1         | 2       | 1     |
+| 12      | 7         | 2         | 2       | 1     |
+| 13      | 9         | 0         | 3       | 1     |
+| 14      | 9         | 1         | 3       | 1     |
+| 15      | 9         | 2         | 3       | 1     |
+
+16-20 players: use 15-player distribution; excess players become Travelers.
+
+### Key Voting Thresholds
+
+| Alive Players | Votes Needed to Execute (>= half) |
+|---------------|-----------------------------------|
+| 3             | 2                                 |
+| 4             | 2                                 |
+| 5             | 3                                 |
+| 6             | 3                                 |
+| 7             | 4                                 |
+| 8             | 4                                 |
+| 9             | 5                                 |
+| 10            | 5                                 |
+| 12            | 6                                 |
+| 15            | 8                                 |
+
+### Win/Loss Summary
+
+| Good Wins | Evil Wins |
+|-----------|-----------|
+| Demon dies (by execution or ability) | Only 2 non-Traveler players remain alive |
+| If both conditions are simultaneous, **good wins** | Travelers do NOT count toward the 2-player threshold |
+
+### Day Phase Flow
+1. Discussion (5-10 min typical)
+2. Storyteller calls for nominations
+3. Nomination -> defense (10-30 sec) -> clockwise vote tally
+4. Repeat nominations or give last call
+5. Execute the player "about to die" (if any)
+6. Prepare night, declare day over
+
+### Night Phase Flow
+1. "All players, eyes closed"
+2. First night only (7+ players): Minion info, then Demon info
+3. Wake characters top-to-bottom per night sheet, resolve abilities
+4. Wait 5-10 seconds at Dawn
+5. "All players, eyes open" -- immediately announce deaths
+
+### Editions at a Glance
+
+| Edition | Difficulty | Min Players | Theme |
+|---------|-----------|-------------|-------|
+| Trouble Brewing | Beginner | 5 | Classic Demon-hunt with misinformation tricks |
+| Bad Moon Rising | Intermediate | 7 | Death extravaganza; multiple kills per night; risky info-gathering |
+| Sects & Violets | Intermediate | 7 | Wild abilities; alignment/character changes; madness mechanic |
+
+### Leaf Guide (Character Token Icons)
+
+| Icon | Meaning |
+|------|---------|
+| Green leaves (top) | Number of reminder tokens to add to Grimoire |
+| Green leaf (left) | Character acts on the first night |
+| Green leaf (right) | Character acts on all other nights |
+| Orange leaf | Character modifies setup (add/remove characters) |
+
+### Dead Player Rules
+- Lose ability immediately (and persistent effects end)
+- Cannot nominate
+- May vote exactly once more (then remove vote token)
+- Still talk freely and close eyes at night
+- Identity is NOT revealed
+- Win/lose with their team
+- Cannot die again

@@ -1,90 +1,108 @@
 ---
 title: "Hey, That's My Fish!"
 bgg_id: 8203
-permalink: /rules/hey-thats-my-fish/
 player_count: "2-4"
 play_time: "20 min"
 designer: "Günter Cornett, Alvydas Jakeliunas"
 source_pdf: "hey-thats-my-fish-rules.pdf"
-source_url: "https://cdn.svc.asmodee.net/production-nextmove/uploads/2024/05/EN-HTMF-Rulebook-lowres.pdf"
-extracted_date: "2026-11-04"
-summarized_date: "2026-11-04"
-rulebook_version: "Next Move / Plan B Games, copyright 2023, ocean-board edition"
+extracted_date: "2026-03-16"
+summarized_date: "2026-03-16"
+rulebook_version: "Plan B Games 2023"
+verification: "unverified"
+verification_date: "2026-06-12"
 ---
+
+# Hey, That's My Fish!
+
+<!-- verification:begin -->
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/hey-thats-my-fish-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hey%2C%20That%27s%20My%20Fish%21&game=hey-thats-my-fish)
+<!-- verification:end -->
 
 ## Overview
 
-Move penguins across an ice field, collecting the tiles they leave behind. Each removed tile creates an impassable gap, so movement also cuts routes off for opponents. The player collecting the most **fish**, rather than the most tiles, wins.
-
-This summary follows the [publisher's ocean-board edition rulebook](https://cdn.svc.asmodee.net/production-nextmove/uploads/2024/05/EN-HTMF-Rulebook-lowres.pdf), PDF pages 2–3. Earlier editions may assemble the ice field without ocean boards.
+2–4 players move penguin figures across a shrinking hex board of ice floe tiles, collecting fish. The board breaks apart as tiles are removed each turn. The player who collects the most fish when all penguins are stranded wins.
 
 ## Components
 
-- 4 ocean boards, assembled into the playing surface.
-- 60 hexagonal ice tiles: **30 with 1 fish, 20 with 2 fish, and 10 with 3 fish**. Their reverse sides show water.
-- 16 penguin figures in 4 colors, with 4 figures per color. Only the number appropriate to the player count enters play; unused figures stay out of the game.
+| Component | Quantity |
+|---|---|
+| Ocean boards | 4 |
+| Ice floe tiles (total) | 60 |
+| — One-fish tiles | 30 |
+| — Two-fish tiles | 20 |
+| — Three-fish tiles | 10 |
+| Penguin figures (4 colors, 4 each) | 16 |
+
+Tiles are double-sided: fish side up = ice floe present; empty water side up = removed.
 
 ## Setup
 
-1. Assemble the four ocean boards as pictured on PDF page 2, with their fish icons oriented the same way.
-2. Mix all 60 tiles face down, then distribute them face up across the board's tile positions. Players may unanimously agree to exchange tiles to distribute the two- and three-fish tiles more evenly.
-3. Choose colors and take penguins according to player count:
-
-   | Players | Penguins per player |
-   |---|---|
-   | 2 | 4 |
-   | 3 | 3 |
-   | 4 | 2 |
-
-4. Beginning with the youngest player and proceeding clockwise, place one penguin at a time on an **unoccupied one-fish tile**. Continue until all participating penguins are placed. Placement does not collect a tile.
+1. Assemble the 4 ocean boards (fish icons all facing the same direction).
+2. Shuffle all 60 ice floe tiles face-down, then place them all face-up randomly on the boards.
+3. Each player chooses a color and takes their penguins:
+   - **2 players:** 4 penguins each
+   - **3 players:** 3 penguins each
+   - **4 players:** 2 penguins each
+4. Starting with the youngest player and going clockwise, each player places **one penguin** on an unoccupied **1-fish tile**. Repeat until all penguins are placed.
 
 ## Turn Structure
 
-The youngest player takes the first movement turn; play proceeds clockwise. On each turn, move **one** of your penguins, then collect the tile it departed from. You must move if any of your penguins has a legal move. Players who can no longer move any penguin leave the turn order after collecting their occupied tiles as described below.
+Each turn has exactly two steps: **Move** then **Collect**. See Actions below.
 
 ## Actions
 
-### Move a penguin
+### 1. Move one penguin
 
-Choose one of your penguins and slide it any positive number of tiles in one of the six straight directions of the hexagonal grid. The destination must be unoccupied.
+Move any one of your penguins in a **straight line** in any of the six hex directions. Rules:
+- The penguin may move **as far as you want** in one direction.
+- It **cannot change direction** mid-move.
+- It cannot move onto or **through** a tile occupied by **any** penguin (including your own).
+- It cannot move onto or through **empty water** (gaps where tiles have been removed).
 
-- You cannot turn during a move.
-- You cannot move onto or through any penguin, including your own.
-- You cannot move onto or through an empty water space left by a collected tile.
-- There is no requirement to stop at the first available tile; you may pass over unoccupied ice tiles along the same unbroken line.
+### 2. Collect one ice floe tile
 
-### Collect the starting tile
+Take the tile the penguin **started its move from** and add it face-up to your collection. That space is now open water.
 
-After the move, remove the tile the penguin **started on** and add it face up to your collection. The destination tile remains on the board under the penguin. The removed tile's position is now water and is no longer traversable.
+Then play passes clockwise.
+
+## Turn Structure (Summary)
+
+1. Move one penguin (straight line, any distance)
+2. Collect the tile the penguin left
+
+## Stuck Penguins
+
+If a player **cannot move any** of their penguins on their turn, they are eliminated from further turns. All their penguins are removed from the board and the tiles those penguins were **standing on** are added to that player's collection.
+
+## End of Game
+
+The game ends when all penguins have been removed from the board (all players are stuck). Any uncollected tiles are returned to the box.
 
 ## Scoring / Victory Conditions
 
-When a player has **no legal move with any of their penguins**, they take no further turns. Remove all their penguins and add the tiles those penguins occupied to that player's collection. The other players continue.
-
-The game ends when every penguin has been removed. Return any unclaimed tiles to the box; these do not score for anyone. Count all fish depicted on each player's collected tiles.
-
-1. Most fish wins.
-2. Among players tied on fish, most collected tiles wins.
-3. If both fish and tiles are tied, the tied players share victory.
+- Count the **total fish** on your collected tiles.
+- Most fish wins.
+- **Tiebreaker:** The tied player with the most collected **tile count** wins.
+- If still tied, all tied players share the victory.
 
 ## Special Rules & Edge Cases
 
-- A single trapped penguin does **not** eliminate its owner while another of that player's penguins can still move. The rule for removing penguins applies when none of that player's penguins can move.
-- Every starting penguin must occupy a one-fish tile, even when a higher-value tile is otherwise unoccupied.
-- Own penguins obstruct movement exactly as opponents' penguins do. Ice on the far side of a figure or a gap cannot be reached by jumping over the obstruction.
-- Separated ice islands remain playable. A player who controls an isolated region still follows normal turn order and movement rules until unable to move.
-- The fish under a penguin are ultimately collected either when that penguin moves away or when its owner has no legal moves; do not collect a destination tile immediately.
+- **Penguin placement:** Penguins may only be placed on **1-fish tiles** during setup (not 2- or 3-fish tiles).
+- **Your own penguins block you:** A penguin cannot move through or onto a tile occupied by one of your own penguins.
+- **Collecting the starting tile only:** You collect the tile the penguin *moved from*, not the tile it moved *to*.
+- **Tile switching at setup:** If all players agree, they may rearrange tiles during setup to more evenly distribute 2- and 3-fish tiles.
+- **Last tile:** A penguin standing on an isolated tile (no legal moves) is removed and its tile added to that player's collection.
 
 ## Player Reference
 
-| Question | Rule |
+| Players | Penguins per player |
 |---|---|
-| First player | Youngest player, clockwise thereafter |
-| Starting placement | One penguin per unoccupied one-fish tile |
-| Move | One own penguin, one straight line, at least one tile |
-| Obstacles | All penguins and all water gaps |
-| Tile collected | Departure tile |
-| No legal move anywhere | Remove own penguins; collect their occupied tiles |
-| Winner | Fish, then tile count, then shared victory |
+| 2 | 4 |
+| 3 | 3 |
+| 4 | 2 |
 
-Movement and elimination are on PDF page 3; board assembly and figure counts are on PDF page 2 of the linked source.
+**On your turn:** Move a penguin in a straight line → collect the tile it moved from.
+
+**Win condition:** Most fish. Tiebreaker: most tiles collected.

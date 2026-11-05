@@ -1,5 +1,5 @@
 import pytest
-from scripts.validate import validate_rules_file
+from scripts.validate import validate_rules_file, EXPANSION_SECTIONS
 
 VALID_RULES = """---
 title: "Catan"
@@ -106,17 +106,92 @@ title: "Catan"
     assert any("bgg_id" in e for e in errors)
 
 
-def test_validate_expansion_sections(tmp_path):
-    from scripts.validate import EXPANSION_SECTIONS
+def test_validate_empty_required_fields(tmp_path):
+    incomplete = """---
+title: ""
+bgg_id: ""
+---
 
-    path = tmp_path / "expansion.md"
-    path.write_text(
-        '---\ntitle: "Expansion"\nbgg_id: 2\nbase_game_bgg_id: 1\n---\n\n'
-        + "\n\n".join(f"## {heading}\nExpansion details." for heading in EXPANSION_SECTIONS)
-    )
-    assert validate_rules_file(str(path)) == []
-    path.write_text(path.read_text().replace("## Rule Changes", "## Rules"))
-    assert any("Rule Changes" in error for error in validate_rules_file(str(path)))
+# Catan
+
+## Overview
+## Components
+## Setup
+## Turn Structure
+## Actions
+## Scoring / Victory Conditions
+## Special Rules & Edge Cases
+## Player Reference
+"""
+    path = tmp_path / "catan.md"
+    path.write_text(incomplete)
+    errors = validate_rules_file(str(path))
+    assert any("title" in e for e in errors)
+    assert any("bgg_id" in e for e in errors)
+
+
+VALID_EXPANSION = """---
+title: "Catan: Seafarers"
+bgg_id: 325
+base_game_bgg_id: 13
+player_count: "3-4"
+designer: "Klaus Teuber"
+---
+
+# Catan: Seafarers
+
+## Overview
+Adds ocean hexes and ships to Catan.
+
+## New Components
+- 60 wooden ships
+- Sea hexes and gold hexes
+
+## Setup Changes
+Build the board with sea frame and island scenarios.
+
+## Rule Changes
+Ships work like roads but on water. Gold hexes give any resource.
+
+## Special Rules & Edge Cases
+Pirate replaces robber on sea hexes.
+
+## Player Reference
+Ship: 1 wool + 1 lumber
+"""
+
+EXPANSION_MISSING_SECTIONS = """---
+title: "Catan: Seafarers"
+bgg_id: 325
+base_game_bgg_id: 13
+---
+
+# Catan: Seafarers
+
+## Overview
+An expansion.
+
+## New Components
+Ships.
+"""
+
+
+def test_validate_expansion_valid(tmp_path):
+    path = tmp_path / "catan-seafarers.md"
+    path.write_text(VALID_EXPANSION)
+    errors = validate_rules_file(str(path))
+    assert errors == []
+
+
+def test_validate_expansion_missing_sections(tmp_path):
+    path = tmp_path / "catan-seafarers.md"
+    path.write_text(EXPANSION_MISSING_SECTIONS)
+    errors = validate_rules_file(str(path))
+    assert any("Setup Changes" in e for e in errors)
+    assert any("Rule Changes" in e for e in errors)
+    # Should NOT complain about base-game sections like "Components" or "Turn Structure"
+    assert not any("Components" in e for e in errors)
+    assert not any("Turn Structure" in e for e in errors)
 
 
 def test_validate_non_mapping_frontmatter(tmp_path):
@@ -135,3 +210,9 @@ def test_validate_rejects_duplicate_identity(tmp_path):
     path = tmp_path / "catan.md"
     path.write_text(VALID_RULES.replace("bgg_id: 13", "bgg_id: 13\nbgg_id: 42"))
     assert any("duplicate frontmatter key: bgg_id" in error for error in validate_rules_file(str(path)))
+
+
+def test_validate_accepts_descriptive_heading_suffix(tmp_path):
+    path = tmp_path / "catan.md"
+    path.write_text(VALID_RULES.replace("## Components", "## Components (Print and Play)"))
+    assert validate_rules_file(str(path)) == []

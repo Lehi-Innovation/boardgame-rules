@@ -1,0 +1,114 @@
+---
+title: "Antike Duellum"
+bgg_id: 104955
+player_count: "2"
+play_time: "60-90 min"
+designer: "Mac Gerdts"
+source_pdf: "antike-duellum-rules.pdf"
+extracted_date: "2026-03-18"
+summarized_date: "2026-03-18"
+verification: "verified"
+verification_date: "2026-06-13"
+---
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/antike-duellum-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Antike%20Duellum&game=antike-duellum)
+<!-- verification:end -->
+
+
+## Overview
+
+Antike Duellum is a 2-player civilization strategy game using the rondel mechanism. Players lead ancient empires (Carthaginians vs Romans, or Greeks vs Persians) competing for military and cultural supremacy. Players produce resources, found cities, build temples and town walls, recruit military units, develop technologies, and maneuver forces. The first player to collect 9 ancient personages wins. Event cards add variability and asymmetry to each game.
+
+## Components
+
+- 1 double-sided game board (Carthaginians vs Romans / Greeks vs Persians)
+- 74 wooden pieces: 24 galleys (12 per color), 24 legions (12 per color), 2 game markers, 12 wooden disks (6 per color), 12 white temples
+- 34 city tokens (10 gold, 12 marble, 12 iron) -- reversible to show either player's color
+- 12 town walls
+- Resource chips: marble (white), iron (blue), gold (yellow) in 1, 2, and 5 denominations
+- Coins
+- 54 cards: 21 personage cards, 25 event cards, 2 blank event cards, 6 short rules cards
+
+## Setup
+
+1. Each player receives wooden pieces of their color: 12 galleys, 12 legions, 1 octagonal game stone, 6 wooden disks, and 1 town wall.
+2. Place 1 disk at zero on the VP track. Place 1 legion and 1 galley in each recruitment box.
+3. Mark 3 starting cities with city tokens (1 gold, 1 marble, 1 iron).
+4. Each player receives 3 marble, 3 iron, and 3 gold chips as starting supply.
+5. Choose starting player randomly; the other player receives 1 coin as compensation.
+6. Sort 21 personage cards into 5 stacks. Set up bank with resources, coins, temples, town walls, city tokens.
+7. Shuffle 25 event cards; draw 3 for an open display.
+
+## Turn Structure
+
+Players alternate turns. Each turn has 3 steps:
+
+1. **Action Selection (Rondel):** Place game stone on the rondel. First turn: free choice. Subsequent turns: move clockwise 1-3 wedges free; each additional wedge costs 1 resource or coin. Cannot stay on same wedge two turns in a row (repeating = 8 wedges = 5 resources).
+2. **Found Cities (optional):** Found cities in regions with at least 1 of your military units. Cost: 1 marble + 1 iron + 1 gold per city, plus 1 coin per adjacent city producing the same resource.
+3. **Win Personages:** Collect earned personages. For each personage gained, opponent draws 1 event card from the open display.
+
+## Actions
+
+**Rondel Wedges:**
+
+| Wedge | Type | Effect |
+|-------|------|--------|
+| Marmor | Production | Gain marble: 1 per marble city, 3 per marble city with temple; also gain 1 coin. |
+| Ferrum | Production | Gain iron: 1 per iron city, 3 per iron city with temple; also gain 1 coin. |
+| Gold | Production | Gain gold: 1 per gold city, 3 per gold city with temple; also gain 1 coin. |
+| Templum | Utilization | Build temples (6 marble each, plus 1 coin per adjacent temple). Triples production/defense/arming. Max 1 per city. Also allows building town walls (1 marble each). |
+| Militia | Utilization | Arm units from recruitment box (2 iron each). 1 per city without temple, 3 per city with temple. |
+| Scientia | Utilization | Buy know-hows with gold; also recruit new legions and/or galleys from personal supply to the recruitment box (1 gold per legion, 2 gold per galley). |
+| Duellum | Military | Move and fight (appears twice on rondel). |
+
+**Military Action (Duellum):**
+- Phase 1 -- Movement: Each unit may move to one adjacent region (2 regions with Road/Navigation). Legions cross red borders; galleys cross blue borders. Opposing units of same type destroy each other 1:1.
+- Phase 2 -- Conquest: City defense = 1 (3 with temple) + town wall bonus (+1) + Res Publica (+1) + defenders in region. Attacker needs units >= defense to conquer. If the city is conquered, the attacker loses units equal to the defense strength of the city (removed from the region and returned to the attacker's recruitment box).
+
+**Know-Hows:** Technology advances purchased with gold, providing benefits like extended movement, increased production, and improved defense.
+
+**Town Walls:** Provide +1 defense to a city. Players receive additional town walls at VP track milestones (0, 1, 2, 3, 5, 7 personages).
+
+**Event Cards:** When opponent gains a personage, you draw event cards as compensation. Event cards have various effects (earthquakes destroying walls, burglary stealing coins, academy granting gold, etc.).
+
+## Scoring / Victory Conditions
+
+First player to collect **9 personages** wins.
+
+| Personage | Requirement | Available |
+|-----------|-------------|-----------|
+| King | Every 5 cities owned (at 5, 10, 15 cities) | 6 |
+| Scholar | Each new know-how learned first | 5 |
+| General | Each enemy temple destroyed via conquest | 4 |
+| Citizen | Every 3 temples owned (at 3, 6, 9, 12 temples) | 4 |
+| Navigator | Control of 7 sea areas at end of turn | 2 |
+
+Once won, personages cannot be lost even if conditions are no longer met.
+
+## Special Rules & Edge Cases
+
+- Coins substitute for any 1-unit resource at any time.
+- Game material is limited: if no more legions, galleys, temples, or city tokens remain, none can be created until some return.
+- Resource chips are unlimited.
+- City tokens are double-sided; conquered cities flip to the conqueror's color.
+- Conquering a city with a temple destroys the temple, earning a General personage.
+- Founding cities: only in regions with your military presence; foreign units do not prevent founding.
+- Event card display is refilled from the draw deck.
+
+## Player Reference
+
+| Phase | Action |
+|-------|--------|
+| 1. Rondel | Move 1-3 free, pay 1 resource per extra wedge |
+| 2. Found cities | 1M + 1I + 1G + adjacency coins |
+| 3. Win personages | Check all 5 types |
+
+| Resource Use | Cost |
+|-------------|------|
+| Temple | 6 marble + 1 coin per adjacent temple |
+| Military unit (arming via Militia) | 2 iron |
+| Recruiting via Scientia | 1 gold per legion, 2 gold per galley |
+| Know-how | Gold (varies) |
+| City founding | 1M + 1I + 1G |
