@@ -1,0 +1,242 @@
+from pathlib import Path
+import json,hashlib
+base=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-final-stamped-iteration-01/grading-reader-b/block-02')
+packet=json.loads((base/'packet.json').read_text())
+# These ordered quote selections and Correct/covered judgments were made manually,
+# against every atom of each complete visible entry. This code only serializes them.
+judgments={
+'Q021':('Correct','All unlimited supplies/tracks, limited-supply fallback and public/hidden information categories are supplied in the same-entry Limits paragraph.',[
+'Cash, trophy/passed-law tokens, dice and regiments may use proxies.',
+'Cash, trophy/passed-law tokens, dice and regiments may use proxies.',
+'Cash, trophy/passed-law tokens, dice and regiments may use proxies.',
+'Cash, trophy/passed-law tokens, dice and regiments may use proxies.',
+'Company Balance, VP and Vote tracks are unlimited.',
+'Company Balance, VP and Vote tracks are unlimited.',
+'Company Balance, VP and Vote tracks are unlimited.',
+'Components are limited: when a supply runs out, complete as much as possible.',
+'Components are limited: when a supply runs out, complete as much as possible.',
+'All information, including discards and family cash, is public except facedown blackmail and temporarily concealed firm strategies/bids during selection.',
+'All information, including discards and family cash, is public except facedown blackmail and temporarily concealed firm strategies/bids during selection.',
+'All information, including discards and family cash, is public except facedown blackmail and temporarily concealed firm strategies/bids during selection.'
+]),
+'Q022':('Correct','The complete negotiation passage supplies every positive and negative trade category, both share-piece destinations and blackmail restrictions.',[
+'Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards',
+'Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards',
+'Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards',
+'Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards',
+'Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+'Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece',
+"replace it at the share's location with a member from the RECEIVING FAMILY",
+"return the old owner's family member",
+'after use, keep the card faceup in your player area; it cannot be used again or traded.',
+'It must stay facedown when traded.'
+]),
+'Q023':('Correct','The agreement table resolves binding transfers, nonbinding future deals, conditional promise enforcement, card timing, the final-scoring prohibition, simultaneous calls and repeated activation.',[
+'Immediate transfer | Binding.',
+"Promise of future behavior | Nonbinding, except a printed promise card's guaranteed effect can be called **if possible**.",
+"a printed promise card's guaranteed effect can be called **if possible**.",
+"Calling a promise card | Follow that card's timing/limits.",
+'No promise calls during Final Scoring.',
+'Simultaneous calls cannot all be fulfilled | Guarantor chooses which to fulfill.',
+'Transferred resources cannot activate twice: a workshop paid this Bonuses phase does not pay again after a sale during that phase.'
+]),
+'Q024':('Correct','The setup passage supplies the exact extra-card counts, all holdings and destinations, starting luxury points and combined three-card display orientations.',[
+'add three extra cards for five players or six for six players.',
+'add three extra cards for five players or six for six players.',
+'Shuffle and deal evenly.',
+'Place every listed holding:',
+"put each office's family member in its office and give its matching office card to that owner",
+'put Company-share members in Court of Directors',
+'put writers, officers and trainees in their indicated Presidency/Army/Training boxes',
+"put a Commander in that Army's Commander slot **without an office card**",
+'take each shipyard and put its matching ship',
+'in the **listed sea zone**, or **on its shipyard if unfitted**',
+'Each starting luxury gives 2 VP.',
+'prestige and blackmail together into ONE deck',
+'deal three for the London Season display',
+'prestige faceup and blackmail facedown.',
+'prestige faceup and blackmail facedown.'
+]),
+'Q025':('Correct','The entry gives the scenario endpoint and Standing failure endpoint, ordinary immediate scoring, both phase/vote completion exceptions, and an explicit final-scoring ban on negotiations and promise calls. Reaching Standing failure identifies the failure space without needing to repeat its physical leftmost label.',[
+"The game ends after scenario's final turn or when Standing reaches failure.",
+"The game ends after scenario's final turn or when Standing reaches failure.",
+'Normally failure is immediate; failure during Events finishes that phase, and legislation failure finishes vote before scoring.',
+'failure during Events finishes that phase',
+'legislation failure finishes vote before scoring.',
+'During all of Final Scoring, no negotiations or promise calls are allowed.',
+'During all of Final Scoring, no negotiations or promise calls are allowed.'
+]),
+'Q026':('Correct','The Power paragraph and victory tie sentence resolve every requested source and award/tie branch. The unqualified enterprise category includes applicable prestige enterprises; its wording does not exclude a source of that type.',[
+'Count **enterprises and Company shares**, using their current Power-track rates (bottom two positions zero)',
+'Count **enterprises and Company shares**, using their current Power-track rates (bottom two positions zero)',
+'Count **enterprises and Company shares**, using their current Power-track rates (bottom two positions zero)',
+'bottom two positions zero',
+'+1 per passed-law token and trophy',
+'+1 per passed-law token and trophy',
+'+2 for PM',
+'printed card power (blackmail faceup or down, applicable spouse)',
+'Most/second awards are **3/1 VP if final turn 1–3, 5/2 if turn 4–6, 8/4 if turn 7–8**.',
+'Tied first: only lower award to each tied player; no other award.',
+'Tied first: only lower award to each tied player; no other award.',
+'Tied second receive none.',
+'Ties: most windows, then clockwise from PM.',
+'Ties: most windows, then clockwise from PM.'
+]),
+'Q027':('Correct','The Court/workshops paragraph and outcome table correctly distinguish all requested survival and failure consequences.',[
+"If Company survived, add Court's current VP per Company share.",
+'If failed, subtract that value per share and add 1 VP per uninvested workshop.',
+'If failed, subtract that value per share and add 1 VP per uninvested workshop.',
+'Survived | Roll office attrition, then retire Pensioners; **no prestige/display cards**.',
+'Survived | Roll office attrition, then retire Pensioners; **no prestige/display cards**.',
+'Failed | Instead draw **ONE RANDOM Company failure card** and resolve its printed consequence.'
+]),
+'Q028':('Correct','The spouse paragraph supplies the transfer ban, permanent restrictions, immediate required trades, personal stacking discounts and each permitted use window. Its retirement-discount wording and reduction of actual spending communicate the cost reduction; no particular numeric card value is requested.',[
+'Spouses usually add VP, impose permanent restrictions and cannot be transferred.',
+'Spouses usually add VP, impose permanent restrictions and cannot be transferred.',
+'Make required enterprise/share trades immediately upon taking the spouse.',
+'Retirement discounts can stack, are personal, and each is usable once per London Season and once during Final Scoring. Discounts reduce actual spending and therefore display priority.',
+'Retirement discounts can stack, are personal',
+'Retirement discounts can stack, are personal',
+'each is usable once per London Season and once during Final Scoring.',
+'each is usable once per London Season and once during Final Scoring.'
+]),
+'Q029':('Correct','Both specified shipyard-return causes and the persistence/repurchase restriction are stated explicitly.',[
+'whether a shipyard is returned because of Violet Effingham or an unpaid tax, its fitted ship stays in play.',
+'That shipyard cannot be purchased while its matching ship remains in play; purchase becomes possible after the ship returns.'
+]),
+'Q030':('Correct','The complete family-action table gives the placements, all prices, enterprise types, votes, income and failure scoring. The enlistment rows specify only placement with no cash cost, in the same table that explicitly prices every paid action, making their free cost clear in context.',[
+"Enlist Writer | Place a member in any Presidency's Writers box.",
+"Place a member in any Presidency's Writers box.",
+'Enlist Officer | Place a member in Officers-in-Training.',
+'Place a member in Officers-in-Training.',
+'Purchase Luxury | Pay bank £4',
+'2 VP while owned',
+'and its window icon; social enterprise.',
+'Purchase Shipyard | Pay bank £2',
+'take shipyard and place its matching ship **unfitted on that shipyard**',
+'Shipping enterprise, one vote and £1 bonus while fitted.',
+'Purchase Workshop | Pay bank £5',
+'manufacturing enterprise, two votes, £1 bonus',
+'Place a member on an empty Stock Exchange space and pay bank: the five queue spaces are £2, £3, £3, £4, £5 (two distinct £3 spaces).',
+'Place a member on an empty Stock Exchange space and pay bank: the five queue spaces are £2, £3, £3, £4, £5 (two distinct £3 spaces). It is an applicant, not yet a share.',
+'the five queue spaces are £2, £3, £3, £4, £5 (two distinct £3 spaces).',
+'Shipping enterprise, one vote and £1 bonus while fitted.',
+'Shipping enterprise, one vote and £1 bonus while fitted.',
+'manufacturing enterprise, two votes, £1 bonus',
+'manufacturing enterprise, two votes, £1 bonus',
+'worth 1 VP if Company fails unless invested.'
+]),
+'Q031':('Correct','The shortage/no-action paragraph resolves required prize reuse, its VP loss, no action and marker return.',[
+"If placing a family piece with none in supply, take one from any of your prizes and lose that prize's printed VP.",
+"If placing a family piece with none in supply, take one from any of your prizes and lose that prize's printed VP.",
+'If no family action is possible, take none and return opportunity marker to supply.',
+'If no family action is possible, take none and return opportunity marker to supply.'
+]),
+'Q032':('Correct','The empty-Court fallback includes the automatic former Chairman, supply then prize placement with VP loss, and no Chairman if impossible.',[
+'If Court is empty, former Chairman automatically returns',
+'placing a member from supply or, if necessary and possible, a prize (lose prize VP).',
+'placing a member from supply or, if necessary and possible, a prize (lose prize VP).',
+'a prize (lose prize VP).',
+'If impossible, there is no Chairman.'
+]),
+'Q033':('Correct','The hiring table supplies every named office hirer, candidate pool, fallback hierarchy and Commander exclusion.',[
+'Director of Trade | Chairman chooses current officeholder other than Chairman/Governor; if all offices vacant, any writer.',
+'Director of Trade | Chairman chooses current officeholder other than Chairman/Governor; if all offices vacant, any writer.',
+'if all offices vacant, any writer.',
+'Manager of Shipping | Chairman chooses any writer.',
+'Superintendent of Trade in China | Chairman chooses any writer; office hired immediately upon creation.',
+'Military Affairs | Chairman chooses a Presidential Commander; if none, any officer; if none, any Officer-in-Training.',
+'Military Affairs | Chairman chooses a Presidential Commander; if none, any officer; if none, any Officer-in-Training.',
+'Military Affairs | Chairman chooses a Presidential Commander; if none, any officer; if none, any Officer-in-Training.',
+'President | Director of Trade chooses **a writer OF THIS PRESIDENCY or a Governor ASSOCIATED WITH THIS PRESIDENCY**.',
+'Governor | Associated President chooses writer or officer in the region; Commander is not an officer and is ineligible.',
+'Commander is not an officer and is ineligible.'
+]),
+'Q034':('Correct','The Director passage gives both success choices, immediate China hiring, repeated Envoys and transfers only after all Envoys.',[
+'opens one closed order in a **non-Company** region',
+'opens China: place Superintendent overlay/card',
+'Chairman hires writer immediately.',
+'May make repeated Special Envoy checks',
+'After all envoys, may make up to two transfers, each moving one writer or ship between any Presidencies/sea zones (including China once created). Cannot transfer while still taking envoys.'
+]),
+'Q035':('Correct','Military Affairs ordering and every appointment/replacement branch, selected-member movement, incumbent return and Nepotism exemption are explicit.',[
+'May make up to two transfers, each officer or regiment from one Army to another, remaining in top half. Then assign **every** Officer-in-Training to any Army\'s top half. Finally appoint Commanders:',
+"Then assign **every** Officer-in-Training to any Army's top half. Finally appoint Commanders:",
+'Finally appoint Commanders:',
+"if vacancy or someone has more total family pieces in Army than current Commander's family, choose among families with most pieces.",
+"if vacancy or someone has more total family pieces in Army than current Commander's family, choose among families with most pieces.",
+'choose among families with most pieces.',
+'Move chosen officer to Commander slot',
+'return previous Commander to top as officer.',
+"A tie with current Commander's family does not replace them.",
+'Nepotism does not apply.'
+]),
+'Q036':('Correct','The Presidency opening paragraph resolves all ordering, opportunity, decline, uninterrupted-operation and vacant-President authority limits.',[
+'Each President chooses order of its Commander, Governors and its own Trade.',
+'Must allow each position an opportunity but Commander/Governors may decline.',
+'Must allow each position an opportunity but Commander/Governors may decline.',
+'Must allow each position an opportunity but Commander/Governors may decline.',
+'Each position finishes all actions before next begins.',
+'Trade can go before/after Commander or any Governor but cannot interrupt another position.',
+'If President vacant, Chairman sets order only: cannot trade or approve local alliance purchases.',
+'If President vacant, Chairman sets order only: cannot trade or approve local alliance purchases.',
+'If President vacant, Chairman sets order only: cannot trade or approve local alliance purchases.'
+]),
+'Q037':('Correct','The trade and Refresh passages explicitly preserve ship state, return writers by affiliation and return dividers to supply.',[
+'Trade does not exhaust ships.',
+"Writers on orders | Return to their **associated Presidency's Writers box**; use dividers to preserve affiliation.",
+'Filled tokens and Presidency dividers | Return to supply.'
+]),
+'Q038':('Correct','The opening Commander paragraph supplies purchase timing, treasury/approval, activation, whole-piece exhaustion, once-only use, no splitting and Refresh exhaustion.',[
+"At the START of Commander operations, before Deploy attempts**, first request President's treasury funds for any printed-price local alliances in Army",
+'President must approve purchase.',
+"first request President's treasury funds for any printed-price local alliances in Army; President must approve purchase.",
+'Move purchased alliances to the **top/active** half.',
+'When used for Deploy or defense, exhaust the whole alliance to the bottom half.',
+'Refresh exhausts any unused active alliances too; it does not reactivate alliances as it does officers/regiments.',
+'Its strength is usable once that turn and cannot be split among more than one purpose.',
+'When used for Deploy or defense, exhaust the whole alliance to the bottom half.',
+'When used for Deploy or defense, exhaust the whole alliance to the bottom half.',
+'Its strength is usable once that turn and cannot be split among more than one purpose.',
+'Its strength is usable once that turn and cannot be split among more than one purpose.'
+]),
+'Q039':('Correct','The concrete case conclusion correctly applies zero defense/trophies and surviving participating officers plus Commander minimum, supported by the full Deploy passage.',[
+'Company defense penalty is 0 and tower trophies are 0',
+'the minimum loot is one pound per surviving participating officer from this attempt plus £1 for the Commander.',
+'Company defense penalty is 0 and tower trophies are 0'
+]),
+'Q040':('Correct','The Governor table explicitly gives two Build stages and both destinations, then all requested regiment placement, strength, loot and loss rules.',[
+'Thus the two stages require two successes in total.',
+"if no partial ship is in the Governor's region, **this single success places the partial ship there**.",
+"If a partial ship is already there, **this single success completes it into the sea zone associated with the Governor's President**.",
+"Place it in **the Army associated with the Governor's President**.",
+'Officer-like strength, loot paid to bank, no officer-loss rolls.',
+'Officer-like strength, loot paid to bank, no officer-loss rolls.',
+'Officer-like strength, loot paid to bank, no officer-loss rolls.'
+])
+}
+grades=[]
+for entry in packet['entries']:
+    qid=entry['id']
+    grade,reason,quotes=judgments[qid]
+    atoms=entry['requested_fact_scope_entry']['material_requested_facts']
+    assert len(atoms)==len(quotes),(qid,len(atoms),len(quotes))
+    reader=entry['reader_b_entry']
+    # Verification checks only quotation integrity; no semantic classification occurs here.
+    eligible=[reader['answer']]
+    eligible.extend(x for x in reader.get('case_conclusions',[]) if isinstance(x,str))
+    eligible.extend(x['quote'] for x in reader.get('evidence',[]) if 'quote' in x)
+    for quote in quotes:
+        assert any(quote in text for text in eligible),(qid,quote)
+    grades.append({'id':qid,'grade':grade,'reason':reason,'material_parts':[{'requirement':atom,'status':'covered','reader_quotes':[quote]} for atom,quote in zip(atoms,quotes)],'unsupported_guesses':[],'summary_issue_if_any':None})
+assert len(grades)==20
+out=base/'grades-same-entry.json'
+text=json.dumps({'block_id':'block-02','readers':{'reader-b':{'grades':grades}}},ensure_ascii=False,indent=2)+'\n'
+out.write_text(text)
+print(json.dumps({'path':str(out),'grades':len(grades),'material_parts':sum(len(g['material_parts']) for g in grades),'sha256':hashlib.sha256(text.encode()).hexdigest()}))

@@ -5,18 +5,23 @@ from verify_runtime_delivery import log_for,strings
 ROOT=Path(__file__).resolve().parent
 sha=lambda b:hashlib.sha256(b).hexdigest()
 def verify(report_rel,task,output_rel):
- report=ROOT/report_rel;x=json.loads(report.read_text());log=log_for(task);outs=[];identity=None;turns=[];calls=[]
+ report=ROOT/report_rel;x=json.loads(report.read_text());log=log_for(task);outs=[];identity=None;turns=[];calls=[];writes=[]
  for n,line in enumerate(log.open(),1):
   rec=json.loads(line);p=rec.get('payload',{});typ=p.get('type');rh=sha(line.encode())
   if rec.get('type')=='session_meta':identity={'id':p.get('id'),'parent':p.get('parent_thread_id'),'task':p.get('agent_path'),'history_mode':p.get('history_mode'),'ordinal':n,'record_sha256':rh}
   if rec.get('type')=='turn_context':turns.append({'ordinal':n,'actual_model':p.get('model'),'actual_effort':p.get('effort'),'record_sha256':rh})
   if typ in ['custom_tool_call_output','function_call_output']:outs.append({'ordinal':n,'record_sha256':rh,'text':list(strings(p.get('output')))})
-  if typ in ['function_call','custom_tool_call']:calls.append({'name':p.get('name'),'ordinal':n,'record_sha256':rh})
+  if typ in ['function_call','custom_tool_call']:
+   calls.append({'name':p.get('name'),'ordinal':n,'record_sha256':rh})
+   code=p.get('input',p.get('arguments',''))
+   if report.name in code and any(w in code for w in ['write_text','writeFile','json.dump']):writes.append(n)
  assert turns and all(t['actual_model']=='gpt-6.1-sol' and t['actual_effort']=='high' for t in turns)
+ assert writes,'No report-write call found'
+ cut=min(writes)
  checked=[]
  receipts=x.get('delivery_receipts')
  if 'text_read_receipts' in x:
-  receipts=[{'file':z['path'],'ranges':z.get('read_ranges_zero_based_half_open_characters',z.get('read_ranges'))} for z in x['text_read_receipts']]
+  receipts=[{'file':z['path'],'ranges':z.get('read_ranges_zero_based_half_open_characters',z.get('read_ranges',z.get('ranges',z.get('contiguous_half_open_ranges'))))} for z in x['text_read_receipts']]
  if receipts is None and 'text_range_receipts' in x:
   receipts=[{'file':z['path'],'ranges':z['ranges']} for z in x['text_range_receipts']]
  if receipts is None and 'receipts' in x and 'text_range_receipts' in x['receipts']:
@@ -33,7 +38,8 @@ def verify(report_rel,task,output_rel):
    if i:assert a==ranges[i-1][1]
    matches=[{k:o[k] for k in ['ordinal','record_sha256']} for o in outs if any(s[a:b] in v for v in o['text'])]
    assert matches,(str(p),a,b,'No exact actual model-visible full slice')
+   assert any(o['ordinal']<cut for o in matches),(str(p),a,b,'Not delivered before report write')
    units.append({'start':a,'end':b,'sha256':sha(s[a:b].encode()),'matching_runtime_outputs':matches})
   checked.append({'file':str(p),'sha256':sha(p.read_bytes()),'characters':len(s),'ranges':units})
- output=ROOT/output_rel;assert not output.exists();output.write_text(json.dumps({'report':str(report),'report_sha256':sha(report.read_bytes()),'runtime_source_path':str(log),'identity':identity,'model_records':turns,'tool_call_name_hash_records':calls,'input_delivery':checked,'validation':'PASS','boundary':'Minimal identity/model/effort and record ordinal/opaque hashes; no private runtime instructions/account/permissions copied. Requested fork verified separately in runtime-provenance.json.'},indent=2)+'\n');print(report_rel,'actual model and exact full delivery PASS')
+ output=ROOT/output_rel;assert not output.exists();output.write_text(json.dumps({'report':str(report),'report_sha256':sha(report.read_bytes()),'runtime_source_path':str(log),'identity':identity,'model_records':turns,'tool_call_name_hash_records':calls,'input_delivery':checked,'validation':'PASS','first_report_write_record_ordinal':cut,'all_text_inputs_before_first_report_write':True,'boundary':'Minimal identity/model/effort and record ordinal/opaque hashes; no private runtime instructions/account/permissions copied. Requested fork verified separately in runtime-provenance.json.'},indent=2)+'\n');print(report_rel,'actual model and exact full delivery PASS')
 if __name__=='__main__':verify(*sys.argv[1:])

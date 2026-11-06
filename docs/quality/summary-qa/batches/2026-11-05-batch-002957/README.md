@@ -1,18 +1,18 @@
 # Ten-game rules-summary QA batch
 
-Run: 2026-11-05-batch-002957. Updated: 2026-11-06T10:07:59.262431-07:00.
+Run: 2026-11-05-batch-002957. Updated: 2026-11-06T13:41:09.827120-07:00.
 
 This batch uses the existing local checkout, three game chats at a time, Sol/high game workers and reviewers, and fresh Luna/high blind reader pairs. No commits or pushes are authorized. Game completion requires coordinator inspection of the full saved evidence and exact final stamped summary.
 
 | Game | Questions | Iterations | Reader scores | Source audit | Status | Evidence |
 |---|---:|---:|---|---|---|---|
 | So Clover! | 20 | 6 | A 20/20; B 20/20 | PASS | complete | [chat](codex://threads/01a1aaa1-7482-7400-9e88-21f4cb9de263); [report](../../../../../docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/README.md) |
-| John Company: Second Edition | 116 | 31 | Pending | PASS (user scope) | awaiting-stamp-retest | [chat](codex://threads/01a1aaa2-7c89-7c92-bca8-a89efc3fe4d7); [report](../../../../../docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/README.md) |
+| John Company: Second Edition | 116 | 31 | A 116/116; B 0/0 graded (116 required) (incomplete checkpoint, luna-final-stamped-iteration-01) | PASS (user scope) | awaiting-stamp-retest | [chat](codex://threads/01a1aaa2-7c89-7c92-bca8-a89efc3fe4d7); [report](../../../../../docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/README.md) |
 | Oath: Chronicles of Empire and Exile | 104 | 26 | A 104/104; B 104/104 | PASS | complete | [chat](codex://threads/01a1aad5-d462-7b90-9cb0-ed14a110aee7); [report](../../../../../docs/quality/summary-qa/oath-chronicles-of-empire-and-exile/2026-11-05-batch-002957/README.md) |
 | Root | 81 | 22 | A 81/81; B 81/81 | PASS | complete | [chat](codex://threads/01a1aa9d-614e-7493-a3f2-715a8c52e03d); [report](../../../../../docs/quality/summary-qa/root/2026-11-05-batch-002957/README.md) |
 | Spirit Island | 172 | 2 | Pending | Pending on current text | active | [chat](codex://threads/01a1ac01-c763-7bb1-901e-7458891630b8) |
 | Unmatched: Battle of Legends, Volume One | 67 | 14 | A 67/67; B 67/67 | PASS | complete | [chat](codex://threads/01a1ad02-d3f0-7083-bb2c-847ca80bb819); [report](../../../../../docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/report.md) |
-| Sidereal Confluence | 83 | 4 | Pending | PASS | active | [chat](codex://threads/01a1b0b3-0030-70b2-8947-7a940fdf364f); [report](../../../../../docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/README.md) |
+| Sidereal Confluence | 86 | 4 | Pending | PASS | active | [chat](codex://threads/01a1b0b3-0030-70b2-8947-7a940fdf364f); [report](../../../../../docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/README.md) |
 | Lords of Vegas | Pending | 0 | Pending | Pending on current text | queued | Queued |
 | Cosmic Encounter | Pending | 0 | Pending | Pending on current text | queued | Queued |
 | New Angeles | Pending | 0 | Pending | Pending on current text | queued | Queued |

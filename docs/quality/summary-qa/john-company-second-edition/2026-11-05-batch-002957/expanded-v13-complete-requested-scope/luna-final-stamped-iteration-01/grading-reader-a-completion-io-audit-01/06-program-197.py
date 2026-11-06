@@ -1,0 +1,116 @@
+import json,hashlib
+from pathlib import Path
+base=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-final-stamped-iteration-01/grading-reader-a/block-06')
+rows=[
+('Q098','Correct','The same-entry Deploy passage resolves participant eligibility, the complete payout cycle, bank shares and repetition.',[
+('Only participating surviving officers receive officer shares',["Count only this attempt's surviving participating officers and used regiments/alliances."]),
+('The Commander is paid first: £1 Commander share plus £1 per own participating surviving officer',["| Commander family first | £1 for Commander **plus £1 for each of their used surviving officers**. |"]),
+('Other players receive £1 per participating surviving officer in clockwise order',["| Other families clockwise | £1 per used surviving officer of that family. |"]),
+('Stop paying when no loot cash remains',["Pay in this order, stopping when cash runs out"]),
+('After paying players, remaining cash pays the bank £1 per participating regiment',["| Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |"]),
+('After paying players, remaining cash pays the bank £1 per participating local-alliance piece regardless of its strength',["| Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |"]),
+('Repeat from the Commander’s share and officers while cash remains',["**Repeat that entire cycle from the Commander until all loot is distributed.**"])]),
+('Q099','Correct','The conditional inward move and Company rebellion meaning are clear in the conquest context.',[
+('An Elephant in the conquered region that faced another region is moved to that region’s center',["If it faced outward from the conquered region, move the Elephant fully inside that region"]),
+('The centered Elephant indicates intended rebellion against the Company',["If it faced outward from the conquered region, move the Elephant fully inside that region; this position indicates it is now threatening Rebellion."])]),
+('Q100','Correct','The complete ordinary expense census, unit rate, Commander exemption and China inclusion are present.',[
+('Each current Debt costs £1',["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]),
+('Each regiment in an Army costs £1',["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]),
+('Each officer in an Army costs £1',["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]),
+('Commanders do not incur the officer expense',["Exclude Commanders."]),
+('Each ship in the three sea zones costs £1',["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]),
+('China-assigned ships are included in those £1-per-ship expenses.',["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."])]),
+('Q101','Correct','The same-entry dividend settlement passage gives waiver scope and consent, actual-total marker placement, and the treasury sweep.',[
+('A shareholder may decline payment on any number of their shares on any dividend',["With that consent, the shareholder may forgo payment for any number of shares on any dividend."]),
+('The firm manager must consent to that waiver',["**Waiving a dividend requires BOTH the shareholder's choice and the MANAGER'S CONSENT**"]),
+('Set the dividend cube to the actual total cash paid out in dividends',["Record **total actual cash paid out**, not per-share dividend, with dividend cube on Company Balance track."]),
+('Place that cube on the Company Balance track',["with dividend cube on Company Balance track."]),
+('Move all remaining India-treasury cash to that firm’s London treasury after dividends',["Sweep remaining India money into London."])]),
+('Q102','Correct','The answer and operative passage state the endgame blackmail ban and explicit card permission exception.',[
+('Blackmail cannot be played once the game is over during Final Scoring',["Once game over, stop negotiations, calling promises and playing blackmail unless a card explicitly permits final-scoring use."]),
+('Explicit permission in a card’s text is the exception',["No, unless a card explicitly permits final-scoring use."])]),
+('Q103','Correct','Within the Director heading, treasury dice funding, rate and penalty and all requested transfer details are supplied.',[
+('Special Envoy dice are bought with the Director’s office-treasury cash',["May make repeated Special Envoy checks: £1 treasury cash per die, no penalty."]),
+('Each £1 buys one die',["£1 treasury cash per die"]),
+('Special Envoy has no dice penalty',["May make repeated Special Envoy checks: £1 treasury cash per die, no penalty."]),
+('The subsequent transfer step permits up to two transfers',["After all envoys, may make up to two transfers"]),
+('Each transfer moves one writer or one ship',["each moving one writer or ship"]),
+('Transfers move between Presidencies or sea zones',["between any Presidencies/sea zones (including China once created)."]),
+('China is an eligible sea zone for ship transfers',["each moving one writer or ship between any Presidencies/sea zones (including China once created)."])]),
+('Q104','Correct','The Army movement passage includes both optional transfers and mandatory assignment of every trainee to an Army top half.',[
+('Military Affairs may make up to two Army transfers',["May make up to two transfers"]),
+('Each transfer moves one officer or regiment',["each officer or regiment from one Army to another"]),
+('A transfer moves from one Army to any other Army',["each officer or regiment from one Army to another"]),
+('Transferred pieces are in the top half of the destination Army box',["each officer or regiment from one Army to another, remaining in top half."]),
+('Every piece in Officers-in-Training must be assigned',["Then assign **every** Officer-in-Training to any Army's top half."]),
+('Each trainee may be assigned to any of the three Armies',["Then assign **every** Officer-in-Training to any Army's top half."]),
+('New officers are placed in the top half of their Army box',["Then assign **every** Officer-in-Training to any Army's top half."])]),
+('Q105','Correct','Separating adjacent different-Presidency writers with dividers clearly places the divider between them on the connection and preserves affiliation for Refresh.',[
+('Adjacent writers from different Presidencies trigger placing a divider',["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."]),
+('Place the divider on their connecting route',["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."]),
+('The divider preserves separate Presidency affiliation during Refresh',["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."])]),
+('Q106','Correct','The concrete conclusion correctly distinguishes the ordinary Invasion closure/Cascade from already performed Rebellion or Foreign Invasion closure.',[
+('Ordinary Invasion Crisis Company Region Loss closes every open order in the lost region',["An Invasion Crisis Region Loss closes all orders in the target region"]),
+('Resolve a Cascade if all orders in that region were already closed',["if they are already closed, it Cascades."]),
+('Region Loss does not add a second closure/Cascade step for Rebellion or Foreign Invasion',["Region Loss adds no second closing/Cascade step for Rebellion or Foreign Invasion losses"])]),
+('Q107','Correct','The investment passage gives free action order, the nobody-wishes-more stopping condition and subsequent strategies.',[
+('Firm Investments has no fixed player action order',["take investments actions without set order until nobody wishes more."]),
+('Players may take investment actions at any time during the step',["take investments actions without set order until nobody wishes more."]),
+('Investment actions finish when no player wishes to take further actions',["take investments actions without set order until nobody wishes more."]),
+('Firm Strategy follows the Firm Investments step',["Then choose strategies."])]),
+('Q108','Correct','Both ships and shares consolidate into the primary firm; the added conditional excess-share rule is supported.',[
+('Secondary firms’ ships consolidate into the surviving primary firm',["The secondary firms’ ships and shares transfer to the primary firm."]),
+('Secondary shareholders/shares consolidate into the surviving primary firm',["The secondary firms’ ships and shares transfer to the primary firm."])]),
+('Q109','Correct','The applicable errata passage supplies corrected timing, own-officeholder dice and twice-highest calculation.',[
+('Company Fraud is played at the start of Revenue',["Company Fraud is played at start of Revenue"]),
+('Roll one die for each of your own officeholders',["roll one die per your officeholder"]),
+('The raw amount is twice the highest die result',["reduce Balance by twice the highest roll (minimum zero)"])]),
+('Q110','Correct','The conclusion and operative passages authorize repeated successes while preserving resource, legal-action and catastrophe limits.',[
+('The same Commander may successfully Deploy again during the operation as many times as desired and affordable',["**May Deploy repeatedly while able, including after a success: there is no one-success-per-turn cap.**"]),
+('Further actions must use still-available active resources rather than reuse exhausted pieces',["each further Deploy must use remaining resources", "Exhausted pieces are unavailable."]),
+('The ordinary target/no-dead-action restrictions still apply to further Deploy actions',["each further Deploy must use remaining resources and a legal, effective target", "You cannot take a dead action with no effect or chance of success"]),
+('Catastrophic failure ends that Commander’s operation',["catastrophe ends further office actions."])]),
+('Q111','Correct','The retained faceup spent card, one-time use and continuing printed Power are all explicit.',[
+('A blackmail card’s effect may be used only once',["A blackmail effect is one-time", "it cannot be used again or traded."]),
+('Keep the used card in its player’s area',["after use, keep the card faceup in your player area"]),
+('The used card is kept faceup',["after use, keep the card faceup in your player area"]),
+('Using the effect does not remove the card’s printed Power, which still counts at Final Scoring whether faceup or facedown',["Any printed Power still counts at Final Scoring whether the card is faceup or facedown."])]),
+('Q112','Correct','The Company Revenue sequence establishes remaining Balance as the available fund for affordable dividends; choice, cost, all share payments, waiver prohibition and strict Standing threshold are covered.',[
+('The Chairman chooses whether to pay ordinary Company dividends',["Chairman may pay any affordable number."]),
+('The Chairman may pay multiple dividends',["Chairman may pay any affordable number."]),
+('Dividend payments must fit within available Company Balance',["2. **Expectations:** Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.\n3. **Dividends:** Chairman may pay any affordable number."]),
+('Company Balance funds the dividends',["2. **Expectations:** Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.\n3. **Dividends:** Chairman may pay any affordable number. Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman."]),
+('Each dividend costs the total number of Company shares',["Each dividend costs one cash per Company share"]),
+('Each dividend pays every shareholder £1 for each Company share owned',["pay each owner £1 per share, including Chairman."]),
+('The Chairman counts as a Company share for dividend cost and payout',["Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman."]),
+('Individual Company shareholders cannot use the firm dividend-waiver permission',["**Company shareholders cannot waive payment.**"]),
+('Advance Standing one space when total cash paid in dividends is strictly greater than Expectations',["If total cash paid as dividends is **strictly greater** than expectations, advance Standing one space."])]),
+('Q113','Correct','Both initial marker state and the resulting first-action limitation are explicit.',[
+('At game start the opportunity marker is not on any Family action',["The marker begins off the board"]),
+('The first main Family action cannot be doubled under the opportunity marker’s normal repeat rule',["the first chosen main action cannot be doubled under the repeat rule; it is taken once."])]),
+('Q114','Correct','Reducing Company Balance by the listed per-unit expenses specifies both the charged account and the calculated debit.',[
+('Ordinary Company Revenue expenses are charged to Company Balance',["**Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]),
+('Lower the Company Balance marker by the calculated ordinary expense total',["**Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."])]),
+('Q115','Correct','The conclusion identifies the attacking region as the one losing a tower.',[
+('A failed ordinary non-Company Invasion removes one tower level from the attacking region',["The attacking (acting) region loses one tower."])]),
+('Q116','Correct','Manager discretion, the India cash source and choosing zero despite available cash are resolved explicitly.',[
+('The firm manager chooses whether and how many ordinary dividends to pay using available India-treasury cash',["The manager chooses whether and how many dividends to pay, and may choose none even if India-treasury cash is available.", "After expenses, manager may pay dividends **from India treasury only**."]),
+('The manager may choose zero dividends even when India-treasury cash is available',["The manager chooses whether and how many dividends to pay, and may choose none even if India-treasury cash is available."])])
+]
+packet=json.loads((base/'packet.json').read_text())
+assert len(rows)==len(packet['entries'])==19
+grades=[]
+for row,entry in zip(rows,packet['entries']):
+ ident,grade,reason,parts=row
+ assert ident==entry['id']
+ assert [p[0] for p in parts]==entry['requested_fact_scope_entry']['material_requested_facts']
+ reader=entry['reader_a_entry']
+ texts=[reader['answer']]+reader.get('case_conclusions',[])+[e['quote'] for e in reader.get('evidence',[])]+[l['supported_fact_or_case_result'] for l in reader.get('clause_ledger',[]) if 'supported_fact_or_case_result' in l]
+ for _,quotes in parts:
+  assert quotes
+  for quote in quotes:
+   assert any(quote in s for s in texts),(ident,quote)
+ grades.append({'id':ident,'grade':grade,'reason':reason,'material_parts':[{'requirement':requirement,'status':'covered','reader_quotes':quotes} for requirement,quotes in parts],'unsupported_guesses':[],'summary_issue_if_any':None})
+output=base/'grades-same-entry.json'
+output.write_text(json.dumps({'block_id':'block-06','readers':{'reader-a':{'grades':grades}}},ensure_ascii=False,indent=2)+'\n')
+print(json.dumps({'path':str(output),'grades':len(grades),'atoms':sum(len(g['material_parts']) for g in grades),'sha256':hashlib.sha256(output.read_bytes()).hexdigest()}))

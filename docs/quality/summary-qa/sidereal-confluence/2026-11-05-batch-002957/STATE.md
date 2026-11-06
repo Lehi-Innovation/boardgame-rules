@@ -1,3 +1,19 @@
+# Current: full-iteration-02 fresh readers running
+
+expanded-v12 independent all3PASS86questions/256atoms; actual18fulltexts/39nativeviews before report verified. Root zero-add passes34/35. Pure05 PASS on exact f57ad40285701ca8652d87e22273007761604b2e1a50cf65051281ff1c189332; actual15fulltexts/36slices/41nativeviews before report verified. Targeted checks and15frozenbanks/34sources integrity PASS. Full-iteration-02 frozen latest bank+summary+audit+review. NEW full2_reader_a and full2_reader_b Luna/high/forknone dispatched same exact generic protocol+prebound v10 helper, only frozen summary/questions allowed rules DATA. Await both complete then verify actualprompt/model/inputdelivery/sourceunits and NEW independent whole-entry grading all86/256each. Old audits/keys/reader failures retained. Goal ACTIVE pending coordinator stamping/exactbyte verification; no shared writes/stamp/commit.
+
+---
+
+# Current authoritative state: expanded-v12 / new pure audit05 pending
+
+Canonical SHA f57ad40285701ca8652d87e22273007761604b2e1a50cf65051281ff1c189332; 30514 characters. Corrected original printed relic cost to ice/snowflake. Old source-audit04 PASS certifies old8d3e only, never current bytes. NEW pure_source_auditor_05 Sol6.1/high/fork none running exact audit05 snapshot plus actual authorities only. No external blocker. Source manifest v2 adds original printed relic deck reverse; original33 source hashes and original manifest v1 preserved.
+
+Bank expanded-v12:86questions/256facts. Q36.F02 source correction; Q86 asks explicit both-converter Kjas territory permission. All85 previous question wording unchanged. Stopping reset at pass33; renewed whole-source rewalks and NEW independent clean review required. No full2 readers dispatched. Goal ACTIVE pending coordinator stamping and exact-byte verification.
+
+---
+
+The following entries are retained historical state, not current certification:
+
 # Latest current bank — expanded-v11
 
 - Current bank85questions/255facts. Fresh v10 reviewer source/keyPASS, exactscopePASS, coverageNEEDS_FIX ordinary simultaneousTrade actions vsindividualplayerturns. AcceptedQ84. Root originalTradeparagraph freelyexchange+nominalroughguide rewalk addsQ85 actualnegotiatedratiosfreedom, separatefromconvertercostsubstitutionQ25(whichmovedguidepurposecontextualinexactscopefix). Q23keyclarifies bidding ships as shipsconcealedduringbidding inclreserveeligibility; reserve-durationremainsonlyQ82. Allprevious83questionwordingunchanged; onlyQ23keyclarified, fullyversioned beforefreshreaders.

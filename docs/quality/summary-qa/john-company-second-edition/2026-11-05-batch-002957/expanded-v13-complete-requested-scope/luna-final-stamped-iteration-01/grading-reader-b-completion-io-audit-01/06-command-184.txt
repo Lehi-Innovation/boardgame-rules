@@ -1,0 +1,140 @@
+python3 - <<'PY'
+import json,hashlib
+from pathlib import Path
+p=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-final-stamped-iteration-01/grading-reader-b/block-06')
+packet=json.loads((p/'packet.json').read_text())
+# Manually selected semantic support for every fixed atom, in packet order.
+support={
+'Q098':[
+["Count only this attempt's surviving participating officers and used regiments/alliances."],
+["| Commander family first | £1 for Commander **plus £1 for each of their used surviving officers**. |"],
+["| Other families clockwise | £1 per used surviving officer of that family. |"],
+["Pay in this order, stopping when cash runs out"],
+["| Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |"],
+["| Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |"],
+["**Repeat that entire cycle from the Commander until all loot is distributed.**"]],
+'Q099':[
+["If it faced outward from the conquered region, move it **fully inside that region**, now threatening Rebellion."],
+["Move the Elephant fully inside the conquered region; it now threatens Rebellion."]],
+'Q100':[
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."],
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."],
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."],
+["Exclude Commanders."],
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."],
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]],
+'Q101':[
+["With that consent, the shareholder may forgo payment for any number of shares on any dividend."],
+["**Waiving a dividend requires BOTH the shareholder's choice and the MANAGER'S CONSENT**"],
+["Record **total actual cash paid out**, not per-share dividend, with dividend cube on Company Balance track."],
+["Record **total actual cash paid out**, not per-share dividend, with dividend cube on Company Balance track."],
+["Sweep remaining India money into London."]],
+'Q102':[
+["Once game over, stop negotiations, calling promises and playing blackmail unless a card explicitly permits final-scoring use."],
+["Once game over, stop negotiations, calling promises and playing blackmail unless a card explicitly permits final-scoring use."]],
+'Q103':[
+["### Director of Trade (p18)","May make repeated Special Envoy checks: £1 treasury cash per die, no penalty."],
+["£1 treasury cash per die, no penalty."],
+["£1 treasury cash per die, no penalty."],
+["After all envoys, may make up to two transfers, each moving one writer or ship between any Presidencies/sea zones (including China once created)."],
+["After all envoys, may make up to two transfers, each moving one writer or ship between any Presidencies/sea zones (including China once created)."],
+["After all envoys, may make up to two transfers, each moving one writer or ship between any Presidencies/sea zones (including China once created)."],
+["After all envoys, may make up to two transfers, each moving one writer or ship between any Presidencies/sea zones (including China once created)."]],
+'Q104':[
+["May make up to two transfers, each officer or regiment from one Army to another, remaining in top half."],
+["May make up to two transfers, each officer or regiment from one Army to another, remaining in top half."],
+["May make up to two transfers, each officer or regiment from one Army to another, remaining in top half."],
+["May make up to two transfers, each officer or regiment from one Army to another, remaining in top half."],
+["Then assign **every** Officer-in-Training to any Army's top half."],
+["Then assign **every** Officer-in-Training to any Army's top half."],
+["Then assign **every** Officer-in-Training to any Army's top half."]],
+'Q105':[
+["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."],
+["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."],
+["Separate adjacent writers from different Presidencies with dividers for correct return at Refresh."]],
+'Q106':[
+["An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them."],
+["An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them."],
+["An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them."]],
+'Q107':[
+["take investments actions without set order until nobody wishes more."],
+["take investments actions without set order until nobody wishes more."],
+["take investments actions without set order until nobody wishes more."],
+["Then choose strategies."]],
+'Q108':[
+["Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides."],
+["Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides."]],
+'Q109':[
+["Company Fraud is played at start of Revenue: roll one die per your officeholder, reduce Balance by twice the highest roll (minimum zero), and take cash from the bank equal to that actual Balance reduction"],
+["roll one die per your officeholder"],
+["reduce Balance by twice the highest roll (minimum zero)"]],
+'Q110':[
+["**May Deploy repeatedly while able, including after a success: there is no one-success-per-turn cap.**"],
+["Exhaust chosen officers/regiments to bottom for one die each and local alliances for printed dice.","Its strength is usable once that turn and cannot be split among more than one purpose.","a noncatastrophic failure can retry using remaining resources."],
+["Target own Presidency's home, any associated region, or any region bordering an associated region. Cannot target another home region or another Presidency's Company-controlled region. Company region must have unrest or a closed order to give action an effect."],
+["On catastrophe, Commander returns half own family's trophies rounded up and Commander member to supply."]],
+'Q111':[
+["A blackmail effect is one-time: after use, keep the card faceup in your player area; it cannot be used again or traded."],
+["after use, keep the card faceup in your player area"],
+["after use, keep the card faceup in your player area"],
+["Any printed Power still counts at Final Scoring whether the card is faceup or facedown."]],
+'Q112':[
+["Chairman may pay any affordable number."],
+["Chairman may pay any affordable number."],
+["Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.","Chairman may pay any affordable number. Each dividend costs one cash per Company share"],
+["Then Company:","Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.","Chairman may pay any affordable number. Each dividend costs one cash per Company share"],
+["Each dividend costs one cash per Company share"],
+["pay each owner £1 per share, including Chairman."],
+["Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman."],
+["**Company shareholders cannot waive payment.**"],
+["If total cash paid as dividends is **strictly greater** than expectations, advance Standing one space."]],
+'Q113':[
+["No. The marker begins off the board, so the first chosen main Family action is taken once."],
+["No. The marker begins off the board, so the first chosen main Family action is taken once."]],
+'Q114':[
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."],
+["Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China."]],
+'Q115':[["On failure, attacker loses one tower."]],
+'Q116':[
+["After expenses, manager may pay dividends **from India treasury only**. Each dividend pays £1 per firm share plus £1 manager."],
+["After expenses, manager may pay dividends **from India treasury only**.","An active non-Hobnob firm paying none records zero"]]
+}
+reasons={
+'Q098':'All requested eligibility, clockwise payout amounts, bank shares, exhaustion of cash and repeated cycles are expressly covered.',
+'Q099':'The conditional inward move and resulting rebellion against the newly controlling Company are covered.',
+'Q100':'The complete £1 expense census, Army qualification, Commander exception and China inclusion are covered.',
+'Q101':'The shareholder waiver scope and manager consent, actual-total marker on the Balance track, and India-to-London remainder are covered.',
+'Q102':'The game-over blackmail prohibition and explicit card permission exception are covered.',
+'Q103':'The Director heading identifies the treasury; the Envoy rate and penalty and all transfer limits and China eligibility are covered.',
+'Q104':'Both transfers and mandatory trainee assignment include their numbers, eligible pieces and Armies, and top-half placement.',
+'Q105':'Separating adjacent writers with dividers clearly places the divider between them on their connection; the text also specifies the affiliation/Refresh purpose.',
+'Q106':'The Region Loss passage covers ordinary Invasion closure, the already-closed Cascade branch, and no additional closure for the other two types.',
+'Q107':'No set order, continuation until nobody wishes more and subsequent strategy selection cover the whole requested procedure.',
+'Q108':'The merger passage expressly transfers secondary ships and shares to the primary firm.',
+'Q109':'Corrected start-of-Revenue timing, one die per own officeholder and twice-highest raw amount are covered.',
+'Q110':'Partial: repeated successes, exhaustion/remaining resources, ordinary target restrictions and catastrophe removing the Commander are covered, but the same entry omits the general prohibition on Deploy with no chance of success (for example no dice). Its Company-region effect restriction only covers the no-effect branch. The full summary provides the missing rule at line 150 under Company Operation: "You cannot take a dead action with no effect or chance of success: for example trade with no ship or deploy without dice to trigger possible officer losses." This is reader selection/coverage error, not missing summary coverage.',
+'Q111':'The one-use effect, retained faceup card in the player area and retained final Power are expressly covered.',
+'Q112':'All requested dividend rules are covered. The Company Revenue sequence operates on remaining Balance before the affordable dividend payment, clearly identifying Balance as its funding limit; the remaining rules are explicit.',
+'Q113':'The case conclusion directly resolves both the initial off-board marker and the first-action consequence.',
+'Q114':'Reducing Balance by £1 per expense item is the requested Company Balance debit by the calculated total.',
+'Q115':'The ordinary Invasion passage explicitly assigns the single tower loss to the attacker.',
+'Q116':'The manager may pay India-funded dividends; optional payment and the express non-Hobnob zero-payout branch establish discretion including none.'
+}
+grades=[]
+for e in packet['entries']:
+    q=e['id']; atoms=e['requested_fact_scope_entry']['material_requested_facts']; quotes=support[q]
+    assert len(atoms)==len(quotes)
+    allowed=[e['reader_b_entry']['answer']]+e['reader_b_entry'].get('case_conclusions',[])+[x['quote'] for x in e['reader_b_entry'].get('evidence',[])]
+    for qs in quotes:
+        for quote in qs:
+            assert any(quote in s for s in allowed),(q,quote)
+    parts=[{'requirement':atom,'status':('omitted' if q=='Q110' and i==2 else 'covered'),'reader_quotes':qs} for i,(atom,qs) in enumerate(zip(atoms,quotes))]
+    issue=None
+    if q=='Q110':
+        issue={'cause':'reader_error','summary_location':'line 150, Company Operation / Success checks','summary_quote':'You cannot take a dead action with no effect or chance of success: for example trade with no ship or deploy without dice to trigger possible officer losses.','explanation':'Summary coverage is present. The selected Commander passage covers target and effect restrictions but does not state the no-chance-of-success prohibition.'}
+    grades.append({'id':q,'grade':('Partial' if q=='Q110' else 'Correct'),'reason':reasons[q],'material_parts':parts,'unsupported_guesses':[],'summary_issue_if_any':issue})
+output=p/'grades-same-entry.json'
+blob=json.dumps({'block_id':'block-06','readers':{'reader-b':{'grades':grades}}},ensure_ascii=False,indent=2)+'\n'
+output.write_text(blob)
+print(json.dumps({'path':str(output),'grades':len(grades),'material_parts':sum(len(x['material_parts']) for x in grades),'sha256':hashlib.sha256(blob.encode()).hexdigest()}))
+PY

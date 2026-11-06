@@ -78,7 +78,7 @@ def verify(iteration,reader,task):
    for e in evidence:
     if isinstance(e,dict) and all(k in e for k in ['start','end','text']):spanchecks.append({'id':answer['id'],'start':e['start'],'end':e['end'],'literal':s[e['start']:e['end']]==e['text']})
  assert all(x['literal'] for x in spanchecks)
- assert all(t['actual_model']=='gpt-6-luna' and t['actual_effort']=='high' for t in turns)
+ assert turns and all(t['actual_model']=='gpt-6-luna' and t['actual_effort']=='high' for t in turns)
  payload={'reader':reader,'requested_model':'gpt-6-luna','requested_effort':'high','fork_turns':'none','runtime_source_path':str(log),'identity':identity,'model_records':turns,'input_delivery':receipts,'raw_receipt_metadata_diagnostics':metadata_diagnostics,'first_answer_file_write_record_ordinal':first_answer_write,'all_inputs_delivered_before_first_answer_file_write':True,'all_expected_ids_exactly_once':True,'evidence_literal_span_checks':spanchecks,'raw_response_sha256':sha(p.read_bytes()),'validation':'PASS','scope':'Technical input/output integrity separate from factual grades. Opaque original-record hashes retained, no internal instructions/account/permissions copied.'}
  (d/f'reader-{reader}-runtime-delivery.json').write_text(json.dumps(payload,indent=2)+'\n');print(iteration,reader,'runtime and delivery PASS',len(actual))
 if __name__=='__main__':verify(*sys.argv[1:])

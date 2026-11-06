@@ -1,6 +1,6 @@
 from pathlib import Path
 import json,hashlib,sys
-B=Path(__file__).parent;idx=sys.argv[1];j=json.loads((B/'coverage-ledger.json').read_text());compact={k:j[k] for k in ['benchmark','question_count','source_hierarchy','novelty_policy','stopping_rule','book_passages','faq_rulings','precise_clause_mappings']};compact.update(retained_non_novel_regressions=['Q32','Q100']);aliases={}
+B=Path(__file__).parent;idx=sys.argv[1];j=json.loads((B/'coverage-ledger.json').read_text());compact={k:j[k] for k in ['benchmark','question_count','source_hierarchy','novelty_policy','stopping_rule','book_passages','faq_rulings','precise_clause_mappings']};aliases={}
 # Supply the required stopping protocol, not prior review outcomes or author saturation claims.
 compact['stopping_rule']={'required_consecutive_zero_addition_passes':2,'fresh_independent_challenge_required':True,'no_forced_pass_or_discovery_quota':True}
 compact['working_base_scope_credit']={'path':str((B/j['benchmark']/'core-scope-credit.json').resolve()),'interpretation':'Independently validate this working clause-level metadata. Historical mappings can retain source-correct generalized/unverified regressions without granting current-base novelty or making every broad Core-labelled FAQ row a saturation requirement. Zero credit never waives regression grading.'}

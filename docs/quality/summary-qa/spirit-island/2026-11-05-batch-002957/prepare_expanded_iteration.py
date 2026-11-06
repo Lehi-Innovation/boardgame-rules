@@ -24,6 +24,7 @@ assert cr['verdict']=='PASS' and progress['coverage_review']['status']=='PASS'
 assert progress['coverage_review']['benchmark']==bankname and progress['coverage_stopping_rule']['independent_challenge']=='PASS'
 assert cr['checked_question_ids']==ids
 assert ar['verdict']=='PASS' and not ar['findings'] and ar['candidate_sha256']==H(ROOT/'rules/spirit-island.md')
+assert sr['verdict']=='PASS', 'Resolve the complete current independent scope/key report before freezing readers'
 assert sr['asked_fact_mapping_verdict']=='PASS' and sr['asked_fact_map_sha256']==H(factpath)
 assert not sr['asked_fact_mapping_findings']
 assert sr['fixed_key_verdict']=='PASS' and not sr['fixed_key_findings']

@@ -1,0 +1,210 @@
+from pathlib import Path
+import json,hashlib
+p=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-final-stamped-iteration-01/grading-reader-a/block-03')
+packet=json.loads((p/'packet.json').read_text())
+# The following are the independently chosen content judgments and exact supporting quotations,
+# in the fixed requested-atom order for each entry. No semantic decision is inferred by code.
+chosen=[
+('Q041','Correct','All five requested China facts are explicitly resolved in the same-entry China passage.',[
+'Created by successful envoy **or** Envoy to China law',
+'**in either case the Chairman immediately hires any writer**',
+'Its treasury holds ships, not cash.',
+'After Bengal, may attempt China Trade',
+'They count Eastern for expenses, events, storms and laws.']),
+('Q042','Correct','All attempt restrictions and dice, controlled-export revenue and personal-bonus formulas are correct and supported.',[
+'**only ONCE, including a failed attempt: no retry**',
+'**Without an export icon in Company-controlled regions, do not attempt China Trade at all.**',
+'Neither payment counts exports in non-Company regions',
+'Roll one die per ship.',
+'On success, count export icons in **all Company-controlled regions only**:\n\n| Recipient | Amount |\n|---|---|\n| Company Balance | **£4 × number of those export icons**. |',
+"| Superintendent's family | **£1 × number of those export icons**, from bank. |"]),
+('Q043','Correct','The passage covers the complete institutional transition, retained holder/fatigue/treasury/position and subsequent conquest/loss exceptions.',[
+'immediately make all Governors pensioners',
+'remove their overlays and partially built Company ships',
+'remove their overlays and partially built Company ships',
+'Replace Director of Trade with Governor General, preserving holder and fatigue',
+'preserving holder and fatigue',
+"uses former Director's treasury and turn position",
+"uses former Director's treasury and turn position",
+'return Governor/Director cards to box.',
+'No further Governors/overlays created upon conquest',
+'Skip Governor Elimination when regions are lost.']),
+('Q044','Correct','Guaranteed Company revenue, all unrest triggers, mandatory single benefit per region, each option and the success cap are covered. The single £2 benefit conveys the unsplit option.',[
+'First Balance +£3 per Company region.',
+'**Every 6 rolled adds one unrest to each Company region**',
+'On failure add another unrest to every Company region.',
+'or £2 Balance/any office treasury **except own**, adding unrest to a Company region.',
+'Multiple Tax choices this turn must put their unrest in different regions.',
+'**must choose one benefit per region**',
+'complete Company ship into any sea zone including China',
+'regiment into any Army',
+'**must choose one benefit per region**: complete Company ship into any sea zone including China; regiment into any Army; or £2 Balance/any office treasury **except own**',
+'At most one successful Govern per turn.']),
+('Q045','Correct','The same-entry storms table and roll procedure cover every fatigue outcome, return state, zone and ownership exemption.',[
+'| Player-owned ships in Company fleets | Check ships in the affected sea zone(s). |\n| Ships assigned to China | Count as **Eastern** sea zone. |\n| Firm ships | Count in the sea zone on their **firm strategy**, even though on a charter. |\n| Hobnob firm ships | **Exempt** from storms. |\n\nRoll **once per eligible ship**',
+'1–2 nothing',
+'3–4 fatigue, or sink if already fatigued',
+'3–4 fatigue, or sink if already fatigued',
+'5–6 sink.',
+'Return a sunk ship to its shipyard **unfatigued**.',
+'| Company and extra ships | **Exempt**; never roll storm checks. |',
+'| Company and extra ships | **Exempt**; never roll storm checks. |',
+'| Ships assigned to China | Count as **Eastern** sea zone. |',
+'| Firm ships | Count in the sea zone on their **firm strategy**, even though on a charter. |',
+'| Hobnob firm ships | **Exempt** from storms. |']),
+('Q046','Correct','Order cleanup, propagation, closed-target fallback and the distinction between initiating and receiving Cascades are all explicit.',[
+"Return any writer on a newly closed order to its owner's supply",
+'flip a filled token to closed.',
+"If told to close an order in an already fully closed region, Cascade: close all open orders directly connected to that region's orders.",
+"If a connected order is already closed, close that region's northernmost open order instead.",
+'If none are open, it also Cascades.',
+'A region can initiate a Cascade only once per event tile',
+"but can receive multiple Cascades' effects."]),
+('Q047','Correct','All three event procedures and the empty-stack Shuffle reversal appear in the entry.',[
+'| Turmoil | Close northernmost open order in top-stack region; if all closed, Cascade. |',
+'Close northernmost open order',
+'if all closed, Cascade.',
+'orders in top-stack region and every bordering region.',
+'Owners take £1 per writer on orders in top-stack region and every bordering region.',
+"| Shuffle | Elephant's March, then shuffle this tile with remaining draw stack",
+'shuffle this tile with remaining draw stack',
+'separately shuffle discards and place on top.',
+'If draw stack empty, March last instead.']),
+('Q048','Correct','Leader location, both regional outcomes and the restricted March condition are explicit.',[
+'Top-stack sovereign region gains one tower.',
+'Top-stack sovereign region gains one tower.',
+'Dominated region instead rebels with printed explosion modifier.',
+'March only if Elephant was fully inside a Company region that successfully rebelled.']),
+('Q049','Correct','Both Peace positional branches and the subsequent March are completely resolved.',[
+"Open orders connected across Elephant's border",
+'add one tower to each touched non-Company region.',
+'If Elephant wholly inside a region, instead open all its orders and remove its unrest.',
+'If Elephant wholly inside a region, instead open all its orders and remove its unrest.',
+'Then March.']),
+('Q050','Correct','The Invasion passage resolves full empire strengths, strict comparison and all requested flag branches. Shattering the entire defender empire conveys removal of its matching flags.',[
+"Sovereign attacker's whole empire strength + event modifier",
+"defender's whole empire strength",
+'must be **greater than**',
+"must be **greater than** defender's whole empire strength",
+"On success, replace defender's flag with attacker's dominated flag",
+'taking a capital shatters its entire empire.',
+'If attacker had no empire, use a free capital/star flag and matching small flag',
+'if none available no new empire/flags form.']),
+('Q051','Correct','The Rebellion rule explicitly restricts the compared regions, requires strict superiority and removes a tower from the capital on failure.',[
+'Compare only rebelling region strength + modifier',
+"against its sovereign capital's strength",
+'other empire regions do not count.',
+'Must be strictly greater.',
+'Must be strictly greater.',
+'Failure removes one tower from the capital.']),
+('Q052','Correct','The full Region Loss passage covers all requested cleanup, officer elimination, loot status, escalation and independent regional defenses. Officer removal and returned members have their ordinary supply destination in context.',[
+'Commander member returns to supply.',
+"Commander returns half their family's trophies rounded up",
+'Eliminate Governor: return office card to unused stack, fatigue and member to supplies.',
+'Eliminate Governor: return office card to unused stack, fatigue and member to supplies.',
+'Eliminate Governor: return office card to unused stack, fatigue and member to supplies.',
+'Remove Governor overlay, partially built Company ship and unrest.',
+'Remove Governor overlay, partially built Company ship and unrest.',
+'Remove Governor overlay, partially built Company ship and unrest.',
+"Restore dome with one tower (or Foreign Invasion's specified strength) and appropriate invasion flag.",
+'and appropriate invasion flag.',
+'Return control token to its region with **the £ loot side DOWN and the region-symbol side UP**.',
+'region loses its Presidency association.',
+'Roll once per officer in associated Army: each 6 removes that officer.',
+'Roll once per officer in associated Army: each 6 removes that officer.',
+'Future conquest gets no loot modifier',
+'Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc.',
+'Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc.',
+'**Losing one region does not automatically lose any other Company region: resolve each other attack and its defense separately.**',
+'**Losing one region does not automatically lose any other Company region: resolve each other attack and its defense separately.**']),
+('Q053','Correct','The March passage covers the Invasion destination priority and every posture and neighbor-selection branch.',[
+'After successful Invasion Crisis, move to successful capital (Imperial Ambitions)',
+'otherwise top-stack region.',
+'Company region: place fully inside.',
+'Dominated region: point toward its sovereign.',
+'Sovereign: point across shape-marked border on tile.',
+'If that neighbor is already dominated by actor, choose first clockwise neighbor that is not.',
+"If all neighbors dominated, use the redirect-arrow shape's border, pointing toward empire capital."]),
+('Q054','Correct','The Foreign Invasion row and strength exception cover all targets, die strength, success cleanup, tower formula and conditional circle March. The only-if condition also excludes a redirect in other cases.',[
+'West→Bombay',
+'South→Madras',
+'East→Bengal',
+'all storms means each',
+'none means top-stack region.',
+'Per target roll ordinary die for attack strength',
+'**Primary Foreign Invasion:** the ordinary attack die, with no added unrest',
+'resolve Invasion/Company attack.',
+'On success close all orders (Cascade if already all closed)',
+'On success close all orders (Cascade if already all closed)',
+"remove target's flag and all matching flags if capital",
+"remove target's flag and all matching flags if capital",
+'restore dome if Company-controlled',
+'set tower strength to half attack roll rounded down.',
+'March with circle shape only if Elephant was fully inside a Company region that was invaded.',
+'March with circle shape only if Elephant was fully inside a Company region that was invaded.']),
+('Q055','Correct','Drawing limits, optional stopping, forced dilemma selection and directional first-matching policy selection before the vote are all explicit.',[
+'PM must draw at least one law, revealing them one at a time. **After one or two ordinary (non-dilemma) draws, the PM may stop drawing, or continue up to three total.',
+'Choose any one law already revealed and discard the others.',
+'Choose any one law already revealed and discard the others.',
+'Drawing a dilemma instead forces selection of that dilemma and ends drawing immediately.',
+'Drawing a dilemma instead forces selection of that dilemma and ends drawing immediately.',
+"PM moves the dial's arm clockwise or counterclockwise",
+"stopping on the **first** policy space matching the chosen law's bottom icon.",
+'That space fixes the target and consequence.',
+"**Before voting**, PM moves the dial's arm"]),
+('Q056','Correct','Tax and bonus cash directions/rates, unpaid-target consequences, windows, prestige category and Power swaps are all covered. The repeated fixed atom is represented once for each requested policy occurrence.',[
+'**Each family pays £1 TO THE BANK per target it owns.**',
+'Each unpaid target returns to supply, including Chairman if taxed.',
+"When selected policy includes windows, additionally pay each window on enterprises and each family member's prize",
+'return enterprise/prize member if unable.',
+'**The BANK PAYS EACH FAMILY £1 per target that family owns.**',
+'Swap target Power marker with next higher marker',
+'if already highest, swap any other pair.',
+'Prestige enterprises count as enterprises of their printed type for these policies.']),
+('Q057','Correct','The voting paragraph explicitly covers cash costs, card rotation and non-reuse, complete round order, PM authority and mandatory stopping after a zero-vote round.',[
+'each £1 family cash buys one vote',
+"**Each card's votes may be used only once in the entire vote, across all rounds",
+'rotate it when used and leave it rotated until vote resolution.',
+'It cannot vote again in a later round of the same vote.',
+'Starting PM, clockwise, players cast votes',
+'PM may call another full round or stop after each',
+'PM may call another full round or stop after each',
+'a round with no votes must end voting.']),
+('Q058','Correct','Vote direction, Opposition Leader and ties, coalition consent/counting and the PM promise exception are all covered in the same-entry voting paragraph.',[
+'A player who voted for may later oppose',
+'once opposed, cannot vote for during this vote.',
+'biggest opponent holds Opposition Leader',
+'tied current holder retains it.',
+"With recipient's consent",
+'someone who already opposed or commits to oppose',
+"add them to that person's opposition total.",
+'PM cannot oppose',
+'PM cannot oppose or consent to enterprises opposing',
+'except forced use of the "Vote with my enterprises" promise.']),
+('Q059','Correct','Final-turn upkeep and scoring, unpaid-prize removal/VP loss and every requested ordinary Refresh item are resolved. Returning an unpaid member conveys its normal supply destination.',[
+'Pay printed upkeep separately for each family member on a prize.',
+'If unpaid, return that member and lose that prize\'s printed VP.',
+'If unpaid, return that member and lose that prize\'s printed VP.',
+'On final turn, perform upkeep but skip Refresh and go to Final Scoring.',
+"| Writers on orders | Return to their **associated Presidency's Writers box**; use dividers to preserve affiliation. |",
+'| Filled tokens and Presidency dividers | Return to supply. |',
+'| Filled tokens and Presidency dividers | Return to supply. |',
+'| Extra ships | Return to supply. |',
+'| Exhausted Army officers and regiments | Reactivate. |',
+'| Active local alliances | Exhaust; do not reactivate alliances. |',
+'**Advance one turn, then begin London Season.**'])
+]
+assert len(chosen)==len(packet['entries'])==19
+grades=[]
+for entry,(qid,grade,reason,quotes) in zip(packet['entries'],chosen):
+ assert entry['id']==qid
+ facts=entry['requested_fact_scope_entry']['material_requested_facts']
+ assert len(facts)==len(quotes),(qid,len(facts),len(quotes))
+ reader=entry['reader_a_entry']
+ allowed=[reader.get('answer','')]+reader.get('case_conclusions',[])+[x.get('quote','') for x in reader.get('evidence',[])]+[x.get('supported_fact_or_case_result','') for x in reader.get('clause_ledger',[])]
+ for quote in quotes:
+  assert quote and any(isinstance(s,str) and quote in s for s in allowed),(qid,quote)
+ grades.append({'id':qid,'grade':grade,'reason':reason,'material_parts':[{'requirement':fact,'status':'covered','reader_quotes':[quote]} for fact,quote in zip(facts,quotes)],'unsupported_guesses':[],'summary_issue_if_any':None})
+out=p/'grades-same-entry.json'
+out.write_text(json.dumps({'block_id':'block-03','readers':{'reader-a':{'grades':grades}}},ensure_ascii=False,indent=2)+'\n')
+print(json.dumps({'path':str(out),'grades':len(grades),'material_parts':sum(len(g['material_parts']) for g in grades),'sha256':hashlib.sha256(out.read_bytes()).hexdigest()}))
