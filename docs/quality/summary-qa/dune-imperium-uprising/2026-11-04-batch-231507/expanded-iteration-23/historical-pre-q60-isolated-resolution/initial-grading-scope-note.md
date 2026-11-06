@@ -1,0 +1,5 @@
+# Trial23 initial complete grading; Q60 scope pending
+
+The NEW complete202-response independent grader returns A100correct/1partialQ60 and B101correct, unsupported0. A60 includes all four Influence cubes; its exact initial locations are not stated. This differs from22B60’s omitted component. The coordinator independently reviews all202rawanswers and identifies no other material finding; only Q60’s actual requested counts-versus-placement scope remains. One NEW neutral exact-case reviewer receives the actualQ60/fixedv17key/full23A+B answers/evidence and all359frozenSummarylines, with no proposedgrade, oldB60history, rootreasoning, otheranswers or targetscore.
+
+Preserve the initial full202grader and exports; hold canonicalace79bytes unchanged pending that single scope result. Do not preemptively edit or begin anotherrepair. No rawanswer, key or question changes. The source23PASS and actualfulltext/image/model proofs are complete; fullgraderinputproof includes all202answers/evidence and all101questions/keys. No current fullpair or final integration PASS is yet claimed.

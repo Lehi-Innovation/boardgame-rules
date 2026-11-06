@@ -1,0 +1,191 @@
+{
+  "report_type": "fresh_independent_final_answer_adjudication",
+  "scope": {
+    "reader": "reader-a",
+    "question_ids": [
+      "Q31",
+      "Q50"
+    ],
+    "rulebook_scope": "1996 classic English base game, publisher pp. 1–12"
+  },
+  "inputs_read": [
+    "questions.json",
+    "answer-key.json",
+    "summary-snapshot.md",
+    "reader-a.json",
+    "reader-b.json",
+    "extracted/el-grande-rules.txt"
+  ],
+  "method": "Grades assess the answer field against the actual question and authoritative rules. Support labels are not grades; evidence fields and other answers do not supply missing answer content. Expected-key details not requested by the question are treated as incidental context.",
+  "adjudications": [
+    {
+      "question_id": "Q31",
+      "question": "For the secret removal of two own Caballeros from a region, how do affected fellow players choose and reveal, and what region must a player with a legal region containing at least two choose?",
+      "answer": "Each affected fellow player secretly chooses one region on their disk; choices are revealed together. It must contain at least two of that player's Caballeros, and two return to provinces. The King's region and Castillo are excluded as sources.",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Who chooses and how",
+          "grade": "correct",
+          "answer_evidence": "Each affected fellow player secretly chooses one region on their disk",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 9,
+            "lines": "554–558",
+            "rule": "Fellow players remove two own Caballeros; region selection is secret and uses secret disks."
+          },
+          "rationale": "The answer identifies affected fellow players, a single region per player, secrecy, and the disk."
+        },
+        {
+          "part": "Choice/reveal timing",
+          "grade": "correct",
+          "answer_evidence": "secretly chooses one region on their disk; choices are revealed together",
+          "source_evidence": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_page": 7,
+              "lines": "364–365",
+              "rule": "For secret-disk action cards, players simultaneously and secretly select a region."
+            },
+            {
+              "path": "summary-snapshot.md",
+              "section": "Stack 2 — Fellow players secretly remove two",
+              "rule": "Choices simultaneous and revealed together."
+            }
+          ],
+          "rationale": "The answer describes private choices followed by a joint reveal. That resolves the requested informational timing: each player chooses without seeing the others' selections, and nobody reveals before the common reveal. Omitting the literal word simultaneously does not leave a materially different procedure open here; simultaneous secret selection does not require physically setting all pointers at precisely the same instant. This conclusion rests on the answer's own secret-choice/joint-reveal sequence, without borrowing the explicit simultaneous wording in its evidence field or reader-b."
+        },
+        {
+          "part": "Mandatory eligible region when at least two own Caballeros are legally available together",
+          "grade": "correct",
+          "answer_evidence": "It must contain at least two of that player's Caballeros",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 9,
+            "lines": "556–558",
+            "rule": "The selected region must contain at least two of the player's Caballeros."
+          },
+          "rationale": "The answer requires choosing a region containing at least two own Caballeros; it does not permit choosing a singleton instead."
+        }
+      ],
+      "additional_claims": [
+        {
+          "claim": "Two return to provinces",
+          "assessment": "supported",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 9,
+            "lines": "554–555"
+          }
+        },
+        {
+          "claim": "King's region and Castillo excluded as sources",
+          "assessment": "supported",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 9,
+            "lines": "560–561"
+          }
+        }
+      ],
+      "incidental_expected_key_context": "Returning the two pieces and source exclusions are supplied correctly, although the core question asks the choice/reveal procedure and region eligibility. A shortfall fallback is not requested: the question expressly supplies a legal region with at least two. The evidence field's unsupported-fallback concern therefore does not establish an answer deficiency.",
+      "material_omissions": [],
+      "material_contradictions": [],
+      "rationale": "Every requested ruling is resolved. The absence of the exact phrase simultaneously choose is a wording difference, not a material failure to describe the secret-choice/common-reveal procedure."
+    },
+    {
+      "question_id": "Q50",
+      "question": "For Intrigue moving two of yours and two foreign Caballeros, what are the separate ownership allowances, may multiple origin regions be used, and what locations are forbidden as sources or allowed as destinations?",
+      "answer": "Move up to two of your own plus up to two foreign Caballeros, separate ownership allowances, from any regions. Multiple origin regions are allowed. Relocation origins exclude King's region and Castillo; destinations exclude King's region but may include Castillo. The row does not specify more restrictive 'other regions' wording.",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Separate ownership allowances",
+          "grade": "correct",
+          "answer_evidence": "up to two of your own plus up to two foreign Caballeros, separate ownership allowances",
+          "source_evidence": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_page": 8,
+              "lines": "460–463",
+              "rule": "Move two own and two foreign Caballeros."
+            },
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_page": 7,
+              "lines": "379–381",
+              "rule": "The printed number is a maximum; the player may move fewer Caballeros at any time."
+            }
+          ],
+          "rationale": "The answer states both independent caps and expressly identifies them as separate; it does not allow converting unused own capacity into additional foreign capacity or vice versa."
+        },
+        {
+          "part": "Multiple origin regions",
+          "grade": "correct",
+          "answer_evidence": "from any regions. Multiple origin regions are allowed.",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 8,
+            "lines": "462–463",
+            "rule": "Caballeros may come from any regions except the King's."
+          },
+          "rationale": "Explicitly allows multiple origins rather than limiting the action to one source region."
+        },
+        {
+          "part": "Forbidden source locations",
+          "grade": "correct",
+          "answer_evidence": "Relocation origins exclude King's region and Castillo",
+          "source_evidence": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_page": 8,
+              "lines": "462–463",
+              "rule": "The King's region is excluded as an origin."
+            },
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_page": 7,
+              "lines": "367–369",
+              "rule": "Caballeros can only be removed from Castillo during general scoring."
+            }
+          ],
+          "rationale": "Both protected source locations are excluded. The earlier phrase from any regions is immediately and explicitly qualified by these exclusions, so it is not a contradictory permission."
+        },
+        {
+          "part": "Allowed destinations",
+          "grade": "correct",
+          "answer_evidence": "destinations exclude King's region but may include Castillo",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 8,
+            "lines": "462–463",
+            "rule": "To any regions except the King's and/or into Castillo."
+          },
+          "rationale": "In the complete answer, movement from any regions is followed by the destination exclusion and Castillo permission. This states the unrestricted board-region destination scope subject to the King's taboo and expressly permits Castillo; no adjacency or other destination limitation is introduced."
+        }
+      ],
+      "additional_claims": [
+        {
+          "claim": "The row does not specify more restrictive other regions wording",
+          "assessment": "supported",
+          "source_evidence": {
+            "path": "extracted/el-grande-rules.txt",
+            "pdf_page": 8,
+            "lines": "460–474",
+            "rule": "The two-own/two-foreign entry says to any regions; the subsequent four-piece entries say into any other regions."
+          },
+          "rationale": "This is a true observation about the relevant entry and agrees with its any-regions destination permission. It does not withhold any requested location ruling or impose a new restriction. Whether every selected origin can also serve as a destination in a complicated exchange is not separately asked; the answer need not settle that additional hypothetical."
+        }
+      ],
+      "incidental_expected_key_context": "The question asks ownership caps, multiple origins, and source/destination locations. It does not ask a separate ruling about every possible multi-origin exchange or require importing the other-regions language used on different cards.",
+      "material_omissions": [],
+      "material_contradictions": [],
+      "rationale": "All requested parts are answered correctly. The final wording caveat is source-supported and does not retract the supplied destination permission. Neither the support label nor the evidence field's concern about an unasked exchange interpretation warrants partial credit."
+    }
+  ],
+  "conclusion": {
+    "Q31": "correct",
+    "Q50": "correct",
+    "genuine_material_contradictions_found": false
+  }
+}

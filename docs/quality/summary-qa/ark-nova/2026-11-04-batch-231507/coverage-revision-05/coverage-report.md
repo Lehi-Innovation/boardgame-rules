@@ -1,0 +1,9 @@
+# Ark Nova coverage revision05
+
+This is a three-field map repair over the unchanged94-question revision04 bank. There are232 source-passage records and42 lookup records. The questions, answer key, material-facts index, lookup file and novelty ledger are byte-identical to revision04. Both readable banks are copied unchanged. No questions, key facts, lookups, novelty decisions or historical IDs changed.
+
+The three exact live-coverage corrections are M06a→Q140 only, IO.sizes→Q85 only and IO.pilfer→Q125 only. Q19 break administration is not retained as a normal-gameplay request. Generic accommodation/scoring/syntax prompts are not treated as requests for small/large definitions. Q54 stays linked to the separate Pilfering payment/repetition passage. No optional contextual edges are added; lookup-Q87 remains unchanged. All other map content, including metadata and embedded lookup data, is exact prior content. The inherited internal map revision field is retained deliberately so that only the three documented question_ids lists differ; this directory and manifest identify revision05.
+
+The complete unchanged33-page primary-source inventory is reused. Two terminal author zero-addition passes after the repaired map checked all232 records and forward/reverse live destinations. Their records are separate in terminal-author-passes.json so the frozen novelty ledger remains byte-identical. All94 active IDs retain coverage, and live question/lookup references resolve. Prior seals remain unchanged.
+
+Independent challenge06 accepted saturation, requested-answer accuracy and strict novelty on this identical94-question bank, with zero new gaps, contradictions or rejections. Its remaining findings were these three map precision groups. The same independent reviewer must still verify the repaired map delta and exact bank identity. The author does not claim that pending independent delta acceptance.

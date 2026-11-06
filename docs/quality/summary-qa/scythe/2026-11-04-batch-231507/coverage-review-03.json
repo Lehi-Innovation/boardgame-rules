@@ -1,0 +1,326 @@
+{
+  "review": "Independent source, answer-key and question-elicitation coverage challenge 03",
+  "scope": "2016 base/core multiplayer only; no Automa, expansions, promos or optional variants",
+  "verdict": "coverage_gaps_found",
+  "conclusion": "The 46-question bank has no material answer-key contradiction identified, but the two zero-addition passes after Q46 do not establish saturation when coverage must be elicited by the actual question. Several distinct explicit source rules occur only as extra answer-key facts; turn overlap is absent from both questions and keys. Nine additions are proposed. None depends on changed quantities, cosmetic phrasing, or a constructed combination of already covered mechanics.",
+  "materials_read": [
+    "Complete extracted/scythe-rules.txt, all 32 pages",
+    "Complete source_pdfs/scythe-recovery.pdf text, all 32 pages; fresh fitz extraction compared equal to the supplied extraction after whitespace normalization",
+    "expanded-v4/questions.json: all 46 questions",
+    "expanded-v4/answer-key.json: all 46 expected answers",
+    "Parent coverage-ledger.json",
+    "source-page-19.png and source-page-29.png, visually inspected"
+  ],
+  "method": "Read the complete authoritative source, check every key against it, and distinguish a fact being present in a key from a fact actually requested by its question. Assess each candidate against the novelty rule. Parent later supplied candidate wording gaps for independent judgment; no summaries, reader outputs, grades or previous reviewer reports were read.",
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "coverage",
+      "finding": "Unlimited occupancy is present only as unsolicited detail in Q22 key. Q22 asks terrain output, worker classification and resource-supply exhaustion; none of those requires answering whether one territory has an occupancy cap.",
+      "source": "p11 NO LIMIT; p13 NO LIMIT",
+      "recommendation": "Add R03-01."
+    },
+    {
+      "id": "F02",
+      "severity": "coverage",
+      "finding": "No question or key asks when a following player may start while the active player is deciding a bottom-row action. This is an explicit timing permission repeated in gameplay and the recap.",
+      "source": "p10 final gameplay paragraph; p14 OVERLAPPING TURNS; p31 TURNS AND PLAYER MATS",
+      "recommendation": "Add R03-02."
+    },
+    {
+      "id": "F03",
+      "severity": "coverage",
+      "finding": "Q03 asks whether the same section can be selected again, meaning selection across turns; it does not ask whether the selected top/bottom action can be paid for repeatedly in the current turn. Its key contains the distinct once-per-action rule.",
+      "source": "p10: You may only take an action once on your turn, not multiple times.",
+      "recommendation": "Add R03-03."
+    },
+    {
+      "id": "F04",
+      "severity": "coverage",
+      "finding": "Q05 asks movement and carriage permissions but does not ask the alternative of gaining coins instead of moving. Its key contains that unelicited branch.",
+      "source": "p11 MOVE: Do one of the following; GAIN COIN(S).",
+      "recommendation": "Add R03-04."
+    },
+    {
+      "id": "F05",
+      "severity": "coverage",
+      "finding": "Q09 asks production payment, origin of new workers and the effect on the current cost. It does not ask whether existing workers can later be returned to the mat to reset costs. The permanence rule in its key is a distinct lifecycle restriction.",
+      "source": "p13 WORKERS ARE PERMANENT; p31 WORKERS",
+      "recommendation": "Add R03-05."
+    },
+    {
+      "id": "F06",
+      "severity": "coverage",
+      "finding": "Q13 asks what power/cards combatants may spend, not whether an attacker is eligible to initiate combat with zero power or popularity. A zero dial choice does not by itself answer the popularity requirement or initiation eligibility.",
+      "source": "p22 NO REQUIREMENTS",
+      "recommendation": "Add R03-06."
+    },
+    {
+      "id": "F07",
+      "severity": "coverage",
+      "finding": "Q14 asks combat aftermath, including stars. Its key says the player can still engage in later combat after the combat-star limit, but the question need not elicit permission for future attacks.",
+      "source": "p23 LIMITED STARS AND GAME END",
+      "recommendation": "Add R03-07."
+    },
+    {
+      "id": "F08",
+      "severity": "coverage",
+      "finding": "Q15 asks encounter timing, losing combat, benefit location and isolation from normal action costs/bonuses. It does not ask whether selecting a payable option is mandatory or whether its benefits may be declined. Those are independent explicit choice rules present only in its key.",
+      "source": "p24 ENCOUNTERS and REQUIRED COST AND OPTIONAL BENEFIT",
+      "recommendation": "Add R03-08."
+    },
+    {
+      "id": "F09",
+      "severity": "coverage",
+      "finding": "Q13 requests secret spending limits, ability order, payment and ties. It does not request the simultaneous choice/reveal procedure. Secret spending alone permits several possible reveal protocols, so it cannot be relied on to elicit simultaneous reveal. The key is correct but the timing fact is not directly tested. Earlier questions are preserved, so propose an addition instead of editing Q13.",
+      "source": "p22 SELECT POWER; p23 REVEAL",
+      "recommendation": "Add R03-09."
+    },
+    {
+      "id": "F10",
+      "severity": "scope_cleanup_only",
+      "finding": "Q38 key includes a tournament coin-exchange exception although the assigned scope excludes optional variants. The core answer that only coins can be exchanged is correct. The extraneous tournament parenthetical does not create a base-game coverage gap.",
+      "source": "p26 ALLIANCES AND BRIBES",
+      "recommendation": "Do not add a tournament question."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "review_id": "R03-01",
+      "question": "Is there any limit to the number of your units or resource tokens that may occupy one territory?",
+      "expected_answer": "There is no per-territory limit on same-faction units or resource tokens. This does not remove the separate one-structure-per-territory restriction.",
+      "source_references": [
+        "p11 NO LIMIT: no limit to same-faction units on a territory",
+        "p13 NO LIMIT: any number of resource tokens or workers can be on a territory"
+      ],
+      "related_existing_questions": [
+        "Q05",
+        "Q09",
+        "Q22",
+        "Q23"
+      ],
+      "novelty": "Distinct explicit occupancy rule. Unlimited carrying, unlimited resource supply, and production output do not establish unlimited placement in one territory. Q22 key supplies this as extra information, but Q22 wording never requests occupancy.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-02",
+      "question": "Must the next player wait until the current player has finished every bottom-row decision, or when may the next turn begin?",
+      "expected_answer": "The next clockwise player may begin when the current player starts or is finalizing a bottom-row action, while the current player decides which upgrade, mech, structure or recruit to gain. The ordinary alternative is to start after the current turn is complete. This overlap does not reverse the stated recruit-bonus priority or the immediate game-end rule.",
+      "source_references": [
+        "p10 GAMEPLAY, paragraph beginning After you have completed your turn",
+        "p14 OVERLAPPING TURNS",
+        "p31 TURNS AND PLAYER MATS"
+      ],
+      "related_existing_questions": [
+        "Q03",
+        "Q12",
+        "Q19"
+      ],
+      "novelty": "Distinct explicit permission governing the start of the next turn, absent from all 46 questions and keys. It is not another recruit-priority example or a recombination of action effects.",
+      "confidence": "medium-high"
+    },
+    {
+      "review_id": "R03-03",
+      "question": "After taking the selected top-row or bottom-row action, may you pay its cost again to take that same action a second time in the same turn?",
+      "expected_answer": "No. Each action may be taken only once during the turn; paying the full cost again does not permit repeating it.",
+      "source_references": [
+        "p10 GAMEPLAY, once-per-action restriction"
+      ],
+      "related_existing_questions": [
+        "Q03"
+      ],
+      "novelty": "Distinct restriction on repetitions within a turn. Q03 section repetition concerns action-token selection on successive turns, a different rule. The extra once-per-action phrase in its key is not requested by that wording.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-04",
+      "question": "What can you gain from the normal, unupgraded Move action if you choose not to move any units?",
+      "expected_answer": "You may choose to gain $1 instead of moving units. Moving and gaining the listed coins are alternative choices.",
+      "source_references": [
+        "p11 MOVE: move units OR GAIN COIN(S)"
+      ],
+      "related_existing_questions": [
+        "Q03",
+        "Q05"
+      ],
+      "novelty": "Previously unelicited top-row action alternative, rather than a changed amount or another movement example. Q05 key includes the alternative but Q05 only asks movement and transportation.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-05",
+      "question": "May a worker already on the board be returned to your Player Mat to cover a Produce cost again, including after it retreats?",
+      "expected_answer": "No. Once on the board, a worker never returns to the Player Mat. A forced retreat puts it on the home base, not back on its Produce rectangle.",
+      "source_references": [
+        "p13 WORKERS ARE PERMANENT",
+        "p23 LOSER: retreat all units to home base",
+        "p31 WORKERS"
+      ],
+      "related_existing_questions": [
+        "Q09",
+        "Q14"
+      ],
+      "novelty": "Distinct permanent worker-removal restriction and its cost consequence. Q09 discusses newly uncovered costs and Q14 asks a specific combat retreat destination, but neither asks whether the player can later return workers to the mat. The retreat reference illustrates the same permanence rule; it does not introduce a new combined mechanic.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-06",
+      "question": "May you initiate combat when you have zero power, zero popularity, or both?",
+      "expected_answer": "Yes. Neither power nor popularity has a minimum requirement for initiating combat. You can select zero power on the dial.",
+      "source_references": [
+        "p22 NO REQUIREMENTS and SELECT POWER"
+      ],
+      "related_existing_questions": [
+        "Q06",
+        "Q13"
+      ],
+      "novelty": "Explicit eligibility branch. Q13 asks what may be spent, and Q06 asks expelling undefended workers at zero popularity; neither directly tests whether combat itself can be initiated without these commodities.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-07",
+      "question": "After a faction other than Saxony has already earned its two combat-victory stars, may it still initiate and win further combats?",
+      "expected_answer": "Yes. The limit restricts further combat stars, not participation or winning. It may continue fighting but gains no additional combat-victory stars.",
+      "source_references": [
+        "p23 LIMITED STARS AND GAME END"
+      ],
+      "related_existing_questions": [
+        "Q14",
+        "Q18"
+      ],
+      "novelty": "Explicit permission after an achievement cap. Q14 covers immediate combat aftermath and Q18 asks which achievements award stars; neither requires answering whether later combat remains legal.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-08",
+      "question": "For a faction without Meander, may you decline to choose an option after drawing an encounter, choose an option you cannot afford, or decline some of the chosen option benefits?",
+      "expected_answer": "You must choose one option and pay any listed cost. An option whose cost you cannot pay is unavailable. You may take as much or as little of the chosen option benefit as you want.",
+      "source_references": [
+        "p24 ENCOUNTERS",
+        "p24 REQUIRED COST AND OPTIONAL BENEFIT"
+      ],
+      "related_existing_questions": [
+        "Q03",
+        "Q15",
+        "Q35",
+        "Q46"
+      ],
+      "novelty": "Explicit encounter-choice branches: mandatory selection, affordability and optional benefit. Existing questions ask timing, location, isolation, Polania extra options or public presentation. The three clauses are the source-defined branches of one choice procedure, not a scenario combining separate mechanics.",
+      "confidence": "high"
+    },
+    {
+      "review_id": "R03-09",
+      "question": "Do combatants select their Power Dials in turn order, and when are the dials and selected combat cards revealed?",
+      "expected_answer": "They select dial power simultaneously and secretly, then reveal both Power Dials and any selected combat cards simultaneously. Attacker-first resolution of combat mech abilities does not make the power selection or reveal sequential.",
+      "source_references": [
+        "p22 SELECT POWER",
+        "p23 REVEAL"
+      ],
+      "related_existing_questions": [
+        "Q13",
+        "Q37"
+      ],
+      "novelty": "Distinct simultaneous commitment/reveal timing procedure. Q13 asks secret spending and ability order without asking selection/reveal timing; Q37 asks visibility of information. Its correct extra key fact does not itself elicit this procedural timing.",
+      "confidence": "high"
+    }
+  ],
+  "checked_passages": [
+    {
+      "pages": "1-3",
+      "checks": "Goal, star list, quick-reference setup/turn/control/scoring overview and component categories. No additional core procedure beyond detailed chapters."
+    },
+    {
+      "pages": "4-5",
+      "checks": "Home bases, expansion placeholders, territory/control/resource rules and all unit roles; compared Q04/Q05/Q21/Q22/Q24."
+    },
+    {
+      "pages": "6-9",
+      "checks": "All deck and supply setup; Factory hidden selection; randomized mats and seating; starting tracks/cards; all mat placements; start player; coins/cards/objectives visibility. Compared Q01/Q02/Q08/Q37/Q44."
+    },
+    {
+      "pages": "10-13",
+      "checks": "Token selection, optional actions, order/payment/gains, once-per-action, overlap, every movement restriction and alternative, carriage/tunnels/river-lake geometry/occupancy, Bolster/Trade, full Produce payment, terrain outputs, worker permanence, supply and dead turn. Found R03-01 through R03-05."
+    },
+    {
+      "pages": "14-17",
+      "checks": "Bottom actions after completion, coin benefits/declining benefits, costs/upgrades/deployment, all 20 base mech ability slots including shared Speed, faction-specific Riverwalk, shortcuts, combat abilities, lake movement/retreat and cargo. Compared Q10/Q23/Q27-Q34; overlap corroborated."
+    },
+    {
+      "pages": "18-20",
+      "checks": "All building restrictions, permanence/control/benefits, Mill/Mine exceptions; all six tile qualifications and visual payouts; enlist one-time/ongoing destinations, announcements, neighbors/two-player and order. Compared Q04/Q11/Q12/Q19/Q26/Q40/Q41/Q44."
+    },
+    {
+      "pages": "21",
+      "checks": "All five faction abilities including Meander sequencing, Coercion limit, Relentless Factory application, Swim exclusions, and Dominate mandatory combat stars. Compared Q03/Q17/Q27/Q32/Q35."
+    },
+    {
+      "pages": "22-23",
+      "checks": "Combat trigger/order, no eligibility requirements, attacker advantage, simultaneous secret dial selection, limits/cards/reveal/payment, outcomes/retreat/reward/popularity, cap versus future participation, sixth-star undo and lake battle. Found R03-06/R03-07/R03-09; remaining branches covered."
+    },
+    {
+      "pages": "24-26",
+      "checks": "Full encounter text including public display/read-aloud, mandatory option and optional benefit, costs/location/isolation/discard/contested entry; Factory acquisition/permanence/fifth action/Move/bonuses; objectives; alliances/bribes. Found R03-08; Q46 does cover public presentation."
+    },
+    {
+      "pages": "27-29",
+      "checks": "Every star achievement, permanence/sharing, immediate game end and all edge cases, tiers, scoring categories, Factory/lakes/resources, tile eligibility, tiebreakers. Visually verified scoring-tier diagram and all six structure tile diagrams; Q20/Q39-Q43 are supported."
+    },
+    {
+      "pages": "30-32",
+      "checks": "Read character text, full highlighted-rule recap and back cover. Character lore and marketing introduce no further core procedure. Recap corroborates overlap/worker permanence and existing coverage."
+    }
+  ],
+  "diagram_verification": {
+    "p19": "Adjacent tunnels: 1/2-3/4-5/6 -> 2/4/6/9 coins. Adjacent lakes and encounters: 1/2-3/4-5/6-7 -> 2/4/6/9. On-tunnel structures: 1/2/3-4 -> 2/4/6. Straight-row and farm+tundra structures: 1/2/3/4 -> 2/4/6/9. Confirmed Mine exclusions, duplicate handling, encounter persistence and row continuity. Q40/Q41 keys correct.",
+    "p29": "Popularity 0-6 -> 3/star,2/territory,1/resource pair; 7-12 -> 4/3/2; 13-18 -> 5/4/3. Diagram confirms 18 belongs to highest tier despite p28 wording calling it 13-17. Confirmed Q20 arithmetic and exclusion of character from the first tiebreaker."
+  },
+  "rejected_candidates": [
+    {
+      "candidate": "Shuffle the three ordinary decks or place supply tokens as separate setup questions",
+      "reason": "Routine setup detail without a distinct condition, timing or consequential rule branch; low-value padding under the novelty rule."
+    },
+    {
+      "candidate": "Additional per-faction Riverwalk, different Speed cargo route, more worker counts or another zero-total losing-combat reward",
+      "reason": "Existing questions directly elicit these ability, transport or reward branches; changing the instance does not add a rule."
+    },
+    {
+      "candidate": "New examples of a neighbor recruit sixth star, pending battle undo, Factory encounter stop, or lake worker retreat",
+      "reason": "Q07/Q12/Q19/Q33/Q36/Q42 directly elicit the relevant timing and exception rules; combinations add no new source-defined outcome."
+    },
+    {
+      "candidate": "More popularity values, resource pair counts, straight rows or adjacency layouts",
+      "reason": "Q20/Q39-Q41 directly elicit all tiers, pairing and all six tile qualification/payout branches."
+    },
+    {
+      "candidate": "Optional coin benefit on bottom-row actions as a separate question",
+      "reason": "Q03 explicitly asks how benefits are determined and its key permits as much or as little benefit as desired; this is the same Player Mat benefit rule, with no distinct exception."
+    },
+    {
+      "candidate": "When building/mech/recruit abilities become active or whether an upgrade retroactively reduces the paid cost",
+      "reason": "Action benefit/cost sequencing plus directly asked structure/deployment/enlist effects already covers the rule. No source-defined alternative timing branch beyond those procedures."
+    },
+    {
+      "candidate": "Defending character with an unclaimed encounter token",
+      "reason": "The booklet mentions a winning character performing an encounter, but no independent reachable base-game state was established that adds a meaningful new branch beyond Q15; a constructed combination is insufficient."
+    },
+    {
+      "candidate": "Combat-card value distribution, encounter card reference numbers, power-dial assembly, achievements-sheet inscription",
+      "reason": "Reference/component/commemorative information; no substantive uncovered core play procedure."
+    },
+    {
+      "candidate": "Tournament restriction, Delay of Game, teaching/sample scoring, Automa, promo or expansion combinations",
+      "reason": "Outside the assigned core multiplayer scope or explicitly recommended teaching/optional content."
+    }
+  ],
+  "saturation_assessment": {
+    "ledger_state": "Ledger passes 8 and 9 accepted zero additions after Q46.",
+    "independent_assessment": "Those passes do not prove saturation under a question-elicitation standard. The ledger map and keys contain rules that the question wording does not request. New explicit rules above warrant review/addition, then fresh zero-addition passes after the latest accepted addition.",
+    "do_not_infer": "This report does not claim any particular summary omits these rules or that readers would fail them; no summary or reader output was inspected."
+  },
+  "limitations": [
+    "Coverage judgment deliberately distinguishes literal substantive question requirements from extra key detail. A broader interpretation that every key fact is automatically tested would hide several listed gaps.",
+    "Overlap is a lower-priority procedure than payment, eligibility or permanence, but it is an explicit permission repeated three times, so it is retained as a distinct timing addition.",
+    "No external FAQ, errata, component-card content or later-edition rule was used. Source conflicts cannot be resolved beyond the supplied booklet.",
+    "The p25 shorthand saying the entire Move action ends at certain stops is less precise than p11 unit-specific wording. Existing keys follow the detailed p11 stop rules; no unsupported new branch is proposed from that wording discrepancy.",
+    "Existing questions must remain identical per the preservation constraint communicated by the parent; proposed questions therefore add coverage rather than rewriting earlier prompts."
+  ]
+}

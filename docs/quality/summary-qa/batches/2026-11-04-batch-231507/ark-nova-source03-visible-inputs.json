@@ -1,0 +1,486 @@
+{
+  "session_id": "01a1aebf-71ed-77c2-991c-a0af424fb8c8",
+  "task": "final_source_audit03",
+  "actual_contexts": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    }
+  ],
+  "parent_spawn": {
+    "task_name": "final_source_audit03",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none"
+  },
+  "inputs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md",
+      "sha256": "799a5e72d97178975ff546a284493d4bfa920bac5dfe1c821eaad4aa78ebb664",
+      "required_units": 717,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/neutral-source-manifest.json",
+      "sha256": "5a0eac89fdbba43a9bc1670ddb5b2b398745e5181613b5a033c9d732a0a7e895",
+      "required_units": 48,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt",
+      "sha256": "5832faf9161e22f5be25af4d626bd10239ddc5a18e2de3aa888a5924fb2074ee",
+      "required_units": 1898,
+      "missing_units": []
+    }
+  ],
+  "actual_returned_image_blocks": 45,
+  "all_required_text_visible": true,
+  "calls_for_boundary_review": [
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f65781887d0b4b17d635ebad214",
+      "status": "completed",
+      "call_id": "call_wBLCp35yDKJnCYP01OFpq0us",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"pwd\",\"max_output_tokens\":1000}));\ntext(await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/neutral-source-manifest.json\",\"max_output_tokens\":6000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933154.669896
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f6bc9fc87d09db63f6b7264b3ec",
+      "status": "completed",
+      "call_id": "call_iJSpAstXVSpmXscyjwx8aeUb",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"mkdir -p /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03\",\"max_output_tokens\":1000}));\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nimport json,hashlib,pathlib,fitz\\nbase=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507')\\nout=base/'final-source-audit-03'\\nmanifest=base/'neutral-source-manifest.json'\\nsnap=base/'expanded-iteration-19/summary-snapshot.md'\\nsources=json.loads(manifest.read_text())['sources']\\nmeta=[]\\nfor item in [{'path':str(manifest)},{'path':str(snap)}]+sources:\\n p=pathlib.Path(item['path']); b=p.read_bytes(); r={**item,'actual_sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}\\n if p.suffix in ('.txt','.md','.json'):\\n  ls=b.decode().splitlines(); r.update(lines=len(ls),final_newline=b.endswith(b'\\\\n')); print(p.name,len(ls),r['actual_sha256'])\\n if p.suffix=='.pdf':\\n  doc=fitz.open(p); r['pages']=len(doc); name=p.stem\\n  for i,page in enumerate(doc):\\n   (out/f'{name}-p{i+1:02}.txt').write_text(page.get_text())\\n   page.get_pixmap(matrix=fitz.Matrix(1.4,1.4)).save(out/f'{name}-p{i+1:02}.png')\\n  print(p.name,'pages',len(doc))\\n meta.append(r)\\n(out/'input-metadata.json').write_text(json.dumps(meta,indent=2))\\nPY\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933162.944968
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f81196c87d0b85f50d37527a269",
+      "status": "completed",
+      "call_id": "call_nA3tRHpfJbxfsfBkunXLF7RV",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md'\\nls=open(p).read().splitlines()\\nfor a,b in [(1,180),(181,360)]:\\n print(f'RANGE {a}-{b}')\\n print('\\\\n'.join(f'{i+1}: {ls[i]}' for i in range(a-1,b)))\\nPY\",\"max_output_tokens\":14500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933183.187243
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f87b8a487d09f5bff7278345d00",
+      "status": "completed",
+      "call_id": "call_fgsM5ZLwHinOpgcuB7dQMF2m",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md';ls=open(p).read().splitlines()\\nfor i in range(164,280):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933189.883087
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f8da29487d0a0bc57c18c82da5e",
+      "status": "completed",
+      "call_id": "call_u1BFR0iwNeeWZXIP7OyLzt1P",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md';ls=open(p).read().splitlines()\\nfor i in range(360,480):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933196.38778
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f93993487d0aa0f3ca1f1fd501f",
+      "status": "completed",
+      "call_id": "call_12U1I8NZoybj8Et9Gkqypukf",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md';ls=open(p).read().splitlines()\\nfor i in range(480,600):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":6000}));\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md';ls=open(p).read().splitlines()\\nfor i in range(600,len(ls)):print(f'{i+1}: {ls[i]}')\\nprint('EOF',len(ls),open(p,'rb').read().endswith(b'\\\\n'))\\nPY\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933202.586255
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3f9e7d5c87d081fbcbd0ef6b163c",
+      "status": "completed",
+      "call_id": "call_lYxwiFH2cqa0kszWXBv6ceNv",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt';ls=open(p).read().splitlines()\\nfor i in range(0,230):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":9500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933212.739512
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fa4de0887d09ae4ea0632aebedc",
+      "status": "completed",
+      "call_id": "call_Z9v6wvNha49uNtkhiBSxEBUQ",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(230,460):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933219.801343
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fad198c87d0bf48651a6673f720",
+      "status": "completed",
+      "call_id": "call_tCJYosVRxhHSm8YoPjggH2G0",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(460,700):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933227.882533
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fb4e4dc87d080a5df64ff25fce1",
+      "status": "completed",
+      "call_id": "call_4pBoLX94MF4Eg12zHXNG31Yw",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(700,930):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933234.551448
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fbc3a5487d0bda4e3d7f962f116",
+      "status": "completed",
+      "call_id": "call_LhpGnYb8nzv4btN0xVx9R7CR",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(930,1160):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933243.066438
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fc1cb0887d0b8e8883ce38e79e0",
+      "status": "completed",
+      "call_id": "call_Wa8CgbFJfMPQiMeKuJpQzZkh",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(1160,1370):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":11500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933248.302268
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fc709bc87d09a6239876f4cdd63",
+      "status": "completed",
+      "call_id": "call_FzpYOGhBnrpBjp1zTeLWt2DZ",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(1370,1535):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933253.501841
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fcbf90487d0b6bab377a501526f",
+      "status": "completed",
+      "call_id": "call_LIH6BWGnBPA5MkNBoZWlKlmD",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt').read().splitlines()\\nfor i in range(1535,1735):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":11000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933258.828295
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fd1988487d08b7a5ffe37656cd8",
+      "status": "completed",
+      "call_id": "call_m6Pu98JEBhpyKML7FJSEJTfO",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\np='/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt';ls=open(p).read().splitlines()\\nfor i in range(1735,len(ls)):print(f'{i+1}: {ls[i]}')\\nprint('EOF',len(ls),open(p,'rb').read().endswith(b'\\\\n'))\\nPY\",\"max_output_tokens\":11000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933264.399717
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3fde36f887d0b6a291f7ebc9db21",
+      "status": "completed",
+      "call_id": "call_ybdPPa7NuT4T5UCCrxleXpcC",
+      "name": "exec",
+      "input": "for(let i=1;i<=4;i++){let p=`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-rules-p${String(i).padStart(2,'0')}.png`; image((await tools.view_image({path:p})).image_url);}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933271.510596
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed3ff72cf887d0808c7c6d69da4e5a",
+      "status": "completed",
+      "call_id": "call_I3l8vOjT28KZSh6IUfB4TWwk",
+      "name": "exec",
+      "input": "for(let i=5;i<=8;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933300.193705
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4029120487d08363dc33773f10fd",
+      "status": "completed",
+      "call_id": "call_labC2iuLSW4Cgay0j1ugDQn9",
+      "name": "exec",
+      "input": "for(let i=9;i<=12;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933351.483073
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4033109c87d0a3ef1831b39880a8",
+      "status": "completed",
+      "call_id": "call_qxM6vqve3grbllbKqVZzCy97",
+      "name": "exec",
+      "input": "for(let i=13;i<=16;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933360.995418
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4040b6a487d0b2b3ebaf4495eec0",
+      "status": "completed",
+      "call_id": "call_HxWmrTKkqqDeEVA2vTDTBQhh",
+      "name": "exec",
+      "input": "for(let i=17;i<=20;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933374.16431
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed404a296c87d0bab62f4ab69249c1",
+      "status": "completed",
+      "call_id": "call_rH7PjbmzcAmqm9OlySKkZA7A",
+      "name": "exec",
+      "input": "for(let i=1;i<=4;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-glossary-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933382.979855
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed40526b8c87d0983148e61f827bba",
+      "status": "completed",
+      "call_id": "call_ytzKvk1ft26toeSR9YWUs1wq",
+      "name": "exec",
+      "input": "for(let i=5;i<=8;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-glossary-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933392.56142
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed405b2cf087d0bcc8510f806e6263",
+      "status": "completed",
+      "call_id": "call_ZXTaNwQCHXc7VBgOb79zdkrA",
+      "name": "exec",
+      "input": "for(let i=1;i<=3;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/ark-nova-faq-rules-p${String(i).padStart(2,'0')}.png`})).image_url);\nfor(let i=1;i<=2;i++) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/capstone-icon-overview-p${String(i).padStart(2,'0')}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933401.513929
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4066034c87d0b7164938c5e2c466",
+      "status": "completed",
+      "call_id": "call_XmVeeop9GWPjrsZrP6wyvCzP",
+      "name": "exec",
+      "input": "for (const p of [\"Spielzene.jpg\",\"Back_arche_nova.jpg\"]) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/table-source-check/${p}`})).image_url);\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor f in sorted(p.glob('*.txt')):print(f.name,len(f.read_text().splitlines()),len(f.read_text()))\\nPY\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933411.15501
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4073a8b487d0bc48df471396e3aa",
+      "status": "completed",
+      "call_id": "call_nScq2kpNWRe6IeSAyKZHIYYB",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(1,6):\\n p=b/f'ark-nova-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name, 'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933422.104233
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed407c8fc887d094653290f09629d8",
+      "status": "completed",
+      "call_id": "call_tX950ogFEDrIzSoHgSvrgU8k",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(6,10):\\n p=b/f'ark-nova-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":7500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933434.182862
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4083cb1887d092a87b972dd987d3",
+      "status": "completed",
+      "call_id": "call_O0b1kRzJ81IEZFZdzB2hq1OL",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(10,14):\\n p=b/f'ark-nova-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":7500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933441.906007
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed408badc087d0a82c24549fdc9024",
+      "status": "completed",
+      "call_id": "call_rQmGzA3r8YUZbIbQMm5XjaSH",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(14,18):\\n p=b/f'ark-nova-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933449.435739
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed4093734087d0a162c236d02c4959",
+      "status": "completed",
+      "call_id": "call_paEeIO4rNhpJOuPfui6VYp1b",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(18,21):\\n p=b/f'ark-nova-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":7500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933456.889994
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed409d444887d0a2134259684f61ce",
+      "status": "completed",
+      "call_id": "call_mAViIOiwAFK16JyFFoZGYa7r",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(1,4):\\n p=b/f'ark-nova-glossary-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933465.437943
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed40a563b887d094372f5402e3dd1d",
+      "status": "completed",
+      "call_id": "call_1vIN9Txo8YcdyfiIKyoWTW3V",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(4,7):\\n p=b/f'ark-nova-glossary-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933474.797733
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed40b1eeec87d0b0c7c486901033d1",
+      "status": "completed",
+      "call_id": "call_DkmtIOg6UyObFZa6tsPSOo77",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(7,9):\\n p=b/f'ark-nova-glossary-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":6500}));\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(1,4):\\n p=b/f'ark-nova-faq-rules-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":5500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933486.873743
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed40c02d2887d0b772277e2c4f52fb",
+      "status": "completed",
+      "call_id": "call_kPZpdns6oGVMSGsNc9xzTbCq",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nfor n in range(1,3):\\n p=b/f'capstone-icon-overview-p{n:02}.txt';ls=p.read_text().splitlines();print(p.name,'LINES',len(ls));print('\\\\n'.join(f'{i+1}: {s}' for i,s in enumerate(ls)));print('EOF')\\nPY\",\"max_output_tokens\":6000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933501.764212
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed40d8631087d0b9613986901b3f69",
+      "status": "completed",
+      "call_id": "call_fdwxZU4hx5hsZb5MAjTvF38X",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom PIL import Image\\nfrom pathlib import Path\\nimport fitz\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507');o=b/'final-source-audit-03'\\nim=Image.open(b/'table-source-check/Spielzene.jpg')\\nfor name,box in [('photo-action-II',(1265,910,1565,1090)),('photo-action-I',(375,1055,690,1230)),('photo-tracks',(175,330,1760,800))]:\\n c=im.crop(box);c.resize((c.width*2,c.height*2)).save(o/f'{name}.png')\\nfor name,pn,rect in [('main-p15-projects',15,(235,445,570,715)),('main-p02-final-card',2,(465,100,555,195)),('main-p09-reputation',9,(50,690,565,787))]:\\n d=fitz.open('/home/jonny/projects/boardgame-rules/source_pdfs/ark-nova-rules.pdf');p=d[pn-1];p.get_pixmap(matrix=fitz.Matrix(4,4),clip=fitz.Rect(rect)).save(o/f'{name}.png')\\nPY\",\"max_output_tokens\":1000}));\nfor (let name of [\"photo-action-II\",\"photo-action-I\",\"photo-tracks\",\"main-p15-projects\",\"main-p02-final-card\",\"main-p09-reputation\"]) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/${name}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933510.568726
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed41002c8487d0843e883e4ebda4ff",
+      "status": "completed",
+      "call_id": "call_nCXkYSlsdkb1Ao5F55T03lZ5",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md').read().splitlines()\\nfor i in range(0,100):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":6500}));\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md').read().splitlines()\\nfor i in range(100,164):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":6000}));\ntext(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nls=open('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md').read().splitlines()\\nfor i in range(280,360):print(f'{i+1}: {ls[i]}')\\nPY\",\"max_output_tokens\":6000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933560.206231
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_00a38c7ded8d07ac016aed412d694087d094925ae3b73d65c4",
+      "status": "completed",
+      "call_id": "call_54R3YteNkdHLGiyxMyVwHnmE",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport fitz\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03')\\nd=fitz.open('/home/jonny/projects/boardgame-rules/source_pdfs/ark-nova-rules.pdf')\\nfor name,pn,rect in [('main-p02-cards-II',2,(370,235,570,337)),('main-p06-map-A',6,(30,420,595,820)),('main-p05-association',5,(235,250,370,500)),('main-p04-track',4,(100,263,595,460))]:\\n d[pn-1].get_pixmap(matrix=fitz.Matrix(5,5),clip=fitz.Rect(rect)).save(b/f'{name}.png')\\nPY\",\"max_output_tokens\":1000}));\nfor (let name of [\"main-p02-cards-II\",\"main-p06-map-A\",\"main-p05-association\",\"main-p04-track\"]) image((await tools.view_image({path:`/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03/${name}.png`})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933578.792644
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "encrypted_content": "gAAAAABq7UHCif2VVyrNRxomJbEdgm9utwiHS3VlwgKmILxcYB61DJnTW_CVc7uVvHcAHp9sh1mP-FRBQxdfF2LXPlQn9mT45l8W_m5IZRFaVQ-lrNO54cEypNOK3bPukrXRF1peRmeg3B6i5bbluFDOCsJCAfbsWJs3A7HHRIbfjYggBj04-ED3lU71drsRcxFsUGLHHyHya4Xq_SY4edWBSZJ6mdQkbPcbAwKZdOZi-aemhlXVf86n1MpS_-FrpwJURSEaEEJ8WL2LZjTDyv66f7pilmOuHVtY66ya3WL8sMevm6BjUOwKtrxgeUVK4Xd7FRCtlSEclBHeIp4QdEy3oQSM9Mh-ERyQNxCL7Erx2wVo4S02PLkFF2pS8Xjpthw41tt7jE46S44p_4_CDxEMFKowrvhX4t-Dbvih27NcPbSqND6-TRB3LQudnVb-On36y6w7VVNOzb6j38hLSu1VCcUDQW4tJtYkNlcAD3hR-xIWf-2K0nlXmHdD64F4Q0J6AadZTDjgc-qm_hxuJ0PGquhS2Z6hRVIOanIkElcQmai63_nnbDxSwc87ckQw6Jj0hScrY2_hyhROxWkzJofhHWQGet2uCNHlQPU2c2FLx6_rsXQKe18nndw5MPz2JVeDEcgx74fRK-wlkIIWE76mJVnHW6mZYN_MSnY7gER7pCDbn_I-M6fftrCYDdS2k1chm6H35UG8P8gguJC3METmfJPGu8IVjEOLZ5ztHh1EO1v7f9uuHZQvq58jm2g3wFirBUW0l0sYe6OM8dNiwevoQwYruMXtvZBaweMfOyN4JaUzNu6YmbpKyOze-F9oNEotDZ-tTZa7VrB8kUq0N4GrNi6ts8ass5O-OTqm7uUJgPrTNBaGrUyjcseVeKKq_UAUB84DbMcFUWrEibJ84SiK0ZsD0_NwRyFr3lLBMj2EW3QiwtPSAYgB3dP6xmmK0mZTiPm5csEfwqupqJvNxpyQJ_ZXzys32rfnJfbQlzmI9V_2S_17Ysbt41L49OOZFHPrGF49xbqJTomw9n6sb7FxXKr-S4USJ6c574aeooAS7v_fi3JsDLR8_HZqHIWUmvGOXkdzLXoMGLSLYaPibn3hmzidk2AZaHteoxC8tQMp98y9wGZ2J96WCN1s2o6G88jYu3q6QVpBVnZ6mbUBBvno6hWRJ-CnosoyyW9P-yR7zsIqRw1jRJayy2tyrfLfCfLaOncI6knKSqOoga2DrNg3uTxexOxcoRDFjY4LZTJ5FiChxyF-IZuPwU08ycfEUg69bmi924gSvNTxvIxt7cFmo8X-8O9n6MriEdI8maciNhxiht2YPKsAZ_OPS7gELFjrZ-2Ct9LzOnMRWnnrAPlCKGNb13ibrLshVHiGlGZlltOSi95uo4SQ6I35cz_2hSh7bfHzezC7aA_GjIEeGw3rvJicu7KhK6W8yVOJE1m1OdmAScZmWeVcggjVO1dOs1QzjysdE1tpOgV3lz1lJrSUPJs_-sbAgrYyI_CxSfRo8zO7SelFn5jppvvNFLoqXG-q7c7AWQRmRvm1IGaDYIjgk-hSM3p0KRrB1zhhDkcuMeO6Zru4AWwTtTyVqreAItD_s3gHkkUhwOlQ5Z7w_za4qRrZWQLki0PzQwrT7mqrPY3IJxbP53709wwyIQ33m0A0YT8t1fFnljQd2mB7ywjWMv1zBQ_ftfDr_E1XaRmJp9cQp80rCpJ0JZNiWEa6JsUJ-xlweJ-SR0Nbh_JjVwz0DhXBQ3ZSfPvRzqInUCEi2nZmZeyc517zcaW6SEd0sJMCvgT3Y0bx-oiT0K9JHeVxNXwwX1Zg2hCO7htG6CpQZSm9qu5fBB4EYkpW4EzbGOsbQq8s329JBTRCBVBUDMCUgAlXfHr7p64Q0F_tc79KZR0zXTwMLRhzZDnTVIkBLeoRSF9ICt3oH-glAsonmxSvFI-nHu15Id3oxo2UOtcX_d3_2ZPq4RmLBDGH8Fp3sxQ4azWqVDdCNS89MGlhZtRjEHsJlK2KHnO6p4G6OvUENLlNaPpPICkyBIjzZ_ixWZQZl8MLF5aw-G-nz0tBizrWcIrfjQyTZeZrlcbGlfjGW69SHPxRvojUAHZyaviate5vyvtKjZpd9sxjaEfBnnRQvOXo65ws0peDKJFOkTjOyx2zM-2nlclHWL3bb_sS24hciHavgSG35Lu65RecsKcRaya1x6EKuuIBC8tXzhp9M_ME7dt2bvKKkUk3BtyNARqg-r9eRR83wNPhT-Em0MdtrMGYI30nhpwLXsjc5ZlPkpnbW9J_X_I4hiLAq2b9l7y73JxYw7nvRdO3T9FcDHWXbJsG7lUb9lXA-GgYazlu-DBBmdDQeWrxBOdYLGM2J5ESBFtXWIJQc3hdNn5VSM3s0ifZzqkys-bQFBp5mtP3NB9nU8AUXz90bcNwn-Cw__-mh-4QZqZzGPsSGyKl_TNuHxygDmlBQBi9WYclONv7yzzJmoLKwo4PymI2rhlxAE32CpfckkTl_CZm74OpXTSCjlr0h7TILYsMulPrmxZlXnKsuWq7gsoz7VcqUVxwdbhOhsl2c_FO7w5ZaKT1hmdIUVZo213lCFVeQScnZIbPigmWfkW2R9NYjCJJxq6PB4YmYPpfpTLwgebdFF3VhkcCNN3Bb051OuqWFQx0omhQGiT4ZXa_lcCQmf7wNAJX2hduNxmQnCm00vcvEquOP_crxDT04iiTSoO_mX-oJbr2GfOIc8iRoO2hbR7jKSoE7DjBXx0NFjaKO5sbHy0-V9jC-gcFF95j9B1CHE10nB-wUkBkp7cxmaibuVJ3y8gu230PcbHP_CLOFYmSWVXobq6xtzcSA0KGa07Tsk6z-5GYc1DigOhh-RuANCqDSJ6a8TB0uyMX-yryNZ7BDd-fbuRjc7NhQLhmbA_bM8S-tz_AI2kOLJfmXbowN99Xei7gdERsk0VVJj8sAb2hC9m9-drwlu0-UVYdDBC7-08xvFifxBvczk_7yVOcoeF92sURjy4rh_CNhGqNJQMQeGT_nnMgRQfpag2b5JspYdcCvJ_kXEJH-86-F20QJH4nkBtydpNJg_vc0Nv88otO1m9sj6LlEchtE-jxkDNLB-El2WpiDIcsbtjsBSdsZ7p4QQqEvheK4PIZSKzQFvLJYIVR5Tk6ErrDtyUnJLb5IuOZO7KhLFpIIQKPejsNsK1E-qEdBUI7y5PnQZY1gtvA4ijfmU_Lc3-g9CLN0RQu4vdexjz4cdOFDtwTTDw944ygzRS1G8uVG6ZcyIKatEXewIsAUr2gc9fm8FfICJsILry5z97RKAxygGPVfjzMw9hqvcqTF-jA4B5dkaWrV9kHtLCS0LK7gl1-1DdQdCsHhFoLpG1fXdRWQMWNdC1q1lviBW5ZecxqDT2FYx-OEwP4ujTJxMjcdVHZFMlowGHMyLsV1SMebcdumqOBaRNNCUOogLHWTnRCsLcCjn8l2znq5V00uDqLCQKkIhUPt3goSXouBd4l_p8LQHYZHrAVtdOx5iK5ipg50YUFvxqh7UZn-Gdr3yPW8FCdajeN5Fi4bUvpTF_BnDZYUh9fQrBa18OYgxTYIKfqGMB5zBXaTEDZcwc513Bp2nJrEB_hposdYw2Q_GJItXw_QIfSAwMr9vcDkU_xgzHiilsp7dBXvFSzwulOSMxQ2Rds2HLLG3YlJbocB6EudKehoMkyYk2iB74Q5LLV1QBuam_U71lYvGgbDDrlpZcbbAcv4sc0EfzujquiGKiaVQ6YXz8JTVQ3cmAhERf5LEH-cMRoeNT0f1p-MWjoc7uANtiKduONMQGZZ0F7THIZWdc25aeOQCSE8FzVkacZUnorUBzG5r7Qr2g8CuSSM0tH3mvZcUuaoVer5py2crEyR9ktzUWM8kBGU0VdtudHBEs04Hlq7oLQtnnzZ1hoODGcGJlZZz0tD2EZVY76hkHDynnp6CtUYwYEL1Z8844OSw_y54GOiQMTmRy7MmWPf1YYVYL5qozjbpNMoIqzmAduxPyMfiLkH0uVSsQK5x30ed3JtzQubteXu3O4ySOq5E58bqZ7Mol6pY3YPxt5qUyfFrcPmH3w4mHD1uf5YEfdHAizniWnRbed6pUGs8mjvIvf7I2tiI7IjeUmSNIzgDo7O5o6Uv-KHklkwQ76-WpImyC0zQJIfT4JYYYKBYNqcxm8xBwmtWvnEgLR5D3EWISmN5HKKEPovYgEBIMmm3YKR9p-NtNpLDEmrFovM1L6FQ0KrWcrf4HFXrFTFC88Hb7g8Vi1or6eW6vJNwotl4v7dXY7DmfT6P2ZpXCctimzVFNnZOlA-wamzRLW3WXwgAtW4EBj0HeCKfq61sKLVqFpr8J-AqyPY1NJJx4l8ICiFf-nxWEPFt9F0ZU5kjV5lAPZ3HD9keIbM1BxPMebcUrQX2WRkG3FlutquhYXXl48y7PveKe00NbH7Ap-79DeZWLkS1EohrTZt6do0ZPKe0HAjTVWS5_3UH88RExCrptIL6mha2Fcq00r25q-OC9JYyDsJNhfKXLHO_ilhXmh0O27tVc_8vleRpfD_c20197razGSVp0FV2YqHQECUkjXiKdqNVEpk9IbBR5YpZZdegquL1Fe2aE-TQ4xYDtMaC89YDU_H99Rcbb9L5_Q1f3wQVfDKye4CvsJ7fdYNmgT3t0u7-8yyS-aIaXBwbm22-NRELYVNMFFD8fIzifuVMB9uk26MHzII-xzpEQvXPS6_eCXS9Y9famXHIxsB1R75GgoOx3xQy9tQStVSDs41ip1b9nL66ow9g_DdiHlr-Pp8CMHEwZUH4e4CoPKQY3XCYmAue1tm-aoyI-2cPw54tUk8FJq09PV3dPGi2N6qL8s_r5ITjC6AiO154v8cMdAYk4Kl2zyhw5NPR0QpdeUWkQMnvB9Dp9e_0MXGwlEx5bszXA9aZp6EDBH23XJSPMKOE46EqqGyJI66V7NPfUyA6OSeHtXRGcJr_ZMPyQC7CtkuDZT4wJ7LnpKO3pEGnem8w0imDQTZ5ZoaVMGxDfak-uqHIggrbf7bfBgm3kxtLSROzCIxzdnH3FiB0fGm1IK1Xp2rFli753-Hc_oFSJdCfaiEJnV78hsUMddc5eqGtWE5_yJq4WRR5rl6SAq4tYgWS_8OsM1np7IsRSM9DHyLAeLGIPESegMnhNBnxeeSqI0KFf81NkLuAFb1sYT4boxwynOMRtA8SbYffuuhuG6jipW6e2bHcaBkxeJSuge71avg65-a1JBSC21rF8tMXa2zC-1nbfoL32lxmOFwk311VoUzW4rScA0_QdLCbD4XMlCvySObNtUqkBivtM5qpGHRyAGZTD3EtSJ_XRXvACJDlTvbZ732Nz1If8ndkAmZzyhXeBZDce82QEM5lnwoYcgL0kkGKLT4vvuejaBjJNpQwgcuSRiI8Vv6mN8B5ggrj5WcN15RqiRplLf15IufCBnGrlzEdOMZI7xX-BTnthGco_LN58UcfNa2f02zdnTsYPBO3usFArqWN97NYFYpslgrhhG8mVQYOKBWbrYKHngRRwvIAXB4iIRHPcs_OTjM4bGn1CZyMn_HK2f3PgmtcGnxtgvJe7CmnXujhmNkO2zslfzIUVbPZOxGg-GjRwcxSrcHD6xz6JJ1-hpEsinfFcoOoUoO916qSsHVecZ6UCSWYqCu7gchzIP5hCN64BH2c-UaiLY9Z1YwYBdlk1WrLPPOhD0u2zAIv79SGQdf-V7lXYLKE7BGIGLT9LgOEp6-KqE4IsBP1HeV0XAooAW7gi3VE1hr-8VxleVh6JM15d7L39kRn_oBBI2jnW8AzfiI3qMCyNfuckJTs0VzqJs_yWn3HjYxuiCCJno3yvFYnGqcl5PGdDxgBU0Wg9pHThkJ-Zj63QvqE-WziaGvepuegdEJg74Xt9EoyIx4yhSQqoOP9pdpBvkl7CzuuMWtoX4KODAAPM3GLann5CfkLCLPZOvsJcb362ED1hhcmSvKTp81aT2N1FCRFLDWkPlIrF-LkMdtntpeO3dSmshq3YqrAa3O4emFDK-u5PAhwOebTC3d5bPOAQpguhwFUwKQ4KstL-oVfB8Mm9Q5TNcJtIxA49qcLBXhPkLl7iEoGBWSxYPg8VgwJUHTVcbv4VNImPS06JHNCFo9NevUSOZ2oFkqZtf-DBRkG4GhzneAvmTd5WW_zRYbcju5zGLC1RDSFrrBdeRf7-uVW7kxUMZj9suZoRzSwgT8iHZxf0vzKyK7kZw35HU-lIAlh4zra7ZDO3EeFRIeIQ4IZ4xJOFjP3BwDGUk7pHdAY1ZzsMKkMQMTWZVU5Dt_bB0RMDlK5pQOGjxMQoeoaKq3a7u0DMHBwLGolVhs9rV2sOLxOYJBUCm1SXD9qc8gV0wSNsakoW1G9Qb6CMFpvqTtfTmuCZiEZ8WEhvOupJDYXUm3PiD7ol4i7Vvmy2H4arn7RvUSqX7N39Q4I3opT-4NKhMvNI-h8hHnl9uNouD7j4RBl68C-K2MoLgzsmoYN7rclt8wvvcbM5Z1TGXTews_Srvqo2Llooky1mvzpX_1-TifK3NlFayneOl8uRMPfSIodJk7j_CKPjIjw0V8XKksbstRiHX-8mRXytJNQg8c9BMooMM6Yf5leIrWKsfiI22BfJn_Js_KDNwdqRYXDideG9P9QbRh0kfQckJ5v1CxhFfSxIUXjZQ0IjxccPDq_KvCqMWqd3QjmqfZ0lt-eT9cFyQqKncj9H4PPsIouciem2kiO7LZgtCcqFR3JJZbzLJF5nIAodMj-YKVomcAhfT4vuB2zcrNsHjlHDadTGoZvUEX8q3J5clX2QPfGsACtNwNCcNs1g8vcgpB42JuekhBPFAAAvAFGA2Hf56LR5QUrmf858c2243gImzbcqJstUP_rRA2qhz0f8Mh_hPK1xPQqiBIJcd97BpEa9c5L0CDhhSaNVpxEx64-uljg1_SRAHCR07gwZXdYox5C663WQfsOf0geEPdFjUKLTr-G0sOfyHH4djo37nTHcYh2WNBb7TEjAjbkeExW40iMaU1UFhVjiNLGoGp-69dH21YBaWFl-eR2uERg7ufDDKLwuxKlOjvlw9N_WSHXFe1dn5u440WQoN4Imx22iIrRtVvLyJEPAmRu7hOFl2G0RLGMP_TLz-RgX9wgPqk81JqteHjVUWcW26NiRts54Yq3UN3Pv41JTfk_PFNCv-28Pc2CSoTQNzlg0rUhwryiBMyMqQDDhRosWQ6DhJebVN4JfOocw6spMzfpCRNXw0LvORh15nI-4iOuSeCXgpJtLUdjb4rAQJWJtnofnEFepK7qc3YDQYQHCseT8JL6q2372W6OJ4vXJhj2sopGi3tMd7ro9RBzr-BVUglaYr6RnM3J7aDiDJmrigPr6cDDEG2E2-1KkvEam0d-ou5Is0ybFks8qw1hiaQYMA6W6FRciEI5Hi9j9qDk4acIyOqh5JFi9lAqwJOyFoMFwGDXY072HiJzoIrXs6jwhOXO8SKzsMGxNQWWh94k4_9gVPJ6KEVypnEmj3pGBW44I5B06XVYjLzXHhCQOb_ZL1OhzssZKalHvfSkbAA21nvJ1rNR8QbdQiklntjKCPjx_9ixbTLImfxNJ6qY2hOUGnwxVJBjbVNr4ISzXknf1VKEYmZysk7hly-FqjofNguJFRKHL3kS6U2UrTuWFhe9p0e3ySsx2uJkK4pWRfkcPL1_Ih1dQDdWeQicpvhA7WTSFaH2WNLMgG2eZaCWz-1bgW19AP8UMXLPpG0C9PW3NYgfnXZqv2Ep9Xpqglm8gJD-EpTheHTtFqj688EH5B8deEmFbeUYvfYasGvfKFhAh1D6_4jkzoJIKbio2HgcpLYec36-fhzin74tw-MyLTwBMYns7W7uYL3c-s5h_uHk1mTMfSyB56WgOdJj-bdhtRIXzKgnVWCDtNJoX4cicJeu1ryS03SDKIpE9Fc6cHAgrr4N19xtq8qgZ4GhlL-FcPrDn06hWTZkxl31FN2_aZTGZSosd7wZVUs8D_bbI57DEKhVQepymhUBkQ8Kb-Z_5SGnu2AEHM7FGXhqlxo2JfH7i-EBPQxatMQ-RT4xjfO6MmXmPmjhA3dI22NFDq6Gy9j1HSggmMCttI8M95timXV5f6wooJT-5UOf8ShP9pc63lDhYeKUi2aV5WjBJdl-6XtlIUaEV0_XB95aukeQEnQPGNKgbGZZ8jKtsyptxKHXQtWzbesSwikx-ht8TfIunBM-ZXMKrL2a_3DHcLqcaNzr1ktzBAGw0xFrhHSg40fM2ifs6mCkjdq5OyfnIl4TpLaiXyceryaz1coJl-_2Icsv8NhqSgm0JFWfOCtHSLJy4Dwf3pwuKisgykynvJeNTpBrgT3RwtVMwWJEIBvmfUVfrWhT3z5z6TGqCMCxaSNnntK0aChGMR8QkC_BI5boqTqax3MOu-NrNoKmVKgPrCB0ECgSS7aMRpyVq4bTOiG48gs2nweDy9cpdWhN8O8fjOSqrrYFygMe1b5ec63jF4aEACf_gC8OdjCOVADMelX8f0MFey7z1blzBXKen0BnpIMd8GsomMEi9DDSOtYm-B9qJ3ozAXEtMQOQAdkU8Zf-QAwL-a8yWfpE5CCqWPRmTFA6IkZKeB8wYRBBIuvPRMEHMhT23tWT9LC0exfEf0xs6_qLBv3yKMYoo_jMXgfmnO8OUl9oIDypAZI4ebO4aSJQBSxMRECbN8QlcRiDU-LriE5-NTUnxBUXdF8ZjT8Hup-gFWIeGAeRCXnBuDw43HcvgVnHiPK_YWXF9TbDlGQYScxdjkgnK16cBbgQCJbdPax_qwdece9xo0gaPjJj9vF6ZBaI26J9H3_vn8L0SZdg4M9ZAmvq5cnrzIsG6klZl8rSEkSGwypIqUEPpfteZ0dTLxZdrEGkRJRBfTcwPsgNHaKYBCKLU9QGsQXtqxpCtlCIIGNO-B5GROMuPP7CBv1vbok3bn9dbQY8dEWe2cot-mLNk7oC3FCoiuK25k4ZeKwVlx4HMc42T85g6wuyz2owBM8K2cJesgHJubLk9IOHZOb7eTmF8QaXLxdosorrO8Rcvx1oh2I-pfp_nNDIufFJYCBWy4b_UTSVpnCZGJcNa1DRc72iU9iSzJ_LA2uGN_uqtiUFUDtHiekaCi-SylpH-bEc5R-51KwkhHDrZFVVVItpRN_Qd1PANPlgeVWF0UjWEaFpxw8joKsaPcuSyjHrLoFUpmF7-_T-qgVqdmQbXBe0u5Y8lUIXCgzFki10mGeBqd3kT6fSR_sfAajDR0wsqmS6NlCQjfx5QqgwKIlz585YqSAk1EIJqmc4Vzn-aicv5NN0M0L1-q404l6gNgrtCiKBuYX50BJwEgHee79AF1WBnZ__XfcXLGXquvmDtyyaHqpuWxDPnU3Ubppba3MZjfEHQZV6tNJTWyBKPEzTjbrjxXv2FpyCPv-Vlci6ZttYnpfgRsvBFcaWgDmAg6kkgoVQ_TVPPeLMbSrWbIztPiqdjhEi7gQv91R6dLVHaNKgZpU5dp3LFJC4Pk9uyWijUztwUCUN8yAeyRAqBdPk77LLhgIa_vQAJLfzj1f1q_QB3L1opFGMXrfD_V6xYqsw9HVQiAxXJgDVfgPAhZSyjDz9hg4re4oxpLm41VyCxAOlSuPp4RosRnkYHRtUCnhFs2_Yh14UOkjFk6BpY4mgVRQLvIp_SagRKHcR_N5YS8hc1M4jrEbRPytH_J86XdUjZSian8FzmBeU3K92BRM2fixHSwQJdXNTYXdHw2noX5Zn0s6WfYE_Zww1S0DgEzx7RrHVFnkU4XBhdwfQFu4UaySr12pw3AD5nD8BB8XpC1ltRVbYmcZ9ychnJMDEVatSFSmtfht5DXnI9wvnJ_QuvG9UYLKcHkJKC38BUakTns8V7l-63CUA8sAQcJg_RpLdL_oFSFEI87wbkTTTYG_uc9dChEOn2x48c8TJ-zm3srsjQCmgHr-7EqZSlUuw5eQy_DKLz-ohKUWnzj47E142BeT4GmHeHmQGlwdImobdwuVysVXI6IT_aG3YD_iFXoQmO-5NJhvE0EjgpUHs2brbH8oh4LQU06C_p3Zh4qDw83PCGXCZzE0AO6s0Eff5Ok5nnpy5C3Aom8LGlbRZdgSLkAJo1_PIbENjO7yoYCqKZOSdlRsZSgxc-dayCm3mWbjvRcrvDxR3nEszwxv69vPhLTWa8XgTqDyhJTBotcJ-5JG376r4ibZ9rDdIvdnPRv7NuSPo97xCyZfK2PEoV8fNDxMLbfRCqa06nBvo2ecgSek90PzEJt-8bf4D6BWtzo0Iq6e73TNovuMCvMvuy3cju8hX5KI0zCVccBkR_vMR_ACaA6MnQSLN16T0M9c0y2wx50yjNCc82-X2dKuN0KBEHyiA8tdeQKQc34gmadgy-lNU3wDqhjG8sGyjH1yd9KAgc81SimwQau4ce87Lwfcq_d23Gk2ga4GdXmWubQnY1QU_0TPVDJoBcD-suf7H91FqtXAdGetSTBN7bVqS23jrv3HcT52bJ3ISNTpx2AoWUIIbdaUBkcwlIwG3tHnAlR9Wsb80I7EywxzlCOcyJ0OLpaWktwD3Vai8th9Mv-BMStWGj9gnd0ATCKxXAsDZNUvzbPLgqhRdOBI_-3x5B0plDdEG7Igmfp31VWg0JjbCvQPchUNcuJ5821p_UniSOk_F8fB2twRatlWXbE78P_BzfallKV4WPF_9PaAaNI_n1YtAef5y-6q-kLTZMh0GyoEC_zNOPCkkJC3oEd_FJUsS2tZB6sBh-hgF9bGzQrJOFyMDbcF5qEcymvGhARJgiOvsLUbz8XE36CQdDPTK73BTMvvD4oIn93n5YcJ_x6zXgnvA2TARFpWGlOsASezaSSB9EMneE-fwZCYZTFy9IIyN_arjjHpXXqvaC8RLlpAiizG1_zo7kgGgiobFyQaIP7rEbmOG8hq6rRzliZ2WNrg4qtXvWuDaGEba36D0vp3c5RPrtBfArerC3oBOYmw7Q1sVwH3T8dFJP5dSxYi22clVyL24Llk1Amj2seJgb6PPCKZgxmss-h3Tgolplj06FrMNrjqtWf0zZGbfexOyUr452miegIE7nmLMD-4zshZlERHVgC-wrOCynPG_tmkSUS1Kt6WrFndq5XEDrhCiHE2emiuY-gD9LX7UMxeviEyTXmEv8dvBCbXHTJa2I6tCQkajPjV2Ocop5EdlYfTvmKJAnCI4KYbu2xst1xyCCnUPtgTcT2pq0mM7TtmJ11v1ITK7k08HY10IDMKiWF6DrIrA3n5RSfxJM40RRQ4hW4_70yPHjlpufhJP_1VOlvU5MqW61XMqonlUaBl2zpCUSY1bwXCmvRLtW1riMZn8PWVIRwpHkh8YJAP-h7r6bKjvufm1fsYkmY0ztcudi9wezyJyDVFN7SfvOASiUBawYqy7yD0sNUpia59WEP30t1LMDFkDHRuq6gPjdu8GpeD4bg4sLCaRQrI3MQSyLd-ScUcGX3hBxm_0XhmSGWATzyU8uOOwdpzPojux8ss9qOGDkOQdxz8B7jobCeRUdDvQbvHYd8Bn_l_sUlzt4vaECw21zavNm_wEUIZJoHFuLjqsatwsQh6E8KbAG7wLMDqNNheHoR3AHinF7Y922ElCvWLdOG2eEw-7Z54qZBRkwc6IbVa-UfX5POifNgvG0fcDhii8HnPO5SZSwIEDEDsZr14BjT5i6bMsC6VrC0fz-vaVHe_FJXLf3kTtAxE5ei_TNPYCthNDDiVV87g5yktEWHpW-ay8xPoDw1AudxOYCCbKWWblCWCONRdSfbwlGzyZuVhfddmqYWffLUsLa0VWCkX8APYFxT5aWJsnGzCXGwSUsjhdrpv6LnQE-QjRkl5ticJGOhaUgFPmTTAbyw_GumLRAEMn1EaEeEwQzO7WsUQ6UloiamdyibIVTZgC-COuapOhnq2lPLuhBq8EoGsq0dDmzuDAO-uSZW-dn7klFpVSsgtwmDfsja55BiAw5BqHD2tswB9onMdYcoPTym-6oeOqnmo93_0UB99YFwhmMzsU9djfgT4zXBXRc1kcmt7LC-L9iww9KJqt3f3Yge8G063zLaGR0I-08uNT2rNZOZDYdsAIse_aYUOBYS32ytTVBDwHM7wLRuw8lGCnd4r_VvU1YbJiycJjAqQf1RqlWsHCXPnTdvn9uG3Q8uR803VW4m0yXsWFrAgDCrIPTwFbwI4oqQvY6TvigZoGkc-eHIo652KWGSacBZwOvo-bS631_nvCXxBTJ_H7E-dTapw-p5kJMfWaBZk_Z-XPI-yC4iKb2vWltNHQMeB0sx0MRF8sOReGHUQXDU-YzmIod4G3j1PRA-M34Z14sydaBiGMUCK0-wh01H29icuSUi7Aehm88SJX4VQPBJ8CANK3qH-3ioIt6sibGlEqXGClRqugWEtoxulXaSMS4mff6LAyzEHuaBKGzYhnTFo9vc4NoQfRagJXi16377j0QeuPoKM3uTJuM7bOBPTJDqSplfMniBKo5YequrFVdIXiDqIACKs8lmCA-Y3w2vhTA6nTK4lggtOJegetHPMJTOYqCh0I0JK14TJYykD3QvQSdmK2KelQRxCqLMe2PyGmsaD2ZJXbG-_imuoEdGa4CYqlYgYlYYp5kWXcjSDvHJI4laSPf9cjHjDh5XodSPN616d963742slDLNuxrBBf9T2qhA5rPFXFiaw7fIbc5NNLxqiX2Z6iWSsmgTAh-08wNy6LsSMHNGau_V1HiIZcLBtR8mJrctL1nvofMv_2cRIs_Dt9IMurVMW64ddx9PXFmG0lKFyGI8U1HLn4owngAz7Z1tudmZgHumefr0XLpjFnF2KAqy1BkBBzmkRKbMPld-J39jo_-r9z1sclHza6yh1xMsrT4xuGGMsn04IryXd5Ab_agt95TtTMECO6tBM94zBBswqWYcOgcxELLnEj_rEZt5zLKxiZlYzn7NG-vqd4caYwr1-NlupyivkRerhCsK8R-ycGGFQjU1TVocEOUm0DKidDCdWVc7OXD827ihxF-AnX964hwuRanH513sU7ivvfVUENaICFe1fI8k82jQ42o-fEaFD7I_rDvbVicAiKJ2qP45Rcnrm6bcjpdoXE7_OPd4bIjltQuBkuhXLLgvO8BL0NYEwZGrd0Rl-3GubOPyCF-mYJ2fI3zO7f_ei391bMb23b2SF-sdVg4Y0aGm1jVF94G6mxg0Yc9ZppzZARiZ0Y2RIPUYNisrn1KljVkBkd52dWwAPjRNWmZIeyuwCe17PeM6F7bnuWuvFq1MfWpbF3ofxAL71obMrgk6xu5oiS8mn5OOD_yGyyPkbw91phxQH2vXpfv9j0hAZE2EIOwu0bATDOMRNB2wE1rOd5Xd4oSdN1NkABj6_vcRaxxUKNU5xgxE6gOmo1NkoRNRuQVVqPGh5cf1ukdhXVzPgbXZIO0x9kfwlZ1v0zAKvAIQlgb5lmNPqHPI8OGTweg6dPRsGc9iwaAZiTzvRGgOpncUuK1TwN5TXqo1ObjKj0RaYgA7ifk9RQG1Ksw5qQ1usFtMZ9GhAWreHgtGXpSqOQYppdMFvL_DZMWgfvhLyc2Zq1txhR_6IIRVD0mCT6r3zOjA7P3oeGb-vTS2rikyXIAE0qh8w0aAjKrUXjGdWx7x5U2Vm5fsoF9KLrr7259BxH5HjfZxdRXWX2OHCPiOI6KBWTIyPGeLIuz2oNAYgtoPQaVFimaNva-Kc3PECwreCkW1fkM0Izb0ytqMUhIC0FR4JzrGqgdfSjaeYxanMzrnsOrQz9AqX9CQZHzqb7f_4nztmLuB4KBobDg9oULG_YF_H93C6RtGwcM00axjtIrpzsY6k5cI4CImI7cEIwtRoTX4h4iRsiOydb1mv4gYHVZrfYfjuyWWEMjqgaPoVeyHAjMT_brDvoty3YkWUI6sZo3CA549uDs_oVXRUBcNR-KedaJL6XvmJ3MUgcTcZiu1sTctXnrFru4b8dyCn3iD_pEsUbT5u7ElBafflKoED_uwJ3Dr-jS1_8Rop-9Yd4Wpoq8P84vph8VMctDD9_iJxF7LxwoMrFxIi_tRNhtn47Kr4Iu37s-TLJgL49Zt4-y4OtF1SeuVj9OwhfMp7TdimLeA4zlMXreYc3Kh_uDxmj5rgzr_3JsZmzVBX78EHZyaBto-NxA9vlCq0wUnOyY86ptDL1dhK6iOhluNkygSWAVlOMZZGVJagF5Ges4dBbOZ8onojBISDZ5Vfe3sHDKHKkBIYYBQ_r5jAKVP-Dzti66Y_iCWiWioZchqII4Ets9X5cYcxdkmMn6l7VsNLe_WYjJZ_eYekdgZwI7Eyjht7I6wzy68FAuiN8tlwagzG3IjeX-yazeEa3t8pVY-ewcnXJHzQXq1EVjFI49P0sHSPBGzAmWC3waXLSbgiA_Qsx67X5nptyb1kbP7qFnbV61OXxZ6qCU-NiJRuIdv4QXhsurK1UIlaCr_vR1kJkc_TayEd8QhFqAffl9seZ35K3hzPVOyvyanAJuwV9k4l_UAk9ycMihryFiSJvfsjDr2sWRRV6s0JCvm0cPu-q4AcWOVcC8EcIjJbc6iWgDxRTopvKkGe0yA7leg5nYKQpLQD8V-kxD8RwyCIq0_9S59SR00VRwIFdGGkUNFqG4k2mERuCXogldY2iMvOuh8vMyaQdonG6qLXqI61D8VsBq-oBcmwPp7r4KMTAPJkh28uKe2y2nk99SoqFn6C5cpzQJg41J4fKik1MidA5iZbKC5qT_WNc1daDArOSDDbwF6b1hn_9KFuZW-3_tTogp4-cDrvJTFbS1yzxOWzZqMKHv4xBePXgA7vQSz27imZSIwFB_3raWaAdBfQtEM4uR5u2vrwVxxlg8ztniBPGrclz6WKsBgOdesCR6QimFihLTmuKF75sA-NPY1mWR4OxDCUlTeCplg6UDzBiH-NTZvMAAOkhKLTOqCGq5Pjepc9Xt8W6h4nkcD91ZImnPY87LPABx_hKOQIF5FDU7jCc_hRcp3U9URdjaRSvdixc3nyp6x_zLT1OhW8-fgxRJV87-7Jk42UStHpkG3OUR2fVnDCIWa8m_Pz0f5FgX2_OZDkb0YXCmP8-uwIWUKrasEVgFzw-2Wsr5vE62lXQ-U22ibHSbzJl0N6uD3YmJ8orDYdYQ2nwti2MdsFc9bUN-SOWYLjjVx9ZbsfPX7y0hZ5Ey000chgVmdFNx8phPJOUrv4ALNx6VpZNiF_gdWfcA_fw5MWof_L4g97DaTzF_NPwMrngwWboQZ4aIORNn6w-QdYpMH1X7tRUMRBQx9ig6FA4Nauf6MVO-TmhFEy5Zm3hdZZuTAGJVr8poPwv8KOpgzKTFYxVU4-b0hLwNRSoQCEHnRVxjpd82abKkp-Ngla1eszb9iK1p9cE6Ekpco8qNXeOkCJdRFnBIxq_nnKoPftw8UXRqM3PeKaBpF2UI8ygGHBSWlx_dHoro5lEbgCaPmRW6ZWBpKp-BURyQ2v1P19g27JrGooYx2J5dgvaCzsTdnrtoz2J7AfQ9pyWs9EsVo9FqL43CZx_Lc7UAzicmir6ImyS4Fl_EbZRmXgkTsdXmdc6ROLkUWvAV5nfePHzq2J98yZVlW7ggVQ1OxfmCVMktJQW_xCpX7bST798p2G10hwR9t033fiGOdTVWdrBiSrvDFV_LwNX5wzMnFJFfhpDjpJWEVp_pWYnU6_bN9mnp8dnIf5JaWUgaX3vOJ_RG9vUuidI3pj9xufuqu7X6z6A2zUfy45QzY6-wukqD2ndcz5qN4SOqSNwhiDVuah8xrwVV55Yujtro6dRTSHEpc0unFcpbneaHWvC4nxlnrQfQU0ovjfE4Vhhf39WdmOaNISZk58ggLCniFkQxGG2P7sIWOdYIK3256zHo1xKovTJKP-BIiGhTAEua8cT8h2y-cwryjeuQgePSNcZYbhYOiUqi9qeZlAl3o1xx_SWtaRQYgZ29nzd9veevI-U3U6wZ6SZqe9bE7vqnGphWAI1Qgbr-6q67T-B4FFYl5VZrG-x1cJPHOFuzpJaAgiRkvOZ282iNfvZbjyWzBdYmoHJhZrG22l6s3LUEckb5Pe2vrR-Usmfsd16emAfpfWdviBKKdfbDMjc9aOoy4MJuCbQhGly12CRdSKVFvvDVcsDK7oouOwudFn63ZRP08FdbPtxViOimig7E6kM-LLyqgUWLBMvZVypweg3wspD7V9dRdZaIvWGk2K6Jvhon5l8MXcHwvJjjToC6CotCz4S5Yum3N3fqVzGR2Hm-v11e7DeguZ_tfjh6ECF1RCyMbrHmPX7NUh18I1Akl42CzL8I5v5CVoMLbImKhhJIi21nrE6Lk5teybnTQnwlscLOUINUNBE66rQn9B9d6UfwZwuJ2JzQZDrrhkOn3BvLyy9_Ap5b1Lu5g0gUA92xwJWwmCh66h2CaWwFf_J_RfqpSiPNd_nk0yvuewTp_suNNhR1Ywb8kKnfeVU-UHNG213U0XUQ01lULD-T5sb5BEzra3jXKRpjs6Qpah95UoyOu3mSnb2Ar-WPS1JPHWBFrHMj8koRQSmQA4mlTMZHsQqCUj_9EYhiEEuaOAXCKcuc3dMJXn0ZWitbp2Mm-kCpUN_sNJCKeRkmJJB6wpuzzpqS9UeRETfwoFh3nPIcHfDnht6ah0fTESJ3Ehyzb8NHsGXnFqON_0UvDDAJaKU1bBW1ma5uMr-uApl_flUXbhimaDcoTQ3Q7-TTtuPSUppCE3_OiWqmUPzWGT-SqvXIX3EwwY6WqWRFu2lbIYa8kjGMC4t01dHGutpygIFom0tykWwEb4Ik9KJFg1qUwiOUVutiF3lHxGsaHyRYn_YVDKrgbbJkTbRYW8EKGp5ueYDs9AiC-G7dEj5QbnrjLFOpcJxcbWH6MhASjwlqXXMkbfWBGf7gDlAOmS2N9aZa9hJsfwKpJfuKeUZPXKVNXGq8Ne5Gw9l7b_FOsaZlJcYF7klu5DbFyESa4-GXFSawol5bnGHeISIIG0duSMmzbUje1Ma7CVhFIvSzsa3aeb92ODK98NE6Uz1tL5ro58PaFkYmiOEEBcfNC-LQox06obT7f_7VIn060Zs00Ps_FWC7FMx21w3aFkNlMXUm89jyjaEJVVksXev-MfS9--fkcxbubQCbP0LgX3p0MINc-AyJUgSLba5NkEusJ68ErWOyi_FcaSQmNEkO9oZX61W_BQybVFyx2U9W-2Qr-UfMM7yBw7oVYiDmpQJDTi096BLQ0R--5JP68uQBN8w_4FpRRea1pq_0zbmVREiSfYz6QtTQC_Q7TIxMmhvP-SB1E4At_LYCRDRDCM_rFow0b8KuDiDRls-LLfTptMTsnttg_fNjj8zThTa-zsn81ubGtB46ioOxwWBn7JhbUbplfdMEZ3st8YAlb4TOQgWitzpLABzw2n-5BitOdgD8hc1rQ8KTmllGwcT0HqfkxSXpKNQjmgS0QMksC3ZsZbZFd4ms4LxN2yNkpjyJ6hs9NDIygm0MKUjqOMPaiZjXovwUC2Cid3Adpc5FkWi41TZcQi_6x2TIm0LBqv3pClJaEV_-bw2hRNyL0VNJ_xjvGv-LqjPCX6CGLrZGv9QCtNAjXoCjn9Xz8C6SaZg34f9rGaXf05mrxYvHRR43CDxzSnfKGeX1H1j7XtLREAzeFZk97RpaxGXuMfjHTsojMSsvn_W4cVNBcU4cIGbMldjGlwLlAEUmUyAQfSEJ5MGlT7cbHcNrh9f83md_sg-ovyjaJJ7LSctxqEJXF9U5whZjZPkwDr1cyhonlN2-SPKKWXc0bJEvuLUIlO0ErblLPqArIlKEU-7kac2Ywrb5yALZWmPbHxC0JCbwam6Yf7YWUyaWKHcN8imZE785jSTeCPrvvkGIzaFVBpIBmDDtyfRaymxRNng2QI8q0j21Du6n5RzecY8XGJnOpLBS-sMqSCf1zL0bm7iCopKx2ZgRCnH9DepOE1aGgQ1cdGhdxkyJ7TCrdC3g9-Pa5tS4Nw9yFNbbvG7bVOwG4fK7MFUINISb1Aa33cOev9GGPqml0GhHaYxa3rcBi-vb0OWBQvxYJcFTU3wEli8fhbJiRWNUEjVJf0bbYyd47-R72wAT_TV8D3etaqwk4Nf2k-v2DPcAduieNupRhDUN2OTXAMh3wBe8WcBCD4NBbRvxroOb1IHDvdhWIf8VvdYIvNtkgI18sx0ZuEeyrOvEAufL7-Z-FGyGkAAlz408sE4MOPCyNKoyalV2OjtFdhjORqIQR7HZ8e2SpEjyiXo0JyZZAZYdqzUEbev2n7KwLoL72H8A9GkqCaUKZqxX9wUB2FvnRqlgS1iTqtKpcLwzo55hFxpFUTLLJ_pcJmWu05RrdUqh_LU_1yUfomAmHYM5SxAcflHMmA1r9Hd3RUVU_pXZP98Ddbf57E53Xuh4OrPtzuOgjsW4Y3uVYdDGyWq1pPhj6mSsQMxikwEsCHCy1YMKXWDg1KWcHq0egGQqwB2NSOQ1a_xZvLUpG8DR2NaYolgvtIg4hNV7Zn3K4gDc6-KVbyPJiBYBO7QDqLENNi1MoxUDBJcvX0uxCEiBzc9NP99HqB5oebzArxyeluR-ROlY8GdZC4ub3Vd8pWNKBAISRtoIynSelHI-eMKxbkFRz4rwu3-1hA9MKz3tLpAWUTDG0NzE0ggFG1BeI1wmrjbs4NbB8RYeCNGCDgckv8viycqkSodEeY7rT6p7AEYBc2QTtoA_7GotxloZdVnHzhKtqDX8qsjtP4DJRx8BR7OIj1_PFghk-V_4578PgzFCCoi3tnDe6AD651ueUwcbSOUYqgewZI9OrElVWiOijioAO8Wdxjs-gKK1fGHYIHmkrKkSNpQwEgmyRS649EHGJjlbtxtUEryd9ip25qa5h7QS2JGA8UuYlHuxqrrLsKk9uge4CSl_0MmSQ4sFm02gdNQieDY5o-LgZ9ItwzkqI8Q71A87yI6fqM-5rCxQtMM8XSTT-mR4kssXEutcEDbOrtkCZVk5ZI-Nlq83gYwIxOBY8k7xfkmwrZnMtD3iMyxCzU1sgALvA6cJWwb038czVupwg9e6QcS0GOBu5_E8ZJihzSRwCFrv5xHnr0gsJsqB0nC-f1TD5XZAXrKIBqbYJjtnhTr8j-BBTF2NmlDCB3q7PPbK5lekBIwFE9uEEyPrQdSr-Wo_kaRztKsSc8Dz4HFetR8B9GvYlKxbjLKXbbK2XbZrM7-ny7XzXsXo_5hQfndqTf_anuF3X4BBz9BVTUuH9-IpW48CcgjzKUR4U-z0w-dS4cRZL2J9ZQ1D7txYZuZGWRL0wLL6Dq62RbKW6j2X8x74PqY0EJUk6OdG4PcBVZsAS-sgb80Zpraz_sZqaV6uoSJl5kNdy6XaMdRDXr6fMfcDDlKN0d73IAavztCnrHmzWcFzTx9KnMK3iUXZQ8NAuVpUZxam37LPpnc1r_byFmWf8-53Vw8LIEgnvyPIyt5cXgrGm-Vcl23S9HwR0ytK6OmFhWwx9r0I3A3HAVCHu4nBPQjdqsxBSJ1KEWZSVhJ3JH8FkZzCTv3fLU9o0TpvRE-ZU1DuQm2qi5hhuGit-7AdYizkJgYSliBxePMbUgo7vMOPSkLbvLHIoWdb-klXNqGcjTfIupbItBT9nyLCw-2sDSI_DnsXNtlOc1V-I3yTZ1_jlPwmTa2e_MShOGRrMtlZ0QISBGbgNhsdw4ohFjcEaBq-rY98bfJxvSiuQ0dTIYTfZuhoF4wHwe6urcBL00M3GWXl8kClWQxwBgCbaFeNbvJ2CPluBhe_i1YpVxCRkbkcbQhoxc4CoipH4QVGgQPbpqYQ9IYdywpnbJ2yXwK-qOO04i0oxJskrK10fJQkr7FFq_QTDGPQWNszGyjDccW_W68EZjBFqVkhtJGr0QLy3m0pC145ZVIMlNmbPShVAKOQ-gyFSTp7BA3lU1DwArsiEz8EBvDNweLrbkRT_gFmBwNsFbyYPTT1L7AhjX-HkVzsfr8vixSqLD2u1d5dK0xofVS29IyU5Ms0-OI30HP8_rK8C6qtP3bwwof40W-YWtAPSEyXu70iv_LRg5uXL96ubypLTroAv2bqHleUIPhmz8ipLGEVBRhjPrdS5kRa25og18IuLRt3xRi3sYKK59L5rmuF6eG-zdDSt3d4RqqXX7iX5V2KyCHsUh_Myytk2RCTYruuVhZIFotflorTSxchkRqI2peHrvy8t7KFvUTBNOnNqYs8g-RARbqOXTAqRy7rvwEOs0PvXfDoNH790lewnlk4pRtBSj-8oPEmhfrGNJ26czMVQXT-1_VsZjnVd6o5ipqP7udtcShUcHryKs9tX2TnQY7IXTHrxBrGTNCXLZx50Ox7my-zE99sFgtKDDbhvPggtCLbkxH9J24Dw98iZZ_ePBO_8k7gneC94ebopnBZOSW7R3GvhjElK18eNnwUHA8ACb2alyXDBITyWKAuHcdRc9XP7KICbBvSUvGEFIppm5mh6lwyke31Nw_vFiJQpnIRNEEr329Rv9uhRKrLmu-Zar_to2lVSV0bW7X7dBriIMz2SejU2yMUq6C0hLCdk5QSVnaonrN-o0XpZxynAwCGJ3Awls9gzyhkfferdccjnYj-9F4iRWYSOg0naQ358u3WXAHfQURUXi3Pve3uDkm-WKlMqgrxMSQLGcNbXLYqwWmCTScuzdP25FPKpJiGPTESzhiVEYJPkJXt4VvBHkSPgfVteWHOdjdlSsFGjUXYCQUF6kXf7Hstb62Cz2o2X23OZBSj4crCbnJYCAwmkIl9ZGWaPSnsWtOFk0Lz04DO0JGyoMP5-wKFa2IeeDAbNVu3JAuMMTKFXIqr9xMa4DZrZuTxdCmetMehk8kHmSEfgpgji7aPoND1bc7tCRXEW9Ekk3UuyKFjBq-uSQYWbx-0=",
+      "id": "ctc_00a38c7ded8d07ac016aed413f02c087d0bbb04b4856530f3a",
+      "status": "completed",
+      "call_id": "call_tFXBNyVgkrAp7G37S7SXIYVm",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"/home/jonny/projects/boardgame-rules/.venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport json,hashlib,fitz\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507');o=b/'final-source-audit-03'\\nmanifest=b/'neutral-source-manifest.json';snapshot=b/'expanded-iteration-19/summary-snapshot.md'\\nprompt='''You are a fresh independent final-only source auditor for the Ark Nova original English base-game rules summary. Read ONLY the exact candidate snapshot at /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/expanded-iteration-19/summary-snapshot.md, the neutral identity/hash manifest at /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/neutral-source-manifest.json, and the seven raw source files explicitly identified by that manifest. The manifest supplies identities, URLs and hashes, not conclusions. Original base scope includes the English main v1.2, base glossary, official base FAQ and official base Icon Overview; optional solo, expansions, promos, map packs and strategy guide are excluded. Original publisher German component photographs are supplementary diagrams for original component numerals only; English prose controls.\\n\\nDo not read canonical or any other summary version, earlier audit or review, findings, repair history, question bank, keys, reader prompts, answers, grades, coverage maps, status, report or parent history. Do not browse or contact another agent. Do not infer expected findings from file/directory names.\\n\\nIndependently verify accuracy AND procedural completeness of the whole supplied summary against the whole accepted source packet. Check setup, ordinary actions and timing, tracks, break, endgame, exceptions, glossary/icon procedures and printed reference details, including evidence visible only in diagrams. Distinguish source-observable data from obscured or unreadable data; never invent hidden values. Do not demand strategy advice or excluded modes. Report unsupported claims, contradictions, omissions and any actual uncertainty with precise source and summary citations. Do not treat a matching hash as a complete read.\\n\\nRead all summary and raw text in bounded complete chunks; recover every truncated range before concluding. Count logical lines using splitlines and inspect true EOF, including a possible final unterminated line. Enumerate every PDF page and inspect all page images as well as text, then inspect both original component photos. You may use /home/jonny/projects/boardgame-rules/.venv/bin/python with PyMuPDF to extract/render the allowed PDF files into /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03; those derivative assets remain allowed inputs. Use tools.view_image to inspect local images. Do not read other repo files or network URLs.\\n\\nWrite ONLY within /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/ark-nova/2026-11-04-batch-231507/final-source-audit-03. Save report.json containing exact intended prompt, all allowed input identities/hashes, actual complete-read ranges and truncation recovery, PDF page/image inspection evidence and both photo inspections, a claim/source audit or coverage ledger, all findings with severity and concrete support, unresolved material/minor counts, and PASS/FAIL with exact snapshot SHA256. Save any necessary source-only derived extraction/render files there. Read-only inputs must remain unchanged. A PASS requires no unresolved material error or credible minor rules omission in scope. Return a concise verdict and report path.'''\\ndef sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()\\ninputs=[]\\nfor item in [{'path':str(snapshot),'identity':'Exact candidate snapshot'}, {'path':str(manifest),'identity':'Neutral identity/hash manifest'}]+json.loads(manifest.read_text())['sources']:\\n p=Path(item['path']);d={**item,'actual_sha256':sha(p),'bytes':p.stat().st_size,'unchanged_at_completion':True}\\n if 'sha256' in item:d['matches_manifest']=item['sha256']==d['actual_sha256']\\n if p.suffix in ['.txt','.md','.json']:d.update(logical_lines=len(p.read_text().splitlines()),ends_with_newline=p.read_bytes().endswith(b'\\\\n'))\\n inputs.append(d)\\nnotes={\\n'ark-nova-rules':[\\n'Cover inspected; identity Ark Nova.',\\n'Components; size distribution, physical enclosure shapes, Action I/II printed numeric tables, illustrated Large Animal Zoo 1/2/4/5 animals for 1/2/3/4 conservation.',\\n'Components including university numerals, money, counters; introduction; solo tile excluded.',\\n'Global/personal setup and diagram: conservation 5/8 bonus sockets, staggered appeal starts, I Cards/Animals table.',\\n'Association setup, donation ladder and two-player blocked column, universities; personal money/worker/cards setup.',\\n'Map A full diagram: seven support bonuses; four recurring bonuses; partner rewards; special-enclosure capacities 3/5/5; starting kiosk/enclosure; restricted hexes.',\\n'Break track diagram and worker/university/partner areas; maximum four partner zoos and bottom-up placement.',\\n'Turn sequencing, action strength, X-token cap, card movement, four upgrades and no empty actions; movement diagram.',\\n'Cards I/II, snapping, reputation cap/overflow, range folders and track reward symbols; deck/display choice and refill.',\\n'Build I/II and all placement, cost, kiosk spacing, full-map conditions; diagrams support distinct buildings and payment before bonuses.',\\n'Animal placement/cost/conditions/effect ordering; terrain icons and example card Scavenging 3.',\\n'Special-enclosure admission and transfer; caiman capacity2 and water; Perception2 example and Lynx Iconic Europe example (max8).',\\n'Animals II and rep-first5 rule; seven categories; Digging2 and display fee example.',\\n'Association worker doubling, tasks2/3/4; printed donation ladder2,5,5,7,7,10,10,12; tile symbols.',\\n'Project insertion/overflow and supports; Reptiles5/4/2 ->5/4/2; Serengeti 4+/3/2- ->5/4/3 and play1 reputation; Large Animals4/3/2 ->4/3/2; Aquatic outer5/2 ->4/2 with hidden middle condition; breeding rewards2CP+2rep/1CP+2rep/2CP.',\\n'Association II and donation timing; release example loses6 appeal, removes2 special tokens, gains4 conservation and12 money.',\\n'Sponsors I/II, level strength+1, display fee, double money; Meerkat Den and instant self-trigger example.',\\n'X alternative, 2/5/8/10 conservation rewards and all break steps1-5; kiosk income eligibility.',\\n'Break completion and scoring; own-turn/break trigger, extra turns; Sponsored Zoo3/6/8/10 ->1/2/3/4; Biodiverse comparison; victory area calculation.',\\n'Page inspected in entirety; optional solo excluded from assessment; English version1.2 visible.'],\\n'ark-nova-glossary-rules':[\\n'Golden rules, simultaneous order, double/terrain icons, release and breeding exceptions; project text checked.',\\n'All Action, Assertion, Boost, Clever, Constriction, Determination, Digging, Dominance, Flock, Full-throated, Hunter, Hypnosis clarifications and examples.',\\n'All remaining Hypnosis examples, Jumping, Multiplier, Peacocking, Petting Zoo, Pilfering, Posturing, Pouch, Resistance, Scavenging, Snapping, Sponsor Magnet, Sunbathing, Venom.',\\n'Effect syntax/color codes, connected/isolated/border/personal-supply definitions, unique-building placement and Sponsors201-206.',\\n'Sponsors207-222,224-225; every threshold, target, recurring timing, limit and cost checked.',\\n'Sponsors226-251; small/large definitions, WAZA, Sponsorship thresholds, any-zoo specialists, hydrologist/geologist, unique buildings.',\\n'Sponsors252-264; Hunter counts, Okapi tokens/paid Sponsor, Side Entrance income, map empty-group/terrain rules, Explorer and condition stacking.',\\n'Final cards004/005/006/009 and maps1,2,4,5,6,7,8; all printed clarifications and image credits read.'],\\n'ark-nova-faq-rules':[\\n'Errata smallest enclosure including no-match case; Boost; optional interaction replacements; Hypnosis tokens; Pilfering tie/min1; multiplier; bonus restrictions; sponsor from hand; WAZA228; own-turn end trigger; Farm border.',\\n'Terrain adjacency, Map A kiosk, Map2 effective size, Map5 free special choice, Map8 upgrade gates; mid-action upgrade/bonuses; Venom X alternative; artwork terrain; release order; all transferred animals. Solo question excluded.',\\n'Border; between-player break display refill; tracks cap113/41; discount3/6; multiple multipliers; X-alternative restrictions; Animals multiplier and Action/Determination distinction.'],\\n'capstone-icon-overview':[\\n'Every icon/text cell inspected: continents/categories/small-large; basic reward icons; ignore1; snapping vs card-range draw; free builds; terrain; red conditions; triggers; Clever/Determination and upgrade.',\\n'Every icon/text cell and two action-row diagrams inspected: immediate/recurring/break/final; paid Sponsor stays; Pouch/Perception/Hunter/Sunbathing; Venom/Hypnosis/Pilfering/Constriction targets and operations; first/last-card token placement.']}\\npdf_evidence=[]\\nfor src in inputs:\\n p=Path(src['path'])\\n if p.suffix!='.pdf':continue\\n pages=[]\\n for i in range(len(fitz.open(p))):\\n  t=o/f'{p.stem}-p{i+1:02}.txt';im=o/f'{p.stem}-p{i+1:02}.png'\\n  pages.append({'page':i+1,'text':str(t),'text_sha256':sha(t),'complete_text_read_range':[1,len(t.read_text().splitlines())],'text_true_eof_inspected':True,'text_final_newline':t.read_bytes().endswith(b'\\\\n'),'image':str(im),'image_sha256':sha(im),'view_image_inspected':True,'observations':notes[p.stem][i]})\\n pdf_evidence.append({'source':str(p),'page_count':len(pages),'enumeration_complete':True,'pages':pages})\\nledger=[]\\ndef row(topic,sl,refs,detail):ledger.append({'topic':topic,'summary_lines':sl,'source_citations':refs,'result':'supported; no rules omission identified','checks':detail})\\nrow('Scope/introduction/components',[23,58],['Main pp2-3,20 version1.2; extracted lines8-125'],'Base packet identities and components; optional solo intentionally excluded. Metadata verification date/banner is not used as evidence for this audit.')\\nrow('Global setup',[60,72],['Main pp4-5; extracted131-209'],'Bonus9->4 faceup/5 unused, board/deck/display, projects4 vs3, two-player blocks, tile supply, final deck, clockwise order.')\\nrow('Personal setup/maps',[74,84],['Main pp4-7; FAQ p2 Map A; extracted160-247,265-280,1802-1804'],'Map A starting empty3+kiosk, Map0 and advanced choices, Action I Animals1, color counters/7tokens/1active+3reserve/25money/2final/8keep4/display reveal.')\\nrow('Map A printed rewards and universities',[86,98],['Main p6 map diagram; Main pp3,5,7,14 university diagrams'],'Support bonuses snap/free2/5money/1CP recur;2rep/12money/3X one-time. Partner2upgrade/3worker/4twoCP; university2upgrade/3twoCP. Universities2research;1research+2rep;limit5+1rep; only research count.')\\nrow('Turn, X and upgrade timing',[100,110],['Main p8; FAQ p2 Other; extracted373-415,1831-1841'],'Strength1-5 and card shift; X+1 maxhold5 fixed beforehand, no do-nothing, benefits sequential, after-finishing includes movement, upgrade next action but instant conditions.')\\nrow('Break trigger and full procedure',[112,124],['Main pp7,18-19; FAQ p3 refill; extracted329-334,989-1066,1864-1865'],'End-of-current-turn break,1X, excess ignored; limit3/5; token cleanup; worker recall/tile restock; discard1/2 compact/refill; appeal/kiosk/activated income; initiator-clockwise and refill per affected player; reset/resume.')\\nrow('Appeal income table',[126,140],['Main pp4-5 complete board diagram; Spielzene.jpg printed Appeal/income track (photo-tracks.png)'],'All interval endpoints and income values5 through37 checked against the visible track, including0,5,6-7,12-14,30-33,50-54,100-104,110-113.')\\nrow('Cards and reputation',[146,163],['Main pp2,4,9 printed cards/track; Icon Overview p2 action diagrams; Spielzene.jpg original component numerals'],'Cards break2; draw tablesI1/1,1/0,2/1,2/0,3/1; II1/0,2/1,2/0,3/1,4/1. Snap5/3, exactly1 any range. Reputation folders1;2-3;4-6;7-9;10-12;13-15; bonuses5upgrade,8worker,11CP,12X,13card,14CP,15X; gate10 and overflow15.')\\nrow('Build',[165,191],['Main p10; Main pp2,6 diagram; Glossary p4 unique; FAQ p1 bonus restrictions'],'Empty-side enclosures, size/cost2perhex, one each special, Ione/II different totals; side adjacency/border first/nooverlap/terrain/restricted/kiosk distance3; pay separately, placement bonus once immediately, fullmap7; special capacity and upgrade availability; unique cards only.')\\nrow('Animals admission and capacities',[193,221],['Main pp4,11-13; Icon Overview pp1-2; Spielzene.jpg Animals I/II numerical rows'],'Conditions, full cost before rewards, partner3percontinent, standard empty/flip vs special capacity tokens3/5/5 and terrain, overlapping info, ordered plays/effects; I0/1/1/1/2;II1/1/2/2/2; strength5 optional repfirst; display fee/range and upgrade-only animals; seven categories.')\\nrow('Special enclosure relocation',[223,230],['Main pp10,12; FAQ pp1-2 transfer clarification/errata'],'Only new reptile/aviary once, all suitable animals optional separately, capacity/terrain, smallest occupied all requirements->size->none, add supply tokens. No special-token removal confused with relocation.')\\nrow('Association basic tasks',[232,237],['Main pp7,14; Glossary p2 Full-throated'],'Active worker1 then2 third forbidden beforebreak; foreign workers irrelevant; tasks2+2rep/3partner/4university; distinct/available tiles,4partnermax third/fourthII, bottom-up, immediate rewards including tile rep.')\\nrow('Projects and release',[238,261],['Main pp15-16; Glossary p1; FAQ pp1-2 release; Icon Overview p1 small/large'],'Hand new project immediate support; II display range+fee; insert left overflow2/3/4 discardright tokens supply; base stays; global one token per reward and normally once perproject; lefttoken choice and bonus sequencing/recurrence; printed size category, appeal loss beforeCP, retained prior benefits, special priority then fallback standard; breeding wholefamily same condition.')\\nrow('Association II and donation ladder',[262,267],['Main pp14-16 association diagram; FAQ p2 mid-action bonuses'],'Different tasks sumstrength resolve sequentially, workers gained usable, donation afteratleast1task/0worker/max1action; visible lowest2,5,5,7,7,10,10 then12 nofurther token.')\\nrow('Sponsors and X alternative',[269,280],['Main pp8,17-18; Icon Overview p2 paid Sponsor'],'Iexactly1 meetslevel; II totallevels<=strength+1, hand/display range+fee, instant before next, afterfinishing deferred; break moneyX/2X evenoverrun; upgrade condition; X alternative card shift max5.')\\nrow('Tracks and end game',[282,300],['Main pp18-19; FAQ pp1,3; extracted1006-1108,1785-1788'],'Conservation2 choice,5/8bonusor5money,10globaldiscard or beforefinal; ownturn/break trigger samearea/cross; extra turns differ; scorecards cap4 each; appeal-target formula highestpositive and project tiebreak.')\\nrow('Shared exceptions and vocabulary',[302,349],['Main pp4,8-19; Glossary pp1,4; FAQ pp1-3; Icon Overview pp1-2'],'Caps, interactions5, display timing and Digging exception separately, kioskspacing, supply substitute, worker reward; icon sources/exclusions/doubles, cardpriority, terrain distinct hexes/artwork not terrain, connected/isolated/border, your/any zoo, syntax/colors, mandatory unique building placement.')\\nrow('Illustrated project references',[324,334],['Main pp2,5,7,15; Glossary p1 breeding; main-p15-projects.png'],'SpeciesDiversity5/4/3 ->5/3/2; Reptiles5/4/2->5/4/2; LargeAnimals4/3/2->4/3/2; Serengeti5/4/3; breeding2CP2rep/1CP2rep/2CP. Aquatic outer conditions5/2 and rewards4/2, middle3CP visible; hidden middle requirement explicitly not asserted.')\\nrow('Animal abilities Action through Peacocking',[351,376],['Glossary pp2-3; Main pp7,11-13 illustrated cards; Icon Overview p2; FAQ p3 named-action distinction'],'Action/Determination aftermove and can/cannot X; Boost/Clever shifts; Assertion/Dominance sources/aboveboard; Digging immediate refill; Flock size/herbivore/fallback; workerhire; Perceptionhalf; Packself/countown; Hunter noanimal discardall; snap/magnet range; IconicEuropeallmax8; Sprint3; Scavengingrandom3keep1; Sunbathing4each; Pouch2retained; Resistanceall finals; petting3/6/9; Posturing ordinary; Peacocking aviaryexception.')\\nrow('Multiplier',[378,391],['Glossary p3; FAQ pp1,3'],'Namedvsanysource immediate, samebase strength sequential, Xoneexecution, extra token+1action not multiply, different options, multipliedX no mixed regular, afterfinishing afterall, breakwait, used/unusedreturn.')\\nrow('Interactive abilities',[393,414],['Main p11; Glossary pp2-3; Icon Overview p2; FAQ pp1-3'],'All targets floor5; self/noeffect hypnosis/pilfer eachselection; tieschooser; PilferCPmin1; Venom higherappeal lowestslots duplicates/no-removalfee2 undoifcannotpay; Constriction other aheadone/both slot5/4+5 owncards -2each, restoreorX at<=0; Hypnosis slots1-3 borrowed side/currentother checks own, tokensnoMult; Pilfercard/cashfallback random sequential; Jumpingwait.')\\n# Sponsor entries grouped by contiguous summary/source scope, all rows actually cross-checked above.\\nfor topic,sl,refs,detail in [\\n('Sponsors201-206',[420,448],['Glossary p4; extracted1443-1453'],'ScienceLabI/Bcard+F3-5/6; Spokespersonrep; Vetmoney2/5/10/strength4/F3unis; Museum2money+CP; Gorilla2rep1CP; Medical2appealperprevious/B1CP.'),\\n('Sponsors207-214',[450,492],['Glossary p5; extracted1457-1497'],'Different continent/category types excludesresearch; othermoney2perCP; Library owner2moneyanyresearch; TechnologyI/B1X+F3unis; Americas/Europefreebuild+F5; AustraliaPouch; Asiafreepavilion; Africaafterfinishing+FperX.'),\\n('Sponsors215-222 and224-225',[494,538],['Glossary p5; extracted1498-1521 and1472-1497'],'Breedingstored2oneicon/project belowboard; Communicator; Engineeroneextracopynormalmoney; Diversityterrain/2money/F2perpairmax3; FederalI/B3+rep9F; Archaeologistuncoveredbonus/freechoiceperborder; Patentsmax3; migrationrepeatsatmost1/project/action; Quarantineignorecounters.'),\\n('Sponsors226-240',[540,571],['Glossary p6; extracted1525-1585; FAQ p1 card228'],'Foreign2rep+F5continents; WAZApermanentchoice/search/extraappeal/size3allowed; smallprogramextra fromhand/displayevenifdeclined; discounts3/4; SponsorshipI1/B3,6,9 thresholds1,3,5; anyzoospecialists3.'),\\n('Sponsors241-253',[573,619],['Glossary pp6-7; extracted1525-1614'],'Terrainincomepernewhexnotedges, finalallconnected; alluniqueplacements/terrain/triggers/F6; RhesusX; Owl2keep1; Turtleupto2sell4; Polaranybear2/F3-5or6; Hyenatotaliconsdoubletwice; Okapimandatorybuildand3tokenspaidSponsorlevelconditions/selftrigger.'),\\n('Sponsors254-264',[621,665],['Glossary p7; extracted1615-1654'],'Schoolborder2 andorderedbenefits; Playgrounds4andterrain; SideEntrance2border/disconnectedallowed/futurebuild/B2perbuilding/kioskcounts/Ffullmap5; Nativesconnected/isolated; Farmborderbuilding/empty6groups; ToursI1CP1appeal/F5icons; Exploreruniqueandnoveltypes; LargeProgramfree5ignore1leftconditionstacks; Monkeysplacementspaces.')]:row(topic,sl,refs,detail)\\nrow('Final scoring and maps',[667,685],['Main pp2,19 scoring diagrams; Glossary p8; FAQ p2 maps'],'Sponsored3/6/8/10 and LargeAnimal1/2/4/5 scoring; Architectural/Conservation/Naturalist/Biodiverse; maps1tower2/nonbuilding,2+2allpurposes,4harboronceownturn,5restaurantperhex/nonbuilding/freeone special,6ignore1condition,7extraeverykiosk,8Hnotplacement/all3levelminus1 and gates.')\\nrow('Icon/FAQ procedures and caps',[687,701],['Icon Overview pp1-2; FAQ pp1-3'],'Ignore1leftnotterrain, free2/3/special undernormalrules, tileassociationavailable, thirdpartner/buildgates; paidSponsorhandonlylevelconditionsnostep; maximum25/minrep/partnercontinent; cap113/41; twoendtriggersturnsets.')\\nrow('Player Reference consistency',[703,717],['Main pp8-19; detailed candidate rules cross-check'],'Abbreviated reference agrees with full candidate sections, Xcap qualifier retained, all fiveactions, costs/limits, break, upgrades, gameendandscoring. No contradictory compressed procedure found.')\\nreport={\\n'audit_type':'Fresh independent final-only source accuracy and procedural-completeness audit',\\n'exact_intended_prompt':prompt,\\n'scope':'Original English base main v1.2, glossary, official base FAQ, official base Icon Overview. Solo, expansion, promo, map-pack and strategy content excluded. German photos limited to original printed component numeric/board diagram corroboration; no German prose rules adopted.',\\n'allowed_inputs':inputs,\\n'input_discipline':{'network_used':False,'other_agents_contacted':False,'other_summary_or_audit_inputs_read':False,'note':'A directory inventory exposed an intended-prompt.txt filename in the output directory; its contents were not read. Only named inputs and my source-only derivatives were read. pwd read working-directory identity only.'},\\n'complete_read_evidence':{\\n'line_count_method':'Python str.splitlines(), including final unterminated logical line; binary endswith newline recorded separately.',\\n'manifest':{'range':[1,48],'true_eof_inspected':True},\\n'summary':{'logical_lines':717,'true_eof_inspected':True,'final_newline':True,'complete_untruncated_read_ranges':[[1,100],[101,164],[165,280],[281,360],[361,480],[481,600],[601,717]],'initial_truncation':{'attempted_ranges':[[1,180],[181,360]],'tool_reported_truncated':True,'recovery':'Reread whole 1-164 and281-360 in bounded calls, and165-280 separately, so no reliance on initial truncated output remains.'}},\\n'raw_text_packet':{'logical_lines':1898,'complete_read_ranges':[[1,230],[231,460],[461,700],[701,930],[931,1160],[1161,1370],[1371,1535],[1536,1735],[1736,1898]],'truncated_ranges':[],'true_eof_inspected':True,'final_newline':False,'last_logical_line':1898},\\n'derived_pdf_text_reads':'Every generated page extraction read from logical line1 through its actual splitlines EOF in bounded calls; exact ranges below. No page-text output truncated. Main pages1-5,6-9,10-13,14-17,18-20; glossary1-3,4-6,7-8; FAQ1-3; Icon1-2.',\\n'pdfs':pdf_evidence,\\n'photos':[\\n{'path':inputs[-2]['path'],'sha256':inputs[-2]['actual_sha256'],'full_image_view_image_inspected':True,'details':'Inspected entire original scene and crops. Original action row I numeric cells0/1/1/1/2 and II1/1/2/2/2; CardsI numeric table and printed board Appeal/income and Reputation labels corroborated. German prose ignored. Perspective/resolution do not reveal every tiny card text; no hidden values inferred.'},\\n{'path':inputs[-1]['path'],'sha256':inputs[-1]['actual_sha256'],'full_image_view_image_inspected':True,'details':'Inspected entire box/component illustration, original component layout and action rows; copyright2021 visible. Corroborates original component identity. Numeric corroboration only; German marketing and rules prose not adopted.'}],\\n'additional_image_inspection_assets':[{'path':str(o/f'{n}.png'),'sha256':sha(o/f'{n}.png'),'view_image_inspected':True} for n in ['photo-action-II','photo-action-I','photo-tracks','main-p15-projects','main-p02-final-card','main-p09-reputation','main-p02-cards-II','main-p06-map-A','main-p05-association','main-p04-track']]},\\n'claim_source_audit_ledger':ledger,\\n'findings':[],\\n'source_limitations':[{'id':'L1','severity':'source limitation; not candidate error or omission','summary_citation':'summary-snapshot.md line332','source_citation':'ark-nova-rules.pdf p15 bottom project diagram, Aquatic card middle condition; derived main-p15-projects.png','observation':'The yellow player cube physically obscures the middle requirement numeral/icon. The outer5/2 requirements and4/2 rewards and middle3CP reward are visible. The candidate explicitly identifies the obscured condition and correctly defers to the printed card. No numeric middle requirement is claimed or reconstructed.','unresolved_rules_defect':False}],\\n'non_rules_metadata_note':'The candidate verification banner/date is an inherited assertion, not source evidence. This report independently assesses the rules in the supplied snapshot; no historical verification or BGG metadata lookup was made.',\\n'unresolved_material_count':0,'unresolved_minor_rules_count':0,\\n'verdict':'PASS','pass_criterion':'No unresolved material rules error or credible minor in-scope rules omission after complete summary, full raw text, every PDF text/page image, and both photo inspections.',\\n'snapshot_sha256':sha(snapshot),\\n'read_only_inputs_unchanged':all(sha(Path(i['path']))==i['actual_sha256'] for i in inputs),\\n'conclusion':'The supplied snapshot accurately and procedurally covers the accepted original-base packet. No unsupported in-scope rules claim, contradiction or credible rules omission was identified. The sole noted unknown is visibly obscured source data already disclosed by the candidate.'}\\n(o/'report.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\\\\n')\\nprint(json.dumps({'report':str(o/'report.json'),'verdict':report['verdict'],'snapshot_sha256':report['snapshot_sha256'],'material':0,'minor':0,'pdf_pages':sum(x['page_count'] for x in pdf_evidence),'inputs_unchanged':report['read_only_inputs_unchanged'],'report_bytes':(o/'report.json').stat().st_size},indent=2))\\nPY\",\"max_output_tokens\":2000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1aebf-7675-7e61-8762-c7a30c1ca09c",
+        "create_time": 1793933623.586936
+      }
+    }
+  ],
+  "limit": "Actual output presence, not OS isolation; manually review calls, ranges, and task boundaries."
+}

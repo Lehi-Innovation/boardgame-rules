@@ -1,0 +1,631 @@
+# Scythe expanded-v9 question and answer bank
+
+## Q01
+
+How are Factory cards, encounter tokens, and the structure bonus set up, and who starts?
+
+Shuffle Factory cards; select players+1 face-down and return others unseen to box. Put an encounter token on each of 11 marked territories. Randomly select one face-up structure bonus tile. Lowest numbered Player Mat starts, then clockwise.
+
+Source: Rulebook PDF p. 6, Rulebook PDF p. 8.
+
+Preserved seed-v1 entry.
+
+## Q02
+
+What starts on the map and each mat, and which mat supplies starting power, combat cards, popularity, coins and objectives?
+
+Character on own home base; one worker on each of two land-adjoined territories. Faction Mat supplies power/combat cards, holds four mechs and six stars. Player Mat supplies popularity/coins/objectives, holds six technology cubes on black-square green boxes, four structures, four recruits and remaining six workers on Produce; action token starts beside it.
+
+Source: Rulebook PDF p. 7, Rulebook PDF p. 8, Rulebook PDF p. 9.
+
+Preserved seed-v1 entry.
+
+## Q03
+
+May you skip both actions, repeat a section, use top-row gains below, or take the bottom action first? How are costs and benefits determined?
+
+Must move token to different section, except Rusviet may repeat including Factory. Top then bottom, each optional once; may skip both. May use top gains below. Pay full exposed red-box cost before taking as much or as little exposed green benefit as desired.
+
+Source: Rulebook PDF p. 10, Rulebook PDF p. 21.
+
+Preserved seed-v1 entry.
+
+## Q04
+
+Who controls a structure territory occupied by an enemy worker, who can use the structure, and from where may you spend resources for an action elsewhere?
+
+Enemy worker controls territory and resources; structure owner retains abilities except cannot Produce at an uncontrolled Mill; enemy gains no structure ability. Spend resources from any controlled territories for actions anywhere; spent resources go to supply.
+
+Source: Rulebook PDF p. 4, Rulebook PDF p. 18.
+
+Preserved seed-v1 entry.
+
+## Q05
+
+On a normal unupgraded Move, can one unit move twice, can a transported worker subsequently move, and who can carry what?
+
+Move up to two different units one adjacent territory each, sequentially, or gain $1 instead. All units carry any number of resources; only mechs carry any number of own workers, not characters. Carriage is not the worker movement so worker can subsequently move itself.
+
+Source: Rulebook PDF p. 5, Rulebook PDF p. 11.
+
+Preserved seed-v1 entry.
+
+## Q06
+
+What happens when a Speed-enabled mech enters enemy workers only, even at zero popularity; may its workers enter that territory by themselves?
+
+Mech stops and cannot move again this turn. Enemy workers immediately retreat home leaving resources; attacker loses one popularity each to minimum zero, still retreats them. Workers cannot independently enter enemy-worker-controlled territory.
+
+Source: Rulebook PDF p. 11, Rulebook PDF p. 15, Rulebook PDF p. 31.
+
+Preserved seed-v1 entry.
+
+## Q07
+
+When does combat occur after movement, who chooses multiple combat order, and can workers enter or leave enemy-character/mech-controlled territory alone?
+
+Finish all movement, then combats before bottom-row action. Active attacker chooses order. Attacking plastic unit stops on entry and enemy temporarily controls territory. Workers cannot enter or leave such territory independently.
+
+Source: Rulebook PDF p. 11, Rulebook PDF p. 22.
+
+Preserved seed-v1 entry.
+
+## Q08
+
+State Bolster and Trade costs and choices; where are traded resources placed and what if all workers are home? What if the combat deck is exhausted?
+
+Bolster $1 for 2 power OR 1 combat card; Trade $1 for any two resources OR 1 popularity. Place resources on controlled territory with worker; cannot trade for resources with all workers home. Empty combat deck reshuffles discards; if both empty draw none.
+
+Source: Rulebook PDF p. 6, Rulebook PDF p. 12.
+
+Preserved seed-v1 entry.
+
+## Q09
+
+How is Produce paid and resolved, where do new workers come from, can benefits be declined, and do new workers change the cost already paid?
+
+Pay all exposed red costs before action, must afford full power/popularity/coins. Choose up to two different controlled territories; each worker may produce one terrain token there. Villages produce workers from Player Mat left to right, after payment, so new exposure affects future Produce costs. May decline production/workers. Workers never return to mat.
+
+Source: Rulebook PDF p. 10, Rulebook PDF p. 13, Rulebook PDF p. 31.
+
+Preserved seed-v1 entry.
+
+## Q10
+
+What are Upgrade and Deploy costs, placement restrictions and effects, and can a completed bottom action still be paid?
+
+Upgrade oil: cube from any green box to empty bracketed red box, never solid border. Deploy metal: choose mech on Faction Mat, put on controlled worker territory, never lake; uncovered ability applies to character/all mechs, not workers. Costs/coins vary by mat. Completed bottom action may still be paid for coins and applicable recruit bonus.
+
+Source: Rulebook PDF p. 14, Rulebook PDF p. 15.
+
+Preserved seed-v1 entry.
+
+## Q11
+
+Where may a structure be built, can it move or be destroyed, and how do Mill and Mine work when their territories are occupied by enemies?
+
+Build costs wood, controlled worker territory, one structure total per territory; Factory allowed, lakes/home bases forbidden. Permanent cannot move/destroy. Mill adds bonus Produce territory and produces as worker plus actual workers only while controlled. Mine personal tunnel usable for all unit movement even enemy-controlled, enemy cannot use it.
+
+Source: Rulebook PDF p. 18.
+
+Preserved seed-v1 entry.
+
+## Q12
+
+When enlisting, where does the token go, what are the one-time bonuses, which action sets ongoing bonus, and how do simultaneous/two-player bonuses resolve?
+
+Pay food; remove any recruit from Player Mat, permanently place on open Faction one-time space for 2 power/coins/popularity/combat cards. Ongoing bonus linked to section uncovered, triggered by self or immediate left/right taking that bottom action, not top/Factory. Announce actions. Active then left then right; sixth star immediately ends. In 2-player opponent triggers once.
+
+Source: Rulebook PDF p. 20.
+
+Preserved seed-v1 entry.
+
+## Q13
+
+What may each combatant secretly spend on dial and cards, how do combat abilities resolve, and how are totals paid and ties broken?
+
+May fight at zero power/popularity. Attacker mech ability first, then defender. Dial 0 to min(current power,7). Up to one card per participating character/mech, even with zero dial. Reveal simultaneously; add card values, attacker wins tie. Both pay dial power and discard used cards face-up; card values do not reduce track.
+
+Source: Rulebook PDF p. 22, Rulebook PDF p. 23.
+
+Preserved seed-v1 entry.
+
+## Q14
+
+After combat, what happens to all units/resources, popularity, combat stars, and the losing player combat-card reward?
+
+Winner controls territory/resources, places combat star if below two (Saxony unlimited available stars), may still fight after limit. Loser retreats all units including workers home leaving resources. Winning attacker loses one popularity per opposing worker retreated; winning defender does not. Loser draws one combat card if revealed at least one power on dial OR cards, none for zero total.
+
+Source: Rulebook PDF p. 23, Rulebook PDF p. 31.
+
+Preserved seed-v1 entry.
+
+## Q15
+
+When is an encounter resolved after contested entry, what if the character loses, where do gains go, and do normal action costs/bonuses apply?
+
+Character stops/cannot move again on entering token; finish Move and all combats before bottom action, only if character still there (must win contested entry). If loses token stays. Discard token, draw encounter, choose one affordable option (Polania up to two); pay printed cost and may decline benefits. Resources/structures/mechs/workers go to encounter territory. No additional normal costs/benefits or recruit bonuses; card face-down bottom encounter deck.
+
+Source: Rulebook PDF p. 11, Rulebook PDF p. 24.
+
+Preserved seed-v1 entry.
+
+## Q16
+
+Who takes a Factory card, when, may later visitors take one or change theirs, and how do Factory actions and Speed movement differ from mat actions?
+
+Each character first finishing Move at Factory after any combat must choose one available card, return rest; not just first visitor, max one permanent card per player, cannot exchange. Fifth section, optional top then bottom; no corresponding mat coins/structure/recruit bonuses. Bottom Move one unit up to twice (three with character/mech Speed), same stop rules, Mine usable.
+
+Source: Rulebook PDF p. 25.
+
+Preserved seed-v1 entry.
+
+## Q17
+
+When can an objective be revealed, what requirements and discards apply, and what changes for Saxony?
+
+Only own turn before/after complete top or bottom action, all requirements true at reveal; may delay reveal. Place one objective star, discard both objectives to deck bottom. Saxony keeps second and may complete both, unrestricted combat/objective stars within six available.
+
+Source: Rulebook PDF p. 21, Rulebook PDF p. 26.
+
+Preserved seed-v1 entry.
+
+## Q18
+
+Which achievements earn stars, may stars be lost or another player block a goal, and when does the game end?
+
+Six upgrades, four mechs, four structures, four recruits, eight workers on board, completed objective, up to two combat victories, 18 popularity,16 power. Must place on achievement, each once except combat two/Saxony exception; irreversible and other players may share goals. Sixth star ends immediately, no extra turns/actions.
+
+Source: Rulebook PDF p. 27, Rulebook PDF p. 28.
+
+Preserved seed-v1 entry.
+
+## Q19
+
+If a bottom action earns the sixth star, what is collected first; what happens to pending battles and a neighbor recruit star?
+
+Gain primary benefit, coins and own recruit ongoing benefit before placing bottom-action sixth star. Undo movement into any still-unresolved battle, return units to origin. Neighbor power/popularity star from recruit only after active action, in order active/left/right (clockwise), only if active did not already end game; stop remaining events at sixth star.
+
+Source: Rulebook PDF p. 20, Rulebook PDF p. 23, Rulebook PDF p. 28.
+
+Preserved seed-v1 entry.
+
+## Q20
+
+At 10 popularity, how much do 5 stars, 4 normal territories plus Factory, and 13 resources add to held coins? Include structure bonus eligibility and all victory tiebreakers.
+
+Tier 7-12 pays $4/star,$3/territory,$2/resource pair. 5 stars=$20; 4+Factory as 3=7 territories=$21; six pairs=$12, total $53 plus held coins and structure tile. Structure bonus even without control. Most coins wins; ties workers+mechs+structures (not character), power, popularity, controlled resources, controlled territories, placed stars.
+
+Source: Rulebook PDF p. 28, Rulebook PDF p. 29.
+
+Preserved seed-v1 entry.
+
+## Q21
+
+Is a home base a territory, may you enter one normally, and are expansion home bases active?
+
+Home base is not territory for any game effect; cannot normally move back in, build/deploy there. Starts and forced retreat exceptions; Crimea Wayfare explicit movement exception. Two unrepresented bases are expansion placeholders/inactive.
+
+Source: Rulebook PDF p. 4, Rulebook PDF p. 11, Rulebook PDF p. 17.
+
+Novelty: Home-base status and default prohibitions beyond setup.
+
+## Q22
+
+Which terrain produces each token, do Factory/lake produce, are workers resources, and what happens if resource supply runs out?
+
+Mountain metal; tundra oil; farm food; forest wood; village workers. Lake/Factory nothing. Workers not resources. Resource supply unlimited; use multipliers as necessary, no territory token/unit limit.
+
+Source: Rulebook PDF p. 4, Rulebook PDF p. 13, Rulebook PDF p. 25.
+
+Novelty: Production terrain mapping and unlimited supply.
+
+## Q23
+
+May resources be picked up/dropped mid-movement, can mechs carry characters, and what does unlocked Speed change about tunnels and stops?
+
+All units may pick/drop any resources; mechs also own workers, never character. Speed adds one territory for character/mechs, including before/after tunnel jump which costs one move; may pick/drop mid-move. Entering enemy unit ends movement/cannot move again turn; character encounter also stops.
+
+Source: Rulebook PDF p. 5, Rulebook PDF p. 11, Rulebook PDF p. 15.
+
+Novelty: Speed transport and tunnel interaction.
+
+## Q24
+
+Can workers capture a territory controlled only by an enemy structure, and are printed tunnels usable by all unit types?
+
+Yes any unit may enter structure-only territory and controls it; no combat from structure alone. All printed tunnel territories adjacent for Move by any unit; enemy Mine not a public tunnel.
+
+Source: Rulebook PDF p. 11, Rulebook PDF p. 18.
+
+Novelty: Structure-only capture branch versus worker/plastic occupation.
+
+## Q25
+
+If unable to afford any action after last using Move, must you pay a partial Produce cost or what turn is legal?
+
+Never partial payment; full cost required. Take a dead turn choosing another section with no actions, still moving token.
+
+Source: Rulebook PDF p. 10, Rulebook PDF p. 13.
+
+Novelty: No-affordable-action dead-turn branch.
+
+## Q26
+
+What do Armory and Monument grant, when do those benefits trigger, and can an enemy occupant take them away?
+
+Armory adds 1 power when owner takes Trade, Monument adds 1 popularity when owner takes Bolster. Uncovered benefits apply future respective top actions, regardless territory control; opponent never gains them. Factory similar actions excluded.
+
+Source: Rulebook PDF p. 18, Rulebook PDF p. 25.
+
+Novelty: Remaining building benefits and persistence.
+
+## Q27
+
+How does each base faction Riverwalk differ, which units receive it, and does Nordic Swim give lake movement or help its mechs?
+
+Riverwalk only character/mechs: Saxony and Nordic forests/mountains; Rusviet farms/villages; Crimea farms/tundra; Polania villages/mountains. Nordic faction Swim workers only across rivers to any land terrain, never lakes; no mech/character benefit.
+
+Source: Rulebook PDF p. 15, Rulebook PDF p. 16, Rulebook PDF p. 17, Rulebook PDF p. 21.
+
+Novelty: Distinct terrain crossing and Swim exception.
+
+## Q28
+
+Which locations become adjacent under Saxony Underpass and Rusviet Township, and which units can use those shortcuts?
+
+Underpass controlled mountains and all tunnels (including own Mine) adjacent for character/mechs. Township controlled villages and Factory adjacent for character/mechs. Not workers; required ability unlocked via deploy.
+
+Source: Rulebook PDF p. 15, Rulebook PDF p. 16.
+
+Novelty: Faction shortcut networks and qualifying control.
+
+## Q29
+
+When does Saxony Disarm apply, how often, and how does Nordic Artillery differ?
+
+Disarm before combat on printed tunnel or own Mine: opponent loses 2 power once per combat, not per unit. Artillery before any combat may pay 1 power to make opponent lose 2, once per combat. Track losses; attacker ability before defender.
+
+Source: Rulebook PDF p. 15, Rulebook PDF p. 16, Rulebook PDF p. 22.
+
+Novelty: Distinct combat ability triggers and payment.
+
+## Q30
+
+With Rusviet People's Army, how many cards may two mechs and three workers play, and can workers alone fight?
+
+Three cards: one per mech plus one total for at least one worker. Need character/mech; workers alone cannot fight. Ability unlocked.
+
+Source: Rulebook PDF p. 16.
+
+Novelty: Worker presence extra-card exception.
+
+## Q31
+
+Where may Crimea Wayfare move its character/mechs, and can they enter an active opponent home base?
+
+From territory or home base to own home base or any inactive faction home base regardless distance, including inactive expansion bases. Not active opponent home base; workers do not gain ability.
+
+Source: Rulebook PDF p. 17.
+
+Novelty: Home-base movement exception and inactive destination.
+
+## Q32
+
+What does Crimea Scout steal and when; how does Coercion value and limit a spent combat card?
+
+Scout before combat randomly steals one opponent combat card to hand, once per combat not per unit. Coercion once per turn spends one combat card as any one resource regardless card value; card not worth end-game coins.
+
+Source: Rulebook PDF p. 17, Rulebook PDF p. 21.
+
+Novelty: Distinct hand theft and resource substitution rules.
+
+## Q33
+
+How do Nordic Seaworthy and Polania Submerge differ in lake movement and retreat, and what happens to transported workers/resources when leaving a lake?
+
+Both character/mechs to/from lakes, workers only via mech; cannot leave workers/resources behind when carrier leaves; worker cannot leave without mech. Nordic may retreat character/mechs onto adjacent lake (or home), carrying workers; Polania may move lake to any lake, no such special retreat. Both cannot build/deploy lake, can fight another lake-capable faction there.
+
+Source: Rulebook PDF p. 16, Rulebook PDF p. 17.
+
+Novelty: Lake movement/retreat exceptions and mandatory cargo.
+
+## Q34
+
+When does Polania Camaraderie prevent popularity loss, and does it cover driving out undefended workers?
+
+Prevents popularity loss for workers forced to retreat after winning combat as aggressor on own turn. Does not apply to driving out undefended workers without combat; normal one popularity each then.
+
+Source: Rulebook PDF p. 17, Rulebook PDF p. 11.
+
+Novelty: Combat-only popularity exception.
+
+## Q35
+
+How does Polania Meander resolve encounters, including card count, options and paying the second option?
+
+Draw just one card; may choose up to two different options in either order; may use first benefit to pay second cost.
+
+Source: Rulebook PDF p. 21.
+
+Novelty: Encounter option/sequence faction exception.
+
+## Q36
+
+If a character reaches an encounter during Factory bottom Move, can it continue moving, and does the encounter occur before all combats finish?
+
+No character movement again that turn; Factory Move obeys stop rules. Encounter after entire Move and all combats; character must remain there. Bottom Factory Move still triggers normal encounter.
+
+Source: Rulebook PDF p. 11, Rulebook PDF p. 24, Rulebook PDF p. 25.
+
+Novelty: Factory movement encounter timing exception.
+
+## Q37
+
+What information about coins, combat cards and objectives is public, and is the exact coin total required on request?
+
+Coin holdings not hidden but need not reveal total value; combat card count public, contents secret; may conceal whether cards used in combat until reveal. Objectives secret until revealed.
+
+Source: Rulebook PDF p. 7, Rulebook PDF p. 22, Rulebook PDF p. 26.
+
+Novelty: Information visibility procedural rule.
+
+## Q38
+
+Which things can be exchanged in alliances, are agreements enforceable, and can a payment cancel combat once begun?
+
+Only tangible exchange coins (tournament exception no coin trades for deals/alliances); informal agreements unenforceable. Cannot cancel already initiated combat by negotiation; must fight after Move, though bribes may influence outcome.
+
+Source: Rulebook PDF p. 26.
+
+Novelty: Negotiation limits and mandatory combat.
+
+## Q39
+
+State all final-scoring popularity tiers and payouts; do controlled lakes and home bases count, and do leftover single resources score?
+
+0-6: stars3/territories2/pairs1;7-12:4/3/2;13-18:5/4/3. Lakes count if controlled, home bases never. Factory three total. Sum controlled resources across board and score floor(total/2), no leftover single; workers not resources.
+
+Source: Rulebook PDF p. 28, Rulebook PDF p. 29 (diagram inspected).
+
+Novelty: All scoring tier boundaries and territory/resource branches.
+
+## Q40
+
+For adjacent-tunnel, adjacent-encounter and adjacent-lake structure bonuses, how are duplicates, rivers, removed encounters and Mines treated, and what are the payouts?
+
+Count each qualifying adjacent feature once across structures. Rivers do not break adjacency; removed encounter tokens still count printed encounter. Mine not tunnel for tile. Adjacent tunnels count1=$2,2-3=$4,4-5=$6,6=$9; lakes/encounters1=$2,2-3=$4,4-5=$6,6-7=$9; zero=$0.
+
+Source: Rulebook PDF p. 19 (diagram inspected).
+
+Novelty: Three adjacency structure-tile rules and diagram payouts.
+
+## Q41
+
+For structures on tunnels, structures in a row, and structures on farms/tundras, what qualifies and what are the payouts?
+
+On printed tunnels not Mine:1=$2,2=$4,3-4=$6. Longest continuous straight line only, rivers do not break:1=$2,2=$4,3=$6,4=$9. Farms+tundras combined number with structures:1=$2,2=$4,3=$6,4=$9. Zero=$0. Bonus regardless territory control.
+
+Source: Rulebook PDF p. 18, Rulebook PDF p. 19 (diagram inspected).
+
+Novelty: Remaining three structure-tile qualification/payout branches.
+
+## Q42
+
+In combat on a lake, does a winning attacker lose popularity for workers carried by the defeated mech?
+
+Yes one popularity per forced-retreat worker even carried on lake; retreat with mech to home base by default (Nordic Seaworthy permits adjacent-lake retreat). Polania unlocked Camaraderie exception after combat.
+
+Source: Rulebook PDF p. 16, Rulebook PDF p. 17, Rulebook PDF p. 23.
+
+Novelty: Lake carried-worker popularity branch.
+
+## Q43
+
+Does placing a popularity star protect current popularity or its scoring tier, and can two factions both star the same achievement?
+
+Star itself permanent, popularity may fall and final payout uses current tier. Other factions may also place same goal; no blocking.
+
+Source: Rulebook PDF p. 27, Rulebook PDF p. 29 (diagram inspected).
+
+Novelty: Irreversible star versus mutable scoring metric.
+
+## Q44
+
+How are Faction Mats and Player Mats assigned, and in what relative faction order should players sit? Why does that seating matter for recruit bonuses?
+
+Randomly shuffle the Faction Mats and Player Mats and deal one of each to each player. Players sit near their faction home bases, with the clockwise order from the top Nordic, Rusviet, Crimea, Saxony, Polania, using the factions in the game. Recruit ongoing bonuses respond to the player and their immediate left/right neighbors, so those neighbors follow the seating arrangement.
+
+Source: Rulebook PDF p. 6: FACTION SELECTION, Rulebook PDF p. 20: ONGOING BONUS and PLAYER ORDER.
+
+Novelty: Distinct setup selection and required relative seating procedure. Q01 asks Factory/encounter/structure setup and start player; Q02 asks piece placement and starting values; Q12 assumes already established left/right neighbors. None elicits or keys mat assignment or seating.
+
+## Q45
+
+For movement, what distinguishes a river from a lake, and from which surrounding land territories can a unit with a lake-movement ability enter the lake?
+
+A river lies on the border between two land territories. A lake comprises an entire territory hex and extends from that hex to any adjacent shoreline. A unit with the appropriate lake-movement ability can move onto it from any of the surrounding territories shown by that shoreline; crossing permission for a river alone does not grant entry to lakes.
+
+Source: Rulebook PDF p. 11: RIVERS AND LAKES; RIVER; LAKE; illustrated example, Rulebook PDF p. 21: NORDIC (SWIM).
+
+Novelty: Distinct source-defined map adjacency rule, rather than another example of the already tested faction ability permissions. Q27/Q33 distinguish abilities and destinations but do not define the geographic boundary or surrounding-shoreline adjacency used to apply those abilities.
+
+## Q46
+
+When you draw an encounter card, may you keep it private? What must you show or read aloud to the other players?
+
+The encounter card is shown to all players when drawn. Show its artwork and read the capitalized thematic text aloud, then read through its costs and benefits and choose an option. The rules do not require reading every option aloud.
+
+Source: Rulebook PDF p. 24, ENCOUNTERS: Show the art to the other players and read the thematic text (the text in all caps) out loud., Rulebook PDF p. 24, concluding DESIGNER'S NOTE: encounter cards are shown to all players when drawn..
+
+Novelty: Distinct mandatory public-information procedure. Q15 does not ask encounter visibility or presentation, Q37 asks only coins/combat cards/objectives, and no expected answer in Q01-Q45 states this procedure. The tested outcome is whether a player may hide a drawn encounter from the table, not a changed quantity, cosmetic rewording, or mechanical combination.
+
+## Q47
+
+Is there any limit to the number of your units or resource tokens that may occupy one territory?
+
+There is no per-territory limit on same-faction units or resource tokens. This does not remove the separate one-structure-per-territory restriction.
+
+Source: Rulebook PDF p11 NO LIMIT: no limit to same-faction units on a territory, Rulebook PDF p13 NO LIMIT: any number of resource tokens or workers can be on a territory.
+
+Novelty: Distinct explicit occupancy rule. Unlimited carrying, unlimited resource supply, and production output do not establish unlimited placement in one territory. Q22 key supplies this as extra information, but Q22 wording never requests occupancy.
+
+## Q48
+
+Must the next player wait until the current player has finished every bottom-row decision, or when may the next turn begin?
+
+The next clockwise player may begin when the current player starts or is finalizing a bottom-row action, while the current player decides which upgrade, mech, structure or recruit to gain. The ordinary alternative is to start after the current turn is complete. This overlap does not reverse the stated recruit-bonus priority or the immediate game-end rule.
+
+Source: Rulebook PDF p10 GAMEPLAY, paragraph beginning After you have completed your turn, Rulebook PDF p14 OVERLAPPING TURNS, Rulebook PDF p31 TURNS AND PLAYER MATS.
+
+Novelty: Distinct explicit permission governing the start of the next turn, absent from all 46 questions and keys. It is not another recruit-priority example or a recombination of action effects.
+
+## Q49
+
+After taking the selected top-row or bottom-row action, may you pay its cost again to take that same action a second time in the same turn?
+
+No. Each action may be taken only once during the turn; paying the full cost again does not permit repeating it.
+
+Source: Rulebook PDF p10 GAMEPLAY, once-per-action restriction.
+
+Novelty: Distinct restriction on repetitions within a turn. Q03 section repetition concerns action-token selection on successive turns, a different rule. The extra once-per-action phrase in its key is not requested by that wording.
+
+## Q50
+
+What can you gain from the normal, unupgraded Move action if you choose not to move any units?
+
+You may choose to gain $1 instead of moving units. Moving and gaining the listed coins are alternative choices.
+
+Source: Rulebook PDF p11 MOVE: move units OR GAIN COIN(S).
+
+Novelty: Previously unelicited top-row action alternative, rather than a changed amount or another movement example. Q05 key includes the alternative but Q05 only asks movement and transportation.
+
+## Q51
+
+May a worker already on the board be returned to your Player Mat to cover a Produce cost again, including after it retreats?
+
+No. Once on the board, a worker never returns to the Player Mat. A forced retreat puts it on the home base, not back on its Produce rectangle.
+
+Source: Rulebook PDF p13 WORKERS ARE PERMANENT, Rulebook PDF p23 LOSER: retreat all units to home base, Rulebook PDF p31 WORKERS.
+
+Novelty: Distinct permanent worker-removal restriction and its cost consequence. Q09 discusses newly uncovered costs and Q14 asks a specific combat retreat destination, but neither asks whether the player can later return workers to the mat. The retreat reference illustrates the same permanence rule; it does not introduce a new combined mechanic.
+
+## Q52
+
+May you initiate combat when you have zero power, zero popularity, or both?
+
+Yes. Neither power nor popularity has a minimum requirement for initiating combat. You can select zero power on the dial.
+
+Source: Rulebook PDF p22 NO REQUIREMENTS and SELECT POWER.
+
+Novelty: Explicit eligibility branch. Q13 asks what may be spent, and Q06 asks expelling undefended workers at zero popularity; neither directly tests whether combat itself can be initiated without these commodities.
+
+## Q53
+
+After a faction other than Saxony has already earned its two combat-victory stars, may it still initiate and win further combats?
+
+Yes. The limit restricts further combat stars, not participation or winning. It may continue fighting but gains no additional combat-victory stars.
+
+Source: Rulebook PDF p23 LIMITED STARS AND GAME END.
+
+Novelty: Explicit permission after an achievement cap. Q14 covers immediate combat aftermath and Q18 asks which achievements award stars; neither requires answering whether later combat remains legal.
+
+## Q54
+
+For a faction without Meander, may you decline to choose an option after drawing an encounter, choose an option you cannot afford, or decline some of the chosen option benefits?
+
+You must choose one option and pay any listed cost. An option whose cost you cannot pay is unavailable. You may take as much or as little of the chosen option benefit as you want.
+
+Source: Rulebook PDF p24 ENCOUNTERS, Rulebook PDF p24 REQUIRED COST AND OPTIONAL BENEFIT.
+
+Novelty: Explicit encounter-choice branches: mandatory selection, affordability and optional benefit. Existing questions ask timing, location, isolation, Polania extra options or public presentation. The three clauses are the source-defined branches of one choice procedure, not a scenario combining separate mechanics.
+
+## Q55
+
+Do combatants select their Power Dials in turn order, and when are the dials and selected combat cards revealed?
+
+They select dial power simultaneously and secretly, then reveal both Power Dials and any selected combat cards simultaneously. Attacker-first resolution of combat mech abilities does not make the power selection or reveal sequential.
+
+Source: Rulebook PDF p22 SELECT POWER, Rulebook PDF p23 REVEAL.
+
+Novelty: Distinct simultaneous commitment/reveal timing procedure. Q13 asks secret spending and ability order without asking selection/reveal timing; Q37 asks visibility of information. Its correct extra key fact does not itself elicit this procedural timing.
+
+## Q56
+
+When taking a bottom-row action, what must you announce to the other players, and why?
+
+You must announce that you are taking the bottom-row action, so the players immediately to your left and right can check their Recruit Ongoing Bonuses.
+
+Source: Rulebook PDF p20 PROCLAMATION.
+
+Novelty: Distinct mandatory action-announcement procedure. Q12 key includes it as extra detail, but its question only asks recruitment/bonus mechanics; other visibility questions do not concern action declarations. This is not another recruit-trigger example.
+
+## Q57
+
+After you achieve a star goal, may you decline or delay placing that star to avoid ending the game? How does this differ from holding a completed objective card unrevealed?
+
+An earned star must be placed on the appropriate achievement immediately; it cannot be declined or delayed to avoid ending the game. You may instead wait to reveal a completed objective, provided you still satisfy it when you reveal it; when you reveal it, place the star.
+
+Source: Rulebook PDF p27 PLACING STARS: when you achieve one of these goals, you must place a star, Rulebook PDF p2 TRIUMPH TRACK: as soon as you complete a requirement, Rulebook PDF p26 OBJECTIVES: may wait to reveal, requirements must hold at reveal.
+
+Novelty: Distinct mandatory placement/timing restriction, with the source-defined voluntary objective-reveal exception. Existing questions ask what earns stars and what happens after placement, not whether an already earned nonobjective star can be withheld. Q17 already covers delaying objective reveal; it supplies the precise exception rather than a new mechanically combined scenario.
+
+## Q58
+
+Before any faction or mech ability provides an exception, may a character, mech or worker move across a river or onto a lake?
+
+No. By default, none of the three unit types may cross rivers or move onto lakes. An applicable special ability is required to override the relevant restriction.
+
+Source: Rulebook PDF p. 5: TYPES OF UNITS: all three unit types can move around the board, not over rivers or onto lakes by default., Rulebook PDF p. 11: RIVERS AND LAKES: By default, units may not move across rivers or onto lakes; some mech abilities break the rule..
+
+Novelty: This is the source's categorical default movement restriction, distinct from the scope and destinations of particular exceptions. Q27 can be fully answered by listing each faction's Riverwalk and Nordic Swim permissions; Q45 can be fully answered by defining river borders and lake shorelines. A reader could answer both while incorrectly believing other units have unrestricted water movement. The proposal asks no new numerical example or combined ability scenario.
+
+## Q59
+
+After placing an enlisted recruit on a Recruit One-Time Bonus space on your Faction Mat, may you move that recruit token later to free the space for another recruit?
+
+No. An enlisted recruit token remains on its chosen Faction Mat space permanently and cannot be moved. You cannot free an occupied one-time bonus space by relocating that token.
+
+Source: Rulebook PDF p. 20: ONE-TIME BONUS: place the recruit on any open Recruit One-Time Bonus space; the token remains there permanently and cannot be moved..
+
+Novelty: This tests the explicit immobility restriction after initial placement. Q12's substantive wording asks where the recruit goes when enlisting, rather than whether it may later move; its key's word permanently is an unasked extra. The restriction has a gameplay consequence because rearrangement could reopen a one-time bonus space for reuse. It is a single source-defined placement/lifecycle restriction, analogous to the independently tested worker and structure permanence rules, not a recombination of unrelated mechanics.
+
+## Q60
+
+May a mech or worker resolve an encounter or remove its encounter token merely by entering that territory?
+
+No. Only characters trigger encounters. A mech or worker entering a territory does not resolve its encounter or remove the encounter token; it remains for a character.
+
+Source: Rulebook PDF p.5, TYPES OF UNITS: characters can have encounters; other units have different roles., Rulebook PDF p.24, ENCOUNTERS: Only characters will trigger an encounter. Token removal occurs when resolving the character-triggered encounter., Rulebook PDF p.31, ENCOUNTERS: Only characters may have encounters..
+
+Novelty: A categorical unit-eligibility restriction with a consequential board-state outcome. Q15 asks timing after contested entry, the losing-character branch, benefit placement and isolated costs; Q36 asks stopping and timing when a character arrives via Factory Move; Q46 asks information presentation; Q54 asks choosing options after drawing. All can be answered correctly while incorrectly allowing a mech or worker to trigger an encounter. Q16 explicitly asks who takes a Factory card, but Factory eligibility does not elicit encounter eligibility. Q05 only asks movement/carriage, Q30 combat eligibility. The additional question introduces no changed quantities, new layout, unrelated combination or reference-only procedure.
+
+## Q61
+
+While you control the territory containing your Mill, how does it affect the number of territories you may Produce on and the output there, including when no actual worker is present?
+
+The Mill territory may count as an extra bonus territory in addition to the normal territories selected for Produce. The Mill produces as if it were one worker, so it can produce even with no actual worker there. Any actual workers on its territory may also produce.
+
+Source: Rulebook PDF p18, MILL: Whenever you take the Produce action, the territory with the Mill may count as an extra (bonus) territory for production. The Mill will produce as if it were a worker. If there are actual workers on the Mill territory, they may also produce resources..
+
+Novelty: Tests the structure's distinct positive ability: extra eligible territory and worker-equivalent output, including the explicit no-worker consequence. Q11 asks only how Mill and Mine work when enemies occupy their territories; a fully responsive answer can simply say that an uncontrolled Mill cannot Produce. Its key supplies the positive ability without requesting it. Q09 asks the general Produce procedure, with no Mill reference and a key limited to worker production on selected territories. Q26 directly asks Armory/Monument, not Mill. This is not another enemy-control example or changed worker count.
+
+## Q62
+
+What presence establishes control of a territory, and do resources alone preserve your control after your last unit leaves a territory where you have no structure?
+
+You control a territory with at least one of your units, or with your structure and no enemy units. Resources are not units and do not establish control. If your last unit leaves and you have no structure there, you no longer control that territory or the resources left there; those resources cannot be spent by you unless you regain control.
+
+Source: Rulebook PDF p4, CONTROL: control requires at least one unit or a structure with no enemy units; only one player controls a territory at a time., Rulebook PDF p4, RESOURCES: resource tokens remain on the board and may be spent only from territories currently controlled., Rulebook PDF p29, EVERY TERRITORY CONTROLLED and EVERY 2 RESOURCES CONTROLLED; PDF p31, END-GAME SCORING..
+
+Novelty: Tests the source-defined no-qualifying-presence branch and its resource-ownership consequence. Q04 tests an enemy worker on a structure territory and remote spending from already-controlled territories. Q24 tests entry into a structure-only territory. Q20 and Q39 assume territory/resource control while testing scoring. None asks what establishes control or what happens when only resources remain. This follows the explicit control definition rather than introducing a new rule or mechanically combining unrelated abilities.
+
+## Q63
+
+Which resource is used to pay for the Build action, and which is used to pay for the Enlist action?
+
+Build uses wood. Enlist uses food; the amount required is the exposed cost on the corresponding Player Mat action.
+
+Source: Rulebook PDF p18, BUILD, Rulebook PDF p20, ENLIST, Rulebook PDF p10, GAMEPLAY, exposed red-box costs.
+
+Novelty: Tests two previously unelicited core payment-resource identities in one parallel question, using the same pairing approach already used for Upgrade/Deploy in Q10. This adds no changed numerical quantity, artificial scenario, mechanical interaction, setup padding or cosmetic rewrite. Resource identity affects whether the player can legally take these bottom-row actions.

@@ -1,0 +1,1 @@
+Adds Q66 Reveal acquisition timing and Q67 board access icon mappings. No earlier question wording or expected answer changes from v4. Top-level terminology notes clarify compressed historic Q14/Q53 Influence labels without changing their rulings or answer strings.

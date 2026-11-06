@@ -1,0 +1,3 @@
+# No readers dispatched
+
+The102-question packet was prepared but no reader was dispatched. A fresh independent whole-prior101 novelty review retired Q103 before any reader saw or answered it. The original candidate, questions, hashes, prompts and source13 audit remain preserved. The source auditor saw only the exact315-line summary and primary sources, never the question bank or any reader feedback; its PASS certifies these same unchanged summary bytes. A new final101 bank and fresh pair use that existing exact-byte source certification by explicit reference rather than pretending another auditor was dispatched.

@@ -1,0 +1,49 @@
+{
+  "guide": "docs/quality/summary-qa/README.md reader template",
+  "isolation": "fork_turns none for every original reader dispatch; instruction-based file access restriction, not OS filesystem sandbox isolation",
+  "model_effort": "All readers explicitly gpt-6-luna/high; all source/coverage/grading reviewers gpt-6.1-sol/high; actual runtime metadata separately retained.",
+  "variants": [
+    {
+      "iterations": [
+        "seed-iteration-01",
+        "seed-iteration-02",
+        "seed-iteration-03"
+      ],
+      "protocol": "Guide blind-reader template: only frozen summary/questions; answer all requested parts, abstain unsupported, id/answer/support/evidence; no sources/key/prior outputs/history/web/other knowledge."
+    },
+    {
+      "iterations": [
+        "seed-iteration-04"
+      ],
+      "addition": "Use enough detail to resolve every requested part; section citations do not substitute for answering."
+    },
+    {
+      "iterations": [
+        "seed-iteration-05",
+        "seed-iteration-06",
+        "seed-iteration-08"
+      ],
+      "addition": "Enumerate compound requested clauses as separate numbered parts; fully describe requested procedures; check every requested part in same answer."
+    },
+    {
+      "iterations": [
+        "full-iteration-02"
+      ],
+      "addition": "Generic clause completeness and procedural detail self-check."
+    },
+    {
+      "iterations": [
+        "full-iteration-04"
+      ],
+      "addition": "Explicit complete-input chunking when tool truncates; no telegraphic omissions, no brevity requirement, quantities/destinations/timing/exceptions."
+    },
+    {
+      "iterations": [
+        "full-iteration-05"
+      ],
+      "exact_prompts": "full-iteration-05/reader-prompts.json",
+      "addition": "requested_parts array plus numbered complete answer and per-question pre-submit check."
+    }
+  ],
+  "limitations": "Prompt self-check emphasis changed, so score differences cannot be attributed solely to summary changes or model performance. Questions/keys were held fixed within each repair series; source/key corrections are versioned."
+}

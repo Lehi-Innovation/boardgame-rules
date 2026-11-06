@@ -1,0 +1,626 @@
+{
+  "benchmark_version": "seed-v1",
+  "grading_method": "Manual semantic comparison of every requested part, independently per answer. Reader support labels do not decide grade.",
+  "readers": {
+    "a": {
+      "totals": {
+        "correct": 0,
+        "partial": 17,
+        "incorrect": 3
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How are Factory cards, encounter tokens, and the structure bonus set up, and who starts?",
+          "expected_answer": "Shuffle Factory cards; select players+1 face-down and return others unseen to box. Put an encounter token on each of 11 marked territories. Randomly select one face-up structure bonus tile. Lowest numbered Player Mat starts, then clockwise.",
+          "source_references": [
+            "Rulebook PDF p. 6",
+            "Rulebook PDF p. 8"
+          ],
+          "observed_answer": "Factory deck is placed on the Factory territory. Encounter tokens are placed on designated territories. Structure bonus setup is not described; only that final coins include structure bonus tile coins (which vary). Who starts is not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Setup: \u201cPlace encounter tokens on designated territories. Place the Factory card deck on the Factory territory.\u201d Final Scoring: \u201cPlus structure bonus tile coins (varies).\u201d",
+          "grade": "partial",
+          "reason": "Missing players+1 random Factory selection/unseen removal, 11 marked encounters, random face-up structure tile, lowest-mat starter.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "What starts on the map and each mat, and which mat supplies starting power, combat cards, popularity, coins and objectives?",
+          "expected_answer": "Character on own home base; one worker on each of two land-adjoined territories. Faction Mat supplies power/combat cards, holds four mechs and six stars. Player Mat supplies popularity/coins/objectives, holds six technology cubes on black-square green boxes, four structures, four recruits and remaining six workers on Produce; action token starts beside it.",
+          "source_references": [
+            "Rulebook PDF p. 7",
+            "Rulebook PDF p. 8",
+            "Rulebook PDF p. 9"
+          ],
+          "observed_answer": "The character starts on the faction's home base and one worker on each adjacent territory. Power and popularity markers start at positions that vary by Faction mat. Starting combat cards, coins, and objective cards are received as indicated, but the summary does not specify their amounts or clearly identify which mat supplies each. Other map and mat starting pieces are not specified.",
+          "reader_support": "partial",
+          "reader_evidence": "Setup: \u201cPlace the character on the faction's home base and one worker on each adjacent territory. Set combat power and popularity markers at starting positions (varies by Faction mat). Receive starting combat cards, coins, and objective cards as indicated.\u201d",
+          "grade": "incorrect",
+          "reason": "Incorrectly attributes popularity to Faction Mat; it is supplied by Player Mat. Mat setup and two land-adjoined worker specificity also incomplete.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "May you skip both actions, repeat a section, use top-row gains below, or take the bottom action first? How are costs and benefits determined?",
+          "expected_answer": "Must move token to different section, except Rusviet may repeat including Factory. Top then bottom, each optional once; may skip both. May use top gains below. Pay full exposed red-box cost before taking as much or as little exposed green benefit as desired.",
+          "source_references": [
+            "Rulebook PDF p. 10",
+            "Rulebook PDF p. 21"
+          ],
+          "observed_answer": "Yes, you may take one action, both, or neither, but must move your action token. You cannot repeat the same section as your previous turn, except Rusviet may repeat the same action section on consecutive turns. The summary says to perform the top-row action before the optional bottom-row action, but does not explicitly say whether taking the bottom action first is prohibited. Whether top-row gains can be spent on the bottom action is not stated. Bottom-row actions are described as paying their cost and gaining their benefit; exact costs are shown in the action descriptions, with Produce's cost variable.",
+          "reader_support": "partial",
+          "reader_evidence": "Turn Structure: \u201cYou may take one action, both, or neither, but you must move your token.\u201d Turn step: \u201ccannot repeat the same section as your previous turn.\u201d Rusviet exception: \u201ccan repeat the same action section on consecutive turns.\u201d",
+          "grade": "partial",
+          "reason": "Missing full exposed red-cost payment, optional green benefit, using top gains below and explicit bottom-first prohibition.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Who controls a structure territory occupied by an enemy worker, who can use the structure, and from where may you spend resources for an action elsewhere?",
+          "expected_answer": "Enemy worker controls territory and resources; structure owner retains abilities except cannot Produce at an uncontrolled Mill; enemy gains no structure ability. Spend resources from any controlled territories for actions anywhere; spent resources go to supply.",
+          "source_references": [
+            "Rulebook PDF p. 4",
+            "Rulebook PDF p. 18"
+          ],
+          "observed_answer": "The summary says resources on a territory belong to whoever controls that territory, but does not explain who controls a structure territory occupied by an enemy worker or who can use its structure. For action spending elsewhere, the summary only states that Trade resources are gained on territories you control with workers; it does not state the general locations from which resources may be spent.",
+          "reader_support": "unsupported",
+          "reader_evidence": "Special Rules: \u201cResources on a territory belong to whoever controls that territory.\u201d Trade: \u201cGain 2 resources of your choice on territories you control with workers.\u201d",
+          "grade": "partial",
+          "reason": "No ruling for enemy unit control, persistent owner structure abilities/Mill exception or remote resource spending.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "On a normal unupgraded Move, can one unit move twice, can a transported worker subsequently move, and who can carry what?",
+          "expected_answer": "Move up to two different units one adjacent territory each, sequentially, or gain $1 instead. All units carry any number of resources; only mechs carry any number of own workers, not characters. Carriage is not the worker movement so worker can subsequently move itself.",
+          "source_references": [
+            "Rulebook PDF p. 5",
+            "Rulebook PDF p. 11"
+          ],
+          "observed_answer": "On a normal Move, up to two units may each move one territory; the summary does not say a unit can move twice. Mechs can carry workers, and workers carry resources. Whether a worker transported by a mech may then move separately is not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMove up to 2 units (character, worker, or mech) one territory each.\u201d \u201cMechs can carry workers. Workers carry resources.\u201d",
+          "grade": "partial",
+          "reason": "No decisive different-units ruling, resource carriage by all units or carried-worker subsequent movement.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What happens when a Speed-enabled mech enters enemy workers only, even at zero popularity; may its workers enter that territory by themselves?",
+          "expected_answer": "Mech stops and cannot move again this turn. Enemy workers immediately retreat home leaving resources; attacker loses one popularity each to minimum zero, still retreats them. Workers cannot independently enter enemy-worker-controlled territory.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 15",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "A unit entering a territory with opponent workers forces them to retreat, with a loss of 1 popularity per retreating worker. The summary does not specify whether Speed-enabled movement changes this, whether the rule applies at zero popularity, or whether the mech's workers may enter the territory alone.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMoving into a territory with opponent workers forces them to retreat (lose 1 popularity per retreating worker).\u201d",
+          "grade": "partial",
+          "reason": "Missing stop, no further turn movement, zero-popularity retreat and independent worker-entry prohibition.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "When does combat occur after movement, who chooses multiple combat order, and can workers enter or leave enemy-character/mech-controlled territory alone?",
+          "expected_answer": "Finish all movement, then combats before bottom-row action. Active attacker chooses order. Attacking plastic unit stops on entry and enemy temporarily controls territory. Workers cannot enter or leave such territory independently.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 22"
+          ],
+          "observed_answer": "Combat occurs when your character or mechs share a territory with an opponent's character or mechs after movement. The summary does not specify who chooses the order of multiple combats. It says workers cannot initiate combat and only characters and mechs fight, but does not explain whether workers can enter or leave territory controlled by an enemy character or mech alone.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cWhen your character/mechs share a territory with opponent character/mechs after movement.\u201d Special Rules: \u201cWorkers cannot initiate combat. Only characters and mechs fight.\u201d",
+          "grade": "partial",
+          "reason": "Missing multiple-combat order, before-bottom timing and independent worker enter/leave restriction.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "State Bolster and Trade costs and choices; where are traded resources placed and what if all workers are home? What if the combat deck is exhausted?",
+          "expected_answer": "Bolster $1 for 2 power OR 1 combat card; Trade $1 for any two resources OR 1 popularity. Place resources on controlled territory with worker; cannot trade for resources with all workers home. Empty combat deck reshuffles discards; if both empty draw none.",
+          "source_references": [
+            "Rulebook PDF p. 6",
+            "Rulebook PDF p. 12"
+          ],
+          "observed_answer": "Bolster costs $1 and gives either 2 Power or 1 Combat Card. Trade costs $1 and gives either 2 resources of your choice on territories you control with workers or 1 Popularity. The summary does not say what happens if all workers are home or if the combat deck is exhausted.",
+          "reader_support": "partial",
+          "reader_evidence": "Bolster: \u201c(pay $1): Gain 2 Power on the Power Track, OR draw 1 Combat Card.\u201d Trade: \u201c(pay $1): Gain 2 resources of your choice on territories you control with workers, OR gain 1 Popularity.\u201d",
+          "grade": "partial",
+          "reason": "Missing all-workers-home restriction and exhaustion reshuffle/no-draw branches.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "How is Produce paid and resolved, where do new workers come from, can benefits be declined, and do new workers change the cost already paid?",
+          "expected_answer": "Pay all exposed red costs before action, must afford full power/popularity/coins. Choose up to two different controlled territories; each worker may produce one terrain token there. Villages produce workers from Player Mat left to right, after payment, so new exposure affects future Produce costs. May decline production/workers. Workers never return to mat.",
+          "source_references": [
+            "Rulebook PDF p. 10",
+            "Rulebook PDF p. 13",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "Produce has a variable cost. Choose up to 2 territories you control with workers; each worker on those territories produces 1 resource matching the terrain (Forest Wood, Mountain Metal, Tundra Oil, Farm Food, Village Worker). The summary does not say how the cost is paid, where new workers come from, whether benefits may be declined, or whether new workers change the cost already paid.",
+          "reader_support": "partial",
+          "reader_evidence": "Produce: \u201c(pay variable cost): Choose up to 2 territories you control with workers. Each worker on those territories produces 1 resource matching the terrain.\u201d",
+          "grade": "partial",
+          "reason": "Missing exposed costs paid before production, full affordability, optional benefits and left-to-right permanent worker placement/future-cost timing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "What are Upgrade and Deploy costs, placement restrictions and effects, and can a completed bottom action still be paid?",
+          "expected_answer": "Upgrade oil: cube from any green box to empty bracketed red box, never solid border. Deploy metal: choose mech on Faction Mat, put on controlled worker territory, never lake; uncovered ability applies to character/all mechs, not workers. Costs/coins vary by mat. Completed bottom action may still be paid for coins and applicable recruit bonus.",
+          "source_references": [
+            "Rulebook PDF p. 14",
+            "Rulebook PDF p. 15"
+          ],
+          "observed_answer": "Upgrade costs Oil: move a technology cube from a green top-row box to a red bottom-row box to improve action efficiency. Deploy costs Metal: place a mech on a territory with workers and unlock a faction-specific mech ability for your character and all mechs. Placement restrictions beyond \u201con a territory with workers\u201d and whether a completed bottom action can still be paid are not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Upgrade: \u201c(pay Oil): Move a technology cube from a green box (top-row) to a red box (bottom-row).\u201d Deploy: \u201c(pay Metal): Place a mech on a territory with workers.\u201d",
+          "grade": "partial",
+          "reason": "Missing bracketed/empty box limits, controlled territory/lake restriction and paying completed bottom action.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "Where may a structure be built, can it move or be destroyed, and how do Mill and Mine work when their territories are occupied by enemies?",
+          "expected_answer": "Build costs wood, controlled worker territory, one structure total per territory; Factory allowed, lakes/home bases forbidden. Permanent cannot move/destroy. Mill adds bonus Produce territory and produces as worker plus actual workers only while controlled. Mine personal tunnel usable for all unit movement even enemy-controlled, enemy cannot use it.",
+          "source_references": [
+            "Rulebook PDF p. 18"
+          ],
+          "observed_answer": "Build costs Wood and places a structure on a territory with workers, with at most one structure per territory. The summary does not say whether structures can move or be destroyed. A Mill counts as an extra territory for Produce; a Mine acts as a personal tunnel adjacent to all other tunnels. How either works when its territory is occupied by enemies is not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Build: \u201cPlace a structure on a territory with workers (max 1 structure per territory).\u201d Structure effects: \u201cMill: Counts as extra territory for Produce. Mine: Acts as a personal tunnel (adjacent to all other tunnels).\u201d",
+          "grade": "partial",
+          "reason": "Missing permanence, legal territories and enemy-controlled Mill/Mine rulings.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "When enlisting, where does the token go, what are the one-time bonuses, which action sets ongoing bonus, and how do simultaneous/two-player bonuses resolve?",
+          "expected_answer": "Pay food; remove any recruit from Player Mat, permanently place on open Faction one-time space for 2 power/coins/popularity/combat cards. Ongoing bonus linked to section uncovered, triggered by self or immediate left/right taking that bottom action, not top/Factory. Announce actions. Active then left then right; sixth star immediately ends. In 2-player opponent triggers once.",
+          "source_references": [
+            "Rulebook PDF p. 20"
+          ],
+          "observed_answer": "Enlist costs Food and places a recruit token, granting one one-time bonus: 2 Power, 2 Coins, 2 Popularity, or 2 Combat Cards. Its ongoing bonus is the specified bonus whenever you or adjacent players take that bottom-row action. The summary does not specify where the token is placed, which action sets its ongoing bonus, or how simultaneous/two-player bonuses resolve.",
+          "reader_support": "partial",
+          "reader_evidence": "Enlist: \u201cPlace a recruit token, gaining a one-time bonus (2 Power, 2 Coins, 2 Popularity, or 2 Combat Cards). Ongoing bonus: Gain the specified bonus whenever you OR adjacent players take that bottom-row action.\u201d",
+          "grade": "partial",
+          "reason": "Missing open Faction destination/permanence, uncovered-action link and active-left-right/two-player timing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "What may each combatant secretly spend on dial and cards, how do combat abilities resolve, and how are totals paid and ties broken?",
+          "expected_answer": "May fight at zero power/popularity. Attacker mech ability first, then defender. Dial 0 to min(current power,7). Up to one card per participating character/mech, even with zero dial. Reveal simultaneously; add card values, attacker wins tie. Both pay dial power and discard used cards face-up; card values do not reduce track.",
+          "source_references": [
+            "Rulebook PDF p. 22",
+            "Rulebook PDF p. 23"
+          ],
+          "observed_answer": "Each combatant secretly selects power from 0 to their current power and may add up to 1 combat card per unit involved; reveal is simultaneous. Highest total wins and the attacker wins ties. The summary does not explain combat abilities or specify further payment/resolution rules for the dial and cards.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cBoth players secretly select power on their dial (0 to current power). Each player may add up to 1 combat card per unit involved. Reveal simultaneously. Highest total wins (attacker wins ties).\u201d",
+          "grade": "incorrect",
+          "reason": "Dial range incorrectly stated up to current power without cap seven. Missing combat ability priority and payment/discard procedure.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "After combat, what happens to all units/resources, popularity, combat stars, and the losing player combat-card reward?",
+          "expected_answer": "Winner controls territory/resources, places combat star if below two (Saxony unlimited available stars), may still fight after limit. Loser retreats all units including workers home leaving resources. Winning attacker loses one popularity per opposing worker retreated; winning defender does not. Loser draws one combat card if revealed at least one power on dial OR cards, none for zero total.",
+          "source_references": [
+            "Rulebook PDF p. 23",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "The winner stays on the territory, keeps resources, and places a combat star. The loser retreats all units to their home base and gains 1 combat card if they committed any power. Popularity changes beyond the separate rule that retreating workers cost 1 popularity per worker are not described.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cWinner: Stays on territory, keeps resources, places combat star. Loser: Retreats all units to home base, gains 1 combat card if they committed any power.\u201d",
+          "grade": "partial",
+          "reason": "Missing attacker versus defender popularity distinction, resource abandonment and explicit card-only retreat-reward branch.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "When is an encounter resolved after contested entry, what if the character loses, where do gains go, and do normal action costs/bonuses apply?",
+          "expected_answer": "Character stops/cannot move again on entering token; finish Move and all combats before bottom action, only if character still there (must win contested entry). If loses token stays. Discard token, draw encounter, choose one affordable option (Polania up to two); pay printed cost and may decline benefits. Resources/structures/mechs/workers go to encounter territory. No additional normal costs/benefits or recruit bonuses; card face-down bottom encounter deck.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 24"
+          ],
+          "observed_answer": "An encounter is triggered when the character moves onto an encounter token, after all movement and combat. Draw a card with three options and choose one; options can grant resources, popularity, power, etc. The summary does not state what happens if the character loses a contested entry, where encounter gains are placed, or whether normal action costs or bonuses apply.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMoving character onto an encounter token triggers an encounter after all movement/combat.\u201d Special Rules: \u201cdraw a card with three options. Choose one (gain resources, popularity, power, etc.).\u201d",
+          "grade": "partial",
+          "reason": "Missing lose/no-encounter branch, benefit destination, affordable printed cost and isolation from mat benefits.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "Who takes a Factory card, when, may later visitors take one or change theirs, and how do Factory actions and Speed movement differ from mat actions?",
+          "expected_answer": "Each character first finishing Move at Factory after any combat must choose one available card, return rest; not just first visitor, max one permanent card per player, cannot exchange. Fifth section, optional top then bottom; no corresponding mat coins/structure/recruit bonuses. Bottom Move one unit up to twice (three with character/mech Speed), same stop rules, Mine usable.",
+          "source_references": [
+            "Rulebook PDF p. 25"
+          ],
+          "observed_answer": "The first character to reach the Factory gains a Factory card, which provides a fifth action section on that player's mat. The summary does not say whether later visitors may take one or change cards, or how Factory actions and Speed movement differ from mat actions.",
+          "reader_support": "partial",
+          "reader_evidence": "Factory: \u201cThe first character to reach the Factory gains a Factory card providing a 5th action section on their Player mat.\u201d",
+          "grade": "partial",
+          "reason": "Missing each character first visit/card permanence and Factory action/movement differences; first-visitor wording insufficient.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "When can an objective be revealed, what requirements and discards apply, and what changes for Saxony?",
+          "expected_answer": "Only own turn before/after complete top or bottom action, all requirements true at reveal; may delay reveal. Place one objective star, discard both objectives to deck bottom. Saxony keeps second and may complete both, unrestricted combat/objective stars within six available.",
+          "source_references": [
+            "Rulebook PDF p. 21",
+            "Rulebook PDF p. 26"
+          ],
+          "observed_answer": "A completed Objective Card is listed as an achievement for placing a star. The summary does not state when it may be revealed, its requirements, what is discarded, or what changes for Saxony.",
+          "reader_support": "partial",
+          "reader_evidence": "Star Placement: \u201cReveal a completed Objective Card.\u201d",
+          "grade": "partial",
+          "reason": "Missing own-turn timing, full requirements at reveal, deck-bottom discard and Saxony second-objective exception.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Which achievements earn stars, may stars be lost or another player block a goal, and when does the game end?",
+          "expected_answer": "Six upgrades, four mechs, four structures, four recruits, eight workers on board, completed objective, up to two combat victories, 18 popularity,16 power. Must place on achievement, each once except combat two/Saxony exception; irreversible and other players may share goals. Sixth star ends immediately, no extra turns/actions.",
+          "source_references": [
+            "Rulebook PDF p. 27",
+            "Rulebook PDF p. 28"
+          ],
+          "observed_answer": "Listed star achievements are completing all 6 Upgrades, deploying all 4 Mechs, building all 4 Structures, enlisting all 4 Recruits, placing all 8 Workers, revealing a completed Objective Card, winning combat (maximum 2 stars except Saxony unlimited), reaching 18 Popularity, and reaching 16 Power. Whether stars can be lost or another player can block a goal is not stated. The game ends immediately when any player places their 6th star.",
+          "reader_support": "partial",
+          "reader_evidence": "Star Placement lists the achievements and Saxony exception. Game End Trigger: \u201cThe game ends immediately when any player places their 6th star on the Triumph Track.\u201d",
+          "grade": "partial",
+          "reason": "Missing irreversible stars and shared non-blocking achievements.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "If a bottom action earns the sixth star, what is collected first; what happens to pending battles and a neighbor recruit star?",
+          "expected_answer": "Gain primary benefit, coins and own recruit ongoing benefit before placing bottom-action sixth star. Undo movement into any still-unresolved battle, return units to origin. Neighbor power/popularity star from recruit only after active action, in order active/left/right (clockwise), only if active did not already end game; stop remaining events at sixth star.",
+          "source_references": [
+            "Rulebook PDF p. 20",
+            "Rulebook PDF p. 23",
+            "Rulebook PDF p. 28"
+          ],
+          "observed_answer": "The summary says bottom-row actions are performed by paying the cost and gaining the benefit, and the game ends immediately when a player places their sixth star. It does not specify what is collected before ending, how pending battles resolve, or whether a neighbor's recruit star is earned.",
+          "reader_support": "unsupported",
+          "reader_evidence": "Turn Structure: \u201cBottom-Row Action (optional): Perform the bottom-row action of that section (pay cost, gain benefit).\u201d Game End Trigger: \u201cThe game ends immediately when any player places their 6th star.\u201d",
+          "grade": "partial",
+          "reason": "Missing pre-star primary/coin/recruit collection, unresolved-battle undo and recruit-star priority.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At 10 popularity, how much do 5 stars, 4 normal territories plus Factory, and 13 resources add to held coins? Include structure bonus eligibility and all victory tiebreakers.",
+          "expected_answer": "Tier 7-12 pays $4/star,$3/territory,$2/resource pair. 5 stars=$20; 4+Factory as 3=7 territories=$21; six pairs=$12, total $53 plus held coins and structure tile. Structure bonus even without control. Most coins wins; ties workers+mechs+structures (not character), power, popularity, controlled resources, controlled territories, placed stars.",
+          "source_references": [
+            "Rulebook PDF p. 28",
+            "Rulebook PDF p. 29"
+          ],
+          "observed_answer": "At 10 Popularity the player is in Tier 2 (7\u201312). The table awards $4 per star, $3 per controlled territory, and $2 per pair of resources. Five stars add $20; four normal territories plus Factory (five territories) add $15. Thirteen resources provide six complete pairs, adding $12, for $47 total from these categories; treatment of an unpaired resource is not specified. Structure bonus tile coins are added, but eligibility is not specified. The stated winner is the player with the most total coins; further victory tiebreakers are not given.",
+          "reader_support": "partial",
+          "reader_evidence": "Final Scoring: \u201c7-12 = Tier 2\u201d; table: \u201cPer Star placed $4,\u201d \u201cPer Territory controlled $3,\u201d \u201cPer 2 Resources controlled $2.\u201d \u201cPlus structure bonus tile coins (varies). Player with the most total coins wins.\u201d",
+          "grade": "incorrect",
+          "reason": "Incorrect Factory value: three territories, not one; result must be $53 rather than $47. Structure eligibility/tiebreakers absent.",
+          "unsupported_guess": false
+        }
+      ]
+    },
+    "b": {
+      "totals": {
+        "correct": 0,
+        "partial": 17,
+        "incorrect": 3
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How are Factory cards, encounter tokens, and the structure bonus set up, and who starts?",
+          "expected_answer": "Shuffle Factory cards; select players+1 face-down and return others unseen to box. Put an encounter token on each of 11 marked territories. Randomly select one face-up structure bonus tile. Lowest numbered Player Mat starts, then clockwise.",
+          "source_references": [
+            "Rulebook PDF p. 6",
+            "Rulebook PDF p. 8"
+          ],
+          "observed_answer": "Factory deck is placed on the Factory territory and encounter tokens are placed on designated territories. Setup of structure bonus tiles and starting player is not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Setup: \u201cPlace encounter tokens on designated territories. Place the Factory card deck on the Factory territory.\u201d Final Scoring mentions \u201cstructure bonus tile coins (varies)\u201d but not setup.",
+          "grade": "partial",
+          "reason": "Missing players+1 random Factory selection/unseen removal, 11 marked encounters, random face-up structure tile, lowest-mat starter.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "What starts on the map and each mat, and which mat supplies starting power, combat cards, popularity, coins and objectives?",
+          "expected_answer": "Character on own home base; one worker on each of two land-adjoined territories. Faction Mat supplies power/combat cards, holds four mechs and six stars. Player Mat supplies popularity/coins/objectives, holds six technology cubes on black-square green boxes, four structures, four recruits and remaining six workers on Produce; action token starts beside it.",
+          "source_references": [
+            "Rulebook PDF p. 7",
+            "Rulebook PDF p. 8",
+            "Rulebook PDF p. 9"
+          ],
+          "observed_answer": "The summary says characters start on faction home bases and one worker on each adjacent territory; combat power and popularity markers start at faction-dependent positions. Starting combat cards, coins, and objective cards are received as indicated, but it does not say which mat provides each. Other starting map pieces and mat contents are not specified.",
+          "reader_support": "partial",
+          "reader_evidence": "Setup: \u201cPlace the character on the faction's home base and one worker on each adjacent territory. Set combat power and popularity markers at starting positions (varies by Faction mat). Receive starting combat cards, coins, and objective cards as indicated.\u201d",
+          "grade": "incorrect",
+          "reason": "Incorrectly attributes popularity to Faction Mat; it is supplied by Player Mat. Mat setup and two land-adjoined worker specificity also incomplete.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "May you skip both actions, repeat a section, use top-row gains below, or take the bottom action first? How are costs and benefits determined?",
+          "expected_answer": "Must move token to different section, except Rusviet may repeat including Factory. Top then bottom, each optional once; may skip both. May use top gains below. Pay full exposed red-box cost before taking as much or as little exposed green benefit as desired.",
+          "source_references": [
+            "Rulebook PDF p. 10",
+            "Rulebook PDF p. 21"
+          ],
+          "observed_answer": "You may take one action, both, or neither, but must move the token. A section cannot be repeated from the previous turn, except the summary notes the Rusviet exception. The summary does not say whether top-row gains can pay bottom-row costs, whether bottom action may come first, or how costs and benefits are calculated beyond \u201cpay cost, gain benefit.\u201d",
+          "reader_support": "partial",
+          "reader_evidence": "Turn Structure: \u201cYou may take one action, both, or neither, but you must move your token.\u201d It also says \u201ccannot repeat the same section as your previous turn\u201d and names the Rusviet exception.",
+          "grade": "partial",
+          "reason": "Missing full exposed red-cost payment, optional green benefit, using top gains below and explicit bottom-first prohibition.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Who controls a structure territory occupied by an enemy worker, who can use the structure, and from where may you spend resources for an action elsewhere?",
+          "expected_answer": "Enemy worker controls territory and resources; structure owner retains abilities except cannot Produce at an uncontrolled Mill; enemy gains no structure ability. Spend resources from any controlled territories for actions anywhere; spent resources go to supply.",
+          "source_references": [
+            "Rulebook PDF p. 4",
+            "Rulebook PDF p. 18"
+          ],
+          "observed_answer": "The summary says resources belong to whoever controls a territory. It does not specify control of a structure territory occupied by an enemy worker, who may use a structure, or the locations from which resources may be spent for an action elsewhere.",
+          "reader_support": "partial",
+          "reader_evidence": "Special Rules: \u201cResource Ownership: Resources on a territory belong to whoever controls that territory.\u201d",
+          "grade": "partial",
+          "reason": "No ruling for enemy unit control, persistent owner structure abilities/Mill exception or remote resource spending.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "On a normal unupgraded Move, can one unit move twice, can a transported worker subsequently move, and who can carry what?",
+          "expected_answer": "Move up to two different units one adjacent territory each, sequentially, or gain $1 instead. All units carry any number of resources; only mechs carry any number of own workers, not characters. Carriage is not the worker movement so worker can subsequently move itself.",
+          "source_references": [
+            "Rulebook PDF p. 5",
+            "Rulebook PDF p. 11"
+          ],
+          "observed_answer": "A normal Move moves up to two units one territory each, so whether one unit can move twice is not specified. The summary does not state whether transported workers can subsequently move or the detailed carrying restrictions; it only says mechs can carry workers and workers carry resources.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMove up to 2 units (character, worker, or mech) one territory each.\u201d \u201cMechs can carry workers. Workers carry resources.\u201d",
+          "grade": "partial",
+          "reason": "No decisive different-units ruling, resource carriage by all units or carried-worker subsequent movement.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What happens when a Speed-enabled mech enters enemy workers only, even at zero popularity; may its workers enter that territory by themselves?",
+          "expected_answer": "Mech stops and cannot move again this turn. Enemy workers immediately retreat home leaving resources; attacker loses one popularity each to minimum zero, still retreats them. Workers cannot independently enter enemy-worker-controlled territory.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 15",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "The summary says moving into a territory with opponent workers forces them to retreat and costs one popularity per retreating worker. It does not specify Speed-enabled entry or whether the mech's workers may enter alone, including at zero popularity.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMoving into a territory with opponent workers forces them to retreat (lose 1 popularity per retreating worker).\u201d Speed is only listed as a mech ability.",
+          "grade": "partial",
+          "reason": "Missing stop, no further turn movement, zero-popularity retreat and independent worker-entry prohibition.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "When does combat occur after movement, who chooses multiple combat order, and can workers enter or leave enemy-character/mech-controlled territory alone?",
+          "expected_answer": "Finish all movement, then combats before bottom-row action. Active attacker chooses order. Attacking plastic unit stops on entry and enemy temporarily controls territory. Workers cannot enter or leave such territory independently.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 22"
+          ],
+          "observed_answer": "Combat occurs when character/mechs share a territory with opponent character/mechs after movement. Multiple combat order and whether workers can enter or leave an enemy character/mech-controlled territory alone are not stated. The summary says workers cannot initiate combat; only characters and mechs fight.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cWhen your character/mechs share a territory with opponent character/mechs after movement.\u201d Special Rules: \u201cWorkers cannot initiate combat. Only characters and mechs fight.\u201d",
+          "grade": "partial",
+          "reason": "Missing multiple-combat order, before-bottom timing and independent worker enter/leave restriction.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "State Bolster and Trade costs and choices; where are traded resources placed and what if all workers are home? What if the combat deck is exhausted?",
+          "expected_answer": "Bolster $1 for 2 power OR 1 combat card; Trade $1 for any two resources OR 1 popularity. Place resources on controlled territory with worker; cannot trade for resources with all workers home. Empty combat deck reshuffles discards; if both empty draw none.",
+          "source_references": [
+            "Rulebook PDF p. 6",
+            "Rulebook PDF p. 12"
+          ],
+          "observed_answer": "Bolster costs $1 and gives a choice of 2 Power or 1 Combat Card. Trade costs $1 and gives 2 chosen resources on territories you control with workers, or 1 Popularity. The all-workers-home case and what happens if the combat deck is exhausted are not stated.",
+          "reader_support": "partial",
+          "reader_evidence": "Top-Row Actions: \u201cBolster (pay $1): Gain 2 Power ... OR draw 1 Combat Card.\u201d \u201cTrade (pay $1): Gain 2 resources ... on territories you control with workers, OR gain 1 Popularity.\u201d",
+          "grade": "partial",
+          "reason": "Missing all-workers-home restriction and exhaustion reshuffle/no-draw branches.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "How is Produce paid and resolved, where do new workers come from, can benefits be declined, and do new workers change the cost already paid?",
+          "expected_answer": "Pay all exposed red costs before action, must afford full power/popularity/coins. Choose up to two different controlled territories; each worker may produce one terrain token there. Villages produce workers from Player Mat left to right, after payment, so new exposure affects future Produce costs. May decline production/workers. Workers never return to mat.",
+          "source_references": [
+            "Rulebook PDF p. 10",
+            "Rulebook PDF p. 13",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "Produce has a variable cost; you choose up to two territories you control with workers, and workers there produce one terrain-matching resource each (a Village produces a worker). The summary does not explain how the cost is paid, where new workers come from, whether benefits may be declined, or whether new workers affect an already-paid cost.",
+          "reader_support": "partial",
+          "reader_evidence": "Produce: \u201cpay variable cost\u201d; \u201cChoose up to 2 territories you control with workers. Each worker on those territories produces 1 resource matching the terrain ... Village = Worker.\u201d",
+          "grade": "partial",
+          "reason": "Missing exposed costs paid before production, full affordability, optional benefits and left-to-right permanent worker placement/future-cost timing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "What are Upgrade and Deploy costs, placement restrictions and effects, and can a completed bottom action still be paid?",
+          "expected_answer": "Upgrade oil: cube from any green box to empty bracketed red box, never solid border. Deploy metal: choose mech on Faction Mat, put on controlled worker territory, never lake; uncovered ability applies to character/all mechs, not workers. Costs/coins vary by mat. Completed bottom action may still be paid for coins and applicable recruit bonus.",
+          "source_references": [
+            "Rulebook PDF p. 14",
+            "Rulebook PDF p. 15"
+          ],
+          "observed_answer": "Upgrade costs Oil and moves a technology cube from a green top-row box to a red bottom-row box, improving action efficiency. Deploy costs Metal and places a mech on a territory with workers, unlocking a faction-specific ability for the character and all mechs. Exact costs, further placement restrictions, and whether a completed bottom action can still be paid are not given.",
+          "reader_support": "partial",
+          "reader_evidence": "Bottom-Row Actions: \u201cUpgrade (pay Oil)\u201d and \u201cDeploy (pay Metal): Place a mech on a territory with workers.\u201d",
+          "grade": "partial",
+          "reason": "Missing bracketed/empty box limits, controlled territory/lake restriction and paying completed bottom action.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "Where may a structure be built, can it move or be destroyed, and how do Mill and Mine work when their territories are occupied by enemies?",
+          "expected_answer": "Build costs wood, controlled worker territory, one structure total per territory; Factory allowed, lakes/home bases forbidden. Permanent cannot move/destroy. Mill adds bonus Produce territory and produces as worker plus actual workers only while controlled. Mine personal tunnel usable for all unit movement even enemy-controlled, enemy cannot use it.",
+          "source_references": [
+            "Rulebook PDF p. 18"
+          ],
+          "observed_answer": "Build costs Wood and places a structure on a territory with workers, with at most one structure per territory. No rule is given on moving or destroying structures, or how Mill/Mine function when enemy units occupy their territories. The Mill counts as an extra territory for Produce; Mine acts as a personal tunnel adjacent to other tunnels.",
+          "reader_support": "partial",
+          "reader_evidence": "Build: \u201cPlace a structure on a territory with workers (max 1 structure per territory).\u201d Mill and Mine effects are listed in Bottom-Row Actions.",
+          "grade": "partial",
+          "reason": "Missing permanence, legal territories and enemy-controlled Mill/Mine rulings.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "When enlisting, where does the token go, what are the one-time bonuses, which action sets ongoing bonus, and how do simultaneous/two-player bonuses resolve?",
+          "expected_answer": "Pay food; remove any recruit from Player Mat, permanently place on open Faction one-time space for 2 power/coins/popularity/combat cards. Ongoing bonus linked to section uncovered, triggered by self or immediate left/right taking that bottom action, not top/Factory. Announce actions. Active then left then right; sixth star immediately ends. In 2-player opponent triggers once.",
+          "source_references": [
+            "Rulebook PDF p. 20"
+          ],
+          "observed_answer": "Enlist costs Food and places a recruit token, with a one-time bonus of 2 Power, 2 Coins, 2 Popularity, or 2 Combat Cards. Ongoing bonus is received whenever you or adjacent players take that bottom-row action. The summary does not specify token placement location, how the action setting is determined, or simultaneous/two-player bonus resolution.",
+          "reader_support": "partial",
+          "reader_evidence": "Enlist: \u201cPlace a recruit token, gaining a one-time bonus (2 Power, 2 Coins, 2 Popularity, or 2 Combat Cards). Ongoing bonus: Gain the specified bonus whenever you OR adjacent players take that bottom-row action.\u201d",
+          "grade": "partial",
+          "reason": "Missing open Faction destination/permanence, uncovered-action link and active-left-right/two-player timing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "What may each combatant secretly spend on dial and cards, how do combat abilities resolve, and how are totals paid and ties broken?",
+          "expected_answer": "May fight at zero power/popularity. Attacker mech ability first, then defender. Dial 0 to min(current power,7). Up to one card per participating character/mech, even with zero dial. Reveal simultaneously; add card values, attacker wins tie. Both pay dial power and discard used cards face-up; card values do not reduce track.",
+          "source_references": [
+            "Rulebook PDF p. 22",
+            "Rulebook PDF p. 23"
+          ],
+          "observed_answer": "Each player secretly selects dial power from 0 to current power and may add up to one combat card per unit involved; reveal simultaneously, and highest total wins with attacker winning ties. Combat-ability resolution and how totals are paid are not detailed.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cBoth players secretly select power on their dial (0 to current power). Each player may add up to 1 combat card per unit involved. Reveal simultaneously. Highest total wins (attacker wins ties).\u201d",
+          "grade": "incorrect",
+          "reason": "Dial range incorrectly stated up to current power without cap seven. Missing combat ability priority and payment/discard procedure.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "After combat, what happens to all units/resources, popularity, combat stars, and the losing player combat-card reward?",
+          "expected_answer": "Winner controls territory/resources, places combat star if below two (Saxony unlimited available stars), may still fight after limit. Loser retreats all units including workers home leaving resources. Winning attacker loses one popularity per opposing worker retreated; winning defender does not. Loser draws one combat card if revealed at least one power on dial OR cards, none for zero total.",
+          "source_references": [
+            "Rulebook PDF p. 23",
+            "Rulebook PDF p. 31"
+          ],
+          "observed_answer": "Winner stays, keeps resources, and places a combat star. Loser retreats all units to home base and gains one combat card if they committed any power. The summary does not specify popularity changes after combat or any other resource handling beyond the winner keeping resources.",
+          "reader_support": "partial",
+          "reader_evidence": "Combat: \u201cWinner: Stays on territory, keeps resources, places combat star. Loser: Retreats all units to home base, gains 1 combat card if they committed any power.\u201d",
+          "grade": "partial",
+          "reason": "Missing attacker versus defender popularity distinction, resource abandonment and explicit card-only retreat-reward branch.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "When is an encounter resolved after contested entry, what if the character loses, where do gains go, and do normal action costs/bonuses apply?",
+          "expected_answer": "Character stops/cannot move again on entering token; finish Move and all combats before bottom action, only if character still there (must win contested entry). If loses token stays. Discard token, draw encounter, choose one affordable option (Polania up to two); pay printed cost and may decline benefits. Resources/structures/mechs/workers go to encounter territory. No additional normal costs/benefits or recruit bonuses; card face-down bottom encounter deck.",
+          "source_references": [
+            "Rulebook PDF p. 11",
+            "Rulebook PDF p. 24"
+          ],
+          "observed_answer": "Moving the character onto an encounter token triggers an encounter after all movement/combat. The summary does not explain contested-entry timing or what happens if the character loses. It says to draw a card with three options and choose one; the exact destination of gains and whether normal action costs/bonuses apply are unstated.",
+          "reader_support": "partial",
+          "reader_evidence": "Move: \u201cMoving character onto an encounter token triggers an encounter after all movement/combat.\u201d Special Rules: \u201cdraw a card with three options. Choose one (gain resources, popularity, power, etc.).\u201d",
+          "grade": "partial",
+          "reason": "Missing lose/no-encounter branch, benefit destination, affordable printed cost and isolation from mat benefits.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "Who takes a Factory card, when, may later visitors take one or change theirs, and how do Factory actions and Speed movement differ from mat actions?",
+          "expected_answer": "Each character first finishing Move at Factory after any combat must choose one available card, return rest; not just first visitor, max one permanent card per player, cannot exchange. Fifth section, optional top then bottom; no corresponding mat coins/structure/recruit bonuses. Bottom Move one unit up to twice (three with character/mech Speed), same stop rules, Mine usable.",
+          "source_references": [
+            "Rulebook PDF p. 25"
+          ],
+          "observed_answer": "The first character to reach the Factory gains a Factory card providing a fifth action section. The summary does not say when during a turn this happens, whether later visitors may take cards or change theirs, or how Factory actions and Speed movement differ from mat actions.",
+          "reader_support": "partial",
+          "reader_evidence": "Factory: \u201cThe first character to reach the Factory gains a Factory card providing a 5th action section on their Player mat.\u201d",
+          "grade": "partial",
+          "reason": "Missing each character first visit/card permanence and Factory action/movement differences; first-visitor wording insufficient.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "When can an objective be revealed, what requirements and discards apply, and what changes for Saxony?",
+          "expected_answer": "Only own turn before/after complete top or bottom action, all requirements true at reveal; may delay reveal. Place one objective star, discard both objectives to deck bottom. Saxony keeps second and may complete both, unrestricted combat/objective stars within six available.",
+          "source_references": [
+            "Rulebook PDF p. 21",
+            "Rulebook PDF p. 26"
+          ],
+          "observed_answer": "The summary says a completed Objective Card can earn a star, but does not state when it may be revealed, its requirements, what must be discarded, or any Saxony-specific change.",
+          "reader_support": "partial",
+          "reader_evidence": "Star Placement: \u201cReveal a completed Objective Card.\u201d No further objective rules are summarized.",
+          "grade": "partial",
+          "reason": "Missing own-turn timing, full requirements at reveal, deck-bottom discard and Saxony second-objective exception.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Which achievements earn stars, may stars be lost or another player block a goal, and when does the game end?",
+          "expected_answer": "Six upgrades, four mechs, four structures, four recruits, eight workers on board, completed objective, up to two combat victories, 18 popularity,16 power. Must place on achievement, each once except combat two/Saxony exception; irreversible and other players may share goals. Sixth star ends immediately, no extra turns/actions.",
+          "source_references": [
+            "Rulebook PDF p. 27",
+            "Rulebook PDF p. 28"
+          ],
+          "observed_answer": "Listed star achievements are completing 6 upgrades, deploying 4 mechs, building 4 structures, enlisting 4 recruits, placing 8 workers, revealing a completed objective, winning combat (max 2 stars except Saxony unlimited), reaching 18 Popularity, and reaching 16 Power. Whether stars can be lost or another player can block a goal is not stated. Game ends immediately when any player places a sixth star.",
+          "reader_support": "partial",
+          "reader_evidence": "Star Placement lists these achievements and limits; Game End Trigger: \u201cThe game ends immediately when any player places their 6th star on the Triumph Track.\u201d",
+          "grade": "partial",
+          "reason": "Missing irreversible stars and shared non-blocking achievements.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "If a bottom action earns the sixth star, what is collected first; what happens to pending battles and a neighbor recruit star?",
+          "expected_answer": "Gain primary benefit, coins and own recruit ongoing benefit before placing bottom-action sixth star. Undo movement into any still-unresolved battle, return units to origin. Neighbor power/popularity star from recruit only after active action, in order active/left/right (clockwise), only if active did not already end game; stop remaining events at sixth star.",
+          "source_references": [
+            "Rulebook PDF p. 20",
+            "Rulebook PDF p. 23",
+            "Rulebook PDF p. 28"
+          ],
+          "observed_answer": "The summary does not specify what is collected before a sixth star earned by a bottom action, how pending battles are handled, or whether a neighboring recruit bonus star is resolved.",
+          "reader_support": "unsupported",
+          "reader_evidence": "The summary states only that the game ends immediately when a player places their sixth star; it gives no sequencing for these events.",
+          "grade": "partial",
+          "reason": "Missing pre-star primary/coin/recruit collection, unresolved-battle undo and recruit-star priority.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At 10 popularity, how much do 5 stars, 4 normal territories plus Factory, and 13 resources add to held coins? Include structure bonus eligibility and all victory tiebreakers.",
+          "expected_answer": "Tier 7-12 pays $4/star,$3/territory,$2/resource pair. 5 stars=$20; 4+Factory as 3=7 territories=$21; six pairs=$12, total $53 plus held coins and structure tile. Structure bonus even without control. Most coins wins; ties workers+mechs+structures (not character), power, popularity, controlled resources, controlled territories, placed stars.",
+          "source_references": [
+            "Rulebook PDF p. 28",
+            "Rulebook PDF p. 29"
+          ],
+          "observed_answer": "At 10 popularity, the summary's tier table puts the player in Tier 2 (7\u201312). The stated additions are 4 coins per star (5 stars = 20), 3 per territory (4 normal territories plus Factory = 15), and 2 per 2 resources; 13 resources would yield 6 complete pairs for 12 coins, with handling of the leftover resource unstated. Sum of stated amounts: 47 coins added to held coins, before any structure bonus. Structure bonus eligibility and all victory tiebreakers are not stated; the summary only says bonus tile coins vary and the player with most total coins wins.",
+          "reader_support": "partial",
+          "reader_evidence": "Final Scoring: popularity tiers 7\u201312 are Tier 2; table gives $4 per star, $3 per territory, $2 per 2 resources. It adds \u201cPlus structure bonus tile coins (varies)\u201d and says most total coins wins.",
+          "grade": "incorrect",
+          "reason": "Incorrect Factory value: three territories, not one; result must be $53 rather than $47. Structure eligibility/tiebreakers absent.",
+          "unsupported_guess": false
+        }
+      ]
+    }
+  }
+}

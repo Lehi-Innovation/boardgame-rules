@@ -1,0 +1,798 @@
+{
+  "benchmark": "benchmark-v1",
+  "standard": "All requested material parts, independently per answer. Grade the ruling, not support labels.",
+  "readers": {
+    "a": {
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How does each player prepare their ID and Voting cards, what happens to cards for unused colors, and how is the initial Gold Bar pool dealt?",
+          "expected_answer": "Stand a visible ID in your chosen color, take the matching Voting set, remove target cards for colors not playing, and retain your Ambush card. Put the Gold deck face down and deal four central Gold Bar cards with values hidden.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                3
+              ]
+            }
+          ],
+          "observed_answer": "Each player chooses a color and places that color's Player ID card visibly in front of them. Give each player the Voting card set whose backs match that color; remove cards targeting colors not in play, but keep that player's own Ambush card. Deal four Gold Bar cards face down to the center with values hidden.",
+          "reader_support": "supported",
+          "reader_evidence": "Setup: 'Each player chooses a color and stands its Player ID card visibly in front of them'; remove cards targeting colors not playing; deal four Gold Bar cards face down to the center.",
+          "grade": "partial",
+          "reason": "Visible placement does not resolve upright placement in a stand, which is material to ID state. Independent adjudicator confirms partial; quoted evidence is not a substitute for the missing requested answer part.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Is there a player-by-player voting turn order? When may a player change their face-down choice, and when are choices revealed?",
+          "expected_answer": "There is no turn order. Choices can change until reveal. Once everyone has chosen, all reveal simultaneously.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "There is no player-by-player turn order. A player may change their face-down card until cards are revealed. Once everyone has chosen, all choices are revealed simultaneously.",
+          "reader_support": "supported",
+          "reader_evidence": "Turn Structure: 'There is no individual turn order.' Vote: 'You may change your chosen card until cards are revealed' and 'reveal all choices simultaneously.'",
+          "grade": "correct",
+          "reason": "Explicitly states no player turn order, changes until reveal, and simultaneous reveal after all have chosen.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "In a seven-player vote, Red receives three votes, Blue two and Green two. Is a four-vote majority necessary to make Red a Target? Explain the Target threshold.",
+          "expected_answer": "No majority is required: the greatest vote total determines the Target. Red alone is Target because three is the highest count.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No. A four-vote majority is not necessary. The player or players receiving the most votes are the Target(s), even if the leading total is only three of seven; in this case Red is the sole Target with three votes.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: 'The player receiving the most votes is the Target. If several players tie for the most votes, all of them are Targets.'",
+          "grade": "correct",
+          "reason": "Applies highest count rather than absolute majority: Red alone is Target at three versus two and two.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Red and Blue tie for the most votes. With neither playing Ambush, what happens to them, and may someone survive by having voted for either tied Target?",
+          "expected_answer": "Both tied Targets are eliminated. A non-Target voter who voted for either tied Target satisfies the voting requirement and is not eliminated for voting outside the Target group.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5,
+                6
+              ]
+            }
+          ],
+          "observed_answer": "With Red and Blue tied for the most votes, both are Targets. Since neither uses Ambush, both are eliminated. A player who voted for either tied Target satisfies the voting requirement and may survive, subject to any other applicable rule (including Ambush effects).",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: tied leaders are all Targets; 'With tied Targets, voting for any one of them satisfies the voting requirement.'",
+          "grade": "correct",
+          "reason": "Both tied Targets eliminated absent successful Ambush; vote for either Target satisfies the survival voting requirement.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Blue is the sole Target. Green received no votes and voted for Red. Green did not Ambush. Does receiving no votes keep Green alive?",
+          "expected_answer": "No. A player who did not vote for a Target is also eliminated, even when nobody voted for that player. Green voted outside the Target group and is eliminated.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No. Receiving no votes does not keep Green alive. Green voted for Red, not the sole Target Blue, so Green did not vote for a Target and is eliminated, absent a successful Ambush exception; Green did not Ambush.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: 'Every other player who did not vote for any Target is also eliminated'; the successful Ambush exception is specified separately.",
+          "grade": "correct",
+          "reason": "Green is eliminated for voting outside the Target group despite receiving no votes.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "Red plays Ambush, Yellow votes for Red, and Pink votes for Yellow. How are votes tallied, who are the Targets, and who survives after Red's legal retaliation?",
+          "expected_answer": "Ambush adds no vote. Red and Yellow each have one vote and are tied Targets. Yellow is eliminated; Red survives its successful Ambush and can retaliate only against Yellow, who voted for Red. Pink voted for tied Target Yellow and survives, leaving Red and Pink.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "Ambush cards do not count as votes, so Red's Ambush adds no vote; among the specified votes, Red gets Yellow's vote and Yellow gets Pink's vote, one each. The question does not specify the other players' votes, so the overall vote totals, actual Target(s), and resulting survivors cannot be determined. If Red is a Target, Red's Ambush succeeds and Red may eliminate one player who voted for Red; Yellow is a legal choice. Pink, who voted for Yellow, is not a legal choice for Red's retaliation. If Red is not a Target, Red's Ambush fails and Red eliminates themself.",
+          "reader_support": "partial",
+          "reader_evidence": "Vote: 'Ambush cards do not count as votes.' Ambush: it works only if its player is a Target and lets them choose 'one of the players who voted for them'; a non-Target ambusher eliminates themself.",
+          "grade": "partial",
+          "reason": "Explicitly leaves overall Targets and survivors indeterminate by positing unspecified players. Unlike earlier caveats, this retracts the requested Red/Yellow Target and Red/Pink survivor ruling. Conditional branches do not supply the complete requested outcome.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "A Target successfully plays Ambush and four players voted for them. Do they eliminate all four voters? May they choose a player who voted for another color instead?",
+          "expected_answer": "The ambusher survives and eliminates exactly one of the players who voted for them. They neither eliminate every voter nor choose someone who did not vote for them.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "No. A successful ambusher chooses one of the four players who voted for them to eliminate, not all four. They may not choose someone who voted for another color instead.",
+          "reader_support": "supported",
+          "reader_evidence": "Ambush: a successful ambusher 'chooses one of the players who voted for them'; they 'cannot choose ... someone who voted for a different Target.'",
+          "grade": "correct",
+          "reason": "Restricts successful Ambush retaliation to exactly one voter who targeted the ambusher; rejects all-voter and arbitrary-color alternatives.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "A player chooses Ambush but is not among the Targets after the votes are counted. What happens to that player?",
+          "expected_answer": "The Ambush fails and that player eliminates themselves.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "The Ambush fails, and that player eliminates themself.",
+          "reader_support": "supported",
+          "reader_evidence": "Ambush: 'An Ambush played by someone who is not a Target fails: that player eliminates themselves.'",
+          "grade": "correct",
+          "reason": "Non-Target Ambush fails and self-eliminates.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "Four players survive a vote and its Ambush effects. Does the round award gold now, and who participates next?",
+          "expected_answer": "The round continues with another conspiracy and vote among the four survivors. It ends when the resolved vote leaves one, two or no survivors.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No gold is awarded yet. With four survivors, the round continues with another conspiracy and vote among those surviving players; only survivors participate in subsequent votes.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: 'Three or more | Continue with another conspiracy and vote among survivors.'",
+          "grade": "correct",
+          "reason": "Four survivors continue conspiracy/voting; no gold yet and only survivors vote.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Exactly one player survives the round. What reward do they collect, and are the four cards four points?",
+          "expected_answer": "The sole survivor collects all four central Gold Bar cards. Four bars are four cards, not four points; each Gold Bar is worth 3, 4 or 5 points.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                3,
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The sole survivor collects all four central Gold Bar cards. Those four cards are not necessarily four points: each card is worth 3, 4, or 5 points, and their values vary.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: one survivor 'collects all four central Gold Bars'; Components says bar values are 3, 4, or 5 points.",
+          "grade": "correct",
+          "reason": "Sole survivor takes all four central cards; explicitly distinguishes cards from 3/4/5 point values.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "Exactly two players survive the voting. What must they do, which cards does each receive, and how do they choose and reveal?",
+          "expected_answer": "They must hold a Final Showdown. Each receives Share, Steal and Grab One & Go, may discuss intentions, secretly chooses one card face down, and reveals simultaneously with the other finalist.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                7,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "They resolve a Final Showdown for the central Gold Bars. Each takes a set of three cards—Share, Steal, and Grab One & Go—may discuss intentions and a bargain, then each chooses one card face down. When both are ready, they reveal simultaneously.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: each takes 'Share, Steal, and Grab One & Go'; they may discuss, choose one face down, and reveal both choices simultaneously when ready.",
+          "grade": "correct",
+          "reason": "Names all three Showdown cards, discussion, face-down selection and simultaneous reveal; all requested parts complete.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "The final vote eliminates every participant. Who receives gold from the deck, who does not, and what happens to the four central bars for next round?",
+          "expected_answer": "Nobody receives the central bars. Every player not involved in that final vote receives one Gold Bar from the deck; participants in that final vote receive none. Leave the four central bars and add no new central gold next round.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4
+              ]
+            }
+          ],
+          "observed_answer": "Each player who was not participating in the final vote receives one Gold Bar card from the deck. Players who participated in that final vote receive no consolation bar for this outcome, including those eliminated by it. Nobody collects the four central bars; leave all four there for the next round and add no new bars.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: 'Each player who was not participating in the final vote receives one Gold Bar from the deck. Leave the four central bars for the next round; add no new bars.' Edge cases: final voters receive no consolation bar.",
+          "grade": "correct",
+          "reason": "Rewards only those absent from the final vote one deck card each; final voters receive none; all four central cards retained with no additions.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "Both finalists reveal Share. How many Gold Bar cards does each receive?",
+          "expected_answer": "Each finalist receives two of the four central Gold Bar cards.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Each finalist receives two Gold Bar cards.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Share: 'You get 2; opponent gets 2.'",
+          "grade": "correct",
+          "reason": "Share/Share yields two central cards each.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "One finalist reveals Share and the other Steal. How are the central Gold Bars divided?",
+          "expected_answer": "The Share player receives no bars and the Steal player receives all four.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Steal player receives all four central Gold Bar cards; the Share player receives none.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Steal: Share player gets 0; Steal player gets 4.",
+          "grade": "correct",
+          "reason": "Steal takes all four, Share takes zero.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "One finalist reveals Grab One & Go and the other Steal. How are the central Gold Bars divided?",
+          "expected_answer": "Grab One & Go receives one bar and Steal receives three.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Steal player receives three central Gold Bar cards and the Grab One & Go player receives one.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Grab One & Go versus Steal: Grab One & Go player gets 1; Steal player gets 3.",
+          "grade": "correct",
+          "reason": "Grab One & Go takes one and Steal three.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "One finalist reveals Grab One & Go and the other Share. How are the central Gold Bars divided?",
+          "expected_answer": "Grab One & Go receives one bar and Share receives three.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Grab One & Go player receives three central Gold Bar cards and the Share player receives one.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Grab One & Go: Share player gets 3; Grab One & Go player gets 1.",
+          "grade": "incorrect",
+          "reason": "Reverses payout: says Grab One & Go takes3 and Share1. Source matrix requires Grab1/Share3. Other answers cannot repair this contradictory ruling.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Both finalists reveal Grab One & Go. How many bars does each take, how many remain central, and how many new central bars are dealt if play continues?",
+          "expected_answer": "Each takes one central bar. Leave the other two central and deal just two new central bars for the next round.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Each finalist takes one central bar. Two bars remain in the center. If play continues, add just two new bars to the center for the next round.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: if both choose Grab One & Go, 'each finalist receives one central bar. Leave the remaining two in the center and add just two new bars for the next round.'",
+          "grade": "correct",
+          "reason": "Each takes one; two remain and only two new central cards dealt if continuing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Both finalists reveal Steal. What do the finalists and the other players receive, and what happens to the central pot?",
+          "expected_answer": "Both finalists receive nothing. Each other player receives one Gold Bar from the deck. Leave all four central bars for the next round rather than replacing them.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Neither finalist receives gold. Every other player receives one Gold Bar card from the deck. Leave all four central bars for the next round and add no new gold to the central pool.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: on double Steal, 'neither finalist receives gold'; give 'every other player one Gold Bar from the deck'; leave all four central bars and add no new gold.",
+          "grade": "correct",
+          "reason": "Finalists get zero, every other player one deck card; all four central cards retained without additions.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "When is victory checked, what totals win with 6–9 versus 10–12 players, and who wins if multiple players qualify with different totals?",
+          "expected_answer": "Check at round end after Gold Bar awards. The threshold is 25 points with 6–9 players and 24 with 10–12. When several qualify, the highest total wins.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Victory is checked at the end of a round, after Gold Bars have been awarded, regardless of how the round ended. With 6–9 players, the threshold is at least 25 points; with 10–12 players, it is at least 24 points. If multiple players qualify with different totals, the player with the highest point total wins.",
+          "reader_support": "supported",
+          "reader_evidence": "Scoring: check 'at the end of a round, after Gold Bars have been awarded'; thresholds are 25 for 6–9 and 24 for 10–12; 'the highest point total wins.'",
+          "grade": "correct",
+          "reason": "Checks after awards at round end for every outcome; gives 25 for6–9,24 for10–12 and highest qualified total wins.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At game end exactly two qualifying players tie for the highest Gold point total. What does the booklet require? If a normal round ends without a winner, which eliminated players return?",
+          "expected_answer": "The tied players conduct another Final Showdown, repeating until a single player at the table has the highest Gold point total. If no winner ends the game, every player returns next round: stand all IDs upright again.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "For exactly two qualifying players tied for the highest Gold point total, the booklet requires a Final Showdown. Repeat Showdowns as necessary until one player has the highest total. If a normal round ends without a winner, everyone returns, including players eliminated during that round; stand all Player ID cards upright and begin another round. The summary notes the booklet does not provide a procedure for three or more tied leaders, but that limitation does not apply to the stated two-player tie.",
+          "reader_support": "supported",
+          "reader_evidence": "Scoring: tied highest qualifying totals 'conduct another Final Showdown' and repeat as necessary until a single player has the highest total. Turn Structure: 'everyone returns: stand all Player ID cards upright and begin another round.'",
+          "grade": "correct",
+          "reason": "Explicitly repeats Showdowns until single highest player, all eliminated return and IDs upright; source limitation caveat is specific to three-or-more leaders and does not contradict two-player answer.",
+          "unsupported_guess": false
+        }
+      ],
+      "totals": {
+        "correct": 17,
+        "partial": 2,
+        "incorrect": 1
+      }
+    },
+    "b": {
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How does each player prepare their ID and Voting cards, what happens to cards for unused colors, and how is the initial Gold Bar pool dealt?",
+          "expected_answer": "Stand a visible ID in your chosen color, take the matching Voting set, remove target cards for colors not playing, and retain your Ambush card. Put the Gold deck face down and deal four central Gold Bar cards with values hidden.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                3
+              ]
+            }
+          ],
+          "observed_answer": "Each player chooses a color and stands that color's Player ID card visibly in front of them. Give each player the Voting card set with that color on its backs; remove cards targeting colors not in play and keep the player's own Ambush card. Deal four Gold Bar cards face down to the center with their values hidden.",
+          "reader_support": "supported",
+          "reader_evidence": "Setup: “stands its Player ID card visibly in front of them”; “Remove cards targeting colors that are not playing. Keep your own Ambush card”; “Deal four Gold Bar cards face down to the center; keep their values hidden.”",
+          "grade": "correct",
+          "reason": "Identifies visible matching ID and Voting set, removal of unused colors with Ambush retained, four central cards dealt face down with hidden values. Source-deck orientation is additional key detail, not independently requested; independent adjudication agrees.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Is there a player-by-player voting turn order? When may a player change their face-down choice, and when are choices revealed?",
+          "expected_answer": "There is no turn order. Choices can change until reveal. Once everyone has chosen, all reveal simultaneously.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "There is no player-by-player turn order. A player may change their face-down choice until cards are revealed. Once everyone has chosen, all choices are revealed simultaneously.",
+          "reader_support": "supported",
+          "reader_evidence": "Turn Structure: “There is no individual turn order.” Vote: “You may change your chosen card until cards are revealed” and “reveal all choices simultaneously.”",
+          "grade": "correct",
+          "reason": "Explicitly states no player turn order, changes until reveal, and simultaneous reveal after all have chosen.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "In a seven-player vote, Red receives three votes, Blue two and Green two. Is a four-vote majority necessary to make Red a Target? Explain the Target threshold.",
+          "expected_answer": "No majority is required: the greatest vote total determines the Target. Red alone is Target because three is the highest count.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No four-vote majority is necessary. Red is the sole Target because Red received the most votes (three); the rule is a plurality threshold, with every player tied for the most votes also becoming a Target.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: “The player receiving the most votes is the Target. If several players tie for the most votes, all of them are Targets.”",
+          "grade": "correct",
+          "reason": "Applies highest count rather than absolute majority: Red alone is Target at three versus two and two.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Red and Blue tie for the most votes. With neither playing Ambush, what happens to them, and may someone survive by having voted for either tied Target?",
+          "expected_answer": "Both tied Targets are eliminated. A non-Target voter who voted for either tied Target satisfies the voting requirement and is not eliminated for voting outside the Target group.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5,
+                6
+              ]
+            }
+          ],
+          "observed_answer": "Red and Blue are both Targets because they tie for the most votes, and without successful Ambush protection both are eliminated. A player may satisfy the voting requirement by voting for either tied Target.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: tied players “are Targets”; “With tied Targets, voting for any one of them satisfies the voting requirement.” Targets are eliminated unless protected by their own successful Ambush.",
+          "grade": "correct",
+          "reason": "Both tied Targets eliminated absent successful Ambush; vote for either Target satisfies the survival voting requirement.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Blue is the sole Target. Green received no votes and voted for Red. Green did not Ambush. Does receiving no votes keep Green alive?",
+          "expected_answer": "No. A player who did not vote for a Target is also eliminated, even when nobody voted for that player. Green voted outside the Target group and is eliminated.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No. Green is eliminated: Green did not vote for the Target (Blue), and receiving no votes does not protect Green. Green's vote for Red does not satisfy the requirement to vote for a Target.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: “Every other player who did not vote for any Target is also eliminated,” subject to the successful Ambush exception.",
+          "grade": "correct",
+          "reason": "Green is eliminated for voting outside the Target group despite receiving no votes.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "Red plays Ambush, Yellow votes for Red, and Pink votes for Yellow. How are votes tallied, who are the Targets, and who survives after Red's legal retaliation?",
+          "expected_answer": "Ambush adds no vote. Red and Yellow each have one vote and are tied Targets. Yellow is eliminated; Red survives its successful Ambush and can retaliate only against Yellow, who voted for Red. Pink voted for tied Target Yellow and survives, leaving Red and Pink.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "Ambush does not count as a vote. Yellow's vote gives Red one vote, and Pink's vote gives Yellow one vote, so Red and Yellow tie for most votes and both are Targets. Red's Ambush succeeds because Red is a Target; Red survives and may eliminate one player who voted for Red, which is Yellow. Pink survives because Pink voted for a Target (Yellow). Among the named players, Red and Pink survive; Yellow is eliminated.",
+          "reader_support": "supported",
+          "reader_evidence": "Vote: “Ambush cards do not count as votes”; tied leaders “are Targets.” Ambush: a Target's successful Ambush lets them “choose one of the players who voted for them to eliminate.” With tied Targets, voting for any one of them satisfies the voting requirement.",
+          "grade": "correct",
+          "reason": "Counts Ambush as zero, ties Red/Yellow at one, protects Red, limits retaliation to Yellow, and retains Pink who voted for Yellow. Other-player caveat does not retract named outcomes; independently adjudicated correct.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "A Target successfully plays Ambush and four players voted for them. Do they eliminate all four voters? May they choose a player who voted for another color instead?",
+          "expected_answer": "The ambusher survives and eliminates exactly one of the players who voted for them. They neither eliminate every voter nor choose someone who did not vote for them.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "No. They eliminate exactly one of the players who voted for them, even if four did so. They cannot choose a player who voted for another color instead.",
+          "reader_support": "supported",
+          "reader_evidence": "Ambush: the ambusher chooses “one of the players who voted for them”; “They cannot choose an arbitrary player or someone who voted for a different Target.”",
+          "grade": "correct",
+          "reason": "Restricts successful Ambush retaliation to exactly one voter who targeted the ambusher; rejects all-voter and arbitrary-color alternatives.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "A player chooses Ambush but is not among the Targets after the votes are counted. What happens to that player?",
+          "expected_answer": "The Ambush fails and that player eliminates themselves.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                6
+              ]
+            }
+          ],
+          "observed_answer": "The player eliminates themselves. An Ambush by someone who is not a Target fails.",
+          "reader_support": "supported",
+          "reader_evidence": "Ambush: “An Ambush played by someone who is not a Target fails: that player eliminates themselves.”",
+          "grade": "correct",
+          "reason": "Non-Target Ambush fails and self-eliminates.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "Four players survive a vote and its Ambush effects. Does the round award gold now, and who participates next?",
+          "expected_answer": "The round continues with another conspiracy and vote among the four survivors. It ends when the resolved vote leaves one, two or no survivors.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                5
+              ]
+            }
+          ],
+          "observed_answer": "No gold is awarded yet. With four survivors, continue with another Conspire → Vote → Resolve cycle, and only the surviving players participate in the next vote.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: “Three or more | Continue with another conspiracy and vote among survivors.”",
+          "grade": "correct",
+          "reason": "Four survivors continue conspiracy/voting; no gold yet and only survivors vote.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Exactly one player survives the round. What reward do they collect, and are the four cards four points?",
+          "expected_answer": "The sole survivor collects all four central Gold Bar cards. Four bars are four cards, not four points; each Gold Bar is worth 3, 4 or 5 points.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                3,
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The sole survivor collects all four central Gold Bar cards. They are four cards, not four points; each card is worth 3, 4, or 5 points.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: “One | That survivor collects all four central Gold Bars.” Components: “receiving one bar means receiving one card whose value is 3, 4, or 5 points.”",
+          "grade": "correct",
+          "reason": "Sole survivor takes all four central cards; explicitly distinguishes cards from 3/4/5 point values.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "Exactly two players survive the voting. What must they do, which cards does each receive, and how do they choose and reveal?",
+          "expected_answer": "They must hold a Final Showdown. Each receives Share, Steal and Grab One & Go, may discuss intentions, secretly chooses one card face down, and reveals simultaneously with the other finalist.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                7,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "They resolve a Final Showdown for the central Gold Bars. Each takes a set containing Share, Steal, and Grab One & Go; they may discuss intentions and a bargain, then each chooses one card and places it face down. When both are ready, they reveal simultaneously.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: each takes “a set containing Share, Steal, and Grab One & Go”; each chooses one face down, and “reveal both choices simultaneously.”",
+          "grade": "correct",
+          "reason": "Names all three Showdown cards, discussion, face-down selection and simultaneous reveal; all requested parts complete.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "The final vote eliminates every participant. Who receives gold from the deck, who does not, and what happens to the four central bars for next round?",
+          "expected_answer": "Nobody receives the central bars. Every player not involved in that final vote receives one Gold Bar from the deck; participants in that final vote receive none. Leave the four central bars and add no new central gold next round.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4
+              ]
+            }
+          ],
+          "observed_answer": "Each player who was not participating in the final vote receives one Gold Bar card from the deck. The players who participated in that final vote receive no consolation bar for this outcome. Leave the four central bars in place for the next round and add no new bars.",
+          "reader_support": "supported",
+          "reader_evidence": "Survivors table: “Each player who was not participating in the final vote receives one Gold Bar from the deck. Leave the four central bars for the next round; add no new bars.” Special Rules clarifies final voters “receive no consolation bar for that outcome.”",
+          "grade": "correct",
+          "reason": "Rewards only those absent from the final vote one deck card each; final voters receive none; all four central cards retained with no additions.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "Both finalists reveal Share. How many Gold Bar cards does each receive?",
+          "expected_answer": "Each finalist receives two of the four central Gold Bar cards.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Each finalist receives two Gold Bar cards.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Share: “You get 2; opponent gets 2.”",
+          "grade": "correct",
+          "reason": "Share/Share yields two central cards each.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "One finalist reveals Share and the other Steal. How are the central Gold Bars divided?",
+          "expected_answer": "The Share player receives no bars and the Steal player receives all four.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Share player gets zero central bars and the Steal player gets all four.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Steal: “You get 0; opponent gets 4.”",
+          "grade": "correct",
+          "reason": "Steal takes all four, Share takes zero.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "One finalist reveals Grab One & Go and the other Steal. How are the central Gold Bars divided?",
+          "expected_answer": "Grab One & Go receives one bar and Steal receives three.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Grab One & Go player receives one central bar, and the Steal player receives three.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Grab One & Go versus Steal: “You get 1; opponent gets 3.”",
+          "grade": "correct",
+          "reason": "Grab One & Go takes one and Steal three.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "One finalist reveals Grab One & Go and the other Share. How are the central Gold Bars divided?",
+          "expected_answer": "Grab One & Go receives one bar and Share receives three.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "The Grab One & Go player receives one central bar, and the Share player receives three.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown table, Share versus Grab One & Go: “You get 3; opponent gets 1.”",
+          "grade": "correct",
+          "reason": "Grab One & Go takes one and Share three.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Both finalists reveal Grab One & Go. How many bars does each take, how many remain central, and how many new central bars are dealt if play continues?",
+          "expected_answer": "Each takes one central bar. Leave the other two central and deal just two new central bars for the next round.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Each finalist takes one bar; two bars remain in the center. If play continues, deal just two new bars, bringing the central pool to four.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: if both choose Grab One & Go, “each finalist receives one central bar. Leave the remaining two in the center and add just two new bars for the next round.”",
+          "grade": "correct",
+          "reason": "Each takes one; two remain and only two new central cards dealt if continuing.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Both finalists reveal Steal. What do the finalists and the other players receive, and what happens to the central pot?",
+          "expected_answer": "Both finalists receive nothing. Each other player receives one Gold Bar from the deck. Leave all four central bars for the next round rather than replacing them.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Neither finalist receives gold. Every other player receives one Gold Bar card from the deck. Leave all four central bars for the next round and add no new gold to the central pool.",
+          "reader_support": "supported",
+          "reader_evidence": "Final Showdown: if both choose Steal, “neither finalist receives gold”; “give every other player one Gold Bar from the deck”; “Leave all four central bars for the next round, and give no new gold.”",
+          "grade": "correct",
+          "reason": "Finalists get zero, every other player one deck card; all four central cards retained without additions.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "When is victory checked, what totals win with 6–9 versus 10–12 players, and who wins if multiple players qualify with different totals?",
+          "expected_answer": "Check at round end after Gold Bar awards. The threshold is 25 points with 6–9 players and 24 with 10–12. When several qualify, the highest total wins.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "Check for victory at the end of each round, after Gold Bars are awarded. With 6–9 players the threshold is at least 25 points; with 10–12 players it is at least 24 points. If multiple players qualify with different totals, the highest point total wins.",
+          "reader_support": "supported",
+          "reader_evidence": "Scoring: “Check for victory at the end of a round, after Gold Bars have been awarded”; thresholds are 25 for 6–9 and 24 for 10–12; “If more than one player has reached the threshold, the highest point total wins.”",
+          "grade": "correct",
+          "reason": "Checks after awards at round end for every outcome; gives 25 for6–9,24 for10–12 and highest qualified total wins.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At game end exactly two qualifying players tie for the highest Gold point total. What does the booklet require? If a normal round ends without a winner, which eliminated players return?",
+          "expected_answer": "The tied players conduct another Final Showdown, repeating until a single player at the table has the highest Gold point total. If no winner ends the game, every player returns next round: stand all IDs upright again.",
+          "source_references": [
+            {
+              "path": "source_pdfs/dead-last-rules.pdf",
+              "pdf_pages": [
+                4,
+                8
+              ]
+            }
+          ],
+          "observed_answer": "For exactly two qualifying players tied for the highest Gold point total, the tied players conduct another Final Showdown. Repeat Showdowns as necessary until one player has the highest total. If a normal round ends without a winner, everyone returns, including players eliminated during that round; stand all Player ID cards upright and begin another round.",
+          "reader_support": "supported",
+          "reader_evidence": "Scoring: “If the highest qualifying totals are tied, the tied players conduct another Final Showdown” and “Repeat these Showdowns as necessary until a single player anywhere at the table has the highest gold point total.” Turn Structure: “everyone returns: stand all Player ID cards upright and begin another round.”",
+          "grade": "correct",
+          "reason": "Explicitly repeats Showdowns until single highest, everyone returns and all IDs upright.",
+          "unsupported_guess": false
+        }
+      ],
+      "totals": {
+        "correct": 20,
+        "partial": 0,
+        "incorrect": 0
+      }
+    }
+  }
+}

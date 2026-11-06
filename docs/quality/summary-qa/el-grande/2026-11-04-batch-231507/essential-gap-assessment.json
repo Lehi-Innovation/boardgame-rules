@@ -1,0 +1,294 @@
+{
+  "assessment_type": "independent_source_completeness",
+  "assessed_date": "2026-11-05",
+  "scope": "Classic 1996 English base game, publisher PDF pages 1–12; no later-edition rules or external clarifications imported.",
+  "read_inputs": [
+    "/home/jonny/projects/boardgame-rules/extracted/el-grande-rules.txt",
+    "/home/jonny/projects/boardgame-rules/source_pdfs/el-grande-publisher-rules.pdf (pages 1–12 only, independently extracted with pypdf)",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/expanded-iteration-01/summary-snapshot.md"
+  ],
+  "independence": "No question banks, answer keys, reader responses, grades, prior reviews, source-gap register, parent history, later-edition text, or web sources were read.",
+  "classification_standard": {
+    "essential_playable_core_outcome_branch": "A reachable state in the standard nine-round base game requires choosing between materially different legal actions, piece dispositions, scoring outcomes, or executable-action procedures, and the permitted source does not determine the choice. Optional execution of an action does not eliminate its unresolved execution branch.",
+    "nonessential_source_limitation": "An editorial inconsistency resolved within this source, an unneeded additional mechanism, or a procedural uncertainty that by itself does not change the core game state.",
+    "fidelity_vs_completeness": "Faithfully disclosing an unresolved source rule is sufficient for source fidelity on that issue; it does not supply the missing playable rule or justify complete-core PASS."
+  },
+  "source_fidelity_verdict": "PASS",
+  "source_fidelity_reason": "Within its declared standard-base-game scope, the snapshot accurately preserves the authoritative rules and explicitly labels the principal unresolved return, secret-selection, movement, and mobile-scoring cases. No definite contradictory gameplay instruction was established. This is a fidelity verdict, not certification that every playable branch is resolved. The zero-count scoring candidate below is not explicitly disclosed, but the summary does not invent a contrary ruling.",
+  "complete_core_verdict": "FAIL_UNRESOLVED_ESSENTIAL_RULINGS",
+  "complete_core_reason": "At least the high-confidence shortages, protected-only selections, Court shortage, Movement destination domain, and mobile-scoreboard/Castillo scoring domain leave reachable standard-game outcomes undetermined. A source-fidelity PASS cannot cure these gaps.",
+  "findings": [
+    {
+      "id": "E01",
+      "title": "The King returns: fewer than three eligible Caballeros",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.9, The King returns detailed explanation and printed card",
+        "PDF p.7 A and C",
+        "extracted text lines 534–543"
+      ],
+      "source_problem": "The detailed explanation requires each player to return three own Caballeros from regions and/or court while forbidding King's region and Castillo. Unlike the adjacent three-from-court Decay card, it gives no shortfall procedure.",
+      "reachable_trigger": "A player's court plus all non-King board regions contain only zero, one, or two of that player's Caballeros; remaining pieces are in provinces, Castillo, or King's region.",
+      "outcome_branch": "Whether that player returns all eligible pieces, returns none, prevents execution of the entire action, or follows another procedure changes piece counts and the action's effect on the other players.",
+      "summary_references": [
+        "snapshot line 90"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "States the exact requirement, ownership, turn order and excluded origins, and expressly says the shortfall rule is absent.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "For this edition's The King returns action, specify the complete procedure for a player with 0, 1, or 2 eligible own Caballeros, and whether a shortage affects execution against other players. Confirm protected pieces remain unavailable."
+    },
+    {
+      "id": "E02",
+      "title": "Return one from each player: a player has no eligible regional Caballero",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.9, You send 1 Caballero ... from each player",
+        "PDF p.7 A and C",
+        "extracted text lines 545–551"
+      ],
+      "source_problem": "The selector must choose one from every player, including themselves, but only from regions and never King's region or Castillo. No exception covers an absent eligible piece.",
+      "reachable_trigger": "One player's pieces are all in court, provinces, King's region, and/or Castillo.",
+      "outcome_branch": "The source does not state whether to omit that player, cancel the action, or apply another fallback. Court pieces are not an authorized substitute.",
+      "summary_references": [
+        "snapshot line 91"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Correctly identifies the selecting player's choice, includes their own piece, and discloses the missing fallback.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "If any player has no Caballero in an eligible non-King region, is that player skipped while one is returned for every other eligible player, or is another procedure required?"
+    },
+    {
+      "id": "E03",
+      "title": "Secretly return two: no legal selected region or unavailable two-piece region",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.9, secretly remove two",
+        "PDF p.7 A–C",
+        "extracted text lines 554–560"
+      ],
+      "source_problem": "Selection must contain at least two own pieces; the one-piece fallback applies when the player has at most one in any region. No procedure covers zero eligible pieces. A further collision occurs when the only region containing two or more is protected, while eligible regions contain single pieces: the literal fallback condition is false, but no legal two-piece selection exists.",
+      "reachable_trigger": "An affected fellow player has no eligible regional pieces; alternatively, two own pieces are in King's region and one is in another region. If 'all players select' includes the selector, their lack of a legal qualifying region creates the same selection problem.",
+      "outcome_branch": "No selection, choosing an empty region, selecting a protected region without removal, returning one eligible piece, and aborting the action are different procedures; returning the protected pieces violates an explicit rule.",
+      "summary_references": [
+        "snapshot lines 92 and 96"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Preserves the two/one distinction and acknowledges missing eligible-region procedures and the protected-only case. It does not expressly illustrate the mixed protected-two/eligible-one case, but supplies no invented fallback.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "Define selection and return for zero eligible pieces, protected-only pieces, and a protected two-piece region plus only eligible single-piece regions. Does 'at most one in any region' mean any eligible non-King region? Specify whether empty/no-op disks are permitted and which players must submit them."
+    },
+    {
+      "id": "E04",
+      "title": "Secretly return all from one region: protected-only ownership",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.10, secretly return all from one region",
+        "PDF p.7 A–C",
+        "extracted text lines 573–581"
+      ],
+      "source_problem": "A selected region must contain at least one own Caballero. A player with no Caballeros in any region is expressly unaffected, but the rule does not expressly extend that exception to a player whose only regional pieces occupy King's region.",
+      "reachable_trigger": "An affected player has Caballeros in King's region and none in other board regions.",
+      "outcome_branch": "The literal nonparticipation exception does not apply, the only occupied selection cannot legally lose pieces, and empty selections fail the occupancy requirement.",
+      "summary_references": [
+        "snapshot lines 93 and 96"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Accurately states the exception and occupancy rule and explicitly identifies protected-only selection as unresolved.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "Is a player with no Caballeros outside King's region treated as unaffected for this action? If so, must they still set/reveal a disk, and what selections are legal for that no-op participation?"
+    },
+    {
+      "id": "E05",
+      "title": "The Court: fewer than two Caballeros in provinces",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.12, The Court",
+        "PDF p.3, power-card recruitment",
+        "PDF p.7 E",
+        "extracted text line 733"
+      ],
+      "source_problem": "The Court only says to move two own Caballeros from provinces to court. The power-card recruitment fallback is stated for that recruitment step, and p.7 E's maximum rule concerns moving pieces onto the board. Neither explicitly authorizes partial Court recruitment or reclaiming board pieces for this special action.",
+      "reachable_trigger": "Only zero or one own Caballero remains in provinces.",
+      "outcome_branch": "Recruiting the available one, declining/being unable to execute the action, or taking a board substitute yields different court and board states.",
+      "summary_references": [
+        "snapshot line 124"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Quotes the two-piece effect and expressly discloses the missing shortage procedure.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "When The Court cannot obtain two from provinces, may it recruit the available amount? Is board reclamation allowed for this special action, and from which locations? Specify the zero-piece case."
+    },
+    {
+      "id": "E06",
+      "title": "Forced Movement: Castillo destination permission versus secret-disk domain",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.2, secret disk excludes Castillo",
+        "PDF p.7 C and F, general Castillo destination permission",
+        "PDF p.11, Movement detailed explanation",
+        "extracted text lines 92–93, 367–369 and 699–710"
+      ],
+      "source_problem": "General rules permit any/all Caballeros moved by special actions to enter Castillo. The forced Movement action instead directs each affected player to choose a destination on a disk that cannot name Castillo. It does not state an exception to the general permission or an alternative way to declare Castillo.",
+      "reachable_trigger": "A fellow player whose group is being expelled wants to send that group to Castillo.",
+      "outcome_branch": "Excluding Castillo, allowing an extra declaration, or allowing an indicated board destination plus diversion/splitting produce different legal destinations and piece distributions.",
+      "summary_references": [
+        "snapshot line 121",
+        "snapshot line 175"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Preserves the disk procedure, court fallback and protected origins, and explicitly discloses the Castillo destination conflict instead of silently deciding it.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "Can the forced Movement card send any expelled Caballeros to Castillo? If yes, how is that choice made secretly with the original disk, and must the entire player's group share that destination? If not, explicitly establish this card's exception to p.7 C/F.",
+      "resolved_domains": "King's region cannot be emptied; Castillo cannot be emptied before general scoring. These are explicit p.7 restrictions, not unresolved origin alternatives."
+    },
+    {
+      "id": "E07",
+      "title": "All-4 special scoring when Castillo has mobile 4/0/0",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.10, all-4 scoring and all-5 exclusion",
+        "PDF p.11, mobile scoreboard may be placed at Castillo",
+        "PDF pp.2 and 4, nine regions versus special Castillo location",
+        "extracted text lines 600–614 and 680–690"
+      ],
+      "source_problem": "A mobile 4/0/0 may legally cover Castillo's scoreboard. All-4 scoring uses current first values and says to score all regions with four lilies, but does not expressly include or exclude Castillo. The source treats Castillo separately from nine regions while expressly including/excluding it in other scoring-card texts; the all-5 card explicitly excludes it.",
+      "reachable_trigger": "Place 4/0/0 at a nonempty Castillo and execute an all-4 scoring action.",
+      "outcome_branch": "Scoring Castillo awards points and reveals contents; excluding it does neither. Ordinary board-region mobile category changes are expressly resolved and are not gaps.",
+      "summary_references": [
+        "snapshot lines 104, 119 and 175"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Correctly handles mobile category replacement for board regions and expressly flags the Castillo/all-4 intersection as unresolved.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "Does all-4 scoring include Castillo when its current scoreboard is mobile 4/0/0, or do value-category scorings always exclude Castillo? If it is included, confirm it is revealed, scored using the mobile values, and re-covered without redistribution."
+    },
+    {
+      "id": "E08",
+      "title": "Zero-count scoring eligibility is not explicitly defined",
+      "classification": "essential_playable_core_outcome_branch",
+      "confidence": "medium",
+      "candidate_status": "Additional completeness candidate; less certain than E01–E07 because ordinary-language 'players with Caballeros' may be understood to exclude absence.",
+      "source_references": [
+        "PDF p.2, scoreboard description",
+        "PDF pp.5–6, rank/tie rules and examples",
+        "PDF p.11, least-Caballeros card explicitly excludes empty regions"
+      ],
+      "source_problem": "The general scoring text supplies rankings and tie shifts but no express minimum of one Caballero to qualify for a rank. Its examples involve positive counts only. Under a purely numeric ranking, absent players can occupy a payable rank or an entirely empty region can pay tied-second points; the usual occupied-player interpretation would not.",
+      "reachable_trigger": "In a five-player game, a 5/3/1 region has counts 2,0,0,0,0; or the region is empty.",
+      "outcome_branch": "Ignoring zero counts versus treating them as tied numeric counts changes point awards during ordinary general scoring.",
+      "summary_references": [
+        "snapshot Region ranks, ties and bonuses, especially line 152"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Faithfully reproduces the source's positive-count ranking/tie scheme without supplying an unsupported minimum-presence rule. It does not label this additional possible omission.",
+      "complete_core_gameplay_unresolved": true,
+      "exact_clarification_needed": "Confirm whether a player must have at least one Caballero in a scored region/Castillo to earn any rank points, and whether an entirely empty scored location awards no points. Explain how zero counts are excluded before tie/rank calculation.",
+      "caution": "Do not treat the familiar no-pieces/no-points convention as verified for this exact source without matching primary authority. Complete-core FAIL already follows from the high-confidence findings, independently of this candidate."
+    },
+    {
+      "id": "N01",
+      "title": "The King returns participant mismatch is resolved internally",
+      "classification": "nonessential_source_limitation",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.7, consult detailed explanation when meaning is unclear",
+        "PDF p.9, heading versus detailed explanation and printed card"
+      ],
+      "source_problem": "The heading says fellow players, but the detailed explanation says each player in clockwise order and the pictured card also says each player.",
+      "resolution_from_permitted_source": "Use the detailed explanation and agreeing card face: the selecting player participates, last in that clockwise sequence. This does not supply a shortage rule.",
+      "summary_references": [
+        "snapshot line 90"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Explicitly identifies the wording discrepancy and explains its source-grounded choice.",
+      "complete_core_gameplay_unresolved": false,
+      "exact_clarification_needed": "None for participation; E01 still requires shortage clarification."
+    },
+    {
+      "id": "N02",
+      "title": "Secret return cards: selecting disks and removing pieces are distinct duties",
+      "classification": "nonessential_source_limitation",
+      "confidence": "medium",
+      "source_references": [
+        "PDF p.7 B",
+        "PDF p.9, secretly remove two card face, heading and detail",
+        "PDF p.10, secretly remove all card face, heading and detail"
+      ],
+      "source_problem": "Card faces and headings assign removal to fellow players; the explanation instructs all players to select disks. It does not expressly say the selecting player must remove pieces. These sentences can coexist as all-player disk participation with fellow-player removal, so 'all players select' alone does not establish that the selector loses Caballeros.",
+      "classification_reason": "When every participant has a legal disk choice, whether an otherwise unaffected selector also sets a disk does not by itself alter the resulting piece state. The exact disk choreography remains a procedural limitation. When mandatory all-player selection has no legal occupied region, the executable-action branch is essential and is covered by E03/E04.",
+      "summary_references": [
+        "snapshot lines 92–93 and 96"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Separately preserves fellow-player removal and the all-player disk wording, and does not invent a requirement for the selector to return pieces.",
+      "complete_core_gameplay_unresolved": false,
+      "conditional_essential_links": [
+        "E03",
+        "E04"
+      ],
+      "exact_clarification_needed": "Confirm whether the selecting player sets a disk purely as an unaffected participant, whether its choice must satisfy the same occupancy condition, and how an unaffected player without a qualifying region participates. Do not infer selector removal merely from disk participation."
+    },
+    {
+      "id": "N03",
+      "title": "Intrigue's 'only these cards' statement conflicts with explicit forced Movement",
+      "classification": "nonessential_source_limitation",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.8, introductory claim that only intrigue cards move another player's Caballeros",
+        "PDF p.11, forced Movement"
+      ],
+      "source_problem": "The broad introductory claim is overinclusive if read to prohibit the explicit forced Movement card.",
+      "resolution_from_permitted_source": "The detailed Movement action expressly requires fellow players to move their own groups. The selecting player is not given arbitrary control over individual foreign pieces. The specific action is playable subject to E06's destination issue.",
+      "summary_references": [
+        "snapshot Stack 1 table and line 121"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Provides the actual card effects rather than importing the misleading broad prohibition.",
+      "complete_core_gameplay_unresolved": false,
+      "exact_clarification_needed": "None to execute the explicit Movement effect; E06 remains separate."
+    },
+    {
+      "id": "N04",
+      "title": "No additional final-score tiebreaker",
+      "classification": "nonessential_source_limitation",
+      "confidence": "high",
+      "source_references": [
+        "PDF p.6, Game end"
+      ],
+      "source_problem": "The source identifies the furthest success-track position but gives no further tiebreaker for equal maximum positions.",
+      "classification_reason": "The game can finish and the maximum-scoring players can be identified without another gameplay transition. A requirement to produce exactly one winner would need an added rule, but this omission alone need not prevent completing the base game.",
+      "summary_references": [
+        "snapshot line 168"
+      ],
+      "summary_fidelity_adequate": true,
+      "summary_reason": "Expressly says no additional endgame tiebreaker is provided.",
+      "complete_core_gameplay_unresolved": false,
+      "exact_clarification_needed": "Only if a single-winner adjudication is required: confirm the original edition's tied-outcome policy. Do not invent a tiebreak."
+    }
+  ],
+  "explicitly_resolved_domains": [
+    "Ordinary deployment originates in court and reaches King's-neighboring regions and/or Castillo; no general special-action adjacency restriction exists.",
+    "King's region cannot gain or lose Caballeros, Grandes, or mobile scoreboards; actions moving the King change the protected region.",
+    "Castillo cannot be a removal/recruitment origin outside general scoring, including special actions and power-card recruitment.",
+    "A normal board-region mobile scoreboard changes both scoring values and value-category eligibility; this is explicit, not an unresolved gap.",
+    "Secret choose-a-region scoring on p.12 uses disks and therefore the nine board regions, including King's region but excluding Castillo; unrestricted choose-any-region cards explicitly allow Castillo.",
+    "The three-piece intrigue descriptions allow any non-King destination, whereas four-piece descriptions say other regions; preserving the card-specific words does not justify importing a universal same-origin exception.",
+    "Grande movement cannot enter Castillo or King's region and cannot leave King's region; the new location becomes the player's home region.",
+    "The all-own-from-one-region intrigue expressly allows returning some pieces to the original region.",
+    "General Castillo redistribution chooses destinations before uncovering, permits no split, and expressly sends an illegal King's-region selection to court."
+  ],
+  "required_next_step": "Obtain matching-edition primary-authority clarification for E01–E07 and investigate E08; then revise the playable summary to state the verified rulings with exact provenance. Until then retain complete-core FAIL even if a separate source-fidelity audit passes.",
+  "counts": {
+    "essential_high_confidence": 7,
+    "essential_additional_medium_confidence_candidate": 1,
+    "nonessential_or_internally_resolved": 4
+  }
+}

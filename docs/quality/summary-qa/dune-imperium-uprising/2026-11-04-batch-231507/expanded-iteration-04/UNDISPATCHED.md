@@ -1,0 +1,1 @@
+No readers or auditors were dispatched on this candidate. Before dispatch, the initial-card-state sentence was narrowed to personal/Intrigue/Imperium decks to avoid implying that face-up Objectives are forbidden. The unchanged original frozen candidate and manifest are preserved; expanded-iteration-05 is the successor. No benchmark question or key changed.

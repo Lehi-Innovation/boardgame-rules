@@ -1,0 +1,51 @@
+{
+  "question_id": "Q09",
+  "scope": "Base core rules only; independently assess each answer against all three requested facts, using only input.json, the frozen summary and the specified source.",
+  "verdicts": {
+    "a": {
+      "rating": "partial",
+      "requested_facts": {
+        "acquisition": "correct: purchase Butler's Pantry, gain one underbutler immediately into Expended Service; ordinary hiring and Hire Servant VP cards exclude it",
+        "availability": "partial: identifies its immediate destination but never says when it becomes available to use",
+        "opponent_recruitment": "correct: unique servant, cannot be recruited"
+      },
+      "reason": "Immediate placement in Expended Service is not a complete answer to when the underbutler is available. The answer omits the transition to Available Service: normally Expended Service to Servants' Quarters at the next rotation, then to Available Service at the following rotation, or earlier through applicable service-refresh mechanisms. The extra setup count is correct but does not supply use timing. All acquisition and recruitment facts are correct independently of answer b.",
+      "refs": [
+        "summary-snapshot.md:42,53,57,64,89,102-108,176,178",
+        "extracted/obsession-rules.txt:647-649,807-808,1080-1084,1100,1111-1116,1125-1133,1140-1143,3352-3356,3968-3977"
+      ]
+    },
+    "b": {
+      "rating": "partial",
+      "requested_facts": {
+        "acquisition": "correct: purchase Butler's Pantry, gain one underbutler immediately into Expended Service; ordinary hiring and Hire Servant VP cards exclude it",
+        "availability": "incomplete and misleading: expressly says timing beyond placement in Expended Service is unspecified, although the summary's general service rules determine it",
+        "opponent_recruitment": "correct: unique servant, cannot be recruited"
+      },
+      "reason": "The caveat does not resolve the requested availability fact. The summary explicitly states the service rotation and refresh rules, so it supports deriving normal availability on the second subsequent service rotation and earlier availability through refresh. No separate underbutler-specific timing rule is needed. This omission remains material even though the answer satisfies the acquisition and recruitment portions and reproduces all substantive facts in the fixed key. The statement about no separate purchase-time restriction does not answer service availability.",
+      "refs": [
+        "summary-snapshot.md:53,57,59,64,89,102-108,176,178",
+        "extracted/obsession-rules.txt:647-649,807-808,1080-1084,1111-1116,1125-1133,1140-1143,3352-3356,3968-3977"
+      ]
+    }
+  },
+  "key_defect": {
+    "present": true,
+    "type": "material completeness omission",
+    "reason": "The fixed question explicitly asks when the underbutler is available, but the fixed expected answer stops at immediate placement in Expended Service. That establishes acquisition timing and initial location, not when the servant can provide service. Both answers cover every positive fact in that abbreviated key; grading by key coverage alone would conceal a material omission in both answers. The key's cited ranges also omit the general rotation and using-servants rules needed to answer availability.",
+    "required_addition": "He is acquired immediately into Expended Service and is not immediately available for service. Normally he moves to Servants' Quarters at the next service rotation and Available Service at the following rotation (the second subsequent hosting turn if relying solely on normal rotations). Passing or a Refresh Service VP card can move him directly to Available Service earlier. Once in Servants' Quarters, Service Help can move him to Available Service, or the Servants' Quarters tile can permit his use from that area. A complete short answer need not enumerate every accelerator, but should explicitly explain the normal availability timing and acknowledge refresh can accelerate it.",
+    "refs": [
+      {
+        "file": "docs/quality/summary-qa/obsession/2026-11-04-batch-231507/seed-iteration-02/summary-snapshot.md",
+        "lines": [53,57,64,89,106,108,176],
+        "supports": "Normal rotation, service requirements, passing refresh, Service Help, underbutler placement, Quarters-use exception and Refresh Service card"
+      },
+      {
+        "file": "extracted/obsession-rules.txt",
+        "lines": [647,648,649,807,808,1058,1111,1112,1113,1114,1115,1116,3356,3841,3968,3969,3970,3971],
+        "supports": "Normal rotation; passing refresh; Service Help; available-servant requirements and prohibition on reuse before return; immediate Expended placement; Quarters tile exception; immediate card refresh"
+      }
+    ]
+  },
+  "interpretation": "Treat 'when is it available' as asking when the acquired servant is available for service, distinct from when it is gained. If that phrase was intended only to ask its initial placement, the question should say so; that narrower intended reading is not enough to remove the present completeness defect. Neither answer states the normal service timing, and answer b explicitly denies the summary supplies it."
+}

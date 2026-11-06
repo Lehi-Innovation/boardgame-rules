@@ -1,0 +1,1 @@
+Reader A saw the complete frozen summary and all97 question texts. Reader B saw all97 question texts but did not visibly read final summary lines271 and273 (Player Reference), so its raw answers/grades are preserved without claiming complete-input evidence. No fact-specific feedback or reread after grading is used to repair this historical run.

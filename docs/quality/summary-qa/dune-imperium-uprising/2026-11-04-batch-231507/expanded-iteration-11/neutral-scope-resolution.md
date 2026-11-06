@@ -1,0 +1,9 @@
+# Scope resolution after independent full11 and neutral11 reviews
+
+Both original reports and all raw responses are retained. The new neutral reviewer received only five exact question/key/raw cases and frozen summary, without proposed grades or earlier outcomes. It agrees B14 is partial for the requested Hooks prerequisite and B75 incorrect for inventing a payment on an unconditional doubled Influence reward.
+
+Adopt its semantic A60 correct: saying the two ordinary Agents and Swordmaster are beside the board is off-board location shorthand; it does not explicitly lock the two ordinary Agents or deny their availability in Rival supply. The actual question asks starting components, not an independent location comparison. Adopt A100 correct: the direct substantive answer explicitly gives bank-to-player origin and excludes opponents. The directionally poor evidence gloss is acknowledged as citation shorthand, not an operative alternative gameplay instruction. This follows semantic grading rather than treating every imprecise citation as a contradictory rule.
+
+Do not adopt neutral11 A02 correct. Original independent seed adjudication.json explicitly established before later pairs that requested starting troops include three garrison plus nine supply, not just the starting garrison allotment. Seed01A/B and02A are consistently partial for the exact same omission; all expanded01–10 A/B explicitly supplied nine. Full11 correctly applies that unchanged criterion. A later narrower interpretation cannot turn this reserve allocation into incidental background merely for this answer. A02 remains partial. No historical grade needs changing.
+
+Final exported11 totals therefore A99 correct/1 partial/0 incorrect and B98 correct/1 partial/1 incorrect. Initial full-grader exports A97/1/2 and B98/1/1 remain preserved as historical-pre-neutral-scope-* files. The trial does not pass, and the separate source11 MINOR remains independently preserved.

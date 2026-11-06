@@ -1,0 +1,139 @@
+{
+  "verdict": "V5_REVISION_REQUIRED_FOR_EXPLICIT_PROCEDURAL_COVERAGE",
+  "benchmark_version": "benchmark-v5",
+  "historical_scope": "Review of the original 28-page manual and the supplied v5 bank only. Basic board, standard semi-cooperative core. No supplemental FAQ or erratum was inspected or used in this review; later supplemented benchmark versions require their own review.",
+  "independence": {
+    "inputs_read_this_followup": [
+      "source-snapshot.txt",
+      "benchmark-v5/questions.json",
+      "benchmark-v5/answer-key.json",
+      "coverage-ledger.json",
+      "procedural-coverage-map.json",
+      "benchmark-corrections-v5.json",
+      "source-gaps.json"
+    ],
+    "source_review_continuity": "The complete scoped core source and original PDF symbols were independently read in the preceding source-only review. This followup reread the entire revised questions/key, ledger, map, corrections and gap register, and rechecked the revised and potentially uncovered passages directly against the snapshot. The original PDF inspection of combat icons, recipe placements and Egg-melee wording remains applicable to these unchanged source files.",
+    "summaries_reader_outputs_or_grades_read": false,
+    "inputs_or_initial_report_modified": false,
+    "runtime": "Requested gpt-6.1-sol/high runtime configuration and confirmation remain parent-handled; no independent runtime attestation is asserted."
+  },
+  "bank_integrity": {
+    "question_count": 62,
+    "answer_count": 62,
+    "unique_question_ids": 62,
+    "question_and_answer_ids_match": true,
+    "ledger_covers_all_question_ids": true,
+    "procedural_map_section_count": 72,
+    "procedural_map_omits_question_ids": ["Q61", "Q62"],
+    "procedural_map_invalid_question_ids": []
+  },
+  "accepted_revisions": [
+    {"question_id": "Q58", "result": "First-death global Pod unlock and subsequent relocking are explicitly and correctly tested.", "source_lines": "1029-1037;3018-3020"},
+    {"question_id": "Q59", "result": "Storage choice of deck, draw-two/keep-one, explicit bottom return, cost and legality are correctly tested.", "source_lines": "2405-2412;2664-2668;3045-3047"},
+    {"question_id": "Q60", "result": "Nest acquisition from the Intruder board, two-card Room Action, post-taking Noise and distinction from ordinary dropped-Object pickup are correctly tested.", "source_lines": "1182-1187;2220-2228;2405-2412;2623-2643;3038-3047"},
+    {"question_id": "Q61", "result": "One Use Only Item consumption in addition to Action-card payment is correctly tested.", "source_lines": "677-687;2198-2199;2259-2263;3048-3053"},
+    {"question_id": "Q62", "result": "Launched-Pod Character arrival on Earth is correctly tested and distinguished from the ship reaching Earth.", "source_lines": "915-958;1093-1096;2712-2719"},
+    {"question_id": "Q18", "result": "Historical unconditional contamination-immunity overcertainty has been explicitly versioned as a source ambiguity. The v5 key does not invent a successful-hit draw, refund or categorical immunity. The ordinary pre-roll draw order remains contextual support for unconditional exemption, not an authoritative clarification.", "source_lines": "1816-1823;2650-2654"},
+    {"question_id": "Q51", "result": "ALL eligible non-Combat Adults is now explicit, and the all-eight-in-Combat limit is disclosed rather than supplied with an invented solution.", "source_lines": "1412-1429"},
+    {"question_id": "Q54", "result": "Screwdriver/tool now accurately describes the visually checked original PDF icon. Recipe pairs and combat symbols remain supported.", "source_lines": "1755-1776;1816-1839;2283-2329", "printed_pages": [18, 19, 23]},
+    {"question_ids": ["Q08", "Q14", "Q22"], "result": "v5 answer-key references now include the missing movement-not-Encounter, Basic Movement cost and ten-card Action deck passages.", "source_lines": "1685-1686;3038-3039;1235-1237"}
+  ],
+  "findings": [
+    {
+      "id": "V5-F01",
+      "severity": "medium",
+      "type": "remaining_explicit_procedure_gap",
+      "question_ids": ["Q05"],
+      "description": "Q05 requests a generic Exploration effect and its key says only to resolve that effect, then specifically explains Silence/Danger. Neither that key nor another question specifies the other four Exploration instructions. The particularly consequential omitted branch is that Doors places the Door in the Corridor by which the Character entered, rather than in any chosen connected Corridor. Q57's Door states/supply and Q10's Intruder/Door interaction do not test that placement instruction. Slime applies to the Character board while Fire and Malfunction apply to the Room; these placements can be tested together with the Door branch without inventing scenarios.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1273-1274;1288-1300;1454-1473;1640-1644", "printed_pages": [14, 15, 17]}],
+      "recommended_action": "Add A01 or explicitly augment Q05 and its key with the four remaining token effects. A blanket instruction to resolve the effect is insufficient for claiming that each source-defined procedural branch has actually been tested."
+    },
+    {
+      "id": "V5-F02",
+      "severity": "medium",
+      "type": "remaining_explicit_procedure_gap",
+      "question_ids": ["Q04", "Q13", "Q18", "Q24", "Q26"],
+      "description": "The keys cover Character Fire Wounds, Egg Fire destruction, marker exhaustion, and the Event Phase's named Fire Damage step. No key states that each Intruder in a burning Room suffers exactly one Injury during that step. Q13 explains how to check death after damage, but supplies no Fire damage amount. Naming the step in Q24 does not test its operative instruction. This is a missing rule, not a different numerical example of an already-tested Fire rule.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "757-768;1565-1568;1982-2007", "printed_pages": [10, 17, 20]}],
+      "recommended_action": "Add A02 or augment Q24 with the Intruder Fire damage amount and application. The existing questions can continue to supply the already-tested death-check details."
+    },
+    {
+      "id": "V5-F03",
+      "severity": "low",
+      "type": "audit_metadata_incomplete",
+      "description": "The ledger includes all 62 questions, but the procedural map still omits Q61 and Q62 entirely. Its One Use Only passage maps only to older questions, its Pod section omits Q62's arrival outcome, and its closing note still calls only Q58-Q60 pending additions. The quick-reference row also omits Q61. These are map defects despite the underlying rules now being in the bank.",
+      "recommended_action": "Map Q61 to 2167-2199, 2200-2268 and the relevant 2985-3126 reference section; map Q62 to 2684-2740; update the note to describe the actual 62-question v5 bank and current review state."
+    },
+    {
+      "id": "V5-F04",
+      "severity": "low",
+      "type": "audit_metadata_stale_references",
+      "question_ids": ["Q08", "Q14", "Q22"],
+      "description": "The repaired citations are present in answer-key.json and benchmark-corrections-v5.json but not in the matching ledger coverage entries. The ledger's danger entry still ends at 1682-1684, Escape lacks 3038-3039 and crew setup lacks 1235-1237. The ledger's source_reference_correction field still points to the older benchmark-corrections.json.",
+      "recommended_action": "Bring the ledger entries and correction-file pointer into agreement with the v5 key."
+    },
+    {
+      "id": "V5-F05",
+      "severity": "medium",
+      "type": "essential_source_limits_remain",
+      "description": "The supplied four source gaps remain unresolved within this manual-only evidence set. Acknowledging them in the key and source-gaps.json is correct, but does not turn them into source-supported gameplay rulings. Even after the two explicit coverage additions, an unconditional full-core PASS remains unavailable on this evidence.",
+      "source_gap_ids": ["SG01", "SG02", "SG03", "SG04"],
+      "recommended_action": "Maintain the four unresolved conditions separately from procedural-bank saturation. Any later authoritative supplemental source must be versioned, checked for original-base-game applicability and reviewed in a new benchmark scope."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "id": "A01",
+      "suggested_integration": "A new question or explicit addition to Q05; no particular new bank ID required.",
+      "topic": "remaining-exploration-token-effects",
+      "question": "When first entering an unexplored Room, what do Slime, Fire, Malfunction and Doors Exploration tokens each place, and where? Do these four effects themselves cancel the normal empty-Room Noise roll?",
+      "expected_answer": "Slime places a Status marker in the Character board's Slime slot. Fire places a Fire marker in the entered Room. Malfunction places a Malfunction marker there, subject to the existing rule that Nest and Room Covered In Slime cannot receive one. Doors places a Door token in the Corridor just used to enter. Resolve the Exploration effect and remove the Exploration token from the game. These four effects do not themselves cancel the normal Noise roll for an empty destination; Silence and Danger Exploration effects provide that cancellation.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1288-1300;1430-1473;1600-1601;3030-3034", "printed_pages": [14, 15, 17, 28]}],
+      "novelty": "Explicit placement targets for four source-defined token branches, particularly the specified entry Corridor for Doors, are absent from the current expected answers. This is not an alternate Room/count scenario.",
+      "key_caution": "Do not infer an unavailable card effect or invent a rule for any pre-existing Destroyed Door; the question tests the token's stated placement instruction."
+    },
+    {
+      "id": "A02",
+      "suggested_integration": "A new question or explicit addition to Q24; no particular new bank ID required.",
+      "topic": "intruder-fire-damage",
+      "question": "During the Event Phase, what happens to each Intruder in a Room with Fire, when relative to Intruder attacks, and does its resulting damage use the ordinary Injury Effect check?",
+      "expected_answer": "After the Intruder Attack step and before resolving the Event card, each Intruder in a Room with a Fire marker suffers one Injury during Fire Damage. Place its Injury marker and perform the usual Injury Effect/death or retreat check appropriate to that Intruder type. An Intruder that attacked in the preceding step is still subject to Fire damage if it remains there.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "757-768;1565-1568;1982-2007;2023-2033", "printed_pages": [10, 17, 20]}],
+      "novelty": "The amount and per-Intruder application of Fire damage are an untested operative rule. Existing Event order and endurance questions support parts of the answer but never request this instruction."
+    }
+  ],
+  "unresolved_essential_source_gaps": [
+    {"id": "SG01", "case": "An Adult is required while all eight models are in Combat.", "source_lines": "1422-1429", "assessment": "Source frees only non-Combat models and supplies no executable resolution when none qualify. Q51 now correctly discloses the limit."},
+    {"id": "SG02", "case": "Queen development adds an Egg after the Nest was marked destroyed.", "source_lines": "809-816;2632-2634", "assessment": "No explicit destroyed-state persistence/reset or resulting Objective ruling. Separate addition and destruction rules do not uniquely settle it."},
+    {"id": "SG03", "case": "Contamination on successful Egg melee.", "source_lines": "1816-1823;2650-2654", "assessment": "The trailing miss condition is grammatically ambiguous. Pre-roll ordinary Melee draw order favors unconditional immunity operationally, but supplies neither an explicit clarification nor an alternative delayed-draw/refund procedure. v5 appropriately preserves the gap."},
+    {"id": "SG04", "case": "A later Character death after Pods were relocked.", "source_lines": "1029-1037;2684-2689;3018-3020", "assessment": "First-death wording conflicts with the Pod section's any-death wording. Q58 correctly avoids the unresolved later-death branch."}
+  ],
+  "coverage_assessment": {
+    "all_source_supported_procedural_passages_explicitly_tested": false,
+    "section_level_coverage": "All core procedural sections have broad question mappings; that is not the same as testing each operative instruction. The two findings identify remaining instructions hidden inside otherwise mapped sections.",
+    "earlier_five_additions_closed": true,
+    "new_meaningful_question_or_augmentation_count": 2,
+    "zero_addition_passes_6_and_7_confirmed_by_this_challenge": false,
+    "new_material_key_error_demonstrated_from_manual_only": false,
+    "unconditional_full_core_pass": false,
+    "reason_unconditional_pass_unavailable": "Four essential source gaps persist in the supplied original manual, independently of the remaining bank coverage details. This report makes no claim about whether supplemental official materials can resolve or alter them.",
+    "novelty_threshold": "Accepted only previously unrequested operative rules, source-defined token branches or consequential timing. Declined alternate player counts, more neighbors, species using the same endurance procedure, other Item names using One Use Only and variants of already-tested Pod arrival or first-death rules.",
+    "card_scope_limit": "Physical Action/Item/Weakness cards not reproduced in the manual remain necessary for their individual text. Do not claim exhaustive coverage of unavailable card-specific effects. Manual-contained examples remain in scope."
+  },
+  "checked_passages": [
+    {"source_lines": "438-688", "area": "Complete board/crew setup, placement and discards", "question_ids": ["Q01", "Q02", "Q21", "Q22", "Q23"], "result": "Covered; repaired ten-card citation accepted."},
+    {"source_lines": "690-842", "area": "Player phases, rounds/pass, Event procedures and bag development", "question_ids": ["Q04", "Q09", "Q23", "Q24", "Q25"], "result": "Broadly covered; Intruder Fire damage amount/application needs explicit testing."},
+    {"source_lines": "845-969", "area": "Goals, ending conditions and ordered victory checks", "question_ids": ["Q20", "Q49", "Q53", "Q56", "Q62"], "result": "Covered under the supplied manual; known source gaps remain separate."},
+    {"source_lines": "971-1143", "area": "Costs, critical moments, Objective guidance and Combat legality", "question_ids": ["Q02", "Q03", "Q18", "Q33", "Q37", "Q39", "Q48", "Q55", "Q56", "Q58"], "result": "Earlier first-death omission closed by Q58."},
+    {"source_lines": "1145-1250", "area": "Basic Actions, card Actions and costs", "question_ids": ["Q03", "Q06", "Q12", "Q14", "Q31", "Q32", "Q34", "Q55", "Q60", "Q61"], "result": "Covered; Nest-specific acquisition now distinct from generic pickup."},
+    {"source_lines": "1252-1521", "area": "Movement, Exploration, Noise, Intruder movement and Technical Corridors", "question_ids": ["Q05", "Q06", "Q07", "Q08", "Q11", "Q45", "Q51", "Q57"], "result": "Four non-Silence/Danger token instructions need explicit key coverage, particularly Doors' entry-Corridor placement. Adult supply limit correctly preserved."},
+    {"source_lines": "1524-1673", "area": "Markers, Fire, Malfunction and Doors", "question_ids": ["Q04", "Q08", "Q10", "Q26", "Q27", "Q34", "Q42", "Q45", "Q57"], "result": "Covered except explicit Intruder Fire damage instruction."},
+    {"source_lines": "1675-1938", "area": "Encounters, Surprise, Blank, Combat, attacks and Escape", "question_ids": ["Q07", "Q08", "Q09", "Q12", "Q13", "Q14", "Q15", "Q52", "Q55"], "result": "Covered; citation repairs accepted and prior independent PDF die-symbol check still applies."},
+    {"source_lines": "1941-2154", "area": "Contamination, endurance/retreat, Character Wounds and Weaknesses", "question_ids": ["Q03", "Q13", "Q15", "Q16", "Q17", "Q20", "Q33", "Q36", "Q53"], "result": "Covered under supplied manual procedures; no new unique ruling inferred from card text."},
+    {"source_lines": "2167-2403", "area": "Items, Objects, inventory, crafting, Search, quests and aggression", "question_ids": ["Q22", "Q28", "Q29", "Q30", "Q31", "Q32", "Q50", "Q54", "Q61"], "result": "One Use Only omission closed. Screwdriver icon correction accepted. Search assessed solely against this manual version."},
+    {"source_lines": "2405-2518", "area": "Common Room rules and all Basic Rooms", "question_ids": ["Q19", "Q33", "Q34", "Q35", "Q36", "Q37", "Q38", "Q39"], "result": "Covered."},
+    {"source_lines": "2525-2681", "area": "Every Additional Room, Nest acquisition/destruction and Surgery", "question_ids": ["Q17", "Q18", "Q40", "Q41", "Q42", "Q43", "Q44", "Q45", "Q59", "Q60"], "result": "Storage and Nest acquisition omissions closed. Egg melee source ambiguity correctly versioned."},
+    {"source_lines": "2684-2834", "area": "Complete Pod procedure and every Special Room", "question_ids": ["Q19", "Q20", "Q30", "Q46", "Q47", "Q48", "Q53", "Q58", "Q62"], "result": "Earth arrival omission closed. Later-death unlock ambiguity preserved. Waiting/exit assessed only against this historical manual's text."},
+    {"source_lines": "2985-3126", "area": "Reference sheet repeats", "question_ids": ["Q03", "Q04", "Q05", "Q06", "Q12", "Q14", "Q15", "Q19", "Q22", "Q23", "Q24", "Q25", "Q28", "Q29", "Q31", "Q34", "Q48", "Q58", "Q61"], "result": "Common costs, first-death trigger and Item consumption cross-checked. Map needs Q61 added."}
+  ]
+}

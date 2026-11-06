@@ -1,0 +1,322 @@
+{
+  "game": "Ark Nova",
+  "iteration": "seed-iteration-08",
+  "status": "complete",
+  "grading_target": "Fixed benchmark-v1.1 (SC01-corrected Q17 release-size bands)",
+  "grading_policy": "Judge every answer independently and semantically against every actually requested part. Correct requires complete requested knowledge and no material contradiction; partial marks required omission/unresolved ruling; incorrect marks material false rule. No facts borrowed across answers and no support-label shortcuts. Do not require extra key facts not asked.",
+  "reader_access_scope": "These grades assess actual answer content only. They do not presume full-input access from support/evidence labels or establish runtime read coverage; the parent audits actual reads separately.",
+  "inputs_read": [
+    "benchmark-v1.1/questions.json",
+    "benchmark-v1.1/answer-key.json",
+    "seed-iteration-08/reader-a.json",
+    "seed-iteration-08/reader-b.json",
+    "extracted/ark-nova-rules.txt"
+  ],
+  "readers": {
+    "a": {
+      "counts": {
+        "correct": 20,
+        "partial": 0,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "grade": "correct",
+          "reason": "Correct starting money, active/inactive worker counts, Zoo-card draw/keep counts, Final Scoring count, Action sides/order and appeal by turn order. Discarding four is implied by keep-four-of-eight and is not separately requested as an additional count.",
+          "answer_evidence": "Each player starts with 25 money, 1 active association worker and 3 inactive workers. Draw 8 Zoo cards and keep 4; draw 2 Final Scoring cards. Put Action cards side I up, with Animals in the leftmost slot (strength 1) and the other four randomly in the other slots. Appeal starts at 0 for the first player, then 1, 2, and 3 in turn order.",
+          "source_references": "Main pp4\u20135"
+        },
+        {
+          "id": "Q02",
+          "grade": "correct",
+          "reason": "Correct three base projects at two/three players versus four at four players, every two-player blocked level/donation space, no such three/four-player blocks, and initial six-card display reveal after hand selection.",
+          "answer_evidence": "The setup has 3 face-up Base Conservation Projects except in a 4-player game, which has 4. In a 2-player game only, block the left level on the left project, middle level on the middle project, and right level on the right project, plus the donation area's three spaces in its left column. No such blocks are specified for 3 or 4 players. Deal the initial display face down and reveal its 6 cards after everyone chooses starting hand cards.",
+          "source_references": "Main pp4\u20135"
+        },
+        {
+          "id": "Q03",
+          "grade": "correct",
+          "reason": "Correct used-slot-four card to slot one with old slots one through three shifting right, strength fixed before acting, +1 per spent X-token, no same-action newly gained tokens, five-token holding cap and after-finishing after Action-card movement. Token return/spending count where included are consistent extra details.",
+          "answer_evidence": "After using the slot-4 card, remove it, shift the cards that were left of that empty slot (slots 1\u20133) one slot right, and put the used card in slot 1. Set strength before the action; each X-token spent adds 1 strength and returns to supply. You may spend any number, though strength above 5 may not improve some actions; you cannot hold more than 5 X-tokens, and tokens gained during the action cannot boost it. An after-finishing effect resolves after the action is complete, including moving its card.",
+          "source_references": "Main p8"
+        },
+        {
+          "id": "Q04",
+          "grade": "correct",
+          "reason": "Correct prohibition on doing nothing and alternative exactly-one-X action, card selection/movement/shifts independent of slot strength or upgrade, and unavailable with five X-tokens held.",
+          "answer_evidence": "You may not do nothing; if you cannot or do not want to perform a regular action, take exactly 1 X-token as the alternative action. Still select an Action card, move it to slot 1, and shift the intervening cards right; its strength and upgrade state do not matter. You cannot take this action while holding 5 X-tokens.",
+          "source_references": "Main pp8,18"
+        },
+        {
+          "id": "Q05",
+          "grade": "correct",
+          "reason": "Correct excess movement ignored, one triggering X-token, completion of current turn before the break and continuation with the next clockwise player. No extra-turn exception is falsely asserted.",
+          "answer_evidence": "When the Break token reaches the last space, ignore any additional steps and the break occurs after the current turn ends. The player who reached it gets 1 X-token. They finish the rest of their turn before the break; after the break, play continues clockwise with the next player.",
+          "source_references": "Main pp7,18\u201319"
+        },
+        {
+          "id": "Q06",
+          "grade": "correct",
+          "reason": "Correct draw and snap options for both sides, two break steps, thresholds five/three, range-free snapping without deck draws versus range-limited II display draws, turn-end display refill and break-only hand-limit timing.",
+          "answer_evidence": "Cards I advances the Break token 2 spaces, then either draws from the deck per its strength table (up to 3, with a possible discard) or, at strength 5+, snaps exactly 1 display card of any reputation instead of drawing; replenish at turn end. Cards II also advances 2 spaces, then draws from the deck and/or display cards within reputation range, in any order, per its upgraded table. Its snap is available from strength 3 and takes exactly 1 display card regardless of reputation, with no deck draw. Reputation range restricts the side-II draw option, not snapping. Do not replenish the display until the turn is complete. There is no hand limit during a turn; discard to the limit only at breaks.",
+          "source_references": "Main p9; Glossary p3"
+        },
+        {
+          "id": "Q07",
+          "grade": "correct",
+          "reason": "Correct matching/lower-folder reputation range, Cards-II gate at ten, extra reputation converted one-for-one to appeal at fifteen and discard-pile inspection prohibition. Inspect is read as inspecting the pile rather than denying visibility of its face-up top card.",
+          "answer_evidence": "Folders 1\u20136 cover reputation 1, 2\u20133, 4\u20136, 7\u20139, 10\u201312, and 13\u201315. Within reputation range means the folder matching your Reputation counter plus lower-numbered folders. Reputation 10+ requires the upgraded Cards action. At 15, further reputation does not move the counter and instead gives 1 appeal per excess reputation step. You may not inspect the discard pile during the game.",
+          "source_references": "Main p9"
+        },
+        {
+          "id": "Q08",
+          "grade": "correct",
+          "reason": "Correct I single versus II different-multiple building/total-size limits, two money per space, border-first and later edge adjacency, empty-map-space/off-map/terrain/restricted-space exclusions, kiosk spacing and pavilion reward. Empty spaces semantically exclude overlap even when overlap is not repeated separately.",
+          "answer_evidence": "Build I builds exactly 1 building, size no greater than strength; Build II builds any number of different buildings with total size no greater than strength, but not two identical buildings in one action. Buildings cost 2 money per space. The first building must have at least one space on a map border; later buildings must touch an existing building by an edge. Build only on empty spaces, without extending off-map, overlapping, or covering water/rock. Restricted-icon spaces require Build II. Each kiosk must be at least 3 spaces from every other kiosk. Each pavilion immediately gives 1 appeal once.",
+          "source_references": "Main p10"
+        },
+        {
+          "id": "Q09",
+          "grade": "correct",
+          "reason": "Correct Build-I enclosure categories and Build-II additions, one-per-zoo limit for each special, four-per-type component supply, sponsor-only unique buildings and immediate seven-appeal reward when all non-terrain map spaces are covered. Enclosure sizes are not separately requested by the availability/count wording.",
+          "answer_evidence": "Build I allows kiosks and pavilions (size 1), standard enclosures (sizes 1\u20135), and one Petting Zoo (size 3). Build II additionally allows one Reptile House and one Large Bird Aviary, each size 5. The component supply has four tiles of each special enclosure type, while each zoo may have only one of each. Build cannot create unique buildings; those enter play through Sponsor cards. Covering every map space except water and rock immediately grants 7 appeal; Build II is required to reach restricted-icon spaces with Build.",
+          "source_references": "Main p10"
+        },
+        {
+          "id": "Q10",
+          "grade": "correct",
+          "reason": "Correctly allows earlier money/cards/workers to fund later steps, requires each item paid before its own benefits, separates immediate from after-finishing effects after full action/card movement, and gives owner-selected simultaneous-effect order.",
+          "answer_evidence": "Yes: bonuses gained earlier in an action, including money, cards, or newly activated workers, may be used in later steps of that action. Resolve items one at a time and pay each item before receiving its own benefits. Immediate effects resolve at once (including before a later animal or building); after-finishing effects wait until the entire action and Action-card movement are complete. For simultaneous effects, the owning player chooses the order.",
+          "source_references": "Main pp10\u201311; Glossary p1; FAQ p2"
+        },
+        {
+          "id": "Q11",
+          "grade": "correct",
+          "reason": "Correct conditions/payment before benefits, per-icon partner discount explicitly covering double icons, empty sufficient-size standard enclosure with occupied-side flipping/normal single occupancy, Petting Zoo exclusivity, special-space token marking/no flipping, terrain applying to both housing choices, and immediate-before-next-animal versus after-finishing timing.",
+          "answer_evidence": "To play an animal, meet all card conditions, pay its full cost, and house it legally. A partner zoo on a matching continent reduces cost by 3 money for each continent icon on the animal (so two icons reduce it by 6); money from the animal's effects comes later. Most animals use an empty standard enclosure at least as large as the printed requirement, which is flipped to occupied and normally houses one animal. Petting Zoo animals must use the Petting Zoo. Reptiles and some birds may use the indicated special enclosure if it has enough free spaces; place the indicated number of player tokens there and never flip a special enclosure. Required water/rock adjacency applies, counted by distinct adjacent hexes, and also applies when using a special enclosure. Resolve ordinary effects immediately before proceeding to another animal; defer after-finishing effects until the whole Animals action and card movement are complete.",
+          "source_references": "Main pp11\u201313; Glossary p1"
+        },
+        {
+          "id": "Q12",
+          "grade": "correct",
+          "reason": "Correct display access within reputation range and folder surcharge, hand/display access, optional strength-five reputation at the very beginning, turn-end refill and upgrade-required animal permission. Display access in addition to hand access permits the source mix without an invented single-source restriction.",
+          "answer_evidence": "Animals II allows animals from the display within reputation range, with an additional cost equal to the folder number; the two animals may be any mix of hand and display. The display is not replenished until the turn ends. At strength 5+, you may first gain 1 reputation at the very beginning of the action, raising your range before choosing display animals. Animals with upgrade-required conditions may also be played.",
+          "source_references": "Main p13"
+        },
+        {
+          "id": "Q13",
+          "grade": "correct",
+          "reason": "Correct construction-only immediate window and once-per-building opportunity, all corresponding eligible animals that fit with per-animal choice, terrain/capacity checks and per-card token marking, and direct smallest-standard-all-requirements/size-only/no-flip fallback. No release-token-removal priority is imported. No separate fixed numeric animal cap is necessary beyond capacity.",
+          "answer_evidence": "Only immediately when a Reptile House or Large Bird Aviary is built may you move eligible corresponding animals that fit, choosing separately for each; relocation is available once at construction per building. Check terrain adjacency and free capacity. Mark each moved animal's indicated number of spaces with your player tokens. To free its standard enclosure, flip the smallest occupied one meeting all its requirements, including terrain; if none does, flip the smallest occupied enclosure meeting its size requirement; if none meets even the size, flip none. The text says to move all suitable animals that fit, but does not give a separate fixed numeric cap beyond available special-enclosure capacity.",
+          "source_references": "Main pp10,12; FAQ pp1\u20132"
+        },
+        {
+          "id": "Q14",
+          "grade": "correct",
+          "reason": "Correct strengths two/three/four/five, I single-task and II different-task total-strength limits, active-worker use and repeat escalation from one to two additional workers, blocked repetition with three already there until break, and irrelevance of other players workers.",
+          "answer_evidence": "The four task strengths are reputation 2, partner zoo 3, university 4, and conservation project work 5. Association I performs exactly one task; II performs one or more different tasks whose total task value is no greater than action strength. Each task needs active worker(s): normally 1, but if you already have 1 worker on that task you must place 2; with 3 already there you cannot perform it again until after a break. Other players' workers on the task do not matter.",
+          "source_references": "Main pp14,16"
+        },
+        {
+          "id": "Q15",
+          "grade": "correct",
+          "reason": "Correct available Association-board source, lowest relevant map destination, immediate space/university reputation bonuses, duplicate restrictions, four-partner cap/Association-II third/fourth requirement, normal hand limit three and specific hand-limit university raising it to five. Broad replenishment-at/after-break phrasing does not expressly introduce an after-income sequencing rule.",
+          "answer_evidence": "Take partner zoos and universities from the Association board and place each on the lowest empty corresponding space on your zoo map; take any printed space bonus immediately, and take a university's printed reputation when acquiring it. You cannot take a duplicate university. Partner zoos must be from different continents, with at most 4 total; the third and fourth require Association II. Matching partner zoos discount animal costs by 3 per matching continent icon and provide that continent icon. The hand-limit university raises the break hand limit from 3 to 5; other universities leave it at 3. The tiles replenish after breaks. Bonuses that award a partner zoo or university also take an available tile from the board.",
+          "source_references": "Main p14; FAQ p1"
+        },
+        {
+          "id": "Q16",
+          "grade": "correct",
+          "reason": "Correct existing-project support or immediate-support hand/Association-II in-range display entry with folder cost, leftmost insertion/right shift and player-count cap, fulfilled level unoccupied by any player, once-per-player support, chosen left-map token and immediate bonus ordering, rightmost overflow discard and supply return with bonuses retained.",
+          "answer_evidence": "Through Association conservation project work (strength 5), support a project already in play or play a Conservation Project card from hand and support it immediately; Association II also permits playing a new card from the in-range display for its folder-number cost. New cards go above the Association board at the left, pushing others right; the display holds up to 2, 3, or 4 cards by player count. To support, fulfill an unoccupied condition/reward level and place one player token from the left edge of your map on it. A level is unavailable if any player's token is already there, and you normally support each project only once. Removing the map token activates its bonus immediately; take it before or after the project reward. If a new project overflows the row, discard the rightmost card and return tokens on it to their owners' supplies, while their map bonuses remain activated.",
+          "source_references": "Main pp15\u201316; Glossary p1"
+        },
+        {
+          "id": "Q17",
+          "grade": "correct",
+          "reason": "Correct benchmark-v1.1 printed-standard-size bands: 2\u2212 accepts one/two, three accepts three, and 4+ accepts four/five. Correct printed appeal/icons loss and discard, retention of conservation/reputation/ability appeal/prior effects, special-capacity removal priority for release and complete standard-enclosure fallback. No blanket exact-size restriction remains.",
+          "answer_evidence": "A Release into the Wild project matches an animal's printed standard-enclosure requirement to a size band, not necessarily a single exact size: 2\u2212 accepts size 1 or 2, 3 accepts size 3, and 4+ accepts size 4 or 5. Discard the animal and lose its icons; first lose only its printed appeal, before gaining conservation. Keep conservation, reputation, ability-generated appeal, and earlier effects already earned. Playing a new Release project grants 1 reputation; supporting one already in play does not. To free space, if the animal could live in a special enclosure, remove its indicated special-enclosure tokens first if possible; otherwise flip the smallest occupied standard enclosure meeting all requirements, then fall back to the smallest meeting size alone, or flip none if none meets size.",
+          "source_references": "Main p15 Release into the Wild depicted 4+/3/2\u2212 bands; Glossary p1 condition as shown and no crossing size categories; FAQ pp1\u20132"
+        },
+        {
+          "id": "Q18",
+          "grade": "correct",
+          "reason": "Correct I single-hand-card and II summed-level-plus-one budgets, in-range display/folder cost, sequential immediate effects except after-finishing, and full-strength I/twice-that-full-money II payment when fewer break steps remain. II doubling inherits the full-strength base; separate verbatim one-step repetition is unnecessary.",
+          "answer_evidence": "Sponsors I plays exactly 1 card from hand if strength is at least its level and conditions are met. Sponsors II plays one or more cards if strength +1 is at least the sum of their levels; cards resolve one by one, each card's immediate effects (except after-finishing effects) fully resolving before the next. On II, cards may come from hand or from the display within reputation range, paying the folder number; no refill until turn end. If using the break-money option, I advances the Break token by strength and pays that much money, even if fewer steps remain; II pays twice that money.",
+          "source_references": "Main p17"
+        },
+        {
+          "id": "Q19",
+          "grade": "correct",
+          "reason": "Correct ordered break steps, three/five hand limit, kiosk qualifying neighbors including empty specials/excluding empty standards, and clockwise display-card-income order from initiator/first affected player with refill after each such player. Income-source details where given are consistent; the requested income ordering concerns players taking display cards.",
+          "answer_evidence": "Break order: discard down to hand limit (normally 3, or 5 with the hand-limit university); clear Multiplier/Venom/Constriction tokens; recall workers and replenish partner zoos/universities; discard display folders 1 and 2, slide cards down and refill; take income; reset the Break token. Kiosk income is 1 money for each adjacent unique building, special enclosure, occupied standard enclosure, and pavilion; empty standard enclosures do not count, but empty special enclosures do. Income is usually simultaneous; when effects require order, start with the break initiator (or affected player closest to them) and proceed clockwise. For players receiving display cards during income, resolve them clockwise from the break initiator/first affected player and refill after each such player's income before the next affected player chooses.",
+          "source_references": "Main pp18\u201319; FAQ p3"
+        },
+        {
+          "id": "Q20",
+          "grade": "correct",
+          "reason": "Correct milestone rewards, first-ten Final Scoring discard and fallback, own-turn-end/break-only trigger with delayed other-player-turn gains and possible earlier trigger by another player, last turns, four-conservation Final Scoring cap, VP formula and supported-project/shared tiebreak. Bonus-token disposal is not a separate requested reward.",
+          "answer_evidence": "At 2 conservation, choose to upgrade an Action card or activate an additional worker. At 5 and 8, choose 5 money or a Bonus token next to that space; the 5-money option remains if tokens are gone. The first time anyone reaches 10, all players discard one Final Scoring card; if nobody reaches 10 before game end, all discard one before final scoring. The game ends at the end of your own turn or during a break if your Appeal and Conservation counters are in the same scoring area or have passed one another. Appeal gained during another player's turn waits until the end of your own turn or a break to trigger the end unless another player triggers it first. If triggered at the end of a turn, the triggering player completes that turn and all others take one more; if during a break, everyone takes one more. Each Final Scoring card can award at most 4 conservation. Victory Points equal your appeal minus the lowest appeal value in the scoring area containing your Conservation counter. Highest positive score wins; ties go to the player with most conservation projects supported, then tied players share the victory.",
+          "source_references": "Main pp18\u201319; FAQ p1"
+        }
+      ]
+    },
+    "b": {
+      "counts": {
+        "correct": 20,
+        "partial": 0,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "grade": "correct",
+          "reason": "Correct starting money, active/inactive worker counts, Zoo-card draw/keep counts, Final Scoring count, Action sides/order and appeal by turn order. Discarding four is implied by keep-four-of-eight and is not separately requested as an additional count.",
+          "answer_evidence": "Each player starts with 25 money, 1 active worker on the notepad and 3 inactive workers below it, draws 8 Zoo cards and keeps 4, and draws 2 Final Scoring cards. Put the Animals Action card in the leftmost slot (strength 1); place the other four randomly in the remaining slots. All five start side I up. Starting Appeal is staggered by turn order: first player 0, second 1, third 2, fourth 3.",
+          "source_references": "Main pp4\u20135"
+        },
+        {
+          "id": "Q02",
+          "grade": "correct",
+          "reason": "Correct three base projects at two/three players versus four at four players, every two-player blocked level/donation space, no such three/four-player blocks, and initial six-card display reveal after hand selection.",
+          "answer_evidence": "Place 4 face-up Base Conservation Projects in a four-player game and 3 in a two- or three-player game. Only in a two-player game, block the left level on the left face-up project, the middle level on the middle project, and the right level on the right project; also block the three spaces in the left donation-area column. No such blocking is specified for three or four players. Reveal the six-card display after all players have chosen their hand cards.",
+          "source_references": "Main pp4\u20135"
+        },
+        {
+          "id": "Q03",
+          "grade": "correct",
+          "reason": "Correct used-slot-four card to slot one with old slots one through three shifting right, strength fixed before acting, +1 per spent X-token, no same-action newly gained tokens, five-token holding cap and after-finishing after Action-card movement. Token return/spending count where included are consistent extra details.",
+          "answer_evidence": "After using a card from slot 4, remove it; shift cards that were to its left one slot right, then put the used card in slot 1. Set strength before the action; each X-token spent beforehand adds 1 strength, while X-tokens gained during the action cannot boost that action. You may hold at most 5 X-tokens. Resolve an effect marked \u201cafter finishing\u201d after completing the action and moving its Action card.",
+          "source_references": "Main p8"
+        },
+        {
+          "id": "Q04",
+          "grade": "correct",
+          "reason": "Correct prohibition on doing nothing and alternative exactly-one-X action, card selection/movement/shifts independent of slot strength or upgrade, and unavailable with five X-tokens held.",
+          "answer_evidence": "You may not do nothing as a regular action; playing zero animals or building zero buildings is not legal. The alternative X-token action gives exactly 1 X-token and still requires selecting an Action card, moving it to slot 1, and shifting intervening cards right. Slot strength and upgrade state do not matter. You cannot take this action when you already hold 5 X-tokens.",
+          "source_references": "Main pp8,18"
+        },
+        {
+          "id": "Q05",
+          "grade": "correct",
+          "reason": "Correct excess movement ignored, one triggering X-token, completion of current turn before the break and continuation with the next clockwise player. No extra-turn exception is falsely asserted.",
+          "answer_evidence": "When the Break token reaches the last space, ignore extra steps and the player who reached it gains 1 X-token. Finish the current turn, then take the break. After the break the Break token resets to the player-count starting space, and play continues clockwise with the next player.",
+          "source_references": "Main pp7,18\u201319"
+        },
+        {
+          "id": "Q06",
+          "grade": "correct",
+          "reason": "Correct draw and snap options for both sides, two break steps, thresholds five/three, range-free snapping without deck draws versus range-limited II display draws, turn-end display refill and break-only hand-limit timing.",
+          "answer_evidence": "On Cards I, advance the Break token 2 spaces without money, then either draw the amount shown for the action strength (maximum 3) and make any required discard, or, at strength 5+, snap exactly 1 display card of any reputation with no deck draw. On Cards II, also advance 2 spaces, then draw from the deck and/or from within reputation range in any order using the upgraded table; a snap is available from strength 3 and still takes exactly 1 card of any reputation with no deck draw. Reputation restriction applies only to the Cards II draw option. Display cards taken are replenished after the entire turn. Hand limit is enforced only at breaks, not during play.",
+          "source_references": "Main p9; Glossary p3"
+        },
+        {
+          "id": "Q07",
+          "grade": "correct",
+          "reason": "Correct matching/lower-folder reputation range, Cards-II gate at ten, extra reputation converted one-for-one to appeal at fifteen and discard-pile inspection prohibition. Inspect is read as inspecting the pile rather than denying visibility of its face-up top card.",
+          "answer_evidence": "\u201cWithin reputation range\u201d includes the display folder matching your Reputation counter and all lower-numbered folders. Reputation 10 or higher requires the upgraded Cards action. Above reputation 15, the counter stays at 15 and each additional reputation step gives 1 Appeal. You may not look through the discard pile during the game.",
+          "source_references": "Main p9"
+        },
+        {
+          "id": "Q08",
+          "grade": "correct",
+          "reason": "Correct I single versus II different-multiple building/total-size limits, two money per space, border-first and later edge adjacency, empty-map-space/off-map/terrain/restricted-space exclusions, kiosk spacing and pavilion reward. Empty spaces semantically exclude overlap even when overlap is not repeated separately.",
+          "answer_evidence": "Build I builds exactly 1 building, with size no greater than action strength. Build II can build different buildings whose total size is at most the strength, but not two identical buildings in the same action. Pay 2 money per space before placing each building. The first building must have at least one space on a map border; later buildings must touch an existing building by at least one edge. Build only on empty spaces, cannot extend beyond the map or cover water/rock, and restricted-icon spaces require Build II. Each kiosk must be at least 3 spaces from every other kiosk. Each pavilion gives 1 Appeal immediately, once.",
+          "source_references": "Main p10"
+        },
+        {
+          "id": "Q09",
+          "grade": "correct",
+          "reason": "Correct Build-I enclosure categories and Build-II additions, one-per-zoo limit for each special, four-per-type component supply, sponsor-only unique buildings and immediate seven-appeal reward when all non-terrain map spaces are covered. Enclosure sizes are not separately requested by the availability/count wording.",
+          "answer_evidence": "Build I allows standard enclosures, kiosks, pavilions, and one Petting Zoo per zoo. Build II additionally allows a Reptile House and Large Bird Aviary. Each special-enclosure type has four supply tiles, and each individual zoo can have only one of each type. Build cannot create unique buildings; those enter through Sponsor cards. Covering every map space except water and rock immediately grants 7 Appeal.",
+          "source_references": "Main p10"
+        },
+        {
+          "id": "Q10",
+          "grade": "correct",
+          "reason": "Correctly allows earlier money/cards/workers to fund later steps, requires each item paid before its own benefits, separates immediate from after-finishing effects after full action/card movement, and gives owner-selected simultaneous-effect order.",
+          "answer_evidence": "Bonuses gained earlier in an action, including money, cards, and newly activated workers, may be used for later steps of that action. Pay for each item before receiving that item's own benefits. Ordinary effects resolve immediately; effects marked \u201cafter finishing\u201d wait until the whole action is complete and the Action card has moved. For simultaneous effects, the owning player chooses the order.",
+          "source_references": "Main pp10\u201311; Glossary p1; FAQ p2"
+        },
+        {
+          "id": "Q11",
+          "grade": "correct",
+          "reason": "Correct conditions/payment before benefits, per-icon partner discount explicitly covering double icons, empty sufficient-size standard enclosure with occupied-side flipping/normal single occupancy, Petting Zoo exclusivity, special-space token marking/no flipping, terrain applying to both housing choices, and immediate-before-next-animal versus after-finishing timing.",
+          "answer_evidence": "For each animal, meet all card conditions, pay its cost, and provide legal housing. A partner zoo on the animal's continent reduces the cost by 3 money per continent icon, so two matching icons reduce it by 6. Standard housing requires one empty standard enclosure at least the printed size; flip the whole enclosure to its occupied side, and it normally houses one animal. Petting Zoo animals can only use the Petting Zoo. Reptiles and some birds may use their indicated special enclosure instead, using player tokens for the animal's indicated number of spaces; special enclosures are never flipped. Required water/rock adjacency applies to standard or chosen special housing and counts distinct adjacent hexes. Animal effects normally resolve as each animal is played; \u201cafter finishing\u201d effects wait until the Animals action is complete and its card has moved.",
+          "source_references": "Main pp11\u201313; Glossary p1"
+        },
+        {
+          "id": "Q12",
+          "grade": "correct",
+          "reason": "Correct display access within reputation range and folder surcharge, hand/display access, optional strength-five reputation at the very beginning, turn-end refill and upgrade-required animal permission. Display access in addition to hand access permits the source mix without an invented single-source restriction.",
+          "answer_evidence": "Animals II allows Animal cards from the display within reputation range as well as from hand; each display animal costs an additional amount equal to its folder number. At strength 5+, you may first gain 1 reputation at the very beginning of the action, so the expanded range is available for that action. The display is not replenished until the turn ends. Animals II also permits animals whose conditions include the upgrade-required icon.",
+          "source_references": "Main p13"
+        },
+        {
+          "id": "Q13",
+          "grade": "correct",
+          "reason": "Correct construction-only immediate window and once-per-building opportunity, all corresponding eligible animals that fit with per-animal choice, terrain/capacity checks and per-card token marking, and direct smallest-standard-all-requirements/size-only/no-flip fallback. No release-token-removal priority is imported. No separate fixed numeric animal cap is necessary beyond capacity.",
+          "answer_evidence": "Only immediately when building a Reptile House or Large Bird Aviary, you may move all corresponding eligible animals that fit, deciding separately for each; check terrain adjacency and available capacity. Mark each moved animal's indicated number of special-enclosure spaces with your supply player tokens. For each animal, flip the smallest occupied standard enclosure meeting all its requirements, including terrain. If none does, flip the smallest occupied enclosure meeting its size requirement; if none meets even the size requirement, flip none. This relocation is once per building and is distinct from releasing an animal.",
+          "source_references": "Main pp10,12; FAQ pp1\u20132"
+        },
+        {
+          "id": "Q14",
+          "grade": "correct",
+          "reason": "Correct strengths two/three/four/five, I single-task and II different-task total-strength limits, active-worker use and repeat escalation from one to two additional workers, blocked repetition with three already there until break, and irrelevance of other players workers.",
+          "answer_evidence": "Association task strengths are: increase reputation 2, gain partner zoo 3, gain university 4, and conservation-project work 5. Association I performs exactly one task, needs at least one active worker, and action strength must meet the task strength. If one of your workers is already on that task, place 2 workers; if 3 are there, you cannot do it again before the break. Other players' workers do not matter. Association II performs one or more different tasks, using 1 or 2 of your workers per task, with total task value no greater than action strength.",
+          "source_references": "Main pp14,16"
+        },
+        {
+          "id": "Q15",
+          "grade": "correct",
+          "reason": "Correct available Association-board source, lowest relevant map destination, immediate space/university reputation bonuses, duplicate restrictions, four-partner cap/Association-II third/fourth requirement, normal hand limit three and specific hand-limit university raising it to five. Broad replenishment-at/after-break phrasing does not expressly introduce an after-income sequencing rule.",
+          "answer_evidence": "Take partner zoos and universities from available tiles on the Association board and place them in the lowest empty matching space on your map; take any printed space bonus immediately, and take printed university reputation when acquired. You cannot acquire a duplicate university. Partner zoos must be from different continents and are limited to 4; the third and fourth require Association II. Universities are the only way to raise hand limit from 3 to 5, and only the hand-limit university does so. The board is replenished at breaks so each tile is available once, skipping tiles all players already have.",
+          "source_references": "Main p14; FAQ p1"
+        },
+        {
+          "id": "Q16",
+          "grade": "correct",
+          "reason": "Correct existing-project support or immediate-support hand/Association-II in-range display entry with folder cost, leftmost insertion/right shift and player-count cap, fulfilled level unoccupied by any player, once-per-player support, chosen left-map token and immediate bonus ordering, rightmost overflow discard and supply return with bonuses retained.",
+          "answer_evidence": "Association I can support a project already in play or play a Conservation Project card from hand and support it immediately. Association II can also play a new project from the display within reputation range, paying its folder number. A support requires a fulfilled condition with no player token on it; each reward level holds one token total, and you normally support a particular project only once. Take the support token from your zoo-map left edge. Removing it activates its map bonus immediately, which you may take before or after the project reward. New projects go in the leftmost space above the Association board and push others right; if this exceeds the player-count limit (2, 3, or 4 projects), discard the rightmost project and return its tokens to their owners' supplies, while their map bonuses stay activated. Base projects below the board do not move.",
+          "source_references": "Main pp15\u201316; Glossary p1"
+        },
+        {
+          "id": "Q17",
+          "grade": "correct",
+          "reason": "Correct benchmark-v1.1 printed-standard-size bands: 2\u2212 accepts one/two, three accepts three, and 4+ accepts four/five. Correct printed appeal/icons loss and discard, retention of conservation/reputation/ability appeal/prior effects, special-capacity removal priority for release and complete standard-enclosure fallback. No blanket exact-size restriction remains.",
+          "answer_evidence": "The Release into the Wild category is determined by the animal's printed standard-enclosure requirement: 2\u2212 accepts size 1 or 2, 3 accepts size 3, and 4+ accepts size 4 or 5. First lose only the animal's printed Appeal, then discard it and lose its icons. Keep conservation, reputation, ability-generated Appeal, and effects already earned. Playing a new Release project grants 1 reputation; supporting one already in play does not. To free housing, if the animal could live in a special enclosure, first remove its indicated special-enclosure tokens if possible; otherwise flip the smallest occupied standard enclosure meeting all requirements, or the smallest meeting size alone as fallback; if none meets size, flip none.",
+          "source_references": "Main p15 Release into the Wild depicted 4+/3/2\u2212 bands; Glossary p1 condition as shown and no crossing size categories; FAQ pp1\u20132"
+        },
+        {
+          "id": "Q18",
+          "grade": "correct",
+          "reason": "Correct I single-hand-card and II summed-level-plus-one budgets, in-range display/folder cost, sequential immediate effects except after-finishing, and full-strength I/twice-that-full-money II payment when fewer break steps remain. II doubling inherits the full-strength base; separate verbatim one-step repetition is unnecessary.",
+          "answer_evidence": "Sponsors I plays exactly 1 Sponsor from hand when action strength is at least its level and conditions are met. Sponsors II plays one or more cards from hand or from the display within reputation range, paying the display folder number; action strength plus 1 must cover the sum of card levels. Resolve cards one after another, fully resolving each card's instant effects except \u201cafter finishing\u201d effects before the next. If using Sponsors I to advance the Break token instead, advance by action strength and take that much money even if fewer steps remain before the last space. The Sponsors II break option pays twice the money.",
+          "source_references": "Main p17"
+        },
+        {
+          "id": "Q19",
+          "grade": "correct",
+          "reason": "Correct ordered break steps, three/five hand limit, kiosk qualifying neighbors including empty specials/excluding empty standards, and clockwise display-card-income order from initiator/first affected player with refill after each such player. Income-source details where given are consistent; the requested income ordering concerns players taking display cards.",
+          "answer_evidence": "Break order: discard to hand limit; clear Multiplier, Venom, and Constriction tokens; return workers and replenish partner zoos/universities; discard display folders 1 and 2, slide remaining cards down, and refill; take income (Appeal-track money, kiosk income, then break-income Sponsor/map effects); reset the Break token. The hand limit is normally 3, or 5 with the hand-limit university. Each kiosk earns 1 money for each adjacent unique building, special enclosure, occupied standard enclosure, or pavilion; empty standard enclosures do not qualify, while empty special enclosures do. If several players receive display cards during income, resolve those players clockwise starting from the break initiator (or first affected player clockwise from them), and refill the display after each such player's income before the next affected player chooses.",
+          "source_references": "Main pp18\u201319; FAQ p3"
+        },
+        {
+          "id": "Q20",
+          "grade": "correct",
+          "reason": "Correct milestone rewards, first-ten Final Scoring discard and fallback, own-turn-end/break-only trigger with delayed other-player-turn gains and possible earlier trigger by another player, last turns, four-conservation Final Scoring cap, VP formula and supported-project/shared tiebreak. Bonus-token disposal is not a separate requested reward.",
+          "answer_evidence": "At 2 conservation points, choose an Action-card upgrade or activate an additional association worker. At 5 and 8, choose 5 money or an available Bonus token. The first time anyone reaches 10, all players discard one Final Scoring card; if nobody reaches 10 before game end, everyone discards one before scoring. Check the game end at the end of your own turn or during a break when Appeal and Conservation are in the same scoring area or pass one another. Appeal gained during another player's turn waits until your own turn ends or a break, unless another player triggers the end first. If triggered at the end of a turn, the triggering player finishes and each other player gets one more turn; if triggered during a break, everyone gets one more turn. A Final Scoring card can award at most 4 conservation. Victory Points equal Appeal minus the lowest Appeal value in the scoring area containing your Conservation counter. Highest positive total wins; ties go to the player with the most supported conservation projects, then tied players share the win.",
+          "source_references": "Main pp18\u201319; FAQ p1"
+        }
+      ]
+    }
+  },
+  "aggregate_counts": {
+    "correct": 40,
+    "partial": 0,
+    "incorrect": 0,
+    "total_answers": 40
+  },
+  "material_failures": []
+}

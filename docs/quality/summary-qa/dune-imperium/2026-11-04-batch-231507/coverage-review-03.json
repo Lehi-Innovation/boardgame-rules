@@ -1,0 +1,207 @@
+{
+  "reviewer": "coverage_review_03",
+  "review_type": "Fresh independent source and saturation challenge",
+  "scope": "Original 2020 base/core standard 2\u20134-player game, including required two-player House Hagal. Solo, variants, expansions, promos and Uprising excluded.",
+  "inputs_read": [
+    "/home/jonny/projects/boardgame-rules/extracted/dune-imperium-rules.txt",
+    "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/faq-columns.txt",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/v4-expanded-scope-corrected/questions.json",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/v4-expanded-scope-corrected/answer-key.json",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/coverage-ledger.json"
+  ],
+  "blinding": "No summary, reader response, grade or prior reviewer report was read. The explicitly supplied coverage ledger was read.",
+  "method": "Read the complete supplied main extraction and then every in-scope PDF page 1\u201319 using fitz text. Visually inspected PDF p18 to verify the diagram-only Sell Melange rates and board labels. Read the complete column-aware official FAQ extraction, filtered entries to original base multiplayer, and compared all 65 question wordings and expected answers against source procedures.",
+  "verdict": "Not yet completely saturated: two narrow source-rule omissions remain in the questions as written. Existing keys have no material factual error found; two compressed Influence phrases should be clarified. Proposed additions may instead be incorporated explicitly into existing Q07 and board-space questions.",
+  "material_answer_key_errors": [],
+  "findings": [
+    {
+      "id": "CR03-F1",
+      "kind": "coverage_gap",
+      "severity": "medium",
+      "related_ids": [
+        "Q07",
+        "Q08"
+      ],
+      "description": "Neither question explicitly tests that acquisitions may be interleaved with Reveal effects. Q07 asks the four steps, whose boxes apply and cleanup; its key permits effects in any order and mentions acquisitions without specifying their relative timing. Q08 tests replacement purchases, pooling/splitting, carryover, immediate card use and Acquire timing. A response that always completes all Reveal effects before making any purchase can satisfy both keys. The source expressly allows acquiring before, between or after Reveal effects. This is a distinct timing permission, not a new quantity example."
+    },
+    {
+      "id": "CR03-F2",
+      "kind": "coverage_gap",
+      "severity": "medium",
+      "related_ids": [
+        "Q04",
+        "Q24",
+        "Q25",
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30"
+      ],
+      "description": "The general matching-icon rule is tested, but the board access map is only partly tested. Q24 explicitly tests Sietch Tabr as City and Q28 Sell Melange as Spice Trade. Q25 asks Combat classification, and Q26\u201330 ask costs/effects/benefits, not Agent-icon classification. In particular no question requires Research Station to be City, Mentat/Rally Troops/High Council/Swordmaster/Hall of Oratory to be Landsraad, or Secure Contract and all three Maker spaces to be Spice Trade. These are distinct legal-placement facts in the Board Space Guide; the access icon is not a board effect."
+    },
+    {
+      "id": "CR03-F3",
+      "kind": "key_clarity",
+      "severity": "low",
+      "related_ids": [
+        "Q14",
+        "Q53"
+      ],
+      "description": "Q14 expected_answer begins \u201c2VP threshold gives1\u201d and Q53 says \u201cone above2VPspace.\u201d The source means 2 Influence, which awards one VP. The surrounding answers indicate the intended rule correctly, so this is compressed wording rather than an established material key error. Replace with \u201cAt 2 Influence, gain 1 VP\u201d and \u201cthe space immediately above the 2-Influence space that awards 1 VP.\u201d"
+    },
+    {
+      "id": "CR03-F4",
+      "kind": "ledger_maintenance",
+      "severity": "low",
+      "related_ids": [
+        "Q52"
+      ],
+      "description": "The ledger coverage_map still names Guild Envoy among base FAQ p2 coverage, although its own rejected list and corrected Q52 appropriately exclude it as Uprising. Remove this stale name; do not reintroduce a question about Guild Envoy."
+    }
+  ],
+  "proposed_questions": [
+    {
+      "proposed_id": "CR03-P1",
+      "question": "During a Reveal turn, must you finish resolving all Reveal effects before spending Persuasion to acquire cards, or may you acquire cards before or between those effects as well?",
+      "fixed_answer": "You may spend Persuasion already gained to acquire cards before, between, or after resolving your Reveal effects. You may resolve Reveal effects in any order, and each acquisition still requires enough available Persuasion.",
+      "source_references": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf",
+          "pages": [
+            11
+          ],
+          "passage": "Resolve Reveal Effects expressly permits acquisition before, between, or after Reveal effects."
+        }
+      ],
+      "novelty": "Distinct source-stated timing permission absent from Q07/Q08 requirements. It does not introduce another arithmetic case or merely combine existing card effects. It can be added as an explicit clause to Q07 instead of a new numbered item."
+    },
+    {
+      "proposed_id": "CR03-P2",
+      "question": "Under ordinary Agent-icon matching, which base-game board spaces are accessible with City, Landsraad, or Spice Trade icons?",
+      "fixed_answer": "City: Arrakeen, Carthag, Research Station, Sietch Tabr. Landsraad: Hall of Oratory, High Council, Mentat, Rally Troops, Swordmaster. Spice Trade: The Great Flat, Hagga Basin, Imperial Basin, Secure Contract, Sell Melange. Matching the icon does not waive costs, requirements, occupancy, or once-per-game restrictions.",
+      "source_references": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf",
+          "pages": [
+            9,
+            17,
+            18
+          ],
+          "passage": "Matching Agent icon required by Agent Turn; each Board Space Guide entry specifies its Agent icon."
+        }
+      ],
+      "novelty": "Covers previously unrequired board-space access classifications. Q04 gives the matching rule without the mapping; Q25 gives a different classification (Combat status); cost/effect questions do not require naming the access category. Already-tested Sietch Tabr and Sell Melange are included only to make the access sets complete; the remaining mappings are the new content."
+    }
+  ],
+  "checked_sections": [
+    {
+      "source": "Main pp1\u20133",
+      "checked": "Theme, nonbinding House combination recommendation, components and starting deck identification. No additional procedural question justified by component counts alone."
+    },
+    {
+      "source": "Main pp4\u20135",
+      "checked": "All setup procedures, Conflict tiers, unused cards, decks, row, Reserve, leaders, Mentat, Alliances, first player, supplies, VP by player count, Agents, garrison and water. Covered by Q01/Q02/Q18/Q22/Q43/Q64/Q65."
+    },
+    {
+      "source": "Main pp6\u20137",
+      "checked": "Objective, score movement, card priority, Leader triggers, deck acquisition/shuffle/trash lifecycle, Influence/Alliance thresholds, Intrigue types/privacy. Covered by Q13\u201316/Q23/Q33\u201335/Q47/Q63/Q65."
+    },
+    {
+      "source": "Main pp8\u20139",
+      "checked": "Five phases, round start, turn alternation, early Reveal, skipped turns, Plot windows, card anatomy, single Agent/icon, legality, requirements, costs first, effect ordering and optional arrows. Covered by Q03\u201305/Q07/Q21/Q24/Q37."
+    },
+    {
+      "source": "Main p10",
+      "checked": "All troop recruitment/deployment, supply restriction, control transfer/visit/defense and harvest rules/examples. Covered by Q06/Q12/Q17/Q22/Q25/Q62."
+    },
+    {
+      "source": "Main p11",
+      "checked": "Four Reveal steps, all remaining cards, box scope, effect/acquisition timing, strength/no-troop/+20, cleanup, acquisition sources/payment/refill/discard. CR03-P1 covers the explicit interleaving omission; otherwise Q07\u201309/Q36/Q60/Q63."
+    },
+    {
+      "source": "Main p12",
+      "checked": "Eligible Combat players, turn order, any number of cards/pass/reentry/consecutive passes, win cards, ranks, all tie branches, zero strength, troops/marker cleanup. Covered by Q10/Q11/Q20/Q44."
+    },
+    {
+      "source": "Main p13",
+      "checked": "Makers, Recall/end trigger, endgame cards/tiebreak, every named clarification: Baron, Bindu Suspension, Calculated Hire, Demand Respect, Kwisatz Haderach, Paul/Poison Snooper, Test of Humanity, The Voice. Covered by Q12/Q13/Q16/Q21/Q38\u201344 and FAQ timing correction in Q39."
+    },
+    {
+      "source": "Main pp14\u201315",
+      "checked": "Strategy recommendations, FAQ pointer and credits; no new binding procedure."
+    },
+    {
+      "source": "Main p16",
+      "checked": "Every glossary entry including Acquire, Agent, Alliance, Control, Draw/Intrigue, Bond, In Play, Influence, gain-two, lost troop, Maker, Mentat, cost, Persuasion, Recall, resources, Retreat, Signet, Steal Intrigue, sword, trash, troop and VP. Existing questions cover these, with FAQ superseding Sort Through the Chaos timing."
+    },
+    {
+      "source": "Main pp17\u201318",
+      "checked": "Every Board Space Guide entry; costs, effects, Combat labels, conditional Persuasion, once-per-game upgrades and Sell Melange diagram rates verified. CR03-P2 covers the incomplete Agent-icon access map."
+    },
+    {
+      "source": "Main p19",
+      "checked": "All general and two-player House Hagal setup/turns/reveal omissions, affected-as-opponent clause, rerolls/reshuffles, ignored normal costs/effects, Influence/Alliance/no-bonus, solo-only Signet exclusion, recruitment/deployment, harvest bonus removal, combat swords, no rewards/control and control removal. Covered by Q18\u201320/Q58/Q59."
+    },
+    {
+      "source": "FAQ p1 relevant base entries",
+      "checked": "Missionaria Protectiva errata, Alliance, Assassination Mission, Baron, Carryall original amounts and Conflict rank rule. Covered by Q15/Q20/Q43/Q46/Q50/Q56."
+    },
+    {
+      "source": "FAQ p2 relevant base entries",
+      "checked": "Corner the Market, Ilban, Ariana original scope, discard, Dispatch an Envoy generic icon rule, Double Cross, Endgame fallback, Foldspace, Guild Bankers, Gun Thopter, Helena reference, Imperial Spy, Intrigue conditions/delays/exhaustion, Liet Kynes, original Maker space definition. Covered by Q13/Q16/Q26/Q34\u201336/Q46\u201352/Q60/Q61."
+    },
+    {
+      "source": "FAQ p3 relevant base entries",
+      "checked": "Manipulate generic Helena rule, optional effects, single-use arrow cost, Plans Within Plans, Poison Snooper, Rapid Mobilization/Retreat zero choice, Recruitment Mission, Refocus, Reveal draws, Reverend Mother Mohiam, general Rivals applicable-option rule. Covered by Q19/Q36/Q37/Q42/Q45/Q51/Q53\u201355."
+    },
+    {
+      "source": "FAQ p4 relevant base entries",
+      "checked": "Shifting Allegiances, Sort Through the Chaos correction, The Spice Must Flow VP retention, Staged Incident adjustment, Test of Humanity/discard cross-reference, tiebreak fallback, original troop supply/any-source/no-rerecruit rules, unbounded VP and win-trigger ties/newly drawn card rule. Covered by Q09/Q13/Q39/Q42/Q44/Q47/Q53/Q57/Q62."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "Another troop-count deployment calculation, zero-supply variant, strength total, or numerical resource tiebreak",
+      "reason": "Mechanical recombination or changed arithmetic under Q06/Q09/Q13/Q22/Q62; no distinct rule."
+    },
+    {
+      "candidate": "A second ordinary occupied-space or insufficient-cost example",
+      "reason": "Same legal placement/cost priority branches in Q04/Q05/Q19/Q24."
+    },
+    {
+      "candidate": "Recruitment Mission plus a Reveal draw as a named-card puzzle",
+      "reason": "The composite puzzle itself only recombines Q36/Q54; CR03-P1 instead targets the source-stated timing permission that those keys do not require."
+    },
+    {
+      "candidate": "Ordinary two-player human starting VP as a new question",
+      "reason": "Source specifies 0 whenever not four players, and the existing question already tests the distinct 0-versus-1 branch. Could clarify Q02 wording to include two players without adding a rule."
+    },
+    {
+      "candidate": "Mentat conflict reward immediate retention",
+      "reason": "Superseded by official Sort Through the Chaos next-round timing, already correctly reflected in Q21/Q39."
+    },
+    {
+      "candidate": "New Staged Incident question",
+      "reason": "No new rule beyond Combat marker adjustment under Q09/Q10 and no-troop strength constraints."
+    },
+    {
+      "candidate": "Full starting card quantities or token denomination quiz",
+      "reason": "Component trivia; setup/shuffling and finite troop versus unlimited resource rules are already covered."
+    },
+    {
+      "candidate": "Solo p20 procedures and solo FAQ entries",
+      "reason": "Excluded. In particular solo resources/VP/difficulty/Leaders/Swordmasters/Expert deployment must not be imported into two-player House Hagal."
+    },
+    {
+      "candidate": "Guild Envoy, Ilesa Ecaz, Archduke Armand Ecaz, grafting, infiltration, dreadnoughts, contracts, Spies, Shield Wall, tech tiles and named expansion/Uprising/promo abilities",
+      "reason": "Outside original 2020 base scope. Generic cross-edition FAQ rules were retained only where they apply to base components, such as Dispatch an Envoy, Helena and troops."
+    },
+    {
+      "candidate": "Recommendations restricting both leaders from the same House",
+      "reason": "Rulebook explicitly frames this as story authenticity and permits nonstandard combinations; it is not a mandatory legality restriction."
+    }
+  ],
+  "write_scope": "Only this report was written; no supplied inputs changed."
+}

@@ -1,0 +1,76 @@
+from pathlib import Path
+import json,hashlib,sys
+P=Path(__file__).resolve().parent;ROOT=Path('/home/jonny/projects/boardgame-rules');iteration,auditdir,bank=sys.argv[1:4];D=P/iteration;A=P/auditdir
+if json.loads((P/'game-status.json').read_text()).get('status')=='complete':raise SystemExit('Integration is already complete; do not overwrite the final report with a pre-integration handoff.')
+v=json.loads((P/'validation.json').read_text());assert v['status']=='PASS',v['failed_checks']
+r=json.loads((D/'results.json').read_text());audit=json.loads((A/'source-audit.json').read_text());N=len(json.loads((D/'questions.json').read_text())['questions']);assert audit['verdict']=='PASS' and not audit.get('findings')
+for rr in 'ab':assert r['readers'][rr]['totals']['correct']==N and r['readers'][rr]['totals']['partial']==r['readers'][rr]['totals']['incorrect']==r['readers'][rr]['totals']['unsupported_guesses']==0
+h=lambda p:hashlib.sha256(p.read_bytes()).hexdigest();assert h(D/'summary-snapshot.md')==h(ROOT/'rules/dune-imperium.md')==h(A/'summary-snapshot.md')
+coverage=json.loads((P/'coverage-review-11.json').read_text());assert coverage['verdict']=='saturated_within_reviewed_scope' and not coverage.get('findings') and not coverage.get('proposed_questions')
+ledger=json.loads((P/'coverage-ledger.json').read_text());assert not ledger['passes'][-1]['accepted_ids'] and not ledger['passes'][-2]['accepted_ids'];ledger['status']='Working saturation confirmed after final independent challenge; see latest coverage review.';(P/'coverage-ledger.json').write_text(json.dumps(ledger,indent=2,ensure_ascii=False)+'\n')
+rows=[];tested=[]
+for d in sorted(P.glob('*iteration-*')):
+ if not (d/'results.json').exists():continue
+ x=json.loads((d/'results.json').read_text());a=x['readers']['a']['totals'];b=x['readers']['b']['totals'];n=len(x['readers']['a']['grades']);rows.append(f"| [{d.name}]({d.name}/results.json) | {a['correct']}/{n} | {b['correct']}/{n} | {a['partial']+b['partial']} | {a['incorrect']+b['incorrect']} | {a['unsupported_guesses']+b['unsupported_guesses']} |");tested.append({'iteration':d.name,'question_count':n,'scores':{rr:x['readers'][rr]['totals'] for rr in 'ab'}})
+versions=[]
+for d in sorted(P.glob('v*-*'),key=lambda d:int(d.name[1:].split('-')[0])):
+ if (d/'questions.json').exists():versions.append(f"[{d.name}]({d.name}/questions.json): {len(json.loads((d/'questions.json').read_text())['questions'])}")
+reviewlinks=', '.join(f'[{p.stem}]({p.name})' for p in sorted(P.glob('coverage-review-??.json')))
+prov=json.loads((P/'model-provenance.json').read_text());finaltasks=[iteration.replace('expanded-iteration-','expanded_')+'_a',iteration.replace('expanded-iteration-','expanded_')+'_b',json.loads((A/'intended-dispatch.json').read_text())['task_name']];sessions=[{'task':x['task'],'session_id':x['session_id'],'contexts':x['contexts'],'spawn_configuration':x['actual_spawn_configuration']} for x in prov if x['task'].split('/')[-1] in finaltasks]
+(P/'final-model-provenance.json').write_text(json.dumps(sessions,indent=2,ensure_ascii=False)+'\n')
+report=f'''# Dune: Imperium — local summary QA PASS, ready for coordinator
+
+Run date: November 5, 2026 (America/Phoenix).
+
+**Both fresh gpt-6-luna/high readers scored {N}/{N}**, with zero partial, incorrect or unsupported-guess answers, on the unchanged **{bank}** bank. A new, final-only gpt-6.1-sol/high source auditor returned **PASS with no findings** on the same exact summary bytes. The canonical summary and tested/audited snapshots are byte-identical. Local validation passed. Coordinator audit recording, targeted stamping and final repository integration remain pending; the persistent goal is active. This is not batch completion.
+
+## Scope and authority
+
+Original 2020 Dune: Imperium, BGG 316554, standard 2–4-player base/core multiplayer including required two-player House Hagal. Solo, optional modes, variants, expansions, promos and Uprising are excluded. The [source scope](source-scope.md), [publisher provenance](source-provenance.json) and [initial fingerprints](input-manifest.json) identify the matching 20-page original rulebook, including Board Space Guide pp17–18 and general/two-player House Hagal p19. Solo-only p20 is excluded. Applicable clauses of the January 13, 2025 official FAQ supersede older print wording.
+
+The complete relevant text and procedural PDF diagrams were read. The tiny Harvest Spice inset was resolved with the matching original publisher card image from Paul Dennen/Dire Wolf’s 2020 designer diary; [download provenance and hash](harvest-source-provenance.json) and [source image](publisher-house-hagal-harvest-spice-2020.jpg) are retained. No Uprising or solo target-selection rule was substituted.
+
+## Frozen benchmark and coverage
+
+Read the [complete question/answer bank](question-bank.md), or use the separate [questions]({bank}/questions.json) and [fixed key]({bank}/answer-key.json). Bank history: {'; '.join(versions)}.
+
+The initial 20 question wordings and expected-answer strings are unchanged. [Original entry hashes](original-entry-hashes.json), each version’s input-manifest and [validation](validation.json) confirm preservation. Genuine corrections were explicit: v3 fixes Q21 Mentat reward timing and Q35 current-Reveal wording; v4 removes Uprising’s Guild Envoy clause from Q52 before any expanded reader run and removes inaccurate approximate extraction-line locators while retaining valid PDF pages. Original benchmark files remain intact. Top-level terminology notes clarify historic Q14/Q53 shorthand for the 2-Influence space awarding 1 VP without changing the original answer strings.
+
+The [coverage and rejection ledger](coverage-ledger.json) maps every in-scope core procedural section to explicit question requirements. It accepts only a distinct rule, outcome branch or consequential timing/priority/exception and rejects arithmetic substitutions, cosmetic renaming, ordinary card-stat duplication and mechanical recombinations. The last two targeted passes ({ledger['passes'][-2]['pass']} and {ledger['passes'][-1]['pass']}) added no questions. The final fresh independent source/coverage challenge found no qualifying additions or material key errors. All earlier challenges, their accepted additions and their rejected candidates are retained: {reviewlinks}.
+
+Important expansion findings include normal human turn order, ordinary untied Combat rewards, acquisition interleaving, exact board access/Combat labels, public supply visibility, normal deck reshuffling, any-source recruitment, Foldspace eligibility, icon addition, Rival timing, diagram-only Corner the Market conditions, Sardaukar Legion’s Reveal deployment, Duke Leto’s restrictions, Harvest Spice priorities and Machinations’ distinct-Faction choice.
+
+This establishes working saturation within this source packet and novelty rule, not proof about every conceivable combination or a card-stat catalog. This is a fixed regression set, not a held-out accuracy estimate.
+
+## Readers, grading and repairs
+
+Each pair used two new sessions, explicit `fork_turns=none`, gpt-6-luna and high reasoning. Readers received only a frozen summary and questions; sources, keys, prior answers, grades, findings, browsing and prior game knowledge were excluded. The [prompt versions](reader-prompt-version.md) preserve guide-plus-self-check-v1 and disclose the v2 generic bounded-reading addition from expanded iteration 04. Actual input-read audits confirm complete summaries and every question text, including later recovery from initial truncation where needed; no run was reclassified merely for an initial truncation. Per-reader dispatch JSON preserves the intended exact task text; per-iteration runtime metadata confirms actual model/effort and parent spawn configuration confirms fork mode. Runtime task bodies are encrypted; environment-only user-message captures are accurately labeled and are not claimed as recovered task prompts. Fresh-context instructions were used; stronger filesystem isolation was not applied. The [final runtime boundary review]({iteration}/reader-tool-boundary-review.json) includes every tool call: each reader also validated its own output, and temporary answer staging departed from the output-only instruction without introducing additional game evidence.
+
+Every requested answer part was compared semantically with the fixed source-backed key. Support labels were not grades. Missing procedural branches stayed partial; wrong rulings and volunteered contradictions stayed incorrect. No missing facts were borrowed from another answer. [Independent adjudications](grading-adjudications.md), [Q15/Q20](adjudication-q15.json), [Q12/Q19](adjudication-seed-04.json) and [Q20’s requested scope](adjudication-seed-06.json) resolve borderline cases. Expanded-run judgments are retained in [the first expanded adjudication](adjudication-expanded03.json), [its secondary check](adjudication-expanded03-secondary.json), [the trash-cost check](adjudication-expanded03-q37.json), and [candidate 04 A judgments](adjudication-expanded04.json) and [candidate 04 B judgments](adjudication-expanded04-b.json), plus [the final standalone source/key/raw-answer judgments](adjudication-expanded05.json). Candidate 04’s accepted setup answer identifies every requested component and its preparation; incidental placement precision was accepted without weakening the material setup requirements. Superseded provisional evaluator results remain preserved. In particular, unrequested explicit Alliance VP arithmetic was removed as an overgrading requirement; mandatory Rival deployment and the combat Reshuffle branch were retained as material findings.
+
+| Actual reader run | A correct | B correct | Partial combined | Incorrect combined | Unsupported guesses combined |
+|---|---:|---:|---:|---:|---:|
+'''+ '\n'.join(rows)+f'''
+
+Candidate 04’s B Combat judgment was initially accepted by an adjudicator, then corrected after checking the exact wording: “reveal until non-Reshuffle” omitted the shuffle operation. The [initial judgment](adjudication-expanded04-b-initial.json) and corrected report remain preserved. An accidentally premature evaluator export before applying those B judgments is explicitly labeled superseded; the actual results retain both partial answers.
+
+Repairs added source-supported general rules and clarified retrieval: cost/Influence order, Alliance loss, final tiebreak, discard eligibility, two-player setup and automation, Intrigue/Reveal timing and exceptions, board labels/rates, and the illustrated card rules. Solo material was removed from the multiplayer summary. The final [diff]({iteration}/summary-changes.patch) and every historical snapshot/raw response/grade remain available. Prepared {69}-question and {72}-question expanded inputs were never dispatched because coverage continued; those directories are explicitly labeled, not counted as tests.
+
+## Fresh final audit and exact bytes
+
+The [final-only source audit]({auditdir}/source-audit.json) is independent of repairs and coverage/reader work. Its new auditor received only this final snapshot and authoritative sources/assets, never earlier versions, audits, repairs, questions, key or reader results. [Intended dispatch]({auditdir}/intended-dispatch.json), [input hashes]({auditdir}/input-manifest.json), [final model provenance](final-model-provenance.json) and [full runtime provenance](model-provenance.json) establish that boundary. The earlier [candidate 04 audit](source-audit-final-04/source-audit.json) passed on earlier bytes; its complete [actual-read evidence](source-audit-final-04/input-read-audit.json) is retained. The earlier [supporting audit](source-audit-01/source-audit.json) covers older text. [Fresh candidate audit03](source-audit-final-03/source-audit.json) also remains historical: it covered the previous 76-question candidate and noted inability to confirm Machinations from its actual visual review. The final auditor inspected all source-only page renderings and detail crops and positively confirmed the claims. The [actual source-read audit]({auditdir}/input-read-audit.json) confirms complete visible text and all 25 required source images; the [tool trace]({auditdir}/actual-input-read-trace.json) retains read commands, text outputs and image counts without duplicating image bytes. Prepared audit packets 01/02 were not dispatched and do not count as audits.
+
+Final summary SHA-256: `{h(D/'summary-snapshot.md')}`.
+
+The [tested snapshot]({iteration}/summary-snapshot.md), final audited snapshot and `/home/jonny/projects/boardgame-rules/rules/dune-imperium.md` have identical bytes. [Final detailed grades]({iteration}/results.json), [reader A]({iteration}/reader-a.json), [reader B]({iteration}/reader-b.json), [question copy]({iteration}/questions.json), [manifest]({iteration}/input-manifest.json) and [runtime settings]({iteration}/model-provenance.json) and [actual input-read audit]({iteration}/input-read-audit.json) cover this exact candidate.
+
+## Validation and handoff
+
+[Validation](validation.json) confirms all IDs exactly once per reader and grade array, grades tied to original inputs, source/key/question hashes, benchmark preservation, actual models/high effort/fork mode, fresh final audit PASS, zero unsupported guesses, and canonical/test/audit byte equality. Targeted `scripts.validate rules/dune-imperium.md` and scoped `git diff --check` passed. Repository edits were limited to the assigned canonical summary and this QA directory. No shared registry, global stamp/regeneration, commit, push or branch operation was performed.
+
+[Machine status](game-status.json) is `ready-for-coordinator`. Wait for the explicit game integration follow-up. If stamping changes any byte, freeze and rerun the full unchanged bank on the stamped text, then refresh exact audit/validation evidence as needed before completing the active goal. See the [complete evidence inventory](evidence-index.md).
+'''
+(P/'README.md').write_text(report)
+files=sorted(p for p in P.rglob('*') if p.is_file() and p.name!='evidence-index.md');(P/'evidence-index.md').write_text('# Evidence inventory\n\n'+''.join(f'- [{p.relative_to(P)}]({p.relative_to(P).as_posix()})\n' for p in files))
+status=json.loads((P/'game-status.json').read_text());status.update(phase='awaiting-coordinator-integration',status='ready-for-coordinator',iterations=[x['iteration'] for x in tested],executed_iteration_count=len(tested),prepared_iterations=sorted(d.name for d in P.glob('*iteration-*') if (d/'not-dispatched.json').exists()),question_count=N,benchmark_version=bank,iteration_results=tested,final_reader_scores={rr:r['readers'][rr]['totals'] for rr in 'ab'},source_audit={'verdict':'PASS','path':str(A/'source-audit.json'),'fresh_final_only':True},report_path=str(P/'README.md'),blocking_reason=None,final_snapshot_path=str(D/'summary-snapshot.md'));status['hashes'].update(canonical_summary_sha256=h(ROOT/'rules/dune-imperium.md'),final_summary_sha256=h(D/'summary-snapshot.md'),final_questions_sha256=h(P/bank/'questions.json'),final_key_sha256=h(P/bank/'answer-key.json'));(P/'game-status.json').write_text(json.dumps(status,indent=2,ensure_ascii=False)+'\n')
+print('ready-for-coordinator',N,h(D/'summary-snapshot.md'))

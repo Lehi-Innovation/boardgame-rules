@@ -1,0 +1,214 @@
+{
+  "review": "coverage-review-06",
+  "benchmark_version": "expanded-v7",
+  "question_count": 60,
+  "scope": "2016 base/core multiplayer; no Automa, expansions, promos or explicit optional variants",
+  "verdict": "gaps",
+  "method": {
+    "independence": "Read only the assigned source, expanded-v7 questions/key, coverage-ledger.json and source-coverage-map.json. Did not read a summary, reader answers/grades or previous reviewer reports.",
+    "complete_source": "Read extracted/scythe-rules.txt in full (pages 1-32). Opened scythe-recovery.pdf with PyMuPDF and compared all 32 pages to the extraction: every page matches after whitespace normalization. Re-read PDF text for the gameplay, bottom-action, recruit, Factory and recap passages.",
+    "visual_checks": [
+      "Visually inspected parent source-page-19.png: six structure tiles, their thresholds/payouts and the lake-adjacency example.",
+      "Visually inspected parent source-page-29.png: all popularity-tier payouts, including 18 popularity, and tie-break text."
+    ],
+    "coverage_standard": "Question wording must substantively elicit the rule. A true fact in an answer key, without a corresponding question request, is insufficient. Kept candidates only for distinct meaningful source rules or outcome branches."
+  },
+  "key_findings": [
+    {
+      "kind": "coverage_gap",
+      "finding": "The normal, controlled Mill production ability is only an answer-key extra. Q11 restricts its Mill/Mine request to enemy-occupied territories.",
+      "source_reference": "PDF p18, MILL and STRUCTURE CONTROL",
+      "affected_questions": [
+        "Q09",
+        "Q11",
+        "Q26"
+      ],
+      "map_challenge": "The p18 MILL bonus-territory/worker/control-exception entry maps all three matters to Q11, but only the control exception is substantively requested."
+    },
+    {
+      "kind": "coverage_gap",
+      "finding": "The resource-only, no-unit/no-structure control branch is not elicited. Current questions test enemy occupation and structure-only capture, but not the positive presence requirement or loss of control when no qualifying piece remains.",
+      "source_reference": "PDF p4, CONTROL and RESOURCES; corroborated p29 EVERY TERRITORY CONTROLLED / EVERY 2 RESOURCES CONTROLLED and p31 END-GAME SCORING",
+      "affected_questions": [
+        "Q04",
+        "Q20",
+        "Q24",
+        "Q39"
+      ],
+      "map_challenge": "The p4 CONTROL entry correctly maps units overriding structures and resources following control, but its mappings do not test whether resources alone can preserve control."
+    },
+    {
+      "kind": "key_check",
+      "finding": "Checked all 60 expected answers against the assigned booklet. No material factual contradiction found. In particular, the inspected diagrams support Q39-Q41; Q20 correctly excludes characters from the first tiebreaker; Q34 correctly limits Camaraderie to retreat after combat."
+    },
+    {
+      "kind": "latest_pass_challenge",
+      "finding": "Ledger passes 17 and 18 correctly reject more unit-eligibility examples and routine handling. Their no-addition conclusion is too broad: the controlled-Mill ability and resource-only control branch are substantive rules, not new numbers, alternate routes or star/Factory combinations."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "proposed_id": "Q61",
+      "question": "While you control the territory containing your Mill, how does it affect the number of territories you may Produce on and the output there, including when no actual worker is present?",
+      "expected_answer": "The Mill territory may count as an extra bonus territory in addition to the normal territories selected for Produce. The Mill produces as if it were one worker, so it can produce even with no actual worker there. Any actual workers on its territory may also produce.",
+      "source_references": [
+        "Rulebook PDF p18, MILL: Whenever you take the Produce action, the territory with the Mill may count as an extra (bonus) territory for production. The Mill will produce as if it were a worker. If there are actual workers on the Mill territory, they may also produce resources."
+      ],
+      "novelty": "Tests the structure's distinct positive ability: extra eligible territory and worker-equivalent output, including the explicit no-worker consequence. Q11 asks only how Mill and Mine work when enemies occupy their territories; a fully responsive answer can simply say that an uncontrolled Mill cannot Produce. Its key supplies the positive ability without requesting it. Q09 asks the general Produce procedure, with no Mill reference and a key limited to worker production on selected territories. Q26 directly asks Armory/Monument, not Mill. This is not another enemy-control example or changed worker count.",
+      "impact": "A player could correctly answer every existing Mill-specific question while omitting the extra territory and mistakenly requiring a real worker for Mill production."
+    },
+    {
+      "proposed_id": "Q62",
+      "question": "What presence establishes control of a territory, and do resources alone preserve your control after your last unit leaves a territory where you have no structure?",
+      "expected_answer": "You control a territory with at least one of your units, or with your structure and no enemy units. Resources are not units and do not establish control. If your last unit leaves and you have no structure there, you no longer control that territory or the resources left there; those resources cannot be spent by you unless you regain control.",
+      "source_references": [
+        "Rulebook PDF p4, CONTROL: control requires at least one unit or a structure with no enemy units; only one player controls a territory at a time.",
+        "Rulebook PDF p4, RESOURCES: resource tokens remain on the board and may be spent only from territories currently controlled.",
+        "Rulebook PDF p29, EVERY TERRITORY CONTROLLED and EVERY 2 RESOURCES CONTROLLED; PDF p31, END-GAME SCORING."
+      ],
+      "novelty": "Tests the source-defined no-qualifying-presence branch and its resource-ownership consequence. Q04 tests an enemy worker on a structure territory and remote spending from already-controlled territories. Q24 tests entry into a structure-only territory. Q20 and Q39 assume territory/resource control while testing scoring. None asks what establishes control or what happens when only resources remain. This follows the explicit control definition rather than introducing a new rule or mechanically combining unrelated abilities.",
+      "impact": "A player could answer the existing occupation/capture/payment questions yet incorrectly treat previously produced, unguarded resources as permanently owned and spendable."
+    }
+  ],
+  "checked_passages": [
+    {
+      "pages": [
+        1,
+        2,
+        3
+      ],
+      "checked": "Goal, quick reference, achievement list and setup recap; component/reference material separated from substantive procedures.",
+      "questions": "Q01-Q03,Q18,Q20"
+    },
+    {
+      "pages": [
+        4,
+        5
+      ],
+      "checked": "Home-base status; complete control definition; remote resource spending/supply; all unit roles and carrying permissions.",
+      "questions": "Q04,Q05,Q15,Q16,Q21,Q22,Q24,Q30,Q47,Q58,Q60",
+      "result": "Resource-only control branch remains unelicited."
+    },
+    {
+      "pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "checked": "Hidden Factory selection, encounter locations, combat-deck exhaustion, mats/seating, all starting placements and information.",
+      "questions": "Q01,Q02,Q08,Q37,Q44"
+    },
+    {
+      "pages": [
+        10,
+        11,
+        12,
+        13,
+        14
+      ],
+      "checked": "Action optionality/order/payment/repetition; turn overlap; Move alternatives and transport; water geometry; every enemy-entry branch; stops/tunnels/home base; Trade/Bolster; Produce cost timing, workers and supply; completed bottom actions and upgrades.",
+      "questions": "Q03-Q10,Q22-Q25,Q36,Q45,Q47-Q52,Q58"
+    },
+    {
+      "pages": [
+        15,
+        16,
+        17
+      ],
+      "checked": "Deploy placement and ability scope; Speed stops/tunnels; all four mech abilities for every base faction, including lake cargo and retreat restrictions.",
+      "questions": "Q10,Q23,Q27-Q34,Q42"
+    },
+    {
+      "pages": [
+        18,
+        19
+      ],
+      "checked": "Build locations, limits, permanence and owner-only effects; all four structures; six structure bonus rules and diagram payouts.",
+      "questions": "Q04,Q11,Q20,Q24,Q26,Q40,Q41",
+      "result": "Controlled Mill extra-territory and worker-equivalent output remain unelicited."
+    },
+    {
+      "pages": [
+        20,
+        21
+      ],
+      "checked": "Recruit food cost, token choices/open bonus spaces/permanence, all one-time bonuses, ongoing trigger/optionality, neighbor order, two-player rule/proclamation; five faction powers.",
+      "questions": "Q03,Q12,Q17,Q27,Q32,Q35,Q44,Q56,Q59"
+    },
+    {
+      "pages": [
+        22,
+        23
+      ],
+      "checked": "Combat timing/participants/eligibility, ability priority, simultaneous secret selection/reveal, dial/card limits, payments, ties, retreat/reward/popularity, star cap, pending combats and lake battle.",
+      "questions": "Q07,Q13,Q14,Q19,Q30,Q37,Q42,Q52,Q53,Q55"
+    },
+    {
+      "pages": [
+        24,
+        25,
+        26
+      ],
+      "checked": "Encounter character eligibility, stops/timing, mandatory public presentation, choices/costs/optional benefits/isolation/location/discard; Factory eligibility/card selection/permanence/bonus separation/movement; objectives and alliances.",
+      "questions": "Q15-Q17,Q32,Q35-Q38,Q46,Q54,Q57,Q60"
+    },
+    {
+      "pages": [
+        27,
+        28,
+        29
+      ],
+      "checked": "Every achievement, mandatory/irreversible stars, immediate end and edge priorities/rollback, complete scoring and six tiebreakers; inspected payout diagram.",
+      "questions": "Q18-Q20,Q39-Q43,Q57"
+    },
+    {
+      "pages": [
+        30,
+        31,
+        32
+      ],
+      "checked": "Complete recap checked against detailed procedures; backstories/marketing/promos excluded.",
+      "questions": "Relevant recap rules mapped to existing action/combat/encounter/scoring questions."
+    }
+  ],
+  "rejections": [
+    {
+      "candidate": "Declining an ongoing recruit bonus on a neighbor turn",
+      "reason": "Reconsidered ledger pass14 rejection. The same general optional-benefit rule requested by Q03, together with Q12's recruit-resolution question, gives adequate coverage; no distinct source-defined exception justifies another question."
+    },
+    {
+      "candidate": "Separate bottom-row coin declination question",
+      "reason": "Q03 explicitly requests benefit determination and elicits as-much/as-little benefit choice. p14 states an instance of that same choice."
+    },
+    {
+      "candidate": "Worker moves first, then rides a mech, rather than rides then moves",
+      "reason": "Reverses the already tested transport/movement sequence in Q05 without adding a distinct rule."
+    },
+    {
+      "candidate": "Further Factory, encounter or sixth-star combination",
+      "reason": "Eligibility, mandatory ending and relevant timing already directly requested; routine recombination adds no source-defined exception."
+    },
+    {
+      "candidate": "More quantities, terrain layouts, lake-retreat cargo or scoring examples",
+      "reason": "Governing rules and all diagrams are covered. Changed counts/routes do not create a new branch."
+    },
+    {
+      "candidate": "Extra ordinary deck shuffles, spent-token pile destination, card-value frequencies and reference numbers",
+      "reason": "Routine handling/reference material without a meaningful new legality or outcome; deck exhaustion and substantive hidden selections are already tested."
+    },
+    {
+      "candidate": "Additional encounter-unit eligibility question",
+      "reason": "Q60 now directly tests both character-only eligibility and token persistence for other units."
+    },
+    {
+      "candidate": "Delay of Game, teaching/sample score, achievement-sheet signature, expansions/Automa/promos",
+      "reason": "Explicitly outside assigned scope or non-core recommended/reference material."
+    }
+  ],
+  "limitations": [
+    "No external FAQ, later errata, expansion content or card-specific content was used.",
+    "The abandoned-resource outcome is the direct application of the source's control definition and current-control payment rule; the booklet does not separately narrate a last-unit-leaves example.",
+    "The two additions are proposals only. Existing questions and keys were not edited."
+  ]
+}

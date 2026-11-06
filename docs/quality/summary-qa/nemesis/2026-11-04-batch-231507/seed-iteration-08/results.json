@@ -1,0 +1,751 @@
+{
+  "benchmark_version": "benchmark-seed-faq-v1",
+  "standard": "Semantic requested-part comparison; correct requires all material requested facts, no unresolved/contradictory answer; support label never accepted as grade. Unrequested key context is not required.",
+  "readers": {
+    "a": {
+      "counts": {
+        "correct": 20,
+        "partial": 0,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "In a four-player standard game, how many Escape Pods are selected, how are they distributed and oriented, and which tokens start in the Intruder bag?",
+          "expected_answer": "Three random pods; lowest numbered in A, next B, next A, all Locked. Bag: 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 7 Adults.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "467-507"
+            }
+          ],
+          "observed_answer": "1. Select 3 Escape Pods in a four-player game. 2. Place the lowest-numbered selected Pod in Section A, the next in B, then alternate A/B; all start Locked side up. 3. The Intruder bag starts with 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, and 3 Adults plus 1 Adult per player (7 Adults for four players).",
+          "reader_support": "supported",
+          "reader_evidence": "Setup steps 7 and 10: 3 Pods for 3\u20134 players; lowest number in A, next in B, alternate; all Locked; bag contents listed.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "How are Objectives filtered and dealt, when does each player choose one, what happens to the rejected card, and do Eggs trigger that choice?",
+          "expected_answer": "Remove Objectives requiring more players than present; deal one Personal and one Corporate secretly. First Intruder miniature of any type appearing triggers immediate choice by everyone before resolving its Encounter. Remove rejected card face down unseen. Eggs do not trigger it.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "589-602;1008-1028"
+            }
+          ],
+          "observed_answer": "1. Remove Corporate and Personal Objective cards marked for more players than are in the game, shuffle the decks separately, and deal each player one of each before the Character draft. 2. At the First Encounter\u2014when the first Intruder miniature appears\u2014each player chooses one of their two Objectives and removes the rejected card from the game face down, unseen by anyone. 3. Eggs do not trigger this choice because they are not Intruders.",
+          "reader_support": "supported",
+          "reader_evidence": "Setup step 16; Critical gameplay moments: First Encounter; Eggs do not trigger it.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "You use an Action card with printed cost 2 while holding that card, two other Action cards and two Contamination cards. What is discarded, and can Contamination substitute for payment? What if the card offers OR effects?",
+          "expected_answer": "Discard the played card and two additional Action cards face up. Contamination cannot pay costs. Choose one OR effect.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "987-998;1235-1250"
+            }
+          ],
+          "observed_answer": "1. Discard the Action card being played and 2 additional Action cards to pay its printed cost of 2. 2. Do not discard either Contamination card for payment; Contamination cards cannot pay Action costs. 3. If the card has sections separated by OR, choose one section/effect; the cost remains the card plus the required additional Action cards.",
+          "reader_support": "supported",
+          "reader_evidence": "Actions: an Action card is discarded plus the required additional cards; Contamination cannot pay; OR means choose one.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "A Character in a burning Room takes one Action then passes. When do they take Fire damage, can they act again this Player Phase, can they discard cards, and do later players rounds burn them again?",
+          "expected_answer": "At end of own round take 1 Light Wound. Passing bars normal Actions this Player Phase, but official FAQ permits Interruption after passing. May discard any number of hand cards on passing. No further Fire wounds from later players rounds this turn.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "723-747;1545-1565"
+            },
+            {
+              "path": "nemesis-current-official-faq.pdf",
+              "section_questions": "Rules 21",
+              "printed_pages": [
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "observed_answer": "1. They take 1 Light Wound at the end of their own round, after taking their one Action and passing. 2. Once passed, they cannot take further normal Actions that Player Phase, though the FAQ permits Interruption after passing. 3. When passing, they may discard any number of cards from their hand. 4. Later players' rounds do not cause this Character to take Fire damage again that turn; Fire damage is assessed when that Character ends their own round.",
+          "reader_support": "supported",
+          "reader_evidence": "Player rounds: one Action means pass; passing ends normal Actions and allows discarding; Fire wound applies at the end of that Character's round.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Describe entering an empty unexplored Room: tile, Item Counter, Exploration effect, Noise roll and token destination. How do Silence, Danger and an already occupied destination alter the Noise roll?",
+          "expected_answer": "Reveal Room and Exploration token; set counter to token number except Nest/Slime Room; resolve effect and remove Exploration token from game. Roll Noise in empty Room unless Silence or Danger exploration cancels it. Occupied Room (Character or Intruder) gives no movement Noise roll.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1288-1300;1336-1353;1430-1473"
+            }
+          ],
+          "observed_answer": "1. On entering the empty unexplored Room, flip its tile face up, reveal and resolve its Exploration token, then return the token to the box. Set the Room's Item count by rotating the tile until the token's number faces the board's Item Counter; do not set a count for the Nest or Slime Room. 2. Resolve the token effect: Silence means no Noise roll; Danger means no Noise roll and moves all eligible neighboring Intruders into the Room, or, if none are eligible, places Noise in each connected Corridor without a marker. Other effects place Slime, Fire, Malfunction, or a Door as indicated. 3. If the destination is empty and the effect does not replace the roll, roll Noise: 1\u20134 places a marker in the corresponding Corridor (a marker already there causes an Encounter); Danger resolves as above; Silence places none. Slime turns Silence into Danger. 4. If a Character or Intruder is already in the destination Room, do not roll Noise.",
+          "reader_support": "supported",
+          "reader_evidence": "Movement, Rooms, and Corridors; Exploration tokens; Noise roll.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What does Careful Movement cost and replace, when is it forbidden, and can a Closed Door be crossed or a miniature stop in a Corridor?",
+          "expected_answer": "Cost 2 Action cards; replaces post-movement Noise roll with placing Noise in a chosen connected Corridor. Forbidden in Combat or when all destination Corridors have Noise. Closed Doors block player movement; no miniature stops in Corridors.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1150-1168;1260-1285;3038-3041"
+            }
+          ],
+          "observed_answer": "1. Careful Movement costs 2 Action cards and replaces the post-move Noise roll with placing a Noise marker in a chosen Corridor connected to the destination; it also replaces automatic Silence/Danger Exploration results. 2. It follows normal movement restrictions, cannot be used in Combat, and is forbidden if every Corridor connected to the destination already has Noise. 3. A Closed Door blocks movement through that Corridor. 4. A miniature may never stop in a Corridor; it must end in a Room.",
+          "reader_support": "supported",
+          "reader_evidence": "Basic Actions: Careful Movement; Movement, Rooms, and Corridors: Closed Door blocks neighboring status and no one stops in Corridors.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "You roll a number for a Corridor already holding Noise, with a Technical Corridors Entrance in your Room. Give the Encounter sequence, Noise removal, token destination and Surprise Attack comparison; do Contamination cards count?",
+          "expected_answer": "Resolve Encounter: remove all connected Noise including Technical Corridors; draw bag token; place matching Intruder; compare token number to all cards in triggering hand including Contamination. Fewer cards causes Surprise Attack against triggerer, equal or more does not. Set token aside.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1380-1389;1685-1720;1778-1794"
+            }
+          ],
+          "observed_answer": "1. Because that Corridor already has Noise, placing another marker there causes an Encounter. First discard all Noise in Corridors connected to the Room, including the Technical Corridors space if connected. 2. Draw an Intruder token and place the matching miniature; keep a drawn non-Blank token outside the bag until a rule returns it (for example, hiding in Technical Corridors). 3. Compare its number with the triggering player's hand size, counting both Action and Contamination cards. Fewer cards than the token number causes a Surprise Attack against that Character. 4. Contamination cards count for this comparison, though they cannot pay Action costs.",
+          "reader_support": "supported",
+          "reader_evidence": "Noise roll: an existing marker causes Encounter; Encounters: clear connected Noise, draw/place, compare number to Action and Contamination cards, and set non-Blank token aside.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "How does Danger resolve with several eligible neighboring Intruders, and when none are eligible? Does moving an Intruder into your Room count as an Encounter? How does Slime affect Silence?",
+          "expected_answer": "Move all neighboring Intruders not in Combat into current Room. If none eligible, put Noise in each connected Corridor lacking it including Technical Corridors. Moving Intruder into occupied Room is Combat, not Encounter. Slime converts Silence Noise/exploration results to Danger.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1392-1411;1437-1454;1528-1542;1682-1684;1685-1686"
+            }
+          ],
+          "observed_answer": "1. On Danger, move all Intruders in neighboring Rooms that are not in Combat with any Character into the destination Room. 2. If there are no eligible neighboring Intruders (including when all are in Combat), place a Noise marker in every connected Corridor that lacks one, including Technical Corridors if the Room has an Entrance. 3. An Intruder moving into a Character's Room is not an Encounter; it simply puts them in Combat. 4. Slime makes a Silence result resolve as Danger.",
+          "reader_support": "supported",
+          "reader_evidence": "Exploration tokens: Danger; Encounters: movement into a Character's Room is not an Encounter; Slime and Noise markers.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "During an Encounter you draw Blank. What happens to Noise and the Blank; when is an Adult added? Contrast Blank in bag development.",
+          "expected_answer": "Encounter replaces connected Noise in every Corridor; return Blank; add Adult only if Blank was last token in bag and a spare Adult is available; no miniature or Surprise Attack. Development always attempts adding one available Adult then returns Blank.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "815-821;1721-1731"
+            }
+          ],
+          "observed_answer": "1. In an Encounter, a Blank causes a Noise marker to be placed in each Corridor connected to that Room, returns to the bag, and no Intruder miniature appears. 2. Add an Adult token only if that Blank was the last token in the bag, and only if an Adult token is available. 3. In bag development, a Blank adds an Adult if one is available regardless of whether it was the last token; then the Blank returns to the bag.",
+          "reader_support": "supported",
+          "reader_evidence": "Encounters: Blank token; Event Phase, Intruder bag development: Blank.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Two Intruders attempt to move together from the same Room through one Closed Door. Where do they end, what happens to the Door, can it later close, and would a Noise-triggered appearance be blocked by that Door?",
+          "expected_answer": "Both stay in original Room and destroy Door simultaneously. Destroyed Door permits movement but cannot close except Plasma Torch. Noise-triggered appearance ignores Closed Door.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1640-1673"
+            }
+          ],
+          "observed_answer": "1. Both Intruders fail to move through the same Closed Door: they destroy it simultaneously and stay in their originating Room. The Door token lies down to show Destroyed. 2. A Destroyed Door cannot later be Closed again, except by the Plasma Torch Item. 3. A Noise-triggered Intruder appearance through a Corridor with a Closed Door is not blocked; it appears regardless of the Door.",
+          "reader_support": "supported",
+          "reader_evidence": "Door tokens: several Intruders moving from the same Room destroy the Door simultaneously and stay; destroyed doors cannot be closed except with Plasma Torch; Noise appearance ignores a Closed Door.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "An injured Intruder moves into Technical Corridors with Noise already there. What happens to its miniature, injuries, token and Noise? Can Characters or Doors normally use those Corridors?",
+          "expected_answer": "Remove miniature, discard injuries, return matching token to bag; keep Noise. Characters barred except Mechanic Technical Corridors card and Technical Corridor Plans Item; Doors never placed there.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1475-1507"
+            }
+          ],
+          "observed_answer": "1. When an Intruder enters a Technical Corridors Entrance, remove its miniature, discard all Injury markers, and return its token to the Intruder bag. 2. Noise already on the Technical Corridors space remains there. 3. Characters normally cannot use Technical Corridors (except the Mechanic's Technical Corridors Action card and Technical Corridor Plans Item), and Door tokens can never be placed there.",
+          "reader_support": "supported",
+          "reader_evidence": "Technical Corridors: Intruder hiding; Characters' exceptions; Door tokens and Noise.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "Describe an ordinary Shoot versus Melee Action: card/ammo costs, target location, Contamination, a miss, and the two-hit die result.",
+          "expected_answer": "Both cost 1 Action card against target in same Room. Shoot needs Weapon in Hand and spends 1 Ammo; normal two-hit deals 2 injuries subject to Weapon. Melee draws Contamination to Action discard before choosing target, miss causes Serious Wound, two-hit deals only 1 injury.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1751-1776;1795-1806;1816-1839;3076-3091"
+            }
+          ],
+          "observed_answer": "1. Both Shoot and Melee are Actions with a cost of 1 Action card. For Shoot, choose a Weapon in Hand and an Intruder in your Room, discard 1 Ammo from that Weapon, and roll the Combat die; a miss has no Melee penalty. 2. For Melee, draw a Contamination card onto your Action discard pile, choose an Intruder in your Room, and roll the die; a miss gives you 1 Serious Wound. 3. In Melee, a die result that would deal 2 Injuries deals only 1 Injury.",
+          "reader_support": "supported",
+          "reader_evidence": "Basic Actions and Combat: Shoot and Melee procedures; double-hit result in Melee counts as one.",
+          "grade": "correct",
+          "reason": "Accepted equivalent comparison: says Shoot rolls the Combat die, then a result that would deal 2 Injuries deals only 1 in Melee. In this direct Shoot-versus-Melee contrast the counterfactual conveys the ordinary two-Injury result. All other requested costs, ammo, target, Contamination and miss facts are supplied.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "After damage, how are Larva, Adult and Queen death checked, when is a Carcass placed, and what if a Queen check draws a Retreat arrow?",
+          "expected_answer": "Larva dies at 1 injury without Carcass. Adult draws one Attack card blood, dies if blood <= current injuries and leaves Carcass. Queen draws two, sums blood and compares same way; any Retreat arrow causes retreat via Event-card corridor number, discard Event, rather than normal numerical resolution.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1976-2033;2247-2252"
+            }
+          ],
+          "observed_answer": "1. After Injury markers are added, check against the Intruder's current total injuries. A Larva dies at 1 Injury. 2. An Adult draws one Intruder Attack card for its blood value; blood less than or equal to its injuries kills it. 3. A Queen draws two cards and sums their blood values; a sum less than or equal to its injuries kills it. Adult and Queen deaths remove the miniature and place an Intruder Carcass in the Room; Larvae leave no Carcass. 4. If a Queen's injury check draws a Retreat arrow on either card, it retreats instead of resolving the numerical death check: draw an Event card and move it through the Corridor matching the card's Intruder movement number.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Intruder Injuries and death; Intruder Retreat.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "A Character Escapes a Room with two Intruders toward an empty unexplored Room. When do attacks occur, who is targeted, what happens if they die, and what follows if they survive?",
+          "expected_answer": "Pay Movement cost 1, choose neighboring Room. Before moving resolve separate Attack from each Intruder targeting escaper. Death leaves Corpse in starting Room; survival completes move and standard exploration/Noise.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1841-1865;1898-1903;3038-3039"
+            }
+          ],
+          "observed_answer": "1. Before moving, resolve one Intruder Attack for each of the two Intruders, starting with the larger types (Queen, Breeder, Adult, then Larva). Escape attacks target the escaping Character. 2. If the Character dies, their Corpse remains in the Room they tried to leave. 3. If they survive, they complete the move to the neighboring Room; because it is unexplored, reveal and resolve its Exploration token, and because it is empty, roll Noise unless the exploration effect replaces that roll.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Character Escape; Movement and Exploration tokens.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "In an ordinary Intruder Attack with several Characters, how is the target chosen and ties broken; how is a hit determined; what changes for Larva and where does its Contamination go?",
+          "expected_answer": "Fewest Action cards in hand; tie First Player or next in turn order. Matching attacker symbol on drawn Attack card means resolve effect; otherwise miss; ignore blood and discard card. Larva draws no Attack card: place miniature on target Character board and give Contamination on top of Action discard.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1874-1953"
+            }
+          ],
+          "observed_answer": "1. With several Characters in the Room, the Intruder targets the one whose player has the fewest Action cards; ties go to the Character with the First Player token or next in turn order. 2. Draw one Intruder Attack card: a matching Intruder symbol is a hit and its effect resolves; otherwise it misses. 3. A Larva does not draw an Attack card: remove it from the board, put it on the target's Character board, and give the target a Contamination card on top of their Action discard pile. If the target already has a Larva, the attacking Larva disappears and the target still gains Contamination, but is not automatically killed.",
+          "reader_support": "supported",
+          "reader_evidence": "Intruder Attack and Infest (Larva attack); Contamination cards: placement on Action discard pile.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "At three Serious Wounds, does dressing one prevent death from a Light Wound? What happens at a third Light Wound otherwise, what does Heal remove, and where do a dead Characters Corpse and Heavy Objects go?",
+          "expected_answer": "No: dressed still counts; any further Wound kills at three Serious. Third Light clears Light track and causes Serious Wound. Heal removes specified Light Wound or discards dressed Serious card. Place Corpse and drop Heavy Objects in death Room.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2035-2089"
+            }
+          ],
+          "observed_answer": "1. Dressing one of three Serious Wounds does not prevent death from any further Wound, including a Light Wound. 2. Otherwise, a third Light Wound clears the Light Wound track and causes a Serious Wound. 3. Heal removes a Light Wound or discards a Dressed Serious Wound, as the healing effect specifies. 4. On death, place a Character Corpse token in the Room and drop all Heavy Objects there.",
+          "reader_support": "supported",
+          "reader_evidence": "Character Wounds and death; FAQ: Heavy Objects drop in the Room on death.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Contrast Canteen/Shower scanning with Surgery: which cards are scanned and removed, how is a Larva handled, and what costs or turn consequences follow Surgery?",
+          "expected_answer": "Canteen/Shower optionally scan hand Contamination, remove non-Infected; infected gives Larva and retains card, existing Larva means death/Creeper. Canteen heals 1 Light; Shower removes Slime. Surgery scans deck/hand/discard, removes infected and Larva, then 1 Light Wound, automatic pass, shuffle all cards including hand into deck; empty hand until next turn.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2135-2150;2556-2566;2606-2621;2669-2682"
+            }
+          ],
+          "observed_answer": "1. Canteen and Shower scan only Contamination cards in the user's hand; remove all non-Infected cards. If an Infected card is found, put a Larva on the Character board; if one is already there, the Character dies and a Creeper appears in the Room. Canteen also heals 1 Light Wound; Shower removes Slime. 2. Surgery scans Contamination cards in the deck, hand, and discard pile and removes all Infected cards; it also removes a Larva if present. It costs 2 Action cards, causes 1 Light Wound, and automatically passes. Shuffle the Character's entire hand and all remaining cards, including remaining Contamination, into the Action deck; the hand remains empty until next turn.",
+          "reader_support": "supported",
+          "reader_evidence": "Room Actions: Canteen, Surgery, Shower; Contamination and Infection.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "How can uncarried Eggs be destroyed with Shoot/Melee, grenades, Molotov and Fire; which Melee penalties are waived, when is Noise rolled and when is the Nest destroyed?",
+          "expected_answer": "Each Injury from Shoot/Melee destroys 1 uncarried Egg. The manual explicitly waives Contamination and Wounds on a missed Egg Melee; its trailing if-they-miss wording does not uniquely settle whether successful Egg Melee also avoids Contamination. Do not invent a successful-hit draw, refund, or unconditional immunity. Grenade destroys 2 Eggs, Molotov 1; Noise after every destruction attempt including miss. Fire destroys 1 uncarried Egg each Fire Damage step. Nest destroyed once all its Eggs taken/destroyed; mark Injury in Nest.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2623-2662"
+            }
+          ],
+          "observed_answer": "1. In a Room with uncarried Eggs, Shoot or Melee attacks can target them; each Injury destroys one Egg. A missed Egg Melee causes neither Contamination nor a Serious Wound. The summary says the manual does not settle whether a successful Egg Melee gives Contamination. 2. A Grenade destroys 2 uncarried Eggs and a Molotov Cocktail destroys 1; they may be thrown at a Room with Eggs as if an Intruder were there. 3. After every individual attempt to destroy an Egg, roll Noise. If throwing at Nest Eggs from another Room, roll Noise in the thrower's Room. 4. During each Fire Damage step, Fire in a Room with uncarried Eggs destroys 1 Egg. When no Eggs remain in the Nest, the Nest is destroyed and marked with an Injury marker.",
+          "reader_support": "partial",
+          "reader_evidence": "Eggs and the Nest; FAQ Rooms 2: Noise from thrown explosives is rolled in the thrower's Room; successful Egg Melee contamination is expressly unresolved.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false,
+          "source_unresolved": true
+        },
+        {
+          "id": "Q19",
+          "question": "What permits or prevents entering an Escape Pod, what must you resolve first, how many Characters and Heavy Objects fit, and what are the options and consequences when you wait?",
+          "expected_answer": "Use corresponding Evacuation Room Action cost 2, unlocked Pod with free space, no Intruder/Malfunction. Roll Noise first and fail if Intruder reaches Room. Two Character spaces; Heavy Objects use none. Enter then launch immediately or wait and pass current turn. At start of first round next Player Phase choose wait/pass, launch, or free exit followed by a full two-Action round. Intruder appearing in Section returns all Pod occupants; another boarder may immediately launch.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2443-2463;2684-2737;3045-3047"
+            },
+            {
+              "path": "nemesis-current-official-faq.pdf",
+              "section_questions": "Rules 1-3",
+              "printed_pages": [
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "observed_answer": "1. To enter, use the matching Evacuation Section A/B Room Action (cost 2 Action cards); its Pod must be Unlocked and have room, and the Section must contain neither an Intruder nor a Malfunction. Roll Noise first; if an Intruder appears or is present in the Section, entry fails. 2. Each Pod holds 2 Characters; Heavy Objects use Hand slots and take no Character space. 3. If you launch after boarding, remove the Pod and occupants from play; they still face Contamination and Objective checks. If you wait, you pass the current turn and remain present in the Section for bag-development Noise rolls. In each later Player Phase, at the start of your first round choose to keep waiting and pass, launch, or exit for free into the Section Room and take a full round of 2 Actions. A second Character boarding may launch the Pod immediately with both aboard. If an Intruder appears in the Section while you wait, Pod occupants return to the Room. A Malfunction while waiting does not prevent waiting, launching, or exiting, but prevents new Pod entry.",
+          "reader_support": "supported",
+          "reader_evidence": "Escape Pods: Board, Capacity, Launch immediately, Wait after boarding, second Character, Intruder and Malfunction while waiting.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "Give the endgame checks in order. What happens with two Damaged Engines, a non-Earth destination (including Quarantine/Mars), and an infected survivor or one carrying a Larva? Do pod passengers need Contamination checks?",
+          "expected_answer": "Engines then Coordinates then Contamination then Objectives. If ship survives to checks: two/three Damaged explodes kills all aboard incl Intruders; non-Earth kills sleepers but ship/Intruders survive, Quarantine sleeper survives Mars. All survivors including launched pod passengers scan all Contamination; any infected triggers shuffle all Action/Contamination draw 4, any Contamination kills else survives. Larva skips scanning and directly does shuffle/draw. Survivors then reveal/check chosen Objective.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "900-958"
+            }
+          ],
+          "observed_answer": "1. The Victory Check order is Engines, Coordinates, Contamination, then Objectives. 2. If 2 or 3 Engines are Damaged, the ship explodes and everyone aboard\u2014including hibernating Characters and Intruders\u2014dies; launched Pod passengers are already away. 3. If the destination is not Earth, all hibernating Characters die, except a Character with the Quarantine Objective if the destination is Mars. 4. Each survivor, including Pod passengers, checks Contamination. Scan cards in deck, discard, and hand; if any is Infected, shuffle all cards and draw 4, and any Contamination card among those four kills the Character. A Character carrying a Larva skips the initial Scan and takes the same shuffle-and-draw-four test. Without a Larva or an Infected card, no four-card test is required.",
+          "reader_support": "supported",
+          "reader_evidence": "Victory Check: Engines, Coordinates, Contamination; Escape Pods: launched occupants still face final Contamination and Objective checks.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        }
+      ]
+    },
+    "b": {
+      "counts": {
+        "correct": 19,
+        "partial": 1,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "In a four-player standard game, how many Escape Pods are selected, how are they distributed and oriented, and which tokens start in the Intruder bag?",
+          "expected_answer": "Three random pods; lowest numbered in A, next B, next A, all Locked. Bag: 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 7 Adults.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "467-507"
+            }
+          ],
+          "observed_answer": "1. Select 3 Escape Pods for a four-player game. 2. Place the lowest-numbered pod in Section A, the next in B, then alternate A/B; all start Locked side up. 3. Put 1 Blank, 4 Larvae, 1 Creeper, 1 Queen, 3 Adults, and 1 additional Adult per player (so 7 Adults total with four players) in the Intruder bag.",
+          "reader_support": "supported",
+          "reader_evidence": "Board setup steps 7 and 10: 3 pods for 3\u20134 players; lowest-numbered in A, next in B then alternate; all Locked. Intruder bag list specifies base tokens plus one Adult per player.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "How are Objectives filtered and dealt, when does each player choose one, what happens to the rejected card, and do Eggs trigger that choice?",
+          "expected_answer": "Remove Objectives requiring more players than present; deal one Personal and one Corporate secretly. First Intruder miniature of any type appearing triggers immediate choice by everyone before resolving its Encounter. Remove rejected card face down unseen. Eggs do not trigger it.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "589-602;1008-1028"
+            }
+          ],
+          "observed_answer": "1. Remove from both Corporate and Personal decks all Objectives showing a player count above the actual count, shuffle the two decks separately, and deal each player one of each, hidden. 2. At the First Encounter\u2014the first time an Intruder miniature appears\u2014each player immediately chooses one of their two cards; remove the rejected card face down without looking at it. 3. Eggs are not Intruders and do not trigger this choice.",
+          "reader_support": "supported",
+          "reader_evidence": "Crew setup step 16; Critical gameplay moments: First Encounter.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "You use an Action card with printed cost 2 while holding that card, two other Action cards and two Contamination cards. What is discarded, and can Contamination substitute for payment? What if the card offers OR effects?",
+          "expected_answer": "Discard the played card and two additional Action cards face up. Contamination cannot pay costs. Choose one OR effect.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "987-998;1235-1250"
+            }
+          ],
+          "observed_answer": "1. Discard the played Action card itself and two additional Action cards to pay its printed cost of 2. 2. Contamination cards cannot pay any Action cost. 3. If the Action card has sections separated by OR, choose one section/effect.",
+          "reader_support": "supported",
+          "reader_evidence": "Actions: Action Cost and Actions from Action cards.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "A Character in a burning Room takes one Action then passes. When do they take Fire damage, can they act again this Player Phase, can they discard cards, and do later players rounds burn them again?",
+          "expected_answer": "At end of own round take 1 Light Wound. Passing bars normal Actions this Player Phase, but official FAQ permits Interruption after passing. May discard any number of hand cards on passing. No further Fire wounds from later players rounds this turn.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "723-747;1545-1565"
+            },
+            {
+              "path": "nemesis-current-official-faq.pdf",
+              "section_questions": "Rules 21",
+              "printed_pages": [
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "observed_answer": "1. After finishing their own round, the Character suffers 1 Light Wound for ending the round in a burning Room. 2. Having passed, they cannot take further normal Actions that Player Phase, though the FAQ allows an Interruption after passing. 3. When passing, they may discard any number of cards from their hand. 4. Later players' rounds do not cause this Character to take Fire damage again that turn; the Fire wound is assessed at the end of that Character's own round.",
+          "reader_support": "supported",
+          "reader_evidence": "Turn Structure, Player rounds; Fire markers.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Describe entering an empty unexplored Room: tile, Item Counter, Exploration effect, Noise roll and token destination. How do Silence, Danger and an already occupied destination alter the Noise roll?",
+          "expected_answer": "Reveal Room and Exploration token; set counter to token number except Nest/Slime Room; resolve effect and remove Exploration token from game. Roll Noise in empty Room unless Silence or Danger exploration cancels it. Occupied Room (Character or Intruder) gives no movement Noise roll.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1288-1300;1336-1353;1430-1473"
+            }
+          ],
+          "observed_answer": "1. On entering, flip the unexplored Room tile face up, reveal and resolve its Exploration token, then remove the token to the box. Set the Room's Item count by rotating the tile so the token's number faces the board's Item Counter (except Nest and Slime Room). 2. Resolve the Exploration effect: Silence cancels the Noise roll, Danger resolves as Danger instead of a roll, and other listed symbols apply their effect. 3. If the destination has no Characters or Intruders, make a Noise roll; skip the roll if either is already there. 4. A numbered result places Noise in the matching connected Corridor; Danger moves all eligible neighboring Intruders in, or, if none are eligible, places Noise in each empty connected Corridor. Silence does nothing. Slime makes Silence resolve as Danger.",
+          "reader_support": "supported",
+          "reader_evidence": "Movement, Rooms, and Corridors; Exploration tokens; Noise roll.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What does Careful Movement cost and replace, when is it forbidden, and can a Closed Door be crossed or a miniature stop in a Corridor?",
+          "expected_answer": "Cost 2 Action cards; replaces post-movement Noise roll with placing Noise in a chosen connected Corridor. Forbidden in Combat or when all destination Corridors have Noise. Closed Doors block player movement; no miniature stops in Corridors.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1150-1168;1260-1285;3038-3041"
+            }
+          ],
+          "observed_answer": "1. Careful Movement costs 2 Action cards. 2. It follows normal movement restrictions and replaces the post-move Noise roll with placing one Noise marker in a chosen Corridor connected to the destination. 3. It is forbidden in Combat and when every Corridor connected to the destination already has Noise. 4. Closed Doors block passage. 5. A miniature cannot stop in a Corridor; characters and Intruders occupy Rooms only.",
+          "reader_support": "supported",
+          "reader_evidence": "Basic Actions: Careful Movement; Movement, Rooms, and Corridors.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "You roll a number for a Corridor already holding Noise, with a Technical Corridors Entrance in your Room. Give the Encounter sequence, Noise removal, token destination and Surprise Attack comparison; do Contamination cards count?",
+          "expected_answer": "Resolve Encounter: remove all connected Noise including Technical Corridors; draw bag token; place matching Intruder; compare token number to all cards in triggering hand including Contamination. Fewer cards causes Surprise Attack against triggerer, equal or more does not. Set token aside.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1380-1389;1685-1720;1778-1794"
+            }
+          ],
+          "observed_answer": "1. A numbered roll that calls for a Corridor already containing Noise triggers an Encounter instead of placing another marker. 2. Resolve the Encounter by removing all Noise markers in Corridors connected to the Room (including Technical Corridors if it has an Entrance), drawing a bag token, and placing its matching Intruder in the Room (unless it is Blank). 3. Keep a drawn non-Blank token set aside outside the bag; it can return if that Intruder later hides in Technical Corridors. A Noise marker for a Technical Corridors Entrance goes on the shared Technical Corridors space. 4. Compare the token number with the triggering player's hand size, counting both Action and Contamination cards: fewer cards than the number causes a Surprise Attack. Contamination cards do count for this comparison.",
+          "reader_support": "supported",
+          "reader_evidence": "Noise roll; Technical Corridors; Encounters.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "How does Danger resolve with several eligible neighboring Intruders, and when none are eligible? Does moving an Intruder into your Room count as an Encounter? How does Slime affect Silence?",
+          "expected_answer": "Move all neighboring Intruders not in Combat into current Room. If none eligible, put Noise in each connected Corridor lacking it including Technical Corridors. Moving Intruder into occupied Room is Combat, not Encounter. Slime converts Silence Noise/exploration results to Danger.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1392-1411;1437-1454;1528-1542;1682-1684;1685-1686"
+            }
+          ],
+          "observed_answer": "1. Danger moves all neighboring Intruders that are not in Combat with a Character into the Room, not just one. 2. If none are eligible (none neighboring, or all in Combat), place a Noise marker in every connected Corridor that lacks one, including Technical Corridors when the Room has an Entrance. 3. Intruder movement into a Character's Room is not an Encounter; the Intruder and Character are simply in Combat. 4. A Slime marker turns a Silence result into Danger.",
+          "reader_support": "supported",
+          "reader_evidence": "Exploration tokens: Danger; Noise roll: Danger; Encounters; Slime marker.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "During an Encounter you draw Blank. What happens to Noise and the Blank; when is an Adult added? Contrast Blank in bag development.",
+          "expected_answer": "Encounter replaces connected Noise in every Corridor; return Blank; add Adult only if Blank was last token in bag and a spare Adult is available; no miniature or Surprise Attack. Development always attempts adding one available Adult then returns Blank.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "815-821;1721-1731"
+            }
+          ],
+          "observed_answer": "1. On a Blank drawn during an Encounter, put a Noise marker in each Corridor connected to the Room, return the Blank to the bag, and end the Encounter without placing an Intruder. 2. Only if it was the last token in the bag, add an Adult token if one is available. 3. In bag development, a Blank adds an Adult token if available and then the Blank is returned to the bag; this is not conditional on it being the last token.",
+          "reader_support": "supported",
+          "reader_evidence": "Encounters: Blank token; Event Phase: Intruder bag development, Blank.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Two Intruders attempt to move together from the same Room through one Closed Door. Where do they end, what happens to the Door, can it later close, and would a Noise-triggered appearance be blocked by that Door?",
+          "expected_answer": "Both stay in original Room and destroy Door simultaneously. Destroyed Door permits movement but cannot close except Plasma Torch. Noise-triggered appearance ignores Closed Door.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1640-1673"
+            }
+          ],
+          "observed_answer": "1. When Intruders trying to move together meet the same Closed Door, they destroy it and all stay in their original Room. 2. The Door token becomes lying (Destroyed); movement through it is allowed, but it can never be Closed again (except by Plasma Torch). 3. A Noise-triggered Intruder appearance through a Corridor with a Closed Door is not blocked; it appears regardless of the Door.",
+          "reader_support": "supported",
+          "reader_evidence": "Fire, Malfunction, Doors, Slime and Noise markers: Door tokens; FAQ Rounds, events, damage and Intruders.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "An injured Intruder moves into Technical Corridors with Noise already there. What happens to its miniature, injuries, token and Noise? Can Characters or Doors normally use those Corridors?",
+          "expected_answer": "Remove miniature, discard injuries, return matching token to bag; keep Noise. Characters barred except Mechanic Technical Corridors card and Technical Corridor Plans Item; Doors never placed there.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1475-1507"
+            }
+          ],
+          "observed_answer": "1. When an Intruder moves to a Technical Corridors Entrance, remove its miniature from the board, discard all its Injury markers, and return its token to the Intruder bag. 2. Noise on the shared Technical Corridors space remains. 3. Characters cannot normally use Technical Corridors, with exceptions for the Mechanic's Technical Corridors Action card and Technical Corridor Plans Item. 4. Door tokens cannot be placed in Technical Corridors.",
+          "reader_support": "supported",
+          "reader_evidence": "Technical Corridors.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "Describe an ordinary Shoot versus Melee Action: card/ammo costs, target location, Contamination, a miss, and the two-hit die result.",
+          "expected_answer": "Both cost 1 Action card against target in same Room. Shoot needs Weapon in Hand and spends 1 Ammo; normal two-hit deals 2 injuries subject to Weapon. Melee draws Contamination to Action discard before choosing target, miss causes Serious Wound, two-hit deals only 1 injury.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1751-1776;1795-1806;1816-1839;3076-3091"
+            }
+          ],
+          "observed_answer": "1. Shoot costs 1 Action card, requires a Weapon in Hand with Ammo, targets one Intruder in your Room, and discards 1 Ammo before rolling the Combat die. It does not add Contamination. A blank misses without a Melee penalty; the die's two-hit result deals 2 Injuries when Shooting, before Weapon modifications. 2. Melee costs 1 Action card, draws a Contamination card onto the top of your Action discard pile, targets one Intruder in your Room, and rolls the Combat die. A miss inflicts 1 Serious Wound; a two-hit result counts as only 1 Injury in Melee.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Shoot and Melee Attack.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "After damage, how are Larva, Adult and Queen death checked, when is a Carcass placed, and what if a Queen check draws a Retreat arrow?",
+          "expected_answer": "Larva dies at 1 injury without Carcass. Adult draws one Attack card blood, dies if blood <= current injuries and leaves Carcass. Queen draws two, sums blood and compares same way; any Retreat arrow causes retreat via Event-card corridor number, discard Event, rather than normal numerical resolution.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1976-2033;2247-2252"
+            }
+          ],
+          "observed_answer": "1. After damage, add Injury markers and check against the Intruder's total current Injuries. A Larva dies at 1 Injury; an Adult requires drawing one Intruder Attack card and dies if its blood value is no greater than its Injuries; a Queen requires drawing two cards and dies if their summed blood is no greater than its Injuries. 2. On a Queen's death, remove the miniature and place an Intruder Carcass in the Room. 3. If either card in the Queen's check has a Retreat arrow, retreat happens instead of a numerical death check: draw an Event card and move the Queen through the Corridor matching its Intruder movement number, then discard that Event card; no death/Carcass is specified for retreat.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Intruder Injuries and death; Intruder Retreat.",
+          "grade": "partial",
+          "reason": "Correctly gives all death-check thresholds and Queen Carcass, but omits requested Adult Carcass placement and Larva no-Carcass exception. These cannot be borrowed from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "A Character Escapes a Room with two Intruders toward an empty unexplored Room. When do attacks occur, who is targeted, what happens if they die, and what follows if they survive?",
+          "expected_answer": "Pay Movement cost 1, choose neighboring Room. Before moving resolve separate Attack from each Intruder targeting escaper. Death leaves Corpse in starting Room; survival completes move and standard exploration/Noise.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1841-1865;1898-1903;3038-3039"
+            }
+          ],
+          "observed_answer": "1. Before moving, resolve one Intruder Attack per Intruder in the Room, starting with larger types (Queen, Breeder, Adult, Larva). 2. Each attack targets the escaper. If the Character dies, their Corpse stays in the Room they tried to escape from. 3. If they survive, they complete the move to the neighboring Room and resolve normal entry effects: explore if unexplored and make a Noise roll if the destination is empty.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Character Escape; Intruder Attack.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "In an ordinary Intruder Attack with several Characters, how is the target chosen and ties broken; how is a hit determined; what changes for Larva and where does its Contamination go?",
+          "expected_answer": "Fewest Action cards in hand; tie First Player or next in turn order. Matching attacker symbol on drawn Attack card means resolve effect; otherwise miss; ignore blood and discard card. Larva draws no Attack card: place miniature on target Character board and give Contamination on top of Action discard.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "1874-1953"
+            }
+          ],
+          "observed_answer": "1. With several Characters in the Room, target the one whose player has the fewest Action cards in hand; break a tie by the First Player token, or the next player in turn order. 2. Draw one Intruder Attack card: a matching Intruder symbol means resolve its effect; otherwise it misses. Ignore the blood icon during an attack. 3. For a Larva, do not draw an Attack card: move the Larva miniature to the target's Character board and give the target 1 Contamination card. 4. Put that Contamination card on top of the target's Action discard pile. If they already have a Larva, the attacking Larva disappears, the existing Larva stays, and they still gain the Contamination card without automatically dying.",
+          "reader_support": "supported",
+          "reader_evidence": "Combat: Intruder Attack and Infest; Contamination cards and Infection.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "At three Serious Wounds, does dressing one prevent death from a Light Wound? What happens at a third Light Wound otherwise, what does Heal remove, and where do a dead Characters Corpse and Heavy Objects go?",
+          "expected_answer": "No: dressed still counts; any further Wound kills at three Serious. Third Light clears Light track and causes Serious Wound. Heal removes specified Light Wound or discards dressed Serious card. Place Corpse and drop Heavy Objects in death Room.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2035-2089"
+            }
+          ],
+          "observed_answer": "1. Dressing a Serious Wound does not prevent death from a further Wound when the Character already has 3 Serious Wounds; they die upon suffering any additional Wound, including Light. 2. Otherwise, a third Light Wound clears the Light Wound track and causes a Serious Wound. 3. Heal removes a Light Wound or discards a Dressed Serious Wound card, as the effect specifies. 4. On death, place the Character Corpse token in the Room as a Character Corpse Object and drop all Heavy Objects there.",
+          "reader_support": "supported",
+          "reader_evidence": "Character Wounds and death.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Contrast Canteen/Shower scanning with Surgery: which cards are scanned and removed, how is a Larva handled, and what costs or turn consequences follow Surgery?",
+          "expected_answer": "Canteen/Shower optionally scan hand Contamination, remove non-Infected; infected gives Larva and retains card, existing Larva means death/Creeper. Canteen heals 1 Light; Shower removes Slime. Surgery scans deck/hand/discard, removes infected and Larva, then 1 Light Wound, automatic pass, shuffle all cards including hand into deck; empty hand until next turn.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2135-2150;2556-2566;2606-2621;2669-2682"
+            }
+          ],
+          "observed_answer": "1. Canteen and Shower scan only Contamination cards in the Character's hand; they remove all non-Infected scanned cards, while an Infected result places a Larva on the board (if one was already there, the Character dies and a Creeper appears in the Room). Canteen also heals 1 Light Wound; Shower removes Slime. 2. Surgery scans every Contamination card across deck, hand, and discard, removes all Infected cards, and removes a Larva from the Character board if present. 3. Surgery then inflicts 1 Light Wound and automatically passes; shuffle all cards, including the entire hand and remaining Contamination cards, into the Action deck. The hand stays empty until next turn.",
+          "reader_support": "supported",
+          "reader_evidence": "Room Actions: Canteen, Surgery, Shower Room; Contamination cards and Infection.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "How can uncarried Eggs be destroyed with Shoot/Melee, grenades, Molotov and Fire; which Melee penalties are waived, when is Noise rolled and when is the Nest destroyed?",
+          "expected_answer": "Each Injury from Shoot/Melee destroys 1 uncarried Egg. The manual explicitly waives Contamination and Wounds on a missed Egg Melee; its trailing if-they-miss wording does not uniquely settle whether successful Egg Melee also avoids Contamination. Do not invent a successful-hit draw, refund, or unconditional immunity. Grenade destroys 2 Eggs, Molotov 1; Noise after every destruction attempt including miss. Fire destroys 1 uncarried Egg each Fire Damage step. Nest destroyed once all its Eggs taken/destroyed; mark Injury in Nest.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2623-2662"
+            }
+          ],
+          "observed_answer": "1. In a Room with uncarried Eggs, Shoot or Melee against them; each Injury destroys one Egg. A Grenade destroys 2 Eggs and a Molotov destroys 1, and they may be thrown at a Room with Eggs as if an Intruder were there. 2. A missed Egg Melee causes neither Contamination nor a Wound; whether a successful Egg Melee causes Contamination is unsupported by the summary, which says the manual wording does not settle it. 3. Make a Noise roll after every single attempt to destroy an Egg. Fire in a Room with uncarried Eggs destroys one Egg during each Fire Damage step. 4. When no Eggs remain, the Nest is destroyed and marked with 1 Injury marker.",
+          "reader_support": "partial",
+          "reader_evidence": "Eggs and the Nest explicitly say the successful Egg Melee Contamination case is not uniquely resolved; other Egg destruction procedures are specified.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false,
+          "source_unresolved": true
+        },
+        {
+          "id": "Q19",
+          "question": "What permits or prevents entering an Escape Pod, what must you resolve first, how many Characters and Heavy Objects fit, and what are the options and consequences when you wait?",
+          "expected_answer": "Use corresponding Evacuation Room Action cost 2, unlocked Pod with free space, no Intruder/Malfunction. Roll Noise first and fail if Intruder reaches Room. Two Character spaces; Heavy Objects use none. Enter then launch immediately or wait and pass current turn. At start of first round next Player Phase choose wait/pass, launch, or free exit followed by a full two-Action round. Intruder appearing in Section returns all Pod occupants; another boarder may immediately launch.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "2443-2463;2684-2737;3045-3047"
+            },
+            {
+              "path": "nemesis-current-official-faq.pdf",
+              "section_questions": "Rules 1-3",
+              "printed_pages": [
+                2,
+                3,
+                4
+              ]
+            }
+          ],
+          "observed_answer": "1. To enter, use the corresponding Evacuation Section A/B Room Action (cost 2 Action cards); the Pod must be Unlocked with an open Character space, and neither an Intruder nor a Malfunction may be in the Section. First make a Noise roll; if an Intruder appears or is present, entry fails. 2. A Pod holds 2 Characters; Heavy Objects use no Character spaces. 3. After boarding, you may launch immediately. If you wait, you pass the current turn and remain present in the Section for Noise rolls from bag development. At the start of your first round in each later Player Phase, choose to keep waiting and pass, launch, or exit free into the Section Room and take a full round of 2 Actions. A second Character boarding a waiting Pod may launch immediately with both aboard; if an Intruder appears in the Section while you wait, all Pod occupants return to the Room. A Malfunction while waiting does not prevent waiting, launching, or exiting, but blocks new Pod entry.",
+          "reader_support": "supported",
+          "reader_evidence": "Escape Pods.",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "Give the endgame checks in order. What happens with two Damaged Engines, a non-Earth destination (including Quarantine/Mars), and an infected survivor or one carrying a Larva? Do pod passengers need Contamination checks?",
+          "expected_answer": "Engines then Coordinates then Contamination then Objectives. If ship survives to checks: two/three Damaged explodes kills all aboard incl Intruders; non-Earth kills sleepers but ship/Intruders survive, Quarantine sleeper survives Mars. All survivors including launched pod passengers scan all Contamination; any infected triggers shuffle all Action/Contamination draw 4, any Contamination kills else survives. Larva skips scanning and directly does shuffle/draw. Survivors then reveal/check chosen Objective.",
+          "source_references": [
+            {
+              "path": "extracted/nemesis-rules.txt",
+              "extraction_lines": "900-958"
+            }
+          ],
+          "observed_answer": "1. Check in order: Engines, Coordinates, Contamination, Objectives. 2. If two Engines are Damaged, the ship explodes and everything aboard dies, including hibernating Characters and Intruders; already-launched Pod passengers are away and remain eligible for checks. 3. If the ship is not headed to Earth, hibernating Characters die at the Coordinates check, except a Character with Quarantine survives hibernation if the destination is Mars. 4. At Contamination check, scan the survivor's cards in hand, deck, and discard; if any is Infected, shuffle all their cards and draw four, dying if any of the four is a Contamination card. A Larva triggers the shuffle-and-four test directly. 5. Pod passengers do need the Contamination check: the summary says each surviving Character, whether hibernating or evacuated, checks Contamination.",
+          "reader_support": "supported",
+          "reader_evidence": "Victory Check (run if at least 1 Character survived \u2014 hibernating or escaped).",
+          "grade": "correct",
+          "reason": "Every requested material ruling is present, agrees with fixed source-backed key and is supported by the frozen summary. Equivalent wording accepted; no missing facts imported from another answer.",
+          "unsupported_guess": false
+        }
+      ]
+    }
+  },
+  "source_unresolved": [
+    "Q18 is an accurate response to a versioned source/key uncertainty; unresolved source ruling prevents complete-core PASS despite factual key-match grading."
+  ],
+  "source_unresolved_ids": [
+    "Q18"
+  ],
+  "complete_core_pass": false,
+  "zero_unresolved_completion_criterion_met": false,
+  "source_limit_note": "Factual key grading recognizes the corrected uncertainty answer; it does not supply a unique playable successful-Egg-Melee ruling."
+}

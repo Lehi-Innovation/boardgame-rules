@@ -1,0 +1,13 @@
+# Coverage revision02
+
+131 active questions retain historical IDs throughQ139. NewQ138 tests the Eurasian Lynx printed immediate aggregate:1appeal per Europe icon across all players zoos, capped at8. NewQ139 tests returning a discarded FinalScoring card facedown underneath the remaining FinalScoringpile. Exact primary locations are MainPDFp12 embedded Lynx cards and MainPDFp18 10conservation bullet.
+
+Q65,Q84,Q101,Q128 are archived as standalone numeric/named lookup combinations. Complete old entries and independent reasons are retained. Their printed amounts, terrain associations and university diagram cell remain in shared-source-lookup-facts.json, while the procedures map to earlier active real questions. Q84 does not depend on archivedQ65. All other question/key objects, including corrected benchmark-v1.1 original twenty and Q06/Q42, remain exactly unchanged. Earlier rejected IDs are not reused or renumbered.
+
+The complete inherited source map has231 records, including all previous passage IDs plus explicit Lynx and FinalScoring-discard records. M12b/M18b overclaims are corrected. All C02-F01–F03 findings have recorded resolutions. All63 actually listed Sponsor entries, glossary abilities/maps/final clarifiers, FAQ entries and IconOverview panels remain indexed. Parameter-only cards and one-cell table variants do not receive novelty credit.
+
+All33 authorized PDF pages were reread in bounded complete native-text ranges and full-page visual sheets. Embedded cards were enlarged, including the Lynx twice-printed effect, Owl/Marabou/Veterinarian, display animal effects, Digging/Boost/Venom and the FinalScoring destination sentence. Complete ranges, raw-source identities and own source crops are recorded in source-reading-report.json. Page20 solo and the solo FAQ were inspected for packet completeness and excluded from candidate authority. No canonical summary, reader outputs, grades or repair history was read.
+
+After both new gaps and the full map were complete, two targeted author passes each found zero further distinct supported rules. These are author checks, not independent saturation acceptance. The earlier draft and revision01 sealed artifacts were verified unchanged. A fresh independent saturation challenge is the next step.
+
+Scope stays original English base v1.2 main/glossary/FAQ plus the accepted official English base IconOverview. Matching original publisher German component artwork only supplements obscured numerals already accepted; no German prose edition, strategy guide, MarineWorlds, promo, map pack, unsupplied card text or optional solo procedure is added.

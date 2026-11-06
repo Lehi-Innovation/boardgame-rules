@@ -1,0 +1,266 @@
+{
+  "review_id": "coverage-review-04",
+  "verdict": "coverage_gap_found",
+  "summary": "The 67-question benchmark is close to saturation but does not explicitly test the ordinary human turn-order procedure in Phase 2. Recommend one addition or an explicit amendment to an existing question/key. No material answer-key contradiction found.",
+  "scope": "Original Dune: Imperium (2020), standard 2–4 human-player multiplayer, including required two-player House Hagal. Solo, variants, expansions, promos and Uprising excluded.",
+  "method": {
+    "sources_read": [
+      "/home/jonny/projects/boardgame-rules/extracted/dune-imperium-rules.txt (complete in-scope material through House Hagal two-player rules; solo-only continuation excluded)",
+      "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf (matched primary passages; directly inspected PDF text for pp4–5,7–8,11–13,16–19 and rendered pp7,17–18 to inspect diagrams/labels)",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/faq-columns.txt (all four pages, both columns; base entries separated from excluded material)",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/v5-expanded/questions.json",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/v5-expanded/answer-key.json",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium/2026-11-04-batch-231507/coverage-ledger.json"
+    ],
+    "prohibited_material_read": false,
+    "questions_checked": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "Q17",
+      "Q18",
+      "Q19",
+      "Q20",
+      "Q21",
+      "Q22",
+      "Q23",
+      "Q24",
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q28",
+      "Q29",
+      "Q30",
+      "Q31",
+      "Q32",
+      "Q33",
+      "Q34",
+      "Q35",
+      "Q36",
+      "Q37",
+      "Q38",
+      "Q39",
+      "Q40",
+      "Q41",
+      "Q42",
+      "Q43",
+      "Q44",
+      "Q45",
+      "Q46",
+      "Q47",
+      "Q48",
+      "Q49",
+      "Q50",
+      "Q51",
+      "Q52",
+      "Q53",
+      "Q54",
+      "Q55",
+      "Q56",
+      "Q57",
+      "Q58",
+      "Q59",
+      "Q60",
+      "Q61",
+      "Q62",
+      "Q63",
+      "Q64",
+      "Q65",
+      "Q66",
+      "Q67"
+    ],
+    "novelty_standard": "Accept only a distinct source-stated rule, outcome branch, or consequential timing/exception interaction. Do not count changed arithmetic, names, cosmetic phrasing, or mechanical recombinations."
+  },
+  "findings": [
+    {
+      "id": "CR04-F1",
+      "type": "coverage_gap",
+      "severity": "material",
+      "title": "Ordinary human Phase-2 turn order is not required by any question",
+      "description": "The rulebook expressly starts Phase 2 with the First Player, continues clockwise one turn at a time, and ends the phase after everyone has Revealed. The current questions test a legal individual Agent turn, early Reveal and skipping later turns, Combat Intrigue order, Round Start, Recall, and the special House Hagal insertion. None requires the order in which human Agent/Reveal turns alternate. Taking all of one human’s Agent turns consecutively before the next human acts changes access to contested spaces while preserving the answers currently required.",
+      "nearest_existing_questions": [
+        "Q03",
+        "Q04",
+        "Q07",
+        "Q10",
+        "Q18",
+        "Q21",
+        "Q59"
+      ],
+      "why_not_covered": "Q03 requires the effects of Revealing early but never asks who starts or how human turns alternate. Q04 limits one placement per individual Agent turn but does not specify who gets the next turn. Q10 specifies order only within Combat. Q21 asks Round Start and Recall, not Phase 2. Q18/Q59 specify when the Rival acts but not ordinary human order.",
+      "source_references": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf",
+          "pages": [
+            8
+          ],
+          "section": "Phase 2: Player Turns",
+          "passages": [
+            "Starting with the player who has the First Player marker and continuing clockwise, players take one turn at a time.",
+            "Once all players have taken a Reveal turn, this phase ends."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "CR04-F2",
+      "type": "ledger_metadata",
+      "severity": "nonblocking",
+      "title": "Accepted Q52 ledger reference still mentions an excluded card",
+      "description": "The accepted Q52 entry still cites Guild Envoy although the current Q52 question/key correctly remove it and the ledger explicitly rejects it as Uprising-specific. This is stale provenance text, not an answer-key error or justification for another question.",
+      "location": "coverage-ledger.json: accepted entry Q52, source_references",
+      "recommended_action": "When updating the ledger for any accepted addition, remove Guild Envoy from the accepted Q52 reference; retain the rejection/history if desired."
+    }
+  ],
+  "proposed_questions": [
+    {
+      "proposed_id": "Q68",
+      "question": "In a standard three- or four-player game, who takes the first turn in Phase 2, how do the players’ Agent and Reveal turns alternate, and when does that phase end?",
+      "fixed_answer": "The player with the First Player marker takes the first turn. Continue clockwise, one turn at a time; each player takes an Agent turn or a Reveal turn on their turn, rather than finishing all of their Agent turns before another player acts. Skip a player for the rest of the phase after that player’s Reveal turn. Phase 2 ends once every player has taken a Reveal turn, then proceed to Combat.",
+      "source_references": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-rules.pdf",
+          "pages": [
+            8
+          ],
+          "section": "Round Structure; Phase 2: Player Turns"
+        }
+      ],
+      "novelty": "Explicit alternating human turn procedure. First-player/clockwise/single-turn order is a distinct procedural rule with consequential placement priority, not new arithmetic or another instance of the ordinary occupancy rule. The skip-after-Reveal clause is already covered in Q03 and is included only to make the procedure complete; it is not counted as new coverage.",
+      "alternative": "Instead of adding a numbered question, amend Q03 to ask who starts Phase 2 and how human turns proceed, and amend its key to require First Player, clockwise, one turn at a time and all-Revealed phase completion."
+    }
+  ],
+  "answer_key_review": {
+    "material_errors": [],
+    "result": "All 67 expected answers were compared with their relevant primary passages and applicable FAQ corrections. No material contradiction identified.",
+    "specific_challenges_resolved": [
+      "Q13 checks the endgame at Recall after completing the round; reaching 10 during play does not stop the round. Its shorthand is terse but not a different trigger.",
+      "Q14 and Q53 shorthand about the VP threshold is clarified by the existing terminology_notes; the rule is 2 Influence awarding 1 VP.",
+      "Q20 second-place ties can pay the third reward in two-player play; FAQ Conflict says the reward rules differ only in four-player play. This is distinct from ordinary third place being unavailable.",
+      "Q21/Q39 correctly follow the FAQ for Sort Through the Chaos: take the Mentat at the start of the next round, superseding the older glossary wording.",
+      "Q25 correctly includes Research Station and The Great Flat as Combat spaces; direct PDF labels verified.",
+      "Q28 diagram rates 2/3/4/5 spice to 6/8/10/12 Solari were visually checked.",
+      "Q52 correctly omits Guild Envoy in the actual question/key despite the stale ledger reference.",
+      "Q58/Q59 correctly apply two-player spoiler rules and avoid solo-only Signet, resource/VP and Expert deployment procedures.",
+      "Q60–Q67 cover Foldspace acquisition eligibility, icon preservation, any-source deployment, draw reshuffling, initial setup, supply visibility, acquisition interleaving and the full non-Faction access map."
+    ]
+  },
+  "checked_sections": [
+    {
+      "source": "Main pp1–3",
+      "checked": "Theme, nonmandatory House preference, component identification and starting-deck contents. No standalone procedural addition justified."
+    },
+    {
+      "source": "Main pp4–5",
+      "checked": "Full setup, Conflict deck ordering, starting resources/units/VP/Influence, banks, decks, Row/Reserve, random first player and visible supplies. Covered Q01/Q02/Q18/Q22/Q43/Q64/Q65."
+    },
+    {
+      "source": "Main p6",
+      "checked": "Objective/end trigger, leader ability timing, normal deck lifecycle, agents/Mentat and card precedence. Covered Q13/Q16/Q23/Q30/Q63."
+    },
+    {
+      "source": "Main p7",
+      "checked": "All Influence thresholds, Alliance acquisition/transfer, hidden Intrigue lifecycle/type timing. Covered Q14/Q15/Q34; FAQ Alliance checked."
+    },
+    {
+      "source": "Main p8",
+      "checked": "Round start, five phases, ordinary turn alternation and phase completion, early Reveal/skip, Plot timing and card anatomy. Gap CR04-F1; other procedures Q03/Q07/Q21/Q23/Q34."
+    },
+    {
+      "source": "Main p9",
+      "checked": "Matching icons, one card/Agent, occupancy, costs before effects, requirement gates, effects order and arrows. Covered Q04/Q05/Q24/Q37/Q67."
+    },
+    {
+      "source": "Main p10",
+      "checked": "Supply recruitment, deploy new plus up to two old, non-Combat restriction, control and defense, Maker harvesting. Covered Q06/Q12/Q17/Q22/Q25/Q62."
+    },
+    {
+      "source": "Main p11",
+      "checked": "All Reveal steps, separate boxes, effect/acquisition interleaving, strength and no-troop state, over-20 marker, cleanup, acquisition timing/refill/Persuasion and no immediate ordinary use. Covered Q07–Q09/Q36/Q60/Q63/Q66."
+    },
+    {
+      "source": "Main p12",
+      "checked": "Intrigue priority, repeated passes, adjustments, win triggers, ranking and ties, zero strength and cleanup destinations. Covered Q09–Q11/Q20/Q44."
+    },
+    {
+      "source": "Main p13",
+      "checked": "Makers, Recall/endgame, tie order and every named clarification. Covered Q12/Q13/Q16/Q21/Q38–Q44."
+    },
+    {
+      "source": "Main pp14–15",
+      "checked": "Strategy/advisory text, FAQ pointer and credits. No additional binding procedure."
+    },
+    {
+      "source": "Main p16",
+      "checked": "Every glossary/icon entry, including Acquire, conditional gates, Fremen Bond/In Play, Mentat correction, costs, supply recruitment, recall/retreat/loss, trash/Reserve and stealing Intrigue. Covered Q08/Q16/Q17/Q22/Q23/Q26/Q31–Q34/Q37/Q39/Q45/Q60/Q62/Q63."
+    },
+    {
+      "source": "Main pp17–18",
+      "checked": "Every individual space, all cost/effect entries, combat and access classifications, and illustrated Sell Melange table. Covered Q24–Q30/Q60/Q67."
+    },
+    {
+      "source": "Main p19",
+      "checked": "Every general/two-player Rival paragraph: setup, turn triggers, no Reveal, skips/reshuffle, ignored costs/effects, Influence/Alliance, troops, Combat swords, spice removal and control loss. Covered Q18–Q20/Q58/Q59."
+    },
+    {
+      "source": "FAQ pp1–4",
+      "checked": "Every base-game entry, including errata, Alliance loss, source/trigger restrictions, mandatory/default effects, draw timing, opponent choices, acquisition exceptions, Rival occupied applicable branch, scoring/ties and win-trigger timing. All mapped to existing questions. Excluded-module text and solo-only p20 rules excluded."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "A separate full five-phase-order question",
+      "reason": "The existing questions collectively fix Round Start, Player Turns/Reveal, Combat, phase-4 Makers and phase-5 Recall. Merely asking for their consolidated list is a mechanical recombination. The proposed ordinary human alternation question tests a separate currently unrequired rule."
+    },
+    {
+      "candidate": "A different deployment quantity or later all-troops-loss scenario",
+      "reason": "Arithmetic substitutions and the no-troop/strength branch are already Q06/Q09/Q62."
+    },
+    {
+      "candidate": "Another ordinary space occupancy, cost-before-gain, or insufficient Fremen Influence example",
+      "reason": "Same legality branches Q04/Q05/Q24."
+    },
+    {
+      "candidate": "Another Alliance threshold/decline/tie example",
+      "reason": "Q14/Q15/Q53 already require the distinct threshold, transfer and cost outcomes."
+    },
+    {
+      "candidate": "Additional Intrigue timings, empty deck cases, or acquisition/reveal combinations",
+      "reason": "Q03/Q08/Q16/Q34–Q37/Q44/Q54/Q55/Q60/Q63/Q66 already require the source-stated timing exceptions. Novel card names without a different branch do not add coverage."
+    },
+    {
+      "candidate": "More starting component counts, deck card-name inventory or cosmetic pile placement",
+      "reason": "Setup/lifecycle/finite supply are already tested; remaining inventory/layout facts do not create a distinct consequential procedure."
+    },
+    {
+      "candidate": "Staged Incident marker adjustment as a named-card question",
+      "reason": "Its only applicable FAQ clarification is the general Combat-marker adjustment already tested in Q09/Q10."
+    },
+    {
+      "candidate": "A newly named card combination using existing recall, Fremen Bond, troop or Plot rules",
+      "reason": "Mechanical combination of already tested rules, without a separate source-stated priority or exception."
+    },
+    {
+      "candidate": "Solo rewards, resource purchases, Expert deployment or solo leader restrictions",
+      "reason": "Explicitly out of scope; no importing solo exceptions into two-player House Hagal."
+    },
+    {
+      "candidate": "Expansion/Uprising/promo FAQ entries and expansion examples within mixed entries",
+      "reason": "Excluded by edition/scope. Retain only the applicable base rule of mixed entries such as Carryall, Manipulate, troops and Rivals."
+    }
+  ],
+  "input_edits_made": false
+}

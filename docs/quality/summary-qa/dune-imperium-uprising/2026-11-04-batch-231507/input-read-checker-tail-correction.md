@@ -1,0 +1,3 @@
+# Input-read checker correction
+
+The checker initially recognized cat/sed/nl/Python printing but omitted the ordinary read commands tail/head. Reader12A completed its required final30 summary lines using a standalone tail command; the actual runtime output contains every previously flagged line through the true end, without truncation. All input-read checkers now recognize tail/head as reads while retaining exclusions for own answer/report writing and validation. This corrects recognition of genuine model-visible input, not any input/answer/key or claimed reading range. Historical reports are recomputed from unchanged runtime evidence; any remaining actual gaps remain explicit.

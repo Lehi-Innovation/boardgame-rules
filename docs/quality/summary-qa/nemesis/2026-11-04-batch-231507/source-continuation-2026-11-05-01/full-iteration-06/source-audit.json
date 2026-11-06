@@ -1,0 +1,249 @@
+{
+  "verdict": "MINOR",
+  "summary_file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-06/summary-snapshot.md",
+  "summary_sha256": "2a32ee08f7a6cfd2c5e2fb0802734548b358535de726059dadb177edc70edc56",
+  "audited_utc": "2026-11-05T21:33:59.222140+00:00",
+  "scope": "Original Nemesis basic-board standard semi-cooperative six original characters; original English manual and scoped officialFAQ, supplemental original PL/FR/DE manuals. No summary or sources other than listed; no key/questions/reader/grade/prior audit.",
+  "independence": {
+    "inputs_read": "Only the input manifest, its fixed summary snapshot and listed authoritative source files. No question banks, keys, reader answers, grades, prior audits, source-gap/discovery records or web were consulted; no reader communication occurred.",
+    "inputs_unchanged": true,
+    "all_manifest_hashes_match": true
+  },
+  "source_coverage": {
+    "manuals": "English, Polish, French and German original manuals: all standard-game material on printed pp.1–26 and p.28 read; p.27 alternate modes/board excluded from ruling scope. English p.23 was rendered for visual verification of crafting component symbols.",
+    "faq": "Official FAQ v2.2, dated 16 April 2025: base-game Rules 1–26, Actions 1–19, Rooms 1–9 and Items 1–10 checked, with cooperative and Intruder-player clauses excluded. Expansion sections do not supply rulings."
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "MINOR",
+      "classification": "important_timing_omission",
+      "summary_location": {
+        "line": 467,
+        "section": "Player Reference / Additional Rooms / Room Covered With Slime"
+      },
+      "finding": "The Room reference says entry automatically gives Slime, but does not state that this happens before resolving the Exploration token. The generic entry procedure resolves exploration first without this exception. On first revealing this Room with a Silence token, that omission can produce Silence rather than the required Danger.",
+      "source_references": [
+        {
+          "source": "official-original-manual-pl.pdf",
+          "printed_page": 25,
+          "section": "Room Covered With Slime"
+        },
+        {
+          "source": "official-original-manual-fr.pdf",
+          "printed_page": 25,
+          "section": "Salle de slime"
+        },
+        {
+          "source": "nemesis-original-rules.pdf",
+          "printed_pages": [
+            15,
+            17,
+            25
+          ],
+          "section": "Slime and Room Covered With Slime"
+        }
+      ],
+      "supported_repair": "Add to the Room Covered With Slime entry: Place the Slime marker before resolving its Exploration token; a Silence token therefore resolves as Danger.",
+      "reason_for_using_localization": "PL and FR explicitly give this timing. It is consistent with the English automatic-on-entry effect and Slime conversion, rather than replacing a conflicting English timing rule."
+    },
+    {
+      "id": "F2",
+      "severity": "INFO",
+      "classification": "unresolved_localization_variance",
+      "summary_location": {
+        "line": 332,
+        "section": "Door tokens"
+      },
+      "finding": "The exhausted Door supply instruction accurately follows English, which permits relocating any board Door token. PL and FR restrict the relocated token to a non-destroyed Door, and DE specifies a closed Door. These sources are not mutually identical, and none is identified in the supplied materials as an erratum that overrides the others.",
+      "source_references": [
+        {
+          "source": "nemesis-original-rules.pdf",
+          "printed_page": 17
+        },
+        {
+          "source": "official-original-manual-pl.pdf",
+          "printed_page": 17
+        },
+        {
+          "source": "official-original-manual-fr.pdf",
+          "printed_page": 17
+        },
+        {
+          "source": "official-original-manual-de.pdf",
+          "printed_page": 17
+        }
+      ],
+      "supported_repair": "No mandatory change to the English-following rule is established. For a multilingual source-comparison reference, label the current instruction as the English manual wording and add the PL/FR/DE restriction difference to Source limitations; do not silently replace it with a localization-specific rule."
+    }
+  ],
+  "checked_claims": [
+    {
+      "claim": "Components and setup",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.2–3,6,8; PL/FR/DE pp.2–3,6,8",
+      "result": "Six original characters; decks, markers, miniatures, board side, hidden rooms and exploration tokens, B destination, 2/3/4 locked Pods, top Engine status, 5 Eggs, 3 Weaknesses, bag mix and additional Adult per player, Objective filtering/draft order, loaded starting weapon, inactive quests and blue corpse are represented accurately against English. Localization quantity/setup differences are recorded separately."
+    },
+    {
+      "claim": "Discard destinations",
+      "assessment": "SUPPORTED_WITH_FAQ_PRECEDENCE",
+      "source_references": "English pp.9,20,22–23; FAQ Actions 6 and Items 8",
+      "result": "Face-up discard piles, gained Contamination to Action discard, Search reject to bottom of its deck, dropped Objects staying in Room and dropped Items to Item discard match English plus explicit FAQ; localization differences do not override FAQ."
+    },
+    {
+      "claim": "Player Phase and passing",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.10,17,28; FAQ Rules 21 and Actions 17–18",
+      "result": "Refill to five; token passes left except turn one; clockwise rounds of two Actions; one Action then pass; optional hand discard on pass; pass ends normal actions; empty hand after two Actions requires a later passing round; Interruption exception and same-room restriction are covered."
+    },
+    {
+      "claim": "Event order and bag development",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.10,16,20; FAQ Rules 6–7,19",
+      "result": "Time/self-destruct, attacks, Fire Injury Effect, event movement then effect, and bag development are in order. Adult is returned before Noise per FAQ; Breeder after rolls follows manual. Larva/Creeper removal is reusable token supply per FAQ. Queen and Blank effects are represented without inventing a depleted/destroyed-Nest ruling."
+    },
+    {
+      "claim": "Action categories, costs and restrictions",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.12–13,24,28; FAQ Actions 1–5 and Items 10",
+      "result": "Basic one-card costs and two-card Careful Movement, Action-card additional costs, Room two-card cost and restrictions, Item printed cost, nonpayment with Contamination, allowed Combat actions and quest activation classification are covered."
+    },
+    {
+      "claim": "Movement, exploration and Noise",
+      "assessment": "SUPPORTED_WITH_MINOR_OMISSION",
+      "source_references": "English pp.14–17; PL/FR p.25; FAQ Actions 11,14 and Rules 4,10,22",
+      "result": "Unexplored Room reveal/token/count/effect/removal, occupied Room Noise exemption, Danger/Silence, Slime conversion, Closed Doors, shared Technical Corridors and special entry exceptions are covered. Explicit Slime Room timing before Exploration is omitted; see F1."
+    },
+    {
+      "claim": "Technical Corridor destinations",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.10,16,18; PL/FR/DE pp.10,16,18",
+      "result": "Intruder miniature leaves board, Injuries are discarded, token returns to bag, and existing Technical Noise remains. Encounter tokens otherwise stay outside bag pending a return rule."
+    },
+    {
+      "claim": "Encounter procedure and Surprise",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.15,18; PL/FR/DE pp.15,18",
+      "result": "Noise clearance includes connected Technical Corridors, token determines miniature, Action plus Contamination cards count for Surprise, Blank restores Noise/returns/adds Adult only if last token, movement into Characters is Combat rather than Encounter, and Adult overflow wording/limitation are represented."
+    },
+    {
+      "claim": "Shooting, Melee and Injury Effects",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.18–20; PL/FR/DE pp.18–20",
+      "result": "Weapon/target/Ammo/die sequence, normal pre-roll Melee Contamination, misses causing Serious Wound, species-dependent die results, doubled Shoot versus single Melee hit, variable endurance, two-card Queen/Breeder sum, retreat instead of blood-number check, and Carcass exception for Larvae match English. Craft icons were visually checked on English p.23."
+    },
+    {
+      "claim": "Escape and Intruder attacks",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.19–20; FAQ Rules 5,8,12",
+      "result": "Escape attack before movement, separate attacks for each Intruder, FAQ size order, corpse origin Room, default targeting fewest Action cards/tie order and Surprise/Escape overrides, symbol-hit check, attack-deck reshuffle and Larva infestation/second-Larva exception are covered. FAQ itself omits Creeper from its size-order example; summary reproduces it without adding an unsupported ranking."
+    },
+    {
+      "claim": "Contamination and scanning",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.20–21,25; DE p.21; FAQ Actions 19, Rooms 1 and Items 4,9",
+      "result": "Contamination cannot pay costs; Scanner distinguishes Infected; normal result retains Infected card and places Larva or kills an already-infested Character with Creeper; Canteen/Shower aggregate multiple Infected results as one Larva; Rest, Alcohol, Antidote and Surgery exceptions are distinguished."
+    },
+    {
+      "claim": "Wounds, death and treatment",
+      "assessment": "SUPPORTED",
+      "source_references": "English p.21; FAQ Rules 23–24",
+      "result": "Three Light Wounds convert to Serious; duplicate effects do not stack; three Serious plus any further Wound kills even when dressed; Objects drop and Items leave game; dress/heal distinction and two-Light-Wound carryover are represented."
+    },
+    {
+      "claim": "Fire, Malfunction, Doors and Slime",
+      "assessment": "SUPPORTED_WITH_LOCALIZATION_VARIANCE",
+      "source_references": "English p.17; PL/FR/DE p.17; FAQ Rules 8,22",
+      "result": "Per-round Character Fire wounds and no more after passing, per-event Intruder Fire damage/check, ninth-marker end condition, one-marker caps, supply returns, malfunction restrictions/computers, door states/destruction/simultaneity/encounter exception and Slime cap/removal match English. Door supply policy differs across localizations; see F2."
+    },
+    {
+      "claim": "Items, Objects, searching and crafting",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.22–23; PL/FR/DE pp.22–23; FAQ Actions 6,15; Items 3,5–6,8",
+      "result": "Unlimited hidden normal inventory, public heavy cards/two hands, Objects, free dropping, one-Ammo searched weapons, attachments, Duct Tape excluding Objects, deck color/white Room one-deck search/count limits, crafted availability and two component symbols, full Flamethrower Ammo and quest activation are covered."
+    },
+    {
+      "claim": "Eggs and Nest",
+      "assessment": "SUPPORTED_WITH_EXPLICIT_PROCEDURAL_GAP",
+      "source_references": "English pp.13,19,25; PL/FR p.25; DE p.25; FAQ Rooms 2,7,9",
+      "result": "Basic pickup differs from two-card Nest extraction; Nest Eggs on Intruder board, destruction marker, uncarried Egg attacks/Grenade/Molotov quantities, attempt Noise and origin Room, Fire destruction, Weakness bonus and dropped-Egg nonrestoration are covered. Successful Melee Contamination is the ordinary rule after the explicitly miss-conditioned PL/FR exception; this is justified by the exception structure, not an assumed language hierarchy. Pre-roll draw versus missed-draw waiver remains unresolved."
+    },
+    {
+      "claim": "Escape Pods",
+      "assessment": "SUPPORTED_WITH_DISCLOSED_SOURCE_AMBIGUITY",
+      "source_references": "English pp.12,24,26; PL/FR/DE pp.12,26; FAQ Rules 1–3,25",
+      "result": "Locked start, manual unlock, first death/first yellow, Room-entry restrictions/cost/Noise, two-person capacity, launch consequences, waiting/pass/later three-way choice, Noise while waiting, forced exit, second-occupant launch authority and malfunction-after-entry are represented. Later-death unlock discrepancy is explicitly disclosed."
+    },
+    {
+      "claim": "Self-destruct and hibernation",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.12,24,26; FAQ Rules 13–14,20,25",
+      "result": "Green start, paired advancement, stop/removal/restart, first-yellow no-return/unlock and no repeated unlock, final explosion, Character prohibition while sleepers exist, Coolant Leak exception, active sequence at jump, blue-time requirement, Noise failure, removal from active play and sleepers unaffected by later Fire/Malfunction are covered."
+    },
+    {
+      "claim": "Room reference coverage",
+      "assessment": "SUPPORTED_WITH_MINOR_OMISSION",
+      "source_references": "English pp.24–26; PL/FR/DE pp.24–26; FAQ Rooms 1–9",
+      "result": "All 11 basic Rooms, all 9 possible additional Rooms, and five fixed Special Rooms are represented. Storage repeatability, research Object location/retention, Airlock phase timing/door cancellation, Computer restrictions, Engine token manipulation disclosure, Coordinates mapping and exceptions are covered. See F1 for Slime Room timing."
+    },
+    {
+      "claim": "End conditions and Victory Check",
+      "assessment": "SUPPORTED",
+      "source_references": "English pp.11–12,24,26; FAQ Rules 20,26",
+      "result": "Immediate jump kills awake crew; explosion kills all aboard including Intruders; last active crew ends game; engines then coordinates then all-survivor contamination then objectives; two damaged Engines; Quarantine/Mars exception; launched Pod Earth status; all-zones four-card test including non-Infected Contamination; Larva skips scan only; ship destruction fulfills Nest/Queen requirements all match scoped sources."
+    },
+    {
+      "claim": "Character/Item/Weakness FAQ exceptions",
+      "assessment": "SUPPORTED_AS_FAR_AS_LISTED_SOURCES_GO",
+      "source_references": "FAQ Rules 9,11,16,21; Actions 7–14,17–19; Items 1–7,9–10",
+      "result": "Covering Fire, Full Auto, Nerves of Steel, Order/Intercom/Motivation, Technical Corridor Doors, Rest, Smoke Grenade, Medkit/Bandages, Energy Charge, attachments, Flamethrower, Motion Scanner, Alcohol and Antidote clarifications are represented. Full underlying card texts are not all reproduced in the scoped manuals/FAQ and cannot be independently reconstructed here."
+    }
+  ],
+  "localization_comparison": [
+    {
+      "topic": "Egg Melee",
+      "assessment": "Ordinary Melee draws Contamination before rolling (all manuals p.19). PL/FR p.25 explicitly condition both the no-Contamination and no-Wound exception on a miss. English/German p.25 phrasing is less syntactically explicit, but does not establish a blanket successful-hit exemption. Snapshot inference is supported; missed-draw implementation remains a gap."
+    },
+    {
+      "topic": "Pod unlock on later death",
+      "assessment": "All p.12 critical moments state first death. English/Polish p.26 use less restricted death wording; French/German p.26 specify first death. Snapshot correctly preserves the English inconsistency rather than treating a translation as a binding erratum."
+    },
+    {
+      "topic": "Dropped Item destination",
+      "assessment": "PL/FR p.22 put unused/dropped Items under the corresponding deck; DE p.22 removes dropped Items from game. English pp.9,22 and explicit scoped FAQ Items 8 give the Item discard pile. Snapshot correctly follows FAQ; no alternative destination should be imported."
+    },
+    {
+      "topic": "Red corpse count and Pod selection",
+      "assessment": "English/Polish p.3 list five red corpse tokens whereas French/German p.3 list four. English/Polish/French setup p.6 randomly selects the required Pods; German p.6 enumerates lowest-numbered Pods. Snapshot accurately follows English; these differences do not justify changing English setup/components."
+    },
+    {
+      "topic": "Queen/Breeder endurance comparison",
+      "assessment": "English/Polish/German p.20 use the ordinary less-than-or-equal death comparison for the two-card sum. French p.20 refers back to the ordinary method but adds a strict-less-than paraphrase. Snapshot less-than-or-equal statement is strongly supported by the primary English and cross-language agreement; French extra wording is not an overriding erratum."
+    },
+    {
+      "topic": "Slime timing and retained retreat Injuries",
+      "assessment": "PL/FR p.25 specify Slime before Exploration; their p.20 expressly retains Injuries on retreat except into Technical Corridors. Both clarify compatible English rules. Snapshot explicitly covers Technical Corridor Injury removal; F1 identifies the missing entry timing."
+    }
+  ],
+  "source_supported_fidelity": {
+    "assessment": "Broadly supported; no MAJOR contradiction found in the scoped English manual plus FAQ or in the justified Egg Melee interpretation. MINOR reflects a supported timing omission. Localization disagreement is reported separately from English fidelity.",
+    "does_not_mean": "A fully resolved standalone replacement for the game and every card."
+  },
+  "complete_core": {
+    "assessment": "Not established as completely self-contained or fully resolved. It covers the manual/FAQ standard core extensively, but F1 should be repaired and several cases remain underdetermined in the supplied original sources.",
+    "remaining_source_gaps": [
+      "All eight Adult miniatures in Combat when another must be placed.",
+      "Whether Queen development adding an Egg restores an already destroyed Nest.",
+      "Implementation of missed Egg Melee no-Contamination exception given ordinary pre-roll draw.",
+      "Whether a later death re-unlocks Pods after a prior unlock was reversed.",
+      "Exhausted Door supply relocation rule differs among original languages."
+    ],
+    "card_dependency": "Original Action, Item, Quest and Weakness card text still governs effects not fully printed in these manuals/FAQ. The sources are insufficient to verify every individual card detail of the six-character core."
+  },
+  "limitations": [
+    "No outside publisher clarification, web lookup, card corpus, later edition, expansion or reader evidence was used.",
+    "Printed page references are used; these PDFs align printed pages with page indices.",
+    "Translation wording is compared as evidence, not presumed to have priority solely because it is more explicit.",
+    "No new manual text is quoted verbatim in this JSON."
+  ]
+}

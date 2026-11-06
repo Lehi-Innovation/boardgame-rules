@@ -1,0 +1,85 @@
+{
+  "review_type": "fresh independent source and coverage challenge",
+  "scope": "1996 publisher English classic base game, PDF pages 1–12 including all base Action Cards; excludes expansion pages 13–20, later editions and optional short game",
+  "inputs_read": [
+    "extracted/el-grande-rules.txt",
+    "source_pdfs/el-grande-publisher-rules.pdf, pages 1–12 only (independently extracted with pypdf)",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v3/questions.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v3/answer-key.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/coverage-ledger.json"
+  ],
+  "independence": "No summary, reader output, grades, previous review, source-clarity review or parent history was read. The ledger's references to prior reviews were not followed.",
+  "verdict": {
+    "status": "one small but substantive procedural branch remains untested",
+    "saturation_confirmed": false,
+    "proposed_addition_count": 1,
+    "key_correction_count": 0,
+    "rationale": "All 52 current answer keys are consistent with the permitted source at the specificity asked. The two latest zero-addition passes nevertheless missed an explicit mobile-scoreboard action branch: introducing an unused scoreboard versus relocating one already in play. Q17 tests destination and physical restrictions, but neither its question nor its key requires this choice of operation. Add one focused question, then repeat targeted zero-addition checks. Preserve Q01–Q20 unchanged."
+  },
+  "findings": [
+    {
+      "id": "F02-01",
+      "kind": "coverage gap",
+      "topic": "Mobile scoreboard introduction versus relocation",
+      "source_pages": [2, 6, 11],
+      "source_sections": ["Preparation: Mobile scoreboards", "Mobile Scoreboards", "4-stack: Mobile scoreboard"],
+      "finding": "The scoreboards initially wait beside the board. The special action can introduce one for the first time or move one already on the board to a different region. Current Q17 asks only about Castillo, King-region restrictions, stacking and orientation. Its key lists those restrictions but does not say an already placed scoreboard remains selectable for relocation, or that both scoreboards are initially off board.",
+      "novelty": "This is an explicit legal-operation branch based on the scoreboard's current state, not another destination permutation or altered scoring number. A reader who incorrectly treats mobile scoreboards as single-use placement pieces could answer Q17 correctly yet get this operation wrong.",
+      "minimal_fix": "Add the proposed Q53 below. Do not assert any unstated ability to return a scoreboard to the reserve or stack it."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "proposed_id": "Q53",
+      "question": "Where do the mobile scoreboards begin, and on the place-or-move special action may you introduce an unused scoreboard or instead relocate one already on the board?",
+      "expected_answer": "Both begin beside the board. The special action may put a mobile scoreboard onto the board for the first time, or move one already on the board to a different region. The Castillo is also allowed. Existing King-region, no-stacking and upright-value restrictions still apply.",
+      "required_distinction": "Unused-to-board introduction and already-in-play relocation are both legal alternatives; a mobile scoreboard is not limited to its first placement.",
+      "source_references": [
+        {"path": "source_pdfs/el-grande-publisher-rules.pdf", "pdf_pages": "2", "section": "Preparation: Mobile scoreboards", "corroborating_text": "extracted/el-grande-rules.txt"},
+        {"path": "source_pdfs/el-grande-publisher-rules.pdf", "pdf_pages": "11", "section": "Mobile scoreboard: place or move a mobile scoreboard", "corroborating_text": "extracted/el-grande-rules.txt"}
+      ],
+      "nearest_existing_question": "Q17",
+      "why_not_duplicate": "Q17 concerns permitted locations, stacking and orientation. Its current expected answer could be reproduced without knowing that a scoreboard already on the board can be selected for a later move. The proposed question tests that explicit operation choice; it need not repeat Q17's restrictions in its scoring rubric."
+    }
+  ],
+  "key_corrections": [],
+  "checked_keys": {
+    "ids": ["Q01", "Q02", "Q03", "Q04", "Q05", "Q06", "Q07", "Q08", "Q09", "Q10", "Q11", "Q12", "Q13", "Q14", "Q15", "Q16", "Q17", "Q18", "Q19", "Q20", "Q21", "Q22", "Q23", "Q24", "Q25", "Q26", "Q27", "Q28", "Q29", "Q30", "Q31", "Q32", "Q33", "Q34", "Q35", "Q36", "Q37", "Q38", "Q39", "Q40", "Q41", "Q42", "Q43", "Q44", "Q45", "Q46", "Q47", "Q48", "Q49", "Q50", "Q51", "Q52"],
+    "result": "No definite correction required. Q29 accurately discloses the King-returns heading/detail discrepancy. Q47 and Q49 preserve the source's other-regions wording. Q31–Q33 do not resolve unasked protected-only or absent-legal-source cases. Q40 requires the printed disk procedure without inventing an answer to the general Castillo-entry tension."
+  },
+  "checked_passages": [
+    {"pdf_pages": "1", "passages": "Components, player range, object", "coverage": "Component counts and historical/flavor statements do not create additional meaningful procedural branches. Standard victory covered by Q20."},
+    {"pdf_pages": "2", "passages": "Board and printed scoring ranks; standard game length; Castillo, region-card, Grande, Caballero, disk, power-card, Action Card and mobile-scoreboard preparation", "coverage": "Q01, Q03, Q05, Q12–Q14, Q20–Q21, Q52; mobile scoreboards beginning beside the board linked to F02-01. Six-round instructions excluded."},
+    {"pdf_pages": "3", "passages": "Round sequence and marker; reveal cards; power-card starter/direction/uniqueness/display/turn order; recruitment and shortage; action-card selection and two activities", "coverage": "Q02–Q07, Q10, Q21–Q22. No new branch from changing power values or pictorial recruitment amounts."},
+    {"pdf_pages": "4", "passages": "Ordinary deployment including split destinations and adjacency examples; special-action timing; used/remaining cards and recurring King card; King-region restrictions and bonus; Castillo entry and announcement", "coverage": "Q05–Q09, Q15, Q23. Alternate adjacency examples and phase combinations add no independent rule."},
+    {"pdf_pages": "5", "passages": "General-scoring schedule and ordered stages; secret destination before Castillo reveal; all-to-one movement and illegal King selection; region-majority procedure, Grande exclusion, low-player rank cutoffs and ties", "coverage": "Q10–Q14. No invented ruling for empty regions or score-track marker reuse."},
+    {"pdf_pages": "6", "passages": "Both tie examples; King bonus and home bonus; mobile-scoreboard function; game end", "coverage": "Q12–Q15, Q20, Q35–Q36. Different numbers, colors or combined bonuses are not additional branches."},
+    {"pdf_pages": "7", "passages": "All Action Card rules A–G: taboo and scoring exception; simultaneous secret disk; Castillo entry/exit; indivisible activities; maxima; ordinary/special placement domains; optional special action", "coverage": "Q04–Q09, Q23, Q31–Q34, Q40, Q43–Q52. General/specific tensions retained below instead of turned into keys."},
+    {"pdf_pages": "8", "passages": "1-stack common deployment and all nine printed Intrigue descriptions including the two duplicated designs: all own from one; extra court deployment; exclusive alternative; up to five single origin; three foreign; three mixed; two own/two foreign; four own; four mixed", "coverage": "Q44–Q51 and Q05–Q09. Checked ownership, one/multiple origins, maxima, special versus ordinary destination scope, any versus other wording, and original-region return exception. No new substantive Intrigue branch."},
+    {"pdf_pages": "9", "passages": "2-stack common deployment; Veto retention, eligible target, notice, interruption, remainder and expiry; both Decay cards; King returns participants/order/sources; actor-chosen one per player; secret two removal and singleton fallback", "coverage": "Q24–Q32 and Q05–Q09. Shortage and participant ambiguities preserved below."},
+    {"pdf_pages": "10", "passages": "Secret whole-region return; any-one special scoring; 3-stack common deployment; 4-, 5-, 6/7-value group selection and mobile override; special Castillo reveal/replace", "coverage": "Q16, Q33–Q36. Board-group membership versus mobile first value covered. Special Castillo scoring does not cause redistribution."},
+    {"pdf_pages": "11", "passages": "First-position-only; most and least region scoring; unrestricted one-location scoring; 4-stack common deployment; mobile scoreboard first entry/relocation and placement restrictions; Royal Adviser; forced Movement", "coverage": "Q17, Q34, Q37–Q41; first-entry/relocation branch is F02-01/proposed Q53. Ties, empty exclusion, Castillo exclusion and invalid Movement destinations checked."},
+    {"pdf_pages": "12", "passages": "Grande movement; power recovery including current card and visibility; Court action; simultaneous unique scoring; 5-stack deployment and any-board-region King movement", "coverage": "Q18–Q19, Q23, Q41–Q43, Q52. No new branch from combining each special action with deployment in a different order."}
+  ],
+  "rejected_candidates": [
+    {"candidate": "Ask again whether any-three may return to origin while any-four/up-to-five say other regions", "reason": "Q47 and Q49 now expressly cover the distinct source wording; no new branch."},
+    {"candidate": "Different ordinary-deployment amounts, King positions, tie counts, player colors or bonus combinations", "reason": "Numeric/cosmetic duplicates or mechanical applications of Q02–Q06 and Q12–Q15."},
+    {"candidate": "Repeat mobile-scoreboard category inclusion using the other tile or a different region", "reason": "Q35–Q36 already test mobile values replacing printed group membership; no new exception."},
+    {"candidate": "Mobile scoreboard permits returning a tile from the board to the unused supply", "reason": "The source describes introduction or relocation to a different region, without an express reserve-return procedure. Proposed Q53 asks only the positive, explicit choices."},
+    {"candidate": "Force a ruling for secret Movement into Castillo or for a 4-value scoreboard at Castillo during all-4 scoring", "reason": "General/specific source tension; not a dependable additional answer key."},
+    {"candidate": "King returns with too few eligible pieces, removal when all pieces are protected, or replenishment after provinces run out", "reason": "No explicit action-specific fallback in supplied source; do not promote an invented rule into the benchmark."},
+    {"candidate": "Veto a completed action, retain Veto an extra round, or vary partial-action examples", "reason": "Already Q25–Q26; separate Veto-versus-Veto ordering is not expressly resolved."},
+    {"candidate": "Ask separate deployment-first versus special-first scenarios for each remaining card", "reason": "Mechanical recombinations of the general indivisibility/order rule, except the already covered King/deployment and Court/deployment interactions."}
+  ],
+  "unresolved_source_limits": [
+    {"id": "L02-01", "pdf_pages": "9", "issue": "King returns heading says fellow players; detailed execution says each player and card face agrees with each player.", "treatment": "Q29 openly distinguishes the evidence. Do not silently harmonize the heading or alter the preserved original20."},
+    {"id": "L02-02", "pdf_pages": "7,9–10", "issue": "Secret-removal headings address fellow players while detailed paragraphs say all players choose disks. The actor's exact disk participation is not distinguished from being affected.", "treatment": "Keep keys limited to affected fellow players and general simultaneous secret selection; do not invent actor losses."},
+    {"id": "L02-03", "pdf_pages": "9–10,12", "issue": "King returns and one-per-player removals have no express insufficient-eligible-piece fallback; secret removals do not settle protected-only/no-legal-region cases; The Court supplies no explicit depleted-provinces fallback.", "treatment": "Do not extrapolate the separately printed Decay shortage rule or ordinary recruitment's board retrieval into these actions."},
+    {"id": "L02-04", "pdf_pages": "2,7,11", "issue": "General Castillo rule permits it whenever moving Caballeros, but forced Movement explicitly selects another region on disks that omit Castillo.", "treatment": "Q40's printed disk procedure is supported. A definitive optional Castillo destination answer is not established within this source."},
+    {"id": "L02-05", "pdf_pages": "10–11", "issue": "A mobile 4/0/0 scoreboard may be placed at Castillo, but all-4 wording neither expressly includes nor excludes Castillo; all-5 does expressly exclude it.", "treatment": "Do not infer all-4 Castillo inclusion solely from the tile value."},
+    {"id": "L02-06", "pdf_pages": "9", "issue": "Two Veto cards exist; their interaction with one another is not explicitly adjudicated.", "treatment": "Do not create a Veto-chain ruling from timing language alone."},
+    {"id": "L02-07", "pdf_pages": "8,11", "issue": "The 1-stack introduction claims only Intrigue moves another player's board Caballeros, whereas the 4-stack Movement action expressly forces fellow players' Caballeros to move.", "treatment": "Treat the specific Movement procedure as supplied; do not turn the introductory exclusivity claim into a general prohibition against that printed action."},
+    {"id": "L02-08", "pdf_pages": "5–6,11", "issue": "No explicit final tied-score tiebreaker, empty-region scoring procedure, or all-empty most-region edge procedure is provided.", "treatment": "Do not add definitive edge-case answers beyond the source's normal ranking and most/least selection rules."}
+  ],
+  "preservation": "Only this review file was created. Original20 and benchmark-v3 were not edited."
+}

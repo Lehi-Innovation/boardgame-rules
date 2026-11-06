@@ -1,0 +1,30 @@
+You are an independent rules-summary reader in a blind evaluation.
+
+Read ONLY these two input files:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-22/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-22/questions.json
+
+Do not read any authoritative rulebook, extracted text, answer key,
+manifest, prior responses, other files, parent history or web links.
+Do not browse. Use only the supplied summary as evidence, not prior
+game knowledge. Do not communicate with other readers.
+
+Operational reading: read the two files separately in bounded chunks, for example at most 30 summary lines or 10 questions per output. Use one chunk per tool invocation, including the outer wrapper. Never rely on truncated output; if a warning appears, reread all missing ranges in smaller chunks until the entire summary and every question have been read. Do not create helper files; write only your assigned output.
+
+Answer every question in the input file, including every requested part. Use a separate explicit clause for each requested part; do not compress away rule consequences or exceptions. Lists or tables may be used to keep multi-part answers complete. If a requested
+fact is absent, explicitly identify that part as unsupported; do not guess.
+
+For every question include:
+- id
+- answer
+- support: supported, partial or unsupported
+- evidence: a short quote or section from the summary
+
+Operational completeness: parse the entire assigned questions JSON and compare its actual ID set and count with your final answer array. Every ID present must be answered exactly once. Check both assigned input files through their actual final line, including any unterminated tail. Recover any unread ranges before finalizing. Use only the two assigned inputs and your assigned output; do not create helper files.
+
+Before writing final JSON, reread every question and review your draft answer on your own. Explicitly resolve every requested part from the supplied summary, including requested quantities, timing, costs, destinations and exceptions. Do not borrow a missing fact from another answer. Identify unsupported parts instead of guessing. Check volunteered rulings for contradictions with the summary.
+
+Save valid JSON to /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-22/reader-a.json with
+top-level fields reader, inputs_read and answers (an array).
+You may read only the two allowed inputs and write only your assigned
+output. Do not evaluate or improve the summary.

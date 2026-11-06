@@ -1,0 +1,185 @@
+{
+  "review_type": "Fresh independent final source and coverage challenge",
+  "verdict": "Coverage is strong and source-consistent, but the two-zero-addition stopping check does not stand under a prompt-level novelty audit: two narrowly defined procedural/timing rules remain unasked.",
+  "scope": "2014 dlp Orleans base game for 2–4 players, English pp12–21, all20 base Places pp22–23, components p24; excludes optional pregame Place exclusion and expansions.",
+  "method": {
+    "read_inputs": [
+      "authoritative-source.txt",
+      "matching-rulebook.pdf",
+      "source-provenance.json",
+      "coverage-ledger-v3.json",
+      "bank-v1/questions.json",
+      "bank-v1/answer-key.json",
+      "bank-v2/questions.json",
+      "bank-v2/answer-key.json",
+      "bank-v3/questions.json",
+      "bank-v3/answer-key.json"
+    ],
+    "diagram_evidence": "Inspected allowed rendered pp12,13,16,17,18,22,23 and player-board crop. Rendered and inspected remaining printed pp14,15,19,20,21,24 directly from matching-rulebook.pdf.",
+    "restricted_material": "No summaries, reader outputs, grades, audits, or earlier coverage review/report read. No reader communication.",
+    "source_pdf_sha256": "267ac223f04cba34b686f4dcdcb47460af3c9813a8f644b7ba46950f94750fad",
+    "grading_boundary": "A correct extra fact in a key is explanatory context unless the prompt asks for it. No finding below depends on requiring an unrequested extra fact."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "type": "missing_explicit_rule",
+      "source": "p15, authoritative-source.txt line167",
+      "finding": "The source explicitly permits the player to carry out activated actions in any order. Q04 asks how players alternate and about passing, and its key correctly gives the rotation/pass rules, but neither asks nor keys freedom of ordering the player’s own actions.",
+      "consequence": "A reader can preserve clockwise one-action turns yet wrongly believe their own Places must resolve in printed or activation order.",
+      "proposed_question_id": "Q56"
+    },
+    {
+      "id": "F02",
+      "type": "missing_consequential_timing",
+      "source": "p17, authoritative-source.txt lines232–234; p23 lines506–513 and523–530",
+      "finding": "A newly acquired Place can now be activated or have its special ability used. The useful untested branch is immediate availability of a passive ability acquired during Actions. Q08 asks category and stack inspection; its extra description of acquiring an ability cannot be made a mandatory answer fact. Q46/Q47 ask what an owned ability does, not whether a newly acquired ability waits for next round.",
+      "consequence": "An incorrect next-round delay would change legal substitutions later in the current round, particularly placement supplied during Actions. The proposed prompt avoids requiring a separate action or a new Planning Phase.",
+      "proposed_question_id": "Q57"
+    },
+    {
+      "id": "F03",
+      "type": "source_consistency",
+      "finding": "No material contradiction found among the 55 question/key pairs against the selected edition. Printed action costs match the player-board and all20 Place illustrations."
+    }
+  ],
+  "proposed_questions": [
+    {
+      "id": "Q56",
+      "question": "When several of your Places are already activated, must you execute them in printed board order or in the order they were filled, or may you choose their execution order?",
+      "expected_answer": "You may carry out your activated actions in any order, while still taking only one action on each of your turns in the clockwise Action Phase.",
+      "required_material_facts": [
+        "The player may choose the order of their activated actions."
+      ],
+      "supporting_context_not_additional_requirement": [
+        "One action per turn is already covered by Q04."
+      ],
+      "source_references": [
+        "p15, authoritative-source.txt line167: explicit any-order permission; lines162–163: existing one-action turn rule."
+      ],
+      "novelty": "New explicit procedural permission. Q04 concerns order among players and irreversible passing; it does not ask order among one player’s activated Places. This is a direct rule question, not changed numbers or recombined action effects."
+    },
+    {
+      "id": "Q57",
+      "question": "You acquire Herb Garden or School through a Trader action during the Action Phase. Is its passive substitution ability available as soon as you acquire the Place, or must you wait until the next round?",
+      "expected_answer": "It is available as soon as you acquire the Place. The acquired Place is now available to use its special ability; these passive abilities do not require activation or a next-round delay.",
+      "required_material_facts": [
+        "The passive ability becomes available immediately on acquisition, including during the current Action Phase."
+      ],
+      "source_references": [
+        "p17, authoritative-source.txt lines232–234: place the chosen Place beside the board; you now have a Place to activate or use its special ability.",
+        "p23, authoritative-source.txt lines506–513 and523–530, and tile illustrations: Herb Garden and School ownership abilities."
+      ],
+      "novelty": "Consequential acquisition-timing rule, directly grounded in the source’s now-available instruction. Q08 asks permitted categories and inspecting stacks; Q46/Q47 test substitution scope for owned Places. None asks when ownership starts conferring the passive effect. No separate question is proposed for every possible later action or substituted profession."
+    }
+  ],
+  "redundancy_assessment": {
+    "existing_additions": "No whole added question is clearly redundant under the stated branch/interaction standard. Q50 tests tied-last rather than Q01 tied-lead; Q51 unique-most rather than Q20 tied-most; Q53 coin scoring is not requested by Q20; Q54 initial Status is not requested by Q13; Q55 explicitly requests the recovery exception not requested by Q18. Q42/Q43/Q45/Q48 cover distinct branch or timing/priority consequences.",
+    "overlap_not_whole_redundancy": [
+      "Q26 repeats some Town Hall constraints while adding Scriptorium printed cost.",
+      "Q35 repeats supply-exhaustion context while adding five printed production costs/effects.",
+      "Q40 repeats Technology constraints while adding Laboratory cost and its first-tile incompatibility."
+    ],
+    "rejected_candidates": [
+      {
+        "candidate": "Different goods counts at Taxes, different draw allowance/capacity numbers, different mix of torture sacrifices.",
+        "reason": "Cosmetic numerical changes to Q02/Q18/Q33."
+      },
+      {
+        "candidate": "Another destination for a first Technology or single-slot Technology prohibition.",
+        "reason": "Same placement restrictions as Q07/Q40."
+      },
+      {
+        "candidate": "Another Town Hall completion race or named Deed.",
+        "reason": "Mechanical combination of Q04/Q14 with no new exception."
+      },
+      {
+        "candidate": "Base Market printed-space count in isolation.",
+        "reason": "Adds a board count rather than a new capacity rule; bounded placement/drawing and Tower expansion already tested by Q02/Q49."
+      },
+      {
+        "candidate": "New-edition Bathhouse errata, empty-bag Plague, insufficient neutral torture followers.",
+        "reason": "Different edition or source does not supply a definitive additional rule."
+      },
+      {
+        "candidate": "Sacristy retention on a positive event, Laboratory Technology timing example, or Bathhouse substitution permutations.",
+        "reason": "Existing persistence, negative-only protection, usual Technology rules, and substitution rules cover these consequences; further scenarios are recombinations."
+      }
+    ]
+  },
+  "preservation": {
+    "questions.json": {
+      "counts": [
+        20,
+        50,
+        55
+      ],
+      "bank_v1_20_exact_in_v2": true,
+      "bank_v1_20_exact_in_v3": true,
+      "bank_v2_50_exact_in_v3": true,
+      "comparison": "Complete parsed entry equality, including ids, prompt/key text, references and novelty fields; not merely semantic equality."
+    },
+    "answer-key.json": {
+      "counts": [
+        20,
+        50,
+        55
+      ],
+      "bank_v1_20_exact_in_v2": true,
+      "bank_v1_20_exact_in_v3": true,
+      "bank_v2_50_exact_in_v3": true,
+      "comparison": "Complete parsed entry equality, including ids, prompt/key text, references and novelty fields; not merely semantic equality."
+    }
+  },
+  "reviewed_passages": [
+    {
+      "source": "pp12–13",
+      "reviewed": "All setup instructions, diagrams, shared/personal supply placement, Hour Glass preparation, colored Followers, neutral reductions and map exclusions for2/3 players."
+    },
+    {
+      "source": "p14",
+      "reviewed": "Youngest starter;18 rounds; Hour Glass reveal; Census unique/tie and2-player branches; Knight draw/capacity/Market retention; Planning and zero/single-slot Places; Census and Knight diagrams."
+    },
+    {
+      "source": "p15",
+      "reviewed": "Partial activation across rounds; full activation; clockwise one-action/pass cycle; arbitrary own action order; destinations and Technology persistence; unused activations; Event and Start Player; printed activation illustration."
+    },
+    {
+      "source": "pp16–17",
+      "reviewed": "All recruitment effects and track bonuses; all Technology restrictions and delayed usability; Place acquisition categories and immediate availability; University, Castle plateau/Citizen, Monastery substitution, last-track prohibition; track diagrams."
+    },
+    {
+      "source": "p18",
+      "reviewed": "Ship/Wagon route/distance/goods/empty routes; Guildhall occupancy and Orleans exception; Scriptorium; Town Hall1/2, matching Deed spaces, rewards/completion, permanent tiles and marked exclusion; movement/Deed diagrams."
+    },
+    {
+      "source": "p19",
+      "reviewed": "Coin/Citizen/status landing-or-passing rewards; initial Status; end trigger; unique/tied station bonus; every scoring source and both tiebreak levels; scoring/status diagrams. Optional Place-exclusion rule excluded."
+    },
+    {
+      "source": "p20",
+      "reviewed": "All six events and all printed operative branches: Pilgrimage timing; Income basis; Harvest compulsory food/fallback/destination; Taxes; Trading Day; Plague protected/neutral destinations and no track loss."
+    },
+    {
+      "source": "p21",
+      "reviewed": "Torture trigger, available coin shortfall, every sacrifice option, random/redraw and Development floor, removal/recovery exception; finite tile/coin supply and restored stocks; bag inspection/shuffle; empty travel links; marked protection; Phase3 recovery versus direct movement prohibition; coin supply; simultaneous/ordered planning and ordered payments."
+    },
+    {
+      "source": "p22",
+      "reviewed": "All12 Places and printed activation costs: Hayrick, Cheese Factory, Winery, Wool Manufacturer, Tailor Shop, Shipping Line, Brewery, Windmill, Library, Pharmacy, Cellar, Office; all effects and exhaustion/payment bounds."
+    },
+    {
+      "source": "p23",
+      "reviewed": "All8 Places and printed costs/no-cost abilities: Bathhouse, Hospital, School, Horse Wagon, Herb Garden, Sacristy, Gunpowder Tower, Laboratory; immediate placement branches, timing, exceptions and global-rule interactions."
+    },
+    {
+      "source": "p24",
+      "reviewed": "Complete English component list and edition identifiers; component-count trivia not proposed as procedural additions."
+    }
+  ],
+  "zero_addition_stopping_check": {
+    "stands": false,
+    "reason": "Two source-defined rules remain unrequested at prompt level. Add or explicitly adjudicate Q56/Q57, then rerun targeted zero-addition checks. This is working saturation within this edition and novelty standard, not a claim that every imaginable scenario needs a question.",
+    "minimum_falsifier": "Q56 directly tests the explicit any-order rule absent from current prompts/keys."
+  }
+}

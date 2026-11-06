@@ -1,0 +1,3 @@
+# Source-only proof label correction
+
+The playability input checker was derived from the whole-bank coverage checker. Its six-file matching loop correctly checked only the four raw primary texts plus original Leader transcription/neutral metadata, but its inherited output boolean/method text still mentioned a bank/key. The boolean is now named `all_authorized_primary_texts_visible` and the method explicitly states source-only inputs. No bank, key or summary was supplied to or read by the assessor; the actual source-only file list/runtime outputs are unchanged. The earlier mislabeled proof is retained separately.

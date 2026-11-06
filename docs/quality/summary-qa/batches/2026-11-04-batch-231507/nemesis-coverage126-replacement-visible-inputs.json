@@ -1,0 +1,449 @@
+{
+  "session_id": "01a1af93-d905-7053-aae4-79ea5b5a8fa7",
+  "task": "source_continuation_coverage126_required_model",
+  "actual_contexts": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    }
+  ],
+  "parent_spawn": {
+    "task_name": "source_continuation_coverage126_required_model",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none"
+  },
+  "inputs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/benchmark-v16/questions.json",
+      "sha256": "c012e255df6a9414ce5207084743febb19979e6d36821a88867c9a93998e7f78",
+      "required_units": 126,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/benchmark-v16/answer-key.json",
+      "sha256": "1efc1c974651db5cfdac3786035de9e0b44050ed4d6918867528b19d97d12a93",
+      "required_units": 126,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt",
+      "sha256": "804d04898db3199b4215608ce7ed8ed4586e66fdcdd89ac2d30348a8b62c1b6c",
+      "required_units": 3126,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/current-official-faq-extraction.txt",
+      "sha256": "2123074b283f8319c60d73403668c71f3d15d188a51a962a9109c185d07a6913",
+      "required_units": 542,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/requested-parts-clarification-Q19-v14.json",
+      "sha256": "07a0a6349424d46e093725cd8d3bdd0ccde4845cccbc37658c7c00ba14309fbe",
+      "required_units": 58,
+      "missing_units": []
+    }
+  ],
+  "actual_returned_image_blocks": 31,
+  "all_required_text_visible": true,
+  "calls_for_boundary_review": [
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed75cbd8f087d0807df0cd8776fb17",
+      "status": "completed",
+      "call_id": "call_GeXhuThGr0k31WsgaK8b6GkW",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json\",max_output_tokens:20000});text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947082.819574
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed75d64cec87d09447f1af6c4a8157",
+      "status": "completed",
+      "call_id": "call_YFTFUZCjBXy8qpVWVrWBtEgg",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json'\\nm=json.load(open(p)); files=dict(m['source_files']);files[m['question_file']]=m['question_sha256'];files[m['key_file']]=m['key_sha256'];files[m['author_coverage_map']]=m['author_coverage_map_sha256'];files.update(m['accepted_scope_files'])\\nfor f,h in files.items(): print(hashlib.sha256(open(f,'rb').read()).hexdigest()==h, f)\\nfor name in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[name])); print(name,type(d).__name__, (list(d)[:10] if isinstance(d,dict) else len(d))); print(str(d)[:3000])\\nfor f in m['accepted_scope_files']: print(open(f).read())\\nPY\",\"max_output_tokens\":6000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947091.732253
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed75e2554887d09ff331b4e48e1521",
+      "status": "completed",
+      "call_id": "call_tO517eAYbPyGwf3OwkZmmofo",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json'\\nm=json.load(open(p)); files=dict(m['source_files']);files[m['question_file']]=m['question_sha256'];files[m['key_file']]=m['key_sha256'];files[m['author_coverage_map']]=m['author_coverage_map_sha256'];files.update(m['accepted_scope_files'])\\nfor f,h in files.items(): print(hashlib.sha256(open(f,'rb').read()).hexdigest()==h, f)\\nfor name in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[name])); print(name,type(d).__name__, (list(d)[:10] if isinstance(d,dict) else len(d))); print(str(d)[:3000])\\nfor f in m['accepted_scope_files']: print(open(f).read())\\nPY\",\"max_output_tokens\":8000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947105.078249
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed75f246e087d0b7dbfd189fdbb3fe",
+      "status": "completed",
+      "call_id": "call_BKMd3BbMl7i07lPm2Tqp87PX",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'benchmark-v16/questions.json'))['questions']; a=json.load(open(b+'benchmark-v16/answer-key.json'))['answers']\\nfor x,y in zip(q,a):\\n print(x['id'],x['question']); print('KEY:',y['expected_answer'])\\nPY\",\"max_output_tokens\":30000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947120.435831
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed75fc31d487d098cd00ed435d25dc",
+      "status": "completed",
+      "call_id": "call_GVhdWwYvPrXhCBuMzDaur4QH",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'benchmark-v16/questions.json'))['questions'];a=json.load(open(b+'benchmark-v16/answer-key.json'))['answers']\\nfor x,y in zip(q,a):\\n if 44<=int(x['id'][1:])<=67:print(x['id'],x['question'],'\\\\nKEY:',y['expected_answer'])\\nPY\",\"max_output_tokens\":7000}))\ntext(await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/current-official-faq-extraction.txt\",\"max_output_tokens\":24000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947130.865073
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed760a984887d0b281f8a8fbb880d9",
+      "status": "completed",
+      "call_id": "call_IzDGjfbVibNCQnVtA1iKBgG5",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1,720p' /home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt\",\"max_output_tokens\":16000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947143.315231
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed760ff16487d0bf009df6b4134749",
+      "status": "completed",
+      "call_id": "call_poKxypOXVTqGMphIHf9c0H3h",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '721,1455p' /home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt\",\"max_output_tokens\":19000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947150.230719
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7614c1e487d0b374c767781d8242",
+      "status": "completed",
+      "call_id": "call_bsHjlkyYoJYJTNWOQArMJ5pt",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1456,2215p' /home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt\",\"max_output_tokens\":19000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947155.341792
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed761d914887d0a8729eda18425ec4",
+      "status": "completed",
+      "call_id": "call_1We5pGJb7ePYghVkg8fETBgT",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '2216,3070p' /home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt\",\"max_output_tokens\":20000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947162.871958
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed762e047c87d088894b1a71abcfb7",
+      "status": "completed",
+      "call_id": "call_fNQqyUsYqs17F9P2yTex4uSt",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"command -v pdftoppm; command -v pdfinfo; command -v magick; command -v convert; python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-author-ledger.json'\\nd=json.load(open(p)); print(json.dumps(d,ensure_ascii=False,indent=2))\\nPY\",\"max_output_tokens\":17000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947173.071556
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7635aecc87d08f07a27cff87d051",
+      "status": "completed",
+      "call_id": "call_FKwSeozKRQwqBlVjsGFOj7pD",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport importlib.util\\nfor x in ['fitz','pypdf','PIL','pymupdf']: print(x,importlib.util.find_spec(x))\\nPY\",\"max_output_tokens\":2000}))\ntext(ALL_TOOLS.filter(x=>/pdf|file|python|terminal|execute|render/i.test(x.name+' '+x.description)).map(x=>({name:x.name,description:x.description.slice(0,150)})).slice(0,150))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947186.835493
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed763eca6887d0923d11d9a6396135",
+      "status": "completed",
+      "call_id": "call_R6JdMTyA8waCOlLBzbYLuxJa",
+      "name": "exec",
+      "input": "text(await tools.mcp__codex_app__load_workspace_dependencies({}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947196.185935
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7649b1c487d08a86d5beb61150a7",
+      "status": "completed",
+      "call_id": "call_12TIa6N0J1JIwZZnkiHkqeqN",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport importlib.util\\nfor x in ['pypdfium2','pdf2image','cairo','cairocffi','wand']: print(x,importlib.util.find_spec(x))\\nPY\",\"max_output_tokens\":1000}))\ntext(await tools.exec_command({cmd:\"'/mnt/c/Users/jonny/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe' -c \\\"import fitz; print(fitz.__file__)\\\"\",\"max_output_tokens\":1000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947206.154329
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7654e51087d081083bd8c2eb0a33",
+      "status": "completed",
+      "call_id": "call_thAY0uSeTXq8itnWDbTG4BTH",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 -m pip install --target /tmp/nemesis-coverage126-pdf-runtime pymupdf\",\"yield_time_ms\":1000,\"max_output_tokens\":2000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947217.826117
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed766089d887d092477c6be99aab6f",
+      "status": "completed",
+      "call_id": "call_lMoM4yi45iXo4XXdBdVEaz9y",
+      "name": "exec",
+      "input": "text(await tools.write_stdin({session_id:49580,chars:\"\",yield_time_ms:1000,max_output_tokens:2000}))\ntext(ALL_TOOLS.filter(x=>/node_repl.*js$/.test(x.name)))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947229.569386
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7666b5ac87d0a517fa27b7d6f36f",
+      "status": "completed",
+      "call_id": "call_rO8oW5loTpzDdVRlhbvrqYjt",
+      "name": "exec",
+      "input": "text(await tools.mcp__node_repl__js({code:\"var fs = await import('node:fs/promises'); var cp = await import('node:child_process'); nodeRepl.write({cwd:nodeRepl.cwd,home:nodeRepl.homeDir});\",title:\"Locate PDF inspection runtime\"}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947236.142061
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed76701f6887d09c01001f1e631d7f",
+      "status": "completed",
+      "call_id": "call_aj7AtbHrZkes8e5EJwRvgW9c",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/nemesis-original-rules.pdf'\\nr=PdfReader(p);print('pages',len(r.pages))\\nfor i,p in enumerate(r.pages):\\n print(i+1, len(p.images),[(x.name,len(x.data)) for x in p.images][:20])\\nPY\",\"max_output_tokens\":4000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947245.09886
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7692a83c87d091e66b0bce7b4489",
+      "status": "completed",
+      "call_id": "call_l3LRT0lDY41klt3hEQzv3VHs",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\nfrom PIL import Image,ImageDraw\\nimport hashlib,os,logging\\nlogging.getLogger('pypdf').setLevel(logging.ERROR)\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/'\\nr=PdfReader(b+'nemesis-original-rules.pdf'); os.makedirs('/tmp/nemesis126-inspect',exist_ok=True)\\nseen=set(); cells=[]\\nfor i,p in enumerate(r.pages):\\n if i==26:continue\\n for x in p.images:\\n  h=hashlib.sha256(x.data).hexdigest()\\n  if h in seen:continue\\n  seen.add(h)\\n  im=x.image.convert('RGB')\\n  if min(im.size)<40:continue\\n  if im.width>2000 and im.height>2000:continue\\n  dest=f'/tmp/nemesis126-inspect/p{i+1:02}-{x.name}.png';im.save(dest)\\n  thumb=im.copy();thumb.thumbnail((450,550));cell=Image.new('RGB',(470,580),'white'); cell.paste(thumb,((470-thumb.width)//2,25));ImageDraw.Draw(cell).text((5,5),f'p{i+1} {x.name} {im.size}',fill='black');cells.append(cell)\\nfor j in range(0,len(cells),12):\\n sheet=Image.new('RGB',(1880,1740),'#ddd')\\n for k,c in enumerate(cells[j:j+12]): sheet.paste(c,((k%4)*470,(k//4)*580))\\n sheet.save(f'/tmp/nemesis126-inspect/sheet-{j//12:02}.jpg')\\nprint('cells',len(cells),'sheets',(len(cells)+11)//12)\\nPY\",\"max_output_tokens\":2000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947277.641513
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed76b59d4087d08c78a11319a375f4",
+      "status": "completed",
+      "call_id": "call_qaMbxyF7cAxicIQ5gKQaGjUS",
+      "name": "exec",
+      "input": "text(await tools.write_stdin({session_id:23299,chars:\"\",yield_time_ms:1000,max_output_tokens:1000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947302.968194
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed76b9e95c87d0860e35172f8c3632",
+      "status": "completed",
+      "call_id": "call_4ij1SL4t0yjfvzXQLy26MBC6",
+      "name": "exec",
+      "input": "for(let n=0;n<4;n++){image((await tools.view_image({path:`/tmp/nemesis126-inspect/sheet-${String(n).padStart(2,\"0\")}.jpg`})).image_url)}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947319.951131
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed76cc67c487d083c82afc53036f17",
+      "status": "completed",
+      "call_id": "call_6sWasWnCGl9bKoftSFkhT0fw",
+      "name": "exec",
+      "input": "for(let n=4;n<8;n++){image((await tools.view_image({path:`/tmp/nemesis126-inspect/sheet-${String(n).padStart(2,\"0\")}.jpg`})).image_url)}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947336.555484
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed76f274a887d098994539e89f2622",
+      "status": "completed",
+      "call_id": "call_yAcVHhxAacthnkg896aAdB6I",
+      "name": "exec",
+      "input": "for(let n=8;n<12;n++){image((await tools.view_image({path:`/tmp/nemesis126-inspect/sheet-${String(n).padStart(2,\"0\")}.jpg`})).image_url)}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947362.53299
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7702eff487d091a851abe19b1dd2",
+      "status": "completed",
+      "call_id": "call_BVBCkGT4etnfZW7DNIvI3VD0",
+      "name": "exec",
+      "input": "for(let n=12;n<16;n++){image((await tools.view_image({path:`/tmp/nemesis126-inspect/sheet-${String(n).padStart(2,\"0\")}.jpg`})).image_url)}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947390.210579
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed770b598487d0976a68eb3f4b6bd5",
+      "status": "completed",
+      "call_id": "call_ogniReHpuoNQwr03BD5Z6FKs",
+      "name": "exec",
+      "input": "for(let n=16;n<21;n++){image((await tools.view_image({path:`/tmp/nemesis126-inspect/sheet-${String(n).padStart(2,\"0\")}.jpg`})).image_url)}\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947401.302635
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed771b7e8887d0bc5457ff44676c3a",
+      "status": "completed",
+      "call_id": "call_sLFcHKJLchObuRTSPopGRDI7",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nd=json.load(open(b+'coverage126-required-model-author-ledger.json'))\\nfor x in d['accepted_additions']:\\n if int(x['id'][1:])>=118 and int(x['id'][1:])<=126: print(json.dumps(x,ensure_ascii=False))\\nprint('keys',list(d))\\nPY\",\"max_output_tokens\":12000}))\ntext(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom PIL import Image\\nfor p in ['p13-X312.jp2.png','p13-X309.jp2.png','p23-X586.jpg.png','p23-X591.jp2.png','p23-X578.jp2.png']:\\n im=Image.open('/tmp/nemesis126-inspect/'+p); im.resize((im.width*3,im.height*3)).save('/tmp/nemesis126-inspect/zoom-'+p)\\nPY\",\"max_output_tokens\":1000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947413.924979
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7738e0d087d0b079de4f76537cde",
+      "status": "completed",
+      "call_id": "call_A7peKX1e5gRLcDDhTL5x9Xry",
+      "name": "exec",
+      "input": "for (const p of [\"zoom-p13-X312.jp2.png\",\"zoom-p13-X309.jp2.png\",\"zoom-p23-X586.jpg.png\",\"zoom-p23-X591.jp2.png\",\"zoom-p23-X578.jp2.png\"])image((await tools.view_image({path:\"/tmp/nemesis126-inspect/\"+p})).image_url)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947427.563515
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed774a9a5087d0a35b674283b66228",
+      "status": "completed",
+      "call_id": "call_WjfNqdy84Zx1IB3YswKHWRCp",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\nfrom PIL import Image,ImageDraw\\nimport os,logging\\nlogging.getLogger('pypdf').setLevel(logging.ERROR)\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nfor lang in ['pl','fr','de']:\\n r=PdfReader(b+f'official-original-manual-{lang}.pdf');print(lang,len(r.pages))\\n for n in [13,22,23]:\\n  cells=[]\\n  for x in r.pages[n-1].images:\\n   im=x.image.convert('RGB')\\n   if im.width<200 or im.height<100 or im.width>2500 or im.height>2500:continue\\n   dest=f'/tmp/nemesis126-inspect/{lang}-{n}-{x.name}.png';im.save(dest)\\n   im.thumbnail((800,800));cell=Image.new('RGB',(820,830),'white');cell.paste(im,((820-im.width)//2,25));ImageDraw.Draw(cell).text((3,5),x.name,fill='black');cells.append(cell)\\n  for j in range(0,len(cells),4):\\n   sh=Image.new('RGB',(1640,1660),'#ddd')\\n   for k,c in enumerate(cells[j:j+4]): sh.paste(c,((k%2)*820,(k//2)*830))\\n   sh.save(f'/tmp/nemesis126-inspect/{lang}-page{n}-sheet{j//4}.jpg')\\n  print(lang,n,[(x.name,x.image.size) for x in r.pages[n-1].images if 200<=x.image.width<=2500 and 100<=x.image.height<=2500])\\nPY\",\"max_output_tokens\":4000}))\ntext(await tools.exec_command({cmd:\"rg -n -i 'grenad|granat|antidot|gegen|contem|explora|schleim|nest' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/official-original-manual-fr-reading.txt\",\"max_output_tokens\":5000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947455.351654
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed776fcbd887d0b73f62c4fd65451c",
+      "status": "completed",
+      "call_id": "call_SOIAHiNWr0qrA9Jb0jHQrTTy",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/'\\nr=PdfReader(b+'nemesis-original-rules.pdf')\\nfor n in [10,13,22,23,25]:\\n print('PAGE',n);print(r.pages[n-1].extract_text())\\nPY\",\"max_output_tokens\":13000}))\ntext(await tools.write_stdin({session_id:88380,chars:\"\",yield_time_ms:1000,max_output_tokens:4000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947489.314192
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7784306c87d0b37d71513cb9c14b",
+      "status": "completed",
+      "call_id": "call_nLS8KtkZdb0exNGzKxDb31us",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/'\\nr=PdfReader(b+'nemesis-current-official-faq.pdf')\\nfor n in [2,3,4]:\\n t=r.pages[n-1].extract_text();print(n,len(t),t[:250])\\nfor lang in ['pl','fr','de']:\\n p=b+f'source-continuation-2026-11-05-01/official-original-manual-{lang}-reading.txt'\\n t=open(p).read();print(lang,'chars',len(t));\\n for word in {'pl':['puste','Jaja','ska\u017c','ubran','przeszuk'], 'fr':['\u0153ufs','contamination','blessure','grenade'], 'de':['Ei','Kontamination','Durchsuchen','Granate']}[lang]:\\n  ix=t.lower().find(word.lower());print(word,t[max(0,ix-80):ix+250].replace('\\\\n',' '))\\nPY\",\"max_output_tokens\":4000}))\nfor (const p of [\"fr-page13-sheet1.jpg\",\"fr-page23-sheet2.jpg\",\"de-page23-sheet1.jpg\",\"de-page22-sheet1.jpg\"])image((await tools.view_image({path:\"/tmp/nemesis126-inspect/\"+p})).image_url)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947519.097653
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed77d1b9bc87d088b8c3aa897b5ffe",
+      "status": "completed",
+      "call_id": "call_bCZmv5lW0HcTVVTD2iGYyu2l",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '3071,3160p' /home/jonny/projects/boardgame-rules/extracted/nemesis-rules.txt; python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'benchmark-v16/questions.json'))['questions']; a=json.load(open(b+'benchmark-v16/answer-key.json'))['answers']\\nfor x,y in zip(q,a):\\n if 1<=int(x['id'][1:])<=43:print(x['id'],x['question'],'\\\\nKEY:',y['expected_answer'])\\nPY\",\"max_output_tokens\":11000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947540.891926
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed77e4c94487d08790700a8806a442",
+      "status": "completed",
+      "call_id": "call_20pdo2fYteVdQyT8tBbkWXw3",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pypdf import PdfReader\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nfor lang in ['pl','fr','de']:\\n r=PdfReader(b+f'official-original-manual-{lang}.pdf')\\n for n in [15,25]:\\n  t=r.pages[n-1].extract_text(); print(lang,n)\\n  if n==25:\\n   for needle in {'pl':['Niszczenie','niszczenie','Ska\u017cenia'], 'fr':['D\u00e9truire','d\u00e9truire','Contamination'], 'de':['Eier zerst\u00f6ren','EIER','Kontaminationskarte']}[lang]:\\n    ix=t.find(needle)\\n    if ix>=0:print(t[max(0,ix-200):ix+1200])\\n  else: print(t[:400])\\nPY\",\"max_output_tokens\":6000}))\ntext(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom PIL import Image\\np='/tmp/nemesis126-inspect/p10-X224.jpg.png';im=Image.open(p);im.resize((im.width*3,im.height*3)).save('/tmp/nemesis126-inspect/coolant-zoom.png')\\nPY\",\"max_output_tokens\":1000}))\nimage((await tools.view_image({path:\"/tmp/nemesis126-inspect/coolant-zoom.png\"})).image_url)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947607.238925
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed783ef19c87d0a7ded0afe9ba9a32",
+      "status": "completed",
+      "call_id": "call_4uGBK2qSI37FQgzawnLF4ABO",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-author-ledger.json'\\nd=json.load(open(p))\\nfor x in d['accepted_additions']:\\n if x['id']=='Q117':print(json.dumps(x,ensure_ascii=False,indent=2))\\nPY\",\"max_output_tokens\":4000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947648.128851
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0264a98a9207965c016aed7867faac87d08f73475f72e4fa1a",
+      "status": "completed",
+      "call_id": "call_AtoC92gKZkOEqAvZnA6LpK8c",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib,datetime\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nm=json.load(open(b+'coverage126-required-model-input-manifest.json'))\\nq=json.load(open(m['question_file']))['questions'];a={x['id']:x for x in json.load(open(m['key_file']))['answers']}; byid={x['id']:x for x in q}\\nrows='''01|Four-player Pod selection, A/B distribution, Locked orientation and starting bag composition.|6\\n02|Objective filtering, secret two-deck deal, first-miniature choice timing, rejected-card secrecy and Egg exclusion.|8,12\\n03|Played card plus two additional Action cards, prohibition on Contamination payment and choosing one OR branch.|12,13\\n04|Fire at own round end, passing restrictions and FAQ Interruption exception, optional hand discards, no later-round Fire after passing.|10,17\\n05|Reveal Room/token, Item Counter and exceptions, Exploration resolution/removal, empty versus occupied entry Noise and automatic Silence/Danger.|14,15,16\\n06|Careful Movement cost and replacement, all-noisy and Combat prohibitions, Closed Door movement barrier and no stopping in Corridors.|13,14,17,28\\n07|Encounter sequence, all adjacent Noise including Technical Corridors, token set aside, triggerer's entire hand and strict fewer-than Surprise comparison.|16,18\\n08|All eligible neighboring Intruders, fallback Noise only in unmarked Corridors, movement versus Encounter, Slime converting Silence.|15,17,18\\n09|Encounter Blank restores adjacent Noise and returns; last-token-only Adult addition versus routine development addition, subject to available Adult.|10,18\\n10|Simultaneous Intruder Closed Door destruction with all staying, Destroyed state and Plasma Torch exception, appearance independent of Door.|17\\n11|Duct removal, injuries discarded, corresponding token returned, Noise retained, normal Character access exceptions and no Doors.|16\\n12|Ordinary Shoot/Melee costs, same-Room target, Weapon/Ammo, Contamination destination/timing, miss and two-hit outcomes.|13,18,19,28\\n13|Larva one-Injury death, Adult one-card and Queen two-card endurance checks, Carcass placement, Queen Retreat priority/direction.|20,22\\n14|Ordinary Escape cost/destination, each Intruder attacks escaper before movement, corpse origin on death, ordinary entry after survival.|19,20\\n15|Ordinary attack target by fewest Action cards with turn-order tie, matching symbols, blood ignored, discard, Larva infestation/Contamination destination.|20\\n16|Three-Serious death including dressed Wounds, Light conversion, meaning of Heal, corpse and dropped Heavy Objects.|21\\n17|Hand-only Canteen/Shower scans versus Surgery all three zones, opposite removal sets, Larva handling, Surgery Light Wound/pass/whole-hand shuffle.|25\\n18|Uncarried Egg destruction by damage and specified throws/Fire, conditional Melee miss waiver, Noise after attempts, zero-Egg Nest destruction.|19,25\\n19|All eight fixed accepted parts: entry, pre-boarding Noise, capacity, immediate waiting pass/Noise exposure, timed later choices, second boarder, Intruder return and later Malfunction.|24,26\\n20|Ordered Engines/Coordinates/Contamination/Objectives checks; Damaged-Engine destruction, non-Earth/Mars exception, infected/Larva shuffle-draw and Pod inclusion.|11\\n21|Basic/additional tiles and Exploration setup, hidden Coordinates, Destination B, Time green, paired Engines, five Eggs and three hidden Weaknesses.|6\\n22|Player Number/Inventory assignment, Character draft, board/miniature/deck/loaded Weapon/inactive Quests, initial Hibernatorium/Corpse and First Player.|8\\n23|Start-of-phase draw-to-five and token pass except first turn, empty Action deck reshuffle, normal face-up discard destinations and Search exception.|9,10,23\\n24|Event Phase order, symbol-based unoccupied-Room Intruder movement and direction/ducts, movement-before-effect, Event/Attack deck exhaustion reshuffles.|10,20\\n25|All named bag-development branches, removed/returned tokens, ordered Noise excluding Combat, Queen/Nest branches, Adult immediate return and completed effects before next turn.|10\\n26|Fire/Malfunction finite pools, required new placement exhaustion, existing marker no-op, one-per-Room and pool returns; all aboard die on destruction.|11,17\\n27|Malfunction disables Room Action/Computer but not Search, forbidden Rooms, Special Rooms, independent Engine status and protected existing sleepers.|17,24,26\\n28|Hidden unlimited normal inventory and visible backs, reveal on use, public Heavy Hands and overflow, added Items and Duct Tape versus Objects.|22\\n29|Free own-turn dropping, Object remains versus discarded Item, searched one Ammo versus fully loaded starting Weapon and capacity.|8,22\\n30|Room-color deck including white one-deck choice, draw two/keep one/bottom other, Item Counter/zero, Special Rooms and Crafted-only Blue.|23,26\\n31|One-card Craft Action plus two matching components, availability, selecting rather than random draw, inspectable deck and four products.|13,23,28\\n32|Initiator cost, all same-Room participants including non-initiator-only exchanges, consensual gifts, no Ammo exchange, pickup applies to Objects not searched Heavy Items.|13,28\\n33|Object-to-slot Weakness matching, Object actually in Laboratory, research/reveal/nonconsumption, shared benefit and nonpersonal research Objective.|12,21,24\\n34|Ordinary Room Action two-card cost, location/explicit exceptions, no Combat/Malfunction, Computer reference significance, Fire does not bar use or Search.|17,24,28\\n35|Armory two Ammo to one Energy Weapon, no Classic reload and capacity bound.|24\\n36|Emergency Room three exclusive treatments, dressing suppresses effect without reducing count and identical effects do not stack.|21,24\\n37|Personal Signal marker, Objective use only and Comms always included as basic Room.|12,24\\n38|Any selected Room, remove Fire if present and all Intruders flee with separate random direction cards, usable with no Fire.|24\\n39|Self-Destruct start/stop/restart/advance, first-yellow irreversibility and Pod unlock, no repeated unlock, final/jump destruction, sleeper initiation restriction and Event exception.|11,12,24\\n40|Other Yellow Room and no Destroyed connected Door, closing/marker, opening cancellation and all-closed end-of-Player-Phase death/Fire removal.|25\\n41|Cabins passive start-of-turn draw-to-six, no Intruders and no Malfunction, no paid Room Action.|25\\n42|Command Center any Room and independently chosen Door states, Destroyed Door exception only Plasma Torch.|17,25\\n43|All three Engine statuses from Engine Control despite target Engine Room Malfunction; no status change there.|25,26\\n44|Hatch one Pod flip, Monitoring one unexplored Room plus token, secrecy, return and permitted lying.|25\\n45|Automatic entry Slime, no counter/Malfunction, no stacking, Shower/Clothes removal and Shower not extinguishing Fire; first-entry Silence interaction.|14,15,17,25\\n46|Cockpit secret Coordinates lookup/return, destination marker among four card entries, no setting in Combat/after hibernation and common restrictions.|24,26\\n47|Secret top Engine check versus two-token repair/break, may lie about status, must disclose order change, no prior check and repair despite Malfunction.|26\\n48|Open blue Time prerequisite, functioning/unoccupied Hibernatorium and cost, Noise/failure, miniature/participation removed, later destination/Self-Destruct restrictions and Malfunction immunity.|26,28\\n49|Final-red immediate jump and awake death, last active Character termination, active Self-Destruct destruction versus ordinary jump, Intruders survive ordinary jump.|11\\n50|No direct attacks on Characters; intentional/accidental indirect harm and supported examples.|23\\n51|All-eight Adult placement procedure only frees non-Combat Adults, returns matching tokens if possible; moved Intruders stay in unexplored Rooms without revealing them.|15\\n52|Small/larger Intruder-symbol target eligibility in Shoot and Melee, with Serious Wound on Melee ineligible miss.|18,19\\n53|No final four-card draw without Infected/Larva, no final-scan non-Infected removal instruction and Pod passengers still need Objective/survival checks.|11\\n54|Four exact two-icon component recipes from the readable character-board/crafting illustrations.|22,23\\n55|Same-Room Intruder defines Combat, Eggs excluded, restriction icons and unmarked Actions, limited Basic Actions and no Room/Quest activation.|12,13,24\\n56|Named-player death rather than personal kill, no death credit for surviving hibernation/escape, only-survivor meaning and own survival.|11,12\\n57|Door shortage relocation, Open/Closed/Destroyed representation, maximum one per Corridor and no Technical Corridor Door.|16,17\\n58|First Character death unlocks every Pod; later ordinary relocking remains possible.|12\\n59|Storage two-card draw from chosen regular color, keep one/bottom one and common cost/location/Combat/Malfunction restrictions.|24,25,28\\n60|Nest two-card Room Action takes board Egg then Noise and uses Hand, versus one-card Basic pickup of previously dropped Egg without instructed Noise.|13,25,28\\n61|One Use Only Item goes to proper Item discard after effect, in addition to Action-card payment/showing.|22,28\\n62|Launched Pod Character treated as arriving Earth, without determining ship destination or exempting final checks.|11,26\\n63|Waiting Pod Character treated as in Section for Adult-development Noise.|26\\n64|Later Section Malfunction leaves existing boarder's launch/wait/exit choices, blocks new entry only.|26\\n65|Each escaping Intruder attacks, larger-first sequence explicitly listed Queen/Breeder/Adult/Larva by FAQ.|19\\n66|Remove-from-game Event still removed when another part cannot resolve.|10\\n67|Adult token returned before development Noise and can be redrawn immediately.|10\\n68|Retreat at Closed Door normally destroys Door/stays; The Way of Moving exception for affected non-Breeder/non-Queen.|17,20\\n69|Hand wound does not increase Basic Shoot cost; Shoot is not Item Action.|13\\n70|Vulnerability to Fire adds once per damage instance, Flamethrower two-crosshair total three.|18\\n71|Second attacking Larva disappears, resident Larva stays, new Contamination but no instant death from that attack.|20\\n72|Later Hibernatorium Fire does not wound out-of-play sleeper; ship destruction and end checks still matter.|11,26\\n73|Coolant Leak can initiate despite sleepers, contrasting Character initiation restriction.|24\\n74|Discarded/dead Intruder tokens remain reusable supply, including bag additions and matching ducts.|16,18\\n75|Fire may be placed in unexplored Rooms; Malfunction may not.|17\\n76|Two Light plus two more resolves to one Serious and one Light.|21\\n77|Standard-play death drops Heavy Objects and makes Item cards disappear.|21,22\\n78|Only first yellow automatically unlocks, not later yellow after relocking.|24\\n79|Ship destruction meets Queen/Nest destruction requirements but own survival/other Objective requirements remain.|11,12\\n80|Deliberately empty state-unchanging Trade prohibited, honest unsuccessful negotiation allowed.|13\\n81|Quest activation is printed Basic Action, Out of Combat Only and possible despite Malfunction.|23\\n82|Combat Basic Actions limited to Shoot/Melee/Basic Movement Escape, no Trade/Craft/pickup/Room/Quest; unrestricted card/Item Actions may remain legal.|12,13,24\\n83|Covering Fire can move Soldier alone, separate chosen directions, one Noise roll and Soldier Surprise comparison.|19\\n84|Full Auto discards all Ammo then single Shoot, adds half discarded Ammo rounded down plus Assault Rifle bonus.|13\\n85|Nerves of Steel may follow Attack-card inspection and may protect Soldier on another's Surprise, without protecting other Characters.|20\\n86|Careful Movement and Reconnaissance cancel automatic Danger/Silence Exploration as well as Noise roll.|13,15\\n87|Captain Order barred while Captain in Combat; remote Intercom Order can make another Escape normally.|19\\n88|Motivation via Intercom affects computer-Room Characters and those sharing Captain's Room.|24\\n89|Technical Corridors movement ignores Door Exploration effect because entry direction undefined.|15,16\\n90|Remote Order cannot be Interrupted without sharing Captain's Room; passing does not bar Interruption.|10\\n91|Empty hand after two Actions does not immediately pass; next-round passing can cause further Fire/Bleeding.|10,17\\n92|Rest multiple Infected cards gives one Larva; only prior Larva permits that scan's fatal outcome.|20,21\\n93|Noise from neighboring-Room Egg throw resolved in throwing Character's current Room.|25\\n94|Remote Intranet research still requires Object itself in Laboratory.|24\\n95|Storage Room Action repeatable at counter zero; counter constrains ordinary Search card Action.|23,25\\n96|Nest Fire with Vulnerability to Fire destroys two board Eggs per Fire step.|25\\n97|Dropped Egg in Nest remains Heavy Object without restoring Nest board-Egg hit points.|25\\n98|Smoke Grenade affected player chooses an Action card from hand and discards it.|13\\n99|Medkit and Bandages can be used on other Characters.|21,22\\n100|Cannot directly use own Energy Charge on another's Weapon; Trade Charge, owner uses in own round.|13\\n101|Alcohol Infected scan draws new Contamination without placing Larva.|20\\n102|Extended Magazine/Auto Loader immediately give extra Ammo on used/empty Energy Weapon.|22\\n103|Crafted Flamethrower starts fully loaded, not searched-Weapon one Ammo.|23\\n104|Scout Motion Scanner unique reaction unaffected by Hand Item-Action wound.|21\\n105|Antidote all-zone scan/removal, Larva removal, new Contamination, non-Infected preservation, retained hand and pass, versus Surgery whole-hand shuffle/no new card.|23,25\\n106|Exploration Slime on board, Fire/Malfunction in entered Room, Door in entry Corridor; token removed after once-only effect.|15\\n107|Event Fire Damage after attacks gives each Intruder one Injury and normal Injury Effect/death/retreat check.|10,17,20\\n108|Explicit prohibition on any Search Action in Nest and Room Covered With Slime, present in PDF despite extraction omission.|25\\n110|Closed Door blocks Grenade throwing through that Corridor.|17\\n111|Technical Corridor Noise is one board-wide network marker and ordinary Corridor Noise spans Closed Door.|15,16\\n112|Bandages and Clothes complete exclusive menus, undressed Serious cannot be directly healed, costs/icons/one-use.|22,23\\n113|Fire Extinguisher local Fire removal OR one local Intruder Retreat, not both, one-card cost and consumption.|22\\n114|Taser local Intruder Injury plus Retreat OR chosen local Character's entire hand discard; cost/consumption.|23\\n115|Flamethrower minimum damage except blank, otherwise-size-ineligible Queen receives one; ordinary double Injury plus Fire placement.|18,23\\n116|Molotov current/neighboring Intruder Room, immediate Fire and Injury/Serious Wound to every being including user, independent of later Fire.|23,25\\n117|Energy Charge full own Energy Weapon reload OR connected one Door, no Combat restriction, cost/consumption and Destroyed Door limit.|17,23\\n118|Evacuation Key printed activation in Fire Control System, active use local to Section and one Pod, cost/out-of-Combat/one-use and no reusable remote use.|23\\n119|Log Key activation in Comms; use from functioning Computer to inspect chosen player's retained Objectives without shared-Room target requirement; cost/icons/disposal.|23,24\\n120|Six Shooter only reloads with Reload card and adds one Injury on single crosshair.|22\\n121|Suppression costs zero additional Action cards but spends Ammo/played card, selects self OR willing other, waives Escape attacks.|13,19\\n122|Nemesis Plans checks two Room tiles but excludes Exploration tokens, unlike Monitoring; cost/icons/disposal.|13,25\\n123|Scientist Pistol two-crosshair overridden to one Injury, with normal subsequent Injury Effect check.|19\\n125|Repeated clockwise two-Action active rounds from First Player until all pass; one/no Action requires pass and passed players skipped except Interruption.|10,28\\n126|Canteen healing/Shower Slime removal plus independently optional additional hand scan for one Room Action, not an OR replacement.|25\\n127|Hidden infection before Scan, red foil/exact INFECTED word and lookalike warning; effect-specific scan consequences, no free scan permission.|20,21\\n128|Post-boarding immediate launch option, launch removes Pod token and occupants' miniatures/active participation, while final checks remain.|11,26'''\\nmanual={}\\nfor line in rows.splitlines():\\n n,coverage,pages=line.split('|');manual['Q'+n]={'requested_coverage':coverage,'english_manual_printed_pages':[int(v) for v in pages.split(',')]}\\nassert set(manual)==set(byid),(set(byid)-set(manual),set(manual)-set(byid))\\nfaqmaps={\\n'Rules':{1:[19,63],2:[19],3:[19,64],4:[8],5:[14,65],6:[66],7:[25,67],8:[68],9:[69],10:[51],11:[70],12:[71],13:[72],14:[39,73],15:[37],16:[36,16],19:[74],20:[39,49],21:[4,90,125],22:[75],23:[76],24:[77],25:[39,78],26:[79]},\\n'Actions':{1:[32],2:[80],3:[81],4:[55,82],5:[6,14,82],6:[30],7:[83],8:[84],9:[85],10:[85],11:[86],12:[87],13:[88],14:[89],15:[30],17:[90],18:[91],19:[92]},\\n'Rooms':{1:[17,105],2:[93],3:[94],4:[33],5:[20,27,46,47],6:[95],7:[18,96],8:[38,68],9:[97]},\\n'Items':{1:[98],2:[99],3:[100],4:[101],5:[102],6:[103],7:[104],8:[23,29],9:[105],10:[81]}}\\nfaqledger=[]\\nfor sec,entries in faqmaps.items():\\n for n,ids in entries.items():\\n  faqledger.append({'section':sec,'entry':n,'requested_by':['Q%02d'%i for i in ids],'assessment':'Covered directly or by the already requested general procedure; no independent additional branch established.'})\\nassert len(faqledger)==61\\nfaqledger[[ (x['section'],x['entry']) for x in faqledger].index(('Rules',16))]['assessment']='Leg effect lasting until dressed is an instance of the explicitly requested general dressing rule in Q36/Q16: flip card and ignore its effect, while retaining Serious count. Merely substituting Leg supplies no distinct procedure.'\\nqreviews=[]\\nfor x in q:\\n id=x['id'];notes=[];status='supported';complete='complete_for_actual_request'\\n if id=='Q18':status='supported_with_explicit_source_gap';notes.append('Key preserves English successful-Melee Contamination and conditional miss waiver, and explicitly does not invent a refund/delayed draw. Operational reconciliation remains a source gap, not an answer to be guessed.')\\n if id=='Q51':status='supported_with_explicit_source_gap';notes.append('The key correctly declines to invent a model-freeing resolution when all eight Adults are in Combat.')\\n if id=='Q65':status='supported_with_source_limit';notes.append('FAQ Rules 5 explicitly lists Queen, Breeder, Adult, Larva and omits Creeper. The listed sequence is supported; a complete relative Creeper ordering is not supplied and must not be fabricated.')\\n if id=='Q15':notes.append('Detailed English p20 explicitly says fewest Action cards; p28 shorthand says fewest cards. Prefer the detailed procedure for this keyed branch and record the internal shorthand inconsistency; do not silently count Contamination by analogy with Surprise.')\\n if id=='Q17':notes.append('The Canteen healing/Shower Slime clauses in the key are correct extra context; they do not expand the actual scanning/Surgery request into Q126\\\\'s explicit additive-versus-OR question. Ordinary two-card Room cost is supplied by the common Room rule; the specifically requested post-Surgery costs are Light Wound, pass and empty hand.')\\n if id=='Q19':notes.append('Applied the accepted clean scope unchanged. All eight required parts are present in the supplied key. Immediate-launch/full launch resolution/unlock triggers are not retroactively made required by this row.')\\n if id=='Q24':notes.append('Current request does not ask the individual illustrated Coolant Leak deck-reconstitution instruction. Generic resolve-card wording and the key\\\\'s unless-instructed-otherwise caveat do not supply the missing specific branch; see finding F1.')\\n if id=='Q25':notes.append('Adult pre-Noise return is explicit FAQ correction. Do not silently extend its timing answer to Breeder beyond the source wording or invent exceptional Queen multi-Character targeting/supply resolution.')\\n if id=='Q45':notes.append('Automatic entry Slime is used when resolving the resulting Silence token. Careful Movement/Reconnaissance cancellation still applies; no Malfunction marker allowed and no Search under p25 PDF note.')\\n if id=='Q53':notes.append('Final scan has its own process; general midgame scan/Larva consequences must not be imported into this final check.')\\n if id=='Q77':notes.append('Uses standard-play FAQ Rules 24, not the excluded cooperative Rules 17 item-retention exception.')\\n if id=='Q105':notes.append('FAQ Items 9 governs reshuffle/hand retention; readable p23 Antidote illustration additionally supports removal of an already-present Larva. Does not import generic infected-scan death into this removal procedure.')\\n if id=='Q108':notes.append('Both no-Search notes verified directly in the English PDF p25 text; the supplied extraction omits these sentences.')\\n if id=='Q115':notes.append('English minimum damage/blank exception and Fire clause checked in illustration; compatible FR/DE illustration helps identify the obscured two-crosshair glyph without replacing English authority.')\\n if id=='Q117':notes.append('Complete p23 Energy Charge illustration lacks either Combat-restriction icon. It has the component symbol, which is not a restriction icon.')\\n if id=='Q119':notes.append('Target-location restriction is not present on active Log Key. This does not authorize inspecting removed rejected Objectives forbidden by p12/Q02.')\\n if id=='Q128':notes.append('Physical launch removal and end of active play are expressly requested here. Under fixed Q19 scope they were correct extra context rather than that question\\\\'s full required launch procedure.')\\n qreviews.append({'id':id,'actual_stem':x['question'],'requested_coverage':manual[id]['requested_coverage'],'support_status':status,'key_status':complete,'actual_key':a[id]['expected_answer'],'primary_support':{'english_manual':m['source_files'] and '/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/nemesis-original-rules.pdf','printed_pages':manual[id]['english_manual_printed_pages'],'faq_entries':[{'section':v['section'],'entry':v['entry']} for v in faqledger if id in v['requested_by']]},'scope_or_limit_notes':notes})\\nfiles=dict(m['source_files']);files[m['question_file']]=m['question_sha256'];files[m['key_file']]=m['key_sha256'];files[m['author_coverage_map']]=m['author_coverage_map_sha256'];files.update(m['accepted_scope_files'])\\nhashes=[{'path':p,'expected_sha256':h,'actual_sha256':hashlib.sha256(open(p,'rb').read()).hexdigest(),'matches':hashlib.sha256(open(p,'rb').read()).hexdigest()==h} for p,h in files.items()]\\nclosest=lambda ids:[{'id':i,'actual_stem':byid[i]['question'],'actual_key':a[i]['expected_answer']} for i in ids]\\nf1={'finding_id':'F1','kind':'qualifying_material_coverage_omission','severity':'coverage_addition_required','topic':'Coolant Leak reconstitutes the Event deck even before deck exhaustion','proposed_question':'After resolving the illustrated Coolant Leak Event, the Event deck still has cards and the Generator has no Malfunction. Does the card merely go to the Event discard pile, or what happens to the card, remaining Event deck and Event discard pile? What changes if the Generator has a Malfunction?','expected_answer':'First resolve the normal matching-symbol Intruder movement. Coolant Leak starts Self-Destruct only if the Generator has a Malfunction. Independently of that condition, remove Coolant Leak from the game, then reshuffle the remaining Event deck together with its discard pile to form the Event deck. Do this even when the deck was not exhausted. With no Generator Malfunction the countdown is not started, but removal and reshuffling still occur. Do not shuffle the removed Coolant Leak back in.','raw_primary_support':[{'path':'/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/nemesis-original-rules.pdf','printed_page':10,'pdf_page_one_based':10,'location':'lower-right illustrated Coolant Leak card; Example of an Event Card point 3','primary_passage':'REMOVE this Event from the game and reshuffle the Events deck (including the Discard pile).','corroborating_prose':'In this example, check if a Malfunction marker is present in the Generator Room to trigger the effect. Then, REMOVE this Event from the game (back to the box) and reshuffle the Event deck and discard pile.','inspection_derivative':'/tmp/nemesis126-inspect/coolant-zoom.png'}],'closest_actual_branches':closest(['Q24','Q66','Q73','Q39']),'distinct_consequence':'Q24 asks ordinary Event-phase ordering and what happens when the Event/Attack decks run out; it keys reshuffling discarded Events only upon exhaustion. Q66 asks only whether a remove instruction still applies when other content cannot resolve. Q73/Q39 ask the sleeper exception and countdown mechanics. None requests reintegrating an existing Event discard pile into a still-nonempty deck. This is a distinct deck-management timing exception that changes which previously discarded Events may recur immediately, not a different cost/count/Character name or a recombination of the existing exhaustion rule. Generator condition/removal/sleeper context alone is not the novelty basis.','key_error_in_existing_rows':False}\\nrejected=[\\n('R1','Another cost/quantity version of basic Movement, Trade, Craft, Shoot or Room Action',['Q03','Q06','Q12','Q31','Q32','Q34'],'Rules already request the general payment/procedure. A different ordinary price, count or Character name does not establish a new material branch.'),\\n('R2','Leg wound effect lasts until dressing',['Q16','Q36'],'FAQ Rules16 is covered by requested general Dress suppresses effect while retaining Serious Wound count. No unique lasting exception remains.'),\\n('R3','Danger when every Corridor is noisy and no eligible Intruder',['Q08'],'Q08 explicitly asks no-eligible branch; placing Noise only in unmarked Corridors entails no placement when none exist. FAQ Rules4 adds no distinct outcome.'),\\n('R4','Creeper versus Adult or Breeder versus Queen ordinary endurance draw',['Q13'],'Core p20 expressly groups Creeper/Adult and Breeder/Queen. Merely replacing one member with the other adds no procedure.'),\\n('R5','Fire Control on Combat Intruders, or their Closed Door retreat',['Q38','Q68'],'Q38 asks any Room/all Intruders and Q68 asks retreat at Closed Door. FAQ Rooms8 is a direct recombination, not a new exception.'),\\n('R6','Plasma Torch activation Room/cost and local Door menu',['Q10','Q42','Q57','Q81','Q117','Q118'],'The distinctive exception allowing Destroyed Door closure is already requested/keyed in Q10/Q42. Remaining activation location, price and ordinary local open/close menu are variants of covered Quest/Item/door procedures.'),\\n('R7','Pilot Knowledge of the Ship card',['Q03','Q42','Q117','Q122'],'Readable p13 open/close connected Door OR inspect unexplored Room without token combines already covered ordinary local Door and information-boundary procedures. Zero cost/one tile/carrier identity alone is insufficient.'),\\n('R8','Medkit exact treatment amounts',['Q16','Q36','Q99','Q112'],'Readable p13 Medkit dresses Serious Wounds OR heals one dressed Serious Wound. Dressing/healing meanings, OR exclusivity and permitted other-Character target are covered; remaining amount/name substitutions do not supply a distinct procedure.'),\\n('R9','Flashlight offers Search without a Search Action card',['Q22','Q30','Q55','Q81'],'The readable p13 portion says perform Search for cost2, but does not establish a distinct Search resolution. Carrier/cost substitution and generic icon application alone fail the threshold; concealed/overlapped clauses are not reconstructed.'),\\n('R10','Ordinary Grenade damage quantities and indirect crew harm',['Q18','Q50','Q93','Q110','Q116'],'Existing requests cover Egg-specific Grenade outcome, indirect crew harm, throwing Noise and Closed Door barrier; a routine damage-number substitution alone is insufficient. No unreadable grenade wording is promoted to a new exception.'),\\n('R11','Log Key may inspect discarded rejected Objectives',['Q02','Q119'],'Not supported: p12 explicitly bars looking at other players\\\\' removed Objective cards. The active Item does not establish an override for those removed cards.'),\\n('R12','Additional Pod launch or waiting subcases',['Q19','Q63','Q64','Q128'],'Fixed accepted Q19 scope already includes eight direct waiting contingencies; Q128 now expressly asks launch removal/participation. Rephrasing first/second occupant or later launch supplies no uncovered material branch.'),\\n('R13','Slime Room first-entry Silence becomes Danger',['Q45','Q86'],'Retained Q45 key includes this direct automatic-entry Slime consequence, with Q86 movement cancellation. No omission left.'),\\n('R14','All Canteen/Shower benefits are new because Q17 only asks scans',['Q17','Q126'],'Q17 correct volunteered benefits are not automatically requested, but Q126 now expressly asks benefit plus optional additional scan and declining scan. This request gap is already filled.'),\\n('R15','Technical Corridor Noise from a remote entrance',['Q07','Q11','Q111'],'Q111 expressly asks the network-wide information/spatial effect and two sides of Closed Door. Covered, not an inference from Q07 alone.'),\\n('R16','More finite-token/Room-marker quantities',['Q01','Q21','Q26','Q57','Q74'],'Marker exhaustion and Door shortage have explicit requested outcomes. Changing an existing quantity/state does not establish a new rule.'),\\n('R17','Invent a model-freeing result with all Adults in Combat',['Q51'],'English p15 only frees non-Combat Adults. No arbitrary removal, substitution, cancelled Encounter or extra marker outcome is supplied.'),\\n('R18','Refund or defer Egg Melee Contamination after a miss',['Q18'],'English p19 pre-roll draw and p25 conditional miss waiver do not explain reconciliation. The current key explicitly preserves that gap rather than inventing timing/refund.'),\\n('R19','Put Creeper into a precise FAQ Escape order',['Q14','Q65'],'FAQ Rules5 omits Creeper from its explicit list. A guessed size placement is not a source-backed addition.'),\\n('R20','Assign Queen bag-development multi-Character Encounter targeting or supply-failure outcomes',['Q25','Q07','Q15'],'The supplied English wording does not spell out exceptional multi-Character triggering/target selection or every finite-supply contingency. Do not create outcomes to make the procedure total.'),\\n('R21','General reshuffle of empty Item/Contamination/Serious Wound decks',['Q23','Q24','Q30'],'Explicit reshuffles are supplied for Action/Event/Intruder Attack decks. The provided core/FAQ does not license a blanket rule extending that to every deck.'),\\n('R22','Airlock a Room with a Technical Corridor or decide destroyed-mid-procedure Door cancellation',['Q40','Q11','Q57'],'Doorless ducts and special mid-procedure states are not fully operationally resolved by the supplied text. No invented duct closure or cancellation rule qualifies.'),\\n('R23','Full Weakness/Action/Weapon/Objective/Serious Wound/Item card corpus coverage',['Q13','Q33','Q52','Q68','Q70','Q83','Q84','Q85','Q98','Q105','Q115','Q120','Q123'],'Only named FAQ clauses and readable manual examples are supplied. Tiny, obscured or absent card texts do not establish the entire physical-card corpus or justify extrapolation.'),\\n('R24','Optional Intruder player, solo/cooperative revive, alternate board double ducts, Aftermath/Carnomorphs/Voidseeders',['Q77','Q82','Q111'],'Excluded by scope. In particular FAQ Rules17-18 and Actions16 cannot supply standard-core additions.'),\\n('R25','Coolant Leak can start despite sleepers or is removed on unresolved effect',['Q39','Q66','Q73'],'Those facts alone are already requested. Only the independently supported non-exhaustion full Event-deck reconstitution survives as F1.'),\\n('R26','Later hibernation, non-Earth ship survival and Pod Earth equivalence',['Q20','Q48','Q49','Q53','Q56','Q62','Q72'],'All the corresponding actual requests distinguish Character survival, ship destination/destruction and final checks; merely combining those already asked outcomes adds no procedure.'),\\n('R27','Another successful or missed ordinary attack-symbol example',['Q12','Q52','Q115','Q120','Q123'],'Ordinary species eligibility, Melee penalties and supplied concrete Weapon overrides are requested. New targets/damage arithmetic without a distinct source exception fail novelty.'),\\n('R28','Another physical setup player count or Pod count',['Q01','Q21','Q22'],'The setup procedure is requested; substituting an ordinary player count or corresponding inventory amount alone is not material novelty.')]\\ncand=[{'candidate_id':x[0],'topic':x[1],'decision':'rejected','closest_actual_ids':x[2],'reason':x[3]} for x in rejected]\\ncand.insert(0,{'candidate_id':'C1','topic':f1['topic'],'decision':'proposed_addition','finding':'F1','closest_actual_ids':['Q24','Q66','Q73','Q39'],'reason':f1['distinct_consequence']})\\nout={\\n'report_type':'fresh_independent_whole_bank_raw_primary_coverage_challenge',\\n'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),\\n'model_requirement':{'required_model':m['required_model'],'required_effort':m['required_effort'],'fresh_fork_requested':True,'self_report':'Independent fresh task context; no contact with other agents and no external rule research.'},\\n'input_manifest':b+'coverage126-required-model-input-manifest.json',\\n'scope':m['scope'],\\n'authority':{'governing':'Original English 28-page manual, basic-board standard semi-cooperative core and the scoped official FAQ v2.2 entries. FAQ explicit clarifications/exceptions govern the relevant original wording.','supplements':'Listed original PL/FR/DE manuals are compatible corroboration only. They do not automatically amend English wording; a clearer glyph can corroborate an English card illustration, but incompatible or stronger localized text cannot supply unannounced English errata.','accepted_Q19_scope':'Applied the exact eight required parts and three context-not-automatically-required categories in the clean accepted scope file without re-adjudication.','author_ledger':'Read as challengeable source leads/claims, never as proof of coverage or closure. Author zero-addition declarations are not adopted as independent evidence.','scope_exclusions':['optional modes and Intruder-player mode','alternative board','solo/cooperative variants','campaign and expansions','FAQ Rules17-18 and Actions16','FAQ expansion sections after page4']},\\n'method':{'question_key_read':'All 126 actual question objects and all 126 complete expected answers read. Actual stems control requests; volunteered key context does not expand them.','primary_read':'Read the English core manual text, checked PDF text directly for extraction omissions, and inspected deduplicated native embedded illustrations from all in-scope English pages (including p3 component samples, p7-9 setup/board illustrations, p10 Event, p13 Actions/Items, p14-21 movement/combat/scanning and p22-23 Hands/recipes/Quest/Item examples). Text and native-image extraction were used because a full PDF rendering runtime was unavailable. Read the scoped 61 FAQ entries and cross-checked its original PDF pages2-4. Inspected relevant PL/FR/DE original wording and readable illustrations as supplements, not authority upgrades.','novelty_test':m.get('novelty_standard','A distinct material source-backed procedure/outcome/exception/information boundary beyond closest actual requested/keyed branches; names, costs, quantities and mechanical recombinations alone are insufficient.'),'candidate_search':'Whole-bank setup, phase control, movement/exploration/Noise/Doors, Combat/attacks/wounds, contamination, Objects/Items/Quests, every Room and escape/endgame checked; readable illustrations independently challenged. No target count.','write_boundary':'Only this final JSON and temporary PDF inspection derivatives under /tmp were written.'},\\n'hash_verification':{'all_matched':all(x['matches'] for x in hashes),'file_count':len(hashes),'files':hashes},\\n'bank_integrity':{'actual_question_count':len(q),'actual_key_count':len(a),'unique_review_count':len(qreviews),'every_actual_id_once':len(set(x['id'] for x in qreviews))==126 and set(manual)==set(a),'reserved_absent_ids':['Q109','Q124'],'question_and_key_files_modified':False},\\n'question_reviews':qreviews,\\n'faq_scoped_coverage':{'count':61,'entries':faqledger},\\n'findings':[f1],\\n'material_key_errors':[],\\n'candidate_ledger':cand,\\n'global_source_and_core_limits':[\\n{'limit':'Scope-bounded rather than complete physical game corpus','detail':'Manual examples and 61 scoped FAQ entries do not supply all 60 Action cards, all Weapons/Quest Items, all regular Items, Objectives, Weaknesses, Events, Attack cards or Serious Wounds. Some p3 examples are too tiny, and p13/p23 illustrations overlap or obscure clauses. No full-card-corpus claim is justified.'},\\n{'limit':'Original extraction is incomplete','detail':'The English PDF p25 explicitly prohibits any Search in Nest and Room Covered With Slime; those notes are absent from the supplied main text extraction. Q108 is supported by the actual PDF, not rejected for that extraction gap.'},\\n{'limit':'English shorthand inconsistency','detail':'Detailed English p20 Intruder Attack says fewest Action cards; p28 says fewest cards. The key follows the detailed p20 procedure. Surprise explicitly counts Contamination in p18 and is a separate rule.'},\\n{'limit':'Egg Melee timing not operationally reconciled','detail':'English p19 draws Contamination before target/roll, while p25 waives it if an Egg Melee misses. Current Q18 states successful-versus-missed outcomes and preserves the missing implementation detail; no refund or delayed draw is source-established.'},\\n{'limit':'All-eight-Adults-in-Combat model shortage','detail':'English p15 frees only Adults not in Combat. When none can be freed, no complete placement resolution is supplied. Q51 correctly preserves this gap.'},\\n{'limit':'Incomplete exceptional-state ordering/targeting','detail':'FAQ Rules5 omits Creeper from the larger-first list. English Queen bag development does not fully operationally specify every multi-Character Encounter targeting interaction; normal finite supply/deck instructions do not resolve every hypothetical shortage. No precise extra outcome is invented.'},\\n{'limit':'Door/Airlock edge states','detail':'No Technical Corridor Doors under p16, while Airlock p25 requires connected Doors to remain Closed. The supplied sources do not give a total rule for every duct/mid-procedure destruction case. These are source gaps, not qualifying procedural answers.'},\\n{'limit':'No silent localization or expansion amendment','detail':'PL/FR/DE wording is only supplemental; optional rules, alternative ducts and expansion FAQs are excluded. English conditional wording and explicit scoped FAQ corrections are retained.'}\\n],\\n'bounded_closure_verdict':{'closed':False,'verdict':'One distinct source-backed requested-coverage omission remains: illustrated Coolant Leak\\\\'s immediate reshuffle of the remaining Event deck together with its discard pile, independently of exhaustion and countdown condition. No material false key or required-part omission was established in the 126 supplied keys under their actual stems and accepted Q19 scope.','qualifying_proposed_additions':1,'material_key_errors_found':0,'retained_question_coverage':'All126 present requests remain source-supported with the explicit source-limit caveats recorded per row. Overlap among retained requests is not itself a false key.','closure_boundary':'Adding the proposed branch would address this review\\\\'s established omission; it would not certify every physical card, unreadable clause or hypothetical state. A later independent closure judgment must use the actual resulting question/key rather than counting this prose as already benchmarked.'}\\n}\\np=b+'coverage126-required-model-independent-final.json'\\nwith open(p,'w') as f:json.dump(out,f,ensure_ascii=False,indent=2);f.write('\\\\n')\\ncheck=json.load(open(p));assert len(check['question_reviews'])==126 and len(check['faq_scoped_coverage']['entries'])==61 and all(x['matches'] for x in check['hash_verification']['files'])\\nprint(json.dumps({'written':p,'reviews':len(check['question_reviews']),'faq_entries':61,'findings':len(check['findings']),'all_hashes_match':True,'bytes':len(open(p,'rb').read())}))\\nPY\",\"yield_time_ms\":1000,\"max_output_tokens\":2000}))\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af93-e523-7890-9c6d-3331e048bb6f",
+        "create_time": 1793947745.912079
+      }
+    }
+  ],
+  "limit": "Actual output presence, not OS isolation; manually review calls, ranges, and task boundaries."
+}

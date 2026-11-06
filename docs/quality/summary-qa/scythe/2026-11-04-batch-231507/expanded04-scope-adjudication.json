@@ -1,0 +1,114 @@
+{
+  "scope": "Independent adjudication of reader A and reader B on Q20 and Q49 only. Read only the specified expanded-iteration-04 snapshot, questions, key, reader answers, and authoritative extracted Scythe rules. Support labels and evidence fields do not determine grades; answers are evaluated independently.",
+  "grading": {
+    "correct": "All requested material parts are resolved without a contradictory caveat.",
+    "partial": "A requested material part remains omitted or ambiguous, without an unambiguous material contradiction.",
+    "incorrect": "The answer makes a material claim that contradicts the source."
+  },
+  "adjudications": [
+    {
+      "question_id": "Q20",
+      "reader": "a",
+      "grade": "correct",
+      "parts": {
+        "scoring_calculation": "correct: $20 + $21 + $12 = $53 added to held coins, before the structure bonus",
+        "structure_bonus_eligibility": "correct: explicitly says the bonus is earned even if enemies control the structures' territories",
+        "victory_tiebreakers": "correct: workers + mechs + structures, power, popularity, resources controlled, territories controlled, stars placed"
+      },
+      "reason": "The answer resolves every requested part. It need not separately repeat that most total coins wins because the question requests the calculation, structure bonus eligibility, and all tiebreakers; it does not ask for a separate statement of the ordinary victory condition.",
+      "source_references": [
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 29,
+          "section": "SCORING CATEGORIES; STRUCTURE BONUS TILE; DECLARING THE WINNER",
+          "supports": "Factory counts as three territories, 13 resources at 10 popularity yield 12 coins, structure bonus does not require territorial control, and the six tiebreakers occur in the stated order."
+        },
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 18,
+          "section": "END-GAME BONUS",
+          "supports": "Selected structure tile goals earn coins even without control of the structures' territories."
+        }
+      ]
+    },
+    {
+      "question_id": "Q20",
+      "reader": "b",
+      "grade": "partial",
+      "parts": {
+        "scoring_calculation": "correct: $20 + $21 + $12 = $53 added to held coins, plus the selected structure bonus",
+        "structure_bonus_eligibility": "unresolved: saying the amount depends on tile/features does not say whether structures must be on controlled territories",
+        "victory_tiebreakers": "correct: all six tiebreakers and their order are given; naming workers + mechs + structures already excludes the character"
+      },
+      "reason": "The question expressly requests structure bonus eligibility. The statement 'plus selected structure bonus (amount depends on tile/features)' identifies what determines its amount but leaves territorial-control eligibility unanswered. It does not contradict the rule, so this is partial rather than incorrect. No exact structure payout is required because the selected tile and structure placements are not supplied. The reader's support label is irrelevant.",
+      "source_references": [
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 29,
+          "section": "STRUCTURE BONUS TILE",
+          "supports": "The source explicitly awards the bonus even when the player does not control the territories containing their structures."
+        },
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 18,
+          "section": "END-GAME BONUS",
+          "supports": "Eligibility depends on achieving the selected tile's goals and does not require control of the structures' territories."
+        },
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 29,
+          "section": "SCORING CATEGORIES; DECLARING THE WINNER",
+          "supports": "Factory/resource treatment and the complete ordered tiebreakers match the answer."
+        }
+      ]
+    },
+    {
+      "question_id": "Q49",
+      "reader": "a",
+      "grade": "correct",
+      "parts": {
+        "same_turn_repetition": "correct: explicitly prohibits taking the selected top or bottom action more than once that turn",
+        "rusviet_caveat": "correct: explicitly confines section repetition to successive turns"
+      },
+      "reason": "The initial 'No' and the once-that-turn restriction directly answer the payment question. The Rusviet qualification accurately distinguishes section selection across turns from repeating a paid action within one turn. Referring to what the summary allows does not change the answer's correct substantive rule.",
+      "source_references": [
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 10,
+          "section": "GAMEPLAY",
+          "supports": "Each action can be taken only once on the turn, not multiple times; the selected top and bottom actions are each optional once."
+        },
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 21,
+          "section": "RUSVIET (RELENTLESS)",
+          "supports": "Rusviet can choose the same section as the previous turn(s), including a Factory card."
+        }
+      ]
+    },
+    {
+      "question_id": "Q49",
+      "reader": "b",
+      "grade": "partial",
+      "parts": {
+        "same_turn_repetition": "correct general restriction: states that each selected top and bottom action is taken at most once",
+        "rusviet_caveat": "ambiguous: 'Normally no' followed by 'Rusviet may repeat a section, including Factory' does not distinguish repeating a section on successive turns from repeating an action during this turn"
+      },
+      "reason": "This is partial ambiguity, not fully correct shorthand. In a question expressly about taking an action twice in the same turn, 'Normally no' introduces an apparent exception, and the next sentence names Rusviet without the across-turn limitation. The answer therefore leaves the user's case unresolved for Rusviet. However, it also explicitly states the correct at-most-once restriction and never expressly authorizes Rusviet to take the same action twice in one turn. The section-repetition sentence is itself a true rule when read in its proper scope. On the supplied incorrect-for-material-contradiction standard, that supports partial rather than treating the ambiguous contextual implication as an explicit wrong same-turn exception. A correct version would say 'No, including Rusviet; Rusviet may select the same section on consecutive turns.'",
+      "source_references": [
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 10,
+          "section": "GAMEPLAY",
+          "supports": "An action may be taken only once on the turn, not multiple times; no second payment exception is provided."
+        },
+        {
+          "file": "extracted/scythe-rules.txt",
+          "page": 21,
+          "section": "RUSVIET (RELENTLESS)",
+          "supports": "The exception concerns choosing the same section as the previous turn(s), not repeating an action during one turn; Factory section selection is included."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "game": "Dead Last",
+  "scope": "Independent adjudication of the requested borderline answers only.",
+  "inputs_used": [
+    "summary-snapshot.md",
+    "questions.json",
+    "reader-a.json",
+    "reader-b.json",
+    "../benchmark-v2/answer-key.json"
+  ],
+  "grading_rule": "Evaluate each answer independently. Correct requires all requested material parts resolved accurately with summary support; partial means a missing or unresolved requested material part; incorrect requires a contradictory material ruling. A reader support label alone is not a grade. Extra answer-key context is not automatically a requested part.",
+  "adjudications": [
+    {
+      "id": "Q24",
+      "reader": "reader-a",
+      "grade": "partial",
+      "requested_parts": [
+        {
+          "part": "Prepare four new central Gold Bar cards if play continues after the entire previous pot has been awarded.",
+          "resolved": true,
+          "reason": "The answer says to refill the central pool to four. The question establishes that all four previous bars have been awarded, leaving zero; refilling zero to four entails dealing four new cards. This quantity is accurately resolved by applying the stated procedure to the given scenario; it need not be restated numerically."
+        },
+        {
+          "part": "Keep the new central card values hidden.",
+          "resolved": false,
+          "reason": "The answer does not say to deal face down or keep values hidden. This is part of how the next central pool is prepared, is explicit in the answer key, and is supported by the summary setup and Special Rules statement that Gold Bar values stay hidden when the central pot is dealt. The separate reader answer to Q01 cannot repair this omission."
+        }
+      ],
+      "reason": "Partial solely for omitting the hidden-value preparation requirement, not for failing to compute the four-card refill. Retained-pot wording is harmless general context because the given full-distribution scenario has no leftovers."
+    },
+    {
+      "id": "Q24",
+      "reader": "reader-b",
+      "grade": "partial",
+      "requested_parts": [
+        {
+          "part": "Prepare four new central Gold Bar cards if play continues after the entire previous pot has been awarded.",
+          "resolved": true,
+          "reason": "The answer explicitly applies refill-to-four to the empty pool and says to deal four new central bars."
+        },
+        {
+          "part": "Keep the new central card values hidden.",
+          "resolved": false,
+          "reason": "Neither the answer nor its cited evidence specifies face-down dealing or hidden values. This requested preparation detail appears in the key and is supported by the summary, but cannot be supplied by a different answer."
+        }
+      ],
+      "reason": "Partial: correct replenishment amount and continuation condition, incomplete preparation procedure because visibility of the newly dealt central values is omitted."
+    },
+    {
+      "id": "Q25",
+      "reader": "reader-a",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Does Purple become the Target because successful Ambush allows Blue to survive?",
+          "resolved": true,
+          "reason": "The answer unambiguously says no: Blue remains the sole Target from the four-to-three tally, and its Ambush does not promote Purple."
+        },
+        {
+          "part": "May ordinary Purple voters survive on the basis that Purple becomes the Target?",
+          "resolved": true,
+          "reason": "The answer says Purple voters did not vote for a Target and are eliminated. Its successful-Ambush caveat is inapplicable to these ordinary voters: each player chooses one card, so an ordinary vote for Purple cannot also be that player’s Ambush. Moreover, Blue is the sole Target, so no such Purple voter could independently have a successful Ambush. The caveat is unnecessary general-rule wording, but it does not grant survival on the questioned basis or leave the actual scenario unresolved."
+        }
+      ],
+      "extra_context": {
+        "one_blue_voter_retaliation": "The key additionally describes Blue choosing one Blue voter to eliminate, but the question asks only whether Purple is promoted and whether its voters survive on that basis. It does not request the complete final survivor list or a retaliation procedure, so omitting the retaliation is not a missing requested part."
+      },
+      "reason": "Both requested rulings are accurate and derivable from the summary. The reader’s partial support label reflects absence of the exact illustrated example, not an unresolved answer."
+    },
+    {
+      "id": "Q25",
+      "reader": "reader-b",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Does Purple become the Target because successful Ambush allows Blue to survive?",
+          "resolved": true,
+          "reason": "The answer explicitly rejects promotion of Purple and preserves Blue’s Target status from the tally."
+        },
+        {
+          "part": "May ordinary Purple voters survive on that basis?",
+          "resolved": true,
+          "reason": "The answer says Purple voters did not vote for the Target and are eliminated. Its independently successful-Ambush caveat cannot apply to ordinary Purple voters, who played a target card rather than their one Ambush card, and who are not Targets in the given tally. This superfluous caveat does not assert that those voters can survive or contradict the answer to the question’s stated basis."
+        }
+      ],
+      "extra_context": {
+        "one_blue_voter_retaliation": "The answer mentions retaliation without its exact victim restriction. The question does not ask how Blue retaliates or ask for all survivors; the key’s exactly-one-Blue-voter consequence is useful extra context, not a required answer element here."
+      },
+      "reason": "Correct for both requested consequences. Absence of the exact four-to-three illustration from the summary does not prevent a supported application of its explicit Target and Ambush rules."
+    },
+    {
+      "id": "Q27",
+      "reader": "reader-b",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Can an outsider win when the compensation bar gives that player the single highest total during an extra Showdown?",
+          "resolved": true,
+          "reason": "The answer explicitly says yes and explains that after awards the single highest qualifying total wins. The question already supplies the extra Showdown, double Steal, outsider compensation and resulting unique highest total. It does not ask the reader to restate all double-Steal payouts. The added qualifying-total condition is consistent and necessarily satisfied in the stated scenario: the original pair already had qualifying totals, so an outsider who becomes higher than both is also qualified."
+        }
+      ],
+      "reason": "The application is resolved affirmatively, not withheld. Calling it an inference and marking support partial does not make the requested ruling partial: the summary checks victory after awards and explicitly repeats tied Showdowns until one player anywhere at the table has the highest total. The threshold caveat describes a different hypothetical and does not create uncertainty about the stipulated case."
+    },
+    {
+      "id": "Q10",
+      "reader": "reader-b",
+      "grade": "correct",
+      "requested_parts": [
+        {
+          "part": "Reward for the sole survivor.",
+          "resolved": true,
+          "reason": "The answer states that the sole survivor receives all four central Gold Bar cards."
+        },
+        {
+          "part": "Whether four cards equal four points.",
+          "resolved": true,
+          "reason": "The answer explicitly distinguishes cards from points and states each card is worth 3, 4 or 5 points, matching the summary and key."
+        }
+      ],
+      "extra_claim": {
+        "text": "their values are hidden until revealed for scoring",
+        "status": "unsupported extra timing claim",
+        "reason": "The summary requires hiding central values when dealt and says a player reveals reaching the required total at the end-of-round victory check. It does not establish that awarded cards remain hidden until a particular scoring reveal or describe that timing for all card values. The cited evidence for this answer supports quantity and point values, not that stronger timing assertion."
+      },
+      "reason": "Correct for the requested reward and cards-versus-points ruling. Record the unsupported additional concealment/reveal statement separately; it is outside the question’s requested material parts and is not a contradictory ruling about the reward or its point value."
+    }
+  ]
+}

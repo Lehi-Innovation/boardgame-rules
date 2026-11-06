@@ -1,0 +1,5 @@
+# Q14 contextual semantic scope
+
+A NEW isolated Sol/high/forknone reviewer read the exact Q14/key/full22A+B answers/evidence and all348 frozen22summarylines without proposedgrade, priorfinding, rootreasoning, otheranswers/history or targetscore. Actual complete inputs/settings are verified. Both answers are correct. A’s own typed Conflict-receiving-summon and until-Wall-removed wording, together with no-garrison statement, semantically conveys placement. B states it directly. No literal bank-origin, owner-quadrant precision or immediate-deployment formula is separately asked. A bare section citation supplies no omitted fact and was not used for credit.
+
+The coordinator expressly accepts this reasonable contextual semantic policy and requires no furtherreview. Both22Q14grades remain correct; B60’s omitted fourInfluencecubes remains decisive and is not rescued. No rawanswer, question or fixedkey changes. Apply this actual-question interpretation consistently to subsequent grading; do not infer a destination from otheranswers or a bare sourcecitation.

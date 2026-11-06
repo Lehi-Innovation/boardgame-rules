@@ -1,0 +1,133 @@
+{
+  "scope": {
+    "questions": ["Q02", "Q12"],
+    "iterations": ["seed-iteration-01", "seed-iteration-02"],
+    "readers": ["reader-a", "reader-b"],
+    "independent_review": true,
+    "existing_grades_or_decisions_read": false,
+    "authoritative_source": "extracted/dune-imperium-uprising-rules.txt",
+    "benchmark": "benchmark-v1"
+  },
+  "standard": "Answer every requested part against the frozen source-backed key, accepting equivalent wording. A material missing requested fact is partial when the rest is substantially accurate. Do not require unrelated background merely because it appears in a key. Evaluate volunteered contradictions as well as omissions.",
+  "question_interpretations": {
+    "Q02": {
+      "decision": "Starting troops includes the troop allocation, not just the initially garrisoned troops. Omitting the other nine troops in supply is a material omission and produces partial, not incorrect.",
+      "reason": "The question explicitly asks for starting troops alongside score, Agents and water. The frozen key specifies three garrison troops and nine supply troops. The source calls all twelve cubes troops and separately locates the three in the garrison and the remaining components in supply. Nine reserve troops are part of the requested starting troop state; this is not unasked general component background. An answer need not literally say twelve if it gives three plus nine. The four unused Influence cubes are unasked background and are not required.",
+      "source_references": [
+        "extracted/dune-imperium-uprising-rules.txt:255 (one water)",
+        "extracted/dune-imperium-uprising-rules.txt:268-269 (two Agents on Leader, third beside board)",
+        "extracted/dune-imperium-uprising-rules.txt:271-272 (four-player score 1, otherwise 0)",
+        "extracted/dune-imperium-uprising-rules.txt:279-283 (twelve troops, three in garrison, remaining components in supply)"
+      ]
+    },
+    "Q12": {
+      "decision": "Require the 2-Influence VP and its loss, the 4-Influence track bonus and retention/re-earning, the first-to-4 Alliance and its VP, no theft by tying, and the VP consequences when the Alliance transfers.",
+      "reason": "Re-earning after returning to 4 is part of how the requested 4-Influence reward behaves following a reversal. Alliance-VP loss and gain are part of the requested reversibility of the reward at 4. Saying the token passes identifies its ownership change, but does not fully explain what happens to the score: a player could otherwise wrongly keep the original VP as they keep the separate track bonus. These omissions are material under the fixed key. Neither omission makes an otherwise substantial answer wholly incorrect. Specific resource quantities printed on individual Faction tracks are not required because the frozen key accepts 'the track bonus'. FAQ scenarios involving a holder's Influence decrease are additional background beyond the fixed key; their omission is not penalized. The permitted main-rulebook extraction does not independently verify those added FAQ claims, so their presence alone is not classified as an error.",
+      "source_references": [
+        "extracted/dune-imperium-uprising-rules.txt:329-330 (2 Influence gives 1 VP, lost below 2)",
+        "extracted/dune-imperium-uprising-rules.txt:331-333 (4-Influence bonus retained, can be earned again)",
+        "extracted/dune-imperium-uprising-rules.txt:334-337 (first to 4 receives Alliance and VP; higher opponent takes token, old holder loses VP, new holder gains VP)"
+      ]
+    }
+  },
+  "adjudications": [
+    {
+      "iteration": "seed-iteration-01",
+      "reader": "reader-a",
+      "question_id": "Q02",
+      "grade": "partial",
+      "reasons": [
+        "Correctly gives four-player score 1 VP versus three-player score 0 VP, two Agents on the Leader and third beside the board, three troops in the garrison, and one water.",
+        "Does not give the other nine troops in supply or the total of twelve troops. Three garrison troops alone leave the requested starting troop allocation incomplete."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:255", "extracted/dune-imperium-uprising-rules.txt:268-283"]
+    },
+    {
+      "iteration": "seed-iteration-01",
+      "reader": "reader-b",
+      "question_id": "Q02",
+      "grade": "partial",
+      "reasons": [
+        "Correctly answers starting scores, Agent placement, three garrison troops and one water for both player counts.",
+        "Omits the nine troops remaining in supply. This is a missing requested starting troop fact, not a contradiction or merely unasked component inventory."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:255", "extracted/dune-imperium-uprising-rules.txt:268-283"]
+    },
+    {
+      "iteration": "seed-iteration-02",
+      "reader": "reader-a",
+      "question_id": "Q02",
+      "grade": "partial",
+      "reasons": [
+        "Correctly gives the score difference, both Agent locations, three garrison troops and one water.",
+        "Leaves out the nine troops in supply, so the starting troop allocation remains incomplete under the same standard applied to iteration-01."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:255", "extracted/dune-imperium-uprising-rules.txt:268-283"]
+    },
+    {
+      "iteration": "seed-iteration-02",
+      "reader": "reader-b",
+      "question_id": "Q02",
+      "grade": "correct",
+      "reasons": [
+        "Answers every requested component: four players start at 1 VP and three players at 0; two Agents are on the Leader and the third beside the board; twelve troops comprise three garrison troops plus nine in supply; each player takes one water.",
+        "The answer uses equivalent wording and correctly states that the resource and component setup is shared by both player counts."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:255", "extracted/dune-imperium-uprising-rules.txt:268-283"]
+    },
+    {
+      "iteration": "seed-iteration-01",
+      "reader": "reader-a",
+      "question_id": "Q12",
+      "grade": "correct",
+      "reasons": [
+        "States the 2-Influence VP and loss below 2.",
+        "States the 4-Influence track bonus is kept below 4 and may be earned again after dropping and advancing.",
+        "Gives the first-to-4 Alliance and its VP, explicitly denies theft by tying, requires a higher opponent, and states that transfer removes the old holder's VP and gives it to the new holder.",
+        "All requested key facts are present with no material contradiction."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:329-337"]
+    },
+    {
+      "iteration": "seed-iteration-01",
+      "reader": "reader-b",
+      "question_id": "Q12",
+      "grade": "partial",
+      "reasons": [
+        "Correctly gives the 2-Influence VP and its loss, the 4-Influence bonus and its retention, first-to-4 Alliance and VP, and no theft on a tie because passing requires a higher space.",
+        "Omits that the track bonus can be earned again after falling and reaching 4 again.",
+        "Omits the VP reversal on Alliance transfer: the old holder loses the Alliance VP and the new holder gains it. Saying the token passes does not explicitly distinguish that reversible VP from the retained track bonus.",
+        "The answer is substantially accurate but incomplete, so partial is appropriate."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:329-337"]
+    },
+    {
+      "iteration": "seed-iteration-02",
+      "reader": "reader-a",
+      "question_id": "Q12",
+      "grade": "partial",
+      "reasons": [
+        "Correctly gives the 2-Influence VP and loss; the 4-Influence track bonus, retention and re-earning; first-to-4 Alliance and VP; and no theft merely by tying.",
+        "Omits that transfer costs the former holder the Alliance VP and gives that VP to the new holder.",
+        "The volunteered wording is internally inconsistent: 'the holder gives it up only when an opponent rises to a higher space' is an absolute condition, but the next sentence says a formerly tied player can take the Alliance when the holder loses Influence. In that added scenario the opponent need not rise. The question's narrow no-theft-on-a-tie conclusion is correct, but the global 'only' wording overstates it even under the answer's own FAQ qualification.",
+        "The additional holder-loss scenario is present in the frozen summary at line 220. It is not independently verified by the permitted main-rulebook source and is not itself called false here. The clear requested-fact omission and internal qualification problem support partial, not wholly incorrect."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:329-337", "seed-iteration-02/summary-snapshot.md:220"]
+    },
+    {
+      "iteration": "seed-iteration-02",
+      "reader": "reader-b",
+      "question_id": "Q12",
+      "grade": "partial",
+      "reasons": [
+        "Correctly gives the 2-Influence VP and loss, the 4-Influence track bonus and retention, first-to-4 Alliance and VP, and no theft merely by tying.",
+        "Omits re-earning the track bonus after falling and reaching 4 again.",
+        "Mentions losing the Alliance when dropping to 3 or lower, but does not say that losing or transferring the Alliance loses its VP, or that the recipient gains that VP. The initial award of the VP does not fully answer its reversibility.",
+        "Its phrase 'an opponent must rise to a higher space to pass the holder' can be read in its immediate context of a challenger passing the holder through an advance. Unlike reader-a's explicit 'only when' condition on all Alliance loss, it does not independently exclude the separately stated holder-loss case; no additional contradiction penalty is needed.",
+        "The added FAQ cases appear in the frozen summary at line 220 and are unasked background under this key. They do not supply the missing re-earning or VP-transfer facts."
+      ],
+      "source_references": ["extracted/dune-imperium-uprising-rules.txt:329-337", "seed-iteration-02/summary-snapshot.md:220"]
+    }
+  ],
+  "counts": {"correct": 2, "partial": 6, "incorrect": 0}
+}

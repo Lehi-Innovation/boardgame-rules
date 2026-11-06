@@ -1,0 +1,15 @@
+# Coverage revision 01
+
+This revision has 133 active questions with stable historical IDs through Q137. Q48, Q109, Q110 and Q126 are rejected as duplicate or mechanical-recombination candidates; their original questions, keys, material facts and reasons remain in rejected-candidate-entries.json. Their primary source passages map to earlier real questions. The complete inherited source map is retained and corrected, now 229 passage records.
+
+Five additions cover previously unasked procedures: Q133 Digging2 actual options; Q134 ordered display compaction; Q135 Species Diversity different-category counting and its printed table; Q136 the complete appeal-income table; Q137 newly built standard enclosures empty-side up and once-only placement bonuses. Existing choice/refill timing, sequential funding and numerical examples receive no additional novelty credit.
+
+The first twenty question objects remain unchanged. Their key objects exactly inherit benchmark-v1.1: SC01 explicitly corrects only Q17 to accept depicted printed-standard-size bands2−=1/2,3=3,4+=4/5. The old key17 remains in SC01-source-key-correction.json alongside the correction. Other nineteen original keys are unchanged. Q06 and Q42 question/answer objects remain exactly as in the original candidate; their genuinely missing requested procedures are newQ133/Q134.
+
+All independent findingsF01–F08 have recorded resolutions. Sea Cave/Species Diversity identities and the source map's overbroad coverage claims were corrected. Q131/Q132 now cite primary diagrams and the official English Icon Overview directly, with narrow original publisher component-numeral corroboration, without relying on a prior source report. No canonical summary was read or edited, and no reader output or grade was read. Rejections follow strict source novelty, not reader difficulty or performance.
+
+After all five gaps were covered and the complete revised map regenerated, two further targeted author passes each added zero. This is author self-check evidence only. The original draft's earlier stopping claim was overturned by the independent challenge and remains historical, not independent proof of saturation. A fresh independent source/coverage challenge remains necessary before acceptance.
+
+Canonical authority remains the original English base v1.2 main/glossary/FAQ plus explicitly accepted original official English base Icon Overview. Original publisher German component photographs supply obscured original component numerals only; no German revised prose is adopted. The third-party2022 German card review photo is corroborating research history only. Solo, Marine Worlds, strategy-guide authority, unsupplied card text and absent Map3 clarification remain outside supplied procedural evidence.
+
+Files: questions.json; answer-key.json; material-requested-facts.json; question-bank.md; answer-key.md; coverage-map.json; novelty-rejection-ledger.json; challenge-findings-resolution.json; SC01-source-key-correction.json; rejected-candidate-entries.json; original-draft-immutability-check.json; input-provenance.json; artifact-hashes.json.

@@ -1,0 +1,190 @@
+{
+  "verdict": "REVISION_REQUIRED_NOT_SATURATED",
+  "scope": "Original Nemesis, basic board, standard semi-cooperative core. Alternative board, solo/cooperative, Intruder-player mode and expansions excluded.",
+  "independence": {
+    "inputs_read": [
+      "source-snapshot.txt",
+      "nemesis-original-rules.pdf",
+      "benchmark-v4/questions.json",
+      "benchmark-v4/answer-key.json",
+      "coverage-ledger.json"
+    ],
+    "other_task_artifacts_read": false,
+    "input_files_modified": false,
+    "runtime": "Requested gpt-6.1-sol/high runtime configuration and confirmation are handled by the parent; this reviewer cannot independently attest the effective runtime."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "medium",
+      "type": "source_ambiguity_not_demonstrated_key_error",
+      "question_ids": ["Q18"],
+      "description": "The key states an unconditional exemption from drawing Contamination during Egg melee. The original PDF and snapshot instead use one sentence with a trailing condition: 'the Character does not draw a Contamination card or suffer Wounds if they miss.' That condition can grammatically modify either both coordinated penalties or only suffering Wounds. The normal Melee procedure draws Contamination before target selection and the roll, so the unconditional exemption is the stronger coherent operational reading: the manual supplies no delayed draw, refund or retroactive removal procedure. Nevertheless, the sentence does not explicitly separate the unconditional draw exemption from the miss-only Wound exemption. This is wording ambiguity, not evidence that the current key is false or that a successful Egg hit definitely draws Contamination.",
+      "source_references": [
+        {"path": "source-snapshot.txt", "lines": "1816-1823;2650-2654", "printed_pages": [19, 25]},
+        {"path": "nemesis-original-rules.pdf", "printed_pages": [19, 25], "basis": "Original PDF text independently checked; conditional wording matches snapshot."}
+      ],
+      "recommended_action": "Retain the exact wording and explain the step-order interpretation if using unconditional immunity. Do not silently replace it with a successful-hit Contamination rule, delayed drawing or a refund rule. For a strictly unique source-only key, narrow the question to the unambiguous missed-Egg case or mark the successful-hit contamination clause as requiring clarification."
+    },
+    {
+      "id": "F02",
+      "severity": "medium",
+      "type": "untested_procedure",
+      "question_ids": [],
+      "description": "The Storage Room has an entire operative procedure absent from the questions and ledger: choose Red, Yellow or Green; draw two; keep one; place the other at the bottom. Q30 tests normal Search and its example's return to the deck, which does not test Storage's explicit bottom-of-deck instruction. Storage is not an excluded mode or a repeat.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "2664-2668", "printed_pages": [25]}],
+      "recommended_action": "Add A01 and include Storage in the ledger."
+    },
+    {
+      "id": "F03",
+      "severity": "medium",
+      "type": "untested_trigger",
+      "question_ids": [],
+      "description": "The first Character death immediately unlocks all Pods, which can subsequently be locked again. No benchmark question requests this death trigger. Q39 covers the separate Self-Destruct yellow trigger; Q19 covers entry and waiting; Q44 covers manually changing a Pod. Broadly citing the Pod section does not test this rule.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1029-1037;3018-3020", "printed_pages": [12, 28]}],
+      "recommended_action": "Add A02. Keep its premise to the first death, avoiding the separate any-death wording discrepancy noted in F08."
+    },
+    {
+      "id": "F04",
+      "severity": "medium",
+      "type": "untested_procedure",
+      "question_ids": ["Q18", "Q32", "Q33"],
+      "description": "No question tests the Nest's Take one Egg Room Action: take the token from the Intruder board, then roll Noise. Q18 asks about destruction; Q32 covers generic Heavy Object pickup; Q33 covers research. Those do not establish the Nest-specific two-card Room Action and post-taking Noise. This is consequential because generic pickup has a different cost.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1182-1187;2623-2643;3038-3047", "printed_pages": [13, 25, 28]}],
+      "recommended_action": "Add A03 and distinguish taking a Nest Egg from picking up an already dropped Egg token."
+    },
+    {
+      "id": "F05",
+      "severity": "medium",
+      "type": "untested_item_consumption_rule",
+      "question_ids": ["Q28", "Q29"],
+      "description": "The general One Use Only rule is not requested anywhere: after using such an Item, discard its card in addition to paying the Action cost. Q28's reveal-on-use and Q29's voluntary Drop are different procedures. This rule is explained in the manual itself and does not require unavailable Item-card text.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "2198-2199;2259-2263;3048-3053", "printed_pages": [22, 28]}],
+      "recommended_action": "Add A04."
+    },
+    {
+      "id": "F06",
+      "severity": "medium",
+      "type": "untested_outcome_rule",
+      "question_ids": ["Q19", "Q20", "Q53", "Q56"],
+      "description": "Launched Pod occupants are always treated as having arrived on Earth. None of the current questions or expected answers tests that status. Survival and subsequent Contamination/Objective checks do not imply it. It is an explicit outcome rule relevant to interpreting Character arrival requirements, distinct from where the ship jumps.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "2712-2719", "printed_pages": [26]}],
+      "recommended_action": "Add A05. Do not confuse the Character's arrival with an Objective requiring the ship itself to reach Earth."
+    },
+    {
+      "id": "F07",
+      "severity": "low",
+      "type": "reference_precision",
+      "question_ids": ["Q08", "Q14", "Q22"],
+      "description": "Most references match the snapshot and support the answers. Three repairs improve exact claim support. Q08 cites 1682-1684 for movement not being an Encounter, but that rule is at 1685-1686. Q14's one-card Movement cost is supported by the Escape example or basic-action reference, neither included in its citations. Q22's ten-card Action deck count is supported by components/action-card text, outside its cited ranges.",
+      "corrections": [
+        {"question_id": "Q08", "replace_or_add_lines": "1685-1686", "printed_page": 18},
+        {"question_id": "Q14", "add_lines": "1807-1810 or 3038-3039", "printed_pages": [19, 28]},
+        {"question_id": "Q22", "add_lines": "84 or 1235-1237", "printed_pages": [3, 13]}
+      ],
+      "recommended_action": "Repair the key and matching ledger citations. The substantive answers are supported elsewhere in the supplied manual."
+    },
+    {
+      "id": "F08",
+      "severity": "medium",
+      "type": "source_limits_and_ambiguities",
+      "question_ids": ["Q19", "Q25", "Q51"],
+      "description": "The supplied manual has limits that should remain explicit rather than being converted into invented rulings. The ledger already correctly identifies two: no executable model-supply resolution when all eight Adults are in Combat, and no clear treatment of a previously destroyed Nest if Queen development later adds an Egg. A further wording discrepancy is that the critical-moment rule and reference sheet say the first Character death unlocks Pods, while the Pod section says they unlock automatically when any Character dies. The first-death outcome is unambiguous, but whether a second death re-unlocks manually re-locked Pods is not uniquely settled by these texts.",
+      "source_references": [
+        {"path": "source-snapshot.txt", "lines": "1422-1429", "printed_pages": [15]},
+        {"path": "source-snapshot.txt", "lines": "809-816;2632-2634", "printed_pages": [10, 25]},
+        {"path": "source-snapshot.txt", "lines": "1029-1037;2684-2689;3018-3020", "printed_pages": [12, 26, 28]}
+      ],
+      "recommended_action": "Retain the existing two source-limit exclusions; add the later-death unlock ambiguity. Q51 should explicitly say remove ALL eligible non-Combat Adults and avoid promising a placement result when none are eligible."
+    },
+    {
+      "id": "F09",
+      "severity": "info",
+      "type": "diagram_verification",
+      "question_ids": ["Q52", "Q54"],
+      "description": "The original PDF has 28 pages. Independently extracted and visually inspected its embedded symbols, using their placement in the original page content to associate icons with recipe rows. Q54's four pairs are supported: flame plus cross; battery/lightning plus screwdriver/tool; flame plus screwdriver/tool; flame plus folded cloth. The tool is visually a screwdriver, so 'tool' is a suitable generic answer while 'wrench' is an imprecise label. Q52's small single curved symbol and larger double curved symbol match the corresponding size-restricted hit rows on pages 18 and 19.",
+      "source_references": [
+        {"path": "source-snapshot.txt", "lines": "1755-1776;1816-1839;2283-2329", "printed_pages": [18, 19, 23]},
+        {"path": "nemesis-original-rules.pdf", "printed_pages": [18, 19, 23], "basis": "Embedded icon images visually inspected in memory; original image placements checked against recipe labels. No derived image files written."}
+      ],
+      "recommended_action": "Prefer 'screwdriver/tool' over 'wrench/tool' in Q54. No new diagram question is needed."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "id": "A01",
+      "topic": "storage-room-procedure",
+      "question": "What does the Storage Room's Search for an Item Room Action let you draw and keep, where exactly does the rejected card go, and what are the common Room Action cost and restrictions?",
+      "expected_answer": "Pay two Action cards while in the functioning Storage Room and out of Combat. Choose the Red, Yellow or Green Item deck, draw two cards, keep one, and put the other at the bottom of that deck.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "2405-2412;2664-2668;3045-3047", "printed_pages": [24, 25, 28]}],
+      "novelty": "Previously untested Room Action with an explicit bottom-of-deck disposition, rather than a different ordinary Search example."
+    },
+    {
+      "id": "A02",
+      "topic": "first-death-pod-trigger",
+      "question": "The first Character dies while the ship's Pods are Locked. What happens to every Pod immediately, and can they subsequently be Locked again?",
+      "expected_answer": "All Escape Pods immediately become Unlocked. They may subsequently be Locked and Unlocked normally, for example through Hatch Control System.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1029-1037;3018-3020", "printed_pages": [12, 28]}],
+      "novelty": "A distinct critical-moment trigger absent from the current questions; it is not the already-tested Self-Destruct trigger."
+    },
+    {
+      "id": "A03",
+      "topic": "nest-take-egg",
+      "question": "While in the Nest, how do you take an Egg still represented on the Intruder board, what does that Action cost, and what happens immediately afterward? How does this differ from picking up a previously dropped Egg token in your Room?",
+      "expected_answer": "Use the Nest's Take one Egg Room Action, costing two Action cards and subject to common Room Action restrictions. Take one Egg token from the Intruder board, then perform a Noise roll. The Egg is a Heavy Object and occupies a Hand slot. Picking up an already dropped Egg is the ordinary one-card Pick Up Heavy Object Basic Action; that pickup procedure does not itself instruct a Noise roll.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "1182-1187;2220-2228;2405-2412;2623-2643;3038-3047", "printed_pages": [13, 22, 24, 25, 28]}],
+      "novelty": "The source explicitly defines a different acquisition procedure for Eggs represented in the Nest; destruction and Laboratory questions do not exercise it."
+    },
+    {
+      "id": "A04",
+      "topic": "one-use-item-consumption",
+      "question": "You perform the Action printed on a One Use Only Item. Besides paying its Action-card cost and showing it, what happens to the Item card after use?",
+      "expected_answer": "Discard the Item card to the appropriate Item discard pile after using it. This is in addition to discarding the Action cards needed to pay its Action cost.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "677-687;2198-2199;2210;2259-2263;3048-3053", "printed_pages": [9, 22, 28]}],
+      "novelty": "General mandatory Item consumption is a separate procedure from reveal-on-use, voluntary Drop and crafting components."
+    },
+    {
+      "id": "A05",
+      "topic": "launched-pod-earth-status",
+      "question": "For a rule concerned with the Character's arrival on Earth, where is a Character in a launched Escape Pod treated as having arrived? Does this establish that the ship itself reached Earth?",
+      "expected_answer": "Any Character in a launched Escape Pod is always treated as having arrived on Earth. This is the Character's status and does not establish that the ship reached Earth; the ship's destination and survival are checked separately. The passenger still undergoes the normal endgame Contamination and Objective checks.",
+      "source_references": [{"path": "source-snapshot.txt", "lines": "915-958;1093-1096;2712-2719", "printed_pages": [11, 12, 26]}],
+      "novelty": "Explicit Pod arrival outcome is not requested by existing questions about launching, survival or Objective checks."
+    }
+  ],
+  "coverage_assessment": {
+    "questions_reviewed": 57,
+    "answer_keys_reviewed": 57,
+    "core_source_read": "Complete snapshot core passages 438-2834 and 2985-3126, plus opening material 1-437 to verify the ledger exclusion. Optional-mode material 2837-2984 was excluded from substantive assessment.",
+    "overall": "Broad coverage of setup, costs, movement, Noise, Encounters, combat, injuries, contamination, inventory, endings and almost all Rooms. The two reported zero-addition passes do not establish saturation because five distinct untested rules/procedures remain, including one entire Room Action.",
+    "saturation_claim_supported": false,
+    "distinct_proposed_additions": 5,
+    "key_assessment": "No demonstrated material numerical or diagram error in the reviewed keys. Q18 requires an explicit interpretation or narrowed premise to support strict unique-answer grading. Several exact citations need repair; Q54's tool descriptor should be more precise.",
+    "essential_source_gaps": [
+      "The manual delegates many Character Action, Item and Weakness effects to physical cards not supplied in this source set. Exhaustive card-specific coverage cannot be claimed, and such rules should not be invented.",
+      "All eight Adult models in Combat leaves the model-supply procedure without a supplied executable resolution.",
+      "Previously destroyed Nest plus later Queen-generated Egg lacks an explicit persistence/reset ruling.",
+      "Successful Egg melee Contamination treatment is not separated unambiguously from the final miss condition in the exception sentence, although normal step order favors unconditional immunity.",
+      "First-death versus any-death Pod unlocking wording does not uniquely resolve re-unlocking after a later death."
+    ],
+    "novelty_filter": "Rejected mere changes in player counts, target species sharing the same endurance method, numbers of neighbors and different Contamination draw compositions. Proposed additions each identify an untested operative instruction, critical trigger or explicit outcome rule. Existing coverage should be extended or split where convenient; new question IDs are not themselves required."
+  },
+  "checked_passages": [
+    {"source_lines": "1-437", "area": "Components, overview and narrative", "result": "Ledger exclusion reasonable for narrative; component count supplies Q22's ten-card fact."},
+    {"source_lines": "438-688", "area": "Full setup, board description and discard conventions", "question_ids": ["Q01", "Q02", "Q21", "Q22", "Q23"], "result": "Covered, subject to citation precision."},
+    {"source_lines": "690-842", "area": "Player rounds and complete Event Phase, bag branches and deck recycling", "question_ids": ["Q04", "Q09", "Q23", "Q24", "Q25"], "result": "Covered; known later Nest-addition source gap retained."},
+    {"source_lines": "845-969", "area": "Player goals, all ending conditions and ordered victory checks", "question_ids": ["Q20", "Q49", "Q53", "Q56"], "result": "Covered."},
+    {"source_lines": "971-1143", "area": "Costs, critical moments, Objective explanations and Combat restrictions", "question_ids": ["Q02", "Q03", "Q33", "Q37", "Q48", "Q55", "Q56"], "result": "First-death unlock trigger untested; remaining operative rules covered."},
+    {"source_lines": "1145-1250", "area": "All Basic Actions and Action/Item/Room card usage", "question_ids": ["Q03", "Q06", "Q12", "Q31", "Q32"], "result": "Covered in general; Nest-specific Egg acquisition must be distinguished from generic pickup."},
+    {"source_lines": "1252-1521", "area": "Movement, empty/occupied destinations, all Exploration effects, Noise, Intruder movement and Technical Corridors", "question_ids": ["Q05", "Q06", "Q07", "Q08", "Q11", "Q51"], "result": "Broadly covered; no supplied solution when all Adult models are in Combat."},
+    {"source_lines": "1524-1673", "area": "All marker functions, thresholds, Door states and supply limits", "question_ids": ["Q04", "Q10", "Q26", "Q27", "Q45", "Q57"], "result": "Covered."},
+    {"source_lines": "1675-1938", "area": "Encounters, Blank, Surprise Attack, Shoot, Melee, Escape, Intruder targeting and Larva infestation", "question_ids": ["Q07", "Q08", "Q09", "Q12", "Q13", "Q14", "Q15", "Q52", "Q55"], "result": "Covered; Q08's exact citation requires repair. PDF die symbols independently verified."},
+    {"source_lines": "1941-2154", "area": "Contamination acquisition/scanning, endurance and retreat, Character Wounds/death, Weakness research", "question_ids": ["Q13", "Q15", "Q16", "Q17", "Q20", "Q33", "Q36"], "result": "Covered; generic scan death/Creeper effect checked against Room-specific text."},
+    {"source_lines": "2167-2403", "area": "Items, Heavy Objects, hands/inventory, drop, crafting, Search, quests and aggression", "question_ids": ["Q22", "Q28", "Q29", "Q30", "Q31", "Q32", "Q50", "Q54"], "result": "One Use Only consumption omitted; remaining procedures broadly covered. PDF recipes independently verified."},
+    {"source_lines": "2405-2518", "area": "Room prerequisites, Computers and all Basic Rooms", "question_ids": ["Q19", "Q33", "Q34", "Q35", "Q36", "Q37", "Q38", "Q39"], "result": "Covered."},
+    {"source_lines": "2525-2681", "area": "All Additional Rooms and Egg destruction", "question_ids": ["Q17", "Q18", "Q40", "Q41", "Q42", "Q43", "Q44", "Q45"], "result": "Storage and Nest Take one Egg omitted. Egg melee wording requires interpretation."},
+    {"source_lines": "2684-2834", "area": "Complete Pod procedure and all Special Rooms", "question_ids": ["Q19", "Q20", "Q30", "Q46", "Q47", "Q48", "Q53"], "result": "Pod arrival-on-Earth status omitted. Any-death wording conflicts with first-death wording elsewhere; other procedures covered."},
+    {"source_lines": "2985-3126", "area": "Full reference sheet", "question_ids": ["Q03", "Q06", "Q12", "Q14", "Q19", "Q23", "Q24", "Q31", "Q32", "Q34", "Q48", "Q55"], "result": "Rechecked against operative passages; confirms first-death trigger, One Use Only discard and action costs."
+    }
+  ]
+}

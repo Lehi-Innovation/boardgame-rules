@@ -1,0 +1,513 @@
+{
+  "review": "Independent source-only coverage and fixed-key challenge",
+  "scope": "1996 classic base rules, PDF pp1–12 and every base Action Card; excludes pp13–20, 2023 rules, optional short game",
+  "inputs_read": [
+    "extracted/el-grande-rules.txt",
+    "source_pdfs/el-grande-publisher-rules.pdf (pages 1–12 only)",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v2/questions.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v2/answer-key.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/coverage-ledger.json"
+  ],
+  "blinding": "Did not read canonical or frozen summaries, reader answers, grades, source-gap register, source-clarity review, or other reviewers.",
+  "verdict": {
+    "status": "revise_then_repeat_zero_addition_pass",
+    "saturation_claim_supported": false,
+    "summary": "Every base card family is represented, but the fixed key loses two explicit other-region destination restrictions, the ledger mislabels the any-three/any-four distinction as purely numerical, and the secret-scoring selectable-location domain is not directly tested. Original Q01–Q20 need no correction."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "type": "key_precision",
+      "questions": [
+        "Q47",
+        "Q49"
+      ],
+      "finding": "The source uses any other regions for up-to-five from one region and for any-four, while the keys permit any non-King regions. This erases an explicit restriction. The any-three card instead says any regions. All-own relocation separately expressly permits returning some to the original region; Q44 and Q51 preserve this wording, making the inconsistency visible.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "8",
+          "section": "Intrigue: all own; up to five; any three; any four",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "type": "stopping_rule_challenge",
+      "finding": "Ledger rejection R6 and Q49 novelty characterize any-three versus any-four as numerical only. Their detailed destination wording also differs (any versus any other). A zero-addition pass based on treating those procedures as identical is not sufficient without preserving and testing that difference.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "8",
+          "section": "Intrigue: move any 3; move any 4",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "type": "missing_selectable_domain_branch",
+      "questions": [
+        "Q43",
+        "Q34"
+      ],
+      "finding": "The unique-secret-scoring card requires secret disks. Those disks omit the Castillo (p2), so that card cannot select it, although the pick-any-one-region card expressly can (pp10–11). The King region can still be selected for secret scoring because the taboo permits scoring (p7). Q43 asks resolution and collisions but never directly tests this selectable-domain difference. This changes which location can score rather than merely renaming a region.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "2",
+          "section": "Preparation: Secret disk",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7",
+          "section": "A: King taboo still allows scoring",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "10–11",
+          "section": "Pick any one region scoring",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "12",
+          "section": "Special Scoring: each player secretly chooses",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    }
+  ],
+  "proposed_additions": [
+    {
+      "id": "Q52-proposed",
+      "question": "For the 4-stack special scoring where each player secretly chooses a region and duplicate choices do not score, may a player select the King’s region or the Castillo? How does this compare with the card that lets its player pick any one location to score?",
+      "expected_answer": "The King’s region may be selected: taboo does not prevent scoring. The Castillo cannot be selected with the secret disk because the disk shows the nine board regions and omits the Castillo. The pick-any-one-region card expressly permits either the King’s region or the Castillo; scoring the Castillo there does not redistribute its pieces.",
+      "new_rule_or_branch": "Secret-disk selection excludes a location expressly available to unrestricted single-location scoring; scoring exception to King taboo remains in effect.",
+      "overlap_and_disposition": "Q34 covers unrestricted selection; Q43 covers secret selection and collisions. Neither directly asks their differing location domain. Alternatively amend Q43 question/key to include this branch instead of appending a separate question.",
+      "source_references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "2",
+          "section": "Secret disk excludes Castillo",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7",
+          "section": "Scoring allowed in King region",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "10–11",
+          "section": "Pick one region",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "12",
+          "section": "Secret unique scoring",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "Q53-proposed",
+      "question": "According to the detailed Intrigue explanations, do moving any three Caballeros and moving any four Caballeros have identical destination allowances apart from the number? Compare their source wording with the all-own-from-one-region card’s return-to-origin exception.",
+      "expected_answer": "No. The any-three explanation allows any regions except the King’s (and/or Castillo); any-four says any other regions except the King’s (and/or Castillo). Preserve the other-region restriction for the four-piece action. The all-own-from-one-region explanation expressly permits returning some to the original region. Neither King’s region nor Castillo may supply pieces.",
+      "new_rule_or_branch": "A source-specific destination restriction and expressly stated return exception, not a numerical allowance change.",
+      "overlap_and_disposition": "Prefer incorporating this discriminator into Q49 with the corrected key, because Q44 already tests the explicit return permission and Q47 already asks destinations. Do not append a redundant standalone item if the amended Q49 directly tests this distinction.",
+      "source_references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7–8",
+          "section": "Castillo source rule and detailed Intrigue explanations",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    }
+  ],
+  "key_corrections": [
+    {
+      "id": "Q47",
+      "issue": "Destination restriction loses other.",
+      "replacement_expected_answer": "Up to 5 own and/or foreign Caballeros, all from one non-King origin region, never from the Castillo; distribute them to other non-King regions and/or the Castillo. Preserve the source restriction to other regions rather than granting a return-to-origin exception.",
+      "source_references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7–8",
+          "section": "C; Intrigue up to 5",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "Q49",
+      "issue": "Combines any-three and any-four as identical destination procedures although their detailed source wording differs.",
+      "replacement_expected_answer": "Any-three: at most 3 own and/or foreign Caballeros from any non-King regions (not the Castillo), to any non-King regions and/or the Castillo. Any-four: at most 4 own and/or foreign Caballeros from any non-King regions (not the Castillo), into other non-King regions and/or the Castillo. Retain the any-four other-region restriction; the any-three text says any regions.",
+      "source_references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7–8",
+          "section": "C; Intrigue any 3 and any 4",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    }
+  ],
+  "unresolved_source_ambiguities": [
+    {
+      "id": "S01",
+      "issue": "The King returns participant inconsistency",
+      "source_boundary": "Heading says fellow players, but detailed execution says each player starting actor’s left clockwise and card face says each player. Q29 explicitly tests this discrepancy and is acceptable as source reporting, not as proof the source is internally consistent.",
+      "not_a_new_question": true,
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9",
+          "section": "The King returns",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "issue": "The King returns with fewer than three eligible pieces",
+      "source_boundary": "No stated shortage fallback if a player has fewer than three own Caballeros in court plus non-King board regions. Protected King-region and Castillo pieces remain prohibited. Do not borrow the nearby Decay-of-Authority send-all shortage rule.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9",
+          "section": "The King returns; Decay of Authority",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "issue": "One-per-player removal when some player has no eligible board-region Caballero",
+      "source_boundary": "Source requires one per player including actor and excludes King region/Castillo, but gives no explicit no-eligible-piece fallback.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9",
+          "section": "You send 1 Caballero from each player",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "issue": "Secret removals when only protected pieces or no eligible pieces exist",
+      "source_boundary": "Remove-two requires a qualifying region or singleton fallback but does not explicitly resolve no eligible region, including no pieces. Return-all exempts no-Caballeros-in-any-region, but does not explicitly exempt a player whose only region is the King’s region. Do not invent a legal disk destination or remove protected pieces.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9–10",
+          "section": "Secret remove two; secret return all",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "issue": "Secret-removal actor disk participation",
+      "source_boundary": "Headings affect fellow players, while procedural paragraphs say all players select disks. This does not explicitly determine whether the actor must make a non-effectual choice. Q31/Q33 correctly focus affected opponents rather than manufacturing an actor-removal rule.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9–10",
+          "section": "Secret remove two; secret return all",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "issue": "Forced Movement to Castillo versus secret-disk mechanism",
+      "source_boundary": "Global p7 C says any/all moved Caballeros may also enter Castillo; p11 Movement requires affected players to choose a region on disks, which omit Castillo. The source gives no explicit mechanism for selecting Castillo for that action or an explicit priority ruling. Do not turn this tension into a fixed forced-Movement Castillo answer. This differs from secret scoring, where the global Caballero-movement permission is irrelevant.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "2",
+          "section": "Secret disk",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "7",
+          "section": "C: Castillo",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "11",
+          "section": "Movement",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "issue": "Castillo with a mobile 4/0/0 scoreboard during all-4 scoring",
+      "source_boundary": "The mobile board can be put at Castillo (p11), all-4 uses current first value (p10), and all-5 explicitly excludes Castillo. The source does not expressly state whether mobile-4 Castillo joins all-4 scoring. Do not generalize the explicit all-5 exclusion or assume inclusion without marking inference.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "10",
+          "section": "All 4 and all 5 scoring",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "11",
+          "section": "Mobile scoreboard",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "issue": "Veto against Veto and exact tied game-end procedure",
+      "source_boundary": "No explicit resolution of veto-on-veto, nor a game-end tie breaker beyond furthest success-track position. These are source limits, not license to import another edition.",
+      "references": [
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "9",
+          "section": "Veto",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        },
+        {
+          "path": "source_pdfs/el-grande-publisher-rules.pdf",
+          "pdf_pages": "6",
+          "section": "Game End",
+          "corroborating_text": "extracted/el-grande-rules.txt"
+        }
+      ]
+    }
+  ],
+  "duplicate_checks": [
+    {
+      "candidate": "Standalone any-four versus any-three question asking only different counts",
+      "disposition": "Reject as numerical duplicate; a source-destination discriminator is needed."
+    },
+    {
+      "candidate": "Additional Castle special-scoring no-redistribution question",
+      "disposition": "Reject: Q16 and Q34 already cover the same outcome. Their overlap is justified by unrestricted target choice in Q34."
+    },
+    {
+      "candidate": "Additional King-plus-home-bonus arithmetic or different tie numbers",
+      "disposition": "Reject: Q12–Q15 already supply the mechanics and exception; no distinct rule."
+    },
+    {
+      "candidate": "Repeat maximum deployments for each 1–5 stack or each Intrigue duplicate printing",
+      "disposition": "Reject: existing maximum/sequence rules and card-specific effects cover these; repeated copies do not create new procedures."
+    }
+  ],
+  "checked_passages": [
+    {
+      "pdf_pages": "1",
+      "passage": "Components and object; 2–5 players; no extra setup/turn branch found.",
+      "questions": []
+    },
+    {
+      "pdf_pages": "2",
+      "passage": "Board, region randomization, all initial pieces/court/provinces, secret disk domain, power sets, action stacks, mobile boards; optional short game excluded.",
+      "questions": [
+        "Q01",
+        "Q21",
+        "Q52-proposed"
+      ]
+    },
+    {
+      "pdf_pages": "3–4",
+      "passage": "Round start/reveal, power bidding order/distinct values/used stacks, recruitment shortage, descending turns, deployment, special order, discard, King taboo/bonus, Castillo entry.",
+      "questions": [
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q21",
+        "Q22",
+        "Q23"
+      ]
+    },
+    {
+      "pdf_pages": "5–6",
+      "passage": "General scoring timing/selection/scoring/movement/track order, illegal King choice, ranks/ties/player-count cutoffs, Grandes, bonuses, game end.",
+      "questions": [
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q20"
+      ]
+    },
+    {
+      "pdf_pages": "7",
+      "passage": "All-card rules A–G: taboo, simultaneous disks, Castillo entry/removal, indivisible actions, maximum/fewer, ordinary versus special destinations, optional special.",
+      "questions": [
+        "Q05",
+        "Q06",
+        "Q08",
+        "Q09",
+        "Q23",
+        "Q31",
+        "Q33",
+        "Q40",
+        "Q43",
+        "Q44",
+        "Q45",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51"
+      ]
+    },
+    {
+      "pdf_pages": "8",
+      "passage": "All 11 one-stack cards: all own; extra 2; either/or; 2 copies up-to-5; 3 foreign; 3 any; 2 copies 2 own+2 foreign; 4 own; 4 any. Checked body and card-face text.",
+      "questions": [
+        "Q44",
+        "Q45",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51",
+        "Q53-proposed"
+      ]
+    },
+    {
+      "pdf_pages": "9–10",
+      "passage": "All 11 two-stack cards: 2 Veto; 2 Decay variants; King returns; one-per-player; secret 2; secret all; 3 pick-one scoring. Includes shortfall and actor/source boundaries.",
+      "questions": [
+        "Q24",
+        "Q25",
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q32",
+        "Q33",
+        "Q34"
+      ]
+    },
+    {
+      "pdf_pages": "10–11",
+      "passage": "All 11 three-stack cards: 2 all-4; 2 all-5; all-6/7; 2 Castillo; first-only; most; least; choose-one. Current mobile first values, bonuses, ties, empty regions and Castillo exceptions checked.",
+      "questions": [
+        "Q16",
+        "Q34",
+        "Q35",
+        "Q36",
+        "Q37",
+        "Q38",
+        "Q39"
+      ]
+    },
+    {
+      "pdf_pages": "11–12",
+      "passage": "All 11 four-stack cards: 3 mobile; Adviser; Movement; 2 Grande; 2 recovery; Court; secret unique scoring. Sources/destinations, reveal, invalid disk choices and unique-choice collision checked.",
+      "questions": [
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q40",
+        "Q41",
+        "Q42",
+        "Q43",
+        "Q52-proposed"
+      ]
+    },
+    {
+      "pdf_pages": "12",
+      "passage": "Sole five-stack King card, maximum ordinary deployment and unrestricted King placement except Castillo.",
+      "questions": [
+        "Q05",
+        "Q07",
+        "Q23",
+        "Q41"
+      ]
+    }
+  ],
+  "fixed_key_audit": {
+    "checked_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "Q17",
+      "Q18",
+      "Q19",
+      "Q20",
+      "Q21",
+      "Q22",
+      "Q23",
+      "Q24",
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q28",
+      "Q29",
+      "Q30",
+      "Q31",
+      "Q32",
+      "Q33",
+      "Q34",
+      "Q35",
+      "Q36",
+      "Q37",
+      "Q38",
+      "Q39",
+      "Q40",
+      "Q41",
+      "Q42",
+      "Q43",
+      "Q44",
+      "Q45",
+      "Q46",
+      "Q47",
+      "Q48",
+      "Q49",
+      "Q50",
+      "Q51"
+    ],
+    "correction_ids": [
+      "Q47",
+      "Q49"
+    ],
+    "additional_domain_needed": [
+      "Q43"
+    ],
+    "remaining_answers": "Supported within their asked scope, with explicit source inconsistencies/undefined shortfalls preserved above. No original Q01–Q20 changes proposed."
+  },
+  "stopping_rule_recommendation": "Preserve original 20. Correct Q47/Q49 and ledger R6 wording; directly test the secret-scoring domain and destination exception, preferably by extending existing Q43/Q49 or appending the supplied questions without redundant double counting. Then repeat a targeted zero-addition source pass. Keep unresolved source cases outside definitive answer keys."
+}

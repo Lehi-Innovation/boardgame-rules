@@ -1,0 +1,3 @@
+# Nested Unicode escape normalization correction
+
+The first v17 coverage read proof incorrectly flagged23 full question strings and8 expected-answer strings as absent, despite complete actual outputs. The challenger printed JSON with default ASCII escapes. Decoding Unicode before flattening nested JSON escaping left a spurious backslash before decoded punctuation (for example, `visit\’s` instead of `visit’s`). Runtime inspection of Q24 identified the precise mismatch. The checker now flattens ordinary nested JSON escaping before decoding Unicode, preserving the source text. The initial false-flag proof is retained beside the corrected report. No agent reread, new rule, input mutation or source/coverage verdict change was used to fix this representation issue.

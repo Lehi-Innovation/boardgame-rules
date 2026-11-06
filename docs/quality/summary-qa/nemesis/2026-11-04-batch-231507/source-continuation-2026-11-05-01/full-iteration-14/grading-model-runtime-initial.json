@@ -1,0 +1,148 @@
+{
+  "parent_runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/04/rollout-2026-11-04T23-15-54-01a1aa59-7f47-7aa0-b41e-cdb1bdbea5fa.jsonl",
+  "agents": [
+    {
+      "session_id": "01a1b006-1819-7ee1-8738-b2968a71b9dd",
+      "runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T01-42-31-01a1b006-1819-7ee1-8738-b2968a71b9dd.jsonl",
+      "task": "source_continuation_grade14_a",
+      "actual_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        }
+      ],
+      "parent_spawn": {
+        "task_name": "source_continuation_grade14_a",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none"
+      },
+      "executable_tool_calls": [
+        {
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"python - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nx=json.load(open(p))\\nprint(type(x).__name__)\\nprint(json.dumps(x.get('a') if isinstance(x,dict) and 'a' in x else next(r for r in (x if isinstance(x,list) else x.values()) if r.get('id')=='a'),indent=2))\\nPY\",\"max_output_tokens\":12000});text(r.output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nx=json.load(open(p))\\nprint(type(x).__name__)\\nprint(json.dumps(x.get('a') if isinstance(x,dict) and 'a' in x else next(r for r in (x if isinstance(x,list) else x.values()) if r.get('id')=='a'),indent=2))\\nPY\",\"max_output_tokens\":12000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nx=json.load(open(p))\\nprint(list(x))\\nfor k,v in x.items():\\n if isinstance(v,list):\\n  print('list key',k,'length',len(v)); print('first keys', list(v[0]) if isinstance(v[0],dict) else '')\\nPY\",\"max_output_tokens\":1000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nx=json.load(open(p))\\nfor r in x['records']:\\n if r['grader']=='a': print(json.dumps(r,indent=2))\\nPY\",\"max_output_tokens\":14000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-input-manifest-a.json\",\"max_output_tokens\":12000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-input-manifest-a.json'\\nm=json.load(open(p))\\nfor p in m['allowed_inputs']:\\n b=open(p,'rb').read();print(p.rsplit('/',1)[-1],len(b),'HASH_OK',hashlib.sha256(b).hexdigest()==m['hashes'][p])\\n if any(x in p for x in ['rubric','addendum','clarification']): print(b.decode())\\nfor p in [m['allowed_inputs'][0],m['allowed_inputs'][2],m['allowed_inputs'][3]]:\\n x=json.load(open(p));print(p.rsplit('/',1)[-1],type(x).__name__,list(x)[:20] if isinstance(x,dict) else len(x));print(json.dumps(x[0] if isinstance(x,list) else {k:v for k,v in x.items() if not isinstance(v,list)},indent=2)[:2500])\\nPY\",\"max_output_tokens\":18000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '1,220p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":16000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '221,440p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":18000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '441,700p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":20000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nfor f,k in [('full-iteration-14/questions.json','questions'),('benchmark-v17/answer-key.json','answers'),('full-iteration-14/reader-a.json','answers')]:\\n x=json.load(open(b+f));print(f,json.dumps(x[k][0],ensure_ascii=False))\\nPY\",\"max_output_tokens\":4500})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'full-iteration-14/questions.json'))['questions'];k=json.load(open(b+'benchmark-v17/answer-key.json'))['answers'];r=json.load(open(b+'full-iteration-14/reader-a.json'))['answers']\\nfor a in q[:16]:\\n i=a['id'];kk=next(x for x in k if x['id']==i);rr=next(x for x in r if x['id']==i)\\n print(json.dumps({'question':a,'key':kk,'reader':rr},ensure_ascii=False))\\nPY\",\"max_output_tokens\":19000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "store('assessments', {\nQ01:[\"Select three random Escape Pods\",\"Distribute in number order A/B/A\",\"Orient all Pods Locked\",\"Start bag with 1 Blank, 4 Larvae, 1 Creeper, 1 Queen and 7 Adults\"],\nQ02:[\"Remove Objectives requiring more than actual player count\",\"Deal one Personal and one Corporate secretly\",\"Everyone chooses one immediately when first Intruder miniature appears before Encounter resolution\",\"Remove rejected Objective face down unseen\",\"Eggs do not trigger choice\"],\nQ03:[\"Discard played Action card and two additional Action cards face up\",\"Contamination cannot substitute for Action-card payment\",\"Choose one OR effect\"],\nQ04:[\"Take one Light Wound at end of own passing round\",\"No further ordinary Actions after passing; Interruption remains permitted\",\"May discard any number of hand cards upon passing\",\"Later players' rounds cause no further Fire wounds this turn\"],\nQ05:[\"Reveal Room tile and Exploration token on entry\",\"Set Item Counter from token except Nest and Slime Room\",\"Resolve Exploration effect\",\"Remove resolved Exploration token from game\",\"Ordinary movement Noise roll follows in empty Room\",\"Silence and Danger Exploration replace Noise roll\",\"Occupied destination causes no movement Noise roll\"],\nQ06:[\"Careful Movement costs two Action cards\",\"Replace movement Noise roll with chosen connected-Corridor Noise placement\",\"Forbidden in Combat\",\"Forbidden when all destination Corridors already contain Noise\",\"Closed Door blocks passage\",\"No miniature may stop in a Corridor\"],\nQ07:[\"Already-marked numbered Corridor triggers Encounter\",\"Remove all connected Noise including Technical Corridors\",\"Draw bag token and place matching miniature\",\"Keep non-Blank token outside bag\",\"Compare token number with triggering player's full hand\",\"Fewer cards causes Surprise Attack; equal or more does not\",\"Contamination counts for comparison\"],\nQ08:[\"Move all eligible neighboring Intruders, excluding those in Combat\",\"With none eligible place Noise in every unmarked connected Corridor including Technical Corridors\",\"Moving Intruder into Room gives Combat rather than Encounter\",\"Slime converts Silence to Danger\"],\nQ09:[\"Encounter Blank restores Noise in each connected Corridor\",\"Return Blank to bag\",\"Add available Adult only if Blank was last token in Encounter\",\"Development Blank attempts to add an available Adult regardless of last-token condition\"],\nQ10:[\"Both Intruders stay in original Room\",\"Both destroy Closed Door simultaneously\",\"Only Plasma Torch can reclose Destroyed Door\",\"Noise-triggered appearance bypasses Closed Door\"],\nQ11:[\"Remove Intruder miniature\",\"Discard all Injury markers\",\"Return its token to bag\",\"Leave Technical Corridors Noise in place\",\"Characters normally cannot use Technical Corridors except named card/Item exceptions\",\"Doors cannot be placed in Technical Corridors\"],\nQ12:[\"Shoot and Melee each cost one Action card\",\"Shoot requires Weapon in Hand and spends one Ammo\",\"Target is in same Room\",\"Melee gains one Contamination to Action discard\",\"Shoot miss gives zero Injuries and no self Wound\",\"Melee miss gives zero Injuries and one Serious Wound\",\"Double-hit deals two Shoot Injuries subject to modifiers and one Melee Injury\"],\nQ13:[\"Larva dies at one Injury\",\"Larva leaves no Carcass\",\"Adult draws one Attack card and dies if blood is at most current total Injuries\",\"Dead Adult leaves Carcass in Room\",\"Queen draws two Attack cards, sums blood and dies if sum is at most current total Injuries\",\"Dead Queen leaves Carcass in Room\",\"Arrow on either Queen card causes retreat instead of numerical death check\"],\nQ14:[\"Resolve one Attack per Intruder before moving\",\"Attacks target escaping Character\",\"Death leaves Corpse in starting Room\",\"Survival completes move\",\"Explore destination and apply ordinary Noise subject to Exploration replacement\"],\nQ15:[\"Target Character with fewest Action cards in hand\",\"Break ties by First Player then turn order\",\"Non-Larva attack hits only with matching Intruder symbol; otherwise misses\",\"Larva draws no Attack card and moves to Character board\",\"Gained Contamination goes on top of Action discard\"],\nQ16:[\"Dressing does not prevent further-Wound death at three Serious Wounds\",\"Third Light Wound clears track and gives Serious Wound\",\"Heal removes specified Light Wound or dressed Serious Wound\",\"Death leaves Corpse in death Room\",\"Drop all Heavy Objects in death Room\"]\n});\ntext((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'full-iteration-14/questions.json'))['questions'];k=json.load(open(b+'benchmark-v17/answer-key.json'))['answers'];r=json.load(open(b+'full-iteration-14/reader-a.json'))['answers']\\nfor a in q[16:32]:\\n i=a['id'];print(json.dumps({'question':a,'key':next(x for x in k if x['id']==i),'reader':next(x for x in r if x['id']==i)},ensure_ascii=False))\\nPY\",\"max_output_tokens\":22000})).output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'full-iteration-14/questions.json'))['questions'];k=json.load(open(b+'benchmark-v17/answer-key.json'))['answers'];r=json.load(open(b+'full-iteration-14/reader-a.json'))['answers']\\nfor a in q[21:24]:\\n i=a['id'];print(json.dumps({'question':a,'key':next(x for x in k if x['id']==i),'reader':next(x for x in r if x['id']==i)},ensure_ascii=False))\\nPY\",\"max_output_tokens\":6000})).output)\n"
+        }
+      ]
+    },
+    {
+      "session_id": "01a1b006-3051-7410-9346-298c84e9709d",
+      "runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T01-42-38-01a1b006-3051-7410-9346-298c84e9709d.jsonl",
+      "task": "source_continuation_grade14_b",
+      "actual_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        }
+      ],
+      "parent_spawn": {
+        "task_name": "source_continuation_grade14_b",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none"
+      },
+      "executable_tool_calls": [
+        {
+          "name": "exec",
+          "input": "const r = await tools.exec_command({cmd:\"python - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nd=json.load(open(p))\\nprint(json.dumps(d.get('b') if isinstance(d,dict) and 'b' in d else d,indent=2))\\nPY\",\"max_output_tokens\":8000});text(r.output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-prompts.json'\\nd=json.load(open(p))\\nif isinstance(d,dict):\\n print(json.dumps(d.get('b',d),indent=2))\\nelse:\\n print(json.dumps([r for r in d if r.get('id')=='b' or r.get('reader')=='b'],indent=2))\\nPY\",\"max_output_tokens\":10000});text(r.output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/grading-input-manifest-b.json\",\"max_output_tokens\":10000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\nbase=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01')\\nm=json.load(open(base/'full-iteration-14/grading-input-manifest-b.json'))\\nfor p,h in m['hashes'].items():\\n a=hashlib.sha256(Path(p).read_bytes()).hexdigest()\\n print('HASH',Path(p).name,a==h)\\nfor p in m['allowed_inputs']:\\n if any(x in Path(p).name for x in ['rubric','addendum','clarification']):\\n  print('\\\\nFILE',p);print(Path(p).read_text())\\nfor f in ['full-iteration-14/questions.json','benchmark-v17/answer-key.json','full-iteration-14/reader-b.json']:\\n d=json.load(open(base/f));print('SCHEMA',f,type(d).__name__,list(d)[:15] if isinstance(d,dict) else len(d)); print(str(d)[:1500])\\nPY\",\"max_output_tokens\":16000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"wc -l -c /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/reader-b.json\\nsed -n '1,220p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":19000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '221,410p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":22000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '411,579p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/full-iteration-14/summary-snapshot.md\",\"max_output_tokens\":24000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01')\\nq=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[:18]:\\n print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":22000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01')\\nq=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[9:12]+q[18:25]:\\n print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":14500})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01');q=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[25:36]: print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":15000})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01');q=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[36:47]: print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":15500})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01');q=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[47:59]: print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":15500})).output);\n"
+        },
+        {
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01');q=json.load(open(b/'full-iteration-14/questions.json'))['questions'];k={x['id']:x for x in json.load(open(b/'benchmark-v17/answer-key.json'))['answers']};r={x['id']:x for x in json.load(open(b/'full-iteration-14/reader-b.json'))['answers']}\\nfor x in q[59:71]: print(json.dumps({'question':x,'key':k[x['id']],'reader':r[x['id']]},ensure_ascii=False))\\nPY\",\"max_output_tokens\":14500})).output);\n"
+        }
+      ]
+    }
+  ],
+  "limit": "Task bodies are encrypted; no claim to recover delivered prompts. Context isolation is prompt-based, not OS enforcement."
+}

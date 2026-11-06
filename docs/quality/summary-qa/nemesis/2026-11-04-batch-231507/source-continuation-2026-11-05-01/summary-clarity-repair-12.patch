@@ -1,0 +1,76 @@
+--- full-iteration-11/summary-snapshot.md
++++ rules/nemesis.md
+@@ -48,7 +48,7 @@
+ 
+ 1. Place the board with the **basic side** up (red arrow icon in the upper left corner).
+ 2. Shuffle all Room tiles "2" without looking at their fronts and randomly place one face down on each Room slot marked "2". Return the rest to the box unseen (there are more tiles than slots — players never know exactly which Rooms are on the ship).
+-3. Place all Room tiles "1" the same way on the slots marked "1".
++3. Shuffle all **11 Room tiles "1"** without looking at their fronts and randomly place one **face down** on each slot marked "1". All 11 are used.
+ 4. Shuffle the Exploration tokens (unseen) and place one face down on each Room tile. Return the rest to the box.
+ 5. Place 1 random Coordinates card face down on its space next to the Cockpit. Return the rest to the box.
+ 6. Place 1 Status marker on the "B" space of the Destination Track — this is the Destination marker.
+@@ -64,7 +64,7 @@
+ 
+ 14. **Randomly deal Player Numbers:** use Help cards numbered 1 to the player count and deal one at random to each player. This is their **Player Number**, which sets character-choice order and matters for some Objectives.
+ 15. **Match the Inventory to that number:** each player takes the plastic Inventory card holder with the same number as their Help card (keeps non-Heavy Item cards hidden).
+-16. Remove from both Objective decks (Corporate and Personal) all cards showing a player count higher than the actual number of players. Shuffle the two decks separately and deal each player **1 Corporate and 1 Personal Objective card**, kept hidden. (You receive Objectives before the Character draft on purpose — pick a Character suited to your Objective.)
++16. **Let P be the actual number of players in this game.** Remove from both Objective decks (Corporate and Personal) every card requiring **more than P players**. Shuffle the two decks separately and deal each player **1 Corporate and 1 Personal Objective card**, kept hidden. (You receive Objectives before the Character draft on purpose — pick a Character suited to your Objective.)
+ 17. Character draft, in Player Number order: shuffle the Character draft cards. Each player **draws 2 → reveals both publicly → chooses 1 → shuffles the unchosen card back into the draft deck before the next player draws**. You may only control the Character you drafted. After every player has chosen, return the remaining draft deck to the box.
+ 18. **Complete starting kit:** keep your **Help card and matching numbered Inventory holder** from steps 14–15, and take: (A) your Character board; (B) your miniature (in a colored plastic ring), placed in the **Hibernatorium**; (C) your 10-card Action deck, shuffled, face down at the left of your board; (D) your Starting Item card (Weapon) in one of your two Hand slots, loaded with Ammo markers equal to that Weapon's Ammo capacity; (E) your 2 Quest Items, horizontal side up, next to the board (NOT active at the start — they unlock via mini-quests). Return unused Character boards to the box. (F) Leave a spot for your Action discard pile — used Action cards and Contamination cards go there.
+ 19. **Player 1 gets the initial First Player token.** It stays with them for the first turn; later turns pass it left during the Player Phase.
+@@ -72,7 +72,7 @@
+ 
+ ### Discard piles
+ 
+-Normal **card** discards are face up; each deck has its own discard space:
++**Normal discard destinations include marker pools and card piles:** return a discarded **marker to its matching supply pool**, and place a discarded **card face up in the appropriate pile** listed below.
+ 
+ | Component | Destination |
+ |---|---|
+@@ -84,7 +84,7 @@
+ | Discarded Serious Wound cards | Serious Wound discard pile |
+ | **Discarded markers** | **Return to the appropriate marker pool** |
+ 
+-**Routing rule:** Action and gained Contamination cards go to that Character's Action discard; Items go to the matching Item discard; Event, Intruder Attack and Serious Wound cards each go to their own discard. **Discarded markers return to their matching supply pools.** An explicit effect can give a different destination: Search and Storage keep one of two Item cards and return the other face down to the bottom of the chosen deck. Removed-from-game Contamination and Exploration tokens do not return to their supplies.
++**Routing rule:** discarded markers → matching supply pools; Action and gained Contamination cards → that Character's Action discard; Items → matching Item discard; Event, Intruder Attack and Serious Wound cards → their respective discard piles. An explicit effect can give a different destination: Search and Storage keep one of two Item cards and return the other face down to the bottom of the chosen deck. Removed-from-game Contamination and Exploration tokens do not return to their supplies.
+ 
+ ## Turn Structure
+ 
+@@ -157,6 +157,8 @@
+ 
+ Each Character has a partially unique deck of 10 Action cards. To use one, discard that card face up **and** pay its cost by discarding the required number of additional Action cards. If a card has two sections separated by "OR," choose one.
+ 
++**Printed-payment example:** Captain's Basic Repairs has an extra cost of **2**. Discard **Basic Repairs itself + 2 other Action cards = 3 Action cards total**. Those three cards are sufficient for its printed Action-card payment; Contamination cannot replace any of them. The card's separate requirements, including Out of Combat, still apply.
++
+ Passing stops normal Actions for the rest of that Player Phase. The **Interruption card remains playable after passing**, with its normal requirements (see FAQ).
+ 
+ The original manual illustrates these card effects on page 13:
+@@ -438,10 +440,15 @@
+ - **Capacity:** 2 Characters per Pod. Heavy Objects take no Character space.
+ - **Launch immediately:** after boarding you may launch. Remove the Pod token and its occupants' miniatures from the game; they stop participating and count as arriving on Earth. They still face the final Contamination and Objective checks.
+ - **Wait after boarding:** you pass the current turn. You remain treated as present in the Section for Noise rolls from bag development (FAQ Rules 1).
+-- **At the start of your first round in each later Player Phase**, choose exactly one: remain waiting and pass; launch; or exit for free into the corresponding Section Room and play a full round of 2 Actions (FAQ Rules 2).
+-- **A second Character boards your waiting Pod:** the **new boarder may immediately launch with both occupants aboard**. Waiting by the first occupant does not prevent this launch or reserve launch control for them.
+-- **An Intruder appears in the Section while you wait:** all Characters in that Section's Pods immediately return to its Room.
+-- **A Malfunction appears in the Section while you wait:** you may still wait, launch or exit; the marker blocks only new entry to Pods (FAQ Rules 3).
++
++**While waiting in a Pod, resolve these situations:**
++
++| Situation | Options or consequence |
++|---|---|
++| Start of your first round in each later Player Phase | Choose exactly one: **remain waiting and pass; launch; or exit free into the corresponding Section Room and play a full round of 2 Actions** (FAQ Rules 2). |
++| A second Character boards your Pod | The **new boarder may immediately launch with both occupants aboard**; the first occupant's decision to wait does not reserve launch control. |
++| An Intruder appears in the Section | **Every Character in any Pod of that Section immediately returns to the Section Room.** |
++| A Malfunction appears in the Section | You may still **wait, launch or exit**; the marker blocks **only new Pod entry** (FAQ Rules 3). |
+ 
+ ### Self-Destruct sequence (Generator Room)
+ 
+@@ -503,7 +510,7 @@
+ 
+ ### Card and marker handling
+ 
+-Draw to 5 at the start of the Player Phase; when a required Action draw finds the deck empty, shuffle that Character's Action discard into a new deck. Pass the First Player token left after drawing, except on turn 1. **Normal card discards are face up:** Action/Contamination → own Action discard; Items → matching Item discard; Event, Intruder Attack and Serious Wound → their respective discard piles. **Discarded markers → matching supply pools.** Follow explicit exceptions such as Search/Storage's face-down bottom-deck return and cards removed from the game.
++Draw to 5 at the start of the Player Phase; when a required Action draw finds the deck empty, shuffle that Character's Action discard into a new deck. Pass the First Player token left after drawing, except on turn 1. **Normal discard routing:** markers → matching supply pools; cards go **face up** to their piles — Action/Contamination → own Action discard; Items → matching Item discard; Event, Intruder Attack and Serious Wound → their respective discard piles. Follow explicit exceptions such as Search/Storage's face-down bottom-deck return and cards removed from the game.
+ 
+ ### Action costs
+ 

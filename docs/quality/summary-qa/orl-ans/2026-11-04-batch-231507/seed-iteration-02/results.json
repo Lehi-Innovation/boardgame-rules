@@ -1,0 +1,705 @@
+{
+  "iteration": "seed-iteration-02",
+  "benchmark_version": "bank-v1",
+  "grading": "All requested parts compared semantically against frozen source-backed key; extra materially false rulings count incorrect. Support labels are not grades.",
+  "readers": {
+    "a": {
+      "counts": {
+        "correct": 18,
+        "partial": 2,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "In a 3-player Census, two players tie furthest ahead and one is alone furthest behind. Who gains or pays? What changes for an unequal 2-player Census?",
+          "expected_answer": "No one gains for a tied lead; the unique last player pays 1 coin. With 2 players, unique leader gains 1 coin and last pays nothing.",
+          "source_references": [
+            "p.14; extraction lines 129–133"
+          ],
+          "observed_answer": {
+            "id": "Q01",
+            "answer": "In the 3-player case, the tied leaders receive no coin and the unique last player pays 1 coin. In an unequal 2-player Census, the unique leader still gains 1 coin, but the last player never pays.",
+            "support": "supported",
+            "evidence": "Turn Structure → Census: tied lead gives no coin; unique last pays; in a 2-player game the last player never pays."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Your Knight draw allowance is 6, but only two Market spaces are free. Must you draw six? May you draw more than two? What happens to unused Market Followers?",
+          "expected_answer": "Drawing is optional up to the Knight allowance and free Market capacity; draw at most two. Unused Market Followers remain and occupy spaces.",
+          "source_references": [
+            "p.14; lines 135–142"
+          ],
+          "observed_answer": {
+            "id": "Q02",
+            "answer": "You do not have to draw six: you may draw any number up to the allowance, limited by free Market spaces, so at most two here. Unused Market Followers remain between rounds and occupy capacity.",
+            "support": "supported",
+            "evidence": "Turn Structure → Followers: draw any number up to the allowance, limited by free Market spaces; unused Market Followers remain between rounds and occupy capacity."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "May you partially fill an action over several rounds, execute it before it is full, or save a fully activated action for a later round? Where do its Followers go when it is eventually executed?",
+          "expected_answer": "May fill over rounds, cannot execute until all required spaces occupied. May save activation with tiles left in place. On execution Followers go to own bag; Technology stays.",
+          "source_references": [
+            "p.15; lines 154–170"
+          ],
+          "observed_answer": {
+            "id": "Q03",
+            "answer": "You may fill an action gradually over multiple rounds, but it activates only when all required spaces are occupied by Followers or legal Technology (Town Hall needs only one space). You may save an activated action for a later round. When executed, its Followers return to your bag; Technology stays on its spaces.",
+            "support": "supported",
+            "evidence": "Turn Structure → Planning/Actions: actions may be filled gradually; activation requires all spaces except Town Hall; activation can be saved; after executing, return Followers to your bag and Technology stays."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "How do players alternate actions in Phase 5? If you pass with an unused activated action, can you act again later this round and what happens to that activation?",
+          "expected_answer": "Start player then clockwise, one action or pass per turn, repeat until all pass. Passing ends own actions this round even if activated actions remain; unused activation and Followers stay for a later round.",
+          "source_references": [
+            "p.15; lines 159–170"
+          ],
+          "observed_answer": {
+            "id": "Q04",
+            "answer": "Starting with the Start Player, players go clockwise repeatedly, each taking one activated action or passing. Passing ends your participation for the Action Phase, so you cannot act again that round. Unused activations retain their Followers on the board for future rounds.",
+            "support": "supported",
+            "evidence": "Turn Structure → Actions: take one activated action or pass; passing ends your participation; unused activations keep their Followers for future rounds."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "What does the Farm House action recruit, where does it go, and what track movement and immediate reward follow?",
+          "expected_answer": "Take Farmer into own bag; advance Farmer track one space and take depicted good.",
+          "source_references": [
+            "p.16; lines 186–191"
+          ],
+          "observed_answer": {
+            "id": "Q05",
+            "answer": "Farm House recruits a Farmer into your bag, advances the Farmers Track one space, and gives the good depicted on that space.",
+            "support": "supported",
+            "evidence": "Actions table, Farm House: put a new Farmer in your bag; advance Farmers Track one space and take its depicted good."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What three professions can Village recruit, and what distinct track reward accompanies each?",
+          "expected_answer": "Choose Boatman, Craftsman or Trader, put recruit in bag and advance corresponding track. Boatman gains depicted coins (first at last space gets Citizen instead); Craftsman gains Technology usable only after passing; Trader gains Place Tile.",
+          "source_references": [
+            "pp.16–17; lines 192–208,224–234"
+          ],
+          "observed_answer": {
+            "id": "Q06",
+            "answer": "Village lets you recruit one of a Boatman, Craftsman, or Trader, putting the chosen neutral Follower in your bag and advancing that profession's track one space. Boatman gains the depicted coins (or a Citizen for the first player at the last space); Craftsman gains a Technology tile, usable only after passing; Trader gains one Place Tile, category I on the first advance and I or II on later advances.",
+            "support": "supported",
+            "evidence": "Actions → Village recruitment: each chosen neutral Follower enters your bag and its track advances; listed profession-specific rewards."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "You just recruited a Craftsman. Can its Technology help another action this Action Phase? What must your first Technology replace, and what are the placement limits for all Technology?",
+          "expected_answer": "Only use after passing, so no further own action this round. First must replace Farmer; later any required Character except Monk. Max one per Place, no single-Character Places, cannot move after placement; remains until game end.",
+          "source_references": [
+            "p.16; lines 202–218"
+          ],
+          "observed_answer": {
+            "id": "Q07",
+            "answer": "No. A newly gained Craftsman Technology can be used only after you pass, so it cannot help execute another action this round after that pass. Your first placed Technology must replace a Farmer. Later Technology may replace any profession except Monk. Technology remains on its space, cannot be moved, and you may place no more than one at a Place or any at a Place requiring only one Follower.",
+            "support": "supported",
+            "evidence": "Village recruitment and Technology: Craftsman tile is used only after passing; first Technology replaces a Farmer; subsequent placement restrictions and permanence are stated."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "On your first Trader-track advance may you choose a category II Place? What categories are allowed later, and may players inspect the stacks?",
+          "expected_answer": "First advance category I only; later I or II. Place beside board; can activate/use ability; stacks inspectable at any time.",
+          "source_references": [
+            "p.17; lines 224–236"
+          ],
+          "observed_answer": {
+            "id": "Q08",
+            "answer": "No. The first Trader-track advance permits category I only; every later advance permits category I or II. Players may inspect the stacks at any time.",
+            "support": "supported",
+            "evidence": "Setup: players may inspect Place Tile stacks at any time. Village recruitment: first Traders Track advance permits category I; later advances I or II."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "What do University, Castle and Monastery each give and where do recruits go? Does the fourth Knight increase the draw allowance, and what happens once a character track is at its last space?",
+          "expected_answer": "University Scholar into bag, advance Scholars and gain depicted Development Points; Castle Knight into bag, advance Knights for draw limit; fourth Knight stays draw 7, first there may take Citizen. Monastery Monk into bag, no additional bonus. At final track space cannot take corresponding action again.",
+          "source_references": [
+            "p.17; lines 237–260"
+          ],
+          "observed_answer": {
+            "id": "Q09",
+            "answer": "University puts a Scholar in your bag, advances the Scholars Track, and gives its depicted Development Points. Castle puts a Knight in your bag and advances the Knights Track, which sets future draw allowance. Monastery puts a Monk in your bag with no extra track reward. Recruiting the fourth Knight does not raise the allowance above 7 at that step; once a character track is at its last space, you cannot take that corresponding action again.",
+            "support": "supported",
+            "evidence": "Actions table and Character-track limits: University/Castle/Monastery effects; fourth Knight does not raise allowance above 7; no further corresponding action at last space."
+          },
+          "grade": "partial",
+          "reason": "Omits the fourth-Knight first-arrival Citizen reward within the requested Castle rewards.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Can a Monk replace a Knight for an ordinary action? Can a Knight or Technology replace a required Monk? Can a Monk replace a required profession on Beneficial Deeds?",
+          "expected_answer": "Monk may replace Knight or any other Character in ordinary actions. No other Character or Technology can replace required Monk. Beneficial Deeds require exact depicted types, no Monk substitution.",
+          "source_references": [
+            "pp.17–18; lines 253–257,290–293"
+          ],
+          "observed_answer": {
+            "id": "Q10",
+            "answer": "Yes, a Monk may replace a Knight on an ordinary action. No, a Knight or Technology cannot replace a required Monk. No, Monks or other substitutions cannot replace the exact professions depicted on Beneficial Deeds.",
+            "support": "supported",
+            "evidence": "Monks: Monk can replace any other profession in ordinary actions, but the reverse is forbidden. Town Hall: Deeds require exact professions; substitutions cannot replace them."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "What exactly does one Ship or Wagon action move, and how many goods can you take if two lie on that connection? May you use an empty connection?",
+          "expected_answer": "Ship moves to one adjacent town along Waterway; Wagon likewise along Road. May take one good from connection even if multiple; keep by board. Empty links legal, give no good.",
+          "source_references": [
+            "pp.18,21; lines 263–270,388–389"
+          ],
+          "observed_answer": {
+            "id": "Q11",
+            "answer": "One Ship or Wagon action moves the Merchant along one adjacent Waterway or Road connection, respectively. You may take at most one good from that connection, choosing one if multiple goods are there. An empty connection is legal and yields no good.",
+            "support": "supported",
+            "evidence": "Movement and goods: one connection per action; one good at most; empty Roads/Waterways are legal and yield no good."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "What does Guildhall build, where must your Merchant be, and may you build where an opponent has already built? State the Orléans exception.",
+          "expected_answer": "Build Trading Station in Merchant current town; no existing station of any player allowed. In Orléans each player may build one.",
+          "source_references": [
+            "p.18; lines 271–275"
+          ],
+          "observed_answer": {
+            "id": "Q12",
+            "answer": "Guildhall builds one Trading Station in the town where your Merchant currently is. A town with another player's station cannot receive another station. Orléans is the exception: each player may build one station there.",
+            "support": "supported",
+            "evidence": "Building: Guildhall requires your Merchant in the town; occupied towns cannot receive another station; each player may build one in Orléans."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "What does Scriptorium do? When Development movement lands on or passes coin, Citizen and status spaces, what rewards/status changes occur?",
+          "expected_answer": "Scriptorium gives 1 Development Point/advance 1 space. Landing/passing coin gives depicted coins; first landing/passing Citizen gets it. Landing/passing status immediately sets Development Status to shown value (initially 1).",
+          "source_references": [
+            "pp.18–19; lines 276–278,306–316"
+          ],
+          "observed_answer": {
+            "id": "Q13",
+            "answer": "Scriptorium gives 1 Development Point, moving your marker one space. When Development movement lands on or passes a coin space, collect its depicted coins; the first player onto or past a Citizen space collects that Citizen; reaching or passing a Development Status space immediately changes your Status to its shown value.",
+            "support": "supported",
+            "evidence": "Actions table, Scriptorium; Scoring: coin, Citizen, and Development Status effects on moving onto or past spaces."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "Can Town Hall work with one Follower, can it send two in one action, and can your starting colored Followers be used? What rewards and destinations apply, including Canalization and completing a Deed?",
+          "expected_answer": "One or two can activate, move one or both to free matching Deed spaces; colored starters prohibited. Receive depicted 1/2/3 coins per tile; Canalization 1 coin or 1 Development Point. Tile remains permanently. Completing last vacant Deed space earns its Citizen.",
+          "source_references": [
+            "p.18; lines 279–296"
+          ],
+          "observed_answer": {
+            "id": "Q14",
+            "answer": "Town Hall works with one or two eligible Followers in one action. Starting marked Followers cannot be used. Send them to free Deed spaces matching their exact professions, including different Deeds; take each placement's depicted 1–3 coins, or for Canalization choose 1 coin or 1 Development Point. The player filling a Deed's last space takes its Citizen.",
+            "support": "supported",
+            "evidence": "Town Hall and Beneficial Deeds: one or both Followers; starting Followers barred; exact-profession free spaces; rewards and last-space Citizen."
+          },
+          "grade": "partial",
+          "reason": "Gives Deed destination but does not resolve that dispatched Followers remain there permanently.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "What does Pilgrimage forbid, when does it apply, and when are the other events resolved? Which event opens the game?",
+          "expected_answer": "Pilgrimage forbids recruiting Monks during Phase 5 Actions. Other events resolve Phase 6. Pilgrimage is deliberately first/top tile.",
+          "source_references": [
+            "pp.13–14,20; lines 99–103,123–127,343–345"
+          ],
+          "observed_answer": {
+            "id": "Q15",
+            "answer": "Pilgrimage prohibits Monk recruitment during Phase 5, the Action Phase. The other events resolve in Phase 6. The game opens with Pilgrimage because that tile is placed on top of the Hour Glass stack.",
+            "support": "supported",
+            "evidence": "Turn Structure → Hour Glass/Event; Setup: Pilgrimage on top; Pilgrimage event rule applies before the Event Phase."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "During Harvest you have wool, wine and coins. Which goods qualify, where does paid food go, and what if you have no food and fewer than five coins?",
+          "expected_answer": "Grain/cheese/wine qualify, wool does not. Must pay one food to Goods Market; if no food pay 5 coins, if unable undergo torture for missing coins.",
+          "source_references": [
+            "pp.20–21; lines 348–351,364–379"
+          ],
+          "observed_answer": {
+            "id": "Q16",
+            "answer": "Only grain, cheese, or wine qualify as food; wool does not. Paid food goes to the Goods Market. If you have no food, you owe 5 coins; if you have fewer than five, you pay what you can and undergo torture for the shortfall.",
+            "support": "supported",
+            "evidence": "Events → Harvest: pay one grain, cheese, or wine to Goods Market; if unable, pay 5 coins; if unable to pay those coins, torture for shortfall; wool and brocade are not food."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "During Plague you draw a neutral Scholar; during another Plague you draw your colored starting Trader. What is lost, where does it go, do tracks fall, and is a replacement draw required for the starting Trader?",
+          "expected_answer": "Neutral Scholar returned to game board, available again; do not move Scholar track backward. Colored starter cannot be lost; keep it and lose no tile this round, no redraw.",
+          "source_references": [
+            "p.20; lines 357–361"
+          ],
+          "observed_answer": {
+            "id": "Q17",
+            "answer": "The neutral Scholar is returned to its game-board supply and becomes recruitable again; its track marker does not move back. The marked starting Trader is kept, so no Follower is lost and no replacement draw is made. You do not redraw a starting Follower.",
+            "support": "supported",
+            "evidence": "Events → Plague: neutral Follower returns to supply without track rollback; marked starting Follower is kept and no redraw occurs."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "You owe three coins but have only one. Explain torture payment choices, restrictions on sacrificing Followers or Development Points, and where lost items go.",
+          "expected_answer": "Pay available coin and replace each missing coin (two) with one item, any mix: built/supply Trading Station, random bag Follower (redraw colored starters), Development Point (left one, never onto/past coin space), Goods, Place, Technology. Remove items from game, only Development Points can be regained.",
+          "source_references": [
+            "p.21; lines 364–379"
+          ],
+          "observed_answer": {
+            "id": "Q18",
+            "answer": "Pay the one coin you have, then replace each of the two missing coins with one eligible item per missing coin. Choices include a Trading Station, a random eligible neutral Follower from your bag, one Development Point, or a Goods, Place, or Technology tile. Marked starting Followers cannot be sacrificed; keep drawing and returning marked Followers until an eligible neutral one is drawn. A Development Point moves you one space left but never onto or past a coin space. Items surrendered are removed from the game; only lost Development Points can be regained.",
+            "support": "supported",
+            "evidence": "Torture (bankruptcy): available coins are paid; each missing coin replaced by a listed item; marked Followers protected; DP restriction; surrendered items removed."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "What happens if an action would give an unavailable Character, Technology or Goods Tile? Can it resume when stock returns? What if the coin supply is temporarily empty?",
+          "expected_answer": "Tiles limited: cannot play action providing unavailable tile. Harvest/Plague can return stock, permitting actions again. With insufficient supply coins, players cannot receive coins at that moment.",
+          "source_references": [
+            "p.21; lines 381–385"
+          ],
+          "observed_answer": {
+            "id": "Q19",
+            "answer": "You cannot play an action that provides an unavailable Character, Technology, or Goods tile, even if another part of that action would still give a reward. If goods or Followers return to supply through Harvest or Plague, the corresponding actions become available again. If the common coin supply is empty, players cannot receive coins at that moment.",
+            "support": "supported",
+            "evidence": "Limited supplies: cannot play an action providing an unavailable tile; Harvest/Plague may return goods/Followers and corresponding actions become available again; insufficient coin supply means no coins received."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At game end two players tie for most built Trading Stations. Who takes the bonus Citizen? Give final values of all five goods and the scoring formula for stations/Citizens; how are equal final scores broken?",
+          "expected_answer": "Tied most stations gives no bonus Citizen. Grain 1, cheese 2, wine 3, wool 4, brocade 5; coins 1 VP each; (built stations + collected Citizens) × Development Status. Highest VP; tie furthest ahead on Development Track; still tied share win.",
+          "source_references": [
+            "p.19; lines 317–335"
+          ],
+          "observed_answer": {
+            "id": "Q20",
+            "answer": "A tie for most built Trading Stations means nobody takes the bonus Citizen. Final good values are grain 1, cheese 2, wine 3, wool 4, and brocade 5 points each. Final score is coins plus goods values plus (built Trading Stations + collected Citizens) multiplied by final Development Status. Ties go to the player further ahead on the Development Track; if still tied, players share victory.",
+            "support": "supported",
+            "evidence": "Scoring / Victory Conditions: unique most stations takes set-aside Citizen, tie gives nobody; goods values, scoring formula, and tie-break stated."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        }
+      ]
+    },
+    "b": {
+      "counts": {
+        "correct": 19,
+        "partial": 1,
+        "incorrect": 0
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "In a 3-player Census, two players tie furthest ahead and one is alone furthest behind. Who gains or pays? What changes for an unequal 2-player Census?",
+          "expected_answer": "No one gains for a tied lead; the unique last player pays 1 coin. With 2 players, unique leader gains 1 coin and last pays nothing.",
+          "source_references": [
+            "p.14; extraction lines 129–133"
+          ],
+          "observed_answer": {
+            "id": "Q01",
+            "answer": "In the 3-player case, the tied leaders gain no coin; the uniquely last player pays 1 coin. In a 2-player unequal Census, the unique leader still gains 1 coin, but the last player never pays.",
+            "support": "supported",
+            "evidence": "Census: a tied lead gives no coin; a tied last place pays nothing. In a 2-player game the last player never pays, but a unique leader still gains 1 coin."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Your Knight draw allowance is 6, but only two Market spaces are free. Must you draw six? May you draw more than two? What happens to unused Market Followers?",
+          "expected_answer": "Drawing is optional up to the Knight allowance and free Market capacity; draw at most two. Unused Market Followers remain and occupy spaces.",
+          "source_references": [
+            "p.14; lines 135–142"
+          ],
+          "observed_answer": {
+            "id": "Q02",
+            "answer": "You do not have to draw six: draw any number up to the allowance, limited by your two free Market spaces. You cannot draw more than two. Undrawn Market Followers remain there between rounds and occupy capacity.",
+            "support": "supported",
+            "evidence": "Draw any number up to the allowance ... limited by free Market spaces. Unused Market Followers remain between rounds and occupy capacity."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "May you partially fill an action over several rounds, execute it before it is full, or save a fully activated action for a later round? Where do its Followers go when it is eventually executed?",
+          "expected_answer": "May fill over rounds, cannot execute until all required spaces occupied. May save activation with tiles left in place. On execution Followers go to own bag; Technology stays.",
+          "source_references": [
+            "p.15; lines 154–170"
+          ],
+          "observed_answer": {
+            "id": "Q03",
+            "answer": "You may fill an action gradually over multiple rounds. You cannot execute it until all its required spaces are occupied (except Town Hall, which needs only one of its two spaces); a fully activated action may be saved for a later round. When executed, its Followers return to your bag; Technology remains on its spaces.",
+            "support": "supported",
+            "evidence": "You may ... fill an action gradually over multiple rounds. An action is activated only when all required spaces are occupied ... An activation can be saved for a later round."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "How do players alternate actions in Phase 5? If you pass with an unused activated action, can you act again later this round and what happens to that activation?",
+          "expected_answer": "Start player then clockwise, one action or pass per turn, repeat until all pass. Passing ends own actions this round even if activated actions remain; unused activation and Followers stay for a later round.",
+          "source_references": [
+            "p.15; lines 159–170"
+          ],
+          "observed_answer": {
+            "id": "Q04",
+            "answer": "Starting with the Start Player and moving clockwise repeatedly, players take one activated action or pass per turn. Passing ends your participation for that Action Phase, so you cannot act again that round. Your unused activation retains its Followers on the board for future rounds.",
+            "support": "supported",
+            "evidence": "Taking one activated action or passing per turn ... Passing ends your participation ... Unused activations ... keep their Followers on the board for future rounds."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "What does the Farm House action recruit, where does it go, and what track movement and immediate reward follow?",
+          "expected_answer": "Take Farmer into own bag; advance Farmer track one space and take depicted good.",
+          "source_references": [
+            "p.16; lines 186–191"
+          ],
+          "observed_answer": {
+            "id": "Q05",
+            "answer": "Farm House recruits a Farmer into your bag, advances your Farmers Track one space, and gives the good depicted at the new track space.",
+            "support": "supported",
+            "evidence": "Farm House: ... Put a new Farmer in your bag; advance Farmers Track one space and take its depicted good."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "What three professions can Village recruit, and what distinct track reward accompanies each?",
+          "expected_answer": "Choose Boatman, Craftsman or Trader, put recruit in bag and advance corresponding track. Boatman gains depicted coins (first at last space gets Citizen instead); Craftsman gains Technology usable only after passing; Trader gains Place Tile.",
+          "source_references": [
+            "pp.16–17; lines 192–208,224–234"
+          ],
+          "observed_answer": {
+            "id": "Q06",
+            "answer": "Village can recruit a Boatman, Craftsman, or Trader, putting the chosen neutral Follower in your bag and advancing that profession's track one space. Boatman gives the depicted coins, except at the last space where the first player there gets a Citizen instead. Craftsman gives a Technology tile, usable only after you pass. Trader gives a Place Tile: the first track advance allows category I only, while later advances allow category I or II.",
+            "support": "supported",
+            "evidence": "Village recruitment: Put the chosen neutral Follower into your bag and advance its profession's track one space."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "You just recruited a Craftsman. Can its Technology help another action this Action Phase? What must your first Technology replace, and what are the placement limits for all Technology?",
+          "expected_answer": "Only use after passing, so no further own action this round. First must replace Farmer; later any required Character except Monk. Max one per Place, no single-Character Places, cannot move after placement; remains until game end.",
+          "source_references": [
+            "p.16; lines 202–218"
+          ],
+          "observed_answer": {
+            "id": "Q07",
+            "answer": "No. A newly acquired Craftsman Technology is usable only after you pass, so it cannot help another action that Action Phase after that pass. The first Technology must replace a Farmer. Each Technology permanently fills one required Action Space and stays there; later ones may replace any profession except Monk. You may not place more than one Technology at one Place or any Technology at a Place requiring only one Follower.",
+            "support": "supported",
+            "evidence": "A Craftsman-acquired tile is used only after passing. Your first placed Technology must replace a Farmer; later ones may replace any profession except Monk."
+          },
+          "grade": "correct",
+          "reason": "Permanent filling/staying on one space semantically covers immovability; independent adjudication agrees.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "On your first Trader-track advance may you choose a category II Place? What categories are allowed later, and may players inspect the stacks?",
+          "expected_answer": "First advance category I only; later I or II. Place beside board; can activate/use ability; stacks inspectable at any time.",
+          "source_references": [
+            "p.17; lines 224–236"
+          ],
+          "observed_answer": {
+            "id": "Q08",
+            "answer": "No. The first Trader-track advance permits category I only; every later advance allows category I or II. Players may inspect both stacks at any time.",
+            "support": "supported",
+            "evidence": "Your first Traders Track advance permits category I only; every later advance allows I or II. Players may inspect these stacks at any time."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "What do University, Castle and Monastery each give and where do recruits go? Does the fourth Knight increase the draw allowance, and what happens once a character track is at its last space?",
+          "expected_answer": "University Scholar into bag, advance Scholars and gain depicted Development Points; Castle Knight into bag, advance Knights for draw limit; fourth Knight stays draw 7, first there may take Citizen. Monastery Monk into bag, no additional bonus. At final track space cannot take corresponding action again.",
+          "source_references": [
+            "p.17; lines 237–260"
+          ],
+          "observed_answer": {
+            "id": "Q09",
+            "answer": "University recruits a Scholar into your bag, advances the Scholars Track one space, and grants its depicted Development Points. Castle recruits a Knight into your bag and advances the Knights Track one space. Monastery recruits a Monk into your bag with no extra track reward. Recruiting the fourth Knight does not increase the draw allowance above 7 at that step; the first player there may receive the Citizen. Once a character track is at its last space, you cannot take its corresponding action again.",
+            "support": "supported",
+            "evidence": "University ... put a new Scholar in your bag; advance Scholars Track ... Castle ... put a new Knight in your bag; advance Knights Track ... Monastery ... put a new Monk in your bag; no extra track reward."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "Can a Monk replace a Knight for an ordinary action? Can a Knight or Technology replace a required Monk? Can a Monk replace a required profession on Beneficial Deeds?",
+          "expected_answer": "Monk may replace Knight or any other Character in ordinary actions. No other Character or Technology can replace required Monk. Beneficial Deeds require exact depicted types, no Monk substitution.",
+          "source_references": [
+            "pp.17–18; lines 253–257,290–293"
+          ],
+          "observed_answer": {
+            "id": "Q10",
+            "answer": "A Monk may replace a Knight for an ordinary action. A Knight or Technology cannot replace a required Monk. A Monk also cannot replace a profession on Beneficial Deeds, which require the exact professions depicted.",
+            "support": "supported",
+            "evidence": "On ordinary actions, a Monk can replace any other profession. The reverse is forbidden ... Substitutions, including Monks ... cannot replace the exact professions depicted on Deeds."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "What exactly does one Ship or Wagon action move, and how many goods can you take if two lie on that connection? May you use an empty connection?",
+          "expected_answer": "Ship moves to one adjacent town along Waterway; Wagon likewise along Road. May take one good from connection even if multiple; keep by board. Empty links legal, give no good.",
+          "source_references": [
+            "pp.18,21; lines 263–270,388–389"
+          ],
+          "observed_answer": {
+            "id": "Q11",
+            "answer": "One Ship action moves the Merchant one adjacent town along one Waterway; one Wagon action moves it one adjacent town along one Road. You may take at most one good from that connection, choosing one if two lie there. An empty connection is legal and yields no good.",
+            "support": "supported",
+            "evidence": "One Ship/Wagon action traverses just one connection. You may take one good from that connection ... Empty Roads/Waterways are legal and yield no good."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "What does Guildhall build, where must your Merchant be, and may you build where an opponent has already built? State the Orléans exception.",
+          "expected_answer": "Build Trading Station in Merchant current town; no existing station of any player allowed. In Orléans each player may build one.",
+          "source_references": [
+            "p.18; lines 271–275"
+          ],
+          "observed_answer": {
+            "id": "Q12",
+            "answer": "Guildhall builds one Trading Station in the Merchant's current town. Your Merchant must be there. A town with any player's station cannot receive another, except Orléans, where each player may build one station.",
+            "support": "supported",
+            "evidence": "Build one Trading Station in your Merchant's current town ... A town with any player's Trading Station cannot receive another. Orléans is the exception."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "What does Scriptorium do? When Development movement lands on or passes coin, Citizen and status spaces, what rewards/status changes occur?",
+          "expected_answer": "Scriptorium gives 1 Development Point/advance 1 space. Landing/passing coin gives depicted coins; first landing/passing Citizen gets it. Landing/passing status immediately sets Development Status to shown value (initially 1).",
+          "source_references": [
+            "pp.18–19; lines 276–278,306–316"
+          ],
+          "observed_answer": {
+            "id": "Q13",
+            "answer": "Scriptorium grants 1 Development Point, moving one space on the Development Track. When movement lands on or passes a coin space, collect its depicted coins; the first player onto or past a Citizen space collects that Citizen. Reaching or passing a Development Status space immediately changes your Status to its shown value.",
+            "support": "supported",
+            "evidence": "Scriptorium: Gain 1 Development Point: move one space ... On moving onto or past a coin space, collect ... first player ... Citizen ... Status immediately becomes its shown value."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "Can Town Hall work with one Follower, can it send two in one action, and can your starting colored Followers be used? What rewards and destinations apply, including Canalization and completing a Deed?",
+          "expected_answer": "One or two can activate, move one or both to free matching Deed spaces; colored starters prohibited. Receive depicted 1/2/3 coins per tile; Canalization 1 coin or 1 Development Point. Tile remains permanently. Completing last vacant Deed space earns its Citizen.",
+          "source_references": [
+            "p.18; lines 279–296"
+          ],
+          "observed_answer": {
+            "id": "Q14",
+            "answer": "Town Hall works with one or two eligible Followers in one action; starting marked Followers cannot be used. Send one or both to free Deed spaces matching their exact professions, including spaces on different Deeds. Each placement earns the depicted 1, 2, or 3 coins; Canalization gives a choice of 1 coin or 1 Development Point. The player who fills a Deed's last unoccupied space takes its Citizen. Sent Followers stay there for the rest of the game.",
+            "support": "supported",
+            "evidence": "In one Town Hall action, send one or both to any free Deed spaces matching their exact professions ... for Canalization choose 1 coin or 1 Development Point. Whoever fills a Deed's last unoccupied space takes its Citizen."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "What does Pilgrimage forbid, when does it apply, and when are the other events resolved? Which event opens the game?",
+          "expected_answer": "Pilgrimage forbids recruiting Monks during Phase 5 Actions. Other events resolve Phase 6. Pilgrimage is deliberately first/top tile.",
+          "source_references": [
+            "pp.13–14,20; lines 99–103,123–127,343–345"
+          ],
+          "observed_answer": {
+            "id": "Q15",
+            "answer": "Pilgrimage forbids Monk recruitment during that round's Action Phase; it applies before the Event Phase, during Phase 5. Other events resolve in Phase 6. The game opens with Pilgrimage because that tile is placed on top of the Hour Glass stack.",
+            "support": "supported",
+            "evidence": "Pilgrimage instead prohibits Monk recruitment during Phase 5 ... Most events wait until Phase 6 ... round 1 always has Pilgrimage."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "During Harvest you have wool, wine and coins. Which goods qualify, where does paid food go, and what if you have no food and fewer than five coins?",
+          "expected_answer": "Grain/cheese/wine qualify, wool does not. Must pay one food to Goods Market; if no food pay 5 coins, if unable undergo torture for missing coins.",
+          "source_references": [
+            "pp.20–21; lines 348–351,364–379"
+          ],
+          "observed_answer": {
+            "id": "Q16",
+            "answer": "Wine qualifies as food; wool does not. Paid food goes to the Goods Market. If you cannot pay food, you owe 5 coins; with fewer than five coins, you pay what you have and undergo torture for the shortfall.",
+            "support": "supported",
+            "evidence": "Harvest: Pay one grain, cheese, or wine to the Goods Market. If you cannot pay food, pay 5 coins instead. If unable to pay those coins, undergo torture for the shortfall. Wool and brocade are not food."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "During Plague you draw a neutral Scholar; during another Plague you draw your colored starting Trader. What is lost, where does it go, do tracks fall, and is a replacement draw required for the starting Trader?",
+          "expected_answer": "Neutral Scholar returned to game board, available again; do not move Scholar track backward. Colored starter cannot be lost; keep it and lose no tile this round, no redraw.",
+          "source_references": [
+            "p.20; lines 357–361"
+          ],
+          "observed_answer": {
+            "id": "Q17",
+            "answer": "The neutral Scholar is returned to its game-board supply and becomes recruitable again; its track marker does not move back. The colored starting Trader is kept, so no Follower is lost and no replacement draw is required. Starting Followers cannot be lost to Plague.",
+            "support": "supported",
+            "evidence": "A neutral Follower returns to its game-board supply ... do not move its track marker back. If it is one of your marked starting Followers, keep it and lose no Follower this round; do not redraw."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "You owe three coins but have only one. Explain torture payment choices, restrictions on sacrificing Followers or Development Points, and where lost items go.",
+          "expected_answer": "Pay available coin and replace each missing coin (two) with one item, any mix: built/supply Trading Station, random bag Follower (redraw colored starters), Development Point (left one, never onto/past coin space), Goods, Place, Technology. Remove items from game, only Development Points can be regained.",
+          "source_references": [
+            "p.21; lines 364–379"
+          ],
+          "observed_answer": {
+            "id": "Q18",
+            "answer": "Pay the one available coin, then replace each of the two missing coins with an eligible item, in any mix: a built or unbuilt Trading Station; one random eligible neutral Follower from your bag; one Development Point; or one Goods, Place, or Technology tile. For Followers, return and redraw marked starting Followers until drawing a neutral one. A Development Point moves one space left but cannot move onto or past a coin space. Surrendered items are removed from the game. Marked starting Followers cannot be sacrificed.",
+            "support": "supported",
+            "evidence": "Replace each missing coin with one item from any mix ... return and redraw marked starting Followers until drawing an eligible neutral one ... Development Point ... never onto or past a coin space. Items surrendered ... removed from the game."
+          },
+          "grade": "correct",
+          "reason": "All requested sacrifice/payment restrictions and removal destinations covered. Later recovery of Development Points is incidental to this question; independent adjudication agrees.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "What happens if an action would give an unavailable Character, Technology or Goods Tile? Can it resume when stock returns? What if the coin supply is temporarily empty?",
+          "expected_answer": "Tiles limited: cannot play action providing unavailable tile. Harvest/Plague can return stock, permitting actions again. With insufficient supply coins, players cannot receive coins at that moment.",
+          "source_references": [
+            "p.21; lines 381–385"
+          ],
+          "observed_answer": {
+            "id": "Q19",
+            "answer": "You cannot play an action that provides an unavailable Character, Technology, or Goods tile, even if another part would still give a reward. The summary says returned goods or Followers can make corresponding actions available again, but does not explicitly state a general rule for resuming an unavailable action when stock returns. If the common coin supply is temporarily empty, players cannot receive coins at that moment.",
+            "support": "partial",
+            "evidence": "You cannot play an action that provides an unavailable tile ... Harvest and Plague may return goods/Followers to supply; the corresponding actions become available again. If the common supply has insufficient coins, players cannot receive coins at that moment."
+          },
+          "grade": "partial",
+          "reason": "Correctly describes Harvest/Plague restoration but explicitly leaves the requested general stock-restoration ruling unresolved.",
+          "unsupported_correct_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "At game end two players tie for most built Trading Stations. Who takes the bonus Citizen? Give final values of all five goods and the scoring formula for stations/Citizens; how are equal final scores broken?",
+          "expected_answer": "Tied most stations gives no bonus Citizen. Grain 1, cheese 2, wine 3, wool 4, brocade 5; coins 1 VP each; (built stations + collected Citizens) × Development Status. Highest VP; tie furthest ahead on Development Track; still tied share win.",
+          "source_references": [
+            "p.19; lines 317–335"
+          ],
+          "observed_answer": {
+            "id": "Q20",
+            "answer": "A tie for most built Trading Stations means nobody takes the bonus Citizen. Goods score grain 1, cheese 2, wine 3, wool 4, and brocade 5 points each. Stations and collected Citizens score (built stations + Citizens) multiplied by final Development Status. For tied final scores, the player furthest ahead on the Development Track wins; if still tied, they share victory.",
+            "support": "supported",
+            "evidence": "A tie gives nobody that Citizen. Goods ... 1 / 2 / 3 / 4 / 5 each. Highest total wins. Ties go to the player furthest ahead on the Development Track; if still tied, share victory."
+          },
+          "grade": "correct",
+          "reason": "All requested rulings match the fixed key and are supported by the supplied summary; equivalent wording accepted.",
+          "unsupported_correct_guess": false
+        }
+      ]
+    }
+  }
+}

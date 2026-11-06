@@ -1,0 +1,137 @@
+{
+  "session_id": "01a1af05-ba55-7082-ae93-91d1a7a4c5b1",
+  "task": "source_continuation_q23_scope_adjudication",
+  "actual_contexts": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    }
+  ],
+  "parent_spawn": {
+    "task_name": "source_continuation_q23_scope_adjudication",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none"
+  },
+  "inputs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/case.json",
+      "sha256": "3afe755476339f29b1f5c5b1fde26638e98ea4b7dcb28fa4866c406b28d772a7",
+      "required_units": 41,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/policy.json",
+      "sha256": "4bf347243a6dc7760f0fb96d79efbae8b480594faad19b6c59c3b446040f29ea",
+      "required_units": 11,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md",
+      "sha256": "be31e50aedcc66b186cfa9a09e912bbea159df9b1850d0b2401d472f7908c407",
+      "required_units": 571,
+      "missing_units": []
+    }
+  ],
+  "actual_returned_image_blocks": 0,
+  "all_required_text_visible": true,
+  "calls_for_boundary_review": [
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed51637b8087d091ab67972c60fa15",
+      "status": "completed",
+      "call_id": "call_iWXG66H98T5d1c8p7Pk37q2X",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/input-manifest.json\",max_output_tokens:10000});text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937762.495847
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed5167b46487d0b37ae7bda6744241",
+      "status": "completed",
+      "call_id": "call_Nr6kQyxiXTLgjucQ9CbeEoID",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib,pathlib\\np=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/input-manifest.json')\\nm=json.loads(p.read_text())\\nfor name,expected in m['required_inputs'].items():\\n b=pathlib.Path(name).read_bytes()\\n print(json.dumps({'path':name,'expected':expected,'actual':hashlib.sha256(b).hexdigest(),'matches':hashlib.sha256(b).hexdigest()==expected}))\\n print(b.decode())\\nPY\",\"max_output_tokens\":30000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937766.826902
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed516dfc4c87d09900221853882ea8",
+      "status": "completed",
+      "call_id": "call_AryJd0GP9YB6OBdKG8RZc3hp",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib,pathlib\\np=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/input-manifest.json')\\nm=json.loads(p.read_text())\\nfor name,expected in m['required_inputs'].items():\\n b=pathlib.Path(name).read_bytes()\\n print(json.dumps({'path':name,'expected':expected,'actual':hashlib.sha256(b).hexdigest(),'matches':hashlib.sha256(b).hexdigest()==expected}))\\n print(b.decode())\\nPY\",\"max_output_tokens\":30000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937772.96806
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed5176771487d082285a8097ae938e",
+      "status": "completed",
+      "call_id": "call_43nz6GcjCDINiZryuJWf3yvd",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"wc -l /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md\",\"max_output_tokens\":1000}));\ntext(await tools.exec_command({cmd:\"sed -n '1,180p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937780.206536
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed517e744887d0a9f2d804c1eade17",
+      "status": "completed",
+      "call_id": "call_D06fJszLB4BSRy282KFahEba",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"sed -n '181,360p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md\",max_output_tokens:10000});text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937789.363425
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed5184d7e487d09781dda8144619ca",
+      "status": "completed",
+      "call_id": "call_K5JB0bDEFm3NmB7QTw2TDtgL",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"sed -n '361,571p' /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md\",max_output_tokens:11000});text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937794.370287
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed5193daec87d0b2c3890ab25dffdc",
+      "status": "completed",
+      "call_id": "call_49kcLoZWWCKHQBZDUifWQgYY",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"nl -ba /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md | sed -n '77,105p;484,493p;536,540p;561,565p'\",max_output_tokens:4000});text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937800.543575
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_0ed3bab3bf731cfd016aed5199c5ac87d096ddcd5fd236d72e",
+      "status": "completed",
+      "call_id": "call_z28iBCSJPFd48VH8otAEiyLZ",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport pathlib,json,hashlib\\nbase=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01')\\nmanifest=json.loads((base/'input-manifest.json').read_text())\\nchecks=[]\\nfor name,expected in manifest['required_inputs'].items():\\n actual=hashlib.sha256(pathlib.Path(name).read_bytes()).hexdigest()\\n assert actual==expected\\n checks.append({'path':name,'expected_sha256':expected,'actual_sha256':actual,'matches':True})\\nresult={\\n 'question_id':'Q23',\\n 'input_hash_checks':checks,\\n 'inputs_read':{'required_inputs':'All three required inputs read completely; all listed SHA-256 hashes match.','optional_primary_sources_read':[]},\\n 'actual_requested_parts':[\\n  {'part':'Action-hand refill timing','required_ruling':'Refill at the start of the Player Phase. Drawing up to five gives the ordinary refill procedure.','summary_reference':'summary-snapshot.md, Turn Structure > I: Player Phase, line 95'},\\n  {'part':'First Player token passing','required_ruling':'Pass left after drawing, except on the first game turn.','summary_reference':'summary-snapshot.md, Turn Structure > I: Player Phase, line 96'},\\n  {'part':'Empty Action deck','required_ruling':'When a required draw encounters an empty Action deck, shuffle that Character\\\\'s Action discard into a new Action deck, then draw.','summary_reference':'summary-snapshot.md, Turn Structure > I: Player Phase, line 95'},\\n  {'part':'Normal discard destinations','required_ruling':'Action and gained Contamination cards go to the Character\\\\'s Action discard; Items to matching Item discards; Event, Intruder Attack and Serious Wound cards to their respective discards; discarded markers return to the appropriate pools.','scope_reasoning':'The literal stem asks for normal discard destinations without restricting that clause to cards. Markers have a normal discard destination and are therefore within this broad handling request. Their inclusion is supported by the meaning of the requested clause, not merely by their presence in the key.','summary_reference':'summary-snapshot.md, Setup > Discard piles, lines 79-87'},\\n  {'part':'Normal discard visibility','required_ruling':'Normal card discards are face up.','summary_reference':'summary-snapshot.md, Setup > Discard piles, introductory sentence'}\\n ],\\n 'contextual_key_facts':[\\n  {'fact':'Search returns the rejected Item face down to the bottom of the selected deck.','required':False,'reason':'The stem requests normal discards, rather than all special return procedures. This explicit exception provides context and must be accurate if asserted, but is not an independently required requested part.','summary_reference':'summary-snapshot.md, Setup > Discard piles, line 87; Items and Objects > Search procedure'},\\n  {'fact':'The fixed key includes both hand size and the first-turn token exception.','required_status':'Ordinary refill size supplies the operative refill rule; the first-turn exception is material to the explicitly requested passing timing. Neither requires exact wording.'}\\n ],\\n 'judgments':{\\n  'a':{\\n   'judgment':'correct',\\n   'complete_local_response_reasoning':'The answer explicitly resolves Player Phase refill to five, passing left after drawing with the first-turn exception, and reshuffling the personal Action discard only when a required draw finds the deck empty. It states every requested normal card destination, face-up visibility, and the return of discarded markers to matching pools. The evidence repeats these rules and explicitly confirms marker routing; no missing fact is inferred from the requested_parts checklist or the supported label. The added Search/Storage return and removed-from-game distinction agree with the frozen summary. The extra player-round and Interruption explanation in evidence agrees with the Player Phase rules and does not contradict the requested rulings. All material requested parts are resolved across this complete local response.',\\n   'supporting_frozen_summary_references':[\\n    {'reference':'summary-snapshot.md, Turn Structure > I: Player Phase, lines 95-99 and after-pass table','supports':'Refill, empty-deck handling, token timing, and the additional round/passing/Interruption statements.'},\\n    {'reference':'summary-snapshot.md, Setup > Discard piles, introductory sentence and lines 79-87','supports':'Face-up normal card discards, each card destination, marker pools, explicit return exceptions and removed-from-game distinction.'},\\n    {'reference':'summary-snapshot.md, Player Reference > Card and marker handling','supports':'The complete ordinary handling sequence and marker routing.'}\\n   ],\\n   'material_omissions':[],\\n   'material_false_rulings':[]\\n  },\\n  'b':{\\n   'judgment':'partial',\\n   'complete_local_response_reasoning':'The answer and evidence accurately resolve refill at Player Phase start to five, token passing left after drawing except on the first turn, required-draw reshuffling, face-up normal card discards and all listed normal card destinations. The additional six-card Cabins shorthand is supported by the frozen summary\\\\'s key numbers and is not read as an assertion that its normal room conditions cease to apply. The Search/Storage return exception is accurate. However, neither the answer nor the evidence states the normal destination of discarded markers. The requested_parts entry merely labels discard destination and visibility; it asserts no marker-routing rule. The supported label likewise supplies no missing fact. Since the unqualified requested normal discard destinations include markers, this is a material omission. No materially false affirmative ruling or contradiction appears, so the policy calls for partial.',\\n   'supporting_frozen_summary_references':[\\n    {'reference':'summary-snapshot.md, Turn Structure > I: Player Phase, lines 95-96','supports':'The supplied refill, reshuffle and token-passing rulings.'},\\n    {'reference':'summary-snapshot.md, Setup > Discard piles, introductory sentence and lines 79-87','supports':'Supplied card routing and visibility; line 85 and the routing rule establish the omitted normal marker destination.'},\\n    {'reference':'summary-snapshot.md, Player Reference > Card and marker handling','supports':'Discarded markers return to matching supply pools as part of ordinary handling.'},\\n    {'reference':'summary-snapshot.md, Player Reference > Key numbers, line 563; Additional Rooms 2 > Cabins','supports':'The six-card Cabins shorthand, with the room\\\\'s actual conditions supplied in the reference.'}\\n   ],\\n   'material_omissions':['Normal discarded-marker destination: return to appropriate marker/supply pool.'],\\n   'material_false_rulings':[]\\n  }\\n },\\n 'narrow_limitation':'This ruling uses only the unchanged supplied policy, literal case and complete frozen summary. It treats normal discard destinations as an unqualified component-handling request, while not requiring an inventory of special Search/Storage or removed-from-game exceptions. It does not require enumeration of every special hand-size modifier or its conditions when only ordinary refill timing is asked and no contrary affirmative rule is asserted.'\\n}\\n(base/'adjudication.json').write_text(json.dumps(result,indent=2)+'\\\\n')\\nprint('Wrote adjudication.json')\\nPY\",\"max_output_tokens\":1000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1af05-c8f7-70f2-a65d-df0faa1e97f2",
+        "create_time": 1793937814.75094
+      }
+    }
+  ],
+  "limit": "Actual output presence, not OS isolation; manually review calls, ranges, and task boundaries."
+}

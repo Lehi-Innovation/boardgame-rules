@@ -1,0 +1,57 @@
+{
+  "parent_runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/04/rollout-2026-11-04T23-15-54-01a1aa59-7f47-7aa0-b41e-cdb1bdbea5fa.jsonl",
+  "agents": [
+    {
+      "session_id": "01a1afa6-f899-7572-8b0b-b44341d05767",
+      "runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T23-58-38-01a1afa6-f899-7572-8b0b-b44341d05767.jsonl",
+      "task": "source_continuation_coverage127_final",
+      "actual_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        }
+      ],
+      "parent_spawn": {
+        "task_name": "source_continuation_coverage127_final",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none"
+      },
+      "executable_tool_calls": [
+        {
+          "name": "exec",
+          "input": "const r = await tools.exec_command({cmd:\"cat docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage127-input-manifest.json\",max_output_tokens:20000});text(r.output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage127-input-manifest.json'\\nm=json.load(open(p));fs={m['question_file']:m['question_sha256'],m['key_file']:m['key_sha256'],**m['source_files'],m['author_coverage_map']:m['author_coverage_map_sha256'],**m['accepted_scope_files']}\\nfor f,h in fs.items():\\n a=hashlib.sha256(open(f,'rb').read()).hexdigest();print(a==h,a,f)\\nfor k in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[k]));print(k,type(d).__name__,list(d)[:8] if isinstance(d,dict) else len(d))\\nprint(open(next(iter(m['accepted_scope_files']))).read())\\nPY\",\"max_output_tokens\":12000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage127-input-manifest.json'\\nm=json.load(open(p));fs={m['question_file']:m['question_sha256'],m['key_file']:m['key_sha256'],**m['source_files'],m['author_coverage_map']:m['author_coverage_map_sha256'],**m['accepted_scope_files']}\\nfor f,h in fs.items():\\n a=hashlib.sha256(open(f,'rb').read()).hexdigest();print(a==h,a,f)\\nfor k in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[k]));print(k,type(d).__name__,list(d)[:8] if isinstance(d,dict) else len(d))\\nprint(open(next(iter(m['accepted_scope_files']))).read())\\nPY\",\"max_output_tokens\":12000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(p+'benchmark-v17/questions.json'));k=json.load(open(p+'benchmark-v17/answer-key.json'))\\nprint(json.dumps(q['questions'][:2],indent=2)); print(json.dumps(k['answers'][:2],indent=2))\\nPY\",\"max_output_tokens\":5000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(p+'benchmark-v17/questions.json'))['questions'];k=json.load(open(p+'benchmark-v17/answer-key.json'))['answers']\\nfor a,b in zip(q,k): print(a['id'],a['question'],'\\\\nKEY:',b['expected_answer'],'\\\\nREF:',b['source_references'])\\nPY\",\"max_output_tokens\":31000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(p+'benchmark-v17/questions.json'))['questions'];k=json.load(open(p+'benchmark-v17/answer-key.json'))['answers']\\nfor a,b in list(zip(q,k))[30:65]: print(a['id'],a['question'],'\\\\nKEY:',b['expected_answer'])\\nPY\",\"max_output_tokens\":14000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(p+'benchmark-v17/questions.json'))['questions'];k=json.load(open(p+'benchmark-v17/answer-key.json'))['answers']\\nfor a,b in list(zip(q,k))[65:105]: print(a['id'],a['question'],'\\\\nKEY:',b['expected_answer'])\\nPY\",\"max_output_tokens\":14000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(p+'benchmark-v17/questions.json'))['questions'];k=json.load(open(p+'benchmark-v17/answer-key.json'))['answers']\\nfor a,b in list(zip(q,k))[105:]: print(a['id'],a['question'],'\\\\nKEY:',b['expected_answer'])\\nPY\",\"max_output_tokens\":14000}))\n"
+        }
+      ]
+    }
+  ],
+  "limit": "Task bodies are encrypted; no claim to recover delivered prompts. Context isolation is prompt-based, not OS enforcement."
+}

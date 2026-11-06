@@ -1,0 +1,141 @@
+{
+  "reader": "B",
+  "scope": [
+    "Q11",
+    "Q43"
+  ],
+  "inputs_read": [
+    "bank-v6/questions.json",
+    "bank-v6/answer-key.json",
+    "expanded-iteration-04/reader-b.json",
+    "authoritative-source.txt"
+  ],
+  "standard": "Every requested material fact must be correct and supported; a missing requested fact without a material contradiction is partial. Evaluate the answer and same-question evidence without inferring rules from action names or importing other answers.",
+  "adjudications": [
+    {
+      "id": "Q11",
+      "grade": "partial",
+      "support": "supported_for_stated_facts; requested_route_mapping_missing",
+      "requested_material_reasoning": "The prompt asks what exactly one Ship or Wagon action moves. The legal route is part of each named action’s movement scope: Ship moves the Merchant along a Waterway to an adjacent town, while Wagon moves it along a Road. The response correctly gives the Merchant, one connection, adjacent-town destination, selection of at most one good, and legality of empty connections, but neither its answer nor same-question evidence states which action uses which route. The generic phrase “one connection” cannot establish that mapping by reasonable semantic equivalence without importing information absent from this response. The mapping is therefore a missing requested material fact.",
+      "incidental_reasoning": "Connection colors and the instruction to keep a collected tile next to the Player Board are incidental to the requested movement scope, goods quantity/choice, and empty-connection branches. Their omission does not drive this grade. The response does not explicitly assert that either action can use either route type, so the missing restriction is an omission rather than an explicit false route ruling.",
+      "response_references": [
+        {
+          "file": "expanded-iteration-04/reader-b.json",
+          "json_pointer": "/answers/10/answer",
+          "quote": "One Ship or Wagon action moves the Merchant along exactly one connection to an adjacent town."
+        },
+        {
+          "file": "expanded-iteration-04/reader-b.json",
+          "json_pointer": "/answers/10/evidence",
+          "quote": "Movement and goods: “just one connection”; “one good … choosing one if several”; “Empty Roads/Waterways are legal”."
+        }
+      ],
+      "source_references": [
+        {
+          "file": "bank-v6/questions.json",
+          "id": "Q11",
+          "quote": "What exactly does one Ship or Wagon action move, and how many goods can you take if two lie on that connection? May you use an empty connection?"
+        },
+        {
+          "file": "bank-v6/answer-key.json",
+          "id": "Q11",
+          "quote": "Ship moves to one adjacent town along Waterway; Wagon likewise along Road. May take one good from connection even if multiple; keep by board. Empty links legal, give no good."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            263,
+            267
+          ],
+          "page": 18,
+          "quote": "Ship\nMove your Merchant Token from its current location along a Waterway\n(blue connection) to an adjacent town. If there is a Goods Tile on the way,\nyou may take it. If there are multiple goods, you may take one of them. Place\nthe Goods Tile next to your Player Board."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            268,
+            270
+          ],
+          "page": 18,
+          "quote": "Wagon\nThis action is similar to the “Ship” action, but rather than moving along a\nWaterway, move your Merchant Token along a Road (brown connection)."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            387,
+            388
+          ],
+          "page": 21,
+          "quote": "Empty Roads or Waterways\nYou may use empty Roads and Waterways. You just do not receive a good."
+        }
+      ]
+    },
+    {
+      "id": "Q43",
+      "grade": "correct",
+      "support": "supported",
+      "requested_material_reasoning": "The response unambiguously permits execution later in the same round on a later action turn, conditioned on not having passed. That resolves both requested timing alternatives. The question already supplies the immediate placement and completed activation as premises. The source combines immediate Bathhouse placement with activation as soon as all spaces are filled, availability of activated actions during Actions, free action order, and the prohibition on further actions after passing. No new Planning Phase is required for this already activated Place.",
+      "incidental_reasoning": "The sentence “The summary does not state this Bathhouse-specific timing explicitly, but its general Action Phase rules support it” qualifies the explicitness of the supporting explanation. It does not retract or leave unresolved the preceding definite ruling “It may be executed later this round”. A source-explicit Bathhouse-specific timing sentence is unnecessary when the general rules and the supplied premise resolve the question. The placement details, drawn-tile count, and prohibition on placing tiles back on Bathhouse are not requested timing facts.",
+      "response_references": [
+        {
+          "file": "expanded-iteration-04/reader-b.json",
+          "json_pointer": "/answers/42/answer",
+          "quote": "It may be executed later this round on a later action turn, provided you have not passed: actions can be chosen in any order, and passing ends your participation. The summary does not state this Bathhouse-specific timing explicitly, but its general Action Phase rules support it."
+        },
+        {
+          "file": "expanded-iteration-04/reader-b.json",
+          "json_pointer": "/answers/42/evidence",
+          "quote": "Turn Structure, Actions: choose actions’ order freely; one activated action or pass each turn; passing ends participation."
+        }
+      ],
+      "source_references": [
+        {
+          "file": "bank-v6/questions.json",
+          "id": "Q43",
+          "quote": "During the Action Phase, Bathhouse immediately supplies the last needed Follower to another Place. Must that newly activated Place wait for next round, or may you execute it on a later action turn this round if you have not passed?"
+        },
+        {
+          "file": "bank-v6/answer-key.json",
+          "id": "Q43",
+          "quote": "May execute on a later own action turn this round: Bathhouse places immediately, and full activation allows action during current/future Action Phase; no extra Planning Phase required. Cannot act after passing."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            154,
+            158
+          ],
+          "page": 15,
+          "quote": "A Place is considered activated as soon as all of its Action Spaces have a tile."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            160,
+            163
+          ],
+          "page": 15,
+          "quote": "Actions: You may carry out the actions of the Places you activated, i.e. where you placed a Follower (or Technology Tile) on every required space.\nBeginning with the Start Player and in clockwise order, each player may carry out 1 action or pass. If you pass, you cannot carry out any more actions during that round."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            167,
+            170
+          ],
+          "page": 15,
+          "quote": "You may carry out your actions in any order. You are not required to carry out an activated action. You may pass even if you could carry out more actions. The Action Phase ends when all players have passed. If you pass, you cannot participate in the current Action Phase anymore."
+        },
+        {
+          "file": "authoritative-source.txt",
+          "lines": [
+            545,
+            549
+          ],
+          "page": 23,
+          "quote": "Bathhouse\nDraw 3 Character Tiles from your bag and choose 2 of them. Immediately place the chosen tiles on appropriate Action Spaces."
+        }
+      ]
+    }
+  ]
+}

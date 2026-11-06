@@ -1,0 +1,644 @@
+{
+  "review_id": "coverage-review-04",
+  "review_type": "Fresh independent source/coverage and fixed-key challenge",
+  "scope": "Classic 1996 English base game, publisher PDF pp1–12 including every base Action Card; excludes pp13–20, later editions and optional short game.",
+  "inputs_read": [
+    "extracted/el-grande-rules.txt",
+    "source_pdfs/el-grande-publisher-rules.pdf (pages 1–12 only)",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v5/questions.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/benchmark-v5/answer-key.json",
+    "docs/quality/summary-qa/el-grande/2026-11-04-batch-231507/coverage-ledger.json"
+  ],
+  "independence": "Did not open summaries, readers, grades, prior review reports, or any reports named by the ledger. Publisher PDF text was independently extracted using pypdf for pp1–12 and compared with the permitted extraction.",
+  "verdict": {
+    "supported_target_saturation": "confirmed: no meaningful new source-defined target beyond the 53 existing questions was found; latest ledger passes 11 and 12 both add zero, and this challenge also adds zero",
+    "new_target_count": 0,
+    "fixed_key_validation": "needs Q13 stem/key clarification for literal total-score sufficiency; the four-player count repair is correct, but does not specify whether King/home bonuses apply",
+    "complete_core_gameplay": "cannot pass: essential source gaps remain; zero new supported targets does not establish complete resolution of all playable base-card states",
+    "overall": "Coverage saturation supported; unconditional all-keys-valid and complete-core-gameplay claims are not supported."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "medium",
+      "question_id": "Q13",
+      "kind": "scenario sufficiency",
+      "finding": "The stem specifies four player counts 4,3,2,2 and scoreboard 6/4/2, but asks what each scores without stating King location, the sole leader’s Grande location, or that only scoreboard points are requested. The fixed 6,4,0,0 key is exactly the source’s rank-score example. As a complete score for an arbitrary region, the sole leader can also receive the King bonus and/or home bonus. The first score can therefore be 6, 8, or 10 while all supplied counts and values remain unchanged. The four-player change fixes the omitted-player problem but not this independent missing-state issue.",
+      "source_references": [
+        {
+          "pdf_pages": "5–6",
+          "section": "Score the Regions; Example 2; King’s Bonus; Home region bonus"
+        }
+      ],
+      "resolution": "Qualify the existing stem as asking for scoreboard points before bonuses, or explicitly state that neither bonus applies. Do not add a duplicate bonus-combination target."
+    },
+    {
+      "id": "F02",
+      "severity": "informational",
+      "question_id": "Q12",
+      "kind": "scenario verification",
+      "finding": "The corrected four-player stem is sufficient. Three tied leaders each score the second scoreboard number, and the next distinct count takes third rank per the source’s explicit example. Tied leaders receive neither majority bonus, so missing King/Grande positions cannot alter the stated 3,3,3,1 outcome."
+    },
+    {
+      "id": "F03",
+      "severity": "informational",
+      "kind": "source-boundary verification",
+      "finding": "Q47 and Q49 preserve the important source distinction between other regions and any regions. Q52 correctly distinguishes secret-disk scoring from unrestricted single-location scoring. Q53 correctly includes both first introduction and relocation of a mobile scoreboard. No further numeric or cosmetic variants should be counted as additions."
+    }
+  ],
+  "proposed_additions": [],
+  "key_corrections": [
+    {
+      "question_id": "Q13",
+      "correction_type": "clarify stem and qualify key, without changing intended rank outcome",
+      "proposed_question": "In a four-player region worth 6/4/2 with counts 4,3,2,2, what scoreboard points does each player receive before any King’s or home-region bonuses?",
+      "proposed_expected_answer": "6,4,0,0 scoreboard points: the two players tied for third drop to fourth and receive no scoreboard points. This question asks only for points from the scoreboard, before bonuses.",
+      "alternative_if_stem_unchanged": "The scoreboard awards 6,4,0,0. Total scores cannot be fixed from the supplied facts: the sole leader also earns 2 if this is the King’s region and 2 if their own Grande is here.",
+      "source_references": [
+        {
+          "pdf_pages": "5–6",
+          "section": "Score the Regions; Example 2; King’s Bonus; Home region bonus"
+        }
+      ]
+    }
+  ],
+  "checked_passages": [
+    {
+      "pdf_pages": "1",
+      "passage": "Components and object",
+      "result": "Read; no uncovered substantive procedure. Component-number variants are not new targets."
+    },
+    {
+      "pdf_pages": "2",
+      "passage": "Board explanation and all preparation bullets",
+      "questions": [
+        "Q01",
+        "Q17",
+        "Q19",
+        "Q21",
+        "Q52",
+        "Q53"
+      ],
+      "result": "Supported: randomized King and homes, home pieces/court/provinces, own power deck, separate shuffled stacks, secret disk omits Castillo, initial unused mobile boards."
+    },
+    {
+      "pdf_pages": "3",
+      "passage": "Round sequence, marker, action-card reveal, power-card play and turn/recruitment sequence",
+      "questions": [
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q07",
+        "Q21",
+        "Q22"
+      ],
+      "result": "Supported: reveal before power play, clockwise unique face-up power choices, previous last player starts, descending turns, optional maximum recruitment before choosing action. Reveal timing is within existing round-start coverage, not a separate novelty."
+    },
+    {
+      "pdf_pages": "3–4,7",
+      "passage": "Ordinary deployment, special-action choice and sequencing; disposal and next round",
+      "questions": [
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q23"
+      ],
+      "result": "Supported: current King adjacency, Castillo, split deployment, either whole action first, optional special, unchosen cards discarded, King card returns each round."
+    },
+    {
+      "pdf_pages": "4–5,7",
+      "passage": "King region and Castillo restrictions",
+      "questions": [
+        "Q04",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q16"
+      ],
+      "result": "Supported: strict King taboo with scoring exception, announce Castillo additions, broad entry but general-scoring-only exits; cannot recruit from protected locations."
+    },
+    {
+      "pdf_pages": "5–6",
+      "passage": "Complete general scoring sequence and both worked ranking examples",
+      "questions": [
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14"
+      ],
+      "result": "All stages/ranks supported. Q12 scenario sufficient. Q13 rank arithmetic supported but its unconditional total needs F01 qualification."
+    },
+    {
+      "pdf_pages": "6",
+      "passage": "King and home bonuses, mobile scoreboard function and game end",
+      "questions": [
+        "Q15",
+        "Q17",
+        "Q20",
+        "Q35"
+      ],
+      "result": "Supported: sole-majority bonuses at scoring including special scoring, changing home via Grande, scoreboard values, end after third general scoring. End-score tie resolution is not supplied."
+    },
+    {
+      "pdf_pages": "7",
+      "passage": "Action-card general rules A–G",
+      "questions": [
+        "Q05",
+        "Q06",
+        "Q08",
+        "Q09",
+        "Q31",
+        "Q33",
+        "Q40",
+        "Q43",
+        "Q45",
+        "Q46",
+        "Q52"
+      ],
+      "result": "Checked every clause: taboo/scoring, simultaneous secret choices, Castillo entry and restricted exit, indivisible actions, maxima/fewer pieces, ordinary versus special destinations, declining special."
+    },
+    {
+      "pdf_pages": "8",
+      "passage": "Every 1-stack Intrigue variant, including duplicate copies",
+      "questions": [
+        "Q44",
+        "Q45",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51"
+      ],
+      "result": "Supported: all-own single origin with explicit return permission; extra two; exclusive choice; five single-origin mixed; three foreign; three mixed; separate two-own/two-foreign allowances; four own; four mixed. Preserved other/any destination wording and universal protected-source limits. The prefatory claim that only Intrigue moves others is limited by the explicit later Movement card; no absolute-exclusivity key is present."
+    },
+    {
+      "pdf_pages": "9",
+      "passage": "2-stack common deployment; Veto and both Decay actions",
+      "questions": [
+        "Q24",
+        "Q25",
+        "Q26",
+        "Q27",
+        "Q28"
+      ],
+      "result": "Supported: held-card window, announce actions, stop announced/uncompleted special/remainder, no ordinary deployment cancellation, one use, next-round expiry; opponents-only court losses and explicit low-court fallback."
+    },
+    {
+      "pdf_pages": "9",
+      "passage": "The King returns!, one-per-player return, secret two removal",
+      "questions": [
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q32"
+      ],
+      "result": "Keys correctly report detailed King returns paragraph/card face versus heading and clockwise participation; actor chooses one per player including own; secret-two legal-region and singleton branches supported. Ineligible/no-piece cases and actor participation remain source limits, not settled by these questions."
+    },
+    {
+      "pdf_pages": "10",
+      "passage": "Secret all-own removal; 2-stack pick one to score",
+      "questions": [
+        "Q33",
+        "Q34"
+      ],
+      "result": "Supported positive-eligible-region and no-region-pieces branches; unrestricted scoring expressly allows King and Castillo. Protected-only piece distribution remains unresolved."
+    },
+    {
+      "pdf_pages": "10",
+      "passage": "3-stack deployment; all4, all5, all6/7, Castillo special scoring",
+      "questions": [
+        "Q16",
+        "Q35",
+        "Q36"
+      ],
+      "result": "Supported categories, all printed values, mobile-board overrides, bonuses, explicit all5 Castillo exclusion and special Castillo cover-again behavior. All4 with mobile scoreboard at Castillo remains ambiguous rather than a new definitive target."
+    },
+    {
+      "pdf_pages": "11",
+      "passage": "First-position-only, most-Caballeros, least-Caballeros, choose-any special scorings",
+      "questions": [
+        "Q34",
+        "Q37",
+        "Q38",
+        "Q39"
+      ],
+      "result": "Supported first-only tie exclusion, tied selection totals, least positive count, explicit Castillo exclusions and unrestricted Castillo scoring without redistribution."
+    },
+    {
+      "pdf_pages": "11",
+      "passage": "4-stack deployment; mobile scoreboards, Royal Adviser and forced Movement",
+      "questions": [
+        "Q17",
+        "Q40",
+        "Q41",
+        "Q53"
+      ],
+      "result": "Supported two mobile-board state transitions, Castillo placement, taboo, no stacking, upright orientation, one-step King range; affected opponent groups use simultaneous disks and illegal King/origin choices send to courts. Castillo destination conflict remains a source limit."
+    },
+    {
+      "pdf_pages": "12",
+      "passage": "Grande, power recovery, Court, unique secret scoring and 5-stack King card",
+      "questions": [
+        "Q18",
+        "Q19",
+        "Q23",
+        "Q41",
+        "Q42",
+        "Q43",
+        "Q52"
+      ],
+      "result": "Supported Grande source/destination restrictions and new home, any played power recovery including current card without required disclosure, province-to-court two, unique selections only, secret-disk domain, King any board region except Castillo and normal maximum five deployment. Court shortage fallback not supplied."
+    }
+  ],
+  "all_key_checks": [
+    {
+      "question_id": "Q01",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q02",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q03",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q04",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q05",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q06",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q07",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q08",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q09",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q10",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q11",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q12",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q13",
+      "status": "requires stem/key qualification"
+    },
+    {
+      "question_id": "Q14",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q15",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q16",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q17",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q18",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q19",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q20",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q21",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q22",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q23",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q24",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q25",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q26",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q27",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q28",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q29",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q30",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q31",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q32",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q33",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q34",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q35",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q36",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q37",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q38",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q39",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q40",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q41",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q42",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q43",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q44",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q45",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q46",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q47",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q48",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q49",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q50",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q51",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q52",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    },
+    {
+      "question_id": "Q53",
+      "status": "supported within the explicitly stated or ordinary eligible case"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "New King-plus-home numerical example",
+      "reason": "Mechanical application already covered in Q15; F01 calls for repairing an existing underspecified scenario, not a new target."
+    },
+    {
+      "candidate": "Different regions, player colors, counts, repeated card copies or ordinary deployment numbers",
+      "reason": "Numeric/cosmetic variants of existing branches."
+    },
+    {
+      "candidate": "More return-to-origin comparisons",
+      "reason": "Q44/Q47/Q49/Q51 already preserve source wording distinctions."
+    },
+    {
+      "candidate": "Another reveal-before-power question",
+      "reason": "Source round-start sequence is already mapped to Q02/Q21/Q22; no new exception or priority branch."
+    },
+    {
+      "candidate": "Definitive fallback answers for shortage, protected-only, secret Movement-to-Castillo and all4-Castillo cases",
+      "reason": "Source does not supply an unambiguous essential ruling; register limits rather than invent fixed targets."
+    }
+  ],
+  "source_limits": [
+    {
+      "id": "SL01",
+      "pdf_pages": "9",
+      "passage": "The King returns!",
+      "limit": "Detailed rule demands three eligible own pieces, excludes King/Castillo, and gives no explicit fallback if fewer than three exist across eligible regions and court. Cannot declare a full procedure for that state."
+    },
+    {
+      "id": "SL02",
+      "pdf_pages": "9",
+      "passage": "Return one piece per player",
+      "limit": "Requires a region piece of each player but supplies no fallback where a player has none outside the King region/Castillo. Court pieces are not authorized replacements."
+    },
+    {
+      "id": "SL03",
+      "pdf_pages": "9",
+      "passage": "Secret removal of two",
+      "limit": "The singleton fallback does not specify a no-eligible-piece procedure. A player with two only in the King region and singletons elsewhere also exposes tension between at-least-two selection and protected-region prohibition. Do not silently invent a legal-singleton/no-piece fallback."
+    },
+    {
+      "id": "SL04",
+      "pdf_pages": "9–10",
+      "passage": "Secret removal of two/all from one region",
+      "limit": "Headings target fellow players while detailed paragraphs say all players choose disks; the acting player’s required selection/participation is not fully reconciled. Existing questions ask affected fellow players and do not cure this gap."
+    },
+    {
+      "id": "SL05",
+      "pdf_pages": "10",
+      "passage": "Secret removal of all own from one region",
+      "limit": "Explicit exemption covers no Caballeros in any region, but does not expressly cover having region pieces only in the forbidden King region. Do not broaden the exemption without a source ruling."
+    },
+    {
+      "id": "SL06",
+      "pdf_pages": "2,7,11",
+      "passage": "Forced Movement and Castillo",
+      "limit": "General C/F permit moved pieces to Castillo, but this card requires another region chosen on disks that omit Castillo. The source does not reconcile the general allowance with this specific selection mechanism."
+    },
+    {
+      "id": "SL07",
+      "pdf_pages": "10–11",
+      "passage": "All4 scoring with a 4/0/0 mobile scoreboard at Castillo",
+      "limit": "Mobile boards may be placed at Castillo; all4 uses first-value categories and mobile overrides; only all5 explicitly excludes Castillo. All4 applicability to a mobile-valued Castillo is not expressly resolved."
+    },
+    {
+      "id": "SL08",
+      "pdf_pages": "12",
+      "passage": "The Court",
+      "limit": "Calls for two provinces-to-court pieces but provides no special shortage fallback or express authorization to take board pieces, unlike normal power recruitment. Cannot treat normal recruitment’s exceptional board supply as established here."
+    },
+    {
+      "id": "SL09",
+      "pdf_pages": "6",
+      "passage": "Game End",
+      "limit": "Names the furthest-progressed player as winner but supplies no distinct final-score tie-break procedure. Existing generic winning-condition answer does not establish one."
+    }
+  ],
+  "stopping_assessment": {
+    "latest_two_ledger_passes": [
+      11,
+      12
+    ],
+    "both_zero_additions": true,
+    "this_review_additions": 0,
+    "saturation_and_completeness_are_separate": true,
+    "required_action": "Repair Q13 wording/key qualification; keep essential source-gap status incomplete. No additional source-defined question proposed."
+  },
+  "literal_scenario_sufficiency": {
+    "all_53_checked": true,
+    "concrete_outcome_stems": [
+      {
+        "question_id": "Q12",
+        "result": "Sufficient: four player counts specified, scoreboard specified, all tied for majority so no bonus eligibility can alter the numerical result."
+      },
+      {
+        "question_id": "Q13",
+        "result": "Insufficient for unconditional total points: only the rank-derived scoreboard points are fixed. See F01 and exact proposed corrected wording."
+      },
+      {
+        "question_id": "Q28",
+        "result": "Sufficient: relevant fellow player has two and actor has five; explicit court-shortage fallback and opponents-only scope fix the requested outcomes. Other opponents’ unspecified holdings are not requested as numerical outputs."
+      },
+      {
+        "question_id": "Q35",
+        "result": "Sufficient: asks category eligibility under two stated mobile boards and whether ordinary conditional bonuses apply, not particular players’ total points. No occupancy data needed for those requested facts."
+      },
+      {
+        "question_id": "Q38",
+        "result": "Sufficient: tie for largest board-region total and larger Castillo total determine which locations qualify; no unspecified individual majority affects that selection. Key does not fabricate point totals."
+      }
+    ],
+    "remaining_conditional_branches": [
+      {
+        "question_ids": [
+          "Q04",
+          "Q11",
+          "Q14",
+          "Q15",
+          "Q17",
+          "Q18",
+          "Q19",
+          "Q23",
+          "Q25",
+          "Q26",
+          "Q27",
+          "Q31",
+          "Q32",
+          "Q33",
+          "Q36",
+          "Q37",
+          "Q39",
+          "Q40",
+          "Q43",
+          "Q44",
+          "Q46",
+          "Q47",
+          "Q48",
+          "Q49",
+          "Q50",
+          "Q51",
+          "Q52",
+          "Q53"
+        ],
+        "result": "Requested legal domains, conditional outcomes, timing, or ownership/source restrictions are supplied or directly defined by the source. Keys state rules rather than unconditional numerical totals requiring additional positions. Q31 expressly requires a legal region with at least two; Q32 expressly supplies legal singleton regions; Q33’s no-region-pieces branch is explicitly supplied. Unresolved protected-only/no-eligible states are separately registered and not inferred as settled."
+      },
+      {
+        "question_ids": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10",
+          "Q16",
+          "Q20",
+          "Q21",
+          "Q22",
+          "Q24",
+          "Q29",
+          "Q30",
+          "Q34",
+          "Q41",
+          "Q42",
+          "Q45"
+        ],
+        "result": "Generic setup/procedure, normal-scoring reference, maximum allowance, or quoted execution-rule questions do not purport to fix an arbitrary underspecified numerical board state. Q42/Q45 state nominal allowances, not guaranteed deployment with an unstated court/province supply. Q29 expressly asks what the detailed paragraph requires and how the heading differs; it does not claim an insufficient-supply ruling. Q30’s generic one-per-player procedure must not be treated as resolving a no-eligible-piece case."
+      }
+    ],
+    "correction_scope": "One existing-stem clarification only. Q13’s omitted bonus prerequisites are material to the requested total; King/Grande positions in questions that request only eligibility, maxima or normal scoring rules are incidental and do not warrant extra questions or corrections."
+  }
+}

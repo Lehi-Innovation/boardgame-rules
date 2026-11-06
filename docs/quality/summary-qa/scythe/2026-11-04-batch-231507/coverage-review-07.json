@@ -1,0 +1,391 @@
+{
+  "review_id": "coverage-review-07",
+  "benchmark_version": "expanded-v8",
+  "scope": "2016 base/core multiplayer; excludes Automa, expansions, promos and optional variants",
+  "verdict": "gaps",
+  "summary": "All 62 expected answers are supported by the authoritative source. One narrow substantive elicitation gap remains: the resource types used to pay for Build and Enlist appear in keys but are not requested by the questions. One paired cost-resource question is proposed.",
+  "independence": {
+    "read": [
+      "Complete extracted/scythe-rules.txt, pages 1-32",
+      "Complete source_pdfs/scythe-recovery.pdf text, pages 1-32, verified against the supplied extraction page by page",
+      "expanded-v8/questions.json, all 62 entries",
+      "expanded-v8/answer-key.json, all 62 entries",
+      "Parent coverage-ledger.json",
+      "Parent source-coverage-map.json, all 91 passage groups",
+      "Parent source-page-19.png and source-page-29.png, visually"
+    ],
+    "not_read": [
+      "Summaries",
+      "Reader outputs or grades",
+      "Earlier coverage-review reports",
+      "Parent chat history"
+    ],
+    "pdf_sha256": "3a27021231ff6ceb6401878eb27912ca7ce9455c6d2e7393e29248a80939f606",
+    "pdf_text_verification": "PyMuPDF read all 32 PDF pages. Each page matched its supplied text-extraction section after whitespace and extraction control-character normalization."
+  },
+  "key_audit": {
+    "checked_ids": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15",
+      "Q16",
+      "Q17",
+      "Q18",
+      "Q19",
+      "Q20",
+      "Q21",
+      "Q22",
+      "Q23",
+      "Q24",
+      "Q25",
+      "Q26",
+      "Q27",
+      "Q28",
+      "Q29",
+      "Q30",
+      "Q31",
+      "Q32",
+      "Q33",
+      "Q34",
+      "Q35",
+      "Q36",
+      "Q37",
+      "Q38",
+      "Q39",
+      "Q40",
+      "Q41",
+      "Q42",
+      "Q43",
+      "Q44",
+      "Q45",
+      "Q46",
+      "Q47",
+      "Q48",
+      "Q49",
+      "Q50",
+      "Q51",
+      "Q52",
+      "Q53",
+      "Q54",
+      "Q55",
+      "Q56",
+      "Q57",
+      "Q58",
+      "Q59",
+      "Q60",
+      "Q61",
+      "Q62"
+    ],
+    "substantive_source_contradictions": [],
+    "notes": [
+      "Q20 correctly uses the detailed p29 tiebreaker list, excluding the character from the first tiebreaker, despite p2 quick-reference shorthand referring broadly to units.",
+      "Q34 correctly preserves the 2016 source restriction of Camaraderie to workers forced to retreat after combat.",
+      "Q39 correctly includes popularity 18 in the highest payout tier.",
+      "Q40/Q41 payouts match the visually inspected p19 tile diagrams."
+    ]
+  },
+  "findings": [
+    {
+      "id": "G01",
+      "type": "substantive_direct_elicitation_gap",
+      "title": "Build and Enlist payment resource types are only unasked key extras",
+      "source_references": [
+        "Rulebook PDF p18, BUILD: The resource used to build structures is wood.",
+        "Rulebook PDF p20, ENLIST: The resource used to enlist recruits is food."
+      ],
+      "reason": "The resource identity determines which stock can legally pay for the action. Q10 explicitly requests Upgrade and Deploy costs, but Q11 only requests Build locations, permanence and enemy-occupied Mill/Mine behavior. Q12 only requests recruit placement, bonuses and resolution. An answer can satisfy every requested part of Q11 and Q12 without stating wood or food. Their keys do contain those facts, which cannot establish elicitation. Q03 establishes the general exposed-red-box payment procedure; it does not request the action-to-resource mapping.",
+      "related_question_ids": [
+        "Q03",
+        "Q10",
+        "Q11",
+        "Q12"
+      ],
+      "severity": "narrow but meaningful core-procedure coverage gap"
+    }
+  ],
+  "proposed_additions": [
+    {
+      "proposed_id": "Q63",
+      "question": "Which resource is used to pay for the Build action, and which is used to pay for the Enlist action?",
+      "expected_answer": "Build uses wood. Enlist uses food; the amount required is the exposed cost on the corresponding Player Mat action.",
+      "source_references": [
+        "Rulebook PDF p18, BUILD",
+        "Rulebook PDF p20, ENLIST",
+        "Rulebook PDF p10, GAMEPLAY, exposed red-box costs"
+      ],
+      "novelty": "Tests two previously unelicited core payment-resource identities in one parallel question, using the same pairing approach already used for Upgrade/Deploy in Q10. This adds no changed numerical quantity, artificial scenario, mechanical interaction, setup padding or cosmetic rewrite. Resource identity affects whether the player can legally take these bottom-row actions.",
+      "existing_entries": "Leave Q01-Q62 and all existing keys unchanged."
+    }
+  ],
+  "checked_passages": [
+    {
+      "source_pages": [
+        1,
+        2,
+        3
+      ],
+      "check": "Read in full; procedural quick-reference rules corroborate detailed source. Components, narrative and generic counts introduce no additional meaningful procedure."
+    },
+    {
+      "source_pages": [
+        4,
+        5
+      ],
+      "questions": [
+        "Q04",
+        "Q05",
+        "Q21",
+        "Q22",
+        "Q24",
+        "Q30",
+        "Q58",
+        "Q60",
+        "Q62"
+      ],
+      "check": "Home-base status/restrictions, territorial and resource control including resource-only territory, remote spending, resources versus workers, unit roles/carriage/default water restrictions."
+    },
+    {
+      "source_pages": [
+        6,
+        7,
+        8,
+        9
+      ],
+      "questions": [
+        "Q01",
+        "Q02",
+        "Q08",
+        "Q37",
+        "Q44"
+      ],
+      "check": "Setup, concealed limited Factory selection, encounter/structure setup, mats and starting pieces/values, random assignment/seating, start player, public/private information."
+    },
+    {
+      "source_pages": [
+        10,
+        11
+      ],
+      "questions": [
+        "Q03",
+        "Q05",
+        "Q06",
+        "Q07",
+        "Q21",
+        "Q23",
+        "Q24",
+        "Q45",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q58"
+      ],
+      "check": "Action order/optionality/costs, one action once, normal movement/coin alternative, cargo, sequential movement, tunnels, rivers/lakes, opponent worker/structure/plastic branches, forced stops and encounter sequencing."
+    },
+    {
+      "source_pages": [
+        12,
+        13
+      ],
+      "questions": [
+        "Q08",
+        "Q09",
+        "Q22",
+        "Q25",
+        "Q47",
+        "Q51"
+      ],
+      "check": "Bolster/Trade costs and alternatives, exhaustion, resource placement/home-base worker condition, production cost timing/full payment, terrain map, worker placement/permanence, dead turns and unlimited occupancy/supply."
+    },
+    {
+      "source_pages": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "questions": [
+        "Q10",
+        "Q23",
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q32",
+        "Q33",
+        "Q34",
+        "Q48"
+      ],
+      "check": "Completed bottom actions, optional coins, upgrades/deploy, ability unlock scope, every base faction mech ability, Speed, river terrain pairs, shortcuts, combat power/card changes, lake cargo and special retreat, combat-only Camaraderie."
+    },
+    {
+      "source_pages": [
+        18
+      ],
+      "questions": [
+        "Q04",
+        "Q11",
+        "Q26",
+        "Q61"
+      ],
+      "check": "Build placement/control/limits/permanence and all four structure abilities, including positive controlled-Mill behavior and Mine owner-only use. Build payment resource not directly elicited; see G01."
+    },
+    {
+      "source_pages": [
+        19
+      ],
+      "questions": [
+        "Q40",
+        "Q41"
+      ],
+      "check": "Visually inspected all six tiles and lake diagram. Verified adjacency duplicates/rivers, printed encounter persistence, Mine exclusion, straight continuous longest row, farms/tundras combined and every payout."
+    },
+    {
+      "source_pages": [
+        20
+      ],
+      "questions": [
+        "Q12",
+        "Q19",
+        "Q56",
+        "Q59"
+      ],
+      "check": "Recruit token selection/open one-time space/immobility, all one-time bonuses, linked ongoing triggers/exclusions, self/left/right order, two-player rule and announcement. Enlist payment resource not directly elicited; see G01."
+    },
+    {
+      "source_pages": [
+        21
+      ],
+      "questions": [
+        "Q03",
+        "Q17",
+        "Q18",
+        "Q27",
+        "Q32",
+        "Q35"
+      ],
+      "check": "Every faction ability: repeat section including Factory, Coercion, Swim, Meander distinct options/order/funding and Dominate objective/combat exceptions."
+    },
+    {
+      "source_pages": [
+        22,
+        23
+      ],
+      "questions": [
+        "Q07",
+        "Q13",
+        "Q14",
+        "Q19",
+        "Q30",
+        "Q37",
+        "Q42",
+        "Q52",
+        "Q53",
+        "Q55"
+      ],
+      "check": "Combat eligibility, selection/reveal secrecy and simultaneity, attacker ability priority/ties, dial/card caps/payment, all-unit retreat/resources, loser card, popularity, lake battle, post-star-cap combat and pending battle reversal."
+    },
+    {
+      "source_pages": [
+        24,
+        25
+      ],
+      "questions": [
+        "Q15",
+        "Q16",
+        "Q35",
+        "Q36",
+        "Q46",
+        "Q54",
+        "Q60"
+      ],
+      "check": "Character-only encounters, stopping and all-combat timing, lost-entry token persistence, public presentation, compulsory affordable choice/optional gain, benefit location/isolation, Factory first visit/card permanence/fifth section/separate bonuses and movement."
+    },
+    {
+      "source_pages": [
+        26,
+        27,
+        28
+      ],
+      "questions": [
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q38",
+        "Q43",
+        "Q57"
+      ],
+      "check": "Objectives reveal/requirements/delay/discard/Saxony; coin-only unenforceable agreements/mandatory combat; all star achievements and mandatory/permanent/shared stars; immediate sixth-star ending and explicit ordering/undo exceptions. Optional Delay of Game excluded."
+    },
+    {
+      "source_pages": [
+        29
+      ],
+      "questions": [
+        "Q20",
+        "Q39",
+        "Q40",
+        "Q41",
+        "Q43"
+      ],
+      "check": "Visually inspected popularity track and scoring categories: 0-6 pays 3/2/1, 7-12 pays 4/3/2, 13-18 pays 5/4/3; held coins, Factory three, lakes/home bases, pooled resource pairs, structure independence and all tiebreaks."
+    },
+    {
+      "source_pages": [
+        30,
+        31,
+        32
+      ],
+      "check": "Read full character/narrative/marketing pages and entire highlighted-rule recap. Recap corroborates covered procedures; no additional substantive core rule found."
+    }
+  ],
+  "rejections": [
+    {
+      "candidate": "Another normal Move unit count, worker quantity, production count, combat value or popularity example",
+      "reason": "Existing questions elicit the governing action/quantity or source outcome. Changed quantities do not create a new meaningful branch."
+    },
+    {
+      "candidate": "Mill on another terrain or with a different number of workers",
+      "reason": "Q61 directly requests positive Mill production and Q22 requests terrain outputs; another layout adds no source-defined exception."
+    },
+    {
+      "candidate": "Resource-only control after a different unit departs",
+      "reason": "Q62 directly requests the defining presence and no-presence consequence."
+    },
+    {
+      "candidate": "A new combination of Speed, Factory, an encounter and sixth-star interruption",
+      "reason": "Existing direct stopping, timing and immediate-ending questions cover the source-defined rules. No additional explicit exception was found."
+    },
+    {
+      "candidate": "Separate questions for physical return of spent resources, ordinary deck shuffles, supply piles, encounter/objective deck-bottom handling or card distribution",
+      "reason": "Routine handling/reference padding without a distinct meaningful legality, priority, privacy or outcome branch; substantive exhaustion/selection/reveal/token persistence is already tested."
+    },
+    {
+      "candidate": "An additional voluntary-benefit question for coins or recruit bonuses",
+      "reason": "The generic voluntary-benefit procedure and the relevant bonus resolution are already elicited; changing benefit source does not establish a new explicit exception."
+    },
+    {
+      "candidate": "Tournament coin-trade restatement, sample scoring, Delay of Game, achievement-sheet entries, teaching cards or promos",
+      "reason": "Tournament restriction is already in Q38; remaining items are optional variants, teaching/reference practices, commemorative material or excluded scope."
+    }
+  ],
+  "limitations": [
+    "This review addresses the supplied 2016 booklet and base multiplayer scope only; no external FAQ or later-edition correction was used.",
+    "The PDF text was checked in full and required image-only numeric evidence was visually inspected on parent pages 19 and 29; other PDF illustrations were not separately treated as additional independent rules.",
+    "No claim is made that every explanatory sentence or routine physical-handling instruction needs an individual question. The proposed gap concerns the legal resource identity of two core actions.",
+    "Only this report file was written; the bank, keys and parent ledgers remain unchanged."
+  ]
+}

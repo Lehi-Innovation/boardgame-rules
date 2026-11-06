@@ -1,0 +1,1841 @@
+{
+  "reviewer_role": "Fresh independent source and procedural coverage challenger",
+  "benchmark_version": "v6",
+  "scope": "Original Nemesis, standard semi-cooperative game, basic board; original 28-page manual plus official FAQ v2.2 dated 16.04.2025 (download filename v2.1). Cooperative-only Rules 17–18, Intruder-player Actions 16, and expansion rulings excluded from conclusions.",
+  "verdict": {
+    "status": "REVISION_REQUIRED_FOR_COVERAGE",
+    "questions_reviewed": 107,
+    "definite_answer_key_errors": 0,
+    "distinct_missing_procedural_exceptions": 1,
+    "source_gap_status": "FAQ does not expressly resolve SG01–SG04. SG01–SG03 remain precise limitations; SG04 is a general-versus-specific wording discrepancy with a strong detailed-rule interpretation, not equally strong evidence of a missing procedure.",
+    "explanation": "All 107 expected answers have source support at the level they claim. One directly printed room restriction is absent from the question coverage: Search is prohibited in both Nest and Room Covered With Slime. This text is missing from source-snapshot.txt but present in the supplied original PDF. No cosmetic variants or mere combinations are proposed."
+  },
+  "findings": [
+    {
+      "id": "F01",
+      "kind": "distinct_coverage_omission",
+      "severity": "required",
+      "affected_questions": [
+        "Q30",
+        "Q45",
+        "Q60"
+      ],
+      "finding": "Neither Nest nor Room Covered With Slime permits any Search Action. Q30 expressly checks the different prohibition in Special Rooms; Q45 checks the Slime Room counter and Malfunction status, and Q60 checks the Nest egg action. Absence of an Item Counter is not a substitute for testing the printed no-Search exception.",
+      "source": {
+        "path": "nemesis-original-rules.pdf",
+        "printed_page": 25,
+        "sections": [
+          "Room Covered With Slime",
+          "Nest"
+        ],
+        "exact_text": "Note: You cannot perform any Search Action in this Room."
+      },
+      "extraction_problem": "The note appears under each of these two ordinary room entries in the PDF, but is absent from source-snapshot.txt around lines 2599–2605 and 2623–2663.",
+      "required_change": "Add one combined question for this shared explicit exception and ensure source extraction does not silently omit these notes."
+    },
+    {
+      "id": "F02",
+      "kind": "source_wording_difference_not_key_error",
+      "affected_questions": [
+        "Q47"
+      ],
+      "finding": "FAQ Rooms 5 broadly says Malfunction prevents checking/changing Engine states; its question concerns whether Malfunction alone destroys the ship at the jump. The detailed Engine procedure explicitly permits Repair/Break with a Repairs Action or Tools Item despite Malfunction. Q47 tests that explicit card/Item exception, not ordinary Room Action availability.",
+      "source_references": [
+        {
+          "path": "current-official-faq-extraction.txt",
+          "lines": "267–272",
+          "section_question": "Rooms 5"
+        },
+        {
+          "path": "source-snapshot.txt",
+          "lines": "2782–2793",
+          "printed_page": 26
+        }
+      ],
+      "resolution": "Retain Q47. Do not treat the contextual broad sentence as an explicit repeal of the detailed Repairs/Tools exception. A source note would prevent a reviewer from mistakenly marking the supported exception wrong."
+    },
+    {
+      "id": "F03",
+      "kind": "source_wording_difference_not_key_error",
+      "affected_questions": [
+        "Q15"
+      ],
+      "finding": "Detailed Intruder Attack targeting says fewest Action cards; the p28 reference summary says fewest cards. Contamination is expressly not an Action card, while the separate Encounter rule expressly counts Contamination for Surprise. Q15 follows the detailed targeting procedure.",
+      "source_references": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "1891–1903;1945–1952;3103–3105",
+          "printed_pages": [
+            20,
+            28
+          ]
+        },
+        {
+          "path": "source-snapshot.txt",
+          "lines": "1702–1707;1787–1790",
+          "printed_page": 18
+        }
+      ],
+      "resolution": "Retain the detailed-rule key and record the shortened reference-sheet wording. Do not silently import the Surprise comparison into ordinary targeting or claim the FAQ independently settled the wording difference."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "id": "PA01",
+      "question": "May you perform a Search Action in the Nest or in the Room Covered With Slime? Are these rooms subject to the same Search rule as ordinary searchable Rooms?",
+      "answer": "No. Each of those two Room entries explicitly prohibits any Search Action. Their other permitted procedures, such as taking an Egg in the Nest or receiving Slime on entry, do not grant permission to Search.",
+      "exact_source": {
+        "path": "nemesis-original-rules.pdf",
+        "printed_page": 25,
+        "sections": [
+          "Room Covered With Slime",
+          "Nest"
+        ],
+        "exact_text": "Note: You cannot perform any Search Action in this Room."
+      },
+      "extraction_lines": "No matching note exists in source-snapshot.txt; inspect PDF p25 directly. Adjacent extracted entries are lines 2599–2605 and 2623–2663.",
+      "distinctness": "An explicit action-availability exception for two ordinary Room tiles. Q30 covers Special Rooms, Q45 does not ask Search availability, and Q60 covers the separate Egg Room Action. One combined question is sufficient."
+    }
+  ],
+  "checked_passages": [
+    {
+      "path": "source-snapshot.txt",
+      "lines": "438–655",
+      "coverage": "Board and crew setup; checked Q01–Q02,Q21–Q22."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "657–999",
+      "coverage": "Board terminology, discard piles, turn sequence, bag development, endgame and action cost; checked Q03–Q04,Q20,Q23–Q26,Q49,Q53."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "1000–1473",
+      "coverage": "Critical moments, Objectives, Combat restrictions, Basic Actions, movement, exploration and Noise; checked Q02–Q11,Q31–Q34,Q37,Q51,Q55–Q60,Q106."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "1475–1966",
+      "coverage": "Technical Corridors, markers, Doors, Encounters, attacks, escape and Contamination; checked Q07–Q16,Q24,Q26–Q27,Q45,Q51–Q52,Q57,Q107."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "1967–2403",
+      "coverage": "Scanning, injury/death, wounds, Weaknesses, Items/Objects, Search/Craft/Quest and indirect harm; checked Q12–Q18,Q28–Q33,Q36,Q50,Q54,Q61."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "2405–2834",
+      "coverage": "All base-game and additional rooms, pods and Special Rooms; checked every room question Q17–Q20,Q33–Q48,Q59–Q62."
+    },
+    {
+      "path": "source-snapshot.txt",
+      "lines": "2985–3126",
+      "coverage": "Core reference sheet; detailed rules take precedence over abbreviated wording when no explicit later ruling changes the procedure."
+    },
+    {
+      "path": "nemesis-original-rules.pdf",
+      "printed_pages": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        28
+      ],
+      "coverage": "Direct PDF text compared against the source snapshot across core pages; inspected embedded combat die graphics and blue component icons/card illustrations on pp18 and23. Confirmed Q52 and Q54 icon identities; confirmed omitted no-Search notes on p25."
+    },
+    {
+      "path": "nemesis-current-official-faq.pdf",
+      "printed_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "coverage": "Verified v2.2 16.04.2025 cover, base-game Rules, Actions, Rooms and Items against extraction. Excluded cooperative Rules17–18 and Intruder-player Actions16 from conclusions."
+    },
+    {
+      "path": "current-official-faq-extraction.txt",
+      "lines": "1–350",
+      "coverage": "Every in-scope FAQ entry mapped to existing coverage or rejected as already covered, below."
+    }
+  ],
+  "faq_coverage_map": {
+    "Rules": {
+      "1": [
+        "Q63"
+      ],
+      "2": [
+        "Q19"
+      ],
+      "3": [
+        "Q64"
+      ],
+      "4": [
+        "Q08"
+      ],
+      "5": [
+        "Q65"
+      ],
+      "6": [
+        "Q66"
+      ],
+      "7": [
+        "Q25",
+        "Q67"
+      ],
+      "8": [
+        "Q68"
+      ],
+      "9": [
+        "Q69"
+      ],
+      "10": [
+        "Q51"
+      ],
+      "11": [
+        "Q70"
+      ],
+      "12": [
+        "Q71"
+      ],
+      "13": [
+        "Q72"
+      ],
+      "14": [
+        "Q39",
+        "Q73"
+      ],
+      "15": [
+        "Q37"
+      ],
+      "16": [
+        "Q36"
+      ],
+      "19": [
+        "Q74"
+      ],
+      "20": [
+        "Q39",
+        "Q49"
+      ],
+      "21": [
+        "Q04",
+        "Q90"
+      ],
+      "22": [
+        "Q75"
+      ],
+      "23": [
+        "Q76"
+      ],
+      "24": [
+        "Q77"
+      ],
+      "25": [
+        "Q39",
+        "Q78"
+      ],
+      "26": [
+        "Q79"
+      ]
+    },
+    "Actions": {
+      "1": [
+        "Q32"
+      ],
+      "2": [
+        "Q80"
+      ],
+      "3": [
+        "Q81"
+      ],
+      "4": [
+        "Q55",
+        "Q82"
+      ],
+      "5": [
+        "Q82"
+      ],
+      "6": [
+        "Q30"
+      ],
+      "7": [
+        "Q83"
+      ],
+      "8": [
+        "Q84"
+      ],
+      "9": [
+        "Q85"
+      ],
+      "10": [
+        "Q85"
+      ],
+      "11": [
+        "Q86"
+      ],
+      "12": [
+        "Q87"
+      ],
+      "13": [
+        "Q88"
+      ],
+      "14": [
+        "Q89"
+      ],
+      "15": [
+        "Q30"
+      ],
+      "17": [
+        "Q90"
+      ],
+      "18": [
+        "Q91"
+      ],
+      "19": [
+        "Q92"
+      ]
+    },
+    "Rooms": {
+      "1": [
+        "Q17",
+        "Q105"
+      ],
+      "2": [
+        "Q93"
+      ],
+      "3": [
+        "Q94"
+      ],
+      "4": [
+        "Q33"
+      ],
+      "5": [
+        "Q20",
+        "Q27",
+        "Q47"
+      ],
+      "6": [
+        "Q95"
+      ],
+      "7": [
+        "Q18",
+        "Q96"
+      ],
+      "8": [
+        "Q38",
+        "Q68"
+      ],
+      "9": [
+        "Q97"
+      ]
+    },
+    "Items": {
+      "1": [
+        "Q98"
+      ],
+      "2": [
+        "Q99"
+      ],
+      "3": [
+        "Q100"
+      ],
+      "4": [
+        "Q101"
+      ],
+      "5": [
+        "Q102"
+      ],
+      "6": [
+        "Q103"
+      ],
+      "7": [
+        "Q104"
+      ],
+      "8": [
+        "Q29",
+        "Q61"
+      ],
+      "9": [
+        "Q105"
+      ],
+      "10": [
+        "Q81"
+      ]
+    }
+  },
+  "rejected_addition_candidates": [
+    {
+      "candidate": "Danger with no neighboring eligible Intruders and every corridor already noisy",
+      "reason": "Q08 already places only in corridors lacking Noise; the FAQ explicitly confirms the resulting no-op. It is not a distinct additional procedure."
+    },
+    {
+      "candidate": "Leg Serious Wound stops applying when dressed",
+      "reason": "Q36 already tests the general rule that dressing removes the effect; Leg is a cosmetic instance."
+    },
+    {
+      "candidate": "Signal is individual in standard play",
+      "reason": "Q37 explicitly puts its marker on the acting Character board. Cooperative extensions are out of scope."
+    },
+    {
+      "candidate": "Two non-initiating Characters trade with each other",
+      "reason": "Q32 already asks who may join and permits agreeing Characters in the same Room to exchange. FAQ Actions1 is direct supporting clarification, not a missing trade system."
+    },
+    {
+      "candidate": "Fire Control may target a room containing a Character and Intruder in Combat",
+      "reason": "Q38 already permits any target Room and makes all its Intruders flee; Q34 distinguishes acting-Character Room Action restrictions. FAQ Rooms8 reinforces the covered target behavior. Do not add merely by combining Combat with this already unrestricted target selection."
+    },
+    {
+      "candidate": "Creeper uses Adult injury procedure and Breeder uses Queen injury procedure",
+      "reason": "Same injury procedures with type substitution; not a distinct rule family beyond Q13 and general injury checks."
+    }
+  ],
+  "source_gap_assessment": {
+    "official_faq_resolves_any_claimed_gap": false,
+    "gaps": [
+      {
+        "id": "SG01",
+        "status": "unresolved_exact_case",
+        "manual_reference": "source-snapshot.txt 1422–1429; PDF p15",
+        "faq_assessment": "No in-scope FAQ entry addresses unavailable Adult models when every model is in Combat. Rules10 is only permission to enter unexplored Rooms; Rules19 governs token reuse, not model availability.",
+        "remaining_precise_gap": "When placement is required and all eight Adult models are in Combat, no qualifying model can be removed under the stated freeing procedure. The sources give no executable fallback. Do not invent cancellation, substitution, extra models or forced removal of a Combat Adult."
+      },
+      {
+        "id": "SG02",
+        "status": "unresolved_exact_case",
+        "manual_reference": "source-snapshot.txt 809–816;1121–1123;2632–2634",
+        "faq_assessment": "Rooms7 confirms the Intruder-board egg pile represents Nest HP. Rooms9 says a dropped Egg does not restore those HP. Neither addresses a new Egg added by Queen development after the Nest was marked destroyed. Rules26 only confirms ship destruction fulfills the objective.",
+        "remaining_precise_gap": "After Queen development adds a new board Egg to a previously destroyed Nest, the sources do not explicitly say whether the destruction marker/state persists, resets, or how that affects the destroy-Nest Objective at the end. Do not transfer the dropped-Egg ruling to a different source of Egg creation."
+      },
+      {
+        "id": "SG03",
+        "status": "unresolved_wording_ambiguity",
+        "manual_reference": "source-snapshot.txt 1816–1823;2650–2654; PDF pp19,25",
+        "faq_assessment": "No in-scope FAQ question clarifies Contamination for a successful Egg Melee. Rooms2 addresses Noise location for thrown Grenades/Molotovs; Rooms7 and9 concern Egg location/HP.",
+        "remaining_precise_gap": "The terminal if-they-miss phrase may qualify both penalties or only Wounds. Standard Melee draws Contamination before the die roll, but the Egg exception does not explicitly disambiguate a successful hit. Q18 correctly preserves this limitation without inventing an extra successful-hit draw, refund, or unconditional immunity."
+      },
+      {
+        "id": "SG04",
+        "status": "not_resolved_by_faq; downgrade_to_general_vs_specific_wording_discrepancy",
+        "manual_reference": "source-snapshot.txt 1029–1037;2684–2689;3018–3020",
+        "faq_assessment": "Rules25 resolves successive yellow Self-Destruct spaces only. It says nothing about a later death after Pods were relocked. Do not cite it as an official later-death ruling.",
+        "remaining_precise_gap": "The general Pod entry says any death; the dedicated critical moment and reference sheet both say first death. The detailed rule also expressly allows subsequent normal relocking.",
+        "recommended_treatment": "The strongest source-supported procedure is first-death-only automatic unlocking, following the dedicated rule. Keep the wording discrepancy visible; do not treat the broad Pod overview as an equally explicit new recurring-death procedure or claim the FAQ eliminated the discrepancy. Q58 remains correct for the first-death case it actually asks."
+      }
+    ],
+    "remaining_strict_gaps": [
+      "SG01",
+      "SG02",
+      "SG03"
+    ],
+    "new_essential_gaps_proven": []
+  },
+  "question_support_checks": [
+    {
+      "id": "Q01",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "467-507"
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "589-602;1008-1028"
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "987-998;1235-1250"
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "723-747;1545-1565"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 21",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1288-1300;1336-1353;1430-1473"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1150-1168;1260-1285;3038-3041"
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1380-1389;1685-1720;1778-1794"
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1392-1411;1437-1454;1528-1542;1682-1684;1685-1686"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "815-821;1721-1731"
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1640-1673"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1475-1507"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1751-1776;1795-1806;1816-1839;3076-3091"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1976-2033;2247-2252"
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1841-1865;1898-1903;3038-3039"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1874-1953"
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2035-2089"
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2135-2150;2556-2566;2606-2621;2669-2682"
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2623-2662"
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2443-2463;2684-2737;3045-3047"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 1-3",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "900-958"
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "438-550;2420-2422;2525-2527"
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "571-655;2374-2382;1235-1237"
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "677-688;703-721;2330-2339"
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "750-838;1918-1920"
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "787-829"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 7,19",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "879-896;1545-1630"
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1587-1630"
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2200-2246"
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "632-635;2232-2235;2270-2276"
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2330-2373;2741-2749"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 6,15",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1203-1210;2283-2329;3038-3041"
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1180-1202;3038-3041"
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1102-1120;2090-2121;2506-2518"
+        }
+      ]
+    },
+    {
+      "id": "Q34",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1584-1586;2405-2422;3045-3047"
+        }
+      ]
+    },
+    {
+      "id": "Q35",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2423-2429"
+        }
+      ]
+    },
+    {
+      "id": "Q36",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2068-2089;2437-2442"
+        }
+      ]
+    },
+    {
+      "id": "Q37",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1087-1092;2420-2422;2430-2436"
+        }
+      ]
+    },
+    {
+      "id": "Q38",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2464-2475"
+        }
+      ]
+    },
+    {
+      "id": "Q39",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2476-2505"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 14,20,25",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q40",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2528-2547"
+        }
+      ]
+    },
+    {
+      "id": "Q41",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2548-2555"
+        }
+      ]
+    },
+    {
+      "id": "Q42",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1654-1660;2567-2573"
+        }
+      ]
+    },
+    {
+      "id": "Q43",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2574-2583"
+        }
+      ]
+    },
+    {
+      "id": "Q44",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2584-2598"
+        }
+      ]
+    },
+    {
+      "id": "Q45",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1351-1353;1528-1544;1599-1601;2599-2621"
+        }
+      ]
+    },
+    {
+      "id": "Q46",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2750-2773"
+        }
+      ]
+    },
+    {
+      "id": "Q47",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2774-2808"
+        }
+      ]
+    },
+    {
+      "id": "Q48",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1608-1611;2809-2834"
+        }
+      ]
+    },
+    {
+      "id": "Q49",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "869-899"
+        }
+      ]
+    },
+    {
+      "id": "Q50",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2383-2403"
+        }
+      ]
+    },
+    {
+      "id": "Q51",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1412-1429"
+        }
+      ]
+    },
+    {
+      "id": "Q52",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1755-1776;1816-1839"
+        },
+        {
+          "path": "nemesis-original-rules.pdf",
+          "printed_pages": [
+            18,
+            19
+          ],
+          "basis": "Visual inspection of matching original-edition diagram/icons"
+        }
+      ]
+    },
+    {
+      "id": "Q53",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "935-958;2712-2720"
+        }
+      ]
+    },
+    {
+      "id": "Q54",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "2283-2329"
+        },
+        {
+          "path": "nemesis-original-rules.pdf",
+          "printed_pages": [
+            23
+          ],
+          "basis": "Visual inspection of matching original-edition diagram/icons"
+        }
+      ]
+    },
+    {
+      "id": "Q55",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1129-1143"
+        },
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 3-5",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q56",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1057-1086"
+        }
+      ]
+    },
+    {
+      "id": "Q57",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1499-1500;1631-1673"
+        }
+      ]
+    },
+    {
+      "id": "Q58",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "1029-1037;3018-3020",
+          "printed_pages": [
+            12,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q59",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "2405-2412;2664-2668;3045-3047",
+          "printed_pages": [
+            24,
+            25,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q60",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "1182-1187;2220-2228;2405-2412;2623-2643;3038-3047",
+          "printed_pages": [
+            13,
+            22,
+            24,
+            25,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q61",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "677-687;2198-2199;2210;2259-2263;3048-3053",
+          "printed_pages": [
+            9,
+            22,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q62",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "source-snapshot.txt",
+          "lines": "915-958;1093-1096;2712-2719",
+          "printed_pages": [
+            11,
+            12,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q63",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 1",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q64",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 3",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q65",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 5",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q66",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 6",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q67",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 7",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q68",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 8",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q69",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 9",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q70",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 11",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q71",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 12",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q72",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 13",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q73",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 14",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q74",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 19",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q75",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 22",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q76",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 23",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q77",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 24",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q78",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 25",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q79",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rules 26",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q80",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 2",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q81",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 3; Items 10",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q82",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 4-5",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q83",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 7",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q84",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 8",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q85",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 9-10",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q86",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 11",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q87",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 12",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q88",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 13",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q89",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 14",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q90",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 17; Rules 21",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q91",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 18",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q92",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Actions 19",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q93",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rooms 2",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q94",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rooms 3",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q95",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rooms 6",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q96",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rooms 7",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q97",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Rooms 9",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q98",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 1",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q99",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 2",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q100",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 3",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q101",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 4",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q102",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 5",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q103",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 6",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q104",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 7",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q105",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "nemesis-current-official-faq.pdf",
+          "section_questions": "Items 9",
+          "printed_pages": [
+            2,
+            3,
+            4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Q106",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "1454-1473"
+        }
+      ]
+    },
+    {
+      "id": "Q107",
+      "status": "supported_at_claimed_scope",
+      "source_references_checked": [
+        {
+          "path": "extracted/nemesis-rules.txt",
+          "extraction_lines": "750-764;1565-1566;1984-2001"
+        }
+      ]
+    }
+  ],
+  "files_read_for_evidence": [
+    "source-snapshot.txt",
+    "nemesis-original-rules.pdf",
+    "current-official-faq-extraction.txt",
+    "nemesis-current-official-faq.pdf",
+    "benchmark-v6/questions.json",
+    "benchmark-v6/answer-key.json",
+    "source-gaps.json"
+  ]
+}

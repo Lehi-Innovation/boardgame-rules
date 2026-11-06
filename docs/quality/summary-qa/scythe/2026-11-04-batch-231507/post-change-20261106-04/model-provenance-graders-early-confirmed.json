@@ -1,0 +1,163 @@
+{
+  "stage": "graders-early-confirmed",
+  "observed_at_utc": "2026-11-06T11:00:58.183987+00:00",
+  "parent_runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T01-13-50-01a1aac5-76e9-7752-846f-420015969a30.jsonl",
+  "parent_spawn_proof": {
+    "postchange_20261106_04_grade_b": {
+      "task_name": "postchange_20261106_04_grade_b",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none"
+    },
+    "postchange_20261106_04_grade_a": {
+      "task_name": "postchange_20261106_04_grade_a",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none"
+    }
+  },
+  "agents": {
+    "postchange_20261106_04_grade_b": {
+      "role": "postchange_20261106_04_grade_b",
+      "session_id": "01a1b083-a896-7572-94f5-c7797aa85c90",
+      "session_log": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T03-59-43-01a1b083-a896-7572-94f5-c7797aa85c90.jsonl",
+      "source": {
+        "subagent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1aac5-76e9-7752-846f-420015969a30",
+            "depth": 1,
+            "agent_path": "/root/postchange_20261106_04_grade_b",
+            "agent_nickname": "Hegel",
+            "agent_role": null
+          }
+        }
+      },
+      "started": "2026-11-06T10:59:46.831Z",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff"
+        }
+      ],
+      "tool_calls": [
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0876be36b9e48a7a016aedb33398a087d0b420036b2436fafb",
+          "status": "completed",
+          "call_id": "call_3IYS7DEhbRB2pkOiQ4BWAlZq",
+          "name": "exec",
+          "input": "const r = await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04/grading-policy.md && python - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nfor n in ['questions.json','answer-key.json','reader-b.json']:\\n d=json.loads((p/n).read_text()); print('\\\\nFILE',n); print(json.dumps(d,ensure_ascii=False,indent=2))\\nPY\",\"max_output_tokens\":30000});text(r.output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff",
+            "create_time": 1793962802.418207
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0876be36b9e48a7a016aedb33cb32087d09daca5151c953a09",
+          "status": "completed",
+          "call_id": "call_6GFNUTfzIev1yotKonYXkcZq",
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nfor n in ['summary-snapshot.md','questions.json','answer-key.json','reader-b.json','grading-policy.md']:\\n f=p/n; print('HASH',n,hashlib.sha256(f.read_bytes()).hexdigest())\\nfor n in ['questions.json','answer-key.json','reader-b.json']:\\n d=json.loads((p/n).read_text()); print('\\\\nFILE',n); print(json.dumps(d,ensure_ascii=False,indent=2))\\nPY\",\"max_output_tokens\":42000}));\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff",
+            "create_time": 1793962810.742652
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0876be36b9e48a7a016aedb34503dc87d0949a68892028a85b",
+          "status": "completed",
+          "call_id": "call_t4P3QWxXSIGcccC8mKnLMIhU",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04/summary-snapshot.md\",\"max_output_tokens\":20000})).output);\ntext((await tools.exec_command({cmd:\"wc -l extracted/scythe-rules.txt; sha256sum extracted/scythe-rules.txt source_pdfs/scythe-recovery.pdf; head -n 100 extracted/scythe-rules.txt; pdfinfo source_pdfs/scythe-recovery.pdf | head -n 20\",\"max_output_tokens\":6000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff",
+            "create_time": 1793962819.137961
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0876be36b9e48a7a016aedb34ebcfc87d084e5ffe1bed867f0",
+          "status": "completed",
+          "call_id": "call_luepR9UlqVDBV5H9TjfwFLSi",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"sed -n '100,620p' extracted/scythe-rules.txt\",\"max_output_tokens\":17000})).output);\ntext((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nq=json.loads((p/'questions.json').read_text())['questions']; k=json.loads((p/'answer-key.json').read_text())['answers']; r=json.loads((p/'reader-b.json').read_text());print('READER METADATA', {x:y for x,y in r.items() if x!='answers'})\\nfor a,b,c in zip(q[:21],k[:21],r['answers'][:21]):print(json.dumps({'q':a,'key':b,'reader':c},ensure_ascii=False))\\nPY\",\"max_output_tokens\":16000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff",
+            "create_time": 1793962827.818293
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0876be36b9e48a7a016aedb362499c87d0a6e91245e96cbed9",
+          "status": "completed",
+          "call_id": "call_2OT8YbJzCxkZCcrK9lQ1AVzx",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nr=json.loads((p/'reader-b.json').read_text())['answers']\\nfor x in r[3:7]: print(json.dumps(x))\\nPY\\nsed -n '620,890p' extracted/scythe-rules.txt\",\"max_output_tokens\":11000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b083-bb44-7301-9246-52aa59f7c4ff",
+            "create_time": 1793962848.095327
+          }
+        }
+      ]
+    },
+    "postchange_20261106_04_grade_a": {
+      "role": "postchange_20261106_04_grade_a",
+      "session_id": "01a1b084-1b3d-7b90-b469-fa3299a18e27",
+      "session_log": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T04-00-10-01a1b084-1b3d-7b90-b469-fa3299a18e27.jsonl",
+      "source": {
+        "subagent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1aac5-76e9-7752-846f-420015969a30",
+            "depth": 1,
+            "agent_path": "/root/postchange_20261106_04_grade_a",
+            "agent_nickname": "Volta",
+            "agent_role": null
+          }
+        }
+      },
+      "started": "2026-11-06T11:00:11.829Z",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "turn_id": "01a1b084-1d6c-7292-93dc-63b0f64bc0db"
+        }
+      ],
+      "tool_calls": [
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_08453bebde3e42a1016aedb3571b3887d0ba66bc2295924cd7",
+          "status": "completed",
+          "call_id": "call_dvdhDprPz3I7TnrmMp5ItdCV",
+          "name": "exec",
+          "input": "const r = await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04/grading-policy.md\",\"max_output_tokens\":12000});text(r.output);\nconst r2 = await tools.exec_command({cmd:\"python - <<'PY'\\nfrom pathlib import Path\\nimport json, hashlib\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nfor n in ['questions.json','answer-key.json','reader-a.json','summary-snapshot.md']:\\n f=p/n; b=f.read_bytes(); print('\\\\nFILE',n,'SHA256',hashlib.sha256(b).hexdigest())\\n if n.endswith('.json'):\\n  x=json.loads(b); print(type(x).__name__); print(json.dumps(x,ensure_ascii=False)[:7000])\\n else: print(b.decode())\\nPY\",\"max_output_tokens\":24000});text(r2.output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b084-1d6c-7292-93dc-63b0f64bc0db",
+            "create_time": 1793962836.510495
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_08453bebde3e42a1016aedb3635d3487d0bbe92f97f1b910a5",
+          "status": "completed",
+          "call_id": "call_Tz8GUr77IytfebmQprIxxvPM",
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\nimport json, hashlib\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-04')\\nfor n in ['questions.json','answer-key.json','reader-a.json','summary-snapshot.md']:\\n f=p/n; b=f.read_bytes(); print('\\\\nFILE',n,'SHA256',hashlib.sha256(b).hexdigest())\\n if n.endswith('.json'):\\n  x=json.loads(b); print(type(x).__name__); print(json.dumps(x,ensure_ascii=False)[:8000])\\n else: print(b.decode())\\nPY\",\"max_output_tokens\":24500}));\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b084-1d6c-7292-93dc-63b0f64bc0db",
+            "create_time": 1793962850.177912
+          }
+        }
+      ]
+    }
+  },
+  "actual_required_settings_verified": true,
+  "checks": {
+    "postchange_20261106_04_grade_a": true,
+    "postchange_20261106_04_grade_b": true
+  },
+  "isolation_limit": "Original parent fork settings and actual child turn contexts are verified. Saved prompts retain the intended dispatch text; encrypted task payloads are not decrypted. Context/input restriction is prompt-based, not OS enforcement."
+}

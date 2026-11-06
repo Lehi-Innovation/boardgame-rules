@@ -1,0 +1,5 @@
+# Stamped16 reader failure
+
+NEW independent full202 grader confirms A101/0/0 and B100/0/1, with B10 the sole material failure and zero unsupported guesses. B affirmatively permits3spice for doubled2VP while same-question evidence correctly quotes3→1/6→2; correct evidence does not retract that operative wrong option. Coordinator independently identified the same explicit contradiction during partial raw review before the independent grader finished; no root finding was fed to that grader. Coordinator proof is under the shared batch uprising-stamped16-root-review.json and is not represented as full202 root acceptance.
+
+The summary and fixed key already state3→1 or6→2 explicitly, so this is a reader error. No canonical, question or key change was made. All rawresponses/full202grading and source16PASS remain intact. The coordinator expressly authorized two NEW full101 readers on identical stamped99d2c3... bytes and retention of actual freshsource16PASS only while those bytes remain identical. Iteration17 records the exact-byte source reference; no new source17 auditor is claimed.

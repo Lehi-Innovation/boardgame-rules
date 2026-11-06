@@ -1,0 +1,143 @@
+--- original/pandemic.md
++++ seed-iteration-04/summary-snapshot.md
+@@ -57,7 +57,10 @@
+    - **Standard:** 5 Epidemic cards
+    - **Heroic:** 6 Epidemic cards
+ 
+-   Divide remaining Player cards into face-down piles equal in number to the Epidemic cards used (as equal in size as possible). Shuffle 1 Epidemic card into each pile. Stack the piles to form the Player Deck, placing smaller piles on the bottom.
++   Remove unused Epidemic cards from the game. Prepare the deck in these steps:
++   1. Divide remaining Player cards into **face-down piles**, equal in number to the Epidemic cards used and as equal in size as possible.
++   2. Shuffle 1 Epidemic card into each pile, keeping it face down.
++   3. Stack the piles to form the Player Deck, placing smaller piles on the bottom.
+ 
+ 8. **Infect initial cities:** Place the Infection Rate marker on the leftmost "2" space. Shuffle Infection cards and:
+    - Flip 3 cards: place **3 cubes** of matching color on each city.
+@@ -71,15 +74,15 @@
+ 
+ Each turn has 3 phases in order:
+ 
+-1. **Do 4 Actions** — Choose from available actions (may repeat the same action).
+-2. **Draw 2 Player Cards** — Resolve any Epidemic cards drawn. Discard down to 7-card hand limit.
++1. **Do up to 4 Actions** — Choose from available actions (may repeat the same action or stop early).
++2. **Draw 2 Player Cards together** — First resolve any Epidemic cards drawn, then discard or play Events until within the 7-card hand limit.
+ 3. **Infect Cities** — Flip Infection cards equal to the current infection rate.
+ 
+-After completing all 3 phases, play passes to the left.
++After completing all 3 phases, play passes to the left. Teammates may freely offer advice, but the player whose turn it is decides what to do.
+ 
+ ## Actions
+ 
+-You may perform up to **4 actions** per turn. You may repeat actions. Your role's special abilities may modify how actions work.
++You may perform up to **4 actions** per turn, including stopping early. You may repeat actions; each repetition costs another action. Your role's special abilities may modify how actions work. All cards discarded to pay action costs go to the **Player Discard Pile**.
+ 
+ ### Movement Actions
+ 
+@@ -94,10 +97,16 @@
+ 
+ | Action | Description |
+ |---|---|
+-| **Build a Research Station** | Discard the City card matching your current city to place a research station there. If all 6 are already built, move one from the board. |
+-| **Treat Disease** | Remove 1 disease cube of any color from your city. If that disease is **cured**, remove **all** cubes of that color from your city instead. |
++| **Build a Research Station** | Discard the City card matching your current city, **take a research station from the supply**, and place it in your current city. If all 6 are already built, relocate one from anywhere on the board. |
++| **Treat Disease** | Remove 1 disease cube of a chosen color from your city, returning it to the cube supply. If that disease is **cured**, return **all** cubes of that one color from your city instead. Treat each different color with a separate action. |
+ | **Share Knowledge** | Give the City card matching your current city to another player in the same city, **or** take that card from another player in the same city. Both players must agree. If the receiving player exceeds 7 cards, they must immediately discard or play an Event card. |
+-| **Discover a Cure** | At a research station, discard **5 City cards** of the same color to cure that disease. Move the cure marker to the Cure Indicator. |
++| **Discover a Cure** | At any research station, **discard 5 City cards of the same disease color and move that disease’s cure marker to its Cure Indicator**. **Existing cubes remain, and infections or Epidemics still add cubes until eradication.** If no cubes of that color are on the board, immediately eradicate the disease and flip its marker. |
++
++### Cure Procedure
++
++1. At any research station, discard 5 City cards of the disease color (4 for the Scientist). The station city’s color does not need to match.
++2. Move that disease’s cure marker to its Cure Indicator. This marker movement records the discovered cure.
++3. **A cured disease keeps its existing cubes and can still infect during both infections and Epidemics; eradication stops that disease’s new placements.** If no cubes of that color are on the board when the cure is discovered, immediately eradicate it and flip the marker.
+ 
+ ### Eradication
+ 
+@@ -108,7 +117,7 @@
+ 
+ ### Drawing Player Cards
+ 
+-- Draw the top **2 cards** from the Player Deck.
++- Draw the top **2 cards together** from the Player Deck.
+ - If fewer than 2 cards remain when you need to draw, **the game ends and the players lose** (do not reshuffle discards).
+ 
+ ### Epidemic Cards
+@@ -120,15 +129,16 @@
+ 3. **Intensify:** Reshuffle **only** the Infection Discard Pile and place it **on top** of the Infection Deck.
+ 
+ - If 2 Epidemic cards are drawn at once, resolve all 3 steps for the first, then all 3 steps for the second. Events may be played between the two.
++- After the first Intensify, the Infection Discard Pile is empty. With two Epidemics together, the second bottom Infection card is therefore the only card shuffled during the second Intensify. It ends on top and will be drawn first during normal Infections, normally causing an outbreak unless an Event, eradication or role protection prevents it.
+ - Remove resolved Epidemic cards from the game. Do **not** draw replacements.
+ 
+ ### Infection Rate Track
+ 
+ | Position | Infection Rate |
+ |---|---|
+-| 1-2 | 2 cards per turn |
+-| 3-4 | 3 cards per turn |
+-| 5-7 | 4 cards per turn |
++| 1-3 | 2 cards per turn |
++| 4-5 | 3 cards per turn |
++| 6-7 | 4 cards per turn |
+ 
+ ### Infecting Cities
+ 
+@@ -155,7 +165,7 @@
+ 
+ - Maximum **7 cards** in hand (Player cards only; Role and Reference cards don't count).
+ - Applies immediately after receiving cards (including via Share Knowledge).
+-- Excess cards must be discarded or played as Event cards.
++- Discard cards or play Event cards until you have at most 7. After drawing Player cards, first resolve all Epidemic cards drawn, then enforce this limit.
+ 
+ ### Event Cards
+ 
+@@ -169,10 +179,10 @@
+ | Card | Effect |
+ |---|---|
+ | **Airlift** | Move any 1 pawn to any city (get permission for another player's pawn). |
+-| **One Quiet Night** | Skip the next Infect Cities step (do not flip Infection cards). |
++| **One Quiet Night** | Skip the next Infect Cities step (do not flip Infection cards); does not skip an Epidemic’s Infect step. |
+ | **Resilient Population** | Remove any 1 card in the Infection Discard Pile from the game. May be played between the Infect and Intensify steps of an Epidemic. |
+ | **Government Grant** | Place a research station in any city (no card discard needed). |
+-| **Forecast** | Draw, view, and rearrange the top 6 cards of the Infection Deck. |
++| **Forecast** | Draw, view, and rearrange the top 6 cards of the Infection Deck, then put them back on top. |
+ 
+ ## Scoring / Victory Conditions
+ 
+@@ -204,7 +214,7 @@
+ - **Research station limit:** Only 6 exist. If all are placed and you build another, relocate one from the board.
+ - **If more than 6 stations supplied:** Set extras aside during setup.
+ - **Board wrapping:** White lines going off one edge of the board wrap to the other edge (e.g., Sydney and Los Angeles are connected).
+-- **Introductory game:** Play with cards face up for all to see. Standard/Heroic: keep hands private.
++- **Introductory game:** Play with cards face up for all to see. Standard/Heroic: keep hands private by default; experienced groups may choose open hands. Anyone may examine either discard pile at any time.
+ - **Two Epidemics at once:** Resolve each fully in sequence. Events may be played between them.
+ - **Cube supply check:** If you cannot place the needed cubes during an epidemic, outbreak, or infection, the game ends in a loss immediately.
+ 
+@@ -212,20 +222,20 @@
+ 
+ | Role | Special Abilities |
+ |---|---|
+-| **Contingency Planner** | As an action, take 1 Event card from the Player Discard Pile and store it on this Role card (limit 1, doesn't count against hand limit). When played, remove it from the game instead of discarding. |
+-| **Dispatcher** | As an action: move any pawn (with owner's permission) to a city with another pawn, OR move another player's pawn as if it were your own. Cannot use the Operations Expert's special move. Discards come from the Dispatcher's hand for Direct/Charter Flights. |
+-| **Medic** | Treat Disease removes **all** cubes of one color (not just 1). If a disease is cured, automatically removes all cubes of that color from any city entered or occupied (no action needed, works on other players' turns if moved by Dispatcher or Airlift). Also prevents placement of cured disease cubes in the Medic's city. |
+-| **Operations Expert** | As an action: build a research station without discarding a City card. Once per turn as an action: move from a research station to any city by discarding any City card. |
+-| **Quarantine Specialist** | Prevents disease cube placement and outbreaks in the current city and **all connected cities**. Does not affect cubes placed during setup. |
+-| **Researcher** | When Sharing Knowledge, may give **any** City card (not just the matching one) to a player in the same city. A player who Shares Knowledge with the Researcher on their turn may take any of the Researcher's City cards. |
++| **Contingency Planner** | As an action, take 1 Event card from anywhere in the Player Discard Pile and store it on this Role card (limit 1, doesn't count against hand limit). When played, remove it from the game instead of discarding. |
++| **Dispatcher** | As an action: move any pawn to a city with another pawn, OR move another player's pawn as if it were your own. **Both options require the owner's agreement when moving another player's pawn.** When directing another pawn, may move it but cannot make it Treat Disease or do other nonmovement actions. Cannot use the Operations Expert's special move. Discards come from the Dispatcher's hand for Direct/Charter Flights; the Charter card matches the moved pawn's departure city, not the Dispatcher's location. |
++| **Medic** | Treat Disease removes **all** cubes of one color (not just 1). If a disease is cured, automatically removes all cubes of that color from any city entered or occupied (no action needed, works on other players' turns if moved by Dispatcher or Airlift). Also prevents placement and outbreaks of cured diseases in the Medic's city, but does not protect adjacent cities or uncured diseases. |
++| **Operations Expert** | As an action: build a research station in the current city with no City card needed, used or discarded. Once per turn as an action: move from a research station to any city by discarding any City card. |
++| **Quarantine Specialist** | Prevents disease cube placement and outbreaks of every disease color in the current city and **all connected cities**. Does not affect cubes placed during setup. |
++| **Researcher** | When Sharing Knowledge, may give **any** City card (not just the matching one) to a player in the same city. This exception only transfers from the Researcher's hand to the other player's hand, on either player's turn; it does not allow arbitrary nonmatching cards to be given to the Researcher. |
+ | **Scientist** | Needs only **4** City cards (not 5) of the same color to Discover a Cure. |
+ 
+ ## Player Reference
+ 
+ ### Turn Sequence
+ 
+-1. Do 4 actions (any combination, repeats allowed)
+-2. Draw 2 Player cards (resolve Epidemics, discard to 7)
++1. Do up to 4 actions (any combination, repeats allowed; may stop early)
++2. Draw 2 Player cards together (first resolve Epidemics, then discard/play Events to 7)
+ 3. Infect cities (flip cards = current infection rate)
+ 
+ ### Actions Quick Reference

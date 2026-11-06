@@ -1,0 +1,3 @@
+# No readers dispatched
+
+The102-question packet was prepared but no reader was dispatched. NEW whole-prior101 novelty review retired Q103 before any reader saw or answered it. The original315-line candidate, questions, hashes, prompts and source13 audit remain preserved. A12 later omitted the requested exclusive-acquisition clause in Q102, so a direct general reserved-contract statement was added beside the taking procedure. Source13 PASS is supporting history for its exact pre-clarity bytes; current317-line candidate receives a NEW source14 auditor and fresh full101 pair. No source-audit reuse claim is applied.

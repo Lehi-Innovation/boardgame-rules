@@ -1,0 +1,1 @@
+The frontmatter preserves the original product player range 1–6, supported by the original publisher booklet and supplements. The Overview explicitly limits this summary/QA to standard 2–4-player procedures plus optional standard CHOAM. Solo and six-player procedures remain excluded; their supported existence is product metadata, not a claim those modes were tested.

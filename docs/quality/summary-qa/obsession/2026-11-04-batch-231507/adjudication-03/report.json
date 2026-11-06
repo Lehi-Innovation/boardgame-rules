@@ -1,0 +1,333 @@
+{
+  "question_id": "Q44",
+  "question": "How does the Servants’ Quarters improvement tile differ from Service Help and ordinary service rotation, how many servants can it supply per turn, and where does a servant used through it go afterward?",
+  "scope": "Base game only; input.json, its three specified summary snapshots, and extracted/obsession-rules.txt only. Support labels ignored. Each answer assessed on its own content.",
+  "grading_standard": {
+    "correct": "All requested material parts resolved, allowing equivalent wording and clear contrastive implication.",
+    "partial": "At least one requested material fact missing or unresolved, without a material wrong ruling.",
+    "incorrect": "Contains a material wrong ruling."
+  },
+  "requested_material_facts": [
+    {
+      "id": "tile_access",
+      "required_fact": "The tile permits directly using a servant still in Quarters, in addition to Available Service."
+    },
+    {
+      "id": "capacity",
+      "required_fact": "At most one Quarters servant through the tile each turn."
+    },
+    {
+      "id": "service_help_mechanism",
+      "required_fact": "Service Help instead moves a Quarters servant into Available Service."
+    },
+    {
+      "id": "service_help_cost_contrast",
+      "required_fact": "Service Help costs three reputation increments per servant; the tile use requires no reputation payment."
+    },
+    {
+      "id": "ordinary_rotation",
+      "required_fact": "Ordinary rotation occurs first and advances servants one space: Quarters to Available, then Expended to Quarters. The tile additionally permits using one servant left in Quarters afterward."
+    },
+    {
+      "id": "afterward",
+      "required_fact": "A servant used through the tile goes to Expended Service at turn end."
+    }
+  ],
+  "scope_resolution": "The question expressly requests comparison with ordinary service rotation. Merely labeling the tile separate from rotation supplies no functional comparison; saying after rotation adds correct timing but still does not describe the rotation mechanism. An adequate comparison identifies the one-space progression (Quarters to Available; Expended to Quarters) before the tile accesses one servant still in Quarters. This requirement is applied uniformly. The key’s compressed wording “Ordinary rotation still occurs first” does not remove the question’s explicit comparison request. Equivalent formulations are accepted: the first answer’s explicit Service Help cost contrast conveys free tile use, and the second answer’s normal Expended cleanup wording conveys its normal timing.",
+  "cases": [
+    {
+      "case": "expanded-iteration-01/b",
+      "question_id": "Q44",
+      "grade": "partial",
+      "reasoning": "The answer correctly gives direct access to one Quarters servant per turn in addition to Available Service, the Service Help transfer and three-increment cost, and the Expended destination at turn end. Its contrast “Service Help instead costs 3 reputation increments” reasonably communicates that the tile use does not carry that charge; an explicit word-for-word statement of “free” is unnecessary. However, “separate from ordinary rotation” names a distinction without explaining any ordinary rotation movement or confirming rotation first. It leaves the specifically requested ordinary-rotation comparison materially unresolved. This is an omission, not a wrong ruling.",
+      "requested_material_checklist": [
+        {
+          "id": "tile_access",
+          "status": "satisfied",
+          "answer_evidence": "“use one servant from the Servants’ Quarters area each turn in addition to Available Service”"
+        },
+        {
+          "id": "capacity",
+          "status": "satisfied",
+          "answer_evidence": "“Maximum one servant from the tile per turn.”"
+        },
+        {
+          "id": "service_help_mechanism",
+          "status": "satisfied",
+          "answer_evidence": "“moves one servant from Quarters to Available Service”"
+        },
+        {
+          "id": "service_help_cost_contrast",
+          "status": "satisfied_by_equivalent_contrast",
+          "answer_evidence": "“Service Help instead costs 3 reputation increments” contrasts its charge with the tile ability."
+        },
+        {
+          "id": "ordinary_rotation",
+          "status": "unresolved",
+          "answer_evidence": "“separate from ordinary rotation” gives neither the Quarters-to-Available / Expended-to-Quarters mechanism nor its initial timing."
+        },
+        {
+          "id": "afterward",
+          "status": "satisfied",
+          "answer_evidence": "“goes to Expended Service at turn end”"
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 17,
+          "lines": [
+            644,
+            650
+          ],
+          "evidence": "Rotate Service is step 1. Servants in Quarters and Expended each move one space right; move Quarters servants first to avoid moving an expended servant twice. In board-area terms this is Quarters to Available, then Expended to Quarters."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 27,
+          "lines": [
+            1057,
+            1062
+          ],
+          "evidence": "Service Help: Lose 3 reputation to move any 1 servant from Servants’ Quarters to Available Service."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 30,
+          "lines": [
+            1112,
+            1116
+          ],
+          "evidence": "At the end of your turn, place all servants used in any capacity in Expended Service; unused Available servants remain Available."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 101,
+          "lines": [
+            3839,
+            3848
+          ],
+          "evidence": "Recurring benefit: Each turn, the player may use 1 servant from the Servants’ Quarters in addition to servants from Available Service. No reputation payment is attached to this ability."
+        }
+      ],
+      "summary_evidence": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/obsession/2026-11-04-batch-231507/expanded-iteration-01/summary-snapshot.md",
+        "passages": [
+          {
+            "line": 53,
+            "quote": "1. **Rotate service:** move servants in Servants’ Quarters to Available Service first, then those in Expended Service to Servants’ Quarters. Each advances exactly one space; do not move expended servants twice. Unused available servants remain available."
+          },
+          {
+            "line": 60,
+            "quote": "8. **Clear board:** all servants used in any capacity go to **Expended Service**; all played gentry go to your **personal discard pile**. Return the activity tile to its correct tableau column, flipping/upgrading it as required. The last player advances the round marker."
+          },
+          {
+            "line": 89,
+            "quote": "| Service Help | Lose 3 increments; move one servant **from Servants’ Quarters to Available Service** | Repeatable; cannot take a servant directly from Expended Service |"
+          },
+          {
+            "line": 108,
+            "quote": "**Servants’ Quarters tile:** each turn you may use **one servant from the Servants’ Quarters area** in addition to Available Service. This is the tile’s ability, separate from the board area and from Service Help. After use the servant goes to Expended Service normally. Ongoing service abilities apply once their tiles are in your tableau and do not require hosting an activity on those tiles."
+          }
+        ],
+        "use_in_grade": "Establishes what the corresponding summary actually supplies. Missing answer facts are not borrowed from it."
+      }
+    },
+    {
+      "case": "expanded-iteration-03/b",
+      "question_id": "Q44",
+      "grade": "partial",
+      "reasoning": "The answer correctly gives direct tile access to one Quarters servant per turn in addition to Available Service, the Service Help Quarters-to-Available transfer, and the Expended destination. “Goes to Expended Service normally” adequately conveys the normal cleanup destination and timing; it is not a wrong ruling. But calling the ability “separate from Service Help and ordinary rotation” does not supply Service Help’s three-reputation cost or the free-versus-paid contrast, and describes no ordinary rotation movement or initial timing. Both requested comparisons are therefore incomplete. Neither the summary’s omitted facts nor another answer can fill these gaps.",
+      "requested_material_checklist": [
+        {
+          "id": "tile_access",
+          "status": "satisfied",
+          "answer_evidence": "“use one servant from the Servants’ Quarters area on each turn, in addition to Available Service”"
+        },
+        {
+          "id": "capacity",
+          "status": "satisfied",
+          "answer_evidence": "“one Quarters servant per turn”"
+        },
+        {
+          "id": "service_help_mechanism",
+          "status": "satisfied",
+          "answer_evidence": "“Service Help instead moves a servant from Quarters to Available Service.”"
+        },
+        {
+          "id": "service_help_cost_contrast",
+          "status": "unresolved",
+          "answer_evidence": "Neither three reputation nor a cost-free tile use is stated or established by the bare “separate” label."
+        },
+        {
+          "id": "ordinary_rotation",
+          "status": "unresolved",
+          "answer_evidence": "“separate from ... ordinary rotation” describes neither rotation movement nor its initial timing."
+        },
+        {
+          "id": "afterward",
+          "status": "satisfied_by_equivalent_wording",
+          "answer_evidence": "“goes to Expended Service normally” denotes normal end-of-turn cleanup."
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 17,
+          "lines": [
+            644,
+            650
+          ],
+          "evidence": "Rotate Service is step 1. Servants in Quarters and Expended each move one space right; move Quarters servants first to avoid moving an expended servant twice. In board-area terms this is Quarters to Available, then Expended to Quarters."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 27,
+          "lines": [
+            1057,
+            1062
+          ],
+          "evidence": "Service Help: Lose 3 reputation to move any 1 servant from Servants’ Quarters to Available Service."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 30,
+          "lines": [
+            1112,
+            1116
+          ],
+          "evidence": "At the end of your turn, place all servants used in any capacity in Expended Service; unused Available servants remain Available."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 101,
+          "lines": [
+            3839,
+            3848
+          ],
+          "evidence": "Recurring benefit: Each turn, the player may use 1 servant from the Servants’ Quarters in addition to servants from Available Service. No reputation payment is attached to this ability."
+        }
+      ],
+      "summary_evidence": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/obsession/2026-11-04-batch-231507/expanded-iteration-03/summary-snapshot.md",
+        "passages": [
+          {
+            "line": 53,
+            "quote": "1. **Rotate service:** move servants in Servants’ Quarters to Available Service first, then those in Expended Service to Servants’ Quarters. Each advances exactly one space; do not move expended servants twice. Unused available servants remain available."
+          },
+          {
+            "line": 60,
+            "quote": "8. **Clear board:** all servants used in any capacity go to **Expended Service**; all played gentry go to your **personal discard pile**. Return the activity tile to its correct tableau column, flipping/upgrading it as required. The last player advances the round marker."
+          },
+          {
+            "line": 89,
+            "quote": "| Service Help | Lose 3 increments; move one servant **from Servants’ Quarters to Available Service** | Repeatable; cannot take a servant directly from Expended Service |"
+          },
+          {
+            "line": 108,
+            "quote": "**Servants’ Quarters tile:** each turn you may use **one servant from the Servants’ Quarters area** in addition to Available Service. This is the tile’s ability, separate from the board area and from Service Help. After use the servant goes to Expended Service normally. Ongoing service abilities apply once their tiles are in your tableau and do not require hosting an activity on those tiles."
+          }
+        ],
+        "use_in_grade": "Establishes what the corresponding summary actually supplies. Missing answer facts are not borrowed from it."
+      }
+    },
+    {
+      "case": "expanded-iteration-04/a",
+      "question_id": "Q44",
+      "grade": "partial",
+      "reasoning": "The answer correctly gives direct access to one Quarters servant each turn in addition to Available Service, explicitly says the tile requires no reputation payment, correctly contrasts Service Help’s three-increment transfer to Available, and states the Expended destination at turn end. “This occurs after ordinary rotation” also correctly establishes timing. It nevertheless does not describe what ordinary rotation moves: Quarters to Available and Expended to Quarters, one space each. Temporal order alone cannot explain the requested functional difference between ordinary rotation and the tile, including why servants remain in Quarters for the tile to use. Under the same requested-fact standard applied to the other two answers, this remaining material omission makes the answer partial rather than correct. There is no material wrong ruling.",
+      "requested_material_checklist": [
+        {
+          "id": "tile_access",
+          "status": "satisfied",
+          "answer_evidence": "“use one servant from Quarters in addition to Available Service”"
+        },
+        {
+          "id": "capacity",
+          "status": "satisfied",
+          "answer_evidence": "“Each turn ... one servant”"
+        },
+        {
+          "id": "service_help_mechanism",
+          "status": "satisfied",
+          "answer_evidence": "“move one Quarters servant to Available”"
+        },
+        {
+          "id": "service_help_cost_contrast",
+          "status": "satisfied",
+          "answer_evidence": "“without reputation payment”; Service Help “costs 3 increments”"
+        },
+        {
+          "id": "ordinary_rotation",
+          "status": "partially_satisfied",
+          "answer_evidence": "“after ordinary rotation” establishes sequence, but no rotation movement is described."
+        },
+        {
+          "id": "afterward",
+          "status": "satisfied",
+          "answer_evidence": "“goes to Expended Service at turn end”"
+        }
+      ],
+      "source_evidence": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 17,
+          "lines": [
+            644,
+            650
+          ],
+          "evidence": "Rotate Service is step 1. Servants in Quarters and Expended each move one space right; move Quarters servants first to avoid moving an expended servant twice. In board-area terms this is Quarters to Available, then Expended to Quarters."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 27,
+          "lines": [
+            1057,
+            1062
+          ],
+          "evidence": "Service Help: Lose 3 reputation to move any 1 servant from Servants’ Quarters to Available Service."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 30,
+          "lines": [
+            1112,
+            1116
+          ],
+          "evidence": "At the end of your turn, place all servants used in any capacity in Expended Service; unused Available servants remain Available."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/obsession-rules.txt",
+          "page": 101,
+          "lines": [
+            3839,
+            3848
+          ],
+          "evidence": "Recurring benefit: Each turn, the player may use 1 servant from the Servants’ Quarters in addition to servants from Available Service. No reputation payment is attached to this ability."
+        }
+      ],
+      "summary_evidence": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/obsession/2026-11-04-batch-231507/expanded-iteration-04/summary-snapshot.md",
+        "passages": [
+          {
+            "line": 53,
+            "quote": "1. **Rotate service:** move servants in Servants’ Quarters to Available Service first, then those in Expended Service to Servants’ Quarters. Each advances exactly one space; do not move expended servants twice. Unused available servants remain available."
+          },
+          {
+            "line": 60,
+            "quote": "8. **Clear board:** all servants used in any capacity go to **Expended Service**; all played gentry go to your **personal discard pile**. Return the activity tile to its correct tableau column, flipping/upgrading it as required. **End-of-turn round check:** after cleanup, **only the last player in turn order advances the round marker one space**. Earlier players leave it in place for the next player."
+          },
+          {
+            "line": 91,
+            "quote": "| Service Help | Lose 3 increments; move one servant **from Servants’ Quarters to Available Service** | Repeatable; cannot take a servant directly from Expended Service |"
+          },
+          {
+            "line": 110,
+            "quote": "**Servants’ Quarters tile:** each turn you may use **one servant from the Servants’ Quarters area** in addition to Available Service, **without a reputation payment**. This is not ordinary rotation: rotation first moves Quarters servants to Available, then Expended servants to Quarters, one space each. Nor is it Service Help: that special action costs **3 reputation increments** to move one Quarters servant to Available. The tile instead permits directly using one servant still in Quarters after rotation. After use the servant goes to Expended Service normally. Ongoing service abilities apply once their tiles are in your tableau and do not require hosting an activity on those tiles."
+          }
+        ],
+        "use_in_grade": "Establishes what the corresponding summary actually supplies. Missing answer facts are not borrowed from it."
+      }
+    }
+  ]
+}

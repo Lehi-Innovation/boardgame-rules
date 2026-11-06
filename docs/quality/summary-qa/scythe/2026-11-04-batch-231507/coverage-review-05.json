@@ -1,0 +1,1156 @@
+{
+  "game": "Scythe",
+  "review": "coverage-review-05",
+  "benchmark_reviewed": "expanded-v6",
+  "question_count": 59,
+  "verdict": "gaps",
+  "scope": "2016 base/core multiplayer; Automa, expansions, promo additions and optional variants excluded.",
+  "independence": {
+    "read": [
+      "Complete extracted/scythe-rules.txt (all 1656 lines, 32 pages)",
+      "Complete source_pdfs/scythe-recovery.pdf text, verified against extraction on all 32 pages",
+      "expanded-v6/questions.json",
+      "expanded-v6/answer-key.json",
+      "coverage-ledger.json",
+      "source-coverage-map.json",
+      "Source-only source-page-19.png and source-page-29.png, visually inspected"
+    ],
+    "not_read": [
+      "Any summary or candidate summary",
+      "Reader outputs or grades",
+      "Earlier independent reviewer reports",
+      "Parent chat history"
+    ]
+  },
+  "source_verification": {
+    "pdf_pages": 32,
+    "pdf_sha256": "3a27021231ff6ceb6401878eb27912ca7ce9455c6d2e7393e29248a80939f606",
+    "all_pdf_page_text_matches_extraction_after_whitespace_normalization": true,
+    "page_19_visual_check": "All six qualification rules and payout bands match Q40/Q41. Adjacent tunnels 1/2-3/4-5/6 = 2/4/6/9; adjacent lakes/encounters 1/2-3/4-5/6-7 = 2/4/6/9; on tunnels 1/2/3-4 = 2/4/6; straight row and farm+tundra 1/2/3/4 = 2/4/6/9.",
+    "page_29_visual_check": "Scoring columns show popularity 0-6 at 3/2/1, 7-12 at 4/3/2, and 13-18 at 5/4/3 for stars/territories/resource pairs. Tiebreak list and illustrated structure tile corroborate keys."
+  },
+  "key_findings": [
+    {
+      "finding": "One meaningful source rule is not directly requested: only characters trigger encounters. Existing encounter questions assume a character or concern card resolution after triggering; they do not test whether another unit may claim the encounter.",
+      "severity": "coverage_gap",
+      "affected_source_pages": [
+        5,
+        24,
+        31
+      ],
+      "existing_questions_considered": [
+        "Q05",
+        "Q15",
+        "Q16",
+        "Q23",
+        "Q30",
+        "Q36",
+        "Q46",
+        "Q54"
+      ]
+    },
+    {
+      "finding": "All 59 expected answers were checked. No material source contradiction in the existing answer keys was found. The proposed addition does not require changing any existing entry.",
+      "severity": "information"
+    },
+    {
+      "finding": "The current source-coverage-map.json contains 88 procedural passage entries, while coverage-ledger pass15 describes 86. This is a bookkeeping discrepancy, not an additional missing rule.",
+      "severity": "information"
+    }
+  ],
+  "proposed_additions": [
+    {
+      "suggested_id": "Q60",
+      "wording": "May a mech or worker resolve an encounter or remove its encounter token merely by entering that territory?",
+      "expected_answer": "No. Only characters trigger encounters. A mech or worker entering a territory does not resolve its encounter or remove the encounter token; it remains for a character.",
+      "source_references": [
+        "Rulebook PDF p.5, TYPES OF UNITS: characters can have encounters; other units have different roles.",
+        "Rulebook PDF p.24, ENCOUNTERS: Only characters will trigger an encounter. Token removal occurs when resolving the character-triggered encounter.",
+        "Rulebook PDF p.31, ENCOUNTERS: Only characters may have encounters."
+      ],
+      "novelty": "A categorical unit-eligibility restriction with a consequential board-state outcome. Q15 asks timing after contested entry, the losing-character branch, benefit placement and isolated costs; Q36 asks stopping and timing when a character arrives via Factory Move; Q46 asks information presentation; Q54 asks choosing options after drawing. All can be answered correctly while incorrectly allowing a mech or worker to trigger an encounter. Q16 explicitly asks who takes a Factory card, but Factory eligibility does not elicit encounter eligibility. Q05 only asks movement/carriage, Q30 combat eligibility. The additional question introduces no changed quantities, new layout, unrelated combination or reference-only procedure."
+    }
+  ],
+  "key_audit": [
+    {
+      "id": "Q01",
+      "result": "source_supported",
+      "notes": "Factory selection players+1 hidden, 11 encounters, random face-up tile, lowest mat and clockwise start match pp6,8."
+    },
+    {
+      "id": "Q02",
+      "result": "source_supported",
+      "notes": "Initial units, mats, track/card sources and component placements match pp7-9."
+    },
+    {
+      "id": "Q03",
+      "result": "source_supported",
+      "notes": "Optional top-then-bottom, full exposed costs, optional benefits, section change and Rusviet exception match pp10,21."
+    },
+    {
+      "id": "Q04",
+      "result": "source_supported",
+      "notes": "Enemy unit control overrides structure, owner retains abilities except uncontrolled Mill, remote payment matches pp4,18."
+    },
+    {
+      "id": "Q05",
+      "result": "source_supported",
+      "notes": "Two different sequential units, unlimited resources, mech-only worker carriage and carried-worker later move match pp5,11."
+    },
+    {
+      "id": "Q06",
+      "result": "source_supported",
+      "notes": "Worker-only entry immediately stops plastic, retreats workers and loses popularity to floor zero; independent worker entry barred, pp11,15,31."
+    },
+    {
+      "id": "Q07",
+      "result": "source_supported",
+      "notes": "All movement then chosen combat order; worker independent entry/exit prohibition matches pp11,22."
+    },
+    {
+      "id": "Q08",
+      "result": "source_supported",
+      "notes": "Unupgraded Bolster/Trade costs and alternatives, worker placement prerequisite and combat-deck exhaustion match pp6,12."
+    },
+    {
+      "id": "Q09",
+      "result": "source_supported",
+      "notes": "Full prepayment, selected controlled territories, per-worker output, leftmost village workers, optional output and future costs match pp10,13,31."
+    },
+    {
+      "id": "Q10",
+      "result": "source_supported",
+      "notes": "Oil upgrade with bracketed-only red destination; metal deploy to controlled worker territory, no lake; shared plastic ability and completed-action payment match pp14-15."
+    },
+    {
+      "id": "Q11",
+      "result": "source_supported",
+      "notes": "Wood building, controlled worker site, one structure total, permanence, Factory allowed, home/lake barred, Mill and personal Mine rules match p18."
+    },
+    {
+      "id": "Q12",
+      "result": "source_supported",
+      "notes": "Food enlistment, open permanent one-time space, four two-unit rewards, uncovered-action ongoing triggers, player priority and two-player once match p20."
+    },
+    {
+      "id": "Q13",
+      "result": "source_supported",
+      "notes": "Attacker ability first; dial bounded by current power and seven; per-plastic cards, additive totals, both pay and attacker tie match pp22-23."
+    },
+    {
+      "id": "Q14",
+      "result": "source_supported",
+      "notes": "Winner control/stars, attacker-only popularity, all losing units home, resources abandoned, positive dial/card loser reward and Saxony match pp21,23,31."
+    },
+    {
+      "id": "Q15",
+      "result": "source_supported",
+      "notes": "Character stop, post-all-movement/all-combat timing, failed entry token retention, encounter gains location and isolated cost/benefit match pp11,24. Does not itself ask exclusive unit eligibility."
+    },
+    {
+      "id": "Q16",
+      "result": "source_supported",
+      "notes": "Character first Factory visit, mandatory permanent choice, later visitors, fifth section, independent benefits, one-unit two/three-step Move and Mine match p25."
+    },
+    {
+      "id": "Q17",
+      "result": "source_supported",
+      "notes": "Own-turn before/after complete action, full requirements at reveal, delay, discard and Saxony second objective match pp21,26."
+    },
+    {
+      "id": "Q18",
+      "result": "source_supported",
+      "notes": "Nine achievement types/thresholds, mandatory irreversible shared placement and immediate sixth-star end match pp27-28."
+    },
+    {
+      "id": "Q19",
+      "result": "source_supported",
+      "notes": "Bottom primary/coins/own recruit before star, undo pending combat entry and neighbor priority/end interruption match pp20,23,28."
+    },
+    {
+      "id": "Q20",
+      "result": "source_supported",
+      "notes": "At popularity ten, 20+21+12=53 before held coins/tile; control-independent structure bonus and all six tiebreakers match pp28-29."
+    },
+    {
+      "id": "Q21",
+      "result": "source_supported",
+      "notes": "Home base nonterritory/default restriction, starts/retreat and Wayfare exception, inactive expansion placeholders match pp4,11,17."
+    },
+    {
+      "id": "Q22",
+      "result": "source_supported",
+      "notes": "Terrain outputs, no lake/Factory output, nonresource workers and unlimited resource supply match pp4,13,25."
+    },
+    {
+      "id": "Q23",
+      "result": "source_supported",
+      "notes": "Cargo pickup/drop, no carried character, extra Speed step, one-step tunnels and enemy/encounter stops match pp5,11,15."
+    },
+    {
+      "id": "Q24",
+      "result": "source_supported",
+      "notes": "Any unit captures structure-only territory, no structure combat; all units use printed tunnels, private Mine excluded for enemies, pp11,18."
+    },
+    {
+      "id": "Q25",
+      "result": "source_supported",
+      "notes": "No partial payment; dead turn on another section when unable to act matches pp10,13."
+    },
+    {
+      "id": "Q26",
+      "result": "source_supported",
+      "notes": "Armory Trade power and Monument Bolster popularity, owner retention and independent Factory actions match pp18,25."
+    },
+    {
+      "id": "Q27",
+      "result": "source_supported",
+      "notes": "All five Riverwalk terrain pairs, plastic-only mech abilities, worker-only Nordic river Swim and no lakes match pp15-17,21."
+    },
+    {
+      "id": "Q28",
+      "result": "source_supported",
+      "notes": "Saxony controlled mountains/all tunnels/own Mine and Rusviet controlled villages/Factory networks for character/mechs match pp15-16."
+    },
+    {
+      "id": "Q29",
+      "result": "source_supported",
+      "notes": "Disarm tunnel/own Mine two-power loss; Artillery optional pay one for loss two; once per combat, attacker first matches pp15-16,22."
+    },
+    {
+      "id": "Q30",
+      "result": "source_supported",
+      "notes": "Two mechs plus any workers allow three cards; workers alone cannot fight, p16."
+    },
+    {
+      "id": "Q31",
+      "result": "source_supported",
+      "notes": "Wayfare distance-free own/inactive home destinations, including inactive expansion homes, never active opponent home, p17."
+    },
+    {
+      "id": "Q32",
+      "result": "source_supported",
+      "notes": "Once-per-combat random Scout theft; once-per-turn Coercion card for one arbitrary resource irrespective value matches pp17,21."
+    },
+    {
+      "id": "Q33",
+      "result": "source_supported",
+      "notes": "Seaworthy lake entry/exit and adjacent-lake retreat, Submerge lake jumps, worker transport and mandatory cargo removal match pp16-17."
+    },
+    {
+      "id": "Q34",
+      "result": "source_supported",
+      "notes": "Camaraderie applies only after victorious attacking combat, not undefended-worker entry, pp11,17."
+    },
+    {
+      "id": "Q35",
+      "result": "source_supported",
+      "notes": "Meander one card, up to two different options in either order and first benefit may pay second cost matches p21."
+    },
+    {
+      "id": "Q36",
+      "result": "source_supported",
+      "notes": "Factory bottom Move preserves encounter stop and post-entire-Move/all-combat timing, pp11,24-25. Character premise does not elicit exclusivity."
+    },
+    {
+      "id": "Q37",
+      "result": "source_supported",
+      "notes": "Coin holdings public but exact value need not be disclosed; combat count public/content secret and commitment concealment; objectives secret, pp7,22,26."
+    },
+    {
+      "id": "Q38",
+      "result": "source_supported",
+      "notes": "Only coins exchanged, unenforceable agreements, initiated combat unavoidable; source tournament exception is correct additional context, p26."
+    },
+    {
+      "id": "Q39",
+      "result": "source_supported",
+      "notes": "All three popularity tier boundaries and 3/2/1,4/3/2,5/4/3 payouts, controlled lakes, no home bases, Factory triple, pooled floor(resource/2) match pp28-29 and diagram."
+    },
+    {
+      "id": "Q40",
+      "result": "source_supported",
+      "notes": "All three adjacency tile qualifications, deduplication, printed encounters, rivers, excluded Mine and diagram payout bands match visual p19."
+    },
+    {
+      "id": "Q41",
+      "result": "source_supported",
+      "notes": "Printed tunnel occupation 1/2/3-4, longest continuous straight row, combined farm+tundra counts and diagram payouts match visual p19."
+    },
+    {
+      "id": "Q42",
+      "result": "source_supported",
+      "notes": "Lake carried workers cause victorious attacker popularity loss; Nordic retreat and Polania combat exception match pp16-17,23."
+    },
+    {
+      "id": "Q43",
+      "result": "source_supported",
+      "notes": "Popularity star retained despite lower later popularity; current tier scores and multiple players share goal, pp27,29."
+    },
+    {
+      "id": "Q44",
+      "result": "source_supported",
+      "notes": "Random mat assignment and clockwise Nordic/Rusviet/Crimea/Saxony/Polania relative seating; neighbor trigger implications match pp6,20."
+    },
+    {
+      "id": "Q45",
+      "result": "source_supported",
+      "notes": "River border versus full-hex lake extending to shorelines; special ability may enter from surrounding shoreline territories, pp11,21."
+    },
+    {
+      "id": "Q46",
+      "result": "source_supported",
+      "notes": "Public encounter display, art shown and capitalized thematic text read aloud; no instruction to read every option aloud, p24."
+    },
+    {
+      "id": "Q47",
+      "result": "source_supported",
+      "notes": "Unlimited same-faction units and resources per territory, distinct single-structure limit, pp11,13,18."
+    },
+    {
+      "id": "Q48",
+      "result": "source_supported",
+      "notes": "Following turn can overlap bottom action decisions; source permission does not alter recruit priority or instant end, pp10,14,20,28,31."
+    },
+    {
+      "id": "Q49",
+      "result": "source_supported",
+      "notes": "Each action only once per turn irrespective ability to pay again, p10."
+    },
+    {
+      "id": "Q50",
+      "result": "source_supported",
+      "notes": "Unupgraded Move has alternative one coin in lieu of unit movement, p11."
+    },
+    {
+      "id": "Q51",
+      "result": "source_supported",
+      "notes": "Workers never return to Player Mat; retreat home does not cover Produce cost, pp13,23,31."
+    },
+    {
+      "id": "Q52",
+      "result": "source_supported",
+      "notes": "Zero power and/or popularity does not bar combat; zero dial allowed, p22."
+    },
+    {
+      "id": "Q53",
+      "result": "source_supported",
+      "notes": "Combat remains legal after two combat stars; additional non-Saxony combat stars unavailable, p23."
+    },
+    {
+      "id": "Q54",
+      "result": "source_supported",
+      "notes": "Non-Meander encounter requires one affordable option, optional benefits may be declined, p24."
+    },
+    {
+      "id": "Q55",
+      "result": "source_supported",
+      "notes": "Simultaneous secret dial selection and simultaneous dial/card reveal, distinct attacker-first ability phase, pp22-23."
+    },
+    {
+      "id": "Q56",
+      "result": "source_supported",
+      "notes": "Mandatory bottom-action announcement for adjacent recruit checks, p20."
+    },
+    {
+      "id": "Q57",
+      "result": "source_supported",
+      "notes": "Earned stars must be placed immediately; completed objectives may be held until voluntary reveal while requirements still true, pp2,26-27."
+    },
+    {
+      "id": "Q58",
+      "result": "source_supported",
+      "notes": "All unit types default unable to cross rivers or enter lakes before applicable exceptions, pp5,11."
+    },
+    {
+      "id": "Q59",
+      "result": "source_supported",
+      "notes": "Recruit placed permanently on chosen Faction Mat bonus space, no relocation/reopening, p20."
+    }
+  ],
+  "latest_zero_addition_passes_challenged": [
+    {
+      "ledger_pass": 14,
+      "challenge": "Rechecked categorical defaults versus faction exceptions, component permanence, public information and optional benefits.",
+      "result": "Water restrictions are now directly asked by Q58 and recruit immobility by Q59. Worker/structure permanence already requested. Character-only encounter eligibility is a separate categorical privilege restriction missed by the pass, despite coverage of movement/carriage, combat eligibility and Factory eligibility."
+    },
+    {
+      "ledger_pass": 15,
+      "challenge": "Re-read every mapped procedural group and the complete source with substantive question wording as the coverage test. Rechecked all original costs/alternatives, every faction ability, event priority, sixth-star interruption and both diagram-only pages.",
+      "result": "Existing timing, cost, retreat, quantity and tile branches stand. The p5/p24/p31 character-only encounter statement is not asked by the mapped encounter questions; its presence beside covered timing does not establish coverage."
+    }
+  ],
+  "checked_passages": [
+    {
+      "source_reference": "Rulebook PDF p. 4: HOME BASE: status, normal restrictions and inactive bases",
+      "question_ids": [
+        "Q21",
+        "Q31"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 4: CONTROL: units override structure; resources follow territorial control",
+      "question_ids": [
+        "Q04",
+        "Q24"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 4: RESOURCES: remote payment, supply and worker exclusion",
+      "question_ids": [
+        "Q04",
+        "Q22"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 5: TYPES OF UNITS: carriage, combat roles, character-only privileges",
+      "question_ids": [
+        "Q05",
+        "Q15",
+        "Q16",
+        "Q30"
+      ],
+      "coverage_result": "Mapped questions cover the other named rules; character-only encounter eligibility is not substantively elicited. See proposed Q60."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 6: BOARD SETUP: ordinary decks, limited hidden Factory selection, structure tile, encounters, supply",
+      "question_ids": [
+        "Q01",
+        "Q08"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 6: FACTION SELECTION: random mats and prescribed relative seating",
+      "question_ids": [
+        "Q44"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 7: STARTING CARDS AND TRACK POSITIONS; character/workers",
+      "question_ids": [
+        "Q02",
+        "Q37"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 8: PLAYER MAT: token/cubes/structures/recruits/workers and lowest-mat start",
+      "question_ids": [
+        "Q01",
+        "Q02"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 9: FACTION MAT: mechs/stars, empty one-time bonus spaces",
+      "question_ids": [
+        "Q02"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 10: GAMEPLAY: token, optional ordered actions, costs and partial benefits, top gains below",
+      "question_ids": [
+        "Q03"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 10: GAMEPLAY: each action once per turn",
+      "question_ids": [
+        "Q49"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 10: GAMEPLAY: overlap with following turn",
+      "question_ids": [
+        "Q48"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: MOVE alternatives: different units sequentially or gain coins",
+      "question_ids": [
+        "Q05",
+        "Q50"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: RESOURCES AND WORKERS: unlimited carriage, pickup/drop, worker transport not movement",
+      "question_ids": [
+        "Q05",
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: RIVERS AND LAKES, RIVER, LAKE: default blocks and shoreline geometry",
+      "question_ids": [
+        "Q27",
+        "Q33",
+        "Q45"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: TUNNELS: printed tunnel adjacency for any unit",
+      "question_ids": [
+        "Q24"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: MOVING INTO OPPONENT TERRITORIES: worker-only control",
+      "question_ids": [
+        "Q06"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: MOVING INTO OPPONENT TERRITORIES: structure-only control",
+      "question_ids": [
+        "Q24"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: MOVING INTO OPPONENT TERRITORIES: character/mech control and worker restrictions",
+      "question_ids": [
+        "Q07"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: HOME BASE entry prohibition",
+      "question_ids": [
+        "Q21",
+        "Q31"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: ENCOUNTERS stop and postcombat eligibility",
+      "question_ids": [
+        "Q15",
+        "Q36"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 11: NO LIMIT: same-faction occupancy",
+      "question_ids": [
+        "Q47"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 12: BOLSTER and combat deck exhaustion",
+      "question_ids": [
+        "Q08"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 12: TRADE choices, location and all-workers-home prohibition",
+      "question_ids": [
+        "Q08"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 13: PRODUCE full-cost timing, selected territories, per-worker output and village placement",
+      "question_ids": [
+        "Q09"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 13: TERRAIN TYPE / WHAT IT PRODUCES diagram",
+      "question_ids": [
+        "Q22"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 13: PAYMENT IS REQUIRED and dead-turn paragraph",
+      "question_ids": [
+        "Q09",
+        "Q25"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 13: NO LIMIT resource supply and territorial occupancy",
+      "question_ids": [
+        "Q22",
+        "Q47"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 13: WORKERS ARE PERMANENT",
+      "question_ids": [
+        "Q51"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 14: OVERLAPPING TURNS",
+      "question_ids": [
+        "Q48"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 14: COINS optional; completed bottom actions still payable and recruit triggers",
+      "question_ids": [
+        "Q03",
+        "Q10"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 14: UPGRADE green to empty bracketed red, excluded solid borders",
+      "question_ids": [
+        "Q10"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 15: DEPLOY worker/control/lake restrictions and unlocked ability scope",
+      "question_ids": [
+        "Q10"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 15: SPEED: extra step, tunnels, cargo, forced stops",
+      "question_ids": [
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 15: SAXONY Riverwalk, Underpass, Disarm",
+      "question_ids": [
+        "Q27",
+        "Q28",
+        "Q29"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 16: NORDIC Riverwalk, Seaworthy, Artillery, Speed",
+      "question_ids": [
+        "Q27",
+        "Q29",
+        "Q33",
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 16: RUSVIET Riverwalk, Township, Peoples Army, Speed",
+      "question_ids": [
+        "Q27",
+        "Q28",
+        "Q30",
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 17: CRIMEA Riverwalk, Wayfare, Scout, Speed",
+      "question_ids": [
+        "Q27",
+        "Q31",
+        "Q32",
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 17: POLANIA Riverwalk, Submerge, Camaraderie, Speed",
+      "question_ids": [
+        "Q27",
+        "Q33",
+        "Q34",
+        "Q23"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 18: BUILD limits, control, permanence, legal spaces and owner-only abilities",
+      "question_ids": [
+        "Q04",
+        "Q11"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 18: ARMORY and MONUMENT matching top bonuses",
+      "question_ids": [
+        "Q26"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 18: MILL bonus territory and worker, control exception",
+      "question_ids": [
+        "Q11"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 18: MINE personal tunnel even enemy-controlled",
+      "question_ids": [
+        "Q11",
+        "Q24"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 18: END-GAME BONUS without territory control",
+      "question_ids": [
+        "Q20",
+        "Q40",
+        "Q41"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 19: Adjacent tunnel/lake/encounter tiles and three diagrams",
+      "question_ids": [
+        "Q40"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 19: On tunnels/straight row/farms+tundras tiles and three diagrams",
+      "question_ids": [
+        "Q41"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 20: ENLIST and ONE-TIME BONUS: location, choices, permanence",
+      "question_ids": [
+        "Q12"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 20: ONGOING BONUS: uncovered section, self/neighbors, excluded triggers",
+      "question_ids": [
+        "Q12"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 20: PLAYER ORDER and TWO-PLAYER RULES",
+      "question_ids": [
+        "Q12",
+        "Q19"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 20: PROCLAMATION",
+      "question_ids": [
+        "Q56"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 21: RUSVIET RELENTLESS including Factory",
+      "question_ids": [
+        "Q03"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 21: CRIMEA COERCION",
+      "question_ids": [
+        "Q32"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 21: NORDIC SWIM",
+      "question_ids": [
+        "Q27"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 21: POLANIA MEANDER",
+      "question_ids": [
+        "Q35"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 21: SAXONY DOMINATE",
+      "question_ids": [
+        "Q17",
+        "Q18",
+        "Q14"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 22: COMBAT trigger, multiple order and participants",
+      "question_ids": [
+        "Q07",
+        "Q30"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 22: NO REQUIREMENTS",
+      "question_ids": [
+        "Q52"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 22: ATTACKER ADVANTAGE ability priority and tie",
+      "question_ids": [
+        "Q13"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 22: SELECT POWER and ADD COMBAT CARDS: limits and secrecy",
+      "question_ids": [
+        "Q13",
+        "Q37",
+        "Q55"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: REVEAL, totals, both-player payment and card discard",
+      "question_ids": [
+        "Q13",
+        "Q55"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: WINNER control, stars, attacker popularity and encounters",
+      "question_ids": [
+        "Q14",
+        "Q15"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: LOSER all-unit retreat, resource abandonment and reward card",
+      "question_ids": [
+        "Q14",
+        "Q51"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: LIMITED STARS: future combat remains legal",
+      "question_ids": [
+        "Q53"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: GAME END pending attacks undone",
+      "question_ids": [
+        "Q19"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 23: BATTLE IN A LAKE carried-worker popularity",
+      "question_ids": [
+        "Q42"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: ENCOUNTERS trigger, stops, whole-Move/all-combat sequence",
+      "question_ids": [
+        "Q15",
+        "Q36"
+      ],
+      "coverage_result": "Mapped questions cover the other named rules; character-only encounter eligibility is not substantively elicited. See proposed Q60."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: Public encounter card/art and capitalized thematic read-aloud",
+      "question_ids": [
+        "Q46"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: Required option/affordable cost and optional benefit",
+      "question_ids": [
+        "Q54"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: Encounter card face-down deck-bottom destination",
+      "question_ids": [
+        "Q15"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: BENEFIT LOCATION and ISOLATED COST AND BENEFIT",
+      "question_ids": [
+        "Q15"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 24: COMBAT: failed contested entry leaves token",
+      "question_ids": [
+        "Q15"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 25: FACTORY no production, scoring weight and first-visit choice",
+      "question_ids": [
+        "Q22",
+        "Q20",
+        "Q16"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 25: FACTORY CARDS: fifth section, separate bonuses, permanence",
+      "question_ids": [
+        "Q16"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 25: MOVE, MINE, SPEED and stop rules",
+      "question_ids": [
+        "Q16",
+        "Q36"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 26: OBJECTIVES timing, requirements, delay and deck-bottom discard/Saxony",
+      "question_ids": [
+        "Q17",
+        "Q57"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 26: ALLIANCES AND BRIBES: only coins, unenforceable deals, combat unavoidable",
+      "question_ids": [
+        "Q38"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 27: PLACING STARS: all achievements/quantities",
+      "question_ids": [
+        "Q18"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 27: Mandatory placement and objective reveal timing distinction",
+      "question_ids": [
+        "Q57"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 27: Stars permanent/shared; current popularity still mutable",
+      "question_ids": [
+        "Q18",
+        "Q43"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 28: Immediate sixth-star end, no remaining actions/turns",
+      "question_ids": [
+        "Q18",
+        "Q19"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 28: EDGE CASES: bottom benefit/coins/recruit before star, pending battles, neighbor order",
+      "question_ids": [
+        "Q19"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 29: SCORING CATEGORIES: held coins, stars, controlled territories, Factory/lakes/home",
+      "question_ids": [
+        "Q20",
+        "Q39"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 29: Resource pairs pooling/round down, structure tile independence",
+      "question_ids": [
+        "Q20",
+        "Q39",
+        "Q40",
+        "Q41"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 29: Popularity tier/payout diagram including 18",
+      "question_ids": [
+        "Q39"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 29: DECLARING WINNER: most coins and full tiebreak order",
+      "question_ids": [
+        "Q20"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p. 31: HIGHLIGHTED RULES recap: corroborates detailed covered rules",
+      "question_ids": [
+        "Q03",
+        "Q05",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14",
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18",
+        "Q19",
+        "Q20",
+        "Q48",
+        "Q51"
+      ],
+      "coverage_result": "Mapped questions cover the other named rules; character-only encounter eligibility is not substantively elicited. See proposed Q60."
+    },
+    {
+      "source_reference": "Rulebook PDF pp.5,11: categorical default water restrictions",
+      "question_ids": [
+        "Q58"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    },
+    {
+      "source_reference": "Rulebook PDF p.20: enlisted token remains permanently on chosen Faction space",
+      "question_ids": [
+        "Q59"
+      ],
+      "coverage_result": "Covered at the meaningful rule/branch/timing level by the mapped substantive wording; routine physical/reference detail does not warrant a separate question."
+    }
+  ],
+  "additional_source_pages_checked": [
+    {
+      "pages": [
+        1,
+        2
+      ],
+      "result": "Goal, setup/reference, automatic stars and scoring corroborate detailed sections. Quick reference objective at-any-time shorthand is qualified by detailed p26 own-turn/action-boundary rule in Q17."
+    },
+    {
+      "pages": [
+        3
+      ],
+      "result": "Component inventory/color reference; no additional meaningful procedure."
+    },
+    {
+      "pages": [
+        9
+      ],
+      "result": "Quick-start and teaching suggestions are recommendations, not additional core turn restrictions."
+    },
+    {
+      "pages": [
+        28
+      ],
+      "result": "Delay of Game explicitly marked VARIANT excluded; sample scoring exercise and self-banking/physical mound handling do not add a meaningful core decision."
+    },
+    {
+      "pages": [
+        29,
+        30,
+        32
+      ],
+      "result": "Achievement inscription, character stories, marketing/replacement/video/promo references excluded or nonprocedural."
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "Ask another default-water unit, faction river destination or lake retreat example.",
+      "reason": "Q27/Q33/Q45/Q58 directly request the actual permission and exception rules; changed unit/count/layout alone is not novel."
+    },
+    {
+      "candidate": "Ask whether an enlisted recruit can be rearranged in a different bonus configuration.",
+      "reason": "Q59 directly requests the permanence restriction and reopening consequence."
+    },
+    {
+      "candidate": "Ask whether a neighboring player may decline a recruit bonus.",
+      "reason": "No distinct exception to the generic optional-benefit rule. Q03 asks benefit determination and Q12 ongoing resolution; duplicating an optional-benefit example fails the novelty threshold."
+    },
+    {
+      "candidate": "Ask separately for Build wood or Enlist food.",
+      "reason": "General costs are exposed red boxes under Q03, and bottom action placement/resolution is already covered. Isolated resource-icon lookup adds reference granularity without a distinct branch, priority or exception."
+    },
+    {
+      "candidate": "Ask whether worker-only expulsion is combat or awards a combat star.",
+      "reason": "Q06 directly requests worker-only entry outcome, and Q07/Q14/Q18/Q30 request actual combat eligibility, outcome and star rules. This is the already covered worker-versus-plastic branch."
+    },
+    {
+      "candidate": "Ask whether a mech may take a Factory card.",
+      "reason": "Q16 directly asks who takes a Factory card, so character-only Factory eligibility is substantively elicited, unlike the proposed encounter question."
+    },
+    {
+      "candidate": "Ask additional combat dial values, odd resource amounts, popularities, troop counts, recruit sixth-star layouts or repeated tile positions.",
+      "reason": "Existing questions directly request the governing branches, priority and payouts. These change quantities or combine mechanics."
+    },
+    {
+      "candidate": "Ask deck shuffle/supply locations, spent-resource pile, encounter-card deck-bottom destination as isolated questions.",
+      "reason": "Routine handling/reference padding. Exhaustion, territorial resource control, affordability, automatic encounter timing and substantive discard consequences are already tested."
+    },
+    {
+      "candidate": "Ask printed card distributions, inventory quantities, dial assembly, encounter reference numbers or achievement signatures.",
+      "reason": "Component/reference/cosmetic/commemorative information, without an untested meaningful core rule."
+    }
+  ],
+  "limitations": [
+    "This finding is a coverage judgment against the supplied authoritative booklet, not against FAQs, later editions, card databases or play variants.",
+    "PDF text was verified in full. The source-only images on pp19 and 29 were visually inspected; other pages were read via their verified text rather than every decorative image.",
+    "Question-wording elicitation is judged at the meaningful rule level. Generic optional-benefit, exposed-cost and already requested resolution rules were not exploded into every possible physical or numerical instance."
+  ],
+  "existing_entries_unchanged": true,
+  "reviewed_bank_hashes": {
+    "expanded-v6/questions.json": "3d52e4f860f0c69dc7c49b758dd4472f4b95ffa74021837933e63508b200363f",
+    "expanded-v6/answer-key.json": "7551439cafeb7c597797ebdc618ad2841eb5791d9ea5ce535063ca421a0b653d"
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "stage": "graders-early-confirmed",
+  "observed_at_utc": "2026-11-06T10:05:12.949091+00:00",
+  "parent_runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T01-13-50-01a1aac5-76e9-7752-846f-420015969a30.jsonl",
+  "parent_spawn_proof": {
+    "postchange_20261106_02_grade_a": {
+      "task_name": "postchange_20261106_02_grade_a",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none"
+    },
+    "postchange_20261106_02_grade_b": {
+      "task_name": "postchange_20261106_02_grade_b",
+      "model": "gpt-6.1-sol",
+      "reasoning_effort": "high",
+      "fork_turns": "none"
+    }
+  },
+  "agents": {
+    "postchange_20261106_02_grade_a": {
+      "role": "postchange_20261106_02_grade_a",
+      "session_id": "01a1b04f-b521-72a2-b9b3-6ff05734843c",
+      "session_log": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T03-02-56-01a1b04f-b521-72a2-b9b3-6ff05734843c.jsonl",
+      "source": {
+        "subagent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1aac5-76e9-7752-846f-420015969a30",
+            "depth": 1,
+            "agent_path": "/root/postchange_20261106_02_grade_a",
+            "agent_nickname": "Curie",
+            "agent_role": null
+          }
+        }
+      },
+      "started": "2026-11-06T10:03:31.065Z",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206"
+        }
+      ],
+      "tool_calls": [
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda606910487d0acca5aae8239b4d5",
+          "status": "completed",
+          "call_id": "call_HT9VLeLOtvp8Owygg1tVRDhR",
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02/grading-policy.md\",\"max_output_tokens\":15000});text(r.output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959429.067649
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda60f760887d084e2f0013c6a16e2",
+          "status": "completed",
+          "call_id": "call_fN7EmydbNbbPSgoqiHnB94e0",
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\nfor n in ['questions.json','answer-key.json','reader-a.json']:\\n d=json.loads((p/n).read_text()); print(n, type(d).__name__); print(json.dumps(d,ensure_ascii=False)[:1800])\\nfor f in [p/'summary-snapshot.md',p/'questions.json',p/'answer-key.json',p/'reader-a.json',p/'grading-policy.md',Path('extracted/scythe-rules.txt'),Path('source_pdfs/scythe-recovery.pdf')]:\\n print('HASH',str(f.resolve()),hashlib.sha256(f.read_bytes()).hexdigest())\\nPY\",\"max_output_tokens\":6500});text(r.output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959438.428983
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda6188a1c87d091277f033a3ebece",
+          "status": "completed",
+          "call_id": "call_n7eRKiVpygM4Ry5z4gVCT564",
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\nfor n in ['questions.json','answer-key.json','reader-a.json']:\\n d=json.loads((p/n).read_text()); print(n, type(d).__name__); print(json.dumps(d,ensure_ascii=False)[:2200])\\nfor f in [p/'summary-snapshot.md',p/'questions.json',p/'answer-key.json',p/'reader-a.json',p/'grading-policy.md',Path('extracted/scythe-rules.txt'),Path('source_pdfs/scythe-recovery.pdf')]:\\n print('HASH',str(f.resolve()),hashlib.sha256(f.read_bytes()).hexdigest())\\nPY\",\"max_output_tokens\":6500});text(r.output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959446.818325
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda621404487d0973c67162f7a2c80",
+          "status": "completed",
+          "call_id": "call_9PTbZjnD32jpqRbqORP2iyWy",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02/summary-snapshot.md\",\"max_output_tokens\":24000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959456.19558
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda633e2a887d09659360f22e07d44",
+          "status": "completed",
+          "call_id": "call_tzYEmHykjOYTMnOPu8jQvVj3",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\nq=json.loads((p/'questions.json').read_text())['questions']; k={x['id']:x for x in json.loads((p/'answer-key.json').read_text())['answers']}; r={x['id']:x for x in json.loads((p/'reader-a.json').read_text())['answers']}\\nfor x in q[:22]:\\n print('\\\\n'+x['id']+' QUESTION: '+x['question']); print('KEY: '+k[x['id']]['expected_answer']); print('RESPONSE: '+r[x['id']]['answer']); print('EVIDENCE: '+r[x['id']]['evidence'])\\nPY\",\"max_output_tokens\":18000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959468.425565
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda640c5c887d08119e144e860736c",
+          "status": "completed",
+          "call_id": "call_nK40TW2ukE94qeO9hTGxHfV0",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\nq=json.loads((p/'questions.json').read_text())['questions']; k={x['id']:x for x in json.loads((p/'answer-key.json').read_text())['answers']}; r={x['id']:x for x in json.loads((p/'reader-a.json').read_text())['answers']}\\nfor x in q[22:44]:\\n print('\\\\n'+x['id']+' QUESTION: '+x['question']); print('KEY: '+k[x['id']]['expected_answer']); print('RESPONSE: '+r[x['id']]['answer']); print('EVIDENCE: '+r[x['id']]['evidence'])\\nPY\",\"max_output_tokens\":18000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959482.154696
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0271262a2f09e6ec016aeda64ec9cc87d0a8de01a353dd2f7c",
+          "status": "completed",
+          "call_id": "call_UlLlmFSRHgOQqMwKZVjRmopb",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\nq=json.loads((p/'questions.json').read_text())['questions']; k={x['id']:x for x in json.loads((p/'answer-key.json').read_text())['answers']}; r={x['id']:x for x in json.loads((p/'reader-a.json').read_text())['answers']}\\nfor x in q[44:]:\\n print('\\\\n'+x['id']+' QUESTION: '+x['question']); print('KEY: '+k[x['id']]['expected_answer']); print('RESPONSE: '+r[x['id']]['answer']); print('EVIDENCE: '+r[x['id']]['evidence'])\\nPY\",\"max_output_tokens\":18000})).output);\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-3857-79c0-aac9-052cdc178206",
+            "create_time": 1793959495.219752
+          }
+        }
+      ]
+    },
+    "postchange_20261106_02_grade_b": {
+      "role": "postchange_20261106_02_grade_b",
+      "session_id": "01a1b050-8102-72c1-9736-61a881a4ae72",
+      "session_log": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T03-03-48-01a1b050-8102-72c1-9736-61a881a4ae72.jsonl",
+      "source": {
+        "subagent": {
+          "thread_spawn": {
+            "parent_thread_id": "01a1aac5-76e9-7752-846f-420015969a30",
+            "depth": 1,
+            "agent_path": "/root/postchange_20261106_02_grade_b",
+            "agent_nickname": "Bacon",
+            "agent_role": null
+          }
+        }
+      },
+      "started": "2026-11-06T10:03:52.367Z",
+      "contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high",
+          "turn_id": "01a1b050-82f4-7572-8988-46ba1fd43a92"
+        }
+      ],
+      "tool_calls": [
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0848b0330ea5d74d016aeda62bb93c87d0a578a033dae1ecb6",
+          "status": "completed",
+          "call_id": "call_jXAxHRvnhK3esQ6HFwaaJeb5",
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02/grading-policy.md\",max_output_tokens:7000});text(r.output)\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-82f4-7572-8988-46ba1fd43a92",
+            "create_time": 1793959465.46298
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0848b0330ea5d74d016aeda632403c87d0899593cc99a48021",
+          "status": "completed",
+          "call_id": "call_LNOB69f4mBItaskICpYQfbPM",
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\nb=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\npaths=[b/x for x in ['summary-snapshot.md','questions.json','answer-key.json','reader-b.json','grading-policy.md']]+[Path('extracted/scythe-rules.txt'),Path('source_pdfs/scythe-recovery.pdf')]\\nh={str(p.resolve()):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}\\nPath('/tmp/scythe-b-hashes.json').write_text(json.dumps(h))\\nfor name in ['questions.json','answer-key.json','reader-b.json']:\\n d=json.loads((b/name).read_text()); print(name, type(d).__name__); print(json.dumps(d,ensure_ascii=False)[:2200])\\nPY\",\"max_output_tokens\":3000}))\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-82f4-7572-8988-46ba1fd43a92",
+            "create_time": 1793959470.910141
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0848b0330ea5d74d016aeda63d240c87d0aa18c914646b9d90",
+          "status": "completed",
+          "call_id": "call_VQJyUztt0pHfMr27HzKgjeey",
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\nfrom pathlib import Path\\nb=Path('docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02')\\npaths=[b/x for x in ['summary-snapshot.md','questions.json','answer-key.json','reader-b.json','grading-policy.md']]+[Path('extracted/scythe-rules.txt'),Path('source_pdfs/scythe-recovery.pdf')]\\nh={str(p.resolve()):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}\\nPath('/tmp/scythe-b-hashes.json').write_text(json.dumps(h))\\nfor name in ['questions.json','answer-key.json','reader-b.json']:\\n d=json.loads((b/name).read_text()); print(name, type(d).__name__); print(json.dumps(d,ensure_ascii=False)[:2200])\\nPY\",\"max_output_tokens\":3000}))\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-82f4-7572-8988-46ba1fd43a92",
+            "create_time": 1793959480.513089
+          }
+        },
+        {
+          "type": "custom_tool_call",
+          "id": "ctc_0848b0330ea5d74d016aeda651c78087d08a5f892441881917",
+          "status": "completed",
+          "call_id": "call_iRSgQId4AqXFCl1YClQYnMXv",
+          "name": "exec",
+          "input": "text((await tools.exec_command({cmd:\"cat docs/quality/summary-qa/scythe/2026-11-04-batch-231507/post-change-20261106-02/summary-snapshot.md\",\"max_output_tokens\":15000})).output)\n",
+          "internal_chat_message_metadata_passthrough": {
+            "turn_id": "01a1b050-82f4-7572-8988-46ba1fd43a92",
+            "create_time": 1793959499.980522
+          }
+        }
+      ]
+    }
+  },
+  "actual_required_settings_verified": true,
+  "checks": {
+    "postchange_20261106_02_grade_b": true,
+    "postchange_20261106_02_grade_a": true
+  },
+  "isolation_limit": "Original parent fork settings and actual child turn contexts are verified. Saved prompts retain the intended dispatch text; encrypted task payloads are not decrypted. Context/input restriction is prompt-based, not OS enforcement."
+}

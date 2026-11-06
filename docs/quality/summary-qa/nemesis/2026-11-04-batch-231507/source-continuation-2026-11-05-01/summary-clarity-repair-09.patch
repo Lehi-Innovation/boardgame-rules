@@ -1,0 +1,141 @@
+--- full-iteration-08/summary-snapshot.md
++++ rules/nemesis.md
+@@ -72,7 +72,7 @@
+ 
+ ### Discard piles
+ 
+-Normal discards are face up; each deck has its own discard space:
++Normal **card** discards are face up; each deck has its own discard space:
+ 
+ | Component | Destination |
+ |---|---|
+@@ -82,9 +82,9 @@
+ | Discarded Event cards | Event discard pile |
+ | Discarded Intruder Attack cards | Intruder Attack discard pile |
+ | Discarded Serious Wound cards | Serious Wound discard pile |
+-| Discarded markers | Appropriate marker pool |
+-
+-An explicit effect can give a different destination: Search and Storage keep one of two Item cards and return the other face down to the bottom of the chosen deck. Removed-from-game Contamination and Exploration tokens do not return to their supplies.
++| **Discarded markers** | **Return to the appropriate marker pool** |
++
++**Discarding a marker returns it to its matching supply pool; it does not go into a card discard pile.** An explicit effect can give a different destination: Search and Storage keep one of two Item cards and return the other face down to the bottom of the chosen deck. Removed-from-game Contamination and Exploration tokens do not return to their supplies.
+ 
+ ## Turn Structure
+ 
+@@ -97,9 +97,15 @@
+ 3. **Player rounds** — starting with the First Player and going clockwise, each player performs a **round of 2 Actions**. Series of rounds repeat as long as at least one player has not passed. Rules:
+    - If you cannot perform any Actions, or choose not to, you must pass.
+    - If you perform only 1 Action instead of two, you must pass.
+-   - Once you pass you may perform no further normal Actions this Phase (flip your Help card to its "Pass" side). **Exception: the official FAQ allows Interruption after passing.**
+-   - When passing, you may discard any number of cards from your hand.
++   - When passing, flip your Help card to its "Pass" side and apply the passing rules below.
+    - A Character who **ends their round in a Room with a Fire marker suffers 1 Light Wound** (every round; only after finishing their own round — passing players take it once at the end of their round and no more that turn).
++
++| After you pass | Rule for the rest of this Player Phase |
++|---|---|
++| Normal Actions | You cannot take further normal Actions. |
++| **Interruption card** | **You may still play Interruption after passing**, subject to its usual card requirements (FAQ Rules 21). This is an explicit exception to the normal-Action prohibition. |
++| Hand cards | At the moment you pass, you may discard any number of cards from your hand. |
++| Fire in your Room | Take 1 Light Wound at the end of your own passing round. Later players' rounds do not give you further Fire wounds that turn. |
+ 
+ ### II: Event Phase
+ 
+@@ -125,7 +131,15 @@
+ 
+ **Action Cost:** each Action's icon shows a number — discard exactly that many Action cards from your hand (face up) to pay. **Contamination cards are not Action cards: they can never be discarded to pay any Action cost.**
+ 
+-**In Combat / Out of Combat:** some Actions and Items are marked "In Combat only" or "Out of Combat only." You are **in Combat** whenever an Intruder is in your Room (Eggs do not count as Intruders). Unmarked card and Item Actions work in or out of Combat subject to their requirements. **Basic Actions in Combat are limited to Shoot, Melee and Basic Movement as Escape: no Trade, Craft, Pick Up Heavy Object or Quest Item activation.** Room Actions remain forbidden (FAQ Actions 3–5).
++**In Combat / Out of Combat:** you are **in Combat** whenever an Intruder is in your Room. Eggs do not count as Intruders. Apply an Action or Item's marking as follows:
++
++| Combat marking | Required situation |
++|---|---|
++| **In Combat only** | You may use it **only while an Intruder is in your Room**. |
++| **Out of Combat only** | You may use it **only while no Intruder is in your Room**. |
++| No Combat marking | You may use it in either situation, subject to its own requirements. |
++
++**Basic Actions in Combat are limited to Shoot, Melee and Basic Movement as Escape: no Trade, Craft, Pick Up Heavy Object or Quest Item activation.** Room Actions remain forbidden (FAQ Actions 3–5).
+ 
+ ### Basic Actions (available to every Character; cost 1 Action card, except Careful Movement which costs 2)
+ 
+@@ -156,13 +170,13 @@
+ 
+ ### Room Actions
+ 
+-Most Rooms grant a specific Action (see Player Reference). **Cost: 2 Action cards.** You must be in the Room, you cannot perform a Room Action while in Combat, and you cannot perform one in a Room with a Malfunction marker.
++Most Rooms grant a specific Action (see Player Reference). **Cost: 2 Action cards. Room Actions are local: your Character must be in the Room whose Action you use**, unless an explicit special ability permits otherwise. You cannot perform a Room Action while in Combat or in a Room with a Malfunction marker.
+ 
+ ### Movement, Rooms, and Corridors
+ 
+ - Characters and Intruders may only occupy Rooms (Special Rooms — Hibernatorium, Cockpit, Engines — count as Rooms; Escape Pod tokens are the only exception for Characters). Corridors connect Rooms; no one may ever stop in a Corridor. Effects of moving through a Corridor are resolved AFTER moving into the Room.
+ - Two Rooms are **neighboring** when directly connected by 1 Corridor. A Closed Door blocks the "neighboring" status for players' Movement.
+-- **After entering a Room:** (1) if the Room tile was unexplored (face down), flip it face up and reveal and resolve its Exploration token, then return that token to the box (removed from the game); (2) if the Room is empty (no Characters, no Intruders), perform a **Noise roll**. If anyone — Character or Intruder — is already there, do NOT roll for Noise.
++- **After entering a Room:** (1) if the Room tile was unexplored (face down), flip it face up and reveal and resolve its Exploration token, then return that token to the box (removed from the game); (2) apply the Movement Noise rule. **A Silence or Danger Exploration result replaces the Movement Noise roll: resolve that result and do not roll Noise again afterward.** Otherwise, perform the ordinary Noise roll if the destination is empty (no Characters, no Intruders). If anyone — Character or Intruder — is already there, do NOT roll for Movement Noise. Movement abilities that replace or cancel Noise retain their stated overrides.
+ - To leave a Room containing an Intruder you must use the **Escape** rule (see Special Rules).
+ - In the **Room Covered With Slime**, gain Slime immediately on entry, **before resolving its Exploration token**. A Silence Exploration token therefore resolves as Danger.
+ - During Movement, Special Rooms are treated as already-explored Rooms.
+@@ -355,17 +369,17 @@
+ 
+ ### Item and Weapon effects illustrated in the manual
+ 
+-These selected examples come from the original manual's card illustrations (pp.13,22–23). In the following table, each Item costs **1 Action card**, is **One Use Only**, and is discarded after use. Choose only one effect when a card gives alternatives.
+-
+-| Item | Combat restriction | Effect |
+-|---|---|---|
+-| Bandages | Out of Combat only | **Dress 1 Serious Wound OR Heal all Light Wounds.** Dressing does not Heal or discard a Serious Wound. |
+-| Clothes | Out of Combat only | **Discard your Slime marker OR Dress 1 Serious Wound.** |
+-| Fire Extinguisher | May be used in Combat | **Discard Fire from your current Room OR choose 1 Intruder in your current Room and force it to Retreat.** It does not combine both effects or affect all Intruders like Fire Control System. |
+-| Taser | May be used in Combat | Choose **1 Intruder in your Room**: it suffers **1 Injury and Retreats**. OR choose **1 Character in your Room**: they discard **all cards in their hand**, including Contamination cards. |
+-| Energy Charge | May be used in Combat | **Fully load 1 of your own Energy Weapons** (up to its Ammo capacity) OR **Open or Close 1 Door in a Corridor connected to your Room**. The normal prohibition on closing Destroyed Doors applies. To reload someone else's Weapon, Trade the Charge to them first; you cannot use it directly on their Weapon. |
+-| Molotov Cocktail | May be used in Combat | Choose your Room or a neighboring Room **containing an Intruder** (uncarried Eggs also permit the target, as under Eggs). **Place Fire** there; immediately, **each Intruder suffers 1 Injury and each Character suffers 1 Serious Wound**, including you if you are there. This immediate damage is separate from later Fire damage. |
+-| Nemesis Plans | Out of Combat only | Privately check **any 2 unexplored Room tiles**, then return them face down. **Do not inspect their Exploration tokens**. Monitoring Room, by contrast, checks 1 tile together with its token. |
++These selected examples come from the original manual's card illustrations (pp.13,22–23). **One Use Only means discard that Item after its effect, in addition to paying its Action-card cost.** The table states the cost, consumption and Combat restriction together for each Item. Choose only one effect when a card gives alternatives.
++
++| Item | Action-card cost and use | Combat restriction | Effect |
++|---|---|---|---|
++| Bandages | **1; One Use Only — discard after use** | Out of Combat only | **Dress 1 Serious Wound OR Heal all Light Wounds.** Dressing does not Heal or discard a Serious Wound. |
++| Clothes | **1; One Use Only — discard after use** | Out of Combat only | **Discard your Slime marker OR Dress 1 Serious Wound.** |
++| Fire Extinguisher | **1; One Use Only — discard after use** | May be used in Combat | **Discard Fire from your current Room OR choose 1 Intruder in your current Room and force it to Retreat.** It does not combine both effects or affect all Intruders like Fire Control System. |
++| Taser | **1; One Use Only — discard after use** | May be used in Combat | Choose **1 Intruder in your Room**: it suffers **1 Injury and Retreats**. OR choose **1 Character in your Room**: they discard **all cards in their hand**, including Contamination cards. |
++| Energy Charge | **1; One Use Only — discard after use** | May be used in Combat | **Fully load 1 of your own Energy Weapons** (up to its Ammo capacity) OR **Open or Close 1 Door in a Corridor connected to your Room**. The normal prohibition on closing Destroyed Doors applies. To reload someone else's Weapon, Trade the Charge to them first; you cannot use it directly on their Weapon. |
++| Molotov Cocktail | **1; One Use Only — discard after use** | May be used in Combat | Choose your Room or a neighboring Room **containing an Intruder** (uncarried Eggs also permit the target, as under Eggs). **Place Fire** there; immediately, **each Intruder suffers 1 Injury and each Character suffers 1 Serious Wound**, including you if you are there. This immediate damage is separate from later Fire damage. |
++| Nemesis Plans | **1; One Use Only — discard after use** | Out of Combat only | Privately check **any 2 unexplored Room tiles**, then return them face down. **Do not inspect their Exploration tokens**. Monitoring Room, by contrast, checks 1 tile together with its token. |
+ 
+ The page-13 **Medkit** offers **Dress 1 Serious Wound OR Heal 1 Dressed Serious Wound** (cost 1, One Use Only). It can treat another Character, as can Bandages (FAQ Items 2). The **Flashlight** offers a Search Action (cost 2, Out of Combat only); follow the normal Search procedure and the card's requirements.
+ 
+@@ -390,8 +404,16 @@
+ ### Eggs and the Nest
+ 
+ - Egg tokens on the Intruder board represent the Eggs in the Nest; taking or destroying Eggs removes them from the Intruder board. When no Eggs remain (all carried away or destroyed), the Nest is destroyed — mark it with 1 Injury marker.
+-- **Destroying Eggs:** in a Room with uncarried Eggs, resolve a Shoot or Melee Attack against them — each Injury (of any type) destroys 1 Egg; A **successful Egg Melee** retains the normal draw of **1 Contamination card onto your Action discard pile**. A **missed Egg Melee** causes neither Contamination nor a Wound. The manuals do not specify how to reconcile the normal pre-roll Contamination step with this miss exception; no refund or alternative draw timing is specified. Grenades may be thrown at Rooms with uncarried Eggs as if an Intruder were there: a Grenade destroys 2 Eggs, a Molotov Cocktail 1 Egg. **After every single attempt to destroy an Egg, perform a Noise roll.**
+-- A Fire marker in a Room with uncarried Eggs destroys 1 uncarried Egg during each Fire Damage step.
++
++| Method against uncarried Eggs | Egg destruction |
++|---|---|
++| Shoot or Melee | Each Injury destroys **1 Egg**. Resolve the normal attack, with the Egg Melee exception below. |
++| Grenade | Destroys **2 Eggs**. Uncarried Eggs permit the Room to be targeted as if an Intruder were there. |
++| Molotov Cocktail | Destroys **1 Egg** immediately; its Fire marker can continue destroying Eggs in later Fire Damage steps. |
++| **Fire marker** | Destroys **1 uncarried Egg during every Event Phase Fire Damage step**; with Vulnerability to Fire discovered, destroy **2** instead (FAQ Rooms 7). |
++
++- **Egg Melee penalties:** a successful Egg Melee retains the normal draw of **1 Contamination card onto your Action discard pile**. A missed Egg Melee causes neither Contamination nor a Wound. The manuals do not specify how to reconcile the normal pre-roll Contamination step with this miss exception; no refund or alternative draw timing is specified.
++- **Noise after an attack attempt:** after every single Shoot, Melee, Grenade or Molotov attempt to destroy an Egg, perform a Noise roll, including a miss. For a remote Grenade/Molotov, roll in your own Room, not the Nest (FAQ Rooms 2).
+ 
+ ### Escape Pods
+ 
+@@ -467,7 +489,7 @@
+ 
+ - Basic Action: discard 1 Action card (Careful Movement: 2).
+ - Action card: discard the card + its printed cost in extra cards.
+-- Room Action: discard 2 Action cards (not in Combat; not in a Malfunctioning Room).
++- Room Action: discard 2 Action cards **while in that Room**, out of Combat and without a Malfunction there (unless an explicit special ability overrides location).
+ - Item Action: discard the printed number of cards ("One Use Only" Items are also discarded).
+ - Contamination cards can never pay costs.
+ 
+@@ -481,6 +503,8 @@
+ - Intruder kill check: Larva/Egg die at 1 Injury; Creeper/Adult draw 1 card (blood ≤ Injuries = dead); Breeder/Queen draw 2 and add. Retreat arrow on a drawn card = Intruder flees via an Event card's Corridor number.
+ 
+ ### Room Actions (cost 2)
++
++**Common requirements for every Room Action below:** your Character must be **in the Room whose Action you use**, outside Combat, and the Room must have no Malfunction marker. Pay **2 Action cards**. An explicit special ability can permit a different location; otherwise these Actions cannot be used remotely.
+ 
+ **Basic Rooms "1"** (all 11 in every game): 
+ 

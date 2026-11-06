@@ -1,0 +1,5 @@
+# Q46 exact-question scope resolution
+
+The NEW isolated Sol/high/forknone reviewer read the exact case (question, fixedv17key, complete20A/B answers/evidence) and all330 frozen20summarylines, without proposedgrade, prior deduction, otheranswers/history, coordinator reasoning or targetscore. Actual complete inputs and runtime settings are verified. Both answers are correct: they provide all requested icons, persistent effects, with/without-CHOAM contract benefits, public-availability fallback and Faction distinction. Refill is unasked acquisition-maintenance context for this space-icons/effects question. This does not relax the corrected availability predicate or excuse a false volunteered rule.
+
+The coordinator explicitly accepted this Q46-only scope conclusion before21grading. Initial fullgrader partial exports remain in historical-pre-q46-isolated-resolution; its independent202-row report remains unchanged. The other100 assessments per reader remain unchanged. No raw answer, question or key is rewritten. This is not a coordinator full202 review of20. Continue21 on current clarified bytes; do not revert or publish20.

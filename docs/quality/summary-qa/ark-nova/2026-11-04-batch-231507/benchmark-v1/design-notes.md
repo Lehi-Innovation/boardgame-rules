@@ -1,0 +1,1 @@
+Source-first key prepared after reading full packet and existing summary. All expected answers frozen before readers. Quantities on Action cards absent from source PDFs are not invented; Cards questions request the printed-table procedure. PDF diagrams inspected include main pp6,9,11 and glossary p1, FAQ p2. Additional coverage follows the initial series.

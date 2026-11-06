@@ -1,0 +1,41 @@
+{
+  "parent_runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/04/rollout-2026-11-04T23-15-54-01a1aa59-7f47-7aa0-b41e-cdb1bdbea5fa.jsonl",
+  "agents": [
+    {
+      "session_id": "01a1af93-d905-7053-aae4-79ea5b5a8fa7",
+      "runtime_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T23-37-44-01a1af93-d905-7053-aae4-79ea5b5a8fa7.jsonl",
+      "task": "source_continuation_coverage126_required_model",
+      "actual_contexts": [
+        {
+          "model": "gpt-6.1-sol",
+          "effort": "high"
+        }
+      ],
+      "parent_spawn": {
+        "task_name": "source_continuation_coverage126_required_model",
+        "model": "gpt-6.1-sol",
+        "reasoning_effort": "high",
+        "fork_turns": "none"
+      },
+      "executable_tool_calls": [
+        {
+          "name": "exec",
+          "input": "const r=await tools.exec_command({cmd:\"cat /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json\",max_output_tokens:20000});text(r.output)\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python - <<'PY'\\nimport json,hashlib\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json'\\nm=json.load(open(p)); files=dict(m['source_files']);files[m['question_file']]=m['question_sha256'];files[m['key_file']]=m['key_sha256'];files[m['author_coverage_map']]=m['author_coverage_map_sha256'];files.update(m['accepted_scope_files'])\\nfor f,h in files.items(): print(hashlib.sha256(open(f,'rb').read()).hexdigest()==h, f)\\nfor name in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[name])); print(name,type(d).__name__, (list(d)[:10] if isinstance(d,dict) else len(d))); print(str(d)[:3000])\\nfor f in m['accepted_scope_files']: print(open(f).read())\\nPY\",\"max_output_tokens\":6000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,hashlib\\np='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/coverage126-required-model-input-manifest.json'\\nm=json.load(open(p)); files=dict(m['source_files']);files[m['question_file']]=m['question_sha256'];files[m['key_file']]=m['key_sha256'];files[m['author_coverage_map']]=m['author_coverage_map_sha256'];files.update(m['accepted_scope_files'])\\nfor f,h in files.items(): print(hashlib.sha256(open(f,'rb').read()).hexdigest()==h, f)\\nfor name in ['question_file','key_file','author_coverage_map']:\\n d=json.load(open(m[name])); print(name,type(d).__name__, (list(d)[:10] if isinstance(d,dict) else len(d))); print(str(d)[:3000])\\nfor f in m['accepted_scope_files']: print(open(f).read())\\nPY\",\"max_output_tokens\":8000}))\n"
+        },
+        {
+          "name": "exec",
+          "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nb='/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/'\\nq=json.load(open(b+'benchmark-v16/questions.json'))['questions']; a=json.load(open(b+'benchmark-v16/answer-key.json'))['answers']\\nfor x,y in zip(q,a):\\n print(x['id'],x['question']); print('KEY:',y['expected_answer'])\\nPY\",\"max_output_tokens\":30000}))\n"
+        }
+      ]
+    }
+  ],
+  "limit": "Task bodies are encrypted; no claim to recover delivered prompts. Context isolation is prompt-based, not OS enforcement."
+}

@@ -1,0 +1,672 @@
+{
+  "benchmark_version": "benchmark-v1",
+  "grading_standard": "Retain every predetermined material fact; no relaxed target after repeated failures.",
+  "readers": {
+    "a": {
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "For 2, 3 and 4 players, how many starting Player cards does each receive, which cards are excluded before dealing, and where do pawns start?",
+          "expected_answer": "2 players: 4 each; 3: 3 each; 4: 2 each. Remove Epidemic cards before shuffling/dealing City and Event cards. All chosen role pawns start in Atlanta.",
+          "material_facts": [
+            "2 players: 4 each; 3: 3 each; 4: 2 each.",
+            "Remove Epidemic cards before shuffling/dealing City and Event cards.",
+            "All chosen role pawns start in Atlanta."
+          ],
+          "source_references": "extraction 108\u2013128; matching PDF p2 setup table",
+          "observed_answer": "Deal 4 Player cards to each player with 2 players, 3 each with 3 players, and 2 each with 4 players. Remove the Epidemic cards before shuffling and dealing; pawns start in Atlanta.",
+          "reader_evidence": "Setup: Deal Player cards; Deal roles.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Describe initial infection: marker position, cities and cubes in each group, and destinations of the revealed and remaining Infection cards.",
+          "expected_answer": "Marker at leftmost 2. Reveal three cities with 3 matching cubes each, three with 2 each, three with 1 each (18 cubes). Nine revealed cards face up in Infection Discard Pile; remaining form Infection Deck.",
+          "material_facts": [
+            "Marker at leftmost 2.",
+            "Reveal three cities with 3 matching cubes each, three with 2 each, three with 1 each (18 cubes).",
+            "Nine revealed cards face up in Infection Discard Pile; remaining form Infection Deck."
+          ],
+          "source_references": "extraction 202\u2013209",
+          "observed_answer": "Put the Infection Rate marker on the leftmost 2 space. Reveal 3 Infection cards and place 3 matching-color cubes in each named city; reveal 3 more and place 2 in each; reveal 3 more and place 1 in each. Put all 9 revealed cards on the Infection Discard Pile; the remaining cards form the Infection Deck.",
+          "reader_evidence": "Setup, step 8: Infect initial cities.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "How is the Player Deck prepared for Introductory, Standard and Heroic difficulty, including uneven piles and unused Epidemic cards?",
+          "expected_answer": "Use 4, 5, 6 Epidemics respectively; remove unused Epidemics from game. Divide remaining Player cards into that many roughly equal face-down piles; shuffle one Epidemic into each. Stack with smaller piles on bottom.",
+          "material_facts": [
+            "Use 4, 5, 6 Epidemics respectively; remove unused Epidemics from game.",
+            "Divide remaining Player cards into that many roughly equal face-down piles; shuffle one Epidemic into each.",
+            "Stack with smaller piles on bottom."
+          ],
+          "source_references": "extraction 179\u2013185",
+          "observed_answer": "Use 4 Epidemic cards for Introductory, 5 for Standard, or 6 for Heroic; remove unused Epidemic cards from the game. Divide the remaining Player cards into that many face-down piles, as equal in size as possible, shuffle one Epidemic into each pile, then stack them with smaller piles on the bottom.",
+          "reader_evidence": "Setup, step 7: Prepare the Player Deck.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "How many actions may you take, may you repeat or stop early, where do discarded action cards go, and what phases follow before whose turn?",
+          "expected_answer": "Up to 4; repeats allowed and fewer than 4 allowed. Discard action cards to Player Discard Pile. Draw 2 Player cards, then Infect Cities, then player on left.",
+          "material_facts": [
+            "Up to 4; repeats allowed and fewer than 4 allowed.",
+            "Discard action cards to Player Discard Pile.",
+            "Draw 2 Player cards, then Infect Cities, then player on left."
+          ],
+          "source_references": "extraction 189\u2013195,285\u2013290",
+          "observed_answer": "Take up to 4 actions; actions may be repeated and you may stop early. Cards discarded to pay action costs go to the Player Discard Pile. Then draw 2 Player cards together (resolve Epidemics first, then get down to the 7-card limit), then Infect Cities. After all three phases, play passes to the left.",
+          "reader_evidence": "Turn Structure; Actions.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "State the requirements and card costs for Drive/Ferry, Direct Flight, Charter Flight and Shuttle Flight, including a white line crossing the board edge.",
+          "expected_answer": "Drive/Ferry follows a white line; edge lines wrap (Sydney\u2013Los Angeles). Direct: discard destination City card. Charter: discard departure/current City card to go anywhere. Shuttle: both departure and destination have research stations; no card discard.",
+          "material_facts": [
+            "Drive/Ferry follows a white line; edge lines wrap (Sydney\u2013Los Angeles).",
+            "Direct: discard destination City card.",
+            "Charter: discard departure/current City card to go anywhere.",
+            "Shuttle: both departure and destination have research stations; no card discard."
+          ],
+          "source_references": "extraction 280\u2013296; matching PDF p4 movement text",
+          "observed_answer": "Drive/Ferry moves to a city connected by a white line and costs no card. Direct Flight discards the City card for the destination. Charter Flight discards the City card matching the city you are in to move anywhere. Shuttle Flight moves from a city with a research station to any other city with a research station and costs no card. White lines going off one board edge wrap to the other edge.",
+          "reader_evidence": "Actions: Movement Actions; Special Rules & Edge Cases: Board wrapping.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "How do you build a research station normally, and what happens if all six are on the board or the box supplied extras?",
+          "expected_answer": "Discard matching current-city card and place station in current city. Normally take from supply; if six built relocate a station from anywhere on board. Set extras beyond six aside during setup.",
+          "material_facts": [
+            "Discard matching current-city card and place station in current city.",
+            "Normally take from supply; if six built relocate a station from anywhere on board.",
+            "Set extras beyond six aside during setup."
+          ],
+          "source_references": "extraction 298\u2013302,328\u2013329",
+          "observed_answer": "Normally, discard the City card matching your current city, take a research station from the supply, and place it there. If all six are built, relocate one from anywhere on the board. If the box supplied more than six, set the extras aside during setup.",
+          "reader_evidence": "Actions: Build a Research Station; Special Rules & Edge Cases: Research station limit and extras.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "A non-Medic is in a city with two cured disease colors and an uncured color. What does one Treat Disease action remove, how are the other colors cleared, and where do removed cubes go?",
+          "expected_answer": "One action removes one cube of a chosen uncured color or all cubes of one chosen cured color. Separate Treat Disease action per cured color; one action does not clear multiple colors. Removed cubes return to cube supply.",
+          "material_facts": [
+            "One action removes one cube of a chosen uncured color or all cubes of one chosen cured color.",
+            "Separate Treat Disease action per cured color; one action does not clear multiple colors.",
+            "Removed cubes return to cube supply."
+          ],
+          "source_references": "extraction 303\u2013307,325\u2013327",
+          "observed_answer": "One Treat Disease action removes all cubes of one chosen cured color from the city; it does not also clear another color. Treat each different color with a separate action. The uncured color is treated one cube at a time, also with a separate action per cube. Removed cubes return to the cube supply.",
+          "reader_evidence": "Actions: Treat Disease; Cure Procedure; Eradication.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "How is a cure discovered, may the research-station city have a different color, what happens to existing cubes, and what if no cubes of that color are on the board?",
+          "expected_answer": "At any research station discard 5 same-color City cards; city color irrelevant. Move cure marker to corresponding indicator; existing cubes remain and cured disease may still infect. If no cubes on board at cure discovery it is immediately eradicated; flip marker.",
+          "material_facts": [
+            "At any research station discard 5 same-color City cards; city color irrelevant.",
+            "Move cure marker to corresponding indicator; existing cubes remain and cured disease may still infect.",
+            "If no cubes on board at cure discovery it is immediately eradicated; flip marker."
+          ],
+          "source_references": "extraction 318\u2013323,343\u2013347,555\u2013556",
+          "observed_answer": "At any research station, discard 5 City cards of the disease color (4 for the Scientist) and move that disease's cure marker to its Cure Indicator. The station city's color need not match. Existing cubes remain on the board; if no cubes of that color are on the board when the cure is discovered, eradicate it immediately and flip the marker.",
+          "reader_evidence": "Actions: Discover a Cure; Cure Procedure.",
+          "grade": "partial",
+          "reason": "Cure-marker movement and all directly named parts resolved, but fixed material fact that cured disease may still infect is omitted in this answer. No borrowing from Q15 to fill it.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "For normal Share Knowledge, which card may move, where must both players be, whose agreement is required, and what if the recipient reaches eight cards?",
+          "expected_answer": "Give or take City card matching shared current city; both players there and both agree. Recipient immediately discards a card or plays an Event to return to seven.",
+          "material_facts": [
+            "Give or take City card matching shared current city; both players there and both agree.",
+            "Recipient immediately discards a card or plays an Event to return to seven."
+          ],
+          "source_references": "extraction 310\u2013317,557\u2013562",
+          "observed_answer": "Normally, give or take the City card matching the city where both players are. Both players must agree. If the recipient exceeds 7 cards, they must immediately discard or play an Event card until within the limit.",
+          "reader_evidence": "Actions: Share Knowledge; Hand Limit.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "How does the Researcher change Share Knowledge, on whose turn can it happen, and may another player give the Researcher an arbitrary nonmatching City card using that exception?",
+          "expected_answer": "Researcher may give any City card from her hand to a player in same city. Can occur on either player\u2019s turn through Share Knowledge. Exception is only from Researcher\u2019s hand, not arbitrary transfers to her.",
+          "material_facts": [
+            "Researcher may give any City card from her hand to a player in same city.",
+            "Can occur on either player\u2019s turn through Share Knowledge.",
+            "Exception is only from Researcher\u2019s hand, not arbitrary transfers to her."
+          ],
+          "source_references": "extraction 664\u2013674",
+          "observed_answer": "When sharing knowledge, the Researcher may give any City card, rather than only the matching-city card, to a player in the same city. This transfer from the Researcher's hand may happen on either player's turn. The exception does not let another player give an arbitrary nonmatching card to the Researcher.",
+          "reader_evidence": "Roles: Researcher; Special Rules & Edge Cases: Researcher exception.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "After actions, exactly when do you lose for insufficient Player cards; are the two drawn together, and can discards be reshuffled?",
+          "expected_answer": "Draw top two together. If fewer than two as about to draw, lose immediately. Do not reshuffle discards.",
+          "material_facts": [
+            "Draw top two together.",
+            "If fewer than two as about to draw, lose immediately.",
+            "Do not reshuffle discards."
+          ],
+          "source_references": "extraction 430\u2013435",
+          "observed_answer": "After actions, draw the top 2 Player cards together. If fewer than 2 cards remain when you need to draw, the game ends and the players lose. Discards are not reshuffled.",
+          "reader_evidence": "Drawing Player Cards.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "Resolve an Epidemic whose bottom Infection card names a city already holding two cubes of that color: give all steps, cube placements/outbreak, card destinations, and replacement draw rule.",
+          "expected_answer": "Increase marker one space. Draw bottom Infection card; add one cube to reach three then outbreak (unless eradicated/protected); discard Infection card. Shuffle only Infection Discard Pile onto top of existing Infection Deck. Remove resolved Epidemic from game; no replacement.",
+          "material_facts": [
+            "Increase marker one space.",
+            "Draw bottom Infection card; add one cube to reach three then outbreak (unless eradicated/protected); discard Infection card.",
+            "Shuffle only Infection Discard Pile onto top of existing Infection Deck.",
+            "Remove resolved Epidemic from game; no replacement."
+          ],
+          "source_references": "extraction 436\u2013460",
+          "observed_answer": "Resolve the Epidemic in order: Increase the Infection Rate marker by one space; Infect by drawing the bottom Infection card. For a non-eradicated disease, place 3 cubes in its city, but with two already there add only one to reach 3, then an outbreak occurs. Resolve the outbreak, then discard that Infection card to the Infection Discard Pile. Intensify by reshuffling only the Infection Discard Pile and placing it on top of the Infection Deck. Remove the resolved Epidemic card from the game; do not draw a replacement.",
+          "reader_evidence": "Epidemic Cards; Outbreaks.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "Starting before any Epidemics, give the number of Infection cards flipped after 0, 1, 2, 3, 4, 5 and 6 Epidemics.",
+          "expected_answer": "2, 2, 2, 3, 3, 4, 4.",
+          "material_facts": [
+            "2, 2, 2, 3, 3, 4, 4."
+          ],
+          "source_references": "matching PDF p3 Infection Rate Track diagram (seven spaces 2,2,2,3,3,4,4); extraction 399\u2013403,439\u2013440",
+          "observed_answer": "After 0, 1, 2, 3, 4, 5, and 6 Epidemics, flip 2, 2, 2, 3, 3, 4, and 4 Infection cards per turn, respectively.",
+          "reader_evidence": "Player Reference: Infection Rate Track.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "If both drawn Player cards are Epidemics, how are they sequenced, when can an Event be used between them, and when is an over-limit hand reduced relative to drawn Epidemics?",
+          "expected_answer": "Resolve all three steps of first then all three of second. Events allowed after first resolves, before second. Resolve drawn Epidemics before reducing over-seven hand.",
+          "material_facts": [
+            "Resolve all three steps of first then all three of second.",
+            "Events allowed after first resolves, before second.",
+            "Resolve drawn Epidemics before reducing over-seven hand."
+          ],
+          "source_references": "extraction 457\u2013464,522\u2013523",
+          "observed_answer": "Resolve all three steps of the first Epidemic, then all three steps of the second; Events may be played between the two. After resolving all Epidemics drawn, enforce the 7-card hand limit. The summary says Events cannot be played between drawing and resolving a card.",
+          "reader_evidence": "Epidemic Cards; Hand Limit.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "During normal Infect Cities, which deck end and how many cards are used, how is each resolved for a normal, eradicated, or cured-but-not-eradicated disease, and where does the card go?",
+          "expected_answer": "Top cards equal current infection rate; resolve one at a time. Add one matching cube; if already three trigger outbreak instead of fourth. Eradicated: no cube; cured but not eradicated still infects normally. Discard each to Infection Discard Pile.",
+          "material_facts": [
+            "Top cards equal current infection rate; resolve one at a time.",
+            "Add one matching cube; if already three trigger outbreak instead of fourth.",
+            "Eradicated: no cube; cured but not eradicated still infects normally.",
+            "Discard each to Infection Discard Pile."
+          ],
+          "source_references": "extraction 399\u2013407,423\u2013429",
+          "observed_answer": "Flip Infection cards from the top of the Infection Deck, one at a time, equal to the current infection rate. For each named city, place 1 matching-color cube unless that disease is eradicated; if the city already has 3 of that color, place no fourth cube and cause an outbreak. A cured but not eradicated disease can still infect. Discard each Infection card to the Infection Discard Pile.",
+          "reader_evidence": "Infecting Cities; Cure Procedure.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "An outbreak spreads to a connected city already holding three cubes of that color. Describe timing, outbreak-marker movements, return spread into the first city, and whether different colors share a single three-cube cap.",
+          "expected_answer": "Advance marker for initial outbreak and place one same-color cube on every connected city. At saturated neighbor do not add fourth; resolve chain outbreak after current outbreak, advancing marker again. Do not add cube to cities already outbreaked during this Infection card resolution. Up to three of EACH color, not three total.",
+          "material_facts": [
+            "Advance marker for initial outbreak and place one same-color cube on every connected city.",
+            "At saturated neighbor do not add fourth; resolve chain outbreak after current outbreak, advancing marker again.",
+            "Do not add cube to cities already outbreaked during this Infection card resolution.",
+            "Up to three of EACH color, not three total."
+          ],
+          "source_references": "extraction 479\u2013492",
+          "observed_answer": "The first outbreak resolves by advancing the Outbreaks marker and spreading one cube to every connected city. If a connected city already has 3 of that color, a chain outbreak occurs there after the current outbreak resolves, advancing the marker again and spreading from that city. Do not add cubes to cities that already had an outbreak during this Infection card, so spread does not return into the first city if it already outbreaked. Each color can have up to 3 cubes in a city; different colors have separate caps.",
+          "reader_evidence": "Outbreaks.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "An Infection card has just been drawn and would cause an outbreak. Can Airlift move the Quarantine Specialist before that outbreak? When may it be played before the next card, who chooses its use, what action cost applies, and where is the played Event discarded?",
+          "expected_answer": "Cannot play between drawing and resolving card; must resolve outbreak first. Can play after outbreak before next Infection card, on any player\u2019s turn. Event player decides use; no action cost. Normal played Event goes to Player Discard Pile.",
+          "material_facts": [
+            "Cannot play between drawing and resolving card; must resolve outbreak first.",
+            "Can play after outbreak before next Infection card, on any player\u2019s turn.",
+            "Event player decides use; no action cost.",
+            "Normal played Event goes to Player Discard Pile."
+          ],
+          "source_references": "extraction 496\u2013507",
+          "observed_answer": "No. Once the Infection card has been drawn, it cannot be interrupted with Airlift before resolving the outbreak; Events cannot be played between drawing and resolving a card. Airlift may be played after that card resolves and before the next Infection card is drawn. Any player may play it, and the player who plays it chooses its use; it moves any one pawn to any city (get permission for another player's pawn). It costs no action, and the Event is discarded to the Player Discard Pile.",
+          "reader_evidence": "Event Cards; Actions (Events are not actions); Infecting Cities.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "How can the Contingency Planner recover an Event: action cost, eligible discard depth, storage capacity, hand-limit treatment and destination after play?",
+          "expected_answer": "As one action take any Event from anywhere in Player Discard Pile onto Role card. Only one stored at a time; not in hand/does not count toward hand limit. After stored Event played remove from game instead of discard.",
+          "material_facts": [
+            "As one action take any Event from anywhere in Player Discard Pile onto Role card.",
+            "Only one stored at a time; not in hand/does not count toward hand limit.",
+            "After stored Event played remove from game instead of discard."
+          ],
+          "source_references": "extraction 582\u2013595",
+          "observed_answer": "As an action, the Contingency Planner takes one Event card from anywhere in the Player Discard Pile and stores it on the Role card. Capacity is one, and it does not count against the hand limit. When played, remove it from the game instead of discarding it.",
+          "reader_evidence": "Roles: Contingency Planner.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "For the Dispatcher, state both movement options and permission, whose cards pay Direct/Charter Flights and which city a Charter card matches, whether they may direct another pawn to Treat, and whether they can use Operations Expert\u2019s special move.",
+          "expected_answer": "As action move any pawn to city with another pawn OR move another pawn as own; owner permission required for another pawn. Dispatcher hand pays Direct/Charter; Charter matches moved pawn\u2019s departure city. Cannot direct nonmovement actions such as Treat. Cannot use Operations Expert special move when moving that pawn.",
+          "material_facts": [
+            "As action move any pawn to city with another pawn OR move another pawn as own; owner permission required for another pawn.",
+            "Dispatcher hand pays Direct/Charter; Charter matches moved pawn\u2019s departure city.",
+            "Cannot direct nonmovement actions such as Treat.",
+            "Cannot use Operations Expert special move when moving that pawn."
+          ],
+          "source_references": "extraction 599\u2013612,676\u2013680",
+          "observed_answer": "As an action, the Dispatcher may move any pawn (with its owner's permission) to a city with another pawn, or move another player's pawn as if it were their own. Direct/Charter Flight discards come from the Dispatcher's hand; the Charter card matches the moved pawn's departure city. The Dispatcher cannot direct another pawn to Treat Disease or take another nonmovement action, and cannot use the Operations Expert's special move.",
+          "reader_evidence": "Roles: Dispatcher.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "What wins immediately, must diseases be eradicated or the board clear, and what are the three exact loss triggers including cube-supply timing?",
+          "expected_answer": "Discover all four cures: immediate win regardless of remaining cubes; eradication unnecessary. Lose at eighth outbreak/last outbreak-track space. Lose immediately when cannot place cubes actually needed of required color during epidemic, outbreak or infection. Lose when unable to draw two Player cards after actions, not merely when deck becomes empty.",
+          "material_facts": [
+            "Discover all four cures: immediate win regardless of remaining cubes; eradication unnecessary.",
+            "Lose at eighth outbreak/last outbreak-track space.",
+            "Lose immediately when cannot place cubes actually needed of required color during epidemic, outbreak or infection.",
+            "Lose when unable to draw two Player cards after actions, not merely when deck becomes empty."
+          ],
+          "source_references": "extraction 447\u2013451,491\u2013492,515\u2013530",
+          "observed_answer": "Players win immediately when cures for all 4 diseases are discovered; eradication and a clear board are not required. They lose if the Outbreaks marker reaches the last space (the 8th outbreak), if they cannot place the required disease cubes because a color's supply is exhausted (during an epidemic, outbreak, or infection), or if a player cannot draw 2 Player cards after their actions because fewer than 2 remain.",
+          "reader_evidence": "Scoring / Victory Conditions: Victory and Defeat; Drawing Player Cards.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        }
+      ],
+      "totals": {
+        "correct": 19,
+        "partial": 1,
+        "incorrect": 0
+      }
+    },
+    "b": {
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "For 2, 3 and 4 players, how many starting Player cards does each receive, which cards are excluded before dealing, and where do pawns start?",
+          "expected_answer": "2 players: 4 each; 3: 3 each; 4: 2 each. Remove Epidemic cards before shuffling/dealing City and Event cards. All chosen role pawns start in Atlanta.",
+          "material_facts": [
+            "2 players: 4 each; 3: 3 each; 4: 2 each.",
+            "Remove Epidemic cards before shuffling/dealing City and Event cards.",
+            "All chosen role pawns start in Atlanta."
+          ],
+          "source_references": "extraction 108\u2013128; matching PDF p2 setup table",
+          "observed_answer": "Starting cards: 2 players get 4 each, 3 players get 3 each, and 4 players get 2 each. Remove and set aside Epidemic cards before shuffling/dealing the remaining City and Event cards. Each player's pawn starts in Atlanta.",
+          "reader_evidence": "Setup, steps 5\u20136: unused roles/pawns are removed; Epidemic cards are removed before dealing; starting-card table; matching pawns are placed in Atlanta.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Describe initial infection: marker position, cities and cubes in each group, and destinations of the revealed and remaining Infection cards.",
+          "expected_answer": "Marker at leftmost 2. Reveal three cities with 3 matching cubes each, three with 2 each, three with 1 each (18 cubes). Nine revealed cards face up in Infection Discard Pile; remaining form Infection Deck.",
+          "material_facts": [
+            "Marker at leftmost 2.",
+            "Reveal three cities with 3 matching cubes each, three with 2 each, three with 1 each (18 cubes).",
+            "Nine revealed cards face up in Infection Discard Pile; remaining form Infection Deck."
+          ],
+          "source_references": "extraction 202\u2013209",
+          "observed_answer": "Put the Infection Rate marker on the leftmost 2 space. Flip 3 Infection cards and put 3 matching cubes on each named city; flip 3 more and put 2 on each; flip 3 more and put 1 on each. Put all nine revealed cards on the Infection Discard Pile; the remaining cards form the Infection Deck.",
+          "reader_evidence": "Setup, step 8: marker on leftmost 2; three groups of three cards with 3, 2, and 1 cubes; revealed cards go to discard and remaining cards form deck.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "How is the Player Deck prepared for Introductory, Standard and Heroic difficulty, including uneven piles and unused Epidemic cards?",
+          "expected_answer": "Use 4, 5, 6 Epidemics respectively; remove unused Epidemics from game. Divide remaining Player cards into that many roughly equal face-down piles; shuffle one Epidemic into each. Stack with smaller piles on bottom.",
+          "material_facts": [
+            "Use 4, 5, 6 Epidemics respectively; remove unused Epidemics from game.",
+            "Divide remaining Player cards into that many roughly equal face-down piles; shuffle one Epidemic into each.",
+            "Stack with smaller piles on bottom."
+          ],
+          "source_references": "extraction 179\u2013185",
+          "observed_answer": "Use 4 Epidemic cards for Introductory, 5 for Standard, or 6 for Heroic; remove unused Epidemic cards from the game. Divide the remaining Player cards into that many face-down piles, as equal in size as possible, shuffle one Epidemic into each pile, then stack the piles with smaller piles on the bottom.",
+          "reader_evidence": "Setup, step 7: difficulty counts, unused cards removed, piles equal in number to Epidemics and as equal in size as possible; smaller piles go on bottom.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "How many actions may you take, may you repeat or stop early, where do discarded action cards go, and what phases follow before whose turn?",
+          "expected_answer": "Up to 4; repeats allowed and fewer than 4 allowed. Discard action cards to Player Discard Pile. Draw 2 Player cards, then Infect Cities, then player on left.",
+          "material_facts": [
+            "Up to 4; repeats allowed and fewer than 4 allowed.",
+            "Discard action cards to Player Discard Pile.",
+            "Draw 2 Player cards, then Infect Cities, then player on left."
+          ],
+          "source_references": "extraction 189\u2013195,285\u2013290",
+          "observed_answer": "Take up to 4 actions; actions can be repeated and you may stop early. Action-cost cards go to the Player Discard Pile. Then draw 2 Player cards together, resolve any Epidemics and reduce the hand to the limit as needed, then infect cities. After all three phases, play passes to the left.",
+          "reader_evidence": "Turn Structure and Actions: up to 4 actions, repeats/stopping early; action discards to Player Discard Pile; phases are actions, draw, infect; passes left.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "State the requirements and card costs for Drive/Ferry, Direct Flight, Charter Flight and Shuttle Flight, including a white line crossing the board edge.",
+          "expected_answer": "Drive/Ferry follows a white line; edge lines wrap (Sydney\u2013Los Angeles). Direct: discard destination City card. Charter: discard departure/current City card to go anywhere. Shuttle: both departure and destination have research stations; no card discard.",
+          "material_facts": [
+            "Drive/Ferry follows a white line; edge lines wrap (Sydney\u2013Los Angeles).",
+            "Direct: discard destination City card.",
+            "Charter: discard departure/current City card to go anywhere.",
+            "Shuttle: both departure and destination have research stations; no card discard."
+          ],
+          "source_references": "extraction 280\u2013296; matching PDF p4 movement text",
+          "observed_answer": "Drive/Ferry moves to a city connected by a white line and costs no card. Direct Flight discards the City card for the destination. Charter Flight discards the City card for the city you are in and moves to any city. Shuttle Flight requires being at a research station and moves to any other city with a research station. White lines crossing an edge wrap to the other edge of the board.",
+          "reader_evidence": "Movement Actions table and Special Rules & Edge Cases: white-line connected movement; card costs; Shuttle station requirement; board wrapping example.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "How do you build a research station normally, and what happens if all six are on the board or the box supplied extras?",
+          "expected_answer": "Discard matching current-city card and place station in current city. Normally take from supply; if six built relocate a station from anywhere on board. Set extras beyond six aside during setup.",
+          "material_facts": [
+            "Discard matching current-city card and place station in current city.",
+            "Normally take from supply; if six built relocate a station from anywhere on board.",
+            "Set extras beyond six aside during setup."
+          ],
+          "source_references": "extraction 298\u2013302,328\u2013329",
+          "observed_answer": "Normally, discard the City card matching your current city, take a research station from the supply, and place it there. If all six are already built, relocate one from anywhere on the board. If the box supplied more than six, set the extras aside during setup.",
+          "reader_evidence": "Other Actions, Build a Research Station; Special Rules: six-station limit and extras set aside during setup.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "A non-Medic is in a city with two cured disease colors and an uncured color. What does one Treat Disease action remove, how are the other colors cleared, and where do removed cubes go?",
+          "expected_answer": "One action removes one cube of a chosen uncured color or all cubes of one chosen cured color. Separate Treat Disease action per cured color; one action does not clear multiple colors. Removed cubes return to cube supply.",
+          "material_facts": [
+            "One action removes one cube of a chosen uncured color or all cubes of one chosen cured color.",
+            "Separate Treat Disease action per cured color; one action does not clear multiple colors.",
+            "Removed cubes return to cube supply."
+          ],
+          "source_references": "extraction 303\u2013307,325\u2013327",
+          "observed_answer": "A non-Medic's Treat Disease action removes one cube of one chosen color; if that color is cured, it removes all cubes of that color from the city. The other disease colors require separate Treat Disease actions. Removed cubes return to the cube supply.",
+          "reader_evidence": "Other Actions, Treat Disease: one cube, or all of one cured color, and cubes return to the cube supply; it says each different color takes a separate action.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "How is a cure discovered, may the research-station city have a different color, what happens to existing cubes, and what if no cubes of that color are on the board?",
+          "expected_answer": "At any research station discard 5 same-color City cards; city color irrelevant. Move cure marker to corresponding indicator; existing cubes remain and cured disease may still infect. If no cubes on board at cure discovery it is immediately eradicated; flip marker.",
+          "material_facts": [
+            "At any research station discard 5 same-color City cards; city color irrelevant.",
+            "Move cure marker to corresponding indicator; existing cubes remain and cured disease may still infect.",
+            "If no cubes on board at cure discovery it is immediately eradicated; flip marker."
+          ],
+          "source_references": "extraction 318\u2013323,343\u2013347,555\u2013556",
+          "observed_answer": "At any research station, discard 5 City cards of the same disease color (4 for the Scientist) and move that disease's cure marker to its Cure Indicator. The station city's color need not match the disease. Existing cubes stay on the board; if none of that color are on the board when the cure is discovered, eradicate it immediately and flip the marker.",
+          "reader_evidence": "Cure Procedure: cost, any research station and no matching station-color requirement, existing cubes remain, and no cubes means immediate eradication.",
+          "grade": "partial",
+          "reason": "Cure-marker movement and all directly named parts resolved, but fixed material fact that cured disease may still infect is omitted in this answer. No borrowing from Q15 to fill it.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "For normal Share Knowledge, which card may move, where must both players be, whose agreement is required, and what if the recipient reaches eight cards?",
+          "expected_answer": "Give or take City card matching shared current city; both players there and both agree. Recipient immediately discards a card or plays an Event to return to seven.",
+          "material_facts": [
+            "Give or take City card matching shared current city; both players there and both agree.",
+            "Recipient immediately discards a card or plays an Event to return to seven."
+          ],
+          "source_references": "extraction 310\u2013317,557\u2013562",
+          "observed_answer": "Normally, the card that moves must match the city both players occupy; either give that card to the other player or take it from them. Both players must agree. If the recipient exceeds 7 cards, they immediately discard or play an Event card.",
+          "reader_evidence": "Share Knowledge action and Hand Limit: matching current-city card, same city, both agree, and immediate limit handling after receiving a card.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "How does the Researcher change Share Knowledge, on whose turn can it happen, and may another player give the Researcher an arbitrary nonmatching City card using that exception?",
+          "expected_answer": "Researcher may give any City card from her hand to a player in same city. Can occur on either player\u2019s turn through Share Knowledge. Exception is only from Researcher\u2019s hand, not arbitrary transfers to her.",
+          "material_facts": [
+            "Researcher may give any City card from her hand to a player in same city.",
+            "Can occur on either player\u2019s turn through Share Knowledge.",
+            "Exception is only from Researcher\u2019s hand, not arbitrary transfers to her."
+          ],
+          "source_references": "extraction 664\u2013674",
+          "observed_answer": "The Researcher may give any City card from their own hand to a player in the same city, on either player's turn. The exception does not let another player give an arbitrary nonmatching City card to the Researcher.",
+          "reader_evidence": "Roles, Researcher: any card can be given by the Researcher, on either player's turn; it explicitly does not permit arbitrary nonmatching cards to be given to the Researcher.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "After actions, exactly when do you lose for insufficient Player cards; are the two drawn together, and can discards be reshuffled?",
+          "expected_answer": "Draw top two together. If fewer than two as about to draw, lose immediately. Do not reshuffle discards.",
+          "material_facts": [
+            "Draw top two together.",
+            "If fewer than two as about to draw, lose immediately.",
+            "Do not reshuffle discards."
+          ],
+          "source_references": "extraction 430\u2013435",
+          "observed_answer": "After actions, draw the top 2 Player cards together. If fewer than 2 cards remain when you need to draw, the players lose; do not reshuffle discards.",
+          "reader_evidence": "Drawing Player Cards: top 2 together; fewer than 2 remaining means loss; discards are not reshuffled.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "Resolve an Epidemic whose bottom Infection card names a city already holding two cubes of that color: give all steps, cube placements/outbreak, card destinations, and replacement draw rule.",
+          "expected_answer": "Increase marker one space. Draw bottom Infection card; add one cube to reach three then outbreak (unless eradicated/protected); discard Infection card. Shuffle only Infection Discard Pile onto top of existing Infection Deck. Remove resolved Epidemic from game; no replacement.",
+          "material_facts": [
+            "Increase marker one space.",
+            "Draw bottom Infection card; add one cube to reach three then outbreak (unless eradicated/protected); discard Infection card.",
+            "Shuffle only Infection Discard Pile onto top of existing Infection Deck.",
+            "Remove resolved Epidemic from game; no replacement."
+          ],
+          "source_references": "extraction 436\u2013460",
+          "observed_answer": "Resolve the Epidemic in order: Increase the Infection Rate marker by one; Infect by drawing the bottom Infection card and placing cubes in its city; Intensify by reshuffling only the Infection Discard Pile and placing it on top of the Infection Deck. For the city with two cubes, add only enough to reach three (one cube), then an outbreak occurs. Discard the Infection card to the Infection Discard Pile before Intensify. Remove the resolved Epidemic card from the game and do not draw a replacement.",
+          "reader_evidence": "Epidemic Cards: three ordered steps; infection with existing cubes adds only enough to reach 3 and then outbreak; card goes to Infection Discard Pile; resolved Epidemics removed with no replacements.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "Starting before any Epidemics, give the number of Infection cards flipped after 0, 1, 2, 3, 4, 5 and 6 Epidemics.",
+          "expected_answer": "2, 2, 2, 3, 3, 4, 4.",
+          "material_facts": [
+            "2, 2, 2, 3, 3, 4, 4."
+          ],
+          "source_references": "matching PDF p3 Infection Rate Track diagram (seven spaces 2,2,2,3,3,4,4); extraction 399\u2013403,439\u2013440",
+          "observed_answer": "The Infection cards flipped after 0, 1, 2, 3, 4, 5, and 6 Epidemics are respectively 2, 2, 2, 3, 3, 4, and 4.",
+          "reader_evidence": "Player Reference, Infection Rate Track: table lists 0\u20136 Epidemics and 2, 2, 2, 3, 3, 4, 4 cards flipped.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "If both drawn Player cards are Epidemics, how are they sequenced, when can an Event be used between them, and when is an over-limit hand reduced relative to drawn Epidemics?",
+          "expected_answer": "Resolve all three steps of first then all three of second. Events allowed after first resolves, before second. Resolve drawn Epidemics before reducing over-seven hand.",
+          "material_facts": [
+            "Resolve all three steps of first then all three of second.",
+            "Events allowed after first resolves, before second.",
+            "Resolve drawn Epidemics before reducing over-seven hand."
+          ],
+          "source_references": "extraction 457\u2013464,522\u2013523",
+          "observed_answer": "Resolve the first Epidemic's Increase, Infect, and Intensify steps fully, then resolve all three steps for the second. Events may be played between the two Epidemics. After resolving all Epidemics drawn, discard or play Events until the hand is within 7 cards.",
+          "reader_evidence": "Epidemic Cards: two Epidemics resolve fully in sequence and Events may be played between them; Drawing Player Cards/Hand Limit: Epidemics resolve before enforcing the hand limit.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "During normal Infect Cities, which deck end and how many cards are used, how is each resolved for a normal, eradicated, or cured-but-not-eradicated disease, and where does the card go?",
+          "expected_answer": "Top cards equal current infection rate; resolve one at a time. Add one matching cube; if already three trigger outbreak instead of fourth. Eradicated: no cube; cured but not eradicated still infects normally. Discard each to Infection Discard Pile.",
+          "material_facts": [
+            "Top cards equal current infection rate; resolve one at a time.",
+            "Add one matching cube; if already three trigger outbreak instead of fourth.",
+            "Eradicated: no cube; cured but not eradicated still infects normally.",
+            "Discard each to Infection Discard Pile."
+          ],
+          "source_references": "extraction 399\u2013407,423\u2013429",
+          "observed_answer": "Flip the top of the Infection Deck, one card at a time, for the current infection rate. For a non-eradicated disease, normally place one matching cube on the named city; if it already has three of that color, place no fourth cube and have an outbreak. For an eradicated disease, place no cube. A cured but not eradicated disease still infects and gets a cube by the normal rule. Discard each Infection card to the Infection Discard Pile.",
+          "reader_evidence": "Infecting Cities: top cards equal to rate, one at a time; eradicated diseases get no cube; a city at three gets an outbreak; each card is discarded. Cure Procedure says cured diseases can still infect until eradicated.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "An outbreak spreads to a connected city already holding three cubes of that color. Describe timing, outbreak-marker movements, return spread into the first city, and whether different colors share a single three-cube cap.",
+          "expected_answer": "Advance marker for initial outbreak and place one same-color cube on every connected city. At saturated neighbor do not add fourth; resolve chain outbreak after current outbreak, advancing marker again. Do not add cube to cities already outbreaked during this Infection card resolution. Up to three of EACH color, not three total.",
+          "material_facts": [
+            "Advance marker for initial outbreak and place one same-color cube on every connected city.",
+            "At saturated neighbor do not add fourth; resolve chain outbreak after current outbreak, advancing marker again.",
+            "Do not add cube to cities already outbreaked during this Infection card resolution.",
+            "Up to three of EACH color, not three total."
+          ],
+          "source_references": "extraction 479\u2013492",
+          "observed_answer": "An outbreak first advances the Outbreaks marker, then spreads one cube to every connected city. If a connected city already has three cubes of that color, its chain outbreak occurs after the current outbreak resolves and advances the marker again. During chain reactions, do not add cubes to a city that already had an outbreak during resolution of this Infection card, so the spread does not return cubes to the first city. Each color has its own three-cube city cap; a city may hold multiple colors, up to three cubes of each.",
+          "reader_evidence": "Outbreaks: marker then spread; chain reaction after current outbreak; no cubes added to cities already outbroken during the current card; cities can have up to 3 of each color.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "An Infection card has just been drawn and would cause an outbreak. Can Airlift move the Quarantine Specialist before that outbreak? When may it be played before the next card, who chooses its use, what action cost applies, and where is the played Event discarded?",
+          "expected_answer": "Cannot play between drawing and resolving card; must resolve outbreak first. Can play after outbreak before next Infection card, on any player\u2019s turn. Event player decides use; no action cost. Normal played Event goes to Player Discard Pile.",
+          "material_facts": [
+            "Cannot play between drawing and resolving card; must resolve outbreak first.",
+            "Can play after outbreak before next Infection card, on any player\u2019s turn.",
+            "Event player decides use; no action cost.",
+            "Normal played Event goes to Player Discard Pile."
+          ],
+          "source_references": "extraction 496\u2013507",
+          "observed_answer": "No. Airlift cannot move the Quarantine Specialist between drawing an Infection card and resolving it, because Events cannot be played between drawing and resolving a card. After that card is resolved, Airlift can be played before the next Infection card; any player may play it, and its player chooses its use. It is not an action, and the player playing it decides where to move the pawn (permission is required for another player's pawn). Discard the Event to the Player Discard Pile.",
+          "reader_evidence": "Event Cards: any player may play Events at any time except between drawing and resolving a card; player chooses use; Airlift permission; Events are not actions and go to Player Discard Pile.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "How can the Contingency Planner recover an Event: action cost, eligible discard depth, storage capacity, hand-limit treatment and destination after play?",
+          "expected_answer": "As one action take any Event from anywhere in Player Discard Pile onto Role card. Only one stored at a time; not in hand/does not count toward hand limit. After stored Event played remove from game instead of discard.",
+          "material_facts": [
+            "As one action take any Event from anywhere in Player Discard Pile onto Role card.",
+            "Only one stored at a time; not in hand/does not count toward hand limit.",
+            "After stored Event played remove from game instead of discard."
+          ],
+          "source_references": "extraction 582\u2013595",
+          "observed_answer": "As an action, the Contingency Planner takes one Event card from anywhere in the Player Discard Pile and stores it on the Role card. Only one can be stored, and it does not count toward the hand limit. When played, remove it from the game instead of discarding it.",
+          "reader_evidence": "Roles, Contingency Planner: action cost, anywhere in Player Discard Pile, one-card capacity, excluded from hand limit, and remove from game when played.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "For the Dispatcher, state both movement options and permission, whose cards pay Direct/Charter Flights and which city a Charter card matches, whether they may direct another pawn to Treat, and whether they can use Operations Expert\u2019s special move.",
+          "expected_answer": "As action move any pawn to city with another pawn OR move another pawn as own; owner permission required for another pawn. Dispatcher hand pays Direct/Charter; Charter matches moved pawn\u2019s departure city. Cannot direct nonmovement actions such as Treat. Cannot use Operations Expert special move when moving that pawn.",
+          "material_facts": [
+            "As action move any pawn to city with another pawn OR move another pawn as own; owner permission required for another pawn.",
+            "Dispatcher hand pays Direct/Charter; Charter matches moved pawn\u2019s departure city.",
+            "Cannot direct nonmovement actions such as Treat.",
+            "Cannot use Operations Expert special move when moving that pawn."
+          ],
+          "source_references": "extraction 599\u2013612,676\u2013680",
+          "observed_answer": "As an action, the Dispatcher may move any pawn (with its owner's permission) to a city with another pawn, or move another player's pawn as if it were their own. Direct/Charter Flight cards come from the Dispatcher's hand; for a Charter Flight the card matches the moved pawn's departure city, not the Dispatcher's location. The Dispatcher may not direct another pawn to Treat Disease or take other nonmovement actions, and cannot use the Operations Expert's special move.",
+          "reader_evidence": "Roles, Dispatcher: both movement options, permission, restrictions on directing other pawns, card payer and Charter matching city, and Operations Expert restriction.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "What wins immediately, must diseases be eradicated or the board clear, and what are the three exact loss triggers including cube-supply timing?",
+          "expected_answer": "Discover all four cures: immediate win regardless of remaining cubes; eradication unnecessary. Lose at eighth outbreak/last outbreak-track space. Lose immediately when cannot place cubes actually needed of required color during epidemic, outbreak or infection. Lose when unable to draw two Player cards after actions, not merely when deck becomes empty.",
+          "material_facts": [
+            "Discover all four cures: immediate win regardless of remaining cubes; eradication unnecessary.",
+            "Lose at eighth outbreak/last outbreak-track space.",
+            "Lose immediately when cannot place cubes actually needed of required color during epidemic, outbreak or infection.",
+            "Lose when unable to draw two Player cards after actions, not merely when deck becomes empty."
+          ],
+          "source_references": "extraction 447\u2013451,491\u2013492,515\u2013530",
+          "observed_answer": "Players win immediately when cures for all four diseases are discovered; eradication and a clear board are not required. They lose if the Outbreaks marker reaches the last space (the 8th outbreak), if a required disease cube cannot be placed because that color's supply is exhausted, or if a player cannot draw 2 Player cards after their actions. Cube-supply failure during an epidemic, outbreak, or infection causes an immediate loss.",
+          "reader_evidence": "Victory and Defeat: all four cures win immediately without eradication; three loss triggers; Special Rules says cube-supply inability during epidemic, outbreak, or infection loses immediately.",
+          "grade": "correct",
+          "reason": "All requested material facts match source-backed fixed key; equivalent wording accepted.",
+          "unsupported_guess": false
+        }
+      ],
+      "totals": {
+        "correct": 19,
+        "partial": 1,
+        "incorrect": 0
+      }
+    }
+  }
+}

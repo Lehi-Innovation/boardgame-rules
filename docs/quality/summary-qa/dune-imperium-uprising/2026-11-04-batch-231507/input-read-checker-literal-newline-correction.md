@@ -1,0 +1,3 @@
+# Literal newline-escape matching correction
+
+Final reader15B Q90 contains literal backslash-n separators in its parsed answer string, while the grader-visible nested JSON output escapes those separators again. The complete22-row answer is visibly present in an untruncated allowed-input read. The checker previously normalized only visible output, then compared an unnormalized raw value, causing a false missing-content flag. It now applies the same escape normalization to both sides. This changes only matching representation, not reader output, key, source facts, grade or read evidence. Original raw literal separators remain preserved; no operational reread or grader feedback was needed.

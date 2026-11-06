@@ -1,0 +1,543 @@
+{
+  "benchmark_version": "seed-v2",
+  "readers": {
+    "a": {
+      "correct": 20,
+      "partial": 0,
+      "incorrect": 0,
+      "unsupported_guesses": 0,
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How many ordinary turns does each player take in the standard 16-round game, and what happens (including service rotation and ongoing tile benefits) on a courtship round?",
+          "expected_answer": "Twelve ordinary turns: four seasons, each three ordinary rounds then a courtship. No player turn, rotation, monument reputation or Servants’ Hall use on courtship; only courtship resolves.",
+          "source_refs": [
+            "pp.16,76; extraction lines 614–629,2898–2903"
+          ],
+          "actual_answer": "Each player takes twelve ordinary turns: the 16 spaces are four seasons of three ordinary rounds plus a courtship. Courtship has no player turns, service rotation, monument income, or Servants’ Hall use.",
+          "reader_evidence": "Overview: ‘each player takes twelve ordinary turns. Courtship is an event, with no player turns, service rotation, monument income or Servants’ Hall use.’",
+          "grade": "correct",
+          "reason": "Twelve ordinary turns and every specified no-turn courtship exclusion correctly stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "State the ordered procedure for hosting an activity, including when round-track events and ongoing effects happen and where used servants, gentry and the tile go at cleanup.",
+          "expected_answer": "Rotate service; resolve round event then ongoing effects; choose activity; invite exact required gentry; provide service; enjoy favours; optional market buy; clear board. Used servants to Expended Service, played gentry to personal discard, tile upgraded if needed and returned to correct tableau column; last player advances marker.",
+          "source_refs": [
+            "pp.17–20; lines 642–796"
+          ],
+          "actual_answer": "Hosting order: (1) move servants from Servants’ Quarters to Available Service, then Expended Service to Servants’ Quarters (each advances one space; do not move expended servants twice); (2) resolve the round-track event, then applicable monument and Servants’ Hall effects in either order; (3) choose an activity tile; (4) invite the exact required gentry; (5) provide required service; (6) take favours, all positive before all negative; (7) optionally buy one improvement; (8) clear: all used servants to Expended Service, played gentry to the personal discard pile, and return the activity tile to its tableau column, flipping/upgrading as required. The last player advances the round marker.",
+          "reader_evidence": "Turn Structure, Hosting an activity steps 1–8: ‘Check round track, then ongoing tiles’; cleanup sends servants to Expended Service, gentry to personal discard, and returns the tile to its tableau column.",
+          "grade": "correct",
+          "reason": "Complete hosting order, event/ongoing priority and used-component cleanup destinations stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "When passing, in what order do you recover servants and gentry, resolve events/ongoing effects, take a passing benefit and buy? What benefits are available in this base-only scope, and may you hire through Butler’s Room as a passing benefit?",
+          "expected_answer": "All servants directly Available; all personal discard gentry to hand; round event then ongoing effects; choose £200 or free market refresh; optional one tile purchase; last player advances marker. Hiring on pass is expansion/optional and excluded here.",
+          "source_refs": [
+            "p.21,30; lines 801–830,1135–1144"
+          ],
+          "actual_answer": "Pass order: all servants directly to Available Service; all gentry in your discard to hand; resolve the round-track event, then ongoing tile effects; choose either £200 or a free Market refresh; optionally buy one tile. Any servant used for an ongoing effect is expended at turn end. Butler’s Room hiring is an activity, not a passing benefit, so you cannot hire through it as a pass benefit.",
+          "reader_evidence": "Passing: ‘all servants directly to Available Service → all gentry in your discard to hand → round-track event, then ongoing tile effects → choose £200 or a free Market refresh → optional one tile purchase’; Butler’s Room hiring is an activity.",
+          "grade": "correct",
+          "reason": "Complete passing order, both base benefits and exclusion of hire-on-pass stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Your reputation is 6.1 after step 2 and you plan a PR6 activity with PR6 guests, but need four Service Help actions that lower your actual reputation to 3.4. Is this legal, which servants can Service Help refresh, and what reputation is used to screen the tile and guests?",
+          "expected_answer": "Legal if four needed servants are in Servants’ Quarters and costs payable. Service Help costs 3 increments each, Quarters to Available only. Screening reputation fixed after step 2 before step 3 is level 6 for tile and guests all turn; later loss does not invalidate.",
+          "source_refs": [
+            "pp.18,27,77; lines 705–724,1057–1062,2922–2932"
+          ],
+          "actual_answer": "Yes. The PR screen is fixed at the end of step 2, before choosing the activity, so reputation level 6.1 is used to check the PR6 tile and guests. The four Service Help actions may then lower actual reputation to 3.4 without invalidating the activity. Each costs three reputation increments and moves one servant from Servants’ Quarters to Available Service; it cannot take a servant directly from Expended Service. The action is legal as described, since special actions may lower actual reputation after screening.",
+          "reader_evidence": "Reputation screening: ‘fixed at the end of step 2, before Choose Activity’ and special actions later ‘may lower actual reputation below those PRs without invalidating the activity.’ Service Help moves one servant from Servants’ Quarters to Available Service.",
+          "grade": "correct",
+          "reason": "Fixed end-step-2 screening and Quarters-only Service Help support legal PR6 plan despite later loss.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "How must positive and negative favours be ordered? At minimum reputation can you take a negative reputation favour first to avoid the loss, and what is required to play a guest with a money penalty?",
+          "expected_answer": "All positive before all negative. Cannot take loss first at minimum; ignore only loss beyond minimum after positives. Must pay money penalty; activity income, VP money or Borrow Money can fund it. If unable to fund full payment cannot play guest.",
+          "source_refs": [
+            "pp.36,76–77; lines 1379–1391,2905–2924"
+          ],
+          "actual_answer": "Resolve all positive favours before all negative favours; choose any order within those groups. At minimum reputation, you cannot take a negative reputation favour first to avoid the loss. A money penalty must be fully payable: use positive money favours, a money VP card, or Borrow Money; if short, borrow if possible, otherwise you cannot play that guest/tile.",
+          "reader_evidence": "Hosting step 6 requires positive favours before negative. Special Rules: ‘You cannot take a negative favour first to shelter it at minimum reputation’; money penalty must be fully payable.",
+          "grade": "correct",
+          "reason": "Positive-before-negative rule and money-penalty funding/illegality conditions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "Give all three special action costs, their per-turn limits and the minimum-reputation restriction. Can service help take a servant straight out of Expended Service?",
+          "expected_answer": "Borrow £100 costs 2 increments, repeatable; Service Help 3 increments per servant Quarters to Available, repeatable; Refresh Market 4 increments, special action once per turn. Need enough reputation; no specials at minimum 1.1. No direct refresh from Expended via Service Help.",
+          "source_refs": [
+            "p.27; lines 1043–1062"
+          ],
+          "actual_answer": "Borrow Money: lose 2 reputation increments, gain £100; repeatable. Service Help: lose 3 increments, move one servant from Servants’ Quarters to Available Service; repeatable. Refresh Market: lose 4 increments and fully refresh the Market; this special action is limited to once per turn. At minimum reputation you cannot take a special action. Service Help cannot take a servant directly from Expended Service.",
+          "reader_evidence": "Special-action table lists all three costs/effects and limits; reputation section says ‘At minimum you cannot ... take a special action.’",
+          "grade": "correct",
+          "reason": "All three action costs, repetition limits, minimum restriction and origin distinction resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "How do you hire with the base Butler’s Room activity, may any gentry attend, where do new hires go, and how does upgrading change the recruiting option?",
+          "expected_answer": "Use available butler/underbutler, no gentry. Take up to two from Servants for Hire except underbutler to Expended Service; used butler also expended and tile upgrades. Upgraded room may instead recruit one common footman/valet/lady’s maid from anywhere on one opponent board to your Expended, never unique servants.",
+          "source_refs": [
+            "pp.29–30,88; lines 1076–1084,1110–1144,3357–3374"
+          ],
+          "actual_answer": "Host the Butler’s Room with an available butler or underbutler and no gentry. Take up to two servants from Servants for Hire, excluding underbutlers, into Expended Service; there is no money fee. On first use, the room upgrades. Its upgraded side instead lets you recruit one common servant (footman, valet, or lady’s maid) from any location on one opponent’s family board into your Expended Service, rather than hiring up to two from the supply. Unique servants cannot be recruited.",
+          "reader_evidence": "Servants and hiring, Butler’s Room: ‘no gentry’; hires up to two non-underbutlers from supply into Expended Service; upgraded room recruits one common servant from an opponent board.",
+          "grade": "correct",
+          "reason": "No-gentry butler activity, up-to-two hire destination and upgraded one-common-servant recruitment fully resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "When may a housekeeper substitute for a lady’s maid, when may a footman substitute for a valet, and can an underbutler substitute while the regular male servant is still available?",
+          "expected_answer": "Housekeeper only no available lady’s maid; footman requires Brushing Room and no available valet. Underbutler may replace butler/valet/footman even if regular available.",
+          "source_refs": [
+            "pp.29–30,88; lines 1091–1105,1117–1134,3351–3356"
+          ],
+          "actual_answer": "A housekeeper may substitute for a lady’s maid only when no lady’s maids are available. With a Brushing Room in your tableau, footmen may substitute for valets only when no valets are available. An underbutler may substitute for any base male servant (butler, valet, or footman), even if that regular type is still available.",
+          "reader_evidence": "Servants and hiring: housekeeper and footman substitutions are conditional on no regular servant being available; underbutler may substitute even when that type remains available.",
+          "grade": "correct",
+          "reason": "Housekeeper/BrushingRoom availability conditions and underbutler unrestricted base-male substitutions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "How can an underbutler be acquired in the base game, when is it available, and can another player recruit it?",
+          "expected_answer": "Only acquire Butler’s Pantry; gain underbutler from supply immediately into Expended Service. Cannot hire with Butler’s Room or hire-servant VP card; unique, cannot be recruited. He is not immediately available: normally Expended to Quarters at the next service rotation, then Available at the second subsequent rotation. A pass or Refresh Service VP card can make him available sooner; once in Quarters, Service Help or the Quarters tile can allow earlier use.",
+          "source_refs": [
+            "pp.29–30,88,105; lines 1097–1105,1140–1143,3351–3356,3973–3977",
+            "pp.17,21,27,30,101,105; lines 647–650,807–808,1057–1058,1111–1116,3840–3842,3967–3971"
+          ],
+          "actual_answer": "The only way to acquire an underbutler is purchasing Butler’s Pantry; take it from supply immediately into Expended Service. It is not immediately available: normally it moves to Servants’ Quarters at your next service rotation, then to Available Service at your second subsequent rotation. Passing or a Refresh Service VP card can make it available earlier; once in Quarters, Service Help or the Servants’ Quarters tile can permit earlier use. Another player cannot recruit it through Butler’s Room or a Hire Servant VP card; those methods exclude underbutlers.",
+          "reader_evidence": "Butler’s Pantry is ‘the only way to acquire an underbutler’; hire methods explicitly exclude underbutlers; the summary gives its Expended-to-Quarters-to-Available timing.",
+          "grade": "correct",
+          "reason": "Pantry-only acquisition, immediate Expended placement, second-rotation availability/earlier refresh, and unique recruitment immunity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "How is a tile’s purchase price calculated in the Market and Reserve, what is the minimum price, and can you buy a tile you already own or one above your reputation?",
+          "expected_answer": "Market space price plus tile modifier; Reserve £300 plus modifier; minimum £100. Cannot acquire duplicates by any means. May purchase above reputation; PR restricts play only.",
+          "source_refs": [
+            "pp.26,40; lines 1005–1010,1524–1546"
+          ],
+          "actual_answer": "In the Market, pay the market-space price plus the tile’s printed price modifier. In Reserve, the base price is £300 plus the modifier. The price cannot be below £100. You may never acquire a duplicate tile you already own, but reputation does not restrict purchasing, so you may buy a tile above your reputation.",
+          "reader_evidence": "Builders’ Market and Reserve: Market-space price plus modifier; Reserve base £300 plus modifier; minimum £100; never acquire a duplicate; PR does not restrict purchasing.",
+          "grade": "correct",
+          "reason": "Both price formulas, floor, duplicate ban and above-reputation acquisition permission resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "When refilling the Market after a purchase, what happens to remaining tiles, a drawn duplicate, a reserve-eligible tile and multiple newly drawn tiles? Does buying just one tile from a duplicate stack cause a refill?",
+          "expected_answer": "Slide remaining left; stack drawn duplicate on match and draw again; qualifying Service/PR1 drawn tile to Reserve and draw again; sort new tiles by ascending sorting number when filling multiple spaces. One remaining duplicate keeps space occupied so no refill.",
+          "source_refs": [
+            "pp.20,41; lines 770–777,1550–1557"
+          ],
+          "actual_answer": "When a Market space empties, slide remaining tiles left and draw replacements into the rightmost spaces. Stack a drawn duplicate on its matching Market tile and draw again; duplicates share one space and its price. If a drawn tile qualifies for Reserve, send it straight to Reserve and draw again. When filling multiple spaces, sort only newly drawn tiles by ascending sorting number. Buying one tile from a two-tile duplicate stack leaves the space occupied, so it causes no refill.",
+          "reader_evidence": "Refill: ‘slide remaining tiles left’; stack duplicates and draw again; Reserve-eligible tiles go straight to Reserve; sort only new tiles. Buying one from a stack leaves an occupied space.",
+          "grade": "correct",
+          "reason": "Old tiles slide; duplicates stack; eligible Reserve routing; new-tile sorting and no-refill stack branch resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "After seasons 1 and 2, which Market tiles move to Reserve, what exception applies, what happens to later draws, and is a full seasonal Market refresh standard here?",
+          "expected_answer": "After season1 all Service except Largest Wine Cellar; after season2 PR1. Later eligible draws go straight Reserve. Full Market refresh after first three courtships standard under compendium/corrigendum; old stable-market aid incomplete.",
+          "source_refs": [
+            "pp.23,40–41; corrigendum p.2; lines 884–920,1524–1531,4569–4572"
+          ],
+          "actual_answer": "After courtship 1, move all Market Service tiles except Largest Wine Cellar to Reserve; later Service draws also go directly there, with that same exception. After courtship 2, also move all Market PR1 tiles to Reserve, and later PR1 draws go there. Largest Wine Cellar never enters Reserve. After each of the first three courtships, fully refresh the Market after Reserve movement: set all Market tiles aside, refill the six spaces under normal rules, then return the set-aside tiles to the bag and mix. This full seasonal refresh is standard in this scope.",
+          "reader_evidence": "Open Reserve and Refresh sections specify post-courtship moves and exceptions; ‘Full refresh occurs after each of the first three courtships’; overview says full seasonal refresh is standard.",
+          "grade": "correct",
+          "reason": "Both Reserve openings, WineCellar exception, future draws and default first-three-season refresh resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "For an ordinary (nonfinal) courtship, how are Fairchilds returned, theme scores and ties handled, and objectives discarded? Which direction does the first-player marker then pass?",
+          "expected_answer": "Return both Fairchilds first. Total current theme-category tile VP including negatives; highest draws VP and chooses one Fairchild to hand. Ties all draw VP and no Fairchild. Each discards one objective face down; shuffle together and bottom objective deck. At season setup first player passes anticlockwise.",
+          "source_refs": [
+            "pp.22–23; lines 835–879,902–909"
+          ],
+          "actual_answer": "At each courtship, first return both Fairchilds to Alderley Hall. In courtships 1–3, score the current theme’s tile VP, including negatives; only the face-up hybrid category counts. The highest score wins one VP card and chooses one Fairchild for hand. On a tie for highest, each tied player draws one VP card and no Fairchild is awarded. Every player discards one secret objective; shuffle the discards together and put them face down on the bottom of the objective deck. After the first three courtships, pass the first-player marker anticlockwise (as part of seasonal upkeep).",
+          "reader_evidence": "Courtship and seasonal upkeep: both Fairchilds return first; current theme score/tie handling, objective discards, and anticlockwise first-player pass are specified.",
+          "grade": "correct",
+          "reason": "Fairchild return, current-theme negatives, winner/tie awards, objective destination and anticlockwise marker resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "How does final courtship differ in scoring and tie resolution, and what last actions are permitted before end-game scoring?",
+          "expected_answer": "Sum tile VP in all four revealed theme categories, repeated categories count repeatedly/double for two. Highest wins Fairchild+VP; tied highest reputation level breaks tie ignoring wheel position; if still tied no Fairchild, tied winners draw VP. After courtship final special actions and VP-card benefits if possible, then scoring.",
+          "source_refs": [
+            "pp.22–24,42; lines 860–870,884–897,1604–1609"
+          ],
+          "actual_answer": "Final courtship scores tile VP across all four revealed themes; repeated categories count each time, including negative VP. The highest gets one VP card and a Fairchild. A tie is broken by highest reputation level, ignoring wheel position; if still tied, no Fairchild is awarded and tied winners draw VP cards under the tie rule. Players discard the final objective, then have a final chance to use special actions and VP cards for benefits where possible before scoring. Only a Fairchild won in final courtship retains its 8 VP for final scoring.",
+          "reader_evidence": "Final courtship section specifies all four themes, tie process, final objective discard, last chance for special actions/VP cards, and Fairchild scoring.",
+          "grade": "correct",
+          "reason": "All-four-theme/repeated-category score, level tiebreak, persistent tie and last actions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "List all end-game VP categories, the points for reputation levels 1–7, wealth rounding, and the complete victory tiebreak sequence.",
+          "expected_answer": "Tiles including negative; gentry in hand/discard incl final Fairchild and negatives; remaining objectives; reputation 1,3,6,10,15,21,28 for levels1–7; servants2 each; £200 per1VP rounded down; unused VP cards. Tie: final Fairchild holder, then highest rep level ignoring position, then shared victory.",
+          "source_refs": [
+            "p.24; lines 926–954"
+          ],
+          "actual_answer": "End-game VP categories: improvement tiles (all face-up printed VP, including negatives and unused tiles); gentry in hand and discard (including negatives, family, and final Fairchild; dismissed guests do not score); fulfilled objectives; reputation; servants (2 VP each); wealth (1 VP per £200, rounded down); and retained unused VP cards (printed VP). Reputation levels 1–7 score 1, 3, 6, 10, 15, 21, and 28 VP, respectively. Victory tiebreaks: player with final Fairchild wins; otherwise highest reputation level wins; otherwise share victory. Wheel position never breaks the game tie.",
+          "reader_evidence": "Final VP table lists scoring categories and reputation values; tiebreak paragraph gives final Fairchild, reputation level, then shared victory.",
+          "grade": "correct",
+          "reason": "Every requested VP source, reputation-level schedule, wealth rounding and complete tiebreak sequence resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "How many objectives do you normally receive and retain for scoring in a standard game, what happens to simultaneous discards, and must tile objectives show upgraded tiles?",
+          "expected_answer": "5 setup+2 Draw Objectives=7; discard1 each of4 courtships leaves3. Shuffle simultaneous face-down discards before bottom deck. Extra objective effects increase final total by1 each. Tile objectives require possession at end, no upgrade required.",
+          "source_refs": [
+            "pp.42,77,106; lines 1592–1623,2935–2940,4000–4001"
+          ],
+          "actual_answer": "Normally each player gets five objectives at setup and two more on round 6. Each player discards one at each of four courtships, leaving three to score; extra objectives from Main Library or a VP card increase the retained final count without an extra discard. Simultaneous discards are shuffled together, then put face down on the bottom of the objective deck. Tile objectives require owning the named tiles at game end, not upgrading them.",
+          "reader_evidence": "Objectives and VP cards: ‘five at setup plus two on round 6’; discard one at each of four courtships, leaving three; simultaneous discards shuffled; tile objective does not require upgraded tiles.",
+          "grade": "correct",
+          "reason": "Five plus two minus four leaves three; simultaneous discards shuffled/bottomed; upgrade not required.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "When can VP cards be used for benefits, where do used cards go, and what happens to retained cards at game end?",
+          "expected_answer": "Immediately on draw or anytime own turn; final chance after final courtship. Reveal and discard to bottom VP deck for benefit; may use several. Retain hidden with objectives and score printed VP if not discarded; no both benefit and VP.",
+          "source_refs": [
+            "pp.22,42; lines 865–871,1592–1609"
+          ],
+          "actual_answer": "A VP card may be used immediately when drawn, at any time on your own later turn (several may be used), and once more after final courtship before scoring. Reveal it and discard it for its benefit; used cards go to the bottom of the VP deck. Retained cards stay hidden with objectives and score their printed VP at game end; you cannot take both benefit and final VP.",
+          "reader_evidence": "Objectives and VP cards section gives use timing, bottom-deck destination, retained-card scoring, and the mutually exclusive benefit/VP choice.",
+          "grade": "correct",
+          "reason": "All VP-card use windows, bottom-deck destination, retained scoring and benefit/VP exclusivity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Explain the mandatory flip rules for a normal activity tile, an already-upgraded tile, a hybrid, and a tile that upgrades into an ongoing monument. Which category counts for a hybrid at courtship and for objectives?",
+          "expected_answer": "First use normal tile flips to upgrade at cleanup, mandatory; upgraded stays. Hybrid flips each use and moves correct category, starts underlined hybrid icon side. Activity-to-monument flips after first use and never hosts again. Only currently face-up hybrid category counts.",
+          "source_refs": [
+            "pp.20,39; lines 785–793,1473–1505"
+          ],
+          "actual_answer": "A normal activity tile must flip to its rose/upgrade side after its first use; an already-upgraded normal tile remains on that side after later uses. A hybrid starts with its underlined category icon showing, flips after every use, and moves to the newly face-up category. An activity tile that upgrades into an ongoing monument hosts its front-side activity once, then upgrades and cannot host again; its monument benefit begins on later turns. Only the currently face-up hybrid category counts for courtship and objectives.",
+          "reader_evidence": "Improvements and ongoing effects: normal tiles upgrade after first use; hybrids flip each use and count by face-up category; Queen’s and Lionheart Suites upgrade into monuments and cannot host again.",
+          "grade": "correct",
+          "reason": "Mandatory normal flip, already-upgraded persistence, hybrid alternation/category and one-use monument conversion resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "When do monuments and Servants’ Hall work on a hosting turn and a pass turn? How does Servants’ Hall use a servant, and may it target a player at minimum reputation?",
+          "expected_answer": "After event in step2 hosting or step3 pass. Monuments1rep per ordinary turn, no courtship. Hall any one available servant on tile to lower opponent1 gain1; used servant expended end turn; still host activity/pass. Cannot target minimum-rep opponent.",
+          "source_refs": [
+            "pp.17–18,21,27,39,101; lines 681–685,810–811,1046–1051,1473–1489,3824–3831"
+          ],
+          "actual_answer": "On a hosting turn, resolve the round event first, then applicable monument and Servants’ Hall effects during ongoing effects step 2; on a pass, recover all servants and gentry first, then resolve event and ongoing effects at step 3. Monuments give one reputation per ordinary turn, hosting or passing, but no courtship income; a newly purchased monument first pays on a later turn. Servants’ Hall uses one available servant during its effect: place that servant on the tile to lower one opponent’s reputation by one and gain one reputation yourself; the servant cannot also serve the activity and is expended at turn end. You cannot target a player at minimum reputation.",
+          "reader_evidence": "Turn Structure places ongoing effects after the event on hosting and after recovery on passing. Monuments and Servants’ Hall paragraphs specify income, servant use, destination, and minimum-reputation restriction.",
+          "grade": "correct",
+          "reason": "Hosting/pass ongoing timing, Hall servant use/destination, normal monument income and minimum-target immunity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "Compare Heritage Guest Suite, Queen’s Suite and Lionheart Suite: which guest is used, service and doubling rules, subsequent tile state, and whether their single-guest count can be changed.",
+          "expected_answer": "Heritage one casual from hand, footman tile and guest normal service; double all favours including negative, stays upgraded activity. Queen one prestige from hand, housekeeper tile and normal guest service; double1 chosen favour others normal; upgrades monument. Lionheart butler tile draws1 prestige from deck no guest service, double all nonnegative favours, keep guest to discard; upgrades monument. All fixed1 cannot modify count.",
+          "source_refs": [
+            "pp.79,93,95,99; lines 3010–3014,3532–3535,3605–3614,3765–3771"
+          ],
+          "actual_answer": "Heritage Guest Suite: put one footman on the tile and play one casual guest from hand; provide that guest’s normal service. Double all the guest’s favours, including negative ones; it upgrades and remains an activity tile. Queen’s Suite: put a housekeeper on the tile and play one prestige guest from hand; provide normal guest service. Double one chosen favour and resolve the others normally; it upgrades into a monument. Lionheart Suite: put a butler on the tile and draw one prestige guest from the deck to attend, with no personal guest service; double nonnegative favours, excluding negative favours from doubling, keep the guest and place it in discard at cleanup; it upgrades into a monument. Each suite has a fixed count of one guest, which cannot be increased or decreased.",
+          "reader_evidence": "Suite table specifies each guest source, tile service, guest service, doubling rule and later tile state; following text says all have a fixed count of one guest and no effect changes it.",
+          "grade": "correct",
+          "reason": "All three suites’ guest origins, tile/guest service, distinct doubling, later state and fixed-one count resolved.",
+          "unsupported_guess": false
+        }
+      ]
+    },
+    "b": {
+      "correct": 20,
+      "partial": 0,
+      "incorrect": 0,
+      "unsupported_guesses": 0,
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How many ordinary turns does each player take in the standard 16-round game, and what happens (including service rotation and ongoing tile benefits) on a courtship round?",
+          "expected_answer": "Twelve ordinary turns: four seasons, each three ordinary rounds then a courtship. No player turn, rotation, monument reputation or Servants’ Hall use on courtship; only courtship resolves.",
+          "source_refs": [
+            "pp.16,76; extraction lines 614–629,2898–2903"
+          ],
+          "actual_answer": "Each player takes twelve ordinary turns: the 16 spaces contain four seasons of three ordinary rounds plus a courtship. Courtship is an event with no player turns, service rotation, monument income, or Servants’ Hall use.",
+          "reader_evidence": "Overview: ‘each player takes twelve ordinary turns’; courtship is an event with ‘no player turns, service rotation, monument income or Servants’ Hall use.’",
+          "grade": "correct",
+          "reason": "Twelve ordinary turns and every specified no-turn courtship exclusion correctly stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "State the ordered procedure for hosting an activity, including when round-track events and ongoing effects happen and where used servants, gentry and the tile go at cleanup.",
+          "expected_answer": "Rotate service; resolve round event then ongoing effects; choose activity; invite exact required gentry; provide service; enjoy favours; optional market buy; clear board. Used servants to Expended Service, played gentry to personal discard, tile upgraded if needed and returned to correct tableau column; last player advances marker.",
+          "source_refs": [
+            "pp.17–20; lines 642–796"
+          ],
+          "actual_answer": "Hosting order: (1) rotate service, moving servants in Servants’ Quarters to Available Service, then Expended Service to Servants’ Quarters; (2) resolve the round-track event, then applicable monument and Servants’ Hall effects in either order; (3) choose an activity tile; (4) invite the exact required number and types of gentry; (5) staff every required service icon; (6) collect favours, resolving all positive before negative; (7) optionally buy one improvement; (8) send every used servant to Expended Service, played gentry to the personal discard pile, and return the tile to its tableau column, flipping/upgrading as required. The last player advances the round marker.",
+          "reader_evidence": "Turn Structure → Hosting an activity, steps 1–8.",
+          "grade": "correct",
+          "reason": "Complete hosting order, event/ongoing priority and used-component cleanup destinations stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "When passing, in what order do you recover servants and gentry, resolve events/ongoing effects, take a passing benefit and buy? What benefits are available in this base-only scope, and may you hire through Butler’s Room as a passing benefit?",
+          "expected_answer": "All servants directly Available; all personal discard gentry to hand; round event then ongoing effects; choose £200 or free market refresh; optional one tile purchase; last player advances marker. Hiring on pass is expansion/optional and excluded here.",
+          "source_refs": [
+            "p.21,30; lines 801–830,1135–1144"
+          ],
+          "actual_answer": "Passing order: all servants directly to Available Service; all gentry in your discard to hand; resolve the round-track event, then ongoing tile effects; choose £200 or a free Market refresh; optionally buy one tile; then the last player advances the marker. Servants used for an ongoing effect during the pass are expended at turn end. Butler’s Room hiring is an activity, not a passing benefit, so you cannot hire through it while passing.",
+          "reader_evidence": "Passing: ‘all servants directly to Available Service → all gentry in your discard to hand → round-track event, then ongoing tile effects → choose £200 or a free Market refresh → optional one tile purchase’; hiring is ‘an activity in this base scope, not a passing benefit.’",
+          "grade": "correct",
+          "reason": "Complete passing order, both base benefits and exclusion of hire-on-pass stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "Your reputation is 6.1 after step 2 and you plan a PR6 activity with PR6 guests, but need four Service Help actions that lower your actual reputation to 3.4. Is this legal, which servants can Service Help refresh, and what reputation is used to screen the tile and guests?",
+          "expected_answer": "Legal if four needed servants are in Servants’ Quarters and costs payable. Service Help costs 3 increments each, Quarters to Available only. Screening reputation fixed after step 2 before step 3 is level 6 for tile and guests all turn; later loss does not invalidate.",
+          "source_refs": [
+            "pp.18,27,77; lines 705–724,1057–1062,2922–2932"
+          ],
+          "actual_answer": "Yes. It is legal to play the PR6 activity and PR6 guests: screening uses the reputation level at the end of step 2, before Choose Activity, so 6.1 qualifies. Later Service Help actions may lower actual reputation to 3.4 without invalidating the activity. Service Help moves one servant from Servants’ Quarters to Available Service; it cannot take one directly from Expended Service.",
+          "reader_evidence": "Reputation screening is fixed at the end of step 2 and remains the screening level for the whole activity; Service Help moves a servant ‘from Servants’ Quarters to Available Service’ and cannot take one directly from Expended Service.",
+          "grade": "correct",
+          "reason": "Fixed end-step-2 screening and Quarters-only Service Help support legal PR6 plan despite later loss.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "How must positive and negative favours be ordered? At minimum reputation can you take a negative reputation favour first to avoid the loss, and what is required to play a guest with a money penalty?",
+          "expected_answer": "All positive before all negative. Cannot take loss first at minimum; ignore only loss beyond minimum after positives. Must pay money penalty; activity income, VP money or Borrow Money can fund it. If unable to fund full payment cannot play guest.",
+          "source_refs": [
+            "pp.36,76–77; lines 1379–1391,2905–2924"
+          ],
+          "actual_answer": "Resolve all positive favours before all negative favours; within each group their order is your choice. At minimum reputation, a negative reputation favour cannot be taken first to avoid the loss: negative reputation cannot go below 1.1. A money penalty must be fully payable. You may use positive money favours from the activity, a money VP card, or Borrow Money; if short, you must borrow if possible, and if you still cannot fund it, you cannot play that guest or tile.",
+          "reader_evidence": "Hosting step 6 requires ‘all positive favours before all negative favours’; money penalty rule says it must be fully payable and, if short, ‘you must borrow if possible.’ Special Rules: negative reputation cannot take reputation below 1.1.",
+          "grade": "correct",
+          "reason": "Positive-before-negative rule and money-penalty funding/illegality conditions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "Give all three special action costs, their per-turn limits and the minimum-reputation restriction. Can service help take a servant straight out of Expended Service?",
+          "expected_answer": "Borrow £100 costs 2 increments, repeatable; Service Help 3 increments per servant Quarters to Available, repeatable; Refresh Market 4 increments, special action once per turn. Need enough reputation; no specials at minimum 1.1. No direct refresh from Expended via Service Help.",
+          "source_refs": [
+            "p.27; lines 1043–1062"
+          ],
+          "actual_answer": "Borrow Money costs 2 reputation increments and gains £100; it is repeatable. Service Help costs 3 increments and moves one servant from Servants’ Quarters to Available Service; it is repeatable. Refresh Market costs 4 increments and fully refreshes the Market; that special action is limited to once per turn. At minimum reputation (1.1), you cannot take a special action. Service Help cannot take a servant directly from Expended Service.",
+          "reader_evidence": "Special actions table lists each cost/effect and limit; reputation section says at minimum ‘you cannot … take a special action’; Service Help cannot take a servant directly from Expended Service.",
+          "grade": "correct",
+          "reason": "All three action costs, repetition limits, minimum restriction and origin distinction resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "How do you hire with the base Butler’s Room activity, may any gentry attend, where do new hires go, and how does upgrading change the recruiting option?",
+          "expected_answer": "Use available butler/underbutler, no gentry. Take up to two from Servants for Hire except underbutler to Expended Service; used butler also expended and tile upgrades. Upgraded room may instead recruit one common footman/valet/lady’s maid from anywhere on one opponent board to your Expended, never unique servants.",
+          "source_refs": [
+            "pp.29–30,88; lines 1076–1084,1110–1144,3357–3374"
+          ],
+          "actual_answer": "Use Butler’s Room as a Servant Hiring activity with an available butler or underbutler and no gentry. Take up to two servants from Servants for Hire, excluding underbutlers, into Expended Service; there is no hiring fee. On its upgraded side, instead of hiring up to two from supply, recruit one common servant (footman, valet, or lady’s maid) from any location on one opponent’s family board into your Expended Service. Unique servants cannot be recruited.",
+          "reader_evidence": "Servants and hiring → Butler’s Room: ‘no gentry’; up to two from supply into Expended Service; upgraded room recruits one common servant from ‘any location on one opponent’s family board.’",
+          "grade": "correct",
+          "reason": "No-gentry butler activity, up-to-two hire destination and upgraded one-common-servant recruitment fully resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "When may a housekeeper substitute for a lady’s maid, when may a footman substitute for a valet, and can an underbutler substitute while the regular male servant is still available?",
+          "expected_answer": "Housekeeper only no available lady’s maid; footman requires Brushing Room and no available valet. Underbutler may replace butler/valet/footman even if regular available.",
+          "source_refs": [
+            "pp.29–30,88; lines 1091–1105,1117–1134,3351–3356"
+          ],
+          "actual_answer": "A housekeeper may substitute for a lady’s maid only when no lady’s maids are available. With a Brushing Room in your tableau, a footman may substitute for a valet only when no valets are available. An underbutler may substitute for any base male servant (butler, valet, footman) even when that servant type remains available.",
+          "reader_evidence": "Servants and hiring: substitution rules for housekeeper, footman with Brushing Room, and underbutler.",
+          "grade": "correct",
+          "reason": "Housekeeper/BrushingRoom availability conditions and underbutler unrestricted base-male substitutions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "How can an underbutler be acquired in the base game, when is it available, and can another player recruit it?",
+          "expected_answer": "Only acquire Butler’s Pantry; gain underbutler from supply immediately into Expended Service. Cannot hire with Butler’s Room or hire-servant VP card; unique, cannot be recruited. He is not immediately available: normally Expended to Quarters at the next service rotation, then Available at the second subsequent rotation. A pass or Refresh Service VP card can make him available sooner; once in Quarters, Service Help or the Quarters tile can allow earlier use.",
+          "source_refs": [
+            "pp.29–30,88,105; lines 1097–1105,1140–1143,3351–3356,3973–3977",
+            "pp.17,21,27,30,101,105; lines 647–650,807–808,1057–1058,1111–1116,3840–3842,3967–3971"
+          ],
+          "actual_answer": "The only way to acquire an underbutler is to purchase Butler’s Pantry; take one from supply immediately into Expended Service. It is not immediately available: normally it moves to Servants’ Quarters at your next service rotation and to Available Service at your second subsequent rotation. Passing or a Refresh Service VP card can make it available earlier; once it is in Quarters, Service Help or the Servants’ Quarters tile can permit earlier use. Another player cannot recruit it: the upgraded Butler’s Room recruits only common servants, and underbutlers cannot be hired through Butler’s Room or Hire Servant VP cards.",
+          "reader_evidence": "Butler’s Pantry paragraph gives acquisition, Expended Service destination and rotation timing; Butler’s Room paragraph limits recruiting to common servants; Hire Servant VP cards exclude underbutlers.",
+          "grade": "correct",
+          "reason": "Pantry-only acquisition, immediate Expended placement, second-rotation availability/earlier refresh, and unique recruitment immunity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "How is a tile’s purchase price calculated in the Market and Reserve, what is the minimum price, and can you buy a tile you already own or one above your reputation?",
+          "expected_answer": "Market space price plus tile modifier; Reserve £300 plus modifier; minimum £100. Cannot acquire duplicates by any means. May purchase above reputation; PR restricts play only.",
+          "source_refs": [
+            "pp.26,40; lines 1005–1010,1524–1546"
+          ],
+          "actual_answer": "Market price is the market-space price plus the tile’s printed price modifier. Reserve price is £300 plus the modifier. A tile cannot cost less than £100. You may not acquire a duplicate tile you already own by any means. Reputation does not restrict purchasing, so a tile above your reputation may be bought.",
+          "reader_evidence": "Builders’ Market and Reserve: ‘market-space price plus the tile’s printed price modifier’; Reserve base price £300; minimum £100; never acquire a duplicate; reputation does not restrict purchasing.",
+          "grade": "correct",
+          "reason": "Both price formulas, floor, duplicate ban and above-reputation acquisition permission resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "When refilling the Market after a purchase, what happens to remaining tiles, a drawn duplicate, a reserve-eligible tile and multiple newly drawn tiles? Does buying just one tile from a duplicate stack cause a refill?",
+          "expected_answer": "Slide remaining left; stack drawn duplicate on match and draw again; qualifying Service/PR1 drawn tile to Reserve and draw again; sort new tiles by ascending sorting number when filling multiple spaces. One remaining duplicate keeps space occupied so no refill.",
+          "source_refs": [
+            "pp.20,41; lines 770–777,1550–1557"
+          ],
+          "actual_answer": "When a Market space becomes empty, slide remaining tiles left and draw replacements into the rightmost spaces. Stack a drawn duplicate on its matching tile already in the Market and draw again. A Reserve-eligible tile goes straight to Reserve, then draw again. If filling multiple spaces, sort only the new tiles by ascending sorting number. Buying one tile from a two-tile stack leaves that space occupied, so it does not trigger a refill.",
+          "reader_evidence": "Builders’ Market and Reserve → Refill specifies sliding, duplicate stacking, Reserve routing, sorting new tiles, and that buying one from a two-tile stack leaves an occupied space.",
+          "grade": "correct",
+          "reason": "Old tiles slide; duplicates stack; eligible Reserve routing; new-tile sorting and no-refill stack branch resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "After seasons 1 and 2, which Market tiles move to Reserve, what exception applies, what happens to later draws, and is a full seasonal Market refresh standard here?",
+          "expected_answer": "After season1 all Service except Largest Wine Cellar; after season2 PR1. Later eligible draws go straight Reserve. Full Market refresh after first three courtships standard under compendium/corrigendum; old stable-market aid incomplete.",
+          "source_refs": [
+            "pp.23,40–41; corrigendum p.2; lines 884–920,1524–1531,4569–4572"
+          ],
+          "actual_answer": "After courtship 1, move all Market Service tiles except Largest Wine Cellar to Reserve; later Service tiles drawn go directly there, with the same exception. After courtship 2, also move all Market PR1 tiles to Reserve; later PR1 draws go directly there. Largest Wine Cellar never enters Reserve. A full Market refresh after each of the first three courtships is standard in this rules scope.",
+          "reader_evidence": "Open Reserve: after courtship 1 Service tiles move except Largest Wine Cellar and future Service draws go there; after courtship 2 PR1 tiles move and future PR1 draws go there. Refresh: full refresh after each of the first three courtships; standard scope confirms it is required.",
+          "grade": "correct",
+          "reason": "Both Reserve openings, WineCellar exception, future draws and default first-three-season refresh resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "For an ordinary (nonfinal) courtship, how are Fairchilds returned, theme scores and ties handled, and objectives discarded? Which direction does the first-player marker then pass?",
+          "expected_answer": "Return both Fairchilds first. Total current theme-category tile VP including negatives; highest draws VP and chooses one Fairchild to hand. Ties all draw VP and no Fairchild. Each discards one objective face down; shuffle together and bottom objective deck. At season setup first player passes anticlockwise.",
+          "source_refs": [
+            "pp.22–23; lines 835–879,902–909"
+          ],
+          "actual_answer": "At each courtship, first return both Fairchilds to Alderley Hall, wherever held. In courtships 1–3, score the current face-up theme’s tile VP, including negative values; only the currently face-up hybrid category counts. The highest scorer draws one VP card and chooses one Fairchild for their hand. If tied for highest, each tied player draws one VP card and no one gets a Fairchild. Every player discards one secret objective; shuffle simultaneous discards together and put them on the bottom of the deck. After courtships 1–3, pass the first-player marker anticlockwise.",
+          "reader_evidence": "Courtship and seasonal upkeep gives the return order, theme scoring, winner and tie outcomes, objective discard, and seasonal order including passing first-player marker anticlockwise.",
+          "grade": "correct",
+          "reason": "Fairchild return, current-theme negatives, winner/tie awards, objective destination and anticlockwise marker resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "How does final courtship differ in scoring and tie resolution, and what last actions are permitted before end-game scoring?",
+          "expected_answer": "Sum tile VP in all four revealed theme categories, repeated categories count repeatedly/double for two. Highest wins Fairchild+VP; tied highest reputation level breaks tie ignoring wheel position; if still tied no Fairchild, tied winners draw VP. After courtship final special actions and VP-card benefits if possible, then scoring.",
+          "source_refs": [
+            "pp.22–24,42; lines 860–870,884–897,1604–1609"
+          ],
+          "actual_answer": "At final courtship, return Fairchilds as usual and score tile VP for all four revealed theme cards; repeated categories count each time, including negative VP. Highest score gets one VP card and a Fairchild. On a tie, highest reputation level breaks it, with wheel position ignored; if still tied, no Fairchild is awarded and tied winners draw VP cards under the courtship tie rule. Discard the final objective. Then players may take a final chance to use special actions and VP cards for their benefits where possible before the marker moves to Wedding Bells and scoring.",
+          "reader_evidence": "Final courtship paragraph specifies all-four-theme scoring, ties, final objective discard, and final opportunity to use special actions and VP cards.",
+          "grade": "correct",
+          "reason": "All-four-theme/repeated-category score, level tiebreak, persistent tie and last actions resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "List all end-game VP categories, the points for reputation levels 1–7, wealth rounding, and the complete victory tiebreak sequence.",
+          "expected_answer": "Tiles including negative; gentry in hand/discard incl final Fairchild and negatives; remaining objectives; reputation 1,3,6,10,15,21,28 for levels1–7; servants2 each; £200 per1VP rounded down; unused VP cards. Tie: final Fairchild holder, then highest rep level ignoring position, then shared victory.",
+          "source_refs": [
+            "p.24; lines 926–954"
+          ],
+          "actual_answer": "End-game VP categories are improvement tiles (printed face-up VP, including negatives), gentry in hand and discard (including negatives, family, and final Fairchild; dismissed guests excluded), fulfilled objectives, reputation, servants, wealth, and retained unused VP cards. Reputation levels 1–7 score respectively 1, 3, 6, 10, 15, 21, and 28 VP. Wealth scores 1 VP per £200, rounded down. Victory ties go first to the tied player with the final Fairchild; otherwise the tied player with the highest reputation level wins; if still tied, victory is shared. Reputation wheel position does not break the tie.",
+          "reader_evidence": "Final VP table lists each source, the reputation sequence and £200 rounded-down wealth scoring; victory paragraph gives Fairchild, reputation-level, then shared-victory tiebreaks.",
+          "grade": "correct",
+          "reason": "Every requested VP source, reputation-level schedule, wealth rounding and complete tiebreak sequence resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "How many objectives do you normally receive and retain for scoring in a standard game, what happens to simultaneous discards, and must tile objectives show upgraded tiles?",
+          "expected_answer": "5 setup+2 Draw Objectives=7; discard1 each of4 courtships leaves3. Shuffle simultaneous face-down discards before bottom deck. Extra objective effects increase final total by1 each. Tile objectives require possession at end, no upgrade required.",
+          "source_refs": [
+            "pp.42,77,106; lines 1592–1623,2935–2940,4000–4001"
+          ],
+          "actual_answer": "Normally each player gets five secret objectives at setup and draws two more on round 6. Discard one at each of the four courtships, leaving three to score. Shuffle simultaneous discards together, then put them face down on the bottom of the objective deck. A tile objective requires owning the named tile at game end; it does not need to be upgraded.",
+          "reader_evidence": "Objectives and VP cards: five at setup plus two on round 6; discard one at each of four courtships, leaving three; simultaneous discards are shuffled together; tile objectives require owning tiles, not upgrading them.",
+          "grade": "correct",
+          "reason": "Five plus two minus four leaves three; simultaneous discards shuffled/bottomed; upgrade not required.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "When can VP cards be used for benefits, where do used cards go, and what happens to retained cards at game end?",
+          "expected_answer": "Immediately on draw or anytime own turn; final chance after final courtship. Reveal and discard to bottom VP deck for benefit; may use several. Retain hidden with objectives and score printed VP if not discarded; no both benefit and VP.",
+          "source_refs": [
+            "pp.22,42; lines 865–871,1592–1609"
+          ],
+          "actual_answer": "A VP card’s benefit may be used immediately when drawn, at any time on your later turn (multiple cards may be used), and once more after final courtship before scoring. Used VP cards go to the bottom of the VP deck. Retained, unused cards stay hidden with objectives and score their printed VP at game end; a card cannot provide both its benefit and final VP.",
+          "reader_evidence": "VP card rules state when benefits can be used, that used cards go to the bottom of the VP deck, and retained cards stay hidden with objectives; you cannot take both benefit and final VP.",
+          "grade": "correct",
+          "reason": "All VP-card use windows, bottom-deck destination, retained scoring and benefit/VP exclusivity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "Explain the mandatory flip rules for a normal activity tile, an already-upgraded tile, a hybrid, and a tile that upgrades into an ongoing monument. Which category counts for a hybrid at courtship and for objectives?",
+          "expected_answer": "First use normal tile flips to upgrade at cleanup, mandatory; upgraded stays. Hybrid flips each use and moves correct category, starts underlined hybrid icon side. Activity-to-monument flips after first use and never hosts again. Only currently face-up hybrid category counts.",
+          "source_refs": [
+            "pp.20,39; lines 785–793,1473–1505"
+          ],
+          "actual_answer": "A normal activity tile must flip to its rose/upgrade side after its first use; once upgraded, it stays on that side on later uses. A hybrid starts with its underlined icon showing, flips after every use, and moves to the newly face-up category. A tile that upgrades into an ongoing monument (Queen’s Suite or Lionheart Suite) has one activity use, then becomes a monument and can never host again; its monument benefit starts on subsequent turns. For a hybrid, only its currently face-up category counts at courtship and for objectives.",
+          "reader_evidence": "Improvements and ongoing effects gives normal and hybrid flip rules and says only the face-up category counts for courtship and objectives; Monuments and suite entries describe suite upgrade into monument and later benefit.",
+          "grade": "correct",
+          "reason": "Mandatory normal flip, already-upgraded persistence, hybrid alternation/category and one-use monument conversion resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "When do monuments and Servants’ Hall work on a hosting turn and a pass turn? How does Servants’ Hall use a servant, and may it target a player at minimum reputation?",
+          "expected_answer": "After event in step2 hosting or step3 pass. Monuments1rep per ordinary turn, no courtship. Hall any one available servant on tile to lower opponent1 gain1; used servant expended end turn; still host activity/pass. Cannot target minimum-rep opponent.",
+          "source_refs": [
+            "pp.17–18,21,27,39,101; lines 681–685,810–811,1046–1051,1473–1489,3824–3831"
+          ],
+          "actual_answer": "Monuments resolve during the ongoing-effects step on ordinary turns, whether hosting or passing; each gives one reputation. There is no monument income during courtship. Servants’ Hall also resolves during the ongoing-effects step (step 2 when hosting, step 3 when passing): place one available servant on it to reduce one opponent’s reputation by one and gain one reputation yourself. That servant cannot also staff the activity and goes to Expended Service at turn end. You may not target a player at minimum reputation.",
+          "reader_evidence": "Monuments: one reputation per ordinary turn during ongoing effects, hosting or passing, no courtship income. Servants’ Hall specifies its timing, one available servant, reputation changes, expending, and minimum-reputation targeting restriction.",
+          "grade": "correct",
+          "reason": "Hosting/pass ongoing timing, Hall servant use/destination, normal monument income and minimum-target immunity resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "Compare Heritage Guest Suite, Queen’s Suite and Lionheart Suite: which guest is used, service and doubling rules, subsequent tile state, and whether their single-guest count can be changed.",
+          "expected_answer": "Heritage one casual from hand, footman tile and guest normal service; double all favours including negative, stays upgraded activity. Queen one prestige from hand, housekeeper tile and normal guest service; double1 chosen favour others normal; upgrades monument. Lionheart butler tile draws1 prestige from deck no guest service, double all nonnegative favours, keep guest to discard; upgrades monument. All fixed1 cannot modify count.",
+          "source_refs": [
+            "pp.79,93,95,99; lines 3010–3014,3532–3535,3605–3614,3765–3771"
+          ],
+          "actual_answer": "Heritage Guest Suite uses one casual guest from hand and a footman on the tile; provide the guest’s normal service. It doubles all guest favours, including negative ones, then upgrades and remains an activity tile. Queen’s Suite uses one prestige guest from hand and a housekeeper on the tile; provide normal guest service. It doubles one chosen favour and resolves the others normally, then upgrades into a monument. Lionheart Suite draws one prestige guest from the deck to attend, uses a butler on the tile, and requires no personal guest service. It doubles nonnegative favours while negative favours are excluded from doubling; keep the drawn guest and put it in your discard at cleanup, then the tile upgrades into a monument. Each suite has a fixed count of one guest that cannot be increased or decreased.",
+          "reader_evidence": "Suite activity table lists each guest source/type, tile service, guest service, favour doubling, cleanup and later tile state; following paragraph says all three have a fixed count of one guest.",
+          "grade": "correct",
+          "reason": "All three suites’ guest origins, tile/guest service, distinct doubling, later state and fixed-one count resolved.",
+          "unsupported_guess": false
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "appendix_title": "Never-reaches10 Final Scoring discard: source-to-actual-prompt scope adjudication",
+  "review_type": "Finite same-reviewer source-to-prompt consistency follow-up, not a fresh-context full review.",
+  "bank_identity": {
+    "revision": "coverage-revision-05",
+    "active_question_count": 94,
+    "questions_sha256": "f6b1803bcaf6feac54e4a1ed2a79f053d655aa4a6962d381d5d72159d0675717",
+    "answer_key_sha256": "bc70ac84aa525cee8d421ef6652f1fe9118c63deaa87caff266aba02f0ab1f03",
+    "all94_question_objects_unchanged": true
+  },
+  "source_evidence": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/source_pdfs/ark-nova-rules.pdf",
+      "sha256": "f6b4eedc68e993f61b4c5cb5d99bb4af399da0be3de4781321bcba1ba44516f6",
+      "page": 18,
+      "section": "Appeal and Conservation Points,10conservation bullet",
+      "verbatim": "If no one accrues 10 Conservation Points before the game ends, all players must choose and discard a Final Scoring card before end game scoring can begin."
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/source_pdfs/ark-nova-rules.pdf",
+      "sha256": "f6b4eedc68e993f61b4c5cb5d99bb4af399da0be3de4781321bcba1ba44516f6",
+      "page": 19,
+      "section": "End of Game & Final Scoring,2.Score cards",
+      "verbatim": "Remember, if no player reached 10 conservation points, all players should discard one of their Final Scoring cards before adding these points to their totals."
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/ark-nova-rules.txt",
+      "sha256": "5832faf9161e22f5be25af4d626bd10239ddc5a18e2de3aa888a5924fb2074ee",
+      "reread_inclusive_logical_line_ranges": [
+        "1008–1045",
+        "1075–1095"
+      ],
+      "relevant_exact_ranges": [
+        "1036–1040",
+        "1084–1089"
+      ],
+      "source_hash_unchanged": true
+    }
+  ],
+  "complete_prompt_check": {
+    "all94_question_objects_reread": true,
+    "result": "No accepted94prompt explicitly requests the no-player-ever-reaches10 fallback.",
+    "closest_candidates": [
+      {
+        "id": "Q20",
+        "prompt_verbatim": "State conservation milestone rewards at 2,5,8,10; exact end trigger timing including gains on another player turn; last turns; Final Scoring cap; victory-point formula and tiebreak.",
+        "actual_scope": "Requests milestone rewards at2/5/8/10, end-trigger timing, last turns, final-card cap, VP formula and tiebreak. Reaching the10milestone and ending without that milestone ever occurring are different source triggers. The prompt does not ask the latter branch.",
+        "not_evidence_of_literal_coverage": "Its fixed key includes the source-supported clause or do before final scoring if never reached10; that is extra key context, not wording in the prompt."
+      },
+      {
+        "id": "Q56",
+        "prompt_verbatim": "How does Resistance interact with the 10-conservation Final Scoring discard and scoring multiple Final Scoring cards?",
+        "actual_scope": "Requests Resistance’s interaction with the10-conservation discard event and scoring multiple retained Final Scoring cards. It does not ask what normal multiplayer players must do if the specified event never occurs. Scoring all cards still retained does not itself specify an additional obligation to discard in that counterfactual branch."
+      },
+      {
+        "id": "Q139",
+        "prompt_verbatim": "Where do players put the Final Scoring card discarded when the first player reaches 10 conservation points, and in what orientation?",
+        "actual_scope": "Explicitly limited to destination/orientation of the card discarded when the first player reaches10. It does not request the alternative no10trigger or its before-scoring deadline."
+      },
+      {
+        "id": "Q01",
+        "prompt_verbatim": "What are the starting money, active and inactive workers, zoo-card draw/keep counts, Final Scoring cards, Action card order/sides and appeal by turn order?",
+        "actual_scope": "Starting Final Scoring card count, not a late discard trigger."
+      },
+      {
+        "id": "Q19",
+        "prompt_verbatim": "Give break steps in order, hand limit, kiosk qualifying neighbors and income order/refill when several players take display cards.",
+        "actual_scope": "Break administration. The no10fallback occurs before final scoring and is not a normal break step."
+      }
+    ]
+  },
+  "requested_vs_context": {
+    "Q20_fallback_clause_source_accurate": true,
+    "Q20_fallback_clause_literally_requested": false,
+    "Q56_scoring_multiple_cards_does_not_implicitly_request_every_discard_trigger": true,
+    "coverage_caution": "Do not use the extra key clause, map assertion, a general scoring reference, or the existing94count as proof that this conditional was actually asked."
+  },
+  "novelty_analysis": {
+    "candidate_rule": "If the game ends before any player reaches10conservation, every player must choose and discard one Final Scoring card before end-game scoring/card points begin.",
+    "distinct_source_defined_branch": true,
+    "distinct_trigger": "Game ends with the first10conservation event still absent, rather than the first occurrence of that event.",
+    "distinct_timing": "Before end-game scoring begins and before adding Final Scoring/endgame card points, rather than immediately upon reaching the10milestone.",
+    "consequential_outcome": "A player cannot score an extra retained starting Final Scoring card merely because the ordinary10milestone discard never happened. This changes which card points may be counted.",
+    "why_not_mechanically_entailed": "A conditional discard obligation at the first10milestone does not entail another discard obligation when that trigger never occurs. Ordinary final scoring and the per-card cap do not supply that missing obligation. No previously requested universal rule states that exactly one starting Final Scoring card must always be removed by scoring time.",
+    "why_not_printed_lookup_or_parameter_substitution": "This changes the condition and timing under which a mandatory action occurs. It is neither a new card name/amount/icon nor a numerical table cell or a direct application of an already requested default.",
+    "verdict": "Genuine distinct unasked procedural/timing/outcome branch; focused new question is warranted."
+  },
+  "focused_proposal": {
+    "proposed_id": "Q141",
+    "id_status": "Proposal only; Q140 is the highest existing ID and all94existing objects remain unchanged.",
+    "question": "If the game ends before any player reaches10conservation points, what must all players do with their Final Scoring cards, and when?",
+    "expected_answer": "Every player must choose and discard one Final Scoring card before end-game scoring begins, before adding those card points to their totals, even though the10conservation discard event never occurred.",
+    "material_requested_facts": [
+      "The fallback applies if no player reached10conservation before the game ends.",
+      "All players must choose and discard exactly one of their Final Scoring cards.",
+      "Do this before end-game scoring begins/before adding the card points."
+    ],
+    "source_references": [
+      "Main English base v1.2 PDF p18,10conservation bullet fallback.",
+      "Main English base v1.2 PDF p19,Score cards reminder."
+    ],
+    "new_question_credit": 1,
+    "existing_context_not_new_credit": "The discard destination/orientation already requested by Q139, the ordinary reached10event, Resistance’s retained-card rule, and the4conservation-per-card cap do not earn additional new credit here.",
+    "implementation_boundary": "Do not rewrite Q20/Q56/Q139 or any old object. If adopted, add the focused question and its facts, and link the primary p18/p19 fallback passages to it. This appendix performs no bank edit."
+  },
+  "acceptance_effect": {
+    "prior_acceptance_history_preserved": true,
+    "earlier_saturation_conclusion_needs_reopening": true,
+    "reason": "My earlier full saturation conclusion counted this extra key clause as sufficient representation without establishing an actual prompt request for the no10branch. This finite check identifies a genuine omission; the prior unconditional saturation acceptance is qualified by this new finding until repaired and checked.",
+    "source_accuracy_of_existing_fallback_key_clause": "Retained; the clause is correct but unrequested in Q20.",
+    "94_existing_question_novelty_verdict": "No new duplicate rejection of any existing object is made by this check.",
+    "map_effect": "Any live claim that Q20/Q56 alone explicitly request the fallback needs correction; the source branch requires focused question coverage rather than an extra key sentence.",
+    "no_quota_or_assumed_outcome": "94isnotacap;1genuineadditionalquestionisproposed based on the source-defined branch."
+  },
+  "final_verdict": "Genuine source-to-actual-prompt gap. Preserve all94oldobjects; propose focused Q141 for the mandatory no10before-final-scoring discard. Reopen saturation acceptance for this finite omission; do not treat extra key context as prompt coverage.",
+  "constraints": {
+    "only_new_saved_artifact": "coverage-challenge-06/final-scoring-fallback-scope-adjudication.json",
+    "question_key_summary_bank_source_edits": false,
+    "reader_grader_summary_canonical_or_other_reports_read": false,
+    "contacts": false,
+    "prior_reports_logs_verdict_files_unchanged": true
+  }
+}

@@ -1,0 +1,82 @@
+Read these local references before work:
+/home/jonny/projects/boardgame-rules/CLAUDE.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/README.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/heat-pedal-to-the-metal/2026-11-04/coverage-expansion-01/README.md
+The user expressly authorizes this separate game chat, all described reader/reviewer subagents, and coordinator continuation messages. Create a persistent goal for your entire assigned QA objective with no token budget. Work until full completion; don't stop at a plan, first iteration, partial bank, or intermediate PASS. Use gpt-6-luna/high for fresh blind readers and gpt-6.1-sol/high for fresh source/coverage reviewers. Confirm runtime metadata.
+
+1. Follow the local QA guide. Read the complete authoritative source for the
+   exact edition and scope. Inspect the source PDF when text extraction or
+   diagrams are insufficient. Do not invent rules or treat the summary as its
+   own authority. If an essential ruling cannot be sourced, record the precise
+   gap and what would resolve it; do not quietly skip it or declare success.
+
+2. Prepare an initial bank of 20 meaningful questions with predetermined answers
+   and source references before dispatching readers. Reuse an existing larger
+   bank as the baseline if one already exists; do not shrink it. If the source
+   genuinely supports fewer distinct questions, document that with independent
+   coverage review rather than padding the set to reach a number.
+
+3. Run two fresh blind reader subagents using gpt-6-luna/high. Use
+   fork_turns="none" and explicitly select the model and reasoning effort.
+   Give each only a frozen summary snapshot and question file, using the guide's
+   reader prompt. Exclude sources, keys, earlier responses, grades, reviewer
+   findings, parent history, browsing and prior game knowledge. Verify actual
+   models from runtime metadata; never silently substitute another model.
+
+4. Compare every requested part of every answer against the fixed source-backed
+   key. Record correct, partial and incorrect separately, with per-question
+   evidence and reasons. Judge the answer, not its confidence/support label.
+   Each answer must resolve all its requested parts; do not borrow missing facts
+   from another answer to manufacture a pass. Accept equivalent wording, but
+   retain material omissions, unsupported guesses, wrong rulings and contradictory
+   caveats as findings. Seek fresh independent adjudication if a case is borderline.
+
+5. Repair summary gaps and ambiguities using general source-supported rules,
+   not an appended answer key. Freeze the next version and rerun the entire bank
+   with two new readers. Keep questions and expected answers fixed throughout
+   each repair series. Preserve all failed iterations and raw outputs. Explicitly
+   version a genuine source/key correction rather than changing the target silently.
+   Continue until both readers answer the initial bank completely and correctly.
+
+6. Expand beyond the initial bank. Map procedural source passages to questions.
+   Accept a new question only for a new rule, a rule-defined outcome branch, or
+   an interaction where timing, priority or an exception changes the ruling.
+   Reject cosmetic rewording, changed numbers within an already covered branch,
+   and mechanical recombinations without a distinct timing or exception issue.
+   Preserve earlier IDs, wording and answers in each expanded bank version.
+
+7. Keep a coverage map and acceptance/rejection ledger. Continue targeted passes
+   until two consecutive passes produce no meaningfully new source-supported
+   questions after all core procedural passages have coverage. Then have a fresh
+   source/coverage reviewer challenge the bank and key, without seeing the summary
+   or reader outputs. If it finds a real gap, add it and repeat the stopping check.
+   Twenty is a seed and Heat's 47 is an example; neither is a universal cap or quota.
+
+8. Freeze the complete expanded bank and its key before testing. Run all N
+   questions, including the originals, with two fresh Luna readers. Repair and
+   rerun until both independently score N/N with zero partial, unresolved or
+   incorrect answers and no unsupported guesses replacing summary coverage.
+   Do not relax grading, remove hard questions or reuse informed readers to pass.
+
+9. Obtain an independent final source audit from a fresh reviewer that has not
+   authored the repairs or seen the questions, key or reader responses. Give it
+   only the final summary and authoritative source. Resolve findings before
+   claiming PASS. If repairs or audit feedback change the summary after a passing
+   pair, rerun the full bank on that exact new text and update the audit as needed.
+   If audit feedback reveals an untested core rule, reopen coverage expansion.
+
+10. Save evidence under the assigned unique
+    docs/quality/summary-qa/<slug>/<run-id>/ directory: readable question/answer
+    bank, separate question and key JSON, source references, coverage/rejection
+    ledger, reviewer reports, input hashes, every frozen summary and question
+    copy, raw reader responses, detailed grades, actual model provenance, diffs,
+    source-audit outcomes, validation results and a readable final report.
+    Never overwrite historical runs. Confirm original entries and hashes remain
+    intact within their benchmark versions, every expected ID appears once per
+    reader, and the final snapshot matches the canonical summary byte for byte.
+
+Exclusive ownership: ONLY your assigned canonical summary and assigned QA output directory. You may read shared docs/sources but may not edit another game's files, shared instructions, games.yaml, games.json, index.md, global audit registries or shared scripts. Do not run global stamping/regeneration, commit, push, switch branches, reset or discard work. Preserve pre-existing changes. A separate active source-recovery chat exists: fingerprint assigned sources and canonical summary before work; if unexpected changes occur, preserve evidence and tell the coordinator via your status file before overwriting. The coordinator handles registry, audit recording, final targeted stamping, index and manifest regeneration sequentially. Do not claim batch completion until it validates your exact tested bytes. You do not need to message the coordinator chat.
+
+Save machine-readable progress in your output_directory/game-status.json with game, slug, phase, status, question_count, iterations, final_reader_scores, source_audit, report_path, blocking_reason, final_snapshot_path, source_paths, and hashes when available. Update it at meaningful milestones. Finish a readable README.md with links to all evidence. If you have passed locally but need coordinator audit recording/stamping, say status="ready-for-coordinator" and leave your goal active. Once the coordinator returns the stamped summary, retest exact bytes if changed. Mark your goal complete only after the full evidence and final repository checks hold.
+
+Full criteria: all procedural source passages covered; two consecutive targeted passes adding no meaningful questions; independent coverage challenge resolved; two fresh final Luna/high readers N/N on the complete unchanged expanded bank with no partial, incorrect or unsupported guesses; fresh independent final source audit PASS; original benchmark preservation, input integrity and actual model provenance verified; final snapshot byte-identical to canonical summary. Twenty is a seed, no question quota or cap. Record optional modes and expansions excluded; complete base core cannot be omitted. Continue working autonomously.

@@ -1,0 +1,441 @@
+{
+  "review_role": "Fresh independent source and procedural coverage challenger",
+  "scope": "Original 2023 English Uprising 23-10-12 standard 2–4 players, required scoring two-player Rival and optional standard CHOAM; relevant general/Uprising January 13 2025 FAQ; exclude solo, optional Rival variants, six-player teams, cross-game expansions.",
+  "verdict": "changes_required",
+  "all_core_procedural_passages_covered": false,
+  "two_zero_addition_passes_justified": false,
+  "summary": "Most procedures are covered. Two distinct source rules remain untested in the frozen question/key pair: the explicitly permitted split of sandworm-doubled Influence, and the House Hagal Signet icon invoking the Rival card ability. Q59 also imports a Bloodlines Leader outside scope. No inspected answer was otherwise found substantively false.",
+  "findings": [
+    {
+      "id": "F01",
+      "type": "coverage_gap",
+      "severity": "material",
+      "affected_questions": [
+        "Q10",
+        "Q37"
+      ],
+      "finding": "Q10 tests doubling, exclusions, and optional VP cost but its predetermined answer does not test the source's explicit permission to split the two Influence obtained by doubling a one-Influence reward. Q37 correctly prohibits splitting one two-Influence effect. The interaction is an expressly documented exception with a different outcome, not another numeric example.",
+      "source_refs": [
+        "Main p14 Sandworm Reward Doubling example",
+        "Main p20 Gain one/gain two Influence"
+      ]
+    },
+    {
+      "id": "F02",
+      "type": "coverage_gap",
+      "severity": "material",
+      "affected_questions": [
+        "Q20",
+        "Q72"
+      ],
+      "finding": "No question/key explains that the Signet Ring icon on a House Hagal card triggers the Signet Ring ability on the Rival card. Q20 only says to use Hagal effects, while Q72 describes playing a human Signet Ring card and the human Leader. The icon selects a different rule source and is a basic Rival resolution rule.",
+      "source_refs": [
+        "Supplements PDF p4 Rival Agent Turns icon explanation",
+        "Supplements PDF p3 Rival Cards anatomy"
+      ]
+    },
+    {
+      "id": "F03",
+      "type": "scope_error",
+      "severity": "material",
+      "affected_questions": [
+        "Q59"
+      ],
+      "finding": "The Chani Leader FAQ answer is faithful to FAQ p1 but the Leader is a Bloodlines component, outside original 2023 Uprising and the fixed no-expansion scope. Chani the Uprising Imperium card is a different component. Remove or exclude Q59 rather than changing its answer.",
+      "source_refs": [
+        "FAQ PDF p1 Chani (Leader)",
+        "Official Bloodlines rulebook p12 Clarifications: Chani",
+        "Main p3 nine Leaders; Supplements pp7–8 leader enumeration"
+      ],
+      "reader_testing_status": "Never reader-tested, confirmed by parent; genuine source-scope correction.",
+      "provenance_artifact": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/coverage-scope-evidence.json"
+    },
+    {
+      "id": "F04",
+      "type": "ledger_reference_error",
+      "severity": "minor",
+      "finding": "The map links Supplements p3 Rival setup to Q59; the actual Rival setup question is Q60. The Main pp4–5 setup entry also lists Q59 although it is Chani. Rejection text refers to Q63 as the conditional selected-space exception (actually Q64), Q60 as mixed-resource priority (actually Q61), and Q61 as homogeneous VP sets (actually Q62). The troop-recruit rejection calls Q64 the source-recruit exception although Q64 is conditional destinations. These stale references weaken the traceability claim.",
+      "source_refs": [
+        "coverage-ledger.json map and rejections",
+        "benchmark-v3/questions.json"
+      ]
+    },
+    {
+      "id": "F05",
+      "type": "source_extraction_limit_verified",
+      "severity": "informational",
+      "finding": "Text extraction omits resource icons from the Rival Buying Victory Points diagram. I rendered and visually inspected complete source PDF page 5. It shows 7 Solari, 7 spice, 3 Intrigue cards, or 3 water for 1 VP; Q62 is correct.",
+      "source_refs": [
+        "Supplements PDF p5 diagram; rendered /tmp/uprising-supplements-p5.png"
+      ]
+    }
+  ],
+  "proposed_questions": [
+    {
+      "proposed_id": "Q75",
+      "question": "A Conflict reward grants one Influence with a Faction of your choice. If you double that reward with a sandworm, may you place one Influence with each of two different Factions? Contrast a single effect that grants two Influence with a chosen Faction.",
+      "predetermined_answer": "Yes. Sandworm-doubling the one-Influence reward gives two Influence that may go to the same Faction or two different Factions. A single two-Influence effect requires choosing one Faction and putting both Influence there.",
+      "novelty": "Explicit source-defined exception to indivisible two-Influence effects, documented in the sandworm reward example.",
+      "source_refs": [
+        "Main PDF p14 Sandworm Reward Doubling example",
+        "Main PDF p20 Gain one/gain two Influence"
+      ],
+      "not_covered_by": [
+        "Q10 expected answer has no Influence allocation branch",
+        "Q37 covers only one two-Influence effect"
+      ]
+    },
+    {
+      "proposed_id": "Q76",
+      "question": "When a House Hagal card shows a Signet Ring icon during a standard two-player Rival turn, which ability is resolved, and where is that ability printed?",
+      "predetermined_answer": "Resolve the Signet Ring ability printed on that Rival's Rival card. The Hagal icon is its trigger; the Rival does not need a human Signet Ring deck card.",
+      "novelty": "A distinct basic House Hagal icon-resolution rule, not the human Leader Signet Ring trigger.",
+      "source_refs": [
+        "Supplements PDF p4 Rival Agent Turns: Signet Ring icon",
+        "Supplements PDF p3 Rival Cards: Signet Ring ability"
+      ],
+      "not_covered_by": [
+        "Q20 specifies Hagal effects generally but does not identify this effect",
+        "Q72 covers human Signet Ring play and Leader ability only"
+      ]
+    }
+  ],
+  "checked_passages": [
+    {
+      "source": "Main pp1–3",
+      "check": "Theme and component lists inspected; procedural rules separated from reference counts. Component-count trivia does not warrant extra questions.",
+      "status": "nonprocedural/reference"
+    },
+    {
+      "source": "Main pp4–5",
+      "check": "Conflict construction, human supplies, score, Objectives, first player, module omissions and unlimited bank.",
+      "questions": [
+        "Q01",
+        "Q02",
+        "Q16",
+        "Q21",
+        "Q22",
+        "Q23"
+      ],
+      "status": "core covered"
+    },
+    {
+      "source": "Main pp6–7",
+      "check": "Leader text precedence, Signet trigger, acquisition/discard/reshuffle, Agents, Faction thresholds and Alliance, Intrigue secrecy/types.",
+      "questions": [
+        "Q04",
+        "Q12",
+        "Q13",
+        "Q31",
+        "Q34",
+        "Q38",
+        "Q72"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main pp8–9",
+      "check": "Phase order, early Reveal lockout, Agent card/icon/cost/requirement legality, optional arrows and effect ordering.",
+      "questions": [
+        "Q03",
+        "Q04",
+        "Q23",
+        "Q24",
+        "Q25"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main pp10–11",
+      "check": "Control transfer/visit/defense; Shield Wall; supply recruit limit; current-turn recruitment plus two old troops; worms/Hooks; Spy placement/access/recall/Intelligence timing.",
+      "questions": [
+        "Q05",
+        "Q06",
+        "Q14",
+        "Q22",
+        "Q26",
+        "Q27",
+        "Q28",
+        "Q48",
+        "Q73"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main pp12–13",
+      "check": "Reveal separation/order, acquisitions interleaved, pool/split/refill, no Persuasion carryover, units/swords strength, last-unit loss and flexible strength timing.",
+      "questions": [
+        "Q03",
+        "Q07",
+        "Q13",
+        "Q34",
+        "Q39",
+        "Q71"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main p14",
+      "check": "Intrigue priority/pass/reset; reward ranks and all source-defined ties; icon matching; doubling and optional payment; explicitly split doubled Influence.",
+      "questions": [
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q10",
+        "Q11",
+        "Q29",
+        "Q30",
+        "Q40",
+        "Q70"
+      ],
+      "status": "gap F01"
+    },
+    {
+      "source": "Main p15",
+      "check": "Makers accumulation, Recall end check and restart, Endgame Intrigues and ordered resource tiebreakers.",
+      "questions": [
+        "Q14",
+        "Q15",
+        "Q23",
+        "Q41"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main pp16–17",
+      "check": "CHOAM setup/taking/exhaustion/four completion types/ownership timing/token destination; Leader transitions and Spacing Guild Favor discard source.",
+      "questions": [
+        "Q16",
+        "Q17",
+        "Q18",
+        "Q42",
+        "Q43",
+        "Q44",
+        "Q45"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Main pp18–19",
+      "check": "Cross-game compatibility excluded; credits nonprocedural.",
+      "status": "excluded/nonprocedural"
+    },
+    {
+      "source": "Main p20",
+      "check": "Every procedural glossary entry checked against bank, including acquire, wild, Bond, in-play lifetime, eligibility, recall, resources, retreat, spies, theft, normal and Intrigue trash.",
+      "questions": [
+        "Q11",
+        "Q22",
+        "Q25",
+        "Q32",
+        "Q33",
+        "Q34",
+        "Q35",
+        "Q36",
+        "Q37",
+        "Q48",
+        "Q51",
+        "Q72",
+        "Q73",
+        "Q74"
+      ],
+      "status": "covered except contrasting exception F01"
+    },
+    {
+      "source": "Supplements pp1–2",
+      "check": "All 22 standard board spaces checked for icon, cost, effect and Combat designation.",
+      "questions": [
+        "Q28",
+        "Q32",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51",
+        "Q52",
+        "Q53",
+        "Q54",
+        "Q55",
+        "Q56"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Supplements p3",
+      "check": "Scoring Rival setup, Ornithopter assignment, First Player exclusion, resource/components, retained 2P Reshuffle. Solo difficulty excluded.",
+      "questions": [
+        "Q19",
+        "Q60"
+      ],
+      "status": "covered"
+    },
+    {
+      "source": "Supplements p4",
+      "check": "Rival turn seating, no Reveal, occupied redraw/Reshuffle, normal-space effects ignored, every icon, conditional destination and bonus, Spy continuation and garrison deployment.",
+      "questions": [
+        "Q19",
+        "Q20",
+        "Q63",
+        "Q64",
+        "Q65",
+        "Q66",
+        "Q67",
+        "Q68"
+      ],
+      "status": "gap F02 (Hagal Signet icon)"
+    },
+    {
+      "source": "Supplements p5",
+      "check": "Swordmaster total and spending priority, VP conversion diagram, all Maker branches, Scheme trigger and timing, combat bonus/rewards/control/choice/contract exception.",
+      "questions": [
+        "Q61",
+        "Q62",
+        "Q63",
+        "Q66",
+        "Q67",
+        "Q68",
+        "Q69",
+        "Q70"
+      ],
+      "status": "covered; diagram visually verified"
+    },
+    {
+      "source": "Supplements pp6–14",
+      "check": "Read complete; optional Rival variants, solo-only rules, expansion combinations and six-player rules excluded from this benchmark.",
+      "status": "excluded"
+    },
+    {
+      "source": "FAQ pp1–4",
+      "check": "General/Uprising Alliance, Conflict, contract, discard, Endgame tie, False Orders, Intrigue timing/deck exhaustion, Litany, Hooks, Manipulate, optional effects, retreat, Reveal draws, Jessica, Rival conditional selection/cost, Shaddam, Shield, Spies, persistent Spice Must Flow VP, troop deployment and win triggers checked. Other-product entries excluded.",
+      "questions": [
+        "Q25",
+        "Q27",
+        "Q30",
+        "Q31",
+        "Q32",
+        "Q33",
+        "Q36",
+        "Q38",
+        "Q39",
+        "Q40",
+        "Q41",
+        "Q42",
+        "Q43",
+        "Q44",
+        "Q48",
+        "Q51",
+        "Q57",
+        "Q58",
+        "Q63",
+        "Q64"
+      ],
+      "status": "covered; expansion-only Q59 flagged separately"
+    }
+  ],
+  "rejected_candidates": [
+    {
+      "candidate": "More troop totals or alternate resource mixtures",
+      "reason": "Same Q05 deployment branch or Q61/Q62 resource rules; changed quantities alone add no source rule."
+    },
+    {
+      "candidate": "Two or three sandworms, a different resource reward, or a different optional VP price",
+      "reason": "Q10 already fixes one-or-more doubling and second payment; the split-Influence exception in F01 is the only substantive uncovered reward branch found."
+    },
+    {
+      "candidate": "A different occupied conditional Hagal destination",
+      "reason": "Q20 and Q64 test redraw rather than fallback."
+    },
+    {
+      "candidate": "Rival Hagal Wall-removal prerequisite",
+      "reason": "Q68 key explicitly states Hagal wall removal requires Hooks; adding a second question would duplicate that source branch."
+    },
+    {
+      "candidate": "Rival Steal Intrigue versus human Secrets",
+      "reason": "The source uses the same four-or-more/random-card outcome; Q32 plus Q20 covers it without a new exception."
+    },
+    {
+      "candidate": "Another late draw, multi-Spy turn, or contract ownership scenario",
+      "reason": "Q27, Q39, Q42 and Q18 cover source-defined limits and timing. Mechanical recombinations rejected."
+    },
+    {
+      "candidate": "Additional starting-deck card counts or component layout trivia",
+      "reason": "Reference detail rather than a new consequential procedural outcome; no additional core branch identified."
+    },
+    {
+      "candidate": "Import Chani Leader, Bloodlines, Ix, Immortality, solo, Streamlined or six-player interactions",
+      "reason": "Outside fixed scope; Q59 needs scope correction, not expanded testing."
+    }
+  ],
+  "source_refs": {
+    "main": "Original 2023 23-10-12 rulebook, authoritative extraction and run-local page-labeled extraction",
+    "supplements": "Original 23-10-12 combined Board Space Guide / Rivals / six-player supplement; PDF page 5 image inspected",
+    "faq": "Official Errata and FAQ last updated January 13 2025; only general and Uprising-applicable entries used",
+    "scope_crosscheck": "https://dwd-web.s3.us-west-2.amazonaws.com/pdfs/DUNE_IMPERIUM_BLOODLINES_Rulebook.pdf — official PDF opened; p2 Leader-specific components names Chani, p12 Chani clarification; preserved in coverage-scope-evidence.json."
+  },
+  "actual_inputs": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/dune-imperium-uprising-rules.txt",
+      "sha256": "21342cf965b4c64456776adea86f44d4ebf60815cebae4eb6c86187bf02fb580"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-04-batch-231507/source-discovery/dune-imperium-uprising-rules.txt",
+      "sha256": "3ee5fe1a6a5bcffc5c2688b1053d1e9039cac409dcaf7ac7744fa72e095ddd48"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-04-batch-231507/source-discovery/dune-imperium-uprising-supplements.txt",
+      "sha256": "2ac5af392c68d504ccb405136806b9f1ef5df289b4b82de59e1489cb380e3809"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-04-batch-231507/source-discovery/dune-imperium-official-faq-2025-01-13.txt",
+      "sha256": "58cd21648b65db8809c72878838ae158338d1703dddfbfbed339be6239b62812"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/benchmark-v3/questions.json",
+      "sha256": "e0a4938ad474338385a27bac83fd9afb103e7946db5aee9d4501a2480cb045cd"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/benchmark-v3/answer-key.json",
+      "sha256": "3343cda08ff64aa39424be1f7e0a1425b625fd6c1c19082c2289c1e4b300a7ff"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/coverage-ledger.json",
+      "sha256": "b0fb2ff9805e14659738993b2631e0fc2d38d2bbfdc392392404e52f4c41cfa6"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/source_pdfs/dune-imperium-uprising-supplements.pdf",
+      "sha256": "454ea3ef442f0622f4bf5b83b8368b24e34aaf4f0dc0f02d93dfba66e690c075"
+    }
+  ],
+  "additional_actual_inputs": [
+    {
+      "path": "/tmp/uprising-supplements-p5.png",
+      "kind": "Locally rendered unannotated source PDF page 5, visually inspected"
+    },
+    {
+      "url": "https://dwd-web.s3.us-west-2.amazonaws.com/pdfs/DUNE_IMPERIUM_BLOODLINES_Rulebook.pdf",
+      "kind": "Official publisher PDF opened through web tool, 12 pages; p2 identifies Chani Leader-specific component and p12 has Chani clarification; scope crosscheck only."
+    },
+    {
+      "kind": "web_search",
+      "queries": [
+        "site.direwolfdigital.com Chani leader promo Uprising",
+        "site.news.direwolfdigital.com/dune-imperium-bloodlines Chani Leader"
+      ],
+      "note": "Search snippets inspected for scope identity; only official primary Bloodlines rulebook relied on."
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/coverage-scope-evidence.json",
+      "kind": "Preserved official provenance/excerpt for Q59 exclusion; created after parent authorization."
+    }
+  ],
+  "independence": {
+    "summaries_read": false,
+    "reader_outputs_read": false,
+    "prior_grades_or_repairs_read": false,
+    "readers_contacted": false,
+    "other_task_files_changed": false,
+    "authorized_additional_provenance_file": "coverage-scope-evidence.json, requested by parent after initial review."
+  },
+  "recommended_next_action": "Add the two predetermined questions (or expand existing questions AND frozen keys to require these exact branches), remove/exclude Q59, correct stale ledger links, then repeat coverage passes on the revised bank. Do not claim the current two zero-addition passes establish saturation."
+}

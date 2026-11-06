@@ -1,0 +1,683 @@
+{
+  "session_id": "01a1ad6f-9313-7771-96a7-46bb9f42d891",
+  "task": "final_source_audit23",
+  "actual_contexts": [
+    {
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    }
+  ],
+  "parent_spawn": {
+    "task_name": "final_source_audit23",
+    "model": "gpt-6.1-sol",
+    "reasoning_effort": "high",
+    "fork_turns": "none"
+  },
+  "inputs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md",
+      "sha256": "ace79e7c435165eea787c0d71a10d4d2f6ac1f89673363593fb5c35d3a62cf1c",
+      "required_units": 359,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/dune-imperium-uprising-rules.txt",
+      "sha256": "21342cf965b4c64456776adea86f44d4ebf60815cebae4eb6c86187bf02fb580",
+      "required_units": 1205,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt",
+      "sha256": "ce8e2d26252d71fb45e531b07160b494059c13ebb37f0668b9cd86a4c5854315",
+      "required_units": 981,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt",
+      "sha256": "783b74f6aea9b4f0512e68a0581ca0438cb42dd565e2d88e0778b1322ecb5f23",
+      "required_units": 374,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-original-2023-leader-transcription.txt",
+      "sha256": "7f25aa0a5875ec9f2b667fef4343ee7beded69d1a4b7d47ba8aea3cd44152ae3",
+      "required_units": 4,
+      "missing_units": []
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-source-origin-metadata.json",
+      "sha256": "58349ff4059a8b0ad68dcbd99adfaf58bb164c031eb3f078ffbba92b17bae204",
+      "required_units": 11,
+      "missing_units": []
+    }
+  ],
+  "actual_returned_image_blocks": 5,
+  "all_required_text_visible": true,
+  "calls_for_boundary_review": [
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9717a7c87d0889ec264c6ac824d",
+      "status": "completed",
+      "call_id": "call_WftGqAiwm3ZewmrHgxwPtdfr",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"pwd && rg --files -g AGENTS.md -g '!node_modules' -g '!.git' . /home/jonny 2>/dev/null | head -60\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911151.078109
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9759c1887d0bf0d0e3b0a3c00d8",
+      "status": "completed",
+      "call_id": "call_RiHqB73zufiYK55xgAfYtn9t",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\nimport hashlib\\nroot=Path('/home/jonny/projects/boardgame-rules')\\nfiles=['docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md','extracted/dune-imperium-uprising-rules.txt','docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt','docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt','docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-original-2023-leader-transcription.txt','docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-source-origin-metadata.json']\\nfor f in files:\\n b=(root/f).read_bytes(); print(f, 'lines=',len(b.splitlines()),'ends_newline=',b.endswith(b'\\\\n'),'sha256=',hashlib.sha256(b).hexdigest())\\nPY\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911156.732658
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece97e709087d0951a1d9700e04b3c",
+      "status": "completed",
+      "call_id": "call_Z7Qrob1Y5WuWYqmOrt5kxuvA",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1,30{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":5000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911165.690518
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece982c0e487d091c1ed7ead5bd609",
+      "status": "completed",
+      "call_id": "call_zVYVMpnxgT22IuhVSPPYZQmj",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '31,60{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":6000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911170.046912
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9879d0487d0bbe6afd5ff554480",
+      "status": "completed",
+      "call_id": "call_2re8EBKgMioTKQWugL6cRn4p",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '61,90{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":6500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911174.577736
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece98b85ec87d08e69a6915c84858b",
+      "status": "completed",
+      "call_id": "call_LyK7V9bPmDHev9V48xFMJC8u",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '91,120{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911178.628182
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece98f315087d094d52cafdc03b6d4",
+      "status": "completed",
+      "call_id": "call_0yNuHqBeFYD1MH6s8F0vvfQQ",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '121,150{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911182.26767
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9934cf087d082cffe8d012408e5",
+      "status": "completed",
+      "call_id": "call_UaPxNaZE6gD1ML8kklgocrZq",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '151,180{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911186.356632
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece99727a887d0b8d893142a8dcc3f",
+      "status": "completed",
+      "call_id": "call_g7LinTwZXiHVcy1F6Fehwmgl",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '181,210{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":9000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911190.318257
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece99c5e6087d0baeb964041dc69ef",
+      "status": "completed",
+      "call_id": "call_nElR7OCdxfi91kLl3GHcaaBe",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '211,240{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911195.247742
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9a24e4487d0a9aea842f327537b",
+      "status": "completed",
+      "call_id": "call_pP8Lv9hySEDLWxjrRr4S4sV4",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '241,270{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911201.27237
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9a9043887d0b952feeefb4e1f5a",
+      "status": "completed",
+      "call_id": "call_VAKGbnBofmc0fkMhcdYo3V9M",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '271,300{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911207.697855
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9adca7487d080e49b9ba4625297",
+      "status": "completed",
+      "call_id": "call_Iqxc4eeLlYQUhGPx4H0j0Ra4",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '301,330{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911211.977707
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9b2c7bc87d0916e23c123237a2e",
+      "status": "completed",
+      "call_id": "call_xOrc5fdaDNfwUu2n6bC7lucv",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '331,359{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/summary-snapshot.md\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911217.770207
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9b905d887d0a31ade0cf876e7b6",
+      "status": "completed",
+      "call_id": "call_rzx0oj2rxkFV0SQfxkUSqP0O",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1,100{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":6500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911223.980477
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9c012ac87d0a1e99c1c661463dc",
+      "status": "completed",
+      "call_id": "call_9wwVtE6wdUWNEBSsNjBLkX3W",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '101,200{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":7000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911231.00082
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9c49c9887d085aa09c98964c858",
+      "status": "completed",
+      "call_id": "call_QYaNMYIBIOOgim4me1ir2jps",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '201,300{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911235.43617
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9c8210c87d091209e444f99f448",
+      "status": "completed",
+      "call_id": "call_NQk2xLaZVyurVSrBi97sE58l",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '301,400{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911239.332087
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9cb7bac87d081df84a684203d73",
+      "status": "completed",
+      "call_id": "call_Uxj2B6i3SejcEIiZpKjn6Wq1",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '401,500{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911242.333615
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9d08ba887d095df1b61c3ffb7a9",
+      "status": "completed",
+      "call_id": "call_lb1ZENex6qXtmejejjNYxAz0",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '501,600{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911246.558778
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9d5537087d09057ca044f99ff69",
+      "status": "completed",
+      "call_id": "call_KXPnawmFfB4Jmkh994mxGXIX",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '601,700{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911251.236529
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9d8b5e887d08a26c878eef07185",
+      "status": "completed",
+      "call_id": "call_zzTw0IiLqwqT4tg1R4XpBM0t",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '701,800{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911255.6913
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9dc40fc87d0aaf547c1349ebb23",
+      "status": "completed",
+      "call_id": "call_ItVQV8xsOuPgiHwfcIdFJiJB",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '801,900{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911259.346664
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9df4c2c87d0b299d449e2eb3cdd",
+      "status": "completed",
+      "call_id": "call_Ot3M5hNDpSlyic9VDQ3xlXcW",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '901,1000{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911262.281764
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9e2648487d08bb3589c7f07329e",
+      "status": "completed",
+      "call_id": "call_EHhAG7DzzszKwGjkHSIOGzsN",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1001,1100{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911265.36456
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9e5c2c887d0af180b877b8806ee",
+      "status": "completed",
+      "call_id": "call_9mOUNdyINo0CLTbTTvJlUAx4",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1101,1200{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911268.827406
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9e9e0a887d09accdb0bfbb8fc5d",
+      "status": "completed",
+      "call_id": "call_RGjgRtYhtQtjTLbidb7WufzW",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1201,1205{=;p;}' extracted/dune-imperium-uprising-rules.txt\",\"max_output_tokens\":2000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911272.9394
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9ede2f487d090b8d33cc48cde28",
+      "status": "completed",
+      "call_id": "call_WKj6ooQKdAP26w9gFS3R1ijR",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1,100{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911276.963819
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9f359b887d09325bd032964bcc7",
+      "status": "completed",
+      "call_id": "call_vBOvsJiz3ntFnah23j1Qgipc",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '101,200{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911282.072905
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9f73e0c87d0bcec6a589c137e02",
+      "status": "completed",
+      "call_id": "call_Bw7fw9KlXDNc3pk41kJs9ZeW",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '201,300{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911286.185912
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aece9fc664487d0b621553bd75a532f",
+      "status": "completed",
+      "call_id": "call_Of5rxQsQC2hJlyZ2VQPaDHHo",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '301,400{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911290.678787
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea00c94c87d09725be4e1bd31e86",
+      "status": "completed",
+      "call_id": "call_AJAYpVPrW5XxdkxnXTHvZvYh",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '401,500{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911295.622678
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea088af887d08607da9285d82ca4",
+      "status": "completed",
+      "call_id": "call_1ygCOZRVuiwN4hhZk6qF72ca",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '501,600{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911303.292097
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea0d89d487d08cc749dc3771729d",
+      "status": "completed",
+      "call_id": "call_ggUUi0wE0uvvY3LcljoGc5aV",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '601,700{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911308.651846
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea12667887d08a0c4b6636fb55ce",
+      "status": "completed",
+      "call_id": "call_C2PrelSp6EFlyd0UJIl4DTnP",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '701,800{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911312.610978
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea177cb087d0a53d1e1408727f00",
+      "status": "completed",
+      "call_id": "call_VKjlXDIWSozeUIcjIs0Od9DN",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '801,900{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911318.326895
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea1c5da087d0aab47eda73f39974",
+      "status": "completed",
+      "call_id": "call_X2V8TlzfoxzAnSnESDx8fbVS",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '901,981{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements.txt\",\"max_output_tokens\":8000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911322.854752
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea20857c87d0899abf197c4bae57",
+      "status": "completed",
+      "call_id": "call_lZ3bNBf4KD0QHUi19VrziKWY",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '1,100{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt\",\"max_output_tokens\":8500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911327.401057
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea252d4c87d09aaa64b4c225b8e7",
+      "status": "completed",
+      "call_id": "call_bCZ8LpZNc1AXDf8bk6p9gPdJ",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '101,200{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911331.973504
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea2aba3c87d09c5532e64c41e63e",
+      "status": "completed",
+      "call_id": "call_KmGtmAHu9bvRaZu5aUAypCq5",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '201,300{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911336.985344
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea2eb2d487d0afa37b8953950afb",
+      "status": "completed",
+      "call_id": "call_ISmHIr46Agh2njilVT7SjKlF",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"sed -n '301,374{=;p;}' docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-official-faq-2025-01-13.txt\",\"max_output_tokens\":10000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911341.707243
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea32d24087d0a64339f981984827",
+      "status": "completed",
+      "call_id": "call_M6KExqYGcctfAfSJvytdQj4z",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"cat -n docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-original-2023-leader-transcription.txt\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911345.837113
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea37337c87d0a70f196dc6f0cde1",
+      "status": "completed",
+      "call_id": "call_HA3C904quPu5szAplCkkaLvV",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"cat -n docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-source-origin-metadata.json\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911350.057855
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea3df20487d08380fc6c88d1af89",
+      "status": "completed",
+      "call_id": "call_3gIv3LEPkmUKjknw7fhDjkPH",
+      "name": "exec",
+      "input": "image((await tools.view_image({path:\"/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/shaddam-original-2023-leader.png\"})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911355.211881
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea453fa087d083fbf227ff3ca333",
+      "status": "completed",
+      "call_id": "call_FPLU6QErHZKwKQjeQHAVtku4",
+      "name": "exec",
+      "input": "image((await tools.view_image({path:\"/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/dune-imperium-uprising-supplements-p5.png\"})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911363.531404
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea56a84087d0a15d5dddcb8b128a",
+      "status": "completed",
+      "call_id": "call_HLVo6rNp9nPBazS0HkmjSsQX",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\".venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport hashlib,fitz\\nroot=Path('/home/jonny/projects/boardgame-rules')\\nfor n in ['dune-imperium-uprising-rules.pdf','dune-imperium-uprising-supplements.pdf','dune-imperium-official-faq-2025-01-13.pdf']:\\n p=root/'source_pdfs'/n\\n d=fitz.open(p)\\n print(n,'pages=',len(d),'sha256=',hashlib.sha256(p.read_bytes()).hexdigest())\\nfor n in ['shaddam-original-2023-leader.png','dune-imperium-uprising-supplements-p5.png']:\\n p=root/'docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507'/n\\n print(n,'sha256=',hashlib.sha256(p.read_bytes()).hexdigest())\\np=root/'source_pdfs/dune-imperium-uprising-rules.pdf';d=fitz.open(p)\\nprint('rules PDF page 5 size',d[4].rect)\\nd[4].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save(root/'docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/audit-rules-p5.png')\\nPY\",\"max_output_tokens\":3000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911368.179543
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea5df91487d09ea0083e333b9c89",
+      "status": "completed",
+      "call_id": "call_RftxG9vcAdFdMynw07N9VhYQ",
+      "name": "exec",
+      "input": "image((await tools.view_image({path:\"/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/audit-rules-p5.png\"})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911388.697362
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea6e1cf487d0b2e0316752f8bfb1",
+      "status": "completed",
+      "call_id": "call_WQlbrPLSRNwSDDm6kzTDx29Q",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\".venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport fitz\\nroot=Path('/home/jonny/projects/boardgame-rules')\\nout=root/'docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23'\\nd=fitz.open(root/'source_pdfs/dune-imperium-uprising-supplements.pdf')\\nd[0].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save(out/'audit-supplements-p1.png')\\nPY\",\"max_output_tokens\":1000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911393.231732
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea72979887d09ef5d3a657799ca1",
+      "status": "completed",
+      "call_id": "call_668NMp9ESJQyIHoFyCdjFudP",
+      "name": "exec",
+      "input": "image((await tools.view_image({path:\"/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/audit-supplements-p1.png\"})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911409.390344
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea777df087d0b39a7cfa30d92edb",
+      "status": "completed",
+      "call_id": "call_98KDxvSCOGgaGR4TYLmuo5Bj",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\".venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport fitz\\nroot=Path('/home/jonny/projects/boardgame-rules');out=root/'docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23'\\nd=fitz.open(root/'source_pdfs/dune-imperium-uprising-supplements.pdf');d[1].get_pixmap(matrix=fitz.Matrix(1.3,1.3)).save(out/'audit-supplements-p2.png')\\nPY\",\"max_output_tokens\":1000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911414.350151
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea7de64887d0b9f1f3a4a4d6eeb5",
+      "status": "completed",
+      "call_id": "call_QMJMJBmqaqdOCJs2KCnpjceY",
+      "name": "exec",
+      "input": "image((await tools.view_image({path:\"/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507/expanded-iteration-23/audit-supplements-p2.png\"})).image_url);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911420.681063
+      }
+    },
+    {
+      "type": "custom_tool_call",
+      "id": "ctc_02bc7e93641022d9016aecea83624c87d0868a41cc3d844f2c",
+      "status": "completed",
+      "call_id": "call_fbqMUr1kbF0LY067H62ePqdV",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"cat > /tmp/build-source-audit23.py <<'PY'\\nfrom pathlib import Path\\nimport hashlib,json,datetime\\nroot=Path('/home/jonny/projects/boardgame-rules')\\nbase=root/'docs/quality/summary-qa/dune-imperium-uprising/2026-11-04-batch-231507'\\npaths={\\n'summary':base/'expanded-iteration-23/summary-snapshot.md',\\n'rules':root/'extracted/dune-imperium-uprising-rules.txt',\\n'supplements':base/'dune-imperium-uprising-supplements.txt',\\n'faq':base/'dune-imperium-official-faq-2025-01-13.txt',\\n'original_leader_transcription':base/'shaddam-original-2023-leader-transcription.txt',\\n'origin_metadata':base/'shaddam-source-origin-metadata.json',\\n'original_leader_image':base/'shaddam-original-2023-leader.png',\\n'rival_resource_diagram':base/'dune-imperium-uprising-supplements-p5.png',\\n'rules_pdf':root/'source_pdfs/dune-imperium-uprising-rules.pdf',\\n'supplements_pdf':root/'source_pdfs/dune-imperium-uprising-supplements.pdf',\\n'faq_pdf':root/'source_pdfs/dune-imperium-official-faq-2025-01-13.pdf'}\\ninputs={k:{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for k,p in paths.items()}\\nexpected={'summary':'ace79e7c435165eea787c0d71a10d4d2f6ac1f89673363593fb5c35d3a62cf1c','rules':'21342cf965b4c64456776adea86f44d4ebf60815cebae4eb6c86187bf02fb580','supplements':'ce8e2d26252d71fb45e531b07160b494059c13ebb37f0668b9cd86a4c5854315','faq':'783b74f6aea9b4f0512e68a0581ca0438cb42dd565e2d88e0778b1322ecb5f23'}\\nfor k,h in expected.items(): assert inputs[k]['sha256']==h,(k,'changed during audit')\\nreads={}\\nfor k,n,step in [('summary',359,30),('rules',1205,100),('supplements',981,100),('faq',374,100),('original_leader_transcription',4,100),('origin_metadata',11,100)]:\\n b=paths[k].read_bytes();assert len(b.splitlines())==n\\n reads[k]={'actual_read_ranges':[[a,min(a+step-1,n)] for a in range(1,n+1,step)],'line_count_including_final_unterminated_line':n,'ends_with_newline':b.endswith(b'\\\\n'),'complete':True,'method':'Separate functions.exec invocation and separate exec_command output for every bounded chunk; all chunks displayed with line numbers; no truncated result.'}\\nchecks=[]\\ndef ck(claim,summary,source,note='Supported; no material discrepancy found.'):\\n checks.append({'claim':claim,'summary_lines':summary,'source_references':source,'result':'PASS','assessment':note})\\nck('Scope, product metadata, concepts and differences',[[1,27],[95,95],[345,359]],['rules:73-81,101-104,164-174,285-315,463-480,569-574,643-644,788-790,850-851,1073-1074,1200-1201','supplements:351-425'],'The declared rules scope is standard 2\u20134 players plus optional standard CHOAM; the 1\u20136 metadata describes the product. Expansion, solo, optional Rival and six-player rules are not imported.')\\nck('Core component and starting-deck inventory',[[31,48]],['rules:98-168,892-906','supplements:221-223'],'Main-box quantities and starting deck match. Required Rival uses the separately identified House Hagal deck and Rival cards; omission of their inventory counts from the component bullets is not a material gameplay omission.')\\nck('Conflict deck face-down tier construction and concealed unused cards',[[53,53],[74,84],[88,88]],['rules:178-191'])\\nck('Leader selection, complexity, abilities and Leader-specific initial states',[[54,54],[206,206]],['rules:193-199,291-295,935-954'])\\nck('Board, Shield Wall and Alliance setup',[[52,52]],['rules:216-227'])\\nck('Shared draw decks, Imperium Row, Reserve, objectives and first player',[[55,56],[84,93]],['rules:200-211,237-242'])\\nck('Human component locations, water, resources and bank',[[57,72]],['rules:231-235,255-283,1171-1173','rules PDF:p5 (visually inspected)'])\\nck('Round Start, defensive bonus, human turns and Rival continuation',[[99,105],[339,339]],['rules:354-376,506-508','supplements:227-236'])\\nck('Card anatomy, legal Agent origins, matching icons, occupancy, costs and effects ordering',[[107,109],[175,178],[341,341]],['rules:306-313,385-399,403-448,463-489,593-609','faq:175-185,327-333'],'Entry resources must already be held, including legally resolved pre-placement Plot gains. Destination/card gains cannot fund their own entry. Summary explicitly retains card/access requirements when using Spies.')\\nck('Reveal sequence, persuasion and strength timing, cleanup',[[111,114],[343,343]],['rules:646-677,704-738'])\\nck('Combat Intrigue priority, pass reopening and immediate strength adjustment',[[116,117]],['rules:740-748','faq:336-339'])\\nck('Ordinary Combat reward eligibility by player count and positive strength',[[119,119],[347,347]],['rules:749-765','faq:72-75'])\\nck('Winner card destination then mandatory match; troop, worm and marker cleanup',[[121,124],[153,154],[351,351]],['rules:762-790,1114-1120'])\\nck('Combat tie cases including three tied for first in four-player game',[[187,199]],['rules:793-806'])\\nck('Makers and Recall including first player alternation in 2P',[[126,130],[339,339]],['rules:824-840,1150-1152','supplements:227-232'])\\nck('Strength and deployment limits, unit origins and troop scarcity',[[134,142],[349,351]],['rules:532-555,657-674,1197-1199','faq:353-363'])\\nck('Sandworm origins, immediate deployment, Hooks requirement exceptions and retention, Shield Wall',[[144,148],[180,180]],['rules:509-523,556-568,695-699,1153-1156,1176-1179','faq:200-201,304-306'])\\nck('Sandworm reward doubling and optional reward costs',[[150,151]],['rules:779-787,1157-1162'])\\nck('Acquisition, persuasion pooling, reshuffling and row replenishment',[[156,157],[201,202]],['rules:300-305,704-733,1105-1107,1136-1141'])\\nck('Trash, discard, draw and Intrigue handling',[[159,160],[184,186]],['rules:338-352,1129-1135,1189-1196','faq:114-117,175-187'])\\nck('Endgame trigger, Endgame Intrigue, tiebreakers, scores beyond 12 and permanent acquire VP',[[162,170],[334,334],[357,357]],['rules:285-290,824-848','faq:135-138,334-335,364-366'])\\nck('Faction thresholds, retained/repeatable track bonuses and Alliance ownership/VP',[[167,167],[181,182],[328,328],[353,353]],['rules:325-337,482-489,976-983,1111-1113,1142-1149','faq:21-30'])\\nck('Spy placement/recall optionality, supply exhaustion, Infiltrate and Gather Intelligence',[[174,178],[331,331]],['rules:576-609,1182-1188','faq:213-223,327-333'],'Explicit rulebook may language supports optional Spy placement and ordinary recall. The one-Spy-per-Gather-Intelligence limit and distinct recalls are supported by FAQ.')\\nck('Control destinations, visitor/controller separation and defensive troop origin',[[179,180],[232,234]],['rules:491-523,620-634,1124-1128','supplements:9-13,90-95,137-142'])\\nck('Arrows, optional costs, mandatory effects, Fremen Bond and recall/retreat destinations',[[183,183],[202,205],[327,327]],['rules:414-423,1136-1141,1157-1168,1174-1175','faq:213-229,255-256'])\\nck('CHOAM optionality, setup, 20 standard versus 10 separate Ix contracts',[[208,212],[228,228]],['rules:850-867,892-932','original Leader image:left ability','original_leader_transcription:1-4','origin_metadata:2-9'],'Original physical Leader image independently inspected. Its exclusive set-aside instruction applies in standard CHOAM when Shaddam is selected; this was not inferred from six-player-only rules.')\\nck('Shaddam Signet alternative benefits and immediate turn-long deployment prohibition',[[206,206],[214,214],[330,330]],['original Leader image:right ability and icon branches','rules:948-951','faq:292-300'],'Image shows 1 Solari plus 1 troop OR 3 Solari for chosen Influence, with units unable to deploy this turn. Summary matches both branches and timing.')\\nck('Contract taking, public refill, 2 Solari fallback and exclusive reserved contracts',[[216,218],[236,242]],['rules:868-874,1121-1123','supplements:3-8,37-43','original Leader image:left ability','faq:292-296'])\\nck('Contract completion triggers, holding-before-entry, rewards, completed destination and mandatory multiple completion',[[220,226],[329,329]],['rules:875-890','faq:76-85'])\\nboard=[('Accept Contract',246,'3-8'),('Arrakeen',247,'9-13'),('Assembly Hall',248,'14-18'),('Deep Desert',249,'19-26'),('Deliver Supplies',250,'27-30'),('Desert Tactics',251,'31-36'),('Dutiful Service',252,'37-43'),('Espionage',253,'44-48'),('Fremkit',254,'49-53'),('Gather Support',255,'54-58'),('Hagga Basin',256,'67-74'),('Heighliner',257,'75-80'),('High Council',258,'81-89'),('Imperial Basin',259,'90-95'),('Imperial Privilege',260,'96-103'),('Research Station',261,'104-108'),('Sardaukar',262,'109-113'),('Secrets',263,'114-119'),('Shipping',264,'120-126'),('Sietch Tabr',265,'127-136'),('Spice Refinery',266,'137-142'),('Swordmaster',267,'143-154')]\\nfor name,line,ref in board:\\n ck(name+': access icon, Combat flag, cost, requirements, effects and exceptions',[[line,line]],['supplements:'+ref,'supplements PDF:pp1-2 (both visually inspected)']+(['faq:287-289'] if name=='Swordmaster' else [])+(['rules:1193-1196'] if name=='Desert Tactics' else []))\\nck('Required scoring Rival selection, setup and objective assignment',[[269,285]],['supplements:157-204,394-404','rules:268-283'],'No solo difficulty or Streamlined rule is imported. Standard Rival gets track VP/Alliances and can win.')\\nck('Rival Agent-turn loop, occupancy, two-destination priority, Place Spy continuation',[[286,290]],['supplements:226-281','faq:276-281'])\\nck('Rival Signet versus Scheme, Spy post priority, trigger timing and pre-placement recruited troops',[[292,299]],['supplements:245-269,334-347','supplements PDF:p5 diagram (visually inspected)'])\\nck('Rival resource collection, Swordmaster threshold, spending priority and conversions',[[301,307]],['supplements:285-316','supplements PDF:p5 Buying Victory Points diagram (visually inspected)','faq:287-289'],'Visual diagram confirms 7 Solari, 7 spice, 3 Intrigue or 3 water per VP. Summary correctly retains leftovers and spends in mandatory Solari/spice/Intrigue/water order.')\\nck('Rival Maker spice, Hooks and conditional Shield Wall removal',[[309,319]],['supplements:265-271,294-308'])\\nck('Rival Combat bonus, rewards/doubling, icons, control, Influence priority and contract substitution',[[321,321]],['supplements:317-332'])\\nck('FAQ draw timing, deferred Plot effects and exhausted Intrigue deck',[[332,332]],['faq:175-187,257-268'])\\nck('FAQ deployment, win-only Intrigues and retreat zero',[[333,333]],['faq:255-256,353-363,367-372'])\\nck('FAQ Jessica, False Orders, Manipulate and Litany Against Fear',[[335,335]],['faq:140-145,192-195,205-212,269-271'])\\nresult={\\n 'verdict':'PASS','findings':[],\\n 'scope':'Original English 2023 Uprising v23-10-12, standard 2\u20134-player multiplayer including scoring 2P Rival and optional standard base-box CHOAM (20 contracts); separate 10 Ix contracts identified only. Relevant general/Uprising January 13, 2025 FAQ applied. Solo, optional Rival variants, six-player, expansions and later products excluded.',\\n 'checked_claims':checks,\\n 'inputs':inputs,\\n 'read_completeness':{'documents':reads,'summary_read_before_authoritative_texts':True,'all_text_inputs_completely_read':True,'missing_or_truncated_ranges':[], 'visual_inspections':[{'input':'original_leader_image','coverage':'Entire original unannotated Leader, including both abilities and Signet icon branches.'},{'input':'rival_resource_diagram','coverage':'Entire supplied supplements p5 image, including four VP conversions, resource rules, Scheme and Combat.'},{'input':'rules_pdf','pages':[5],'render':str(base/'expanded-iteration-23/audit-rules-p5.png'),'coverage':'Entire setup page, human component positions and initial states.'},{'input':'supplements_pdf','pages':[1,2],'renders':[str(base/'expanded-iteration-23/audit-supplements-p1.png'),str(base/'expanded-iteration-23/audit-supplements-p2.png')],'coverage':'Entire standard Board Space Guide, all 22 spaces and their diagrams.'}], 'pdf_reading_note':'Complete text sources read; PDF visuals inspected selectively for material icon/layout evidence, not represented as complete visual reading of all PDF pages.'},\\n 'omission_review':'Reviewed complete sources for important missing rules within scope. Standard turn structure, setup, board access/effects, costs, optionality, units/Spies, Conflict rewards/ties, component destinations, scoring, Rival, CHOAM and relevant FAQ are covered. Printed card text remains governing where specific card details are not reproduced. No material omission identified.',\\n 'independence_statement':'Fresh independent final source audit. Read only the assigned frozen iteration-23 summary, complete authorized rules/supplements/FAQ texts, supplied original Leader transcription/origin metadata and unannotated images, and necessary publisher PDF assets. Did not read another summary version, prior audit/reviewer conclusions, repair history, provenance/conclusion files beyond explicitly authorized origin metadata/transcription, coverage questions/key, reader answers or grades. Did not communicate with readers or edit the summary. Verified frozen summary and principal text hashes unchanged immediately before writing.',\\n 'created_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()\\n}\\np=base/'expanded-iteration-23/source-audit.json';p.write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\\\\n')\\nprint(json.dumps({'path':str(p),'verdict':result['verdict'],'findings':len(result['findings']),'checked_claim_groups':len(checks),'all_text_inputs_complete':True}))\\nPY\\n.venv/bin/python /tmp/build-source-audit23.py\",\"max_output_tokens\":2000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ad6f-94c9-7251-8fa0-9542ad879ed3",
+        "create_time": 1793911425.710104
+      }
+    }
+  ],
+  "limit": "Actual output presence, not OS isolation; manually review calls, ranges, and task boundaries."
+}

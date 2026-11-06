@@ -1,0 +1,5 @@
+# Recall and Rival ability clarity
+
+Full14 initially scored A99/1/1 and B100/1/0. A NEW neutral14 review independently confirms both Q23 partials: the unrestricted2–4-player Recall request and original key include the required two-player branch. It accepts A76’s combined label in its operative Hagal-Ring context as terminology imprecision without an extra Scheme action. Both reports/raw responses remain unchanged; final14 both100/1/0. All22 earlier expanded Q23 responses are consistently corrected to partial, with original exports preserved; no question or expected string changed.
+
+The next summary now states human-versus-Rival recall destinations and human-only First Player passing directly in Phase5 and the Player Reference. A separate trigger/ability table distinguishes Hagal Signet Ring from third-Spy Scheme without requiring a human Ring card or Reveal. The table improves terminology even though neutral14 accepts the prior label semantically. The new324-line candidate receives a NEW final-only source15 auditor and fresh full101 pair. Finalv16 questions/key and already independently completed source-only coverage proof remain unchanged.

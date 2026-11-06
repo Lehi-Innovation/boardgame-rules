@@ -1,0 +1,864 @@
+{
+  "benchmark_version": "v1-seed",
+  "grading_standard": "../grading-standard.json",
+  "readers": {
+    "a": {
+      "totals": {
+        "correct": 5,
+        "incorrect": 2,
+        "partial": 13
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How are the King and home regions assigned, and where do each player’s initial ten Caballeros go?",
+          "expected_answer": "Shuffle region cards; reveal top for King, each player takes another for home and places Grande. Two Caballeros home, one on first success-track space, seven court; remaining supply provinces.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "2",
+              "section": "Preparation"
+            }
+          ],
+          "observed": {
+            "id": "Q01",
+            "answer": "The top region card is revealed and the King is placed there. Each player receives a region card and places their Grande in that home region. Of each player's initial ten Caballeros, 2 go to the home region, 1 to scoring track space 1, and 7 to their court.",
+            "support": "supported",
+            "evidence": "Setup: reveal top region card and place the King there; deal one card to each player for their Grande/home region; each player places 2 Caballeros in home, 1 on scoring track space 1, and 7 in their court."
+          },
+          "grade": "correct",
+          "reason": "Assignment and all ten destinations correct; summary evidence includes shuffled region cards.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Who begins playing power cards in the first and later rounds, in what seating direction do others play, and may a played value be matched?",
+          "expected_answer": "Players choose first-round starter; previous round’s last player begins later rounds; clockwise; no duplicate value in a round.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3",
+              "section": "Play the power cards"
+            }
+          ],
+          "observed": {
+            "id": "Q02",
+            "answer": "The youngest player begins in round 1. In later rounds, the player who played lowest last round begins. Other players' seating direction is not specified. Values must be different, so a played value may not be matched.",
+            "support": "partial",
+            "evidence": "Power cards: “Starting with the leader (youngest in round 1, then whoever played lowest last round)” and “All played values must be different.”"
+          },
+          "grade": "incorrect",
+          "reason": "Wrong first-round starter: source says players choose, not youngest. Clockwise also omitted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "What determines turn order and court recruitment, and when is recruitment done relative to choosing an action card?",
+          "expected_answer": "Descending power value determines turns. Recruit at most pictured Caballeros from provinces into court first, then choose face-up action card.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3",
+              "section": "Player turns"
+            }
+          ],
+          "observed": {
+            "id": "Q03",
+            "answer": "Players take turns from highest to lowest power-card value. On their turn, each adds from the provinces to their court the number of Caballeros shown on their power card. Recruitment happens before discarding that card and selecting an action card.",
+            "support": "supported",
+            "evidence": "Player turns (highest to lowest power card): first “Adds Caballeros from the provinces to their court (number shown on power card),” then discards the card and selects an action card."
+          },
+          "grade": "partial",
+          "reason": "Recruitment timing/value correct but does not resolve at-most/optional recruitment allowance.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "If a power card allows recruitment but your provinces lack enough, what alternative is allowed, and which protected locations cannot supply it?",
+          "expected_answer": "May remove own Caballeros from board to make up difference; not King’s region or Castillo (taboo and no Castillo removal outside general scoring).",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,4,7",
+              "section": "Recruitment; taboo; Castillo"
+            }
+          ],
+          "observed": {
+            "id": "Q04",
+            "answer": "If the provinces run out, a player may remove their own Caballeros from the board to their court. The summary does not say which board locations are protected from supplying those Caballeros.",
+            "support": "partial",
+            "evidence": "Special Rules: “If provinces run out, a player may remove their own Caballeros from the board to their court.”"
+          },
+          "grade": "partial",
+          "reason": "Fails to resolve every protected source, especially Castillo.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Where may ordinary action-card deployment go, may it be split, and must the full printed allowance be used?",
+          "expected_answer": "From court to regions adjacent to current King and/or Castillo; split freely; printed number is maximum, fewer allowed.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,7",
+              "section": "Deployment; E,F"
+            }
+          ],
+          "observed": {
+            "id": "Q05",
+            "answer": "Ordinary deployment may go to regions adjacent to the King's region or into the Castillo, and it may be split among multiple adjacent regions and the Castillo. The card shows the maximum. The summary does not explicitly say whether using fewer than the full allowance is permitted.",
+            "support": "partial",
+            "evidence": "Deploying Caballeros: “regions adjacent to the King or into the Castillo”; “Maximum number shown”; “Can split between multiple adjacent regions and the Castillo.”"
+          },
+          "grade": "partial",
+          "reason": "Gives maximum but explicitly leaves fewer-than-maximum use unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "May special action and ordinary deployment be done in either order, may either be interleaved with the other, and may the special action be declined?",
+          "expected_answer": "Either order, each completed wholly before next; no splitting/interleaving. Special action optional, may select card to prevent it.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,7",
+              "section": "Sequence; skipping"
+            }
+          ],
+          "observed": {
+            "id": "Q06",
+            "answer": "Deployment and the special action may be done in either order, and the special action is optional. Whether the two activities may be interleaved is not specified.",
+            "support": "partial",
+            "evidence": "Turn structure: perform the two activities “(in either order)” and the “Special action” is “(optional).”"
+          },
+          "grade": "partial",
+          "reason": "Noninterleaving requirement explicitly unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "What happens to selected and unselected face-up action cards after turns and rounds, and what is exceptional about the King card?",
+          "expected_answer": "Chosen card laid aside unavailable to later players; remaining face-up cards discarded at round end; King card returns face-up every round, never permanently discarded.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4",
+              "section": "Next Round"
+            }
+          ],
+          "observed": {
+            "id": "Q07",
+            "answer": "After a turn, the chosen action card is turned over. The summary does not state what happens to unselected face-up cards at the end of a round. The King card is turned face up every round and never permanently discarded.",
+            "support": "partial",
+            "evidence": "Turn structure: “Turns over the chosen action card.” Special Rules: “The King card (5-pile) is turned face up every round and never permanently discarded.”"
+          },
+          "grade": "partial",
+          "reason": "Unselected round-end card destination omitted/unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "What changes are forbidden in the King’s region, may it still be scored, and what kind of action changes its protected status?",
+          "expected_answer": "No Caballeros, Grande or mobile scoreboard in/out, even special actions; scoring allowed. King-moving actions move King, changing which region is taboo.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,7",
+              "section": "King; A"
+            }
+          ],
+          "observed": {
+            "id": "Q08",
+            "answer": "No Caballero, Grande, or scoreboard may be moved into or out of the King's region. The region may still be scored; the summary gives a King's bonus when it is scored. Moving the King is listed as a special action, which would change which region is the King's region, but the summary does not explicitly describe that effect on the restriction.",
+            "support": "partial",
+            "evidence": "The King's Region: “No Caballeros, Grandes, or scoreboards may be moved into or out of the King's Region. No exceptions”; King's Bonus applies “when it is scored.” Special actions include “move the King.”"
+          },
+          "grade": "partial",
+          "reason": "Reader A leaves King movement’s change to protected region explicitly unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "When putting Caballeros into the Castillo, what must be announced, how does King location affect entry, and when may they leave?",
+          "expected_answer": "Announce number added; entry whenever adding/moving Caballeros regardless King; leave only at general scoring.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,5,7",
+              "section": "Castillo; C"
+            }
+          ],
+          "observed": {
+            "id": "Q09",
+            "answer": "Players announce how many Caballeros they add to the Castillo. The King’s location does not restrict entry: Caballeros can always enter the Castillo. They leave during general scoring, when the Castillo is emptied and they are moved to chosen regions. If the Castillo is scored via an action card, it is not emptied.",
+            "support": "supported",
+            "evidence": "The Castillo: Caballeros are placed secretly and “players announce how many they add”; “During general scoring only: Castillo is scored, then emptied”; deployment says Caballeros “can always enter the Castillo regardless of King's position.”"
+          },
+          "grade": "correct",
+          "reason": "Announced amount, unrestricted entry and general-only exit correctly resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "List the timing and ordered stages of general scoring, including when destinations are chosen relative to revealing the Castillo.",
+          "expected_answer": "After rounds 3,6,9: secretly choose destinations first and place disks face down; uncover and score Castillo; reveal disks and move its Caballeros; score board regions in track order.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,5",
+              "section": "General scoring"
+            }
+          ],
+          "observed": {
+            "id": "Q10",
+            "answer": "General scoring occurs after rounds 3, 6, and 9. First, each player secretly selects a destination region on their secrecy disk; next the Castillo is scored; then its Caballeros are redistributed to the selected regions; finally, the regions are scored in round-chart order. Thus destinations are chosen before the Castillo is scored/revealed.",
+            "support": "supported",
+            "evidence": "General Scoring: “Each player secretly selects a region ... for Castillo redistribution”; then “Score the Castillo”; then “Move Castillo Caballeros”; then “Score each region.”"
+          },
+          "grade": "correct",
+          "reason": "All four scoring stages, rounds and selection before revelation correct.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "At general scoring, may one player split Castillo Caballeros between regions, choose the King’s region, or keep them in the Castillo; what happens if the King’s region was chosen?",
+          "expected_answer": "All must go to single disk-selected region, not King’s region; Castillo emptied. Illegal King choice sends own Castillo Caballeros to own court.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5",
+              "section": "Secret disk; move"
+            }
+          ],
+          "observed": {
+            "id": "Q11",
+            "answer": "A player's Castillo Caballeros all go to one region, so they cannot be split, and the chosen destination cannot be the King's region. Keeping them in the Castillo is not listed as an option. The summary does not say what happens if a player selects the King's region despite the prohibition.",
+            "support": "partial",
+            "evidence": "General Scoring: “all of one player's must go to a single region, cannot be the King's Region.”"
+          },
+          "grade": "partial",
+          "reason": "Illegal King-region selection consequence (own court) unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "In a five-player scoring of 5/3/1, three players have four Caballeros each and another has three. What do these four players score, and do Grandes count?",
+          "expected_answer": "Three tied leaders each 3 (second rank); next player third rank gets1. Grandes do not count toward majority.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5,6",
+              "section": "Score Regions; example1"
+            }
+          ],
+          "observed": {
+            "id": "Q12",
+            "answer": "The three players tied at four Caballeros each receive the lower tied position's points, which is the second-place value of 3; the higher position is eliminated. The summary does not specify what the player with three Caballeros scores after this three-way tie. Grandes do not count as Caballeros in the standard game.",
+            "support": "partial",
+            "evidence": "Region Scoring: “Tied players each receive the points for the lower position and the higher position is eliminated.” Special Rules: a Grande “does not count as a Caballero” in the standard game."
+          },
+          "grade": "partial",
+          "reason": "Reader A resolves leaders correctly but next player’s third rank/1 point unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q13",
+          "question": "In a five-player region worth 6/4/2 with counts 4,3,2,2, what does each score?",
+          "expected_answer": "6,4,0,0: tied third players drop to fourth.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6",
+              "section": "Example2"
+            }
+          ],
+          "observed": {
+            "id": "Q13",
+            "answer": "The player with 4 scores 6 points; the player with 3 scores 4; and each of the two players tied at 2 receives the lower tied position's 2 points, with the higher position eliminated.",
+            "support": "supported",
+            "evidence": "Region Scoring defines first/second/third as the three scoreboard values and says tied players each receive the points for the lower position while the higher position is eliminated."
+          },
+          "grade": "incorrect",
+          "reason": "Reader A awards tied third players2 instead of dropping to fourth/0.",
+          "unsupported_guess": true
+        },
+        {
+          "id": "Q14",
+          "question": "Which scoreboard ranks pay in two-player and three-player games, and what happens to a two-player tie for first?",
+          "expected_answer": "Two players only first rank; three only first two. Tied first drops to second so two-player tied leaders receive no points.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5",
+              "section": "Score Regions"
+            }
+          ],
+          "observed": {
+            "id": "Q14",
+            "answer": "The summary does not specify which scoreboard ranks pay in two-player or three-player games, or the outcome of a two-player tie for first.",
+            "support": "unsupported",
+            "evidence": "The summary says regions show three scoring values for most, second, and third, but does not describe player-count-specific scoreboards or a two-player tie rule."
+          },
+          "grade": "partial",
+          "reason": "Player-count rank cutoffs and tie result unresolved; abstention is partial.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "When are the King’s and home bonuses awarded, how much is each, and what happens on a tied majority?",
+          "expected_answer": "Whenever relevant region scored including special scoring; sole majority earns2 King bonus in King region and2 home bonus if own Grande there; neither for tied first.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6,10",
+              "section": "Bonuses"
+            }
+          ],
+          "observed": {
+            "id": "Q15",
+            "answer": "The King's Bonus is 2 points when the King's region is scored, for the player with a sole Caballero majority there; it is not awarded on a tie for first. The Home Bonus is 2 points when a region is scored, for its sole Caballero-majority holder if their Grande is there; it is not awarded on a tied majority.",
+            "support": "supported",
+            "evidence": "King's Bonus: “+2 points when it is scored” and “Not awarded if tied for first.” Home Bonus: “+2 points if their Grande is in that region” and “No Home Bonus ... for a tied majority.”"
+          },
+          "grade": "correct",
+          "reason": "Both2-point bonuses on scoring and sole-majority/tie conditions correctly stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "Does specially scoring the Castillo empty it or redistribute its Caballeros? Describe what happens.",
+          "expected_answer": "Uncover and score; replace Castillo over same Caballeros; no redistribution until general scoring.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "10,11",
+              "section": "Special Castillo scoring"
+            }
+          ],
+          "observed": {
+            "id": "Q16",
+            "answer": "Specially scoring the Castillo does not empty it or redistribute its Caballeros. It is scored via the action card, and the Caballeros remain there; emptying occurs only during general scoring.",
+            "support": "supported",
+            "evidence": "The Castillo section says it is emptied “During general scoring only” and, “If scored via action cards, it is NOT emptied.”"
+          },
+          "grade": "correct",
+          "reason": "No emptying/redistribution, remains until general scoring correctly resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Can a mobile scoreboard be put at the Castillo, moved into/out of King’s region, stacked on the other, or rotated to change its values?",
+          "expected_answer": "Castillo allowed; King in/out prohibited; cannot stack; right side up only8/4/0 or4/0/0.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "11",
+              "section": "Mobile scoreboard"
+            }
+          ],
+          "observed": {
+            "id": "Q17",
+            "answer": "The summary says scoreboards may not be moved into or out of the King's region. It does not specify whether a mobile scoreboard may be placed at the Castillo, stacked on another scoreboard, or rotated to change its values.",
+            "support": "partial",
+            "evidence": "The King's Region restriction includes “scoreboards”; no Castillo placement, stacking, or rotation rule for scoreboards is given."
+          },
+          "grade": "partial",
+          "reason": "Castillo placement, stacking and orientation unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "What are the legal source/destination restrictions on moving your Grande, may other Grandes already be there, and what changes afterward?",
+          "expected_answer": "Cannot leave King region or enter King region/Castillo; any other region even multiple Grandes; new region is home.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "12",
+              "section": "Grande"
+            }
+          ],
+          "observed": {
+            "id": "Q18",
+            "answer": "The summary says certain action cards can move a Grande, subject to the King's Region restriction. It does not state legal source/destination rules beyond that restriction, whether another Grande may already be at the destination, or what changes after the move.",
+            "support": "partial",
+            "evidence": "Special Rules: “Certain action cards can move it, subject to the King’s Region restriction.”"
+          },
+          "grade": "partial",
+          "reason": "Complete legal move/destination and new home effects unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "Which power card may the recovery action return, can it be the card used this turn, and must the choice be revealed?",
+          "expected_answer": "Any one played card, including current turn’s, to hand; need not reveal, though taking visible top is observable.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "12",
+              "section": "Power Cards"
+            }
+          ],
+          "observed": {
+            "id": "Q19",
+            "answer": "The summary only says power cards can be recovered via certain action cards. It does not identify which card may be returned, whether the current turn's card is eligible, or whether the choice must be revealed.",
+            "support": "unsupported",
+            "evidence": "Special Rules: “Power cards are permanently discarded after use (can only be recovered via certain action cards).” No further recovery procedure is included."
+          },
+          "grade": "partial",
+          "reason": "Recovery choice, current-turn eligibility and secrecy unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "When does the standard game end, and how is the winner determined?",
+          "expected_answer": "After third general scoring following round9; furthest along success track/most points wins.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6",
+              "section": "Game End"
+            }
+          ],
+          "observed": {
+            "id": "Q20",
+            "answer": "The standard game ends after 9 rounds. The player with the most points wins.",
+            "support": "supported",
+            "evidence": "Game End: “After 9 rounds ... Player with the most points wins.”"
+          },
+          "grade": "partial",
+          "reason": "Rounds/winner correct but answer does not specify game ends after third/final general scoring.",
+          "unsupported_guess": false
+        }
+      ]
+    },
+    "b": {
+      "totals": {
+        "correct": 5,
+        "incorrect": 2,
+        "partial": 13
+      },
+      "grades": [
+        {
+          "id": "Q01",
+          "question": "How are the King and home regions assigned, and where do each player’s initial ten Caballeros go?",
+          "expected_answer": "Shuffle region cards; reveal top for King, each player takes another for home and places Grande. Two Caballeros home, one on first success-track space, seven court; remaining supply provinces.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "2",
+              "section": "Preparation"
+            }
+          ],
+          "observed": {
+            "id": "Q01",
+            "answer": "The top region card is revealed and the King is placed there; each player is dealt one region card and places their Grande in that home region. Each player starts with 2 Caballeros in their home region, 1 on scoring-track space 1, and 7 in their court. The summary does not explicitly say how many remain in the provinces, but these are the initial ten asked about.",
+            "support": "supported",
+            "evidence": "Setup: “reveal top card and place the King in that region. Deal one card to each player; they place their Grande in that region (home region).” Each player places “2 Caballeros in their home region, 1 on scoring track space 1, 7 in their court.”"
+          },
+          "grade": "correct",
+          "reason": "Assignment and all ten destinations correct; summary evidence includes shuffled region cards.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q02",
+          "question": "Who begins playing power cards in the first and later rounds, in what seating direction do others play, and may a played value be matched?",
+          "expected_answer": "Players choose first-round starter; previous round’s last player begins later rounds; clockwise; no duplicate value in a round.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3",
+              "section": "Play the power cards"
+            }
+          ],
+          "observed": {
+            "id": "Q02",
+            "answer": "In round 1, the youngest player starts playing power cards; in later rounds, the starting player is whoever played the lowest card last round. The summary does not state the seating direction for the other players. Played values may not match: all values in a round must be different.",
+            "support": "partial",
+            "evidence": "“Starting with the leader (youngest in round 1, then whoever played lowest last round), each player plays one power card face up. All played values must be different.”"
+          },
+          "grade": "incorrect",
+          "reason": "Wrong first-round starter: source says players choose, not youngest. Clockwise also omitted.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q03",
+          "question": "What determines turn order and court recruitment, and when is recruitment done relative to choosing an action card?",
+          "expected_answer": "Descending power value determines turns. Recruit at most pictured Caballeros from provinces into court first, then choose face-up action card.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3",
+              "section": "Player turns"
+            }
+          ],
+          "observed": {
+            "id": "Q03",
+            "answer": "Players take turns from highest to lowest power-card value. On their turn, they first add the number of Caballeros shown on their power card from the provinces to their court, then discard that power card, and then select an action card. Thus recruitment precedes action-card selection.",
+            "support": "supported",
+            "evidence": "“Player turns (highest to lowest power card)” and each player “Adds Caballeros from the provinces to their court (number shown on power card)” before “Selects one face-up action card.”"
+          },
+          "grade": "partial",
+          "reason": "Recruitment timing/value correct but does not resolve at-most/optional recruitment allowance.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q04",
+          "question": "If a power card allows recruitment but your provinces lack enough, what alternative is allowed, and which protected locations cannot supply it?",
+          "expected_answer": "May remove own Caballeros from board to make up difference; not King’s region or Castillo (taboo and no Castillo removal outside general scoring).",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,4,7",
+              "section": "Recruitment; taboo; Castillo"
+            }
+          ],
+          "observed": {
+            "id": "Q04",
+            "answer": "If provinces run out, a player may remove their own Caballeros from the board to their court. The summary says nothing about whether Caballeros in the Castillo may be used this way. The King’s region is expressly protected from movement out, so it cannot supply them. Other protected-location restrictions are unsupported.",
+            "support": "partial",
+            "evidence": "“If provinces run out, a player may remove their own Caballeros from the board to their court.” The King’s Region rule says “No Caballeros, Grandes, or scoreboards may be moved into or out of the King's Region.”"
+          },
+          "grade": "partial",
+          "reason": "Fails to resolve every protected source, especially Castillo.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q05",
+          "question": "Where may ordinary action-card deployment go, may it be split, and must the full printed allowance be used?",
+          "expected_answer": "From court to regions adjacent to current King and/or Castillo; split freely; printed number is maximum, fewer allowed.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,7",
+              "section": "Deployment; E,F"
+            }
+          ],
+          "observed": {
+            "id": "Q05",
+            "answer": "Ordinary deployment may go from the court to regions adjacent to the King’s region or into the Castillo. It may be split among multiple adjacent regions and the Castillo. The printed number is a maximum; the summary does not explicitly say whether using fewer than the full allowance is permitted.",
+            "support": "partial",
+            "evidence": "Deploy from court “to regions adjacent to the King's region or into the Castillo (max shown on card)” and “Can split between multiple adjacent regions and the Castillo.”"
+          },
+          "grade": "partial",
+          "reason": "Gives maximum but explicitly leaves fewer-than-maximum use unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q06",
+          "question": "May special action and ordinary deployment be done in either order, may either be interleaved with the other, and may the special action be declined?",
+          "expected_answer": "Either order, each completed wholly before next; no splitting/interleaving. Special action optional, may select card to prevent it.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,7",
+              "section": "Sequence; skipping"
+            }
+          ],
+          "observed": {
+            "id": "Q06",
+            "answer": "Ordinary deployment and the special action may be done in either order, and the special action is optional. Whether the two activities may be interleaved is unsupported.",
+            "support": "partial",
+            "evidence": "The action card’s “two activities (in either order)” are deployment and the special action; the special action is marked “(optional).”"
+          },
+          "grade": "partial",
+          "reason": "Noninterleaving requirement explicitly unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q07",
+          "question": "What happens to selected and unselected face-up action cards after turns and rounds, and what is exceptional about the King card?",
+          "expected_answer": "Chosen card laid aside unavailable to later players; remaining face-up cards discarded at round end; King card returns face-up every round, never permanently discarded.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4",
+              "section": "Next Round"
+            }
+          ],
+          "observed": {
+            "id": "Q07",
+            "answer": "After a player chooses an action card, they turn that card over. The summary does not say what happens to unselected face-up cards at the end of a turn or round. The King card in the 5-Caballero pile is turned face up every round and is never permanently discarded.",
+            "support": "partial",
+            "evidence": "“Turns over the chosen action card.” Also: “The King card (5-pile) is turned face up every round and never permanently discarded.”"
+          },
+          "grade": "partial",
+          "reason": "Unselected round-end card destination omitted/unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q08",
+          "question": "What changes are forbidden in the King’s region, may it still be scored, and what kind of action changes its protected status?",
+          "expected_answer": "No Caballeros, Grande or mobile scoreboard in/out, even special actions; scoring allowed. King-moving actions move King, changing which region is taboo.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,7",
+              "section": "King; A"
+            }
+          ],
+          "observed": {
+            "id": "Q08",
+            "answer": "Caballeros, Grandes, and scoreboards may not be moved into or out of the King’s region. The summary indicates regions are scored, including the King’s region, and states that its majority holder may receive the King’s bonus when it is scored. Certain action cards can move the King, which changes which region is protected. Other details of that status change are unsupported.",
+            "support": "partial",
+            "evidence": "King’s Region: “No Caballeros, Grandes, or scoreboards may be moved into or out of the King's Region.” “Player with the most Caballeros in the King's Region gets +2 points when it is scored.” Certain action cards “move the King.”"
+          },
+          "grade": "correct",
+          "reason": "Answers taboo objects, scoring permission and King movement changing protected region; generic other-details caveat does not leave a requested ruling unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q09",
+          "question": "When putting Caballeros into the Castillo, what must be announced, how does King location affect entry, and when may they leave?",
+          "expected_answer": "Announce number added; entry whenever adding/moving Caballeros regardless King; leave only at general scoring.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "4,5,7",
+              "section": "Castillo; C"
+            }
+          ],
+          "observed": {
+            "id": "Q09",
+            "answer": "Players announce how many Caballeros they add to the Castillo. The King’s location does not restrict entry: Caballeros can always enter the Castillo. At general scoring the Castillo is scored and then emptied. If the Castillo is scored via an action card, it is not emptied. The summary does not specify any other time when Caballeros may leave.",
+            "support": "supported",
+            "evidence": "“Caballeros placed secretly; players announce how many they add.” They “can always enter the Castillo regardless of King's position.” During general scoring it is “scored, then emptied”; if scored via action cards, “it is NOT emptied.”"
+          },
+          "grade": "correct",
+          "reason": "Announced amount, unrestricted entry and general-only exit correctly resolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q10",
+          "question": "List the timing and ordered stages of general scoring, including when destinations are chosen relative to revealing the Castillo.",
+          "expected_answer": "After rounds 3,6,9: secretly choose destinations first and place disks face down; uncover and score Castillo; reveal disks and move its Caballeros; score board regions in track order.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "3,5",
+              "section": "General scoring"
+            }
+          ],
+          "observed": {
+            "id": "Q10",
+            "answer": "General scoring occurs after rounds 3, 6, and 9. In order: each player secretly selects a destination region on their secrecy disk; the Castillo is scored; its Caballeros are moved to their chosen regions; then each region is scored in the order shown on the round chart. Destinations are chosen before the Castillo is revealed/scored.",
+            "support": "supported",
+            "evidence": "“General Scoring (after rounds 3, 6, and 9)” lists: “Each player secretly selects a region,” “Score the Castillo (lift it, count Caballeros…),” “Move Castillo Caballeros to chosen regions,” then “Score each region in order shown on the round chart.”"
+          },
+          "grade": "correct",
+          "reason": "All four scoring stages, rounds and selection before revelation correct.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q11",
+          "question": "At general scoring, may one player split Castillo Caballeros between regions, choose the King’s region, or keep them in the Castillo; what happens if the King’s region was chosen?",
+          "expected_answer": "All must go to single disk-selected region, not King’s region; Castillo emptied. Illegal King choice sends own Castillo Caballeros to own court.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5",
+              "section": "Secret disk; move"
+            }
+          ],
+          "observed": {
+            "id": "Q11",
+            "answer": "A given player’s Castillo Caballeros must all go to one region; they cannot choose the King’s region. Keeping them in the Castillo is not listed as an option, and the summary says the Castillo is emptied. The summary does not say what happens if a player selects the King’s region as their destination.",
+            "support": "partial",
+            "evidence": "“Move Castillo Caballeros to chosen regions (all of one player's must go to a single region, cannot be the King's Region).” General scoring says the Castillo is “then emptied.”"
+          },
+          "grade": "partial",
+          "reason": "Illegal King-region selection consequence (own court) unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q12",
+          "question": "In a five-player scoring of 5/3/1, three players have four Caballeros each and another has three. What do these four players score, and do Grandes count?",
+          "expected_answer": "Three tied leaders each 3 (second rank); next player third rank gets1. Grandes do not count toward majority.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5,6",
+              "section": "Score Regions; example1"
+            }
+          ],
+          "observed": {
+            "id": "Q12",
+            "answer": "The three players tied at four Caballeros each receive the points for the lower tied position, which is third place: 1 point each. The higher tied positions are eliminated. The player with three Caballeros is not assigned points by the summary’s stated tie rule. Grandes do not count as Caballeros in the standard game. The summary does not explicitly state the score for the fourth player in this example.",
+            "support": "partial",
+            "evidence": "For ties: “Tied players each receive the points for the lower position and the higher position is eliminated.” Standard game: a Grande “does not count as a Caballero.”"
+          },
+          "grade": "incorrect",
+          "reason": "Wrong3-way-tie rank: awards1 each instead of3 each; next player unresolved.",
+          "unsupported_guess": true
+        },
+        {
+          "id": "Q13",
+          "question": "In a five-player region worth 6/4/2 with counts 4,3,2,2, what does each score?",
+          "expected_answer": "6,4,0,0: tied third players drop to fourth.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6",
+              "section": "Example2"
+            }
+          ],
+          "observed": {
+            "id": "Q13",
+            "answer": "The player with 4 Caballeros scores first-place value 6, and the player with 3 scores second-place value 4. The players tied at 2 Caballeros occupy the third and fourth positions; the summary’s tie rule awards the lower tied position’s points, but it does not specify the score for fourth place when only three scoring values are listed. Their exact scores are therefore unsupported by the summary.",
+            "support": "partial",
+            "evidence": "Region scoring provides first, second, and third values; ties receive “the points for the lower position and the higher position is eliminated.” The summary does not say what fourth place scores."
+          },
+          "grade": "partial",
+          "reason": "Tied-third fourth-place score explicitly unresolved rather than source-contradicting.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q14",
+          "question": "Which scoreboard ranks pay in two-player and three-player games, and what happens to a two-player tie for first?",
+          "expected_answer": "Two players only first rank; three only first two. Tied first drops to second so two-player tied leaders receive no points.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "5",
+              "section": "Score Regions"
+            }
+          ],
+          "observed": {
+            "id": "Q14",
+            "answer": "The summary lists scoreboards 8/4/0 and 4/0/0 but does not specify which is used in two-player versus three-player games. It also does not state what happens in a two-player tie for first.",
+            "support": "unsupported",
+            "evidence": "Components lists “2 scoreboards (8/4/0 and 4/0/0),” with no player-count mapping or two-player tie procedure."
+          },
+          "grade": "partial",
+          "reason": "Player-count rank cutoffs and tie result unresolved; abstention is partial.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q15",
+          "question": "When are the King’s and home bonuses awarded, how much is each, and what happens on a tied majority?",
+          "expected_answer": "Whenever relevant region scored including special scoring; sole majority earns2 King bonus in King region and2 home bonus if own Grande there; neither for tied first.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6,10",
+              "section": "Bonuses"
+            }
+          ],
+          "observed": {
+            "id": "Q15",
+            "answer": "When a region is scored, the sole player with the most Caballeros in the King’s region receives a +2 King’s Bonus; it is not awarded on a tied first place. When a region is scored, its sole Caballero-majority holder receives a +2 Home Bonus if their Grande is there; no Home Bonus is awarded for a tied majority.",
+            "support": "supported",
+            "evidence": "King’s Bonus: “+2 points when it is scored” and “Not awarded if tied for first.” Home Bonus: “When a region is scored,” the sole majority holder gains “+2 points if their Grande is in that region”; none “for a tied majority.”"
+          },
+          "grade": "correct",
+          "reason": "Both2-point bonuses on scoring and sole-majority/tie conditions correctly stated.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q16",
+          "question": "Does specially scoring the Castillo empty it or redistribute its Caballeros? Describe what happens.",
+          "expected_answer": "Uncover and score; replace Castillo over same Caballeros; no redistribution until general scoring.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "10,11",
+              "section": "Special Castillo scoring"
+            }
+          ],
+          "observed": {
+            "id": "Q16",
+            "answer": "If an action card scores the Castillo, it is not emptied. The summary does not say whether this special scoring redistributes its Caballeros; it only specifies redistribution and emptying during general scoring.",
+            "support": "partial",
+            "evidence": "“If scored via action cards, it is NOT emptied.” General scoring separately says Castillo Caballeros are moved to chosen regions."
+          },
+          "grade": "partial",
+          "reason": "Explicitly leaves redistribution unsupported despite correct no-emptying statement.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q17",
+          "question": "Can a mobile scoreboard be put at the Castillo, moved into/out of King’s region, stacked on the other, or rotated to change its values?",
+          "expected_answer": "Castillo allowed; King in/out prohibited; cannot stack; right side up only8/4/0 or4/0/0.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "11",
+              "section": "Mobile scoreboard"
+            }
+          ],
+          "observed": {
+            "id": "Q17",
+            "answer": "The summary says scoreboards may not be moved into or out of the King’s region. It does not say whether a mobile scoreboard can be put at the Castillo, stacked on another scoreboard, or rotated to change values. These requested details are unsupported.",
+            "support": "partial",
+            "evidence": "The only relevant restriction stated is: “No Caballeros, Grandes, or scoreboards may be moved into or out of the King's Region.”"
+          },
+          "grade": "partial",
+          "reason": "Castillo placement, stacking and orientation unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q18",
+          "question": "What are the legal source/destination restrictions on moving your Grande, may other Grandes already be there, and what changes afterward?",
+          "expected_answer": "Cannot leave King region or enter King region/Castillo; any other region even multiple Grandes; new region is home.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "12",
+              "section": "Grande"
+            }
+          ],
+          "observed": {
+            "id": "Q18",
+            "answer": "The summary says certain action cards can move a Grande, subject to the King’s Region restriction, and that a Grande marks its owner’s Home Bonus region. It does not give the legal source or destination rules, whether another Grande may already be there, or what changes afterward beyond the Home Bonus location. Those parts are unsupported.",
+            "support": "partial",
+            "evidence": "“Certain action cards can move it, subject to the King's Region restriction.” A Grande “marks the region eligible for its owner’s +2 Home Bonus.”"
+          },
+          "grade": "partial",
+          "reason": "Complete legal move/destination and new home effects unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q19",
+          "question": "Which power card may the recovery action return, can it be the card used this turn, and must the choice be revealed?",
+          "expected_answer": "Any one played card, including current turn’s, to hand; need not reveal, though taking visible top is observable.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "12",
+              "section": "Power Cards"
+            }
+          ],
+          "observed": {
+            "id": "Q19",
+            "answer": "The summary only says power cards can be recovered via certain action cards. It does not identify which card may be returned, whether the card used this turn can be returned, or whether the choice must be revealed.",
+            "support": "unsupported",
+            "evidence": "“Power cards are permanently discarded after use (can only be recovered via certain action cards).”"
+          },
+          "grade": "partial",
+          "reason": "Recovery choice, current-turn eligibility and secrecy unresolved.",
+          "unsupported_guess": false
+        },
+        {
+          "id": "Q20",
+          "question": "When does the standard game end, and how is the winner determined?",
+          "expected_answer": "After third general scoring following round9; furthest along success track/most points wins.",
+          "source_references": [
+            {
+              "path": "extracted/el-grande-rules.txt",
+              "pdf_pages": "6",
+              "section": "Game End"
+            }
+          ],
+          "observed": {
+            "id": "Q20",
+            "answer": "The standard game ends after 9 rounds. The player with the most points wins.",
+            "support": "supported",
+            "evidence": "“After 9 rounds … Player with the most points wins.”"
+          },
+          "grade": "partial",
+          "reason": "Rounds/winner correct but answer does not specify game ends after third/final general scoring.",
+          "unsupported_guess": false
+        }
+      ]
+    }
+  }
+}

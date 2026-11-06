@@ -1,0 +1,3 @@
+# AWK read recognition correction
+
+The initial source22 input proof recognized only7 read outputs and falsely flagged most authorized text as absent. Actual runtime inspection confirms the auditor used separate numbered `awk` reads for later summary chunks and all primary texts. The checker’s read-command allowlist omitted `awk`; it now recognizes those real model-visible reads while retaining report-writing/hash-only exclusions. The initial false-flag proof is preserved in source22’s iteration. No source reread, content mutation, grade or verdict change is used to repair this evidence-parser omission.

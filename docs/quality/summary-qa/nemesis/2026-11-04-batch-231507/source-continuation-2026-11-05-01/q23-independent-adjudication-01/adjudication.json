@@ -1,0 +1,116 @@
+{
+  "question_id": "Q23",
+  "input_hash_checks": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/case.json",
+      "expected_sha256": "3afe755476339f29b1f5c5b1fde26638e98ea4b7dcb28fa4866c406b28d772a7",
+      "actual_sha256": "3afe755476339f29b1f5c5b1fde26638e98ea4b7dcb28fa4866c406b28d772a7",
+      "matches": true
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/policy.json",
+      "expected_sha256": "4bf347243a6dc7760f0fb96d79efbae8b480594faad19b6c59c3b446040f29ea",
+      "actual_sha256": "4bf347243a6dc7760f0fb96d79efbae8b480594faad19b6c59c3b446040f29ea",
+      "matches": true
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/nemesis/2026-11-04-batch-231507/source-continuation-2026-11-05-01/q23-independent-adjudication-01/summary-snapshot.md",
+      "expected_sha256": "be31e50aedcc66b186cfa9a09e912bbea159df9b1850d0b2401d472f7908c407",
+      "actual_sha256": "be31e50aedcc66b186cfa9a09e912bbea159df9b1850d0b2401d472f7908c407",
+      "matches": true
+    }
+  ],
+  "inputs_read": {
+    "required_inputs": "All three required inputs read completely; all listed SHA-256 hashes match.",
+    "optional_primary_sources_read": []
+  },
+  "actual_requested_parts": [
+    {
+      "part": "Action-hand refill timing",
+      "required_ruling": "Refill at the start of the Player Phase. Drawing up to five gives the ordinary refill procedure.",
+      "summary_reference": "summary-snapshot.md, Turn Structure > I: Player Phase, line 95"
+    },
+    {
+      "part": "First Player token passing",
+      "required_ruling": "Pass left after drawing, except on the first game turn.",
+      "summary_reference": "summary-snapshot.md, Turn Structure > I: Player Phase, line 96"
+    },
+    {
+      "part": "Empty Action deck",
+      "required_ruling": "When a required draw encounters an empty Action deck, shuffle that Character's Action discard into a new Action deck, then draw.",
+      "summary_reference": "summary-snapshot.md, Turn Structure > I: Player Phase, line 95"
+    },
+    {
+      "part": "Normal discard destinations",
+      "required_ruling": "Action and gained Contamination cards go to the Character's Action discard; Items to matching Item discards; Event, Intruder Attack and Serious Wound cards to their respective discards; discarded markers return to the appropriate pools.",
+      "scope_reasoning": "The literal stem asks for normal discard destinations without restricting that clause to cards. Markers have a normal discard destination and are therefore within this broad handling request. Their inclusion is supported by the meaning of the requested clause, not merely by their presence in the key.",
+      "summary_reference": "summary-snapshot.md, Setup > Discard piles, lines 79-87"
+    },
+    {
+      "part": "Normal discard visibility",
+      "required_ruling": "Normal card discards are face up.",
+      "summary_reference": "summary-snapshot.md, Setup > Discard piles, introductory sentence"
+    }
+  ],
+  "contextual_key_facts": [
+    {
+      "fact": "Search returns the rejected Item face down to the bottom of the selected deck.",
+      "required": false,
+      "reason": "The stem requests normal discards, rather than all special return procedures. This explicit exception provides context and must be accurate if asserted, but is not an independently required requested part.",
+      "summary_reference": "summary-snapshot.md, Setup > Discard piles, line 87; Items and Objects > Search procedure"
+    },
+    {
+      "fact": "The fixed key includes both hand size and the first-turn token exception.",
+      "required_status": "Ordinary refill size supplies the operative refill rule; the first-turn exception is material to the explicitly requested passing timing. Neither requires exact wording."
+    }
+  ],
+  "judgments": {
+    "a": {
+      "judgment": "correct",
+      "complete_local_response_reasoning": "The answer explicitly resolves Player Phase refill to five, passing left after drawing with the first-turn exception, and reshuffling the personal Action discard only when a required draw finds the deck empty. It states every requested normal card destination, face-up visibility, and the return of discarded markers to matching pools. The evidence repeats these rules and explicitly confirms marker routing; no missing fact is inferred from the requested_parts checklist or the supported label. The added Search/Storage return and removed-from-game distinction agree with the frozen summary. The extra player-round and Interruption explanation in evidence agrees with the Player Phase rules and does not contradict the requested rulings. All material requested parts are resolved across this complete local response.",
+      "supporting_frozen_summary_references": [
+        {
+          "reference": "summary-snapshot.md, Turn Structure > I: Player Phase, lines 95-99 and after-pass table",
+          "supports": "Refill, empty-deck handling, token timing, and the additional round/passing/Interruption statements."
+        },
+        {
+          "reference": "summary-snapshot.md, Setup > Discard piles, introductory sentence and lines 79-87",
+          "supports": "Face-up normal card discards, each card destination, marker pools, explicit return exceptions and removed-from-game distinction."
+        },
+        {
+          "reference": "summary-snapshot.md, Player Reference > Card and marker handling",
+          "supports": "The complete ordinary handling sequence and marker routing."
+        }
+      ],
+      "material_omissions": [],
+      "material_false_rulings": []
+    },
+    "b": {
+      "judgment": "partial",
+      "complete_local_response_reasoning": "The answer and evidence accurately resolve refill at Player Phase start to five, token passing left after drawing except on the first turn, required-draw reshuffling, face-up normal card discards and all listed normal card destinations. The additional six-card Cabins shorthand is supported by the frozen summary's key numbers and is not read as an assertion that its normal room conditions cease to apply. The Search/Storage return exception is accurate. However, neither the answer nor the evidence states the normal destination of discarded markers. The requested_parts entry merely labels discard destination and visibility; it asserts no marker-routing rule. The supported label likewise supplies no missing fact. Since the unqualified requested normal discard destinations include markers, this is a material omission. No materially false affirmative ruling or contradiction appears, so the policy calls for partial.",
+      "supporting_frozen_summary_references": [
+        {
+          "reference": "summary-snapshot.md, Turn Structure > I: Player Phase, lines 95-96",
+          "supports": "The supplied refill, reshuffle and token-passing rulings."
+        },
+        {
+          "reference": "summary-snapshot.md, Setup > Discard piles, introductory sentence and lines 79-87",
+          "supports": "Supplied card routing and visibility; line 85 and the routing rule establish the omitted normal marker destination."
+        },
+        {
+          "reference": "summary-snapshot.md, Player Reference > Card and marker handling",
+          "supports": "Discarded markers return to matching supply pools as part of ordinary handling."
+        },
+        {
+          "reference": "summary-snapshot.md, Player Reference > Key numbers, line 563; Additional Rooms 2 > Cabins",
+          "supports": "The six-card Cabins shorthand, with the room's actual conditions supplied in the reference."
+        }
+      ],
+      "material_omissions": [
+        "Normal discarded-marker destination: return to appropriate marker/supply pool."
+      ],
+      "material_false_rulings": []
+    }
+  },
+  "narrow_limitation": "This ruling uses only the unchanged supplied policy, literal case and complete frozen summary. It treats normal discard destinations as an unqualified component-handling request, while not requiring an inventory of special Search/Storage or removed-from-game exceptions. It does not require enumeration of every special hand-size modifier or its conditions when only ordinary refill timing is asked and no contrary affirmative rule is asserted."
+}

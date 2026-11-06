@@ -1,0 +1,26 @@
+# Reader prompt versions
+
+v1: guide+generic-self-check-v1. Exact guide prompt plus user-requested generic pre-submission self-check. Used in legacy seed iterations01–06. Exact intended plaintext templates are preserved separately; host parent records retain encrypted dispatch-message bodies, without plaintext recovery.
+
+v2: guide+generic-self-check+complete-input-v2. Same guide prompt and unchanged generic self-check, plus: “Read both allowed inputs completely in bounded chunks. If any tool output is truncated, reread the missing ranges before answering. A heading list or search matches alone do not establish a complete read.”
+
+Reason: direct runtime evidence in legacy iteration06 shows a 17,768-token combined cat was truncated at8,000 tokens; subsequent heading searches and partial reads did not necessarily restore every missing passage. This operational instruction supplies no question-specific facts, key, prior findings or gameplay hints. Legacy raw runs/grades remain intact. Fresh v2 readers still see only two allowed inputs, fork_turns=none and Luna/high.
+
+Child runtime environment-only user-message records are not recovered task prompts; exact intended plaintext task text is saved in pre-dispatch templates; encrypted parent task-message bodies are not plaintext recovery. Actual model/effort comes from child turn_context metadata. Strong filesystem isolation was not used.
+
+### Version3 — complete standalone responses and neutraldelivery
+
+Used from expanded02 onward. Keeps the guide, generic self-check and bounded complete-input guidance. Adds only: “Make each answer a complete, standalone response to the question. Use as much detail as needed to resolve every requested part; do not shorten it by relying on another answer or on rules you assume the reader knows.” It supplies no game fact, question ID, earlier finding or answer. Exact per-reader intended plaintext is frozen before dispatch. Reader-only payload r01 contains only neutralgame/scope/opaqueversion and94unchanged questionobjects; author/source correction history stays outside readerdelivery.
+
+Host dispatch logs encrypt message bodies. Intended plaintext templates, requested dispatch identities, actual runtime model/effort and public input/output traces are retained separately. Legacy actual-dispatch-prompt filenames containing gAAAAA are preserved mislabeled ciphertext; they are not recovered plaintext. See provenance-label-correction-01/correction-record.json.
+
+### Version4 — numbered requested parts
+
+Used in expanded03 through expanded07, keeps all v3 guidance and adds only: “Write each answer as separate numbered clauses, with one clause for each part asked by the question. Each clause should explicitly resolve that part from the summary.” This generic output structure contains no game fact, prior finding, question ID or answer. The 94 question objects and factual keys stay unchanged. The reader still receives only the frozen summary and neutral question payload.
+
+
+### Version5 — explicit named alternatives
+
+Available as an explicit freeze option, used starting with expanded08. Keeps all other v4 text and replaces only its numbered-clause instruction with: “Write each answer as separate numbered clauses, explicitly covering every requested part and every named alternative. Make the scope of conditions clear within that answer; do not leave the reader to infer which alternative a qualifier applies to.” This is generic output guidance, with no game rule, threshold, question ID, prior finding or answer. It makes the local scope of requested alternatives explicit without changing evaluator acceptance of clear logical entailment. All95 questions and factual keys remain unchanged.
+
+The previous prompt-version report and freeze helper are preserved in prompt-history before this update. Historical provenance wording has been corrected here to distinguish intended plaintext from encrypted host dispatch bodies. A separate descriptive-label clarification preserves old manifests that said opaque r01 although the actual95-question delivery was r02; those evaluator-only labels were never reader inputs. Historical frozen manifests and all actual payload bytes remain unchanged.

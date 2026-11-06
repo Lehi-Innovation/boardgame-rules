@@ -1,0 +1,190 @@
+{
+  "review_type": "Fresh independent source, answer-key correctness, and procedural coverage challenge",
+  "benchmark_version": "benchmark-v3",
+  "verdict": "pass_with_minor_citation_cleanup",
+  "blocking_findings": false,
+  "independence": {
+    "read_summary": false,
+    "read_reader_outputs": false,
+    "read_grades": false,
+    "read_complete_authoritative_extraction": true,
+    "inspected_all_eight_matching_pdf_page_renders": true,
+    "compared_complete_questions_and_answer_key": true,
+    "compared_coverage_ledger": true
+  },
+  "findings": [
+    {
+      "id": "C01",
+      "severity": "minor",
+      "category": "citation_scope_hygiene",
+      "question_id": "Q38",
+      "finding": "The Q38 answer-key and ledger source reference still cites a puzzle p4 example, although the authorized supplemental evidence is the base Government Grant card reproduction on p2 only. No p4 example is necessary to establish the expected answer.",
+      "source_backed_facts": [
+        "The p2 Government Grant card explicitly adds one research station to any city with no City card needed.",
+        "Any city supports placement away from the playing player without using puzzle mechanics."
+      ],
+      "required_correction": "Remove the p4 example reference from the answer key and coverage ledger; retain the p2 component reference.",
+      "affects_expected_answer": false,
+      "blocks_coverage_or_correctness_pass": false
+    }
+  ],
+  "new_meaningful_questions": [],
+  "answer_key_assessment": {
+    "questions_checked": 39,
+    "substantive_answer_errors_found": 0,
+    "conclusion": "All 39 expected answers are supported by the assigned core source and the specifically allowed base-component evidence. No replacement expected facts are needed.",
+    "explicit_checks": [
+      "The matching PDF p2 visibly supplies the 4/3/2 setup hand counts missing from the authoritative text extraction.",
+      "The matching PDF p4 explicitly gives destination-card Direct Flight and departure-card Charter Flight; the extraction alone omits the Direct Flight instruction.",
+      "The matching PDF p6 infection-track illustration confirms the complete 2,2,2,3,3,4,4 sequence. The key currently points to the p3 board diagram; p6 is the clearer visual citation.",
+      "An Epidemic in a zero-cube city adds three without an outbreak; a nonempty city is filled to three and outbreaks. Cured alone does not suppress infection. Eradication suppresses placement but not the other Epidemic steps.",
+      "The second of consecutive Epidemics intensifies only its own newly discarded Infection card with no intervening effects, as explicitly stated by the p6 callout.",
+      "Events are barred between drawing and resolving an Infection card; the p7 double-Epidemic callout separately permits Events after the first Epidemic. The key preserves both timing rules.",
+      "The Researcher exception works only outward from her hand; the Dispatcher pays flights from his own hand, cannot direct treatment, and cannot use Operations Expert special travel.",
+      "Medic automatic removal while already present and when moved on another turn is explicitly supported; his protection is cured diseases in his own city. Quarantine Specialist protects all colors in her city and connected cities, excluding setup.",
+      "Curing the fourth disease wins immediately despite remaining cubes. Cube loss is inability to place cubes actually needed, and Player Deck loss occurs on the next required two-card draw rather than merely emptying the deck."
+    ]
+  },
+  "coverage_assessment": {
+    "saturated_for_assigned_procedural_source": true,
+    "conclusion": "I found no omitted distinct source-defined rule, outcome branch, or consequential timing/priority/exception interaction that warrants an additional question. The ledger saturation claim survives this independent challenge within the assigned 2015 core scope.",
+    "coverage_groups": [
+      {
+        "area": "Setup, supplies, first player, and difficulty construction",
+        "questions": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q06",
+          "Q21"
+        ]
+      },
+      {
+        "area": "Turn authority, information, sequencing, actions, movement, and sharing",
+        "questions": [
+          "Q04",
+          "Q05",
+          "Q09",
+          "Q10",
+          "Q11",
+          "Q22",
+          "Q37"
+        ]
+      },
+      {
+        "area": "Station building, treatments, cures, eradication, and endings",
+        "questions": [
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q20",
+          "Q23"
+        ]
+      },
+      {
+        "area": "Epidemic sequencing, empty/nonempty/eradicated city branches, intensification, and rate track",
+        "questions": [
+          "Q12",
+          "Q13",
+          "Q14",
+          "Q24",
+          "Q25",
+          "Q26"
+        ]
+      },
+      {
+        "area": "Normal infection, chain outbreaks, per-color caps, event timing, and actual cube shortages",
+        "questions": [
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q20"
+        ]
+      },
+      {
+        "area": "All seven roles and their material exceptions",
+        "questions": [
+          "Q10",
+          "Q18",
+          "Q19",
+          "Q27",
+          "Q28",
+          "Q29",
+          "Q30",
+          "Q31",
+          "Q32",
+          "Q33"
+        ]
+      },
+      {
+        "area": "All five core Event effects and their material timing/card-destination rules",
+        "questions": [
+          "Q17",
+          "Q18",
+          "Q34",
+          "Q35",
+          "Q36",
+          "Q38",
+          "Q39"
+        ]
+      }
+    ],
+    "additional_candidates_rejected": [
+      {
+        "candidate": "A zero-cube supply while an eradicated or protected city is drawn",
+        "reason": "Q20 already limits loss to cubes actually needed; Q23/Q25 and Q32/Q33 explicitly suppress placements. This is direct application of already tested exceptions, not a new priority rule."
+      },
+      {
+        "candidate": "Additional infection paths revisiting a city that has received cubes but has not yet outbreaked",
+        "reason": "Q16 tests the per-Infection-card restriction specifically on cities that already outbreaked, chain timing, and the per-color threshold. A different adjacency graph does not add a rule."
+      },
+      {
+        "candidate": "Government Grant or Operations Expert station placement when all six stations are present",
+        "reason": "The six-station supply and relocation procedure is already Q06. The two exceptions change placement location/card cost and are Q28/Q38; no separate source-defined limit exception is printed."
+      },
+      {
+        "candidate": "Operations Expert taking ordinary flights after using the special move",
+        "reason": "Q29 scopes once-per-turn specifically to the special travel, while Q04/Q05 cover ordinary repeatable movement. No new exception is introduced."
+      },
+      {
+        "candidate": "Medic entering a city with several cured colors or eradicating a disease through automatic removal",
+        "reason": "Q31 specifies automatic removal of cured colors; Q08/Q23 cover cure/last-cube eradication. This combines covered effects without a new ruling."
+      },
+      {
+        "candidate": "Using Forecast to choose an alternate six-card ordering, or playing a named stored Planner Event",
+        "reason": "Q39 already covers reordering and deck destination; Q18 already supplies stored-event timing and removal destination. These are mechanical combinations."
+      },
+      {
+        "candidate": "Stacked One Quiet Night Events, Forecast with fewer than six Infection cards, Infection Deck exhaustion, or special tie rulings",
+        "reason": "The assigned source does not supply additional explicit rulings. Adding questions would require importing unsupported rules or interpretations."
+      },
+      {
+        "candidate": "Expansion Events and puzzle-specific role/action rules visible in the supplemental puzzle document",
+        "reason": "Outside authorized base-game scope. Only the p2 base Government Grant reproduction was used."
+      }
+    ]
+  },
+  "source_adequacy_assessment": {
+    "adequate_for_current_bank": true,
+    "authoritative_text": "Read the full extracted/pandemic-rules.txt. It contains the complete core procedural passages but loses some embedded text, notably starting-hand numerals and Direct Flight text.",
+    "matching_pdf": "Inspected matching-page-1.png through matching-page-8.png and read matching-extraction.txt. The seven-role booklet is marked copyright 2015 on p8. Its procedural content matches the authoritative extraction, while its images restore missing setup, movement, and infection-track evidence.",
+    "government_grant": {
+      "evidence_inspected": "official-event-puzzle-page-2.png from official-event-puzzle.pdf",
+      "judgment": "Adequate primary publisher reproduction of the modern base Government Grant card. Text is unambiguous: one research station, any city, no City card needed. Expansion cards elsewhere on the same page are excluded. No puzzle scenario prose was used."
+    },
+    "forecast": {
+      "evidence_inspected": [
+        "forecast-card-photo.jpg",
+        "forecast-photo-provenance.json",
+        "official-components-2.webp",
+        "component-download-provenance.json"
+      ],
+      "judgment": "Adequate primary component evidence with provenance qualification. The unobscured photograph shows the actual printed modern Forecast card: draw/look/rearrange top six Infection Deck cards and put them back on top. Its title, art, striped header, and visible text fragments match the publisher component image. The photograph is third-party hosted, so it should be described as a photograph of a publisher-printed component rather than a publisher-hosted full rule quotation. The official image alone is partly occluded and would not establish the six-card value or complete return instruction."
+    },
+    "limitations": [
+      "The main text extraction alone is insufficient for several image-only facts; retain the matching PDF evidence.",
+      "Forecast full effect relies on the readable physical-component photograph plus publisher visual corroboration.",
+      "The current answer key is adequate for the assigned base scope; this review does not claim coverage of expansion, Legacy, or unprinted edge-case rulings."
+    ]
+  }
+}
