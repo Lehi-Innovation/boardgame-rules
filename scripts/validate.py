@@ -11,6 +11,7 @@ import os
 import re
 import sys
 from pathlib import Path
+from urllib.parse import urlsplit
 
 import yaml
 
@@ -21,6 +22,20 @@ REQUIRED_FRONTMATTER = ["title", "bgg_id"]
 
 def _has_required_value(frontmatter: dict, field: str) -> bool:
     """Return True when a required frontmatter field is present and usable."""
+    if field == "bgg_id" and frontmatter.get(field) is None:
+        # A known wrong ID may be withdrawn while the matching named game has
+        # no confirmed replacement. Require an explicit, traceable decision.
+        original = frontmatter.get("original_bgg_id")
+        evidence = frontmatter.get("identity_evidence_url", "")
+        try:
+            parsed = urlsplit(evidence) if isinstance(evidence, str) else None
+        except ValueError:
+            parsed = None
+        return (field in frontmatter
+                and frontmatter.get("bgg_id_status") == "unresolved"
+                and type(original) is int and original > 0
+                and parsed is not None and parsed.scheme in {"http", "https"}
+                and bool(parsed.netloc))
     if field not in frontmatter:
         return False
 

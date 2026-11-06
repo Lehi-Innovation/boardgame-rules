@@ -4,16 +4,19 @@ bgg_id: 1722
 player_count: "2"
 play_time: "120-240 min"
 designer: "James Dunnigan"
-source_pdf: "caesar-s-legions-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "caesar-s-legions-selection-ceeba15f38ef.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://images.steamusercontent.com/ugc/1843661703094370897/1C0D1E3B5E7A23F9F5B04A62F3B07123E62376A2/"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original official second-edition Caesars Legions fundamental rules p4 require opposing units to occupy the SAME HEX for combat; summary says combat occurs between adjacent enemy units. The same rules require secret tactical-card comparison before ordinary combat, whereas summary describes tactical cards as optional modifiers to combat or movement. Specific original-source MAJOR findings only; source is retained14-page rules portion plus original charts, no complete publication/full audit or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caesar%27s%20Legions&game=caesar-s-legions)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/caesar-s-legions-rules.txt) · 🌐 [Rules reference PDF (English)](https://images.steamusercontent.com/ugc/1843661703094370897/1C0D1E3B5E7A23F9F5B04A62F3B07123E62376A2/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Caesar%27s%20Legions&game=caesar-s-legions)
 <!-- verification:end -->
 
 

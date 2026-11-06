@@ -4,19 +4,22 @@ bgg_id: 6333
 player_count: "2"
 play_time: "30 min"
 designer: "Games Workshop"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "mighty-warriors-selection-25066627ff70.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://images.steamusercontent.com/ugc/1001395725529783574/19AAD582F959DF3166D0352A352ED252343A6D5B/"
+source_type: "rulebook_images"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Mighty Warriors
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Mighty Warriors1991 booklet p3 rolls one D6 to set the movement allowance for every model that turn, with card exceptions; summary substitutes movement values. Combat requires physically dropping dice into a HIT/MISS tray, choosing the highest HIT and applying the force-card result, but summary substitutes generic to-hit/combat-value comparisons and omits the required tray. Booklet/scrolls also allow the Heroic Elf to cast spells; summary describes only Chaos Wizard magic. Specific original-source MAJOR findings only, no full audit and summary body not repaired. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mighty%20Warriors&game=mighty-warriors)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mighty-warriors-rules.txt) · 🌐 [Rulebook images (English)](https://images.steamusercontent.com/ugc/1001395725529783574/19AAD582F959DF3166D0352A352ED252343A6D5B/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mighty%20Warriors&game=mighty-warriors)
 <!-- verification:end -->
 
 ## Overview

@@ -4,16 +4,19 @@ bgg_id: 295571
 player_count: "2-8"
 play_time: "60 min"
 designer: "Martino Chiacchiera, Silvano Sorrentino"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "deckscape-crew-vs-crew-the-pirates-island-selection-9663d5bda78b.html"
+source_url: "https://whatsericplaying.com/2022/11/28/deckscape-crew-vs-crew-the-pirates-island/"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary determines victory by faster completion or fewer errors and records an X per wrong answer. Both matching played reviews instead describe awarding coin-valued Victory cards: a correct first answer earns the card, an incorrect first answer awards it to the other crew, and the crew with the most coins after completing the deck wins. Eric also describes jointly skipping for no award. Original private crew/Victory cards and the publisher competitive/doubloon description corroborate the exact edition. Substituting the cooperative series time/error scoring changes the objective and wrong-answer reward. Specific MAJOR for competitive scoring only; full original minigame/tie procedures remain unrecovered. No full audit, PASS, ID change or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deckscape%20Crew%20vs%20Crew%3A%20The%20Pirates%27%20Island&game=deckscape-crew-vs-crew-the-pirates-island)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/deckscape-crew-vs-crew-the-pirates-island-rules.txt) · 🌐 [Rules reference (English)](https://whatsericplaying.com/2022/11/28/deckscape-crew-vs-crew-the-pirates-island/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deckscape%20Crew%20vs%20Crew%3A%20The%20Pirates%27%20Island&game=deckscape-crew-vs-crew-the-pirates-island)
 <!-- verification:end -->
 
 

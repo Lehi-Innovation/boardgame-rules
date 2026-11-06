@@ -4,16 +4,19 @@ bgg_id: 10509
 player_count: "2-4"
 play_time: "20 min"
 designer: "Unknown"
-source_pdf: "ringel-rangel-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "ringel-rangel-selection-bcd16eb42476.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.spellenlab.be/media/files/ca46f824d485066c7efd2ab538c13f527b2f42c4.pdf"
+source_type: "third_party_rules_translation"
+source_language: "Dutch (unofficial translation)"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Matching HABA Ringel-Rangel rules end after all 24 turtles are used; the player with fewest penalty points wins, each foreign-color ball and turtle counting one and own-color balls neutral. Summary instead awards ring placements and declares most successful placements wins, reversing the objective and omitting penalty scoring. Dutch translated source and visually checked original French final page independently agree on this ending. Specific source-backed finding only; no full audit performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ringel-Rangel&game=ringel-rangel)
+> 📄 [Translated rules text](https://lehi-innovation.github.io/boardgame-rules/extracted/ringel-rangel-rules.txt) · 🌐 [Source PDF (Dutch (unofficial translation))](https://www.spellenlab.be/media/files/ca46f824d485066c7efd2ab538c13f527b2f42c4.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ringel-Rangel&game=ringel-rangel)
 <!-- verification:end -->
 
 

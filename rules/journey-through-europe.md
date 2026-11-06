@@ -4,16 +4,19 @@ bgg_id: 2484
 player_count: "2-6"
 play_time: "60 min"
 designer: "Ravensburger"
-source_pdf: "journey-through-europe-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "journey-through-europe-recovery.html"
+source_url: "https://rulespal.com/europareise/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Journey%20Through%20Europe&game=journey-through-europe)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/journey-through-europe-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/europareise/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Journey%20Through%20Europe&game=journey-through-europe)
 <!-- verification:end -->
 
 

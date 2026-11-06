@@ -4,16 +4,19 @@ bgg_id: 285192
 player_count: "1-3"
 play_time: "90-150 min"
 designer: "Michal Golebiowski, Filip Milunski"
-source_pdf: "destinies-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "destinies-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
+source_url: "https://cdn.1j1ju.com/medias/3c/34/8c-time-of-legends-destinies-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
 verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Destinies&game=destinies)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/destinies-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/3c/34/8c-time-of-legends-destinies-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Destinies&game=destinies)
 <!-- verification:end -->
 
 

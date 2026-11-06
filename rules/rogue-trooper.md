@@ -4,16 +4,19 @@ bgg_id: 1558
 player_count: "2-6"
 play_time: "120 min"
 designer: "Richard Halliwell"
-source_pdf: "rogue-trooper-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rogue-trooper-selection-c2a5977a1c00.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.orderofgamers.com/downloads/RogueTrooper_v1.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The matching Universal Head1987-game reference requires a complete set of4 matching Clue cards, immediately revealed; the Traitor is then placed on Millicoms Bridge with4 lives and killed in combat to win. Summary instead describes random hidden identity/elimination clues and an incorrect-accusation penalty, and places the Traitor at setup. These contradict the sources explicit clue/reveal/confrontation procedures. Specific reference-backed MAJOR findings only; no full publisher-rulebook audit and summary body not repaired. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rogue%20Trooper&game=rogue-trooper)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/rogue-trooper-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.orderofgamers.com/downloads/RogueTrooper_v1.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rogue%20Trooper&game=rogue-trooper)
 <!-- verification:end -->
 
 

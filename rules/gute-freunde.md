@@ -4,16 +4,19 @@ bgg_id: 10511
 player_count: "2-4"
 play_time: "20 min"
 designer: "Virginia Charves"
-source_pdf: "gute-freunde-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "gute-freunde-selection-a049a5611f5c.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://regle.escaleajeux.fr/gutef_rg.pdf"
+source_type: "rules_reference_pdf"
+source_language: "French"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gute%20Freunde&game=gute-freunde)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/gute-freunde-rules.txt) · 🌐 [Rules reference PDF (French)](https://regle.escaleajeux.fr/gutef_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gute%20Freunde&game=gute-freunde)
 <!-- verification:end -->
 
 

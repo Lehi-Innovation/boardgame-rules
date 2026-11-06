@@ -4,16 +4,19 @@ bgg_id: 39
 player_count: "2-4"
 play_time: "60-120 min"
 designer: "Eon Products"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "darkover-selection-7239c4dd0b5c.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Darkover/Darkover%20-%20The%20Ages%20of%20Chaos%20%5BEon%5D%5B1979%5D.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original1979 Eon Darkover rules PDFp3/printedp2 gives movement as one token plus a token per controlled tower, limited by token value and selected destination; the summary invents spending Power discs to move. Power discs actually resolve duels/votes. Castle-based clan/peril collection is per occupied castle and skipped on each players first turn, not a universal two-resource draw. PDFp4/printedp3 succession rule starts at four tokens, has a council-adjustable threshold and can award victory after one unsuccessful challenge with threshold-minus-one tokens; summary instead requires four tokens surviving a full round. Specific MAJOR contradictions only; no full audit or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Darkover&game=darkover)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/darkover-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Darkover/Darkover%20-%20The%20Ages%20of%20Chaos%20%5BEon%5D%5B1979%5D.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Darkover&game=darkover)
 <!-- verification:end -->
 
 

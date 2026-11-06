@@ -4,16 +4,19 @@ bgg_id: 2637
 player_count: "2"
 play_time: "120-240 min"
 designer: "David Glantz"
-source_pdf: "rome-at-war-series-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rome-at-war-series-selection-4769c6de8119.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "http://www.avalanchepress.com/pdf/RAW5.pdf"
+source_type: "learn_to_play"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says attackers and defenders compare combat strengths, apply modifiers and consult a combat-results table. The publisher’s original Rome at War Learn to Play sheet, page1 Attacking, instead gives each unit a number of dice equal to its combat strength; each6scores a hit, with specified situations hitting on5or6. High morale and the highest-ranking leader can add dice. Page2 resolves ordinary assault rolls simultaneously, with specific missile-fire exceptions. Replacing this strength-sized hit-counting system with a strength-comparison CRT changes the core combat procedure. Specific MAJOR against the covered original publisher teaching sheet; full scenario/terrain/victory rules and exact2015ThirdEdition equivalence remain uncertified. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rome%20at%20War%20Series&game=rome-at-war-series)
+> 📄 [Learn-to-play text](https://lehi-innovation.github.io/boardgame-rules/extracted/rome-at-war-series-rules.txt) · 🌐 [Source PDF (English)](http://www.avalanchepress.com/pdf/RAW5.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rome%20at%20War%20Series&game=rome-at-war-series)
 <!-- verification:end -->
 
 

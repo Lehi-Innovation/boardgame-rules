@@ -4,19 +4,22 @@ bgg_id: 17379
 player_count: "2+"
 play_time: "120 min"
 designer: "GHQ"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "micro-armour-the-game-wwii-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.shopify.com/s/files/1/0266/2711/3023/files/Micro_Armour_The_Game_WWII_2nd_Edition__Full_Color.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Micro Armour: The Game - WWII
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Micro%20Armour%3A%20The%20Game%20-%20WWII&game=micro-armour-the-game-wwii)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/micro-armour-the-game-wwii-rules.txt) · 🌐 [Source PDF (English)](https://cdn.shopify.com/s/files/1/0266/2711/3023/files/Micro_Armour_The_Game_WWII_2nd_Edition__Full_Color.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Micro%20Armour%3A%20The%20Game%20-%20WWII&game=micro-armour-the-game-wwii)
 <!-- verification:end -->
 
 ## Overview

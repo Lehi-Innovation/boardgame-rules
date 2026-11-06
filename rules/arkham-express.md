@@ -4,16 +4,19 @@ bgg_id: 77548
 player_count: "1-4"
 play_time: "30 min"
 designer: "David Willems"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "arkham-express-selection-8c47dc4dd429.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.pdf-archive.com/2016/07/20/arkham-express-rules-v1/arkham-express-rules-v1.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Arkham Express v1.0 p1 defines die faces as Investigation,Move,Heal,Monster,Fight,Fight; summary invents a Wild face and removes the second Fight face, changing the probabilities. Original defeat threshold is six combined Monsters AND/OR Gates on the board; summary describes six open gates, omitting monsters from the threshold. Its Gate Surge rule is unsupported by the original next-highest-free-location monster placement. Specific original-source MAJOR findings only; source roll-count wording is internally inconsistent and that issue is not adjudicated. No full audit or summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arkham%20Express&game=arkham-express)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/arkham-express-rules.txt) · 🌐 [Source PDF (English)](https://www.pdf-archive.com/2016/07/20/arkham-express-rules-v1/arkham-express-rules-v1.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arkham%20Express&game=arkham-express)
 <!-- verification:end -->
 
 

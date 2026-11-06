@@ -4,16 +4,19 @@ bgg_id: 145428
 player_count: "2-6"
 play_time: "60 min"
 designer: "Takara (based on The Game of Life by Reuben Klamer)"
-source_pdf: "jinsei-game-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "jinsei-game-selection-f49b25612053.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.takaratomy.co.jp/support/manual/items/301912%E5%8F%96%E4%BA%BA%E7%94%9F%E3%82%B2%E3%83%BC%E3%83%A0.pdf"
+source_type: "rulebook_pdf"
+source_language: "Japanese"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary lists LIFE tiles with hidden monetary values and bases final scoring on revealing them and adding cash. The recovered original 2008 sixth-edition Japanese Jinsei Game instead uses treasure cards (お宝カード, PDF6 section6) and explicitly values stocks, houses and treasure cards at the end (PDF8 section14), with treasure cards worth twice their stated value and stocks $30,000 each. Debt settlement and child bonuses occur separately before the finish (PDF7 section13). These are different components and scoring procedures, and can change the winner. Specific MAJOR finding for this explicitly covered 2008 edition only; other historical editions are not individually audited and the summary body has not been repaired. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jinsei%20Game&game=jinsei-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/jinsei-game-rules.txt) · 🌐 [Source PDF (Japanese)](https://www.takaratomy.co.jp/support/manual/items/301912%E5%8F%96%E4%BA%BA%E7%94%9F%E3%82%B2%E3%83%BC%E3%83%A0.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jinsei%20Game&game=jinsei-game)
 <!-- verification:end -->
 
 

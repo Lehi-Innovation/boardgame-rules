@@ -4,16 +4,19 @@ bgg_id: 154934
 player_count: "1-2"
 play_time: "15-30 minutes"
 designer: "Uncredited (traditional)"
-source_pdf: ""
-extracted_date: "2026-03-22"
+source_pdf: "pentominoes-selection-49d5ef82b074.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.cs.brandeis.edu/~storer/JimPuzzles/PACK/Pentominoes/LINKS/PentominoesBhatFletcher.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The Bhat/Fletcher university reference and Golomb's published Pentomino Game use a shared set of unused pentominoes, with the last legal placement winning. Summary instead divides the pieces between players, permits passing and determines the winner by pieces played. These change both legal choices and the end condition. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pentominoes&game=pentominoes)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/pentominoes-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.cs.brandeis.edu/~storer/JimPuzzles/PACK/Pentominoes/LINKS/PentominoesBhatFletcher.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Pentominoes&game=pentominoes)
 <!-- verification:end -->
 
 

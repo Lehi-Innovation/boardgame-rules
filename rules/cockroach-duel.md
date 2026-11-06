@@ -4,15 +4,19 @@ bgg_id: 217275
 player_count: "2"
 play_time: "15-20 min"
 designer: "Jacques Zeimet"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "cockroach-duel-selection-f84846a6c521.pdf"
+source_url: "https://www.schmidtspiele.de/files/Produkte/4/40880%20-%20Kakerlaken%20Duell/40880_Kakerlaken_Duell_D-FR-IT-GB-1.pdf"
+source_type: "rulebook_pdf"
+source_language: "English; German, French, Italian"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Schmidt40880 English rules printed pp7-9 use FOUR cockroaches and alternating bluffer/guesser roles: one player hides three green tiles and one red cross; the opponent reveals sequentially. Green pulls a corresponding cockroach towards the guesser; red ends the turn and unrevealed columns move towards the bluffer. Summary invents two cockroaches and simultaneous direction-token selection/reveal. Original victory attracts a cockroach beyond the last space towards the winning players OWN tile area; summary instead sends it to the opponents end. Specific original-source MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cockroach%20Duel&game=cockroach-duel)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cockroach-duel-rules.txt) · 🌐 [Source PDF (English; German, French, Italian)](https://www.schmidtspiele.de/files/Produkte/4/40880%20-%20Kakerlaken%20Duell/40880_Kakerlaken_Duell_D-FR-IT-GB-1.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cockroach%20Duel&game=cockroach-duel)
 <!-- verification:end -->
 
 

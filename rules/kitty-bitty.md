@@ -4,16 +4,19 @@ bgg_id: 28238
 player_count: "2-4"
 play_time: "10 min"
 designer: "Florian Fay"
-source_pdf: "kitty-bitty-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "kitty-bitty-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://cdn.1j1ju.com/medias/cf/74/18-kitty-bitty-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Blue Orange 2018 source lists 9 Mommy Cats; summary lists 4. A caught kitten does not move forward, but summary says it goes back and invents an unspecified variant. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kitty%20Bitty&game=kitty-bitty)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/kitty-bitty-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/cf/74/18-kitty-bitty-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kitty%20Bitty&game=kitty-bitty)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 720
 player_count: "2-4"
 play_time: "90-120 min"
 designer: "Tom McMurchie"
-source_pdf: "fast-food-franchise-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "fast-food-franchise-selection-8cc943d393e0.html"
+source_url: "https://www.andrew.cmu.edu/user/gc00/reviews/fff.html"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary presents advertising as spending money to boost revenue/marketdominance and omits its compulsory movement effect. BrianBankler’s matching detailed gameplayreference states that landing on an owned advertising square requires moving FORWARD to a market of that corporation, where the chain’s income/expansion rules apply. This redirects players into corporate markets rather than merely providing a passive incomebonus. The omission changes movement, payments and marketaccess. Specific MAJOR finding against the matching thirdpartyreference; original fullpublishermanual remains unrecovered. No fullaudit or bodyrepair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fast%20Food%20Franchise&game=fast-food-franchise)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/fast-food-franchise-rules.txt) · 🌐 [Rules reference (English)](https://www.andrew.cmu.edu/user/gc00/reviews/fff.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fast%20Food%20Franchise&game=fast-food-franchise)
 <!-- verification:end -->
 
 

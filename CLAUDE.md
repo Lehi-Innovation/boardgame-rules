@@ -205,14 +205,19 @@ omitted subsystems, invented mechanics) resist automated fixing.
 
 Use [docs/quality/summary-qa/README.md](docs/quality/summary-qa/README.md) to
 evaluate whether readers can answer table questions from a summary alone.
-Prepare 20 questions and a source-backed answer key before dispatching two
+Start with 20 questions and a source-backed answer key before dispatching two
 fresh-context reader subagents. Readers see only a frozen summary and questions;
 they must not see the source, key, earlier answers, grades, or parent chat.
 Set the requested model explicitly and retain actual model provenance.
 
 Grade every requested part against the unchanged key. Repair partial or incorrect
 answers using the authoritative source, then repeat with two new readers until
-both score 20/20. A separate source auditor must cover the final summary; the
+both answer the complete frozen question bank correctly. Expand coverage in a
+new benchmark version when requested, preserving earlier questions and answers.
+Count a question as new only for a distinct rule, outcome branch, or consequential
+interaction; stop after two targeted passes add none and a separate source
+review finds no further meaningful gaps. Keep a coverage and rejection ledger.
+A separate source auditor must cover the final summary; the
 repairer cannot supply that independent sign-off. Preserve snapshots, hashes,
 raw responses, grades, findings, and all failed iterations. A fixed-question
 pass measures regression coverage and does not replace semantic verification.

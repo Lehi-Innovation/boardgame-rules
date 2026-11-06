@@ -4,16 +4,19 @@ bgg_id: 2163
 player_count: "1-2"
 play_time: "120-180 min"
 designer: "Richard Halliwell, Jervis Johnson"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "deathwing-selection-6f54890d1380.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://net-clan.com/PDFS/SpaceHulk/SpaceHulk1stEd-Deathwing1990.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Deathwing1990 p9 requires grenade targets within the Captains LOS AND arc of fire, up to8 squares; summary calls the grenade launcher indirect fire for targets around corners. Original solo rules pp40-41 use immediate face-up blip conversion and written closest-Marine/shortest-route/LOS movement priorities; summary setup instead requires automated behaviour cards absent from these solo procedures. Specific source-backed MAJOR findings only; no full audit and summary body not repaired. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deathwing&game=deathwing)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/deathwing-rules.txt) · 🌐 [Source PDF (English)](https://net-clan.com/PDFS/SpaceHulk/SpaceHulk1stEd-Deathwing1990.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deathwing&game=deathwing)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 1542
 player_count: "2-6"
 play_time: "60-90 min"
 designer: "Andrew Lloyd Webber, Ian Livingstone, Derek Carver"
-source_pdf: "calamity-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "calamity-selection-c5505f65d5a3.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://archive.org/download/imagine-magazine-02-keith-thomson-editor/Imagine%20Magazine%2012%20-%20Keith%20Thomson%20%28editor%29.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary teaches dice movement, an ending after one circuit, and insurance policies that pay the player compensation for losses while charging ongoing premiums. Connor’s contemporary reference (Imagine 12, March 1984, printed 14 / PDF 16) instead makes players the insurers: they receive premiums on policies still in force at year-end and pay £200,000 per policy hit by the two-die risk grid. Movement uses cards numbered 1–5, and the game lasts two circuits, with most cash winning. Reversing the insurance cash flows and replacing both movement and ending changes central procedures. Specific MAJOR for those covered rules only; full manual, all board effects and bankruptcy/loan exceptions remain missing. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Calamity&game=calamity)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/calamity-rules.txt) · 🌐 [Rules reference PDF (English)](https://archive.org/download/imagine-magazine-02-keith-thomson-editor/Imagine%20Magazine%2012%20-%20Keith%20Thomson%20%28editor%29.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Calamity&game=calamity)
 <!-- verification:end -->
 
 

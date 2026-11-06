@@ -4,16 +4,19 @@ bgg_id: 17480
 player_count: "2"
 play_time: "30-60 min"
 designer: "Lawrence R. Sims"
-source_pdf: "battlelords-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "battlelords-selection-9237cdd67325.html"
+source_url: "https://card.g1.xrea.com/en/fb06bl.html"
+source_type: "rules_reference_html"
+source_language: "Japanese (third-party rules account)"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives an immediate win for reaching a victory-point threshold or eliminating every enemy soldier. The matching rules account instead checks Reputation during the Victory phase, combining current Fame with completed missions and requiring the agreed threshold and sole highest score. Elimination depends on having no active Hotspot and zero Fame at the end of the Hotspot phase, not on losing all soldiers. The primary game description independently places the Reputation comparison at round end. This finding covers those ending rules; the main reference is an unofficial Japanese account. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battlelords&game=battlelords)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/battlelords-rules.txt) · 🌐 [Rules reference (Japanese (third-party rules account))](https://card.g1.xrea.com/en/fb06bl.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battlelords&game=battlelords)
 <!-- verification:end -->
 
 

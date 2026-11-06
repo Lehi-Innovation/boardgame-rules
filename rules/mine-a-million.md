@@ -4,19 +4,22 @@ bgg_id: 1920
 player_count: "2-6"
 play_time: "120 min"
 designer: "Unknown (Waddingtons)"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "mine-a-million-selection-22530ac16397.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://images.steamusercontent.com/ugc/1469815841881310473/61932F3759D8DDB1AEF7155A4F3E040292753FE4/"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Mine a Million
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Matching Mine a Million rules reference gives ordinary production only on die rolls1or6 after the first round and requires all voluntary financial transactions BEFORE rolling; summary says mines produce each turn and puts selling/investing after the roll. It also restricts barges to canals although the reference explicitly permits coastal barge voyages. Specific third-party-reference-backed MAJOR findings only; original publisher transcription authority unverified, no full audit or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mine%20a%20Million&game=mine-a-million)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/mine-a-million-rules.txt) · 🌐 [Rules reference PDF (English)](https://images.steamusercontent.com/ugc/1469815841881310473/61932F3759D8DDB1AEF7155A4F3E040292753FE4/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mine%20a%20Million&game=mine-a-million)
 <!-- verification:end -->
 
 ## Overview

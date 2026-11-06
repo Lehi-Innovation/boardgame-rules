@@ -4,16 +4,19 @@ bgg_id: 13881
 player_count: "2"
 play_time: "60-120 min"
 designer: "Uncredited (SPI)"
-source_pdf: "marengo-napoleon-in-italy-14-june-1800-rules.pdf"
-extracted_date: "2026-03-21"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_html: "marengo-napoleon-in-italy-14-june-1800-recovery.html"
+source_url: "https://rulespal.com/marengo-1975/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Marengo%3A%20Napoleon%20in%20Italy%2C%2014%20June%201800&game=marengo-napoleon-in-italy-14-june-1800)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/marengo-napoleon-in-italy-14-june-1800-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/marengo-1975/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Marengo%3A%20Napoleon%20in%20Italy%2C%2014%20June%201800&game=marengo-napoleon-in-italy-14-june-1800)
 <!-- verification:end -->
 
 

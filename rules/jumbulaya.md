@@ -4,16 +4,19 @@ bgg_id: 35548
 player_count: "2-4"
 play_time: "45 min"
 designer: "Richard Darst"
-source_pdf: "jumbulaya-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "jumbulaya-selection-8b438b562040.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://images1.vat19.com/manuals/jumbulaya.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Jumbulaya rules require a seven-, eight- or nine-TILE vertical word and explicitly reject E-QU-A-L-L-Y as six tiles despite seven letters. Summary instead defines the Jumbulaya in letters, permitting too-short combo-tile words. It also restricts stealing to a longer word although original rules permit equal-length trades/rearrangements. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jumbulaya&game=jumbulaya)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/jumbulaya-rules.txt) · 🌐 [Source PDF (English)](https://images1.vat19.com/manuals/jumbulaya.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jumbulaya&game=jumbulaya)
 <!-- verification:end -->
 
 

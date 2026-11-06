@@ -4,16 +4,19 @@ bgg_id: 39481
 player_count: "2"
 play_time: "30 min"
 designer: "Traditional (Malagasy)"
-source_pdf: "katro-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "katro-selection-0c33c98fb33d.html"
+source_url: "https://ludii.games/details.php?keyword=Katro"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Katro&game=katro)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/katro-rules.txt) · 🌐 [Rules reference (English)](https://ludii.games/details.php?keyword=Katro) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Katro&game=katro)
 <!-- verification:end -->
 
 

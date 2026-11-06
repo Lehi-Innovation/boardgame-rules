@@ -4,16 +4,19 @@ bgg_id: 239188
 player_count: "1-4"
 play_time: "60-90 min"
 designer: "David Cicurel"
-source_pdf: "chronicles-of-crime-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "chronicles-of-crime-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://cdn.1j1ju.com/medias/c7/75/a6-chronicles-of-crime-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chronicles%20of%20Crime&game=chronicles-of-crime)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/chronicles-of-crime-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/c7/75/a6-chronicles-of-crime-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chronicles%20of%20Crime&game=chronicles-of-crime)
 <!-- verification:end -->
 
 

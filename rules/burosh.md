@@ -4,16 +4,19 @@ bgg_id: 37937
 player_count: "2-6"
 play_time: "15 min"
 designer: "Kyle Wernle"
-source_pdf: "burosh-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "burosh-selection-537588847f44.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://burosh.win/wp-content/uploads/2021/03/Hand-Rankings.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says all three wild cards can represent any card. The original maker’s updated challenge sheet instead restricts each: Emperor represents a face card or Ace and is always trump; Magician represents a numeric card including1but not Ace and is always trump; Hermit can represent any card outside trump. The Emperor also wins otherwise equal hands, while the other wilds copy their chosen card without that tie advantage. Unrestricted wild use creates illegal hands and changes challenge winners. Specific MAJOR for this covered updated challenge subsystem only; no full-base-rule or exact2008edition audit. Other setup/turn/ending claims remain uncertified; no summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Burosh&game=burosh)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/burosh-rules.txt) · 🌐 [Rules reference PDF (English)](https://burosh.win/wp-content/uploads/2021/03/Hand-Rankings.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Burosh&game=burosh)
 <!-- verification:end -->
 
 

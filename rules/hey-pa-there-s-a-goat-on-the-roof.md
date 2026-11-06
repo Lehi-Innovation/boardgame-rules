@@ -3,16 +3,19 @@ title: "Hey Pa! There's a Goat on the Roof"
 bgg_id: 11371
 player_count: "2-6"
 play_time: "30 min"
-source_pdf: "hey-pa-there-s-a-goat-on-the-roof-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "hey-pa-there-s-a-goat-on-the-roof-selection-b9461d14dcc5.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://web.archive.org/web/20060616090002id_/http://samstoybox.com:80/toypics/GoatRoofInstruct1.jpg"
+source_type: "rulebook_images"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original1966 ParkerBrothers HeyPa instruction image2 explicitly requires the FARMER TO BE INSIDE THE BARN before a goat can jump onto the roof,and the PLAYER spins a sufficient count to traverse the stump and reach the barn in one turn. Summary instead repeats a defective third-party transcription saying the Farmer must spin and omits the farmer-inside condition. This removes the bell/farmer gate controlling when the three-can game-ending jump is legal. Original images resolve the typed-copy omission. Specific source-backed MAJOR ending finding only; no full summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hey%20Pa%21%20There%27s%20a%20Goat%20on%20the%20Roof&game=hey-pa-there-s-a-goat-on-the-roof)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/hey-pa-there-s-a-goat-on-the-roof-rules.txt) · 🌐 [Rulebook images (English)](https://web.archive.org/web/20060616090002id_/http://samstoybox.com:80/toypics/GoatRoofInstruct1.jpg) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hey%20Pa%21%20There%27s%20a%20Goat%20on%20the%20Roof&game=hey-pa-there-s-a-goat-on-the-roof)
 <!-- verification:end -->
 
 

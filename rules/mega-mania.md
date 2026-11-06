@@ -4,19 +4,22 @@ bgg_id: 1541
 player_count: "2-4"
 play_time: "120 min"
 designer: "Richard Halliwell"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "mega-mania-selection-075870c3df98.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.orderofgamers.com/downloads/BlockMania_v1.1.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Mega-Mania
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary repeatedly says that exhausting the Mania deck ends the game when the Judges arrive. The matching English reference PDF page5 instead starts the Justice endgame, prohibits new blockers and requires Justice-card play each turn; play continues until the last blocker is removed or all blocks collapse. Page8 applies the normal ending to Mega-Mania multiplayer. The independent Italian translation section12 (PDF page11) explicitly agrees. Stopping at deck exhaustion removes an entire required stage and changes scoring/outcome. Specific MAJOR finding only; the third-party references have separately recorded limitations, and neither a full summary audit nor a body repair was performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mega-Mania&game=mega-mania)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/mega-mania-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.orderofgamers.com/downloads/BlockMania_v1.1.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mega-Mania&game=mega-mania)
 <!-- verification:end -->
 
 ## Overview

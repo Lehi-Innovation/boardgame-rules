@@ -4,16 +4,19 @@ bgg_id: 40962
 player_count: "2-4"
 play_time: "20-30 min"
 designer: "Inka Brand, Markus Brand"
-source_pdf: "burg-der-1000-spiegel-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "burg-der-1000-spiegel-recovery.html"
+source_url: "https://rulespal.com/mirror-mansion/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Burg%20der%201000%20Spiegel&game=burg-der-1000-spiegel)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/burg-der-1000-spiegel-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/mirror-mansion/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Burg%20der%201000%20Spiegel&game=burg-der-1000-spiegel)
 <!-- verification:end -->
 
 

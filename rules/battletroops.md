@@ -4,16 +4,19 @@ bgg_id: 7943
 player_count: "2+"
 play_time: "60-180 min"
 designer: "FASA Corporation"
-source_pdf: "battletroops-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "battletroops-selection-421d92de2477.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/BattleTech%20%5Bmulti%5D/Sourcebooks/FASA/BattleTech%20-%20Battletroops%20%7BFASA1637%7D.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says players alternate moving squads or individual troopers. Original BattleTroops page8 instead resolves a complete SideA movement segment: move one soldier, set its firing arc or throw a grenade, and repeat until ALL soldiers on SideA have moved; then resolve its grenades/area effects before SideB moves all of its soldiers. Initiative is rolled only on the first turn, fixing SideA and SideB. Enemy reaction fire can interrupt movement, but it does not make activation alternate between the sides. The incorrect activation order changes firing-arc exposure, grenade timing and tactical opportunities. Specific MAJOR finding; no full audit or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleTech%3A%20BattleTroops&game=battletroops)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/battletroops-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/BattleTech%20%5Bmulti%5D/Sourcebooks/FASA/BattleTech%20-%20Battletroops%20%7BFASA1637%7D.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleTech%3A%20BattleTroops&game=battletroops)
 <!-- verification:end -->
 
 

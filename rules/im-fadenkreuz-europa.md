@@ -4,15 +4,19 @@ bgg_id: 37730
 player_count: "2-6"
 play_time: "45 min"
 designer: "Uncredited"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "im-fadenkreuz-europa-selection-922d7180c4b7.html"
+source_url: "https://www.cliquenabend.de/spiele/781000-Europa-Wissen.html"
+source_type: "rules_reference_html"
+source_language: "German"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary repeatedly ends the game only after all question cards have been used. The recovered detailed German Europa-Wissen rules account instead ends on a score threshold: its goal section says 30 points or more, while its final rules sentence says more than 30 points. That boundary inconsistency is retained and needs the original manual to resolve, but neither version requires exhausting the 110-card/220-question deck. The summary’s ending changes game length and when the winner is determined. Specific MAJOR finding against the matching third-party rules reference, independently corroborated for game identity; no full publisher-rulebook audit or summary-body repair was performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Im%20Fadenkreuz%3A%20Europa&game=im-fadenkreuz-europa)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/im-fadenkreuz-europa-rules.txt) · 🌐 [Rules reference (German)](https://www.cliquenabend.de/spiele/781000-Europa-Wissen.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Im%20Fadenkreuz%3A%20Europa&game=im-fadenkreuz-europa)
 <!-- verification:end -->
 
 

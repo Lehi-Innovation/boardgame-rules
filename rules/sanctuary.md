@@ -4,19 +4,22 @@ bgg_id: 1571
 player_count: "2-6"
 play_time: "60-90 min"
 designer: "Bill Fawcett"
-source_pdf: "sanctuary-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "sanctuary-selection-137e7642b6f5.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.Card-board-and-miniature-games/Board%20games/Sanctuary%20%5BMayfield%20Games%5D/Sanctuary%20-%20The%20Thieves%27%20World%20Board%20Game%20-%202nd%20Edition%20%5BMFG451%5D%201988.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Sanctuary
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Matching Sanctuary1988 second-edition original rules PDFp7/printedp5 and p9/printedp7 allocate any two of three dice to the thief and the remaining die to a chosen Hell Hound; summary says guards follow fixed patrol routes. Original optional Prince rule PDFp10/printedp8 allows the Prince with three or more thief players, and wins after the Event deck is exhausted twice without a thief reaching300cached SP. Summary wrongly restricts this role to six players and omits the two-deck-cycle ending trigger. Findings explicitly compare recovered1988 edition; exact equivalence to1982 printing not claimed. Specific MAJOR findings only; no full audit or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Sanctuary&game=sanctuary)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/sanctuary-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.Card-board-and-miniature-games/Board%20games/Sanctuary%20%5BMayfield%20Games%5D/Sanctuary%20-%20The%20Thieves%27%20World%20Board%20Game%20-%202nd%20Edition%20%5BMFG451%5D%201988.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Sanctuary&game=sanctuary)
 <!-- verification:end -->
 
 ## Overview

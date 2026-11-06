@@ -4,15 +4,19 @@ bgg_id: 1753
 player_count: "1-4"
 play_time: "30 min"
 designer: "Uncredited"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "im-m-rchenwald-recovery.html"
+source_url: "https://rulespal.com/im-marchenwald/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Im%20M%C3%A4rchenwald&game=im-m-rchenwald)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/im-m-rchenwald-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/im-marchenwald/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Im%20M%C3%A4rchenwald&game=im-m-rchenwald)
 <!-- verification:end -->
 
 

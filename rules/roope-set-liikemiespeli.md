@@ -4,16 +4,19 @@ bgg_id: 66499
 player_count: "2-4"
 play_time: "45-60 min"
 designer: "Unknown"
-source_pdf: "roope-set-liikemiespeli-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "roope-set-liikemiespeli-selection-8c3fa7a4522e.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.tactic.net/site/rules/FIN/02669.pdf"
+source_type: "rulebook_pdf"
+source_language: "Finnish"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Tactic Roope-Seta Liikemiespeli 02669 Finnish rules page 3 explicitly permit freely negotiated trades of shares and gold between players on the active players turn; shares may also be sold to the bank for 7000. The summary instead states that shares cannot be traded between players and may only be bought from the bank, removing a legal negotiation mechanism. Original Free Trade panel visually checked. Specific source-backed finding only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Roope-Seta%20Liikemiespeli&game=roope-set-liikemiespeli)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/roope-set-liikemiespeli-rules.txt) · 🌐 [Source PDF (Finnish)](https://www.tactic.net/site/rules/FIN/02669.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Roope-Seta%20Liikemiespeli&game=roope-set-liikemiespeli)
 <!-- verification:end -->
 
 

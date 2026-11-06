@@ -3,16 +3,19 @@ title: "Layli Goobalay"
 bgg_id: 39489
 player_count: "2"
 play_time: "15-30 min"
-source_pdf: "layli-goobalay-rules.pdf"
-extracted_date: "2026-03-21"
+source_pdf: "layli-goobalay-selection-4ed66230fd11.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.abstractgames.org/uploads/1/1/6/4/116462923/abstract_games_issue_13.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Layli%20Goobalay&game=layli-goobalay)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/layli-goobalay-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.abstractgames.org/uploads/1/1/6/4/116462923/abstract_games_issue_13.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Layli%20Goobalay&game=layli-goobalay)
 <!-- verification:end -->
 
 

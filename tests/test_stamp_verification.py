@@ -10,6 +10,7 @@ from scripts.stamp_verification import (
     VERIFICATION_END,
     compute_state,
     has_extracted_source,
+    build_block,
     promote_registry,
     stamp_file,
 )
@@ -25,6 +26,42 @@ bgg_id: 42
 
 A test game.
 """
+
+
+def test_original_language_pdf_link_is_visible():
+    block = build_block("example", "Example", "unverified", "", source_url="http://archive.test/download.php?id=12",
+                        source_language="German")
+    assert "Source PDF (German)" in block
+    assert "http://archive.test/download.php?id=12" in block
+
+
+def test_transcription_is_not_labelled_as_original_rulebook():
+    block = build_block("example", "Example", "unverified", "", source_url="https://rules.test/example",
+                        source_type="third_party_rules_transcription")
+    assert "Rules source text" in block
+    assert "Rules transcription (English)" in block
+    assert "Full rulebook text" not in block
+
+
+@pytest.mark.parametrize("source_type,label", [
+    ("research_paper", "Research paper"),
+    ("author_rules_html", "Author's rules"),
+    ("author_rules_text", "Author's rules"),
+    ("rules_reference_html", "Rules reference"),
+    ("rules_reference_text", "Rules reference"),
+    ("rules_reference_pdf", "Rules reference PDF"),
+    ("rules_reference_images", "Rules reference images"),
+    ("rulebook_images", "Rulebook images"),
+    ("rulebook_archive", "Rulebook archive"),
+])
+@pytest.mark.parametrize("state", ["unverified", "inaccurate"])
+def test_rules_references_have_accurate_source_labels(source_type, label, state):
+    block = build_block("example", "Example", state, "Source-backed conflict.",
+                        source_url="https://source.test/rules", source_type=source_type)
+    assert f"{label} (English)" in block
+    assert "full rulebook text" not in block.lower()
+    assert "Source PDF" not in block
+    assert "Source-backed conflict.." not in block
 
 
 @pytest.fixture

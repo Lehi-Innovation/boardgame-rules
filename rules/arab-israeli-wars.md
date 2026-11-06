@@ -4,16 +4,19 @@ bgg_id: 3218
 player_count: "2"
 play_time: "60-240 min"
 designer: "Unknown"
-source_pdf: "arab-israeli-wars-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "arab-israeli-wars-recovery.html"
+source_url: "https://rulespal.com/arab-israeli-wars/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arab-Israeli%20Wars&game=arab-israeli-wars)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/arab-israeli-wars-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/arab-israeli-wars/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arab-Israeli%20Wars&game=arab-israeli-wars)
 <!-- verification:end -->
 
 

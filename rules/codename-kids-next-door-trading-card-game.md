@@ -4,15 +4,19 @@ bgg_id: 16977
 player_count: "2"
 play_time: "20-40 min"
 designer: "Uncredited"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "codename-kids-next-door-trading-card-game-selection-e29d33c925a2.html"
+source_url: "https://kiwix.scoggi.net/content/wikipedia_en_all_maxi_2023-11/A/Codename%3A_Kids_Next_Door_Trading_Card_Game"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The matching core rules account describes a top-deck flip game: compare battle numbers (or use the same-colour panic button), with first five won battles ending play; advanced turns choose between adding the revealed card to the treehouse and battling, with snack-icon power-ups. The summary instead invents a starting5-7card hand, draw/deploy/attack/end phases, characters attacking opponents/characters and life-point or mission victory. Those mechanisms replace both the actual turn and win condition. Original Wizards FAQ supplements independently confirm the treehouse/snack system and minimum20-card/maximum3copies deck constraints; this remains a labelled community rules account rather than the original complete starter sheet. Specific MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Codename%3A%20Kids%20Next%20Door%20TCG&game=codename-kids-next-door-trading-card-game)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/codename-kids-next-door-trading-card-game-rules.txt) · 🌐 [Rules reference (English)](https://kiwix.scoggi.net/content/wikipedia_en_all_maxi_2023-11/A/Codename%3A_Kids_Next_Door_Trading_Card_Game) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Codename%3A%20Kids%20Next%20Door%20TCG&game=codename-kids-next-door-trading-card-game)
 <!-- verification:end -->
 
 

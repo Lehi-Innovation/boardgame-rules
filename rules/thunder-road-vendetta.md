@@ -1,22 +1,25 @@
 ---
 title: "Thunder Road: Vendetta"
-bgg_id: 804
+bgg_id: 342070
 player_count: "2-4"
 play_time: "60-90 min"
 designer: "Rob Daviau, Noah Cohen, Brian Neff"
-source_pdf: "thunder-road-vendetta-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "thunder-road-vendetta-recovery.html"
+source_url: "https://rulespal.com/thunder-road-vendetta/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Thunder Road: Vendetta
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Thunder%20Road%3A%20Vendetta&game=thunder-road-vendetta)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/thunder-road-vendetta-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/thunder-road-vendetta/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Thunder%20Road%3A%20Vendetta&game=thunder-road-vendetta)
 <!-- verification:end -->
 
 ## Overview

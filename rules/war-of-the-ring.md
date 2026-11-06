@@ -4,19 +4,22 @@ bgg_id: 9609
 player_count: "2-4"
 play_time: "150-180 min"
 designer: "Roberto Di Meglio, Marco Maggi, Francesco Nepitello"
-source_pdf: "war-of-the-ring-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "war-of-the-ring-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/3d/14/4f-war-of-the-ring-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 
 # War of the Ring
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20War%20of%20the%20Ring&game=war-of-the-ring)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/war-of-the-ring-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/3d/14/4f-war-of-the-ring-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20War%20of%20the%20Ring&game=war-of-the-ring)
 <!-- verification:end -->
 
 ## Overview

@@ -4,16 +4,19 @@ bgg_id: 55127
 player_count: "2-6"
 play_time: "45-60 min"
 designer: "Jordy Sopourn, Shari Sopourn"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "bailout-the-game-selection-35388d39fd55.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://web.archive.org/web/20100613200017id_/http://www.bailoutthegame.com:80/images/bailout_the_game_directions.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary declares the bank with the most debt at the end of the money trail the winner, but omits Bank Stock Certificates and their mandatory final settlement. The original 2009 rules (PDF1 Bank Stock Certificates and PDF3 Winning the Game) require every player whose certificate is held by someone else to transfer 50% of their assets or debt to that holder after all banks arrive. All such exchanges happen simultaneously, before totals are compared. Banks that finish early remain eligible for card interactions and certificate theft until everyone arrives. Omitting the certificate settlement can select a different winner, so this is a specific MAJOR scoring omission; no full summary audit or body repair was performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bailout%21%20The%20Game&game=bailout-the-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/bailout-the-game-rules.txt) · 🌐 [Source PDF (English)](https://web.archive.org/web/20100613200017id_/http://www.bailoutthegame.com:80/images/bailout_the_game_directions.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bailout%21%20The%20Game&game=bailout-the-game)
 <!-- verification:end -->
 
 

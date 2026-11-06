@@ -4,16 +4,19 @@ bgg_id: 6504
 player_count: "2"
 play_time: "15-30 min"
 designer: "Alfred Leonardi"
-source_pdf: "ace-of-aces-wingleader-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "ace-of-aces-wingleader-selection-cc87d1c220b2.html"
+source_url: "https://armchairgeneral.com/retro-review-4-beware-the-hun-in-the-sun-ace-of-aces-wingleader-game-review.htm"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary explicitly gives Basic play unlimited ammunition and postpones ammo tracking to an Intermediate level, while its setup already has both players select aircraft cards. The readable original Wingleader Errata instead makes its Ammo Rule require subtracting one point from the Aircraft Card for every shot and prohibits shooting at zero; it places Optional Rules under a separate later heading. The collector identifies the aircraft-card game as Basic, with Introductory/Basic/Optional levels. Unlimited aircraft-card firing removes an enforced resource limit and enables shots the corrected rules forbid. Specific MAJOR for errata-covered aircraft-card ammunition only, not a full rulebook audit or a claim about all introductory/expansion variants. Full manuals/tables remain missing; no body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ace%20of%20Aces%3A%20Wingleader&game=ace-of-aces-wingleader)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/ace-of-aces-wingleader-rules.txt) · 🌐 [Rules reference (English)](https://armchairgeneral.com/retro-review-4-beware-the-hun-in-the-sun-ace-of-aces-wingleader-game-review.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ace%20of%20Aces%3A%20Wingleader&game=ace-of-aces-wingleader)
 <!-- verification:end -->
 
 

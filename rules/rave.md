@@ -4,19 +4,22 @@ bgg_id: 12645
 player_count: "2-6"
 play_time: "45-90 min"
 designer: "Patrick Treloar"
-source_pdf: "rave-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rave-selection-0b0bf60c3d87.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://web.archive.org/web/20070404224106id_/http://www.fantazia.org.uk/picsscene/ravegame10185.jpg"
+source_type: "rulebook_images"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Rave
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary orders turns as Roll/Spin, Move, then Resolve Space and lists drawing a Vibe card as an effect a landed-on space may require. The original Quick Edit point 1 and detailed Stage 1 (rulebook image 3), Stage 1 continuation and Stage 2 instructions (image 4) instead require taking and acting on a Vibe card BEFORE every movement roll, with the later Dance stage explicitly replacing movement/Vibe draws with Dance cards. Vibe cards can move police, change money/energy and affect the planned turn, so changing their timing and making the draw conditional alters play. Specific source-backed MAJOR timing finding only; no full summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rave&game=rave)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/rave-rules.txt) · 🌐 [Rulebook images (English)](https://web.archive.org/web/20070404224106id_/http://www.fantazia.org.uk/picsscene/ravegame10185.jpg) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rave&game=rave)
 <!-- verification:end -->
 
 ## Overview

@@ -4,19 +4,22 @@ bgg_id: 168215
 player_count: "1-2"
 play_time: "30 min"
 designer: "Frederic Moyersoen"
-source_pdf: "saboteur-the-duel-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "saboteur-the-duel-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/9c/36/85-saboteur-the-duel-rulebook.pdf"
+source_type: "third_party_rules_translation"
+source_language: "English (unofficial translation)"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Saboteur: The Duel
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Saboteur%3A%20The%20Duel&game=saboteur-the-duel)
+> 📄 [Translated rules text](https://lehi-innovation.github.io/boardgame-rules/extracted/saboteur-the-duel-rules.txt) · 🌐 [Source PDF (English (unofficial translation))](https://cdn.1j1ju.com/medias/9c/36/85-saboteur-the-duel-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Saboteur%3A%20The%20Duel&game=saboteur-the-duel)
 <!-- verification:end -->
 
 ## Overview

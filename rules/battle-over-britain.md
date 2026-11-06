@@ -4,16 +4,19 @@ bgg_id: 4278
 player_count: "2"
 play_time: "120-240 min"
 designer: "David C. Isby"
-source_pdf: "battle-over-britain-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "battle-over-britain-selection-eea953ef5179.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://levmishkin.wordpress.com/wp-content/uploads/2009/02/bob_estrat_gico_21.pdf"
+source_type: "rules_reference_pdf"
+source_language: "Spanish"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary describes each game turn as a portion of a day while presenting the strategic campaign. The original Spanish NAC introduction (section 1.0, PDF4) and section 5.0 (PDF11) state that the strategic campaign consists of nine turns, each representing five days. The introduction distinguishes this from combat scenarios and the advanced game; those are separate systems, not a portion-of-a-day strategic turn. This changes the timing of raids, repair, activity and replacements. Specific MAJOR for strategic turn scale only. The recovered PDF is partial, missing the remaining combat/advanced chapters and screen tables; OCR exact values require the original scan. No full summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20Over%20Britain&game=battle-over-britain)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/battle-over-britain-rules.txt) · 🌐 [Rules reference PDF (Spanish)](https://levmishkin.wordpress.com/wp-content/uploads/2009/02/bob_estrat_gico_21.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Battle%20Over%20Britain&game=battle-over-britain)
 <!-- verification:end -->
 
 

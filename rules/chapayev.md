@@ -3,15 +3,19 @@ title: "Chapayev"
 bgg_id: 36799
 player_count: "2"
 play_time: "15-30 min"
-extracted_date: "2026-03-18"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "chapayev-selection-0bfb967dfb8f.html"
+source_url: "https://en.wikipedia.org/wiki/Chapayev_(game)"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chapayev&game=chapayev)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/chapayev-rules.txt) · 🌐 [Rules reference (English)](https://en.wikipedia.org/wiki/Chapayev_%28game%29) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Chapayev&game=chapayev)
 <!-- verification:end -->
 
 

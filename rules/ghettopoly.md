@@ -4,16 +4,19 @@ bgg_id: 8063
 player_count: "2-6"
 play_time: "60-120 min"
 designer: "David Chang"
-source_pdf: "ghettopoly-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "ghettopoly-selection-1f457197a88d.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://steamusercontent-a.akamaihd.net/ugc/13410282621589806660/88B9ED3C248937CA52C676F687E7C365ECC0D9E9/"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Ghettopoly directions explicitly require counterclockwise movement; summary says clockwise. The original Just Loitering space awards the center pot, or triggers a500-dollar award if empty; summary substitutes Free Parking with no action. Emergency Room is triggered by snake eyes and has7/11/fee/card release procedures, rather than the summaries generic Monopoly jail rules. Specific original-source MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ghettopoly&game=ghettopoly)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ghettopoly-rules.txt) · 🌐 [Source PDF (English)](https://steamusercontent-a.akamaihd.net/ugc/13410282621589806660/88B9ED3C248937CA52C676F687E7C365ECC0D9E9/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ghettopoly&game=ghettopoly)
 <!-- verification:end -->
 
 

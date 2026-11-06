@@ -4,16 +4,19 @@ bgg_id: 7296
 player_count: "2-6"
 play_time: "45-90 min"
 designer: "Joe Lasheras, Chris McNutt"
-source_pdf: "goth-the-game-of-horror-trivia-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "goth-the-game-of-horror-trivia-selection-fb35e37f699a.html"
+source_url: "https://puzz.com/gothtriviaboardgame.html"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goth%3A%20The%20Game%20of%20Horror%20Trivia&game=goth-the-game-of-horror-trivia)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/goth-the-game-of-horror-trivia-rules.txt) · 🌐 [Rules reference (English)](https://puzz.com/gothtriviaboardgame.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Goth%3A%20The%20Game%20of%20Horror%20Trivia&game=goth-the-game-of-horror-trivia)
 <!-- verification:end -->
 
 

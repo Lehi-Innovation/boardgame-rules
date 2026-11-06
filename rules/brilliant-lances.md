@@ -4,16 +4,19 @@ bgg_id: 3894
 player_count: "2"
 play_time: "120-240 min"
 designer: "Frank Chadwick, Dave Nilsen"
-source_pdf: "brilliant-lances-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "brilliant-lances-selection-fd6259878e61.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Traveller/The%20New%20Era/0303%20Brilliant%20Lances.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original GDW BrilliantLances MarkI Mod1(February1994) PDFp6/printedp5 has Launch,secret Plotting,Movement,Sensor,Fire,DamageControl,TurnRecord phases. Summary invents an Initiative phase and omits Launch,secret Plotting and Sensor phases. Original Sensor/Fire paragraphs require a sensor lock before firing at an enemy; summary describes range/arc attacks without this central prerequisite. Comparison explicitly uses the recoveredFebruary1994 edition. Specific MAJOR findings only; no full summary audit/body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brilliant%20Lances&game=brilliant-lances)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/brilliant-lances-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Traveller/The%20New%20Era/0303%20Brilliant%20Lances.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brilliant%20Lances&game=brilliant-lances)
 <!-- verification:end -->
 
 

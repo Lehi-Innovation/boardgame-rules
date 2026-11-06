@@ -69,6 +69,18 @@ def test_validate_valid_file(tmp_path):
     assert errors == []
 
 
+@pytest.mark.parametrize("evidence,valid", [("https://author.test/rules", True),
+                                         ("", False), ("not a URL", False),
+                                         ("https://[broken", False)])
+def test_withdrawn_wrong_id_requires_identity_evidence(tmp_path, evidence, valid):
+    path = tmp_path / "example.md"
+    frontmatter = ("bgg_id: null\nbgg_id_status: unresolved\n"
+                   "original_bgg_id: 42\nidentity_evidence_url: " + repr(evidence))
+    path.write_text(VALID_RULES.replace("bgg_id: 13", frontmatter))
+    errors = validate_rules_file(str(path))
+    assert bool(errors) is (not valid)
+
+
 def test_validate_missing_sections(tmp_path):
     path = tmp_path / "catan.md"
     path.write_text(MISSING_SECTIONS)

@@ -4,16 +4,19 @@ bgg_id: 1866
 player_count: "2-6"
 play_time: "30-45 min"
 designer: "Uncredited"
-source_pdf: "brainstorm-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "brainstorm-selection-be01f77e0155.html"
+source_url: "https://speltokig.blogspot.com/2011/04/speltips-brainstorm.html"
+source_type: "rules_reference_html"
+source_language: "Swedish"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brainstorm&game=brainstorm)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/brainstorm-rules.txt) · 🌐 [Rules reference (Swedish)](https://speltokig.blogspot.com/2011/04/speltips-brainstorm.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Brainstorm&game=brainstorm)
 <!-- verification:end -->
 
 

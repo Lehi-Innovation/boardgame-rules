@@ -4,16 +4,19 @@ bgg_id: 6914
 player_count: "2"
 play_time: "120 min"
 designer: "Frank Chadwick"
-source_pdf: "beda-fomm-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "beda-fomm-selection-38a6d47a8251.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.spigames.net/Phoenix/Phoenix24.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary tells the Italian player to win by exiting the northern map edge, repeated in its player-reference table. R.Jordan’s original GDW120Series review in Phoenix24,printed23 (PDF27), explicitly has Italian units enter from the north and exit to the south. Alan Sharif’s separate GDW120Series IPW review independently states south-edge exit. The summary reverses the retreat objective, directing movement to the entry edge. Specific MAJOR for exit direction only; full original manual and exact exit-count victory schedule remain missing. No later Consim edition substituted, no full audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Beda%20Fomm&game=beda-fomm)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/beda-fomm-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.spigames.net/Phoenix/Phoenix24.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Beda%20Fomm&game=beda-fomm)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 798
 player_count: "2"
 play_time: "15-30 min"
 designer: "Alfred Leonardi"
-source_pdf: "ace-of-aces-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "ace-of-aces-selection-19c0b84195b3.html"
+source_url: "https://gametek.substack.com/p/all-about-that-ace"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ace%20of%20Aces&game=ace-of-aces)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/ace-of-aces-rules.txt) · 🌐 [Rules reference (English)](https://gametek.substack.com/p/all-about-that-ace) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ace%20of%20Aces&game=ace-of-aces)
 <!-- verification:end -->
 
 

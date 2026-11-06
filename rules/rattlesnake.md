@@ -4,19 +4,22 @@ bgg_id: 27940
 player_count: "2-4"
 play_time: "10-15 min"
 designer: "Peter-Paul Joopen"
-source_pdf: "rattlesnake-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rattlesnake-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/1c/f5/58-rattlesnake-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 
 # RattleSnake
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20RattleSnake&game=rattlesnake)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/rattlesnake-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/1c/f5/58-rattlesnake-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20RattleSnake&game=rattlesnake)
 <!-- verification:end -->
 
 ## Overview

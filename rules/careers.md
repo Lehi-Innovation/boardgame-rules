@@ -4,16 +4,19 @@ bgg_id: 1475
 player_count: 2-6
 play_time: 60 minutes
 designer: James Cooke Brown
-source_pdf: careers-rules.pdf
-extracted_date: 2026-03-18
+source_pdf: "careers-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: 2026-03-18
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "http://www.spielanleitung.com/download.php4?id=1149"
+source_type: "rulebook_pdf"
+source_language: "German"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Careers&game=careers)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/careers-rules.txt) · 🌐 [Source PDF (German)](http://www.spielanleitung.com/download.php4?id=1149) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Careers&game=careers)
 <!-- verification:end -->
 
 

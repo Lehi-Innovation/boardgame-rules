@@ -79,5 +79,5 @@ documented in [CLAUDE.md](CLAUDE.md).
 
 To test whether assistants can answer questions from a summary alone, use the
 [rules summary question answering workflow](docs/quality/summary-qa/README.md).
-It covers the fixed 20-question test, independent readers, source-backed repairs,
-model comparisons, and the Heat pilot results.
+It covers fixed question banks, expansion until questions repeat, independent
+readers, source-backed repairs, model comparisons, and the Heat pilot results.

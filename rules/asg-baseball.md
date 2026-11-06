@@ -4,16 +4,19 @@ bgg_id: 11780
 player_count: "2"
 play_time: "60-120 min"
 designer: "George Gerney"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "asg-baseball-selection-ba537279dc22.html"
+source_url: "https://web.archive.org/web/20130603023612id_/http://www.gamersalliance.com/F11/baseballtabletop4.htm"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary explicitly says all outcomes are determined by oneD20roll, cross-referenced against both batter and pitcher. K-ban’s detailed1989ThreeWreference instead first rolls on the pitcher’sPcolumn: a direct outcome ends the procedure, but1–6selects the batter column for a secondD20roll, andXrequires a batterXcolumn reroll. The same complete procedure appears in the preserved republication. Reusing one roll for both cards changes the pitcher-controlled branching and outcome distribution. Specific MAJOR for covered at-bat resolution only; the reviewer’s limited-testing qualification and missing full charts/rare outcomes remain explicit. No full original1973or complete3Wsummary audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20ASG%20Baseball&game=asg-baseball)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/asg-baseball-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20130603023612id_/http://www.gamersalliance.com/F11/baseballtabletop4.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20ASG%20Baseball&game=asg-baseball)
 <!-- verification:end -->
 
 

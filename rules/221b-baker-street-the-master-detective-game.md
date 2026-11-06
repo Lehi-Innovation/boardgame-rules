@@ -4,16 +4,19 @@ bgg_id: 1275
 player_count: "2-6"
 play_time: "60-90 min"
 designer: "Jay Moriarty"
-source_pdf: "221b-baker-street-the-master-detective-game-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "221b-baker-street-the-master-detective-game-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
+source_url: "https://content.cmpl.org/bg/221BBakerStreet.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
 verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20221B%20Baker%20Street%3A%20The%20Master%20Detective%20Game&game=221b-baker-street-the-master-detective-game)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/221b-baker-street-the-master-detective-game-rules.txt) · 🌐 [Source PDF (English)](https://content.cmpl.org/bg/221BBakerStreet.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20221B%20Baker%20Street%3A%20The%20Master%20Detective%20Game&game=221b-baker-street-the-master-detective-game)
 <!-- verification:end -->
 
 

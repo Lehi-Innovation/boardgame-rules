@@ -4,16 +4,19 @@ bgg_id: 8395
 player_count: "2"
 play_time: "30-45 min"
 designer: "Herbert Pinthus"
-source_pdf: "giganten-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "giganten-selection-90028530391b.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://regle.escaleajeux.fr/giga2_rg.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Carlit Dinosaures/Giganten rules use a square grid and orthogonal normal movement, not the summary's hex grid/hex adjacency. Challenges occur against adjacent enemies after movement and are normally optional, not movement into an enemy square. Same-family, equal-strength combats leave both figures on the board; only different-family equal-strength fights remove both. Summary instead removes both on every tie. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Giganten&game=giganten)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/giganten-rules.txt) · 🌐 [Source PDF (French)](https://regle.escaleajeux.fr/giga2_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Giganten&game=giganten)
 <!-- verification:end -->
 
 

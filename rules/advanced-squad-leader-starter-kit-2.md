@@ -4,19 +4,22 @@ bgg_id: 15126
 player_count: "2"
 play_time: "60-240 min"
 designer: "Ken Dunn"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "advanced-squad-leader-starter-kit-2-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://mmpgamers.com/support/aslsk/ASLSK2_Rules.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Advanced Squad Leader: Starter Kit #2
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Squad%20Leader%3A%20Starter%20Kit%20%232&game=advanced-squad-leader-starter-kit-2)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/advanced-squad-leader-starter-kit-2-rules.txt) · 🌐 [Source PDF (English)](https://mmpgamers.com/support/aslsk/ASLSK2_Rules.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Squad%20Leader%3A%20Starter%20Kit%20%232&game=advanced-squad-leader-starter-kit-2)
 <!-- verification:end -->
 
 ## Overview

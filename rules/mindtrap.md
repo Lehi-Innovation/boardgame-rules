@@ -4,19 +4,22 @@ bgg_id: 1923
 player_count: "2+"
 play_time: "60 min"
 designer: "Richard Fast"
-source_pdf: "mindtrap-rules.pdf"
-extracted_date: "2026-03-21"
+source_pdf: "mindtrap-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-08-08"
+source_url: "https://www.boardgamecapital.com/game_rules/mindtrap.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 
 # MindTrap
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20MindTrap&game=mindtrap)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/mindtrap-rules.txt) · 🌐 [Source PDF (English)](https://www.boardgamecapital.com/game_rules/mindtrap.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20MindTrap&game=mindtrap)
 <!-- verification:end -->
 
 ## Overview

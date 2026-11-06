@@ -1,19 +1,22 @@
 ---
 title: "Gridlock"
-bgg_id: 22428
+bgg_id: 35205
 player_count: "2-4"
 play_time: "30-45 min"
 designer: "Andrew Looney"
-source_pdf: "gridlock-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "gridlock-selection-a29e254565bb.html"
+source_url: "https://www.wunderland.com/icehouse/Gridlock.html"
+source_type: "author_rules_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Andrew Looneys original Gridlock rules first place all pyramids upright, then enter a separate phase of dropping existing upright pyramids and turning fallen pieces. Summary instead places a new pyramid and turns pieces on each turn, omitting the required two phases. Original specifies turning 3/2/1 pieces by pyramid size and an exact adjacent-chain score table (1,2,4,8,16,32,64,128); summary omits the counts and substitutes unspecified favorable orientation/territory scoring. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gridlock&game=gridlock)
+> 📄 [Author's rules text](https://lehi-innovation.github.io/boardgame-rules/extracted/gridlock-rules.txt) · 🌐 [Author's rules (English)](https://www.wunderland.com/icehouse/Gridlock.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Gridlock&game=gridlock)
 <!-- verification:end -->
 
 

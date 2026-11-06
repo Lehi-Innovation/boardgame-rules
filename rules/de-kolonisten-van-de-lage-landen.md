@@ -4,16 +4,19 @@ bgg_id: 52825
 player_count: "3-5"
 play_time: "75 min"
 designer: "Klaus Teuber"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "de-kolonisten-van-de-lage-landen-recovery.html"
+source_url: "https://rulespal.com/de-kolonisten-van-de-lage-landen/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20De%20Kolonisten%20van%20de%20Lage%20Landen&game=de-kolonisten-van-de-lage-landen)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/de-kolonisten-van-de-lage-landen-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/de-kolonisten-van-de-lage-landen/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20De%20Kolonisten%20van%20de%20Lage%20Landen&game=de-kolonisten-van-de-lage-landen)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 5294
 player_count: "2"
 play_time: "120-240 min"
 designer: "Stephen Peek"
-source_pdf: "fury-in-the-west-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "fury-in-the-west-selection-06b96c9a2079.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.vftt.co.uk/files/AH%20The%20General/The%20General%20Vol%2018%20No%201.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary describes stragglers as accumulating from continuous combat and omits mandatory losses from ordinary movement. The publisher rules discussion in Avalon Hill The General 18-1, May-June 1981, printed page 7, explicitly says each unit loses one SFP whether it moves one hex or four, with examples of one SFP lost per turn of movement even without casualties. Stationary units can recover stragglers, and the Advanced Game column formation is an explicit movement exception. Casualty and straggler markers meeting eliminates the unit. Omitting ordinary movement attrition changes maneuver, resting decisions and whether a brigade survives. Specific MAJOR finding only; no full rulebook audit or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fury%20in%20the%20West&game=fury-in-the-west)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/fury-in-the-west-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.vftt.co.uk/files/AH%20The%20General/The%20General%20Vol%2018%20No%201.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fury%20in%20the%20West&game=fury-in-the-west)
 <!-- verification:end -->
 
 

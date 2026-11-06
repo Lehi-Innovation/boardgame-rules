@@ -4,16 +4,19 @@ bgg_id: 1829
 player_count: "2-5"
 play_time: "240 min"
 designer: "Rob Daviau, Craig Van Ness"
-source_pdf: "risk-2210-a-d-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "risk-2210-a-d-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/9d/11/22-risk-2210-ad-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Risk%202210%20A.D.&game=risk-2210-a-d)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/risk-2210-a-d-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/9d/11/22-risk-2210-ad-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Risk%202210%20A.D.&game=risk-2210-a-d)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 17118
 player_count: "2"
 play_time: "60 min"
 designer: "Unknown (traditional)"
-source_pdf: "rithmomachia-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rithmomachia-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://revistas.uan.edu.co/index.php/espaciomatematico/es/article/download/1470/1134/4666"
+source_type: "research_paper"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rithmomachia&game=rithmomachia)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/rithmomachia-rules.txt) · 🌐 [Research paper (English)](https://revistas.uan.edu.co/index.php/espaciomatematico/es/article/download/1470/1134/4666) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rithmomachia&game=rithmomachia)
 <!-- verification:end -->
 
 

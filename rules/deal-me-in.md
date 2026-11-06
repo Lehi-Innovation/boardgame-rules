@@ -4,16 +4,19 @@ bgg_id: 2062
 player_count: "2-4"
 play_time: "30-60 min"
 designer: "Unknown"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "deal-me-in-selection-1b1c6b94a969.html"
+source_url: "https://web.archive.org/web/20240604141654id_/https://boardgamegeek.com/boardgame/2062/deal-me-in"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary puts all 56 card tiles into the draw pool without first placing the four jokers on their designated board spaces. The original box-lid reference explicitly starts with setting jokers on the board, corroborated by the detailed community account. The summary also lists a high card as a valid hand, whereas the original lid requires at least a pair to open and its scoring table starts at Pair (10 points); a player able to open must do so. These errors change the initial board and legal opening plays. Specific MAJOR finding from the original condensed reference and corroborating account; the separately enclosed full booklet remains unrecovered, and no full audit or body repair was performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deal%20Me%20In&game=deal-me-in)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/deal-me-in-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20240604141654id_/https://boardgamegeek.com/boardgame/2062/deal-me-in) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deal%20Me%20In&game=deal-me-in)
 <!-- verification:end -->
 
 

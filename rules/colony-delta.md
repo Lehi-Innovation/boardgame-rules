@@ -4,15 +4,19 @@ bgg_id: 11622
 player_count: "2"
 play_time: "60-120 min"
 designer: "Uncredited"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "colony-delta-selection-3ea966d92d83.pdf"
+source_url: "https://www.spigames.net/Phoenix/Phoenix30.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives automatic resource income from controlled territories and presents control of most territory or elimination as the win condition. Hackett’s contemporary reference (Phoenix30 March/April1981 printed20–21/PDF24–25) instead says the primary aim is economic VP production: colonist/worker units must mine ore deposits, normally producing one OrePoint per unit per turn or five for a permanent colony. Ore must reach a Spaceport and then the home planet before it earns VPs; ore left on Delta at game end is worthless. Farming generates home-planet VPs directly, and mining and farming cannot coexist in a hex. The printed28/PDF32 turn table places economic collection after military actions and includes distinct surface and space transport. Replacing these production/transport decisions with generic territory income and a military-control objective changes the core game. Specific MAJOR against covered economic rules only; full ending/tie conditions and numerical CRT/units remain uncertified. The source’s air-return/advance ordering conflict is unresolved, and reviewer house rules are excluded. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colony%20Delta%3A%20Earth%20vs.%20Sigma%20Draconis&game=colony-delta)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/colony-delta-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.spigames.net/Phoenix/Phoenix30.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Colony%20Delta%3A%20Earth%20vs.%20Sigma%20Draconis&game=colony-delta)
 <!-- verification:end -->
 
 

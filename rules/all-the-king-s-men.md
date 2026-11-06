@@ -4,16 +4,19 @@ bgg_id: 1289
 player_count: "2"
 play_time: "15-30 min"
 designer: "Unknown"
-source_pdf: "all-the-king-s-men-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "all-the-king-s-men-selection-3b0e7fcab91d.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://regle.escaleajeux.fr/fousr_rg.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Miro/Parker Brothers Les Fous du Roi sheet lists seven archers per player and shows seven across the front row. Summary lists four archers per player and sets up only four, omitting three pieces on each side and changing initial play. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20All%20The%20King%27s%20Men&game=all-the-king-s-men)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/all-the-king-s-men-rules.txt) · 🌐 [Source PDF (French)](https://regle.escaleajeux.fr/fousr_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20All%20The%20King%27s%20Men&game=all-the-king-s-men)
 <!-- verification:end -->
 
 

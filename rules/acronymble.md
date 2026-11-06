@@ -4,16 +4,19 @@ bgg_id: 12646
 player_count: "3-8"
 play_time: "30-60 min"
 designer: "Steven May"
-source_pdf: "acronymble-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "acronymble-selection-6bf5d2b63021.html"
+source_url: "https://web.archive.org/web/20060823023335id_/http://www.acronymble.com:80/TheRules.htm"
+source_type: "author_rules_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says movement is entirely determined by votes and that a player receiving zero votes does not move. The original publisher TheRules.htm and THE BOARD.htm instead award one point for a sentence of at least three words plus one per vote. THE CARDS.htm and SOME IMPORTANT NOTES.htm additionally award one optional original-nonsense-word bonus on its designated Composition card, even without votes. These omitted bonuses can advance a player who receives no votes and alter the winner. The summary also has each player read their own noodle and gives every player a vote, while the original main rules require the Nymwit to read entries without identifying authors; the Nymwit writes an entry but does not vote. These are source-backed scoring and information-flow errors. Specific MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Acronymble&game=acronymble)
+> 📄 [Author's rules text](https://lehi-innovation.github.io/boardgame-rules/extracted/acronymble-rules.txt) · 🌐 [Author's rules (English)](https://web.archive.org/web/20060823023335id_/http://www.acronymble.com:80/TheRules.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Acronymble&game=acronymble)
 <!-- verification:end -->
 
 

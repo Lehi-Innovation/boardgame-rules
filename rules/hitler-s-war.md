@@ -4,15 +4,19 @@ bgg_id: 2168
 player_count: "2-3"
 play_time: "180 min"
 designer: "John Prados"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "hitler-s-war-selection-fe48dfaa30a9.pdf"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Avalon%20Hill%20Games/Avalon%20Hill%20-%20Hitler%27s%20War.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The original Avalon Hill Hitler’s War manual (copyright 1984, May 1985 printing), PDF page 5 / printed page 3, gives the basic turn as Movement, Combat (Initial Attack and Exploitation), then Production. The full campaign sequence on PDF page 22 / printed page 20 is Strategic Warfare, Movement, Combat, Production and Partisan, then Research. The summary replaces these with Reinforcement, Movement, Combat and Supply phases, omitting the campaign’s strategic warfare and research decisions and misplacing production. The manual’s full campaign begins in 1939; the summary states that the full game begins at Barbarossa in 1941. Specific MAJOR sequence and campaign-scope findings for this edition only; no full summary audit or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hitler%27s%20War&game=hitler-s-war)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/hitler-s-war-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Avalon%20Hill%20Games/Avalon%20Hill%20-%20Hitler%27s%20War.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hitler%27s%20War&game=hitler-s-war)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 3384
 player_count: "2"
 play_time: "30 min"
 designer: "Andy Jones"
-source_pdf: "kerrunch-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "kerrunch-selection-cd5193416b7b.html"
+source_url: "https://web.archive.org/web/20160421054228id_/http://zenseeker.net/BoardGames/Kerrunch.htm"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Matching Kerrunch rules reference gives four stages: Moving,Tackling,Passing,Standing up stunned players. Summary instead splits movement into two stages, adds ball handling as the fourth and omits end-of-turn recovery of all stunned models entirely. It also says injured players are removed for the current drive, whereas the reference requires recovery rolls after each touchdown:1-3 remain injured,4-6 return. Specific reference-backed MAJOR findings only; no complete publisher-rulebook audit and summary body not repaired. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kerrunch&game=kerrunch)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/kerrunch-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20160421054228id_/http://zenseeker.net/BoardGames/Kerrunch.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Kerrunch&game=kerrunch)
 <!-- verification:end -->
 
 

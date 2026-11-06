@@ -4,16 +4,19 @@ bgg_id: 2093
 player_count: "4"
 play_time: "120 min"
 designer: "Traditional"
-source_pdf: "mahjong-rules.pdf"
-extracted_date: "2026-03-21"
+source_pdf: "mahjong-selection-d805edf13493.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://jlmahjongg.com/wp-content/mahjonggnotes/mahjonggbasics.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The matching American Mah Jongg reference, Smigel/Sloey page1, gives the optional second Charleston as Left, Across, Right; the summary says to repeat the first Right, Across, Left sequence. Page2 repeatedly requires counterclockwise draw/discard turns, whereas the summary says clockwise. These errors change the actual tile exchanges and order of play for the explicitly American variant. Specific MAJOR findings against the recovered reference only; no full summary audit,official NMJL endorsement or summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mahjong&game=mahjong)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/mahjong-rules.txt) · 🌐 [Rules reference PDF (English)](https://jlmahjongg.com/wp-content/mahjonggnotes/mahjonggbasics.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mahjong&game=mahjong)
 <!-- verification:end -->
 
 

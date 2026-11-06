@@ -4,19 +4,22 @@ bgg_id: 93006
 player_count: "1-4"
 play_time: "20-30 min"
 designer: "Unknown"
-source_pdf: "resan-genom-sagoland-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "resan-genom-sagoland-selection-59cddbdd25d1.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://img.tradera.net/images/871/656829871_dbfe8c4c-32b5-4488-a756-61e6b919de02.jpg"
+source_type: "rulebook_images"
+source_language: "Swedish"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Resan genom Sagoland
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Resan%20genom%20Sagoland&game=resan-genom-sagoland)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/resan-genom-sagoland-rules.txt) · 🌐 [Rulebook images (Swedish)](https://img.tradera.net/images/871/656829871_dbfe8c4c-32b5-4488-a756-61e6b919de02.jpg) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Resan%20genom%20Sagoland&game=resan-genom-sagoland)
 <!-- verification:end -->
 
 ## Overview

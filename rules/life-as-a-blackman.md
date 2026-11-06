@@ -3,16 +3,19 @@ title: "Life as a BlackMan"
 bgg_id: 3988
 player_count: "2-6"
 play_time: "15-45 min"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "life-as-a-blackman-selection-f4e25efb5745.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.blackmangame.com/wp-content/uploads/2017/07/Rules_Life-as-a-Blackman.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Life%20as%20a%20BlackMan&game=life-as-a-blackman)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/life-as-a-blackman-rules.txt) · 🌐 [Source PDF (English)](https://www.blackmangame.com/wp-content/uploads/2017/07/Rules_Life-as-a-Blackman.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Life%20as%20a%20BlackMan&game=life-as-a-blackman)
 <!-- verification:end -->
 
 

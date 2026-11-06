@@ -4,16 +4,19 @@ bgg_id: 9805
 player_count: "2-4"
 play_time: "45-60 min"
 designer: "Roberto Fraga"
-source_pdf: "habana-taxi-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "habana-taxi-selection-d93071f7652f.html"
+source_url: "https://forum.trictrac.net/t/habana-taxi-prix-du-taxi/3558?page=2"
+source_type: "rules_reference_html"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives an individual On your turn sequence of choosing a taxi, paying, moving a piece and visiting monuments. The complete designer-signed clarification, TricTrac post25 (March19,2004), instead says negotiations have no player order and occur simultaneously. Offers may change until every passenger of a taxi agrees; after three minutes an unfunded taxi does not depart. Once the fare is collected, all players who chose that taxi travel, subject to later event-card ejection, and arrival order is determined only after all events. Replacing that shared simultaneous negotiation/event procedure with independent player turns changes the core timing and decisions. Specific MAJOR against covered clarifications only. The author’s optional event opt-out and Panne-removal variants are not treated as printed base rules. Full setup, ending and scoring remain uncertified; no full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Habana%20Taxi&game=habana-taxi)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/habana-taxi-rules.txt) · 🌐 [Rules reference (French)](https://forum.trictrac.net/t/habana-taxi-prix-du-taxi/3558?page=2) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Habana%20Taxi&game=habana-taxi)
 <!-- verification:end -->
 
 

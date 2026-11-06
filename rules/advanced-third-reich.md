@@ -4,19 +4,22 @@ bgg_id: 283
 player_count: "2-6"
 play_time: "180-600 min"
 designer: "Bruce Harper"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "advanced-third-reich-selection-f59ee3afc6a5.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.vftt.co.uk/files/AH%20The%20General/The%20General%20Vol%2027%20No%203.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 
 # Advanced Third Reich
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Third%20Reich&game=advanced-third-reich)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/advanced-third-reich-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.vftt.co.uk/files/AH%20The%20General/The%20General%20Vol%2027%20No%203.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Advanced%20Third%20Reich&game=advanced-third-reich)
 <!-- verification:end -->
 
 ## Overview

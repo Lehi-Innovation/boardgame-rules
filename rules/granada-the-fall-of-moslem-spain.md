@@ -1,19 +1,22 @@
 ---
 title: "Granada: The Fall of Moslem Spain"
-bgg_id: 58099
+bgg_id: 5453
 player_count: "2"
 play_time: "120-180 min"
 designer: "Robert Markham"
-source_pdf: "granada-the-fall-of-moslem-spain-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "granada-the-fall-of-moslem-spain-selection-9933df8b4ef4.html"
+source_url: "http://www.avalanchepress.com/GranadaCombat.php"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary describes the Moorish objective only as holding Granada and enough territory to prevent Spanish conquest within the timeframe. The matching AvalanchePress rules article Granada:ACombatAnalysis, J.R.Jarvinen June2024, explicitly gives the Moors an offensive victory if they control BOTH Cordoba and Lorca at the end of a campaign season. It separately specifies the Spanish four-castle objective. Omitting the Moorish season-end castle-control route changes objectives and when the winner is determined. This specific MAJOR finding is against the scoped publisherreference; original fullmanual and exact applicability to every2003printing remain uncertified. No fullaudit or bodyrepair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Granada%3A%20The%20Fall%20of%20Moslem%20Spain&game=granada-the-fall-of-moslem-spain)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/granada-the-fall-of-moslem-spain-rules.txt) · 🌐 [Rules reference (English)](http://www.avalanchepress.com/GranadaCombat.php) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Granada%3A%20The%20Fall%20of%20Moslem%20Spain&game=granada-the-fall-of-moslem-spain)
 <!-- verification:end -->
 
 

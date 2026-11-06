@@ -4,16 +4,19 @@ bgg_id: 5052
 player_count: "2"
 play_time: "120-240 min"
 designer: "uncredited"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "austerlitz-selection-9d7ac796ebab.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.Card-board-and-miniature-games/Board%20games/SPI/SPI%20-%20Austerlitz%20-%20Battle%20of%20Three%20Emperors%202%20December%201805.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Correct John Young SPI Austerlitz rules section4.1 always gives Allies movement/combat first, then French movement/combat,for thirteen turns; summary invents an initiative phase. Section14 scores eliminated enemy Strength Points and Allied exits east/west with only one edge counted, plus Allied retreat-line losses at game end. Summary substitutes terrain-control/scenario objectives and omits the defining Allied exit scoring. The different1980 David James Ritchie manual is rejected. Specific matching-source MAJOR contradictions only; no full summary audit or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Austerlitz&game=austerlitz)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/austerlitz-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.Card-board-and-miniature-games/Board%20games/SPI/SPI%20-%20Austerlitz%20-%20Battle%20of%20Three%20Emperors%202%20December%201805.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Austerlitz&game=austerlitz)
 <!-- verification:end -->
 
 

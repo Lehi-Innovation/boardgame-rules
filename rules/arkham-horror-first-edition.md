@@ -4,16 +4,19 @@ bgg_id: 34
 player_count: "1-8"
 play_time: "120-240 min"
 designer: "Richard Launius"
-source_pdf: "arkham-horror-first-edition-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "arkham-horror-first-edition-recovery.html"
+source_url: "https://rulespal.com/arkham-horror-1987/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arkham%20Horror%20First%20Edition&game=arkham-horror-first-edition)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/arkham-horror-first-edition-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/arkham-horror-1987/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Arkham%20Horror%20First%20Edition&game=arkham-horror-first-edition)
 <!-- verification:end -->
 
 

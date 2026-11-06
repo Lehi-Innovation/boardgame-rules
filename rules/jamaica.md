@@ -4,16 +4,19 @@ bgg_id: 28023
 player_count: "2-6"
 play_time: "30-60 min"
 designer: "Malcolm Braff, Bruno Cathala, Sébastien Pauchon"
-source_pdf: "jamaica-rules.pdf"
-extracted_date: "2026-03-20"
+source_pdf: "jamaica-recovery-dfc7f54cb84e.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://cdn.1j1ju.com/medias/e5/9c/77-jamaica-regle.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jamaica&game=jamaica)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/jamaica-rules.txt) · 🌐 [Source PDF (French)](https://cdn.1j1ju.com/medias/e5/9c/77-jamaica-regle.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Jamaica&game=jamaica)
 <!-- verification:end -->
 
 

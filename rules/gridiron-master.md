@@ -4,16 +4,19 @@ bgg_id: 28596
 player_count: "2"
 play_time: "60-120 min"
 designer: "Paul Morin, Jordan Sampson"
-source_pdf: "gridiron-master-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "gridiron-master-selection-4578dac9c98c.html"
+source_url: "https://web.archive.org/web/20110711131057id_/http://www.gridironmaster.com/gridiron_eng//rules.htm"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary suggests queen movement for the quarterback, but the original publisher rules assign king movement. It also describes two possessions per team per quarter, where the publisher specifies two total possessions for either team. These change the quarterback’s legal movement and double the regular quarter length. This finding covers those rules; the full Game Guide remains unavailable. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20GridIron%20Master&game=gridiron-master)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/gridiron-master-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20110711131057id_/http://www.gridironmaster.com/gridiron_eng//rules.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20GridIron%20Master&game=gridiron-master)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 8093
 player_count: "1+"
 play_time: "10-15 min"
 designer: "Uncredited"
-source_pdf: "bull-s-eye-ball-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "bull-s-eye-ball-selection-3d2a14e58893.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://regle.escaleajeux.fr/hotsh_rg.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bull%27s-Eye%20Ball&game=bull-s-eye-ball)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/bull-s-eye-ball-rules.txt) · 🌐 [Source PDF (French)](https://regle.escaleajeux.fr/hotsh_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bull%27s-Eye%20Ball&game=bull-s-eye-ball)
 <!-- verification:end -->
 
 

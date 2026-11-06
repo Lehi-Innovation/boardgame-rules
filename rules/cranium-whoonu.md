@@ -4,16 +4,19 @@ bgg_id: 16035
 player_count: "3-6"
 play_time: "30 min"
 designer: "Cranium Inc."
-source_pdf: "cranium-whoonu-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "cranium-whoonu-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
+source_url: "https://www.boardgamecapital.com/game_rules/cranium-whoonu.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
 verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cranium%20Whoonu&game=cranium-whoonu)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/cranium-whoonu-rules.txt) · 🌐 [Source PDF (English)](https://www.boardgamecapital.com/game_rules/cranium-whoonu.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Cranium%20Whoonu&game=cranium-whoonu)
 <!-- verification:end -->
 
 

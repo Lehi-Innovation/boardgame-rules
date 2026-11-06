@@ -4,16 +4,19 @@ bgg_id: 13776
 player_count: "2-4"
 play_time: "30-60 min"
 designer: "Traditional"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "ashtapada-selection-ad7d66d52eb6.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://a4gamescompany.wordpress.com/wp-content/uploads/2018/05/ashtapada-10-2mb-pdf.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ashtapada&game=ashtapada)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/ashtapada-rules.txt) · 🌐 [Rules reference PDF (English)](https://a4gamescompany.wordpress.com/wp-content/uploads/2018/05/ashtapada-10-2mb-pdf.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ashtapada&game=ashtapada)
 <!-- verification:end -->
 
 

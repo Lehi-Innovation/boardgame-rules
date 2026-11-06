@@ -4,16 +4,19 @@ bgg_id: 17136
 player_count: "2"
 play_time: "20 min"
 designer: "unknown"
-source_pdf: "da-vinci-s-challenge-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "da-vinci-s-challenge-selection-2ab0f4aeff3d.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_url: "https://www.buffalolib.org/sites/default/files/gaming-unplugged/inst/Da%20Vinci's%20Challenge%20Instructions.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original2004 Briarpatch rules pp3-4 and matching score sheet p5 require patterns made from the players own color; the blocking figure explicitly shows a light oval breaking dark patterns. Summary instead repeatedly permits mixed-color patterns. Original has nine named patterns with values triangle1,diamond1,gem5,eye5,pyramid10,hourglass10,star10,circle25,flower25; summary substitutes five patterns including an invented pinwheel,diamond2,star5,circle10. Specific original-source MAJOR findings only; no full audit or summary-body repair. Designer portfolio alternate image has differing hourglass/star values, so only original2004 scan is used for these findings. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Da%20Vinci%27s%20Challenge&game=da-vinci-s-challenge)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/da-vinci-s-challenge-rules.txt) · 🌐 [Source PDF (English)](https://www.buffalolib.org/sites/default/files/gaming-unplugged/inst/Da%20Vinci%27s%20Challenge%20Instructions.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Da%20Vinci%27s%20Challenge&game=da-vinci-s-challenge)
 <!-- verification:end -->
 
 

@@ -4,15 +4,19 @@ bgg_id: 371972
 player_count: "1-4"
 play_time: "60-90 min"
 designer: "Martino Chiacchiera, Silvano Sorrentino"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "ierusalem-anno-domini-recovery.html"
+source_url: "https://rulespal.com/ierusalem-anno-domini/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ierusalem%3A%20Anno%20Domini&game=ierusalem-anno-domini)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/ierusalem-anno-domini-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/ierusalem-anno-domini/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ierusalem%3A%20Anno%20Domini&game=ierusalem-anno-domini)
 <!-- verification:end -->
 
 

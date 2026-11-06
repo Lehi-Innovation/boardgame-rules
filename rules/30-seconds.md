@@ -4,16 +4,19 @@ bgg_id: 25213
 player_count: "3-16"
 play_time: "30 min"
 designer: "Calie Esterhuyse"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "30-seconds-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.boardgamecapital.com/game_rules/30-seconds.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2030%20Seconds&game=30-seconds)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/30-seconds-rules.txt) · 🌐 [Source PDF (English)](https://www.boardgamecapital.com/game_rules/30-seconds.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2030%20Seconds&game=30-seconds)
 <!-- verification:end -->
 
 

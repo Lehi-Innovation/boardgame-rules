@@ -4,15 +4,19 @@ bgg_id: 7609
 player_count: "2"
 play_time: "60-120 min"
 designer: "John Hill"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "hue-selection-aa9ad25ac7ca.pdf"
+source_url: "https://www.spigames.net/PDFs/FuldaGapP13re.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says the US/ARVN player must recapture Hue within an allotted number of turns. Rob Gibson’s contemporary1978 reference for the original SDC game explicitly says there is no time limit: play continues until all NVA/VC units are removed from the walled city. Victory is calculated from destroyed-unit points and additional points for each turn the NVA/VC retain an InnerCity foothold. An invented fixed deadline changes the ending and victory incentives. Specific MAJOR applies to the originalSDC scope expressly included by the summary; exact1982 revisions and full numeric VP/tie rules remain uncertified. No full audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hue&game=hue)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/hue-rules.txt) · 🌐 [Rules reference PDF (English)](https://www.spigames.net/PDFs/FuldaGapP13re.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hue&game=hue)
 <!-- verification:end -->
 
 

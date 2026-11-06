@@ -4,19 +4,22 @@ bgg_id: 55763
 player_count: "2-5"
 play_time: "45 min"
 designer: "Gunter Baars"
-source_pdf: ""
-extracted_date: "2026-03-21"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "mister-x-recovery.html"
+source_url: "https://rulespal.com/mister-x/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Mister X
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mister%20X&game=mister-x)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/mister-x-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/mister-x/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mister%20X&game=mister-x)
 <!-- verification:end -->
 
 ## Overview

@@ -4,19 +4,22 @@ bgg_id: 37001
 player_count: "2"
 play_time: "15-30 min"
 designer: "L. Lynn Smith"
-source_pdf: "sanqi-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "sanqi-selection-d73b838c58f0.html"
+source_url: "https://jpneto.github.io/world_abstract_games/sanqi.htm"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # SANQI
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20SANQI&game=sanqi)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/sanqi-rules.txt) · 🌐 [Rules reference (English)](https://jpneto.github.io/world_abstract_games/sanqi.htm) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20SANQI&game=sanqi)
 <!-- verification:end -->
 
 ## Overview

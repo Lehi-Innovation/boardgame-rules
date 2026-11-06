@@ -4,16 +4,19 @@ bgg_id: 3616
 player_count: "2"
 play_time: "60-180 min"
 designer: "FASA Corporation"
-source_pdf: "battleforce-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "battleforce-selection-d2d82cb3319b.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/BattleTech%20%5Bmulti%5D/Core%20Rulebooks/BattleTech%20-%20BattleForce%20%7BFASA1611%7D.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Correct original1987 FASA1611 BattleForce manual PDFp12/printedp11 gives each phasing player Movement,Sighting,Attack,End phases before the opponent repeats them. The phasing player moves some/none/all units; all combat damage is immediate,with air attacks then same-hex attacks then others. Summary instead invents a recurring initiative phase,alternating unit movement and separate ranged-then-close combat phases,omitting the full Sighting phase. PDFp11/printedp10 determines first player in scenario setup,not by rolling initiative each game turn. Specific MAJOR sequence contradictions only; no full audit/body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleForce&game=battleforce)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/battleforce-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/BattleTech%20%5Bmulti%5D/Core%20Rulebooks/BattleTech%20-%20BattleForce%20%7BFASA1611%7D.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20BattleForce&game=battleforce)
 <!-- verification:end -->
 
 

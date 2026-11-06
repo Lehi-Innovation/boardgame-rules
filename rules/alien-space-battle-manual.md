@@ -4,16 +4,19 @@ bgg_id: 8046
 player_count: "2"
 play_time: "60-120 min"
 designer: "Lou Zocchi"
-source_pdf: "alien-space-battle-manual-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "alien-space-battle-manual-selection-fa96afa754f3.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Star%20Trek%20RPG/Star%20Fleet%20Battles/Star%20Fleet%20and%20Alien%20Space%20Battle%20Manuals/Alien%20Space%20Battle%20Manual.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Alien%20Space%20Battle%20Manual&game=alien-space-battle-manual)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/alien-space-battle-manual-rules.txt) · 🌐 [Rules reference PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Star%20Trek%20RPG/Star%20Fleet%20Battles/Star%20Fleet%20and%20Alien%20Space%20Battle%20Manuals/Alien%20Space%20Battle%20Manual.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Alien%20Space%20Battle%20Manual&game=alien-space-battle-manual)
 <!-- verification:end -->
 
 

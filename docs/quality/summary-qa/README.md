@@ -1,16 +1,18 @@
 # Rules summary question answering workflow
 
-Use this workflow to test whether an assistant can answer table questions from a game's summary alone, then repair gaps against the authoritative rules. Each run uses a fixed set of 20 questions and two independent readers. Continue until both readers answer all 20 completely and correctly from the exact final summary.
+Use this workflow to test whether an assistant can answer table questions from a game's summary alone, then repair gaps against the authoritative rules. Start with 20 questions and expand coverage when needed. Freeze each question-bank version before testing it with two independent readers. Continue repairs until both readers answer every question completely and correctly from the exact final summary.
 
 This complements the repository's [semantic audit](../../../CLAUDE.md#semantic-audit): source auditing checks the summary's rules, while this test checks whether readers can recover and apply them. A passing question set does not replace an independent source audit.
+
+For multiple games, use the [local coordinator prompt](multi-game-prompt.md) to create a separate chat per game, queue the work, isolate reader contexts, and coordinate shared catalog updates.
 
 ## Roles and access
 
 | Role | Inputs | Responsibility |
 |---|---|---|
 | Evaluator | Authoritative rules, questions, fixed answer key, summary and reader outputs | Prepare the key, grade every requested part and retain evidence |
-| Reader A | Frozen summary and questions only | Independently answer all 20 questions |
-| Reader B | The same frozen summary and questions only | Independently answer all 20 questions |
+| Reader A | Frozen summary and questions only | Independently answer the complete question bank |
+| Reader B | The same frozen summary and questions only | Independently answer the complete question bank |
 | Repairer | Summary, source, key and findings | Correct the summary using source-supported rules |
 | Source auditor | Revised summary and authoritative source | Independently check the final rules without seeing reader answers or the key |
 
@@ -19,11 +21,21 @@ The evaluator may also perform repairs and compare answers with the fixed key, a
 ## Prepare the source and answer key
 
 1. Select a game with both `rules/<slug>.md` and authoritative source material, usually `extracted/<slug>-rules.txt`. Read the complete relevant source. Identify the edition and scope, such as the core game without expansions. If the extraction is incomplete or a diagram is essential, inspect the source PDF before writing the key.
-2. Write 20 questions covering routine play and consequential edge cases. Include timing, legal actions, card or component destinations, resource costs, exceptions, scoring and end conditions. Use concrete scenarios where they expose ambiguity. Keep every question within the chosen source's scope.
+2. Write an initial 20 questions covering routine play and consequential edge cases. Include timing, legal actions, card or component destinations, resource costs, exceptions, scoring and end conditions. Use concrete scenarios where they expose ambiguity. Keep every question within the chosen source's scope.
 3. Write the expected answers before dispatching readers. Include every material fact requested by each question and exact source references. Label extraction line numbers as such; they are not PDF page numbers. Prefer source-first question design; record whether the evaluator also saw the summary when selecting questions.
 4. Fix the grading standard before seeing reader answers. Save questions separately from the key, and fingerprint both plus the source with SHA-256. Do not disclose the key to readers.
 
-Keep the 20 questions and key unchanged throughout a repair series. If a genuine source or key error is discovered, record the correction as a new benchmark version rather than silently changing the target to get a pass.
+Keep the question bank and key unchanged throughout a repair series. Coverage expansion creates a new benchmark version: retain the old version and preserve its original question IDs, wording and answers in the expanded bank. If a genuine source or key error is discovered, record the correction as a new benchmark version rather than silently changing the target to get a pass.
+
+## Expand until questions repeat
+
+Map the source's procedural passages to the existing questions. Add a question when it covers a new source-supported rule, a rule-defined condition with a different outcome, or a previously untested interaction where timing, priority or an exception changes the ruling. Merely changing names, numbers or phrasing within a covered branch does not add meaningful coverage. Neither does mechanically combining already covered rules without a new timing or exception issue.
+
+Record each accepted question's source references and what it adds beyond earlier questions. Review setup, action limits, phase order, component destinations, boundary conditions, resource exhaustion, scoring and end conditions in separate passes. Keep a rejection ledger as well: record later candidates and why they repeat existing coverage or need a different authoritative source.
+
+A practical stopping rule is two consecutive targeted passes with zero qualifying additions after all core procedural passages have coverage, followed by a separate source review that actively challenges the claimed saturation. If that review finds a real gap, add it and repeat the stopping check. Preserve the review and the coverage map. This establishes working saturation under the stated source and novelty criteria, not proof that every conceivable scenario has been enumerated.
+
+Freeze the expanded question bank and its source-backed key before readers see them. Run the complete expanded bank, including earlier questions, so new summary repairs cannot silently break previous answers. The Heat expansion grew from 20 to 47 questions; its [coverage ledger](heat-pedal-to-the-metal/2026-11-04/coverage-expansion-01/coverage-ledger.json) records two passes adding questions and two subsequent passes adding none.
 
 ## Freeze each iteration
 
@@ -31,7 +43,7 @@ Use `docs/quality/summary-qa/<slug>/<date>/` for the evidence. Keep the initial 
 
 | Artifact | Contents |
 |---|---|
-| `questions.json` | Game, scope and 20 numbered questions, without answers |
+| `questions.json` | Game, scope, benchmark version and numbered questions, without answers |
 | `answer-key.json` | Predetermined answers, material facts and source references |
 | `input-manifest.json` | Original input paths and hashes |
 | `<iteration>/summary-snapshot.md` | Byte-for-byte copy of the tested summary |
@@ -51,7 +63,7 @@ Freeze inputs before dispatch. Readers should read the snapshot rather than a li
 
 ## Run two independent readers
 
-Launch two new subagents for each iteration, each answering all 20 questions. In this environment, use `fork_turns: "none"` so neither inherits the parent chat. Set the requested model explicitly and keep reasoning effort consistent across comparisons. The Heat runs used `gpt-6.1-sol` and then `gpt-6-luna`, both at `high` effort.
+Launch two new subagents for each iteration, each answering the entire frozen question bank. In this environment, use `fork_turns: "none"` so neither inherits the parent chat. Set the requested model explicitly and keep reasoning effort consistent across comparisons. The Heat runs used `gpt-6.1-sol` and then `gpt-6-luna`, both at `high` effort.
 
 Give each reader the same instructions, changing only its output path. Allow access only to its summary snapshot and question file. Exclude authoritative sources, the answer key, prior answers, grades, audit findings, browsing and prior game knowledge. Save the raw output before grading or giving feedback.
 
@@ -71,7 +83,7 @@ manifest, prior responses, other files, parent history or web links.
 Do not browse. Use only the supplied summary as evidence, not prior
 game knowledge. Do not communicate with other readers.
 
-Answer all 20 questions, including every requested part. If a requested
+Answer every question in the input file, including every requested part. If a requested
 fact is absent, explicitly identify that part as unsupported; do not guess.
 
 For every question include:
@@ -88,7 +100,7 @@ output. Do not evaluate or improve the summary.
 
 ## Grade every requested part
 
-The evaluator reads all 40 answers and compares them with the fixed key. Reader confidence and support labels are evidence to inspect, not grades to accept automatically.
+The evaluator reads both complete answer sets and compares them with the fixed key: a bank of N questions produces 2N answers per iteration. Reader confidence and support labels are evidence to inspect, not grades to accept automatically.
 
 | Grade | Definition |
 |---|---|
@@ -106,7 +118,7 @@ For compound questions, require every requested part for full credit. Report cor
 2. Update the canonical summary with general, source-supported rules. Preserve the game's terminology and explain timing, destinations and exceptions where needed. Avoid appending the answer key or rules invented solely to satisfy a scenario.
 3. Have a separate source auditor check the revised summary. The auditor sees the source and summary, but no key or reader answers. Repair material findings and resolve any remaining findings before treating the summary as independently passed. If the summary changes after a passing reader pair, freeze and test the new text again.
 4. Freeze the next iteration and launch two new readers with the same model, questions and instructions. Do not reuse the earlier readers: they have already seen the test and might have received additional context.
-5. Compare all 40 new answers with the same key. Repeat until both readers score 20/20 with no partial, unresolved or incorrect answers and no unsupported guesses standing in for summary coverage.
+5. Compare both complete answer sets with the same key. Repeat until both readers score N/N with no partial, unresolved or incorrect answers and no unsupported guesses standing in for summary coverage.
 
 If the first pair passes, no repair is needed. A prior independent source audit can be reused when the tested summary and source are byte-identical to the audited inputs; identify that evidence rather than claiming a new audit.
 
@@ -135,9 +147,9 @@ A model comparison on different summary versions does not isolate the effect of 
 
 Before claiming success, check all of the following against the saved files:
 
-- Both reader outputs and both grade arrays contain IDs 1–20 exactly once, without missing or duplicate questions.
+- Both reader outputs and both grade arrays contain all N expected IDs exactly once, without missing or duplicate questions.
 - Every saved grade corresponds to the original question, expected answer and actual reader response.
-- Each reader has 20 correct, zero partial and zero incorrect answers, with all requested parts supported by the summary.
+- Each reader has N correct, zero partial and zero incorrect answers, with all requested parts supported by the summary.
 - The question, key and source hashes match the frozen originals.
 - The final summary snapshot is byte-identical to the current canonical summary.
 - Actual reader models and reasoning settings match the intended run, or any unverified settings are disclosed.
@@ -157,7 +169,7 @@ git diff --check
 
 Use the existing audit-recording and stamping workflow in [CLAUDE.md](../../../CLAUDE.md#verification--trust-stamping). A question-test pass alone must not overwrite semantic verification status. Stamp before freezing the final snapshot, or verify that stamping leaves it unchanged. In a shared worktree, preserve unrelated changes; generated artifacts can be regenerated in temporary files and compared before replacing live files.
 
-The final report should state the game and source scope, model and effort, per-reader scores by iteration, what changed, source-audit outcome, validation results and evidence links. Describe success as passing the fixed 20-question regression set. Use a separately frozen, previously unseen set for a later held-out evaluation; passing the known set does not establish exhaustive coverage or general model equivalence.
+The final report should state the game and source scope, model and effort, question-bank version and size, per-reader scores by iteration, what changed, source-audit outcome, validation results and evidence links. Describe success as passing the fixed regression set for that version. Use a separately frozen, previously unseen set for a later held-out evaluation; passing the known set does not establish exhaustive coverage or general model equivalence.
 
 ## Heat pilot
 
@@ -171,3 +183,5 @@ The November 4, 2026 pilot used the extracted core rules for **Heat: Pedal to th
 | Same final summary, gpt-6-luna | 20/20 | 20/20 | First pair passed; no further rules changes needed |
 
 See the [baseline report](heat-pedal-to-the-metal/2026-11-04/README.md), [Sol repair and retest](heat-pedal-to-the-metal/2026-11-04/retest-report.md), and [Luna test](heat-pedal-to-the-metal/2026-11-04/luna-report.md) for the questions, key, raw responses, grades, summary snapshots, model provenance and source audits.
+
+The subsequent [coverage expansion](heat-pedal-to-the-metal/2026-11-04/coverage-expansion-01/README.md) grew the bank to 47 questions, preserved the original 20 entries, and stopped after two zero-addition passes plus an independent source review. Both final Luna readers scored 47/47 after additional source-backed repairs. The [expanded question and answer bank](heat-pedal-to-the-metal/2026-11-04/coverage-expansion-01/question-bank.md) includes the novelty rationale for every addition.

@@ -4,16 +4,19 @@ bgg_id: 6638
 player_count: "2-12"
 play_time: "60-120 min"
 designer: "Mike Carr"
-source_pdf: "fight-in-the-skies-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "fight-in-the-skies-selection-2fe13f79e828.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Boardgames/Dawn%20Patrol%20Boxed%20Set.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary repeatedly says all players plot aircraft movement simultaneously. In its explicitly included1982seventh edition, the recovered original basic rules printed page3(PDF6) instead roll two dice for movement order and move aircraft sequentially, with altitude/non-fighter exceptions; printed page11(PDF14) adds tailing order/card exceptions. The original advanced sequence(PDF37) also uses ordered movement and target commitments after each move. Only attacks resolve simultaneously, and special concealed tailing/collision choices are not simultaneous plotting of every aircraft move. The designer’s first-person history also identifies the older game’s chain movement system. The error changes information available when choosing movement and targets. Specific MAJOR finding for the covered seventh-edition scope only; earlier editions were not individually audited, and no full audit or summary-body repair was performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fight%20in%20the%20Skies&game=fight-in-the-skies)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/fight-in-the-skies-rules.txt) · 🌐 [Source PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/Vault2.0.-.TTRPG-Gamebooks/Boardgames/Dawn%20Patrol%20Boxed%20Set.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fight%20in%20the%20Skies&game=fight-in-the-skies)
 <!-- verification:end -->
 
 

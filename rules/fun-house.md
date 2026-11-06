@@ -4,16 +4,19 @@ bgg_id: 16982
 player_count: "2-4"
 play_time: "30 min"
 designer: "Uncredited"
-source_pdf: "fun-house-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "fun-house-selection-fe52df29c269.jpg"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://di2ponv0v5otw.cloudfront.net/posts/2024/10/18/6712f58c3eddeba147986e41/l_6712f77ae825d11d3eaf39bd.jpeg"
+source_type: "rules_reference_images"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary tells each player to roll a die or spin for movement, then draw a challenge card and collect prizes. The original Pressman instructions instead have the selecting team choose a skill game at Start (later the game named by its current space), one player from EVERY team play it, then EVERY team move clockwise according to that game's scores or results. Selection passes clockwise. The invented roll/move/draw procedure changes both turn participation and movement throughout the game. Specific MAJOR established by the complete core paragraphs on the original front; no reliance on unreadable reverse fine print. First-to-finish remains the objective, with source-specific same-round last-game-score/overshoot ties. No full audit, PASS, ID change or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fun%20House&game=fun-house)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/fun-house-rules.txt) · 🌐 [Rules reference images (English)](https://di2ponv0v5otw.cloudfront.net/posts/2024/10/18/6712f58c3eddeba147986e41/l_6712f77ae825d11d3eaf39bd.jpeg) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Fun%20House&game=fun-house)
 <!-- verification:end -->
 
 

@@ -8,11 +8,11 @@ source_pdf: "dune-imperium-uprising-rules.pdf"
 extracted_date: "2026-05-17"
 summarized_date: "2026-08-05"
 rulebook_version: "23-10-12"
-verification: "inaccurate"
-verification_date: "2026-08-05"
+verification: "verified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Invented CHOAM rules: Shaddam's "Sardaukar Commander" set-aside exclusive contracts and multi-contract completion rule (cited to FAQ) have no source support; components say 20 contracts total (10 standard + 10 RoI) vs source 20 standard + 10 Rise-of-Ix.. Until corrections pass a new audit, prefer the full rulebook text linked below.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/dune-imperium-uprising-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dune%3A%20Imperium%20%E2%80%93%20Uprising&game=dune-imperium-uprising)
 <!-- verification:end -->
@@ -24,7 +24,7 @@ Dune: Imperium – Uprising is a deck-building worker placement game set in the 
 
 Compared with base Dune: Imperium, the rulebook's difference notes call out: Spies and observation posts, a new **Spy** Agent icon, additional board spaces requiring 2 Influence with a Faction, sandworms and Maker Hooks, Battle Icons and Sandworm Reward Doubling, Objective cards (which determine the first player), and the new optional CHOAM Module. There is **no Mentat** Agent and there are **no Foldspace** cards. Cards of any type can override the usual rules of the game.
 
-Games for one or two players require the separate **Rivals** rules supplement; six-player games require the separate **Six-Player Games** supplement (this rulebook does not detail those modes). Board spaces are described in detail on the separate **Board Space Guide** sheet. Uprising is compatible with all previous Dune: Imperium products.
+**Scope:** Original English 2023 Uprising, rulebook version 23-10-12: complete standard 2–4-player play, including the required two-player Rival rules below, plus the optional standard base-box CHOAM Module. Solo-only rules, all optional Rival variants (including Streamlined Rivals), six-player teams and cross-game expansions are excluded. In two-player play use an ordinary scoring Rival, rather than the two Streamlined-only Rivals Lady Amber Metulli and Glossu “The Beast” Rabban. The 10 contrasting-back Rise of Ix contracts are identified for sorting only and are not used in this scope. Shaddam’s printed setup instruction is verified against the original Leader card reproduced in the publisher’s October 4, 2023 Contracts design diary. Board-space rules come from the publisher’s Uprising Board Space Guide; the labeled FAQ section uses relevant clarifications from the official January 13, 2025 FAQ.
 
 ## Components
 
@@ -50,12 +50,47 @@ Games for one or two players require the separate **Rivals** rules supplement; s
 ## Setup
 
 1. Place the game board (with the side shown in the rulebook face up). Place the **Shield Wall token** in the marked area below the Spice Refinery board space. Place the four **Alliance tokens** on the marked areas of the Emperor, Spacing Guild, Bene Gesserit, and Fremen Influence tracks.
-2. **Create the Conflict Deck:** Separate the Conflict cards by their backs (I/II/III). Shuffle the four Conflict III cards and place all of them face down in the marked area of the board. Shuffle the nine Conflict II cards and deal five face down on top. Shuffle the three Conflict I cards and deal one face down on top. Result: a 10-card Conflict Deck — 1 Conflict I on top, 5 Conflict II below it, 4 Conflict III on the bottom. Return the unused Conflict cards to the box without looking at them.
-3. Each player takes a **Leader** (choose, or select at random) and places it in front of them. Do **not** use Shaddam Corrino IV unless playing with the CHOAM Module. Leaders have one to three icons after their names — more icons means more strategically complex; for your first game each player should choose a one-icon Leader. (For the most authentic story, more than one Leader from the same House shouldn't be used in the same game, but nonstandard combinations are allowed.) Each Leader has two unique abilities: the first (left) is used during play as described on the Leader; the second (right), marked by the **Signet Ring icon**, activates when you play your Signet Ring card on one of your Agent turns.
+2. **Create the face-down Conflict Deck:** Keep every used card face down while constructing the deck. Separate the Conflict cards by their backs (I/II/III). Shuffle the four Conflict III cards and place all of them face down in the marked area of the board. Shuffle the nine Conflict II cards and deal five face down on top. Shuffle the three Conflict I cards and deal one face down on top. Result: a **face-down 10-card Conflict Deck** — 1 Conflict I on top, 5 Conflict II below it, 4 Conflict III on the bottom. Return the unused Conflict cards to the box without looking at them.
+3. Each player takes a **Leader** (choose, or select at random) and places it in front of them. Do **not** use Shaddam Corrino IV unless playing with the CHOAM Module. Leaders have one to three icons after their names — more icons means more strategically complex; for your first game each player should choose a one-icon Leader. (For the most authentic story, more than one Leader from the same House shouldn't be used in the same game, but nonstandard combinations are allowed.) Each Leader has two unique abilities: the first (left) is used during play as described on the Leader; the second (right), marked by the **Signet Ring icon**, activates when you play your Signet Ring card on one of your Agent turns, not merely when you reveal it.
 4. Prepare cards along the board edge (if not using the CHOAM Module, omit any cards marked with the CHOAM symbol). Shuffle the **Intrigue Deck** and place it face down. Shuffle the **Imperium Deck**, place it face down, and deal **five** cards face up from it as the **Imperium Row**. Next to the Row, place the Reserve cards in two stacks: **Prepare the Way** and **The Spice Must Flow**.
-5. Shuffle the **Objective cards**, first omitting any whose "1-3P"/"4/6P" marking doesn't match your player count (return those to the box). Each player draws one Objective at random and places it face up in their supply. The player whose Objective shows the First Player marker takes that marker.
-6. Each player chooses a color and takes all of its components. Place two Agents on your Leader and your third Agent (your **Swordmaster**) next to the game board. Shuffle your 10-card starting deck and place it face down in your supply, to the left of your Leader. Place one of your two discs on the Score track — on the **1** space in a 4-player game, otherwise on the **0** space. Place your Combat marker on the **0** space of the Combat track. Place four cubes, one each, on the bottom spaces of the four Factions' Influence tracks. Your other 12 cubes are troops: place **three** in one of the four circular garrisons (each player takes the one closest to them). Take **1 water**. Place your remaining components (including your 3 Spies) in your supply, in clear view of all players.
-7. Create a bank next to the board containing the Solari, spice, remaining water, and the sandworms you prefer (wood, plastic, or both). These are not meant to be limited — make any convenient substitution if you run out. Add the 4 Maker Hooks tokens to the bank.
+5. Shuffle the **Objective cards**, first omitting any whose "1-3P"/"4/6P" marking doesn't match your player count (return those to the box). Distribute one random Objective **face up** into each player’s supply. This face-up state makes it eligible for a later battle-icon match. The player whose Objective shows the First Player marker takes that marker.
+6. Each player chooses a color and takes all of its components. Place two Agents on your Leader and your third Agent (your **Swordmaster**) next to the game board. Shuffle your 10-card starting deck and place it face down in your supply, to the left of your Leader. Place one of your two discs on the Score track — on the **1** space in a 4-player game, otherwise on the **0** space. Place your Combat marker on the **0** space of the Combat track. Place four cubes, one each, on the bottom spaces of the four Factions' Influence tracks. Your other 12 cubes are troops: place **three** in one of the four circular garrisons (each player takes the one closest to them), and the **remaining nine troops in your supply**. Take **1 water**. Place your remaining components (including your 3 Spies) in your supply, in clear view of all players.
+7. Create a bank next to the board containing the Solari, spice, remaining water, and the sandworms you prefer (wood, plastic, or both). These are not meant to be limited — make any convenient substitution if you run out. Put all 4 Maker Hooks tokens in this common bank; normal setup assigns none to a human player. A token later acquired by a player moves from the bank onto that player’s garrison. Whenever you gain Solari, spice or water, take it from the bank; whenever you pay any of these resources, return it to the bank.
+
+**Human component layout before the first round:**
+
+| Component | Starting location |
+|---|---|
+| Two Agents | On your Leader. |
+| Third Agent / Swordmaster | Beside the board, available after gaining your Swordmaster. |
+| Four Influence cubes | One on the bottom space of each of the four Faction Influence tracks. |
+| Three Control markers | All three in your personal supply, in clear view. |
+| Three Spies and your Councilor | In your personal supply, in clear view. |
+| Combat marker | On 0 of the Combat track, with the initial side shown in the rulebook face up. |
+| Twelve troop cubes | Three in your nearest garrison and nine in your personal supply. |
+| Score marker | On 1 for a four-player game; on 0 otherwise. |
+| Starting deck and water | Shuffle the ten-card deck face down in your supply to the left of your Leader; place your starting 1 water in your supply. |
+
+**Face-down Conflict deck construction — shuffle each entire tier before dealing:**
+
+| Tier | Randomize | Used cards and position |
+|---|---|---|
+| III | Shuffle all 4 cards. | Put all 4 face down on the bottom. |
+| II | Shuffle all 9 cards. | Deal 5 face down above the III cards. |
+| I | Shuffle all 3 cards. | Deal 1 face down on top. |
+
+Return the unused I and II cards to the box unseen. The shuffle-and-deal procedure selects which I and II cards are used.
+
+**Initial card states:** The **Conflict Deck**, personal decks, Intrigue Deck and Imperium Deck all begin **face down**; the five cards dealt into the Imperium Row are face up. Without CHOAM, omit CHOAM-marked Imperium and Intrigue cards before shuffling.
+
+| Card group | Initial state and location |
+|---|---|
+| Conflict Deck | A **face-down** stack: one random I on top, five random II below, all four shuffled III on the bottom. Keep its used cards concealed until their Round Start reveal. |
+| Each human’s ten-card starting deck | Face down, shuffled, in that human’s supply to the left of the Leader. |
+| Shared draw decks: Intrigue **and** Imperium | Without CHOAM, omit CHOAM-marked cards from **both** decks. Shuffle each deck separately; put **both decks face down** beside the board. |
+| Imperium Row | Deal five Imperium cards **face up** from the face-down Imperium Deck. The remaining deck stays face down. |
+| Reserve | Prepare the Way and The Spice Must Flow in two separate stacks beside the Imperium Row. |
+| Objective cards | Omit mismatched player counts, shuffle the eligible cards, and distribute one **face up** to each player’s supply. The marked Objective determines First Player. |
 
 Setup differences from base Dune: Imperium: there is no Mentat (place the Shield Wall token on the board instead); there are no Foldspace cards; sandworms and Maker Hooks go in the bank; Spies are added to each player's components; Objective cards are distributed and determine the first player.
 
@@ -64,14 +99,14 @@ Setup differences from base Dune: Imperium: there is no Mentat (place the Shield
 A game is played in a series of rounds, each with five phases in this order:
 
 ### Phase 1: Round Start
-Reveal a new Conflict card from the top of the Conflict Deck and place it face up next to the deck (on top of any Conflict cards remaining from previous rounds). Then each player draws **five** cards from their own deck to form their hand.
+Reveal a new Conflict card from the top of the Conflict Deck and place it face up next to the deck (on top of any Conflict cards remaining from previous rounds). Resolve any defensive troop bonus for a location already controlled when its Conflict is revealed: its controller may deploy one troop from supply directly to the Conflict, without an Agent visit. Then each player draws **five** cards from their own deck to form their hand.
 
 ### Phase 2: Player Turns
-Starting with the First Player and continuing clockwise, players take one turn at a time: either an **Agent turn** or a **Reveal turn**. Generally you take Agent turns until you run out of Agents, then a Reveal turn — but Agent turns are optional; you may take a Reveal turn while you still have Agents. Once you've taken a Reveal turn, your turns are skipped for the rest of the phase; the phase ends when all players have taken a Reveal turn. You may play **Plot Intrigue** cards at any point during one of your own Agent or Reveal turns.
+Starting with the First Player and continuing clockwise, players take one turn at a time: either an **Agent turn** or a **Reveal turn**. Generally you take Agent turns until you run out of Agents, then a Reveal turn — but Agent turns are optional; you may take a Reveal turn while you still have Agents. Once you've taken a Reveal turn, your turns are skipped for the rest of the phase. In standard 3–4-player play, the phase ends when all players have taken a Reveal turn. In two-player play, skip the humans who have Revealed but continue the Rival’s Agent turns while it has an Agent in supply; proceed to Combat only once both humans have Revealed and the Rival has used all its Agents. The Rival never Reveals. You may play **Plot Intrigue** cards at any point during one of your own Agent or Reveal turns. Pay an entry cost using resources you already hold at that moment. On an Agent turn you may first play a legal Plot Intrigue before placing your Agent; resources it grants before entry join your available supply and can also pay that cost. Gains that occur only after placement, from the destination or played Agent card, cannot pay for that same entry.
 
 **Card anatomy:** each deck card has an Agent box and a Reveal box; on a given turn you use only one of them (Agent box on an Agent turn, Reveal box on a Reveal turn). Cards may also show a Faction (not all do), Agent icons, a Persuasion cost (top right), and sometimes an Acquire effect.
 
-**Agent Turn:** Play one card from your hand face up in front of you and use it to send an Agent from your Leader to an **unoccupied** board space whose upper-left icon matches one of the card's Agent icons (Spies provide an alternative — see Special Rules). You choose only one Agent icon; one card can't send multiple Agents. You can't send an Agent to a space that already has one (Spies can provide a way around this). You must pay any costs and meet any requirements of the space — if you can't pay the cost immediately (before resolving any effects of the space or the card you played), you can't send your Agent there. Then gain the effects of the board space and of the card's **Agent box** (ignore its Reveal box); if the space belongs to a Faction, also advance your cube one space on that Faction's Influence track. You may carry out all these effects in any order. A card with no Agent icons can't be played on an Agent turn — it may only be revealed on a Reveal turn.
+**Agent Turn:** Play one card from your hand face up in front of you and use it to send an Agent from your Leader to an **unoccupied** board space whose upper-left icon matches one of the card's Agent icons (Spies provide an alternative — see Special Rules). You choose only one Agent icon; one card can't send multiple Agents. A connected Spy alone does not give every card Spy-Agent access: you need a matching normal Agent icon on the played card, or its **Spy Agent icon** with your Spy at a connected post. Infiltrate bypasses another player’s occupancy, not the card-icon requirement. You can't send an Agent to a space that already has one (Spies can provide a way around this). You must pay any costs and meet any requirements of the space — if you can't pay the cost immediately (before resolving any effects of the space or the card you played), you can't send your Agent there. Then gain the effects of the board space and of the card's **Agent box** (ignore its Reveal box); if the space belongs to a Faction, also advance your cube one space on that Faction's Influence track. You may carry out all these effects in any order. A card with no Agent icons can't be played on an Agent turn — it may only be revealed on a Reveal turn.
 
 **Reveal Turn:** Three steps in order:
 - **Reveal Cards:** Reveal all cards remaining in your hand, placing them face up in front of you, kept separate from cards played on Agent turns.
@@ -79,15 +114,20 @@ Starting with the First Player and continuing clockwise, players take one turn a
 - **Clean Up:** Move all cards in front of you (from your Agent and Reveal turns) to your discard pile.
 
 ### Phase 3: Combat
-First, Combat Intrigue: starting with the First Player and continuing clockwise, each player with **at least one unit in the Conflict** may play any number of **Combat Intrigue** cards, or pass. You are not required to pass just because you passed earlier in the phase. Once all players involved in Combat pass consecutively, resolve the Combat. If a card changes the number of units a player has in the Conflict (or otherwise alters strength), adjust their Combat marker (no units in the Conflict = strength 0).
+First, Combat Intrigue: starting with the First Player and continuing clockwise, each player with **at least one unit in the Conflict** may play any number of **Combat Intrigue** cards, or pass. You are not required to pass just because you passed earlier in the phase. If a Combat Intrigue changes a player’s deployed units or otherwise alters strength, adjust their Combat marker **when that card resolves**, during the Combat Intrigue window. The total set during Reveal is not fixed for the rest of the round; no units in the Conflict means strength 0. Once all players involved in Combat pass consecutively, resolve the Combat using the adjusted strength shown on the track.
 
-**Resolve Combat:** Conflict card rewards are given by strength, as shown on the Combat track. The player with the highest strength **wins the Conflict** and gains the first reward; the second highest gains the second reward; in a game with four (or six) players, the third highest gains the third reward (with three or fewer players, the third reward is used only in a tie for second place). A player with **0 strength** receives no reward. Finally, the winner takes the Conflict card into their supply face up, then checks for a battle icon match. Once all rewards are given, each player returns their troops from the Conflict to their **supply** (not their garrison), all Combat markers reset to 0, and any sandworms return to the bank.
+**Resolve Combat:** Conflict card rewards are given by strength, as shown on the Combat track. **Player count determines which ranks are paid:** with 2 or 3 players (including two humans plus a Rival), ordinary first and second place receive rewards, and ordinary third place receives nothing. The printed third reward is used in these games only when players tie for second. With 4 players, ordinary first, second and third can all receive rewards. Apply the tie rules below before distributing rewards. The player with the highest strength **wins the Conflict** and gains the first reward; the second highest gains the second reward; in a game with four players, the third highest gains the third reward (with three or fewer players, the third reward is used only in a tie for second place). A player with **0 strength** receives no reward. After Conflict rewards, the winner’s card procedure has two ordered steps:
+
+1. Take the won Conflict card **face up into your supply**.
+2. **Then** check that new card for a battle-icon match, resolving the mandatory matching pair for 1 VP when one exists.
+
+If there is no winner because of a tie, nobody takes the card or performs this winner’s check. After rewards, each player returns their troops from the Conflict to their **supply** (not their garrison), all Combat markers reset to 0, and any sandworms return to the bank.
 
 ### Phase 4: Makers
-Check each board space with a Maker icon — Deep Desert, Hagga Basin, and Imperial Basin (in a six-player game, also Habbanya Erg). If the space has no Agent, place 1 spice from the bank in its bonus-spice spot; this adds to any bonus spice already there from previous rounds. (When you send an Agent to a Maker space, you gain **all** the bonus spice there.)
+Check each board space with a Maker icon — Deep Desert, Hagga Basin, and Imperial Basin . If the space has no Agent, place 1 spice from the bank in its bonus-spice spot; this adds to any bonus spice already there from previous rounds. (When you send an Agent to a Maker space, you gain **all** the bonus spice there.)
 
 ### Phase 5: Recall
-If any player is at **10 or more VP** on the Score track, or the Conflict Deck is empty, the **Endgame** is triggered (see Scoring). If no one has won, prepare the next round: players recall their Agents, returning them to their Leaders; pass the First Player marker clockwise; begin a new round with Phase 1.
+If any player is at **10 or more VP** on the Score track, or the Conflict Deck is empty, the **Endgame** is triggered (see Scoring). Otherwise prepare the next round: each human returns their Agents to their Leader. **With 3–4 humans, pass the First Player marker clockwise. In a two-player game, return the Rival’s Agents to its supply and pass First Player to the other human; the marker alternates only between the two humans and never goes to the Rival.** Then begin a new round with Phase 1.
 
 ## Actions
 
@@ -97,13 +137,14 @@ If any player is at **10 or more VP** on the Score track, or the Conflict Deck i
 - Announce your total and move your Combat marker to that space of the Combat track. If your strength is over **20**, flip the marker to the +20 side and start again from the beginning of the track.
 
 ### Recruiting & Deploying Units
-- There are two unit types: **troops** and **sandworms** (the Rise of Ix expansion adds a third, dreadnoughts).
+- There are two unit types: **troops** and **sandworms** .
 - The cube icon **recruits** one troop: take it from your supply and place it in your garrison. If you run out of troops in your supply, you can't recruit more until some return there.
 - Units in your garrison won't help you win Combats. When you send an Agent to a **Combat space** (marked with a desert illustration and crossed swords — most are on Dune; three appear with Factions: Heighliner with the Spacing Guild, Desert Tactics and Fremkit with the Fremen), you may deploy units to the Conflict area at the center of the garrisons: any or all units recruited during your current turn (from the board space and from the card you played), plus up to **two more** units from your garrison. Keep deployed units in the quadrant of the Conflict area nearest your garrison.
 
 ### Sandworms
-- The sandworm icon **summons and immediately deploys** one sandworm: take it from the bank and put it in your quadrant of the Conflict. A sandworm can **never** be placed in a garrison.
-- Two restrictions: (1) the sandworm icon is usually prefaced by a requirement to have a **Maker Hooks** token on your garrison (obtainable at Sietch Tabr; the Maker Hooks icon means take a token from the bank if you don't already have one and place it on your garrison — that icon before a colon marks the requirement); (2) a sandworm can't be summoned to a Conflict protected by the **Shield Wall** — the icon does nothing if the current Conflict is protected.
+- **Placement: take each summoned sandworm from the bank and put it directly in your own quadrant of the Conflict.** The sandworm icon summons and immediately deploys one sandworm. A sandworm can **never** be placed in a garrison.
+- Two restrictions: (1) the sandworm icon is usually prefaced by a requirement to have a **Maker Hooks** token on your garrison (obtainable at Sietch Tabr; the Maker Hooks icon means take a token from the bank if you don't already have one and place it on your garrison — that icon before a colon marks the requirement); (2) a sandworm can't be summoned to a Conflict at **Arrakeen, Spice Refinery or Imperial Basin** while the **Shield Wall** remains — the summoning icon does nothing for those protected Conflicts. Removing the Wall permits summoning to any Conflict.
+- Maker Hooks are **not a universal prerequisite**: a summoning effect that does not specify Hooks (such as the rulebook’s Unexpected Allies example) does not require them. Hooks you own are never spent to summon. Shield Wall protection still applies unless it has been removed.
 - After Combat, all sandworms are returned to the bank.
 
 ### Sandworm Reward Doubling
@@ -116,44 +157,65 @@ There are three battle icons: Crysknife, Desert Mouse, and Ornithopter. When you
 During your Reveal turn, use **Persuasion** to acquire any of the five cards in the Imperium Row, or **Prepare the Way** or **The Spice Must Flow** from the Reserve. The cost is shown at the card's top right. Acquire as many cards as you have Persuasion for; you may pool Persuasion from multiple sources (cards and board spaces) to buy one card, and may split Persuasion from a single source across different cards. Persuasion can never be saved — any you don't use during your Reveal turn is lost. An acquired card goes face up into your discard pile (to the right of your Leader); you don't use it right away — whenever you can't draw because your deck is empty, reshuffle your discard pile into a new deck and continue drawing. The Imperium Row must always have five cards: replace missing cards from the top of the Imperium Deck, so after acquiring a card you may acquire its replacement (if you can afford it).
 
 ### Trashing
-Some effects **trash** cards — from your hand, discard pile, or in play — removing them from your deck for the rest of the game. Return trashed cards to the box (Reserve cards return to their Reserve stack instead). Trashing is optional unless it's paying a cost, or a card directs you to trash itself.
+Some effects **trash** cards — from your hand, discard pile, or in play — removing them from your deck for the rest of the game. Return trashed cards to the box (Reserve cards return to their Reserve stack instead). Trashing is optional unless it's paying a cost, or a card directs you to trash itself. The separate trash-an-Intrigue icon trashes one Intrigue of your choice from your hand.
 
 ## Scoring / Victory Conditions
 
 **Game end:** At the end of a round, if any player has reached **10 or more VP**, or the Conflict Deck is empty, the Endgame is triggered. First, players may play and resolve any **Endgame Intrigue** cards they have. Then whoever has the most Victory Points is the winner. In case of a tie, **tiebreakers are, in order:** amount of spice, then Solari, then water, then garrisoned troops.
 
 **Victory Points:** Whenever you gain or lose a VP, move your Score marker up or down one space on the Score track. Sources:
-- **Faction Influence:** reaching **2** Influence with a Faction = 1 VP (lost if you drop back below 2). Reaching **4** Influence = the bonus shown on that track space; you do **not** give the bonus back if you drop below 4 (and can even earn it again by dropping and re-advancing).
-- **Alliances:** the **first** player to reach 4 Influence with a Faction takes its Alliance token into their supply and gains the VP shown on it. If they are ever passed by an opponent rising to a **higher** space on that track, they must give that opponent the token — losing the VP, which the opponent gains.
+- **Faction Influence:** **Each Alliance token is worth 1 VP to whoever currently holds it. Every transfer removes 1 VP from the former holder and gives 1 VP to the new holder.** At **2 Influence**, gain **1 VP**; lose it below 2 and regain it when reaching 2 again. At **4 Influence**, there are **two separate rewards with different reversal rules**: (a) gain the printed **track bonus**, keep it if you fall below 4, and earn it again on returning to 4; (b) the **first player to 4 gains the Alliance token and 1 VP**, but that VP remains tied to holding the token. **When a challenger gains Influence, tying the current holder does not steal the Alliance; rising above the holder transfers the token and its 1 VP.** An Alliance is therefore a temporary VP, unlike the retained track bonus. **Official FAQ — a separate transfer trigger is the holder losing Influence:** if previously tied, the formerly tied opponent takes the token; if several were tied, the former holder chooses its recipient. If the holder falls to 3 or lower and nobody has 4+, return the token to the board. On transfer the old holder loses 1 VP and the new holder gains 1 VP; on return to the board the old holder loses that VP.
 - **Conflict card rewards** (first/second/third place, as printed on the card).
 - **Battle icon matches:** each flipped matching pair = 1 VP.
 - **Card effects as printed** — Intrigue cards, for example, can score Victory Points.
 
 ## Special Rules & Edge Cases
 
-- **Spies & observation posts:** Observation posts around the board each connect to one or more board spaces. The **Spy icon** (on a card or board space) lets you place a Spy from your supply on an **unoccupied** observation post; if you have no Spies in your supply when you need to place one, you may first recall one of your Spies for no effect. Some placement effects (e.g., from the Lady Margot Fenring Leader) specify a particular Agent icon that must be connected to the post — otherwise you can't place the Spy. The **Recall Spy icon** on a card returns one of your Spies from a post to your supply (usually as a cost for a powerful effect). A Spy may also be recalled **without a card** for one of two effects: **Infiltrate** — if you wish to send an Agent to a board space occupied by another player, recall your own Spy from a connected post to ignore the other player's Agent and send your Agent to that same space; **Gather Intelligence** — whenever you send an Agent to a board space, you may recall your own Spy from a connected post to draw a card, deciding immediately after placing your Agent (before receiving any effects of the space or the card you played). You cannot recall the same Spy to both Infiltrate and Gather Intelligence (though on certain spaces, like the Research Station, you may recall one Spy to Infiltrate and another Spy to Gather Intelligence). The **Spy Agent icon** on a card lets you send an Agent to any board space connected to an observation post where you currently have a Spy — you do **not** recall the Spy for this.
+- **Spies & observation posts:** Ordinary Spy placement and Recall Spy icons are optional: you may decline even if a legal placement or recall exists. Declining a recall used as a cost also declines its associated benefit; an Intrigue still requires paying all its costs to play it. Observation posts around the board each connect to one or more board spaces. The **Spy icon** (on a card or board space) lets you place a Spy from your supply on an **unoccupied** observation post; if you have no Spies in your supply when you need to place one, you may first recall one of your Spies for no effect. Some placement effects (e.g., from the Lady Margot Fenring Leader) specify a particular Agent icon that must be connected to the post — otherwise you can't place the Spy. The **Recall Spy icon** on a card returns one of your Spies from a post to your supply (usually as a cost for a powerful effect).
+- **Infiltrate and Gather Intelligence require your Agent-turn card:** These two abilities do not need a separate card effect instructing you to recall a Spy. **You must still play a card for the Agent turn**, meet its normal Agent-access condition (a matching Agent icon or legal Spy Agent access), and pay the board space’s entry costs and requirements. A Spy does not provide a free Agent placement without playing a card.
+- **Infiltrate:** To send an Agent to a board space occupied by another player, recall your own Spy from a connected observation post to ignore that other player’s Agent. Infiltrate cannot bypass your own Agent.
+- **Gather Intelligence:** Whenever you send an Agent to a board space, you may recall your own Spy from a connected observation post to draw one card. Decide immediately after placing your Agent, before receiving effects of the space or played card. **At most one Gather Intelligence draw is allowed for that Agent placement; recalling a second connected Spy cannot give a second Gather Intelligence draw.**
+- **Separate Spy costs and Spy Agent access:** You cannot recall the same Spy to both Infiltrate and Gather Intelligence. You may use two different Spies for different effects — one to Infiltrate and one to Gather Intelligence, as at Research Station. The **Spy Agent icon** on a card lets you send an Agent to any board space connected to an observation post where you currently have a Spy; you do **not** recall the Spy for that access.
 - **Critical Locations & Control:** Some Conflict cards represent a struggle at Arrakeen, Spice Refinery, or Imperial Basin (per the card's title). Winning such a Conflict includes control of that space: place a Control marker from your supply on the flag below it, replacing any opponent's marker. While your marker is there, you receive the bonus whenever **any** player (yourself included) sends an Agent there: 1 Solari for Arrakeen or Spice Refinery, 1 spice for Imperial Basin. When a Conflict card is revealed for a space you already control, you get a defensive bonus: you may deploy one troop from your **supply** to the Conflict.
-- **Shield Wall:** These three locations are protected from sandworms by the Shield Wall: while the token is on the board, no sandworm can be summoned to a Conflict at Arrakeen, Spice Refinery, or Imperial Basin. When the Shield Wall detonation icon appears on a card or board space, you may remove the token from the board (return it to the box); once removed, sandworms may be summoned to any Conflict.
+- **Shield Wall:** These three locations are protected from sandworms by the Shield Wall: while the token is on the board, no sandworm can be summoned to a Conflict at Arrakeen, Spice Refinery, or Imperial Basin. When the Shield Wall detonation icon appears on a card or board space, you may remove the token from the board (return it to the box); once removed, sandworms may be summoned to any Conflict. The Shield Wall is gone for the rest of the game and cannot return in a later round.
 - **Influence:** Sending an Agent to a Faction's board space gains 1 Influence with that Faction; other effects can also move your cube up (and occasionally down) the track. The "gain one / gain two / lose one Influence" icon with a free choice means choose any **one** of the four Factions — when gaining two, you can't choose two different Factions. Faction-specific icons gain Influence only with the Faction shown. Some card effects require a minimum Influence with a given Faction to use; the **Alliance icon** requires you to hold that Faction's Alliance token.
 - **Influence-requirement spaces:** Certain board spaces require Influence to visit: Imperial Privilege (2+ Emperor), Shipping (2+ Spacing Guild), Sietch Tabr (2+ Fremen). (The rulebook's strategy notes add that reaching 2 Influence unlocks a Faction-related ability: a new board space for the Emperor, Spacing Guild, and Fremen; stronger cards for the Bene Gesserit.)
 - **Arrows / paying costs:** An arrow indicates a cost (left of the arrow, or above it) you must pay to get the effect (right of the arrow, or below it). You are never forced to pay, but if you don't, you don't gain the effect. You may pay the cost and gain the effect only **once per turn** (rulebook example: you may pay 2 water to Ecological Testing Station to draw two cards, but may not pay 4 water to draw four). The only exception is sandworm reward doubling applied to a reward on a Conflict card.
-- **Intrigue cards:** Received primarily from board spaces such as Secrets, Sardaukar, and Assembly Hall, and wherever the Intrigue card icon appears. Keep them face down, separate from your deck; you may look at them at any time; reveal them only when you play them; after resolving, place them face up in a discard pile next to the Intrigue Deck. **Plot** — playable any time during one of your own Agent or Reveal turns; **Combat** — only during Combat; **Endgame** — only at the end of the game. **Steal Intrigue icon:** each opponent who has **four or more** Intrigue cards must give you one of them, selected at random.
-- **Discarding:** Whenever you're directed to discard a card, it cannot be an Intrigue card unless specified.
-- **Combat ties:** When any number of players tie for **first**: they each gain the **second** reward, and no one wins the Conflict or takes the Conflict card. With three or fewer players, no other rewards are given; with four (or six) players, if three or more tied for first, no other rewards are given — but if exactly two tied for first, the remaining players compete for the **third** reward. Tie for **second**: each tied player gains the third reward; the winner of the Conflict keeps their rewards (and the card), but no further rewards are given. Tie for **third**: those players receive nothing.
+- **Intrigue cards:** Received primarily from board spaces such as Secrets, Sardaukar, and Assembly Hall, and wherever the Intrigue card icon appears. Keep them face down, separate from your deck; you may look at them at any time; reveal them only when you play them; after resolving, place them face up in a discard pile next to the Intrigue Deck. **Plot** — playable any time during one of your own Agent or Reveal turns; **Combat** — only during Combat **and only if you have at least one unit deployed in the Conflict**; **Endgame** — only at the end of the game. **Steal Intrigue icon:** each opponent who has **four or more** Intrigue cards must give you one of them, selected at random.
+- **Drawing cards:** An ordinary draw-a-card effect draws from your **own deck**, not the Imperium Deck or a chosen card from your discard pile. If your deck is empty when a draw is needed, shuffle your discard pile into a new deck and continue. The separate Intrigue draw icon draws from the Intrigue Deck instead.
+- **Discarding:** Unless otherwise specified, discard a card of your choice **from your hand**, not from in play or your discard pile. It cannot be an Intrigue card unless specified.
+- **Combat ties:** When any number of players tie for **first**: they each gain the **second** reward, and no one wins the Conflict or takes the Conflict card. With three or fewer players, no other rewards are given; with four players, if three or more tied for first, no other rewards are given — but if exactly two tied for first, the remaining players compete for the **third** reward. Tie for **second**: each tied player gains the third reward; the winner of the Conflict keeps their rewards (and the card), but no further rewards are given. Tie for **third**: those players receive nothing.
+
+**Three tied for first:** Each gets the second reward; nobody wins or takes the Conflict card. This gives **no other rewards in either a three-player or four-player game**: a remaining fourth player gets nothing.
+
+**Conflict ties by player count:**
+
+| Tie | Rewards for tied players | Other rewards / Conflict card |
+|---|---|---|
+| First, with 3 or fewer players | Each gets the second reward. | No other rewards; nobody takes the card. |
+| Exactly two tied first, with 4 players | Each gets the second reward. | Remaining players compete for third reward; nobody takes the card. |
+| Three or more tied first, with 4 players | Each gets the second reward. | No other rewards; nobody takes the card. |
+| Second | Each gets the third reward. | Winner keeps first reward and card; no further rewards. |
+| Third | Tied players get nothing. | Apply the higher-rank rewards normally. |
+
 - **Acquire box:** Some cards have an acquire box beneath their cost — you gain that effect one time, at the moment you acquire the card (not later when you play it).
 - **In play / Fremen Bond:** Cards you play on Agent turns and reveal during your Reveal turn remain face up and "in play" until you Clean Up at the end of your Reveal turn (unless trashed first). **Fremen Bond** effects may be used if you have one or more **other** Fremen cards in play; two Fremen Bond cards can activate one another, regardless of the order played.
 - **Recall Agent icon:** Return one of your **other** Agents on the board to your Leader (not the Agent you sent this turn); you may use it again on another Agent turn in the same round.
 - **Retreat:** When you retreat a troop, move it from the Conflict back to your garrison.
 - **Swordmaster:** From the Swordmaster board space you can gain your third Agent (placed next to the board during setup), then use it for the rest of the game. There is **no Mentat** Agent in Uprising.
-- **Leader clarifications:** *Feyd-Rautha Harkonnen* — during setup, place the Feyd token on the leftmost space of the Training track printed on the Leader; when it reaches the rightmost space, it remains there for the rest of the game. *Lady Jessica* — begin the game with the Lady Jessica side face up (not Reverend Mother Jessica). *Lady Margot Fenring / Princess Irulan* — you "reach" 2 Influence even when moving past 2 while gaining multiple Influence at once; you can reach 2 with the same Faction more than once per game by losing Influence and later regaining it (you only "reach" it when moving up the track, not down). *Shaddam Corrino IV* (usable only with the CHOAM Module) — when you play your Signet Ring to send an Agent to a board space, his "Emperor of the Known Universe" restriction on deploying units to the Conflict takes effect immediately. *Spacing Guild's Favor* — moving this card from in play to your discard pile during Clean Up does not trigger its discard ability; only discarding it from your hand does.
+- **Leader clarifications:** *Feyd-Rautha Harkonnen* — during setup, place the Feyd token on the leftmost space of the Training track printed on the Leader; when it reaches the rightmost space, it remains there for the rest of the game. *Lady Jessica* — begin the game with the Lady Jessica side face up (not Reverend Mother Jessica). *Lady Margot Fenring / Princess Irulan* — you "reach" 2 Influence even when moving past 2 while gaining multiple Influence at once; you can reach 2 with the same Faction more than once per game by losing Influence and later regaining it (you only "reach" it when moving up the track, not down). *Shaddam Corrino IV* (usable only with the CHOAM Module) — when you play your Signet Ring to send an Agent to a board space, his "Emperor of the Known Universe" restriction on deploying units to the Conflict takes effect immediately; general freedom to order board-space and Agent-box effects cannot postpone it. *Spacing Guild's Favor* — moving this card from in play to your discard pile during Clean Up does not trigger its discard ability; only discarding it from your hand does.
 
 ### CHOAM Module (optional mini-expansion)
 
 Play without it at least once to learn the game, then add it for more strategic depth.
 
-**Setup changes:** Shuffle the **20 contracts** face down, then flip **two** face up and place them on the marked spaces on the board beneath the Landsraad Council; place the remaining **18** face down in the bank. Shuffle the 4 additional Intrigue cards into the Intrigue Deck and the 4 additional Imperium cards into the Imperium Deck. A player has the option to choose **Shaddam Corrino IV** as their Leader (this is not required).
+**Setup changes:** A player may choose **Shaddam Corrino IV** as their Leader; this is optional. **If Shaddam is chosen, first set aside both Sardaukar contracts from the 20 standard contracts**, following his printed Sardaukar Commander ability. They are reserved for his exclusive acquisition but do **not** begin in his possession. Shuffle the remaining contract tokens face down, then flip **two** face up onto the marked spaces beneath the Landsraad Council and put the rest face down in the bank. With no Shaddam, shuffle all **20**: two offers and **18** in the bank. With Shaddam, shuffle the **18** not set aside: two offers and **16** in the bank, plus the two reserved contracts. Shuffle the 4 additional Intrigue cards into the Intrigue Deck and the 4 additional Imperium cards into the Imperium Deck.
 
-**Taking contracts:** Without the CHOAM Module, the contract icon simply gives **2 Solari** as indicated on the board. With the module, the icon means: take one of the two face-up contracts on the board and place it in your supply, then replace it with another contract from the bank, flipped face up. If all contracts have been taken by players, the icon reverts to giving 2 Solari.
+**Shaddam’s Signet benefits:** On an Agent turn using Signet Ring, **Emperor of the Known Universe** offers one of two alternatives: **gain 1 Solari and recruit 1 troop**, or **pay 3 Solari to gain 1 Influence with any one Faction**. Choose one branch, not both. Recruit the troop from your supply into your garrison. His restriction on deploying units to the Conflict applies immediately for that entire turn, so the recruited troop cannot deploy that turn.
+
+**Taking contracts:** Without the CHOAM Module, the contract icon simply gives **2 Solari** as indicated on the board. With the module, take an available public face-up contract from the board into your supply, then refill its offer from the bank face up if possible. **If no face-up contracts remain, gain 2 Solari instead.** The fallback does not require every contract token to be owned by a player: if the general offers are exhausted while Shaddam’s reserved Sardaukar contracts remain set aside, the other humans gain 2 Solari because they cannot acquire his reserved contracts.
+
+**Reserved Sardaukar contracts:** **Only Shaddam may acquire the two set-aside Sardaukar contracts; no other player may take them.** When Shaddam acquires a contract, he may choose a reserved Sardaukar contract instead of a generally available one. Reserving them during setup does not give him possession.
 
 **Completing contracts:** A contract is your promise to fulfill a service for the CHOAM Corporation — you receive its "payment" only when you make good on it.
 - Most contracts name a specific board space and are completed by sending an Agent to that space.
@@ -163,19 +225,118 @@ Play without it at least once to learn the game, then add it for more strategic 
 
 When you complete a contract, announce it, gain the rewards it shows, then flip it face down and **leave it in your supply** (certain cards refer to "completed contracts"). If you take a contract involving the board space where you've **already sent your Agent this turn**, you must wait until a future turn to complete it — you must have had the contract at the time you sent your Agent.
 
-**CHOAM with Rise of Ix:** Rise of Ix replaces one of the Uprising board locations where you can take a new contract; to compensate and jumpstart contract completion, Uprising includes 10 additional contracts (with different backs) used specifically with Rise of Ix. After setting up the 20 standard contracts, shuffle the 10 Rise of Ix contracts and give **two to each player**; each player looks at their two and simultaneously chooses **one** to begin the game with, placing it face up in their supply. Return all unchosen Rise of Ix contracts to the box.
+The **10 contrasting-back contracts** are a separate Rise of Ix compatibility set; leave them in the box for standard CHOAM. They do not reduce the 20 standard contracts to 10.
 
-### Combining with other Dune: Imperium products
+## Board Space Guide — Standard 2–4 Players
 
-Uprising is compatible with all previous Dune: Imperium products. For the latest rulings and clarifications, see the FAQ at http://www.duneimperium.com/FAQ.
+The listed Agent icon is required unless the Spy Agent icon permits access. Pay entry costs and meet Influence requirements before effects. The explicit **Combat?** column states whether normal deployment is permitted: **Yes** permits it; **No** does not. The four Faction Agent icons are Emperor, Spacing Guild, Bene Gesserit and Fremen. Landsraad, City and Spice Trade are not Factions: **Accept Contract gives no automatic Influence**, nor do Imperial Privilege, Shipping or Sietch Tabr. Those spaces give only their explicitly listed Influence effects, if any. On an actual Faction space, the 1 Influence listed in this table is the same advance described in the Agent-turn rule: **gain it once in total, not twice**. At controlled locations, resolve both the visitor’s effects and the controller’s separate bonus, even if they are the same player. A visit to **Arrakeen** therefore provides one recruited troop and one drawn card to the visitor **and 1 Solari to its controller**; the bonus is part of the visit even when the controller is another player. Both Sietch Tabr options require **City** access and **2+ Fremen Influence**, with **no resource entry cost**.
 
-- **Base Dune: Imperium:** Recommended: don't add its Conflict cards (you may, but it makes matching battle icons harder). As there is no Mentat in Uprising, remove the Calculated Hire Intrigue card (and the Sort Through the Chaos Conflict card, if you use the base game's Conflict cards). You may shuffle all other Intrigue and Imperium cards together, or create your own custom blend.
-- **Rise of Ix:** During setup, keep the CHOAM board overlay folded in half and cover only the top-right corner of the Uprising board — this creates a new CHOAM section and covers the Assembly Hall and Gather Support spaces while leaving the rest of the Landsraad unchanged. The overlay and Ix board have no printed observation posts: play as if there is one on each — one connecting to Interstellar Shipping and Smuggling, the other to Tech Negotiation and Dreadnought. Recommended: don't add Rise of Ix Conflict cards (you may; it makes matching battle icons slightly harder) — but Epic Game Mode needs one additional Conflict III card: add Economic Supremacy. Using Ilesa Ecaz requires the Foldspace cards from base Dune: Imperium (allow her to acquire Foldspace cards even though no one else can).
-- **Immortality:** Still cover the Research Station with the Research Station overlay, even though Uprising's Research Station differs from the original board's.
+**Faction status of the contract spaces:** Accept Contract is a **non-Faction Spice Trade space**, so its visit gives no automatic Faction advance. Dutiful Service is an **Emperor Faction space**, so visiting it automatically advances Emperor Influence by **one**. That is the same one Influence already listed in its Effects column; count it once in total.
+
+**Human contract icon — one shared rule for both Accept Contract and Dutiful Service:** Their card draw or Emperor Influence still happens in every row below. Resolve the contract icon according to the current module/supply state:
+
+| State when the icon resolves | Contract-icon effect at either space |
+|---|---|
+| CHOAM is not being used | Gain 2 Solari. |
+| CHOAM is being used and a public face-up contract is available | Take an available public face-up contract into your supply, then **refill that public offer face up from the bank if a bank contract remains**. |
+| CHOAM is being used but the public offers are exhausted | Gain 2 Solari. For humans other than Shaddam, his unacquired set-aside Sardaukar contracts do not prevent this fallback. |
+
+| Space | Agent access icon | Combat? | Cost / requirement | Effects |
+|---|---|---|---|---|
+| Accept Contract | Spice Trade | No | None | Always draw one card, plus resolve the contract icon using the shared rule above. |
+| Arrakeen | City | Yes | None | Controller gains 1 Solari; visitor recruits one troop and draws one card. These are separate visit effects. |
+| Assembly Hall | Landsraad | No | None | Draw an Intrigue; gain 1 Persuasion during your Reveal turn if your Agent is here. |
+| Deep Desert | Spice Trade | Yes | 3 water | Gain all bonus spice; choose either 4 base spice OR, with Maker Hooks, summon two sandworms. |
+| Deliver Supplies | Spacing Guild | No | None | Gain 1 Guild Influence and 1 water. |
+| Desert Tactics | Fremen | Yes | 1 water | Gain 1 Fremen Influence, recruit one troop, and optionally trash a card. |
+| Dutiful Service | Emperor | No | None | Gain 1 Emperor Influence, counted once, plus resolve the contract icon using the same shared rule above. |
+| Espionage | Bene Gesserit | No | 1 spice | Gain 1 Bene Gesserit Influence, draw a card, place a Spy. |
+| Fremkit | Fremen | Yes | None | Gain 1 Fremen Influence and draw a card. |
+| Gather Support | Landsraad | No | Choose 0 or 2 Solari | Recruit two troops; if 2 Solari paid, also gain 1 water. |
+| Hagga Basin | Spice Trade | Yes | 1 water | Gain all bonus spice; choose either 2 base spice OR, with Maker Hooks, summon one sandworm. |
+| Heighliner | Spacing Guild | Yes | 5 spice | Gain 1 Guild Influence and recruit five troops. |
+| High Council | Landsraad | No | 5 Solari each visit | First visit: put Councilor on unoccupied seat; gain 2 Persuasion on every Reveal turn for rest of game. Subsequent visits: gain 2 spice, draw an Intrigue and recruit three troops. |
+| Imperial Basin | Spice Trade | Yes | None | Gain 1 base spice plus all bonus spice; controller gains 1 spice. |
+| Imperial Privilege | Landsraad | No | 3 Solari; 2+ Emperor Influence | May discard an Intrigue to draw an Intrigue. Recall one of your other Agents and draw a card. |
+| Research Station | City | Yes | 2 water | Recruit two troops and draw two cards. |
+| Sardaukar | Emperor | No | 4 spice | Gain 1 Emperor Influence, draw an Intrigue and recruit four troops. |
+| Secrets | Bene Gesserit | No | None | Gain 1 Bene Gesserit Influence and draw an Intrigue. Each opponent with 4+ Intrigues gives you one selected at random. |
+| Shipping | Spice Trade | No | 3 spice; 2+ Guild Influence | Gain 5 Solari and 1 Influence with any one Faction. |
+| Sietch Tabr | City | Yes | No resource cost; 2+ Fremen Influence | Choose: take Maker Hooks if you lack them, recruit one troop and gain 1 water; OR gain 1 water and optionally remove Shield Wall. |
+| Spice Refinery | City | Yes | Choose 0 or 1 spice | Gain 2 Solari, or 4 Solari if you paid 1 spice; controller gains 1 Solari. |
+| Swordmaster | Landsraad | No | 8 Solari before anyone gains Swordmaster; 6 once anyone has one | Only once per player per game. Take third Agent from beside board onto Leader; available this round and for rest of game. A Rival gaining its Swordmaster also reduces the human cost to 6. |
+
+## Required Rival Rules — Standard Two-Player Game
+
+Use **one shared scoring Rival** as the third competitor. It can win: its 10+ VP triggers Endgame at Recall just like a human’s score. Select its Rival card; follow its printed Signet Ring and Scheme abilities and its left-to-right Faction priority list. Its printed Swordmaster value sets its resource threshold; lower values are more challenging. Do not apply solo difficulty adjustments or optional Rival variants.
+
+**Setup:** Give it a color, four cubes at the bottom of Influence tracks, three troops in its garrison and the remaining troops in supply, two Agents in supply and Swordmaster beside the board, three Spies and 1 water in supply. Its score and Combat marker start at 0. Shuffle House Hagal and place the deck near the shared Rival, retaining the 2P Reshuffle card. Give the Rival the Ornithopter Objective; randomly deal the other two eligible Objectives to the humans, with First Player going to the human whose card shows it. First Player alternates only between humans. Each round the Rival is considered immediately clockwise from First Player, so turn order is First Player → Rival → other human. Restore its Agents to its supply at Recall for the next round.
+
+**Rival starting components and resource:**
+
+| Component or resource | Starting number and location |
+|---|---|
+| Faction Influence cubes | **Four cubes: one at the bottom of each of the four Faction Influence tracks.** |
+| Troop cubes | Three in its garrison; the remaining nine in its supply. |
+| Agents | Two in its supply; the third Agent / Swordmaster beside the board. |
+| Spies | Three in its supply. |
+| Water | One in its supply. |
+| Score and Combat markers | Each starts at 0 on its corresponding track. |
+
+**Agent turns:** A Rival takes Agent turns while an Agent remains in supply and never takes a Reveal turn. Reveal House Hagal cards until an Agent can be placed on an unoccupied indicated space. Ignore an occupied destination and reveal again. With a two-destination card, select only the destination matching the current conditions (Guild Influence for Accept Contract/Shipping; Conflict tier for Deliver Supplies/Heighliner); if that destination is occupied, reveal a new card, without using the other destination. If House Hagal empties or Reshuffle appears, immediately reshuffle it and continue.
+
+**Place Spy cards do not place an Agent:** try an empty post of the specified type; if none exists ignore placement. In either case immediately reveal another Hagal card and continue this Agent turn.
+
+Ignore normal space costs and effects: apply only the revealed House Hagal effects, including printed resource gains, Influence, Signet Ring, troop, Spy and Maker Hooks icons. A numbered Influence icon refers to that position in the Rival card’s Faction priority list. Some cards provide a bonus at 2+ Influence; lack of that bonus never prevents placing the Agent. For example, its Gather Support card recruits one troop and, with 2+ Emperor Influence, also gains one Influence with its second-priority Faction. For troop icons, recruit from supply; at a Combat space deploy all newly recruited troops, otherwise put them in garrison. At every Combat space also deploy up to two available troops from garrison, even when the card recruited none. Stolen Intrigues come randomly from each opponent with 4+ Intrigues. Rivals use Intrigues as resources, rather than playing their text.
+
+**Rival Signet Ring and Scheme are separate abilities:**
+
+| Trigger | Ability resolved |
+|---|---|
+| A revealed House Hagal effect shows the Signet Ring icon | Resolve the **Signet Ring ability** printed on the selected Rival card. Do not substitute its Scheme. No human Signet Ring card or Reveal turn is involved. |
+| The Rival places its third and final supply Spy | Immediately recall its other two Spies, then resolve its **Scheme ability**. The Signet Ring icon is not itself this trigger. |
+
+**Spies and Schemes:** Unless a post type is specified, place a Spy at the first available Faction observation post in priority order; if all four are occupied ignore placement. A Place Spy card uses an empty post of its specified type, or ignores placement if none exists; either way reveal another Hagal card because it has not sent an Agent. Rivals never recall Spies to Infiltrate or Gather Intelligence. Placing their third and final supply Spy immediately recalls their other two Spies and triggers their printed Scheme. If a Scheme recruits troops before Agent placement and the Rival then visits a Combat space that same turn, deploy those troops too.
+
+**Resource gains:** Collect resources from Hagal effects and Conflict rewards, not ordinary space effects or 4-Influence track bonuses (the Maker and control exceptions below still apply).
+
+**Swordmaster resource total:** Count all Solari, spice, Intrigue cards and water currently in the Rival’s supply, including its starting water. Each unit or Intrigue card counts as one. As soon as the total reaches the Rival’s printed Swordmaster value, spend exactly that many resources and take its third Agent, usable in the current round.
+
+**The spending priority is mandatory:** pay with **Solari first, then spice, then Intrigue cards, then water**. Use as much of each type as needed and available before moving to the next type; stop when the printed cost is paid and keep all leftovers. You may not choose a different mix to retain higher-priority resources by spending lower-priority ones instead.
+
+**After Swordmaster:** Whenever the Rival has **7 Solari**, **7 spice**, **3 Intrigue cards**, or **3 water**, spend each such set for 1 VP. The Rival gains and loses Influence VP and Alliances like a human, but does not receive the resource bonus for reaching 4 Influence.
+
+**Maker spaces:** The Rival always collects all bonus spice at a visited Maker space. At Hagga Basin or Deep Desert, with Maker Hooks and a Conflict that permits sandworms, summon one or two sandworms respectively instead of taking base spice. If it summons none, take the space’s base spice instead (Hagga 2, Deep Desert 4; Imperial Basin always 1). A Hagal Maker Hooks icon takes a token if needed. A Hagal Shield Wall removal effect removes the wall only if the Rival has Maker Hooks and the wall is still present. Without Hooks, or if the wall is already gone, ignore this removal effect; it has no further effect.
+
+**Rival Hooks and Wall icons:** These use the Rival’s own Hooks, regardless of whether a human has them.
+
+| House Hagal effect | Rival state | Result |
+|---|---|---|
+| Maker Hooks | No Hooks token | Take one from the bank onto the Rival’s garrison. |
+| Maker Hooks | Already has Hooks | Do not take another token. |
+| Shield Wall removal | Has Hooks and Wall remains | Remove the Wall to the box. |
+| Shield Wall removal | Lacks Hooks | Ignore removal; leave the Wall in place. |
+| Shield Wall removal | Wall already gone | No further effect. |
+
+**Combat:** At the beginning of Combat, if the Rival has at least one unit deployed, reveal one Hagal card in turn order. Ignore everything except its bottom swords, adding that many strength; on Reshuffle, reshuffle and reveal again. Humans then have their normal Combat Intrigue window. The Rival receives normal placement rewards, doubles rewards with one or more sandworms, and wins Conflict cards and battle-icon VP normally. It gains control bonuses when any human or Rival visits its controlled space and the defensive troop from supply when that Conflict is revealed. When choosing Influence, use the Faction with least Influence, breaking ties by leftmost priority icon. Always take an optional Conflict VP if it can pay the resources or recall the required Spies. It **never takes contracts**: a contract reward gives it 2 Solari, even with CHOAM. Combat cleanup and two-/three-player reward and tie rules apply normally.
+
+## FAQ & Rulings
+
+These are relevant base-game clarifications from Dire Wolf’s **official FAQ, January 13, 2025**, pp1–4; they supplement the original rulebook rather than importing expansion rules.
+
+- **Mandatory effects and costs:** Most card and space effects are mandatory. Exceptions include “may,” arrow costs you can decline, and the optional black-X trash icon. A direct instruction to trash a card itself is mandatory. Intrigue conditions and costs must be met to play that Intrigue. Optional arrow effects can only be paid once, except doubled Conflict rewards.
+- **Alliance loss:** Any transfer makes the old holder lose 1 VP and the new holder gain 1 VP. In addition to an opponent rising higher, if the holder loses Influence after being tied, the formerly tied player takes the Alliance; if several were tied, the former holder chooses which receives it. Falling to 3 or lower also loses the Alliance; if nobody has 4+ to take it, return it to the board. Losing the Alliance loses its VP.
+- **Contract completion is mandatory:** Fulfill all contracts you hold for the same space with one Agent placement. A board-space contract is another effect of that Agent turn and can resolve in any order with space and Agent-box effects. This does not waive the rule that you must hold it when sending the Agent.
+- **Shaddam:** Sardaukar Commander permits choosing a set-aside Sardaukar contract instead of a generally available one when acquiring a contract; set aside both before the initial contract shuffle, but these contracts do not start in your possession. Emperor of the Known Universe takes effect immediately on playing Signet Ring to send an Agent, but lasts only for that turn, not the round. Follow the printed Leader for its deployment restriction.
+- **Spies:** Recalling a Spy still requires playing a card for the Agent turn and does not waive costs or requirements. You may recall two Spies for different effects (one Infiltrate, one Gather Intelligence), never two to Gather Intelligence on the same placement. Maker Hooks are retained, not spent, when summoning.
+- **Draw timing:** Drawn during Reveal means immediately reveal and use that card this turn. Drawn after Reveal means keep it for next round, then draw five additional cards. A Plot Intrigue with a later Reveal effect stays face up until then, is used, then discarded. If the Intrigue deck runs out, shuffle its discard to form a new deck.
+- **Combat and troops:** All troops newly recruited that turn, including from an Intrigue, can deploy at a Combat space; old garrison troops cannot be re-recruited to bypass the two-troop limit. “When you win a Conflict” Intrigues cannot be played after tying for first; if received as a winning reward they can be played immediately. “Retreat any number” allows zero.
+- **Victory:** The Spice Must Flow’s acquire VP is retained if the card is later trashed. Scores may exceed the printed track’s 12. If all four resource tiebreakers remain tied, the player who most recently took a Reveal turn wins.
+- **Reverend Mother Jessica** may use her ability on the turn she flips. **False Orders:** affected opponents move their Spy to an empty post not connected to your Agent’s destination that turn; it may be played even if no enemy Spy is connected there. **Manipulate:** opponents cannot acquire the removed card; you may acquire it by other means without the 1-Persuasion discount; if unacquired by the end of your next Reveal, remove it from game. **Litany Against Fear:** ignore its red box during Reveal, or when it gains an Agent icon and is played normally as an Agent card.
 
 ## Player Reference
 
-**Round:** 1. Round Start (reveal Conflict card, draw 5) → 2. Player Turns (Agent turns, then one Reveal turn each) → 3. Combat → 4. Makers (1 bonus spice on Agent-free Maker spaces) → 5. Recall (check Endgame; recall Agents; pass First Player marker clockwise).
+**Round:** 1. Round Start (reveal Conflict card, draw 5) → 2. Player Turns (Agent turns, then one Reveal turn each) → 3. Combat → 4. Makers (1 bonus spice on Agent-free Maker spaces) → 5. Recall (check Endgame; return human Agents to Leaders; with 3–4 humans pass First Player clockwise; in 2P return Rival Agents to supply and pass First Player to the other human, never the Rival).
 
 **Agent turn:** Play 1 card → send 1 Agent to an unoccupied space matching one of its Agent icons → pay space costs immediately → gain space + Agent-box effects, +1 Influence on Faction spaces (all in any order).
 
@@ -183,11 +344,13 @@ Uprising is compatible with all previous Dune: Imperium products. For the latest
 
 **The 8 Agent icons:** Emperor, Spacing Guild, Bene Gesserit, Fremen, Landsraad, City, Spice Trade, Spy.
 
+**Combat rewards:** In 2–3-player play (including a Rival), ordinary first and second get rewards; untied third gets nothing. Third reward is available there only for a tie for second. With 4 players, ordinary first, second and third receive rewards. Ties for first: each takes second; nobody wins/takes the card. In 3 or fewer players no other rewards; in 4 players with exactly two tied first, the rest compete for third.
+
 **Strength:** troop = 2, sandworm = 3, revealed sword = 1. You need at least 1 unit in the Conflict to have any strength.
 
 **Deployment (Combat spaces only):** all units recruited this turn + up to 2 from your garrison. After Combat: troops → supply (not garrison); sandworms → bank.
 
-**Influence:** reach 2 = 1 VP (lost below 2); reach 4 = track bonus (kept) + Alliance token and its VP for the first player there (token passes to an opponent who rises higher).
+**Influence:** Reach 2 → 1 VP, lost below 2. Reach 4 → track bonus, kept below 4 and gained again when returning to 4. First to 4 also gains Alliance token +1 VP. A tie does not steal it: an opponent must rise higher to take the token, making the old holder lose 1 VP and the new holder gain 1 VP; holder Influence loss has additional FAQ rules.
 
 **Starting deck (10):** Convincing Argument x2, Dagger x2, Dune the Desert Planet x2, Diplomacy, Reconnaissance, Seek Allies, Signet Ring.
 

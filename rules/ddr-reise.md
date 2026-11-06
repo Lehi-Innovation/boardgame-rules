@@ -4,16 +4,19 @@ bgg_id: 30601
 player_count: "2-6"
 play_time: "30-60 min"
 designer: "Unknown"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "ddr-reise-selection-6ef897d5a382.html"
+source_url: "https://dewiki.de/Lexikon/DDR-Reise"
+source_type: "rules_reference_html"
+source_language: "German"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says there are no direct jumps between non-connected cities. The complete German Spielablauf reference instead requires a red event card whenever a player reaches one of their own destinations; its named city is where the pawn must now be placed, and the journey continues from there. The unrestricted no-jumps statement removes a central mandatory relocation procedure. Specific MAJOR for this covered movement/event rule only; the source is a third-party gameplay reference with full original setup and movement exceptions still missing. No complete audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20DDR-Reise&game=ddr-reise)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/ddr-reise-rules.txt) · 🌐 [Rules reference (German)](https://dewiki.de/Lexikon/DDR-Reise) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20DDR-Reise&game=ddr-reise)
 <!-- verification:end -->
 
 

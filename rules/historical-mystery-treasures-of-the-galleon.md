@@ -4,15 +4,19 @@ bgg_id: 453355
 player_count: "1-4"
 play_time: "60-90 min"
 designer: "Mikhail Rozanov"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "historical-mystery-treasures-of-the-galleon-selection-b82820bb5ad1.pdf"
+source_url: "https://hobbygames.ru/download/rules/istoricheskij-detektiv-sokrovishha-galeona-rules.pdf"
+source_type: "rulebook_pdf"
+source_language: "Russian"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original2025 v1.0 rules distinguish FREE arrow-only investigation-card flips from PAID bell-marked flips. Only the latter consume the shared24action budget. Summary says each investigation action costs1move and instructs reducing the counter after every resolution, with all interrogations/examinations/visits priced1; it omits free flips and their identifying symbol, substantially reducing available investigation. Original also requires conditional deck/card unlocks and QR questions/answers after stopping, rather than a bundled question sheet. Specific original-source MAJOR action-budget finding only; no full audit/summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Historical%20Mystery%3A%20Treasures%20of%20the%20Galleon&game=historical-mystery-treasures-of-the-galleon)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/historical-mystery-treasures-of-the-galleon-rules.txt) · 🌐 [Source PDF (Russian)](https://hobbygames.ru/download/rules/istoricheskij-detektiv-sokrovishha-galeona-rules.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Historical%20Mystery%3A%20Treasures%20of%20the%20Galleon&game=historical-mystery-treasures-of-the-galleon)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 32337
 player_count: "2-4"
 play_time: "45-60 min"
 designer: "Unknown"
-source_pdf: "about-time-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "about-time-selection-c0a2e38c03d5.html"
+source_url: "https://web.archive.org/web/20121215045033id_/http://www.abouttimeboardgame.com:80/blogs/news_reviews/6947222-about-time-the-rules-in-brief-from-about-time-mini-rules"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary allows any team to shout Time and play a Time card, and its reference table repeats that unrestricted instruction. The publisher Mini Rules posted by co-designer Joe Gill in November 2012 explicitly says the Reader can never play a TimeCard. The Reader is the team currently rolling, moving and reading the question, so this changes which team can obtain the extra information during that round. Specific MAJOR eligibility finding for the recovered publisher core-reference scope; not a complete audit or certification of every original edition, and no summary-body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20About%20Time&game=about-time)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/about-time-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20121215045033id_/http://www.abouttimeboardgame.com:80/blogs/news_reviews/6947222-about-time-the-rules-in-brief-from-about-time-mini-rules) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20About%20Time&game=about-time)
 <!-- verification:end -->
 
 

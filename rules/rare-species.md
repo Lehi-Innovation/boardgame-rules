@@ -4,19 +4,22 @@ bgg_id: 18143
 player_count: "2-4"
 play_time: "30-45 min"
 designer: "Henry Russell"
-source_pdf: "rare-species-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "rare-species-selection-f17903653d58.html"
+source_url: "https://web.archive.org/web/20210623130549id_/https://boardgamegeek.com/boardgame/18143/rare-species"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Rare Species
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary makes a successful male/female match an immediately scored pair. The detailed archived community rules account instead requires two stages: first capture only the female into one of three holding cages, leaving the male on the main board; later land beside its male and identify the caged female to claim the completed breeding pair. The original Conservation Park board photograph confirms three holding spaces for the female cards. The summary omits these cages, their three-female capacity and stealing of unpaired females, changing legal actions and which animals score. Specific MAJOR finding against the recovered community rules reference and matching original component photo; the full publisher booklet remains unrecovered, and no complete publisher-rulebook audit or body repair was performed. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rare%20Species&game=rare-species)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/rare-species-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20210623130549id_/https://boardgamegeek.com/boardgame/18143/rare-species) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rare%20Species&game=rare-species)
 <!-- verification:end -->
 
 ## Overview

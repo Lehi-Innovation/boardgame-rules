@@ -4,17 +4,20 @@ bgg_id: 165320
 player_count: "2-4"
 play_time: "45-60 min"
 designer: "Unknown"
-source_pdf: "afrikan-t-hti-retkikunnat-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "afrikan-t-hti-retkikunnat-selection-65e1a6f5d4b2.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
 base_game_bgg_id: 5130
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://res.cloudinary.com/martinex/image/upload/v1726564221/game-instructions/AFRIKAN_T%C3%84HTI_RETKIKUNNAT_FI_40855993_tdsbkl.pdf"
+source_type: "rulebook_pdf"
+source_language: "Finnish"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Afrikan%20t%C3%A4hti%3A%20Retkikunnat&game=afrikan-t-hti-retkikunnat)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/afrikan-t-hti-retkikunnat-rules.txt) · 🌐 [Source PDF (Finnish)](https://res.cloudinary.com/martinex/image/upload/v1726564221/game-instructions/AFRIKAN_T%C3%84HTI_RETKIKUNNAT_FI_40855993_tdsbkl.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Afrikan%20t%C3%A4hti%3A%20Retkikunnat&game=afrikan-t-hti-retkikunnat)
 <!-- verification:end -->
 
 

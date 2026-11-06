@@ -4,15 +4,19 @@ bgg_id: 13584
 player_count: "2"
 play_time: "60-120 min"
 designer: "Alderac Entertainment Group"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "clan-war-selection-742140c9405f.html"
+source_url: "https://web.archive.org/web/20110203012729id_/http://www.boardgamegeek.com:80/thread/68739/clan-war-review"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary determines which player acts first and then alternates unit movement. The early boxed-game review instead rolls initiative separately for every unit, permits leader adjustments, and moves units in initiative order. The summary also omits the custom thirty-card tactical deck and the orders, additional cavalry movement and reserve movement phases described by the source. These change central turn decisions. This finding covers the early boxed game; it does not certify later Daimyo Edition rules. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Clan%20War&game=clan-war)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/clan-war-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20110203012729id_/http://www.boardgamegeek.com:80/thread/68739/clan-war-review) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Clan%20War&game=clan-war)
 <!-- verification:end -->
 
 

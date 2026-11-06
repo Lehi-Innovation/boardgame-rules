@@ -4,19 +4,22 @@ bgg_id: 390092
 player_count: "2-5"
 play_time: "20-90 min"
 designer: "Rob Daviau, Matt Leacock, Alan R. Moon"
-source_pdf: "ticket-to-ride-legacy-legends-of-the-west-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "ticket-to-ride-legacy-legends-of-the-west-recovery.html"
+source_url: "https://rulespal.com/ticket-to-ride-legacy-legends-of-the-west/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Ticket to Ride Legacy: Legends of the West
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ticket%20to%20Ride%20Legacy%3A%20Legends%20of%20the%20West&game=ticket-to-ride-legacy-legends-of-the-west)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/ticket-to-ride-legacy-legends-of-the-west-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/ticket-to-ride-legacy-legends-of-the-west/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ticket%20to%20Ride%20Legacy%3A%20Legends%20of%20the%20West&game=ticket-to-ride-legacy-legends-of-the-west)
 <!-- verification:end -->
 
 ## Overview

@@ -4,19 +4,22 @@ bgg_id: 1249
 player_count: "2-4"
 play_time: "30 min"
 designer: "Unknown"
-source_pdf: "safari-jack-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "safari-jack-selection-8614fa9f47ec.html"
+source_url: "https://web.archive.org/web/20030909115331id_/http://www.rpg.net:80/reviews/archive/9/9441.phtml"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Safari Jack
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says play continues until all animals are captured or no valid moves remain, then the highest captured-animal total wins. Daron Patton’s detailed June18,2003 Safari Jack reference for the explicitly included Hip Pocket edition instead ends on a point target: first to amass15 points in a two-player game, with lower targets for3/4players. Those exact multiplayer numbers and tie rules are not supplied. Replacing a race to the target with exhausting all animals/moves changes the ending and winner. Specific MAJOR applies to the covered2003 edition, not certified equivalence of every earlier printing. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Safari%20Jack&game=safari-jack)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/safari-jack-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20030909115331id_/http://www.rpg.net:80/reviews/archive/9/9441.phtml) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Safari%20Jack&game=safari-jack)
 <!-- verification:end -->
 
 ## Overview

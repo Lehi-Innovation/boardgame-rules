@@ -1,0 +1,540 @@
+--- Page 1 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+AN INTRODUCTION TO CLOBBER
+Michael H. Albert
+Department of Computer Science, University of Otago, New Zealand
+malbert@cs.otago.nz
+J. P. Grossman
+Department of Mathematics and Statistics, Dalhousie University, Halifax, NS, Canada
+jpg@mathstat.dal.ca
+Richard J. Nowakowski
+Department of Mathematics and Statistics, Dalhousie University, Halifax, NS, Canada
+rjn@mathstat.dal.ca
+David Wolfe
+Department of Mathematics and Computer Science, Gustavus Adolphus College, St. Peter, MN, USA
+wolfe@gustavus.edu
+Received: 2/27/04, Revised: 8/25/04, Accepted: 5/9/05, Published: 9/1/05
+Abstract
+Clobber is an all-small game usually played on a checkerboard but the rules easily generalize
+to play on an arbitrary graph. We show that, on a graph, determining the value of the game
+is NP-hard. We also examine clobber on a 1 × n and a 2 × n strip.
+Keywords: Clobber, combinatorial game, all-small, inﬁnitesimal, NP-hard.
+1
+Introduction
+Clobber is a partisan game that was ﬁrst developed and investigated by the authors at
+Games-at-Dal 2001. It was then introduced at the 2002 Dagstuhl seminar on algorithmic
+and Combinatorial Game Theory. In the initial position, black and white tokens are placed
+on the vertices of an undirected graph, at most one per vertex. A player moves by picking up
+one of their tokens and “clobbering” an adjacent token of the opposite color; the clobbered
+token is replaced by the one that was moved. The last player to move wins. In practice, the
+game is played on a checkerboard (grid graph), where all squares are occupied with tokens
+
+--- Page 2 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+2
+of the same color as the square. A 6 × 7 board suﬃces to highlight the features of the game.
+See [10] for a report of the ﬁrst clobber world championship. Recently, a 10 × 10 board has
+become more popular.
+Because there is no position in which one player can move and the other cannot (both
+players have a move if and only if there are adjacent tokens of opposite colors), clobber is
+an all-small [1, p. 229] [2, p. 101] game. In Amazons and Go, for example, a player wins
+by gaining territory in which the other player cannot move. In clobber, neither player can
+gain such an advantage; in particular, the game values are all inﬁnitesimals [1, p. 36–37] [2,
+p. 100].
+In the next section of this paper, we give a genealogy, some examples of game values that
+occur and leave with some conjectures about 1 × n and 2 × n positions. The game values for
+clobber, in general, do not have nice canonical forms. Atomic weights [1, Ch. 8][2, p. 217]
+are a way of avoiding complicated inﬁnitesimals. In the third section, we introduce atomic
+weights. They help to show that the game will not have an easy solution. The addition of
+just one piece can change the atomic weight, in either direction, by an arbitrary amount. In
+Section 4, we determine the atomic weight for an arbitrary graph that has just one white
+token and the rest are black. This result allows us to show that clobber is NP-hard. The
+ﬁnal section describes a position justiﬁed by its aesthetic appeal.
+For background on combinatorial games please see [1], [2], or the survey articles in [12].
+The notation and game values studied here are developed, in depth, in [1] and [2].
+2
+Genealogy
+Clobber originated from work on one-dimensional peg duotaire.
+Peg duotaire [14] is an
+impartial game; the moves are the same as in peg-solitaire but there are two players and
+the last player to move wins. The one-dimensional version, studied in [11], is played with a
+row of holes that can hold pegs. Each move consists of jumping one peg over an adjacent
+peg and landing in an empty hole; the peg that was jumped is removed. The last player to
+move is the winner. A closed set of positions results from pairing up the holes and allowing
+at most one peg in each pair. Such positions can be represented using a shorthand notation
+with
+for a peg,
+for a hole and letting x =
+and o =
+. For example,
+becomes xxoxxoo
+It is not necessary to explicitly represent
+since it can be shown that in these positions
+an empty pair of holes separates the position into disjoint sub-games. Using this shorthand
+notation, the legal moves are xo →x and xo →o . That is ‘x’ can capture ‘o’ to the right
+and ‘o’ can capture ‘x’ to the left. This naturally becomes a partisan game by allowing
+Left to move x and Right to move o. We can generalize the game beyond one dimension by
+
+--- Page 3 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+3
+removing the directional restrictions and allowing the capture of any adjacent and opposite
+piece; the resulting game is clobber.
+It should be noted that another partisan generalization of peg-duotaire is konane, al-
+though konane predates peg-duotaire by at least 200 years. This game is played on a 10×10
+checkerboard, black pieces and white pieces on their own colors except for two adjacent
+squares. Pieces move as in peg solitaire (over an opponent’s piece on to an empty square)
+and jumps can be chained but the piece jumping is not allowed to change direction. See [5]
+for the exact rules and variants. Konane was a popular game in Hawaii before 1900, and it
+is not well understood.
+Using the taxonomy proposed by Fraenkel [7], clobber is both a math-game and a play-
+game. The 1 × n and 2 × n positions considered in this paper are primarily of theoretical
+interest and, for the most part, do not generate interesting play between two players. By
+contrast, the m × n checkerboard, with white pieces starting on white squares and black on
+black squares, are, currently, mathematically intractable but they are good positions for a two
+player game that involves a combination of skill, intuition and knowledge of combinatorial
+game theory.
+For clobber positions, we use
+for a white token which is played by Right, and
+for a
+black token which is played by Left.
+3
+Values, Conjectures and Atomic Weights for 1 × n
+and 2 × n positions
+3.1
+1 × n Clobber
+We begin by evaluating some simple positions.1
+=
+= 0
+=
+∗
+=
+{0 |
+} = {0 | ∗} = ↑
+=
+{0 |
+} = {0 | ↑} = 2.↑+ ∗
+If X is a pattern of black, white and empty spaces we denote a string consisting of n
+copies of this pattern by Xn, so (
+2)3 =
+.
+Lemma 3.1
+m
+n
+=
+0 for m, n ≥2; and
+1Since clobber is usually played on the grid graph, throughout this paper, nodes which are adjacent
+horizontally or vertically are assumed to be connected by an edge.
+
+--- Page 4 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+4
+n
+=
+(n −1).↑+ n.∗.
+Proof: In
+m
+n with m, n ≥2 the ﬁrst player always loses; after the ﬁrst player captures,
+the second player captures back to end the game. The second assertion follows by induction
+and the base cases were evaluated before the statement of the Lemma. Speciﬁcally,
+n
+=
+
+0
+
+n−1
+=
+{0 | (n −2).↑+ (n −1).∗}
+=
+(n −1).↑+ n.∗
+We leave this section with two conjectures.
+Conjecture 3.2 (
+)n is a ﬁrst player win for n ̸= 3.
+Conjecture 3.3 (
+)n = ⌊(n + 1)/2⌋.↑.
+The ﬁrst conjecture has been veriﬁed by computer up to n = 19 and, except for n = 3,
+the ﬁrst player has few losing moves. The second conjecture has been veriﬁed up to n = 17.
+3.2
+2 × n Clobber
+Consider the 2 × n position
+ n =
+n
+
+
+
+· · ·
+Lemma 3.4 If n is even then
+ n = 0.
+Proof: The second player can use one of (at least) two strategies: (1) partition the board
+into 2 × 2 squares; when the ﬁrst player plays a vertical move in a square the second player
+responds in that square with the unique horizontal response.
+Or, (2) play rotationally
+symmetric moves maintaining the invariant that a 180 degree rotation about the midpoint
+inverts
+and
+.
+For n odd, we can only present conjectures.
+Conjecture 3.5 For n odd
+ n is a ﬁrst player win.
+
+--- Page 5 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+5
+This has been veriﬁed by computer up to n = 13. The position quickly gives rise to many
+sub-positions, some of which can be dealt with here.
+Claim 3.6
+ n = 0.
+Proof: By symmetry, it suﬃces to show that
+can win if
+moves ﬁrst. White’s strategy is
+as follows: each time
+captures up,
+captures by moving to the right leaving two smaller
+positions of the same form.
+Claim 3.7 If n is even then
+ n ≤0.
+Proof: We need to show that
+has a winning strategy if
+(Left) moves ﬁrst. Pair up the
+n middle columns. Whichever column
+moves in,
+responds by clobbering down in that
+column’s pair. This splits the position into two subgames one of which is a smaller position of
+the same form and the other which is rotationally anti-symmetric and therefore zero. (Here
+we use the fact that the number of columns is even; if n were odd then Left could destroy
+the symmetry by moving vertically in the middle column.)
+3.3
+Atomic Weights
+In all-small games, atomic weights [1, Ch. 8] [2, p. 217] play an important role in the de-
+termining of the outcome of a position. In [1] they are used to analyze small positions of
+Hackenbush and Childish Hackenbush. In clobber, all the positions are small. We begin
+with a brief overview of atomic weights.
+Let
+= {0, ∗, ∗2, . . . | 0, ∗, ∗2, . . .}, i.e.
+the game whose options are ∗n for all non-
+negative integers n. The atomic weight of a game, aw(g), is deﬁned recursively:
+Deﬁnition 3.8 If g = {a, b, c, . . . | d, e, f, . . .} where a, b, c, d, e, f, . . . have atomic weights
+A, B, C, D, E, . . ., then the atomic weight of g is
+G0 = {A −2, B −2, C −2, . . . | D + 2, E + 2, F + 2, . . .}
+UNLESS G0 is an integer and either g > or g < . In these exceptional cases, if g >
+then aw(g) is the largest integer G for which G D + 2, E + 2, F + 2, . . .. Similarly, if if
+g < then aw(g) is the least integer for which G A −2, B −2, C −2, . . ..
+
+--- Page 6 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+6
+A number of useful facts concerning atomic weights are not at all obvious from the
+deﬁnition. (Refer to [1, Ch. 8] for proofs.)
+First, atomic weights are additive:
+aw(G + H) = aw(G) + aw(H)
+(A game of clobber breaks down in independent sub-games relatively quickly so this is a very
+useful property.)
+Atomic weights are order preserving:
+If G ≥H then aw(G) ≥aw(H)
+Sometimes the atomic weight suﬃces to determine the winner. If aw(G) ≥2 then G > 0;
+if aw(G) ≤−2 then G < 0; if 2 > aw(G) > −2 then the atomic weight does not determine
+the winner. In the context of a , the atomic weights do determine the winner:
+g + ≥0 if and only if aw(g) ≥1
+.
+In this last statement, can be replaced by any ‘remote’ nimber ∗n, where remote means
+that no position of g, including g itself, has value ∗n. We have not encountered a clobber
+position with value ∗4, however,
+has value ∗2 and will serve as a remote nimber
+for many positions.
+Following from Lemma 3.1, it would be nice to assume that the atomic weight can-
+not change by more than 1 when an extra piece is added, but this is false. For example,
+Lemma 3.1 shows us that aw(
+n) = 0, aw(
+n) = n −1 and, for n ≥2, aw(
+n) = 0.
+For n > 4, the game
+n has atomic weight {0 | {0 | 4−n}} = n−4. In addition,
+positions with atomic weights of 1/2, 1/4, 1/8, ↑, ∗and 1 can ﬁt on a 2×7 board (Figure 1).
+The game
+n has atomic weight {n −3 | 2} showing that arbitrarily hot atomic weights
+can occur.
+3.4
+Award Winning Clobber Problem
+The problem in Figure 2 was composed by Adam Duﬀy and Garrett Kolpin, and was the
+winning entry at the Clobber Problem Composition contest held at the Third International
+Conference on Computer and Games in Edmonton in the summer of 2002.
+Their solution involves calculating the atomic weight of each component, and treating the
+component of value ∗2 as a remote star relative to the other positions. The components have
+atomic weights which total to −1 + 2, and so, by properties listed in [1, p. 236], the ﬁrst
+player can win. Black can win by ﬁrst moving on the component
+to
+.
+Duﬀy and Kolpin’s detailed solution can be downloaded from [4].
+
+--- Page 7 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+7
+Position
+Value
+Atomic Weight
+∗2
+0
+⇑∗| ↓∗
+1/2
+⇑∗| {∗, ↓| ⇓∗}, {0 | }
+1/4
+⇑| 0, {0 ∥⇓∗, | 5↓}
+1/8
+⇑| 0, {0 | ∗}
+↑
+⇑| ⇓∗
+∗
+⇑∗| ↓, {0 | ∗, 5↓}
+1
+↓, {⇑∗| ↑∥0, {∗, ↑| ∗, ↓} ||| ∗| ↓} ∥⇓∗| 8↓∗
+−2 + 2
+(extremely complex)
+−2 + 1
+2
+Figure 1: A sampling of atomic weights appearing in clobber
+Figure 2: Problem: Black to move and win.
+
+--- Page 8 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+8
+4
+Clobber is NP-hard
+In this section, we will consider graphs with only one white token. Consider a graph G and
+the corresponding game Gv in which all but vertex v is occupied by black tokens and v is
+occupied by a white token.
+A blocked v-path in G is any maximal path P = {v0 = v, v1, v2, . . . , vr} starting at v.
+That is, every vertex adjacent to vr is in P so that the path cannot be extended from vr. A
+blocked split v-path, or split path for short, is a blocked path P = {v0 = v, v1, v2, . . . , vr} for
+which there exists vertices x, y such that Q = {v0 = v, v1, v2, . . . , vr−1, x, y} is also a blocked
+path. The length, l(P), of a blocked path P = {v0 = v, v1, v2, . . . , vr} depends on whether
+the path is split:
+l(P) =
+
+ r + 1
+if P is not a split path
+r
+if P is a split path
+It may be that the two paths in a split path only have v in common but then l(P) = 1: for
+example,
+. Let
+l(Gv) = min{l(P) | P is a blocked path or a split path of Gv}.
+For example,
+l(
+)
+=
+3
+l(
+)
+=
+2
+l(
+)
+=
+3
+Note, that if G is a row of n ≥2 vertices with v at one end then Lemma 3.1 gives that
+aw(G) = aw((n −2).↑+ n.∗) = n −2. Also, note that aw(
+) = aw(↓∗) = −1, whereas
+aw(
+) = 1. At the end of a split path, i.e. at
+, Right has the option of moving
+to 0 or to
+= ∗, both of which have atomic weight 0. This choice between two apparently
+small games is actually the diﬀerence of playing to a ﬁrst-player-win and a second-player-win
+game. This gives Right a local advantage that is reﬂected in the atomic weights.
+Lemma 4.1 For a graph G with v ∈V (G) having at least one neighbor,
+aw(Gv) = l(Gv) −2
+(In the exceptional case when v has no neighbor, Gv = 0.)
+Proof: We prove this by induction on the number of vertices, and assume throughout that
+G is connected and v has a neighbor. Note that Left’s options are all identically 0.
+First, suppose l(Gv) = 1. Since v has a neighbor, the blocked path of length 1 must be
+split, so Gv is of the form
+
+--- Page 9 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+9
+H
+or
+H
+where H is arbitrary and possibly empty. Right has moves to ∗and to 0. A move to a vertex
+in H by induction has atomic weight ≥−1. In the preliminary atomic weight calculation of
+Gv,
+G0 = {0 −2 | 0 + 2, . . .}
+where the omitted right options could be from {−1+2, 0+2, 1+2, 2+2, . . .} and the atomic
+weight of Gv is either −1, 0, or (possibly) 1, depending on how Gv compares with . But
+Gv = {0 | 0, ∗, . . .} ≤{0 | 0, ∗} = ↓∗,
+which has atomic weight -1. So aw(Gv) = −1.
+If l(Gv) = 2, then in the preliminary atomic weight calculation of Gv,
+G0 = {0 −2 | −1 + 2, . . .}
+and aw(Gv) is either −1 or 0. We’ll conﬁrm Gv + 0, and hence aw(Gv) must be 0: Left
+can win moving ﬁrst on Gv + by moving to 0, and then moving Gv to 0 at Left’s next
+opportunity. (Right can’t move to Gv to 0 because l(Gv) = 2.)
+Henceforth, assume l(Gv) > 2.
+We know that Gv = {0 | (G −v)w, w adjacent to v}
+There is at least one vertex b that is the next vertex on a shortest blocked path from v and
+l((G −v)b) = l(Gv) −1. So, the preliminary atomic weight of Gv is,
+G0 = {0 −2 | l((G −v)b −2 + 2} = {−2 | l(Gv) −1)} ,
+and aw(Gv) is −1, 0, or l(Gv) −2, depending on how Gv compares with . The same
+argument as the l(Gv) = 2 case shows Left can win moving ﬁrst on Gv + . But Left can
+also win moving second by moving to 0 as soon as possible. Even given two consecutive
+moves on Gv, Right cannot move Gv to 0 since l(Gv) > 2.
+Theorem 4.2 Determining the atomic weight of a clobber graph, Gv, is NP-hard.
+Proof: We reduce from Hamiltonian path which is NP-complete [8, p. 199 (GT39)]. Let
+(H, v) be an instance of Hamiltonian path, where H is an undirected graph on n vertices,
+and v ∈V (H). For the clobber position, construct the following graph on 2n + 1 vertices
+which has H as a subgraph:
+v
+H
+Kn
+x
+
+--- Page 10 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+10
+The new graph, G, consists of a new vertex x, H, and a clique on n vertices, Kn. Every
+vertex of H is connected by an edge to x and to every vertex of Kn. So the new graph has
+n + |E(H)| + n2 +
+n
+2
+
+edges.
+The reader can conﬁrm that Gv has no blocked paths of length n and that any blocked
+path of length n + 1 in Gv must visit all vertices of H, and then end at x. Further, Gv has
+no split paths of length n. Hence, the atomic weight of Gv is n −1 if and only if H has a
+Hamiltonian path originating at v.
+Corollary 4.3 Determining who wins from a clobber position is NP-hard.
+Proof: Deﬁne Gv as in proof of the last Theorem and let
+C =
+n
+
+
+
+· · ·
+.
+If H has a Hamilton cycle, then Gv ≤C, for the right options from positions in C are a
+subset of the right options from positions in Gv. If H has no Hamilton path, then Gv C,
+since aw(Gv) ≥n and aw(C) = n −1. Hence, White wins moving second on Gv −C if and
+only if H has a Hamilton path.
+We leave open whether clobber is NP-hard when played on a grid graph.
+5
+For the Clobber Museum
+The following 3 × 7 rectangle is fascinating:
+G =
+In particular, a remarkably large number of paths which the white stone can take through
+the rectangle are canonical. Figure 3 includes G as one component, along with a second
+component, call it H, which is G’s negative. Furthermore, H has no dominated or reversible
+options; it is in canonical form.
+Since the sum of the two components has value zero, the second player wins. If Black
+moves ﬁrst (typically on H), White can ﬁnd his winning response on G by observing the
+
+--- Page 11 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+11
+R U U
+U L D
+D R U
+L
+R
+D
+D
+L
+L
+L
+R U R
+D
+R
+L
+D
+R
+L
+D
+R U U R R D R D R R U L
+U
+U
+R
+L
+U
+R
+R
+R
+R
+U
+L
+U
+U
+D D L U
+R D R D R
+L
+L
+L
+D
+L
+L
+U L
+L U
+Left
+Right
+Up
+Down
+Figure 3: A position of value zero. The markings provide guidance on how to win moving
+second.
+direction (Up, Down, Left, or Right) indicated on the stone which Black captured. Except
+when the 3 × 7 component is symmetric, all winning responses are unique.
+By Lemma 4.1, the atomic weight of the 3 × 7 component is 6; to achieve this, White’s
+moves are U-R-R-D-D-L-U.
+The position has another curious property. Augment H by lengthening or shortening any
+of its tendrils by one to get a new position H′. In that case, G + H′ is incomparable with 0.
+Black wins moving ﬁrst by making a bee-line towards the augmented tendril until either (1)
+White fails to follow the markings on the stones, or (2) Black gets near the end of a tendril.
+In either exceptional case, with practice the reader can conﬁrm that Black can win.
+Similarly, White can win moving ﬁrst by moving on the 3 × 7 component, following the
+letters on the marked stones along the augmented tendril to coax Black along.
+Lastly, lengthening any tendril by two white stones yields a position in which White wins
+moving ﬁrst or second.
+References
+[1] Elwyn R. Berlekamp, John H. Conway, and Richard K. Guy. Winning Ways. A K
+Peters, Ltd., Natick, Massachusetts, 2nd edition, 2001. First edition published in 1982
+by Academic Press.
+[2] John H. Conway. On Numbers and Games. A K Peters, Ltd., Natick, Massachusetts,
+
+--- Page 12 ---
+INTEGERS: ELECTRONIC JOURNAL OF COMBINATORIAL NUMBER THEORY 5(2) (2005), #A01
+12
+2nd edition, 2001. First edition published in 1976 by Academic Press.
+[3] E. D. Demaine, M. L. Demaine, and R. Fleischer. Solitaire clobber. Theoretical Com-
+puter Science, 313(3):325–338, February 2004.
+[4] Adam
+Duﬀy
+and
+Garrett
+Kolpin.
+By
+hook
+or
+by
+crook.
+http://www.gustavus.edu/~wolfe/games/clobber.
+[5] Michael D. Ernst.
+Playing konane mathematically: A combinatorial game-theoretic
+analysis. UMAP Journal, 16(2):95–121, Spring 1995.
+[6] R. Fleischer and R. J. Nowakowski, editors. Algorithmic Combinatorial Game Theory,
+Dagstuhl, Germany, February 2002, volume 313(3):417–425 of Theoretical Computer
+Science, February 2004.
+[7] Aviezri Fraenkel. Complexity, appeal and challenges of combinatorial games. Theoretical
+Computer Science, 313(3):393–415, February 2004.
+[8] Michael R. Garey and David S. Johnson. Computers and Intractability: A Guide to the
+Theory of NP-Completeness. W. H. Freeman and Company, 1979.
+[9] J. P. Grossman. Periodicity in one-dimensional peg duotaire. Theoretical Computer
+Science, 313(3):417–425, February 2004.
+[10] J. P. Grossman.
+Report on the ﬁrst international clobber tournament.
+Theoretical
+Computer Science, 313(3):533–537, February 2004.
+[11] Christopher Moore and David Eppstein. 1-dimensional peg solitaire and duotaire. In
+Richard Nowakowski, editor, More Games of No Chance, pages 341–350. Cambridge
+University Press, MSRI Publications 42, 2002.
+[12] Richard Nowakowski, editor. Games of No Chance: Combinatorial Games at MSRI,
+1994. Cambridge University Press, MSRI Publications 29, 1996.
+[13] Ivars Peterson. Getting clobbered. Science News, 161(17), April 27 2002.
+[14] B. Ravikumar. Peg-solitaire, string rewriting systems and ﬁnite automata. Proceedings
+of the 8th International Symposium on Algorithms and Computation, pages 233–242,
+1997.

@@ -4,16 +4,19 @@ bgg_id: 7027
 player_count: "2"
 play_time: "120-180 min"
 designer: "Dennis Shortridge"
-source_pdf: "guerilla-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_text: "guerilla-selection-63767739eb18.txt"
+source_url: "https://grognard.com/errata1/guer2.txt"
+source_type: "rules_reference_text"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Guerilla&game=guerilla)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/guerilla-rules.txt) · 🌐 [Rules reference (English)](https://grognard.com/errata1/guer2.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Guerilla&game=guerilla)
 <!-- verification:end -->
 
 

@@ -4,15 +4,19 @@ bgg_id: 39581
 player_count: "4-12"
 play_time: "30-45 min"
 designer: "Uncredited"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "citizen-x-selection-b8d25b06ea4f.pdf"
+source_url: "https://cx.endime.de/wp-content/uploads/2018/06/CitizenX_CommunityEdition_v060.pdf"
+source_type: "rulebook_pdf"
+source_language: "German"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary substitutes majority-vote elimination and zombie/citizen numerical parity for Citizen X’s actual mechanisms. Official Community Edition PDF pages3-4 require private two-person conversations, weapon-card exchange of information and restricted truthful identity guessing. Pages2/5 resolve victory through the prosecutor correctly naming every current zombie in a final tribunal (or the inspector’s prescribed rescue), with an incorrect accusation or failed succession giving zombies victory. Converted players continue on the zombie side; there is no routine daytime vote eliminating a suspect. The31October2008 H@LL9000 review independently describes these same core mechanisms in the older edition, supporting the mismatch across the recorded edition distinction. These errors replace the information system and win condition. Specific MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Citizen%20X&game=citizen-x)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/citizen-x-rules.txt) · 🌐 [Source PDF (German)](https://cx.endime.de/wp-content/uploads/2018/06/CitizenX_CommunityEdition_v060.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Citizen%20X&game=citizen-x)
 <!-- verification:end -->
 
 

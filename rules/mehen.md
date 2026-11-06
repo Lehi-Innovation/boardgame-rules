@@ -4,19 +4,22 @@ bgg_id: 4148
 player_count: "2-6"
 play_time: "30 min"
 designer: "Traditional (Ancient Egyptian)"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "mehen-selection-03d2e59dfa5b.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://c.tabletopia.com/games/hyena/rules/mehen-eng/en"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Mehen
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mehen&game=mehen)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/mehen-rules.txt) · 🌐 [Rules reference PDF (English)](https://c.tabletopia.com/games/hyena/rules/mehen-eng/en) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Mehen&game=mehen)
 <!-- verification:end -->
 
 ## Overview

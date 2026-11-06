@@ -4,16 +4,19 @@ bgg_id: 11378
 player_count: "2+"
 play_time: "60 min"
 designer: "Unknown"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "deep-space-navigator-selection-3932529efed0.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/tabletop-gaming-magazines/Space%20Gamer/Space%20Gamer%20%2367%20-%20Interdiction%20Station%20-%20SJG%20-%2002-84.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says ships can stop or reverse by applying opposite thrust over multiple turns. TonyWatson’s contemporary feature (SpaceGamer67 January/February1984 printed4/PDF6) explicitly states a minimum speed of one, maximum of eight, and that backwards movement is ruled out. It illustrates that a ship moving at speed one cannot apply four units of reverse maneuver to travel three units in the opposite direction. The summary therefore teaches illegal stopping and reversing under the covered original1983rules. The same page permits combat before or after movement at the player’s option, rather than the summary’s fixed post-navigation combat sequence. Specific MAJOR for these covered movement/timing rules only; the original changes sheet has unresolved shield ambiguity and later revised-edition equivalence remains unproven. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deep%20Space%20Navigator&game=deep-space-navigator)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/deep-space-navigator-rules.txt) · 🌐 [Rules reference PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/tabletop-gaming-magazines/Space%20Gamer/Space%20Gamer%20%2367%20-%20Interdiction%20Station%20-%20SJG%20-%2002-84.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deep%20Space%20Navigator&game=deep-space-navigator)
 <!-- verification:end -->
 
 

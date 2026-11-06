@@ -32,6 +32,7 @@ import os
 import re
 import sys
 from datetime import date
+from urllib.parse import quote, urlsplit
 
 import yaml
 
@@ -93,16 +94,50 @@ def compute_state(slug: str, audit_results: dict[str, dict], extracted_dir: str 
     return "unverified", ""
 
 
-def build_block(slug: str, title: str, state: str, reason: str, base_url: str | None = None) -> str:
+def build_block(slug: str, title: str, state: str, reason: str, base_url: str | None = None,
+                source_url: str = "", source_language: str = "English", source_type: str = "rulebook_pdf") -> str:
     """Build the visible status block for a rules page."""
     base = base_url or site_base_url()
     badge = BADGES[state]
     if state == "inaccurate":
-        badge = badge.format(reason=f": {reason}" if reason else "")
+        badge = badge.format(reason=f": {reason.rstrip().rstrip('.')}" if reason else "")
+    if source_type != "rulebook_pdf":
+        badge = badge.replace("against the rulebook.", "against its rules source.")
+        badge = badge.replace("the full rulebook text linked below", "the linked rules source")
 
     links = []
     if state != "unverifiable":
-        links.append(f"📄 [Full rulebook text]({extracted_text_url(slug, base)})")
+        text_label = {
+            "third_party_rules_transcription": "Rules source text",
+            "third_party_rules_translation": "Translated rules text",
+            "learn_to_play": "Learn-to-play text",
+            "research_paper": "Rules reference text",
+            "author_rules_html": "Author's rules text",
+            "author_rules_text": "Author's rules text",
+            "rules_reference_html": "Rules reference text",
+            "rules_reference_text": "Rules reference text",
+            "rules_reference_pdf": "Rules reference text",
+            "rules_reference_images": "Rules reference text",
+            "rulebook_images": "Rulebook text",
+            "rulebook_archive": "Rulebook text",
+        }.get(source_type, "Full rulebook text")
+        links.append(f"📄 [{text_label}]({extracted_text_url(slug, base)})")
+    parsed = urlsplit(source_url)
+    if parsed.scheme in {"http", "https"} and parsed.netloc:
+        label = {
+            "third_party_rules_transcription": "Rules transcription",
+            "research_paper": "Research paper",
+            "author_rules_html": "Author's rules",
+            "author_rules_text": "Author's rules",
+            "rules_reference_html": "Rules reference",
+            "rules_reference_text": "Rules reference",
+            "rules_reference_pdf": "Rules reference PDF",
+            "rules_reference_images": "Rules reference images",
+            "rulebook_images": "Rulebook images",
+            "rulebook_archive": "Rulebook archive",
+        }.get(source_type, "Source PDF")
+        safe_url = quote(source_url, safe=":/?&=%#@+;,._~-")
+        links.append(f"🌐 [{label} ({source_language})]({safe_url})")
     links.append(f"🚩 [Report a rules error]({report_issue_url(title, slug)})")
 
     return (
@@ -165,7 +200,10 @@ def stamp_file(
 
     state, reason = compute_state(slug, audit_results, extracted_dir)
     new_fm, _ = _stamp_frontmatter(fm_text, state, stamp_date or date.today().isoformat())
-    block = build_block(slug, title, state, reason, base_url)
+    block = build_block(slug, title, state, reason, base_url,
+                        source_url=str(fm.get("source_url") or ""),
+                        source_language=str(fm.get("source_language") or "English"),
+                        source_type=str(fm.get("source_type") or "rulebook_pdf"))
 
     # Replace an existing managed block, else insert after the H1 (or at top).
     block_re = re.compile(

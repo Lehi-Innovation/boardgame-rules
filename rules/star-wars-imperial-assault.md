@@ -4,19 +4,22 @@ bgg_id: 164153
 player_count: "2-5"
 play_time: "60-120 min"
 designer: "Justin Kemppainen, Corey Konieczka, Jonathan Ying"
-source_pdf: "star-wars-imperial-assault-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "star-wars-imperial-assault-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/53/e0/6f-star-wars-imperial-assault-rulebook.pdf"
+source_type: "learn_to_play"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Star Wars: Imperial Assault
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Star%20Wars%3A%20Imperial%20Assault&game=star-wars-imperial-assault)
+> 📄 [Learn-to-play text](https://lehi-innovation.github.io/boardgame-rules/extracted/star-wars-imperial-assault-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/53/e0/6f-star-wars-imperial-assault-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Star%20Wars%3A%20Imperial%20Assault&game=star-wars-imperial-assault)
 <!-- verification:end -->
 
 ## Overview

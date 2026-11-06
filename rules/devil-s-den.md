@@ -4,16 +4,19 @@ bgg_id: 5482
 player_count: "1-2"
 play_time: "120-240 min"
 designer: "David G. Martin, Leonard Millman"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "devil-s-den-selection-d7832e557d7c.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://zuntzu.com/gameboxes/OSG/DevilDenV2.zip"
+source_type: "rulebook_archive"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Devil%27s%20Den&game=devil-s-den)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/devil-s-den-rules.txt) · 🌐 [Rulebook archive (English)](https://zuntzu.com/gameboxes/OSG/DevilDenV2.zip) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Devil%27s%20Den&game=devil-s-den)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 153571
 player_count: "2-4"
 play_time: "15-20 min"
 designer: "Uncredited"
-source_pdf: "bug-race-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "bug-race-selection-caaf5c19bf14.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://trehgrannik.com/upload/Gonki_zhukov_pravila_rus.pdf"
+source_type: "rulebook_pdf"
+source_language: "Russian"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Rightgames Bug Race rules require drawing two movement cards, passing one left/right in alternating rounds, then playing both to move specifically marked leg tokens subject to adjacency and no-jumping restrictions. The summary omits the entire movement-card deck and draw/pass/play procedure and instead describes a physical dexterity race through nine levels. Original nine refers to board parts, not nine levels; body movement is expressly permitted whenever leg positions allow, including between legs on the same card, whereas summary prohibits sliding the body. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bug%20Race&game=bug-race)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/bug-race-rules.txt) · 🌐 [Source PDF (Russian)](https://trehgrannik.com/upload/Gonki_zhukov_pravila_rus.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bug%20Race&game=bug-race)
 <!-- verification:end -->
 
 

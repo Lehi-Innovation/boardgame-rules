@@ -4,16 +4,19 @@ bgg_id: 35722
 player_count: "2-4"
 play_time: "20 min"
 designer: "Uncredited"
-source_pdf: "leap-frog-rules.pdf"
-extracted_date: "2026-03-21"
+source_pdf: "leap-frog-selection-84fb28eeb477.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "http://www.cyningstan.com/data-download/104/leapfrog-leaflet"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Damian Walker’s matching historical Leapfrog reference (Leaflet 30, printed pages 2–3, rules 1–10) starts with a completely filled board, 15–18 squares per side, of shared pieces. Every player first removes one piece; later turns consist of capture jumps. The summary instead gives each player four privately controlled frogs, ordinary non-capturing steps and dice or spinner turns. Both versions in the reference end when no jumps remain; the player with the most captured pieces or highest captured value wins. The summary substitutes eliminating an opponent or racing to the opposite edge. These are fundamental setup, turn and victory contradictions. The comparison covers the traditional pre-1898 game and Murray’s 1898 version. Specific MAJOR findings only; no full summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Leap%20Frog&game=leap-frog)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/leap-frog-rules.txt) · 🌐 [Rules reference PDF (English)](http://www.cyningstan.com/data-download/104/leapfrog-leaflet) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Leap%20Frog&game=leap-frog)
 <!-- verification:end -->
 
 

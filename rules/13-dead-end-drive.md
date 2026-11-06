@@ -4,16 +4,19 @@ bgg_id: 1899
 player_count: "2-4"
 play_time: "45 min"
 designer: "Unknown"
-source_pdf: "13-dead-end-drive-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "13-dead-end-drive-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
+source_url: "https://cdn.1j1ju.com/medias/72/47/ba-13-dead-end-drive-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
 verification_date: "2026-11-04"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2013%20Dead%20End%20Drive&game=13-dead-end-drive)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/13-dead-end-drive-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/72/47/ba-13-dead-end-drive-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%2013%20Dead%20End%20Drive&game=13-dead-end-drive)
 <!-- verification:end -->
 
 

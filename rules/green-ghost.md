@@ -3,16 +3,19 @@ title: "Green Ghost"
 bgg_id: 4460
 player_count: "2-4"
 play_time: "30 min"
-source_pdf: "green-ghost-rules.pdf"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_html: "green-ghost-recovery.html"
+source_url: "https://rulespal.com/green-ghost/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Green%20Ghost&game=green-ghost)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/green-ghost-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/green-ghost/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Green%20Ghost&game=green-ghost)
 <!-- verification:end -->
 
 

@@ -4,15 +4,19 @@ bgg_id: 195340
 player_count: "2-4"
 play_time: "15-30 min"
 designer: "Uncredited"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "clomping-creatures-selection-5fa20b4f3f78.pdf"
+source_url: "https://regle.escaleajeux.fr/animy_rg.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Matching HABA Animal Mystère rules describe guessing animal footsteps traced on another player's back, using riddle/path cards and a snake marker. Summary instead invents player-controlled creature movement, movement dice/cards and board encounters. It omits the actual tactile guessing turn and card-award/end rules. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Clomping%20Creatures&game=clomping-creatures)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/clomping-creatures-rules.txt) · 🌐 [Source PDF (French)](https://regle.escaleajeux.fr/animy_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Clomping%20Creatures&game=clomping-creatures)
 <!-- verification:end -->
 
 

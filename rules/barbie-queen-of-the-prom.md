@@ -3,16 +3,19 @@ title: "Barbie Queen of the Prom"
 bgg_id: 9633
 player_count: "2-4"
 play_time: "30-60 min"
-source_pdf: "barbie-queen-of-the-prom-rules.pdf"
-extracted_date: "2026-03-18"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_html: "barbie-queen-of-the-prom-recovery.html"
+source_url: "https://rulespal.com/barbie-queen-of-the-prom-game/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Barbie%20Queen%20of%20the%20Prom&game=barbie-queen-of-the-prom)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/barbie-queen-of-the-prom-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/barbie-queen-of-the-prom-game/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Barbie%20Queen%20of%20the%20Prom&game=barbie-queen-of-the-prom)
 <!-- verification:end -->
 
 

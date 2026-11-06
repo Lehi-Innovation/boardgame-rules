@@ -4,19 +4,22 @@ bgg_id: 76
 player_count: "2-6"
 play_time: "120-180 min"
 designer: "G.W. \"Jerry\" D'Arcey"
-source_pdf: ""
-extracted_date: "2026-03-18"
+source_pdf: "air-baron-selection-0bbd20c4f781.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.hall9000.de/html/ksr/pdf/air_baron"
+source_type: "rules_reference_pdf"
+source_language: "German"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 
 # Air Baron
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary tells a player to purchase/invest before collecting income and defines market share as the percentage of all spokes owned. Köther’s detailed reference instead orders the turn as optional fare-war declaration, two profit-marker draws and then one action. The original designer Evan Davis (The General30-6, printed/PDF23) independently explains two draws and market share awarded by hub dominance/control, with full control worth double dominance. The original board prints different weighted values for different hubs. Buying before the draws changes available cash and profit eligibility; replacing weighted hub values with a spoke percentage changes the central victory calculation. Specific MAJOR for covered turn order/market share only. Full manual, setup and player-count-specific targets remain missing; no full audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Air%20Baron&game=air-baron)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/air-baron-rules.txt) · 🌐 [Rules reference PDF (German)](https://www.hall9000.de/html/ksr/pdf/air_baron) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Air%20Baron&game=air-baron)
 <!-- verification:end -->
 
 ## Overview

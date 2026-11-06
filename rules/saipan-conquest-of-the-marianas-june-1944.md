@@ -4,19 +4,22 @@ bgg_id: 8743
 player_count: "2"
 play_time: "120-180 min"
 designer: "Jim Dunnigan"
-source_pdf: "saipan-conquest-of-the-marianas-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "saipan-conquest-of-the-marianas-june-1944-recovery.html"
+source_url: "https://rulespal.com/saipan/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Saipan: Conquest of the Marianas, June 1944
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Saipan%3A%20Conquest%20of%20the%20Marianas%2C%20June%201944&game=saipan-conquest-of-the-marianas-june-1944)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/saipan-conquest-of-the-marianas-june-1944-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/saipan/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Saipan%3A%20Conquest%20of%20the%20Marianas%2C%20June%201944&game=saipan-conquest-of-the-marianas-june-1944)
 <!-- verification:end -->
 
 ## Overview

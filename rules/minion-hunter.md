@@ -4,19 +4,22 @@ bgg_id: 679
 player_count: "2-6"
 play_time: "60 min"
 designer: "Lester W. Smith"
-source_pdf: ""
-extracted_date: "2026-03-21"
+source_pdf: "minion-hunter-selection-28dc84d9ee13.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-21"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/60396-sample.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 
 # Minion Hunter
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives every turn four universal phases: Career, Equipment, Plot advances, then Action (move/investigate/combat). The original public sample, printed3/PDF4, instead says a Game Turn consists of one Player Turn followed by a Plot Card Turn. What the player does depends on the pawn’s location at the beginning of the turn; after movement and resulting effects the Player Turn ends. Printed5/PDF6 then advances the Plot Card immediately after that completed Player Turn. The summary both invents universal career/equipment phases and moves the plot advance ahead of the action it should follow, changing what threats remain available to encounter. Specific MAJOR against the original sample; full later rules and victory remain unavailable. No full audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Minion%20Hunter&game=minion-hunter)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/minion-hunter-rules.txt) · 🌐 [Rules reference PDF (English)](https://d1vzi28wh99zvq.cloudfront.net/pdf_previews/60396-sample.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Minion%20Hunter&game=minion-hunter)
 <!-- verification:end -->
 
 ## Overview

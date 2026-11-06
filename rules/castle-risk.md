@@ -1,19 +1,22 @@
 ---
 title: Castle Risk
-bgg_id: 3834
+bgg_id: 2557
 player_count: 2-6
 play_time: 90-120 minutes
-designer: Uncredited (Parker Brothers)
-source_pdf: castle-risk-rules.pdf
-extracted_date: 2026-03-18
+designer: "Charles Phillips"
+extracted_date: "2026-11-06"
 summarized_date: 2026-03-18
-verification: "unverifiable"
-verification_date: "2026-11-04"
+source_html: "castle-risk-recovery.html"
+source_url: "https://rulespal.com/castle-risk/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20Risk&game=castle-risk)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/castle-risk-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/castle-risk/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Castle%20Risk&game=castle-risk)
 <!-- verification:end -->
 
 

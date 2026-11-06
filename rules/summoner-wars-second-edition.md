@@ -1,22 +1,25 @@
 ---
 title: "Summoner Wars (Second Edition)"
-bgg_id: 58281
+bgg_id: 332800
 player_count: "2"
 play_time: "40-60 min"
 designer: "Colby Dauch"
-source_pdf: "summoner-wars-second-edition-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "summoner-wars-second-edition-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/d7/25/ba-summoner-wars-second-edition-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 
 # Summoner Wars (Second Edition)
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Summoner%20Wars%20%28Second%20Edition%29&game=summoner-wars-second-edition)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/summoner-wars-second-edition-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/d7/25/ba-summoner-wars-second-edition-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Summoner%20Wars%20%28Second%20Edition%29&game=summoner-wars-second-edition)
 <!-- verification:end -->
 
 ## Overview

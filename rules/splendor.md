@@ -8,14 +8,14 @@ source_pdf: "splendor-rules.pdf"
 extracted_date: "2026-03-03"
 summarized_date: "2026-03-03"
 rulebook_version: "1st Edition (2014)"
-verification: "minor_issues"
-verification_date: "2026-08-08"
+verification: "verified"
+verification_date: "2026-11-04"
 ---
 
 # Splendor
 
 <!-- verification:begin -->
-> ✅ **Verified (minor gaps)** — fact-checked against the rulebook text; only small omissions were found, nothing that changes how the game is played or scored.
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
 >
 > 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/splendor-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Splendor&game=splendor)
 <!-- verification:end -->
@@ -39,16 +39,16 @@ Players take on the role of Renaissance merchants collecting gem tokens to purch
 
 ### Development Cards (90 total)
 
-| Level | Cards | General Characteristics |
-|---|---|---|
-| Level 1 | 40 cards | Cheapest; mostly provide bonuses with few or no prestige points |
-| Level 2 | 30 cards | Mid-cost; moderate prestige points |
-| Level 3 | 20 cards | Most expensive; highest prestige point values |
+| Level | Cards |
+|---|---|
+| Level 1 | 40 cards |
+| Level 2 | 30 cards |
+| Level 3 | 20 cards |
 
 Each development card shows:
-- A **gem bonus** (top-left corner) -- a permanent discount of one gem of that color for future purchases
-- A **prestige point value** (top-left corner, may be 0)
-- A **cost** (bottom) -- the combination of gem tokens required to purchase it
+- A **gem bonus** -- a permanent discount of one gem of that color for future purchases
+- A **prestige point value** (may be 0)
+- A **cost** -- the combination of gem tokens required to purchase it
 
 ### Noble Tiles (10 total)
 
@@ -82,10 +82,10 @@ The youngest player goes first. Play proceeds clockwise.
 
 On their turn, a player **must** perform exactly **one** of the following four actions:
 
-1. Take 3 gem tokens of different colors
-2. Take 2 gem tokens of the same color
-3. Reserve 1 development card and take 1 gold token
-4. Purchase 1 development card
+1. Take 3 gem tokens of different colors (no gold).
+2. Take 2 gem tokens of the same color (no gold), only if that color has **at least 4 tokens in the supply before taking them**.
+3. Reserve 1 development card (only if you hold fewer than 3 reserved cards) and take 1 gold token **if available**; an empty gold pile does not prevent reserving.
+4. Purchase 1 face-up development card from the market or 1 card you reserved on a previous turn.
 
 After performing their action, the player checks the **10-token hand limit** and then checks for a **noble visit**. Play then passes clockwise.
 
@@ -93,7 +93,7 @@ After performing their action, the player checks the **10-token hand limit** and
 
 ### 1. Take 3 Gem Tokens of Different Colors
 
-Take 1 gem token from each of 3 different color piles. You may not take gold tokens with this action. If fewer than 3 colors are available, you may only take as many different colors as remain.
+Take 1 gem token from each of 3 different color piles. You may not take gold tokens with this action.
 
 ### 2. Take 2 Gem Tokens of the Same Color
 
@@ -128,7 +128,9 @@ Place purchased development cards face-up in front of you, sorted by bonus color
 
 ### Token Hand Limit
 
-A player **may never have more than 10 tokens** (including gold) at the end of their turn. If taking tokens causes a player to exceed 10, they must immediately return tokens of their choice to the supply until they have exactly 10. A player may return tokens they just took.
+All tokens a player owns **must be visible to all players at all times**.
+
+A player **may never have more than 10 tokens** (including gold) at the end of their turn. A player may temporarily exceed 10 during their action, but must return tokens of their choice to the supply until they have exactly 10 by the end of their turn. A player may return some or all of the tokens they just took, including gold obtained by reserving.
 
 ### Noble Visits
 
@@ -140,6 +142,7 @@ At the **end of their turn**, a player checks whether they qualify for a noble v
 - If a player qualifies for **multiple nobles** on the same turn, they **choose one** to receive. The other noble(s) remain available for future turns.
 - A player can receive **at most one noble per turn**.
 - Each noble tile is worth **3 prestige points**.
+- Place the received noble tile **face-up in front of you**.
 - Noble visits require **bonuses only** (from cards), not gem tokens.
 
 ## Scoring / Victory Conditions
@@ -148,12 +151,14 @@ At the **end of their turn**, a player checks whether they qualify for a noble v
 
 | Source | Points |
 |---|---|
-| Development cards | Varies (0-5 per card, printed on each card) |
+| Development cards | Printed on each purchased card |
 | Noble tiles | 3 each |
 
 ### End-Game Trigger
 
 When any player reaches **15 or more prestige points**, the current round is completed so that every player has played the **same number of turns**.
+
+Exhausting the development decks or the face-up market **does not end the game**. Continue with the remaining legal actions, including purchasing reserved cards, until the normal prestige-point end condition.
 
 ### Determining the Winner
 
@@ -167,7 +172,6 @@ In case of a tie, the player who has purchased the **fewest development cards** 
 
 ### Token Supply Depletion
 - If a gem color's supply is empty, no tokens of that color can be taken.
-- If fewer than 3 different colors are available in the supply, a player taking 3 different tokens can only take as many different colors as exist.
 - The 2-tokens-of-same-color action requires **at least 4 tokens** of that color in the supply. With 3 or fewer, this action is unavailable for that color.
 
 ### Gold Token Specifics
@@ -180,7 +184,7 @@ In case of a tie, the player who has purchased the **fewest development cards** 
 ### Reserved Cards
 - Maximum of 3 reserved cards in hand at any time. If a player already has 3, they cannot reserve another.
 - Reserved cards are hidden from other players (when taken from a face-up position, the card itself is known but once in hand it is private).
-- Cards reserved from the top of a deck are **never shown** to other players.
+- When reserving the top card of a deck, take it **without showing it** to other players.
 - The only way to remove a reserved card from your hand is to **purchase it**.
 
 ### Card Replacement
@@ -231,7 +235,7 @@ In case of a tie, the player who has purchased the **fewest development cards** 
 | Gold tokens (all player counts) | 5 |
 | Noble tiles revealed | Players + 1 |
 | Development cards | 40 Level 1, 30 Level 2, 20 Level 3 (90 total) |
-| Noble tiles in game | 10 total |
+| Noble tiles in box | 10 total |
 | Same-color token threshold | Must be 4+ in supply to take 2 |
 
 ### Turn Checklist

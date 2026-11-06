@@ -4,19 +4,22 @@ bgg_id: 24416
 player_count: "3-8"
 play_time: "30 min"
 designer: "Carlo A. Rossi"
-source_pdf: "santy-anno-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "santy-anno-recovery.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cdn.1j1ju.com/medias/0f/52/c6-santy-anno-rulebook.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-04"
 ---
 
 # Santy Anno
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against the rulebook. Double-check critical rules against the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Santy%20Anno&game=santy-anno)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/santy-anno-rules.txt) · 🌐 [Source PDF (English)](https://cdn.1j1ju.com/medias/0f/52/c6-santy-anno-rulebook.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Santy%20Anno&game=santy-anno)
 <!-- verification:end -->
 
 ## Overview

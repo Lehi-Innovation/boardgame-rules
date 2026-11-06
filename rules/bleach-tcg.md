@@ -4,16 +4,19 @@ bgg_id: 28838
 player_count: "2"
 play_time: "30-60 min"
 designer: "Score Entertainment"
-source_pdf: "bleach-tcg-rules.pdf"
-extracted_date: "2026-03-18"
+source_pdf: "bleach-tcg-selection-22bbae76c23a.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-18"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "http://karcianki.pl/files/blch/Bleach.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Score core rulebook gives five-card starting hands with one mulligan, requires a character to be in play at the start of the turn to deplete for attacks, and permits multiple battlegrounds subject to uniqueness. Summary instead gives six-card hands, permits same-turn attacks and restricts battlegrounds to one replacing the old one. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bleach%20TCG&game=bleach-tcg)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/bleach-tcg-rules.txt) · 🌐 [Source PDF (English)](http://karcianki.pl/files/blch/Bleach.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Bleach%20TCG&game=bleach-tcg)
 <!-- verification:end -->
 
 

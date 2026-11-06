@@ -4,15 +4,19 @@ bgg_id: 1428
 player_count: "3-6"
 play_time: "45 min"
 designer: "Uncredited"
-extracted_date: "2026-03-20"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-20"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_pdf: "image-selection-b5b0518d21c9.pdf"
+source_url: "https://www.spellenlab.be/media/files/a2fd535bd8dfaf02fee755dd7f3ff047665ff4c6.pdf"
+source_type: "rulebook_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original 3M Image rules pages 2–3 permit playing up to three hand cards plus public board cards and allow any player to extend, replace or close any shared image. Summary gives one card, restricts extensions to images the player started and invents a private clue-giver/guesser scoring scheme. Source awards the closer the score printed under the letter-card space; it does not award a separate builder/guesser bonus for fewer clues. Original scoring page visually checked. Specific source-backed findings only; no full audit performed. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Image&game=image)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/image-rules.txt) · 🌐 [Source PDF (English)](https://www.spellenlab.be/media/files/a2fd535bd8dfaf02fee755dd7f3ff047665ff4c6.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Image&game=image)
 <!-- verification:end -->
 
 

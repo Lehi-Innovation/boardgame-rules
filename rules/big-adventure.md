@@ -4,16 +4,19 @@ bgg_id: 307534
 player_count: "2-4"
 play_time: "30-60 min"
 designer: "Unknown"
-source_pdf: "big-adventure-rules.pdf"
-extracted_date: "2026-03-19"
+source_pdf: "big-adventure-selection-3a2fb48994e0.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://gaga.ru/gaga/files/pdf/rules/ru/3037.pdf"
+source_type: "rules_reference_pdf"
+source_language: "Russian"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary says the first player to reach the final space wins. The original current Russian publisher reference instead requires a compulsory stop on the gum space, makes that player immovable there, and tells them to roll on their turns to try opening the finish-safe. The original box back explicitly says winning requires reaching the gum and opening that safe. Arrival alone therefore does not win; removing the separate safe attempt changes the ending and other players’ opportunities. Specific MAJOR for this covered current publisher ending only. Exact successful-roll target and other board rules remain unavailable; no first-edition/full-summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Big%20Adventure&game=big-adventure)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/big-adventure-rules.txt) · 🌐 [Rules reference PDF (Russian)](https://gaga.ru/gaga/files/pdf/rules/ru/3037.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Big%20Adventure&game=big-adventure)
 <!-- verification:end -->
 
 

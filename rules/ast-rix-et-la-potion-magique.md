@@ -4,16 +4,19 @@ bgg_id: 61798
 player_count: "2-6"
 play_time: "30-45 min"
 designer: "uncredited"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "ast-rix-et-la-potion-magique-selection-5e7a213d9636.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://regle.escaleajeux.fr/ast_p_rg.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary replaces the original route-card game with collecting ingredients for a personal cauldron, and moves one space each turn. The complete printed Jeux Noël rules instead deal seven ELEMENT/HANDICAP cards, require legally discarding the entire hand, visiting both circular spaces for a sickle and potion gourd, and returning to the village with both items and no cards. Normal movement uses a die; rolling1permits any distance from1to6, and movement may go forward, backward or both ways. These are different core objectives and movement procedures. Printed publisher credits and exact seven-card mechanics confirm BGG61798despite the archive file previously being misclassified as Nathan. Specific MAJOR for these contradictions, not a full summary audit, PASS, ID change or body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ast%C3%A9rix%20et%20la%20Potion%20magique&game=ast-rix-et-la-potion-magique)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/ast-rix-et-la-potion-magique-rules.txt) · 🌐 [Source PDF (French)](https://regle.escaleajeux.fr/ast_p_rg.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Ast%C3%A9rix%20et%20la%20Potion%20magique&game=ast-rix-et-la-potion-magique)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 123665
 player_count: "4-10"
 play_time: "30-45 min"
 designer: "Unknown"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "delir-phone-selection-c3d74fcbb76f.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.merouxmodelkit.fr/Ludo_regles/440.pdf"
+source_type: "rulebook_pdf"
+source_language: "French"
+verification: "inaccurate"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: Original Delirphone2002 Ravensburger leaflet p4 awards the caller TWO Chat Points per unguessed pronounced secret word with2or3opponents, or THREE with4plus opponents; summary awards only one per word. Original p5 also requires each wrong guess to pay one Chat Point TO THE CALLER; summary omits this transfer entirely. Three special colored dice choose words, rather than summaries colored chips. These changes alter the scoring and guessing incentives. Original single-opponent caller payout gap preserved, not adjudicated. Specific original-source MAJOR findings only; no full audit or summary-body repair. Until corrections pass a new audit, prefer the full rulebook text linked below.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Delir%27phone&game=delir-phone)
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/delir-phone-rules.txt) · 🌐 [Source PDF (French)](https://www.merouxmodelkit.fr/Ludo_regles/440.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Delir%27phone&game=delir-phone)
 <!-- verification:end -->
 
 

@@ -4,16 +4,19 @@ bgg_id: 235213
 player_count: "2"
 play_time: "60-120 min"
 designer: "Uncredited"
-source_pdf: "galacta-star-commandos-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "galacta-star-commandos-selection-62b63af1e300.html"
+source_url: "https://onemoregamingproject.blogspot.com/2015/09/galacta-another-trip-down-memory-lane.html"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives each player movement, shooting, close-combat and morale phases and does not restrict moved figures from shooting. The original1980HeritageHowToPlay front explicitly defines four phases for the entire turn: A moves, A shoots, B moves, B shoots. Only figures that did not move in their movement phase may shoot; close combat is allowed even after movement and saving throws are made within that attack step. Replacing this with four phases per player and allowing the implied move-then-fire sequence changes core activation and attack eligibility. Specific MAJOR for this completely visible base-turn procedure only. Reverse-side combat exceptions, full roster/scenarios and optional rules remain missing; no full summary audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Galacta%3A%20Star%20Commandos&game=galacta-star-commandos)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/galacta-star-commandos-rules.txt) · 🌐 [Rules reference (English)](https://onemoregamingproject.blogspot.com/2015/09/galacta-another-trip-down-memory-lane.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Galacta%3A%20Star%20Commandos&game=galacta-star-commandos)
 <!-- verification:end -->
 
 

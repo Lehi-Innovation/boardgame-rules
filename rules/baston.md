@@ -4,16 +4,19 @@ bgg_id: 4537
 player_count: "2-4"
 play_time: "45-60 min"
 designer: "uncredited"
-source_pdf: ""
-extracted_date: "2026-03-19"
+source_pdf: "baston-selection-92e64efa6fc7.pdf"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://www.ludism.fr/regles_files/fr/Baston.zip"
+source_type: "rulebook_archive"
+source_language: "French"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Baston&game=baston)
+> 📄 [Rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/baston-rules.txt) · 🌐 [Rulebook archive (French)](https://www.ludism.fr/regles_files/fr/Baston.zip) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Baston&game=baston)
 <!-- verification:end -->
 
 

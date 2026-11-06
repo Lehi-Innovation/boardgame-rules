@@ -4,16 +4,19 @@ bgg_id: 19859
 player_count: "2-4"
 play_time: "20-45 min"
 designer: "Uncredited"
-source_pdf: "breakscore-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "breakscore-selection-a711c4aff5ce.html"
+source_url: "https://web.archive.org/web/20090126043301id_/http://breakscore.com:80/bs_faq.html"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary’s turn sequence says to roll, move the counter, resolve its square and then update the running breakscore; its Move action says to move the indicated dice number. The original publisher FAQ instead explicitly says counters move only when the player decides to sit. Players set aside selected scoring dice, reroll all remaining dice, accumulate the turn score and risk losing the whole score on zouch; banking that score then determines movement. The publisher guide and base Game Terms independently confirm this sequence. Immediate movement on each roll replaces the central push-your-luck/banking procedure and changes when board effects occur. Specific MAJOR for this covered turn/movement rule only. Source version/card/zap conflicts and missing full scoring/void/setup rules remain explicit; no full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Breakscore&game=breakscore)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/breakscore-rules.txt) · 🌐 [Rules reference (English)](https://web.archive.org/web/20090126043301id_/http://breakscore.com:80/bs_faq.html) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Breakscore&game=breakscore)
 <!-- verification:end -->
 
 

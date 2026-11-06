@@ -4,16 +4,19 @@ bgg_id: 343387
 player_count: "1-6"
 play_time: "60 min"
 designer: "Martino Chiacchiera, Silvano Sorrentino"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "deckscape-dracula-s-castle-selection-777887757a22.html"
+source_url: "https://www.infranken.de/ratgeber/familie/spiele-test-deckscape-draculas-schloss-mit-karten-auf-kooperativer-vampirjagd-art-5735784"
+source_type: "rules_reference_html"
+source_language: "German"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deckscape%3A%20Dracula%27s%20Castle&game=deckscape-dracula-s-castle)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/deckscape-dracula-s-castle-rules.txt) · 🌐 [Rules reference (German)](https://www.infranken.de/ratgeber/familie/spiele-test-deckscape-draculas-schloss-mit-karten-auf-kooperativer-vampirjagd-art-5735784) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Deckscape%3A%20Dracula%27s%20Castle&game=deckscape-dracula-s-castle)
 <!-- verification:end -->
 
 

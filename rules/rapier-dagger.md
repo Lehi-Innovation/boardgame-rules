@@ -4,19 +4,22 @@ bgg_id: 7770
 player_count: "2"
 play_time: "30-60 min"
 designer: "Unknown"
-source_pdf: "rapier-dagger-rules.pdf"
-extracted_date: "2026-03-22"
+source_pdf: "rapier-dagger-selection-1105f76cf867.jpg"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_url: "https://cf.geekdo-images.com/aGNmHgSw6sdqVqmn2FqaJA__original/img/p5l4wnYtZ5DmGp77k2qOGsJP3V0=/0x0/filters:format(jpeg)/pic104080.jpg"
+source_type: "rules_reference_images"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-06"
 ---
 
 # Rapier & Dagger
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rapier%20%26%20Dagger&game=rapier-dagger)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/rapier-dagger-rules.txt) · 🌐 [Rules reference images (English)](https://cf.geekdo-images.com/aGNmHgSw6sdqVqmn2FqaJA__original/img/p5l4wnYtZ5DmGp77k2qOGsJP3V0=/0x0/filters:format%28jpeg%29/pic104080.jpg) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Rapier%20%26%20Dagger&game=rapier-dagger)
 <!-- verification:end -->
 
 ## Overview

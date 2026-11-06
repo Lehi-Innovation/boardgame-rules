@@ -4,16 +4,19 @@ bgg_id: 194285
 player_count: "4+"
 play_time: "30 min"
 designer: "Unknown"
-source_pdf: ""
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "dance-arena-200-selection-d35ea8c39e31.html"
+source_url: "https://mj9981168.pixnet.net/blog/posts/8226070276"
+source_type: "rules_reference_html"
+source_language: "Traditional Chinese (third-party rules account)"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dance%20Arena%20200&game=dance-arena-200)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/dance-arena-200-rules.txt) · 🌐 [Rules reference (Traditional Chinese (third-party rules account))](https://mj9981168.pixnet.net/blog/posts/8226070276) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Dance%20Arena%20200&game=dance-arena-200)
 <!-- verification:end -->
 
 

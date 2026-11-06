@@ -4,16 +4,19 @@ bgg_id: 4247
 player_count: "1-2"
 play_time: "60-120 min"
 designer: "Uncredited"
-source_pdf: "boarding-party-rules.pdf"
-extracted_date: "2026-03-19"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-19"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "boarding-party-selection-4289d1d35dfb.html"
+source_url: "https://centurionsreview.com/boarding-party/boarding-party-review/"
+source_type: "rules_reference_html"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-06"
 ---
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary advertises1–2players but gives only the goal of reaching and neutralizing the command center before a timer. DavidLent’s detailed reference distinguishes the two-player scenario: players compete for VPs from controlling the computer at game end and destroying enemy units, and it explicitly says not to destroy the computer. The robot player may directly control three robots each turn while the rest move randomly. Applying the solo computer-destruction goal to that competitive scenario changes its objective. Specific MAJOR for covered two-player rules only; full original weapon/movement tables and exact VP/time values remain missing. No full audit or summary body repair. Until corrections pass a new audit, prefer the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Boarding%20Party&game=boarding-party)
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/boarding-party-rules.txt) · 🌐 [Rules reference (English)](https://centurionsreview.com/boarding-party/boarding-party-review/) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Boarding%20Party&game=boarding-party)
 <!-- verification:end -->
 
 

@@ -4,19 +4,22 @@ bgg_id: 256680
 player_count: "1-4"
 play_time: "100-120 min"
 designer: "Tim Burrell-Saward, Noah Cohen, Brian Neff, Rob Daviau, Justin D. Jacobson, Isaac Childres"
-source_pdf: "return-to-dark-tower-rules.pdf"
-extracted_date: "2026-03-22"
+extracted_date: "2026-11-06"
 summarized_date: "2026-03-22"
-verification: "unverifiable"
-verification_date: "2026-06-12"
+source_html: "return-to-dark-tower-recovery.html"
+source_url: "https://rulespal.com/return-to-dark-tower/rulebook"
+source_type: "third_party_rules_transcription"
+source_language: "English"
+verification: "unverified"
+verification_date: "2026-11-05"
 ---
 
 # Return to Dark Tower
 
 <!-- verification:begin -->
-> ⚠️ **Unverifiable** — no source rulebook text is available to check this AI-generated summary against. Treat all details with caution.
+> ⚠️ **Unverified** — this AI-generated summary has not yet been fact-checked against its rules source. Double-check critical rules against the linked rules source.
 >
-> 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Return%20to%20Dark%20Tower&game=return-to-dark-tower)
+> 📄 [Rules source text](https://lehi-innovation.github.io/boardgame-rules/extracted/return-to-dark-tower-rules.txt) · 🌐 [Rules transcription (English)](https://rulespal.com/return-to-dark-tower/rulebook) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Return%20to%20Dark%20Tower&game=return-to-dark-tower)
 <!-- verification:end -->
 
 ## Overview
