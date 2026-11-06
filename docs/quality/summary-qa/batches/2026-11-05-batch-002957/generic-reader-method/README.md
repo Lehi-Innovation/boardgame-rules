@@ -1,0 +1,5 @@
+# Generic exact-source excerpt method
+
+This rule-agnostic helper computes complete Markdown table rows, local headers, paragraphs and list items from supplied original text, using original Unicode offsets. It contains no game rules, question map, key, prior answers or grades. The six neutral fixture tests cover complete long rows, cropped rows, header counts, escaped pipes, Unicode/CRLF, prose boundaries and nested list items. Their saved successful result is bound to the exact code hashes; it does not supply a factual QA verdict.
+
+Game parents may review this reusable process code and, if useful, embed it unchanged in the identical prebound generic instructions supplied to both fresh readers. The sole rules authority remains the frozen summary; question data remains the frozen bank. Do not send readers other QA reports, provenance history or keys. Record complete original instruction/data delivery and any actual helper execution. Keep optional technical format diagnostics separate from factual grading of every asked part in the whole same entry. Helper use does not prove factual completeness or correct case application.

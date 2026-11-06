@@ -1,0 +1,5 @@
+Block 03 independently graded Q037–Q054 for both readers against expanded-v11 and scope-v12. Both entire supplied inputs were first read in contiguous chunks of at most 5,000 characters. All 36 entries are correct: reader-a 18 correct and reader-b 18 correct; all 118 required fact assessments are satisfied.
+
+Same-entry attached passages count as evidence alongside the restored answer and numeric fields. Q038 explicitly calculates two dead and three surviving on the attacker board for each reader. Q047’s attached Chronicle passage supplies both saved map order and reverse ruin insertion. Q054’s two-Coast conditional rule directly resolves the destination-only case. Equivalent complete meaning was accepted without an exact-keyword requirement; no cross-entry or cross-reader borrowing was used. All extra claims were assessed. No gold or scope defect was identified.
+
+This is extractive fixed-regression grading, not a one-shot, unaided, or held-out assessment. Technical validation is recorded separately from grading outcomes.

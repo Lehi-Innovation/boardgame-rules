@@ -1,0 +1,2535 @@
+{
+  "benchmark": "v9-current-complete-attack-commitment",
+  "block": 3,
+  "ids": [
+    "Q35",
+    "Q36",
+    "Q37",
+    "Q38",
+    "Q39",
+    "Q40",
+    "Q41",
+    "Q42",
+    "Q43",
+    "Q44",
+    "Q45",
+    "Q46",
+    "Q47",
+    "Q48",
+    "Q49",
+    "Q50"
+  ],
+  "summary_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-02/summary-snapshot.md",
+  "original_raw_file_sha256": {
+    "a": "46988c4ce7cef380bac5716e94042c6d8de68e07cf524b8d3a03bf29dd7a451d",
+    "b": "96875f6b92ff4baff26037e0c766a057e87d9cb4b3b2621b9087d01197db8b84"
+  },
+  "entry_hash_definition": "SHA256 of lossless parsed entry reserialization with ensure_ascii=False,sort_keys=True,separators comma/colon. Every original entry field retained.",
+  "records": [
+    {
+      "question": {
+        "id": "Q35",
+        "question": "For Restless Spirits, who is the active fighter, where must the chosen space be, which spaces and fighters take how much damage, and how many cards are drawn if zero, one or two opposing fighters are defeated? If the opposing hero is defeated, do you finish the draw?"
+      },
+      "fixed_key": {
+        "id": "Q35",
+        "expected_answer": "Merlin plays scheme; Choose space in Merlin’s zone and one space adjacent to that chosen space; deal 2 to each opposing fighter in those two spaces; Zero defeated: no draw; one or two defeated: draw 1 total; Opposing hero defeated ends game immediately before further draw",
+        "required_facts": [
+          "Merlin plays scheme",
+          "Choose space in Merlin’s zone and one space adjacent to that chosen space; deal 2 to each opposing fighter in those two spaces",
+          "Zero defeated: no draw; one or two defeated: draw 1 total",
+          "Opposing hero defeated ends game immediately before further draw"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c2; rulebook p14"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q35",
+        "asked_clauses": "For Restless Spirits, who is the active fighter, where must the chosen space be, which spaces and fighters take how much damage, and how many cards are drawn if zero, one or two opposing fighters are defeated? If the opposing hero is defeated, do you finish the draw?",
+        "required_answer_facts": [
+          "Merlin is the active fighter playing Restless Spirits.",
+          "Choose space in Merlin’s zone and one space adjacent to that chosen space; deal 2 to each opposing fighter in those two spaces",
+          "Zero defeated: no draw; one or two defeated: draw 1 total",
+          "Opposing hero defeated ends game immediately before further draw"
+        ],
+        "contextual_key_background": [
+          "Restless Spirits is a scheme; Q35 asks its active fighter and effects, not card type."
+        ],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c2; rulebook p14"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q35",
+          "clauses": [
+            "Restless Spirits active fighter and selected-space condition",
+            "Damage area and target eligibility",
+            "Draw count for 0/1/2 defeats and hero-end exception"
+          ],
+          "answer": "Merlin is the active fighter; choose a space in Merlin’s zone. Deal 2 damage to each opposing fighter in that space and one adjacent space. If zero are defeated, draw 0; if one or two are defeated, draw 1 total. If an opposing hero is defeated, the duel ends immediately and the pending draw is not completed.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H16097",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 17341,
+              "end": 17590,
+              "text": "| Restless Spirits | Merlin; S/—; B2; 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |",
+              "header_id": "H16097"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 8691,
+              "end": 8885,
+              "text": "**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q35",
+          "clauses": [
+            "active fighter and space",
+            "damage affected spaces/fighters",
+            "draw counts for 0/1/2 defeats",
+            "hero defeat interaction"
+          ],
+          "answer": "Merlin is active; choose a space in Merlin’s zone. Deal 2 to each opposing fighter in that space and one adjacent space. Draw 1 only if at least one fighter is defeated; zero defeats draws 0, one or two defeats still draws 1. If opposing hero is defeated, game ends immediately, so do not finish the draw.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 17341,
+              "end": 17590,
+              "text": "| Restless Spirits | Merlin; S/—; B2; 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 8459,
+              "end": 8885,
+              "text": "## Scoring / Victory Conditions\n\nThere is no points score. Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.\n\n**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "9ec89e375886d3f74771ae20a6d39e7c71fd7bb338142d2fc78722c26953fb48",
+        "b": "547f8c7a9938cbbbcedc0f93d7a854630e638a48ff748af299734b7c9ae1a8ac"
+      }
+    },
+    {
+      "question": {
+        "id": "Q36",
+        "question": "Who plays Command the Storms, which fighters can it move how far, and when moving an opposing fighter which side’s fighters can it pass through and which block it?"
+      },
+      "fixed_key": {
+        "id": "Q36",
+        "expected_answer": "Merlin-only scheme; Move each fighter including opposing up to 3; For opposing fighter use owner perspective: can pass its friendly fighters, cannot pass its enemies; cannot end occupied",
+        "required_facts": [
+          "Merlin-only scheme",
+          "Move each fighter including opposing up to 3",
+          "For opposing fighter use owner perspective: can pass its friendly fighters, cannot pass its enemies; cannot end occupied"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c3–4; rulebook p9"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q36",
+        "asked_clauses": "Who plays Command the Storms, which fighters can it move how far, and when moving an opposing fighter which side’s fighters can it pass through and which block it?",
+        "required_answer_facts": [
+          "Merlin-only permitted user",
+          "Move each fighter including opposing up to 3",
+          "For opposing fighter use owner perspective: can pass its friendly fighters, cannot pass its enemies"
+        ],
+        "contextual_key_background": [
+          "Scheme type is source background; question asks user and movement permissions.",
+          "Unoccupied endpoint is true but unasked; question asks transit blockers."
+        ],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c3–4; rulebook p9"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q36",
+          "clauses": [
+            "Command the Storms user and move scope/distance",
+            "Opposing fighter movement perspective and blockers"
+          ],
+          "answer": "Merlin plays it as a scheme; move each fighter, including opponents, up to 3 spaces. For an opposing fighter, apply movement rules from its owner’s perspective: it may pass its own friendly fighters, cannot pass through your fighters, and cannot finish in any occupied space.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H16097",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 17591,
+              "end": 17777,
+              "text": "| Command the Storms | Merlin; S/—; B2; 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |",
+              "header_id": "H16097"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 4652,
+              "end": 5045,
+              "text": "Ordinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q36",
+          "clauses": [
+            "user and fighters/distance",
+            "movement rules from opposing owner perspective"
+          ],
+          "answer": "Merlin’s Command the Storms scheme moves each fighter, including opponents, up to 3. For opposing fighters apply their owner’s movement rules: pass through that owner’s friendly fighters, not through opposing fighters; do not finish occupied.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 17591,
+              "end": 17777,
+              "text": "| Command the Storms | Merlin; S/—; B2; 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 4350,
+              "end": 5635,
+              "text": "### Maneuver\n\n1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.\n\nOrdinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception.\n\n**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "0b5384c1949f587bd3f8fca09aed6e9b1cb2400195cf37e598fd70cafe36b046",
+        "b": "06b86160d3018b8e5a43ddcaafbae5ee4e0bda27d77de2fd532a45f87e8db7d7"
+      }
+    },
+    {
+      "question": {
+        "id": "Q37",
+        "question": "Can Merlin use Swift Strike, which fighter does it move, how far and when, and does it require a combat win?"
+      },
+      "fixed_key": {
+        "id": "Q37",
+        "expected_answer": "ANY allows Merlin; After combat move the fighter that used it up to 4; No win condition",
+        "required_facts": [
+          "ANY allows Merlin",
+          "After combat move the fighter that used it up to 4",
+          "No win condition"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c5–6"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q37",
+        "asked_clauses": "Can Merlin use Swift Strike, which fighter does it move, how far and when, and does it require a combat win?",
+        "required_answer_facts": [
+          "Merlin may use Swift Strike",
+          "After combat move the fighter that used it up to 4",
+          "No win condition"
+        ],
+        "contextual_key_background": [
+          "ANY label allowing all own fighters is separately tested by Q63; this question specifically asks Merlin permission."
+        ],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c5–6"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q37",
+          "clauses": [
+            "Swift Strike user/type and moved fighter/distance/timing",
+            "Win requirement"
+          ],
+          "answer": "ANY fighter may play it as attack value 3. After combat, move your fighting fighter up to 4 spaces; no win condition is stated, so either result qualifies. Merlin may initiate it as an attack, not defend with this attack-only card.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H16097",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 17778,
+              "end": 17874,
+              "text": "| Swift Strike | ANY; A/3; B2; 2 | After combat move **your fighting fighter** up to 4 spaces. |",
+              "header_id": "H16097"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 6789,
+              "end": 7151,
+              "text": "Attack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H16097",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q37",
+          "clauses": [
+            "Merlin use and card type",
+            "mover/distance/timing",
+            "win condition"
+          ],
+          "answer": "Merlin can use ANY Swift Strike as an attack. After combat move your fighting fighter, Merlin, up to 4 spaces; no combat win required.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 16097,
+              "end": 16193,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 17778,
+              "end": 17874,
+              "text": "| Swift Strike | ANY; A/3; B2; 2 | After combat move **your fighting fighter** up to 4 spaces. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4729d7391e9a111e62db788deff2f8efc772e98042f5db56f56cde17095dc946",
+        "b": "9fe48af4eed2284db98a74f8341239f3d35389a01cf032e249bb8c2190cc1808"
+      }
+    },
+    {
+      "question": {
+        "id": "Q38",
+        "question": "Medusa attacks using Gaze of Stone (value 2) against an uncancelled defense value 2, then in a separate combat against no defense. Assuming no other modifiers and a surviving target, state attack damage, combat winner and Gaze’s extra damage in each case."
+      },
+      "fixed_key": {
+        "id": "Q38",
+        "expected_answer": "Against defense 2 attack damage 0, defender wins, no Gaze extra 8; Undefended attack damage 2, Medusa wins, after combat deal 8 extra to opposing fighter if game continues",
+        "required_facts": [
+          "Against defense 2 attack damage 0, defender wins, no Gaze extra 8",
+          "Undefended attack damage 2, Medusa wins, after combat deal 8 extra to opposing fighter if game continues"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r1c1–2;r1c4; rulebook p12;p14"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q38",
+        "asked_clauses": "Medusa attacks using Gaze of Stone (value 2) against an uncancelled defense value 2, then in a separate combat against no defense. Assuming no other modifiers and a surviving target, state attack damage, combat winner and Gaze’s extra damage in each case.",
+        "required_answer_facts": [
+          "Against defense 2 attack damage 0, defender wins, no Gaze extra 8",
+          "Undefended attack damage 2, Medusa wins, after combat deal 8 extra to opposing fighter if game continues"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r1c1–2;r1c4; rulebook p12;p14"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q38",
+          "clauses": [
+            "Equal defense case attack damage/winner/extra Gaze",
+            "No-defense case values"
+          ],
+          "answer": "At 2 versus 2, attack damage is max(2−2,0)=0; defender wins, so Gaze’s win-triggered extra damage is 0. With no defense, attack damage is 2; Medusa wins and Gaze deals an additional 8 damage after combat, total 10 if target survives and duel continues.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 18007,
+              "end": 18243,
+              "text": "| Gaze of Stone | Medusa; A/2; B4; 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |",
+              "header_id": "H17910"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "list_item",
+              "start": 7283,
+              "end": 7527,
+              "text": "3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage."
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 8168,
+              "end": 8457,
+              "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q38",
+          "clauses": [
+            "first attack damage/winner/extra effect",
+            "second attack damage/winner/extra effect"
+          ],
+          "answer": "Against defense 2: attack damage 2−2=0, defender wins; Gaze’s win-triggered extra damage is 0. With no defense: damage 2, Medusa wins, then Gaze deals 8 extra damage to the surviving target.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 18007,
+              "end": 18243,
+              "text": "| Gaze of Stone | Medusa; A/2; B4; 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 7153,
+              "end": 8457,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "54868688be578863b3f419016bb0917284df84bbfbae60ec711fd6e3099bc768",
+        "b": "2aec5fb15fd2bc0afcb66c11f3e5aaaf3a2978c2a601d7f2d2675408874368ec"
+      }
+    },
+    {
+      "question": {
+        "id": "Q39",
+        "question": "Who plays A Momentary Glance, when does it deal how much damage, what determines its target’s location, and may it target a friendly fighter instead of an opponent?"
+      },
+      "fixed_key": {
+        "id": "Q39",
+        "expected_answer": "Medusa-only scheme resolves its effect on scheme action; Deal 2 damage to any one fighter in Medusa’s zone; Any includes friendly; not restricted to opponents",
+        "required_facts": [
+          "Medusa-only scheme resolves its effect on scheme action",
+          "Deal 2 damage to any one fighter in Medusa’s zone",
+          "Any includes friendly; not restricted to opponents"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r1c5–6"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q39",
+        "asked_clauses": "Who plays A Momentary Glance, when does it deal how much damage, what determines its target’s location, and may it target a friendly fighter instead of an opponent?",
+        "required_answer_facts": [
+          "Medusa-only scheme resolves its effect on scheme action",
+          "Deal 2 damage to any one fighter in Medusa’s zone",
+          "Any includes friendly; not restricted to opponents"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r1c5–6"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q39",
+          "clauses": [
+            "A Momentary Glance user/action and effect timing/amount",
+            "Target zone and friendly eligibility"
+          ],
+          "answer": "Medusa plays this scheme; deal 2 damage to any one fighter in Medusa’s zone, including a friendly fighter.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 18244,
+              "end": 18374,
+              "text": "| A Momentary Glance | Medusa; S/—; B4; 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |",
+              "header_id": "H17910"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q39",
+          "clauses": [
+            "user/timing/amount",
+            "target location and friendly eligibility"
+          ],
+          "answer": "Medusa plays A Momentary Glance as a scheme; it deals 2 damage to one fighter in Medusa’s zone. Target location is evaluated in her zone; any fighter there may be selected, including a friendly one.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 18244,
+              "end": 18374,
+              "text": "| A Momentary Glance | Medusa; S/—; B4; 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "f33ddd64645d81b2f85abc86f03d68aec7adc1c288f69bdd0682fe986756cbfe",
+        "b": "9e6d1f9a82eeb9e80c898350dba2ced1b8e2153a71bdd0317056554042763451"
+      }
+    },
+    {
+      "question": {
+        "id": "Q40",
+        "question": "Who can use Hiss and Slither versus Clutching Claws, what are their card types, and what happens after combat? Must you win, and does either printed effect let you choose the opponent’s discard or make it random?"
+      },
+      "fixed_key": {
+        "id": "Q40",
+        "expected_answer": "Hiss Medusa-only defense; Clutching Harpy-only versatile; After combat opponent discards 1 regardless of win; Neither says you choose or random; opponent discards their chosen card",
+        "required_facts": [
+          "Hiss Medusa-only defense; Clutching Harpy-only versatile",
+          "After combat opponent discards 1 regardless of win",
+          "Neither says you choose or random; opponent discards their chosen card"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r2c1–3;r2c6;r3c1–2"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q40",
+        "asked_clauses": "Who can use Hiss and Slither versus Clutching Claws, what are their card types, and what happens after combat? Must you win, and does either printed effect let you choose the opponent’s discard or make it random?",
+        "required_answer_facts": [
+          "Hiss Medusa-only defense; Clutching Harpy-only versatile",
+          "After combat opponent discards 1 regardless of win",
+          "Neither says you choose or random; opponent discards their chosen card"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r2c1–3;r2c6;r3c1–2"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q40",
+          "clauses": [
+            "Hiss and Slither/Clutching Claws users and types",
+            "Postcombat discard effects and win requirement",
+            "Opponent choice versus random"
+          ],
+          "answer": "Hiss and Slither is Medusa-only defense value 4; Clutching Claws is Harpy-only versatile value 3. After combat each makes the opponent discard one card of their own choice. Neither requires a win; neither effect lets you choose the opponent’s discard, and neither is random.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 18375,
+              "end": 18561,
+              "text": "| Hiss and Slither | Medusa; D/4; B3; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |",
+              "header_id": "H17910"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 18663,
+              "end": 18847,
+              "text": "| Clutching Claws | Harpy; V/3; B2; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |",
+              "header_id": "H17910"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q40",
+          "clauses": [
+            "users/type",
+            "after-combat effect and win condition",
+            "chooser/randomness"
+          ],
+          "answer": "Medusa’s Hiss and Slither is defense 4; Harpy’s Clutching Claws is versatile 3. Both after combat make opponent discard 1 card of opponent’s choice; no win required. You do not choose it and it is not random.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 18375,
+              "end": 18561,
+              "text": "| Hiss and Slither | Medusa; D/4; B3; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "table_row",
+              "start": 18663,
+              "end": 18847,
+              "text": "| Clutching Claws | Harpy; V/3; B2; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "7a68b808d98394cce450e19e126f1bdd74f9287948a4826524559574c7d0e510",
+        "b": "58305e52554dd4c313176c6bcdc59bcf65af16dfe23e0344339ada800b24a360"
+      }
+    },
+    {
+      "question": {
+        "id": "Q41",
+        "question": "Who can play The Hounds of Mighty Zeus, what type and value is it, and after combat does it move just the fighting Harpy or all Harpies, for how far? Can Medusa play it herself?"
+      },
+      "fixed_key": {
+        "id": "Q41",
+        "expected_answer": "Harpy-only versatile value 4; After combat move each Harpy up to 3; Medusa cannot play it",
+        "required_facts": [
+          "Harpy-only versatile value 4",
+          "After combat move each Harpy up to 3",
+          "Medusa cannot play it"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r2c4–5"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q41",
+        "asked_clauses": "Who can play The Hounds of Mighty Zeus, what type and value is it, and after combat does it move just the fighting Harpy or all Harpies, for how far? Can Medusa play it herself?",
+        "required_answer_facts": [
+          "Harpy-only versatile value 4",
+          "After combat move each Harpy up to 3",
+          "Medusa cannot play it"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r2c4–5"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q41",
+          "clauses": [
+            "Hounds user/type/value",
+            "Movement scope and distance",
+            "Medusa eligibility"
+          ],
+          "answer": "Harpy-only versatile value 4. After combat move each Harpy up to 3 spaces, not just the fighting Harpy. Medusa cannot play it.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 18562,
+              "end": 18662,
+              "text": "| The Hounds of Mighty Zeus | Harpy; V/4; B3; 2 | After combat move **each Harpy** up to 3 spaces. |",
+              "header_id": "H17910"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q41",
+          "clauses": [
+            "user/type/value",
+            "movement"
+          ],
+          "answer": "Harpy-only versatile value 4; after combat move each Harpy up to 3. Medusa cannot play it.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 18562,
+              "end": 18662,
+              "text": "| The Hounds of Mighty Zeus | Harpy; V/4; B3; 2 | After combat move **each Harpy** up to 3 spaces. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "d734f49adf9910b3f8b03a916e13ac2c36b117a1f36dfb6a25557abd39097a55",
+        "b": "cdc32af0f764cc6cee377dec4836138585ebae5f44bbd8fdde2dfd8e3ab1276e"
+      }
+    },
+    {
+      "question": {
+        "id": "Q42",
+        "question": "When may Second Shot be BOOSTed, who may use it and what is its type/base value? If you discard a BOOST-2 card, what is the attack value and what happens to the discarded card’s effect?"
+      },
+      "fixed_key": {
+        "id": "Q42",
+        "expected_answer": "Medusa-only attack value 3; During combat optional BOOST by discarding 1 hand card; Add 2 gives 5; ignore discarded card effect",
+        "required_facts": [
+          "Medusa-only attack value 3",
+          "During combat optional BOOST by discarding 1 hand card",
+          "Add 2 gives 5; ignore discarded card effect"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r3c5–6;r4c1; rulebook p10"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q42",
+        "asked_clauses": "When may Second Shot be BOOSTed, who may use it and what is its type/base value? If you discard a BOOST-2 card, what is the attack value and what happens to the discarded card’s effect?",
+        "required_answer_facts": [
+          "Medusa-only attack value 3",
+          "During combat optional BOOST by discarding 1 hand card",
+          "Add 2 gives 5; ignore discarded card effect"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r3c5–6;r4c1; rulebook p10"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q42",
+          "clauses": [
+            "Second Shot timing/user/type/base value",
+            "Boost-2 calculation and discarded effects"
+          ],
+          "answer": "Medusa-only attack value 3; during combat she may discard a hand card and add its BOOST value. With BOOST 2, attack value is 3+2=5. A BOOST discards the card and ignores its effects.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 19087,
+              "end": 19223,
+              "text": "| Second Shot | Medusa; A/3; B3; 3 | During combat you **may BOOST this attack** by discarding a hand card and adding its BOOST value. |",
+              "header_id": "H17910"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 5047,
+              "end": 5635,
+              "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q42",
+          "clauses": [
+            "user/timing/type/value",
+            "BOOST and effect"
+          ],
+          "answer": "Medusa attack value 3 may be BOOSTed during combat. With BOOST 2, 3+2=5; discarded card effects are ignored.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 19087,
+              "end": 19223,
+              "text": "| Second Shot | Medusa; A/3; B3; 3 | During combat you **may BOOST this attack** by discarding a hand card and adding its BOOST value. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 4350,
+              "end": 5635,
+              "text": "### Maneuver\n\n1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.\n\nOrdinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception.\n\n**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "86b024054b0aaa8904a17e21d48d3bac7705d2654aa3aa09b9c123bf42d55437",
+        "b": "03b577f108a7ddd7b63ba6a9ec5133ee38571afe088dffd9e3f61db092fb86c9"
+      }
+    },
+    {
+      "question": {
+        "id": "Q43",
+        "question": "Can a Harpy use Dash as defense, who moves afterward, what is the maximum movement, and must that Harpy win for the movement to occur if it survives?"
+      },
+      "fixed_key": {
+        "id": "Q43",
+        "expected_answer": "ANY versatile permits Harpy defense; After combat move that fighting Harpy up to 3, not all fighters; No win condition",
+        "required_facts": [
+          "ANY versatile permits Harpy defense",
+          "After combat move that fighting Harpy up to 3, not all fighters",
+          "No win condition"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r4c2–4"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q43",
+        "asked_clauses": "Can a Harpy use Dash as defense, who moves afterward, what is the maximum movement, and must that Harpy win for the movement to occur if it survives?",
+        "required_answer_facts": [
+          "A Harpy may use Dash as defense.",
+          "After combat move that fighting Harpy up to 3, not all fighters",
+          "No win condition"
+        ],
+        "contextual_key_background": [
+          "A clear Harpy defense permission resolves the asked clause; literal ANY/versatile labels or other users are not independently required. A contradictory permission remains incorrect."
+        ],
+        "source_refs": [
+          "medusa-action-cards.png r4c2–4"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q43",
+          "clauses": [
+            "Dash legal defender/user and type",
+            "Moved fighter/distance/timing and win condition"
+          ],
+          "answer": "A Harpy may defend with ANY versatile Dash, but Dash moves your fighting fighter, so it moves that Harpy up to 3 spaces after combat. No win is required; if it survives and duel continues, movement occurs after loss as well.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 19224,
+              "end": 19308,
+              "text": "| Dash | ANY; V/3; B1; 3 | After combat move your fighting fighter up to 3 spaces. |",
+              "header_id": "H17910"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 6789,
+              "end": 7151,
+              "text": "Attack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q43",
+          "clauses": [
+            "Dash defense legality",
+            "mover/distance/win"
+          ],
+          "answer": "ANY versatile 3; Harpy may defend. After combat move fighting fighter up to 3, no win required.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 19224,
+              "end": 19308,
+              "text": "| Dash | ANY; V/3; B1; 3 | After combat move your fighting fighter up to 3 spaces. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "0a684a8b7bc71f12a46a1d8be2aeca7e7d7de46627c92f735e5789e6a6f8e7d2",
+        "b": "5d89cfca11a36d28b1d783eb8880665df69c081d171af58202f056beb2c72366"
+      }
+    },
+    {
+      "question": {
+        "id": "Q44",
+        "question": "Who may use Snipe and in which combat roles, and what does it do after combat on a loss as well as a win?"
+      },
+      "fixed_key": {
+        "id": "Q44",
+        "expected_answer": "ANY fighter may use versatile Snipe attacking or defending; After combat draw 1, on loss as well as win if game continues",
+        "required_facts": [
+          "ANY fighter may use versatile Snipe attacking or defending",
+          "After combat draw 1, on loss as well as win if game continues"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r4c5–6;r5c1"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q44",
+        "asked_clauses": "Who may use Snipe and in which combat roles, and what does it do after combat on a loss as well as a win?",
+        "required_answer_facts": [
+          "ANY fighter may use versatile Snipe attacking or defending",
+          "After combat draw 1, on loss as well as win if game continues"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r4c5–6;r5c1"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q44",
+          "clauses": [
+            "Snipe users and roles",
+            "After-combat effect on win/loss"
+          ],
+          "answer": "ANY versatile value 3 can attack or defend. After combat draw 1 card on either a win or loss, if duel continues.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H17910",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 19309,
+              "end": 19364,
+              "text": "| Snipe | ANY; V/3; B1; 3 | After combat draw 1 card. |",
+              "header_id": "H17910"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 6789,
+              "end": 7151,
+              "text": "Attack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H17910",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q44",
+          "clauses": [
+            "user and roles",
+            "on win/loss"
+          ],
+          "answer": "ANY versatile Snipe may attack or defend; after combat draw 1 on win or loss.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 17910,
+              "end": 18006,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 19309,
+              "end": 19364,
+              "text": "| Snipe | ANY; V/3; B1; 3 | After combat draw 1 card. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "6af664335b7aa4215a52385fec5b1dcf8bb9b23e864ce845eac63cf8a53c252e",
+        "b": "cc7ccf4fb30775585e84cbcbca0d4c75e9e95393cca7f3fb2881fe48b8cf6b60"
+      }
+    },
+    {
+      "question": {
+        "id": "Q45",
+        "question": "Who may use Toil and Danger and in which combat roles, and what does it move how far at what timing? Does Sinbad’s Voyage-count maneuver bonus increase that card’s printed movement?"
+      },
+      "fixed_key": {
+        "id": "Q45",
+        "expected_answer": "Sinbad-only versatile may attack or defend; After combat move Sinbad up to 3; Voyage-count movement ability applies when maneuvering, so does not increase this card’s move",
+        "required_facts": [
+          "Sinbad-only versatile may attack or defend",
+          "After combat move Sinbad up to 3",
+          "Voyage-count movement ability applies when maneuvering, so does not increase this card’s move"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c1–4; sinbad-character.png"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q45",
+        "asked_clauses": "Who may use Toil and Danger and in which combat roles, and what does it move how far at what timing? Does Sinbad’s Voyage-count maneuver bonus increase that card’s printed movement?",
+        "required_answer_facts": [
+          "Sinbad-only versatile may attack or defend",
+          "After combat move Sinbad up to 3",
+          "Voyage-count movement ability applies when maneuvering, so does not increase this card’s move"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c1–4; sinbad-character.png"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q45",
+          "clauses": [
+            "Toil and Danger users/roles",
+            "Movement target/distance/timing",
+            "Voyage maneuver bonus applicability"
+          ],
+          "answer": "Sinbad-only versatile value 3 can attack or defend. After combat move Sinbad up to 3 spaces, regardless of combat result. This printed after-combat movement is not the maneuver allowance; Voyage-count bonus does not increase it.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H20606",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 20716,
+              "end": 20799,
+              "text": "| Toil and Danger | Sinbad; V/3; B1; 4 | After combat move Sinbad up to 3 spaces. |",
+              "header_id": "H20606"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 11691,
+              "end": 12605,
+              "text": "**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value. A Voyage’s own combat value is its **printed 2 plus 1 per other Voyage in the discard pile during combat**, before any other modifiers. Resolve this bonus during combat before calculating damage. The card currently being played is not yet in that pile; played cards enter it only at the end of combat. Voyage Home can remove the accumulated cards from the pile, reducing later bonuses."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q45",
+          "clauses": [
+            "user/roles",
+            "movement and timing",
+            "Voyage maneuver bonus scope"
+          ],
+          "answer": "Sinbad-only versatile 3. After combat Sinbad moves up to 3. Voyage-count bonus applies to maneuver, not this post-combat move.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 20716,
+              "end": 20799,
+              "text": "| Toil and Danger | Sinbad; V/3; B1; 4 | After combat move Sinbad up to 3 spaces. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 10073,
+              "end": 12605,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value. A Voyage’s own combat value is its **printed 2 plus 1 per other Voyage in the discard pile during combat**, before any other modifiers. Resolve this bonus during combat before calculating damage. The card currently being played is not yet in that pile; played cards enter it only at the end of combat. Voyage Home can remove the accumulated cards from the pile, reducing later bonuses."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "d5757c2cc2cee99095a5edafcdfaefca6088431a02bace1ead9262c31962ee70",
+        "b": "902077729b8d7237e04c266ef0c3fef790a8dac0d5ab90162dda52e1535afbd2"
+      }
+    },
+    {
+      "question": {
+        "id": "Q46",
+        "question": "Who may play Riches Beyond Compare, what action does it use, and what is its mandatory effect? With 8 cards after resolving it midturn, must you immediately discard?"
+      },
+      "fixed_key": {
+        "id": "Q46",
+        "expected_answer": "Sinbad-only scheme; Draw 3 mandatory; No immediate hand-limit discard midturn; enforce 7 at turn end",
+        "required_facts": [
+          "Sinbad-only scheme",
+          "Draw 3 mandatory",
+          "No immediate hand-limit discard midturn; enforce 7 at turn end"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c6;r2c1; rulebook p8–10"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q46",
+        "asked_clauses": "Who may play Riches Beyond Compare, what action does it use, and what is its mandatory effect? With 8 cards after resolving it midturn, must you immediately discard?",
+        "required_answer_facts": [
+          "Sinbad-only scheme",
+          "Draw 3 mandatory",
+          "No immediate hand-limit discard midturn; enforce 7 at turn end"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c6;r2c1; rulebook p8–10"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q46",
+          "clauses": [
+            "Riches user/action type and mandatory effect",
+            "Midturn hand limit timing"
+          ],
+          "answer": "Sinbad plays Riches Beyond Compare as a scheme; draw 3 cards mandatorily. With 8 cards midturn, no immediate discard is required; discard down to 7 only at end of turn.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H20606",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 20800,
+              "end": 20862,
+              "text": "| Riches Beyond Compare | Sinbad; S/—; B1; 2 | Draw 3 cards. |",
+              "header_id": "H20606"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 4155,
+              "end": 4336,
+              "text": "You may hold more than 7 cards during your turn. **At the end of your turn**, discard excess cards to your own discard pile until you have **7**, then the opponent takes their turn."
+            },
+            {
+              "unit_id": "E3",
+              "kind": "list_item",
+              "start": 8953,
+              "end": 9050,
+              "text": "- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q46",
+          "clauses": [
+            "user/action/effect",
+            "8-card midturn limit"
+          ],
+          "answer": "Sinbad’s scheme draws 3 mandatory. Keep 8 until turn end, then discard to 7.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 20800,
+              "end": 20862,
+              "text": "| Riches Beyond Compare | Sinbad; S/—; B1; 2 | Draw 3 cards. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 3908,
+              "end": 4336,
+              "text": "## Turn Structure\n\nAt the start of Medusa’s turn, her optional special ability may resolve (see below). Then take **2 actions** from **maneuver, scheme, attack**. You may repeat an action, including maneuver twice; **you cannot skip an action**.\n\nYou may hold more than 7 cards during your turn. **At the end of your turn**, discard excess cards to your own discard pile until you have **7**, then the opponent takes their turn."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "15a18c3baafef213f833ab3ee5a4c65d7bc9c1ee94a184703bf2e59aa1e74e1b",
+        "b": "5ebb22a4e4f9059a8d902d1010cd38065aac3a1bedc92f9143c93d8abd26b744"
+      }
+    },
+    {
+      "question": {
+        "id": "Q47",
+        "question": "Who may use By Fortune and Fate, what type/value is it, and what does it do after combat? If Porter is defeated but Sinbad lives, may you initiate it as an attack, and may the unusable card still BOOST?"
+      },
+      "fixed_key": {
+        "id": "Q47",
+        "expected_answer": "Porter-only attack value 3; after combat draw 2 without win condition; Defeated Porter cannot initiate an attack with it; card still usable to pay BOOST",
+        "required_facts": [
+          "Porter-only attack value 3; after combat draw 2 without win condition",
+          "Defeated Porter cannot initiate an attack with it; card still usable to pay BOOST"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c2–4; rulebook p10–12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q47",
+        "asked_clauses": "Who may use By Fortune and Fate, what type/value is it, and what does it do after combat? If Porter is defeated but Sinbad lives, may you initiate it as an attack, and may the unusable card still BOOST?",
+        "required_answer_facts": [
+          "Porter-only attack value 3; after combat draw 2 without win condition",
+          "Defeated Porter cannot initiate an attack with it; card still usable to pay BOOST"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c2–4; rulebook p10–12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q47",
+          "clauses": [
+            "By Fortune and Fate user/type/value/effect",
+            "Defeated Porter attack eligibility and BOOST eligibility"
+          ],
+          "answer": "Porter-only attack value 3. After combat draw 2 cards if duel continues. If Porter is defeated, it cannot initiate an attack, but its unusable card may still be discarded to BOOST.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H20606",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 20863,
+              "end": 20936,
+              "text": "| By Fortune and Fate | Porter; A/3; B1; 3 | After combat draw 2 cards. |",
+              "header_id": "H20606"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 6789,
+              "end": 7151,
+              "text": "Attack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend."
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 5047,
+              "end": 5635,
+              "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q47",
+          "clauses": [
+            "user/type/value/effect",
+            "defeated attack legality",
+            "BOOST eligibility"
+          ],
+          "answer": "Porter-only attack 3, draw 2 after combat. Defeated Porter cannot initiate attack, but its unusable card can still be discarded to BOOST.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 20863,
+              "end": 20936,
+              "text": "| By Fortune and Fate | Porter; A/3; B1; 3 | After combat draw 2 cards. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 4350,
+              "end": 5635,
+              "text": "### Maneuver\n\n1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.\n\nOrdinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception.\n\n**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "e356d6e8fcc5906ffb77e6ce838b6c83141f0c889b9983f3dada90edcdb95287",
+        "b": "b0c3a771792ca5b03f35e2f5476f167f598bdd98fcf8999ca71e4667cc23f224"
+      }
+    },
+    {
+      "question": {
+        "id": "Q48",
+        "question": "Compare Commanding Impact and Exploit: allowed users, combat type/value, and their after-combat effects. Do their draws require winning?"
+      },
+      "fixed_key": {
+        "id": "Q48",
+        "expected_answer": "Both ANY; Commanding Impact attack value 5; Exploit versatile value 4; Both after combat draw 1 without win requirement",
+        "required_facts": [
+          "Both ANY",
+          "Commanding Impact attack value 5; Exploit versatile value 4",
+          "Both after combat draw 1 without win requirement"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c5;r4c2–3"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q48",
+        "asked_clauses": "Compare Commanding Impact and Exploit: allowed users, combat type/value, and their after-combat effects. Do their draws require winning?",
+        "required_answer_facts": [
+          "Both ANY",
+          "Commanding Impact attack value 5; Exploit versatile value 4",
+          "Both after combat draw 1 without win requirement"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c5;r4c2–3"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q48",
+          "clauses": [
+            "Commanding Impact and Exploit users/types/values/effects",
+            "Whether draws require combat win"
+          ],
+          "answer": "Commanding Impact: ANY attack value 5; after combat draw 1. Exploit: ANY versatile value 4; after combat draw 1. Neither requires winning combat.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H20606",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 20937,
+              "end": 21004,
+              "text": "| Commanding Impact | ANY; A/5; B2; 1 | After combat draw 1 card. |",
+              "header_id": "H20606"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 21136,
+              "end": 21193,
+              "text": "| Exploit | ANY; V/4; B1; 2 | After combat draw 1 card. |",
+              "header_id": "H20606"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q48",
+          "clauses": [
+            "Commanding Impact type/value/user/effect",
+            "Exploit type/value/user/effect",
+            "win condition"
+          ],
+          "answer": "Commanding Impact ANY attack 5 draws 1 after combat; Exploit ANY versatile 4 draws 1 after combat. Neither draw requires winning.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 20937,
+              "end": 21004,
+              "text": "| Commanding Impact | ANY; A/5; B2; 1 | After combat draw 1 card. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "table_row",
+              "start": 21136,
+              "end": 21193,
+              "text": "| Exploit | ANY; V/4; B1; 2 | After combat draw 1 card. |",
+              "header_id": "U1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "15103c25c4edb9e0f48bd85ba9cf8768e19a1272fcd1c113482ca79871ad9bac",
+        "b": "e955cb15a9620bccbf936ce1fa6d6f8b9f5fe535ac6fc39babb168a587e23fee"
+      }
+    },
+    {
+      "question": {
+        "id": "Q49",
+        "question": "For Leap Away, what type/value and permitted users does it have, and what happens after a win versus a loss? Which fighter can be moved how far, and do normal blockers apply if you move an opponent?"
+      },
+      "fixed_key": {
+        "id": "Q49",
+        "expected_answer": "ANY versatile value 4; If won after combat choose either fighter in combat and move up to 4; Loss gives no movement; Opponent movement obeys owner-relative normal blockers and no occupied endpoint",
+        "required_facts": [
+          "ANY versatile value 4",
+          "If won after combat choose either fighter in combat and move up to 4",
+          "Loss gives no movement",
+          "Opponent movement obeys owner-relative normal blockers and no occupied endpoint"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c6;r4c1; rulebook p9"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q49",
+        "asked_clauses": "For Leap Away, what type/value and permitted users does it have, and what happens after a win versus a loss? Which fighter can be moved how far, and do normal blockers apply if you move an opponent?",
+        "required_answer_facts": [
+          "ANY versatile value 4",
+          "If won after combat choose either fighter in combat and move up to 4",
+          "Loss gives no movement",
+          "Normal movement blockers apply when moving the opposing fighter."
+        ],
+        "contextual_key_background": [
+          "Owner-relative transit and unoccupied endpoints are true normal rules. Q49 asks whether normal blockers apply, so a clear yes/reference to defined normal movement rules suffices; do not demand an unasked inventory. An affirmative wrong rule remains incorrect. Explicit transit actors remain required in Q36 and endpoint fact in Q03."
+        ],
+        "source_refs": [
+          "sinbad-action-cards.png r3c6;r4c1; rulebook p9"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q49",
+          "clauses": [
+            "Leap Away type/value/users and win/loss condition",
+            "Chosen fighter and distance",
+            "Opponent movement blockers"
+          ],
+          "answer": "ANY versatile value 4. After a win choose either fighter in combat and move it up to 4 spaces; on a loss no movement. If moving an opponent, normal movement rules apply from its owner’s perspective, including blockers.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H20606",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 21005,
+              "end": 21135,
+              "text": "| Leap Away | ANY; V/4; B1; 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |",
+              "header_id": "H20606"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "paragraph",
+              "start": 4652,
+              "end": 5045,
+              "text": "Ordinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "H20606",
+                "E1",
+                "E2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q49",
+          "clauses": [
+            "type/value/user",
+            "after-combat win/loss and mover",
+            "opponent movement blockers"
+          ],
+          "answer": "ANY versatile 4. On win choose either fighter in combat to move up to 4; on loss no move. Moving an opponent applies movement restrictions from that opponent’s owner perspective.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "table_header",
+              "start": 20606,
+              "end": 20715,
+              "text": "| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "table_row",
+              "start": 21005,
+              "end": 21135,
+              "text": "| Leap Away | ANY; V/4; B1; 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |",
+              "header_id": "U1"
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 4350,
+              "end": 5635,
+              "text": "### Maneuver\n\n1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.\n\nOrdinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**. An effect that moves opposing fighters follows the same rules **from their owner’s perspective**. Apply these movement restrictions to card movement unless that card states an exception.\n\n**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "654a05b72172b8760c640dbb6cbfab2134807e9b9b95c2934866fa977011a213",
+        "b": "63e4b7993a2871fc7860af0ed87567776d7daf54e4221127a9322fb2a561381b"
+      }
+    },
+    {
+      "question": {
+        "id": "Q50",
+        "question": "After Voyage to the Island That Was a Whale, who recovers how much health, is a combat win required, and what if Sinbad is already at 14 health or has been defeated?"
+      },
+      "fixed_key": {
+        "id": "Q50",
+        "expected_answer": "After combat Sinbad recovers 2 without win condition; At 14 capped at 15; Defeated Sinbad has already lost duel so cannot be saved",
+        "required_facts": [
+          "After combat Sinbad recovers 2 without win condition",
+          "At 14 capped at 15",
+          "Defeated Sinbad has already lost duel so cannot be saved"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c5; sinbad-character.png; rulebook p5;p14"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q50",
+        "asked_clauses": "After Voyage to the Island That Was a Whale, who recovers how much health, is a combat win required, and what if Sinbad is already at 14 health or has been defeated?",
+        "required_answer_facts": [
+          "After combat Sinbad recovers 2 without win condition",
+          "At 14 capped at 15",
+          "Defeated Sinbad has already lost duel so cannot be saved"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c5; sinbad-character.png; rulebook p5;p14"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q50",
+          "clauses": [
+            "Voyage recovery amount/recipient/win condition",
+            "Health cap and defeated hero/game end"
+          ],
+          "answer": "Voyage to the Island That Was a Whale recovers 2 health for Sinbad after combat; no win required. At 14 health, recover only 1 up to his 15 dial maximum. If Sinbad has been defeated, his hero defeat ends the duel immediately, so no later recovery resolves.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "H19744",
+              "kind": "table_header",
+              "start": 19744,
+              "end": 19811,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|"
+            },
+            {
+              "unit_id": "E1",
+              "kind": "table_row",
+              "start": 20124,
+              "end": 20193,
+              "text": "| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |",
+              "header_id": "H19744"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "list_item",
+              "start": 9697,
+              "end": 9833,
+              "text": "- Recovery cannot raise a fighter above their dial maximum. A later recovery effect cannot undo the immediate game end from hero defeat."
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 8691,
+              "end": 8885,
+              "text": "**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "H19744",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "H19744",
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q50",
+          "clauses": [
+            "recovery amount/win",
+            "health cap at 14",
+            "defeated Sinbad"
+          ],
+          "answer": "Sinbad recovers 2 after combat, without win requirement. At 14, 14+2=16 capped at dial maximum 15. If Sinbad is defeated, hero defeat ends game, so no later healing effect.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "U1",
+              "kind": "subsection",
+              "start": 19366,
+              "end": 21193,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only A/2, one copy each**. **Voyage Home has B1; the other six have no printed BOOST value.** Each has: **during combat, +1 value for each other Voyage card in your discard pile**. Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |\n| Voyage to the City of the King of Serendib | Draw 1 card. |\n\n| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|\n| Toil and Danger | Sinbad; V/3; B1; 4 | After combat move Sinbad up to 3 spaces. |\n| Riches Beyond Compare | Sinbad; S/—; B1; 2 | Draw 3 cards. |\n| By Fortune and Fate | Porter; A/3; B1; 3 | After combat draw 2 cards. |\n| Commanding Impact | ANY; A/5; B2; 1 | After combat draw 1 card. |\n| Leap Away | ANY; V/4; B1; 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |\n| Exploit | ANY; V/4; B1; 2 | After combat draw 1 card. |"
+            },
+            {
+              "unit_id": "U2",
+              "kind": "subsection",
+              "start": 8918,
+              "end": 10071,
+              "text": "### Cards, exhaustion and healing\n\n- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**.\n- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw.\n- Played and resolved cards and discarded cards go into your own **face-up discard pile**, distinct from the face-down deck. Both players may inspect either discard pile **at any time**.\n- Recovery cannot raise a fighter above their dial maximum. A later recovery effect cannot undo the immediate game end from hero defeat.\n- “Move” follows paths and blockers; “place” puts the fighter directly in the permitted destination, with **one fighter per space** still required. Card permission to place anywhere is not limited to maneuver distance or a movement path."
+            },
+            {
+              "unit_id": "U3",
+              "kind": "subsection",
+              "start": 8459,
+              "end": 8885,
+              "text": "## Scoring / Victory Conditions\n\nThere is no points score. Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.\n\n**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "U1",
+                "U2",
+                "U3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4021f3f5f2e6d0466ef7a5d188d22e755dddeeb5675d756d0c97d6519814f5e3",
+        "b": "fc4d6ad7b74b032cdb7b0185c86ce0b7713e03e267167b7fee2e21c563e286f2"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+# Source display and citation addendum
+
+The audit helper used Python `str.splitlines()`. Its output and the original read record therefore used splitlines indices mislabeled as physical LF lines. This is an audit citation-format defect; it does not change the substantive source verdict.
+
+The assigned extract has exactly one additional non-LF line separator: U+001E inside physical LF1067, whose literal representation is `when there are \x1e+ vacancies.`. The helper displayed this as label1067 `when there are` and label1068 `+ vacancies.`. From displayed label1069 onward, the actual physical LF number is one less. Thus the original displayed read range1–3030 covers actual physical LF1–3029. All relevant multiplayer text remains covered; the originally bounded responses still contain at most50 physical lines. Printed Rules page citations are unaffected. The candidate contains no such extra separator, so its482 line locations are unchanged.
+
+For corrected references, use physical LF splitting on the literal LF byte rather than `splitlines()`. Labels1–1066 map directly; labels1067/1068 both map to physical LF1067; subsequent original-extract labels map by subtracting1. The JSON addendum supplies a corrected mapping for every original-extract read range without changing the initial read record.
+
+The operative vacancy rule is independently confirmed by the original native Rules printed p13, rendered and visually inspected in `source-display-native-rules-p13.png`: **four or more vacant offices**, **one additional writer once this turn**. Correct extract citation: physical LF1101–1104, previously displayed1102–1105. This confirms the intended four-plus-vacancies reminder whose graphical numeral is unreadable in the p12 illustration’s extracted text; the control character is not itself a legible numeral. The applicable original errata physical LF52–79 changes forced prize reuse, No Action and empty Court rules, and supplies no contrary Writer threshold. Current candidate physical LF102 accurately states the four-vacancy threshold, the once-per-turn extra writer and three total when doubled.
+
+**Substantive result remains scoped PASS, with0 source findings.** There is1 low-severity audit display/citation-format defect documented here. No new official-rule conflict was found. No unqualified independently verified official-core or publisher-email signoff is asserted.
+
+The original audit files, manifest, snapshot and read record were preserved. This followup wrote only this addendum pair and its new native p13 image. Input and derivative hashes, preservation checks and exact corrected ranges are recorded in the JSON. Candidate SHA256 remains `25266d482daf6361fa2f140365306be1f90fdc0bc025b83e837d032aab8fd6f5`.

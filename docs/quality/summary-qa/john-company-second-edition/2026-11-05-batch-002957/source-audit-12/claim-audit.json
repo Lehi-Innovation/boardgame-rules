@@ -1,0 +1,140 @@
+{
+  "summary_sha256": "04219e8b7d48c4b01de073bacce1eea81061a43bdc176d06a8435e8cc7282e26",
+  "known_sourced_claims_verdict": "PASS",
+  "known_sourced_claims_findings": [],
+  "checked_changed_claims": [
+    {
+      "id": "SA12-C01",
+      "summary_lines": [
+        402,
+        410
+      ],
+      "claim": "Row1 scores firm points/prison and references next row as the ONE special firm retirement; row2 alone executes it before ordinary Power/Court/outcome scoring, including Company failure",
+      "source_refs": [
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 37,
+          "lines": [
+            2652,
+            2658
+          ],
+          "section": "Special Retirement",
+          "evidence": "Only one special retirement even with shares in multiple firms."
+        },
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 37,
+          "lines": [
+            2665,
+            2674
+          ],
+          "section": "Firms in Final Scoring",
+          "evidence": "Score firm points, then one special retirement regardless of Company outcome, then rest of Final Scoring; no display cards."
+        }
+      ],
+      "result": "verified; SA11-KNOWN-01 resolved",
+      "organization_assessment": "The new sentence is explicitly a cross-reference to row2, rather than a second retirement instruction. No duplicate retirement remains in the sequential table."
+    }
+  ],
+  "inherited_unchanged_claim_checks": {
+    "source_audit11": "source-audit-11/source-audit.json",
+    "source_audit10": "source-audit-10/source-audit.json",
+    "retained_claim_groups": 72,
+    "method": "All prior text is byte-for-byte unchanged apart from the single replacement at summary line406. Inherit earlier source-only checks for those identical claims, superseding only audit11 claim64/result and SA11-KNOWN-01 with the direct p37 check above."
+  },
+  "resolved_findings": [
+    {
+      "id": "SA11-KNOWN-01",
+      "severity": "MINOR",
+      "category": "procedural_sequence_ambiguity",
+      "title": "Firm special retirement is instructed in two sequential scoring rows",
+      "summary_lines": [
+        402,
+        407
+      ],
+      "is_summary_factual_error": false,
+      "finding": "The table heading requires completing each row before the next, but row1 now both calculates firm points and says to allow the eligible firm special retirement before proceeding to steps3–5. Row2 separately instructs that same special retirement. The overlapping execute/skip directives make it unclear whether row1 is an overview or an executable step and risk an extra retirement when following rows literally. The underlying one-retirement entitlement and ordering are source-supported; the new table organization is ambiguous.",
+      "source_refs": [
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 37,
+          "lines": [
+            2652,
+            2658
+          ],
+          "section": "Special Retirement",
+          "evidence": "A player with shares in multiple firms may take only one special retirement."
+        },
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 37,
+          "lines": [
+            2665,
+            2674
+          ],
+          "section": "Firms in Final Scoring",
+          "evidence": "Score firms, then shareholders may perform one special retirement, then proceed with the rest of Final Scoring."
+        }
+      ],
+      "impact": "A sequential-table reading can repeat the special-retirement instruction or skip the separate row without a clear cross-reference. Retiring an extra family piece can materially change VP. Severity is MINOR because the surrounding text consistently states one eligible retirement and the intended rule is recoverable.",
+      "repair_advice": "Keep row1 to firm VP/prison scoring and explicitly direct the reader to step2. Execute the single firm special retirement only in row2, then proceed to ordinary scoring steps3–5. Preserve both Company outcomes and no-display condition.",
+      "reader_test_status": "Not inspected; identified from source procedure and frozen summary structure.",
+      "resolution_status": "resolved_in_audit12",
+      "resolution": "Row1 now explicitly identifies the next row (step2) as describing the ONE special firm retirement and ordinary scoring beginning at step3. It no longer directs a retirement execution within row1. Row2 is the single executable special-retirement step.",
+      "resolution_summary_lines": [
+        406,
+        407
+      ]
+    }
+  ],
+  "unresolved_core_findings": [
+    {
+      "id": "SA04-CORE-01",
+      "severity": "MAJOR",
+      "category": "unresolved_core_procedural_branch_source_sufficiency_gap",
+      "summary_lines": [
+        208,
+        215,
+        452
+      ],
+      "is_summary_factual_error": false,
+      "title": "Company-defense outcome remains unresolved when an active alliance exceeds attack strength",
+      "finding": "A standard Events in India defense can have attack strength1 and only one active, bought strength2 alliance available. The summary reproduces the printed equality test and explicitly declines to decide this case. The supplied rules do not explicitly say whether excess alliance strength may be wasted/capped, whether full exhaustion succeeds, or whether literal non-equality forces Region Loss. This leaves an in-scope core outcome without a complete adjudication.",
+      "source_refs": [
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 22,
+          "lines": [
+            1622,
+            1626
+          ],
+          "section": "Local Alliances",
+          "evidence": "Alliance strength is available for defense; each piece is usable once and strength cannot be split among more than one purpose."
+        },
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 33,
+          "lines": [
+            2285,
+            2291
+          ],
+          "section": "Mounting Defense",
+          "evidence": "The printed instruction requires equal strength or as many pieces as possible, and says a non-equal result causes Crisis success/Region Loss."
+        },
+        {
+          "file": "supplements/pnp/Rulebooks/John Company Player Aid (Front and Back).pdf",
+          "page": 2,
+          "section": "Crisis table, Attack on the Company row and result header",
+          "evidence": "Defender strength is exhausted Regiments, Officers and Local Alliances; result header says defender wins ties. This supports a comparative-defense reading but gives no concrete excess-alliance example or explicit cap/discard rule."
+        }
+      ],
+      "independent_source_assessment": "Literal p33 non-equality wording could be read to make an exhausted strength2 alliance fail against attack1. Alternatively, p22 use-for-one-purpose language and the official aid’s strength-comparison table support wasting excess on a single defense. Neither is asserted here as a definitive designer ruling. The aid is relevant contrary/contextual evidence, so the question cannot honestly be closed merely by assuming greater-or-equal defense or merely by quoting p33 equality without addressing alliance counting.",
+      "impact": "The unresolved branch determines unrest clearance/trophies versus Region Loss, officer rout and Company Standing loss, potentially ending the game; it is core multiplayer procedure and not an excluded optional mode.",
+      "repair_advice": "Obtain a publisher/designer clarification of this concrete case: Company region faces attack strength1; only active Army resource is a bought strength2 alliance. Must it be exhausted, does it defend successfully, and is any excess strength discarded while the whole piece becomes unavailable? Cite that ruling, encode the procedure and re-audit. Until then retain the explicit source-gap disclosure and unverified status; do not award complete core signoff.",
+      "reader_test_status": "Not inspected; this is a source-completeness finding independent of question coverage or reader results.",
+      "resolution_status": "needs_authoritative_clarification",
+      "stable_gap_id": "GAP-DEFENSE-OVERSHOOT"
+    }
+  ],
+  "complete_core_signoff": false
+}

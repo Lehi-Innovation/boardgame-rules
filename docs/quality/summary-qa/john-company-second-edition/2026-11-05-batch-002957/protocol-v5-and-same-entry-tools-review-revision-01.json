@@ -1,0 +1,239 @@
+{
+  "review_id": "protocol-v5-and-same-entry-tools-review-revision-01",
+  "verdict": "PASS",
+  "scope": "Generic protocol plus parent-only structural/source-quote, lossless packet, same-entry literal-citation and merge/validate tooling. Semantic requested-fact correctness, relevance and actual reader grading remain outside this review.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v5.txt",
+      "sha256": "0cdf7c426ae55deff4e8939226b9e0b1b3197ee6fea913fb9fbfd5fcda479e39",
+      "bytes": 7530
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-check.py",
+      "sha256": "60d4c7b0768041e2ad735d5cbec71871516b4fa47fd7dc5a3a4dbb19298242fc",
+      "bytes": 3183
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-fact-check.py",
+      "sha256": "b2c0e3cfc80a674a2a03585adc384ca443abdda5b094bfc3b000df257368c0c0",
+      "bytes": 2540
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/block-grading-tools.py",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+      "bytes": 10926
+    }
+  ],
+  "protocol_verdict": "PASS: generic, identical except role/path, blind, full-bank, individual short-exact-fact ledgers, minimal explicit case computations and complete selected sections with needed cross-reference following.",
+  "prior_findings": [
+    {
+      "id": "V5-T01",
+      "status": "resolved",
+      "evidence": "Nontext, empty and whitespace-only supporting quotes now fail; a covered part still requires a valid nonempty quote."
+    },
+    {
+      "id": "V5-T02",
+      "status": "resolved",
+      "evidence": "V5 explicitly declares case_conclusions a plain-string array; nested objects raise ValueError for format review while the complete raw source remains preserved. No grade cap or synthetic final result is written."
+    },
+    {
+      "id": "V5-T03",
+      "status": "resolved",
+      "evidence": "Same-entry substantive_strings validation is unconditional. All four substantive locations passed independently without any clarification marker."
+    },
+    {
+      "id": "V5-T04",
+      "status": "resolved",
+      "evidence": "raw_entries validates original order/count/uniqueness before indexing, is called by prepare and merge, and merge additionally compares each full packet raw entry with the original."
+    }
+  ],
+  "remaining_concrete_issues_within_scope": [],
+  "validation_boundaries": {
+    "structural_and_source_literal_checks_separate_from_semantic_grading": true,
+    "unsupported_clauses_need_not_guess_supporting_sections": true,
+    "all_substantive_same_entry_fields_count_without_marker": true,
+    "metadata_and_requested_labels_do_not_establish_fact_coverage": true,
+    "malformed_fields_are_format_errors_not_score_caps": true,
+    "complete_raw_entries_and_original_reports_preserved": true,
+    "same_entry_report_preferred_when_present": true,
+    "validate_command_read_only_even_with_existing_results": true,
+    "answer_key_or_asked_fact_changes_required": false
+  },
+  "synthetic_testing": {
+    "method": "Only the four authorized source files were read. Checker/tool code ran in isolated namespaces; fact-check functions used an injected allowed base checker, avoiding imported bytecode writes. All synthetic source/question/answer/grade/packet/result data and filesystem operations were in-memory objects/dictionaries. No fixture or real output files were read or written.",
+    "test_count": 32,
+    "all_expected_outcomes_verified": true,
+    "checks": [
+      {
+        "case": "exact boundary/hash/span and one complete answer copy",
+        "expected_behavior_verified": true,
+        "detail": "Nested level6 heading and EOF without newline match the protocol; full slice hashes recomputed independently."
+      },
+      {
+        "case": "cropped complete attachment rejected structurally",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "duplicate complete attachment rejected structurally",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "wrong boundary/hash metadata rejected structurally",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "invented declared fact rejected by source-quote check",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unselected declared source rejected by source-quote check",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "entire section used as short fact rejected by source-quote check",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "explicit unsupported clause accepts empty supporting section lists",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unknown question ID returns structural error without crashing",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unconditional same-entry answer quotation accepted without a marker",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unconditional same-entry ledger quotation accepted without a marker",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unconditional same-entry case_conclusions quotation accepted without a marker",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "unconditional same-entry evidence.quote quotation accepted without a marker",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "question/requested/location/confidence labels excluded from substantive view",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "empty string covered support rejected",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: Empty/nontext supporting quote: SYN1"
+      },
+      {
+        "case": "whitespace covered support rejected",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: Empty/nontext supporting quote: SYN1"
+      },
+      {
+        "case": "nontext covered support rejected",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: Empty/nontext supporting quote: SYN1"
+      },
+      {
+        "case": "no covered quotation covered support rejected",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: SYN1"
+      },
+      {
+        "case": "nested case metadata raises format review error instead of counting or scoring it",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: case_conclusions must be a list of plain strings, not nested metadata"
+      },
+      {
+        "case": "prepare rejects original duplicate IDs before dictionary indexing",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "raw_entries rejects original order",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "raw_entries rejects original count",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "raw_entries rejects original uniqueness",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "raw_entries rejects original extra count",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "cross-entry quote borrowing rejected",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: SYN1"
+      },
+      {
+        "case": "valid full raw entry including custom nested fields preserved in packet",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "merge rejects complete packet entry differing from original even with updated packet hash",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: Complete raw entry differs from original"
+      },
+      {
+        "case": "merge independently rejects invalid original ID list",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: ValueError: reader-a original IDs/count/order/uniqueness differ; no entries indexed or dropped"
+      },
+      {
+        "case": "preferred same-entry report selected and both originals/full raw entry retained",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "read-only validate path makes no writes with existing results",
+        "expected_behavior_verified": true,
+        "detail": ""
+      },
+      {
+        "case": "ordinary merge refuses to overwrite existing results",
+        "expected_behavior_verified": true,
+        "detail": "Structured validation/format exception; raw input and any prior results preserved: AssertionError: Preserve original results"
+      },
+      {
+        "case": "CLI validate dispatch uses tested read-only validation_only path",
+        "expected_behavior_verified": true,
+        "detail": ""
+      }
+    ]
+  },
+  "isolation": {
+    "no_real_bank_reader_grade_result_report_history_status_session_or_agent_inputs": true,
+    "no_real_score_requested_or_inferred": true,
+    "prior_reviews_unchanged": true,
+    "only_requested_revision_outputs_written": true
+  },
+  "notes": [
+    "Literal citation validation establishes that the quoted text occurs in an allowed substantive field of the same raw entry; an independent semantic grader still decides whether that content supplies or contradicts the requested fact.",
+    "The plain-string case-conclusion constraint is explicit in v5. Malformed nested input is preserved and surfaced for format review rather than silently interpreted or automatically graded."
+  ]
+}

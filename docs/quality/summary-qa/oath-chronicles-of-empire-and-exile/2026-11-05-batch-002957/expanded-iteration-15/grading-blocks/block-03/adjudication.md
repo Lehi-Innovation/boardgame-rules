@@ -1,0 +1,11 @@
+# Block 03 independent strict adjudication
+
+Reader A: 18 correct, 0 partial, 0 incorrect. Reader B: 18 correct, 0 partial, 0 incorrect. All 118 fixed fact groups are satisfied across 36 complete original entries (Q037–Q054). No gold or scope defects were found.
+
+The lossless packet was reconstructed with every original quote, metadata field, answer, and extra field preserved. All 18 reconstructed entries per reader compare exactly equal to their own raw originals; both raw-file hashes match the packet declarations. The summary and packet were fully read in marked contiguous Unicode chunks of at most 5,000 characters, at most two per call; concrete ranges and hashes are in grading-validation.json. Raw originals were used only for the permitted equality/hash check.
+
+Each fact is evaluated using only the same complete entry, including its attached full section. Broad attached passages are operative evidence even when the narrower answer quotation omits a requested rule; support labels and headings alone receive no credit. Equivalent operational meanings and conditional quotations resolve nonnumeric cases without redundant prose. In particular, the Coast-to-Coast condition requires both endpoints, and the defense-location conditions exclude board warbands and untargeted garrisons in Q039. The fixed contextual exclusions were honored.
+
+Q038 has explicit correct arithmetic in both extra numeric applications: floor(5/2) = 2 killed and 3 survivors on the attacker board. No second subtraction of skulls occurs. All other substantive extra fields and the full attached sections were assessed; none introduces a material false conclusion. Q047’s attached map paragraph supplies the saved ruin order; its repacking paragraph supplies reverse insertion and the faceup guarantee. Q040’s prompted-cost rule together with the prohibition on extra resources supplies the exact-payment constraint.
+
+Technical validation passed: exact frozen question/key/fact text and order, observed answers, raw reconstruction equality, literal same-entry evidence and exact summary spans, hashes, totals and counts. Other declared input hashes are retained as declarations, without opening unauthorized keys or scope files.

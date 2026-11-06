@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T13:30:45.961Z",
+    "ordinal": 222,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0d3ee84afc7ebf1c016aec8504240487d0b3485195dfc71132",
+      "status": "completed",
+      "call_id": "call_zg6SXPQt0Le9bcBYz3KBdJTI",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\ns=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-15/summary-snapshot.md').read_text()\\nfor prefix in ['- **Explore:**','- **Quest (matching clearing only):**','- **Repair:**']:\\n line=next(x for x in s.splitlines() if x.startswith(prefix))\\n print(repr(line))\\nPY\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:2000});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abe3-b653-7c53-8741-eca50f0c7474",
+        "create_time": 1793885427.356248
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T13:30:46.566Z",
+    "ordinal": 225,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1abe7-a1a5-7203-a1bc-762dc8f5a77b",
+      "call_id": "call_zg6SXPQt0Le9bcBYz3KBdJTI",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "\"- **Explore:** Exhaust torch in ruin's clearing. Take one hidden item face up into Satchel or track; score one VP if an item taken. Remove ruin when its last item is taken, freeing the building slot.\"\n'- **Quest (matching clearing only):** Choose a face-up quest matching clearing; exhaust its **two listed items**, put quest in play area completed. Choose either VP equal to matching completed quests **including this one**, or draw two cards. Draw replacement quest into public display. No cards are spent to pay a quest.'\n'- **Repair:** Exhaust hammer; move one damaged item to Satchel **keeping current face**. Ready tea/coins/bags move to tracks if space.'\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abe3-b653-7c53-8741-eca50f0c7474",
+        "create_time": 1793885446.565994
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

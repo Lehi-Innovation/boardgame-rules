@@ -1,0 +1,1286 @@
+{
+  "reader": "reader-b",
+  "inputs_read": [
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-04/summary-snapshot.md",
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-04/questions.json"
+  ],
+  "delivery_receipt": {
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-04/summary-snapshot.md": {
+      "sha256": "24c6aa2d51d9f3021d1656a819348ac944071475b816637991354c495e891564",
+      "char_length": 27280,
+      "all_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          10000
+        ],
+        [
+          10000,
+          15000
+        ],
+        [
+          15000,
+          20000
+        ],
+        [
+          20000,
+          25000
+        ],
+        [
+          25000,
+          27280
+        ]
+      ],
+      "truncation_checks": "All six slices were printed; contiguous endpoints; final slice ends at character 27280; no truncation."
+    },
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-04/questions.json": {
+      "sha256": "8378eda87aaf65768f8b7ee486c4ff44c45ae7996e6f0e7b73f40ed584809247",
+      "char_length": 17673,
+      "all_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          10000
+        ],
+        [
+          10000,
+          15000
+        ],
+        [
+          15000,
+          17673
+        ]
+      ],
+      "truncation_checks": "All four slices were printed; contiguous endpoints; final slice ends at character 17673; no truncation."
+    }
+  },
+  "instruction_delivery": {
+    "path": "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-04/reader-b-prompt.txt",
+    "sha256": "4f5bca5514ddc507ff2d24452ba14256cd4d5f5991ee10e95ed6d75a160113d2",
+    "char_length": 5573,
+    "read_ranges": [
+      [
+        0,
+        5000
+      ],
+      [
+        5000,
+        5573
+      ]
+    ],
+    "truncation_checks": "Both slices printed contiguously; final slice ends at character 5573; no truncation."
+  },
+  "answers": [
+    {
+      "id": "Q01",
+      "clauses": "How is a duel set up: cards and health, who places where and in what order, legal sidekick spaces including a multizone hero space, when is Alice’s initial size chosen, and who takes the first turn?",
+      "answer": "Each player takes their chosen fighter components, sets health to starting values (undialed sidekicks have 1), shuffles their 30-card deck and draws 5. Younger places hero on space 1, then sidekicks in separate spaces sharing a zone; if hero’s space is multizone, any of its zones works. Alice’s controller chooses size when placing her. Older places hero on space 2, then sidekicks by same rules. Younger starts.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q01-u1",
+          "start": 2934,
+          "end": 3605,
+          "text": "3. Each player shuffles their **30 action cards into one separate face-down deck**, then draws **5 cards**.\n4. The **younger player** places their hero on starting space **1**, then their sidekick(s) in **separate spaces sharing a zone with that hero**. If the hero’s space belongs to several zones, use any of those zones. Make beginning-of-game decisions when placing that player’s fighters. **Alice’s controller**, whether younger or older, chooses **BIG or SMALL when placing Alice** and displays her size token.\n5. The **older player** places their hero on starting space **2**, then places sidekicks under the same rules.\n6. The younger player takes the first turn."
+        },
+        {
+          "unit_id": "Q01-u2",
+          "start": 2826,
+          "end": 2933,
+          "text": "2. Set the hero’s and sidekick’s dials to the starting health above; undialed sidekicks have 1 health each."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q01-u1",
+            "Q01-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "clauses": "What actions must you take on a turn, may you repeat or skip an action, and when and how do you enforce the 7-card hand limit if you temporarily hold 9?",
+      "answer": "Take 2 actions among maneuver, scheme, attack. Actions may repeat; none may be skipped. A hand of 9 is allowed midturn; at turn end discard to own pile until 7, then opponent turn.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q02-u1",
+          "start": 3927,
+          "end": 4336,
+          "text": "At the start of Medusa’s turn, her optional special ability may resolve (see below). Then take **2 actions** from **maneuver, scheme, attack**. You may repeat an action, including maneuver twice; **you cannot skip an action**.\n\nYou may hold more than 7 cards during your turn. **At the end of your turn**, discard excess cards to your own discard pile until you have **7**, then the opponent takes their turn."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q02-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "clauses": "During an ordinary maneuver, in what order do drawing and movement occur, which fighters may move how far, and can you pass through friendly or enemy fighters, end on an occupied space, or interleave two fighters’ moves?",
+      "answer": "Maneuver draws 1 mandatory card first, then each fighter may move independently up to its move allowance, including zero. Friendly fighters may be passed through; opposing fighters may not. No fighter may end on an occupied space, and finish one fighter’s move before moving the next.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q03-u1",
+          "start": 4364,
+          "end": 4858,
+          "text": "1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.\n\nOrdinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q03-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "clauses": "How do you BOOST maneuver movement, what happens to the discarded card’s printed effect, who receives the movement increase, and may a defeated sidekick’s unusable card pay for it?",
+      "answer": "During maneuver discard one hand card and add its printed BOOST value to movement for that maneuver; ignore its effects. Every friendly fighter gets the increased allowance. A card unusable because its fighter is defeated may still pay BOOST.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q04-u1",
+          "start": 5047,
+          "end": 5541,
+          "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q04-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "clauses": "Your empty deck is asked to draw 2 cards by a mandatory effect while your hero and a sidekick survive. Do you reshuffle or decline the draws, and what damage does each fighter take?",
+      "answer": "Draws are mandatory unless optional. Empty deck does not reshuffle: each missing card draw causes each of your fighters 2 damage. Thus two missing draws cause two separate 2-damage events per surviving fighter (4 total each, if all remain alive).",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q05-u1",
+          "start": 10545,
+          "end": 11101,
+          "text": "- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**.\n- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q05-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "clauses": "For a melee fighter and a ranged fighter, which targets are legal if adjacent across a zone boundary, nonadjacent in the same zone, or in a disconnected part of the same colored zone?",
+      "answer": "Any fighter may attack an adjacent opponent across a zone boundary. Melee has no other target range. Ranged may also attack any opponent sharing a zone regardless of distance or adjacency, including a disconnected portion of that zone.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q06-u1",
+          "start": 3701,
+          "end": 3906,
+          "text": "A **zone** consists of all spaces with the same colored pattern, even if separated on the board. A space showing several patterns belongs to all those zones. Adjacency and shared zones are different tests."
+        },
+        {
+          "unit_id": "Q06-u2",
+          "start": 6365,
+          "end": 6736,
+          "text": "1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q06-u1",
+            "Q06-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "clauses": "When is an attack action illegal, who must be named as attacker, what cards may each combatant use, may the defender decline a card, and when are the cards revealed? How do versatile cards count for other effects?",
+      "answer": "Attack is illegal without an attack-capable card in hand or a valid target. Declare attacker and target, then attacker commits a legal attack card face down; defender may decline or commit legal defense face down. Reveal simultaneously after both choices. Versatile cards count as attack and defense for other effects.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q07-u1",
+          "start": 6240,
+          "end": 7000,
+          "text": "You cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices."
+        },
+        {
+          "unit_id": "Q07-u2",
+          "start": 7114,
+          "end": 7476,
+          "text": "Attack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q07-u1",
+            "Q07-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "clauses": "Give the full combat resolution order, including simultaneous effect priority, whether effects are optional, other after-combat game effects and played-card destinations.",
+      "answer": "Resolve immediately effects, during-combat effects, damage, after-combat card effects, other after-combat game effects, then discard played cards to respective face-up piles. Same-timing effects resolve defender first; card effects are mandatory unless marked otherwise.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q08-u1",
+          "start": 7524,
+          "end": 8165,
+          "text": "1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**."
+        },
+        {
+          "unit_id": "Q08-u2",
+          "start": 8167,
+          "end": 8388,
+          "text": "**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q08-u1",
+            "Q08-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "clauses": "An attack value 4 meets defense value 4, then a card effect deals 2 damage to the defender. Who won and why? With no defense card against an attack value 4, how much attack damage is dealt?",
+      "answer": "The attack deals max(0,4−4)=0 attack damage, so defender wins combat; later effect damage does not change that winner. With no defense card, attack damage is 4.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q09-u1",
+          "start": 8493,
+          "end": 8782,
+          "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+        },
+        {
+          "unit_id": "Q09-u2",
+          "start": 7608,
+          "end": 7852,
+          "text": "3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q09-u1",
+            "Q09-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "clauses": "A sidekick reaches zero during combat but its hero lives; what happens to the token and its played card’s after-combat effect? What changes if instead a hero reaches zero, even if a later healing effect was pending?",
+      "answer": "At zero health, sidekick is defeated and its token is immediately removed. Its played after-combat effect still resolves if the duel continues. A hero at zero immediately loses and ends game; pending healing or other effects do not continue.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q10-u1",
+          "start": 10084,
+          "end": 10477,
+          "text": "There is no points score. Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.\n\n**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game."
+        },
+        {
+          "unit_id": "Q10-u2",
+          "start": 7853,
+          "end": 8006,
+          "text": "4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q10-u1",
+            "Q10-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "clauses": "How do you play and resolve a scheme, can you use a scheme restricted to a defeated fighter, and who may inspect whose discard pile when?",
+      "answer": "Play scheme from hand face up, name a permitted active fighter; a scheme whose listed fighters are defeated cannot be played. Resolve then discard to own discard pile. Either player may inspect either face-up discard pile at any time.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q11-u1",
+          "start": 5649,
+          "end": 5901,
+          "text": "Play a scheme (yellow lightning icon) from hand **face up**, declaring a fighter allowed by its fighter label as the **active fighter**. You cannot play a scheme if its listed fighters are defeated. Resolve its effect, then put it in your discard pile."
+        },
+        {
+          "unit_id": "Q11-u2",
+          "start": 11102,
+          "end": 11288,
+          "text": "- Played and resolved cards and discarded cards go into your own **face-up discard pile**, distinct from the face-down deck. Both players may inspect either discard pile **at any time**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q11-u1",
+            "Q11-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "clauses": "State Alice’s starting health, movement, attack type, Jabberwock stats, initial-size choice, and the combat bonuses for BIG and SMALL. Do the size bonuses apply to Jabberwock?",
+      "answer": "Alice has 13 health, melee attack, move 2; Jabberwock has 8 health and melee attack. Her controller chooses BIG or SMALL when placing Alice at setup. BIG adds 2 to Alice attack-card values; SMALL adds 1 to Alice defense-card values (including versatile cards in that role). Neither bonus applies to Jabberwock.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q12-u1",
+          "start": 2497,
+          "end": 2546,
+          "text": "| Alice | 13 | Melee | 2 | Jabberwock: 8, melee |"
+        },
+        {
+          "unit_id": "Q12-u2",
+          "start": 11685,
+          "end": 11955,
+          "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q12-u1",
+            "Q12-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "clauses": "State Arthur and Merlin’s starting health, attack types and move value. When and how may Arthur boost an attack using his ability, and what if the opposing card cancels his attack-card effects?",
+      "answer": "Arthur starts at 18 health, melee, move 2; Merlin at 7 health, ranged, move 2. When Arthur attacks, he may play a hand card face down alongside his attack card and add its BOOST value, ignoring effects; discard it. If opponent cancels effects on Arthur’s attack card, this ability BOOST is discarded without effect.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q13-u1",
+          "start": 2547,
+          "end": 2599,
+          "text": "| King Arthur | 18 | Melee | 2 | Merlin: 7, ranged |"
+        },
+        {
+          "unit_id": "Q13-u2",
+          "start": 12164,
+          "end": 12565,
+          "text": "**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q13-u1",
+            "Q13-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q14",
+      "clauses": "State Medusa’s starting health, move and attack type; her sidekicks’ number, health and attack type; and the timing, optionality, target and amount of her special ability.",
+      "answer": "Medusa starts at 16 health, ranged, move 3. She has three Harpies, each 1 health and melee. At start of her turn she may deal 1 damage to one opposing fighter in Medusa’s zone; optional, not an attack, and no adjacency required. Harpies do not project it.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q14-u1",
+          "start": 2600,
+          "end": 2655,
+          "text": "| Medusa | 16 | Ranged | 3 | 3 Harpies: 1 each, melee |"
+        },
+        {
+          "unit_id": "Q14-u2",
+          "start": 13041,
+          "end": 13281,
+          "text": "**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q14-u1",
+            "Q14-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "clauses": "State Sinbad and Porter’s health and attack types and normal move value. With 3 Voyage cards already discarded, how far may each move in a maneuver and what is a newly played base-2 Voyage’s combat value before other modifiers? Does the played Voyage count itself yet?",
+      "answer": "Sinbad: 15 health, melee, move 2; Porter: 6 health, melee. With 3 Voyages in discard, each may move 2+3=5 spaces before any BOOST. A newly played base-2 Voyage has combat value 2+3=5 before modifiers; it is not yet in discard and does not count itself.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q15-u1",
+          "start": 2656,
+          "end": 2702,
+          "text": "| Sinbad | 15 | Melee | 2 | Porter: 6, melee |"
+        },
+        {
+          "unit_id": "Q15-u2",
+          "start": 13283,
+          "end": 13589,
+          "text": "**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**."
+        },
+        {
+          "unit_id": "Q15-u3",
+          "start": 13813,
+          "end": 14192,
+          "text": "**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q15-u1",
+            "Q15-u2",
+            "Q15-u3"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q16",
+      "clauses": "What exactly do Alice’s Eat Me and Drink Me schemes do, in which order, and may she refuse the size change after taking their first benefit?",
+      "answer": "Eat Me moves Alice up to 3 spaces, then mandatorily switches BIG↔SMALL (even if she moved zero). Drink Me draws 2 cards, then mandatorily switches BIG↔SMALL. She cannot refuse either switch.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q16-u1",
+          "start": 17108,
+          "end": 17253,
+          "text": "| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |"
+        },
+        {
+          "unit_id": "Q16-u2",
+          "start": 17389,
+          "end": 17500,
+          "text": "| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q16-u1",
+            "Q16-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "clauses": "Jabberwock attacks with Jaws That Bite, Arthur defends with Skirmish, both value 4. Arthur moves Jabberwock away so it has no adjacent fighters. Resolve damage, winner, timing and the Jaws effect. If a friendly fighter alone were adjacent instead, could Alice decline to damage it?",
+      "answer": "Attack damage is max(0,4−4)=0; defender Arthur wins combat. Defender-first Skirmish resolves, and on win may move either fighter up to 2 spaces; it moves Jabberwock away before Jaws checks adjacency. With none adjacent, Jaws deals no damage. If only a friendly fighter were adjacent, Jaws’ mandatory effect would deal 2 to it; Alice cannot decline.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q17-u1",
+          "start": 16186,
+          "end": 16371,
+          "text": "| Skirmish | ANY | Versatile (attack or defense) | 4 | 1 | Alice 2, Arthur 3 | After combat, **if you won**, choose either fighter in that combat and move that fighter up to 2 spaces. |"
+        },
+        {
+          "unit_id": "Q17-u2",
+          "start": 17501,
+          "end": 17740,
+          "text": "| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |"
+        },
+        {
+          "unit_id": "Q17-u3",
+          "start": 18282,
+          "end": 18629,
+          "text": "**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q17-u1",
+            "Q17-u2",
+            "Q17-u3"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "clauses": "Arthur uses The Holy Grail. At its after-combat timing he has respectively 4, 5, or 0 health. What happens in each case, and can any healing exceed the dial maximum?",
+      "answer": "At 4 health Arthur is not defeated and heals to 8; at 5 nothing happens; at 0 the duel has ended already, so no healing. Recovery cannot exceed dial maximum.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q18-u1",
+          "start": 19335,
+          "end": 19547,
+          "text": "| The Holy Grail | King Arthur | Defense only | 1 | 2 | 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |"
+        },
+        {
+          "unit_id": "Q18-u2",
+          "start": 11289,
+          "end": 11425,
+          "text": "- Recovery cannot raise a fighter above their dial maximum. A later recovery effect cannot undo the immediate game end from hero defeat."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q18-u1",
+            "Q18-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "clauses": "What movement exception does Winged Frenzy grant, to which fighters and for how far? What happens afterward if a Harpy has been defeated, where may it return, and may it end on an occupied space?",
+      "answer": "Winged Frenzy allows each of your fighters to move up to 3 and pass through opposing fighters. Then return one defeated Harpy, if any, by placing it in any unoccupied space in Medusa’s zone. Occupancy remains prohibited.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q19-u1",
+          "start": 21843,
+          "end": 22169,
+          "text": "| Winged Frenzy | ANY | Scheme | — | 2 | 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |"
+        },
+        {
+          "unit_id": "Q19-u2",
+          "start": 11426,
+          "end": 11573,
+          "text": "- “Move” follows paths and blockers; “place” puts the fighter directly in the permitted destination, with **one fighter per space** still required."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q19-u1",
+            "Q19-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q20",
+      "clauses": "Sinbad plays Voyage Home with 4 other Voyages in his discard pile. If uncancelled and game continues, what is its value, what returns where after combat, where does Voyage Home itself end, and what is his next unboosted maneuver allowance?",
+      "answer": "With four other Voyages already discarded, Voyage Home is worth 2+4=6 before modifiers. After combat, take all other Voyages from discard into hand; Home itself enters discard at normal end of combat and remains there. With Home alone there, next unboosted maneuver allowance is 2+1=3 for each fighter.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q20-u1",
+          "start": 23205,
+          "end": 23516,
+          "text": "| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |"
+        },
+        {
+          "unit_id": "Q20-u2",
+          "start": 13813,
+          "end": 14192,
+          "text": "**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q20-u1",
+            "Q20-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "clauses": "What does Regroup draw after combat if you win versus lose? If it is your defeated sidekick’s played card and the duel continues, does that draw still occur?",
+      "answer": "Regroup draws 1 after combat if you lose; if you win it draws 2 instead. If played by a defeated sidekick, its effect still resolves when the duel continues.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q21-u1",
+          "start": 15593,
+          "end": 15785,
+          "text": "| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |"
+        },
+        {
+          "unit_id": "Q21-u2",
+          "start": 7853,
+          "end": 8006,
+          "text": "4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q21-u1",
+            "Q21-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q22",
+      "clauses": "Your fighter plays Momentous Shift while in its turn-start space after moving away and back. Is the value 3 or 5? What if it is now in a different space from where it started this turn, including when defending on the opponent’s turn?",
+      "answer": "Value is 3 after moving away and returning to the starting space, because it ended in the same space. It is 5 when currently in a different space than at the start of the current turn; this applies during defense on the opponent’s turn too.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q22-u1",
+          "start": 15786,
+          "end": 16185,
+          "text": "| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q22-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q23",
+      "clauses": "After Looking Glass, what choices are available, how many must be different, and can you choose the draw twice or place Alice in her current or an occupied space? If Alice is SMALL, what is the card’s defense value?",
+      "answer": "Looking Glass is Alice-only defense value 2. After combat choose two different effects from: draw 2, recover Alice 3, place Alice in any other space. Cannot select draw twice; placement excludes her current space. SMALL adds 1, so defense value is 3.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q23-u1",
+          "start": 16579,
+          "end": 16753,
+          "text": "| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |"
+        },
+        {
+          "unit_id": "Q23-u2",
+          "start": 11685,
+          "end": 11904,
+          "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q23-u1",
+            "Q23-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q24",
+      "clauses": "What condition enables Snicker-Snack’s after-combat hand effect, who sees the hand, who chooses the discarded card, and where does it go? What happens to that effect if Alice loses combat?",
+      "answer": "Snicker-Snack (Alice-only attack value 3) works only if Alice won. Then she looks at opponent’s hand and chooses one card for opponent to discard. On a loss the effect does not happen.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q24-u1",
+          "start": 16754,
+          "end": 16896,
+          "text": "| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |"
+        },
+        {
+          "unit_id": "Q24-u2",
+          "start": 7853,
+          "end": 8006,
+          "text": "4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q24-u1",
+            "Q24-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q25",
+      "clauses": "For each of O Frabjous Day!, The Other Side of the Mushroom, I’m Late I’m Late, and Mad as a Hatter, state the after-combat movement (who and maximum distance, if any) and size effect. Can these size changes alter the attack damage already resolved?",
+      "answer": "O Frabjous Day!: no movement; after combat change size. The Other Side: move Alice up to 3, then change size. I’m Late, I’m Late: move Alice up to 5, then change size. Mad as a Hatter: move each of your fighters up to 2, then change size. These occur after combat result and cannot change damage already resolved.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q25-u1",
+          "start": 16897,
+          "end": 16978,
+          "text": "| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |"
+        },
+        {
+          "unit_id": "Q25-u2",
+          "start": 16979,
+          "end": 17107,
+          "text": "| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |"
+        },
+        {
+          "unit_id": "Q25-u3",
+          "start": 17254,
+          "end": 17388,
+          "text": "| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |"
+        },
+        {
+          "unit_id": "Q25-u4",
+          "start": 17893,
+          "end": 18044,
+          "text": "| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |"
+        },
+        {
+          "unit_id": "Q25-u5",
+          "start": 12055,
+          "end": 12162,
+          "text": "After-combat size changes occur after the current combat result and do not retroactively change its damage."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q25-u1",
+            "Q25-u2",
+            "Q25-u3",
+            "Q25-u4",
+            "Q25-u5"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q26",
+      "clauses": "Manxome Foe is played with printed value 3 and its during-combat discard reveals a card of combat value 5 and BOOST 2. Which card is discarded from where, what is Manxome Foe’s value before other modifiers, and does that discard count as drawing a card?",
+      "answer": "Discard the top card of your deck to your own face-up discard pile; add its BOOST value 2 to Manxome Foe’s printed 3, giving value 5 before modifiers. It is a discard, not a draw.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q26-u1",
+          "start": 18045,
+          "end": 18280,
+          "text": "| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q26-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q27",
+      "clauses": "Jabberwock uses Claws That Catch against a hero, then in a separate combat against a sidekick. What is its combat value in each case before other modifiers, and does Alice being BIG add to either?",
+      "answer": "Against a hero Claws That Catch has value 5; against a sidekick it stays 3. Alice’s BIG bonus belongs to Alice, not Jabberwock, so adds nothing in either case.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q27-u1",
+          "start": 17741,
+          "end": 17892,
+          "text": "| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |"
+        },
+        {
+          "unit_id": "Q27-u2",
+          "start": 11685,
+          "end": 11955,
+          "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q27-u1",
+            "Q27-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q28",
+      "clauses": "Arthur attacks with Noble Sacrifice, committing a BOOST-2 card through his ability and later discarding a BOOST-3 card through Noble Sacrifice. If uncancelled, what is the attack value and when is each boost chosen? If a defending Feint cancels Noble Sacrifice, which boosts survive and what is the attack value?",
+      "answer": "Arthur may commit ability BOOST from a hand card face down alongside the attack card; Noble Sacrifice then separately may BOOST during combat by discarding another hand card. If both resolve, 2+2+3=7. Against Feint, printed Noble effect is canceled: ability BOOST is discarded without effect, and Noble’s separate boost effect cannot resolve; value remains 2.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q28-u1",
+          "start": 12164,
+          "end": 12565,
+          "text": "**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**."
+        },
+        {
+          "unit_id": "Q28-u2",
+          "start": 18843,
+          "end": 19042,
+          "text": "| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |"
+        },
+        {
+          "unit_id": "Q28-u3",
+          "start": 9362,
+          "end": 9791,
+          "text": "| Arthur attacks with Noble Sacrifice and an ability BOOST; defender plays Feint | Feint cancels Noble Sacrifice’s printed effect. Arthur’s ability BOOST is **discarded without effect**, and the canceled during-combat effect cannot provide another BOOST. Noble Sacrifice retains printed attack value **2**, before other modifiers. The current Excalibur exception does not protect this card, which has printed effects to cancel. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q28-u1",
+            "Q28-u2",
+            "Q28-u3"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q29",
+      "clauses": "Who may play The Lady of the Lake, what named card does it retrieve from which locations to where, when must you shuffle, and what are Excalibur’s user, type and printed attack value?",
+      "answer": "The Lady is a King Arthur scheme. Search deck and discard pile for Excalibur and add it to hand; shuffle if deck searched. Excalibur is King Arthur-only attack card, printed value 6.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q29-u1",
+          "start": 19548,
+          "end": 19724,
+          "text": "| The Lady of the Lake | King Arthur | Scheme | — | 2 | 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |"
+        },
+        {
+          "unit_id": "Q29-u2",
+          "start": 19043,
+          "end": 19117,
+          "text": "| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q29-u1",
+            "Q29-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q30",
+      "clauses": "After an uncancelled The Aid of Morgana, do you draw only if Arthur won? How many cards, at what timing, and who is allowed to play it?",
+      "answer": "The Aid of Morgana is Arthur-only attack value 4. After combat draw 2, regardless of who won, while the duel continues.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q30-u1",
+          "start": 19118,
+          "end": 19209,
+          "text": "| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |"
+        },
+        {
+          "unit_id": "Q30-u2",
+          "start": 7853,
+          "end": 8006,
+          "text": "4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q30-u1",
+            "Q30-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q31",
+      "clauses": "Who can play Divine Intervention, as what combat-card type, and whom does it move how far at which timing? Must that fighter have won?",
+      "answer": "Divine Intervention is Arthur-only versatile (attack or defense), value 3. After combat move Arthur up to 5 spaces; it does not require winning.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q31-u1",
+          "start": 19210,
+          "end": 19334,
+          "text": "| Divine Intervention | King Arthur | Versatile (attack or defense) | 3 | 2 | 2 | After combat move Arthur up to 5 spaces. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q31-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q32",
+      "clauses": "Who plays Prophecy, what happens to the top four cards, and in what order may cards be returned to the deck? Is this a scheme or an attack?",
+      "answer": "Prophecy is Merlin’s scheme, not an attack. Look at top 4, add 2 to hand, return other 2 to top in any order.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q32-u1",
+          "start": 19725,
+          "end": 19867,
+          "text": "| Prophecy | Merlin | Scheme | — | 2 | 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q32-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q33",
+      "clauses": "For Bewilderment, name its legal fighter, card type and printed defense value; state its during-combat effect and optional after-combat placement, including destination occupancy. Does its printed zero automatically make the attacker win?",
+      "answer": "Bewilderment is Merlin-only defense value 0. During combat it prevents all damage. After combat Merlin may be placed in any unoccupied space. Zero printed value does not automatically make attacker win: prevented attack damage means defender wins.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q33-u1",
+          "start": 19868,
+          "end": 20025,
+          "text": "| Bewilderment | Merlin | Defense only | 0 | 2 | 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |"
+        },
+        {
+          "unit_id": "Q33-u2",
+          "start": 8493,
+          "end": 8782,
+          "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q33-u1",
+            "Q33-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q34",
+      "clauses": "Who plays Aid the Chosen One, what type/value is it, and what happens after combat on a win versus a loss?",
+      "answer": "Aid the Chosen One is Merlin-only attack value 4. After combat, if Merlin won, draw 2; on a loss no draw.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q34-u1",
+          "start": 20026,
+          "end": 20125,
+          "text": "| Aid the Chosen One | Merlin | Attack only | 4 | 2 | 1 | After combat, if you won, draw 2 cards. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q34-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q35",
+      "clauses": "For Restless Spirits, who is the active fighter, where must the chosen space be, which spaces and fighters take how much damage, and how many cards are drawn if zero, one or two opposing fighters are defeated? If the opposing hero is defeated, do you finish the draw?",
+      "answer": "Restless Spirits is Merlin’s scheme; choose any space in Merlin’s zone. Deal 2 to each opposing fighter in that space and one adjacent space. If zero are defeated, draw none; if one or two defeated, draw 1 total. If the opposing hero is defeated, game ends immediately and the draw is not completed.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q35-u1",
+          "start": 20126,
+          "end": 20384,
+          "text": "| Restless Spirits | Merlin | Scheme | — | 2 | 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |"
+        },
+        {
+          "unit_id": "Q35-u2",
+          "start": 10283,
+          "end": 10427,
+          "text": "**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q35-u1",
+            "Q35-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q36",
+      "clauses": "Who plays Command the Storms, which fighters can it move how far, and when moving an opposing fighter which side’s fighters can it pass through and which block it?",
+      "answer": "Command the Storms is Merlin’s scheme; move every fighter, including opponents, up to 3. When moving opponent, use their owner’s perspective: they may pass through their own friendly fighters, cannot pass through the moving side’s opposing fighters, and cannot finish occupied.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q36-u1",
+          "start": 20385,
+          "end": 20580,
+          "text": "| Command the Storms | Merlin | Scheme | — | 2 | 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |"
+        },
+        {
+          "unit_id": "Q36-u2",
+          "start": 4652,
+          "end": 4858,
+          "text": "Ordinary movement enters adjacent spaces along connecting lines. You may pass through your own friendly fighters, but **cannot finish in any occupied space**. You may **not pass through opposing fighters**."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q36-u1",
+            "Q36-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q37",
+      "clauses": "Can Merlin use Swift Strike, which fighter does it move, how far and when, and does it require a combat win?",
+      "answer": "Swift Strike is ANY attack-only value 3. After combat move your fighting fighter up to 4, with no win requirement.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q37-u1",
+          "start": 20581,
+          "end": 20691,
+          "text": "| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q37-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q38",
+      "clauses": "Medusa attacks using Gaze of Stone (value 2) against an uncancelled defense value 2, then in a separate combat against no defense. Assuming no other modifiers and a surviving target, state attack damage, combat winner and Gaze’s extra damage in each case.",
+      "answer": "Against defense 2, attack damage max(0,2−2)=0; defender wins, so Gaze’s extra damage is 0. With no defense, damage is 2 and Medusa wins combat, then Gaze deals 8 additional damage (assuming target survives).",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q38-u1",
+          "start": 20900,
+          "end": 21150,
+          "text": "| Gaze of Stone | Medusa | Attack only | 2 | 4 | 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |"
+        },
+        {
+          "unit_id": "Q38-u2",
+          "start": 8493,
+          "end": 8782,
+          "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q38-u1",
+            "Q38-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q39",
+      "clauses": "Who plays A Momentary Glance, when does it deal how much damage, what determines its target’s location, and may it target a friendly fighter instead of an opponent?",
+      "answer": "A Momentary Glance is Medusa’s scheme. It deals 2 damage to any one fighter in Medusa’s zone, including a friendly fighter; target is determined by being in Medusa’s zone.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q39-u1",
+          "start": 21151,
+          "end": 21290,
+          "text": "| A Momentary Glance | Medusa | Scheme | — | 4 | 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q39-u1"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q40",
+      "clauses": "Who can use Hiss and Slither versus Clutching Claws, what are their card types, and what happens after combat? Must you win, and does either printed effect let you choose the opponent’s discard or make it random?",
+      "answer": "Hiss and Slither is Medusa-only defense-only value 4; Clutching Claws is Harpy-only versatile value 3. After combat each makes opponent discard one card from their own hand, of their choice; neither requires a win. Neither effect lets you choose, and neither is random.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "Q40-u1",
+          "start": 21291,
+          "end": 21492,
+          "text": "| Hiss and Slither | Medusa | Defense only | 4 | 3 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |"
+        },
+        {
+          "unit_id": "Q40-u2",
+          "start": 21626,
+          "end": 21842,
+          "text": "| Clutching Claws | Harpy | Versatile (attack or defense) | 3 | 2 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "Q40-u1",
+            "Q40-u2"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    }
+  ]
+}

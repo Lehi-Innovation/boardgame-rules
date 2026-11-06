@@ -1,0 +1,2952 @@
+{
+  "benchmark": "v9-current-complete-attack-commitment",
+  "block": 4,
+  "ids": [
+    "Q51",
+    "Q52",
+    "Q53",
+    "Q54",
+    "Q55",
+    "Q56",
+    "Q57",
+    "Q58",
+    "Q59",
+    "Q60",
+    "Q61",
+    "Q62",
+    "Q63",
+    "Q64",
+    "Q65",
+    "Q66",
+    "Q67"
+  ],
+  "summary_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/summary-snapshot.md",
+  "original_raw_file_sha256": {
+    "a": "97e503b3754e6e707dd2e7a58ba8ff772a41dc6ecdc2963280a0dc3c5c99ea4f",
+    "b": "490bcf4a6720330d700b3d7a8c5573e69bd4a4ca7c5f89bfeb5a5a8ff84f7119"
+  },
+  "entry_hash_definition": "SHA256 of lossless parsed entry reserialization with ensure_ascii=False,sort_keys=True,separators comma/colon. Every original entry field retained.",
+  "records": [
+    {
+      "question": {
+        "id": "Q51",
+        "question": "What exactly does Voyage to the Valley of the Giant Snakes do after combat, does it require a win, and does it discard a card from that hand?"
+      },
+      "fixed_key": {
+        "id": "Q51",
+        "expected_answer": "Look at opponent’s hand after combat regardless of win; No discard effect",
+        "required_facts": [
+          "Look at opponent’s hand after combat regardless of win",
+          "No discard effect"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c6"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q51",
+        "asked_clauses": "What exactly does Voyage to the Valley of the Giant Snakes do after combat, does it require a win, and does it discard a card from that hand?",
+        "required_answer_facts": [
+          "Look at opponent’s hand after combat regardless of win",
+          "No discard effect"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r2c6"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q51",
+          "clauses": [
+            "Valley Voyage effect, win requirement, whether it discards from hand."
+          ],
+          "answer": "After combat, look at the opponent’s hand. This effect does not require winning and does not discard a card.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q51-valley",
+              "start": 23764,
+              "end": 24285,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |",
+              "kind": "table_header_and_row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q51-valley"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q51",
+          "clauses": [
+            "What does Voyage to the Valley of the Giant Snakes do after combat?",
+            "Does it require a win, and does it discard a card from the opponent’s hand?"
+          ],
+          "answer": "The attached operative text answers the Voyage lookup: it only lets you look at the opponent’s hand; it neither discards a card nor requires a win.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23821,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |",
+              "kind": "table intro and header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 24214,
+              "end": 24285,
+              "text": "| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |",
+              "kind": "table row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4a69014b47a06a511ae5f3bf2fd3b1c6bbe67a96b386e81b26fd51e42b1afa5b",
+        "b": "f0bdb93a3e4be73098c240141acf57d08dd8478b15dd7ff1ef13b49db0d74e95"
+      }
+    },
+    {
+      "question": {
+        "id": "Q52",
+        "question": "What exactly happens after Voyage to the Creature with Eyes Like Coals of Fire, who loses the card, how is it selected, and is a combat win required?"
+      },
+      "fixed_key": {
+        "id": "Q52",
+        "expected_answer": "After combat opponent discards 1 random card; No win requirement",
+        "required_facts": [
+          "After combat opponent discards 1 random card",
+          "No win requirement"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c1"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q52",
+        "asked_clauses": "What exactly happens after Voyage to the Creature with Eyes Like Coals of Fire, who loses the card, how is it selected, and is a combat win required?",
+        "required_answer_facts": [
+          "After combat opponent discards 1 random card",
+          "No win requirement"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c1"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q52",
+          "clauses": [
+            "Effect, whose card is lost, selection, win requirement."
+          ],
+          "answer": "After combat, the opponent discards one random card from their hand. No win is required.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q52-creature",
+              "start": 23764,
+              "end": 24380,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |",
+              "kind": "table_header_and_row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q52-creature"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q52",
+          "clauses": [
+            "What happens after Voyage to the Creature with Eyes Like Coals of Fire?",
+            "Who loses the card, and how is it selected?",
+            "Is a combat win required?"
+          ],
+          "answer": "The attached operative text answers the Voyage lookup: the opponent discards one random card; no combat win is required.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23821,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |",
+              "kind": "table intro and header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 24286,
+              "end": 24380,
+              "text": "| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |",
+              "kind": "table row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "dde8d9765d3efc100405105a5a28728fc6c40e01e4da2376a956826c2a6471dd",
+        "b": "2b628e091a1b2884f7b4bd603b4ede5c5a65032d3a54df71c253b253d3709b68"
+      }
+    },
+    {
+      "question": {
+        "id": "Q53",
+        "question": "What movement does Voyage to the Cannibals with the Root of Madness allow after combat, who moves, is it optional, and must Sinbad have won?"
+      },
+      "fixed_key": {
+        "id": "Q53",
+        "expected_answer": "After combat may move Sinbad up to 2; Optional and no win requirement",
+        "required_facts": [
+          "After combat may move Sinbad up to 2",
+          "Optional and no win requirement"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c2"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q53",
+        "asked_clauses": "What movement does Voyage to the Cannibals with the Root of Madness allow after combat, who moves, is it optional, and must Sinbad have won?",
+        "required_answer_facts": [
+          "After combat may move Sinbad up to 2",
+          "Optional and no win requirement"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c2"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q53",
+          "clauses": [
+            "Who moves/how far; optionality and win requirement."
+          ],
+          "answer": "After combat, you may move Sinbad up to 2 spaces. It is optional and does not require winning.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q53-cannibals",
+              "start": 23764,
+              "end": 24475,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |",
+              "kind": "table_header_and_row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q53-cannibals"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q53",
+          "clauses": [
+            "What movement does this Voyage permit after combat, and who moves?",
+            "Is it optional?",
+            "Must Sinbad have won?"
+          ],
+          "answer": "The attached operative text answers the Voyage lookup: Sinbad may move up to 2 spaces; it is optional and does not require a win.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23821,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |",
+              "kind": "table intro and header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 24381,
+              "end": 24475,
+              "text": "| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |",
+              "kind": "table row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4ea08af979e9e48df8c909568dee447222297ed7c8727b5ef364ac733f74dec2",
+        "b": "09a0393a5ea8da10ece7320ea654196e4422730ac439af9e0d03e110084c1b77"
+      }
+    },
+    {
+      "question": {
+        "id": "Q54",
+        "question": "What happens after Voyage to the City of the Man-Eating Apes if Sinbad lost combat but is alive and the duel continues? Can the 2 damage from this effect change who won the combat?"
+      },
+      "fixed_key": {
+        "id": "Q54",
+        "expected_answer": "Deal 2 damage to opposing fighter after combat even on loss; Effect damage does not change combat winner",
+        "required_facts": [
+          "Deal 2 damage to opposing fighter after combat even on loss",
+          "Effect damage does not change combat winner"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c3; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q54",
+        "asked_clauses": "What happens after Voyage to the City of the Man-Eating Apes if Sinbad lost combat but is alive and the duel continues? Can the 2 damage from this effect change who won the combat?",
+        "required_answer_facts": [
+          "Deal 2 damage to opposing fighter after combat even on loss",
+          "Effect damage does not change combat winner"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c3; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q54",
+          "clauses": [
+            "Givens: Sinbad lost combat, alive, duel continues.",
+            "After-combat result; whether effect damage changes combat winner."
+          ],
+          "answer": "The Voyage deals 2 damage to the opposing fighter after combat even though Sinbad lost. The effect damage cannot change who won that combat.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q54-apes",
+              "start": 23764,
+              "end": 24562,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q54-winner",
+              "start": 9120,
+              "end": 9409,
+              "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q54-apes"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q54-winner"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q54",
+          "clauses": [
+            "If Sinbad lost combat but is alive and the duel continues, what does this Voyage do after combat?",
+            "Can its 2 effect damage change who won combat?"
+          ],
+          "answer": "The Voyage deals 2 damage to the opposing fighter after combat even though Sinbad lost; no win condition is stated. Effect damage does not change the combat winner.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23821,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |",
+              "kind": "table intro and header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 24476,
+              "end": 24562,
+              "text": "| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 8105,
+              "end": 9411,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "kind": "combat rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "f82b2aef32f041122fca8b70a13b18250f2311ed39219495c92f2a7bdbaf3d63",
+        "b": "1aa1ac419dcfd099324ee4a590676546393f291fd2e3a889d3bf2c9db9e4afb6"
+      }
+    },
+    {
+      "question": {
+        "id": "Q55",
+        "question": "What happens after Voyage to the City of the King of Serendib, when and for whose hand, and must Sinbad win first?"
+      },
+      "fixed_key": {
+        "id": "Q55",
+        "expected_answer": "After combat draw 1 into own hand, mandatory without win requirement if duel continues",
+        "required_facts": [
+          "After combat draw 1 into own hand, mandatory without win requirement if duel continues"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c4; rulebook p9;p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q55",
+        "asked_clauses": "What happens after Voyage to the City of the King of Serendib, when and for whose hand, and must Sinbad win first?",
+        "required_answer_facts": [
+          "After combat draw 1 into own hand, mandatory without win requirement if duel continues"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r3c4; rulebook p9;p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q55",
+          "clauses": [
+            "Effect timing and whose hand receives card; win requirement."
+          ],
+          "answer": "After combat, Sinbad’s player draws 1 card into their hand. The draw is mandatory and does not require winning.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q55-serendib",
+              "start": 23764,
+              "end": 24624,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |\n| Voyage to the City of the King of Serendib | Draw 1 card. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q55-draw",
+              "start": 11172,
+              "end": 11269,
+              "text": "- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q55-serendib",
+                "q55-draw"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q55",
+          "clauses": [
+            "What happens after this Voyage, when and for whose hand?",
+            "Must Sinbad win first?"
+          ],
+          "answer": "The attached operative text answers the Voyage lookup: after combat Sinbad draws one card, with no win condition stated.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23821,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |",
+              "kind": "table intro and header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 24563,
+              "end": 24624,
+              "text": "| Voyage to the City of the King of Serendib | Draw 1 card. |",
+              "kind": "table row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "5cc6869c2e5393099e61a539e625c106c44fcfefeeae1c50cc1e84d9bb2ae9ce",
+        "b": "e0ed3a9e76bb7dcffdaa51c969210f5050993bc1b603606f0037d478f15b0522"
+      }
+    },
+    {
+      "question": {
+        "id": "Q56",
+        "question": "A required draw of 2 begins with one card left in your deck and all fighters alive. What happens to the first and second draws, does an empty deck alone deal damage before a draw is requested, and does the discard pile get shuffled?"
+      },
+      "fixed_key": {
+        "id": "Q56",
+        "expected_answer": "First draw takes remaining card into hand; Second missing draw deals 2 to each own fighter immediately; Empty deck alone marks exhausted but deals no damage until a draw required; No reshuffle",
+        "required_facts": [
+          "First draw takes remaining card into hand",
+          "Second missing draw deals 2 to each own fighter immediately",
+          "Empty deck alone marks exhausted but deals no damage until a draw required",
+          "No reshuffle"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "rulebook p9"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q56",
+        "asked_clauses": "A required draw of 2 begins with one card left in your deck and all fighters alive. What happens to the first and second draws, does an empty deck alone deal damage before a draw is requested, and does the discard pile get shuffled?",
+        "required_answer_facts": [
+          "First draw takes remaining card into hand",
+          "Second missing draw deals 2 to each own fighter immediately",
+          "Empty deck alone marks exhausted but deals no damage until a draw required",
+          "No reshuffle"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "rulebook p9"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q56",
+          "clauses": [
+            "Givens: required draw 2; one card remains; all fighters alive.",
+            "First/second draw outcome; damage timing; empty-deck damage absent draw request?",
+            "Reshuffle?"
+          ],
+          "answer": "Draw the one remaining card. The second required draw fails and each of your fighters takes 2 damage. An empty deck alone causes no damage before a draw is required. Do not shuffle the discard pile.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q56-exhaustion",
+              "start": 11270,
+              "end": 11728,
+              "text": "- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q56-exhaustion"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q56-exhaustion"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q56-exhaustion"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q56",
+          "clauses": [
+            "Given a required draw of 2 starting with one card left, what happens on the first and second draws?",
+            "Does an empty deck alone deal damage before a draw is requested?",
+            "Is the discard pile shuffled?"
+          ],
+          "answer": "The first draw takes the remaining card. The second cannot be drawn, so each of your fighters takes 2 damage. An empty deck causes no damage until a draw is required, and the discard pile is not shuffled.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 11172,
+              "end": 11728,
+              "text": "- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**.\n- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw.",
+              "kind": "global rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "310f934a4fe742aa89fdf1830479bb60915b154c8a2e6ba5b8a7ff80c66e9c09",
+        "b": "c76ec4d6b57521ab3dfbef62b9dbd8edfb392301a531c889c086c793215ec740"
+      }
+    },
+    {
+      "question": {
+        "id": "Q57",
+        "question": "Both combatants play Feint. Which immediately effect resolves first, what happens to the other Feint’s effect, and do the printed combat values vanish?"
+      },
+      "fixed_key": {
+        "id": "Q57",
+        "expected_answer": "Defender’s immediately effect first cancels attacker Feint effects; Attacker cancellation does not resolve; Printed values remain; only effects canceled",
+        "required_facts": [
+          "Defender’s immediately effect first cancels attacker Feint effects",
+          "Attacker cancellation does not resolve",
+          "Printed values remain; only effects canceled"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "all four action sheets Feint; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q57",
+        "asked_clauses": "Both combatants play Feint. Which immediately effect resolves first, what happens to the other Feint’s effect, and do the printed combat values vanish?",
+        "required_answer_facts": [
+          "Defender’s immediately effect first cancels attacker Feint effects",
+          "Attacker cancellation does not resolve",
+          "Printed values remain; only effects canceled"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "all four action sheets Feint; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q57",
+          "clauses": [
+            "Which Feint effect first; what happens to the other; do combat values vanish?"
+          ],
+          "answer": "The defender’s Feint resolves first and cancels the attacker’s Feint effect. The attacking Feint does not resolve. Both keep printed combat value 2.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q57-feint",
+              "start": 15873,
+              "end": 16219,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q57-example",
+              "start": 9730,
+              "end": 9986,
+              "text": "| Both fighters play Feint | The **defender’s Feint resolves first** and cancels the attacking Feint’s effect. The attacking Feint **does not resolve or cancel the defender’s card**. Both cards keep their printed combat value **2**, before other modifiers.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q57-feint",
+                "q57-example"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q57-example"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q57-example"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q57",
+          "clauses": [
+            "Which Feint effect resolves first?",
+            "What happens to the other Feint’s effect?",
+            "Do the printed combat values vanish?"
+          ],
+          "answer": "The defender’s Feint resolves first and cancels the attacker’s Feint effect; the attacking Feint does not resolve or cancel the defender’s card. Both printed combat values remain 2.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 15873,
+              "end": 16010,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 16041,
+              "end": 16219,
+              "text": "| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 8105,
+              "end": 9120,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n",
+              "kind": "combat rule"
+            },
+            {
+              "unit_id": "u4",
+              "start": 9730,
+              "end": 9988,
+              "text": "| Both fighters play Feint | The **defender’s Feint resolves first** and cancels the attacking Feint’s effect. The attacking Feint **does not resolve or cancel the defender’s card**. Both cards keep their printed combat value **2**, before other modifiers. |",
+              "kind": "example row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "b9f3ff2b6ecdc51f8dfda639fcae5a8962cdec95b3a47b88af587cbbfa32920e",
+        "b": "5e556247b868e60555c319e80eac0e67351eb2bcbb5e5fae4f59e9a5d0cd325c"
+      }
+    },
+    {
+      "question": {
+        "id": "Q58",
+        "question": "BIG Alice attacks with O Frabjous Day! against defense 4 with no other effects. What is Alice’s attack value and attack damage, when does size change, and what bonus applies to her next defense while SMALL?"
+      },
+      "fixed_key": {
+        "id": "Q58",
+        "expected_answer": "Attack value 4+2=6 and attack damage 2; Change BIG to SMALL after combat, after damage; Next SMALL defense card, if played, has +1 value",
+        "required_facts": [
+          "Attack value 4+2=6 and attack damage 2",
+          "Change BIG to SMALL after combat, after damage",
+          "Next SMALL defense card, if played, has +1 value"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r1c4; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q58",
+        "asked_clauses": "BIG Alice attacks with O Frabjous Day! against defense 4 with no other effects. What is Alice’s attack value and attack damage, when does size change, and what bonus applies to her next defense while SMALL?",
+        "required_answer_facts": [
+          "Attack value 4+2=6 and attack damage 2",
+          "Change BIG to SMALL after combat, after damage",
+          "Next SMALL defense card, if played, has +1 value"
+        ],
+        "contextual_key_background": [
+          "Q58 does not itself ask the no-defense-card branch. Ordinary shorthand for next defense bonus accepted when it does not assert a bonus without playing a card. Q65 directly tests absent-card condition."
+        ],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r1c4; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q58",
+          "clauses": [
+            "Givens: BIG Alice with O Frabjous Day vs defense 4.",
+            "Attack value/damage; size change timing; next SMALL defense bonus."
+          ],
+          "answer": "Alice’s attack value is 4 + 2 = 6, dealing 6 − 4 = 2 attack damage. O Frabjous Day changes her size after the combat result, so it does not alter this damage. If she is then SMALL, her defense-card values get +1.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q58-frabjous",
+              "start": 17033,
+              "end": 17605,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q58-alice",
+              "start": 12312,
+              "end": 12789,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q58-frabjous",
+                "q58-alice"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q58-frabjous",
+                "q58-alice"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q58",
+          "clauses": [
+            "What are BIG Alice’s attack value and attack damage against defense 4?",
+            "When does her size change happen?",
+            "What bonus applies to her next defense while SMALL?"
+          ],
+          "answer": "Alice’s attack value is 4 + 2 = 6 and her attack damage is 6 − 4 = 2. The size change occurs after the current combat result; while SMALL, Alice adds 1 to her defense-card values.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 17033,
+              "end": 17173,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 17524,
+              "end": 17605,
+              "text": "| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 12312,
+              "end": 12789,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u4",
+              "start": 8105,
+              "end": 9120,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n",
+              "kind": "combat rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "9e641fd98a3447a8dcd05288d40db9566ed73d65a5972f834a234223b4dbe8d0",
+        "b": "d19ca482fd7dea518d587e7982b3c48576c759f71bb0d007bfe30af3a1ec516a"
+      }
+    },
+    {
+      "question": {
+        "id": "Q59",
+        "question": "Can Sinbad discard one of the six non-Home Voyage cards to BOOST maneuver movement and thereby put it in the discard pile? How does Voyage Home differ, and is an absent BOOST value simply a printed zero?"
+      },
+      "fixed_key": {
+        "id": "Q59",
+        "expected_answer": "No; six non-Home Voyages have no BOOST value and cannot be used as BOOST payment; Voyage Home has printed BOOST 1 and may pay for BOOST; Missing value is not a printed zero",
+        "required_facts": [
+          "No; six non-Home Voyages have no BOOST value and cannot be used as BOOST payment",
+          "Voyage Home has printed BOOST 1 and may pay for BOOST",
+          "Missing value is not a printed zero"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5;r2c5–6;r3c1–4; rulebook p10; Justin Jacobson BGG thread2294803 2019-10-17 primary post"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q59",
+        "asked_clauses": "Can Sinbad discard one of the six non-Home Voyage cards to BOOST maneuver movement and thereby put it in the discard pile? How does Voyage Home differ, and is an absent BOOST value simply a printed zero?",
+        "required_answer_facts": [
+          "No; six non-Home Voyages have no BOOST value and cannot be used as BOOST payment",
+          "Voyage Home has printed BOOST 1 and may pay for BOOST",
+          "Missing value is not a printed zero"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5;r2c5–6;r3c1–4; rulebook p10; Justin Jacobson BGG thread2294803 2019-10-17 primary post"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q59",
+          "clauses": [
+            "Can six non-Home Voyages pay for BOOST and enter discard?",
+            "How Home differs; absent BOOST vs printed zero."
+          ],
+          "answer": "No. The six non-Home Voyages have no BOOST value and cannot pay for BOOST, so this cannot place them in discard. Voyage Home has BOOST 1 and may pay. An absent BOOST value is not a printed zero.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q59-voyage-boost",
+              "start": 26258,
+              "end": 26847,
+              "text": "**Can the six Voyages without a BOOST value pay for BOOST?** No. They have **no BOOST value**, rather than a printed zero, and cannot be discarded as BOOST payment. **Voyage Home is the exception: it has BOOST 1.** The original components identify these cards. Designer/publisher Justin Jacobson’s [October 17, 2019 explanation](https://boardgamegeek.com/thread/2294803/any-rule-of-thumb-for-boost-values) confirms that the omissions intentionally prevent Sinbad from dumping Voyages into his discard pile this way. This original-fighter clarification does not introduce other sets’ rules.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q59-voyage-boost"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q59-voyage-boost"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q59",
+          "clauses": [
+            "Can any of the six non-Home Voyage cards pay for a maneuver BOOST and enter discard that way?",
+            "How does Voyage Home differ?",
+            "Is an absent BOOST value a printed zero?"
+          ],
+          "answer": "The six non-Home Voyages cannot be discarded to pay for BOOST; Voyage Home has BOOST 1 and can. An absent BOOST value is not a printed zero.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 23154,
+              "end": 23763,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n",
+              "kind": "table intro"
+            },
+            {
+              "unit_id": "u2",
+              "start": 26258,
+              "end": 26847,
+              "text": "**Can the six Voyages without a BOOST value pay for BOOST?** No. They have **no BOOST value**, rather than a printed zero, and cannot be discarded as BOOST payment. **Voyage Home is the exception: it has BOOST 1.** The original components identify these cards. Designer/publisher Justin Jacobson’s [October 17, 2019 explanation](https://boardgamegeek.com/thread/2294803/any-rule-of-thumb-for-boost-values) confirms that the omissions intentionally prevent Sinbad from dumping Voyages into his discard pile this way. This original-fighter clarification does not introduce other sets’ rules.",
+              "kind": "FAQ"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "9819a6bc8a5a0662c937fa343e6522469bfe50e0df30cb086a07191264485dc8",
+        "b": "974c90a1bee9eaec302374916acb8a52c2b8c644f9b42cc5d322ef710f5e64b0"
+      }
+    },
+    {
+      "question": {
+        "id": "Q60",
+        "question": "BIG Alice attacks with Momentous Shift after starting the turn in another space; defender uses Feint (value 2). What does Feint cancel, does it cancel Alice’s character-card bonus, and what are her attack value and attack damage?"
+      },
+      "fixed_key": {
+        "id": "Q60",
+        "expected_answer": "Feint cancels Momentous Shift effect so no replacement value 5; Alice character ability is not an effect on the attack card and remains; Alice attack value 3+2=5; against defense 2 deals 3 attack damage",
+        "required_facts": [
+          "Feint cancels Momentous Shift effect so no replacement value 5",
+          "Alice character ability is not an effect on the attack card and remains",
+          "Alice attack value 3+2=5; against defense 2 deals 3 attack damage"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r3c5–6;r5c1–3; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q60",
+        "asked_clauses": "BIG Alice attacks with Momentous Shift after starting the turn in another space; defender uses Feint (value 2). What does Feint cancel, does it cancel Alice’s character-card bonus, and what are her attack value and attack damage?",
+        "required_answer_facts": [
+          "Feint cancels Momentous Shift effect so no replacement value 5",
+          "Alice character ability is not an effect on the attack card and remains",
+          "Alice attack value 3+2=5; against defense 2 deals 3 attack damage"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r3c5–6;r5c1–3; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q60",
+          "clauses": [
+            "Givens: BIG Alice started turn elsewhere and attacks; Feint defense 2.",
+            "What Feint cancels and whether Alice bonus is canceled; attack value/damage."
+          ],
+          "answer": "Feint cancels Momentous Shift’s conditional value change, so it stays at printed 3. It does not cancel Alice’s separate BIG bonus: attack value is 3 + 2 = 5 and damage is 5 − 2 = 3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q60-momentous",
+              "start": 15873,
+              "end": 16812,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |\n| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |\n| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q60-example",
+              "start": 10419,
+              "end": 10674,
+              "text": "| BIG Alice attacks with Momentous Shift; the defense is Feint 2 | Feint cancels the conditional change to value 5. Momentous Shift keeps printed value **3**, while Alice’s separate BIG ability still adds **2**: attack **3 + 2 = 5**, damage **5 − 2 = 3**.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q60-momentous",
+                "q60-example"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q60-example"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q60",
+          "clauses": [
+            "What does Feint cancel?",
+            "Does Feint cancel Alice’s BIG character-card bonus?",
+            "What are Alice’s attack value and damage against defense 2?"
+          ],
+          "answer": "Feint cancels Momentous Shift’s conditional effect, but not Alice’s separate BIG bonus. The attack value is 3 + 2 = 5 and damage is 5 − 2 = 3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 15873,
+              "end": 16010,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 16041,
+              "end": 16219,
+              "text": "| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 16413,
+              "end": 16812,
+              "text": "| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u4",
+              "start": 12312,
+              "end": 12789,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u5",
+              "start": 10419,
+              "end": 10676,
+              "text": "| BIG Alice attacks with Momentous Shift; the defense is Feint 2 | Feint cancels the conditional change to value 5. Momentous Shift keeps printed value **3**, while Alice’s separate BIG ability still adds **2**: attack **3 + 2 = 5**, damage **5 − 2 = 3**. |",
+              "kind": "worked example"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "5914818479a1634e2c9ce0be39940f2af1d9427f2214c7efa46af415571fe997",
+        "b": "0b3098fbe04e64cfa147851fc41b85f126989ac78a72a6153d6f81b717382e91"
+      }
+    },
+    {
+      "question": {
+        "id": "Q61",
+        "question": "Sinbad begins a maneuver with no Voyages in his discard pile, draws normally, then discards Voyage Home to BOOST before moving. What is the movement allowance for Sinbad and Porter in this maneuver, and does that discard resolve Home’s after-combat retrieval effect?"
+      },
+      "fixed_key": {
+        "id": "Q61",
+        "expected_answer": "After discard Home is in discard pile: move2 + printed BOOST1 + Voyage-count1 =4 for each fighter; Discarding to BOOST ignores Home card effects so no after-combat retrieval",
+        "required_facts": [
+          "After discard Home is in discard pile: move2 + printed BOOST1 + Voyage-count1 =4 for each fighter",
+          "Discarding to BOOST ignores Home card effects so no after-combat retrieval"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-character.png; sinbad-action-cards.png r1c5; rulebook p9–10"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q61",
+        "asked_clauses": "Sinbad begins a maneuver with no Voyages in his discard pile, draws normally, then discards Voyage Home to BOOST before moving. What is the movement allowance for Sinbad and Porter in this maneuver, and does that discard resolve Home’s after-combat retrieval effect?",
+        "required_answer_facts": [
+          "After discard Home is in discard pile: move2 + printed BOOST1 + Voyage-count1 =4 for each fighter",
+          "Discarding to BOOST ignores Home card effects so no after-combat retrieval"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-character.png; sinbad-action-cards.png r1c5; rulebook p9–10"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q61",
+          "clauses": [
+            "Givens: starts with no Voyages; draws normally; discards Voyage Home for maneuver BOOST before moving.",
+            "Movement allowance for Sinbad and Porter.",
+            "Does discarding Home resolve its after-combat retrieval?"
+          ],
+          "answer": "Each has allowance 2 + 1 Voyage in discard + Home’s BOOST 1 = 4 spaces. Discarding it to BOOST ignores its effects, so its after-combat retrieval does not resolve.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q61-sinbad-maneuver",
+              "start": 13910,
+              "end": 14216,
+              "text": "**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q61-boost",
+              "start": 5674,
+              "end": 6168,
+              "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q61-home-value",
+              "start": 23198,
+              "end": 23363,
+              "text": "All **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q61-sinbad-maneuver",
+                "q61-home-value"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q61-boost"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q61",
+          "clauses": [
+            "With zero Voyages at maneuver start and Voyage Home discarded as BOOST before moving, what is the allowance for Sinbad and Porter?",
+            "Does discarding Voyage Home to BOOST resolve its after-combat retrieval effect?"
+          ],
+          "answer": "Each fighter’s allowance is 2 + 1 Voyage in discard + 1 BOOST value = 4. Voyage Home’s effects are ignored when discarded to BOOST, so its after-combat retrieval does not resolve.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 13910,
+              "end": 14438,
+              "text": "**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u2",
+              "start": 5674,
+              "end": 6264,
+              "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option.\n\n",
+              "kind": "BOOST rule"
+            },
+            {
+              "unit_id": "u3",
+              "start": 23154,
+              "end": 24143,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |",
+              "kind": "table intro and Voyage Home row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "2a06a918c499b1c500c46b4e207905760f9d56b55d004fd0203a245f007a9208",
+        "b": "c5ca577678db7fc9d5de4fdfeae5a3e3ff1398c2cea31b35f541b37e09ba4db4"
+      }
+    },
+    {
+      "question": {
+        "id": "Q62",
+        "question": "Group these Alice combat cards by permitted fighter (Alice only, Jabberwock only, or either) and legal role (attack only, defense only, or either): Looking Glass; Snicker-Snack; O Frabjous Day!; The Other Side of the Mushroom; I’m Late, I’m Late; Mad as a Hatter; Jaws That Bite; Claws That Catch; Manxome Foe. Also state the user/role rule for Feint, Regroup, Momentous Shift and Skirmish in original decks that contain them. When Jabberwock is attacked, may Alice-only or attack-only cards be used as its defense?"
+      },
+      "fixed_key": {
+        "id": "Q62",
+        "expected_answer": "Looking Glass: Alice only, defense only; Snicker-Snack, O Frabjous Day!, Other Side of the Mushroom: Alice only, attack only; I’m Late I’m Late, Mad as a Hatter: Alice only, versatile attack or defense; Jaws That Bite, Claws That Catch: Jabberwock only, attack only; Manxome Foe: ANY (either Alice or Jabberwock), versatile attack or defense; Feint, Regroup, Momentous Shift, Skirmish: ANY fighter and versatile in each original deck where present; Jabberwock cannot defend using Alice-only cards or any attack-only card",
+        "required_facts": [
+          "Looking Glass: Alice only, defense only",
+          "Snicker-Snack, O Frabjous Day!, Other Side of the Mushroom: Alice only, attack only",
+          "I’m Late I’m Late, Mad as a Hatter: Alice only, versatile attack or defense",
+          "Jaws That Bite, Claws That Catch: Jabberwock only, attack only",
+          "Manxome Foe: ANY (either Alice or Jabberwock), versatile attack or defense",
+          "Feint, Regroup, Momentous Shift, Skirmish: ANY fighter and versatile in each original deck where present",
+          "Jabberwock cannot defend using Alice-only cards or any attack-only card"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png all named cells; all four original action sheets shared cards; rulebook p8;p11;p16"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q62",
+        "asked_clauses": "Group these Alice combat cards by permitted fighter (Alice only, Jabberwock only, or either) and legal role (attack only, defense only, or either): Looking Glass; Snicker-Snack; O Frabjous Day!; The Other Side of the Mushroom; I’m Late, I’m Late; Mad as a Hatter; Jaws That Bite; Claws That Catch; Manxome Foe. Also state the user/role rule for Feint, Regroup, Momentous Shift and Skirmish in original decks that contain them. When Jabberwock is attacked, may Alice-only or attack-only cards be used as its defense?",
+        "required_answer_facts": [
+          "Looking Glass: Alice only, defense only",
+          "Snicker-Snack, O Frabjous Day!, Other Side of the Mushroom: Alice only, attack only",
+          "I’m Late I’m Late, Mad as a Hatter: Alice only, versatile attack or defense",
+          "Jaws That Bite, Claws That Catch: Jabberwock only, attack only",
+          "Manxome Foe: ANY (either Alice or Jabberwock), versatile attack or defense",
+          "Feint, Regroup, Momentous Shift, Skirmish: ANY fighter and versatile in each original deck where present",
+          "Jabberwock cannot defend using Alice-only cards or any attack-only card"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png all named cells; all four original action sheets shared cards; rulebook p8;p11;p16"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q62",
+          "clauses": [
+            "Classify each named Alice deck card by permitted fighter and role.",
+            "For the listed shared cards, state user/role in decks containing them.",
+            "When Jabberwock defends, can Alice-only or attack-only cards be used?"
+          ],
+          "answer": "The attached operative rows state each requested card’s permitted fighter and role. The four named shared cards are ANY versatile cards in the decks listed in their rows. Jabberwock cannot use Alice-only cards; attack-only cards cannot be used to defend. It may defend with an eligible defense or versatile card labeled Jabberwock or ANY.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q62-looking",
+              "start": 17033,
+              "end": 17380,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-snicker",
+              "start": 17033,
+              "end": 17523,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-frabjous",
+              "start": 17033,
+              "end": 17605,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-mushroom",
+              "start": 17033,
+              "end": 17734,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-late",
+              "start": 17033,
+              "end": 18015,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-hatter",
+              "start": 17033,
+              "end": 18671,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-jaws",
+              "start": 17033,
+              "end": 18367,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-claws",
+              "start": 17033,
+              "end": 18519,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-manxome",
+              "start": 17033,
+              "end": 18907,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-shared-feint",
+              "start": 15873,
+              "end": 16219,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-shared-regroup",
+              "start": 15873,
+              "end": 16412,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |\n| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-shared-momentous-shift",
+              "start": 15873,
+              "end": 16812,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |\n| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |\n| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-shared-skirmish",
+              "start": 15873,
+              "end": 16998,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |\n| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |\n| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |\n| Skirmish | ANY | Versatile (attack or defense) | 4 | 1 | Alice 2, Arthur 3 | After combat, **if you won**, choose either fighter in that combat and move that fighter up to 2 spaces. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q62-card-rules",
+              "start": 7922,
+              "end": 8103,
+              "text": "A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q62-looking",
+                "q62-snicker",
+                "q62-frabjous",
+                "q62-mushroom",
+                "q62-late",
+                "q62-hatter",
+                "q62-jaws",
+                "q62-claws",
+                "q62-manxome"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q62-shared-feint",
+                "q62-shared-regroup",
+                "q62-shared-momentous-shift",
+                "q62-shared-skirmish"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q62-looking",
+                "q62-snicker",
+                "q62-frabjous",
+                "q62-mushroom",
+                "q62-late",
+                "q62-hatter",
+                "q62-jaws",
+                "q62-claws",
+                "q62-manxome",
+                "q62-shared-feint",
+                "q62-shared-regroup",
+                "q62-shared-momentous-shift",
+                "q62-shared-skirmish",
+                "q62-card-rules"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q62",
+          "clauses": [
+            "Looking Glass: permitted fighter and legal role.",
+            "Snicker-Snack: permitted fighter and legal role.",
+            "O Frabjous Day!: permitted fighter and legal role.",
+            "The Other Side of the Mushroom: permitted fighter and legal role.",
+            "I’m Late, I’m Late: permitted fighter and legal role.",
+            "Mad as a Hatter: permitted fighter and legal role.",
+            "Jaws That Bite: permitted fighter and legal role.",
+            "Claws That Catch: permitted fighter and legal role.",
+            "Manxome Foe: permitted fighter and legal role.",
+            "Feint, Regroup, Momentous Shift and Skirmish: user and role in decks containing them.",
+            "When Jabberwock is attacked, may Alice-only or attack-only cards be used as its defense?"
+          ],
+          "answer": "The attached operative text answers the card classification clauses. Jabberwock cannot defend with an Alice-only card or a pure attack card.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 17033,
+              "end": 17173,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 17206,
+              "end": 17380,
+              "text": "| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 17381,
+              "end": 17523,
+              "text": "| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u4",
+              "start": 17524,
+              "end": 17605,
+              "text": "| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u5",
+              "start": 17606,
+              "end": 17734,
+              "text": "| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u6",
+              "start": 17881,
+              "end": 18015,
+              "text": "| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u7",
+              "start": 18520,
+              "end": 18671,
+              "text": "| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u8",
+              "start": 18128,
+              "end": 18367,
+              "text": "| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u9",
+              "start": 18368,
+              "end": 18519,
+              "text": "| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u10",
+              "start": 18672,
+              "end": 18907,
+              "text": "| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u11",
+              "start": 15873,
+              "end": 16010,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u12",
+              "start": 16041,
+              "end": 16219,
+              "text": "| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u13",
+              "start": 16220,
+              "end": 16412,
+              "text": "| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u14",
+              "start": 16413,
+              "end": 16812,
+              "text": "| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u15",
+              "start": 16813,
+              "end": 16998,
+              "text": "| Skirmish | ANY | Versatile (attack or defense) | 4 | 1 | Alice 2, Arthur 3 | After combat, **if you won**, choose either fighter in that combat and move that fighter up to 2 spaces. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u16",
+              "start": 6855,
+              "end": 8105,
+              "text": "### Attack\n\nYou cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.\n3. **Resolve combat** in the order below, then discard played cards to their owners’ **face-up discard piles**.\n\nAttack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.\n\n",
+              "kind": "global rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u3",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u4",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "u1",
+                "u5",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 4,
+              "evidence_unit_ids": [
+                "u1",
+                "u6",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 5,
+              "evidence_unit_ids": [
+                "u1",
+                "u7",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 6,
+              "evidence_unit_ids": [
+                "u1",
+                "u8",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 7,
+              "evidence_unit_ids": [
+                "u1",
+                "u9",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 8,
+              "evidence_unit_ids": [
+                "u1",
+                "u10",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 9,
+              "evidence_unit_ids": [
+                "u11",
+                "u12",
+                "u13",
+                "u14",
+                "u15",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 10,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3",
+                "u4",
+                "u5",
+                "u6",
+                "u7",
+                "u8",
+                "u9",
+                "u10",
+                "u16"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "377aee9fec9d4e3efd7594355c8ff30e6cd81db6d3ed1a24acc039542810996b",
+        "b": "dc7d5cf4fc4acbf7a36f89a8dc387adedeb6229c54cface8d3a1fda0d6549b6b"
+      }
+    },
+    {
+      "question": {
+        "id": "Q63",
+        "question": "For The Aid of Morgana, Swift Strike, Gaze of Stone, Winged Frenzy, and all seven original Sinbad Voyage cards, state permitted fighter(s) and whether each is attack only, defense only, versatile, or scheme. Can Merlin defend with Swift Strike or Morgana? Can a Harpy initiate Winged Frenzy or Gaze? Can Porter attack with a Voyage, or Sinbad defend with one?"
+      },
+      "fixed_key": {
+        "id": "Q63",
+        "expected_answer": "The Aid of Morgana: Arthur only, attack only; Swift Strike: ANY own fighter, attack only; Merlin may attack with it but cannot defend with it; Gaze of Stone: Medusa only, attack only; Winged Frenzy: ANY own fighter, scheme; a Harpy may initiate it; All seven Voyages: Sinbad only, attack only; Merlin cannot defend with Morgana (wrong fighter and attack-only); A Harpy cannot initiate Gaze (Medusa-only); Porter cannot attack with Voyage (Sinbad-only); Sinbad cannot defend with Voyage (attack-only)",
+        "required_facts": [
+          "The Aid of Morgana: Arthur only, attack only",
+          "Swift Strike: ANY own fighter, attack only; Merlin may attack with it but cannot defend with it",
+          "Gaze of Stone: Medusa only, attack only",
+          "Winged Frenzy: ANY own fighter, scheme; a Harpy may initiate it",
+          "All seven Voyages: Sinbad only, attack only",
+          "Merlin cannot defend with Morgana (wrong fighter and attack-only)",
+          "A Harpy cannot initiate Gaze (Medusa-only)",
+          "Porter cannot attack with Voyage (Sinbad-only); Sinbad cannot defend with Voyage (attack-only)"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c5;r3c5–6; medusa-action-cards.png r1c1–2;r1c4;r3c3–4; sinbad-action-cards.png r1c5;r2c5–6;r3c1–4; rulebook p10–11;p16"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q63",
+        "asked_clauses": "For The Aid of Morgana, Swift Strike, Gaze of Stone, Winged Frenzy, and all seven original Sinbad Voyage cards, state permitted fighter(s) and whether each is attack only, defense only, versatile, or scheme. Can Merlin defend with Swift Strike or Morgana? Can a Harpy initiate Winged Frenzy or Gaze? Can Porter attack with a Voyage, or Sinbad defend with one?",
+        "required_answer_facts": [
+          "The Aid of Morgana: Arthur only, attack only",
+          "Swift Strike: ANY own fighter, attack only; Merlin may attack with it but cannot defend with it",
+          "Gaze of Stone: Medusa only, attack only",
+          "Winged Frenzy: ANY own fighter, scheme; a Harpy may initiate it",
+          "All seven Voyages: Sinbad only, attack only",
+          "Merlin cannot defend with Morgana (wrong fighter and attack-only)",
+          "A Harpy cannot initiate Gaze (Medusa-only)",
+          "Porter cannot attack with Voyage (Sinbad-only); Sinbad cannot defend with Voyage (attack-only)"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c5;r3c5–6; medusa-action-cards.png r1c1–2;r1c4;r3c3–4; sinbad-action-cards.png r1c5;r2c5–6;r3c1–4; rulebook p10–11;p16"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q63",
+          "clauses": [
+            "For each of five named cards and seven Voyages, permitted fighter(s) and card type.",
+            "Can Merlin defend with Swift Strike or Morgana? Can Harpy initiate Winged Frenzy or Gaze? Can Porter attack with a Voyage or Sinbad defend with one?"
+          ],
+          "answer": "The attached operative rows and shared Voyage metadata state the permitted fighters and roles. Merlin cannot defend with Swift Strike (attack only) or The Aid of Morgana (Arthur-only attack). A surviving Harpy may initiate Winged Frenzy, but cannot use Medusa-only Gaze of Stone. Porter cannot use Sinbad-only Voyages, and Sinbad cannot defend with attack-only Voyages.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q63-morgana",
+              "start": 17033,
+              "end": 19836,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |\n| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q63-swift",
+              "start": 17033,
+              "end": 21318,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |\n| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |\n| Divine Intervention | King Arthur | Versatile (attack or defense) | 3 | 2 | 2 | After combat move Arthur up to 5 spaces. |\n| The Holy Grail | King Arthur | Defense only | 1 | 2 | 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |\n| The Lady of the Lake | King Arthur | Scheme | — | 2 | 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |\n| Prophecy | Merlin | Scheme | — | 2 | 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |\n| Bewilderment | Merlin | Defense only | 0 | 2 | 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |\n| Aid the Chosen One | Merlin | Attack only | 4 | 2 | 1 | After combat, if you won, draw 2 cards. |\n| Restless Spirits | Merlin | Scheme | — | 2 | 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |\n| Command the Storms | Merlin | Scheme | — | 2 | 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |\n| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q63-gaze",
+              "start": 17033,
+              "end": 21777,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |\n| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |\n| Divine Intervention | King Arthur | Versatile (attack or defense) | 3 | 2 | 2 | After combat move Arthur up to 5 spaces. |\n| The Holy Grail | King Arthur | Defense only | 1 | 2 | 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |\n| The Lady of the Lake | King Arthur | Scheme | — | 2 | 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |\n| Prophecy | Merlin | Scheme | — | 2 | 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |\n| Bewilderment | Merlin | Defense only | 0 | 2 | 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |\n| Aid the Chosen One | Merlin | Attack only | 4 | 2 | 1 | After combat, if you won, draw 2 cards. |\n| Restless Spirits | Merlin | Scheme | — | 2 | 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |\n| Command the Storms | Merlin | Scheme | — | 2 | 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |\n| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |\n\n#### Medusa (remaining 24 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Gaze of Stone | Medusa | Attack only | 2 | 4 | 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q63-winged",
+              "start": 17033,
+              "end": 22796,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |\n| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |\n| Divine Intervention | King Arthur | Versatile (attack or defense) | 3 | 2 | 2 | After combat move Arthur up to 5 spaces. |\n| The Holy Grail | King Arthur | Defense only | 1 | 2 | 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |\n| The Lady of the Lake | King Arthur | Scheme | — | 2 | 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |\n| Prophecy | Merlin | Scheme | — | 2 | 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |\n| Bewilderment | Merlin | Defense only | 0 | 2 | 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |\n| Aid the Chosen One | Merlin | Attack only | 4 | 2 | 1 | After combat, if you won, draw 2 cards. |\n| Restless Spirits | Merlin | Scheme | — | 2 | 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |\n| Command the Storms | Merlin | Scheme | — | 2 | 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |\n| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |\n\n#### Medusa (remaining 24 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Gaze of Stone | Medusa | Attack only | 2 | 4 | 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |\n| A Momentary Glance | Medusa | Scheme | — | 4 | 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |\n| Hiss and Slither | Medusa | Defense only | 4 | 3 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |\n| The Hounds of Mighty Zeus | Harpy | Versatile (attack or defense) | 4 | 3 | 2 | After combat move **each Harpy** up to 3 spaces. |\n| Clutching Claws | Harpy | Versatile (attack or defense) | 3 | 2 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |\n| Winged Frenzy | ANY | Scheme | — | 2 | 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q63-voyage-meta",
+              "start": 23198,
+              "end": 23762,
+              "text": "All **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q63-voyage-rows",
+              "start": 23764,
+              "end": 24624,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |\n| Voyage to the City of the King of Serendib | Draw 1 card. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q63-role-rule",
+              "start": 7922,
+              "end": 8103,
+              "text": "A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q63-morgana",
+                "q63-swift",
+                "q63-gaze",
+                "q63-winged",
+                "q63-voyage-meta",
+                "q63-voyage-rows"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q63-swift",
+                "q63-morgana",
+                "q63-role-rule"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q63-winged",
+                "q63-gaze"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "q63-voyage-meta",
+                "q63-voyage-rows",
+                "q63-role-rule"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q63",
+          "clauses": [
+            "The Aid of Morgana: permitted fighter and card role/type.",
+            "Swift Strike: permitted fighter and card role/type.",
+            "Gaze of Stone: permitted fighter and card role/type.",
+            "Winged Frenzy: permitted active fighter(s) and card type.",
+            "Each of the seven Voyage cards: permitted fighter and card type.",
+            "Can Merlin defend with Swift Strike or The Aid of Morgana?",
+            "Can a Harpy initiate Winged Frenzy or play Gaze of Stone?",
+            "Can Porter attack with a Voyage, or can Sinbad defend with one?"
+          ],
+          "answer": "The attached operative text answers the card-classification clauses. Merlin cannot defend with either attack-only card; a surviving Harpy can initiate Winged Frenzy but cannot play Medusa-only Gaze; Porter cannot use a Sinbad-only Voyage, and Sinbad cannot defend with an attack-only Voyage.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 19297,
+              "end": 19437,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u2",
+              "start": 19745,
+              "end": 19836,
+              "text": "| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 21208,
+              "end": 21318,
+              "text": "| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u4",
+              "start": 21354,
+              "end": 21494,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u5",
+              "start": 21527,
+              "end": 21777,
+              "text": "| Gaze of Stone | Medusa | Attack only | 2 | 4 | 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u6",
+              "start": 22470,
+              "end": 22796,
+              "text": "| Winged Frenzy | ANY | Scheme | — | 2 | 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u7",
+              "start": 23154,
+              "end": 24624,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |\n| Voyage to the City of the King of Serendib | Draw 1 card. |",
+              "kind": "table intro, header, and seven rows"
+            },
+            {
+              "unit_id": "u8",
+              "start": 6855,
+              "end": 8105,
+              "text": "### Attack\n\nYou cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.\n3. **Resolve combat** in the order below, then discard played cards to their owners’ **face-up discard piles**.\n\nAttack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.\n\n",
+              "kind": "global combat-card rules"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u3",
+                "u4",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "u5",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 4,
+              "evidence_unit_ids": [
+                "u7"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 5,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 6,
+              "evidence_unit_ids": [
+                "u3",
+                "u5",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 7,
+              "evidence_unit_ids": [
+                "u7",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "0916ace1fcb94e279a894d3e4f21f592573ce892567c45e838b3611c4a616caf",
+        "b": "2c9ec4f17c8facd5bb482c1117d284b63e951379ccc48b98e05bfbb41ff33bd6"
+      }
+    },
+    {
+      "question": {
+        "id": "Q64",
+        "question": "Under the original Excalibur cancellation interpretation covered by this summary, Arthur attacks with Excalibur and an ability BOOST of 3; the defender plays Feint with defense value 2. Does Excalibur’s lack of printed effects preserve the BOOST, what happens to that BOOST card, and what are the final attack value and attack damage?"
+      },
+      "fixed_key": {
+        "id": "Q64",
+        "expected_answer": "Original interpretation: Feint cancels Arthur ability BOOST even though Excalibur has no printed effects; BOOST card discarded without effect; Excalibur attack remains printed 6; against defense2 deals 4 attack damage",
+        "required_facts": [
+          "Original interpretation: Feint cancels Arthur ability BOOST even though Excalibur has no printed effects",
+          "BOOST card discarded without effect",
+          "Excalibur attack remains printed 6; against defense2 deals 4 attack damage"
+        ],
+        "contextual_background": [
+          "Question explicitly asks original historical interpretation, so6/4 remains correct for its given condition; it is not the current-play ruling. IELLO official2025 source now independently authenticated and supersedes the2021 original interpretation for current casual and tournament play. Current9/7 branch asked in Q66."
+        ],
+        "source_refs": [
+          "king-arthur-character.png; king-arthur-action-cards.png r1c4; rulebook p10–12",
+          "Justin Jacobson primary article36640902 BGG thread2455319, 2021-01-02; author43936 verified public profile",
+          "IELLO official2025-08-11 erratum establishes replacement date and current/historical distinction: https://iello.fr/unmatched-inarretable-excalibur/"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q64",
+        "asked_clauses": "Under the original Excalibur cancellation interpretation covered by this summary, Arthur attacks with Excalibur and an ability BOOST of 3; the defender plays Feint with defense value 2. Does Excalibur’s lack of printed effects preserve the BOOST, what happens to that BOOST card, and what are the final attack value and attack damage?",
+        "required_answer_facts": [
+          "Original interpretation: Feint cancels Arthur ability BOOST even though Excalibur has no printed effects",
+          "BOOST card discarded without effect",
+          "Excalibur attack remains printed 6; against defense2 deals 4 attack damage"
+        ],
+        "contextual_key_background": [
+          "Question explicitly asks original historical interpretation, so6/4 remains correct for its given condition; it is not the current-play ruling. IELLO official2025 source now independently authenticated and supersedes the2021 original interpretation for current casual and tournament play. Current9/7 branch asked in Q66."
+        ],
+        "source_refs": [
+          "king-arthur-character.png; king-arthur-action-cards.png r1c4; rulebook p10–12",
+          "Justin Jacobson primary article36640902 BGG thread2455319, 2021-01-02; author43936 verified public profile",
+          "IELLO official2025-08-11 erratum establishes replacement date and current/historical distinction: https://iello.fr/unmatched-inarretable-excalibur/"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q64",
+          "clauses": [
+            "Givens: original interpretation; Arthur attacks Excalibur with ability BOOST 3; Feint defense value 2.",
+            "Does no-effects Excalibur preserve BOOST? BOOST card fate; final attack value/damage."
+          ],
+          "answer": "Under the historical interpretation, Excalibur’s lack of printed effects did not preserve Arthur’s ability BOOST: discard that BOOST card without effect. Excalibur remains value 6; attack damage is 6 − 2 = 4.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q64-historical",
+              "start": 27456,
+              "end": 27827,
+              "text": "**Historical reference, superseded August 2025:** the original interpretation removed the ability BOOST even from Excalibur against Feint. Designer Justin Jacobson [confirmed that prior intent on January 2, 2021](https://boardgamegeek.com/thread/2455319/article/36640902#36640902). Under that historical interpretation only, Excalibur retained value 6 after cancellation.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q64-arthur-cancel",
+              "start": 13074,
+              "end": 13239,
+              "text": "If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q64-excalibur",
+              "start": 17033,
+              "end": 19744,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |",
+              "kind": "table_header_and_row"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q64-historical",
+                "q64-arthur-cancel",
+                "q64-excalibur"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q64",
+          "clauses": [
+            "Under the original interpretation, does textless Excalibur’s lack of printed effects preserve Arthur’s ability BOOST?",
+            "What happens to the BOOST card?",
+            "What are the final attack value and attack damage against defense 2?"
+          ],
+          "answer": "Under that historical interpretation, the ability BOOST does not apply; the BOOST card is discarded without effect. Excalibur remains at value 6, so attack damage against defense 2 is 6 − 2 = 4.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 12791,
+              "end": 13666,
+              "text": "**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u2",
+              "start": 19670,
+              "end": 19744,
+              "text": "| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u3",
+              "start": 16041,
+              "end": 16219,
+              "text": "| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u4",
+              "start": 27456,
+              "end": 27906,
+              "text": "**Historical reference, superseded August 2025:** the original interpretation removed the ability BOOST even from Excalibur against Feint. Designer Justin Jacobson [confirmed that prior intent on January 2, 2021](https://boardgamegeek.com/thread/2455319/article/36640902#36640902). Under that historical interpretation only, Excalibur retained value 6 after cancellation. The publisher’s 2025 erratum replaces this historical ruling for current play.",
+              "kind": "historical FAQ"
+            },
+            {
+              "unit_id": "u5",
+              "start": 8105,
+              "end": 9411,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "kind": "combat rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u2",
+                "u3",
+                "u4",
+                "u5"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "7756d0594d87c37d78e74484d0fc496544c67fce72068633817dfe6b99eb7e50",
+        "b": "23bbc06b221fc5ffecdb67ccce868b4487e1c716e429fda780b229023759d088"
+      }
+    },
+    {
+      "question": {
+        "id": "Q65",
+        "question": "SMALL Alice survives an attack of value 4, declines to play any defense card, and no other effects apply. Does she take 3 or 4 attack damage, who wins combat, and why does her SMALL ability change or not change that result?"
+      },
+      "fixed_key": {
+        "id": "Q65",
+        "expected_answer": "Alice takes full 4 attack damage, not 3; Attacker wins because attack itself dealt damage; SMALL adds1 to defense-card value; no defense card played means no card value to increase and no defense bonus",
+        "required_facts": [
+          "Alice takes full 4 attack damage, not 3",
+          "Attacker wins because attack itself dealt damage",
+          "SMALL adds1 to defense-card value; no defense card played means no card value to increase and no defense bonus"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-character.png SMALL ability; rulebook p11 optional defense;p12 undefended damage/combat winner"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q65",
+        "asked_clauses": "SMALL Alice survives an attack of value 4, declines to play any defense card, and no other effects apply. Does she take 3 or 4 attack damage, who wins combat, and why does her SMALL ability change or not change that result?",
+        "required_answer_facts": [
+          "Alice takes full 4 attack damage, not 3",
+          "Attacker wins because attack itself dealt damage",
+          "SMALL adds1 to defense-card value; no defense card played means no card value to increase and no defense bonus"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-character.png SMALL ability; rulebook p11 optional defense;p12 undefended damage/combat winner"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q65",
+          "clauses": [
+            "Givens: SMALL Alice takes attack value 4; plays no defense; no other effects.",
+            "Attack damage, winner, and whether SMALL changes result."
+          ],
+          "answer": "Alice takes 4 attack damage because no defense card means take the attack value. The attacker wins because the attack deals damage. SMALL’s +1 applies to Alice’s defense-card values; she played no defense card, so it does not change the result.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q65-alice",
+              "start": 12312,
+              "end": 12582,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q65-no-defense",
+              "start": 8238,
+              "end": 8435,
+              "text": "Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q65-winner",
+              "start": 9120,
+              "end": 9409,
+              "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q65-no-defense"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q65-no-defense",
+                "q65-winner"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q65-alice"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q65",
+          "clauses": [
+            "Given SMALL Alice declines a defense card against attack 4, does she take 3 or 4 damage?",
+            "Who wins combat?",
+            "Why does SMALL or does it not change the result?"
+          ],
+          "answer": "Alice takes 4 attack damage and the attacker wins because the attack deals damage. SMALL adds 1 only to Alice’s defense-card values; with no defense card played, that bonus does not apply.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 12312,
+              "end": 12789,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u2",
+              "start": 8105,
+              "end": 9411,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "kind": "combat rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u2"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "d58720a2f2076e8777bf92eba152359586961459c4ad4e7cf3f59401505b8ea4",
+        "b": "273b93242fbf0b51dd57663f91de8ce2553d629a1a835c8d581cae900d6caf23"
+      }
+    },
+    {
+      "question": {
+        "id": "Q66",
+        "question": "Under the official August 2025 Excalibur erratum, Arthur attacks with textless Excalibur and an ability BOOST of 3; the defender plays Feint with defense value 2. Does the BOOST still apply, what are the final attack value and attack damage, and does this ruling also preserve the BOOST on Noble Sacrifice if Feint actually cancels that card’s effects?"
+      },
+      "fixed_key": {
+        "id": "Q66",
+        "expected_answer": "Textless Excalibur keeps the ability BOOST because there are no printed effects for Feint to cancel; attack6+3=9 and attack damage9-2=7; Noble Sacrifice has an effect which Feint cancels, so Arthur ability BOOST does not survive on it.",
+        "required_facts": [
+          "Textless Excalibur retains ability BOOST under official2025 change",
+          "Attack value6+3=9; attack damage9-2=7",
+          "Noble Sacrifice exception does not apply: its effects are canceled and ability BOOST is discarded without effect"
+        ],
+        "contextual_background": [
+          "This is the official applicable current rule. The historical calculation retained in Q64 does not control Q66."
+        ],
+        "source_refs": [
+          "IELLO official post2025-08-11 https://iello.fr/unmatched-inarretable-excalibur/",
+          "Original Arthur character and action sheet (Excalibur6, Noble Sacrifice effects)",
+          "Rulebook p12 damage/result"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q66",
+        "asked_clauses": "Under the official August 2025 Excalibur erratum, Arthur attacks with textless Excalibur and an ability BOOST of 3; the defender plays Feint with defense value 2. Does the BOOST still apply, what are the final attack value and attack damage, and does this ruling also preserve the BOOST on Noble Sacrifice if Feint actually cancels that card’s effects?",
+        "required_answer_facts": [
+          "Textless Excalibur retains ability BOOST under official2025 change",
+          "Attack value6+3=9; attack damage9-2=7",
+          "Noble Sacrifice exception does not apply: its effects are canceled and ability BOOST is discarded without effect"
+        ],
+        "contextual_key_background": [
+          "This is the official applicable current rule. The historical calculation retained in Q64 does not control Q66."
+        ],
+        "source_refs": [
+          "IELLO official post2025-08-11 https://iello.fr/unmatched-inarretable-excalibur/",
+          "Original Arthur character and action sheet (Excalibur6, Noble Sacrifice effects)",
+          "Rulebook p12 damage/result"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q66",
+          "clauses": [
+            "Givens: current 2025 rule; textless Excalibur with ability BOOST 3 vs Feint defense 2.",
+            "Does BOOST apply; attack value and damage.",
+            "Does ruling preserve BOOST on Noble Sacrifice if Feint cancels its effects?"
+          ],
+          "answer": "The official erratum lets Arthur’s BOOST apply to textless Excalibur: attack value is 6 + 3 = 9 and attack damage is 9 − 2 = 7. It does not preserve the BOOST on Noble Sacrifice when Feint cancels Noble Sacrifice’s effects; then the ability BOOST is discarded without effect.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q66-excalibur",
+              "start": 17033,
+              "end": 19744,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |\n| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |\n| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |\n| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |\n| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |\n| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |\n| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |\n| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |\n| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |\n| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |\n| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |\n\n**Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.\n\n#### King Arthur (remaining 18 cards)\n\n| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |\n|---|---|---|---:|---:|---|---|\n| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |\n| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |",
+              "kind": "table_header_and_row"
+            },
+            {
+              "unit_id": "q66-erratum",
+              "start": 13193,
+              "end": 13491,
+              "text": "**Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below.",
+              "kind": "paragraph"
+            },
+            {
+              "unit_id": "q66-arthur",
+              "start": 13074,
+              "end": 13666,
+              "text": "If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q66-excalibur",
+                "q66-erratum"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q66-excalibur",
+                "q66-erratum"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q66-arthur"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q66",
+          "clauses": [
+            "Under the official erratum, does Arthur’s BOOST apply to textless Excalibur against Feint?",
+            "What are attack value and damage with BOOST 3 against defense 2?",
+            "Does the erratum preserve Arthur’s ability BOOST on Noble Sacrifice if Feint cancels Noble Sacrifice’s effects?"
+          ],
+          "answer": "The ability BOOST applies: attack value is 6 + 3 = 9, dealing 9 − 2 = 7 attack damage. The erratum does not preserve the ability BOOST on Noble Sacrifice when Feint cancels that card’s effects; the BOOST is discarded without effect.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 12791,
+              "end": 13666,
+              "text": "**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.",
+              "kind": "hero ability"
+            },
+            {
+              "unit_id": "u2",
+              "start": 19297,
+              "end": 19437,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u3",
+              "start": 19670,
+              "end": 19744,
+              "text": "| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u4",
+              "start": 19470,
+              "end": 19669,
+              "text": "| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u5",
+              "start": 15873,
+              "end": 16010,
+              "text": "| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |\n|",
+              "kind": "table header"
+            },
+            {
+              "unit_id": "u6",
+              "start": 16041,
+              "end": 16219,
+              "text": "| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |",
+              "kind": "table row"
+            },
+            {
+              "unit_id": "u7",
+              "start": 26849,
+              "end": 27454,
+              "text": "**Excalibur versus Feint — official August 11, 2025 erratum:** IELLO [published the official Restoration Games change](https://iello.fr/unmatched-inarretable-excalibur/) for both casual play and tournaments. Textless Excalibur has no printed effect that Feint can cancel, so Arthur’s ability BOOST still applies. Excalibur’s printed attack value remains 6 before adding that BOOST. This exception does not preserve BOOST on another Arthur card whose effects actually are canceled. Resolve ordinary combat damage, then discard played cards normally; the cancellation does not return the BOOST card to hand.",
+              "kind": "official erratum"
+            },
+            {
+              "unit_id": "u8",
+              "start": 8105,
+              "end": 9411,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "kind": "combat rule"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1",
+                "u3",
+                "u5",
+                "u6",
+                "u7"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u3",
+                "u7",
+                "u8"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1",
+                "u4",
+                "u5",
+                "u6",
+                "u7"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "1a6dd3de9f4b0ce03d91937edd8afcc4e1b27fb2adace10e06881495fd82e83a",
+        "b": "deb0d8ad7e916e19e1bd3747e2cceffa034016dc8499f75fa157e57a1acf9372"
+      }
+    },
+    {
+      "question": {
+        "id": "Q67",
+        "question": "In an ordinary attack, when must the target be declared relative to choosing combat cards? Who chooses and commits a card first, what faces do the attack card and any defense card show before reveal, may the defender decline a card, and when are the chosen cards revealed? May the attacker wait to see the defense card and then choose a different attack card or target?"
+      },
+      "fixed_key": {
+        "id": "Q67",
+        "expected_answer": "Declare the attack target before either player chooses and commits their combat card. The attacker chooses and plays the attack card face down first. The defender then chooses a defense card face down or declines; the attack card has not been revealed before that choice. Both chosen cards are revealed simultaneously after those choices. Target and attack card are committed before defense reveal; attacker cannot wait for the defense reveal to choose a different attack card or target in the ordinary procedure.",
+        "required_facts": [
+          "Declare the attack target before either player chooses and commits their combat card.",
+          "The attacker chooses and plays the attack card face down first.",
+          "The defender then chooses a defense card face down or declines; the attack card has not been revealed before that choice.",
+          "Both chosen cards are revealed simultaneously after those choices.",
+          "Target and attack card are committed before defense reveal; attacker cannot wait for the defense reveal to choose a different attack card or target in the ordinary procedure."
+        ],
+        "contextual_background": [
+          "Permitted-fighter/card restrictions remain true but are separately asked Q07; Q67 directly asks target/commitment timing, faces, optional defense, reveal and inability to select/retarget after defense information."
+        ],
+        "source_refs": [
+          "rulebook p11 ACTION:ATTACK, STEP1 DECLARE TARGET then STEP2 CHOOSE AND REVEAL; original PDF p11"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q67",
+        "asked_clauses": "In an ordinary attack, when must the target be declared relative to choosing combat cards? Who chooses and commits a card first, what faces do the attack card and any defense card show before reveal, may the defender decline a card, and when are the chosen cards revealed? May the attacker wait to see the defense card and then choose a different attack card or target?",
+        "required_answer_facts": [
+          "Declare the attack target before either player chooses and commits their combat card.",
+          "The attacker chooses and plays the attack card face down first.",
+          "The defender then chooses a defense card face down or declines; the attack card has not been revealed before that choice.",
+          "Both chosen cards are revealed simultaneously after those choices.",
+          "Target and attack card are committed before defense reveal; attacker cannot wait for the defense reveal to choose a different attack card or target in the ordinary procedure."
+        ],
+        "contextual_key_background": [
+          "Permitted-fighter/card restrictions remain true but are separately asked Q07; Q67 directly asks target/commitment timing, faces, optional defense, reveal and inability to select/retarget after defense information."
+        ],
+        "source_refs": [
+          "rulebook p11 ACTION:ATTACK, STEP1 DECLARE TARGET then STEP2 CHOOSE AND REVEAL; original PDF p11"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q67",
+          "clauses": [
+            "When declare target relative to card choices.",
+            "Who commits attack/defense first; face-down state; defender may decline; reveal timing.",
+            "Can attacker wait to see defense and change attack card/target?"
+          ],
+          "answer": "Declare attacker and target first. Then the attacker plays an attack card face down; the defender may decline or play a defense card face down. Reveal simultaneously after both choices, so the attacker cannot wait to see the defense before selecting a different card or target.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "q67-attack-steps",
+              "start": 6992,
+              "end": 7627,
+              "text": "1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.",
+              "kind": "paragraph"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "q67-attack-steps"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "q67-attack-steps"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "q67-attack-steps"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q67",
+          "clauses": [
+            "When must the target be declared relative to choosing combat cards?",
+            "Who chooses and commits a card first, and what faces do the attack and defense cards show before reveal?",
+            "May the defender decline a card, and when are cards revealed?",
+            "May the attacker wait to see the defense card and then choose a different attack card or target?"
+          ],
+          "answer": "Declare the attacking fighter and target before choosing cards. The attacker then plays an attack card face down; the defender may decline or plays a defense card face down; reveal simultaneously after both choices. The attacker cannot wait for the defense card to change their card or target.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "u1",
+              "start": 6855,
+              "end": 8105,
+              "text": "### Attack\n\nYou cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.\n3. **Resolve combat** in the order below, then discard played cards to their owners’ **face-up discard piles**.\n\nAttack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.\n\n",
+              "kind": "subsection"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "u1"
+              ],
+              "supported": true,
+              "resolved": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "5a0c9f3612065b3c2fe1508501f969ddac383e31866f900ffb4488f10c8d20ff",
+        "b": "b0a8c727ed9635df5391de40bbe3f569c6afbd7d3a7812df23707efe97dcd61d"
+      }
+    }
+  ]
+}

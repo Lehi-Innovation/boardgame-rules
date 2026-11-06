@@ -1,0 +1,130 @@
+{
+  "review_id": "protocol-v4-independent-review-revision-01",
+  "verdict": "PASS",
+  "scope": "V4 generic blind-reader protocol plus the checker’s declared structural boundary/hash/exactly-once-literal-copy contract; no semantic requested-fact correctness or section-relevance certification.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v4.txt",
+      "sha256": "38b1354b73561b1b160cacc845ebc4b738dfb69a88b1bd1e332f70988985a654",
+      "bytes": 5659
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-check.py",
+      "sha256": "60d4c7b0768041e2ad735d5cbec71871516b4fa47fd7dc5a3a4dbb19298242fc",
+      "bytes": 3183
+    }
+  ],
+  "prior_review_preserved": true,
+  "other_files_or_real_reader_outputs_accessed": false,
+  "scores_or_results_requested_or_inferred": false,
+  "findings": {
+    "protocol_generic_identical_and_blind": true,
+    "full_bank_initial_delivery_and_same_reader_limits_preserved": true,
+    "actual_clause_facts_and_minimal_explicit_case_results_required": true,
+    "complete_sections_derived_only_from_frozen_summary": true,
+    "heading_regex_boundaries_line_ids_and_hash_algorithm_match": true,
+    "full_source_slice_hash_checked_before_trailing_whitespace_relaxation": true,
+    "answer_copy_check_allows_only_omission_of_source_trailing_whitespace": true,
+    "selected_complete_text_must_occur_exactly_once_in_answer": true,
+    "unknown_question_id_is_row_error_with_safe_clause_lookup": true,
+    "unsupported_clause_may_have_empty_supporting_section_list": true,
+    "checker_explicitly_disclaims_semantic_correctness_and_relevance": true
+  },
+  "prior_findings": {
+    "V4-C01_duplicate_body_copy": {
+      "status": "resolved for declared exactly-once literal-copy contract",
+      "evidence": "The checker counts the complete source slice after permitted rstrip() and requires count == 1; the duplicate-body synthetic case now records copy count 2 instead of one.",
+      "scope_note": "The checker identifies source sections through metadata and ledger references. It does not parse or bind answer-body section-ID labels to attachment blocks; labeling remains a protocol/self-check requirement rather than a separately certified parser property. No stronger identified-block-format guarantee is claimed here."
+    },
+    "V4-C02_unknown_question_id": {
+      "status": "resolved",
+      "evidence": "Unknown IDs are recorded explicitly, and clause validation uses qmap.get(..., \"\"). The synthetic invalid-ID case returns structured errors and exact_ordered_ids=false without raising."
+    }
+  },
+  "independent_synthetic_tests": {
+    "method": "Only the allowed checker source was executed in an isolated namespace. Synthetic source/question/answer strings were supplied through in-memory read_text objects; no fixture files or real reader files were accessed.",
+    "boundary_assertions": "Parent heading section H003 covers lines3–6, stops before a level6 child; H007 covers lines7–8 through EOF without a trailing newline. Both full-slice hashes independently recomputed.",
+    "case_count": 9,
+    "results": [
+      {
+        "case": "valid complete section once",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": true,
+        "exact_ordered_ids": true,
+        "errors": []
+      },
+      {
+        "case": "complete section once with permitted trailing whitespace omitted",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": true,
+        "exact_ordered_ids": true,
+        "errors": []
+      },
+      {
+        "case": "cropped final condition",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": true,
+        "errors": [
+          "H003 complete section copy count 0 instead of one"
+        ]
+      },
+      {
+        "case": "duplicate full body copy",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": true,
+        "errors": [
+          "H003 complete section copy count 2 instead of one"
+        ]
+      },
+      {
+        "case": "unknown question ID recorded without exception",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": false,
+        "errors": [
+          "unknown question ID",
+          "requested_clause is not literal question phrase"
+        ]
+      },
+      {
+        "case": "explicit unsupported clause with no section",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": true,
+        "exact_ordered_ids": true,
+        "errors": []
+      },
+      {
+        "case": "mismatched full-slice hash",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": true,
+        "errors": [
+          "H003 mismatched sha256"
+        ]
+      },
+      {
+        "case": "cropped boundary metadata",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": true,
+        "errors": [
+          "H003 mismatched end_line"
+        ]
+      },
+      {
+        "case": "duplicate selected metadata ID",
+        "expected_behavior_verified": true,
+        "all_selected_sections_complete": false,
+        "exact_ordered_ids": true,
+        "errors": [
+          "duplicate section selection"
+        ]
+      }
+    ]
+  },
+  "concrete_remaining_issues_within_stated_scope": [],
+  "execution_boundary": "The CLI checks both readers and remains a coordinator-side structural check. It does not enlarge either blind reader’s allowed input set.",
+  "required_changes": []
+}

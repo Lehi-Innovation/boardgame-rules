@@ -1,0 +1,526 @@
+{
+  "review": "protocol-v8-review-01",
+  "verdict": "PASS with one nonblocking wording-consistency advisory",
+  "scoped_signoff": true,
+  "blocking_findings_count": 0,
+  "findings": [
+    {
+      "id": "V8-01",
+      "severity": "low",
+      "blocking": false,
+      "location": "blind-reader-protocol-user-scope-v8.txt: ANSWER and UNSUPPORTED-CLAUSE REVIEW paragraphs",
+      "finding": "Two retained phrases still imply quote-only ordinary answers/repairs despite the explicit new paraphrase option. ANSWER says exact source quotations supply general rule answers; UNSUPPORTED-CLAUSE REVIEW instructs replacing a recovered fact with the correct exact fact quote. The specific quote/paraphrase instructions and self-check otherwise clearly permit faithful paraphrases.",
+      "recommendation": "Use faithful ledger facts (quotes or paraphrases) for general rules and recovered supported facts. Preserve literal span checks specifically for quote-kind facts.",
+      "impact": "Minor instructional inconsistency; no checker defect or content-grading relaxation. Explicit paraphrase semantics are clear enough for qualified signoff."
+    }
+  ],
+  "input_hashes": {
+    "blind-reader-protocol-user-scope-v8.txt": "5206e20b57c79eb904f4d46ad149da8448a0380a6abef96648d69626d464c3b8",
+    "summary-hierarchical-section-check-v8.py": "5ab24f9ba877a9d61c8dcaf06fe762a9f827d5f472eb7dedd6d606b71f5fc3d0",
+    "blind-reader-protocol-user-scope-v7.txt": "02f4adf3a1e9ca4655964014f711a35dbd55a651f2e65842748de1406645ca25",
+    "summary-hierarchical-section-check.py": "fec4ed84e1d1993ff0763cc584144a4b2e58627260bcc38455626c1ea812e0f2",
+    "block-grading-tools.py": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6"
+  },
+  "review_artifact_hashes": {
+    "protocol-v8-review-01-fixtures/harness.py": "1b48658b485d0235f27d8a1c6559f62f9fb0bd327a53d365ee1c1e1c460bde6c",
+    "protocol-v8-review-01-fixtures/synthetic-test-results.json": "56d96dc3845061cc5557723d61a22e63e5b39ee4f99baff04bf47c72671eeba0"
+  },
+  "read_record": [
+    {
+      "path": "blind-reader-protocol-user-scope-v8.txt",
+      "sha256": "5206e20b57c79eb904f4d46ad149da8448a0380a6abef96648d69626d464c3b8",
+      "read": "Complete authorized static file"
+    },
+    {
+      "path": "summary-hierarchical-section-check-v8.py",
+      "sha256": "5ab24f9ba877a9d61c8dcaf06fe762a9f827d5f472eb7dedd6d606b71f5fc3d0",
+      "read": "Complete authorized static file"
+    },
+    {
+      "path": "blind-reader-protocol-user-scope-v7.txt",
+      "sha256": "02f4adf3a1e9ca4655964014f711a35dbd55a651f2e65842748de1406645ca25",
+      "read": "Complete authorized static file"
+    },
+    {
+      "path": "summary-hierarchical-section-check.py",
+      "sha256": "fec4ed84e1d1993ff0763cc584144a4b2e58627260bcc38455626c1ea812e0f2",
+      "read": "Complete authorized static file"
+    },
+    {
+      "path": "block-grading-tools.py",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+      "read": "Complete v7/v8 protocol and checker static comparison; generic grading helper relevant substantive-string/merge excerpts only"
+    }
+  ],
+  "protocol_assessment": {
+    "generic_and_identical_except_role_paths": true,
+    "no_game_facts_failed_ids_keys_or_mappings": true,
+    "full_frozen_summary_and_question_only_access": true,
+    "direct_paths_no_discovery": true,
+    "manual_one_question_at_a_time_semantic_selection": true,
+    "cross_references_and_qualifiers_required": true,
+    "all_N_completion_and_first_complete_draft_preserved": true,
+    "honest_unknowns_allowed_without_lookup_failure_fallback": true,
+    "no_structural_score_cap": true,
+    "no_substantive_grading_change": true
+  },
+  "checker_assessment": [
+    "Quote-kind requires a literal contiguous span from its declared selected and clause-referenced source unit.",
+    "Paraphrase-kind requires a nonempty textual fact and valid selected/clause-referenced bare source ID; truth, relevance, qualifiers, completeness and calculations are deliberately left to independent semantic grading.",
+    "Unsupported facts may have empty selected/ref lists and null source rather than guessed support; nonempty abstention still required.",
+    "Hierarchy unit and attachment helper function ASTs are unchanged from v7. Tests confirm exact subtree/introduction boundaries, root closure, character offsets, physical LF lines, full untrimmed hashes/copies, source order, overlap/alias rejection, ID-distinct identical source acceptance, and marker namespace protections.",
+    "Parent checker is structural/literal only. Full-bank validation must read BOTH exact_ordered_unique_ids and all_structure_and_declared_source_spans_valid; missing answers fail the former even if per-row structure is vacuously valid.",
+    "Generic substantive-string collection includes paraphrase ledger facts along with answer, plain case conclusions and evidence quote; question/request labels alone do not count as factual proof."
+  ],
+  "synthetic_tests": {
+    "case_count": 89,
+    "all_passed": true,
+    "cases": [
+      {
+        "name": "nested/skipped headings, root closure, Unicode character offsets, EOF and untrimmed hashes match original",
+        "passed": true
+      },
+      {
+        "name": "literal quote accepted",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "faithful nonliteral paraphrase structurally accepted",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "same nonliteral wording rejected as quote",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "false paraphrase structurally allowed for independent semantic rejection",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "honest unsupported needs no guessed section",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "unsupported with actual attached context allowed",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "quote rejects empty/nontext ''",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects empty/nontext '  \\t'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects empty/nontext None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects empty/nontext {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects empty/nontext []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects empty/nontext ''",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects empty/nontext '  \\t'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects empty/nontext None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects empty/nontext {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects empty/nontext []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unsupported rejects empty/nontext ''",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unsupported rejects empty/nontext '  \\t'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unsupported rejects empty/nontext None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unsupported rejects empty/nontext {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unsupported rejects empty/nontext []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source 42",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source 'T999'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source '## Child'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects invalid fact source '#### Child\\nThe cle",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote requires source in own clause refs",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "quote rejects whole unit as individual fact",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source 42",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source 'T999'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source '## Child'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects invalid fact source '#### Child\\nThe cle",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase requires source in own clause refs",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "paraphrase rejects whole unit as individual fact",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid refs None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid refs {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid refs [{}]",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid refs ['T005', 'T999']",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid fact kind None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid fact kind 'literal'",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid fact kind []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "invalid fact kind {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "nonquestion clause rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "parent subtree with overlapping child rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "leaf intro/subtree aliases rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "disjoint intro and child union accepted",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "disjoint sibling sources accepted",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "attachments reverse source order rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "duplicate selected ID rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata kind mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata heading mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata level mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata start_offset mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata end_offset mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata start_line mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata end_line mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "metadata sha256 mismatch rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "crop rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "trailing whitespace rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "mislabeled rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "duplicate identified rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "duplicate unmarked rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unknown marker rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "malformed marker rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unterminated marker rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "nontext question ID []",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "nontext question ID {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "nontext question ID None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "nontext question ID 7",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "malformed selected metadata None",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "malformed selected metadata {}",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "malformed selected metadata ['T999']",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "malformed selected metadata [{}]",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "unknown question ID rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "missing answer rejected by ordered full-bank flag",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "duplicate answer IDs rejected",
+        "expected_valid": false,
+        "passed": true
+      },
+      {
+        "name": "reserved fence/marker source rejected: '## A\\n```\\n## Fake\\n```'",
+        "passed": true
+      },
+      {
+        "name": "reserved fence/marker source rejected: '## A\\n~~~code'",
+        "passed": true
+      },
+      {
+        "name": "reserved fence/marker source rejected: '## A\\n<!-- qa-unit:source'",
+        "passed": true
+      },
+      {
+        "name": "disjoint ID-distinct identical source units accepted",
+        "expected_valid": true,
+        "passed": true
+      },
+      {
+        "name": "malformed/duplicate question source IDs raise format-review error",
+        "passed": true
+      },
+      {
+        "name": "malformed/duplicate question source IDs raise format-review error",
+        "passed": true
+      },
+      {
+        "name": "same-entry collector includes paraphrases and all substantive fields without requested-label proof",
+        "passed": true
+      }
+    ]
+  },
+  "limits": [
+    "No real summary, questions, key, scope, readers, grades, runtime, history, session, status or other-agent inputs were accessed.",
+    "Only the five allowed generic static inputs were read; no actual v8 readers were dispatched.",
+    "Synthetic inputs stayed in memory; only this review fixture harness/results and new report files were written. Sources and earlier reviews were not edited.",
+    "A deliberately false paraphrase correctly passes structure with independent-grading flag; that is not semantic approval or a score.",
+    "Protocol equality is template-level generic role/path identity; actual undispatched reader prompts were not inspected."
+  ]
+}

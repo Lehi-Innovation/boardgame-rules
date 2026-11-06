@@ -1,0 +1,183 @@
+{
+  "reader": "reader-a",
+  "inputs_read": [
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/seed-iteration-04/summary-snapshot.md",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/seed-iteration-04/questions.json"
+  ],
+  "delivery_receipt": {
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/seed-iteration-04/summary-snapshot.md": {
+      "sha256": "a46ab9e5996b0fed669d3f73a4449966ac4a749d0adeae5cde19a9f85ab03ae8",
+      "char_length": 22195,
+      "all_actually_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          10000
+        ],
+        [
+          10000,
+          15000
+        ],
+        [
+          15000,
+          20000
+        ],
+        [
+          20000,
+          22195
+        ]
+      ],
+      "truncation_checks": {
+        "all_slices_within_5000_chars": true,
+        "all_slices_fully_printed_and_read": true,
+        "no_gaps_or_overlaps": true,
+        "rereads_needed": false
+      }
+    },
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/seed-iteration-04/questions.json": {
+      "sha256": "c41106dd6e2fc3bfe940ab6b7b8baa55b622900226c1da5e31afe4c40d737cf8",
+      "char_length": 5277,
+      "all_actually_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          5277
+        ]
+      ],
+      "truncation_checks": {
+        "all_slices_within_5000_chars": true,
+        "all_slices_fully_printed_and_read": true,
+        "no_gaps_or_overlaps": true,
+        "rereads_needed": false
+      }
+    }
+  },
+  "answers": [
+    {
+      "id": "Q01",
+      "answer": "Each player takes the chosen hero’s matching fighters, card deck, dials and components; set hero and sidekick health to their listed starts (Alice 13/Jabberwock 8; Arthur 18/Merlin 7; Medusa 16/three Harpies at 1 each; Sinbad 15/Porter 6). Each shuffles their 30-card deck and draws 5. The younger player places their hero on space 1, then sidekicks in separate spaces sharing a zone with that hero; on a multizone hero space, any of its zones may be used. Alice’s controller chooses BIG or SMALL when placing her and displays the token. Then the older player places their hero on space 2 and sidekicks under the same rules. The younger player takes the first turn.",
+      "support": "supported",
+      "evidence": "Setup: “30 action cards ... draws 5”; younger places on 1, older on 2; sidekicks use separate spaces sharing a zone; Alice chooses size when placing. Fighter reference lists starting health."
+    },
+    {
+      "id": "Q02",
+      "answer": "Take 2 actions from maneuver, scheme, and attack. You may repeat an action, but cannot skip an action. If you temporarily have 9 cards, keep them through your turn and at its end discard 2 to your discard pile, leaving 7; then the opponent takes their turn.",
+      "support": "supported",
+      "evidence": "Turn Structure: “take 2 actions”; “You may repeat an action”; “cannot skip”; at end discard excess until you have 7."
+    },
+    {
+      "id": "Q03",
+      "answer": "Maneuver first requires drawing 1 card; then you may move each of your fighters, one at a time, up to its move value plus applicable bonuses, choosing its distance including zero. Movement is along adjacent spaces. You may pass through your own fighters but cannot finish in any occupied space; you may not pass through opposing fighters. Finish one fighter’s movement before starting another’s, so their movement cannot be interleaved.",
+      "support": "supported",
+      "evidence": "Maneuver: “Draw 1 card first, mandatory”; move each fighter one at a time; finish one fighter before starting another. Ordinary movement passages and occupied-space limits."
+    },
+    {
+      "id": "Q04",
+      "answer": "During a maneuver, discard 1 card from hand and add its printed BOOST value (the circled number, not combat value) to movement for that maneuver. Ignore the discarded card’s effects. Each of your fighters receives the increased allowance. A card that cannot be played because its fighter is defeated can still be discarded to BOOST, including an unusable sidekick card.",
+      "support": "supported",
+      "evidence": "BOOST movement: discard 1 hand card, add BOOST to movement value “for this maneuver”; “Each of your fighters receives that allowance”; defeated fighter’s unusable card can still BOOST."
+    },
+    {
+      "id": "Q05",
+      "answer": "Do not reshuffle and cannot decline mandatory draws. With no cards in the deck, each of the two missing draws causes a separate exhaustion event: the hero and surviving sidekick each take 2 damage per event, for 4 damage each total, unless the hero is defeated and ends the game before a later event.",
+      "support": "supported",
+      "evidence": "Empty deck: do not reshuffle; each required card you cannot draw makes each fighter immediately take 2 damage. Mandatory draw 2 causes two separate events unless hero defeat ends the game."
+    },
+    {
+      "id": "Q06",
+      "answer": "Any fighter may attack an adjacent opponent, even across zone boundaries. Thus both melee and ranged fighters may attack an adjacent target across a boundary. A melee fighter cannot attack a nonadjacent target even if it shares a zone. A ranged fighter may attack a nonadjacent opponent in the same zone, including a disconnected part of that colored zone.",
+      "support": "supported",
+      "evidence": "Attack: any fighter may attack an adjacent opponent across zone boundaries; melee only adjacent; ranged may attack any opponent sharing a zone regardless of distance or adjacency, including separated parts."
+    },
+    {
+      "id": "Q07",
+      "answer": "An attack action is illegal without an attack-capable card in hand or without a valid target for one of your fighters. Declare the attacking fighter as active fighter and the opposing fighter targeted. The attacker plays a legal attack card for that fighter; the defender may decline or play a legal defense card for the defending fighter. Fighter-specific cards must match; ANY cards can be used by any of your fighters. Pure defense cannot attack and pure attack cannot defend. Versatile cards can attack or defend and count as both attack and defense cards for other effects. Reveal simultaneously after both choices.",
+      "support": "supported",
+      "evidence": "Attack: action prerequisites; declare attacker and target; card choices and simultaneous reveal. Card types and fighter-label restrictions; versatile counts as both for other effects."
+    },
+    {
+      "id": "Q08",
+      "answer": "Resolve immediately card effects first, then during-combat effects, then combat damage and the combat winner. Next resolve after-combat card effects, then other after-combat game effects such as a hero ability, and finally put all played cards in their owners’ discard piles. When effects share a timing, the defender resolves first. Effects are mandatory unless they say otherwise, such as “may,” and are completed in printed order. A defeated fighter’s played card can still resolve its after-combat effects unless the game has already ended.",
+      "support": "supported",
+      "evidence": "Combat timing list specifies immediately → during → damage → after-combat cards → other game effects → discard. Same timing: defender first; mandatory unless stated otherwise."
+    },
+    {
+      "id": "Q09",
+      "answer": "The attack deals no attack damage because 4 minus 4 is zero, so the defender wins combat. The later 2 effect damage does not change that winner. With no defense card, attack value 4 deals 4 attack damage.",
+      "support": "supported",
+      "evidence": "Damage is attack minus defense to minimum zero; combat winner is determined only by attack dealing at least 1 damage; effect damage does not change winner."
+    },
+    {
+      "id": "Q10",
+      "answer": "A sidekick at zero is defeated and its token is immediately removed. Its played card’s after-combat effect still resolves unless the game has already ended. If a hero reaches zero, that player immediately loses and the game ends; pending effects do not continue to heal the hero.",
+      "support": "supported",
+      "evidence": "Defeated sidekick token immediately removed; played card after-combat effects resolve unless game ended. Hero defeat ends game immediately; do not continue pending effects to heal."
+    },
+    {
+      "id": "Q11",
+      "answer": "Play a scheme face up from hand, declare an allowed active fighter, resolve its effect, then put it in your discard pile. You cannot play a scheme if a fighter listed on it is defeated. Both players may inspect either player’s face-up discard pile at any time.",
+      "support": "supported",
+      "evidence": "Scheme: face up, declare fighter allowed by label, resolve, discard; cannot use if listed fighters defeated. Both players may inspect either discard pile at any time."
+    },
+    {
+      "id": "Q12",
+      "answer": "Alice starts at 13 health, is melee, and moves 2. Jabberwock starts at 8 health and is melee. Alice chooses BIG or SMALL when placing her at setup. BIG adds 2 to Alice’s attack-card values; SMALL adds 1 to her defense-card values, including versatile cards used in that role. These bonuses belong to Alice, not Jabberwock.",
+      "support": "supported",
+      "evidence": "Fighter reference gives stats; Alice ability: choose size at setup, BIG +2 attack, SMALL +1 defense; bonuses belong to Alice, not Jabberwock."
+    },
+    {
+      "id": "Q13",
+      "answer": "Arthur starts at 18 health and Merlin at 7; both are melee/ranged respectively and both move 2 during maneuver. When Arthur attacks, he may play a hand card face down alongside his attack card and add its BOOST value, ignoring its effects; discard the BOOST card. If the opponent cancels effects on Arthur’s attack card, discard that ability BOOST without effect.",
+      "support": "supported",
+      "evidence": "Fighter reference gives Arthur 18 melee and Merlin 7 ranged. Arthur ability describes maneuver move 2, optional attack BOOST, and cancellation result."
+    },
+    {
+      "id": "Q14",
+      "answer": "Medusa starts at 16 health, is ranged, and moves 3. She has three Harpies, each with 1 health and melee attacks. At the start of Medusa’s turn, she may optionally deal 1 damage to one opposing fighter in Medusa’s zone; adjacency is not required.",
+      "support": "supported",
+      "evidence": "Fighter reference lists Medusa and Harpy stats. Medusa ability: at start of turn, may deal 1 damage to one opposing fighter in her zone; no adjacency requirement."
+    },
+    {
+      "id": "Q15",
+      "answer": "Sinbad starts at 15 health and is melee; Porter starts at 6 health and is melee. Their normal move value is 2. With 3 Voyages in Sinbad’s discard pile, each may move up to 5 spaces in a maneuver before other bonuses (2 + 3); this also applies to Porter. A newly played base-2 Voyage has combat value 5 before other modifiers (printed 2 + 1 for each of the 3 other Voyages in the pile). It does not count itself because the card being played is not yet in the discard pile during combat.",
+      "support": "supported",
+      "evidence": "Fighter reference lists stats and move values. Sinbad ability counts actual Voyages in discard for each fighter’s maneuver; Voyage combat value is printed 2 plus 1 per other Voyage in discard; played card is not yet there."
+    },
+    {
+      "id": "Q16",
+      "answer": "Eat Me is a scheme: move Alice up to 3 spaces, then change size, even if she moved zero. Drink Me is a scheme: draw 2 cards, then change size. The change follows the first benefit and is mandatory when the effect says “change size”; she cannot refuse it.",
+      "support": "supported",
+      "evidence": "Alice card reference lists Eat Me as move up to 3 then change size (even if zero), and Drink Me as draw 2 then change size. Size change is mandatory when effect says so."
+    },
+    {
+      "id": "Q17",
+      "answer": "The attack and defense values tie at 4, so the attack deals 0 damage and Arthur wins combat as defender. At the shared after-combat timing, Arthur’s Skirmish resolves first; as winner he may move Jabberwock up to 2 spaces. Given that he moves Jabberwock away so it has no adjacent fighters, Jaws That Bite then finds no adjacent fighter and deals no damage. If a friendly fighter alone were adjacent, Alice could not decline: Jaws’ 2 damage is mandatory even if the only target is friendly.",
+      "support": "supported",
+      "evidence": "Combat winner is defender if attack deals none. Skirmish moves a fighter if its player won and defender effects resolve first. Jaws damages any one fighter adjacent to Jabberwock, including a friendly if only choice; no adjacent fighter means no damage; mandatory unless optional."
+    },
+    {
+      "id": "Q18",
+      "answer": "At 4 health, Holy Grail sets Arthur to 8. At 5 health, nothing happens. At 0, Arthur is defeated and the duel ends before the pending healing can resolve. Healing cannot raise any fighter above its dial maximum; Arthur’s maximum is 18.",
+      "support": "supported",
+      "evidence": "Holy Grail: at 4 or less but not defeated, set health to 8; at 5+ nothing; at 0 duel already ended. Recovery cannot exceed dial maximum; Arthur dial starts at 18."
+    },
+    {
+      "id": "Q19",
+      "answer": "Winged Frenzy moves each of Medusa’s fighters up to 3 spaces and lets them pass through opposing fighters. After movement, if a Harpy has been defeated, return one defeated Harpy to any unoccupied space in Medusa’s zone. It cannot end on an occupied space.",
+      "support": "supported",
+      "evidence": "Winged Frenzy: each of your fighters moves up to 3 and may pass through opposing fighters; then return a defeated Harpy, if any, to any unoccupied space in Medusa’s zone."
+    },
+    {
+      "id": "Q20",
+      "answer": "Voyage Home’s combat value is 6: its printed 2 plus 1 for each of the 4 other Voyages in the discard pile. After combat, take those 4 other Voyage cards from the discard pile into hand. Voyage Home itself is put into the discard pile at the normal end of combat and remains there. If the game continues with Home alone in the Voyage discard pile, Sinbad’s next unboosted maneuver allowance is 3 (normal 2 + 1 for Home).",
+      "support": "supported",
+      "evidence": "Voyage value is printed 2 plus one per other Voyage in discard. Voyage Home retrieves all other Voyage cards; Home itself enters discard at the normal end and with Home alone next move is 2+1=3."
+    }
+  ]
+}

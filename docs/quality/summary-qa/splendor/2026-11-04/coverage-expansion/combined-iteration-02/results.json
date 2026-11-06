@@ -1,0 +1,2176 @@
+{
+  "benchmark": "combined-iteration-02",
+  "grading": "Evaluator manually inspected every requested material fact and summary evidence against the predetermined unchanged key. Confidence/support labels are evidence, not automatic grades. Simple arithmetic and direct application count as supported.",
+  "readers": {
+    "reader-a": {
+      "grades": [
+        {
+          "id": 1,
+          "question": "Set up a two-player game. How many tokens of each gem color and how many gold tokens remain, how many nobles are revealed, and what happens to unrevealed nobles?",
+          "expected_answer": "4 of each gem color (remove 3 each). All 5 gold remain. Reveal 3 nobles. Unused nobles are removed and will not be used.",
+          "material_facts": [
+            "4 of each gem color (remove 3 each).",
+            "All 5 gold remain.",
+            "Reveal 3 nobles.",
+            "Unused nobles are removed and will not be used."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "12-16"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-34"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "40-44"
+            }
+          ],
+          "observed_answer": "Keep 4 tokens per gem color and 5 gold; reveal 3 nobles. Remove unrevealed nobles permanently.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Adjustments: 2 players = 4 gems/color, 5 gold, 3 nobles. Noble Tile Mechanics: removed nobles are out permanently.",
+          "grade": "correct",
+          "reason": "Setup counts and unused-noble destination match the source and summary table.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 2,
+          "question": "For three players, give the gem-token count per color, gold-token count and noble count. How do those counts differ in a four-player game?",
+          "expected_answer": "Three: 5 gems per color, 5 gold, 4 nobles. Four: 7 gems per color, 5 gold, 5 nobles.",
+          "material_facts": [
+            "Three: 5 gems per color, 5 gold, 4 nobles.",
+            "Four: 7 gems per color, 5 gold, 5 nobles."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "17-22"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-44"
+            }
+          ],
+          "observed_answer": "Three players: 5 gems per color, 5 gold, 4 nobles. Four players: 7 gems per color, 5 gold, 5 nobles; two more gems per color, one more noble, same gold.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Adjustments by Player Count table.",
+          "grade": "correct",
+          "reason": "Both player-count configurations, including unchanged gold, are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 3,
+          "question": "Describe how the development decks and market are prepared: shuffling, order of the three levels, and face-up card counts. Who starts and in which direction does play proceed?",
+          "expected_answer": "Shuffle each deck separately. Place decks in a column increasing bottom to top (1,2,3). Reveal 4 per level, 12 total. Youngest starts; play clockwise.",
+          "material_facts": [
+            "Shuffle each deck separately.",
+            "Place decks in a column increasing bottom to top (1,2,3).",
+            "Reveal 4 per level, 12 total.",
+            "Youngest starts; play clockwise."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "35-39"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            }
+          ],
+          "observed_answer": "Shuffle each level deck separately. Arrange level 1 at bottom, level 2 in middle, level 3 on top. Reveal 4 cards per level (12 total). The youngest player starts and play proceeds clockwise.",
+          "observed_support": "supported",
+          "summary_evidence": "Setup steps 1–3; First Player.",
+          "grade": "correct",
+          "reason": "All deck preparation, market-count, start-player and direction parts are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 4,
+          "question": "List all four action choices on a turn. May you take gems and then buy a card on the same turn, or reserve and buy that reserved card on that same turn?",
+          "expected_answer": "Take 3 gems of different colors. Take 2 same-color gems with 4+ available. Reserve 1 development and take 1 gold if available. Buy 1 face-up or previously reserved development. Exactly one action: neither proposed combination is allowed.",
+          "material_facts": [
+            "Take 3 gems of different colors.",
+            "Take 2 same-color gems with 4+ available.",
+            "Reserve 1 development and take 1 gold if available.",
+            "Buy 1 face-up or previously reserved development.",
+            "Exactly one action: neither proposed combination is allowed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-106"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            }
+          ],
+          "observed_answer": "Choose exactly one: take 3 different non-gold gems; take 2 same-color non-gold gems if at least 4 are in supply; reserve one card if holding fewer than 3 reserved and take gold if available; or purchase one face-up or previously reserved card. You cannot take gems then buy, or reserve then buy that card in the same turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: \"must perform exactly one\" action; purchase reserved on \"a previous turn.\"",
+          "grade": "partial",
+          "reason": "Action list omits the one-token quantity for reservation gold from the fixed action definition; lists other choices and legal conditions correctly. Summary already states one gold, so this is answer completeness, not a rule omission.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 5,
+          "question": "What information about tokens you own must be visible to other players, and when?",
+          "expected_answer": "All tokens owned by a player must be visible to all players at all times.",
+          "material_facts": [
+            "All tokens owned by a player must be visible to all players at all times."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "88-93"
+            }
+          ],
+          "observed_answer": "All owned tokens must be visible to all players at all times.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit: \"All tokens a player owns must be visible to all players at all times.\"",
+          "grade": "correct",
+          "reason": "All owned tokens must remain visible to all players at all times.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 6,
+          "question": "A green pile contains four tokens; a red pile contains three. Can you take two green, leaving two? Can you take two red? When is the supply threshold checked, and can either gem-taking action take gold?",
+          "expected_answer": "Two green legal: threshold checked before taking; 4 available suffices. Two red illegal: fewer than 4. Neither gem-taking action obtains gold; only reserving does.",
+          "material_facts": [
+            "Two green legal: threshold checked before taking; 4 available suffices.",
+            "Two red illegal: fewer than 4.",
+            "Neither gem-taking action obtains gold; only reserving does."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-106"
+            }
+          ],
+          "observed_answer": "Yes, take two green from four, leaving two. No, cannot take two red from three. Check before taking. Neither gem-taking action allows gold.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: \"at least 4 tokens in the supply before taking them\"; gem actions specify \"no gold.\"",
+          "grade": "correct",
+          "reason": "The pre-draw four-token threshold and gold exclusion are correctly applied.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 7,
+          "question": "You begin with nine tokens and take three different gems. Is temporarily holding twelve allowed, how many must you return, can they include the gems just drawn, and does gold count toward the limit?",
+          "expected_answer": "Limit applies at end of turn, so temporary twelve allowed. Return 2 to reach 10. May return some or all newly drawn tokens. Gold counts.",
+          "material_facts": [
+            "Limit applies at end of turn, so temporary twelve allowed.",
+            "Return 2 to reach 10.",
+            "May return some or all newly drawn tokens.",
+            "Gold counts."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "89-93"
+            }
+          ],
+          "observed_answer": "Temporarily holding twelve is allowed. Return two tokens of your choice, including newly drawn gems if desired. Gold counts toward the ten-token limit.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit: may temporarily exceed 10; may return \"some or all of the tokens they just took\"; limit includes gold.",
+          "grade": "correct",
+          "reason": "Temporary excess, return of two, newly drawn tokens and gold inclusion are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 8,
+          "question": "You have ten tokens and fewer than three reserved cards. You reserve a card while gold is available. What happens to the gold and your token count, and what if the gold supply were empty instead?",
+          "expected_answer": "Take 1 gold with reservation then return 1 chosen token to reach 10 at end. May return the gold just drawn. If no gold, still reserve but receive none; with ten tokens no excess is created.",
+          "material_facts": [
+            "Take 1 gold with reservation then return 1 chosen token to reach 10 at end.",
+            "May return the gold just drawn.",
+            "If no gold, still reserve but receive none; with ten tokens no excess is created."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "89-92"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-106"
+            }
+          ],
+          "observed_answer": "Take the gold, reaching eleven temporarily; return one token, possibly that gold, to finish at ten. If gold is empty, reserve with no gold and remain at ten.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve: empty gold does not prevent reservation. Token Hand Limit permits returning gold obtained by reserving.",
+          "grade": "correct",
+          "reason": "Reservation gold and end-turn limit are combined correctly, including empty-gold exception.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 9,
+          "question": "From which two places may you reserve a card? If reserving from a deck, which card is taken and is it shown to opponents? Who may eventually buy a reserved card?",
+          "expected_answer": "A face-up card from the market, or top card of any of the 3 decks. Deck card is taken without showing others. Only the holding player may buy it.",
+          "material_facts": [
+            "A face-up card from the market, or top card of any of the 3 decks.",
+            "Deck card is taken without showing others.",
+            "Only the holding player may buy it."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "53-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "96-100"
+            }
+          ],
+          "observed_answer": "Reserve a face-up market card or the top card of any level deck. Take a deck-top card without showing opponents. Only its reserving player may buy it.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve a Development Card: top card \"without revealing it\"; reserved cards purchased only by reserving player.",
+          "grade": "correct",
+          "reason": "Both reservation sources, top-card privacy and purchaser restriction are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 10,
+          "question": "You already have three reserved cards and want a fourth, or just want the gold from reserving. Can you reserve now? May you discard or exchange a reserved card to make room, and how can a reserved card leave your hand?",
+          "expected_answer": "Cannot reserve while holding 3, including to obtain gold. Cannot discard or exchange a reserved card. Only buying it removes it from hand.",
+          "material_facts": [
+            "Cannot reserve while holding 3, including to obtain gold.",
+            "Cannot discard or exchange a reserved card.",
+            "Only buying it removes it from hand."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-106"
+            }
+          ],
+          "observed_answer": "No reservation with three already reserved, even just for gold. Cannot discard or exchange a reserved card to make room: purchasing it is the only way it leaves your hand.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserved Cards: \"If a player already has 3, they cannot reserve another\"; only removal is purchase.",
+          "grade": "correct",
+          "reason": "Three-card limit, no gold-only reservation, no discard/exchange and purchase-only exit are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 11,
+          "question": "You reserve a face-up level-2 card while that deck has cards left. When and from where is the empty market space refilled? How does this differ when purchasing a face-up card, buying a reserved card, or when the relevant deck is empty?",
+          "expected_answer": "Face-up reservation immediately replaced from same-level deck. Face-up purchase has same replacement. Buying from hand does not remove a market card so causes no refill. Empty deck leaves market gap empty, fewer than 4 allowed.",
+          "material_facts": [
+            "Face-up reservation immediately replaced from same-level deck.",
+            "Face-up purchase has same replacement.",
+            "Buying from hand does not remove a market card so causes no refill.",
+            "Empty deck leaves market gap empty, fewer than 4 allowed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "Immediately refill from the top of the level-2 deck. The same applies to buying a face-up card. Buying a reserved card creates no market vacancy to refill. If the relevant deck is empty, the vacant space stays empty for the rest of the game.",
+          "observed_support": "supported",
+          "summary_evidence": "Card Replacement: face-up purchases and reservations are immediately replaced from the same level; empty deck leaves space empty.",
+          "grade": "correct",
+          "reason": "Immediate same-level refill, both face-up actions, no hand-purchase refill and depleted deck are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 12,
+          "question": "A card costs two blue and one green. You have two blue bonuses and no green bonus. What tokens must you spend? What if your bonuses cover every required color, and are bonuses spent when used?",
+          "expected_answer": "Spend only 1 green. If all costs covered, purchase for zero tokens. Bonuses remain as discounts on later purchases, not spent.",
+          "material_facts": [
+            "Spend only 1 green.",
+            "If all costs covered, purchase for zero tokens.",
+            "Bonuses remain as discounts on later purchases, not spent."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "158-168"
+            }
+          ],
+          "observed_answer": "Spend one green token, no blue. If bonuses cover the full cost, spend no tokens. Bonuses remain permanently and are not spent.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules give this exact 2-blue/1-green example; sufficient bonuses allow no-token purchases; bonuses are permanent.",
+          "grade": "correct",
+          "reason": "Discount calculation, free purchase and persistent bonuses are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 13,
+          "question": "A card costs three blue, two black and one white. You have two blue bonuses, one black bonus, and no white bonus; your available payment is one blue token and two gold. Can you buy it? State which costs the tokens cover, where all spent tokens go, and whether your bonus cards stay with you.",
+          "expected_answer": "Yes: after bonuses remaining cost is 1 blue,1 black,1 white. Pay blue for blue and two gold for black and white. All spent tokens including gold return to middle supply. Keep bonus cards.",
+          "material_facts": [
+            "Yes: after bonuses remaining cost is 1 blue,1 black,1 white.",
+            "Pay blue for blue and two gold for black and white.",
+            "All spent tokens including gold return to middle supply.",
+            "Keep bonus cards."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "158-168"
+            }
+          ],
+          "observed_answer": "Yes. After bonuses, pay one blue token for the remaining blue and two gold for the remaining black and white. All spent tokens return to supply; bonus cards stay with you.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: bonuses reduce costs, gold substitutes for any gem, spent gems and gold return to supply; bonuses permanent.",
+          "grade": "correct",
+          "reason": "Residual cost and all three payments are correct; all spent tokens return and bonus cards stay.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 14,
+          "question": "Which cards can you purchase with a buy action? After purchase, how should acquired development cards be arranged, and which information on them must always remain visible?",
+          "expected_answer": "Buy 1 face-up market card or own card reserved on previous turn. Place acquired cards before player sorted into distinct color rows, staggered vertically. Bonuses and prestige point values visible to everyone at all times.",
+          "material_facts": [
+            "Buy 1 face-up market card or own card reserved on previous turn.",
+            "Place acquired cards before player sorted into distinct color rows, staggered vertically.",
+            "Bonuses and prestige point values visible to everyone at all times."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "149-151"
+            }
+          ],
+          "observed_answer": "Buy one face-up market card or one previously reserved card. Arrange purchased cards face up before you, sorted by bonus color and staggered so bonuses and prestige values are visible to all at all times.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card, including final arrangement paragraph.",
+          "grade": "correct",
+          "reason": "Both legal purchase sources, sorted staggered display and continuous visibility are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 15,
+          "question": "A noble requires three blue, three green and three white bonuses. You have three blue cards, three green cards, two white cards and a white token (or a gold token). Do you qualify? What changes if you instead acquire a third white bonus, and do bonuses above a requirement disqualify you?",
+          "expected_answer": "No: gem/gold tokens cannot replace bonus requirements. Third white bonus qualifies at end of own turn. Requirements are minimums; excess fine.",
+          "material_facts": [
+            "No: gem/gold tokens cannot replace bonus requirements.",
+            "Third white bonus qualifies at end of own turn.",
+            "Requirements are minimums; excess fine."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "64-76"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "170-175"
+            }
+          ],
+          "observed_answer": "No: a white or gold token cannot replace the missing white bonus. A third white bonus qualifies you at the end of your turn. Excess bonuses are allowed.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Visits: requires \"at least\" the bonuses; \"bonuses only ... not gem tokens\"; checked at end of turn.",
+          "grade": "correct",
+          "reason": "Tokens do not meet noble requirements; a third white bonus qualifies at turn end; excess allowed.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 16,
+          "question": "At the end of your action you qualify for two nobles. Can you take both, decline all visits, or choose one? Does the visit use another action, how many points does it give, and when is eligibility checked?",
+          "expected_answer": "Check end of own turn. Must choose 1, cannot take both or decline. Not an action. Noble worth 3 prestige.",
+          "material_facts": [
+            "Check end of own turn.",
+            "Must choose 1, cannot take both or decline.",
+            "Not an action.",
+            "Noble worth 3 prestige."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "169-178"
+            }
+          ],
+          "observed_answer": "Choose one; cannot take both or refuse all visits. The other remains available. This costs no action, gives 3 prestige, and is checked at the end of your turn after your action.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble visit rules: automatic, not an action, choose one, maximum one per turn, 3 points.",
+          "grade": "correct",
+          "reason": "Own-turn timing, compulsory single choice, no extra action and three points are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 17,
+          "question": "Once you receive a noble, where is its tile placed, and is it face up or hidden?",
+          "expected_answer": "Place it face-up in front of the receiving player.",
+          "material_facts": [
+            "Place it face-up in front of the receiving player."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "179-180"
+            }
+          ],
+          "observed_answer": "Put the received noble face up in front of you.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Visits: \"Place the received noble tile face-up in front of you.\"",
+          "grade": "correct",
+          "reason": "Noble tile face-up placement in front of recipient is explicit.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 18,
+          "question": "In a four-player game, turns run A, B, C, D, with A first. B reaches fifteen prestige points on their turn. Who still takes a turn before the game ends, does A take another turn, and is B guaranteed to win?",
+          "expected_answer": "C then D still take their turns. A and B do not take another turn; finish current round for equal turns. B not guaranteed to win: highest final prestige wins.",
+          "material_facts": [
+            "C then D still take their turns.",
+            "A and B do not take another turn; finish current round for equal turns.",
+            "B not guaranteed to win: highest final prestige wins."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-186"
+            }
+          ],
+          "observed_answer": "C and D still play; A does not play again. B is not guaranteed to win: another player may surpass B during the final round.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger completes current round for equal turns; End-of-Game Clarifications says trigger player may be surpassed.",
+          "grade": "correct",
+          "reason": "Only C and D finish the round; no extra turn for A; highest final points decides.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 19,
+          "question": "You have thirteen prestige points and receive a noble at the end of your turn. What is your new total, does that trigger the end of the game even though you skipped over fifteen, and when is the winner determined?",
+          "expected_answer": "Total 16, because noble gives 3. Triggers end: 15 reached or exceeded. Finish current round for equal turns, then compare total prestige including nobles.",
+          "material_facts": [
+            "Total 16, because noble gives 3.",
+            "Triggers end: 15 reached or exceeded.",
+            "Finish current round for equal turns, then compare total prestige including nobles."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "70-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-186"
+            }
+          ],
+          "observed_answer": "Your total is 16. Yes, 15 or more triggers the end condition. Determine the winner after the current round finishes with equal turn counts.",
+          "observed_support": "supported",
+          "summary_evidence": "Nobles worth 3; End-Game Trigger: \"15 or more\"; winner has most points at end of final round.",
+          "grade": "correct",
+          "reason": "Noble raises 13 to 16, crosses the threshold, and comparison waits for equal turns.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 20,
+          "question": "At the end, A has sixteen prestige and ten purchased developments; B has sixteen prestige and nine purchased developments plus three cards still reserved; C has fifteen prestige and only five purchased developments. Who wins and why? Do nobles count toward prestige, and do B’s reserved cards count as purchased developments for the tiebreaker?",
+          "expected_answer": "B wins: tied highest at 16 with fewer purchased developments (9 vs 10). C loses on points before tiebreak. Noble points count. Reserved cards are not purchased cards, so B has 9 for tiebreak.",
+          "material_facts": [
+            "B wins: tied highest at 16 with fewer purchased developments (9 vs 10).",
+            "C loses on points before tiebreak.",
+            "Noble points count.",
+            "Reserved cards are not purchased cards, so B has 9 for tiebreak."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "53-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "185-188"
+            }
+          ],
+          "observed_answer": "B wins: A and B tie at 16, then B wins with 9 purchased developments versus 10. C has fewer prestige, so card count does not help. Noble points count. B’s three reserved cards are unpurchased and do not count in the purchased-card tiebreaker.",
+          "observed_support": "supported",
+          "summary_evidence": "Determining the Winner: most prestige, including nobles. Tiebreaker: fewest development cards purchased.",
+          "grade": "correct",
+          "reason": "B wins tied highest score on nine purchased cards; reserved cards excluded and nobles included.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 21,
+          "question": "You have reserved cards showing a total of eight prestige points and two white bonuses, but have not bought them. Do those printed points count toward your score or the 15-point trigger, and do those bonuses reduce purchase costs or satisfy nobles?",
+          "expected_answer": "No reserved-card prestige counts before purchase, including for the end-game trigger. Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses.",
+          "material_facts": [
+            "No reserved-card prestige counts before purchase, including for the end-game trigger.",
+            "Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "47-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-188"
+            }
+          ],
+          "observed_answer": "No printed points or bonuses on unpurchased reserved cards count toward score, trigger, purchase discounts, or nobles. Those benefits require purchased developments.",
+          "observed_support": "supported",
+          "summary_evidence": "Scoring refers to \"each purchased card\"; payment bonuses from \"previously purchased\" cards; nobles use bonuses from purchased cards.",
+          "grade": "correct",
+          "reason": "Correctly excludes unpurchased reserved cards from prestige, trigger, discounts and noble requirements.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 22,
+          "question": "You buy a development card with a blue bonus and zero prestige. Do you receive a physical blue token from the supply, does its bonus work for future purchases, and can it help qualify you for a noble despite being worth zero prestige?",
+          "expected_answer": "Do not receive a physical blue token; a bonus is a purchase discount. The acquired blue bonus discounts future purchases. A zero-prestige acquired card still contributes its bonus to noble qualification.",
+          "material_facts": [
+            "Do not receive a physical blue token; a bonus is a purchase discount.",
+            "The acquired blue bonus discounts future purchases.",
+            "A zero-prestige acquired card still contributes its bonus to noble qualification."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "47-50"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-76"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            }
+          ],
+          "observed_answer": "No physical token is received. The zero-point card still supplies a permanent blue discount for future purchases and a bonus for noble requirements.",
+          "observed_support": "supported",
+          "summary_evidence": "Bonus Stacking: purchased cards add one permanent bonus and \"never generate tokens\"; cards may be worth 0; nobles require bonuses.",
+          "grade": "correct",
+          "reason": "Distinguishes permanent discount from a physical token and applies a zero-prestige bonus to nobles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 23,
+          "question": "A face-up development costs one blue and grants a blue bonus. You have no blue bonus, no blue token and no gold. Can its own bonus make this purchase free? Separately, suppose you can pay for a white-bonus development and it gives you the final bonus needed by a noble: does that new bonus count for the noble at the end of this turn, or only next turn?",
+          "expected_answer": "The unpurchased card cannot discount its own cost; the first purchase is unaffordable. Bonuses used to discount purchases come from previously acquired cards. A bonus acquired by the paid purchase counts for the end-of-this-turn noble check.",
+          "material_facts": [
+            "The unpurchased card cannot discount its own cost; the first purchase is unaffordable.",
+            "Bonuses used to discount purchases come from previously acquired cards.",
+            "A bonus acquired by the paid purchase counts for the end-of-this-turn noble check."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            }
+          ],
+          "observed_answer": "Its own bonus cannot make it free: discounts come from previously purchased cards. The newly purchased white bonus does count for the noble at the end of this same turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: \"previously purchased development cards\"; turn sequence checks noble eligibility after the action.",
+          "grade": "correct",
+          "reason": "Correctly distinguishes prior bonuses used to pay from a just-purchased bonus counted at the turn-end noble check.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 24,
+          "question": "A card costs one blue and two green. You have four blue bonuses and no green bonuses. Can the three excess blue bonuses pay any green cost or give you blue tokens as change? What payment is still needed?",
+          "expected_answer": "Excess blue bonuses cannot pay green costs. No physical tokens or change are generated. Two green tokens, or gold substituting for them, are still needed.",
+          "material_facts": [
+            "Excess blue bonuses cannot pay green costs.",
+            "No physical tokens or change are generated.",
+            "Two green tokens, or gold substituting for them, are still needed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-168"
+            }
+          ],
+          "observed_answer": "Excess blue bonuses cannot pay green costs or produce blue change. You still need two green tokens, with gold permitted as substitutes for either or both.",
+          "observed_support": "supported",
+          "summary_evidence": "Bonus Stacking: excess gives no benefit and no change; bonuses are color-specific; gold substitutes for any gem.",
+          "grade": "correct",
+          "reason": "Keeps excess bonuses within color, gives no change and pays remaining green cost with gems or gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 25,
+          "question": "You qualify for two nobles and receive one. Before your next turn nobody acquires the other noble and your purchased cards stay unchanged. Were the bonuses used up by the first noble, and can taking gems on your next turn still lead to receiving the other noble? Can you collect that other noble during an opponent’s intervening turn?",
+          "expected_answer": "Bonuses are not used up by receiving a noble. Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then. Cannot collect the second noble during an opponent’s turn.",
+          "material_facts": [
+            "Bonuses are not used up by receiving a noble.",
+            "Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then.",
+            "Cannot collect the second noble during an opponent’s turn."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-178"
+            }
+          ],
+          "observed_answer": "Bonuses remain permanently. Taking gems next turn can be followed by receiving the still-available other noble. You cannot collect it on an opponent’s intervening turn: noble checks occur at the end of your own turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Visits: \"At the end of their turn\"; other nobles remain available for future turns; bonuses permanent.",
+          "grade": "correct",
+          "reason": "Keeps bonuses after receiving a noble and applies the next own-turn check after a non-purchase action; rejects off-turn collection.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 26,
+          "question": "You have no tokens, no purchased developments and no reserved cards. A face-up level-3 development is far too expensive for you to buy. May you reserve it anyway? Do you pay its printed cost when reserving, and do you take gold if available?",
+          "expected_answer": "May reserve the face-up level-3 card despite not affording a purchase. Do not pay its printed purchase cost to reserve. Take one gold if available.",
+          "material_facts": [
+            "May reserve the face-up level-3 card despite not affording a purchase.",
+            "Do not pay its printed purchase cost to reserve.",
+            "Take one gold if available."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-111"
+            }
+          ],
+          "observed_answer": "Yes, reserve the expensive level-3 card without paying its printed cost, and take gold if available. Reservation has no affordability requirement in the described action.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve permits any face-up development or deck top, takes it into hand plus gold; payment is specified for purchasing.",
+          "grade": "correct",
+          "reason": "Correctly treats reservation as independent of printed purchase price and level, with gold if available.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 27,
+          "question": "Instead of reserving a face-up card, you reserve the top card of the level-2 deck while twelve face-up market cards remain. Must any market card be removed or refilled because of that blind reservation, how many market cards remain, and can you take a second card as a replacement in your hand?",
+          "expected_answer": "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain. The reserve action gives only one reserved card, not a second replacement card.",
+          "material_facts": [
+            "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain.",
+            "The reserve action gives only one reserved card, not a second replacement card."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "No market card is removed or refilled: twelve remain. You take only the one deck-top card into your hand, without a second replacement card.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve: take \"one development card\" from deck top; replacement applies to face-up grid acquisitions.",
+          "grade": "correct",
+          "reason": "Blind draw removes no face-up card and gives only one reserved card; all twelve market cards remain.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 28,
+          "question": "A level deck has run out, but its four face-up cards are still in the market. Must those cards be removed, or may they still be purchased or reserved? If one is purchased, what happens to that space and to the other three cards?",
+          "expected_answer": "Keep the four remaining face-up cards available to purchase or reserve. After one is purchased its gap stays empty because the same-level deck is empty. Other three face-up cards remain available.",
+          "material_facts": [
+            "Keep the four remaining face-up cards available to purchase or reserve.",
+            "After one is purchased its gap stays empty because the same-level deck is empty.",
+            "Other three face-up cards remain available."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-100"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "The four face-up cards remain available for purchase or reservation. Purchasing one leaves its space empty because its deck is exhausted; the other three remain available.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchasing/reserving permits face-up cards; Card Replacement: exhausted deck leaves the empty space empty for the rest of the game.",
+          "grade": "correct",
+          "reason": "Retains remaining face-up cards after deck exhaustion and leaves only the vacated space empty.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 29,
+          "question": "All development decks and face-up market cards have been exhausted; nobody has reached fifteen prestige. A player still has an affordable reserved card and gems are available in at least three colors. Does exhaustion itself end the game? May that player buy the reserved card or choose the three-different-gems action?",
+          "expected_answer": "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round. May buy the affordable own reserved card. May instead take three different gems under the stated available supply; still only one action.",
+          "material_facts": [
+            "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round.",
+            "May buy the affordable own reserved card.",
+            "May instead take three different gems under the stated available supply; still only one action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-188"
+            }
+          ],
+          "observed_answer": "Exhaustion does not end the game. The player may buy the reserved card or take three different gems. Continue legal actions until the normal prestige end condition.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger explicitly says deck or market exhaustion does not end the game; remaining legal actions include reserved purchases.",
+          "grade": "correct",
+          "reason": "Correctly continues remaining legal actions after exhaustion; uses the normal prestige trigger.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 30,
+          "question": "You already own ten tokens. Three different gem colors are available. Can you take one of each and then return all three newly taken tokens, ending with exactly the same token holdings? Is a net gain of tokens required?",
+          "expected_answer": "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens. End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement.",
+          "material_facts": [
+            "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens.",
+            "End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-93"
+            }
+          ],
+          "observed_answer": "Yes. Take three, temporarily reaching thirteen, then return all three new tokens to end with the same ten. No net token gain is required.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit permits temporary excess and returning \"some or all of the tokens they just took.\"",
+          "grade": "correct",
+          "reason": "Applies explicit permission to return all newly drawn tokens, including a zero-net-gain action at the limit.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 31,
+          "question": "The gold supply is empty. On A’s turn, A pays two gold while purchasing a card. B then reserves a card with fewer than three cards reserved. Are A’s spent gold tokens removed from the game, or can B take one, and how many gold tokens are left in the supply immediately after B’s reservation before any token-limit returns?",
+          "expected_answer": "A returns both gold tokens to the central supply, not out of the game. B takes one available gold with the reservation. One gold remains in supply before any limit returns.",
+          "material_facts": [
+            "A returns both gold tokens to the central supply, not out of the game.",
+            "B takes one available gold with the reservation.",
+            "One gold remains in supply before any limit returns."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-111"
+            }
+          ],
+          "observed_answer": "A returns both spent gold to supply; B can take one. One gold remains in supply immediately after B’s reservation, before any returns.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: spent gold returned to supply. Reserving takes one gold if available.",
+          "grade": "correct",
+          "reason": "Circulates spent gold through the supply to the next reservation and computes the one remaining gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 32,
+          "question": "You have bought no level-1 or level-2 developments, but can pay for a face-up level-3 card. May you purchase that level-3 card now, or must you unlock its level by buying lower-level cards first?",
+          "expected_answer": "May purchase the affordable face-up level-3 card. The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market.",
+          "material_facts": [
+            "May purchase the affordable face-up level-3 card.",
+            "The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "54-56"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "86-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-114"
+            }
+          ],
+          "observed_answer": "Yes. You may purchase the affordable face-up level-3 card; the purchase action does not require owning lower-level cards first.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card permits a face-up development from the grid by paying its cost, without level prerequisites.",
+          "grade": "correct",
+          "reason": "Uses the unrestricted face-up-card purchase rule, without inventing lower-level prerequisites.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 33,
+          "question": "You have twelve prestige, then purchase a three-prestige development whose bonus also makes you qualify for a noble. May you stop at fifteen and skip the noble visit? What is your total after your turn, and can the other players who still have a turn in the round continue playing?",
+          "expected_answer": "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen. Total is eighteen after the three-prestige card and three-prestige noble. Complete the current round for equal turns; players with remaining turns still play.",
+          "material_facts": [
+            "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen.",
+            "Total is eighteen after the three-prestige card and three-prestige noble.",
+            "Complete the current round for equal turns; players with remaining turns still play."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "170-188"
+            }
+          ],
+          "observed_answer": "You cannot refuse the automatic noble. You finish with 18 prestige: 12 + 3 for the development + 3 for the noble. Other players with turns left in this round continue.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble visits cannot be refused and give 3 points; End-Game Trigger completes the current round with equal turns.",
+          "grade": "correct",
+          "reason": "Completes compulsory noble acquisition after reaching fifteen, totals eighteen and finishes current round.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 34,
+          "question": "Four players act A, B, C, D, with A first. D is the first player to reach fifteen prestige on D’s turn. Does A start another round, does everyone get one more turn, or is the game over after D completes this turn? Explain using equal turn counts.",
+          "expected_answer": "The current round is already complete when D finishes. End after D finishes the turn; A does not start another round and no player gets an extra turn. All players have had equal turn counts.",
+          "material_facts": [
+            "The current round is already complete when D finishes.",
+            "End after D finishes the turn; A does not start another round and no player gets an extra turn.",
+            "All players have had equal turn counts."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-184"
+            }
+          ],
+          "observed_answer": "The game ends after D completes the turn. A does not begin another round and nobody gets an extra turn, since all four have equal turn counts at that point.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger: complete current round so every player has played the same number of turns.",
+          "grade": "correct",
+          "reason": "Recognizes equal turn counts after last player D and adds no extra round.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 35,
+          "question": "In a two-player game, three nobles were revealed and the other seven removed during setup. After someone receives one noble, do you reveal a new tile from those seven to restore the display to three? Where does the acquired tile go and how many nobles remain available in the middle?",
+          "expected_answer": "Do not replenish nobles from the seven tiles removed during setup. The acquired noble goes face-up in front of its recipient. Two nobles remain available in the middle.",
+          "material_facts": [
+            "Do not replenish nobles from the seven tiles removed during setup.",
+            "The acquired noble goes face-up in front of its recipient.",
+            "Two nobles remain available in the middle."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "12-16"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "40-43"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "179-180"
+            }
+          ],
+          "observed_answer": "No replacement noble is revealed: removed nobles are permanently out. The acquired noble goes face up before the receiving player; two remain available in the middle.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Tile Mechanics: removed tiles out permanently; received noble placed face up before player.",
+          "grade": "correct",
+          "reason": "Does not replenish removed nobles; moves acquired tile face up and leaves two available.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 36,
+          "question": "Match each component name to its color: emerald, diamond, sapphire, onyx, ruby and gold joker. How many development cards are in the box in total and at each of the three levels?",
+          "expected_answer": "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow. Ninety developments: forty level 1, thirty level 2, twenty level 3.",
+          "material_facts": [
+            "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow.",
+            "Ninety developments: forty level 1, thirty level 2, twenty level 3."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "5-10"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-35"
+            }
+          ],
+          "observed_answer": "Emerald green, diamond white, sapphire blue, onyx black, ruby red, gold joker yellow. There are 90 developments: 40 level 1, 30 level 2, 20 level 3.",
+          "observed_support": "supported",
+          "summary_evidence": "Components token-color and development-card tables.",
+          "grade": "correct",
+          "reason": "All six token identities and all four development inventory counts match.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 37,
+          "question": "A card’s remaining cost after bonuses is one green. You hold both one green token and one gold. Must you spend green because you have it, or may you pay gold instead and keep the green? Where does the payment go?",
+          "expected_answer": "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent. Keep the unused green token; return spent gold to the supply.",
+          "material_facts": [
+            "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent.",
+            "Keep the unused green token; return spent gold to the supply."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "You may pay gold and keep green. The gold substitutes for the required green token and returns to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: gold \"can substitute for any single gem token\"; spent gold returned to supply.",
+          "grade": "correct",
+          "reason": "Permits optional gold substitution despite owning matching gem and returns only the spent gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 38,
+          "question": "Three gem piles contain one red, two blue and three green tokens. Other gem piles are empty. Can the three-different-gems action take one from each of these piles, or does the four-token minimum prohibit it? What would remain in those three piles?",
+          "expected_answer": "May take one from each of red,blue,green. The four-token prerequisite applies to taking two alike, not the three-different-colors action. Remaining piles: zero red, one blue, two green.",
+          "material_facts": [
+            "May take one from each of red,blue,green.",
+            "The four-token prerequisite applies to taking two alike, not the three-different-colors action.",
+            "Remaining piles: zero red, one blue, two green."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-84"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            }
+          ],
+          "observed_answer": "Yes. The four-token minimum applies to taking two of one color, not three different colors. Taking one from each leaves zero red, one blue, and two green.",
+          "observed_support": "supported",
+          "summary_evidence": "Different-color action takes one each from three piles; only same-color action specifies the four-token threshold.",
+          "grade": "correct",
+          "reason": "Applies the four-token threshold only to two-alike taking, and correctly computes all remaining piles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 39,
+          "question": "You hold a gold token and want to exchange it directly for a red token in the supply without buying a development. Is that a listed action or a permitted use of the joker rule? What use does the summary give gold when purchasing?",
+          "expected_answer": "No direct gold-for-gem exchange action is provided among the four actions. The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action.",
+          "material_facts": [
+            "No direct gold-for-gem exchange action is provided among the four actions.",
+            "The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "A direct gold-for-red exchange is not a listed action or the stated use of gold. Gold substitutes for a required gem token when buying a development.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure lists four actions; Gold Token Specifics allows substitution \"when purchasing a card.\"",
+          "grade": "correct",
+          "reason": "Rejects a standalone exchange action and confines joker substitution to purchase payment.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 40,
+          "question": "On your turn you can legally buy a face-up card and can also take three different gems. You want neither benefit. May you simply pass without performing an action, or must you choose one of the four actions? This asks about voluntarily passing with legal actions available, not a state in which all actions are impossible.",
+          "expected_answer": "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available. The source does not provide a voluntary pass action.",
+          "material_facts": [
+            "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available.",
+            "The source does not provide a voluntary pass action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78-87"
+            }
+          ],
+          "observed_answer": "You must perform exactly one of the four actions; voluntarily passing with legal actions available is not allowed.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: \"must perform exactly one of the following four actions.\"",
+          "grade": "correct",
+          "reason": "Applies must-perform-exactly-one to voluntary passing while legal actions exist, without extending to source-unresolved all-actions-impossible states.",
+          "unsupported_correct_claim": false
+        }
+      ],
+      "totals": {
+        "correct": 39,
+        "partial": 1,
+        "incorrect": 0
+      },
+      "group_totals": {
+        "original-20": {
+          "correct": 19,
+          "partial": 1,
+          "incorrect": 0
+        },
+        "additional-21-40": {
+          "correct": 20,
+          "partial": 0,
+          "incorrect": 0
+        }
+      }
+    },
+    "reader-b": {
+      "grades": [
+        {
+          "id": 1,
+          "question": "Set up a two-player game. How many tokens of each gem color and how many gold tokens remain, how many nobles are revealed, and what happens to unrevealed nobles?",
+          "expected_answer": "4 of each gem color (remove 3 each). All 5 gold remain. Reveal 3 nobles. Unused nobles are removed and will not be used.",
+          "material_facts": [
+            "4 of each gem color (remove 3 each).",
+            "All 5 gold remain.",
+            "Reveal 3 nobles.",
+            "Unused nobles are removed and will not be used."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "12-16"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-34"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "40-44"
+            }
+          ],
+          "observed_answer": "Keep 4 tokens of each gem color and all 5 gold tokens. Reveal 3 nobles; remove the other 7 permanently from the game.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Setup Quick Reference: 2 players: 4 each, 5 gold, 3 nobles. Setup: 'Remove remaining noble tiles from the game'; Noble Tile Mechanics: 'out of the game permanently.'",
+          "grade": "correct",
+          "reason": "Setup counts and unused-noble destination match the source and summary table.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 2,
+          "question": "For three players, give the gem-token count per color, gold-token count and noble count. How do those counts differ in a four-player game?",
+          "expected_answer": "Three: 5 gems per color, 5 gold, 4 nobles. Four: 7 gems per color, 5 gold, 5 nobles.",
+          "material_facts": [
+            "Three: 5 gems per color, 5 gold, 4 nobles.",
+            "Four: 7 gems per color, 5 gold, 5 nobles."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "17-22"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-44"
+            }
+          ],
+          "observed_answer": "Three players use 5 tokens per gem color, 5 gold and 4 nobles. Four players use 7 per gem color, 5 gold and 5 nobles: two more of each gem color and one more noble, with the same gold count.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Adjustments by Player Count: 3 | 5 | 5 | 4; 4 | 7 | 5 | 5.",
+          "grade": "correct",
+          "reason": "Both player-count configurations, including unchanged gold, are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 3,
+          "question": "Describe how the development decks and market are prepared: shuffling, order of the three levels, and face-up card counts. Who starts and in which direction does play proceed?",
+          "expected_answer": "Shuffle each deck separately. Place decks in a column increasing bottom to top (1,2,3). Reveal 4 per level, 12 total. Youngest starts; play clockwise.",
+          "material_facts": [
+            "Shuffle each deck separately.",
+            "Place decks in a column increasing bottom to top (1,2,3).",
+            "Reveal 4 per level, 12 total.",
+            "Youngest starts; play clockwise."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "35-39"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            }
+          ],
+          "observed_answer": "Shuffle each level separately. Arrange decks in a column with level 1 at the bottom, level 2 in the middle and level 3 at the top. Reveal 4 cards per level, 12 total. The youngest player starts and play proceeds clockwise.",
+          "observed_support": "supported",
+          "summary_evidence": "Setup steps 1–3; First Player: 'The youngest player goes first. Play proceeds clockwise.'",
+          "grade": "correct",
+          "reason": "All deck preparation, market-count, start-player and direction parts are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 4,
+          "question": "List all four action choices on a turn. May you take gems and then buy a card on the same turn, or reserve and buy that reserved card on that same turn?",
+          "expected_answer": "Take 3 gems of different colors. Take 2 same-color gems with 4+ available. Reserve 1 development and take 1 gold if available. Buy 1 face-up or previously reserved development. Exactly one action: neither proposed combination is allowed.",
+          "material_facts": [
+            "Take 3 gems of different colors.",
+            "Take 2 same-color gems with 4+ available.",
+            "Reserve 1 development and take 1 gold if available.",
+            "Buy 1 face-up or previously reserved development.",
+            "Exactly one action: neither proposed combination is allowed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-106"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            }
+          ],
+          "observed_answer": "Choose exactly one: take 3 gems of different colors; take 2 gems of one color with at least 4 in its supply; reserve one card if holding fewer than 3 reserved cards and take gold if available; or buy one face-up or previously reserved card. Neither taking gems then buying nor reserving then buying that card is allowed on the same turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: 'must perform exactly one' of four actions; purchase option specifies 'reserved on a previous turn.'",
+          "grade": "partial",
+          "reason": "Action list omits the one-token quantity for reservation gold from the fixed action definition; lists other choices and legal conditions correctly. Summary already states one gold, so this is answer completeness, not a rule omission.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 5,
+          "question": "What information about tokens you own must be visible to other players, and when?",
+          "expected_answer": "All tokens owned by a player must be visible to all players at all times.",
+          "material_facts": [
+            "All tokens owned by a player must be visible to all players at all times."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "88-93"
+            }
+          ],
+          "observed_answer": "All tokens you own must be visible to all players at all times.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit: 'All tokens a player owns must be visible to all players at all times.'",
+          "grade": "correct",
+          "reason": "All owned tokens must remain visible to all players at all times.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 6,
+          "question": "A green pile contains four tokens; a red pile contains three. Can you take two green, leaving two? Can you take two red? When is the supply threshold checked, and can either gem-taking action take gold?",
+          "expected_answer": "Two green legal: threshold checked before taking; 4 available suffices. Two red illegal: fewer than 4. Neither gem-taking action obtains gold; only reserving does.",
+          "material_facts": [
+            "Two green legal: threshold checked before taking; 4 available suffices.",
+            "Two red illegal: fewer than 4.",
+            "Neither gem-taking action obtains gold; only reserving does."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-106"
+            }
+          ],
+          "observed_answer": "You may take two green, leaving two, because the pile starts with four. You may not take two red from a pile of three. Check the threshold before taking the tokens. Neither gem-taking action allows gold.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: 'at least 4 tokens in the supply before taking them'; Actions 1 and 2: 'You may not take gold tokens with this action.'",
+          "grade": "correct",
+          "reason": "The pre-draw four-token threshold and gold exclusion are correctly applied.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 7,
+          "question": "You begin with nine tokens and take three different gems. Is temporarily holding twelve allowed, how many must you return, can they include the gems just drawn, and does gold count toward the limit?",
+          "expected_answer": "Limit applies at end of turn, so temporary twelve allowed. Return 2 to reach 10. May return some or all newly drawn tokens. Gold counts.",
+          "material_facts": [
+            "Limit applies at end of turn, so temporary twelve allowed.",
+            "Return 2 to reach 10.",
+            "May return some or all newly drawn tokens.",
+            "Gold counts."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "89-93"
+            }
+          ],
+          "observed_answer": "Temporarily holding 12 is allowed. Return 2 tokens to end with 10; these may include newly drawn gems. Gold counts toward the limit.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit: 'may temporarily exceed 10'; 'return tokens of their choice'; 'including gold'; 'may return some or all of the tokens they just took.'",
+          "grade": "correct",
+          "reason": "Temporary excess, return of two, newly drawn tokens and gold inclusion are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 8,
+          "question": "You have ten tokens and fewer than three reserved cards. You reserve a card while gold is available. What happens to the gold and your token count, and what if the gold supply were empty instead?",
+          "expected_answer": "Take 1 gold with reservation then return 1 chosen token to reach 10 at end. May return the gold just drawn. If no gold, still reserve but receive none; with ten tokens no excess is created.",
+          "material_facts": [
+            "Take 1 gold with reservation then return 1 chosen token to reach 10 at end.",
+            "May return the gold just drawn.",
+            "If no gold, still reserve but receive none; with ten tokens no excess is created."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "89-92"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-106"
+            }
+          ],
+          "observed_answer": "Take the available gold, temporarily reaching 11 tokens, then return one token of your choice, possibly that gold, to end with 10. If gold is empty, you may still reserve and remain at 10 tokens without receiving gold.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve a Development Card: 'If no gold tokens remain, you may still reserve a card but receive no gold.' Token Hand Limit permits temporary excess and returning gold obtained by reserving.",
+          "grade": "correct",
+          "reason": "Reservation gold and end-turn limit are combined correctly, including empty-gold exception.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 9,
+          "question": "From which two places may you reserve a card? If reserving from a deck, which card is taken and is it shown to opponents? Who may eventually buy a reserved card?",
+          "expected_answer": "A face-up card from the market, or top card of any of the 3 decks. Deck card is taken without showing others. Only the holding player may buy it.",
+          "material_facts": [
+            "A face-up card from the market, or top card of any of the 3 decks.",
+            "Deck card is taken without showing others.",
+            "Only the holding player may buy it."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "53-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "96-100"
+            }
+          ],
+          "observed_answer": "Reserve a face-up market card or the top card of any of the three development decks. A card taken from a deck is not shown to opponents. Only the reserving player may buy it.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve a Development Card: 'face-up development card'; 'top card from any one of the three level decks, without revealing it'; 'Reserved cards may only be purchased by the player who reserved them.'",
+          "grade": "correct",
+          "reason": "Both reservation sources, top-card privacy and purchaser restriction are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 10,
+          "question": "You already have three reserved cards and want a fourth, or just want the gold from reserving. Can you reserve now? May you discard or exchange a reserved card to make room, and how can a reserved card leave your hand?",
+          "expected_answer": "Cannot reserve while holding 3, including to obtain gold. Cannot discard or exchange a reserved card. Only buying it removes it from hand.",
+          "material_facts": [
+            "Cannot reserve while holding 3, including to obtain gold.",
+            "Cannot discard or exchange a reserved card.",
+            "Only buying it removes it from hand."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-106"
+            }
+          ],
+          "observed_answer": "You cannot reserve with three reserved cards, even just to obtain gold. You cannot discard or exchange one to make room: purchase is the only way a reserved card leaves your hand.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserved Cards: 'If a player already has 3, they cannot reserve another'; 'The only way to remove a reserved card from your hand is to purchase it.'",
+          "grade": "correct",
+          "reason": "Three-card limit, no gold-only reservation, no discard/exchange and purchase-only exit are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 11,
+          "question": "You reserve a face-up level-2 card while that deck has cards left. When and from where is the empty market space refilled? How does this differ when purchasing a face-up card, buying a reserved card, or when the relevant deck is empty?",
+          "expected_answer": "Face-up reservation immediately replaced from same-level deck. Face-up purchase has same replacement. Buying from hand does not remove a market card so causes no refill. Empty deck leaves market gap empty, fewer than 4 allowed.",
+          "material_facts": [
+            "Face-up reservation immediately replaced from same-level deck.",
+            "Face-up purchase has same replacement.",
+            "Buying from hand does not remove a market card so causes no refill.",
+            "Empty deck leaves market gap empty, fewer than 4 allowed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "Immediately refill the level-2 space with the top card of the level-2 deck. Purchasing a face-up card uses the same replacement procedure. Buying a reserved card creates no market vacancy and requires no refill. If the relevant deck is empty, a market vacancy remains empty for the rest of the game.",
+          "observed_support": "supported",
+          "summary_evidence": "Card Replacement: 'Whenever a face-up card is acquired (purchased) or reserved from the grid, it is immediately replaced'; 'If the corresponding deck is empty, the empty space in the grid remains empty for the rest of the game.'",
+          "grade": "correct",
+          "reason": "Immediate same-level refill, both face-up actions, no hand-purchase refill and depleted deck are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 12,
+          "question": "A card costs two blue and one green. You have two blue bonuses and no green bonus. What tokens must you spend? What if your bonuses cover every required color, and are bonuses spent when used?",
+          "expected_answer": "Spend only 1 green. If all costs covered, purchase for zero tokens. Bonuses remain as discounts on later purchases, not spent.",
+          "material_facts": [
+            "Spend only 1 green.",
+            "If all costs covered, purchase for zero tokens.",
+            "Bonuses remain as discounts on later purchases, not spent."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "158-168"
+            }
+          ],
+          "observed_answer": "Spend one green token and no blue tokens. If bonuses cover every required color, spend no tokens. Bonuses are permanent and are not spent.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: the example says 'you only need to spend 1 green token'; 'without spending any tokens at all'; bonuses act as a 'permanent gem of that color.'",
+          "grade": "correct",
+          "reason": "Discount calculation, free purchase and persistent bonuses are correct.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 13,
+          "question": "A card costs three blue, two black and one white. You have two blue bonuses, one black bonus, and no white bonus; your available payment is one blue token and two gold. Can you buy it? State which costs the tokens cover, where all spent tokens go, and whether your bonus cards stay with you.",
+          "expected_answer": "Yes: after bonuses remaining cost is 1 blue,1 black,1 white. Pay blue for blue and two gold for black and white. All spent tokens including gold return to middle supply. Keep bonus cards.",
+          "material_facts": [
+            "Yes: after bonuses remaining cost is 1 blue,1 black,1 white.",
+            "Pay blue for blue and two gold for black and white.",
+            "All spent tokens including gold return to middle supply.",
+            "Keep bonus cards."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "158-168"
+            }
+          ],
+          "observed_answer": "Yes. Bonuses leave a cost of one blue, one black and one white. Pay the blue token for blue and the two gold for black and white. Return all three spent tokens to the supply. Your purchased bonus cards stay with you.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: bonuses reduce tokens needed; gold 'can substitute for any single gem token'; spent gems and gold return to supply. Bonus Stacking: each card adds a bonus 'permanently.'",
+          "grade": "correct",
+          "reason": "Residual cost and all three payments are correct; all spent tokens return and bonus cards stay.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 14,
+          "question": "Which cards can you purchase with a buy action? After purchase, how should acquired development cards be arranged, and which information on them must always remain visible?",
+          "expected_answer": "Buy 1 face-up market card or own card reserved on previous turn. Place acquired cards before player sorted into distinct color rows, staggered vertically. Bonuses and prestige point values visible to everyone at all times.",
+          "material_facts": [
+            "Buy 1 face-up market card or own card reserved on previous turn.",
+            "Place acquired cards before player sorted into distinct color rows, staggered vertically.",
+            "Bonuses and prestige point values visible to everyone at all times."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "149-151"
+            }
+          ],
+          "observed_answer": "Buy a face-up market card or one of your previously reserved cards. Place purchased cards face up in front of you, sorted by bonus color and staggered so their bonuses and prestige values remain visible to everyone at all times.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card; 'sorted by bonus color and staggered so that bonuses and prestige point values are visible to all players at all times.'",
+          "grade": "correct",
+          "reason": "Both legal purchase sources, sorted staggered display and continuous visibility are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 15,
+          "question": "A noble requires three blue, three green and three white bonuses. You have three blue cards, three green cards, two white cards and a white token (or a gold token). Do you qualify? What changes if you instead acquire a third white bonus, and do bonuses above a requirement disqualify you?",
+          "expected_answer": "No: gem/gold tokens cannot replace bonus requirements. Third white bonus qualifies at end of own turn. Requirements are minimums; excess fine.",
+          "material_facts": [
+            "No: gem/gold tokens cannot replace bonus requirements.",
+            "Third white bonus qualifies at end of own turn.",
+            "Requirements are minimums; excess fine."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "64-76"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "170-175"
+            }
+          ],
+          "observed_answer": "You do not qualify with only two white bonuses; a white or gold token cannot fill the missing bonus. A third purchased white bonus makes you qualify at the end of your turn, subject to the one-noble limit. Having more bonuses than required is allowed.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Visits: 'at least' the required bonuses; 'bonuses only ... not gem tokens'; Noble Tile Mechanics: 'having more is fine.'",
+          "grade": "correct",
+          "reason": "Tokens do not meet noble requirements; a third white bonus qualifies at turn end; excess allowed.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 16,
+          "question": "At the end of your action you qualify for two nobles. Can you take both, decline all visits, or choose one? Does the visit use another action, how many points does it give, and when is eligibility checked?",
+          "expected_answer": "Check end of own turn. Must choose 1, cannot take both or decline. Not an action. Noble worth 3 prestige.",
+          "material_facts": [
+            "Check end of own turn.",
+            "Must choose 1, cannot take both or decline.",
+            "Not an action.",
+            "Noble worth 3 prestige."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "169-178"
+            }
+          ],
+          "observed_answer": "Choose exactly one noble; you cannot take both or decline all visits. The other stays available. The visit is automatic, uses no action and grants 3 prestige. Check eligibility at the end of your turn after your action.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble visit rules: 'cannot refuse it'; 'not an action'; 'choose one'; 'at most one noble per turn'; '3 prestige points.'",
+          "grade": "correct",
+          "reason": "Own-turn timing, compulsory single choice, no extra action and three points are covered.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 17,
+          "question": "Once you receive a noble, where is its tile placed, and is it face up or hidden?",
+          "expected_answer": "Place it face-up in front of the receiving player.",
+          "material_facts": [
+            "Place it face-up in front of the receiving player."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "179-180"
+            }
+          ],
+          "observed_answer": "Place the noble tile face up in front of you.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble visit rules: 'Place the received noble tile face-up in front of you.'",
+          "grade": "correct",
+          "reason": "Noble tile face-up placement in front of recipient is explicit.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 18,
+          "question": "In a four-player game, turns run A, B, C, D, with A first. B reaches fifteen prestige points on their turn. Who still takes a turn before the game ends, does A take another turn, and is B guaranteed to win?",
+          "expected_answer": "C then D still take their turns. A and B do not take another turn; finish current round for equal turns. B not guaranteed to win: highest final prestige wins.",
+          "material_facts": [
+            "C then D still take their turns.",
+            "A and B do not take another turn; finish current round for equal turns.",
+            "B not guaranteed to win: highest final prestige wins."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-186"
+            }
+          ],
+          "observed_answer": "C and D still take their turns. A does not take another turn, since the round then ends with equal turn counts. B is not guaranteed to win; another player can finish with more prestige.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger: complete the current round so all have the 'same number of turns'; End-of-Game Clarifications: the triggering player may lose if another 'surpasses them in the same final round.'",
+          "grade": "correct",
+          "reason": "Only C and D finish the round; no extra turn for A; highest final points decides.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 19,
+          "question": "You have thirteen prestige points and receive a noble at the end of your turn. What is your new total, does that trigger the end of the game even though you skipped over fifteen, and when is the winner determined?",
+          "expected_answer": "Total 16, because noble gives 3. Triggers end: 15 reached or exceeded. Finish current round for equal turns, then compare total prestige including nobles.",
+          "material_facts": [
+            "Total 16, because noble gives 3.",
+            "Triggers end: 15 reached or exceeded.",
+            "Finish current round for equal turns, then compare total prestige including nobles."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "70-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-186"
+            }
+          ],
+          "observed_answer": "Your total becomes 16. This triggers the end condition because it is 15 or more. Complete the current round, then determine the winner by the final prestige totals.",
+          "observed_support": "supported",
+          "summary_evidence": "Nobles are worth 3; End-Game Trigger: '15 or more prestige points'; Determining the Winner: 'most prestige points at the end of the final round.'",
+          "grade": "correct",
+          "reason": "Noble raises 13 to 16, crosses the threshold, and comparison waits for equal turns.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 20,
+          "question": "At the end, A has sixteen prestige and ten purchased developments; B has sixteen prestige and nine purchased developments plus three cards still reserved; C has fifteen prestige and only five purchased developments. Who wins and why? Do nobles count toward prestige, and do B’s reserved cards count as purchased developments for the tiebreaker?",
+          "expected_answer": "B wins: tied highest at 16 with fewer purchased developments (9 vs 10). C loses on points before tiebreak. Noble points count. Reserved cards are not purchased cards, so B has 9 for tiebreak.",
+          "material_facts": [
+            "B wins: tied highest at 16 with fewer purchased developments (9 vs 10).",
+            "C loses on points before tiebreak.",
+            "Noble points count.",
+            "Reserved cards are not purchased cards, so B has 9 for tiebreak."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "53-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "185-188"
+            }
+          ],
+          "observed_answer": "B wins: A and B tie on 16 prestige, and B has fewer purchased developments, 9 versus 10. C's lower prestige excludes C despite fewer cards. Noble points count. B's three unpurchased reserved cards do not count as purchased developments.",
+          "observed_support": "supported",
+          "summary_evidence": "Determining the Winner: 'most prestige points'; 'Noble tile points count'; Tiebreaker: 'fewest development cards' purchased. Prestige Point Sources specifies 'each purchased card.'",
+          "grade": "correct",
+          "reason": "B wins tied highest score on nine purchased cards; reserved cards excluded and nobles included.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 21,
+          "question": "You have reserved cards showing a total of eight prestige points and two white bonuses, but have not bought them. Do those printed points count toward your score or the 15-point trigger, and do those bonuses reduce purchase costs or satisfy nobles?",
+          "expected_answer": "No reserved-card prestige counts before purchase, including for the end-game trigger. Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses.",
+          "material_facts": [
+            "No reserved-card prestige counts before purchase, including for the end-game trigger.",
+            "Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "47-59"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "101-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-188"
+            }
+          ],
+          "observed_answer": "No. Unpurchased reserved cards contribute neither the eight points to scoring or the trigger nor the two white bonuses to discounts or noble requirements.",
+          "observed_support": "supported",
+          "summary_evidence": "Prestige Point Sources: 'Printed on each purchased card'; Payment rules: bonuses from 'previously purchased development cards'; Noble Visits: bonuses 'from purchased development cards.'",
+          "grade": "correct",
+          "reason": "Correctly excludes unpurchased reserved cards from prestige, trigger, discounts and noble requirements.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 22,
+          "question": "You buy a development card with a blue bonus and zero prestige. Do you receive a physical blue token from the supply, does its bonus work for future purchases, and can it help qualify you for a noble despite being worth zero prestige?",
+          "expected_answer": "Do not receive a physical blue token; a bonus is a purchase discount. The acquired blue bonus discounts future purchases. A zero-prestige acquired card still contributes its bonus to noble qualification.",
+          "material_facts": [
+            "Do not receive a physical blue token; a bonus is a purchase discount.",
+            "The acquired blue bonus discounts future purchases.",
+            "A zero-prestige acquired card still contributes its bonus to noble qualification."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "47-50"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-76"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            }
+          ],
+          "observed_answer": "You receive no physical blue token. The purchased card gives a permanent blue discount for future purchases, and its blue bonus can satisfy a noble requirement even though the card scores zero prestige.",
+          "observed_support": "supported",
+          "summary_evidence": "Bonus Stacking: bonuses 'never generate tokens'; each purchased card adds a bonus permanently. Noble Visits depends on bonuses from purchased cards, and card prestige 'may be 0.'",
+          "grade": "correct",
+          "reason": "Distinguishes permanent discount from a physical token and applies a zero-prestige bonus to nobles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 23,
+          "question": "A face-up development costs one blue and grants a blue bonus. You have no blue bonus, no blue token and no gold. Can its own bonus make this purchase free? Separately, suppose you can pay for a white-bonus development and it gives you the final bonus needed by a noble: does that new bonus count for the noble at the end of this turn, or only next turn?",
+          "expected_answer": "The unpurchased card cannot discount its own cost; the first purchase is unaffordable. Bonuses used to discount purchases come from previously acquired cards. A bonus acquired by the paid purchase counts for the end-of-this-turn noble check.",
+          "material_facts": [
+            "The unpurchased card cannot discount its own cost; the first purchase is unaffordable.",
+            "Bonuses used to discount purchases come from previously acquired cards.",
+            "A bonus acquired by the paid purchase counts for the end-of-this-turn noble check."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-118"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-173"
+            }
+          ],
+          "observed_answer": "You cannot use that card's own bonus to buy it; with no blue bonus, blue token or gold you cannot pay. A newly purchased white bonus does count for a noble at the end of the same turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: discounts come from 'previously purchased development cards'; Noble Visits checks bonuses from purchased cards 'At the end of their turn.'",
+          "grade": "correct",
+          "reason": "Correctly distinguishes prior bonuses used to pay from a just-purchased bonus counted at the turn-end noble check.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 24,
+          "question": "A card costs one blue and two green. You have four blue bonuses and no green bonuses. Can the three excess blue bonuses pay any green cost or give you blue tokens as change? What payment is still needed?",
+          "expected_answer": "Excess blue bonuses cannot pay green costs. No physical tokens or change are generated. Two green tokens, or gold substituting for them, are still needed.",
+          "material_facts": [
+            "Excess blue bonuses cannot pay green costs.",
+            "No physical tokens or change are generated.",
+            "Two green tokens, or gold substituting for them, are still needed."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-168"
+            }
+          ],
+          "observed_answer": "The extra blue bonuses cannot cover green or produce blue tokens as change. You still owe two green tokens, with gold able to substitute for either or both.",
+          "observed_support": "supported",
+          "summary_evidence": "Bonus Stacking: excess bonuses provide 'no benefit for that purchase (no \"change\" is given)'; bonuses reduce costs 'of that color'; gold substitutes for any gem token.",
+          "grade": "correct",
+          "reason": "Keeps excess bonuses within color, gives no change and pays remaining green cost with gems or gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 25,
+          "question": "You qualify for two nobles and receive one. Before your next turn nobody acquires the other noble and your purchased cards stay unchanged. Were the bonuses used up by the first noble, and can taking gems on your next turn still lead to receiving the other noble? Can you collect that other noble during an opponent’s intervening turn?",
+          "expected_answer": "Bonuses are not used up by receiving a noble. Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then. Cannot collect the second noble during an opponent’s turn.",
+          "material_facts": [
+            "Bonuses are not used up by receiving a noble.",
+            "Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then.",
+            "Cannot collect the second noble during an opponent’s turn."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "159-178"
+            }
+          ],
+          "observed_answer": "The first noble does not use up your permanent bonuses. Taking gems on your next turn can still lead to receiving the remaining noble at that turn's end, if it remains available. You cannot receive it during an opponent's intervening turn.",
+          "observed_support": "supported",
+          "summary_evidence": "Bonuses are permanent. Noble Visits: others 'remain available for future turns'; eligibility is checked 'At the end of their turn'; at most one per turn.",
+          "grade": "correct",
+          "reason": "Keeps bonuses after receiving a noble and applies the next own-turn check after a non-purchase action; rejects off-turn collection.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 26,
+          "question": "You have no tokens, no purchased developments and no reserved cards. A face-up level-3 development is far too expensive for you to buy. May you reserve it anyway? Do you pay its printed cost when reserving, and do you take gold if available?",
+          "expected_answer": "May reserve the face-up level-3 card despite not affording a purchase. Do not pay its printed purchase cost to reserve. Take one gold if available.",
+          "material_facts": [
+            "May reserve the face-up level-3 card despite not affording a purchase.",
+            "Do not pay its printed purchase cost to reserve.",
+            "Take one gold if available."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-111"
+            }
+          ],
+          "observed_answer": "Yes. You may reserve that face-up level-3 card with no tokens or developments; reserving does not require paying its printed purchase cost. Take one gold if available.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve a Development Card: 'Take one development card' from the grid or any deck, with only a three-card hand limit; 'also take 1 gold token.' Payment of printed cost appears under Purchase a Development Card.",
+          "grade": "correct",
+          "reason": "Correctly treats reservation as independent of printed purchase price and level, with gold if available.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 27,
+          "question": "Instead of reserving a face-up card, you reserve the top card of the level-2 deck while twelve face-up market cards remain. Must any market card be removed or refilled because of that blind reservation, how many market cards remain, and can you take a second card as a replacement in your hand?",
+          "expected_answer": "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain. The reserve action gives only one reserved card, not a second replacement card.",
+          "material_facts": [
+            "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain.",
+            "The reserve action gives only one reserved card, not a second replacement card."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-103"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "No market card is removed or refilled: all twelve remain. Take only that one top card into your hand; you do not take a second card as a replacement.",
+          "observed_support": "supported",
+          "summary_evidence": "Reserve a Development Card: 'Take one development card'; blind reservation takes the 'top card' from a level deck. Card replacement applies to a face-up card removed 'from the grid.'",
+          "grade": "correct",
+          "reason": "Blind draw removes no face-up card and gives only one reserved card; all twelve market cards remain.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 28,
+          "question": "A level deck has run out, but its four face-up cards are still in the market. Must those cards be removed, or may they still be purchased or reserved? If one is purchased, what happens to that space and to the other three cards?",
+          "expected_answer": "Keep the four remaining face-up cards available to purchase or reserve. After one is purchased its gap stays empty because the same-level deck is empty. Other three face-up cards remain available.",
+          "material_facts": [
+            "Keep the four remaining face-up cards available to purchase or reserve.",
+            "After one is purchased its gap stays empty because the same-level deck is empty.",
+            "Other three face-up cards remain available."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "97-100"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            }
+          ],
+          "observed_answer": "The four face-up cards stay available for purchase or reservation. If one is purchased, its space remains empty for the rest of the game; the other three remain available.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase and Reserve allow face-up grid cards. Card Replacement: 'If the corresponding deck is empty, the empty space in the grid remains empty for the rest of the game.'",
+          "grade": "correct",
+          "reason": "Retains remaining face-up cards after deck exhaustion and leaves only the vacated space empty.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 29,
+          "question": "All development decks and face-up market cards have been exhausted; nobody has reached fifteen prestige. A player still has an affordable reserved card and gems are available in at least three colors. Does exhaustion itself end the game? May that player buy the reserved card or choose the three-different-gems action?",
+          "expected_answer": "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round. May buy the affordable own reserved card. May instead take three different gems under the stated available supply; still only one action.",
+          "material_facts": [
+            "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round.",
+            "May buy the affordable own reserved card.",
+            "May instead take three different gems under the stated available supply; still only one action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "112-114"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "152-157"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-188"
+            }
+          ],
+          "observed_answer": "Exhaustion does not end the game. The player may buy the affordable reserved card or take one gem from each of three available colors. Continue until the normal prestige condition.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger: 'Exhausting the development decks or the face-up market does not end the game. Continue with the remaining legal actions, including purchasing reserved cards.'",
+          "grade": "correct",
+          "reason": "Correctly continues remaining legal actions after exhaustion; uses the normal prestige trigger.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 30,
+          "question": "You already own ten tokens. Three different gem colors are available. Can you take one of each and then return all three newly taken tokens, ending with exactly the same token holdings? Is a net gain of tokens required?",
+          "expected_answer": "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens. End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement.",
+          "material_facts": [
+            "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens.",
+            "End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-93"
+            }
+          ],
+          "observed_answer": "Yes. Temporarily take three different gems, then return all three newly taken tokens, ending with your original ten. No net gain is required.",
+          "observed_support": "supported",
+          "summary_evidence": "Token Hand Limit: 'may temporarily exceed 10'; 'A player may return some or all of the tokens they just took.'",
+          "grade": "correct",
+          "reason": "Applies explicit permission to return all newly drawn tokens, including a zero-net-gain action at the limit.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 31,
+          "question": "The gold supply is empty. On A’s turn, A pays two gold while purchasing a card. B then reserves a card with fewer than three cards reserved. Are A’s spent gold tokens removed from the game, or can B take one, and how many gold tokens are left in the supply immediately after B’s reservation before any token-limit returns?",
+          "expected_answer": "A returns both gold tokens to the central supply, not out of the game. B takes one available gold with the reservation. One gold remains in supply before any limit returns.",
+          "material_facts": [
+            "A returns both gold tokens to the central supply, not out of the game.",
+            "B takes one available gold with the reservation.",
+            "One gold remains in supply before any limit returns."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "85"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "104-111"
+            }
+          ],
+          "observed_answer": "A returns the two spent gold to the supply; they are not removed from the game. B takes one when reserving, leaving one gold in the supply before token-limit returns.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: 'Spent gold tokens are returned to the supply'; Reserve a Development Card: take '1 gold token' if available.",
+          "grade": "correct",
+          "reason": "Circulates spent gold through the supply to the next reservation and computes the one remaining gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 32,
+          "question": "You have bought no level-1 or level-2 developments, but can pay for a face-up level-3 card. May you purchase that level-3 card now, or must you unlock its level by buying lower-level cards first?",
+          "expected_answer": "May purchase the affordable face-up level-3 card. The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market.",
+          "material_facts": [
+            "May purchase the affordable face-up level-3 card.",
+            "The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "54-56"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "86-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-114"
+            }
+          ],
+          "observed_answer": "You may purchase the level-3 face-up card now if you can pay for it. The purchase rules impose no lower-level prerequisite or unlocking requirement.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card: 'Purchase a face-up development card from the grid ... by paying the gem token cost shown on the card.'",
+          "grade": "correct",
+          "reason": "Uses the unrestricted face-up-card purchase rule, without inventing lower-level prerequisites.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 33,
+          "question": "You have twelve prestige, then purchase a three-prestige development whose bonus also makes you qualify for a noble. May you stop at fifteen and skip the noble visit? What is your total after your turn, and can the other players who still have a turn in the round continue playing?",
+          "expected_answer": "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen. Total is eighteen after the three-prestige card and three-prestige noble. Complete the current round for equal turns; players with remaining turns still play.",
+          "material_facts": [
+            "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen.",
+            "Total is eighteen after the three-prestige card and three-prestige noble.",
+            "Complete the current round for equal turns; players with remaining turns still play."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "170-188"
+            }
+          ],
+          "observed_answer": "You cannot skip the automatic noble visit. The purchase raises you to 15 and the noble raises you to 18. Players still due a turn in the current round continue playing before the game ends.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble visit rules: 'automatic' and 'cannot refuse it'; noble worth 3. End-Game Trigger completes the current round for equal turn counts.",
+          "grade": "correct",
+          "reason": "Completes compulsory noble acquisition after reaching fifteen, totals eighteen and finishes current round.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 34,
+          "question": "Four players act A, B, C, D, with A first. D is the first player to reach fifteen prestige on D’s turn. Does A start another round, does everyone get one more turn, or is the game over after D completes this turn? Explain using equal turn counts.",
+          "expected_answer": "The current round is already complete when D finishes. End after D finishes the turn; A does not start another round and no player gets an extra turn. All players have had equal turn counts.",
+          "material_facts": [
+            "The current round is already complete when D finishes.",
+            "End after D finishes the turn; A does not start another round and no player gets an extra turn.",
+            "All players have had equal turn counts."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "182-184"
+            }
+          ],
+          "observed_answer": "The game ends after D completes that turn. A does not start another round and nobody gets another turn: A, B, C and D already have equal turn counts at the end of this round.",
+          "observed_support": "supported",
+          "summary_evidence": "End-Game Trigger: 'the current round is completed so that every player has played the same number of turns.'",
+          "grade": "correct",
+          "reason": "Recognizes equal turn counts after last player D and adds no extra round.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 35,
+          "question": "In a two-player game, three nobles were revealed and the other seven removed during setup. After someone receives one noble, do you reveal a new tile from those seven to restore the display to three? Where does the acquired tile go and how many nobles remain available in the middle?",
+          "expected_answer": "Do not replenish nobles from the seven tiles removed during setup. The acquired noble goes face-up in front of its recipient. Two nobles remain available in the middle.",
+          "material_facts": [
+            "Do not replenish nobles from the seven tiles removed during setup.",
+            "The acquired noble goes face-up in front of its recipient.",
+            "Two nobles remain available in the middle."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "12-16"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "40-43"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "65-72"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "179-180"
+            }
+          ],
+          "observed_answer": "Do not reveal a replacement. The seven removed nobles are permanently out of play. Put the acquired noble face up in front of its recipient; two nobles remain available in the middle.",
+          "observed_support": "supported",
+          "summary_evidence": "Noble Tile Mechanics: removed nobles are 'out of the game permanently'; Noble visit rules: place received tile 'face-up in front of you.'",
+          "grade": "correct",
+          "reason": "Does not replenish removed nobles; moves acquired tile face up and leaves two available.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 36,
+          "question": "Match each component name to its color: emerald, diamond, sapphire, onyx, ruby and gold joker. How many development cards are in the box in total and at each of the three levels?",
+          "expected_answer": "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow. Ninety developments: forty level 1, thirty level 2, twenty level 3.",
+          "material_facts": [
+            "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow.",
+            "Ninety developments: forty level 1, thirty level 2, twenty level 3."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "5-10"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "23-35"
+            }
+          ],
+          "observed_answer": "Emerald is green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow. There are 90 development cards: 40 level 1, 30 level 2 and 20 level 3.",
+          "observed_support": "supported",
+          "summary_evidence": "Components token table and Development Cards table: '90 total', Level 1 40, Level 2 30, Level 3 20.",
+          "grade": "correct",
+          "reason": "All six token identities and all four development inventory counts match.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 37,
+          "question": "A card’s remaining cost after bonuses is one green. You hold both one green token and one gold. Must you spend green because you have it, or may you pay gold instead and keep the green? Where does the payment go?",
+          "expected_answer": "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent. Keep the unused green token; return spent gold to the supply.",
+          "material_facts": [
+            "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent.",
+            "Keep the unused green token; return spent gold to the supply."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "You may spend gold instead and keep your green token. Return the spent gold to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Payment rules: 'Gold tokens (jokers) can substitute for any single gem token. Spent gold tokens are returned to the supply.'",
+          "grade": "correct",
+          "reason": "Permits optional gold substitution despite owning matching gem and returns only the spent gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 38,
+          "question": "Three gem piles contain one red, two blue and three green tokens. Other gem piles are empty. Can the three-different-gems action take one from each of these piles, or does the four-token minimum prohibit it? What would remain in those three piles?",
+          "expected_answer": "May take one from each of red,blue,green. The four-token prerequisite applies to taking two alike, not the three-different-colors action. Remaining piles: zero red, one blue, two green.",
+          "material_facts": [
+            "May take one from each of red,blue,green.",
+            "The four-token prerequisite applies to taking two alike, not the three-different-colors action.",
+            "Remaining piles: zero red, one blue, two green."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-84"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            }
+          ],
+          "observed_answer": "Yes, take one red, one blue and one green. The four-token minimum applies only to taking two of the same color. The piles then hold 0 red, 1 blue and 2 green.",
+          "observed_support": "supported",
+          "summary_evidence": "Action 1: 'Take 1 gem token from each of 3 different color piles'; Action 2 alone specifies 'at least 4 tokens of that color.'",
+          "grade": "correct",
+          "reason": "Applies the four-token threshold only to two-alike taking, and correctly computes all remaining piles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 39,
+          "question": "You hold a gold token and want to exchange it directly for a red token in the supply without buying a development. Is that a listed action or a permitted use of the joker rule? What use does the summary give gold when purchasing?",
+          "expected_answer": "No direct gold-for-gem exchange action is provided among the four actions. The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action.",
+          "material_facts": [
+            "No direct gold-for-gem exchange action is provided among the four actions.",
+            "The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "A direct gold-for-red exchange is not a listed action and is not authorized by the purchasing joker rule. Gold can substitute for a gem token when paying for a development card, after which it returns to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure lists exactly four actions; Gold Token Specifics: 'Gold tokens can substitute for any gem color when purchasing a card.'",
+          "grade": "correct",
+          "reason": "Rejects a standalone exchange action and confines joker substitution to purchase payment.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 40,
+          "question": "On your turn you can legally buy a face-up card and can also take three different gems. You want neither benefit. May you simply pass without performing an action, or must you choose one of the four actions? This asks about voluntarily passing with legal actions available, not a state in which all actions are impossible.",
+          "expected_answer": "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available. The source does not provide a voluntary pass action.",
+          "material_facts": [
+            "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available.",
+            "The source does not provide a voluntary pass action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78-87"
+            }
+          ],
+          "observed_answer": "You must choose one of the four actions. Voluntarily passing while legal actions are available is not allowed.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: 'On their turn, a player must perform exactly one of the following four actions.'",
+          "grade": "correct",
+          "reason": "Applies must-perform-exactly-one to voluntary passing while legal actions exist, without extending to source-unresolved all-actions-impossible states.",
+          "unsupported_correct_claim": false
+        }
+      ],
+      "totals": {
+        "correct": 39,
+        "partial": 1,
+        "incorrect": 0
+      },
+      "group_totals": {
+        "original-20": {
+          "correct": 19,
+          "partial": 1,
+          "incorrect": 0
+        },
+        "additional-21-40": {
+          "correct": 20,
+          "partial": 0,
+          "incorrect": 0
+        }
+      }
+    }
+  }
+}

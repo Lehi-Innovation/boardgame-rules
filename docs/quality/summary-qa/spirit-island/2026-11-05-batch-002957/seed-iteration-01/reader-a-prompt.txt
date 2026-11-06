@@ -1,0 +1,15 @@
+You are an independent rules-summary reader in a blind evaluation of Spirit Island.
+
+Read ONLY these two input files:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/seed-iteration-01/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/seed-iteration-01/questions.json
+
+Do not read any authoritative rulebook, extracted text, answer key, manifest, prior responses, other files, parent history or web links. Do not browse. Use only the supplied summary as evidence, not prior game knowledge. Do not communicate with other readers.
+
+Answer every question including every requested part. If a requested fact is absent, explicitly identify that part as unsupported; do not guess. Scenario facts explicitly stated in a question are givens. The frozen summary is the rules authority. Do not reject a stated scenario fact merely because the summary does not narrate that hypothetical setup; still flag any requested rule absent from the summary.
+
+TECHNICAL DELIVERY: Read the ENTIRE content of BOTH input files using bounded contiguous character ranges of at most 6000 characters each, ONE range per tool response with max_output_tokens at least 4000. Use Python3 or equivalent to print exact slices with start/end offsets and total length. Do not rely on line counts. No combined tool result may exceed output limits. Check every result for truncation; if any is truncated, reread smaller exact ranges before answering. Retain every contiguous range in inputs_read with file path, total characters, SHA256 and read ranges; make clear the ranges cover [0,total) with no gaps. Use only these inputs.
+
+For every question include id, answer, support (supported/partial/unsupported), and evidence (short quote or section from summary).
+
+Save valid JSON to /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/seed-iteration-01/reader-a.json with top-level fields reader, inputs_read and answers array. You may read only the two allowed inputs and write only your assigned output; do not evaluate or improve the summary. Use bounded answer construction if needed; finish all IDs. Return only output path and count.

@@ -1,0 +1,398 @@
+{
+  "review_id": "single-reader-grading-tools-review-01",
+  "verdict": "CHANGES_REQUESTED: delivery-proof correctness",
+  "single_reader_adapter_core_verdict": "PASS under the tested frozen-input contract; final aggregation is equivalent to the original paired validator.",
+  "delivery_proof_verdict": "Four concrete false-positive/false-negative proof risks reproduced. No actual run was inspected or declared valid/invalid.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-tools.py",
+      "sha256": "74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb",
+      "bytes": 10011
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-single-reader-grading-delivery.py",
+      "sha256": "152a947cca1d02ec2fa04e2e13c3ca105a9d16e0adf58d650b13a34675681d86",
+      "bytes": 3649
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/block-grading-tools.py",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+      "bytes": 10926
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-bounded-delivery.py",
+      "sha256": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318",
+      "bytes": 6038
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template.json",
+      "sha256": "70f6bb52dc209a16e3e7c11ae7af215ac7aa084d258a4fdbca806ed50a643e7b",
+      "bytes": 5964
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/grading-dispatch-template.json",
+      "sha256": "f1a78c3714c4d5f07d96c9c4d243e891737b538d2c3cdf0c893a387e9f93ed6f",
+      "bytes": 4949
+    }
+  ],
+  "test_artifacts": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-01/harness.py",
+      "sha256": "f6106944d401dd4d27b47c3fe129a0089253bc36c7c32cfd693374bac7715d5e",
+      "purpose": "Reviewer-owned synthetic harness; imported tool functions compiled with virtual globals only."
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-01/synthetic-test-results-02.json",
+      "sha256": "66cf335b479baad7c7f0c4f711d27869c6f24265144bcb26b2c03e57c91f8d73",
+      "purpose": "Latest independently reproduced synthetic cases; earlier synthetic result retained."
+    }
+  ],
+  "synthetic_test_count": 51,
+  "all_mutating_roots_virtual": true,
+  "checks": [
+    {
+      "area": "Scheduling and template semantics",
+      "verdict": "pass",
+      "evidence": "The new template equals the previous template after exactly its four declared reader-role substitutions. Both stored template hashes verify. The controlling same-entry policy and atom grading rules are unchanged; the new gate explicitly allows only the completed frozen assigned reader and withholds feedback from still-live blind readers."
+    },
+    {
+      "area": "Original-ID validation and lossless preparation",
+      "verdict": "pass in synthetic tests",
+      "evidence": "context validates nonempty unique bank IDs, exact key order, exact scope ID counts and exact original reader order/count before dictionary indexing. Missing/duplicate/reordered/unknown original IDs were rejected before role packets were created. Full role entries, including nested custom data, were preserved and the other reader was absent/unread during A preparation."
+    },
+    {
+      "area": "Complete disjoint role blocks and all atoms",
+      "verdict": "pass in synthetic tests",
+      "evidence": "Synthetic 113-entry and 53-entry banks produced complete disjoint blocks of15–20 entries. Assigned IDs and all four requested atoms per synthetic entry were validated. Missing/duplicate/wrong requirements and malformed/missing/duplicate/reordered grade IDs were rejected."
+    },
+    {
+      "area": "All same-entry substantive fields and quotations",
+      "verdict": "pass in synthetic tests",
+      "evidence": "Quotes from answer, ledger fact, plain case conclusion and operative evidence were all accepted. Empty, metadata-only, other-role and cross-question quotations were rejected. A Correct label with an omitted atom and invalid statuses were rejected. This verifies artifact consistency, not semantic correctness of synthetic or real grading decisions."
+    },
+    {
+      "area": "Frozen input/report/collection integrity",
+      "verdict": "pass in synthetic tests",
+      "evidence": "Raw/question/key/scope/packet tampering was rejected. Full entry equality still rejected a changed packet when its packet hash was updated. Report-role/block mismatches, altered frozen collections and reports changed after collection were rejected. Exclusive creation prevented overwrite of role collections/proofs/results; originals stayed intact."
+    },
+    {
+      "area": "Strict full-pair aggregation",
+      "verdict": "pass in synthetic tests",
+      "evidence": "A could be prepared/validated/collected with B absent, while combine required B. After both synthetic roles were collected, the adapter’s final result exactly equaled direct invocation of the original paired prepare/merge machinery on the same frozen inputs and reports. All original independent reports and complete raw entries were preserved."
+    },
+    {
+      "area": "Basic delivery completeness",
+      "verdict": "partially passes",
+      "evidence": "Full expected summary/metadata/original role entries passed. Partial raw entries, missing/wrong metadata, other-role-only replacements, missing summary lines, recognized early writes and recognized status calls failed as expected. The four counterexamples show that the stronger timing/isolation/original-source claims are not yet fully established."
+    }
+  ],
+  "concrete_findings": [
+    {
+      "id": "SRG-01",
+      "severity": "medium",
+      "component": "prove-bounded-delivery.py: visible(), inherited by prove-single-reader-grading-delivery.py",
+      "problem": "The first-write boundary is inferred from a short substring list rather than actual artifact-write events. A valid file-write spelling not on that list permits later inputs to be counted as pre-write delivery; a stdout-only serialization spelling on the list stops evidence collection even though it does not write an artifact.",
+      "synthetic_observations": [
+        "A first call containing open(..., \"x\").write(...) followed by all inputs was certified complete; the early write was not detected.",
+        "A call containing json.dump(entry, sys.stdout, ...) was treated as a first output write, causing a false incomplete proof."
+      ],
+      "impact": "The proof cannot reliably certify that complete original inputs preceded the first artifact write. This is a proof-boundary problem, not a reader content-grade finding.",
+      "recommendation": "Use an explicitly auditable artifact-write event/helper or a tightly specified write interface, and distinguish stdout transport from file writes. Unrecognized possible mutation paths must not silently yield a complete proof. Preserve existing logs/artifacts and issue a separate verification attempt."
+    },
+    {
+      "id": "SRG-02",
+      "severity": "medium",
+      "component": "prove-single-reader-grading-delivery.py: prove() visible-input allowlist",
+      "problem": "The proof verifies the presence of expected role inputs but does not reject additional other-role packet entries. An extra foreign-role entry is ignored while completeness remains true.",
+      "synthetic_observations": [
+        "Other-role-only input correctly failed to replace the expected entry.",
+        "When full assigned-role inputs were present, an additional separate packet-shaped entry containing the opposite reader role still yielded complete_input_delivery_confirmed=true."
+      ],
+      "impact": "Completeness alone is being reported without detecting this concrete violation of the role-isolation input boundary. The single-reader packet producer itself correctly supplies only the assigned reader.",
+      "recommendation": "Account for visible packet-shaped inputs and source-read calls, rejecting other-role/foreign packet material outside the approved complete entry. Avoid flagging metadata-like text that is legitimately inside an already approved original entry. Keep completeness and forbidden-extra-input checks explicit."
+    },
+    {
+      "id": "SRG-03",
+      "severity": "medium",
+      "component": "prove-single-reader-grading-delivery.py: expected packet/source binding",
+      "problem": "The proof compares visible objects to the current packet but does not verify that packet against its frozen manifest hash, original role-entry hashes or input hashes. Its returned packet_sha256 is informational, not compared with the manifest.",
+      "synthetic_observations": [
+        "Removing a custom nested field from a packet’s role entry, then delivering that altered packet exactly, was certified complete despite the frozen manifest still binding the original packet.",
+        "The per-reader grading validator separately rejected that same tampered packet."
+      ],
+      "impact": "The proof can incorrectly claim complete ORIGINAL role input delivery when it has only proved delivery of a cropped or altered current packet. Existing validate_role guards prevent this particular packet tampering from silently reaching a valid final aggregation when those guards are run.",
+      "recommendation": "Before certifying delivery, verify frozen input/packet hashes and full role-entry canonical hashes, and bind role/block identity to the role manifest. Compare with the frozen original assigned-role entry as needed, without reading the still-blind other reader."
+    },
+    {
+      "id": "SRG-04",
+      "severity": "medium",
+      "component": "prove-bounded-delivery.py: text_present(), inherited summary delivery check",
+      "problem": "Summary lines are accepted as arbitrary substrings of all visible output. A changed line with the original as a proper prefix is falsely counted as complete original summary delivery.",
+      "synthetic_observations": [
+        "With a synthetic summary frozen and prepared as Value 1, a visible line Value 10 satisfied the original Value 1 line check. All metadata and original entries were otherwise delivered, and the proof certified complete. This test used a matching frozen summary manifest, independently of SRG-03."
+      ],
+      "impact": "The proof can certify an altered quantity or condition as an exact original summary line.",
+      "recommendation": "Validate a defined full-line/chunk delivery representation with exact boundaries, decoded content and source line ranges/hashes. Support intentional line-number prefixes/JSON transport explicitly rather than relying on unconstrained substring containment."
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "case": "dispatch semantic text unchanged except the four declared role/scheduling replacements",
+      "passed": true
+    },
+    {
+      "case": "synthetic 113-entry bank partitions into six complete 15–20 entry blocks",
+      "passed": true
+    },
+    {
+      "case": "A preparation uses only A, preserves full raw fields, and makes complete disjoint 15–20 blocks",
+      "passed": true
+    },
+    {
+      "case": "role validation is read-only and validates every atom across all four substantive fields",
+      "passed": true
+    },
+    {
+      "case": "collection cannot overwrite an existing frozen collection",
+      "rejected": true,
+      "exception": "FileExistsError"
+    },
+    {
+      "case": "full pair cannot combine before B is available",
+      "rejected": true,
+      "exception": "FileNotFoundError"
+    },
+    {
+      "case": "missing requested atom rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "duplicated requested atom rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "wrong requirement rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "empty evidence quote rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "metadata-only evidence quote rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "other-role evidence quote rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "cross-question evidence quote rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "Correct with an omitted atom rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "invalid material status rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "missing grade ID rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "duplicated grade ID rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "reordered grade IDs rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "unknown grade ID rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "role report cannot include a second reader",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "role report wrong block identity rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "raw tampering rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "question input tampering rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "key input tampering rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "scope input tampering rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "missing original ID rejected before preparation/indexing",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "case": "duplicate original ID rejected before preparation/indexing",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "case": "reordered original IDs rejected before preparation/indexing",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "case": "unknown original ID rejected before preparation/indexing",
+      "rejected": true,
+      "exception": "ValueError"
+    },
+    {
+      "case": "packet tampering rejected by packet hash",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet differs from original even if packet hash is updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "tampered frozen role collection rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "grade report changed after collection rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "single-reader final combine preserves original reports/collections and both full raw entries",
+      "passed": true
+    },
+    {
+      "case": "combined results cannot be overwritten",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "full role aggregation exactly equals the original paired validator on identical inputs/reports",
+      "passed": true
+    },
+    {
+      "case": "full summary, all metadata and complete original role entries prove delivery",
+      "delivery_complete": true,
+      "finding": null
+    },
+    {
+      "case": "delivery proof cannot overwrite a prior proof",
+      "rejected": true,
+      "exception": "FileExistsError"
+    },
+    {
+      "case": "partial original role entry rejected",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "missing metadata rejected",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "wrong metadata rejected",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "other-role-only entry cannot replace assigned reader entry",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "missing summary lines rejected",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "recognized first-write pattern prevents late delivery",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "recognized collaboration/status call rejected",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "unrecognized early open/write wrongly permits post-write input delivery",
+      "delivery_complete": true,
+      "finding": "SRG-01"
+    },
+    {
+      "case": "stdout-only JSON transport wrongly treated as an output-file write",
+      "delivery_complete": false,
+      "finding": "SRG-01"
+    },
+    {
+      "case": "extra other-role input is not rejected when own inputs are complete",
+      "delivery_complete": true,
+      "finding": "SRG-02"
+    },
+    {
+      "case": "tampered/cropped packet accepted by delivery proof without frozen hash binding",
+      "delivery_complete": true,
+      "finding": "SRG-03"
+    },
+    {
+      "case": "role validator still rejects the tampered packet",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "changed/prefix-only summary line falsely counted as full original line",
+      "delivery_complete": true,
+      "finding": "SRG-04"
+    }
+  ],
+  "review_limits": [
+    "Only the six permitted static helper/template files and this reviewer’s own newly created synthetic harness/results were read.",
+    "No actual summary, bank, questions, key, scope, reader, grade, result, provenance, history, runtime session or status inputs were read. All such file names inside tests referred exclusively to an in-memory filesystem.",
+    "Both adapter and imported paired-module ROOT/Path globals, plus delivery adapter and imported bounded-proof globals, pointed at the same /synthetic virtual root before helper operations. Import-loading top-level code was not executed; allowed function definitions were compiled directly.",
+    "The tests establish code paths and integrity checks, not actual reader factual correctness, model attention, terminal lifecycle or live-run isolation. No actual score was requested or inferred.",
+    "Immutable dispatch/terminal/model and final canonical gates remain coordinator responsibilities; this review introduces no gameplay facts, key changes, per-question hints or grading-policy changes.",
+    "Source files/templates were not edited. All real writes were confined to the authorized new review subfolder and the two requested root review outputs."
+  ],
+  "required_change_scope": "Strengthen the delivery proof’s event boundary, foreign-input detection, frozen source binding and exact summary-content checks. Keep structural/proof failures separate from content grades and do not alter original reports, entries, asked atoms or grading semantics."
+}

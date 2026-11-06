@@ -1,0 +1,128 @@
+{
+  "review_id": "protocol-v4-independent-review",
+  "verdict": "CHANGES_REQUESTED",
+  "protocol_text_verdict": "PASS: generic, blind, complete-bank and substantive-clause requirements preserved",
+  "checker_verdict": "Boundary/hash/full-literal-presence logic matches; exactly-once identified body attachments are not mechanically certified, and unknown IDs can abort validation.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v4.txt",
+      "sha256": "38b1354b73561b1b160cacc845ebc4b738dfb69a88b1bd1e332f70988985a654",
+      "bytes": 5659
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-check.py",
+      "sha256": "c1c593998895c52ea651020d3b6a1ae2c142f2a899c1265f825a9e53585aeb34",
+      "bytes": 3057
+    }
+  ],
+  "excluded_material_accessed": false,
+  "real_reader_files_or_scores_accessed_or_inferred": false,
+  "v3_reread": false,
+  "checks": [
+    {
+      "criterion": "Generic, identical and blind",
+      "verdict": "pass",
+      "finding": "V4 supplies procedural rules and schema only, with role/path substitutions. It explicitly requires identical protocol delivery and forbids game facts, failed IDs, keys, earlier answers and outside knowledge. Neither reviewed file contains a game rule or actual game question/failed-ID hint."
+    },
+    {
+      "criterion": "Full bank and permitted inputs",
+      "verdict": "pass",
+      "finding": "Every summary line and complete question object must be visibly delivered before output writes; actual N/final ID, truncation recovery, bounded batches, ordered unique final IDs and all-ID self-check are retained. Readers may access only their assigned frozen summary/questions and own three output files."
+    },
+    {
+      "criterion": "Section boundaries and hashes",
+      "verdict": "pass",
+      "finding": "The protocol and checker use the same explicit multiline regex, every-next-heading boundary regardless of level, EOF fallback, line arithmetic, H-prefixed start-line IDs and SHA-256 of the full encoded source slice. The checker recomputes from summary only and compares supplied heading/lines/hash."
+    },
+    {
+      "criterion": "Full literal content inside answer",
+      "verdict": "pass for presence, incomplete for exactly-once identified attachment",
+      "finding": "The checker requires the complete expected section with only trailing whitespace stripped to occur inside answer, rather than merely evidence. That matches the permitted whitespace relaxation and rejects cropped text. It does not enforce exactly-once body copies or bind copies to body section IDs; see V4-C01."
+    },
+    {
+      "criterion": "Actual clause results and minimal explicit cases",
+      "verdict": "pass",
+      "finding": "The asked-clause ledger precedes evidence selection and must supply actual facts/results. Numerical/legal/yes-no cases require explicit conclusions and calculations agreeing with complete operative text. Ordinary rules may be supplied directly by same-entry complete sections, avoiding duplicated long Direct Answer and Applicable Text extracts. Keyword overlap and placeholders are not substitutes."
+    },
+    {
+      "criterion": "Unsupported clauses need no guessed section",
+      "verdict": "pass",
+      "finding": "A nonempty ledger clause with an explicit unsupported result and section_ids=[] can pass structural checks with operative_sections=[]. This correctly avoids forcing invented evidence. Vacuous completeness of selected sections is a structural result, not proof that the requested answer is supported."
+    },
+    {
+      "criterion": "No semantic-coverage overclaim",
+      "verdict": "pass",
+      "finding": "The checker explicitly limits its results to structural/literal checks and leaves requested-fact correctness and section relevance to separate independent grading. Nonempty ledger facts and literal phrases are not presented as proof of semantic coverage."
+    },
+    {
+      "criterion": "Checker execution boundary",
+      "verdict": "compatible when run by coordinator",
+      "finding": "The CLI checks both reader roles and therefore belongs outside a blind reader’s allowed-input execution. V4 does not authorize reading this script or the other reader’s output; a reader can implement its required mechanical checks inline from the generic algorithm. The script’s dual-role CLI must not be invoked as an authorization expansion for a blind reader."
+    }
+  ],
+  "concrete_issues": [
+    {
+      "id": "V4-C01",
+      "severity": "medium",
+      "component": "summary-section-check.py: selected-section literal-presence check",
+      "problem": "The protocol requires each selected complete section to be attached ONCE, with its section ID. The checker only tests whether expected text stripped of trailing whitespace occurs somewhere in answer. It detects duplicate metadata IDs, but not duplicate section copies in the answer body. It also does not bind each literal copy to an answer-body section-ID attachment.",
+      "contract_excerpt": "attach each selected complete section ONCE, with its section ID",
+      "evidence": "An in-memory synthetic answer containing the same complete selected section twice, with only one operative_sections metadata entry, returned exact_ordered_ids=true, all_selected_sections_complete=true, and no errors.",
+      "impact": "The mechanical result cannot certify the no-duplicate-extract volume requirement. This is a structural attachment gap, not a requested-fact correctness or relevance judgment.",
+      "recommendation": "If mechanical proof is intended to include the ONCE/identified-attachment contract, define an unambiguous attachment-block format and validate exactly one complete block per selected section ID. Keep semantic relevance separate, and preserve empty supporting-section lists for unsupported clauses."
+    },
+    {
+      "id": "V4-C02",
+      "severity": "low",
+      "component": "summary-section-check.py: qmap[entry[\"id\"]] lookup in clause validation",
+      "problem": "An unknown answer ID raises KeyError during clause validation instead of yielding a structured invalid-ID/order result.",
+      "evidence": "A synthetic entry with an unknown non-game question ID raised KeyError; the checker never returned its already-computable exact_ordered_ids=false result.",
+      "impact": "Invalid-ID input can abort the combined validation run, including the other reader’s check, rather than recording the structural problem.",
+      "recommendation": "Check answer-ID membership before clause lookup, record the unknown ID as a structural error, and continue collecting independent row/order/count results."
+    }
+  ],
+  "tests": {
+    "method": "Executed only the allowed checker source in an isolated namespace and supplied synthetic strings through in-memory read_text objects. No fixture files, actual summary, questions, reader outputs or other filesystem inputs were read or written.",
+    "synthetic_heading_boundaries": [
+      {
+        "section_id": "H003",
+        "start_line": 3,
+        "end_line": 5
+      },
+      {
+        "section_id": "H006",
+        "start_line": 6,
+        "end_line": 7
+      }
+    ],
+    "results": [
+      {
+        "case": "complete section attached once",
+        "exact_ordered_ids": true,
+        "all_selected_sections_complete": true,
+        "errors": []
+      },
+      {
+        "case": "complete selected section duplicated in answer body with one metadata entry",
+        "exact_ordered_ids": true,
+        "all_selected_sections_complete": true,
+        "errors": [],
+        "demonstrates": "V4-C01"
+      },
+      {
+        "case": "explicitly unsupported clause with no selected section",
+        "exact_ordered_ids": true,
+        "all_selected_sections_complete": true,
+        "errors": [],
+        "expected_structural_behavior": true
+      },
+      {
+        "case": "unknown synthetic question ID",
+        "exception": "KeyError",
+        "demonstrates": "V4-C02"
+      }
+    ]
+  },
+  "required_change_boundary": "Repair structural reporting/attachment validation only. Do not force a source section for unsupported clauses or promote the checker into a semantic relevance/correctness grader.",
+  "files_modified_other_than_requested_review_outputs": []
+}

@@ -1,0 +1,396 @@
+{
+  "review_id": "single-reader-grading-tools-review-03",
+  "verdict": "PASS within the declared frozen initial-delivery and generic adapter contract",
+  "reviewed_current_proof_sha256": "72face89f06420bbd65671c3fb475a04a94c100a8dc6243ca8fc72e148ecea63",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-tools.py",
+      "sha256": "74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb",
+      "bytes": 10011
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-single-reader-grading-delivery.py",
+      "sha256": "72face89f06420bbd65671c3fb475a04a94c100a8dc6243ca8fc72e148ecea63",
+      "bytes": 12722
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-single-reader-grading-delivery-revision-02.py",
+      "sha256": "fb09a0d296aca178bdc4bbc4d61f163dfe32b8ce235a45d39e8d5b231eecd65b",
+      "bytes": 10474
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/block-grading-tools.py",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+      "bytes": 10926
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-bounded-delivery.py",
+      "sha256": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318",
+      "bytes": 6038
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template.json",
+      "sha256": "65cf97d5036f321a10b040a63c6a492b04b8ff4f73bf6189feb1037c6bb68e63",
+      "bytes": 8476
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template-initial.json",
+      "sha256": "70f6bb52dc209a16e3e7c11ae7af215ac7aa084d258a4fdbca806ed50a643e7b",
+      "bytes": 5964
+    }
+  ],
+  "reviewer_owned_artifacts": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-03/harness.py",
+      "sha256": "3bd81615c1afaddaf64df742d8690d03c9a06c32be93d114ebdad4f746edd74a",
+      "purpose": "Reviewer-owned in-memory regression harness"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-03/synthetic-test-results.json",
+      "sha256": "2acf7765aa8bd113cf8038f9e8a805761e3e93fea4489f1c7aa149e77e2e0eac",
+      "purpose": "All51 independent expected synthetic outcomes"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-01/harness.py",
+      "sha256": "f6106944d401dd4d27b47c3fe129a0089253bc36c7c32cfd693374bac7715d5e",
+      "purpose": "Previously authorized reviewer-owned utility/generator definitions only"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-02/harness.py",
+      "sha256": "fe09612c7e7b5e1a4966673b88b4daadca0a3a581b318a414afcb2333f24c0f0",
+      "purpose": "Previously authorized reviewer-owned utility/generator definitions only"
+    }
+  ],
+  "findings_resolved": [
+    {
+      "id": "SRG2-01",
+      "status": "resolved",
+      "evidence": "Against identical synthetic frozen data, revision02 certified response-only/orphan traces while revision03 rejected them with unmatched-output diagnostics. Missing/duplicate read call IDs, missing/wrong output IDs, responses preceding calls and wrong known mode/index provenance were rejected or left uncredited, preventing completeness."
+    },
+    {
+      "id": "SRG2-02",
+      "status": "resolved",
+      "evidence": "Revision02 rejected a legitimate nested original packet example exposed by truncation; revision03 recognized only the exact expected serialized prefix, left it uncredited, and accepted a complete approved retry before the boundary. Partial-only or late retries failed. Foreign objects before/after the warning, wrapped tail objects and inconsistent prefixes were not hidden."
+    },
+    {
+      "id": "SRG-01",
+      "status": "retained resolved under the fixed interface",
+      "evidence": "Alternate early writes/stdout helpers, cached commands, unknown/altered calls and missing/early boundaries remained non-certifiable. No write-substring heuristic is used."
+    },
+    {
+      "id": "SRG-02",
+      "status": "retained resolved",
+      "evidence": "Complete approved nested source/metadata/original objects remained allowed, while separate foreign initial or post-boundary packet objects were rejected."
+    },
+    {
+      "id": "SRG-03",
+      "status": "retained resolved",
+      "evidence": "Raw/source/manifest-role and packet tampering failed. Cropped original fields, wrong block identity or opposite-role fields were still rejected even when only the altered packet hash was updated."
+    },
+    {
+      "id": "SRG-04",
+      "status": "retained resolved",
+      "evidence": "Exact tagged physical-LF chunks still rejected changed quantities, ranges, hashes or partial text; no line-prefix substring fallback was reintroduced."
+    }
+  ],
+  "remaining_concrete_findings": [],
+  "independent_synthetic_case_count": 51,
+  "all_expected_outcomes_verified": true,
+  "checks": [
+    {
+      "area": "Recorded call and response provenance",
+      "verdict": "pass",
+      "details": "Outputs retain call IDs. Only a recorded approved pre-boundary call can credit its own expected complete mode/index value. Orphan/missing/duplicate IDs and mode/index mismatches cannot supply missing source, metadata or original-entry delivery."
+    },
+    {
+      "area": "Context-aware truncation recovery",
+      "verdict": "pass",
+      "details": "The exception applies only to a nonempty proper serialized prefix consistent with that call’s expected value before the explicit warning. It adds no complete-value credit. A full approved retry before the boundary is required to repair a partial response. Material after the warning remains inspected."
+    },
+    {
+      "area": "Real foreign content is not erased",
+      "verdict": "pass in independent synthetic cases",
+      "details": "Plain and wrapped foreign objects after a valid prefix/warning, foreign content before the warning and inconsistent prefixes failed even with a complete subsequent retry. Approved nested original data remained preserved rather than treated as outside input."
+    },
+    {
+      "area": "Earlier frozen-interface fixes",
+      "verdict": "pass retained",
+      "details": "Strict known read-only calls, mandatory boundary, exact tagged chunks, full metadata/entry delivery, original canonical/input/packet hashes and role/block binding all retained their rejection behavior."
+    },
+    {
+      "area": "Adapter/full-pair regression",
+      "verdict": "pass retained",
+      "details": "The adapter’s SHA remains74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb. A was handled with B absent; both synthetic roles then combined with original reports/collections intact, producing exactly the original paired validator’s result."
+    },
+    {
+      "area": "Grading policy and audit scope",
+      "verdict": "pass unchanged",
+      "details": "Five substantive grading/output paragraphs matched the preserved initial single-reader template. Technical delivery flags remain separate from content grades. The boundary and later calls are retained for a separate permitted-path/isolation audit; this proof does not claim arbitrary later code is vetted."
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "case": "normal frozen approved delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "revision02 reproduces orphan-output false certification",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "revision03 rejects orphan outputs without recorded read calls",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "approved nested source/metadata/original objects remain accepted",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "revision02 reproduces recovered nested-prefix false rejection",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "revision03 accepts complete approved retry after nested original prefix",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "wrong output call ID rejects delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "missing output call ID rejects delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "missing read call ID rejects delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "duplicate read call ID rejects delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "entry output cannot fill a metadata-mode call",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "entry output under another known read ID is not credited",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "response before its recorded call is rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "entry zero output cannot satisfy entry one call",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "foreign object after a consistent prefix warning still rejects",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "wrapped foreign object after warning still rejects",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "foreign content before warning cannot use prefix exception",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "inconsistent original prefix is not hidden",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "consistent prefix alone never credits complete original entry",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "complete retry arriving after boundary cannot repair initial delivery",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "ordinary truncation recovery remains valid",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "alternate_early_write remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "alternate_stdout remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "cached_read remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "unknown_tool remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "wrong_read_call remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "changed_quantity remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "wrong_chunk_range remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "wrong_chunk_hash remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "partial_chunk remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "missing_metadata remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "wrong_metadata remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "missing_entry remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "partial_entry remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "other_role_only remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "extra_foreign_initial remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "post_foreign remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "missing_boundary remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "early_boundary remains rejected",
+      "expected_behavior_verified": true,
+      "delivery_complete": false
+    },
+    {
+      "case": "later calls retained solely for separate post-boundary audit",
+      "expected_behavior_verified": true,
+      "delivery_complete": true
+    },
+    {
+      "case": "raw input changed cannot pass frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "summary changed cannot pass frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "manifest role changed cannot pass frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet original field cropped fails frozen packet hash",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet original field cropped fails even if packet hash is updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet block changed fails frozen packet hash",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet block changed fails even if packet hash is updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "other-role original added fails frozen packet hash",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "other-role original added fails even if packet hash is updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "substantive grading/output paragraphs unchanged",
+      "passed": true
+    },
+    {
+      "case": "unchanged adapter preserves full entries/reports/collections and equals original paired final merge",
+      "passed": true
+    }
+  ],
+  "review_limits": [
+    "Only permitted static current/preserved generic code/templates and reviewer-owned prior/new synthetic utilities/results were read. No real bank, summary, question, key, scope, reader, grade, result, provenance, runtime, history, status or session input was accessed.",
+    "The original revision02 bugs were independently reproduced under its preserved code and contrasted with current revision03 on identical synthetic data. They were not inferred from parent test artifacts.",
+    "All adapter/imported paired and delivery/imported bounded module ROOT/Path globals pointed at the same virtual /synthetic filesystem before any helper operation. No mutating helper executed against real benchmark paths.",
+    "This review tests the intended response_item journal/call-ID contract and frozen data checks; it does not authenticate any actual runtime journal, reader attention, terminal/model provenance or real content grade.",
+    "The proof certifies exact initial delivery before the declared first possible mutation. Actual later read/write paths and isolation still require the separately declared audit; preserved post-boundary calls are not automatically vetted.",
+    "All original code/templates/reports/tests remain unedited by this review. Real writes were only in the authorized new review03 subfolder and the two requested root review artifacts.",
+    "No grader was dispatched, actual score inferred, gameplay fact supplied, asked atom/key changed, or grading-policy relaxation introduced."
+  ],
+  "required_changes": []
+}

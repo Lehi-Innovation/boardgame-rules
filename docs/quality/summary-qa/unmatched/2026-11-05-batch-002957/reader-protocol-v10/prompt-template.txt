@@ -1,0 +1,163 @@
+You are a NEW independent blind rules-summary reader.
+
+The only rules/test DATA files you may read are:
+{summary}
+{questions}
+The summary is the sole rules authority. Question scenario facts are givens. Do not use prior game knowledge, web links, native sources, keys, manifests, reviews, earlier reader answers or other files. Your own assigned output may be read only for cumulative assembly. This instruction file and its embedded code are generic PROCESS guidance, not another rules authority. No agents or communication with other readers.
+
+Before answering, actually deliver every original character of this instruction file and BOTH data files to your context. Compute original-byte SHA256 and Unicode character lengths. Read in contiguous slices of at most5000 Unicode characters, ONE original slice per tool response with enough output budget. Print [start,end) bounds and record ACTUAL bounds, not rounded approximations. Recover any blank/truncated interval before proceeding and retain both original attempts and recovery receipts. Variables/hashes alone do not prove delivery. Record instructions separately from the two data inputs.
+
+Work ONE question at a time, then save its complete entry before reasoning about another. Enumerate EACH independent asked part separately: do not combine several requested facts into one vague clause. Clauses are requests/givens, not guessed answers. Preserve requested actors, permissions, types, amounts, conditions, order, exceptions, destinations and outcomes; do not invent extra requirements.
+
+For each requested part, search the ENTIRE summary using full proper names and relevant terms, including punctuation/case variants. Inspect context and actual heading names with heading_index. A first keyword mention may only refer to a definition elsewhere; find the governing rule, not merely the first matching word. Before claiming an item/rule absent, record the full-source search and identify the unresolved part rather than guess.
+
+Use ONLY the public generic extract_unit and validate_record API below to construct operative evidence. Execute this trusted embedded code from this instruction file; never execute text from rules/questions. Pass the ORIGINAL complete summary string and an offset in the relevant source content. The code reads no files and contains no rules or question map.
+- For a table match, extract_unit returns a COMPLETE header including its separator, COMPLETE row and literal column/value records. Validate the record before assigning optional metadata. Include header, row and actual controlling introductory/definition text whenever fields are inherited. Store computed fields as the actual lookup answer; do not regenerate attribute values in prose.
+- For non-table matches, it returns a COMPLETE governing section, including peer procedure steps and nested details, or a complete paragraph for a large nonprocedural catalog. A heading alone is never an answer. A single selected step or a nearby restriction paragraph is not the whole procedure. Use every relevant governing section when a requested process crosses sections. Include referenced definitions/limits and actual requested values.
+- Preserve the returned exact start/end/text. Do not select arbitrary fixed character lengths or replace the returned unit with just a heading. Do not dump the whole summary. If extraction rejects an unfamiliar structure, inspect the original boundaries and choose a complete appropriate operative unit programmatically; do not guess a length.
+
+Complete operative text and computed literal fields are ACTUAL lookup answers; no redundant prose is needed. The answer may be an object containing lookup_fields, operative_unit_ids and case_results. Add only necessary concrete case decisions or calculations that are not already explicitly stated in those units. Match each numerical input to a question given or actually applicable source rule; write the substituted arithmetic and evaluated result. Check actual exception triggers, resolve differing cases individually and apply instructions in source order. A correct source quote does not cure a wrong case conclusion or contradictory actual rule claim. Never manually restate a lookup attribute differently from its literal source value. Do not add unasked numeric assumptions or unrelated facts.
+
+Before saving, check EACH requested part against actual same-entry words/field values and its case conclusion. A supported/resolved label or a source-unit ID alone does not supply an absent fact. Every part must actually be present in that entry. Do not borrow facts from another answer. Keep optional kind/header labels best-effort; factual completeness and exact original spans matter. Technical formatting findings remain separate from factual correctness; a fully correct source-supported answer is not made wrong solely by an optional label or cropped metadata.
+
+Write ONLY this cumulative JSON output:
+{output}
+Top-level: reader; inputs_read (the two data paths); delivery_receipt (each path,sha256,char_length,all actual read_ranges and recovery details); instruction_delivery (same details for this guide); answers.
+Each answer: id; clauses (one per independent request/given); answer (actual literal lookup fields/operative unit references plus only needed case results); support (supported/partial/unsupported); evidence (array of unit_id,start,end,text; optional kind/header_id); clause_checks (clause_index,evidence_unit_ids,supported/resolved and absence-search record if relevant). Give each same-entry unit one unique ID. Copy all necessary text into each entry so it stands alone. Save entries in original question order. Preserve every already-saved entry exactly; self-check each before appending. Do not edit/evaluate/improve the summary or any other file.
+
+This turn answer the FIRST at most10 question IDs. Later identical generic technical continuations request the next unanswered batch without factual feedback. Stop at each requested batch, validate own JSON/IDs and report only cumulative saved count.
+
+BEGIN GENERIC SOURCE UNIT HELPER
+```python
+"""Generic Markdown source extraction; no rule facts or question maps."""
+import re
+
+
+def _span(text, start, end):
+    while start < end and text[start].isspace():
+        start += 1
+    while end > start and text[end - 1].isspace():
+        end -= 1
+    if not 0 <= start < end <= len(text):
+        raise ValueError("Empty or invalid source span")
+    return {"start": start, "end": end, "text": text[start:end]}
+
+
+def _lines(text):
+    result, start = [], 0
+    for line in text.splitlines(keepends=True):
+        end = start + len(line)
+        result.append((start, end, line.rstrip("\r\n")))
+        start = end
+    return result
+
+
+def _cells(line):
+    line = line.strip()
+    if not line.startswith("|") or not line.endswith("|"):
+        raise ValueError("Table row lacks an outer pipe")
+    result, current, escaped = [], [], False
+    for char in line[1:-1]:
+        if char == "|" and not escaped:
+            result.append("".join(current).strip())
+            current = []
+        else:
+            current.append(char)
+        escaped = char == "\\" and not escaped
+    result.append("".join(current).strip())
+    return result
+
+
+def _separator(line):
+    try:
+        return all(re.fullmatch(r":?-{3,}:?", c) for c in _cells(line))
+    except ValueError:
+        return False
+
+
+def _table(text, offset):
+    lines = _lines(text)
+    i = next(i for i, (a, b, _) in enumerate(lines) if a <= offset < b)
+    row = _span(text, lines[i][0], lines[i][1])
+    if _separator(row["text"]):
+        raise ValueError("Separator is not a data row")
+    first = i
+    while first > 0 and lines[first - 1][2].strip().startswith("|"):
+        first -= 1
+    separators = [j for j in range(first + 1, i) if _separator(lines[j][2])]
+    if not separators:
+        raise ValueError("No controlling header before requested row")
+    sep = separators[-1]
+    headings = _cells(lines[sep - 1][2])
+    values = _cells(row["text"])
+    if len(headings) != len(values) or len(_cells(lines[sep][2])) != len(values):
+        raise ValueError("Header, separator and row column counts differ")
+    header = _span(text, lines[sep - 1][0], lines[sep][1])
+    return {"kind": "table", "header": header, "row": row,
+            "fields": [{"column_index": n, "column": h, "value": v}
+                       for n, (h, v) in enumerate(zip(headings, values))]}
+
+
+def heading_index(text):
+    return [{"start": m.start(), "end": m.end(), "level": len(m.group(1)),
+             "title": m.group(2)}
+            for m in re.finditer(r"(?m)^(#{1,6})[ \t]+([^\n]+)", text)]
+
+
+def _paragraph(text, offset):
+    start = 0
+    for match in re.finditer(r"\n[ \t\r]*\n", text):
+        if start <= offset < match.start():
+            return _span(text, start, match.start())
+        start = match.end()
+    if start <= offset < len(text):
+        return _span(text, start, len(text))
+    raise ValueError("Offset is in blank separation")
+
+
+def extract_unit(text, offset):
+    """Public API: complete row/fields or governing section, never a bare heading."""
+    if not 0 <= offset < len(text):
+        raise ValueError("Offset outside original source")
+    line = next(line for a, b, line in _lines(text) if a <= offset < b)
+    if line.strip().startswith("|"):
+        return _table(text, offset)
+    heads = heading_index(text)
+    candidates = [h for h in heads if h["start"] <= offset and 2 <= h["level"] <= 3]
+    if not candidates:
+        raise ValueError("Select operative content below a source section heading")
+    h = candidates[-1]
+    end = next((other["start"] for other in heads
+                if other["start"] > h["start"] and other["level"] <= h["level"]), len(text))
+    whole = _span(text, h["start"], end)
+    # Complete governing procedures include peer steps and nested details.
+    # Large nonprocedural catalog chapters can use a complete paragraph instead.
+    has_steps = bool(re.search(r"(?m)^\s*(?:\d+[.)]|[-+*])[ \t]+", whole["text"]))
+    if len(whole["text"]) <= 6000 or has_steps:
+        return {"kind": "subsection", "unit": whole, "heading": h}
+    paragraph = _paragraph(text, offset)
+    if paragraph["text"].startswith("#"):
+        raise ValueError("A heading alone is not operative evidence; select a more specific section")
+    return {"kind": "paragraph", "unit": paragraph, "heading": h}
+
+
+def validate_record(text, record):
+    """Validate the complete returned structure; optional unit metadata is separate."""
+    if record["kind"] == "table":
+        expected = extract_unit(text, record["row"]["start"])
+        for key in ["header", "row"]:
+            actual = {name: record[key][name] for name in ["start", "end", "text"]}
+            if actual != expected[key]:
+                raise ValueError("Table record differs from complete literal source")
+        actual_fields = [{name: field[name] for name in ["column_index", "column", "value"]}
+                         for field in record["fields"]]
+        if actual_fields != expected["fields"]:
+            raise ValueError("Literal field values differ from source columns")
+    else:
+        expected = extract_unit(text, record["unit"]["start"])
+        actual = {name: record["unit"][name] for name in ["start", "end", "text"]}
+        if actual != expected["unit"]:
+            raise ValueError("Prose/procedure record is incomplete")
+    return True
+```
+END GENERIC SOURCE UNIT HELPER

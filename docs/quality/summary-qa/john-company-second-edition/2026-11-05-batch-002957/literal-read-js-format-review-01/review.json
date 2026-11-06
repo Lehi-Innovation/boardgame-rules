@@ -1,0 +1,73 @@
+{
+  "verdict": "PASS",
+  "scope": "Independent prospective technical review of unadopted literal-read JS formatting normalization",
+  "blocking_findings": [],
+  "adopted": false,
+  "actual_proof_invocations": 0,
+  "actual_data_inspected": false,
+  "actual_read_commands_executed": false,
+  "proposal_inputs_modified": false,
+  "original_sources_unchanged": true,
+  "prior_proof_reports_rewritten": false,
+  "gameplay_score_or_denominator_changes": false,
+  "sandbox_security_claim": false,
+  "other_agents_contacted": false,
+  "proposal_source_sha256": "cad72a1509da63fb2cb272f2206f9cafd8532015fbc9b6837e9bfa5963178cde",
+  "original_source_sha256": {
+    "prove-single-reader-grading-delivery-literal-equivalent.py": "07b3402017f1207c6b16513614b783f4e554cee0864637e48adc98b2adb37589",
+    "prove-bounded-delivery.py": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318"
+  },
+  "final_tests": {
+    "total": 813,
+    "passed": 813,
+    "failed": 0,
+    "parser": 753,
+    "wrapper": 25,
+    "allowlist": 13,
+    "session": 20,
+    "integrity": 2,
+    "parser_fixtures": 749,
+    "accepted_parser_fixtures": 340,
+    "rejected_parser_fixtures": 409,
+    "neutral_trace_files": 18,
+    "generated_static_cases": 320,
+    "generated_extra_statement_rejections": 320,
+    "generator_seed": 147092
+  },
+  "conclusions": [
+    "Whole-body anchored narrow grammar uses JSON literal decoding only; no JS or shell evaluation.",
+    "Canonicalization yields the original whole-literal spelling and retains exact frozen-command allowlist membership as the approval gate.",
+    "Shell text, whitespace, paths, mode and index receive no normalization.",
+    "Failed parsing returns original preprocessed body; unknown calls remain unknown.",
+    "Only call_body is monkeypatched; original matching, reporting, boundary, audit fields and complete predicate remain unchanged.",
+    "The wrapper verifies both source hashes, preserves original source-root behavior, requires an explicit prospective output basename and retains exclusive output creation."
+  ],
+  "limits": [
+    "One or two JSON double-quoted strings only; fixed identifiers, keys/order, decimal 24000 and semicolons; not general JavaScript equivalence.",
+    "Raw U+2028/U+2029, lone surrogates and escaped surrogate pairs split between literal tokens are rejected.",
+    "Original preprocessing still strips outer Unicode whitespace and one leading // @exec: line; malformed pragma without newline inherits IndexError.",
+    "Output equality retains original canonical JSON-object semantics and existing extraction, not raw serialized-output byte equality.",
+    "Write marker remains a declaration; subsequent arbitrary code still requires the original separate permitted-path/isolation audit.",
+    "Hash checking is version binding, not atomic check/import protection, location binding, Python-caller authorization or a sandbox.",
+    "Normal imports may create bytecode caches unless disabled; this review used -B. The original import changes sys.dont_write_bytecode globally.",
+    "Root resolves from source location; moving identical sources can change data roots.",
+    "Prospective output does not automatically embed proposal/review hashes; any future comparison requires separate exact-input bindings.",
+    "Finite neutral function-level tests only; no real data or end-to-end proof result, gameplay correctness or resource-exhaustion claim."
+  ],
+  "future_use_requirements": [
+    "Keep this proposal unadopted by this review.",
+    "Obtain fresh review of exact prospective use and explicit future authorization before adoption.",
+    "Preserve existing strict and false reports unchanged; any comparison must be a separately named exclusively created artifact bound to exact proposal/source/review hashes.",
+    "Retain separate post-write permitted-path/isolation audit requirement."
+  ],
+  "evidence": [
+    "review.md",
+    "test_independent.py",
+    "neutral-results.json",
+    "neutral-parser-fixtures.json",
+    "neutral-session-01.jsonl through neutral-session-18.jsonl",
+    "input-hashes.json",
+    "execution.json",
+    "sha256-manifest.json"
+  ]
+}

@@ -1,0 +1,1 @@
+No rules repair: the source-audited summary explicitly says the battle-plan user pays. Iteration07 reader B paraphrased this as paid-for user and independent adjudication retained a partial. Retry uses exact same audited text; the only change since iteration07 snapshot was recorded trailing-whitespace cleanup. No key or question is changed.

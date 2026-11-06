@@ -1,0 +1,164 @@
+# Root seed question/answer bank v1
+
+Law of Root October 13, 2025; common rules, four base factions, Fall/Winter, base Vagabond characters, dominance and coalitions; exclude expansion content, hirelings, landmarks, bots and Advanced Setup.
+
+## Q01
+
+How is rule determined, including ordinary ties, Eyrie ties, tokens and the Vagabond pawn?
+
+**Expected:** More total warriors plus buildings than each other player; ordinary ties mean no ruler. Eyrie win a tie for most if they have at least one Eyrie piece there. Tokens and pawns do not contribute; Vagabond cannot rule or prevent rule.
+
+**Law:** 2.5;7.2.2;9.2.2
+
+## Q02
+
+What makes a normal move legal, can the same warriors move repeatedly, and do rivers count as paths?
+
+**Expected:** Move more than zero warriors/pawns along one linking path to an adjacent clearing; rule origin or destination or both. Same pieces can move repeatedly. Rivers are not paths unless explicitly treated as such.
+
+**Law:** 2.2.1;2.3;4.2
+
+## Q03
+
+Describe battle from ambush through removal: foiling, early ending, dice limits, extra hits, removal priorities and who scores removed buildings/tokens.
+
+**Expected:** Defender may ambush matching clearing; attacker may foil with matching ambush. Unfoiled ambush deals two immediate hits; discard defender ambush, end battle if no attacking warriors/pawns remain. Before-roll effects, roll high attacker/low defender, rolled hits capped by own warriors, after-roll effects, count hits including uncapped extra hits and defenseless extra attacker hit if no defending warriors, then deal hits. Each side chooses own removals, warriors first. Whoever removes enemy building/token scores one, including defender.
+
+**Law:** 4.3;3.2.1
+
+## Q04
+
+How do crafting costs, repeat use of crafting pieces, absent supply items and duplicate persistent effects work?
+
+**Expected:** Activate crafting pieces matching icons; each piece once per turn. Card suit is not its crafting cost. Immediate effect resolves then card discarded; item must be in supply or cannot craft. Persistent effect stays in play area; cannot craft identical effect already there. Vagabond uses hammers and can reactivate pawn.
+
+**Law:** 4.1;9.2.1
+
+## Q05
+
+When and at what VP can you activate dominance, what wins each suit, and can an activated card be replaced or discarded?
+
+**Expected:** During own Daylight at least 10 VP, put card in play area, remove score marker, no longer score VP. Mouse/rabbit/fox win ruling three matching clearings at start of own Birdsong; bird wins ruling two opposite corner clearings then. Activated card cannot be removed or replaced.
+
+**Law:** 3.3.1-2
+
+## Q06
+
+What happens to a dominance card spent for suit, and how can another player take it, especially a bird dominance card?
+
+**Expected:** It becomes available near map instead of discard pile. During Daylight spend matching card to take available card into hand. Available bird dominance cannot be treated as non-bird, so requires bird payment.
+
+**Law:** 3.3.3-4;2.1.1
+
+## Q07
+
+For standard two-player setup, what deck change, hand size, ruins/item setup and faction setup order apply?
+
+**Expected:** Remove all four dominance cards; each draws three. Four ruins cover R slots. Item supply: 2 boots,2 bags,1 crossbow,1 hammer,2 swords,2 tea,2 coins. Factions set up in letter order. Only Vagabond setup hides four R items beneath ruins, one each.
+
+**Law:** 5.1;9.3.4
+
+## Q08
+
+What does the Keep forbid or permit, how do Field Hospitals work, and can the Keep be rebuilt?
+
+**Expected:** Only Marquise may place pieces in keep clearing; others may move into it. Whenever any number of Marquise warriors removed from a clearing, may spend matching card to place those warriors at keep instead of supply. Keep cannot be placed again once removed; no hospital destination without keep.
+
+**Law:** 6.2.2-3
+
+## Q09
+
+State Marquise Daylight order, action allowance, March moves, Recruit limit and Overwork cost.
+
+**Expected:** Craft using workshops first; then up to three actions plus one per bird card spent outside actions. March up to two moves; Recruit once per turn places one warrior per recruiter. Overwork spends card matching sawmill clearing to place one wood there.
+
+**Law:** 6.5
+
+## Q10
+
+How does the Marquise build, including rule, wood network, track selection and scoring?
+
+**Expected:** Choose ruled clearing with open slot and leftmost building of desired type; pay displayed cost with wood from target or ruled clearings connected through ruled clearings; remove wood, place building and score uncovered space.
+
+**Law:** 6.5.4;2.2.3
+
+## Q11
+
+State Eyrie Birdsong steps and the no-roost recovery placement requirement.
+
+**Expected:** Emergency Orders draw one if hand empty; add one or two hand cards to any Decree columns, at most one added bird; if no roosts place roost and three warriors in clearing with fewest warriors where all can be placed.
+
+**Law:** 7.4
+
+## Q12
+
+How does the Eyrie resolve its Decree, including action suit locations, within-column order and Build restrictions?
+
+**Expected:** Craft first; resolve all cards Recruit,Move,Battle,Build in that column order, cards in any order within column. Recruit at matching roost; Move from matching clearing with at least one warrior; Battle in matching clearing; Build in matching ruled clearing without roost and open slot. Bird wild. Inability fully resolve immediately causes turmoil.
+
+**Law:** 7.5;2.2.3
+
+## Q13
+
+What exactly happens in Turmoil, including Viziers, leaders, pieces on map and the rest of the turn?
+
+**Expected:** Lose one VP per bird card including Loyal Viziers; discard Decree except Viziers; flip current leader face down, choose face-up new leader, retuck Viziers as listed. If none face up flip all face up. End Daylight, proceed Evening including roost scoring and draw/discard. No removal of map warriors/buildings.
+
+**Law:** 7.7;7.6
+
+## Q14
+
+When does Outrage trigger, what is paid, and what if the player has no matching card or the supporter stack is full?
+
+**Expected:** Another player removing sympathy or moving any warriors into sympathetic clearing owes one matching hand card including bird to supporters. Merely battling without removing sympathy is not trigger. If none matching show hand to Alliance; Alliance draws deck card to supporters. No bases caps stack at five; incoming overflow discarded.
+
+**Law:** 8.2.3;8.2.6
+
+## Q15
+
+How do Alliance Revolt and Spread Sympathy differ in timing/order, eligible clearing, supporter cost, martial law and results?
+
+**Expected:** Birdsong Revolt before Spread, each any number. Revolt: sympathetic clearing without base whose matching base is on board, pay two matching supporters, remove all enemy pieces, place matching base, warriors equal matching sympathetic clearings, one officer, score removed enemy buildings/tokens. Spread: unsympathetic adjacent to sympathy or any clearing if none; pay shown matching supporters plus one if at least three warriors of one other player; place sympathy and score uncovered points.
+
+**Law:** 8.4
+
+## Q16
+
+How does Alliance train officers and organize, and what does losing a base do to supporters/officers?
+
+**Expected:** Train in Daylight spending hand card matching clearing with base to place supply warrior as officer. Evening has up to number-of-officers military actions; Organize removes own warrior from unsympathetic clearing to place sympathy and score uncovered points. Losing base discards all supporters matching its clearing including birds, removes half officers rounded up; if no bases remain discard supporters down to five.
+
+**Law:** 8.5.3;8.6;8.2.4
+
+## Q17
+
+How do Vagabond refresh, Slip, normal Move and forest Rest work, including hostile destinations and Evening drawing?
+
+**Expected:** Refresh two exhausted items per tea already face up on track, then three more; newly refreshed tea does not boost that step. Slip optionally adjacent clearing/forest free boots even hostile, ignoring restrictions on moving out. Normal Move costs boot plus extra boot if hostile warriors at destination; cannot enter forest, may leave to adjacent clearing, rule ignored. Forest Rest repairs all damaged items and flips them face up; still draw one plus face-up coins on track then discard to five.
+
+**Law:** 9.4;9.5.1;9.6.1-3;9.2.3
+
+## Q18
+
+How do Vagabond Explore, Quest and Repair work, including costs, rewards and item sides?
+
+**Expected:** Explore exhaust torch for item beneath ruin in clearing; take face up, score one VP if item taken, remove ruin after last item. Quest matches clearing suit, exhaust two listed items, complete quest, choose VP equal matching completed quests including this or draw two; replace quest. Repair exhaust hammer to move damaged item to satchel keeping its face; face-up tea/coins/bags move to matching track if able.
+
+**Law:** 9.5.3;9.5.5;9.5.7;9.2.5
+
+## Q19
+
+When does a faction become Hostile to Vagabond, when is Infamy scored, can Aid undo Hostility, and what does Strike target?
+
+**Expected:** Removing any one non-hostile faction warrior makes Hostile. Infamy one extra VP per hostile piece removed in battle during own turn except warrior causing hostility; no Infamy for Strike. Aid cannot undo hostility but can take crafted item. Strike exhaust crossbow, removes enemy warrior, or other faction piece if that enemy has no warriors there.
+
+**Law:** 9.2.9.III;9.5.6
+
+## Q20
+
+What are coalition eligibility, timing, VP requirement, partner selection and victory, and what changes if partner is Hostile?
+
+**Expected:** Vagabond cannot use normal dominance win. With four or more players during own Daylight at least 10 VP activates dominance to coalition with lowest VP other player not already in coalition, choose tied lowest. Place score marker on partner board, stop scoring; partner win means Vagabond also wins. Hostile partner relationship becomes Indifferent.
+
+**Law:** 9.2.8;9.2.9.IIId;3.3.1
+

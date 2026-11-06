@@ -1,0 +1,235 @@
+{
+  "review": "runtime-provenance-review-01",
+  "verified_at_utc": "2026-11-06T05:31:40.866477+00:00",
+  "verdict": "Changes requested: malformed metadata shapes can abort collection; whitespace-only contexts can be confirmed",
+  "source_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/runtime-provenance-all-dates.py",
+  "source_sha256": "d0bce63073145cf4fa7bafe12e317a38cea786070cb3a6f0337f6b0c388af7f7",
+  "read_record": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/runtime-provenance-all-dates.py",
+      "sha256": "d0bce63073145cf4fa7bafe12e317a38cea786070cb3a6f0337f6b0c388af7f7",
+      "method": "Complete static inspection; isolated execution with explicit synthetic session roots only."
+    }
+  ],
+  "positive_findings": [
+    "Recursive discovery across date directories finds matching parent children; unrelated parents excluded.",
+    "All parsed model/effort contexts and source line numbers are retained, including later settings different from earlier context. confirmed means observed nonempty setting fields, not agreement with an expected model.",
+    "Exact captured byte lengths and hashes bind settings to snapshot files.",
+    "Missing contexts, missing/numeric/empty field cases and malformed JSON lines are not confirmed; malformed JSON is disclosed.",
+    "Duplicate actors/session IDs are surfaced for valid textual identifiers.",
+    "New output uses exclusive creation; existing content preserved; relative/absolute/symlink escapes rejected before collection."
+  ],
+  "findings": [
+    {
+      "id": "RP-01",
+      "severity": "material correctness/robustness issue",
+      "finding": "Valid JSON with unexpected object/container shapes raises AttributeError or TypeError and aborts collect, instead of disclosing discovery/parse issues and continuing other records.",
+      "locations": "collect: initial.get; meta.get; source subagent/thread_spawn chains; event.get; turn_context payload.get; Counter(record agent/session_id).",
+      "synthetic_reproductions": [
+        {
+          "fixture": "nonobject-first-event",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "null-session-payload",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "nonobject-subagent",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "null-thread-spawn",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "nonobject-later-event",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "null-context-payload",
+          "exception": "AttributeError"
+        },
+        {
+          "fixture": "unhashable-actor",
+          "exception": "TypeError"
+        },
+        {
+          "fixture": "unhashable-session-id",
+          "exception": "TypeError"
+        }
+      ],
+      "recommendation": "Type-check decoded first/events/payloads/nested provenance containers and actor/session identifiers before .get/hash operations. Record structured discovery/record parse issues for malformed cases; keep affected records unconfirmed or undiscovered as appropriate and continue unaffected files. Do not silently drop malformed relevant context."
+    },
+    {
+      "id": "RP-02",
+      "severity": "context-validation issue",
+      "finding": "Whitespace-only model and effort values pass current nonempty-string test and produce confirmed=true.",
+      "synthetic_reproduction": {
+        "model": "  ",
+        "effort": "\t",
+        "confirmed": true
+      },
+      "recommendation": "Require non-whitespace strings (value.strip()) for actual model/effort metadata. Preserve exact raw observed strings in evidence while marking invalid context unconfirmed. Do not confuse field-presence confirmation with expected-model agreement."
+    }
+  ],
+  "synthetic_tests": {
+    "source_sha256": "d0bce63073145cf4fa7bafe12e317a38cea786070cb3a6f0337f6b0c388af7f7",
+    "case_count": 24,
+    "cases": [
+      {
+        "name": "all dates matched; unrelated parent excluded; every context including later mismatch retained with exact snapshot hashes",
+        "passed": true
+      },
+      {
+        "name": "later different model/effort retained, not falsely collapsed to first context; confirmed is not expected-setting equality",
+        "passed": true
+      },
+      {
+        "name": "missing-context does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "missing-model does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "missing-effort does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "numeric-model does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "empty-effort does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "malformed-line does not certify confirmed",
+        "passed": true
+      },
+      {
+        "name": "duplicate actors and sessions surfaced across date directories",
+        "passed": true
+      },
+      {
+        "name": "malformed initial JSON and missing session_meta disclosed as discovery issues",
+        "passed": true
+      },
+      {
+        "name": "nonobject-first-event crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "null-session-payload crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "nonobject-subagent crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "null-thread-spawn crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "nonobject-later-event crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "null-context-payload crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "AttributeError"
+      },
+      {
+        "name": "unhashable-actor crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "TypeError"
+      },
+      {
+        "name": "unhashable-session-id crashes instead of disclosed issue",
+        "finding": "RP-01",
+        "observed_exception": "TypeError"
+      },
+      {
+        "name": "whitespace-only actual model/effort incorrectly confirmed",
+        "finding": "RP-02"
+      },
+      {
+        "name": "new run-local output written with exclusive creation",
+        "passed": true
+      },
+      {
+        "name": "existing output remains byte-identical after rejected exclusive write",
+        "passed": true
+      },
+      {
+        "name": "relative traversal rejected before collect",
+        "passed": true
+      },
+      {
+        "name": "absolute outside rejected before collect",
+        "passed": true
+      },
+      {
+        "name": "resolved symlink output escape rejected",
+        "passed": true
+      }
+    ],
+    "crash_cases": [
+      {
+        "fixture": "nonobject-first-event",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "null-session-payload",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "nonobject-subagent",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "null-thread-spawn",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "nonobject-later-event",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "null-context-payload",
+        "exception": "AttributeError"
+      },
+      {
+        "fixture": "unhashable-actor",
+        "exception": "TypeError"
+      },
+      {
+        "fixture": "unhashable-session-id",
+        "exception": "TypeError"
+      }
+    ],
+    "no_real_runtime_inputs": true,
+    "all_collection_roots_explicit_synthetic": true
+  },
+  "fixture_artifact_hashes": {
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/runtime-provenance-review-01-fixtures/harness.py": "c6835aa8abf46e3ef8a51f2cdae6be5da5c6b3e113db65aea3363af9cd43abef",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/runtime-provenance-review-01-fixtures/synthetic-results.json": "5b43f8ea867b2752c6468df2366901d3b1fdd7be8cab63e3e076560ee164c7e4"
+  },
+  "contract_and_limits": [
+    "Metadata snapshots establish only actual observed model/effort settings at recorded contexts. They do not prove terminal status, input isolation, fork setting, attention, instruction compliance, content correctness, or gameplay grades.",
+    "Incoming encrypted prompts are not proved by metadata; no ciphertext was decrypted.",
+    "A later mismatch is retained as a later actual context. This helper has no expected-model argument; downstream consumers must explicitly compare ALL observed contexts to their requested settings and resolve duplicates/issues.",
+    "Recursive matching is for direct parent_thread_id children, not a recursive descendant ancestry proof.",
+    "Snapshots may grow after capture; terminal verification requires new complete snapshots and explicit comparison, not status inference.",
+    "This review used only this new helper and synthetic trees. No actual runtime/provenance index, real reader files or grades were read for the generic tool review.",
+    "Original tools, frozen indexes and all earlier reviews remain unchanged."
+  ]
+}

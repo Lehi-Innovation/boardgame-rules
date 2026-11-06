@@ -1,0 +1,2172 @@
+{
+  "benchmark": "v9-current-complete-attack-commitment",
+  "block": 2,
+  "ids": [
+    "Q18",
+    "Q19",
+    "Q20",
+    "Q21",
+    "Q22",
+    "Q23",
+    "Q24",
+    "Q25",
+    "Q26",
+    "Q27",
+    "Q28",
+    "Q29",
+    "Q30",
+    "Q31",
+    "Q32",
+    "Q33",
+    "Q34"
+  ],
+  "summary_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-03/summary-snapshot.md",
+  "original_raw_file_sha256": {
+    "a": "2aaa5c592ae457931dbbc627a38c490fbc4d25a501cdc1571cc540f79e28f584",
+    "b": "2edd4b860569bf7325ff305ec8de64f84870275894625d2a470ff225d8296e1c"
+  },
+  "entry_hash_definition": "SHA256 of lossless parsed entry reserialization with ensure_ascii=False,sort_keys=True,separators comma/colon. Every original entry field retained.",
+  "records": [
+    {
+      "question": {
+        "id": "Q18",
+        "question": "Arthur uses The Holy Grail. At its after-combat timing he has respectively 4, 5, or 0 health. What happens in each case, and can any healing exceed the dial maximum?"
+      },
+      "fixed_key": {
+        "id": "Q18",
+        "expected_answer": "At 4 (or less but above zero) set Arthur to 8; At 5 no healing from Grail; At 0 hero defeated and game already ended, no rescue; Fighters cannot gain health above dial maximum",
+        "required_facts": [
+          "At 4 (or less but above zero) set Arthur to 8",
+          "At 5 no healing from Grail",
+          "At 0 hero defeated and game already ended, no rescue",
+          "Fighters cannot gain health above dial maximum"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c2; rulebook p5; p14"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q18",
+        "asked_clauses": "Arthur uses The Holy Grail. At its after-combat timing he has respectively 4, 5, or 0 health. What happens in each case, and can any healing exceed the dial maximum?",
+        "required_answer_facts": [
+          "At 4 (or less but above zero) set Arthur to 8",
+          "At 5 no healing from Grail",
+          "At 0 hero defeated and game already ended, no rescue",
+          "Fighters cannot gain health above dial maximum"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c2; rulebook p5; p14"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q18",
+          "clauses": [
+            "Holy Grail",
+            "Recovery cannot raise"
+          ],
+          "answer": "At 4 health and alive, set Arthur to 8; at 5, nothing happens; at 0, the duel already ended. Recovery cannot exceed the fighter’s dial maximum.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17305,
+              "end": 17502,
+              "text": "| The Holy Grail | King Arthur; D/1; B2; 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "list_item",
+              "start": 10022,
+              "end": 10158,
+              "text": "- Recovery cannot raise a fighter above their dial maximum. A later recovery effect cannot undo the immediate game end from hero defeat."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q18",
+          "clauses": [
+            "Arthur uses The Holy Grail. At its after-combat timing he has respectively 4, 5, or 0 health. What happens in each case, and can any healing exceed the dial maximum?"
+          ],
+          "answer": "At 4 health, The Holy Grail sets Arthur to 8; at 5, nothing happens; at 0, defeat has already ended the game. Recovery cannot exceed dial maximum.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U18_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 9243,
+              "end": 10398,
+              "text": "### Cards, exhaustion and healing\n\n- Drawing cards, whether from maneuver or an effect, is **mandatory unless explicitly optional**.\n- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw.\n- Played and resolved cards and discarded cards go into your own **face-up discard pile**, distinct from the face-down deck. Both players may inspect either discard pile **at any time**.\n- Recovery cannot raise a fighter above their dial maximum. A later recovery effect cannot undo the immediate game end from hero defeat.\n- “Move” follows paths and blockers; “place” puts the fighter directly in the permitted destination, with **one fighter per space** still required. Card permission to place anywhere is not limited to maneuver distance or a movement path.\n\n",
+              "unit_id": "U18_2"
+            },
+            {
+              "kind": "subsection",
+              "start": 8784,
+              "end": 9212,
+              "text": "## Scoring / Victory Conditions\n\nThere is no points score. Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.\n\n**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game.\n\n",
+              "unit_id": "U18_3"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U18_1",
+                "U18_2",
+                "U18_3"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "d0e6dd269d4c4b5ea5471787718694a2de27f102ae51022017960d4216994e9b",
+        "b": "87d7976c6fc52ada1c3f1f1caa66b73f17b0bd90a5dcabeb4a4c560da1ca18df"
+      }
+    },
+    {
+      "question": {
+        "id": "Q19",
+        "question": "What movement exception does Winged Frenzy grant, to which fighters and for how far? What happens afterward if a Harpy has been defeated, where may it return, and may it end on an occupied space?"
+      },
+      "fixed_key": {
+        "id": "Q19",
+        "expected_answer": "Move each own fighter up to 3, may pass opposing fighters; Then return one defeated Harpy if any to any space in Medusa’s zone; Destinations must be unoccupied: one fighter per space",
+        "required_facts": [
+          "Move each own fighter up to 3, may pass opposing fighters",
+          "Then return one defeated Harpy if any to any space in Medusa’s zone",
+          "Destinations must be unoccupied: one fighter per space"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r3c3–4; rulebook p7; p9"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q19",
+        "asked_clauses": "What movement exception does Winged Frenzy grant, to which fighters and for how far? What happens afterward if a Harpy has been defeated, where may it return, and may it end on an occupied space?",
+        "required_answer_facts": [
+          "Move each own fighter up to 3, may pass opposing fighters",
+          "Then return one defeated Harpy if any to any space in Medusa’s zone",
+          "Destinations must be unoccupied: one fighter per space"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "medusa-action-cards.png r3c3–4; rulebook p7; p9"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q19",
+          "clauses": [
+            "Winged Frenzy",
+            "sidekick can be the active fighter"
+          ],
+          "answer": "Medusa or a surviving Harpy may be active for the ANY scheme. Move each of your fighters up to 3 spaces; they may pass through opposing fighters. Then return one defeated Harpy, if any, to an unoccupied space in Medusa’s zone.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 18603,
+              "end": 18699,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 19541,
+              "end": 19858,
+              "text": "| Winged Frenzy | ANY; S/—; B2; 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 5903,
+              "end": 6226,
+              "text": "**A sidekick can be the active fighter for a scheme if the card’s fighter label permits it. ANY permits any of your surviving fighters, hero or sidekick.** Execute the effect for the fighters and destinations it names; being named as a destination or beneficiary does not by itself make that fighter the required initiator."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q19",
+          "clauses": [
+            "What movement exception does Winged Frenzy grant, to which fighters and for how far? What happens afterward if a Harpy has been defeated, where may it return, and may it end on an occupied space?"
+          ],
+          "answer": "Winged Frenzy lets each of your fighters move up to 3 and pass through opposing fighters. Then return one defeated Harpy, if any, to an unoccupied space in Medusa’s zone.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U19_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 3607,
+              "end": 3908,
+              "text": "### Battlefield\n\nOne fighter per circular space. Spaces connected by a line are **adjacent**. A **zone** consists of all spaces with the same colored pattern, even if separated on the board. A space showing several patterns belongs to all those zones. Adjacency and shared zones are different tests.\n\n",
+              "unit_id": "U19_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U19_1",
+                "U19_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "56deb5150f13b25f27fc96d8bccc97af2be005ba3d8c859adaddaadbb6def2af",
+        "b": "c49ba4d7639a67ed93d8d947fb697f90938058a60fd402c0840492c58987782c"
+      }
+    },
+    {
+      "question": {
+        "id": "Q20",
+        "question": "Sinbad plays Voyage Home with 4 other Voyages in his discard pile. If uncancelled and game continues, what is its value, what returns where after combat, where does Voyage Home itself end, and what is his next unboosted maneuver allowance?"
+      },
+      "fixed_key": {
+        "id": "Q20",
+        "expected_answer": "Value 2+4=6 during combat; After combat return all other Voyage cards from discard to hand; Voyage Home then goes to discard at combat end; Voyage Home is the only Voyage card remaining in the discard pile so next maneuver allowance 2+1=3 for each own fighter",
+        "required_facts": [
+          "Value 2+4=6 during combat",
+          "After combat return all other Voyage cards from discard to hand",
+          "Voyage Home then goes to discard at combat end",
+          "Voyage Home is the only Voyage card remaining in the discard pile so next maneuver allowance 2+1=3 for each own fighter"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5; sinbad-character.png; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q20",
+        "asked_clauses": "Sinbad plays Voyage Home with 4 other Voyages in his discard pile. If uncancelled and game continues, what is its value, what returns where after combat, where does Voyage Home itself end, and what is his next unboosted maneuver allowance?",
+        "required_answer_facts": [
+          "Value 2+4=6 during combat",
+          "After combat return all other Voyage cards from discard to hand",
+          "Voyage Home then goes to discard at combat end",
+          "Voyage Home is the only Voyage card remaining in the discard pile so next maneuver allowance 2+1=3 for each own fighter"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5; sinbad-character.png; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q20",
+          "clauses": [
+            "Voyage combat values",
+            "Voyage Home |"
+          ],
+          "answer": "With four other Voyages in discard, Voyage Home’s value is 2+4=6. After combat, take all other Voyages from your discard into hand. Home itself goes to discard at normal end of combat. With Home alone there, the next unboosted maneuver allowance is 2+1=3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "paragraph",
+              "start": 12546,
+              "end": 13298,
+              "text": "**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers."
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_header",
+              "start": 20710,
+              "end": 20777,
+              "text": "| Voyage | After combat (only while the duel continues) |\n|---|---|"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "table_row",
+              "start": 20778,
+              "end": 21089,
+              "text": "| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |",
+              "header_id": "E2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q20",
+          "clauses": [
+            "Sinbad plays Voyage Home with 4 other Voyages in his discard pile. If uncancelled and game continues, what is its value, what returns where after combat, where does Voyage Home itself end, and what is his next unboosted maneuver allowance?"
+          ],
+          "answer": "Voyage with 4 other Voyages already discarded has value 2+4=6. Voyage Home returns all other Voyages from discard to hand after combat; Home itself enters discard at normal end. With Home alone, next unboosted maneuver allowance is 2+1=3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 10398,
+              "end": 13300,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.\n\n**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers.\n\n",
+              "unit_id": "U20_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 20138,
+              "end": 22161,
+              "text": "#### Sinbad (remaining 21 nonshared cards)\n\nAll **7 Voyage** cards are **Sinbad-only A/2, one copy each**. **Voyage Home has B1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.\n\n| Voyage | After combat (only while the duel continues) |\n|---|---|\n| Voyage Home | Take all **other Voyage cards from your discard pile into hand**. Then Home itself goes to discard at the normal end of combat. The retrieved cards leave the pile, but **Home remains there**: with Home alone in discard, each fighter’s next unboosted maneuver allowance is **2 + 1 = 3**, not 2. |\n| Voyage to the Island That Was a Whale | Sinbad recovers 2 health. |\n| Voyage to the Valley of the Giant Snakes | Look at opponent’s hand. |\n| Voyage to the Creature with Eyes Like Coals of Fire | Opponent discards **1 random card**. |\n| Voyage to the Cannibals with the Root of Madness | You **may move Sinbad up to 2 spaces**. |\n| Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |\n| Voyage to the City of the King of Serendib | Draw 1 card. |\n\n| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|\n| Toil and Danger | Sinbad; V/3; B1; 4 | After combat move Sinbad up to 3 spaces. |\n| Riches Beyond Compare | Sinbad; S/—; B1; 2 | Draw 3 cards. |\n| By Fortune and Fate | Porter; A/3; B1; 3 | After combat draw 2 cards. |\n| Commanding Impact | ANY; A/5; B2; 1 | After combat draw 1 card. |\n| Leap Away | ANY; V/4; B1; 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |\n| Exploit | ANY; V/4; B1; 2 | After combat draw 1 card. |\n\n",
+              "unit_id": "U20_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U20_1",
+                "U20_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4a87cda1c0736ddd167e8ef15dd38810890972a795634db0f52fc94aa8deda0b",
+        "b": "a7ced5e1f653385c81bf64236248074b3926e4da8342f1892986413853d5bd37"
+      }
+    },
+    {
+      "question": {
+        "id": "Q21",
+        "question": "What does Regroup draw after combat if you win versus lose? If it is your defeated sidekick’s played card and the duel continues, does that draw still occur?"
+      },
+      "fixed_key": {
+        "id": "Q21",
+        "expected_answer": "Win draws 2 instead of 1, not 3 total; Lose draws 1; Defeated sidekick’s played after-combat effect still resolves if duel continues",
+        "required_facts": [
+          "Win draws 2 instead of 1, not 3 total",
+          "Lose draws 1",
+          "Defeated sidekick’s played after-combat effect still resolves if duel continues"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "all four action sheets: Regroup; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q21",
+        "asked_clauses": "What does Regroup draw after combat if you win versus lose? If it is your defeated sidekick’s played card and the duel continues, does that draw still occur?",
+        "required_answer_facts": [
+          "Win draws 2 instead of 1, not 3 total",
+          "Lose draws 1",
+          "Defeated sidekick’s played after-combat effect still resolves if duel continues"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "all four action sheets: Regroup; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q21",
+          "clauses": [
+            "Regroup draw if win and loss",
+            "after-combat effect resolves for defeated sidekick if game continues"
+          ],
+          "answer": "Regroup draws 2 if you won combat, otherwise 1. The draw is an after-combat effect and still resolves from a defeated sidekick’s played card while the duel continues.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 13833,
+              "end": 13942,
+              "text": "| Card | Fighter; type/value; B | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 14088,
+              "end": 14246,
+              "text": "| Regroup | ANY; V/1; B2 (Arthur and Sinbad B1) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "list_item",
+              "start": 7853,
+              "end": 8006,
+              "text": "4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q21",
+          "clauses": [
+            "What does Regroup draw after combat if you win versus lose? If it is your defeated sidekick’s played card and the duel continues, does that draw still occur?"
+          ],
+          "answer": "Regroup draws 2 after combat if you won, otherwise 1. A defeated sidekick’s played card still resolves after combat while the duel continues, so the draw occurs.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U21_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 7478,
+              "end": 8784,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "unit_id": "U21_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U21_1",
+                "U21_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "399cb87532d82825dc9d043221a271f608e63204eaaeeb6606f924d92e1cec83",
+        "b": "610aae3cbef88603a2c8d43701c80f1569222758810b9138700c23c3cf239298"
+      }
+    },
+    {
+      "question": {
+        "id": "Q22",
+        "question": "Your fighter plays Momentous Shift while in its turn-start space after moving away and back. Is the value 3 or 5? What if it is now in a different space from where it started this turn, including when defending on the opponent’s turn?"
+      },
+      "fixed_key": {
+        "id": "Q22",
+        "expected_answer": "Same space as turn start means printed value 3; Different current space from where that fighter started this turn means value 5 instead; Test uses current turn, including opponent’s turn when defending; no requirement to be attacker",
+        "required_facts": [
+          "Same space as turn start means printed value 3",
+          "Different current space from where that fighter started this turn means value 5 instead",
+          "Test uses current turn, including opponent’s turn when defending; no requirement to be attacker"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r3c5–6; king-arthur-action-cards.png r4c4–6; sinbad-action-cards.png r4c4–6"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q22",
+        "asked_clauses": "Your fighter plays Momentous Shift while in its turn-start space after moving away and back. Is the value 3 or 5? What if it is now in a different space from where it started this turn, including when defending on the opponent’s turn?",
+        "required_answer_facts": [
+          "Same space as turn start means printed value 3",
+          "Different current space from where that fighter started this turn means value 5 instead",
+          "Test uses current turn, including opponent’s turn when defending; no requirement to be attacker"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r3c5–6; king-arthur-action-cards.png r4c4–6; sinbad-action-cards.png r4c4–6"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q22",
+          "clauses": [
+            "Momentous Shift after move away and return",
+            "current-turn different starting space while defending"
+          ],
+          "answer": "Returning to the turn-start space means the condition is false, so value remains 3. If the fighter is in a different space from where it started the current turn, value is 5, including while defending on the opponent’s turn.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 13833,
+              "end": 13942,
+              "text": "| Card | Fighter; type/value; B | Copies by deck | Effect (only while the duel continues) |\n|---|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 14247,
+              "end": 14615,
+              "text": "| Momentous Shift | ANY; V/3; B1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q22",
+          "clauses": [
+            "Your fighter plays Momentous Shift while in its turn-start space after moving away and back. Is the value 3 or 5? What if it is now in a different space from where it started this turn, including when defending on the opponent’s turn?"
+          ],
+          "answer": "Momentous Shift is 3 if the fighter is back in its turn-start space; moving away and returning fails the different-space test. It is 5 if in a different space from where it started this turn, including the opponent’s turn while defending.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U22_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U22_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "39ed04ef773f5de822a0d14aefb1906c4682063775d5a3ca1ba817dc310a4cc6",
+        "b": "0c9dafbee19c62cd2061f121f8c2899715c738c5fc620c77531cb9b19bef380b"
+      }
+    },
+    {
+      "question": {
+        "id": "Q23",
+        "question": "After Looking Glass, what choices are available, how many must be different, and can you choose the draw twice or place Alice in her current or an occupied space? If Alice is SMALL, what is the card’s defense value?"
+      },
+      "fixed_key": {
+        "id": "Q23",
+        "expected_answer": "Choose 2 different of draw 2, recover 3 health for Alice, place Alice in any other space; Cannot choose draw twice; Placement cannot be current space or occupied space; SMALL Alice defense value 2+1=3",
+        "required_facts": [
+          "Choose 2 different of draw 2, recover 3 health for Alice, place Alice in any other space",
+          "Cannot choose draw twice",
+          "Placement cannot be current space or occupied space",
+          "SMALL Alice defense value 2+1=3"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c1–2; alice-character.png; rulebook p7"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q23",
+        "asked_clauses": "After Looking Glass, what choices are available, how many must be different, and can you choose the draw twice or place Alice in her current or an occupied space? If Alice is SMALL, what is the card’s defense value?",
+        "required_answer_facts": [
+          "Choose 2 different of draw 2, recover 3 health for Alice, place Alice in any other space",
+          "Cannot choose draw twice",
+          "Placement cannot be current space or occupied space",
+          "SMALL Alice defense value 2+1=3"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c1–2; alice-character.png; rulebook p7"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q23",
+          "clauses": [
+            "Looking Glass two different choices",
+            "cannot duplicate draw and place elsewhere",
+            "SMALL defense bonus"
+          ],
+          "answer": "Choose 2 different effects: draw 2 cards, Alice recovers 3 health, or place Alice in any other space. You cannot choose draw twice; “any other” excludes her current space, and a space cannot be occupied. As SMALL, Looking Glass defense is 2+1=3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 14805,
+              "end": 14901,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 14902,
+              "end": 15061,
+              "text": "| Looking Glass | Alice; D/2; B4; 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 10418,
+              "end": 10895,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q23",
+          "clauses": [
+            "After Looking Glass, what choices are available, how many must be different, and can you choose the draw twice or place Alice in her current or an occupied space? If Alice is SMALL, what is the card’s defense value?"
+          ],
+          "answer": "Looking Glass requires two different effects: draw 2; Alice recovers 3; or place Alice in any other space. Cannot choose draw twice; placement cannot be current or occupied. SMALL adds 1 to her defense value, so card value is 3.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U23_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 10398,
+              "end": 13300,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.\n\n**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers.\n\n",
+              "unit_id": "U23_2"
+            },
+            {
+              "kind": "subsection",
+              "start": 3607,
+              "end": 3908,
+              "text": "### Battlefield\n\nOne fighter per circular space. Spaces connected by a line are **adjacent**. A **zone** consists of all spaces with the same colored pattern, even if separated on the board. A space showing several patterns belongs to all those zones. Adjacency and shared zones are different tests.\n\n",
+              "unit_id": "U23_3"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U23_1",
+                "U23_2",
+                "U23_3"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "61a884ddbe315217b7c6da96b576f7c057e97cc46fb772a19cb07e1f0a674c3e",
+        "b": "1ac2bcd1189ce7f1eaa4f5270ebf23e24483a80719c3682b1be3e1964f55bed3"
+      }
+    },
+    {
+      "question": {
+        "id": "Q24",
+        "question": "What condition enables Snicker-Snack’s after-combat hand effect, who sees the hand, who chooses the discarded card, and where does it go? What happens to that effect if Alice loses combat?"
+      },
+      "fixed_key": {
+        "id": "Q24",
+        "expected_answer": "Requires Alice winning combat; Alice player looks at opponent’s hand and chooses 1 card opponent discards into opponent’s discard pile; No hand/discard effect on loss",
+        "required_facts": [
+          "Requires Alice winning combat",
+          "Alice player looks at opponent’s hand and chooses 1 card opponent discards into opponent’s discard pile",
+          "No hand/discard effect on loss"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c3; rulebook p10;p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q24",
+        "asked_clauses": "What condition enables Snicker-Snack’s after-combat hand effect, who sees the hand, who chooses the discarded card, and where does it go? What happens to that effect if Alice loses combat?",
+        "required_answer_facts": [
+          "Requires Alice winning combat",
+          "Alice player looks at opponent’s hand and chooses 1 card opponent discards into opponent’s discard pile",
+          "No hand/discard effect on loss"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c3; rulebook p10;p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q24",
+          "clauses": [
+            "Snicker-Snack condition and hand discard choice",
+            "loss case"
+          ],
+          "answer": "Only if Alice won combat: look at the opponent’s hand and choose one card for them to discard to their own discard pile. If Alice loses, no effect.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 14805,
+              "end": 14901,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 15062,
+              "end": 15190,
+              "text": "| Snicker-Snack | Alice; A/3; B4; 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q24",
+          "clauses": [
+            "What condition enables Snicker-Snack’s after-combat hand effect, who sees the hand, who chooses the discarded card, and where does it go? What happens to that effect if Alice loses combat?"
+          ],
+          "answer": "Snicker-Snack triggers only if Alice won combat. Alice looks at opponent’s hand and chooses one card for opponent to discard to their discard pile. On a loss, no effect.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U24_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U24_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "5f60bfd263016c4eab053ce2be35b331d422cc4020d105b1300eb8f0145c4a4c",
+        "b": "cd141c02b130331ad9c471314a6a435dcf676ce165d8a028a76975791f20c779"
+      }
+    },
+    {
+      "question": {
+        "id": "Q25",
+        "question": "For each of O Frabjous Day!, The Other Side of the Mushroom, I’m Late I’m Late, and Mad as a Hatter, state the after-combat movement (who and maximum distance, if any) and size effect. Can these size changes alter the attack damage already resolved?"
+      },
+      "fixed_key": {
+        "id": "Q25",
+        "expected_answer": "O Frabjous Day changes size with no movement; Other Side moves Alice up to 3 then changes size; I’m Late moves Alice up to 5 then changes size; Mad as a Hatter moves each own fighter up to 2 then changes size; All size changes mandatory and after current damage, so not retroactive",
+        "required_facts": [
+          "O Frabjous Day changes size with no movement",
+          "Other Side moves Alice up to 3 then changes size",
+          "I’m Late moves Alice up to 5 then changes size",
+          "Mad as a Hatter moves each own fighter up to 2 then changes size",
+          "All size changes mandatory and after current damage, so not retroactive"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c4–5;r2c2–4;r4c3–4; alice-character.png; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q25",
+        "asked_clauses": "For each of O Frabjous Day!, The Other Side of the Mushroom, I’m Late I’m Late, and Mad as a Hatter, state the after-combat movement (who and maximum distance, if any) and size effect. Can these size changes alter the attack damage already resolved?",
+        "required_answer_facts": [
+          "O Frabjous Day changes size with no movement",
+          "Other Side moves Alice up to 3 then changes size",
+          "I’m Late moves Alice up to 5 then changes size",
+          "Mad as a Hatter moves each own fighter up to 2 then changes size",
+          "All size changes mandatory and after current damage, so not retroactive"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r1c4–5;r2c2–4;r4c3–4; alice-character.png; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q25",
+          "clauses": [
+            "O Frabjous Day",
+            "Other Side of Mushroom",
+            "I’m Late, I’m Late",
+            "Mad as a Hatter",
+            "size timing"
+          ],
+          "answer": "O Frabjous Day! changes size after combat with no movement. The Other Side moves Alice up to 3, then changes size. I’m Late moves Alice up to 5, then changes size. Mad as a Hatter moves each of Alice’s fighters up to 2, then changes size. These changes happen after the current combat result and cannot alter damage already resolved.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 14805,
+              "end": 14901,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 15191,
+              "end": 15258,
+              "text": "| O Frabjous Day! | Alice; A/4; B4; 1 | After combat change size. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "table_row",
+              "start": 15259,
+              "end": 15373,
+              "text": "| The Other Side of the Mushroom | Alice; A/3; B4; 1 | After combat move Alice up to 3 spaces, then change size. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E4",
+              "kind": "table_row",
+              "start": 15511,
+              "end": 15613,
+              "text": "| I’m Late, I’m Late | Alice; V/2; B3; 3 | After combat move Alice up to 5 spaces, then change size. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E5",
+              "kind": "table_row",
+              "start": 16077,
+              "end": 16196,
+              "text": "| Mad as a Hatter | Alice; V/3; B1; 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E6",
+              "kind": "paragraph",
+              "start": 10418,
+              "end": 10895,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4",
+                "E5",
+                "E6"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4",
+                "E5",
+                "E6"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4",
+                "E5",
+                "E6"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 3,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4",
+                "E5",
+                "E6"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 4,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4",
+                "E5",
+                "E6"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q25",
+          "clauses": [
+            "For each of O Frabjous Day!, The Other Side of the Mushroom, I’m Late I’m Late, and Mad as a Hatter, state the after-combat movement (who and maximum distance, if any) and size effect. Can these size changes alter the attack damage already resolved?"
+          ],
+          "answer": "O Frabjous Day!: after combat change size, no movement. The Other Side: move Alice up to 3, then change size. I’m Late: move Alice up to 5, then change size. Mad as a Hatter: move each of your fighters up to 2, then change size. After-combat changes do not alter resolved damage.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U25_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 10398,
+              "end": 13300,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.\n\n**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers.\n\n",
+              "unit_id": "U25_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U25_1",
+                "U25_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "ca9db90dd01490bf68155ee97a1da9eee1c439f044e0a032f48d9363b15d4f70",
+        "b": "83dfc09958f0e7d3b88586c9b268811a76e325dc704b97b7ce9d6732e058aa8b"
+      }
+    },
+    {
+      "question": {
+        "id": "Q26",
+        "question": "Manxome Foe is played with printed value 3 and its during-combat discard reveals a card of combat value 5 and BOOST 2. Which card is discarded from where, what is Manxome Foe’s value before other modifiers, and does that discard count as drawing a card?"
+      },
+      "fixed_key": {
+        "id": "Q26",
+        "expected_answer": "Discard top card of own deck during combat into own discard pile; Add BOOST 2, not combat value 5: value 3+2=5 before other modifiers; Discard is not a draw",
+        "required_facts": [
+          "Discard top card of own deck during combat into own discard pile",
+          "Add BOOST 2, not combat value 5: value 3+2=5 before other modifiers",
+          "Discard is not a draw"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r4c5–6; rulebook p10"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q26",
+        "asked_clauses": "Manxome Foe is played with printed value 3 and its during-combat discard reveals a card of combat value 5 and BOOST 2. Which card is discarded from where, what is Manxome Foe’s value before other modifiers, and does that discard count as drawing a card?",
+        "required_answer_facts": [
+          "Discard top card of own deck during combat into own discard pile",
+          "Add BOOST 2, not combat value 5: value 3+2=5 before other modifiers",
+          "Discard is not a draw"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r4c5–6; rulebook p10"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q26",
+          "clauses": [
+            "Manxome Foe"
+          ],
+          "answer": "Discard the top card of your own deck into your face-up discard pile; its BOOST 2 is added to Manxome Foe’s printed value 3, yielding 5. Its combat value 5 is irrelevant; this is a discard, not a draw.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 14805,
+              "end": 14901,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 16197,
+              "end": 16400,
+              "text": "| Manxome Foe | ANY; V/3; B2; 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q26",
+          "clauses": [
+            "Manxome Foe is played with printed value 3 and its during-combat discard reveals a card of combat value 5 and BOOST 2. Which card is discarded from where, what is Manxome Foe’s value before other modifiers, and does that discard count as drawing a card?"
+          ],
+          "answer": "Manxome Foe discards top card of your deck into your own face-up discard pile; add that card’s BOOST 2 to printed 3 for value 5. It is a discard, not a draw; revealed card’s combat value is irrelevant.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U26_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U26_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "3e3407b0c933df3c69b54fb06a656e834fbd1d387620a0c9b593847a9a28e4d7",
+        "b": "f2424cb1408edb319bc83e4f655286081b5ab4028f2f2741cafa286cd7690c7b"
+      }
+    },
+    {
+      "question": {
+        "id": "Q27",
+        "question": "Jabberwock uses Claws That Catch against a hero, then in a separate combat against a sidekick. What is its combat value in each case before other modifiers, and does Alice being BIG add to either?"
+      },
+      "fixed_key": {
+        "id": "Q27",
+        "expected_answer": "Against hero value 5 instead of 3; Against sidekick value 3; Alice size does not modify Jabberwock’s cards",
+        "required_facts": [
+          "Against hero value 5 instead of 3",
+          "Against sidekick value 3",
+          "Alice size does not modify Jabberwock’s cards"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-action-cards.png r3c3–4; alice-character.png"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q27",
+        "asked_clauses": "Jabberwock uses Claws That Catch against a hero, then in a separate combat against a sidekick. What is its combat value in each case before other modifiers, and does Alice being BIG add to either?",
+        "required_answer_facts": [
+          "Against hero value 5 instead of 3",
+          "Against sidekick value 3",
+          "Alice size does not modify Jabberwock’s cards"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "alice-action-cards.png r3c3–4; alice-character.png"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q27",
+          "clauses": [
+            "Claws That Catch"
+          ],
+          "answer": "Against a hero, Claws That Catch is value 5; against a sidekick, its condition does not apply and it is value 3. Alice’s BIG bonus belongs to Alice, not Jabberwock, so it adds nothing in either case.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 14805,
+              "end": 14901,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 15939,
+              "end": 16076,
+              "text": "| Claws That Catch | Jabberwock; A/3; B2; 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 10418,
+              "end": 10895,
+              "text": "**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q27",
+          "clauses": [
+            "Jabberwock uses Claws That Catch against a hero, then in a separate combat against a sidekick. What is its combat value in each case before other modifiers, and does Alice being BIG add to either?"
+          ],
+          "answer": "Against a hero Claws That Catch is value 5; against a sidekick value 3. BIG Alice’s +2 belongs to Alice, not Jabberwock, so neither value changes.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U27_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 10398,
+              "end": 13300,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.\n\n**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers.\n\n",
+              "unit_id": "U27_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U27_1",
+                "U27_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "dbc5cb5cce786b76449eb982359cd3b9c778cc0296456c1e856d601fdf611cfa",
+        "b": "07be4d383d836845d57f47e798f2c5a38c7b00f1ca0302169cbf0b851e7237e2"
+      }
+    },
+    {
+      "question": {
+        "id": "Q28",
+        "question": "Arthur attacks with Noble Sacrifice, committing a BOOST-2 card through his ability and later discarding a BOOST-3 card through Noble Sacrifice. If uncancelled, what is the attack value and when is each boost chosen? If a defending Feint cancels Noble Sacrifice, which boosts survive and what is the attack value?"
+      },
+      "fixed_key": {
+        "id": "Q28",
+        "expected_answer": "Ability BOOST chosen face down alongside attack before reveal; Noble Sacrifice optional extra BOOST chosen during combat; Uncancelled value 2+2+3=7; Defending Feint cancels Noble Sacrifice effect and nullifies ability BOOST, which is discarded; no during-combat extra BOOST permitted; value remains printed 2",
+        "required_facts": [
+          "Ability BOOST chosen face down alongside attack before reveal",
+          "Noble Sacrifice optional extra BOOST chosen during combat",
+          "Uncancelled value 2+2+3=7",
+          "Defending Feint cancels Noble Sacrifice effect and nullifies ability BOOST, which is discarded; no during-combat extra BOOST permitted; value remains printed 2"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-character.png; king-arthur-action-cards.png r1c1–3;r5c1–3"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q28",
+        "asked_clauses": "Arthur attacks with Noble Sacrifice, committing a BOOST-2 card through his ability and later discarding a BOOST-3 card through Noble Sacrifice. If uncancelled, what is the attack value and when is each boost chosen? If a defending Feint cancels Noble Sacrifice, which boosts survive and what is the attack value?",
+        "required_answer_facts": [
+          "Ability BOOST chosen face down alongside attack before reveal",
+          "Noble Sacrifice optional extra BOOST chosen during combat",
+          "Uncancelled value 2+2+3=7",
+          "Defending Feint cancels Noble Sacrifice effect and nullifies ability BOOST, which is discarded; no during-combat extra BOOST permitted; value remains printed 2"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-character.png; king-arthur-action-cards.png r1c1–3;r5c1–3"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q28",
+          "clauses": [
+            "Noble Sacrifice timing and multiple boosts",
+            "Arthur ability cancellation by Feint"
+          ],
+          "answer": "Arthur’s ability BOOST 2 is chosen alongside the attack card, before reveal; Noble Sacrifice’s optional BOOST 3 is added during combat. If uncancelled, attack value is 2+2+3=7. If Feint cancels Noble Sacrifice’s effects, the ability BOOST is also discarded without effect, so value is the printed 2; Noble Sacrifice’s BOOST does not resolve.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 16887,
+              "end": 17072,
+              "text": "| Noble Sacrifice | King Arthur; A/2; B3; 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 10897,
+              "end": 11772,
+              "text": "**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled."
+            },
+            {
+              "unit_id": "E4",
+              "kind": "list_item",
+              "start": 6737,
+              "end": 7000,
+              "text": "2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3",
+                "E4"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q28",
+          "clauses": [
+            "Arthur attacks with Noble Sacrifice, committing a BOOST-2 card through his ability and later discarding a BOOST-3 card through Noble Sacrifice. If uncancelled, what is the attack value and when is each boost chosen? If a defending Feint cancels Noble Sacrifice, which boosts survive and what is the attack value?"
+          ],
+          "answer": "Arthur’s ability BOOST is committed with the attack card: +2. Noble Sacrifice separately permits a later combat BOOST: +3. Total 2+2+3=7. Feint cancels Noble Sacrifice effects, removing its +3 permission; Arthur’s ability BOOST remains because it does not cancel the attack effects. Attack value 4.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U28_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 10398,
+              "end": 13300,
+              "text": "### Hero abilities\n\n**Alice:** choose BIG or SMALL when placing her at setup. When **BIG**, add **2 to Alice’s attack-card values**. When **SMALL**, add **1 to Alice’s defense-card values**. This includes versatile cards used in that role. These bonuses belong to **Alice, not Jabberwock**. “Change size” switches BIG ↔ SMALL and updates the token; it is mandatory when the effect says so. After-combat size changes occur after the current combat result and do not retroactively change its damage.\n\n**King Arthur:** Arthur and Merlin each use **move 2** during maneuver, before any BOOST. When **Arthur attacks**, he may BOOST the attack by playing a hand card **face down alongside his attack card**. Add that card’s BOOST value, ignoring its effects; the BOOST card is discarded. If the opponent **cancels the effects on Arthur’s attack card**, this ability’s BOOST is **discarded without effect**. **Excalibur exception (official 2025 erratum):** Excalibur has no printed effects to cancel, so Feint does not remove the ability BOOST from a textless Excalibur attack. The BOOST still increases its attack value; the ordinary final discard of played cards still applies. See the sourced FAQ below. This is Arthur’s ability, not Merlin’s. **Noble Sacrifice** separately permits another BOOST during combat, in addition to the ability’s BOOST, if its effect is not canceled.\n\n**Medusa:** **at the start of your turn**, you **may deal 1 damage to one opposing fighter in Medusa’s zone**. This is optional, not an attack action, and does not require adjacency. Harpies do not project this ability from their own zones.\n\n**Sinbad:** when you maneuver, each of your fighters may move **+1 space for each VOYAGE card in your discard pile**, added to the normal move value 2 and any maneuver BOOST. The bonus also applies to Porter. The maneuver allowance is **2 + Voyages currently in discard + the chosen maneuver BOOST value**. Count the Voyages actually in the discard pile when moving: if Voyage Home is discarded to BOOST this maneuver, it counts in **both applicable terms**: +1 for being a Voyage in discard and +1 from its printed BOOST value.\n\n**Voyage combat values:** during combat, a Voyage’s printed effect adds **1 for every Voyage card already in your discard pile** to its printed value 2. In formula form, **combat value = 2 + the number of Voyages already in discard**, before other modifiers. Count **every Voyage already there**; the card being played is not yet in that pile and therefore does not count itself. Its absence does not remove any of the cards already discarded. For example, with **3 Voyages already in discard**, the new Voyage has value **2 + 3 = 5**, not 2. Resolve this bonus during combat before calculating damage. Played cards enter discard only at the end of combat. Voyage Home’s later after-combat retrieval can reduce the count for later combats or maneuvers.\n\n",
+              "unit_id": "U28_2"
+            },
+            {
+              "kind": "subsection",
+              "start": 6228,
+              "end": 7478,
+              "text": "### Attack\n\nYou cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.\n3. **Resolve combat** in the order below, then discard played cards to their owners’ **face-up discard piles**.\n\nAttack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.\n\n",
+              "unit_id": "U28_3"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U28_1",
+                "U28_2",
+                "U28_3"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "6cac3c687d2ba0e8cbb572a669ae62a82aff1284c820a78349e67c5885fe75bf",
+        "b": "60b3a44b33d38afb4f525a9a0384d86fe42abfadb78b2d94bab5a923c3149dc5"
+      }
+    },
+    {
+      "question": {
+        "id": "Q29",
+        "question": "Who may play The Lady of the Lake, what named card does it retrieve from which locations to where, when must you shuffle, and what are Excalibur’s user, type and printed attack value?"
+      },
+      "fixed_key": {
+        "id": "Q29",
+        "expected_answer": "Arthur plays Lady of Lake scheme; Search own deck and discard for Excalibur, add to hand; Shuffle deck if searched deck; Excalibur Arthur-only attack value 6",
+        "required_facts": [
+          "Arthur plays Lady of Lake scheme",
+          "Search own deck and discard for Excalibur, add to hand",
+          "Shuffle deck if searched deck",
+          "Excalibur Arthur-only attack value 6"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c4;r2c3"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q29",
+        "asked_clauses": "Who may play The Lady of the Lake, what named card does it retrieve from which locations to where, when must you shuffle, and what are Excalibur’s user, type and printed attack value?",
+        "required_answer_facts": [
+          "Only King Arthur may play The Lady of the Lake.",
+          "Search own deck and discard for Excalibur, add to hand",
+          "Shuffle deck if searched deck",
+          "Excalibur Arthur-only attack value 6"
+        ],
+        "contextual_key_background": [
+          "The Lady of the Lake is a scheme; Q29 does not independently ask its card type."
+        ],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c4;r2c3"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q29",
+          "clauses": [
+            "Lady of the Lake user and retrieval/shuffle",
+            "Excalibur user type value"
+          ],
+          "answer": "Arthur may play The Lady of the Lake as a scheme (its fighter label is Arthur); search deck and discard pile for Excalibur and add it to hand. Shuffle if the deck was searched. Excalibur is King Arthur-only, attack, printed value 6.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17503,
+              "end": 17670,
+              "text": "| The Lady of the Lake | King Arthur; S/—; B2; 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "table_row",
+              "start": 17073,
+              "end": 17133,
+              "text": "| Excalibur | King Arthur; A/6; B3; 1 | No printed effect. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q29",
+          "clauses": [
+            "Who may play The Lady of the Lake, what named card does it retrieve from which locations to where, when must you shuffle, and what are Excalibur’s user, type and printed attack value?"
+          ],
+          "answer": "The Lady of the Lake is Arthur-only scheme: find Excalibur in deck or discard and add it to hand; shuffle if searched deck. Excalibur is Arthur-only attack A/6.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U29_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U29_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "64fe27391f458f6f16c702d7387b4d2ba6a911b0a33ac55836c4c359ab108abe",
+        "b": "4507a81b809a132a3650f89acad06db24df751930e6e7d3e5494f3b8dd042717"
+      }
+    },
+    {
+      "question": {
+        "id": "Q30",
+        "question": "After an uncancelled The Aid of Morgana, do you draw only if Arthur won? How many cards, at what timing, and who is allowed to play it?"
+      },
+      "fixed_key": {
+        "id": "Q30",
+        "expected_answer": "Arthur-only attack; After combat draw 2 mandatory whether won or lost, if game continues",
+        "required_facts": [
+          "Arthur-only attack",
+          "After combat draw 2 mandatory whether won or lost, if game continues"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c5; rulebook p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q30",
+        "asked_clauses": "After an uncancelled The Aid of Morgana, do you draw only if Arthur won? How many cards, at what timing, and who is allowed to play it?",
+        "required_answer_facts": [
+          "Arthur-only permitted user",
+          "After combat draw 2 mandatory whether won or lost, if game continues"
+        ],
+        "contextual_key_background": [
+          "Attack-card type true but not asked here; directly tested in Q63."
+        ],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c5; rulebook p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q30",
+          "clauses": [
+            "Aid of Morgana timing, draw count and user",
+            "win condition absent"
+          ],
+          "answer": "The King Arthur-only A/4 card draws 2 cards after combat whether Arthur won or lost; no win condition is stated.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17134,
+              "end": 17211,
+              "text": "| The Aid of Morgana | King Arthur; A/4; B2; 1 | After combat draw 2 cards. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q30",
+          "clauses": [
+            "After an uncancelled The Aid of Morgana, do you draw only if Arthur won? How many cards, at what timing, and who is allowed to play it?"
+          ],
+          "answer": "The Aid of Morgana is Arthur-only attack A/4; after combat draw 2 regardless of win/loss, while duel continues.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U30_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 7478,
+              "end": 8784,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "unit_id": "U30_2"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U30_1",
+                "U30_2"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "0d2329ace245ff22f7f08497bb762f4f7c640805af6976d571b1c00b35cd6e2e",
+        "b": "054a66cc49a2c8472d6a7e8e61c80e201d66a2ed18d8716f89ce3a7cd3ba9b6d"
+      }
+    },
+    {
+      "question": {
+        "id": "Q31",
+        "question": "Who can play Divine Intervention, as what combat-card type, and whom does it move how far at which timing? Must that fighter have won?"
+      },
+      "fixed_key": {
+        "id": "Q31",
+        "expected_answer": "Arthur-only versatile usable attack or defense; After combat move Arthur up to 5; no win condition",
+        "required_facts": [
+          "Arthur-only versatile usable attack or defense",
+          "After combat move Arthur up to 5; no win condition"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c6;r2c1"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q31",
+        "asked_clauses": "Who can play Divine Intervention, as what combat-card type, and whom does it move how far at which timing? Must that fighter have won?",
+        "required_answer_facts": [
+          "Arthur-only versatile usable attack or defense",
+          "After combat move Arthur up to 5; no win condition"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r1c6;r2c1"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q31",
+          "clauses": [
+            "Divine Intervention permitted user/type",
+            "who and distance/timing",
+            "win requirement"
+          ],
+          "answer": "Arthur-only versatile 3 card; after combat move Arthur up to 5 spaces. It does not require a combat win.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17212,
+              "end": 17304,
+              "text": "| Divine Intervention | King Arthur; V/3; B2; 2 | After combat move Arthur up to 5 spaces. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q31",
+          "clauses": [
+            "Who can play Divine Intervention, as what combat-card type, and whom does it move how far at which timing? Must that fighter have won?"
+          ],
+          "answer": "Divine Intervention is Arthur-only versatile value 3. After combat move Arthur up to 5 spaces; no win condition.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U31_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U31_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "4c4f974cb23a9030beaff5ad11a23843a2dbb93be8d1df2658e54f45cd06c25d",
+        "b": "24e2f3c121f92a98d3b090a8d3acf270681f60e2374478d61697500d8088bbd2"
+      }
+    },
+    {
+      "question": {
+        "id": "Q32",
+        "question": "Who plays Prophecy, what happens to the top four cards, and in what order may cards be returned to the deck? Is this a scheme or an attack?"
+      },
+      "fixed_key": {
+        "id": "Q32",
+        "expected_answer": "Merlin-only scheme; Look top 4 of own deck; add 2 to hand; return other 2 atop own deck in any order",
+        "required_facts": [
+          "Merlin-only scheme",
+          "Look top 4 of own deck; add 2 to hand; return other 2 atop own deck in any order"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c4"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q32",
+        "asked_clauses": "Who plays Prophecy, what happens to the top four cards, and in what order may cards be returned to the deck? Is this a scheme or an attack?",
+        "required_answer_facts": [
+          "Merlin-only scheme",
+          "Look top 4 of own deck; add 2 to hand; return other 2 atop own deck in any order"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c4"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q32",
+          "clauses": [
+            "Prophecy user and scheme type",
+            "top four handling and return order"
+          ],
+          "answer": "Merlin plays Prophecy as a scheme. Look at the top 4 cards, add 2 to hand, and put the other 2 back on top in any order; it is not an attack.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17671,
+              "end": 17804,
+              "text": "| Prophecy | Merlin; S/—; B2; 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q32",
+          "clauses": [
+            "Who plays Prophecy, what happens to the top four cards, and in what order may cards be returned to the deck? Is this a scheme or an attack?"
+          ],
+          "answer": "Prophecy is Merlin-only scheme: inspect top 4, add 2 to hand, return other 2 to top in any order.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U32_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U32_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "3dcb6e41f2741965d650719c8651328c8fd5c2abef278fdf6f5a0f08a76b839d",
+        "b": "ef97dd69f00d74f7b0cf3b288f8ef9ba0cfac16f28ab84a5461a1047441ddd58"
+      }
+    },
+    {
+      "question": {
+        "id": "Q33",
+        "question": "For Bewilderment, name its legal fighter, card type and printed defense value; state its during-combat effect and optional after-combat placement, including destination occupancy. Does its printed zero automatically make the attacker win?"
+      },
+      "fixed_key": {
+        "id": "Q33",
+        "expected_answer": "Merlin-only defense value 0; During combat prevent all damage; After combat may place Merlin in any unoccupied space; Prevented attack damage means defender wins despite zero printed defense; zero alone does not make attacker win",
+        "required_facts": [
+          "Merlin-only defense value 0",
+          "During combat prevent all damage",
+          "After combat may place Merlin in any unoccupied space",
+          "Prevented attack damage means defender wins despite zero printed defense; zero alone does not make attacker win"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c5–6; rulebook p7;p12"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q33",
+        "asked_clauses": "For Bewilderment, name its legal fighter, card type and printed defense value; state its during-combat effect and optional after-combat placement, including destination occupancy. Does its printed zero automatically make the attacker win?",
+        "required_answer_facts": [
+          "Merlin-only defense value 0",
+          "During combat prevent all damage",
+          "After combat may place Merlin in any unoccupied space",
+          "Prevented attack damage means defender wins despite zero printed defense; zero alone does not make attacker win"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r2c5–6; rulebook p7;p12"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q33",
+          "clauses": [
+            "Bewilderment user/type/value and prevent damage",
+            "optional after placement destination occupancy",
+            "zero defense and combat winner"
+          ],
+          "answer": "Merlin-only defense value 0. During combat it prevents all damage. After combat you may place Merlin in any unoccupied space. A zero defense does not automatically make the attacker win: combat winner depends on attack damage; with zero dealt, defender wins.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17805,
+              "end": 17947,
+              "text": "| Bewilderment | Merlin; D/0; B2; 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |",
+              "header_id": "E1"
+            },
+            {
+              "unit_id": "E3",
+              "kind": "paragraph",
+              "start": 8493,
+              "end": 8782,
+              "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner."
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 2,
+              "evidence_unit_ids": [
+                "E1",
+                "E2",
+                "E3"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q33",
+          "clauses": [
+            "For Bewilderment, name its legal fighter, card type and printed defense value; state its during-combat effect and optional after-combat placement, including destination occupancy. Does its printed zero automatically make the attacker win?"
+          ],
+          "answer": "Bewilderment is Merlin-only defense value 0. During combat prevent all damage; after combat you may place Merlin in any unoccupied space. Zero defense does not itself determine winner: winner is based on whether attack deals at least 1.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U33_1"
+            },
+            {
+              "kind": "subsection",
+              "start": 7478,
+              "end": 8784,
+              "text": "### Combat timing, damage and winning combat\n\n1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.\n\n**Whenever effects share a timing, the defender’s effect resolves first.** Card effects are **mandatory unless they say otherwise** (for example “may”); this can harm your own fighters. Complete them in the printed order. A card whose effects are canceled keeps its printed combat value; the canceled effects do not resolve.\n\n**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.\n\n",
+              "unit_id": "U33_2"
+            },
+            {
+              "kind": "subsection",
+              "start": 3607,
+              "end": 3908,
+              "text": "### Battlefield\n\nOne fighter per circular space. Spaces connected by a line are **adjacent**. A **zone** consists of all spaces with the same colored pattern, even if separated on the board. A space showing several patterns belongs to all those zones. Adjacency and shared zones are different tests.\n\n",
+              "unit_id": "U33_3"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U33_1",
+                "U33_2",
+                "U33_3"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "b59039dd5b91ad687f3966f1bbd273d7383b3a9d5b0e41b669223de4c31d06bc",
+        "b": "4fb1859788288d8adfb6c1c8802e585c2088cb5bf1b496c76baa4ad94018b1f4"
+      }
+    },
+    {
+      "question": {
+        "id": "Q34",
+        "question": "Who plays Aid the Chosen One, what type/value is it, and what happens after combat on a win versus a loss?"
+      },
+      "fixed_key": {
+        "id": "Q34",
+        "expected_answer": "Merlin-only attack value 4; If won draw 2 after combat; If lost no draw from this effect",
+        "required_facts": [
+          "Merlin-only attack value 4",
+          "If won draw 2 after combat",
+          "If lost no draw from this effect"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c1"
+        ]
+      },
+      "frozen_scope": {
+        "id": "Q34",
+        "asked_clauses": "Who plays Aid the Chosen One, what type/value is it, and what happens after combat on a win versus a loss?",
+        "required_answer_facts": [
+          "Merlin-only attack value 4",
+          "If won draw 2 after combat",
+          "If lost no draw from this effect"
+        ],
+        "contextual_key_background": [],
+        "source_refs": [
+          "king-arthur-action-cards.png r3c1"
+        ]
+      },
+      "raw_reader_entries": {
+        "a": {
+          "id": "Q34",
+          "clauses": [
+            "Aid the Chosen One user/type/value",
+            "after-combat draw condition"
+          ],
+          "answer": "Merlin-only attack value 4; after combat, if Merlin’s side won, draw 2. On a loss, no draw.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_id": "E1",
+              "kind": "table_header",
+              "start": 16790,
+              "end": 16886,
+              "text": "| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |\n|---|---|---|"
+            },
+            {
+              "unit_id": "E2",
+              "kind": "table_row",
+              "start": 17948,
+              "end": 18033,
+              "text": "| Aid the Chosen One | Merlin; A/4; B2; 1 | After combat, if you won, draw 2 cards. |",
+              "header_id": "E1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            },
+            {
+              "clause_index": 1,
+              "evidence_unit_ids": [
+                "E1",
+                "E2"
+              ],
+              "supported": true
+            }
+          ]
+        },
+        "b": {
+          "id": "Q34",
+          "clauses": [
+            "Who plays Aid the Chosen One, what type/value is it, and what happens after combat on a win versus a loss?"
+          ],
+          "answer": "Aid the Chosen One is Merlin-only attack value 4. After combat, if Merlin won, draw 2; on loss, no draw.",
+          "support": "supported",
+          "evidence": [
+            {
+              "kind": "subsection",
+              "start": 13300,
+              "end": 13791,
+              "text": "### Card reference\n\nThe following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.\n\n",
+              "unit_id": "U34_1"
+            }
+          ],
+          "clause_checks": [
+            {
+              "clause_index": 0,
+              "evidence_unit_ids": [
+                "U34_1"
+              ],
+              "supported": true
+            }
+          ]
+        }
+      },
+      "raw_entry_canonical_sha256": {
+        "a": "586d71ab6d97d5380517c175bfae2920e4de3b56af5b17b224db126c6cd62565",
+        "b": "72bb5944b478adb31b02c2a282a2baa250da5e98b45150bfe5a08fffa38680fc"
+      }
+    }
+  ]
+}

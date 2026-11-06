@@ -1,0 +1,136 @@
+{
+  "assessment_id": "hierarchical-section-method-assessment",
+  "verdict": "Retrieval risk confirmed; hierarchical and explicit-union units are reasonable future alternatives with a versioned nonoverlap contract. No current-run modification is authorized.",
+  "prospective_only": true,
+  "effective_timing": "Assessment for any future test only, after the currently frozen/dispatched full pair is graded. Current protocol/checker/raw outputs remain intact under their existing rules.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v6.txt",
+      "sha256": "715ba0eee1f102b06b92a0b1975d30804a8782ac116d685ead63c14852b54019",
+      "bytes": 9672
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-check.py",
+      "sha256": "60d4c7b0768041e2ad735d5cbec71871516b4fa47fd7dc5a3a4dbb19298242fc",
+      "bytes": 3183
+    }
+  ],
+  "current_contract_assessment": {
+    "protocol_and_checker_match": true,
+    "parent_intro_is_currently_a_complete_atomic_unit": true,
+    "whole_descendant_procedure_is_not_implied": true,
+    "no_current_reader_error_or_score_inferred": true
+  },
+  "generic_semantics": {
+    "current_atomic_intro": "The current unit begins at a recognized level2–6 heading and ends before the next recognized heading of any level. When the next heading is a child, this unit contains only the parent introduction. The checker correctly implements that explicit v6 definition. Complete-current-unit is not a claim that the whole parent procedure or its descendants were retrieved.",
+    "future_subtree": "A hierarchical unit begins at heading h of level L and ends immediately before the first later recognized heading whose level is <= L, or EOF. All intervening deeper headings and their text are included. A child subtree stops before its next sibling or ancestor-level heading.",
+    "future_intro": "An introduction unit begins at h and ends before the next recognized heading of any level, or EOF. It contains the heading and its introductory material only. It must be labeled as introduction rather than as the full hierarchical section.",
+    "future_explicit_union": "A selected union consists of complete, individually identified introduction/subtree source slices. It may combine needed ancestor introductions with selected child subtrees. It is not a continuous full-parent range when siblings are omitted. Record each slice and its own exact boundaries/hash; do not replace omitted siblings with ellipses and claim a full parent.",
+    "selection": "The model chooses the smallest appropriate complete unit set that covers the actual governing facts and qualifiers, not simply the shortest text. Broad procedures may warrant a parent subtree. A narrower request may warrant ancestor introductions plus relevant child subtrees and external definitions/exceptions. Code derives/copies only the model-selected units; it must not route questions or infer relevance.",
+    "nonoverlap": "Chosen source intervals are half-open [start,end). Sort by start and require previous.end <= next.start. Selecting a subtree together with an overlapping descendant or its introduction is invalid, even if one literal copy happens to satisfy several substring checks. Adjacent slices are allowed."
+  },
+  "recommended_future_design": "Support separately identified intro and subtree units, with model-chosen smallest sufficient nonoverlapping sets. Use a parent subtree when appropriate or an explicit union of needed ancestor intros/relevant child subtrees; never silently reinterpret an introduction as a full subtree.",
+  "algorithm_and_checker_recommendations": [
+    "Freeze the future method name/version, heading recognizer, eligible heading levels, text decoding/newline policy and source snapshot hash before dispatching either fresh reader.",
+    "Construct a source-only heading table containing each recognized heading’s offset, line, level and parent. The hierarchy uses heading levels even when levels are skipped.",
+    "For each eligible heading h, set intro_end to the next recognized heading offset or EOF; set subtree_end to the first later recognized heading offset with level <= h.level or EOF.",
+    "Emit separately identified intro and subtree units with kind, heading, level, parent, exact [start,end), inclusive displayed line range and SHA-256 of the entire untrimmed source slice.",
+    "Use distinct future unit IDs or an explicit method/kind namespace. Never reuse an old H-number with a different range without a separately frozen method version. A ledger’s source reference remains a bare indexed unit ID, not a heading title/path/full text.",
+    "After the model chooses units for its clause ledger, reject duplicate IDs and overlapping ranges. Copy complete slices in source order. An explicit union remains a list of slices, not an invented continuous source range.",
+    "Verify each short fact quote is a literal contiguous span in its declared selected unit. A missing lookup remains a locator error, not proof of source absence.",
+    "Recompute hashes from full exact slices; any permitted trailing-whitespace omission applies only to displayed attachment text, not to the canonical hash.",
+    "Validate one explicitly identified attachment block per selected unit. Prefer block/ID-aware equality checks over unconstrained substring counts, since distinct source units may contain identical text and nested subtrees contain child text.",
+    "Keep all semantic checks independent: procedure/condition, actor, requested result/destination, completeness, cross-references, calculations and contradictions still require the same per-clause review."
+  ],
+  "heading_lexer_decisions": {
+    "recommendation": "For a future hierarchical contract, explicitly recognize structural ATX heading levels1–6; attachment eligibility may remain levels2–6. A level1 heading should still close a lower-level subtree even if level1 is not selectable. Specify a deterministic fenced-code policy and root/preamble handling before freezing. Do not silently change the current lexer or imply this broader policy already exists in v6.",
+    "compatibility_option": "To isolate only the endpoint change in a future comparison, retain the existing exact recognizer and describe the rule as next equal/higher RECOGNIZED heading. Its deliberate level1/fence limitations must then be stated. Broader Markdown parsing is a separately versioned change.",
+    "preamble": "If operative text exists before the first eligible heading, preserve it as an explicitly bounded/root-introduction unit rather than silently dropping it. No actual source snapshot was inspected to assert such text exists.",
+    "setext_or_other_heading_forms": "Do not claim support for heading forms outside the frozen recognizer. Any added parsing support must be versioned and tested prospectively."
+  },
+  "risks_and_controls": [
+    {
+      "risk": "Introduction mistaken for the whole procedure",
+      "detail": "The parent title can look relevant while its atomic unit omits child actions, outcomes or exceptions. A literal/hash pass proves only that small slice was copied completely. This is a retrieval/selection risk, not evidence that any current reader made an error."
+    },
+    {
+      "risk": "Missing shared ancestor conditions when selecting a child",
+      "detail": "A child subtree may omit a precondition, actor or restriction stated in its parent introduction. Select the needed ancestor intro units as well; do not assume descendant completeness supplies those conditions."
+    },
+    {
+      "risk": "External cross-references and misplaced common qualifiers",
+      "detail": "An exception/definition may sit outside the selected subtree, or a shared closing rule may appear under the last child because of document layout. Read the governing context and follow references; hierarchy is not a semantic proof."
+    },
+    {
+      "risk": "Overbroad attachments and output pressure",
+      "detail": "A large subtree may bring unrelated siblings, increase reread/output volume and make cases harder to assess. Retain short per-request fact quotes and minimal case conclusions; do not use a whole chapter to bypass semantic selection."
+    },
+    {
+      "risk": "Overlap and duplicated content",
+      "detail": "Parent subtree plus child attachment duplicates source intervals. Range-based rejection is needed; body substring presence alone cannot establish nonoverlapping selection."
+    },
+    {
+      "risk": "Ambiguous IDs or hashes after changing boundary semantics",
+      "detail": "An old H-number can refer to an introduction in v6 but a much larger subtree under a new method. Freeze and label the method/kind and exact offsets; preserve current artifacts under their original interpretation."
+    },
+    {
+      "risk": "Parser edge cases",
+      "detail": "Top-level headings, skipped levels, repeated titles, fence content, non-ASCII text, newline conventions, EOF without newline and heading-only sections need deterministic tests. Do not silently conflate recognized syntax with all Markdown."
+    },
+    {
+      "risk": "Apparent grading benefit from extra copied context",
+      "detail": "More attached source text does not relax requested-fact completeness, case resolution or contradiction rules. The future method changes retrieval packaging, not the key or what was asked."
+    },
+    {
+      "risk": "Cross-version comparability and contamination",
+      "detail": "A method change is a new prospectively frozen test configuration. Do not retrofit current outputs, attach missing children after the fact, change current scope/keys, give per-question mappings, or treat this assessment as a score adjustment."
+    }
+  ],
+  "future_checker_test_recommendations": [
+    "Nested child and grandchild are included in a parent subtree; equal-level sibling and higher-level headings terminate it.",
+    "A leaf subtree equals its intro range, while their identity/kind remains unambiguous if both are indexed; do not select both.",
+    "Skipped levels attach to the nearest earlier lower-level ancestor; EOF and trailing-newline arithmetic remain exact.",
+    "Parent intro plus all immediate child subtrees reconstructs the parent subtree exactly in source order; a subset is explicitly a union, not the full parent.",
+    "Parent subtree plus child subtree is rejected for overlap; adjacent intro/child slices are allowed.",
+    "Unit IDs, kind, full ranges, source snapshot hash and complete untrimmed slice hashes are recomputed from the frozen source, not accepted from answer metadata.",
+    "Attachment blocks are each complete and occur once under their declared unit IDs; cropped, duplicate, mislabeled, wrong-method and wrong-hash units are rejected.",
+    "Quotes must belong to their declared selected unit, and unsupported clauses may remain honestly unsupported after rereading attachments, ancestor context and referenced procedures.",
+    "No format/boundary result claims semantic relevance, requested-fact coverage or an automatic grade cap."
+  ],
+  "independent_synthetic_demonstration": {
+    "method": "Executed only the allowed existing checker source in an isolated namespace and constructed neutral source text and candidate hierarchical units entirely in memory. No real summary, question or reader data was used; no fixture files were written.",
+    "current_parent_intro_lines": [
+      1,
+      2
+    ],
+    "proposed_parent_subtree_lines": [
+      1,
+      8
+    ],
+    "proposed_child_subtree_lines": [
+      3,
+      6
+    ],
+    "verified": [
+      "Current parent unit excludes its deeper headings exactly as v6 specifies",
+      "Proposed parent subtree includes both child branches and the grandchild, stopping before the next parent-level heading",
+      "Proposed child subtree includes its detail, stopping before an equal-level sibling",
+      "Parent intro plus both child subtrees reconstructs the complete parent source slice",
+      "Parent intro plus one child is nonoverlapping but is explicitly not a full-parent claim",
+      "Parent-plus-descendant subtree selection is rejected for overlap",
+      "All proposed unit hashes match the exact untrimmed source slices"
+    ]
+  },
+  "not_authorized": [
+    "Changing the current protocol or checker",
+    "Changing current raw outputs, keys, requested-fact scopes or grades",
+    "Retroactive source attachments or scoring relaxation",
+    "Per-question retrieval mappings or answer hints",
+    "Inspecting current readers, candidates, results, grades or status"
+  ],
+  "isolation": {
+    "only_two_authorized_inputs_read": true,
+    "no_current_bank_reader_key_grade_result_candidate_history_status_session_or_agent_tools": true,
+    "only_two_requested_assessment_outputs_written": true
+  }
+}

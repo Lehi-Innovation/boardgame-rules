@@ -1,0 +1,268 @@
+
+<!DOCTYPE html>
+
+
+
+
+
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Querki: Loading Spirit Island FAQ...</title>
+
+    <!-- TODO: aggregate all these CSS files together, to reduce queries. -->    
+    <link rel="stylesheet" href="/assets/stylesheets/f9dd63785b69a6e3cd4a4f01a0ff4e0b-jquery-ui-1.10.0.custom.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/32baf11084e96e14a6c5dd0f125dd2e1-bootstrap.min.css">
+    <!-- This padding is needed for the top navbar. Bootstrap doc says to put it between the main and responsive CSS: -->
+    <style>
+      body {
+        padding-top: 40px;
+      }
+    </style>
+    <link rel="stylesheet" href="/assets/stylesheets/3143eac51fe093d695f446b1c581bbb7-bootstrap-theme.min.css">
+    <!-- TODO: these really should adhere to the facade somehow! -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/webjars/org.webjars/bootstrap-datepicker/1.4.0/css/bootstrap-datepicker3.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/webjars/org.webjars/jstree/3.2.1/themes/default/style.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/stylesheets/b3dde7e54b9a7d6ff206b8372b73af57-manifest.css">
+    <link rel="stylesheet" href="/assets/stylesheets/601c175bae1cf79e2ae57d131b2d37e3-notifications.css">
+    <link rel="stylesheet" href="/assets/stylesheets/6e0d655d59eeebef07be1c5193415ef9-main.css">
+	<link rel="stylesheet" href="/assets/stylesheets/9ac831a66b1518f1f86e39ddb1574d4d-conversations.css">
+    <link rel="stylesheet" media="print" href="/assets/stylesheets/6357738eaa467fe4714a1ebb78be3261-print.css">
+
+    <link rel="shortcut icon" href="/assets/images/dd9db6f10b4638c4c9bffe3f37e33cb7-Capital.png">
+  </head>
+  <body id="_root">
+    <!-- Proto-menubar, which displays while we're loading the guts of the client. The structure intentionally mimics that
+         of the client's own menubar. This will be deleted and replaced once the client is up and running.
+      -->
+    <div class="container">
+      <div class="navbar navbar-default navbar-fixed-top _noPrint" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <a class="navbar-brand" id="_index_button" href="/">
+              <img src='/assets/images/611aeb9af25bc99af6fad728b1df64ea-Logo-menubar.png'>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="guts container-fluid">
+      <div class="row">
+        <div class="querki-content col-md-12">
+          <p>&nbsp;</p>
+          <p><i class="fa fa-spinner fa-pulse fa-fw"></i> Loading Spirit Island FAQ...</p>
+        </div>
+      </div>
+    </div>
+  </body>
+
+    
+
+  <script src=/assets/1043a998c982e69b80ca14dcf5b6d542-querkiclient-jsdeps.min.js type="text/javascript"></script>
+
+    
+
+  <script src=/assets/querkiclient-opt/526944ced9ed68af83c7ba558c43f726-main.js type="text/javascript"></script>
+
+    
+    <script>
+      var clientRoutes = {}; (function(_root){
+var _nS = function(c,f,b){var e=c.split(f||"."),g=b||_root,d,a;for(d=0,a=e.length;d<a;d++){g=g[e[d]]=g[e[d]]||{}}return g}
+var _qS = function(items){var qs = ''; for(var i=0;i<items.length;i++) {if(items[i]) qs += (qs ? '&' : '') + items[i]}; return qs ? ('?' + qs) : ''}
+var _s = function(p,s){return p+((s===true||(s&&s.secure))?'s':'')+'://'}
+var _wA = function(r){return {ajax:function(c){c=c||{};c.url=r.url;c.type=r.method;return jQuery.ajax(c)}, method:r.method,type:r.method,url:r.url,absoluteURL: function(s){return _s('http',s)+'querki.net'+r.url},webSocketURL: function(s){return _s('ws',s)+'querki.net'+r.url}}}
+_nS('controllers.Application'); _root['controllers']['Application']['robots'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "robots.txt"})
+        }
+      ;
+_nS('controllers.Application'); _root['controllers']['Application']['scalajsFile'] = 
+        function(file0) {
+          return _wA({method:"GET", url:"/" + "scalajs/" + (function(k,v) {return v})("file", file0)})
+        }
+      ;
+_nS('controllers.Application'); _root['controllers']['Application']['scalaSharedFile'] = 
+        function(file0) {
+          return _wA({method:"GET", url:"/" + "scala/" + (function(k,v) {return v})("file", file0)})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['index'] = 
+        function() {
+          return _wA({method:"GET", url:"/"})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['space'] = 
+        function(userName0,spaceId1) {
+        
+          if (userName0 == "systemUser" && spaceId1 == "documentation") {
+            return _wA({method:"GET", url:"/" + "help/"})
+          }
+        
+          if (true) {
+            return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/"})
+          }
+        
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['unsub'] = 
+        function(unsubInfo0) {
+          return _wA({method:"GET", url:"/" + "unsub" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("unsubInfo", unsubInfo0)])})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['thingRedirect'] = 
+        function(userName0,spaceId1,thingId2) {
+        
+          if (userName0 == "systemUser" && spaceId1 == "documentation") {
+            return _wA({method:"GET", url:"/" + "help/" + encodeURIComponent((function(k,v) {return v})("thingId", thingId2))})
+          }
+        
+          if (true) {
+            return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/" + (function(k,v) {return v})("thingId", thingId2)})
+          }
+        
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['signup'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "signup/"})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['spaceNoSlash'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1))})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['upload'] = 
+        function(targetActorPath0) {
+          return _wA({method:"POST", url:"/" + "_upload" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("targetActorPath", targetActorPath0)])})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['exportSpace'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_export.xml"})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['apiRequest'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"POST", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_apiRequest"})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['rawApiRequest'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "_apiRequest"})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['marcoPolo'] = 
+        function(userName0,spaceId1,propId2) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_marcoPolo" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("propId", propId2)])})
+        }
+      ;
+_nS('controllers.ClientController'); _root['controllers']['ClientController']['showClient'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "c/"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['logout'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "logout"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['dologin'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "dologin"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['clientlogin'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "clientlogin"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['sendPasswordReset'] = 
+        function() {
+          return _wA({method:"GET", url:"/" + "sendPasswordReset"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['resetPassword'] = 
+        function(email0,expires1,hash2) {
+          return _wA({method:"GET", url:"/" + "resetPassword" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("email", email0), (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("expires", expires1), (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("hash", hash2)])})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['signup'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"POST", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_handleInvite"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['signupStart'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "signupStart/"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['handleInvite'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_handleInvite"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['handleInvite2'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"POST", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_handleInvite2"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['joinlogin'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"POST", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_joinLogin"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['joinSpace'] = 
+        function(userName0,spaceId1) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_joinSpace"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['getCollaborators'] = 
+        function(userName0,spaceId1,q2) {
+          return _wA({method:"GET", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_getCollaborators" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("q", q2)])})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['doSendPasswordReset'] = 
+        function() {
+          return _wA({method:"POST", url:"/" + "sendPasswordReset"})
+        }
+      ;
+_nS('controllers.LoginController'); _root['controllers']['LoginController']['doResetPassword'] = 
+        function(email0,expiresMillis1,hash2) {
+          return _wA({method:"POST", url:"/" + "resetPassword" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("email", email0), (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("expiresMillis", expiresMillis1), (function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("hash", hash2)])})
+        }
+      ;
+_nS('controllers.PhotoController'); _root['controllers']['PhotoController']['upload'] = 
+        function(userName0,spaceId1,thingId2) {
+          return _wA({method:"POST", url:"/" + "u/" + encodeURIComponent((function(k,v) {return v})("userName", userName0)) + "/" + encodeURIComponent((function(k,v) {return v})("spaceId", spaceId1)) + "/_photoUpload" + _qS([(function(k,v) {return encodeURIComponent(k)+'='+encodeURIComponent(v)})("thingId", thingId2)])})
+        }
+      ;
+_nS('controllers.Assets'); _root['controllers']['Assets']['versioned'] = 
+        function(file1) {
+          return _wA({method:"GET", url:"/" + "assets/" + (function(k,v) {return v})("file", file1)})
+        }
+      ;
+})(clientRoutes)
+    </script>
+
+    <script>
+      var pickledJSON = {"user":null,"space":{"$type":"SpaceInfo","oid":{"underlying":".3y28a87"},"linkName":"spirit-island-faq","displayName":"Spirit Island FAQ","ownerId":".1z1429d","ownerHandle":"darker","apps":[],"permissions":[],"isApp":false},"isOwner":false,"userLevel":0}
+    
+      $(function() {
+        var client = QuerkiClient;
+
+        client.start();
+  
+        client.pageManager.setImagePath('/assets/images');
+        
+        client.dataSetting.unpickleRequest(JSON.stringify(pickledJSON));
+
+        // This should come last -- it causes the page to actually render:      
+        var root = $("#_root").get(0);
+        client.pageManager.setRoot(window, root);
+      });
+    </script>
+</html>

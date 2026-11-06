@@ -1,0 +1,215 @@
+{
+  "verdict": "The original Q01\u2013Q20 alone cover all core standard-play procedures and key branches, with working saturation at 20 and no qualifying addition. All 21 draft answer keys are source-supported, but untested candidate Q21 fails incremental novelty because it combines Q12 orientation with Q16 incorrect-card handling.",
+  "checked_questions": [
+    {
+      "id": "Q01",
+      "result": "supported",
+      "references": "PDF p.1; extraction lines 34\u201343",
+      "assessment": "All equipment, deck, card count, random placement and secrecy requirements are supported."
+    },
+    {
+      "id": "Q02",
+      "result": "supported",
+      "references": "PDF p.2; extraction lines 61\u201368; Pair diagram",
+      "assessment": "Correct phase order, simultaneous secret work, eight outer Keywords and four adjacent two-Keyword Pairs."
+    },
+    {
+      "id": "Q03",
+      "result": "supported",
+      "references": "PDF p.2; extraction lines 72\u201375",
+      "assessment": "Single word, compound allowance and all five allowed categories match the source."
+    },
+    {
+      "id": "Q04",
+      "result": "supported",
+      "references": "PDF p.3; extraction lines 91\u201393",
+      "assessment": "Using the Keyword itself is prohibited."
+    },
+    {
+      "id": "Q05",
+      "result": "supported",
+      "references": "PDF p.3; extraction lines 92\u201393",
+      "assessment": "The translation prohibition and Amour example directly support the key."
+    },
+    {
+      "id": "Q06",
+      "result": "supported",
+      "references": "PDF p.3; extraction lines 94\u201395",
+      "assessment": "The word-family prohibition and Prince example directly support the key."
+    },
+    {
+      "id": "Q07",
+      "result": "supported",
+      "references": "PDF p.3; extraction lines 96\u201397",
+      "assessment": "Made-up words and Cuppajo are explicitly prohibited."
+    },
+    {
+      "id": "Q08",
+      "result": "supported",
+      "references": "PDF p.2; extraction lines 65\u201376",
+      "assessment": "Four secret connecting Clues in the matching zones are required."
+    },
+    {
+      "id": "Q09",
+      "result": "supported",
+      "references": "PDF p.4; extraction lines 110\u2013113",
+      "assessment": "Remove the original four, draw one unseen card, shuffle all five, and place the face-down pile on the board in front of the player."
+    },
+    {
+      "id": "Q10",
+      "result": "supported",
+      "references": "PDF p.4; extraction lines 110\u2013114",
+      "assessment": "The transition waits for everyone to finish the complete preparation."
+    },
+    {
+      "id": "Q11",
+      "result": "supported",
+      "references": "PDF p.4; extraction lines 116\u2013121",
+      "assessment": "The first Spectator is chosen; no additional selection mechanism is specified. Team reconstruction and prohibition of all communication support the key."
+    },
+    {
+      "id": "Q12",
+      "result": "supported",
+      "references": "PDF p.2 Pair diagram; p.4 extraction lines 119\u2013121; p.5 verification diagram",
+      "assessment": "Face-up reveal in the middle is explicit. Returning four original cards with the right orientations and leaving the extra off follows from the four-space Pair reconstruction task and diagrams. Orientation is already an explicit required fact in this key."
+    },
+    {
+      "id": "Q13",
+      "result": "supported",
+      "references": "PDF p.4; extraction lines 122\u2013123",
+      "assessment": "The player on the Spectator's left has final placement authority."
+    },
+    {
+      "id": "Q14",
+      "result": "supported",
+      "references": "PDF p.4; extraction lines 124\u2013128",
+      "assessment": "Trial layouts and explanation are permitted; agreed placement triggers verification."
+    },
+    {
+      "id": "Q15",
+      "result": "supported",
+      "references": "PDF p.5; extraction lines 158\u2013166",
+      "assessment": "First-try perfection scores four card points plus two bonus points. The second attempt belongs to the error branch."
+    },
+    {
+      "id": "Q16",
+      "result": "supported",
+      "references": "PDF p.4 extraction lines 117\u2013118; p.5 extraction lines 162\u2013166",
+      "assessment": "The Spectator silently removes incorrect cards to the middle; one final retry follows. Prescribed removal is the only feedback described."
+    },
+    {
+      "id": "Q17",
+      "result": "supported",
+      "references": "PDF p.5; extraction lines 160\u2013170",
+      "assessment": "A perfect second attempt scores four, without the bonus restricted to first-try perfection."
+    },
+    {
+      "id": "Q18",
+      "result": "supported",
+      "references": "PDF p.5; extraction lines 166\u2013170",
+      "assessment": "Remove the wrong card, score one per correct card, and allow no third attempt."
+    },
+    {
+      "id": "Q19",
+      "result": "supported",
+      "references": "PDF p.5; extraction lines 171\u2013174",
+      "assessment": "Turn the board over, write points in its middle, discard all five cards, and pass Spectator to the left. Q20 supplies the terminal condition after everyone has acted."
+    },
+    {
+      "id": "Q20",
+      "result": "supported",
+      "references": "PDF p.4 extraction line 118; p.6 extraction lines 180\u2013183",
+      "assessment": "Each player is Spectator once, then the game ends; sum and record team points and compare against the high score."
+    },
+    {
+      "id": "Q21",
+      "result": "supported_but_redundant",
+      "references": "PDF p.2 Pair geometry; p.5 verification diagram and extraction lines 162\u2013166",
+      "assessment": "Wrong outward Keywords make the rotated card incorrect; silent removal and the final retry are supported. This does not introduce a new rule or outcome beyond Q12 plus Q16."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "severity": "coverage-accounting",
+      "affected_artifacts": [
+        "benchmark-v2/answer-key.json: Q21 novelty",
+        "coverage-ledger.json: passes[0].accepted and saturation_claim"
+      ],
+      "finding": "Q21 is a useful concrete application but fails the ledger's strict novelty standard. Q12 already explicitly requires correct orientations. Q16 already states that incorrect cards are silently removed to the table and receive one final retry. Applying that existing error procedure to the already-covered orientation requirement is a mechanical recombination, not a distinct rule-defined branch.",
+      "recommended_action": "Reject untested candidate Q21 as overlapping Q12 plus Q16. Preserve draft benchmark-v2 and the ledger as historical evidence rather than treating Q21 as an accepted expansion. Keep original Q01\u2013Q20 unchanged and record working saturation at 20 with no qualifying addition.",
+      "source_references": [
+        "PDF p.2, extraction lines 65\u201368 and Pair diagram",
+        "PDF p.4, extraction lines 119\u2013121",
+        "PDF p.5, verification diagram and extraction lines 162\u2013166"
+      ]
+    }
+  ],
+  "proposed_additions": [],
+  "rejected_candidates": [
+    {
+      "candidate": "Wrong orientation in the original space, followed by verification",
+      "reason": "Source-supported but already resolved by Q12's explicit orientation requirement and Q16's error/removal/final-retry procedure. This includes existing Q21."
+    },
+    {
+      "candidate": "Wrong identity or right card in the wrong space",
+      "reason": "Q12 specifies original cards in correct spaces; Q16 supplies the same error procedure. No new branch."
+    },
+    {
+      "candidate": "Correct cards remain while the Spectator removes the incorrect cards",
+      "reason": "Q16 already requires removal of the incorrect cards specifically; a separate question restates that procedure."
+    },
+    {
+      "candidate": "Use central Keywords, or match a Clue to a different zone",
+      "reason": "Outer-edge Pair geometry is explicit in Q02 and matching Clue Zones in Q08."
+    },
+    {
+      "candidate": "Begin Resolution before another player has completed the unseen-card shuffle",
+      "reason": "Q09 specifies the full sequence and Q10 expressly tests the all-players completion gate."
+    },
+    {
+      "candidate": "Resolve a disagreement about orientation using the player to the Spectator's left",
+      "reason": "Application of Q13's placement authority to Q12's orientation requirement; no distinct timing or priority exception."
+    },
+    {
+      "candidate": "Bonus, zero-point, or other partial second-attempt totals",
+      "reason": "Q15 tests first-try perfection; Q17 tests loss of the bonus; Q18 tests final per-card scoring. Changed counts and arithmetic combinations are not new rules."
+    },
+    {
+      "candidate": "Gesture or nod after removing a wrong card",
+      "reason": "Q11 prohibits all communication and Q16 explicitly tests feedback on the error branch."
+    },
+    {
+      "candidate": "Handling an invalid Clue discovered during Resolution, moving previously correct cards on the retry, or accidental communication penalties",
+      "reason": "The supplied source does not prescribe these rulings. Do not invent procedures or penalties."
+    },
+    {
+      "candidate": "Stock totals, additional examples of legal Clue categories, or new word-family examples",
+      "reason": "Component totals are descriptive inventory; clue categories and prohibitions already have direct coverage in Q03\u2013Q07."
+    },
+    {
+      "candidate": "Extra-card counts above one",
+      "reason": "Optional Add a Challenge is explicitly outside the assigned scope."
+    }
+  ],
+  "saturation_assessment": {
+    "complete_standard_play_covered": true,
+    "new_source_supported_branches_found": 0,
+    "q21_incrementally_novel": false,
+    "source_map_assessment": "Every binding standard-play passage is mapped to a question that tests its substance. The component-inventory and advice rows honestly identify descriptive material rather than claiming separate procedural coverage. Optional challenge and credits are properly excluded. The p.5 orientation row is supported, but its coverage already exists in Q12 and does not justify counting Q21 as a new branch.",
+    "basis": "Re-read the complete six-page extraction, checked every required fact against its cited passage, inspected Pair geometry and verification imagery, and challenged setup, clue legality, transition timing, authority, reconstruction, verification outcomes, scoring, cleanup and endgame. Q01\u2013Q20 already reach working saturation under the stated novelty rule and scope.",
+    "limits": "Saturation applies to this supplied English base-game source and standard play. It does not establish rulings for cases the source does not address.",
+    "original_q01_q20_alone_cover_all_core_standard_procedures_and_key_branches": true,
+    "working_saturation_question_count": 20,
+    "qualifying_additions": 0
+  },
+  "inputs_read": [
+    "/home/jonny/projects/boardgame-rules/extracted/so-clover-rules.txt (complete, lines 1\u2013200)",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/baseline/pdf-page-2.png (authoritative PDF page render)",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/baseline/pdf-page-5.png (authoritative PDF page render)",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/benchmark-v2/questions.json",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/benchmark-v2/answer-key.json",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/so-clover/2026-11-05-batch-002957/coverage-ledger.json"
+  ],
+  "independence_statement": "Fresh independent review using only the complete authoritative source text, its permitted page renders, the designated question bank, answer key and coverage ledger. No canonical or frozen summary, reader output, grade, parent history or other review was read. No bank or summary was edited."
+}

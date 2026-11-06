@@ -1,0 +1,109 @@
+--- seed-iteration-01
++++ canonical-repair-01
+@@ -81,12 +81,12 @@
+ 
+ Choose either world deck or your pawn's region discard pile, never both. Discard-pile Search costs 2. World-deck Search costs 2 at zero Visions drawn, 3 at 1–2, and 4 at 3–5; Darkest Secret replaces the world-deck cost with 2. Other applicable modifiers still apply.
+ 
+-Draw up to 3 available cards. From world deck, draw one at a time: if a Vision is drawn, announce that fact, **stop immediately** and increase Visions Drawn by 1. Drawing Visions from a discard does not stop drawing or advance the track. If source empties, draw only what remains; no reshuffle is implied.
++Draw 3 cards, taking fewer only if the source runs out, a world-deck Vision stops you, or a modifier reduces the draw. You cannot voluntarily stop early. From world deck, draw one at a time: if a Vision is drawn, announce that fact, **stop immediately** and increase Visions Drawn by 1. Drawing Visions from a discard does not stop drawing or advance the track. If source empties, draw only what remains; no reshuffle is implied.
+ 
+ Discard all but 1 drawn card **before** playing the remaining card, or discard that last card too. Options:
+ 
+ - **Site:** play faceup at your pawn's site, only below its denizen/edifice capacity. Gain 1 favor from that card's suit bank. With People's Favor you may first discard a card from any site in your region, then play to any site in your region, subject to locks and capacity; discarded and receiving sites can differ.
+-- **Adviser:** play faceup or facedown. Up to 3 total, including facedown; before exceeding limit discard an adviser. Faceup advisers cannot be discarded voluntarily at other times without a rule permitting it. Facedown cards have no suit, restriction banner or power; any card, including site-only cards and Visions, can be held facedown.
++- **Adviser:** play faceup or facedown. Up to 3 total, including facedown; before exceeding limit discard an adviser, subject to locked cards. If the incoming card changes the adviser limit, check against the new limit before playing it; use the lowest of multiple limits. Faceup advisers cannot be discarded voluntarily at other times without a rule permitting it. Facedown cards have no suit, restriction banner or power; any card, including site-only cards and Visions, can be held facedown.
+ - **True Vision:** Exile only, faceup in Revealed Vision slot, replacing and discarding old revealed Vision. Not an adviser. Chancellor/Citizens can hold true Visions facedown but cannot reveal them.
+ 
+ **Discard destinations:** facedown atop next region's pile: Cradle → Provinces → Hinterland → Cradle, ordering multiple discards as you choose. For cards in hand/advisers use your pawn's region; when discarding a card at a site in another region, use the card's region. Favor on discarded cards immediately returns to matching bank; their secrets go to acting player's board **facedown**.
+@@ -110,7 +110,7 @@
+ 
+ Recover 1 **facedown relic at your site** or either banner from anywhere, including yourself or shared bank. Relics held by players or in Reliquary cannot be recovered. Pay relic's site cost (3 favor to indicated bank, burn 2 favor, burn 1 secret or burn 2 secrets), then hold it faceup in personal bank. You may hold unlimited relics/banners and peek before choosing.
+ 
+-- **People's Favor:** pay any amount of favor strictly greater than its current favor. Put paid favor on banner; distribute old favor singly to suit banks, starting anywhere and moving away from world deck through banks, wrapping. Flip it to normal side if Mob. No seizure penalty when recovering.
++- **People's Favor:** pay any amount of favor strictly greater than its current favor. Put paid favor on banner; distribute old favor singly to suit banks, starting at any chosen bank, then moving away from the world deck through successive banks and wrapping as needed (the printed bank order). Do not return the old favor to the previous holder. Flip it to normal side if Mob. No seizure penalty when recovering.
+ - **Darkest Secret:** pay any amount of secrets strictly greater than current secrets. Put paid secrets on it; new holder takes 1 old secret, previous holder takes rest. Recovering from self returns all old secrets to yourself; from shared bank, remainder stays in bank.
+ 
+ **Darkest Secret protection, corrected by official errata:** to recover from another player, there must be a **suited card at their pawn's site matching none of their faceup advisers**. Empty sites and ruin-only sites protect it. Ruins and facedown advisers have no suit. If holder has no faceup advisers but a suited site card exists, it **is recoverable**; the printed Law's contrary parenthetical is erroneous. Recovering from self or shared bank ignores this protection.
+@@ -121,14 +121,21 @@
+ 
+ 1. **Choose defender:** any other player who rules your site or whose pawn is there. If no player rules your site, you may choose bandits. A Citizen attacking Chancellor/another Citizen is non-Imperial for that Campaign. If Chancellor attacks Citizen, that Citizen is non-Imperial for it.
+ 2. **Declare targets, form pools:** at least one target must be at your pawn's site; if defender rules that site you **must** target it. May target any of defender's sites anywhere on map (1 defense die each). If defender's pawn is at your site, may also target any of their relics (printed defense dice), banners (dice equal resources on banner), or pawn-and-favor together (2 dice). A co-located defender's relic target satisfies the local-target requirement. Attacker chooses up to as many attack dice as warbands in attacking force. Apply relevant modifiers and mandatory title defense bonus: Oathkeeper +1 defense die, Usurper +2.
+-3. **Battle plans:** attacker chooses ruled plans once each, then defender. Plans at a site require rule, not merely pawn presence; bandits use all ruled plans with no cost. A plan can be paid for even with resources on it, but still only used once per Campaign. If an attack die must be removed from an empty attack pool, add a defense die instead.
++3. **Battle plans:** red boxes are attacker-only, blue defender-only, gradient either. Attacker chooses eligible ruled plans once each, then defender chooses eligible ruled plans. Plans at a site require rule, not merely pawn presence; bandits use all ruled plans with no cost. A plan can be paid for even with resources on it, but still only used once per Campaign. If an attack die must be removed from an empty attack pool, add a defense die instead.
+ 4. **Roll defense:** shields rolled, doubled for each double-symbol (multipliers stack ×2, ×4, ×8...), **plus** all defending warbands at targeted sites, **plus** defender's board force if their pawn is at attacker site or any targeted site. Doubles multiply shields only, not warbands. Bandits add 1 per targeted bandit site.
+ 5. **Roll attack:** each skull immediately kills 1 own force warband. Count full swords; each pair of hollow swords adds 1, leftover single adds zero. May sacrifice own surviving force warbands for +1 attack each, but if sacrificing must sacrifice **exactly enough to win**, never excess. Attacker wins only if attack **strictly exceeds** defense; tie or lower means defender wins.
+ 6. **Resolve defeat:** defeated side kills half its remaining force, rounded down, and returns survivors to board; bandits cannot be killed and go into hiding. Resolve defeated battle-plan effects. With Imperial defenders Chancellor chooses which warbands die; surviving site warbands go to Chancellor's board, while surviving warbands already on Citizens' boards stay there.
+-7. **If attacker won:** may place any number, including **zero**, of surviving force warbands on any targeted sites. Zero leaves site to bandits unless another power applies. Take **all** targeted relics/banners. For a seized banner (taken any way except Recover), burn 2 of its resources to minimum 1; People's Favor flips to Mob. If pawn-and-favor targeted, may force defender to travel to a legal chosen site for no Supply, and independently may burn half their board favor, rounded down. Respect site travel restrictions, notably Shrouded Wood.
+-8. Resolve victorious battle-plan effects, then any end-of-Campaign plan discards. Transfer Supremacy title **at end of Campaign**, not during temporary loss of site rule.
+-
+-**Imperial defense:** when an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site. Activate all Campaign modifiers ruled by defender/Allies; applicable title defense bonus is shared on the defending side even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site. Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. User pays; same plan cannot be used by multiple players. On powers, “you,” “your enemy,” “the defender,” etc. refer to the entire side, but **your site/your board** still mean that player's own pawn site/board. Declared defender decides contested timing, priority and who uses a shared power. Chancellor controls loss selection as above. An intra-Empire Campaign does not make all Citizens non-Imperial; only the specified attacker/defender loses that status temporarily.
++7. **If attacker won:** may place any number, including **zero**, of surviving force warbands on any targeted sites. Zero leaves site to bandits unless another power applies. Take **all** targeted relics/banners. For a seized banner (taken any way except Recover), burn 2 of its resources to minimum 1; People's Favor flips to Mob. If pawn-and-favor targeted, may force defender to travel to a legal chosen site for no Supply, and independently may burn half their board favor, rounded down. Respect site travel restrictions. **Shrouded Wood overrides the attacker’s destination choice** if its enemy ruler chooses where the pawn must go.
++8. **Finish battle-plan effects:** resolve victorious effects, then any end-of-Campaign plan discards. Defeated effects have already resolved immediately after casualties in step 6; do not skip either timing. Transfer Supremacy title **at end of Campaign**, not during temporary loss of site rule.
++
++**Imperial defense:** apply every relevant change below.
++
++- When an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site. 
++- Activate all Campaign modifiers ruled by defender/Allies; applicable title defense bonus is shared on the defending side even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site. 
++- Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. User pays; same plan cannot be used by multiple players. 
++- On powers, “you,” “your enemy,” “the defender,” etc. refer to the entire side, but **your site/your board** still mean that player's own pawn site/board. Declared defender decides contested timing, priority and who uses a shared power.
++- Chancellor chooses which Imperial defending warbands die. Surviving warbands from sites return to Chancellor’s board; surviving Citizens’ board warbands stay on those Citizens’ boards. 
++- An intra-Empire Campaign does not make all Citizens non-Imperial; only the specified attacker/defender loses that status temporarily.
+ 
+ ### Travel — 1–4 Supply before modifiers
+ 
+@@ -156,6 +163,8 @@
+ **Offer:** must promise **exactly one Reliquary relic**; may additionally negotiate a binding exchange of favor, secrets, banners and non-Reliquary relics. May let recipient peek at Reliquary relics. Other binding-deal powers cannot trade Reliquary relics.
+ 
+ **Acceptance:** flip to Citizen; replace all own warbands on board/map with purple. If insufficient purple, new Citizen chooses which to remove and which to replace. Discard revealed Vision, flip own Usurper title to Oathkeeper, end Act if own turn, and refresh to full leftmost Supply. Exchange promised pieces; Chancellor gains the newly uncovered **mandatory** Reliquary modifier. Forced Citizenship powers apply acceptance without a negotiated offer. All Imperials rule purple sites; Citizenship does not itself grant a separate shared victory.
++
++**Uncovered Reliquary modifiers, mandatory for Chancellor:** Brutal makes the defeated player kill their entire force when Chancellor attacks, even if Chancellor loses. Decadent makes Provinces/Hinterland-to-Cradle Travel cost no Supply, but Travel to Hinterland costs +1. Careless gives 1 additional favor on every Trade, even when trading for secrets, but 1 fewer secret when trading for secrets. Greedy draws 2 additional Search cards (still stopping at a world Vision) but prohibits Search costing more than 2 Supply.
+ 
+ **Exile another Citizen:** Scepter holder pays them 5 favor, +1 if recipient is Oathkeeper, +1 if recipient holds People's Favor, −1 if payer is Oathkeeper, −1 if payer holds People's Favor (range 3–7). Recipient flips Exile, replaces **board** purple warbands with own color and refreshes full. Purple map garrisons stay Imperial. This does not end their Act by itself.
+ 
+@@ -174,7 +183,7 @@
+ 
+ Current holder keeps title on a tie for its goal. If holder no longer meets goal and several others tie for it, outgoing holder chooses recipient. A new holder always takes it Oathkeeper-side, never Usurper-side. Under Supremacy Chancellor holds it if Empire collectively meets goal; Citizens do not count purple sites separately against each other. Other Oaths concern personal holdings. The Grand Scepter counts as a relic when held; Reliquary relics do not.
+ 
+-**Usurper victory:** Exile wins at Wake if already Usurper. Taking title during Act normally requires surviving to next Wake to flip, then surviving to following Wake to win. Losing and retaking title resets it to Oathkeeper. An existing Usurper may instead win at round-eight check.
++**Usurper victory:** Exile wins at Wake if already Usurper. Taking title during Act normally requires surviving to next Wake to flip, then surviving to following Wake to win. Losing and retaking title resets it to Oathkeeper. **Exception to waiting for another Wake:** an existing Usurper may win at the end of round 8, before a following Wake, under the ordered endgame checks. An Oathkeeper who has not flipped yet cannot win by this method.
+ 
+ **Visionary victory:** Exile must have true Vision revealed and goal completed at Wake, with **at least 3 Visions drawn from world deck**. Can reveal it earlier but cannot win early. For Conquest/Sanctuary “most” means **strictly more than every other player**, no ties. Compare to Empire's shared rule for sites. Citizens/Chancellor cannot win by true Visions or Usurper.
+ 
+@@ -210,7 +219,7 @@
+ ### Site powers (Site Reference)
+ 
+ - **Opportunity** (Salt Flats/Mine/Drowned City): at end of your Wake take 1 favor/secret from site, optionally.
+-- **Homeland** sites: when you play a matching-suit card there and have not discarded a card there this turn, gain printed favor from matching bank, 2 warbands, or take its relic as Recover, as shown. A relic Recover still pays normal relic cost but no Supply.
++- **Homeland** sites: when you play a matching-suit card there and have not discarded a card **of that same suit at that site this turn**, gain its printed reward: 1 secret from shared bank, favor from matching suit bank, 2 warbands, or take its relic treating this as Recover. Discarding a different suit there does not suppress it. Taking the relic by this power costs neither Supply nor the ordinary site resource cost.
+ - **Coasts:** traveling from one Coast to another costs 1 Supply and ignores Narrow Pass.
+ - **Plains/Mountain:** must add/subtract 1 attack die when site or anything at site is targeted, even if attacker rules it.
+ - **River:** Muster there gains 1 additional warband if you rule it.
+@@ -221,7 +230,9 @@
+ - **Marshes:** Search while pawn there draws 1 fewer card.
+ - **Buried Giant:** traveling from it may flip 1 own board secret facedown to spend no Supply and ignore Narrow Pass.
+ - **Hidden Place:** cannot travel there or declare Campaign targets there unless flipping 1 board secret facedown.
+-- **Tribunal:** Action if you rule it or pawn there: negotiate binding exchanges of favor, secrets, relics and banners, including combined future terms and penalties.
++- **Tribunal:** Action if you rule it or pawn there: negotiate binding immediate exchanges of favor and secrets, as well as binding future actions in combination with any player and agreed penalties. This does not grant unrestricted immediate relic/banner transfers.
++
++**Enemies:** for Chancellor/Citizens, enemies are Exiles, not fellow Imperial players. For Exiles and Citizens temporarily non-Imperial during the specified Campaigns, enemies are any other players. Bandits are enemies to everyone and vice versa. During a Campaign “your enemy” means the opposing side: defender and Allies for attacker; attacker for defenders.
+ 
+ **Bandit Crown:** treat bandits as own warbands: rule empty faceup sites, may pick up last physical site warband, add relevant bandits to defense (or attacking force with suitable powers). Bandits themselves cannot be killed, moved or sacrificed, including skulls or battle-plan costs.
+ 
+@@ -230,7 +241,7 @@
+ Winner performs these steps in order. After first game open Archive packet: place 8 dividers; put edifices in matching sections; separately shuffle each suit's denizens into its Archive section.
+ 
+ 1. **Vow an Oath:** won by Vision alone → next Oath matches that Vision. Any other way or multiple victory methods → choose any Oath **except current one**. Save goal in World Box.
+-2. **Citizenship:** if winner Exile, flip **all** Citizen boards, including boxed, to Exile. May offer Citizenship to other Exiles except those just flipped; ignore normal in-play offer cost/relic rules. Acceptors flip Citizen and replace all garrisons at sites they rule with **one winner-color warband per site**. Winner cannot offer themself Chronicle Citizenship.
++2. **Citizenship:** if winner Exile, flip **all** Citizen boards, including boxed, to Exile. May offer Citizenship to other Exiles except those just flipped; ignore normal in-play offer cost/relic rules. Each accepting Exile must do both: **flip their board to Citizen** and **replace every garrison at each site they rule with exactly one winner-color warband at that site**, regardless of the old garrison size. Winner cannot offer themself Chronicle Citizenship.
+ 3. **Map and edifices:** Imperial winner may build **or** repair **one** edifice. At ruled site with no intact or ruined edifice, replace denizen with matching intact Archive edifice, returning denizen to world deck; or flip a ruled ruin intact. Discard all sites except those winner rules or with an intact edifice; shuffle discarded sites into site deck, discard their denizens, return relics to relic deck and ruined edifices to Archive. At retained sites winner does not rule, flip intact edifice to ruin and discard all denizens there. Set aside **all sites with ruins**, with attached ruins, remaining denizens and relics, in map order top Cradle to bottom Hinterland. Remove pawns/favor/secrets/warbands from map.
+ 4. **Repack map slots:** excluding set-aside ruins, fill Cradle top-down by pushing Cradle sites up then importing Provinces then Hinterland in top-down order. Fill Provinces top-down by pushing up then importing Hinterland top-down. Push Hinterland sites up. Fill empty Hinterland slots **bottom-up** with set-aside ruins **bottom-up**, then empty Provinces slots similarly. Fill any remaining slots with facedown site-deck cards; in each region with no faceup site, flip top one up.
+ 5. **Add 6 denizens:** winner's most common adviser suit determines 3 random Archive cards, next clockwise suit 2, next clockwise suit 1, to world deck. Choose among tied suits; no suited advisers → choose any. Suit cycle Discord→Arcane→Order→Hearth→Beast→Nomad→Discord. If Archive cannot supply the full allocation, do **not** add that allocation: heal Archive instead. Sort all Dispossessed by suit; take 6 random from largest Dispossessed suit stack into world deck; shuffle remaining Dispossessed into matching Archive suit stacks.
+@@ -243,7 +254,7 @@
+ 
+ | Action | Supply | Main additional cost/result |
+ |---|---:|---|
+-| Search | 2–4 | Up to 3 cards; world Vision stops draw; discard then play at most 1 |
++| Search | 2–4 | Draw 3 unless a stop/reduction applies; world Vision stops draw; discard then play at most 1 |
+ | Muster | 1 | 1 favor on empty site card → 2 board warbands |
+ | Trade | 1 | 1 secret → 1+matching advisers favor; 2 favor → matching advisers secrets |
+ | Recover | 1 | Site relic cost or strictly outbid banner resources |

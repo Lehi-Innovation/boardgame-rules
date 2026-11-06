@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T14:45:19.125Z",
+    "ordinal": 265,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0ec8f6e8487f8d2f016aec967c304887d0bd51ae63c21bd4e8",
+      "status": "completed",
+      "call_id": "call_rgz7gEbqAdcqE96fvGnL6b5h",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\nimport json,hashlib\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/source-audit-candidate-17/source-only-audit/source-audit.json'); j=json.loads(p.read_text())\\nfor k in ['summary','extracted_source','publisher_txt','direct_pdf_text']:\\n e=j['delivery_evidence'][k]; seen=[n for a,b in e['ranges'] for n in range(a,b+1)]; print(k,seen==list(range(1,e['line_count']+1)))\\nprint('audit_sha256',hashlib.sha256(p.read_bytes()).hexdigest());print('sign_off',j['sign_off'],'verdict',j['verdict'],'findings',j['findings'])\\nPY\",\"max_output_tokens\":1000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac23-854c-7d12-947f-5805254d69e2",
+        "create_time": 1793889903.910691
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T14:45:26.157Z",
+    "ordinal": 268,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac2b-fc0d-7f00-8e50-59325b4945c9",
+      "call_id": "call_rgz7gEbqAdcqE96fvGnL6b5h",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.9 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"071fe0\",\"wall_time_seconds\":0.361961366,\"exit_code\":0,\"original_token_count\":48,\"output\":\"summary True\\nextracted_source True\\npublisher_txt True\\ndirect_pdf_text True\\naudit_sha256 29b28f323e4781b851c6c2cb820e31a9ca155b94af7f4bb999d77bc277e2d863\\nsign_off True verdict PASS findings []\\n\"}"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac23-854c-7d12-947f-5805254d69e2",
+        "create_time": 1793889926.1577437
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

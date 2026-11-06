@@ -1,0 +1,161 @@
+cat > docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/final-stamped-source-audit-01/write_reports.py <<'PY'
+from pathlib import Path
+import json,sys,hashlib,datetime
+from audit_helpers import OUT,SOURCES,sha
+# Audit assessments below are manually authored. Code only attaches exact source locations,
+# transports quotations, and serializes the report; it does not infer a verdict.
+def ref(alias,a=None,b=None,pages=None,location=None):
+ d={'path':str(SOURCES[alias]),'sha256':sha(SOURCES[alias])}
+ if a is not None:d['physical_lf_start']=a;d['physical_lf_end']=b or a
+ if pages:d['printed_pages']=pages
+ if location:d['location']=location
+ return d
+def quote(alias,a,b):return '\n'.join(SOURCES[alias].read_text().split('\n')[a-1:b])
+rows=[
+('C01','Edition, player scope, scenarios and exclusions',23,27,[('rules',334,388,'4'),('rules',2625,2634,'37'),('rules',3300,3304,'48')],'Matches the multiplayer scope; Crown and optional Draft are expressly outside this audit.'),
+('C02','Component types and quantities',29,34,[('rules',44,150,'2–3'),('rules',389,407,'4')],'Family and enterprise counts, office counts, overlays and resource types agree.'),
+('C03','Component limits, proxies, unlimited tracks and hidden information',36,36,[('rules',654,666,'6'),('rules',2774,2789,'40')],'Correct exceptions and temporarily hidden firm decisions.'),
+('C04','Regions, strength, sovereignty, empires and mandatory empire decline',38,40,[('rules',669,726,'6–7')],'Tower/dome distinction and global last-dominated-region rule retained.'),
+('C05','General setup, date, loot, local alliances and starting resources',42,45,[('rules',335,388,'4')],'Board and scenario-card instructions correctly combined.'),
+('C06','Scenario setup-card dealing and all kinds of starting holdings',46,46,[('rules',416,425,'5'),('rules',453,477,'5')],'Extra-card counts, placed pieces, ship destinations and luxury points agree.'),
+('C07','Remaining offices, combined prestige/blackmail deck, law deck',47,47,[('rules',427,433,'5')],'One mixed display deck, correct orientations and unused offices.'),
+('C08','Scenario applicability, Long 1710 duration and initial position',49,54,[('rules',360,380,'4'),('rules',2628,2630,'37')],'Deregulation applicability and eight-turn Long scenario correct.'),
+('C09','1710 and Long scenario figures',56,61,[('fronts_text',1017,1034,'PnP Fronts physical9, card74'),('rules',374,380,'4')],'£10/0 debt, £3 treasuries, Royal Protection, one regiment per Army, no Company ships; Long matches initial position.'),
+('C10','1758 figures, Bengal control and Governor',62,65,[('fronts_text',997,1016,'PnP Fronts physical9, card75'),('errata',200,204,None)],'£12/3 debt, £4 treasuries, Calico Acts and East Indian ship verified; Bengal overlay visible on scenario reverse.'),
+('C11','1813 figures, overlays, China and corrected control/share tokens',63,65,[('fronts_text',973,996,'PnP Fronts physical9, card76'),('errata',192,199,None)],'£10/0 debt, £3 treasuries, named laws, two regiments per Army and one Company ship per sea agree.'),
+('C12','Initial power, Standing, deregulation thresholds and turn endpoints',58,67,[('rules',345,346,'4'),('rules',2588,2601,'36')],'Native board inspected: power ordering, Standing S and lined/starred thresholds, dates/final-turn arrows match.'),
+('C13','All prize costs/upkeep/VP/windows',69,79,[],'Native original board inspected: all five prize rows match, including the free-upkeep zero-VP £2 prize.'),
+('C14','Phase order, first-turn London skip and special vote timing',81,85,[('rules',862,887,'10'),('rules',898,900,'11'),('rules',2588,2593,'36'),('rules',2679,2682,'38')],'Standard phases and inserted firm phase agree.'),
+('C15','Office attrition, Chairman stress, pensioners and fatigue destinations',87,89,[('rules',901,928,'11')],'Modified result bands, retirement order, costs and set-aside spending agree; Commanders have no office card.'),
+('C16','Prestige ordering, eligibility, skip, no replacement, complete refill',91,91,[('rules',1002,1014,'12'),('rules',2651,2660,'37')],'Spending/windows/PM ordering correct; firm special retirement is otherwise normal and confers eligibility.'),
+('C17','Spouse restrictions, discount timing, returned shipyards',93,93,[('rules',1018,1031,'12'),('rules',2346,2350,'34')],'Personal stacking discounts and fitted-ship persistence/blocked repurchase retained.'),
+('C18','Prestige enterprises and one-time blackmail; final power',95,95,[('rules',1033,1042,'12')],'Correct transfer and power treatment.'),
+('C19','Family order, opportunity marker double and extra-action laws',97,104,[('rules',1076,1099,'13')],'Phase-start test, optional doubling, main marker placement and most-recent extra law accurate.'),
+('C20','Mandatory prize-piece reuse and impossible family action',106,106,[('rules',1083,1085,'13'),('rules',1097,1099,'13')],'VP loss, applicability to firm shares and marker return correct.'),
+('C21','Writer bonus and officer enlistment',110,111,[('rules',1100,1106,'13')],'Four-vacancy writer bonus only once per turn; training destination accurate.'),
+('C22','Enterprise purchases, costs, bonuses, votes and VP',112,114,[('rules',1107,1121,'13')],'Correct £4/£2/£5 costs and unfitted-ship destination.'),
+('C23','Seek shares queue costs and conversion/debt procedure',115,117,[('rules',1128,1145,'14')],'Native board confirms five queue spaces £2/£3/£3/£4/£5; rightmost/debt and preserved order correct.'),
+('C24','General hiring order, promotions and skipped vacancies',119,123,[('rules',1146,1169,'14')],'Ascending vacancies, fatigue transfer, candidate-pool consent and unavailable hirer handling accurate.'),
+('C25','Nepotism and normal Commander exception',125,131,[('rules',1155,1157,'14'),('rules',1485,1494,'19'),('rules',1513,1520,'19')],'Chairman election and ordinary Commander assignment exempt; individual law powers remain component-specific.'),
+('C26','All office hirers and eligible candidate pools',133,142,[('rules',1234,1254,'16'),('rules',1853,1857,'26')],'Matches rulebook pools, including Presidency-specific Presidents and exclusion of Commanders as Governor candidates.'),
+('C27','Chairman majority election, deadlock and empty Court',144,144,[('rules',1175,1194,'15')],'Pure majority, support, share movement/restrictions and forced former Chairman correctly summarized.'),
+('C28','Operation sequence, vacancies and Presidency order autonomy',146,152,[('rules',1331,1339,'17'),('rules',1527,1539,'20'),('rules',1816,1816,'25')],'Ribbon order checked visually on original board; uninterrupted opportunities and later Governorship hiring agree.'),
+('C29','Success checks, cash location, penalties, retries, catastrophe, dead actions',150,150,[('rules',1341,1365,'17')],'All result bands and resource commitment match, with office-specific limits qualified.'),
+('C30','Bonuses and duplicate activation prohibition',154,156,[('rules',1894,1896,'27'),('rules',770,776,'8'),('rules',2719,2720,'38')],'Invested-workshop exclusion and fitted-yard bonus accurate.'),
+('C31','Company expenses, emergency loans including maximum Debt',158,162,[('rules',1897,1920,'27'),('rules',1812,1815,'25')],'Resource counts, no Commander expense, loan increments/cap behavior and Standing penalties match.'),
+('C32','Expectations, dividends, Standing changes and immediate Revenue failure',163,166,[('rules',1900,1902,'27'),('rules',1921,1934,'27'),('rules',2895,2902,'42')],'Strict dividend threshold and no shareholder waiver correct.'),
+('C33','Storm die ordering, event counts, stack location and ship eligibility',168,182,[('rules',1939,1961,'28'),('rules',1812,1815,'25'),('rules',2919,2922,'42')],'Storm resolution, fatigue/sinking, China and Hobnob exceptions correct.'),
+('C34','Writer loss and complete cascade behavior',184,184,[('rules',1962,1975,'28')],'Destinations, connected closed-order substitution, once-per-tile initiation and multiple receipts match.'),
+('C35','Turmoil, Windfall and Shuffle',186,190,[('rules',2111,2123,'31')],'Locations, bordering regions, shuffle order and empty-stack exception correct.'),
+('C36','Leader and Peace',191,192,[('rules',2124,2139,'31')],'Leader sovereign/domination split, restricted redirect and Peace border/inside effects correct.'),
+('C37','Crisis classification, tail/head and March timing',193,196,[('rules',2186,2197,'32'),('rules',2210,2215,'32')],'Ordinary crisis distinguished from Foreign Invasion location.'),
+('C38','Invasion and Rebellion strength, flags, decline, failure penalties',198,200,[('rules',2192,2219,'32'),('rules',713,714,'7')],'Strict comparisons, empire scope, flag exhaustion and shattering correct.'),
+('C39','Company attack propagation, order and three strength cases',202,206,[('rules',2262,2283,'33'),('foreign',1,1,None)],'Primary first, Army/Commander order and unrest-only secondary strength accurate; Foreign Invasion exception sourced separately.'),
+('C40','Vacant defense offices, mandatory exhaustion and trophy handling',208,216,[('rules',2274,2277,'33'),('rules',2285,2296,'33'),('rules',1622,1626,'22')],'Military Affairs acts directly, Chairman fallback; substitutes never gain/lose trophies; alliances exhaust whole.'),
+('C41','User-adopted defense threshold and consequences',216,223,[('scope',3,25,None),('human',5,11,None),('rules',2290,2296,'33')],'General newly-exhausted strength ≥ attack rule faithfully attributed to user; not treated as independently verified official wording.'),
+('C42','Complete Region Loss, destinations, closures and escalating humiliation',225,225,[('rules',1987,2012,'29'),('rules',1858,1859,'26'),('foreign',1,1,None)],'Commander/officer/Governor handling, face-down loot token, no repeat loot, loss-specific closure, scaling Standing and phase completion all correct.'),
+('C43','Elephant March/Imperial Ambitions/fully formed empires',227,227,[('rules',2045,2082,'30')],'Successful capital priority, Company/domination classification and clockwise/redirect placement accurate.'),
+('C44','Law drawing, forced dilemma, policy direction and initial support',229,231,[('rules',2330,2343,'34'),('rules',2365,2367,'34')],'Up to three one-at-a-time choices and first matching policy space correct.'),
+('C45','Voting sources, card use across rounds, opposition and coalitions',233,233,[('rules',2525,2564,'35')],'Once-per-vote card use, no-vote stopping, irreversible opposition and PM restriction correct.'),
+('C46','Pass/fail resolution, policy shift, law effects and legislated failure',235,235,[('rules',2570,2587,'36')],'Correct order and restoration of voting cards retained.'),
+('C47','Tax, all-window tax, bonus and power policy',237,244,[('rules',2344,2364,'34'),('rules',1033,1037,'12')],'Payments/destinations, Chairman taxation, lost VP, fitted ship persistence and highest-marker exception accurate.'),
+('C48','Prize upkeep, final-turn distinction and all refresh destinations',246,258,[('rules',2602,2621,'36'),('rules',1950,1954,'28')],'Writers, filled tokens/dividers, extra ships, Army activation, alliance exhaustion and no routine ship fatigue removal correct.'),
+('C49','Chairman debt consent/cap and all Balance allocation',262,264,[('rules',1403,1416,'18')],'Three free advances, consent for each subsequent one, interleaving permitted and all allocation retained.'),
+('C50','Director envoys, immediate China hire and two later transfers',266,268,[('rules',1417,1433,'18'),('rules',1808,1815,'25')],'Resources, non-Company order eligibility and sequencing correct.'),
+('C51','Shipping mandatory spend, acquisition priorities, payments and destinations',270,272,[('rules',1457,1471,'19'),('rules',1812,1815,'25')],'At most £2, £2/£3/£5, no consent for Company fit and no direct yard payout correct.'),
+('C52','Military Affairs transfers, all trainees and Commander appointment',274,276,[('rules',1472,1494,'19'),('rules',1495,1520,'19')],'Top-half destination, piece counts including Commander, tie retention and no nepotism accurate.'),
+('C53','Presidency operation order, vacancy and uninterrupted Trade retries',278,282,[('rules',1527,1554,'20')],'Chairman only orders when President absent; region declaration and penalties correct.'),
+('C54','Successful Trade capacity, route, writers, privileges and personal payouts',284,284,[('rules',1555,1582,'20–21'),('rules',2817,2820,'40')],'One order per ship, own connected route, tokens after writers, one success, no other home region, half refills and payouts correct.'),
+('C55','Alliance purchase timing, whole-piece use and refresh',286,288,[('rules',1617,1627,'22'),('rules',2618,2619,'36')],'Start-of-Commander timing, President approval/funds, temporary use and exhaustion correct.'),
+('C56','Repeated Deploy, target boundaries, dice, empire penalties and losses',290,294,[('rules',1627,1650,'22')],'No one-success cap, effects required for Company target, target counted once, and losses after every attempt correct.'),
+('C57','Deploy loot minimum, cyclic distribution and trophies',296,304,[('rules',1674,1695,'23')],'Minimum surviving officers+1, Commander plus own officers, clockwise others, bank per regiment/alliance piece, repeat cycle correct.'),
+('C58','Deploy political changes, Governorship token/overlay/card and catastrophe',306,321,[('rules',1693,1710,'23'),('rules',1842,1847,'26')],'Distinct destinations and postconquest hiring, existing-region loot minimum, GG exception and trophy loss correct.'),
+('C59','Governor Administer pool, results, build stages, regiment and tax',323,338,[('rules',1742,1771,'24')],'Printed pool lookup, decrement every attempt, prior-failure bonus, unrest, two-success ship, unsplit tax and repeat limits accurate.'),
+('C60','China creation/hiring, treasury, no-export prohibition, one attempt and payouts',340,351,[('rules',1808,1823,'25')],'All creation routes, eastern treatment, controlled exports only, £4 and £1 per icon accurate.'),
+('C61','Governor General replacement, hiring, offices, regions and action',353,357,[('rules',1841,1889,'26')],'Governors pensioned, fatigue transferred, treasury/turn position, upfront revenue, sixes/unrest, compulsory benefits and one success correct.'),
+('C62','Deregulation special vote and all pass/fail exceptions',359,368,[('rules',2588,2601,'36'),('rules',2628,2630,'37')],'Thresholds, turn timing, no policy, PM may oppose/stays, debt reduction, S reset and ±3 cap agree.'),
+('C63','Firm treasuries and normal/special retirement',370,374,[('rules',2631,2674,'37'),('rules',2710,2717,'38')],'No family treasury transfer; dividends limit actual retirement spending; one retirement even across firms; final scoring ordering correct.'),
+('C64','Firm phase timing, investment conflicts and strategy transition',376,378,[('rules',2679,2688,'38'),('rules',2773,2775,'40')],'Investment after Family and before Hiring, no set order, manager/PM conflict resolution accurate.'),
+('C65','Firm formation, investment, eligibility restrictions and share cap',380,381,[('rules',2689,2724,'38'),('rules',1184,1187,'15')],'Eligible contributions, bank £5, first cube/share/charter, weak/immature and Chairman restrictions, invested workshops and ten-share limit correct.'),
+('C66','Firm ships and hostile takeover',382,383,[('rules',2729,2748,'39')],'Owner consent, London payment, fitting bank versus buyback Shipping destination, prices and no-manager restriction correct.'),
+('C67','Normal merger and voluntary dissolution',384,385,[('rules',2749,2768,'39'),('rules',2648,2650,'37'),('rules',2839,2843,'41')],'All shareholders, primary-value ties, excess consent/return and all dissolution destinations correct.'),
+('C68','Strategy, bids, eligibility, closed ports and Hobnob',387,400,[('rules',2773,2790,'40'),('rules',2919,2922,'42')],'One attempt, ships required, secret strategy/open bids, Hobnob expenses/no dividends/storm exemption accurate.'),
+('C69','Firm trade checks, initiative/ties and Presidency timing',402,402,[('rules',2791,2809,'40')],'Firm checks before any Presidency actions; filling follows President success or all other office opportunities; ties chosen by President/Chairman accurate.'),
+('C70','Firm capacity, own route, one fill, refilling and value advance',404,404,[('rules',2810,2822,'40')],'Ships+1, open home port, distinct once-per-own-order and halved other-trader fills, per-£6 value accurate.'),
+('C71','Firm expense ordering, costs, rescue and dissolution',406,410,[('rules',2827,2855,'41')],'Initiative/windows/PM order, shares-or-value maximum, both treasuries, permanent invested workshops, rescue loss/value and one-other-firm merger accurate.'),
+('C72','Firm dividends, manager consent, actual payout marker and sweep',412,412,[('rules',2888,2918,'42')],'India only, £1/share plus manager, two-party waiver, total actual payout, Hobnob retention and remainder transfer agree.'),
+('C73','End conditions, game-over restrictions and ordinary final scoring',414,437,[('rules',811,853,'9'),('rules',1900,1902,'27'),('rules',2008,2012,'29'),('rules',2586,2587,'36'),('rules',2665,2674,'37')],'Company failure timing, no negotiation/promises, firm-before-normal ordering and random failure alternative retained.'),
+('C74','Final firm scoring, Debtor prison, power rates/awards and tiebreaks',422,441,[('rules',812,835,'9'),('rules',850,853,'9'),('rules',2665,2674,'37'),('rules',2839,2841,'41')],'Per-player aggregate rounding, −1 prisoner, current Court value, workshops exception, native firm value rates and board awards correct.'),
+('C75','Negotiation assets, share replacement, promises and cash location',443,462,[('rules',757,807,'8'),('rules',663,666,'6'),('rules',2635,2647,'37')],'Allowed/prohibited transfers, binding immediacy, nonbinding future promises, guarantor choice and no double activation accurate.'),
+('C76','User interpretation wording and attribution',464,470,[('scope',3,25,None),('human',5,11,None),('rules',1622,1626,'22'),('rules',2285,2296,'33')],'Correct general ≥ comparison, whole alliance example and source boundary; no claim of inspected email.'),
+('C77','Company Fraud cap and corrected start-of-Revenue timing',476,476,[('ruling',1,1,None),('errata',227,235,None),('fronts_text',83,92,'PnP Fronts physical1, card2')],'Designer confirms alternative2; candidate example and dated attribution faithful.'),
+('C78','Foreign Invasion designer exception and single closure',194,194,[('rules',2297,2316,'33'),('foreign',1,1,None)],'Die-only strength, half rounded-down towers, storm/top-stack region targeting and circle redirect agree.'),
+('C79','Foreign Invasion FAQ and errata provenance',478,480,[('foreign',1,1,None),('errata_original',51,62,None),('publisher',3065,3076,None)],'No unrest added to primary Foreign Invasion; secondary crises retained; no double close/cascade.'),
+('C80','Retained corrected-card effects and setup corrections',480,480,[('errata',192,242,None),('fronts_text',6,25,'PnP Fronts physical1'),('fronts_text',539,547,'PnP Fronts physical6, card51'),('fronts_text',603,614,'PnP Fronts physical6, card47')],'Zero-dice forced rerolls fail; fraud timing/cap; impeachment destinations; previous Commander eligible under Military Oversight all match.'),
+('C81','Quick player reference and source boundary',472,498,[('rules',862,887,'10'),('rules',897,928,'11'),('rules',2679,2682,'38'),('rules',2602,2621,'36')],'Reference restates checked procedures without adding conflicting rules; component consultation expressly required.'),
+]
+checks=[]
+for id,title,a,b,rs,note in rows:
+ checks.append({'id':id,'claim_group':title,'candidate':ref('candidate',a,b),'original_sources':[ref(alias,x,y,pages) for alias,x,y,pages in rs],'manual_assessment':'MATCH within the stated scope','reason':note})
+# Add original native sources for figures whose textual extraction loses icons or placement.
+for id,alias,loc in [('C10','bridge','PDF physical9 / printed sheet20: 1758 reverse map includes Bengal Governor overlay'),('C12','board','PDF physical1: power tree, Standing/Debt tracks and Turn track'),('C13','board','PDF physical1: all five prizes'),('C23','board','PDF physical1: Stock Exchange arrows and five spaces'),('C28','board','PDF physical1: operation ribbon'),('C74','board','PDF physical1: Power Award panel'),('C74','pdf','PDF physical42 / printed42: firm charter Value rate symbols')]:
+ next(x for x in checks if x['id']==id)['original_sources'].append(ref(alias,location=loc))
+scoped='Complete standard 3–6-player John Company: Second Edition (2022), Rules of Play Second Printing 2023: 1710, 1758, 1813 and Long 1710, including core deregulation/firms. Crown/solo/two-player and optional Draft excluded. Individual component powers, starting holdings and exact scenario maps remain lookup material. Includes the explicitly user-adopted general defense-strength interpretation.'
+report={
+ 'audit_id':'final-stamped-source-audit-01','report_version':1,'audit_date':'2026-11-06','candidate':ref('candidate',1,499),'candidate_sha256':sha(SOURCES['candidate']),
+ 'actual_scope':scoped,
+ 'authority_qualification':{'official':'Original supplied Second Printing rulebook, original publisher-linked PnP board/cards, applicable official correction list/original post and supplied designer originals. These were inspected directly; prior audits and the verification banner were not evidence.','human':'The general newly exhausted defense strength ≥ attack comparison is accepted solely as the explicitly attributed user interpretation in the two original human-authority files. The public designer Foreign Invasion and Fraud rulings are separate authorities.','publisher_email_independently_inspected':False,'unqualified_independently_verified_official_only_signoff':False},
+ 'verdict':'PASS','findings':[],
+ 'machine_verdicts':{'official_claims':'PASS','human_interpretation_fidelity':'PASS','overall_scoped_result':'PASS','scoped_signoff':True},
+ 'verdict_explanation':'No material source conflict or consequential common-procedure omission found after reading the entire 499-LF candidate, every original multiplayer rulebook LF through printed42, the full correction texts, both human records, designer originals and relevant original component visuals. The defense threshold is not asserted to be independently verified official text. Eighty-one manually assessed claim groups cover the retained material rule claims and source references. This conclusion applies to the stated component-assisted summary, not a replacement for individual card powers/maps.',
+ 'accepted_scope_variation':{
+  'candidate_reference':ref('candidate',216,223),'candidate_exact_quote':quote('candidate',218,223),
+  'printed_official_reference':ref('rules',2285,2289,'33'),'printed_official_exact_quote':quote('rules',2285,2289),
+  'human_reference':ref('human',5,11),'human_exact_quote':quote('human',5,11),
+  'assessment':'PASS fidelity: the accepted threshold is total strength of newly exhausted pieces equal to OR greater than attack, including overshooting with an indivisible alliance. It is clearly labeled user-supplied at the procedure and in a dedicated attribution section. This is an intentional scoped authority difference, not an unresolved official-source finding.'},
+ 'checked_claims':checks,
+ 'important_omission_review':[
+ {'area':'Setup and scenarios','assessment':'No consequential common setup omission found. Initial figures for every scenario, extra-card counts, complete holdings placement, corrected control/share tokens, map-copy instruction and Long deregulation are present. Exact scenario map pieces and individual dealt holdings may be read from cards as permitted.'},
+ {'area':'London and Family','assessment':'Attrition/fatigue/destinations, retirement spending/windows/display exhaustion/refill, restrictions/discounts, forced prize-piece reuse, extra-action timing and debt/share conversion retained.'},
+ {'area':'Hiring and operations','assessment':'All standard candidate pools, nepotism, promotions, fallback elections, vacant offices, operation order, optional/mandatory actions, costs, destinations, retry and success limits reviewed. Military Oversight is an individual law exception to ordinary Commander appointment, available on the card; the retained correction is accurate.'},
+ {'area':'India and Company-region changes','assessment':'Every standard event, stack-versus-Elephant location, storm exceptions, cascade limits, empire decline, Invasion/Rebellion classification, primary/secondary strengths, substitute defense actors, trophy exclusions, Region Loss destinations/escalation, single Foreign Invasion closure and March redirects retained. The accepted user defense comparison is separately attributed.'},
+ {'area':'Revenue, Parliament, Refresh and ends','assessment':'Full expense/loan/expectation/dividend order, maximum Debt loans, policy/vote timing and consequences, card vote exhaustion, tax destinations, upkeep, refresh and all end timing exceptions retained.'},
+ {'area':'Firms','assessment':'Full core system checked: formation/investment limits and bank funding, two treasuries, owner consent/prices, hostile takeover, merger/dissolution, secret strategies and open bid amounts, one attempt, initiative/filling limits, expenses/rescues, actual dividends, special retirement and final aggregate rounding.'},
+ {'area':'Negotiation and scoring','assessment':'Transfer legality, family replacement on shares, immediate binding agreements, future promises, repeated activation, no game-over negotiation/promises, power awards, Court/workshop success/failure effects, firms-before-normal scoring, random failure card and tie order retained.'},
+ {'area':'Individual components and corrections','assessment':'Exact individual law/spouse/promise/failure powers and scenario maps intentionally remain component lookups. Every retained corrected-card claim was checked against original errata and native fronts. Examples of component overrides, such as Royal Protection, Military Oversight and Industry’s Greed Condemned, are not interpreted as absent merely because the generic procedures do not reprint every card.'}
+ ],
+ 'visual_review':{'native_originals_rendered_here':True,'imported_previous_audit_renders_used':False,'record':'source-read-record.json','reviewed':['Original rulebook physical/printed4,5,33,42','Original board physical1 including prizes, power tree, Stock Exchange, Standing/Debt, turn arrows, ribbon','Original PnP Fronts physical1 cards2,8,9; physical6 cards47,51; physical9 cards74–76 and failure-card source boundary','Original PnP Bridge physical7/printed18 hiring and Debtor’s Prison; physical8/printed19 Governor/GG/China hiring; physical9/printed20 scenario reverse maps; physical11/printed22 loot aid']},
+ 'unresolved_findings':[],
+ 'limitations':['This is a source audit, not a blind-reader or gameplay test.','No private publisher email was accessed or independently verified.','Exact individual component effects/holdings/maps are permitted lookup material and not reproduced exhaustively by the candidate.','The supplied ancillary PNGs were hashed but not substituted for native original PDF inspection.','Model/effort and independence attestation at the orchestration level must be verified by the parent; this report does not self-certify hidden runtime settings.']
+}
+(OUT/'source-audit-v1.json').write_text(json.dumps(report,indent=2,ensure_ascii=False)+'\n')
+(OUT/'source-audit.json').write_bytes((OUT/'source-audit-v1.json').read_bytes())
+md=[f'# Source audit — PASS (scoped)\n',f'Candidate: `{SOURCES["candidate"]}`\n\nSHA256: `{sha(SOURCES["candidate"])}`\n',scoped+'\n',
+'Official claims: **PASS**. User-interpretation fidelity: **PASS**. Overall scoped result: **PASS**. Scoped signoff: **true**.\n',
+'No material inaccuracies or consequential common-procedure omissions were found. This is a manually reached audit conclusion after complete candidate and relevant original rulebook delivery, correction/ruling reads, original PDF renders and the claim-by-claim checks below. The stamped verification banner was not used as evidence.\n',
+'## Authority qualification\n',report['authority_qualification']['official']+'\n',report['authority_qualification']['human']+' No private publisher email was inspected. This is **not** an unqualified independently verified official-only signoff.\n',
+'## Findings\n','None. There are no unresolved findings.\n',
+'## Deliberate defense-rule authority difference\n',
+'The printed rulebook (extraction LF2285–2289; printed/PDF page33) says: \n\n> '+quote('rules',2285,2289).replace('\n','\n> ')+'\n',
+'The candidate explicitly attributes the ≥ comparison to the user at LF216 and LF464–470. The human source, LF10, authorizes “total newly exhausted defense strength equal to or greater than attack makes the Crisis fail.” The candidate applies this generally and correctly includes a strength-2 alliance defending strength1. Normal unrest removal, actual-Commander trophy and failed normal Invasion results remain faithful to official LF2290–2296. The Foreign Invasion designer clarification is a separate public designer source.\n',
+'## Source-read and visual evidence\n',
+'The source-read record contains exact paths, SHA256 hashes, inclusive one-based physical LF ranges, all actual text deliveries, native original-to-derivative provenance, page numbering and actual visual inspections. Relevant rulebook delivery was LF1–3015 (all printed pages1–42), plus LF3290–3306 for the 2023 printing identification. The candidate was read at LF1–499. LF numbers use `text.split("\\n")`; they are not printed page numbers. Rulebook PDF physical and printed pages coincide for the inspected pages. PnP Bridge physical7–11 are printed sheets18–22; PnP Fronts physical and printed sheet numbers coincide.\n',
+'Original native PDFs were rendered with PyMuPDF1.28.2 into this directory. No earlier audit renders were imported. Ancillary supplied PNGs were hashed only. Native board figures confirm the prize table, ordered zero-power positions, share queue, Standing/Debt lined and starred spaces, scenario endpoints and power awards. Native scenario fronts confirm all retained setup figures; reverse maps establish the permitted card lookup and Bengal overlay. Rulebook page33 confirms the circle redirect; page42 confirms the firm-value VP symbols. Native corrected card fronts confirm the retained effects.\n',
+'## Checked claims\n','Each row records a manual comparison; full paths/hashes and exact LF references are in the JSON. “rules” refers only to the supplied original extraction; “fronts_text” is this audit’s native original-card extraction. Board/icon checks cite the original PDF physical page.\n','| ID | Candidate LF | Claims and assessment | Original evidence |\n|---|---:|---|---|']
+for x in checks:
+ ev=[]
+ for s in x['original_sources']:
+  label=next((k for k,v in SOURCES.items() if str(v)==s['path']),s['path'])
+  if 'physical_lf_start'in s:label+=f" LF{s['physical_lf_start']}–{s['physical_lf_end']}"
+  if s.get('printed_pages'):label+=f" (printed {s['printed_pages']})"
+  if s.get('location'):label+=' '+s['location']
+  ev.append(label)
+ md.append(f"| {x['id']} | {x['candidate']['physical_lf_start']}–{x['candidate']['physical_lf_end']} | {x['claim_group']}: {x['reason']} | {'; '.join(ev)} |")
+md+=['\n## Important omission review\n']
+for x in report['important_omission_review']:md.append(f"- **{x['area']}:** {x['assessment']}")
+md+=['\n## Limits\n']+[f'- {x}' for x in report['limitations']]
+(OUT/'source-audit-v1.md').write_text('\n'.join(md)+'\n')
+(OUT/'source-audit.md').write_bytes((OUT/'source-audit-v1.md').read_bytes())
+print('Saved audit reports with',len(checks),'manual claim groups.')
+PY
+python3 docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/final-stamped-source-audit-01/write_reports.py

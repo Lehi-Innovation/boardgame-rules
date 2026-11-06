@@ -1,0 +1,1043 @@
+{
+  "frozen_at_utc": "2026-11-06T10:18:18.528643+00:00",
+  "original_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T01-29-50-01a1affa-7953-7211-8d07-1448134dac48.jsonl",
+  "prefix_bytes": 5038046,
+  "prefix_sha256": "c1ba6f66f7f2119f3cef61762f1dc4a8fd841a057c5038145e27af91e1cbb295",
+  "physical_records": 2863,
+  "initial_prefix_records": 2562,
+  "initial_prefix_is_exact": true,
+  "records": [
+    {
+      "physical_record_ordinal": 2563,
+      "physical_record_sha256": "969218856f084a8d010fd69239b3dde4bb20321b5f00687ddd0045f65ff8b6ee",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8OfJ5gfS91u26oQbSHFbFCK9",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][102]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==260); m=hs[i]; e=next(h.start() for h in hs[i+1:]); t=s[m.start():e]; meta={'section_id':'T260','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':260,'end_line':260+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'what resources buy dice, at what rate, and with what dice penalty','section_ids':['T260'],'fact_kind':'lookup'},{'requested_clause':'how many transfers are permitted, what moves in each, and which origins and destinations are eligible, including China','section_ids':['T260'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:T260:begin -->\\\\n'+t+'<!-- qa-unit:T260:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T260','quote':'### Director of Trade'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T260 complete Director of Trade subsection, including Envoy limitations and transfer timing'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q103')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2566,
+      "physical_record_sha256": "8aa4f3d0fca5bf06d9a55bc5d4182fd5fc60b21f72574f9e10e566ba4d082ec2",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_8OfJ5gfS91u26oQbSHFbFCK9",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q103\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2570,
+      "physical_record_sha256": "1c6f3141912421b0d518711e10a1720e9994c9b32d115b9c862a760b5cd08c19",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_MlXxHfP34USeEg4msQcr3VkU",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][103],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2573,
+      "physical_record_sha256": "59eb19e1f196c1d249d16044a5550771343615893e3c6d0fe2dcf787bf2dd66d",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_MlXxHfP34USeEg4msQcr3VkU",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q104\",\n  \"question\": \"During Military Affairs, how many Army transfers may be made, which piece and destination are allowed in each, and in which half of the Army box are transferred pieces placed? Must all officers-in-training be assigned, to which Armies, and into which half?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2577,
+      "physical_record_sha256": "54879b174f18f02f51b3b6cddabe1a7adcbf085313a20a8ed88664210440cd4d",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_1dEcXuxyF3Nbm81OjbovzTh8",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(267,272)))\\nPY\",yield_time_ms:10000,max_output_tokens:1600});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2580,
+      "physical_record_sha256": "8fa3d2b493ada7f87807a5d7986bb02c9d06b0cd48e2910f1ad886b51aec72b3",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_1dEcXuxyF3Nbm81OjbovzTh8",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "268: ### Military Affairs (p19)\n269: \n270: May make up to two transfers, each officer or regiment from one Army to another, remaining in top half. Then assign **every** Officer-in-Training to any Army's top half. Finally appoint Commanders: if vacancy or someone has more total family pieces in Army than current Commander's family, choose among families with most pieces. Move chosen officer to Commander slot; return previous Commander to top as officer. A tie with current Commander's family does not replace them. Nepotism does not apply.\n271: \n272: ### Presidency operations and Trade (pp20–21)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2584,
+      "physical_record_sha256": "842cc7b674a814548576617e310b12e3c97ee07b9c33235c998b32ef6b85a52f",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_W8XqvYLMi5i38zpzyupPUiTa",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][103]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==268); m=hs[i]; e=next(h.start() for h in hs[i+1:]); t=s[m.start():e]; meta={'section_id':'T268','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':268,'end_line':268+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'how many Army transfers may be made, which piece and destination are allowed in each, and in which half of the Army box are transferred pieces placed','section_ids':['T268'],'fact_kind':'lookup'},{'requested_clause':'Must all officers-in-training be assigned, to which Armies, and into which half','section_ids':['T268'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:T268:begin -->\\\\n'+t+'<!-- qa-unit:T268:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T268','quote':'### Military Affairs'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T268 complete Military Affairs subsection, including transfer and mandatory assignment rules'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q104')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2587,
+      "physical_record_sha256": "6db2aec772e818e8d7c97c218819d854e8a5ce329d9b6955cd1df185538d6c1c",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_W8XqvYLMi5i38zpzyupPUiTa",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q104\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2591,
+      "physical_record_sha256": "704d790464cda1cc4be43418a52aca7b3151d03af697e1b038da61e3cc51e985",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_W2D8ZP4cdlCnUlGd5DH0vHU2",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][104],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2594,
+      "physical_record_sha256": "9c2dad6b398fd751dc16393074bcf4627bf0f6d5b4f134de1ac930413db00283",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_W2D8ZP4cdlCnUlGd5DH0vHU2",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q105\",\n  \"question\": \"When placement makes writers from different Presidencies adjacent on connected orders, where must a Presidency divider be placed, and what does it preserve for Refresh?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2598,
+      "physical_record_sha256": "8ae0f709b5c0695abec080cc49ebf7c0b0f590078346caa2ca647c28d5c489ca",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_0yCfqkFD8StLZebwSElApBL3",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(271,280)))\\nPY\",yield_time_ms:10000,max_output_tokens:2000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2601,
+      "physical_record_sha256": "15d01a4a9671c68c020e4746cf40d06c8e0effc6bc1d7e16c48fd208ea1773bb",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_0yCfqkFD8StLZebwSElApBL3",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "272: ### Presidency operations and Trade (pp20–21)\n273: \n274: Each President chooses order of its Commander, Governors and its own Trade. Must allow each position an opportunity but Commander/Governors may decline. Each position finishes all actions before next begins. Trade can go before/after Commander or any Governor but cannot interrupt another position. If President vacant, Chairman sets order only: cannot trade or approve local alliance purchases.\n275: \n276: Declare regions for Trade: include home region, and only regions reachable through open orders with available ship capacity. Each £1 President's treasury buys one die; subtract one per declared nonhome region. Failure can be retried during operations if affordable; catastrophe removes President. At most **one successful Trade per President per turn**. Failed attempts and retries belong to that President's uninterrupted opportunity; another position cannot act between its attempts.\n277: \n278: **Successful Trade capacity is one order per ship in this Presidency's sea zone. Trade does not exhaust ships.** Fill as many orders as possible within declared regions. First writer goes to home port. Every later order must extend the connected route filled during this same Presidency's Trade. **Writers from another Presidency cannot extend this route**, even when adjacent. **Writers do not limit capacity: use all available writers, then continue filling with filled-order tokens for the remaining ships.** Those tokens continue this Trade's own route. No President may fill another President's home region, even if its office vacant. Increase Balance by each order's printed value, **or half rounded down if a firm already filled it this turn under Deregulation**. President earns bank £1 per order; writer owners earn £1 per writer placed. Separate adjacent writers from different Presidencies with dividers for correct return at Refresh.\n279: \n280: ### Commanders and Deploy (pp22–23)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2605,
+      "physical_record_sha256": "bb30fc4b6aba5f56a216b13326eec2698c0b2ffbb801c187ec88cf2aa2076476",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_EF3P2s9dzGCaYJGo0N23fgLd",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(239,256)))\\nPY\",yield_time_ms:10000,max_output_tokens:3500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2608,
+      "physical_record_sha256": "6cb13b3d1cab17028d4ee985692ab682dd1ccf7d3607563a519a81587512c675",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_EF3P2s9dzGCaYJGo0N23fgLd",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "240: ### IX. Upkeep and Refresh (p36)\n241: \n242: Pay printed upkeep separately for each family member on a prize. If unpaid, return that member and lose that prize's printed VP. Negotiating help remains possible while game continues. On final turn, perform upkeep but skip Refresh and go to Final Scoring. On a nonfinal turn, Refresh as follows:\n243: \n244: | Piece | Refresh destination or state |\n245: |---|---|\n246: | Writers on orders | Return to their **associated Presidency's Writers box**; use dividers to preserve affiliation. |\n247: | Filled tokens and Presidency dividers | Return to supply. |\n248: | Extra ships | Return to supply. |\n249: | Exhausted Army officers and regiments | Reactivate. |\n250: | Active local alliances | Exhaust; do not reactivate alliances. |\n251: | Fitted player ships | Keep fatigue; Trade itself never exhausts ships. |\n252: | Turn marker | **Advance one turn, then begin London Season.** |\n253: \n254: ## Actions\n255: \n256: ### Chairman (p18)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2612,
+      "physical_record_sha256": "70243b957a770164acd5c0c7ed2b78b6f5ac2d52f32d4954882c33dfc1062c93",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_82f94TtOva7CA9lnoeaBHnKU",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][104]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); units=[]\\nfor i,m in enumerate(hs):\\n line=s[:m.start()].count('\\\\n')+1\\n if line not in (240,272): continue\\n e=next((h.start() for h in hs[i+1:] if len(h.group(1))<=len(m.group(1))),len(s)); t=s[m.start():e]; units.append((m.start(),t,{'section_id':'T'+str(line),'kind':'subtree','heading':m.group(),'level':len(m.group(1)),'start_offset':m.start(),'end_offset':e,'start_line':line,'end_line':line+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}))\\nunits.sort(); meta=[u[2] for u in units]; ledger=[{'requested_clause':'where must a Presidency divider be placed','section_ids':['T272'],'fact_kind':'lookup'},{'requested_clause':'what does it preserve for Refresh','section_ids':['T240'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n'+'\\\\n'.join('<!-- qa-unit:'+u['section_id']+':begin -->\\\\n'+item[1]+'<!-- qa-unit:'+u['section_id']+':end -->' for item,u in zip(units,meta)); entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':meta,'answer':answer,'support':'supported','evidence':[{'summary_location':'T272','quote':'### Presidency operations and Trade'},{'summary_location':'T240','quote':'### IX. Upkeep and Refresh'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':meta,'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T272 complete Presidency Trade subsection','T240 complete Upkeep and Refresh subsection, especially writer return and divider handling'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q105')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2615,
+      "physical_record_sha256": "cfb65ba9e7d357f3553bb511a9e5d86d1098530006aefddc4e4ff196789a8aec",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_82f94TtOva7CA9lnoeaBHnKU",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q105\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2619,
+      "physical_record_sha256": "ae014f99df1fdfb839cf77b802c2258ea4d0f27dd3cb13cd47689d3b5eda7cfe",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_VSWkOuOM0xPyuPsxAY1CUDwD",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][105],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2622,
+      "physical_record_sha256": "ece0c1e6f90aad98e07181a7f9a507081e012b1e8ce875ce328f5f8b64c50a3b",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_VSWkOuOM0xPyuPsxAY1CUDwD",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q106\",\n  \"question\": \"When an ordinary Invasion Crisis causes Company Region Loss, what happens to that region’s orders, including if all are already closed? Does Region Loss impose a second order-closing/Cascade step for a loss caused by Rebellion or Foreign Invasion?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2626,
+      "physical_record_sha256": "a4597abda8036d4e1ce1dafbeb5a4b966e9627f3f92214bd7ef24d0315adc242",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_l0kzwRdmRueE49JhC0oVNBxu",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(161,206)))\\nPY\",yield_time_ms:10000,max_output_tokens:7000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2629,
+      "physical_record_sha256": "ab2e55414da095781a082f8f8f4729d6ef5e828ae153eab335fa15ed8803444e",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_l0kzwRdmRueE49JhC0oVNBxu",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "162: ### VII. Events in India (pp28–33)\n163: \n164: **First roll the storm die:** a sea-zone result affects **that zone**, three storms affects **ALL sea zones**, and no storm indication means **NO storm checks**. The die face also specifies the **number of India events**. Resolve all required storms **before drawing any event**. Then flip and resolve **one tile at a time from the draw stack, for as many events as the number printed on that die face**. Where an event uses a region, normally read the **back of the new top tile** in the draw stack, not the tile just drawn; follow each event's specific location rule.\n165: \n166: **Storms:** Determine eligibility in the zone(s) specified above before rolling:\n167: \n168: | Ships | Storm exposure |\n169: |---|---|\n170: | Company and extra ships | **Exempt**; never roll storm checks. |\n171: | Player-owned ships in Company fleets | Check ships in the affected sea zone(s). |\n172: | Ships assigned to China | Count as **Eastern** sea zone. |\n173: | Firm ships | Count in the sea zone on their **firm strategy**, even though on a charter. |\n174: | Hobnob firm ships | **Exempt** from storms. |\n175: \n176: Roll **once per eligible ship**: 1–2 nothing; 3–4 fatigue, or sink if already fatigued; 5–6 sink. Return a sunk ship to its shipyard **unfatigued**.\n177: \n178: **Closing orders and Cascades:** Return any writer on a newly closed order to its owner's supply; flip a filled token to closed. If told to close an order in an already fully closed region, Cascade: close all open orders directly connected to that region's orders. If a connected order is already closed, close that region's northernmost open order instead. If none are open, it also Cascades. A region can initiate a Cascade only once per event tile but can receive multiple Cascades' effects.\n179: \n180: | Event | Procedure |\n181: |---|---|\n182: | Turmoil | Close northernmost open order in top-stack region; if all closed, Cascade. |\n183: | Windfall | Owners take £1 per writer on orders in top-stack region and every bordering region. |\n184: | Shuffle | Elephant's March, then shuffle this tile with remaining draw stack; separately shuffle discards and place on top. If draw stack empty, March last instead. |\n185: | Leader | Top-stack sovereign region gains one tower. Dominated region instead rebels with printed explosion modifier. March only if Elephant was fully inside a Company region that successfully rebelled. |\n186: | Peace | Open orders connected across Elephant's border and add one tower to each touched non-Company region. If Elephant wholly inside a region, instead open all its orders and remove its unrest. Then March. |\n187: | Crisis | Resolve at Elephant's location, tail attacking head, then March. Use procedures below. |\n188: | Foreign Invasion | Roll storm die for target regions: West→Bombay, South→Madras, East→Bengal; all storms means each, none means top-stack region. Per target roll ordinary die for attack strength and resolve Invasion/Company attack. On success close all orders (Cascade if already all closed), remove target's flag and all matching flags if capital, restore dome if Company-controlled, and set tower strength to half attack roll rounded down. March with circle shape only if Elephant was fully inside a Company region that was invaded. |\n189: \n190: **Choose the ordinary Crisis procedure from the Elephant:** Its **tail is the attacker/acting region; its head is the defender**. A sovereign actor (large capital flag or unflagged dome) causes **Invasion**. A dominated actor (small flag or no dome) causes **Rebellion against its sovereign**. If Elephant is wholly inside a Company region, resolve Rebellion against the Company. This classifier concerns ordinary Elephant-located Crisis events; Foreign Invasion uses its own location rule.\n191: \n192: **Invasion Crisis:** Sovereign attacker's whole empire strength + event modifier must be **greater than** defender's whole empire strength. On success, replace defender's flag with attacker's dominated flag; taking a capital shatters its entire empire. If attacker had no empire, use a free capital/star flag and matching small flag; if none available no new empire/flags form. On failure, attacker loses one tower.\n193: \n194: **Rebellion Crisis:** Compare only rebelling region strength + modifier against its sovereign capital's strength; other empire regions do not count. Must be strictly greater. Success makes actor sovereign, removes its flag and closes all its orders (Cascade if already closed). Failure removes one tower from the capital.\n195: \n196: **Attacks on Company:** An Invasion or Rebellion against a Company region also triggers secondary Rebellions in every other Company region with unrest. Resolve attacks in this order: **primary Crisis first**, then secondary regions in **Bombay → Madras → Bengal** Army order. **Within each Presidency, that Commander chooses the order of its associated regions.** Attack strengths are distinct:\n197: \n198: - **Primary normal Crisis:** normal Invasion/Rebellion attack strength **plus unrest in its target region**.\n199: - **Primary Foreign Invasion:** the ordinary attack die, with no added unrest (designer ruling in FAQ).\n200: - **Every secondary Rebellion:** **only the number of unrest cubes in that secondary region**; no event modifier or empire strength.\n201: \n202: **Mounting defense — first identify who acts:**\n203: \n204: | Defense office situation | Acting player |\n205: |---|---|\n206: | Associated Commander occupied | That Commander chooses and exhausts pieces; normal trophy gains/losses apply. |\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2633,
+      "physical_record_sha256": "943f4f22bd8875b256a3a5e13d864aa752121344e6f72b3fab7ac5f79dc4bfdb",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_4Chrf2GEqN9XExxsVtyWrbLb",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(205,223)))\\nPY\",yield_time_ms:10000,max_output_tokens:3500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2636,
+      "physical_record_sha256": "650428ee19cc5eefab2d757b4cf32823cbb69562283600f2a2518b51f23e5f09",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_4Chrf2GEqN9XExxsVtyWrbLb",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "206: | Associated Commander occupied | That Commander chooses and exhausts pieces; normal trophy gains/losses apply. |\n207: | Commander vacant | **Military Affairs itself acts in the Commander's stead**, choosing pieces; gains/loses **no trophies**. |\n208: | Commander AND Military Affairs vacant | **Chairman chooses pieces** and gains/loses **no trophies**. |\n209: \n210: This is acting for the defense, **not appointing a new Commander**. The acting player exhausts active Army pieces to reach at least the Crisis strength, or as many as possible if unable to reach it. Local alliances provide printed strength usable once; **their strength cannot be split among more than one purpose**. The following strength comparison applies the **user-supplied interpretation** recorded under Special Rules & Edge Cases:\n211: \n212: | Total strength of newly exhausted pieces | Attack and defense result |\n213: |---|---|\n214: | **EQUAL TO OR GREATER THAN** Crisis strength | **The attack FAILS; defense SUCCEEDS.** Remove all unrest in the attacked region. The **actual Commander gains one trophy**; **Military Affairs/Chairman substitutes gain OR lose NO trophies**. If this defeated a normal primary Invasion, also remove one attacker tower if possible. |\n215: | **LESS THAN** Crisis strength | **The attack SUCCEEDS; defense FAILS.** Perform Region Loss. If the successful primary Crisis was an Invasion, apply empire creation/growth. |\n216: \n217: **Example:** Exhausting an active strength-2 local alliance successfully defends a strength-1 Crisis. Exhaust the whole alliance piece; its excess strength does not cause the defense to fail.\n218: \n219: **Region Loss:** Commander returns half their family's trophies rounded up, then Commander member returns to supply. Roll once per officer in associated Army: each 6 removes that officer. Eliminate Governor: return office card to unused stack, fatigue and member to supplies. Remove Governor overlay, partially built Company ship and unrest. Restore dome with one tower (or Foreign Invasion's specified strength) and appropriate invasion flag. Return control token to its region with **the £ loot side DOWN and the region-symbol side UP**. Future conquest gets no loot modifier; region loses its Presidency association. An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them. Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc. If this causes failure, finish Events in India before Final Scoring. **Losing one region does not automatically lose any other Company region: resolve each other attack and its defense separately.**\n220: \n221: **Elephant's March:** After successful Invasion Crisis, move to successful capital (Imperial Ambitions); otherwise top-stack region. Company region: place fully inside. Dominated region: point toward its sovereign. Sovereign: point across shape-marked border on tile. If that neighbor is already dominated by actor, choose first clockwise neighbor that is not. If all neighbors dominated, use the redirect-arrow shape's border, pointing toward empire capital.\n222: \n223: ### VIII. Parliament Meets (pp34–36)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2640,
+      "physical_record_sha256": "aa3161a2a08929610991356f253606a529ae5ea0fb45f461c3573795facb1e4b",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_X5jMIo4uIYFdGDIS9uN1fVKk",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(467,492)))\\nPY\",yield_time_ms:10000,max_output_tokens:4000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2643,
+      "physical_record_sha256": "f967ac108cefcccd9d3786fad0ae499e4d922a9d7c31fa3c6b77ca11b986500f",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_X5jMIo4uIYFdGDIS9uN1fVKk",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "468: ## FAQ & Rulings\n469: \n470: **Company Fraud payout cap:** The player receives only the cash actually removed from Company Balance. For example, Balance £10 and highest roll 6 results in Balance £0 and a £10 payout, not £12. Cole Wehrle confirmed that exact alternative on September 24, 2022. [Designer ruling](https://boardgamegeek.com/thread/2938749/article/40850873#40850873). Use the corrected card timing: start of Revenue.\n471: \n472: **Foreign Invasion and unrest:** Cole Wehrle clarified on April 30, 2023 that unrest does **not** add to a Foreign Invasion's primary attack strength or determine its resulting tower levels. Use the ordinary die roll for attack strength; after a successful Foreign Invasion, set towers to **half that roll, rounded down**. The event still uses the Company-defense procedure and its secondary unrest attacks. Do not apply the normal primary Crisis's added unrest to this special event. [Designer ruling](https://boardgamegeek.com/thread/2962161/article/42192767#42192767). **On a successful Foreign Invasion, close all orders in the target region once; if they are already all closed, Cascade instead.** Region Loss does not close them a second time: its additional closure is only for a normal Invasion Crisis.\n473: \n474: **Applicable official errata:** The publisher links the [official errata discussion](https://boardgamegeek.com/thread/2936700/official-errata), whose original designer post links the full internal correction list. The assigned Second Printing rulebook incorporates the core procedural corrections, including forced prize-piece reuse, empty Court, deployment boundaries, Region Loss and Elephant priority. Corrected setup cards supply Bengal's 1758 control token and 1813 control/share-value tokens. Printed card corrections also specify: Mercantile/Diplomatic Connection reducing a check to zero dice means failure; Company Fraud is played at start of Revenue: roll one die per your officeholder, reduce Balance by twice the highest roll (minimum zero), and take cash from the bank equal to that actual Balance reduction; Public Demands Impeachment returns member to supply and office card to vacancies; Military Oversight demotes one Commander to an officer, then appoints a Commander from officers: **the SAME former Commander remains eligible to become COMMANDER again**. These are card-specific effects, not changes to the normal check/hiring procedures.\n475: \n476: ## Player Reference\n477: \n478: | Stage | Key reminders |\n479: |---|---|\n480: | London | Skip first turn; office die +fatigue, Chairman +1; 5+ pensioner. Retirement spending sets prestige order. |\n481: | Family | Repeat last main action for double; vacancy writer bonus once; issue shares rightmost while Debt exists. |\n482: | Firms | Invest first, secret strategy/bid second; London money is not family cash. |\n483: | Hire | Ascending vacancies; own-family consent; fatigue follows promotions. |\n484: | Operate | Chairman → Director/Governor General → Shipping → Military Affairs → Bombay → Madras → Bengal → China. |\n485: | Check | Lowest 1/2 success, 3/4 retryable failure, 5/6 catastrophe. No dead action. |\n486: | Bonuses | £1 workshops and fitted shipyards. |\n487: | Revenue | Firms first; Company expenses → expectations → dividends. |\n488: | India | Storms then events; primary Company attack can spread to all unrest. |\n489: | Parliament | Choose law/policy, votes; 0 passes; failure changes PM and shifts policy. |\n490: | Upkeep | Pay each prize; final turn skip Refresh, otherwise reset writers/Armies/extras and advance. |\n491: \n492: Source: official publisher-linked **Rules of Play, Second Printing 2023**, pp1–42 for this scope. Refer to [extracted rules](../extracted/john-company-second-edition-rules.txt) for the full text.\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2647,
+      "physical_record_sha256": "79c19d7ddf8e55ef7b02ecb26ead7958917ae1ad2cd83bcd41a014c456e877dc",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ckELOYWECw8d85gb5kCPMMm6",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][105]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); units=[]\\nfor i,m in enumerate(hs):\\n line=s[:m.start()].count('\\\\n')+1\\n if line not in (162,468): continue\\n if line==162: e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=3); sid='T162'; kind='subtree'\\n else: e=hs[i+1].start(); sid='I468'; kind='introduction'\\n t=s[m.start():e]; units.append((m.start(),t,{'section_id':sid,'kind':kind,'heading':m.group(),'level':len(m.group(1)),'start_offset':m.start(),'end_offset':e,'start_line':line,'end_line':line+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}))\\nunits.sort(); meta=[u[2] for u in units]; ledger=[{'requested_clause':'what happens to that region’s orders','section_ids':['T162','I468'],'fact_kind':'lookup'},{'requested_clause':'including if all are already closed','section_ids':['T162','I468'],'fact_kind':'lookup'},{'requested_clause':'Does Region Loss impose a second order-closing/Cascade step for a loss caused by Rebellion or Foreign Invasion','section_ids':['T162','I468'],'fact_kind':'lookup'}]; cases=['For an ordinary Invasion Crisis causing Region Loss, close all target orders; if already all closed, Cascade.','For a Rebellion or Foreign Invasion loss, Region Loss does not impose a second closure/Cascade step; those causes close the orders once already.']; answer='\\\\n'.join(cases)+'\\\\n\\\\nApplicable summary text\\\\n\\\\n'+'\\\\n'.join('<!-- qa-unit:'+u['section_id']+':begin -->\\\\n'+item[1]+'<!-- qa-unit:'+u['section_id']+':end -->' for item,u in zip(units,meta)); entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':cases,'operative_sections':meta,'answer':answer,'support':'supported','evidence':[{'summary_location':'T162','quote':'**Region Loss:**'},{'summary_location':'I468','quote':'**Foreign Invasion and unrest:**'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':meta,'case_conclusions':cases,'unsupported_clauses':[],'rechecked_contexts':['T162 full Events in India subtree, including closing orders, Invasion/Rebellion and Region Loss','I468 full FAQ introduction, specifically Foreign Invasion order-close clarification'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q106')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2650,
+      "physical_record_sha256": "75e559129c48f949dc8febe4035261cc79bf9156e3b93a808f59bd1ab9bd575d",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_ckELOYWECw8d85gb5kCPMMm6",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q106\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2654,
+      "physical_record_sha256": "5a4ec5f418a4e48bbda42ecb2e53fe9d2556a851b07bbe21b9c8c484008e9413",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_zLTKdirBC2v5dW9rTZRCCyAJ",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][106],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2657,
+      "physical_record_sha256": "fc10e18690fe6ff663acd81e3964eb08f342db4dd1cd188fcb3bd2fdabad6853",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_zLTKdirBC2v5dW9rTZRCCyAJ",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.8 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q107\",\n  \"question\": \"Within Firm Investments, is there a fixed player action order, and when do investment actions finish so that play can proceed to Firm Strategy?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2661,
+      "physical_record_sha256": "b3445f6fef314f635d5777574876c3fc635348dbce05089048012a654ca568af",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_ubqX9W6hwo6n6OHdWuwS0uc5",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(363,381)))\\nPY\",yield_time_ms:10000,max_output_tokens:3500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2664,
+      "physical_record_sha256": "c6c2489c57580317f4750d9ae90312126918c06b83ecf2c6315781bd847ba882",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_ubqX9W6hwo6n6OHdWuwS0uc5",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "364: #### Firm treasuries and special retirements (p37)\n365: \n366: Firm managers control firms; firm shares can be traded like Company shares. A firm has two treasuries: **London** receives the bank's £5 per investment and pays for ship acquisition, trade bids and expenses; **India** receives trade and pays dividends/expenses. **Investment cash always comes FROM the BANK TO London. London cash cannot buy new equity shares; creating shares requires a Company-share or workshop contribution.** **Family cash cannot be transferred into or out of firm treasuries.** Only specified investment, payout and expense procedures move it.\n367: \n368: **Special retirement:** Each shareholder may make one additional retirement per London Season from supply rather than Pensioners, irrespective of number of firms owned. **Actual cash spent after spouse discounts** cannot exceed the **highest total dividend marker** of any firm they own a share in; the printed prize cost may exceed that marker when discounts cover the difference. No retirement from a firm whose marker is absent or zero. Spouse discounts can allow a higher printed-cost prize; retirement otherwise normal, including prestige eligibility. At start of Final Scoring, score firms then allow one special retirement regardless of Company success/failure, before normal final-scoring steps; no display cards in Final Scoring.\n369: \n370: #### Firms phase: investments (pp38–39)\n371: \n372: After Family share creation, before Hiring, take investments actions without set order until nobody wishes more. Manager resolves timing conflicts within firm; PM resolves conflicts between firms. Then choose strategies.\n373: \n374: - **Form a firm — only if you currently manage none:** return one eligible Company share to supply or flip workshop to invested side. **Flip your family board to its firm-charter side**, then place a family member as first firm share, set value cube to leftmost track space and take £5 from bank into the London treasury.\n375: - **Invest:** With manager's consent, same Company-share/workshop contribution creates one firm share and £5 bank to London. Up to ten firm shares; further investments still contribute £5 but create no shares. Cannot use Chairman share. Cannot use Company shares at all when Standing and/or Debt on lined space. Cannot use shares created this turn, even after trading them away. Invested workshops never return to uninvested: no bonus or Company-failure VP; they remain invested even if firm fails.\n376: - **Ships:** A firm may fit a ship from **its own OR ANOTHER PLAYER'S shipyard**, but **must have that shipyard owner's consent**. Pay **£3 FROM the firm's London treasury TO the BANK**. May buy player-owned ship already in Company with owner's consent: unfatigued £3, fatigued £2, paid **from the firm's London treasury into Shipping treasury**. Firms cannot acquire Company or extra ships.\n377: - **Hostile takeover:** Only a player who **manages NO firm at all** may initiate one; managing a different firm also makes you ineligible. Obtain consent of holders of a majority of the target's shares, then move firm's ships, money and shares to own charter, copy both cube positions; former manager returns cubes and flips board to family side.\n378: - **Merger:** Managers negotiate with **every shareholder's consent**. Highest-value firm is primary; if tied, players choose among tied. Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides. Players may negotiate share transfers. **If the primary would exceed ten shares, RETURN the excess shares to their OWNERS' SUPPLIES, with those owners' consent.** Entire agreement is one binding immediate transfer. Primary's value/dividend track remains the continuing firm's track.\n379: - **Voluntary dissolution:** All shareholders must consent. Apply the same dissolution procedure as an insolvent firm: **shares go to Debtor's Prison (each −1 VP), ships return to their matching shipyards, and the charter flips to its family side. Workshops remain invested for the rest of the game.**\n380: \n381: #### Firm strategies and competing trade (p40)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2668,
+      "physical_record_sha256": "75662fc21e0e60e08cfe8533b7055dd1d3825785698e5cc8b66d79412394d8a9",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_pTcXMxsXtj9oGtvNcdQC9Bv8",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][106]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==370); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=4); t=s[m.start():e]; meta={'section_id':'T370','kind':'subtree','heading':m.group(),'level':4,'start_offset':m.start(),'end_offset':e,'start_line':370,'end_line':370+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'is there a fixed player action order','section_ids':['T370'],'fact_kind':'lookup'},{'requested_clause':'when do investment actions finish so that play can proceed to Firm Strategy','section_ids':['T370'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:T370:begin -->\\\\n'+t+'<!-- qa-unit:T370:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T370','quote':'#### Firms phase: investments'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T370 complete investments subsection, including timing conflicts and transition to strategies'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q107')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2671,
+      "physical_record_sha256": "f133de68da60794e42435f3b59afcdf8bd8bffca72a6f9aacaaad2c7f7130532",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_pTcXMxsXtj9oGtvNcdQC9Bv8",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q107\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2675,
+      "physical_record_sha256": "bbbf1a6c51069b728d10152dff341a65b58038a7b15073b03674e4a24461eed7",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_3I7Ig8b2luZbbQUqZN0I1hfp",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][107],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2678,
+      "physical_record_sha256": "26a966b01d2872d9b335c21ca0993a007942813825e0d1c0aba9a6795a033f29",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_3I7Ig8b2luZbbQUqZN0I1hfp",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q108\",\n  \"question\": \"After a normal negotiated merger has been agreed, what happens to the secondary firms’ ships and shareholders’ shares?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2682,
+      "physical_record_sha256": "8d453b349b5d5a8a88a51850ba81ea6fc7e2fd47c3e89842a8d9428655488f03",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_nY5lgIQPQOUiIT2ygDSFBJNu",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(369,380)))\\nPY\",yield_time_ms:10000,max_output_tokens:2500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2685,
+      "physical_record_sha256": "79e9c26bfbcb0fc74570a5b84ebb62ffc43836918d7b87ca01bd04541e87e14a",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_nY5lgIQPQOUiIT2ygDSFBJNu",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "370: #### Firms phase: investments (pp38–39)\n371: \n372: After Family share creation, before Hiring, take investments actions without set order until nobody wishes more. Manager resolves timing conflicts within firm; PM resolves conflicts between firms. Then choose strategies.\n373: \n374: - **Form a firm — only if you currently manage none:** return one eligible Company share to supply or flip workshop to invested side. **Flip your family board to its firm-charter side**, then place a family member as first firm share, set value cube to leftmost track space and take £5 from bank into the London treasury.\n375: - **Invest:** With manager's consent, same Company-share/workshop contribution creates one firm share and £5 bank to London. Up to ten firm shares; further investments still contribute £5 but create no shares. Cannot use Chairman share. Cannot use Company shares at all when Standing and/or Debt on lined space. Cannot use shares created this turn, even after trading them away. Invested workshops never return to uninvested: no bonus or Company-failure VP; they remain invested even if firm fails.\n376: - **Ships:** A firm may fit a ship from **its own OR ANOTHER PLAYER'S shipyard**, but **must have that shipyard owner's consent**. Pay **£3 FROM the firm's London treasury TO the BANK**. May buy player-owned ship already in Company with owner's consent: unfatigued £3, fatigued £2, paid **from the firm's London treasury into Shipping treasury**. Firms cannot acquire Company or extra ships.\n377: - **Hostile takeover:** Only a player who **manages NO firm at all** may initiate one; managing a different firm also makes you ineligible. Obtain consent of holders of a majority of the target's shares, then move firm's ships, money and shares to own charter, copy both cube positions; former manager returns cubes and flips board to family side.\n378: - **Merger:** Managers negotiate with **every shareholder's consent**. Highest-value firm is primary; if tied, players choose among tied. Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides. Players may negotiate share transfers. **If the primary would exceed ten shares, RETURN the excess shares to their OWNERS' SUPPLIES, with those owners' consent.** Entire agreement is one binding immediate transfer. Primary's value/dividend track remains the continuing firm's track.\n379: - **Voluntary dissolution:** All shareholders must consent. Apply the same dissolution procedure as an insolvent firm: **shares go to Debtor's Prison (each −1 VP), ships return to their matching shipyards, and the charter flips to its family side. Workshops remain invested for the rest of the game.**\n380: \n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2689,
+      "physical_record_sha256": "63684da92b8bafd33357e34f6b65a3209c9016f944675854c7a4d84dddf98248",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_MUE98bfT3038jDEusMN3rBFD",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][107]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==370); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=4); t=s[m.start():e]; meta={'section_id':'T370','kind':'subtree','heading':m.group(),'level':4,'start_offset':m.start(),'end_offset':e,'start_line':370,'end_line':370+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; case='The secondary firms’ shares and ships transfer to the primary firm; excess shares beyond ten return to their owners’ supplies with those owners’ consent.'; ledger=[{'requested_clause':'what happens to the secondary firms’ ships','section_ids':['T370'],'fact_kind':'lookup'},{'requested_clause':'what happens to shareholders’ shares','section_ids':['T370'],'fact_kind':'lookup'}]; answer=case+'\\\\n\\\\nApplicable summary text\\\\n\\\\n<!-- qa-unit:T370:begin -->\\\\n'+t+'<!-- qa-unit:T370:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[case],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T370','quote':'- **Merger:**'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[case],'unsupported_clauses':[],'rechecked_contexts':['T370 complete investments subsection, especially merger effect and excess-share qualifier'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q108')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2692,
+      "physical_record_sha256": "2f1b83f38607d8023bc476f87b7a467bb73d5b18df34b2be02e1c9760cdb78ae",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_MUE98bfT3038jDEusMN3rBFD",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q108\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2696,
+      "physical_record_sha256": "97c2bf929050eb4dc615befa133685af396f45f7905f4dcfcae5cf417df06de4",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_xkEnx3128Eb9vbwxvepCfPkR",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][108],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2699,
+      "physical_record_sha256": "b18797001f1211dc2e0440498b643b7015330d91fed4f84126ce3581009402f4",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_xkEnx3128Eb9vbwxvepCfPkR",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q109\",\n  \"question\": \"Under the corrected Company Fraud card, when may it be played, how many dice are rolled and for whose pieces, and how is the raw amount calculated from the roll before applying the Company Balance cap?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2703,
+      "physical_record_sha256": "4324f45a2bc5efcdf9e251ab5900335c3bd60a813270520382f8f9e7290fcba4",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_toh1y7hojX2mfCWUv1i9xoqz",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(467,476)))\\nPY\",yield_time_ms:10000,max_output_tokens:1800});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2706,
+      "physical_record_sha256": "4d07f8189a690dfff7b47a0fea4d5c496f70cbddd8385d3ba3aff05a6a5bccae",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_toh1y7hojX2mfCWUv1i9xoqz",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "468: ## FAQ & Rulings\n469: \n470: **Company Fraud payout cap:** The player receives only the cash actually removed from Company Balance. For example, Balance £10 and highest roll 6 results in Balance £0 and a £10 payout, not £12. Cole Wehrle confirmed that exact alternative on September 24, 2022. [Designer ruling](https://boardgamegeek.com/thread/2938749/article/40850873#40850873). Use the corrected card timing: start of Revenue.\n471: \n472: **Foreign Invasion and unrest:** Cole Wehrle clarified on April 30, 2023 that unrest does **not** add to a Foreign Invasion's primary attack strength or determine its resulting tower levels. Use the ordinary die roll for attack strength; after a successful Foreign Invasion, set towers to **half that roll, rounded down**. The event still uses the Company-defense procedure and its secondary unrest attacks. Do not apply the normal primary Crisis's added unrest to this special event. [Designer ruling](https://boardgamegeek.com/thread/2962161/article/42192767#42192767). **On a successful Foreign Invasion, close all orders in the target region once; if they are already all closed, Cascade instead.** Region Loss does not close them a second time: its additional closure is only for a normal Invasion Crisis.\n473: \n474: **Applicable official errata:** The publisher links the [official errata discussion](https://boardgamegeek.com/thread/2936700/official-errata), whose original designer post links the full internal correction list. The assigned Second Printing rulebook incorporates the core procedural corrections, including forced prize-piece reuse, empty Court, deployment boundaries, Region Loss and Elephant priority. Corrected setup cards supply Bengal's 1758 control token and 1813 control/share-value tokens. Printed card corrections also specify: Mercantile/Diplomatic Connection reducing a check to zero dice means failure; Company Fraud is played at start of Revenue: roll one die per your officeholder, reduce Balance by twice the highest roll (minimum zero), and take cash from the bank equal to that actual Balance reduction; Public Demands Impeachment returns member to supply and office card to vacancies; Military Oversight demotes one Commander to an officer, then appoints a Commander from officers: **the SAME former Commander remains eligible to become COMMANDER again**. These are card-specific effects, not changes to the normal check/hiring procedures.\n475: \n476: ## Player Reference\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2710,
+      "physical_record_sha256": "a91f6af53255b676d3149d356d75a4ab710c60e190115293a5b37dbc73b62102",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_zc2PYEnkxEm3QcGvccwwy70m",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][108]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==468); m=hs[i]; e=hs[i+1].start(); t=s[m.start():e]; meta={'section_id':'I468','kind':'introduction','heading':m.group(),'level':2,'start_offset':m.start(),'end_offset':e,'start_line':468,'end_line':468+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'when may it be played','section_ids':['I468'],'fact_kind':'lookup'},{'requested_clause':'how many dice are rolled and for whose pieces','section_ids':['I468'],'fact_kind':'lookup'},{'requested_clause':'how is the raw amount calculated from the roll before applying the Company Balance cap','section_ids':['I468'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:I468:begin -->\\\\n'+t+'<!-- qa-unit:I468:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'I468','quote':'## FAQ & Rulings'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['I468 complete FAQ introduction, particularly corrected card timing, dice and raw reduction amount plus payout cap'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q109')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2713,
+      "physical_record_sha256": "16a38e4134d0be61dee77be51457e8ff721e2c316bcd96a5f15f6d28cac2abaf",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_zc2PYEnkxEm3QcGvccwwy70m",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q109\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2717,
+      "physical_record_sha256": "6d29634d2f58f0ab22bb3c44b23bd21433ec2d42154c0de3d3bc2153c4e70366",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_rnisyzYqoG3jZneN0dcnWxRB",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][109],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2720,
+      "physical_record_sha256": "9e221424438032a5a2666cd5ffa525d4d76b1ab7b899d52ba631a18fe6a1baa3",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_rnisyzYqoG3jZneN0dcnWxRB",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q110\",\n  \"question\": \"After a successful Deploy, may the same Commander make further successful Deploy actions during that operation? Must further actions still satisfy the ordinary targeting/no-dead-action restrictions, and how do available active resources or catastrophic failure limit repetition?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2724,
+      "physical_record_sha256": "77c252a50c4a85da6ea08b20d42ffa45123f875c9789616768ec1bfa6df94e13",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_zSUVsgzL9wLobWT2ijrIYrKG",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(139,152)))\\nPY\",yield_time_ms:10000,max_output_tokens:3000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2727,
+      "physical_record_sha256": "d5563bb11232ff56c22b5b0ea5d0b8cb5940d79a464538128dd36d112e24ccae",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_zSUVsgzL9wLobWT2ijrIYrKG",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "140: ### IV. Company Operation\n141: \n142: Follow the red ribbon left to right: **Chairman → Director of Trade (or Governor General) → Manager of Shipping → Military Affairs → Bombay Presidency → Madras Presidency → Bengal Presidency → China Superintendent, if created**. Skip each vacant office. **Within EACH Presidency, its President chooses the order of its Commander, Governor(s) and Trade; each position finishes before the next acts.** Each office spends only its own treasury. Offices created by actions go into Vacant Offices unless immediate hiring is specified. A newly created Governorship normally awaits a later Hiring phase.\n143: \n144: **Success checks (p17):** First commit resources/cash: **all cash for a Company-office check comes from that acting office's treasury and is paid to the bank**. Gather dice, subtract penalties, then roll. Use lowest die: 1–2 success; 3–4 failure, retry if resources and office-specific limits allow; 5–6 catastrophic failure, no more office actions, return officeholder to supply, discard fatigue and flip card into Vacant Offices. Specific Commander/firm procedures modify this. You cannot take a dead action with no effect or chance of success: for example trade with no ship or deploy without dice to trigger possible officer losses.\n145: \n146: Office procedures are in **Actions** below. Presidency order is Bombay, Madras, Bengal; each President orders its own Commander, Governor(s) and Trade. China acts after Bengal.\n147: \n148: ### V. Bonuses (p27)\n149: \n150: Each player takes £1 per workshop and per shipyard whose ship is fitted. Invested workshops give no bonus. Transferring an enterprise cannot trigger its bonus a second time.\n151: \n152: ### VI. Revenue (p27; firms pp41–42)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2731,
+      "physical_record_sha256": "df2aca64a5845213f2c7acacb35cf56259caa39c1f7b9569347c206ad9143d01",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_koSnBrRITz4FsoebB1XGHOuu",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(279,317)))\\nPY\",yield_time_ms:10000,max_output_tokens:6000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2734,
+      "physical_record_sha256": "41e93ab7b0406d83ff905777153f7fee87d2f2ff3f621216b01f7a70127084ed",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_koSnBrRITz4FsoebB1XGHOuu",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "280: ### Commanders and Deploy (pp22–23)\n281: \n282: **At the START of Commander operations, before Deploy attempts**, first request President's treasury funds for any printed-price local alliances in Army; President must approve purchase. Move purchased alliances to the **top/active** half. **When used for Deploy or defense, exhaust the whole alliance to the bottom half.** Its strength is usable once that turn and cannot be split among more than one purpose. **Refresh exhausts any unused active alliances too; it does not reactivate alliances as it does officers/regiments.**\n283: \n284: **May Deploy repeatedly while able, including after a success: there is no one-success-per-turn cap.**\n285: \n286: 1. Target own Presidency's home, any associated region, or any region bordering an associated region. Cannot target another home region or another Presidency's Company-controlled region. Company region must have unrest or a closed order to give action an effect.\n287: 2. Exhaust chosen officers/regiments to bottom for one die each and local alliances for printed dice. Subtract the combined strength of target and **all other regions in its empire, counting target only once**. Company-controlled defense strength is zero. Roll normal check; a noncatastrophic failure can retry using remaining resources.\n288: 3. After **each attempt**, owners roll one die per officer exhausted in attempt; each 6 returns an officer to supply. Regiments never roll officer losses.\n289: \n290: On success, take loot from the bank: **£4 per target tower + faceup loot modifier, with a minimum of (surviving officers used in this attempt + 1)**. The extra £1 guarantees the Commander's minimum share even if no officers survive. Count only this attempt's surviving participating officers and used regiments/alliances.\n291: \n292: | Each payout cycle | Pay in this order, stopping when cash runs out |\n293: |---|---|\n294: | Commander family first | £1 for Commander **plus £1 for each of their used surviving officers**. |\n295: | Other families clockwise | £1 per used surviving officer of that family. |\n296: | Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |\n297: \n298: **Repeat that entire cycle from the Commander until all loot is distributed.** The Commander also receives one trophy per target tower.\n299: \n300: **After loot and trophies, impose successful control in this order:**\n301: \n302: | Step / piece | Action and destination |\n303: |---|---|\n304: | 1. Political strength | Remove target tower and dome. If target was an empire capital, remove **every matching empire flag throughout India**. |\n305: | 2. Orders and unrest | Open **all** target orders and remove **all** its unrest. |\n306: | 3a. Loot/control token, on a new conquest | Turn it region-symbol side up and put it **ABOVE THE ASSOCIATED PRESIDENT'S BOX**. |\n307: | 3b. Governor overlay, on a new conquest | Put it **IN THE CONQUERED REGION ON THE MAP**. |\n308: | 3c. Governor office card, on a new conquest | Put **only the CARD** in **Vacant Offices**, awaiting later Hiring. |\n309: | 4. Elephant | If it faced outward from the conquered region, move it **fully inside that region**, now threatening Rebellion. |\n310: \n311: Steps 3a–3c form a new Governorship only if the target was not already Company-controlled. **With Governor General in play, no new Governor or Governor overlay is created; printed Company symbols indicate control.**\n312: \n313: **Deploying in an already Company-controlled region to reopen orders or clear unrest:** Company defense penalty is zero; no tower remains, so gain **zero tower trophies**. With no tower or faceup loot modifier, use the **minimum loot of surviving participating officers + 1 for the Commander**, distributing normally.\n314: \n315: On catastrophe, Commander returns half own family's trophies rounded up and Commander member to supply. Exhausted officers still check losses. Commander has no office card to vacate.\n316: \n317: ### Governors: Administer (p24)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2738,
+      "physical_record_sha256": "d200161d9fa01b2eb2a4125e2f8fb89960ad86c0f78615a741a4157565d3c0d0",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_Ae7E7doWnx0mAkfjoIdrnjUC",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][109]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); units=[]\\nfor i,m in enumerate(hs):\\n line=s[:m.start()].count('\\\\n')+1\\n if line not in (140,280): continue\\n e=next((h.start() for h in hs[i+1:] if len(h.group(1))<=len(m.group(1))),len(s)); t=s[m.start():e]; sid='T'+str(line); units.append((m.start(),t,{'section_id':sid,'kind':'subtree','heading':m.group(),'level':len(m.group(1)),'start_offset':m.start(),'end_offset':e,'start_line':line,'end_line':line+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}))\\nunits.sort(); meta=[u[2] for u in units]; case='Yes. The Commander may Deploy again after a success while able, but each attempt must meet targeting and effective-action restrictions; a catastrophe ends that office’s actions.'; ledger=[{'requested_clause':'may the same Commander make further successful Deploy actions during that operation','section_ids':['T280','T140'],'fact_kind':'lookup'},{'requested_clause':'Must further actions still satisfy the ordinary targeting/no-dead-action restrictions','section_ids':['T280','T140'],'fact_kind':'lookup'},{'requested_clause':'how do available active resources or catastrophic failure limit repetition','section_ids':['T280','T140'],'fact_kind':'lookup'}]; answer=case+'\\\\n\\\\nApplicable summary text\\\\n\\\\n'+'\\\\n'.join('<!-- qa-unit:'+u['section_id']+':begin -->\\\\n'+item[1]+'<!-- qa-unit:'+u['section_id']+':end -->' for item,u in zip(units,meta)); entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[case],'operative_sections':meta,'answer':answer,'support':'supported','evidence':[{'summary_location':'T280','quote':'**May Deploy repeatedly while able, including after a success: there is no one-success-per-turn cap.**'},{'summary_location':'T140','quote':'### IV. Company Operation'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':meta,'case_conclusions':[case],'unsupported_clauses':[],'rechecked_contexts':['T280 complete Commander/Deploy procedure, including repeated attempts and catastrophe','T140 complete Company Operation introduction, including no-dead-action and catastrophe rules'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q110')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2741,
+      "physical_record_sha256": "973852d42523b0c91a084c786108334c8fd8bcdf5a01e16acfa2b80491909d2e",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_Ae7E7doWnx0mAkfjoIdrnjUC",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q110\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2745,
+      "physical_record_sha256": "877da4c70c3d0530f904c422dd09d4d83170faa968ebb5193f892e33a465e0ea",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_h0jC5URX49YH3pkpy5CkuIsT",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][110],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2748,
+      "physical_record_sha256": "94b8156f3906e65990bcbd7964bb6174f85025bccbb64f5fb9ea9a29d2252356",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_h0jC5URX49YH3pkpy5CkuIsT",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q111\",\n  \"question\": \"How often may a blackmail card’s effect be used, where and in what orientation is the card kept after use, and does using it remove any Power printed on that card?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2752,
+      "physical_record_sha256": "322c3bed2ccad523c785f8234a3d96a7bcbea4d4dabc597bdc02d06cfcfc60b2",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_zfqm8xVyJVt39WNyLo8xr2kf",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(78,91)))\\nPY\",yield_time_ms:10000,max_output_tokens:3000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2755,
+      "physical_record_sha256": "9cafe779e41e2f5670e902460d4335edf4921281ca18cd86fe7475270af82787",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_zfqm8xVyJVt39WNyLo8xr2kf",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "79: ### I. London Season (Rules pp11–12)\n80: \n81: **Attrition:** Simultaneously roll one die for each held office card. Add one per fatigue on that card; Chairman also adds one. Modified 1–2: nothing; 3–4: add fatigue; 5+: retire. Move retiree to Pensioners, flip card into Vacant Offices, return its fatigue to supply. Commanders have no office card and do not roll normal office attrition.\n82: \n83: **Retirements:** Starting with the Chairman (former Chairman if vacant), clockwise, each player may retire each pensioner to a prize. Pay its printed cost, move the member to the prize and gain printed VP. Set actual spending aside until London Season ends to establish display-selection order, then pay bank. Prizes may incur upkeep and window taxes. Unused pensioners do not remain for another turn.\n84: \n85: **Prestige:** Players who completed at least one pensioner retirement **or an eligible firm special retirement during this London Season** must each take or discard one display card, in descending actual total retirement spending. A firm special retirement uses a supply member instead of a pensioner but otherwise counts as a normal retirement for this selection; each eligible player still selects only one card. Ties: most total windows, including new prizes, then clockwise from PM. Acting player may peek at display blackmails. **Do not replace a chosen/discarded card during selection. If the display becomes empty, immediately skip every remaining eligible player.** Finish the display step by **discarding all remaining cards and refilling exactly three: prestige faceup, blackmail facedown, even if nobody took a card**. Return all remaining Pensioners to their supplies.\n86: \n87: Spouses usually add VP, impose permanent restrictions and cannot be transferred. Make required enterprise/share trades immediately upon taking the spouse. Retirement discounts can stack, are personal, and each is usable once per London Season and once during Final Scoring. Discounts reduce actual spending and therefore display priority. **Returned shipyard rule:** whether a shipyard is returned because of Violet Effingham or an unpaid tax, its fitted ship stays in play. That shipyard cannot be purchased while its matching ship remains in play; purchase becomes possible after the ship returns.\n88: \n89: Prestige enterprises retain their type, power and policy effects and can be traded. Blackmail has a one-time printed effect: once used, place it faceup in its owner's area; it can no longer be traded. Both faceup and facedown blackmail can contribute its printed power at final scoring.\n90: \n91: ### II. Family (Rules pp13–14)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2759,
+      "physical_record_sha256": "933b887e99efd4efb4c8b4e1b0b8396c498bc800d21fce995c878859a1bcfae5",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_PyNQIsPv3GBuh3p44fkGCN1Q",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(436,458)))\\nPY\",yield_time_ms:10000,max_output_tokens:4000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2762,
+      "physical_record_sha256": "e40a67fd65fc00b4f23ad92e5d8fa14bbd76612c7015c82dabd9d347eea528aa",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_PyNQIsPv3GBuh3p44fkGCN1Q",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "437: ## Special Rules & Edge Cases\n438: \n439: **Negotiation (p8):**\n440: \n441: | May trade | May not trade |\n442: |---|---|\n443: | Enterprises; **facedown** blackmail; family treasury cash; Company/firm shares; promise cards | Officeholders, writers, officers, prizes, spouses, trophies, passed laws, played blackmail, PM dial or Chairman piece |\n444: \n445: **To transfer a share:** return the old owner's family member and **replace it at the share's location with a member from the RECEIVING FAMILY**. Adjust VP when luxury ownership changes. The owner may allow others to peek privately at their facedown blackmail. It must stay facedown when traded. **A blackmail effect is one-time: after use, keep the card faceup in your player area; it cannot be used again or traded. Any printed Power still counts at Final Scoring whether the card is faceup or facedown.**\n446: \n447: | Agreement / promise rule | Effect |\n448: |---|---|\n449: | Immediate transfer | Binding. |\n450: | Promise of future behavior | Nonbinding, except a printed promise card's guaranteed effect can be called **if possible**. |\n451: | Calling a promise card | Follow that card's timing/limits. **No promise calls during Final Scoring.** |\n452: | Simultaneous calls cannot all be fulfilled | Guarantor chooses which to fulfill. |\n453: | Trading a promise card | May transfer to a third party or back to its guarantor. |\n454: | Repeated activation after transfer | Transferred resources cannot activate twice: a workshop paid this Bonuses phase does not pay again after a sale during that phase. |\n455: \n456: **Cash location matters:** Family treasury can pay family purchases, retirements, upkeep, taxes and deals. Office cash only funds that office. Firm cash uses its specified treasury rules. The unlimited bank does not remove component limits or authorize arbitrary treasury transfers.\n457: \n458: ### User-supplied interpretation: defense strength\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2766,
+      "physical_record_sha256": "56e718254669ba675fe859c0726ada5aecdb556948bf7cd8a55c4a64ac81a0af",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_lqfVirL2cp0KHxUKeKBVxWgZ",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][110]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==437); m=hs[i]; e=hs[i+1].start(); t=s[m.start():e]; meta={'section_id':'I437','kind':'introduction','heading':m.group(),'level':2,'start_offset':m.start(),'end_offset':e,'start_line':437,'end_line':437+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'How often may a blackmail card’s effect be used','section_ids':['I437'],'fact_kind':'lookup'},{'requested_clause':'where and in what orientation is the card kept after use','section_ids':['I437'],'fact_kind':'lookup'},{'requested_clause':'does using it remove any Power printed on that card','section_ids':['I437'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:I437:begin -->\\\\n'+t+'<!-- qa-unit:I437:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'I437','quote':'## Special Rules & Edge Cases'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['I437 complete Special Rules & Edge Cases introduction, containing the one-time, faceup-area, and final Power rule'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q111')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2769,
+      "physical_record_sha256": "a2ff38023e0cccdcf41d1f6c25763ce083e94123895692e19af80262a5c2d545",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_lqfVirL2cp0KHxUKeKBVxWgZ",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q111\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2773,
+      "physical_record_sha256": "d30e739db440a367d4e1db1702b1b4ef2bc4fa1efc94837601046c8171d2173a",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_3mePVmflTeq5wOz2nevL4BSw",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][111],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2776,
+      "physical_record_sha256": "67af43466c826a3896faa6ea1559d49c1c88a1cdafeb4f292af38167a6dec537",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_3mePVmflTeq5wOz2nevL4BSw",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q112\",\n  \"question\": \"Who chooses whether and how many ordinary Company dividends are paid, what limits their affordability, which funds pay them, and what does each dividend cost and pay per share, including the Chairman? May an individual shareholder forgo payment as in a firm, and exactly when does total dividend payout increase Standing?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2780,
+      "physical_record_sha256": "7c925804ccb1d32aad953d5e96b32e7dc49cc09f714843fa2bf2c4bf90f64572",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_F19Dm7ZEdZzo5K0qBfgw5IRx",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(151,162)))\\nPY\",yield_time_ms:10000,max_output_tokens:2500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2783,
+      "physical_record_sha256": "7f3a763eddc6eafd12fed524385ac9dfe8e495f545ba5f2b8cf11ab1d7acb76e",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_F19Dm7ZEdZzo5K0qBfgw5IRx",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "152: ### VI. Revenue (p27; firms pp41–42)\n153: \n154: If deregulated, firms pay expenses/dividends first. Then Company:\n155: \n156: 1. **Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China. Exclude Commanders. If insufficient, take £5 emergency loans. Each loan advances Debt one **only while a track space remains**. **At maximum Debt, keep taking loans without advancing Debt any further.** Newly added emergency Debt causes no extra current-turn expense. After using emergency loans, set Balance to zero. One or two loans lower Standing one; three or more lower Standing two.\n157: 2. **Expectations:** Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.\n158: 3. **Dividends:** Chairman may pay any affordable number. Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman. **Company shareholders cannot waive payment.** If total cash paid as dividends is **strictly greater** than expectations, advance Standing one space.\n159: \n160: Standing reaching leftmost space means Company failure. During Revenue, go immediately to Final Scoring.\n161: \n162: ### VII. Events in India (pp28–33)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2787,
+      "physical_record_sha256": "76786db8b2fea547ff1b4c0a2212d40166a052929466b8cebd24e5a69fcb2402",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_xEJgHS4eDlcUK9MADrvrZ0OD",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][111]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==152); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=3); t=s[m.start():e]; meta={'section_id':'T152','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':152,'end_line':152+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'Who chooses whether and how many ordinary Company dividends are paid','section_ids':['T152'],'fact_kind':'lookup'},{'requested_clause':'what limits their affordability, which funds pay them, and what does each dividend cost and pay per share, including the Chairman','section_ids':['T152'],'fact_kind':'lookup'},{'requested_clause':'May an individual shareholder forgo payment as in a firm','section_ids':['T152'],'fact_kind':'lookup'},{'requested_clause':'exactly when does total dividend payout increase Standing','section_ids':['T152'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:T152:begin -->\\\\n'+t+'<!-- qa-unit:T152:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T152','quote':'### VI. Revenue'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T152 complete Revenue subsection, including expense order, Company Balance and dividend conditions'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q112')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2790,
+      "physical_record_sha256": "71e7b54dc713d1195d22cb5cecbba2a67f036870fb1feb8d8a00a9410843afa1",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_xEJgHS4eDlcUK9MADrvrZ0OD",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q112\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2794,
+      "physical_record_sha256": "bc5956368c5c3aa77a5f2b0a99bcbb47a79e110d5e69dccb1aa1b39effe3c34c",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_mxzf74ILAaWLnKgLQDae4r2K",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][112],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2797,
+      "physical_record_sha256": "3b338337dda362f73847729502f71be089f0e94ba8ddc5ecd846871efe818159",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_mxzf74ILAaWLnKgLQDae4r2K",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q113\",\n  \"question\": \"Where is the opportunity marker at the start of a game, and can the first chosen main Family action be taken twice under the marker’s normal repeat rule?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2801,
+      "physical_record_sha256": "294760eae0ab7ef73b9385b98cd8b92ebb6cb7704dac477ab86268dd5a4054a7",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_yO3zjzGp5w2FwPDINAVB0nJ9",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(90,113)))\\nPY\",yield_time_ms:10000,max_output_tokens:4000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2804,
+      "physical_record_sha256": "5e77ce1acc1c1517680931da992eb8002570beb14bdd15b7fdda74a99888cf37",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_yO3zjzGp5w2FwPDINAVB0nJ9",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "91: ### II. Family (Rules pp13–14)\n92: \n93: Starting with the Chairman title holder, clockwise, each player resolves their family action:\n94: \n95: 1. Check where your opportunity marker was **at phase start** (it begins off the board).\n96: 2. Choose a main family action: take it once, or **may take it twice if the marker already matched it**.\n97: 3. **Place/move the opportunity marker onto your chosen main action.**\n98: 4. After the main action, only the latest passed extra-action law may grant its extra action. This extra action is never doubled by the marker and never moves the marker.\n99: \n100: If placing a family piece with none in supply, take one from any of your prizes and lose that prize's printed VP. This applies to firm-share creation too. If no family action is possible, take none and return opportunity marker to supply.\n101: \n102: | Family action | Effect |\n103: |---|---|\n104: | Enlist Writer | Place a member in any Presidency's Writers box. With at least four vacant offices, place one additional writer **once this turn**, so a doubled Writer action can place three total. |\n105: | Enlist Officer | Place a member in Officers-in-Training. |\n106: | Purchase Luxury | Pay bank £4; gain luxury, 2 VP while owned, and its window icon; social enterprise. |\n107: | Purchase Shipyard | Pay bank £2; take shipyard and place its matching ship **unfitted on that shipyard**, not in a sea zone. Shipping enterprise, one vote and £1 bonus while fitted. |\n108: | Purchase Workshop | Pay bank £5; take workshop; manufacturing enterprise, two votes, £1 bonus; worth 1 VP if Company fails unless invested. |\n109: | Seek Share | Place a member on an empty Stock Exchange space and pay bank: the five queue spaces are £2, £3, £3, £4, £5 (two distinct £3 spaces). It is an applicant, not yet a share. |\n110: \n111: **New Company shares:** After all family actions, if Debt and applicants remain, move the rightmost applicant into Court and lower Debt by one. Repeat while both remain. Pieces in Court are Company shares. With no Debt, slide remaining applicants as far right as possible, preserving order. Seeking a share never pays family cash into Company treasuries.\n112: \n113: ### III. Hiring (Rules pp14–16)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2808,
+      "physical_record_sha256": "47f97f421030b7d19ce761c09f65a23a43a72c1af1fdec2ed0dfb7151224ce7e",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_O20OfBYfU2yPhkKjjJ7NkbPF",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][112]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==91); m=hs[i]; e=next((h.start() for h in hs[i+1:] if len(h.group(1))<=3),len(s)); t=s[m.start():e]; meta={'section_id':'T091','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':91,'end_line':91+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; case='The marker begins off the board, so the first chosen main Family action is taken once, not twice.'; ledger=[{'requested_clause':'Where is the opportunity marker at the start of a game','section_ids':['T091'],'fact_kind':'lookup'},{'requested_clause':'can the first chosen main Family action be taken twice under the marker’s normal repeat rule','section_ids':['T091'],'fact_kind':'lookup'}]; answer=case+'\\\\n\\\\nApplicable summary text\\\\n\\\\n<!-- qa-unit:T091:begin -->\\\\n'+t+'<!-- qa-unit:T091:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[case],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T091','quote':'### II. Family'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[case],'unsupported_clauses':[],'rechecked_contexts':['T091 complete Family subsection, specifically phase-start marker position and doubling rule'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q113')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2811,
+      "physical_record_sha256": "ccd50cd3480095f922e978c27577f77adc2459f7eeee988a427745214ba8db59",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_O20OfBYfU2yPhkKjjJ7NkbPF",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q113\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2815,
+      "physical_record_sha256": "3d9cbdd309bc7bc37a1234b6d4dd2d38f252e0e988bd7b459af6815df6be5495",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_SIUMtbCBX7g1JdI6YsCBLjMj",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][113],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2818,
+      "physical_record_sha256": "9de0dbda370068ffe4a8698e8b2f224e5c8330043822cba761b9ecac1f32a79b",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_SIUMtbCBX7g1JdI6YsCBLjMj",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q114\",\n  \"question\": \"Which Company account is charged for ordinary Revenue expenses, and how is the charge recorded after the expense total is calculated?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2822,
+      "physical_record_sha256": "d458c24af9a962a1d94c801db5a253b1afd265d193a1a34dd88d39bd6ad3bad6",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_52vV1h3YoW1DwTx4eD2TOvRW",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(151,162)))\\nPY\",yield_time_ms:10000,max_output_tokens:2500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2825,
+      "physical_record_sha256": "e4a68720fcfe8eb22c7c8e683c82fa9634fbfe1c243d4c87f3ff6220c2f5c82e",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_52vV1h3YoW1DwTx4eD2TOvRW",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "152: ### VI. Revenue (p27; firms pp41–42)\n153: \n154: If deregulated, firms pay expenses/dividends first. Then Company:\n155: \n156: 1. **Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China. Exclude Commanders. If insufficient, take £5 emergency loans. Each loan advances Debt one **only while a track space remains**. **At maximum Debt, keep taking loans without advancing Debt any further.** Newly added emergency Debt causes no extra current-turn expense. After using emergency loans, set Balance to zero. One or two loans lower Standing one; three or more lower Standing two.\n157: 2. **Expectations:** Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.\n158: 3. **Dividends:** Chairman may pay any affordable number. Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman. **Company shareholders cannot waive payment.** If total cash paid as dividends is **strictly greater** than expectations, advance Standing one space.\n159: \n160: Standing reaching leftmost space means Company failure. During Revenue, go immediately to Final Scoring.\n161: \n162: ### VII. Events in India (pp28–33)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2829,
+      "physical_record_sha256": "76acf5edd8fe23324924d4e4d9f8d6b8806042ca86f130ab4b81961105c0cdf1",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_TDYoDEYKtkQznJJMaji2HxoJ",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][113]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==152); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=3); t=s[m.start():e]; meta={'section_id':'T152','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':152,'end_line':152+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; ledger=[{'requested_clause':'Which Company account is charged for ordinary Revenue expenses','section_ids':['T152'],'fact_kind':'lookup'},{'requested_clause':'how is the charge recorded after the expense total is calculated','section_ids':['T152'],'fact_kind':'lookup'}]; answer='Applicable summary text\\\\n\\\\n<!-- qa-unit:T152:begin -->\\\\n'+t+'<!-- qa-unit:T152:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T152','quote':'### VI. Revenue'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[],'unsupported_clauses':[],'rechecked_contexts':['T152 complete Revenue subsection, specifically Company Balance deduction and insufficiency/emergency-loan accounting'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q114')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2832,
+      "physical_record_sha256": "72f62e27dbc820a5ac67404e015ac88bb5db22bc731ea0d2b9244a0ce631553c",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_TDYoDEYKtkQznJJMaji2HxoJ",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q114\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2836,
+      "physical_record_sha256": "d5f2fe04356b1d9cfce301f6b232aa9f85d5f9484d597f07b00ecaed89fd718a",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_Q8E4orPTEit9yJVapJE6V8u5",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][114],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2839,
+      "physical_record_sha256": "846729cdb0d22048d0873906c709a4619e445de07e9463736960b0dd1506f8c6",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_Q8E4orPTEit9yJVapJE6V8u5",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q115\",\n  \"question\": \"When an ordinary non-Company Invasion fails, which region loses a tower level?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2843,
+      "physical_record_sha256": "8af4689283e858fe30d01f83262468eb0e839394cdb9b95237fdeeb57133fd3c",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_3XxUtZzZIfnXn5TAOeB9qYC6",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(161,206)))\\nPY\",yield_time_ms:10000,max_output_tokens:7000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2846,
+      "physical_record_sha256": "fa22498a6b6545b797b3b9ed61426bc08dd43ab56c5872d705792ba1d667250e",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_3XxUtZzZIfnXn5TAOeB9qYC6",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "162: ### VII. Events in India (pp28–33)\n163: \n164: **First roll the storm die:** a sea-zone result affects **that zone**, three storms affects **ALL sea zones**, and no storm indication means **NO storm checks**. The die face also specifies the **number of India events**. Resolve all required storms **before drawing any event**. Then flip and resolve **one tile at a time from the draw stack, for as many events as the number printed on that die face**. Where an event uses a region, normally read the **back of the new top tile** in the draw stack, not the tile just drawn; follow each event's specific location rule.\n165: \n166: **Storms:** Determine eligibility in the zone(s) specified above before rolling:\n167: \n168: | Ships | Storm exposure |\n169: |---|---|\n170: | Company and extra ships | **Exempt**; never roll storm checks. |\n171: | Player-owned ships in Company fleets | Check ships in the affected sea zone(s). |\n172: | Ships assigned to China | Count as **Eastern** sea zone. |\n173: | Firm ships | Count in the sea zone on their **firm strategy**, even though on a charter. |\n174: | Hobnob firm ships | **Exempt** from storms. |\n175: \n176: Roll **once per eligible ship**: 1–2 nothing; 3–4 fatigue, or sink if already fatigued; 5–6 sink. Return a sunk ship to its shipyard **unfatigued**.\n177: \n178: **Closing orders and Cascades:** Return any writer on a newly closed order to its owner's supply; flip a filled token to closed. If told to close an order in an already fully closed region, Cascade: close all open orders directly connected to that region's orders. If a connected order is already closed, close that region's northernmost open order instead. If none are open, it also Cascades. A region can initiate a Cascade only once per event tile but can receive multiple Cascades' effects.\n179: \n180: | Event | Procedure |\n181: |---|---|\n182: | Turmoil | Close northernmost open order in top-stack region; if all closed, Cascade. |\n183: | Windfall | Owners take £1 per writer on orders in top-stack region and every bordering region. |\n184: | Shuffle | Elephant's March, then shuffle this tile with remaining draw stack; separately shuffle discards and place on top. If draw stack empty, March last instead. |\n185: | Leader | Top-stack sovereign region gains one tower. Dominated region instead rebels with printed explosion modifier. March only if Elephant was fully inside a Company region that successfully rebelled. |\n186: | Peace | Open orders connected across Elephant's border and add one tower to each touched non-Company region. If Elephant wholly inside a region, instead open all its orders and remove its unrest. Then March. |\n187: | Crisis | Resolve at Elephant's location, tail attacking head, then March. Use procedures below. |\n188: | Foreign Invasion | Roll storm die for target regions: West→Bombay, South→Madras, East→Bengal; all storms means each, none means top-stack region. Per target roll ordinary die for attack strength and resolve Invasion/Company attack. On success close all orders (Cascade if already all closed), remove target's flag and all matching flags if capital, restore dome if Company-controlled, and set tower strength to half attack roll rounded down. March with circle shape only if Elephant was fully inside a Company region that was invaded. |\n189: \n190: **Choose the ordinary Crisis procedure from the Elephant:** Its **tail is the attacker/acting region; its head is the defender**. A sovereign actor (large capital flag or unflagged dome) causes **Invasion**. A dominated actor (small flag or no dome) causes **Rebellion against its sovereign**. If Elephant is wholly inside a Company region, resolve Rebellion against the Company. This classifier concerns ordinary Elephant-located Crisis events; Foreign Invasion uses its own location rule.\n191: \n192: **Invasion Crisis:** Sovereign attacker's whole empire strength + event modifier must be **greater than** defender's whole empire strength. On success, replace defender's flag with attacker's dominated flag; taking a capital shatters its entire empire. If attacker had no empire, use a free capital/star flag and matching small flag; if none available no new empire/flags form. On failure, attacker loses one tower.\n193: \n194: **Rebellion Crisis:** Compare only rebelling region strength + modifier against its sovereign capital's strength; other empire regions do not count. Must be strictly greater. Success makes actor sovereign, removes its flag and closes all its orders (Cascade if already closed). Failure removes one tower from the capital.\n195: \n196: **Attacks on Company:** An Invasion or Rebellion against a Company region also triggers secondary Rebellions in every other Company region with unrest. Resolve attacks in this order: **primary Crisis first**, then secondary regions in **Bombay → Madras → Bengal** Army order. **Within each Presidency, that Commander chooses the order of its associated regions.** Attack strengths are distinct:\n197: \n198: - **Primary normal Crisis:** normal Invasion/Rebellion attack strength **plus unrest in its target region**.\n199: - **Primary Foreign Invasion:** the ordinary attack die, with no added unrest (designer ruling in FAQ).\n200: - **Every secondary Rebellion:** **only the number of unrest cubes in that secondary region**; no event modifier or empire strength.\n201: \n202: **Mounting defense — first identify who acts:**\n203: \n204: | Defense office situation | Acting player |\n205: |---|---|\n206: | Associated Commander occupied | That Commander chooses and exhausts pieces; normal trophy gains/losses apply. |\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2850,
+      "physical_record_sha256": "521e5205fd30d09ec32edabeed26d002783855d04b6ac9c29771fa734a9cf182",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_zTA6bId0KkjsdtRoGdUnShfR",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(205,223)))\\nPY\",yield_time_ms:10000,max_output_tokens:3500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2853,
+      "physical_record_sha256": "0b8c5ddfa1938b2cc49a847a5c75576a14a72dcbfddf18b741bbd97d3dba766a",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_zTA6bId0KkjsdtRoGdUnShfR",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "206: | Associated Commander occupied | That Commander chooses and exhausts pieces; normal trophy gains/losses apply. |\n207: | Commander vacant | **Military Affairs itself acts in the Commander's stead**, choosing pieces; gains/loses **no trophies**. |\n208: | Commander AND Military Affairs vacant | **Chairman chooses pieces** and gains/loses **no trophies**. |\n209: \n210: This is acting for the defense, **not appointing a new Commander**. The acting player exhausts active Army pieces to reach at least the Crisis strength, or as many as possible if unable to reach it. Local alliances provide printed strength usable once; **their strength cannot be split among more than one purpose**. The following strength comparison applies the **user-supplied interpretation** recorded under Special Rules & Edge Cases:\n211: \n212: | Total strength of newly exhausted pieces | Attack and defense result |\n213: |---|---|\n214: | **EQUAL TO OR GREATER THAN** Crisis strength | **The attack FAILS; defense SUCCEEDS.** Remove all unrest in the attacked region. The **actual Commander gains one trophy**; **Military Affairs/Chairman substitutes gain OR lose NO trophies**. If this defeated a normal primary Invasion, also remove one attacker tower if possible. |\n215: | **LESS THAN** Crisis strength | **The attack SUCCEEDS; defense FAILS.** Perform Region Loss. If the successful primary Crisis was an Invasion, apply empire creation/growth. |\n216: \n217: **Example:** Exhausting an active strength-2 local alliance successfully defends a strength-1 Crisis. Exhaust the whole alliance piece; its excess strength does not cause the defense to fail.\n218: \n219: **Region Loss:** Commander returns half their family's trophies rounded up, then Commander member returns to supply. Roll once per officer in associated Army: each 6 removes that officer. Eliminate Governor: return office card to unused stack, fatigue and member to supplies. Remove Governor overlay, partially built Company ship and unrest. Restore dome with one tower (or Foreign Invasion's specified strength) and appropriate invasion flag. Return control token to its region with **the £ loot side DOWN and the region-symbol side UP**. Future conquest gets no loot modifier; region loses its Presidency association. An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them. Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc. If this causes failure, finish Events in India before Final Scoring. **Losing one region does not automatically lose any other Company region: resolve each other attack and its defense separately.**\n220: \n221: **Elephant's March:** After successful Invasion Crisis, move to successful capital (Imperial Ambitions); otherwise top-stack region. Company region: place fully inside. Dominated region: point toward its sovereign. Sovereign: point across shape-marked border on tile. If that neighbor is already dominated by actor, choose first clockwise neighbor that is not. If all neighbors dominated, use the redirect-arrow shape's border, pointing toward empire capital.\n222: \n223: ### VIII. Parliament Meets (pp34–36)\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2857,
+      "physical_record_sha256": "a103d56dd8843dfe15bfe47b110aefc7eec8bcdd365fbf0a9c11a50e1de4d387",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_8FbKZy18yvnQIcqbAOKlYQJM",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][114]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==162); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=3); t=s[m.start():e]; meta={'section_id':'T162','kind':'subtree','heading':m.group(),'level':3,'start_offset':m.start(),'end_offset':e,'start_line':162,'end_line':162+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; case='The attacking region loses one tower.'; ledger=[{'requested_clause':'which region loses a tower level','section_ids':['T162'],'fact_kind':'lookup'}]; answer=case+'\\\\n\\\\nApplicable summary text\\\\n\\\\n<!-- qa-unit:T162:begin -->\\\\n'+t+'<!-- qa-unit:T162:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[case],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T162','quote':'**Invasion Crisis:**'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[case],'unsupported_clauses':[],'rechecked_contexts':['T162 complete Events in India subtree, especially ordinary Invasion Crisis failure result'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q115')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2860,
+      "physical_record_sha256": "e02bae3619aa1f3c3444384b961e4c0736737d130c65b61ab66afd62c4883962",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_8FbKZy18yvnQIcqbAOKlYQJM",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q115\n"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+Block 01 independent semantic adjudication
+
+Reader A: 18 correct, 0 partial, 0 incorrect. Reader B: 18 correct, 0 partial, 0 incorrect. All 156 required fact assessments are satisfied. No gold or scope defects identified.
+
+Each complete original entry was graded with its own full attached sections operative; no facts were borrowed across questions/readers or supplemented from unquoted summary. In particular, Q005 reader B’s exclusive statement that a Citizen wins only by replacing a Chancellor victory through succession satisfies the Vision/Usurper prohibition without requiring those words. Q010’s legal later-play destination instruction operates together with its own attached Search placement rules. Q016–Q017 use their own complete Campaign sections for the requested ordering and Imperial details. All extra substantive original fields and quoted claims were assessed; there are no arithmetic applications in this block.
+
+Both inputs were read in full in contiguous, marked chunks of at most 5,000 Unicode characters. Lossless reconstruction equals all 18 permitted original entries for each reader; actual reader hashes match their declarations. Technical validation passed for exact questions, fixed answers, fact text/order, observed answers, literal same-entry evidence, spans, hashes, totals, and read receipts. Declared hashes of other prohibited originals were retained without opening those files.

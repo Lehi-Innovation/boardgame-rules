@@ -1,0 +1,152 @@
+{
+  "purpose": "Independent semantic adjudication of compact bandit-plan qualifiers; current grades/desired outcomes withheld; all original entry fields retained",
+  "cases": [
+    {
+      "reader": "reader-a",
+      "id": "Q037",
+      "question": "An attack-die pool is empty and a battle plan removes an attack die. What happens? Which battle plans do bandits use and in what sequence do sides choose plans?",
+      "fixed_expected_answer": "For each removal from empty attack pool,add defense die. Attacker chooses ruled plans once each then defender; bandits use all ruled plans with no cost. Plan resources do not block paying its plan cost.",
+      "frozen_scope": {
+        "id": "Q037",
+        "question": "An attack-die pool is empty and a battle plan removes an attack die. What happens? Which battle plans do bandits use and in what sequence do sides choose plans?",
+        "fixed_key_expected_answer_sha256": "716a9b5e058bf1362f703785803c2ebb0b60ca09237a6d876daf11d2e69ad997",
+        "source_references": "Law 5.5.3,7.5",
+        "asked_clause_map": [
+          {
+            "clause_id": "Q037-C01",
+            "asked_clause": "Remove attack die from empty pool.",
+            "required_fact_ids": [
+              "Q037-F01"
+            ],
+            "rationale": "These facts resolve this requested operation, condition, outcome or distinction; equivalent complete meaning is accepted."
+          },
+          {
+            "clause_id": "Q037-C02",
+            "asked_clause": "Plan choice sequence/bandits.",
+            "required_fact_ids": [
+              "Q037-F02",
+              "Q037-F03"
+            ],
+            "rationale": "These facts resolve this requested operation, condition, outcome or distinction; equivalent complete meaning is accepted."
+          }
+        ],
+        "required_facts": [
+          {
+            "fact_id": "Q037-F01",
+            "expected_fact": "Each such removal instead adds one defense die.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          },
+          {
+            "fact_id": "Q037-F02",
+            "expected_fact": "Attacker chooses eligible ruled plans once each, then defender.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          },
+          {
+            "fact_id": "Q037-F03",
+            "expected_fact": "Bandits use all ruled no-cost plans.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          }
+        ],
+        "contextual_exclusions": [
+          {
+            "key_or_source_fact": "Occupied plan can still be paid.",
+            "classification": "contextual_not_independently_required",
+            "rationale": "Not asked by empty-pool/bandit/selection-order clauses.",
+            "contradiction_policy": "Absence alone is not penalized; any volunteered materially false ruling is still incorrect."
+          }
+        ],
+        "contextual_exclusion_status": "explicit exclusions listed",
+        "semantic_notes": "Assess the stated requested rule in context; no exact-keyword demand, confidence-label grading, or borrowing from another answer."
+      },
+      "raw_entry": {
+        "id": "Q037",
+        "answer": "Attacker chooses eligible ruled plans first, then defender; bandits use all plans at sites they rule, without cost. Red boxes are attacker-only, blue defender-only, gradient either; rule alone cannot waive the color restriction. If a plan removes an attack die from an empty attack pool, add a defense die instead.",
+        "support": "supported",
+        "evidence": [
+          "Campaign — 2 Supply"
+        ],
+        "verbatim_passages": [
+          "### Campaign — 2 Supply\n\nResolve all steps in order. Your **force** normally means all board warbands for attacker, and all warbands contributing to defense for defender. A power may change that force. Choosing fewer attack dice changes only the dice pool: it does not select a smaller attacking force or leave unrolled board warbands outside the force. Skulls and sacrifices use the actual surviving force, not a subset selected by the number of dice.\n\n1. **Choose defender:** any other player who rules your site or whose pawn is there. If no player rules your site, you may choose bandits. A Citizen attacking Chancellor/another Citizen is non-Imperial for that Campaign. If Chancellor attacks Citizen, that Citizen is non-Imperial for it.\n2. **Declare targets, form pools:** at least one target must be at your pawn's site; if defender rules that site you **must** target it. May target any of defender's sites anywhere on map (1 defense die each). If defender's pawn is at your site, may also target any of their relics (printed defense dice), banners (dice equal resources on banner), or pawn-and-favor together (2 dice). A co-located defender's relic target satisfies the local-target requirement. Attacker chooses up to as many attack dice as warbands in attacking force. Apply relevant modifiers and mandatory title defense bonus: Oathkeeper +1 defense die, Usurper +2. The mandatory title bonus is itself a Campaign modifier.\n3. **Battle plans:** red boxes are attacker-only, blue defender-only, gradient either. Attacker chooses eligible ruled plans once each, then defender chooses eligible ruled plans. Plans at a site require rule, not merely pawn presence; bandits use all ruled plans with no cost. A plan can be paid for even with resources on it, but still only used once per Campaign. If an attack die must be removed from an empty attack pool, add a defense die instead.\n4. **Roll defense:** shields rolled, doubled for each double-symbol (multipliers stack ×2, ×4, ×8...), **plus** all defending warbands at targeted sites, **plus** defender's board force if their pawn is at attacker site or any targeted site. Doubles multiply shields only, not warbands. Bandits add 1 per targeted bandit site.\n5. **Roll attack:** each skull immediately kills 1 own force warband. Count full swords; each pair of hollow swords adds 1, leftover single adds zero. May sacrifice own surviving force warbands for +1 attack each, but if sacrificing must sacrifice **exactly enough to win**, never excess. Attacker wins only if attack **strictly exceeds** defense; tie or lower means defender wins.\n6. **Resolve defeat before taking targets:** on attacker victory, the defender first kills half of the warbands in its defending force, rounded down, returning the rest to board. On defender victory, the attacker kills half its remaining attacking force, rounded down, leaving the survivors on its board; bandits cannot be killed and go into hiding. Resolve defeated battle-plan effects. With Imperial defenders Chancellor chooses which warbands die; surviving site warbands go to Chancellor's board, while surviving warbands already on Citizens' boards stay there.\n7. **If attacker won:** may place any number, including **zero**, of surviving force warbands on any targeted sites. Zero leaves site to bandits unless another power applies. Take **all** targeted relics/banners. For a seized banner (taken any way except Recover), burn 2 of its resources to minimum 1; People's Favor flips to Mob. If pawn-and-favor targeted, may force defender to travel to a legal chosen site for no Supply, and independently may burn half their board favor, rounded down. Banishment itself supplies the no-Supply permission, including when a site normally sets a fixed Travel cost. Destination and non-Supply entry restrictions still apply unless a power ignores them. **Shrouded Wood overrides the attacker’s destination choice** if its enemy ruler chooses where the pawn must go; that changes the destination decision, not the no-Supply payment.\n8. **Finish battle-plan effects for either winner:** defeated effects occur immediately after defeat casualties (step 6). If attacker won, resolve targets (step 7), then attacker’s victorious effects. If defender won, skip attacker’s targets but still resolve defender’s victorious effects. Finally, discard any plans from either side that say “At end, discard.” A victorious defender gains no declared targets merely by defending. Transfer Supremacy title **at end of Campaign**, not during temporary loss of site rule.\n\n**Casualty bookkeeping:** remove skull casualties once, when rolled. If the attacker later loses, apply defeat losses to the force **currently remaining after skulls**, rounding the number killed down. For an ordinary attacking force of R physical warbands remaining, defeat kills ⌊R/2⌋ and leaves R − ⌊R/2⌋ on the attacker’s board. A count already described as surviving or remaining after skulls is the updated count; do not subtract the skull losses from it again. Bandit Crown’s bandits still cannot be killed, moved or sacrificed.\n\n**Imperial defense:** apply every relevant change below.\n\n- When an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site.\n- Activate all Campaign modifiers ruled by defender/Allies. **Share powers as one defending side:** their “you,” “your enemy,” and “defender” mean the whole side, while “your site”/“your board” still mean each user’s own location/board. This shares the Oathkeeper defense bonus even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site.\n- Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. Each shared battle plan may be used **once total per Campaign by one user, who pays its cost**. The same user cannot activate it twice, and a second Ally cannot activate it again.\n- On powers, “you,” “your enemy,” “the defender,” etc. refer to the entire side, but **your site/your board** still mean that player's own pawn site/board. **Declared defender chooses order, timing and priority** when Allies disagree, including which player uses a shared plan and whether a restrictive plan must be declared first.\n- Chancellor chooses which Imperial defending warbands die. Surviving warbands from sites return to Chancellor’s board; surviving Citizens’ board warbands stay on those Citizens’ boards.\n- An intra-Empire Campaign does not make all Citizens non-Imperial; only the specified attacker/defender loses that status temporarily.\n\n"
+        ],
+        "scenario": {
+          "given_state": "The attack-die pool is empty when a battle plan removes an attack die.",
+          "completed_events": "The plan’s die-removal instruction is being resolved.",
+          "next_operation": "Add a defense die instead; then continue plan sequence.",
+          "result": "Attacker chooses eligible plans first, then defender; bandits may use all plans they rule, without cost."
+        }
+      }
+    },
+    {
+      "reader": "reader-b",
+      "id": "Q037",
+      "question": "An attack-die pool is empty and a battle plan removes an attack die. What happens? Which battle plans do bandits use and in what sequence do sides choose plans?",
+      "fixed_expected_answer": "For each removal from empty attack pool,add defense die. Attacker chooses ruled plans once each then defender; bandits use all ruled plans with no cost. Plan resources do not block paying its plan cost.",
+      "frozen_scope": {
+        "id": "Q037",
+        "question": "An attack-die pool is empty and a battle plan removes an attack die. What happens? Which battle plans do bandits use and in what sequence do sides choose plans?",
+        "fixed_key_expected_answer_sha256": "716a9b5e058bf1362f703785803c2ebb0b60ca09237a6d876daf11d2e69ad997",
+        "source_references": "Law 5.5.3,7.5",
+        "asked_clause_map": [
+          {
+            "clause_id": "Q037-C01",
+            "asked_clause": "Remove attack die from empty pool.",
+            "required_fact_ids": [
+              "Q037-F01"
+            ],
+            "rationale": "These facts resolve this requested operation, condition, outcome or distinction; equivalent complete meaning is accepted."
+          },
+          {
+            "clause_id": "Q037-C02",
+            "asked_clause": "Plan choice sequence/bandits.",
+            "required_fact_ids": [
+              "Q037-F02",
+              "Q037-F03"
+            ],
+            "rationale": "These facts resolve this requested operation, condition, outcome or distinction; equivalent complete meaning is accepted."
+          }
+        ],
+        "required_facts": [
+          {
+            "fact_id": "Q037-F01",
+            "expected_fact": "Each such removal instead adds one defense die.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          },
+          {
+            "fact_id": "Q037-F02",
+            "expected_fact": "Attacker chooses eligible ruled plans once each, then defender.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          },
+          {
+            "fact_id": "Q037-F03",
+            "expected_fact": "Bandits use all ruled no-cost plans.",
+            "basis": "requested clause, interpreted with authoritative source and fixed key"
+          }
+        ],
+        "contextual_exclusions": [
+          {
+            "key_or_source_fact": "Occupied plan can still be paid.",
+            "classification": "contextual_not_independently_required",
+            "rationale": "Not asked by empty-pool/bandit/selection-order clauses.",
+            "contradiction_policy": "Absence alone is not penalized; any volunteered materially false ruling is still incorrect."
+          }
+        ],
+        "contextual_exclusion_status": "explicit exclusions listed",
+        "semantic_notes": "Assess the stated requested rule in context; no exact-keyword demand, confidence-label grading, or borrowing from another answer."
+      },
+      "raw_entry": {
+        "id": "Q037",
+        "answer": "Removing an attack die from empty pool instead adds defense die. Bandits use all ruled plans free. Attacker chooses eligible plans first, then defender; Imperial declared defender sets contested order.",
+        "support": "supported",
+        "evidence": [
+          "### Campaign — 2 Supply"
+        ],
+        "verbatim_passages": [
+          {
+            "section": "### Campaign — 2 Supply",
+            "text": "### Campaign — 2 Supply\n\nResolve all steps in order. Your **force** normally means all board warbands for attacker, and all warbands contributing to defense for defender. A power may change that force. Choosing fewer attack dice changes only the dice pool: it does not select a smaller attacking force or leave unrolled board warbands outside the force. Skulls and sacrifices use the actual surviving force, not a subset selected by the number of dice.\n\n1. **Choose defender:** any other player who rules your site or whose pawn is there. If no player rules your site, you may choose bandits. A Citizen attacking Chancellor/another Citizen is non-Imperial for that Campaign. If Chancellor attacks Citizen, that Citizen is non-Imperial for it.\n2. **Declare targets, form pools:** at least one target must be at your pawn's site; if defender rules that site you **must** target it. May target any of defender's sites anywhere on map (1 defense die each). If defender's pawn is at your site, may also target any of their relics (printed defense dice), banners (dice equal resources on banner), or pawn-and-favor together (2 dice). A co-located defender's relic target satisfies the local-target requirement. Attacker chooses up to as many attack dice as warbands in attacking force. Apply relevant modifiers and mandatory title defense bonus: Oathkeeper +1 defense die, Usurper +2. The mandatory title bonus is itself a Campaign modifier.\n3. **Battle plans:** red boxes are attacker-only, blue defender-only, gradient either. Attacker chooses eligible ruled plans once each, then defender chooses eligible ruled plans. Plans at a site require rule, not merely pawn presence; bandits use all ruled plans with no cost. A plan can be paid for even with resources on it, but still only used once per Campaign. If an attack die must be removed from an empty attack pool, add a defense die instead.\n4. **Roll defense:** shields rolled, doubled for each double-symbol (multipliers stack ×2, ×4, ×8...), **plus** all defending warbands at targeted sites, **plus** defender's board force if their pawn is at attacker site or any targeted site. Doubles multiply shields only, not warbands. Bandits add 1 per targeted bandit site.\n5. **Roll attack:** each skull immediately kills 1 own force warband. Count full swords; each pair of hollow swords adds 1, leftover single adds zero. May sacrifice own surviving force warbands for +1 attack each, but if sacrificing must sacrifice **exactly enough to win**, never excess. Attacker wins only if attack **strictly exceeds** defense; tie or lower means defender wins.\n6. **Resolve defeat before taking targets:** on attacker victory, the defender first kills half of the warbands in its defending force, rounded down, returning the rest to board. On defender victory, the attacker kills half its remaining attacking force, rounded down, leaving the survivors on its board; bandits cannot be killed and go into hiding. Resolve defeated battle-plan effects. With Imperial defenders Chancellor chooses which warbands die; surviving site warbands go to Chancellor's board, while surviving warbands already on Citizens' boards stay there.\n7. **If attacker won:** may place any number, including **zero**, of surviving force warbands on any targeted sites. Zero leaves site to bandits unless another power applies. Take **all** targeted relics/banners. For a seized banner (taken any way except Recover), burn 2 of its resources to minimum 1; People's Favor flips to Mob. If pawn-and-favor targeted, may force defender to travel to a legal chosen site for no Supply, and independently may burn half their board favor, rounded down. Banishment itself supplies the no-Supply permission, including when a site normally sets a fixed Travel cost. Destination and non-Supply entry restrictions still apply unless a power ignores them. **Shrouded Wood overrides the attacker’s destination choice** if its enemy ruler chooses where the pawn must go; that changes the destination decision, not the no-Supply payment.\n8. **Finish battle-plan effects for either winner:** defeated effects occur immediately after defeat casualties (step 6). If attacker won, resolve targets (step 7), then attacker’s victorious effects. If defender won, skip attacker’s targets but still resolve defender’s victorious effects. Finally, discard any plans from either side that say “At end, discard.” A victorious defender gains no declared targets merely by defending. Transfer Supremacy title **at end of Campaign**, not during temporary loss of site rule.\n\n**Casualty bookkeeping:** remove skull casualties once, when rolled. If the attacker later loses, apply defeat losses to the force **currently remaining after skulls**, rounding the number killed down. For an ordinary attacking force of R physical warbands remaining, defeat kills ⌊R/2⌋ and leaves R − ⌊R/2⌋ on the attacker’s board. A count already described as surviving or remaining after skulls is the updated count; do not subtract the skull losses from it again. Bandit Crown’s bandits still cannot be killed, moved or sacrificed.\n\n**Imperial defense:** apply every relevant change below.\n\n- When an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site.\n- Activate all Campaign modifiers ruled by defender/Allies. **Share powers as one defending side:** their “you,” “your enemy,” and “defender” mean the whole side, while “your site”/“your board” still mean each user’s own location/board. This shares the Oathkeeper defense bonus even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site.\n- Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. Each shared battle plan may be used **once total per Campaign by one user, who pays its cost**. The same user cannot activate it twice, and a second Ally cannot activate it again.\n- On powers, “you,” “your enemy,” “the defender,” etc. refer to the entire side, but **your site/your board** still mean that player's own pawn site/board. **Declared defender chooses order, timing and priority** when Allies disagree, including which player uses a shared plan and whether a restrictive plan must be declared first.\n- Chancellor chooses which Imperial defending warbands die. Surviving warbands from sites return to Chancellor’s board; surviving Citizens’ board warbands stay on those Citizens’ boards.\n- An intra-Empire Campaign does not make all Citizens non-Imperial; only the specified attacker/defender loses that status temporarily.\n\n"
+          }
+        ]
+      }
+    }
+  ]
+}

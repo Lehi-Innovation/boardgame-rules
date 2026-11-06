@@ -1,0 +1,210 @@
+{
+  "benchmark": "extension-02",
+  "grading": "Evaluator manually inspected every requested material fact and summary evidence against the predetermined unchanged key. Confidence/support labels are evidence, not automatic grades. Simple arithmetic and direct application count as supported.",
+  "readers": {
+    "reader-a": {
+      "grades": [
+        {
+          "id": 37,
+          "question": "A card’s remaining cost after bonuses is one green. You hold both one green token and one gold. Must you spend green because you have it, or may you pay gold instead and keep the green? Where does the payment go?",
+          "expected_answer": "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent. Keep the unused green token; return spent gold to the supply.",
+          "material_facts": [
+            "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent.",
+            "Keep the unused green token; return spent gold to the supply."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "You may pay the gold instead and keep the green token. The spent gold goes back to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card: “Gold tokens (jokers) can substitute for any single gem token. Spent gold tokens are returned to the supply.”",
+          "grade": "correct",
+          "reason": "Permits optional gold substitution despite owning matching gem and returns only the spent gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 38,
+          "question": "Three gem piles contain one red, two blue and three green tokens. Other gem piles are empty. Can the three-different-gems action take one from each of these piles, or does the four-token minimum prohibit it? What would remain in those three piles?",
+          "expected_answer": "May take one from each of red,blue,green. The four-token prerequisite applies to taking two alike, not the three-different-colors action. Remaining piles: zero red, one blue, two green.",
+          "material_facts": [
+            "May take one from each of red,blue,green.",
+            "The four-token prerequisite applies to taking two alike, not the three-different-colors action.",
+            "Remaining piles: zero red, one blue, two green."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-84"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            }
+          ],
+          "observed_answer": "Yes. Take one red, one blue and one green. The four-token minimum applies only to taking two tokens of the same color. The piles would then contain zero red, one blue and two green tokens.",
+          "observed_support": "supported",
+          "summary_evidence": "Take 3 Gem Tokens of Different Colors: “Take 1 gem token from each of 3 different color piles.” Take 2 Gem Tokens of the Same Color: “This action is only permitted if there are at least 4 tokens of that color in the supply”.",
+          "grade": "correct",
+          "reason": "Applies the four-token threshold only to two-alike taking, and correctly computes all remaining piles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 39,
+          "question": "You hold a gold token and want to exchange it directly for a red token in the supply without buying a development. Is that a listed action or a permitted use of the joker rule? What use does the summary give gold when purchasing?",
+          "expected_answer": "No direct gold-for-gem exchange action is provided among the four actions. The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action.",
+          "material_facts": [
+            "No direct gold-for-gem exchange action is provided among the four actions.",
+            "The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "Directly exchanging gold for a red token is not a listed action or a permitted use described by the joker rule. The summary allows gold to substitute for any single gem token when paying for a development card; spent gold is returned to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure lists exactly four actions: take three different gems, take two same-color gems, reserve a card, or purchase a card. Purchase payment rules: “Gold tokens (jokers) can substitute for any single gem token. Spent gold tokens are returned to the supply.”",
+          "grade": "correct",
+          "reason": "Rejects a standalone exchange action and confines joker substitution to purchase payment.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 40,
+          "question": "On your turn you can legally buy a face-up card and can also take three different gems. You want neither benefit. May you simply pass without performing an action, or must you choose one of the four actions? This asks about voluntarily passing with legal actions available, not a state in which all actions are impossible.",
+          "expected_answer": "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available. The source does not provide a voluntary pass action.",
+          "material_facts": [
+            "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available.",
+            "The source does not provide a voluntary pass action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78-87"
+            }
+          ],
+          "observed_answer": "You may not voluntarily pass. You must choose and perform one of the four actions when legal actions are available.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: “On their turn, a player must perform exactly one of the following four actions”.",
+          "grade": "correct",
+          "reason": "Applies must-perform-exactly-one to voluntary passing while legal actions exist, without extending to source-unresolved all-actions-impossible states.",
+          "unsupported_correct_claim": false
+        }
+      ],
+      "totals": {
+        "correct": 4,
+        "partial": 0,
+        "incorrect": 0
+      }
+    },
+    "reader-b": {
+      "grades": [
+        {
+          "id": 37,
+          "question": "A card’s remaining cost after bonuses is one green. You hold both one green token and one gold. Must you spend green because you have it, or may you pay gold instead and keep the green? Where does the payment go?",
+          "expected_answer": "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent. Keep the unused green token; return spent gold to the supply.",
+          "material_facts": [
+            "May spend the gold instead; the joker can replace any color, without a requirement that the matching gem be absent.",
+            "Keep the unused green token; return spent gold to the supply."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "You may pay the gold and keep the green. The summary allows gold to substitute for any single gem token and does not require spending a matching token first. The spent gold returns to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Purchase a Development Card / Payment rules: 'Gold tokens (jokers) can substitute for any single gem token. Spent gold tokens are returned to the supply.'",
+          "grade": "correct",
+          "reason": "Permits optional gold substitution despite owning matching gem and returns only the spent gold.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 38,
+          "question": "Three gem piles contain one red, two blue and three green tokens. Other gem piles are empty. Can the three-different-gems action take one from each of these piles, or does the four-token minimum prohibit it? What would remain in those three piles?",
+          "expected_answer": "May take one from each of red,blue,green. The four-token prerequisite applies to taking two alike, not the three-different-colors action. Remaining piles: zero red, one blue, two green.",
+          "material_facts": [
+            "May take one from each of red,blue,green.",
+            "The four-token prerequisite applies to taking two alike, not the three-different-colors action.",
+            "Remaining piles: zero red, one blue, two green."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "81-84"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "94-95"
+            }
+          ],
+          "observed_answer": "Yes. Take one red, one blue and one green. The four-token minimum applies only to taking two tokens of the same color. The piles then contain zero red, one blue and two green tokens.",
+          "observed_support": "supported",
+          "summary_evidence": "Take 3 Gem Tokens of Different Colors: 'Take 1 gem token from each of 3 different color piles.' Take 2 Gem Tokens of the Same Color requires 'at least 4 tokens of that color in the supply'.",
+          "grade": "correct",
+          "reason": "Applies the four-token threshold only to two-alike taking, and correctly computes all remaining piles.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 39,
+          "question": "You hold a gold token and want to exchange it directly for a red token in the supply without buying a development. Is that a listed action or a permitted use of the joker rule? What use does the summary give gold when purchasing?",
+          "expected_answer": "No direct gold-for-gem exchange action is provided among the four actions. The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action.",
+          "material_facts": [
+            "No direct gold-for-gem exchange action is provided among the four actions.",
+            "The joker substitutes for a required gem token when paying for a development, not as a supply-conversion action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "79-87"
+            },
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "108-111"
+            }
+          ],
+          "observed_answer": "A direct gold-for-red exchange is not one of the four listed actions and is not a permitted use described by the joker rule. Gold substitutes for a single gem token when purchasing a development card; spent gold returns to the supply.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure lists taking three different gems, taking two same-color gems, reserving a card, and purchasing a card as the four actions. Gold Token Specifics: 'Gold tokens can substitute for any gem color when purchasing a card.'",
+          "grade": "correct",
+          "reason": "Rejects a standalone exchange action and confines joker substitution to purchase payment.",
+          "unsupported_correct_claim": false
+        },
+        {
+          "id": 40,
+          "question": "On your turn you can legally buy a face-up card and can also take three different gems. You want neither benefit. May you simply pass without performing an action, or must you choose one of the four actions? This asks about voluntarily passing with legal actions available, not a state in which all actions are impossible.",
+          "expected_answer": "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available. The source does not provide a voluntary pass action.",
+          "material_facts": [
+            "Must choose exactly one of the four actions; cannot voluntarily take zero actions while legal actions are available.",
+            "The source does not provide a voluntary pass action."
+          ],
+          "source_references": [
+            {
+              "path": "extracted/splendor-rules.txt",
+              "extraction_lines": "78-87"
+            }
+          ],
+          "observed_answer": "You cannot voluntarily pass when legal actions are available. You must choose and perform exactly one of the four actions.",
+          "observed_support": "supported",
+          "summary_evidence": "Turn Structure: 'On their turn, a player must perform exactly one of the following four actions'.",
+          "grade": "correct",
+          "reason": "Applies must-perform-exactly-one to voluntary passing while legal actions exist, without extending to source-unresolved all-actions-impossible states.",
+          "unsupported_correct_claim": false
+        }
+      ],
+      "totals": {
+        "correct": 4,
+        "partial": 0,
+        "incorrect": 0
+      }
+    }
+  }
+}

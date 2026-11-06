@@ -1,0 +1,5 @@
+Generic source-unit helper, version9.
+
+The code accepts only supplied text and offsets. Its table-field renderer preserves literal source column/value pairs; its subsection selector includes opening steps and nested subsections. It contains no game rules, question IDs, expected answers, grading findings or lookup maps. Eight neutral synthetic Markdown tests passed before its first reader dispatch; the coordinator reviewed the additions and tests and checked the actual pre-dispatch tool output.
+
+Optional for future fresh pairs: a parent may review and embed the exact code as identical generic process instructions for both readers. Only the frozen summary and questions remain rules DATA inputs. Do not provide this README, provenance files, neutral results, game QA paths/history or other surrounding material to blind readers. Readers must choose their own relevant source units and supply any necessary case conclusions; literal column rendering does not decide factual correctness. Keep material omissions and wrong or contradictory claims as findings. This helper is not normative game authority and creates no additional format-only factual failure gate.

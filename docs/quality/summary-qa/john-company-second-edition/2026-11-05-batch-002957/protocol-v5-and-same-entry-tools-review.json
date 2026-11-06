@@ -1,0 +1,182 @@
+{
+  "review_id": "protocol-v5-and-same-entry-tools-review",
+  "verdict": "CHANGES_REQUESTED",
+  "protocol_text_verdict": "PASS",
+  "structural_and_source_quote_checker_verdict": "PASS within the explicitly limited literal/format contract",
+  "block_grading_tools_verdict": "Four concrete validation/policy/preservation issues require attention; no actual reader or grade was evaluated.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v5.txt",
+      "sha256": "1f59353a5a996ffc1635e9b964cab7068860ef224da48e0991cce23297ed5458",
+      "bytes": 7438
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-check.py",
+      "sha256": "60d4c7b0768041e2ad735d5cbec71871516b4fa47fd7dc5a3a4dbb19298242fc",
+      "bytes": 3183
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-section-fact-check.py",
+      "sha256": "b2c0e3cfc80a674a2a03585adc384ca443abdda5b094bfc3b000df257368c0c0",
+      "bytes": 2540
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/block-grading-tools.py",
+      "sha256": "3f976f65468e3530c77eb6186aac78255b7eb39218b413c6f0d5d9b28ef99bba",
+      "bytes": 9832
+    }
+  ],
+  "isolation": {
+    "only_four_authorized_files_read": true,
+    "v4_comparison_read": false,
+    "real_banks_read": false,
+    "real_reader_outputs_read": false,
+    "real_grades_or_results_read": false,
+    "prior_reports_history_status_session_or_agent_tools_used": false,
+    "real_scores_requested_or_inferred": false,
+    "files_written_other_than_two_review_outputs": false
+  },
+  "checks": [
+    {
+      "criterion": "V5 generic, identical and blind",
+      "verdict": "pass",
+      "finding": "The shared template supplies no game rule, expected answer or actual failed ID. It restricts readers to their own frozen summary/questions and three outputs, preserves complete initial visible delivery and all ordered IDs, and explicitly requires identical treatment except role/path."
+    },
+    {
+      "criterion": "Individual requested clauses, short exact ordinary facts and minimal computations",
+      "verdict": "pass",
+      "finding": "V5 explicitly splits compound requests, quotes a short exact ordinary supporting span for each request, uses additional ledger items for noncontiguous passages, rejects repeated whole-section substitutes and confines explicit case conclusions/calculations to requested concrete scenarios."
+    },
+    {
+      "criterion": "Complete sections and cross-reference following",
+      "verdict": "pass",
+      "finding": "The source-only heading index, exact full-slice hashes and once-only answer attachments remain. Readers must follow procedural references, definitions, phase transitions and exceptions when needed; a bare cross-reference or keyword match cannot substitute for the operative fact."
+    },
+    {
+      "criterion": "Parent-only structural versus semantic checks",
+      "verdict": "pass",
+      "finding": "Both checkers expressly limit themselves to format/literal checks. Fact-source relevance, complete requested coverage, calculations, contradictions and factual correctness remain independently graded. No structural flag is presented as a semantic correctness grade."
+    },
+    {
+      "criterion": "Declared source quotation validation",
+      "verdict": "pass for the stated literal-source contract",
+      "finding": "The fact checker requires quote source selection and clause reference, literal contiguous membership in the declared source section, and rejects a whole section as the short fact. Synthetic invented and unselected quotes failed; valid exact quotes and explicit unsupported clauses without sections behaved as intended. Shortness, relevance and adequate clause splitting remain semantic/protocol checks rather than inferred from literal membership alone."
+    },
+    {
+      "criterion": "Valid full raw-entry preservation",
+      "verdict": "pass for valid unique IDs; duplicate guard required",
+      "finding": "Packets retain complete parsed reader entries without quote deduplication or field removal, including extra nested fields; merge retains complete_raw_entry. Duplicate raw IDs can be silently collapsed before that guarantee, as V5-T04 documents."
+    },
+    {
+      "criterion": "All substantive same-entry fields and excluded labels",
+      "verdict": "changes requested",
+      "finding": "answer, ledger supported_fact_or_case_result, case_conclusions and evidence.quote are represented without borrowing from another entry. Top-level metadata, requested_clause and evidence locations are excluded. Nested case-conclusion metadata and the marker-dependent answer-only fallback violate the requested boundary in the cases documented by V5-T02/T03. Semantic graders must still distinguish operative quotations from headings or other non-factual text."
+    },
+    {
+      "criterion": "Material parts and literal quotations",
+      "verdict": "changes requested",
+      "finding": "Required material parts are matched exactly to the scope requirements, valid status values are enforced, and Correct classifications require all parts covered. Literal quotation matching occurs against the selected same-entry content, but empty support quotes currently bypass it, as V5-T01 documents. These checks validate the grader artifact; they do not independently establish that the quotation proves the requirement."
+    },
+    {
+      "criterion": "Final report preference and original preservation",
+      "verdict": "pass",
+      "finding": "The merge selects grades-same-entry.json whenever it exists, otherwise grades.json. Synthetic tests confirmed the selected source_grade_report, intact original grade file, retained full entry, and refusal to overwrite an existing results output. Preparation uses a new directory, and originals are not rewritten."
+    }
+  ],
+  "concrete_issues": [
+    {
+      "id": "V5-T01",
+      "severity": "medium",
+      "file": "block-grading-tools.py",
+      "function": "merge",
+      "problem": "A covered material part accepts reader_quotes=[\"\"]. The list is truthy, and an empty string is a substring of every substantive string, so both current assertions pass without an actual support quotation. Whitespace-only quotes can likewise count as non-factual support when present in the answer.",
+      "synthetic_observation": "The real merge function completed with a covered synthetic requirement whose sole reader quote was empty.",
+      "required_fix": "Require each supplied reader quote to be a string with non-whitespace content, then verify the original exact quote occurs in an allowed substantive same-entry field. Covered parts must have at least one such valid quotation. Keep factual relevance with the semantic grader."
+    },
+    {
+      "id": "V5-T02",
+      "severity": "medium",
+      "file": "block-grading-tools.py",
+      "function": "substantive_strings",
+      "problem": "Recursive flattening of every dictionary value under case_conclusions includes nested confidence and summary_location metadata. That allows a location/confidence label alone to pass the material quote-location check, contrary to the explicit same-entry substantive-content boundary.",
+      "synthetic_observation": "A synthetic case_conclusions object with an actual result plus confidence/location labels produced all three strings. A covered part quoting only its confidence label was accepted by merge. Top-level confidence/location, clause requested labels and evidence locations were correctly excluded.",
+      "required_fix": "Define and validate the substantive shape of case_conclusions, for example plain conclusion/calculation strings, or extract only declared factual result/calculation leaves and exclude metadata recursively. Preserve the original complete entry even while filtering the quote-validation view."
+    },
+    {
+      "id": "V5-T03",
+      "severity": "medium; conditional compatibility issue",
+      "file": "block-grading-tools.py",
+      "function": "merge",
+      "problem": "Selecting grades-same-entry.json does not itself activate same-entry quote validation. The allowed fields still switch to answer-only unless a separate same-entry-grading-clarification.json marker exists. V5 already establishes the all-substantive-fields policy, so the same valid ledger-only quotation is accepted or rejected based on that additional presence check.",
+      "synthetic_observation": "With grades-same-entry.json present in both cases, a synthetic ledger-only operative quote was rejected without the marker and accepted with it. No actual run or marker file was inspected.",
+      "required_fix": "Activate the declared same-entry policy explicitly for v5/same-entry reports, or require and validate a captured policy version before merging. Avoid silently reverting to answer-only validation for a selected same-entry report. Legacy report compatibility may remain explicit."
+    },
+    {
+      "id": "V5-T04",
+      "severity": "low; invalid-input preservation guard",
+      "file": "block-grading-tools.py",
+      "function": "prepare",
+      "problem": "Reader answers are converted directly to an ID-keyed dictionary before duplicate/count/order validation. Duplicate raw IDs can silently discard an earlier full entry while preparation still writes a manifest claiming complete lossless raw-entry preservation.",
+      "synthetic_observation": "A synthetic reader array containing two distinguishable entries with the same sole expected ID was accepted; only the second entry appeared in the packet. Normal unique-ID entries, including custom nested fields, were preserved exactly.",
+      "required_fix": "Validate the original ordered raw ID list/count/uniqueness against the full question list before constructing dictionaries. Reject malformed duplicates rather than dropping them or attempting to grade them."
+    }
+  ],
+  "synthetic_tests": {
+    "method": "Executed the allowed base checker and block-tool functions in isolated namespaces. The fact-check function was compiled from its allowed AST with the allowed base checker injected, avoiding module cache writes. All synthetic summaries/questions/entries/grader artifacts and filesystem operations were in-memory objects/dictionaries. No fixture or real output files were read or written.",
+    "cases": [
+      {
+        "case": "valid exact declared fact quote",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "invented source quote rejected",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "unselected source section rejected",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "whole section substituted as short fact rejected",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "explicit unsupported clause without a source section accepted structurally",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "complete normal raw nested entry preserved",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "same-entry report preferred and originals/output preservation guards hold",
+        "expected_behavior_verified": true
+      },
+      {
+        "case": "empty reader quote accepted as covered support",
+        "issue": "V5-T01",
+        "observed": true
+      },
+      {
+        "case": "nested conclusion confidence/location treated as substantive quotation candidates",
+        "issue": "V5-T02",
+        "observed": true
+      },
+      {
+        "case": "ledger-only quote validation depends on separate marker despite same-entry report preference",
+        "issue": "V5-T03",
+        "observed": true
+      },
+      {
+        "case": "duplicate raw IDs accepted and earlier full entry discarded",
+        "issue": "V5-T04",
+        "observed": true
+      },
+      {
+        "case": "ordinary top-level/request-label/evidence-location metadata excluded",
+        "expected_behavior_verified": true
+      }
+    ]
+  },
+  "repair_scope": "Tool validation and declared content-policy routing only. Preserve all original entries/artifacts. No asked-fact, answer-key or question-scope change is suggested. Keep semantic grading separate from structural checks and do not require guessed sources for unsupported clauses."
+}

@@ -1,0 +1,42 @@
+--- summary-hierarchical-section-check-v8
++++ summary-hierarchical-section-check-v9
+@@ -1,7 +1,7 @@
+ """Versioned source-only Markdown units and parent-side literal checks; no QA key."""
+ from pathlib import Path
+ import hashlib,json,re,sys
+-METHOD='recognized-atx-1to6-subtrees-and-introductions-v2-quote-or-paraphrase'
++METHOD='recognized-atx-1to6-subtrees-and-introductions-v3-lookup-units'
+ 
+ def units(text):
+     # Deliberately narrow, frozen lexer. Actual source has no fenced code.
+@@ -109,21 +109,20 @@
+             refs=clause.get('section_ids',[])
+             if not isinstance(refs,list) or any(not isinstance(x,str) for x in refs):ce.append('nontext or invalid source-reference IDs');refs=[]
+             if not set(refs)<=set(selected_ids):ce.append('clause references unselected source unit')
+-            if not isinstance(fact,str) or not fact.strip():ce.append('empty/nontext fact or abstention')
+-            if kind in ['quote','paraphrase']:
+-                if not isinstance(uid,str):ce.append('nontext fact source ID');expected=None
+-                else:expected=index.get(uid)
+-                if not isinstance(uid,str) or uid not in selected_ids or uid not in refs:ce.append('fact source not selected/referenced')
+-                if kind=='quote' and (expected is None or not isinstance(fact,str) or not fact or fact not in expected['text']):ce.append('fact is not exact source span')
+-                if expected is not None and isinstance(fact,str) and fact.strip()==expected['text'].strip():ce.append('whole unit substituted for individual fact')
+-            elif kind!='unsupported':ce.append('fact_kind must be quote, paraphrase or unsupported')
+-            quote_checks.append(dict(clause_number=n,fact_kind=kind,paraphrase_meaning_requires_independent_grading=kind=='paraphrase',errors=ce))
++            if kind=='lookup':
++                if not refs:ce.append('lookup clause requires selected source references')
++                if fact not in ['',None]:ce.append('lookup ledger is a source map, not an asserted fact')
++                if uid not in ['',None]:ce.append('lookup ledger uses section_ids, not a separate fact source')
++            elif kind=='unsupported':
++                if not isinstance(fact,str) or not fact.strip():ce.append('unsupported clause requires a precise abstention')
++            else:ce.append('fact_kind must be lookup or unsupported')
++            quote_checks.append(dict(clause_number=n,fact_kind=kind,lookup_meaning_and_asked_coverage_requires_independent_grading=kind=='lookup',errors=ce))
+         rows.append(dict(id=qid,selected_units=selected_ids,boundary_attachment_errors=errors,
+             fact_quote_checks=quote_checks,all_structure_and_declared_source_spans_valid=not errors and all(not x['errors'] for x in quote_checks)))
+     return dict(method=METHOD,reader=role,question_count=len(questions),answer_count=len(ids),
+         exact_ordered_unique_ids=all(isinstance(x,str) for x in ids) and ids==question_ids and len(ids)==len(set(ids)),
+         all_structure_and_declared_source_spans_valid=all(row['all_structure_and_declared_source_spans_valid'] for row in rows),checks=rows,
+-        limits='Parent-only structural proof and exact spans ONLY for quote-kind facts. Paraphrases require valid declared selected source references and nonempty facts, but their truth, relevance, qualifiers and asked-fact completeness require independent semantic grading. No content-score cap from technical format.')
++        limits='Exact complete source-unit boundaries, hashes, attachments and clause-reference structure only. Lookup rules are supplied by the actual attached text. Relevance, all asked facts, governing qualifiers, concrete conclusions/calculations, unsupported guesses and contradictions require independent semantic grading. No content-score cap from field labels or technical format.')
+ 
+ def check(run,role):
+     return check_data((run/'summary-snapshot.md').read_text(),json.loads((run/'questions.json').read_text())['questions'],

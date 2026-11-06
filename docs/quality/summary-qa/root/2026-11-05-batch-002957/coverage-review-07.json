@@ -1,0 +1,1484 @@
+{
+  "review_id": "coverage-review-07",
+  "benchmark_version": "v8",
+  "status": "KEY_CORRECTION",
+  "scope": {
+    "authority": "The Law of Root, October 13, 2025",
+    "included": [
+      "Common rules",
+      "Standard Setup",
+      "Marquise de Cat",
+      "Eyrie Dynasties",
+      "Woodland Alliance",
+      "one Vagabond",
+      "Fall/Autumn and Winter maps",
+      "Thief, Tinker, Ranger",
+      "Dominance and coalitions"
+    ],
+    "excluded": [
+      "Expansion factions and characters",
+      "Second Vagabond",
+      "Hirelings",
+      "Landmarks",
+      "Bots",
+      "Advanced Setup"
+    ]
+  },
+  "independence": {
+    "read_only_qa_inputs": [
+      "benchmark-v8/questions.json",
+      "benchmark-v8/answer-key.json",
+      "benchmark-v8/key-corrections.json",
+      "coverage-ledger.json"
+    ],
+    "not_read": [
+      "Summary",
+      "Reader answers or grades",
+      "Earlier review/audit reports",
+      "Parent history"
+    ],
+    "source_review": "Read all applicable common/base-faction text, base component inventory, glossary, Fall/Winter and V.1-3 in extracted/root-rules.txt; checked PDF text and visually inspected PDF pages 5 and 10 for setup, icons and Populate Ruins. The source itself, not ledger mappings, determined expected rules. References to earlier reviews inside supplied ledger/corrections were treated only as claims to independently test."
+  },
+  "input_hash_algorithm": "sha256",
+  "input_hashes": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/root-rules.txt",
+      "sha256": "1cc92ecc4ab1e81d52eeb3586f54e061bd24e9e9ba450f117780bf4dfe341e27",
+      "bytes": 134254
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/source_pdfs/root-recovery.pdf",
+      "sha256": "d32c8c0681d5bac6d2b483fb75d77efb47e78deaa36cb798bc527a605909c045",
+      "bytes": 6740395
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/benchmark-v8/questions.json",
+      "sha256": "60dfcfc5221b99f076c1635bcad50e759466afed45d8d8438c8adfb30f1650aa",
+      "bytes": 13752
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/benchmark-v8/answer-key.json",
+      "sha256": "20b091a0d25287eeb77e88153dd0e5628b7456623f6ad8aef5e0fa23e23c1b3a",
+      "bytes": 27914
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/benchmark-v8/key-corrections.json",
+      "sha256": "2bfe8d99c2bc0f9ef89c8738b0bad902b9fab02673b58f6ae8d70e14ae1bb586",
+      "bytes": 3158
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/coverage-ledger.json",
+      "sha256": "83a260fcb626bad8a76fe05c720dc0be6f0dd1ab5b5f14cc94981bfbbb155731",
+      "bytes": 47155
+    }
+  ],
+  "counts": {
+    "questions_verified": 80,
+    "keys_with_no_required_correction": 79,
+    "keys_requiring_completion": 1,
+    "new_questions_proposed": 0,
+    "existing_questions_retained": 80
+  },
+  "findings": [
+    {
+      "id": "CR07-K01",
+      "kind": "required_key_completion",
+      "question_id": "Q07",
+      "source_references": [
+        "5.1.3"
+      ],
+      "finding": "The v8 key says to remove four dominance cards and draw three, but omits the initial shared-deck shuffle explicitly between those steps. The existing broad standard-setup/deck-change request is sufficient scope; complete this key rather than adding another question. Q25 only requests the separate empty-deck shuffle and does not request initial setup randomization.",
+      "proposed_answer": "Remove all four dominance cards, then shuffle the shared deck; each player draws three cards. Four ruins cover the R slots. The map item supply is 2 boots, 2 bags, 1 crossbow, 1 hammer, 2 swords, 2 tea, 2 coins. Factions set up in letter order: Marquise, Eyrie, Alliance, Vagabond. If Vagabond is present, during its faction setup take the four ruins and the R-marked bag, boot, hammer and sword; put one item beneath each ruin, shuffle the ruin/item stacks as instructed, then return each stack to an empty R ruin slot. Without Vagabond, no hidden ruin items are populated.",
+      "changes_question_wording": false,
+      "counts_as_new_coverage": false,
+      "confidence": "high"
+    },
+    {
+      "id": "CR07-S01",
+      "kind": "scope_adjudication",
+      "question_id": "Q07",
+      "source_references": [
+        "5.1.4-5",
+        "5.1.7",
+        "9.3.4"
+      ],
+      "finding": "Accept the documented v8 conditional hidden-item correction. Q07 does not restrict ruins/item setup to common setup alone; faction setup is also explicitly part of its request. With Vagabond present, Populate Ruins is the necessary item-setup procedure: take four ruins and R bag/boot/hammer/sword, one beneath each, shuffle as prescribed, return stacks to empty ruin slots. Without Vagabond, Standard Setup itself supplies no hidden R items. Q35 explicitly excludes hidden ruin items, so it cannot stand in for Q07.",
+      "proposed_new_question": null,
+      "confidence": "high"
+    },
+    {
+      "id": "CR07-S02",
+      "kind": "scope_adjudication",
+      "question_id": "Q12",
+      "source_references": [
+        "7.5.2.I",
+        "7.8.2"
+      ],
+      "finding": "Accept the documented v8 Recruit completion. Asking how the Eyrie resolve the Decree includes actually performing each card action, not only identifying the suit location. Ordinary Recruit is one warrior in one chosen matching roost clearing; Charismatic changes it to two. No separate question or novelty increment is warranted.",
+      "confidence": "high"
+    },
+    {
+      "id": "CR07-N01",
+      "kind": "novelty_accounting_correction",
+      "question_id": "Q46",
+      "source_references": [
+        "8.2.6",
+        "9.2.2",
+        "9.2.9.IIb",
+        "1.5.5"
+      ],
+      "finding": "Q46 is correct and worth retaining, but not independent new coverage. Q14 already directly asks the complete Outrage triggers and gives warrior movement/removal of sympathy; Q01/Q17 establish the pawn distinction; Q28 establishes forced actions under the affected player's rules. Testing placement, pawn-only entry or allied-warrior entry applies those same trigger words. The allied entry example adds neither an exception nor a new timing/priority rule. The ability to bring allies is separately requested in Q54.",
+      "proposed_ledger_change": "Move Q46 from accepted additions to retained_regression_only; set counts_as_new_coverage false. Keep the frozen question and its correct answer.",
+      "counts_after_correction": {
+        "seed_questions": 20,
+        "qualifying_expansion_questions": 52,
+        "overlapping_regressions_retained": 8,
+        "regression_questions": 80
+      },
+      "confidence": "high"
+    },
+    {
+      "id": "CR07-N02",
+      "kind": "novelty_rationale_correction",
+      "question_id": "Q56",
+      "source_references": [
+        "9.2.1",
+        "9.5.8"
+      ],
+      "finding": "Retain Q56 as qualifying, but narrow its novelty explanation. Broad corrected Q04 already requests crafting costs/repeat use and includes the mixed-suit constraint and repeated-pawn exception. Q56 independently and explicitly requests immediate use of the newly crafted item, supported by 9.2.1 allowing immediate face-up acquisition. That remains its valid distinct hook. Do not count the overlapping cost/repeat details as additional new rules.",
+      "confidence": "high"
+    },
+    {
+      "id": "CR07-C01",
+      "kind": "coverage_result",
+      "finding": "No further independent core procedural question is required after completing Q07. The remaining apparent gaps are defaults already requested, retained repetitions, routine consequences, nonprocedural component-aid distribution, or explicit exclusions. The review imposes no question cap or quota."
+    }
+  ],
+  "proposed_source_backed_key_corrections": [
+    {
+      "id": "Q07",
+      "source_references": "5.1.1-7;9.3.4",
+      "expected_answer": "Remove all four dominance cards, then shuffle the shared deck; each player draws three cards. Four ruins cover the R slots. The map item supply is 2 boots, 2 bags, 1 crossbow, 1 hammer, 2 swords, 2 tea, 2 coins. Factions set up in letter order: Marquise, Eyrie, Alliance, Vagabond. If Vagabond is present, during its faction setup take the four ruins and the R-marked bag, boot, hammer and sword; put one item beneath each ruin, shuffle the ruin/item stacks as instructed, then return each stack to an empty R ruin slot. Without Vagabond, no hidden ruin items are populated.",
+      "reason": "5.1.3 explicitly requires the initial shared-deck shuffle after dominance removal and before drawing. Existing broad Q07 setup scope already covers it."
+    }
+  ],
+  "proposed_questions": [],
+  "all_80_key_checks": [
+    {
+      "id": "Q01",
+      "status": "PASS",
+      "source_references": [
+        "2.5",
+        "7.2.2",
+        "9.2.2"
+      ],
+      "assessment": "Warriors plus buildings; ordinary ties; Eyrie tied-most exception; tokens/pawn and Vagabond inability to rule."
+    },
+    {
+      "id": "Q02",
+      "status": "PASS",
+      "source_references": [
+        "2.2.1",
+        "2.3",
+        "4.2.1-2"
+      ],
+      "assessment": "Positive group, adjacent path, origin/destination rule, repeated movement, river exclusion."
+    },
+    {
+      "id": "Q03",
+      "status": "PASS",
+      "source_references": [
+        "4.3.1-6",
+        "3.2.1"
+      ],
+      "assessment": "Ambush and foil, two immediate hits, early ending, dice and warrior caps, extra/defenseless hits, own removals and warriors first, enemy building/token VP. Explicit effect-order decision rights are separately requested by Q69."
+    },
+    {
+      "id": "Q04",
+      "status": "PASS",
+      "source_references": [
+        "4.1.1-4",
+        "9.2.1",
+        "9.2.5",
+        "9.5.8"
+      ],
+      "assessment": "Crafting icons and clearing suit, one activation per ordinary piece, available supply and duplicates; ready hammer per Vagabond icon and repeated pawn exception."
+    },
+    {
+      "id": "Q05",
+      "status": "PASS",
+      "source_references": [
+        "3.3.1-2"
+      ],
+      "assessment": "Own Daylight, ten VP, marker removal/no further VP, suit-specific start-of-Birdsong wins, irrevocability."
+    },
+    {
+      "id": "Q06",
+      "status": "PASS",
+      "source_references": [
+        "3.3.3-4",
+        "2.1.1"
+      ],
+      "assessment": "Available rather than discard, matching payment and into hand, bird dominance cannot be substituted into a non-bird available suit."
+    },
+    {
+      "id": "Q07",
+      "status": "KEY_CORRECTION",
+      "source_references": [
+        "5.1.1-7",
+        "9.3.4"
+      ],
+      "assessment": "Existing ruins/item scope includes conditional Vagabond Populate Ruins, including shuffle/return. All v8 stated rules are correct. Initial shared-deck shuffle expressly required by 5.1.3 is omitted from the expected procedure; see CR07-K01."
+    },
+    {
+      "id": "Q08",
+      "status": "PASS",
+      "source_references": [
+        "6.2.2-3"
+      ],
+      "assessment": "Keep placement restriction versus entry by movement; matching-card hospitals for removed Marquise warriors, keep destination and no rebuild."
+    },
+    {
+      "id": "Q09",
+      "status": "PASS",
+      "source_references": [
+        "6.5",
+        "6.5.2-3",
+        "6.5.5"
+      ],
+      "assessment": "Workshop craft first, three-action budget plus bird expenditure outside actions, two-move March, once-per-turn Recruit, matching Overwork cost. Overwork result also directly requested by broad production Q37."
+    },
+    {
+      "id": "Q10",
+      "status": "PASS",
+      "source_references": [
+        "6.5.4.I-III",
+        "2.2.3"
+      ],
+      "assessment": "Rule/open slot, leftmost chosen building, ruled wood network, remove payment, placement and uncovered VP."
+    },
+    {
+      "id": "Q11",
+      "status": "PASS",
+      "source_references": [
+        "7.4.1-3"
+      ],
+      "assessment": "Empty-hand emergency draw, mandatory one/two Decree additions with at most one bird, then fewest-warriors legal no-roost recovery."
+    },
+    {
+      "id": "Q12",
+      "status": "PASS",
+      "source_references": [
+        "7.5.1-2.I-IV",
+        "7.8.2",
+        "2.2.3"
+      ],
+      "assessment": "Broad resolution includes one warrior in one chosen matching roost clearing, or two with Charismatic. Column order and within-column freedom, suit locations, Build restrictions and full-completion/turmoil are correct."
+    },
+    {
+      "id": "Q13",
+      "status": "PASS",
+      "source_references": [
+        "7.7.1-4",
+        "7.6"
+      ],
+      "assessment": "Ordered VP loss including Viziers, purge exceptions, leader replacement/recycle, Viziers and normal Evening; no map-piece removal."
+    },
+    {
+      "id": "Q14",
+      "status": "PASS",
+      "source_references": [
+        "8.2.3.I",
+        "8.2.6"
+      ],
+      "assessment": "Exact removal/warrior-entry triggers, matching hand card including wild bird, reveal-and-draw fallback, no-base five-card capacity and incoming discard."
+    },
+    {
+      "id": "Q15",
+      "status": "PASS",
+      "source_references": [
+        "8.4.1-2",
+        "8.2.5"
+      ],
+      "assessment": "Ordered repeatable Revolt then Spread; eligibility, matching supporter payments, Revolt's removal/base/warriors/officer results; adjacency fallback, single-player Martial Law threshold and spread VP."
+    },
+    {
+      "id": "Q16",
+      "status": "PASS",
+      "source_references": [
+        "8.5.3",
+        "8.6.1.IV",
+        "8.2.4"
+      ],
+      "assessment": "Train cost and officer placement, Organize's warrior removal/unsympathetic eligibility and VP, base-loss matching discards including birds and rounded-up half officers, final-base supporter cap."
+    },
+    {
+      "id": "Q17",
+      "status": "PASS",
+      "source_references": [
+        "9.2.3",
+        "9.2.9.IIIb",
+        "9.2.10",
+        "9.4.1-2",
+        "9.5.1",
+        "9.6.1-3"
+      ],
+      "assessment": "Refresh formula and no self-boosting tea, free Slip and departure exception, normal boot/hostile cost, forest movement limits and Nimble, forest Rest then coin draw/discard."
+    },
+    {
+      "id": "Q18",
+      "status": "PASS",
+      "source_references": [
+        "9.5.3",
+        "9.5.5",
+        "9.5.7",
+        "9.2.5"
+      ],
+      "assessment": "Explore torch/item/face/VP/last-ruin result; suit-matched Quest with both item payments, completed-quest scaling or two cards and replacement; hammer Repair preserving face."
+    },
+    {
+      "id": "Q19",
+      "status": "PASS",
+      "source_references": [
+        "9.2.9.IIIa-c",
+        "9.5.6"
+      ],
+      "assessment": "Warrior-removal hostility, own-turn battle-only Infamy excluding triggering warrior, no Strike Infamy, Aid cannot reverse Hostile, warrior-first Strike target restriction."
+    },
+    {
+      "id": "Q20",
+      "status": "PASS",
+      "source_references": [
+        "9.2.8",
+        "9.2.9.IIId",
+        "3.3.1"
+      ],
+      "assessment": "No normal Vagabond dominance; four-player condition, own Daylight/ten VP inherited activation, lowest other player and ties, partner victory and hostile reset."
+    },
+    {
+      "id": "Q21",
+      "status": "PASS",
+      "source_references": [
+        "1.1.1-2"
+      ],
+      "assessment": "Card/Law/Learning precedence; general/faction compatibility and absolute cannot."
+    },
+    {
+      "id": "Q22",
+      "status": "PASS",
+      "source_references": [
+        "1.1.3",
+        "1.4.2",
+        "6.5"
+      ],
+      "assessment": "Current-turn fallback and atomic compound March, including prohibition on interleaved actions/bird expenditure."
+    },
+    {
+      "id": "Q23",
+      "status": "PASS",
+      "source_references": [
+        "1.4.1",
+        "1.4.3"
+      ],
+      "assessment": "Start/end phase boundaries and final-step lockout with explicit end-of-turn/end-of-Evening exception."
+    },
+    {
+      "id": "Q24",
+      "status": "PASS",
+      "source_references": [
+        "1.2.1-2",
+        "1.3.1-3"
+      ],
+      "assessment": "Public counts/private hand contents, inspectable face-up piles versus shared deck, nonbinding agreements, instructed card transfers and no consent prerequisite."
+    },
+    {
+      "id": "Q25",
+      "status": "PASS",
+      "source_references": [
+        "2.1",
+        "2.1.1.I-II"
+      ],
+      "assessment": "Immediate empty-deck reshuffle, bird wild substitution including matching multicard instructions, mandatory prompted-suit treatment and no reverse substitution. Interpretation note correctly rejects bird-first selection or excess discards."
+    },
+    {
+      "id": "Q26",
+      "status": "PASS",
+      "source_references": [
+        "1.5.1",
+        "1.5.4",
+        "7.5.2"
+      ],
+      "assessment": "Finite pieces/no proxies, maximum possible rather than voluntary undersupply, unchanged costs/prerequisites and complete Eyrie obligations."
+    },
+    {
+      "id": "Q27",
+      "status": "PASS",
+      "source_references": [
+        "1.5.4",
+        "G.20",
+        "G.24"
+      ],
+      "assessment": "Default sources/leftmost track piece, supply/rightmost empty track destinations and permanent item removal, all simultaneous removals before triggers."
+    },
+    {
+      "id": "Q28",
+      "status": "PASS",
+      "source_references": [
+        "1.5.5"
+      ],
+      "assessment": "Forced actor retains its rules/abilities and makes its battle decisions."
+    },
+    {
+      "id": "Q29",
+      "status": "PASS",
+      "source_references": [
+        "G.23",
+        "G.33",
+        "6.2.2"
+      ],
+      "assessment": "Replace must complete remove/place, so keep blocks enemy replacement; swap ignores move/place restrictions."
+    },
+    {
+      "id": "Q30",
+      "status": "PASS",
+      "source_references": [
+        "3.1.1"
+      ],
+      "assessment": "Clockwise priority includes current player in simultaneous thirty-point tie."
+    },
+    {
+      "id": "Q31",
+      "status": "PASS",
+      "source_references": [
+        "2.3",
+        "2.4.1",
+        "M.1",
+        "M.2.1",
+        "9.4.2"
+      ],
+      "assessment": "Correct forest adjacency, Winter river division and ordinary Fall, applied to Slip."
+    },
+    {
+      "id": "Q32",
+      "status": "PASS",
+      "source_references": [
+        "6.3.1-5",
+        "2.2.3"
+      ],
+      "assessment": "Complete Marquise supplies, corner keep, garrison exception, three starting buildings within legal slots and five remaining per right-to-left track."
+    },
+    {
+      "id": "Q33",
+      "status": "PASS",
+      "source_references": [
+        "7.3.1-5"
+      ],
+      "assessment": "Twenty-warrior supply, legal/opposite-when-possible starting corner with six warriors and roost, selected leader and Vizier columns, remaining roost track."
+    },
+    {
+      "id": "Q34",
+      "status": "PASS",
+      "source_references": [
+        "5.1.3",
+        "8.3.1-4"
+      ],
+      "assessment": "Ten warriors, three printed-suit bases, ten sympathy, separate three-card hand and three supporters, no map presence/officers."
+    },
+    {
+      "id": "Q35",
+      "status": "PASS",
+      "source_references": [
+        "9.3.1-3",
+        "9.3.5-6",
+        "9.2.5.II"
+      ],
+      "assessment": "Character/pawn, shuffled displayed quests, Indifferent relationships, S-marked character items, correct tracks/Satchel and boxed unused S items. Satchel items inherit the face-up gained-item rule; no contrary state is asserted."
+    },
+    {
+      "id": "Q36",
+      "status": "PASS",
+      "source_references": [
+        "5.2"
+      ],
+      "assessment": "Recommended minimum Reach 17/18/21 for two/three/four, four base values and adventurous 17+ statement."
+    },
+    {
+      "id": "Q37",
+      "status": "PASS",
+      "source_references": [
+        "6.4",
+        "6.5.5",
+        "6.6",
+        "6.3.1",
+        "1.5.1",
+        "1.5.4"
+      ],
+      "assessment": "Mandatory per-sawmill Birdsong production, optional paid Overwork production, finite eight wood, Evening draw bonuses and discard to five."
+    },
+    {
+      "id": "Q38",
+      "status": "PASS",
+      "source_references": [
+        "6.5.3",
+        "1.5.4",
+        "1.1.3"
+      ],
+      "assessment": "Correct maximum-placement/current-player allocation application; retained overlap, no new rule."
+    },
+    {
+      "id": "Q39",
+      "status": "PASS",
+      "source_references": [
+        "7.2.3",
+        "7.8.1"
+      ],
+      "assessment": "One printed-item VP instead of listed amount while extra crafting-point effects survive; Builder ignores Disdain."
+    },
+    {
+      "id": "Q40",
+      "status": "PASS",
+      "source_references": [
+        "7.8.1-4"
+      ],
+      "assessment": "All four Vizier pairs and abilities are accurate; Despot extra VP is per battle event with at least one building/token, not per removed piece."
+    },
+    {
+      "id": "Q41",
+      "status": "PASS",
+      "source_references": [
+        "7.8.2",
+        "7.5.2",
+        "1.5.4"
+      ],
+      "assessment": "Correct mandatory two versus full-completion application; retained overlap."
+    },
+    {
+      "id": "Q42",
+      "status": "PASS",
+      "source_references": [
+        "8.2.2",
+        "4.3.3.I"
+      ],
+      "assessment": "Guerrilla dice reversal with ordinary rolled-hit caps."
+    },
+    {
+      "id": "Q43",
+      "status": "PASS",
+      "source_references": [
+        "8.2.3",
+        "8.5.1"
+      ],
+      "assessment": "Supporter suit-only use, private inspection and separation from hand; cannot craft supporters."
+    },
+    {
+      "id": "Q44",
+      "status": "PASS",
+      "source_references": [
+        "8.4"
+      ],
+      "assessment": "Correct ordered-phase application; retained overlap."
+    },
+    {
+      "id": "Q45",
+      "status": "PASS",
+      "source_references": [
+        "8.4.2.IIa",
+        "8.6.1.IV"
+      ],
+      "assessment": "One other player's three warriors, not summed enemies; no supporter surcharge on Organize. Retained overlap."
+    },
+    {
+      "id": "Q46",
+      "status": "PASS",
+      "source_references": [
+        "8.2.6",
+        "9.2.9.IIb",
+        "1.5.5"
+      ],
+      "assessment": "Correct application: placement/pawn-only entry are not warrior moves, allied warrior entry does trigger. Further novelty overlap, see CR07-N01."
+    },
+    {
+      "id": "Q47",
+      "status": "PASS",
+      "source_references": [
+        "8.6.1-2"
+      ],
+      "assessment": "Menu, flexible operation allowance and nonconsumed officers, then bonus draw/discard. Recruit quantity and chosen-base target are explicitly requested by Q78 rather than credited solely as this key's context."
+    },
+    {
+      "id": "Q48",
+      "status": "PASS",
+      "source_references": [
+        "9.2.2.I"
+      ],
+      "assessment": "Unremovable pawn remains and damages three items for enemy remove-all effects, limited by available undamaged items under general maximum/excess-hit rules."
+    },
+    {
+      "id": "Q49",
+      "status": "PASS",
+      "source_references": [
+        "9.2.4",
+        "9.2.6-7"
+      ],
+      "assessment": "Undamaged swords in Satchel count regardless of face, defending defenseless threshold, damage per hit and ignored excess."
+    },
+    {
+      "id": "Q50",
+      "status": "PASS",
+      "source_references": [
+        "9.2.5.I-II"
+      ],
+      "assessment": "Three-space matching tracks, face-up track routing, exhausted track item to Satchel, ready/undamaged action-cost requirement."
+    },
+    {
+      "id": "Q51",
+      "status": "PASS",
+      "source_references": [
+        "9.6.4",
+        "9.2.5"
+      ],
+      "assessment": "Last Evening step, Satchel plus Damaged count, six plus two per tracked face-up bag, permanent excess removal and no track load."
+    },
+    {
+      "id": "Q52",
+      "status": "PASS",
+      "source_references": [
+        "9.4.1",
+        "9.5.7",
+        "9.6.1"
+      ],
+      "assessment": "Correct Rest/Refresh/Repair distinctions and preserved Repair face; retained overlap."
+    },
+    {
+      "id": "Q53",
+      "status": "PASS",
+      "source_references": [
+        "9.5.4",
+        "9.2.9.I"
+      ],
+      "assessment": "One ready item plus matching card to faction presence, optional crafted item, repeated same-turn Aid count per one improvement and scored new space."
+    },
+    {
+      "id": "Q54",
+      "status": "PASS",
+      "source_references": [
+        "9.2.9.IIa-c",
+        "1.5.5"
+      ],
+      "assessment": "Allied two-VP Aid, one ally's warriors accompanying to destination clearing under applicable move rules, attacker-only ally use, sword-plus-warrior cap and no self-faction attack."
+    },
+    {
+      "id": "Q55",
+      "status": "PASS",
+      "source_references": [
+        "9.2.9.IId"
+      ],
+      "assessment": "Allied-warrior losses versus damaged items strict comparison at battle end; exception to immediate first-warrior hostility."
+    },
+    {
+      "id": "Q56",
+      "status": "PASS",
+      "source_references": [
+        "9.2.1",
+        "9.5.8",
+        "9.2.5"
+      ],
+      "assessment": "Mixed-suit impossibility and repeatable pawn are correct but overlap Q04's broad corrected target. Immediate acquisition/use of a crafted item remains an explicitly requested distinct target."
+    },
+    {
+      "id": "Q57",
+      "status": "PASS",
+      "source_references": [
+        "V.1.1-2",
+        "V.2.1-2",
+        "V.3.1-2",
+        "9.5.7"
+      ],
+      "assessment": "Correct three characters' starting items and torch powers; Thief random hand card, Tinker matching discard/bird, Ranger three repairs preserving faces then immediate phase transition."
+    },
+    {
+      "id": "Q58",
+      "status": "PASS",
+      "source_references": [
+        "2.2.3-4",
+        "9.5.3"
+      ],
+      "assessment": "Last ruin removal opens slot; ordinary building placement cannot remove a ruin. Explicit-only ruin-removal prohibition is the qualifying independent hook."
+    },
+    {
+      "id": "Q59",
+      "status": "PASS",
+      "source_references": [
+        "G.8",
+        "4.3",
+        "9.2.8-9"
+      ],
+      "assessment": "Coalition excludes enemy status and battle targeting; does not grant Allied powers, while Hostile partner reset is independent relationship rule."
+    },
+    {
+      "id": "Q60",
+      "status": "PASS",
+      "source_references": [
+        "9.2.9.IIIa",
+        "3.2.1"
+      ],
+      "assessment": "Correct three VP: triggering warrior excluded, later warrior one, building ordinary plus Infamy two. Retained application overlap."
+    },
+    {
+      "id": "Q61",
+      "status": "PASS",
+      "source_references": [
+        "9.5.1",
+        "9.2.9.IIIb",
+        "9.4.2"
+      ],
+      "assessment": "Correct hostile-warrior-only/nonstacking normal Move payment and free Slip. Retained application overlap."
+    },
+    {
+      "id": "Q62",
+      "status": "PASS",
+      "source_references": [
+        "3.3.1",
+        "3.3.4",
+        "6.5"
+      ],
+      "assessment": "Taking into hand versus activation, separate ten-VP requirement and no spending faction action allowance for these independent Daylight permissions."
+    },
+    {
+      "id": "Q63",
+      "status": "PASS",
+      "source_references": [
+        "1.5.2-3",
+        "G.10",
+        "G.13"
+      ],
+      "assessment": "Fixed faction ownership, items excluded and not faction-owned."
+    },
+    {
+      "id": "Q64",
+      "status": "PASS",
+      "source_references": [
+        "4.1.2-3",
+        "2.1.4",
+        "G.21"
+      ],
+      "assessment": "Immediate resolve/discard versus persistent play area; no hand treatment or uninstructed spending of play-area cards."
+    },
+    {
+      "id": "Q65",
+      "status": "PASS",
+      "source_references": [
+        "2.1.2-3",
+        "3.3.3",
+        "4.3.1",
+        "2.1"
+      ],
+      "assessment": "Correct noncraftability and distinct special uses. This is not an assertion that ambush cards cannot be used as suited cards for generic card instructions; ordinary matching-card costs are already requested elsewhere."
+    },
+    {
+      "id": "Q66",
+      "status": "PASS",
+      "source_references": [
+        "5.1.1-2",
+        "5.1.6-7"
+      ],
+      "assessment": "Random starting player/seating, score zero and dice near map; faction setup order does not set turn order."
+    },
+    {
+      "id": "Q67",
+      "status": "PASS",
+      "source_references": [
+        "3.1",
+        "3.1.1"
+      ],
+      "assessment": "Immediate ordinary thirty-point victory, with no action/phase/turn completion requirement."
+    },
+    {
+      "id": "Q68",
+      "status": "PASS",
+      "source_references": [
+        "4.3",
+        "G.8"
+      ],
+      "assessment": "Attacking warriors/pawn presence and enemy in the same clearing, no rule prerequisite; lone building/token insufficient."
+    },
+    {
+      "id": "Q69",
+      "status": "PASS",
+      "source_references": [
+        "4.3.2",
+        "4.3.4",
+        "4.3.6",
+        "1.1.3"
+      ],
+      "assessment": "Attacker before/after-roll effect priority, own side removal-trigger order, explicit priorities over current-turn fallback."
+    },
+    {
+      "id": "Q70",
+      "status": "PASS",
+      "source_references": [
+        "4.3.5.III"
+      ],
+      "assessment": "Ignored hits subtract from total, not die or warrior cap."
+    },
+    {
+      "id": "Q71",
+      "status": "PASS",
+      "source_references": [
+        "4.1.2",
+        "3.2.2",
+        "7.2.3",
+        "7.8.1"
+      ],
+      "assessment": "Map supply to Crafted Items box, ordinary printed VP with Eyrie/Builder exception, immediate card discarded."
+    },
+    {
+      "id": "Q72",
+      "status": "PASS",
+      "source_references": [
+        "7.2.1",
+        "7.5.1",
+        "8.2.1",
+        "8.5.1",
+        "4.1.1"
+      ],
+      "assessment": "Eyrie roost and Alliance sympathy crafting, their timing, clearing suit and three-color wildcard icon."
+    },
+    {
+      "id": "Q73",
+      "status": "PASS",
+      "source_references": [
+        "8.5 preamble",
+        "8.5.1-3",
+        "8.2.3.I"
+      ],
+      "assessment": "Mobilize one hand card to supporters subject to cap, free Craft/Mobilize/Train ordering/repetition."
+    },
+    {
+      "id": "Q74",
+      "status": "PASS",
+      "source_references": [
+        "7.6.1-2",
+        "7.7.4"
+      ],
+      "assessment": "Rightmost empty Roost track VP before draw bonuses/discard; normal Evening after turmoil."
+    },
+    {
+      "id": "Q75",
+      "status": "PASS",
+      "source_references": [
+        "9.5.2",
+        "9.2.5",
+        "9.2.6",
+        "9.2.4"
+      ],
+      "assessment": "One ready undamaged sword for initiating Battle, distinct from passive exhausted-sword strength."
+    },
+    {
+      "id": "Q76",
+      "status": "PASS",
+      "source_references": [
+        "1.4.1"
+      ],
+      "assessment": "Birdsong/Daylight/Evening then next clockwise player; play until victory."
+    },
+    {
+      "id": "Q77",
+      "status": "PASS",
+      "source_references": [
+        "9.2.7",
+        "9.2.5",
+        "9.5.7"
+      ],
+      "assessment": "Choose undamaged item, Damaged destination and unchanged face; already damaged cannot absorb another hit; ignore excess."
+    },
+    {
+      "id": "Q78",
+      "status": "PASS",
+      "source_references": [
+        "8.6.1 preamble",
+        "8.6.1.III"
+      ],
+      "assessment": "Officer-count flexible operation budget and one warrior at one chosen base clearing per Recruit; officers persist."
+    },
+    {
+      "id": "Q79",
+      "status": "PASS",
+      "source_references": [
+        "9.5 preamble",
+        "9.2.5",
+        "V.3.2"
+      ],
+      "assessment": "No independent action-count cap; flexible ordering/repetition subject to items/requirements, with Ranger immediate phase end."
+    },
+    {
+      "id": "Q80",
+      "status": "PASS",
+      "source_references": [
+        "9.5.6",
+        "9.2.5"
+      ],
+      "assessment": "Exactly one ready undamaged crossbow to pay Strike."
+    }
+  ],
+  "passage_mappings": [
+    {
+      "source_passage": "1.1.1-3",
+      "requested_procedure": "Conflict hierarchy, absolute cannot, unresolved simultaneous choices",
+      "question_ids": [
+        "Q21",
+        "Q22",
+        "Q69"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "1.2.1-2;1.3.1-3",
+      "requested_procedure": "Information rights, nonbinding agreements, instructed transfers and consent",
+      "question_ids": [
+        "Q24"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "1.4.1-3",
+      "requested_procedure": "Three phases and handoff, start/end timings, interruption ban and terminal-step lockout",
+      "question_ids": [
+        "Q76",
+        "Q23",
+        "Q22"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "1.5.1-5;G.20;G.24",
+      "requested_procedure": "Finite components and maximum manipulation, ownership, default place/remove destinations, simultaneous removals and forced actions",
+      "question_ids": [
+        "Q26",
+        "Q63",
+        "Q27",
+        "Q28"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "2.1;2.1.1.I-II",
+      "requested_procedure": "Draw/discard/deck reset and wild/forced/reverse suit substitution",
+      "question_ids": [
+        "Q25",
+        "Q06"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "2.1.2-4",
+      "requested_procedure": "Noncraftable special cards and play-area restrictions",
+      "question_ids": [
+        "Q65",
+        "Q64"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "2.2.1-4;2.3;2.4.1",
+      "requested_procedure": "Adjacent clearing/path/forest topology, building slots, ruins and ordinary river exclusion",
+      "question_ids": [
+        "Q02",
+        "Q31",
+        "Q58",
+        "Q10",
+        "Q12"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "2.5",
+      "requested_procedure": "Rule and Eyrie/Vagabond exceptions",
+      "question_ids": [
+        "Q01"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "3.1-3.1.1",
+      "requested_procedure": "Immediate victory and simultaneous tie priority",
+      "question_ids": [
+        "Q67",
+        "Q30"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "3.2.1-2",
+      "requested_procedure": "Enemy-building/token removal points and ordinary crafted-item VP",
+      "question_ids": [
+        "Q03",
+        "Q71"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "3.3.1-4",
+      "requested_procedure": "Dominance timing/eligibility, suit wins, persistence, availability/payment and hand destination",
+      "question_ids": [
+        "Q05",
+        "Q06",
+        "Q62",
+        "Q20"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "4.1.1-4",
+      "requested_procedure": "Crafting cost/suit/activation limit/wild icon, item availability/destination, immediate/persistent cards and duplicates",
+      "question_ids": [
+        "Q04",
+        "Q72",
+        "Q71",
+        "Q64",
+        "Q56"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "4.2-4.2.2",
+      "requested_procedure": "Positive group, adjacent path, rule, repeatable movement",
+      "question_ids": [
+        "Q02"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "4.3 preamble;4.3.1.I-II",
+      "requested_procedure": "Battle presence/target, ambush/foil and early end",
+      "question_ids": [
+        "Q68",
+        "Q03"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "4.3.2-4.3.4",
+      "requested_procedure": "Battle ordering, rolls, caps and priority",
+      "question_ids": [
+        "Q03",
+        "Q69",
+        "Q42",
+        "Q49"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "4.3.5.I-III;4.3.6",
+      "requested_procedure": "Extra/defenseless/ignored hits, dealing/removal/trigger order and enemy-removal VP",
+      "question_ids": [
+        "Q03",
+        "Q70",
+        "Q69",
+        "Q77"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "5.1.1-2;5.1.6-7",
+      "requested_procedure": "Faction assignment/seating conventions, zero scores, dice and letter-order faction setup",
+      "question_ids": [
+        "Q66",
+        "Q07"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "5.1.3",
+      "requested_procedure": "Two-player dominance removal, initial deck shuffle, three-card starting hand",
+      "question_ids": [
+        "Q07"
+      ],
+      "key_complete": false
+    },
+    {
+      "source_passage": "5.1.4-5;9.3.4",
+      "requested_procedure": "Four ruins, map item inventory, conditional Vagabond R items, one per ruin, shuffled/returned stacks",
+      "question_ids": [
+        "Q07"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "5.2",
+      "requested_procedure": "Base Reach values and recommended sums",
+      "question_ids": [
+        "Q36"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "6.2.1-3",
+      "requested_procedure": "Workshop crafting, keep restrictions, hospital cost/destination",
+      "question_ids": [
+        "Q09",
+        "Q08",
+        "Q29"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "6.3.1-5",
+      "requested_procedure": "Marquise supplies and complete map/track setup",
+      "question_ids": [
+        "Q32"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "6.4;6.5 preamble;6.5.1-5;6.6",
+      "requested_procedure": "Marquise production, phase order/action budget, battle/March/Recruit/Build/Overwork, wood payment and VP, Evening",
+      "question_ids": [
+        "Q37",
+        "Q09",
+        "Q03",
+        "Q68",
+        "Q10",
+        "Q22"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "7.2.1-3;7.3.1-5",
+      "requested_procedure": "Eyrie crafting/rule/Disdain and complete setup",
+      "question_ids": [
+        "Q72",
+        "Q01",
+        "Q39",
+        "Q33"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "7.4.1-3",
+      "requested_procedure": "Eyrie ordered Birdsong recovery/additions",
+      "question_ids": [
+        "Q11"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "7.5.1-2.I-IV",
+      "requested_procedure": "Eyrie Craft then all Decree columns, each action location/effect and Build restrictions",
+      "question_ids": [
+        "Q12",
+        "Q72"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "7.6.1-2;7.7.1-4;7.8.1-4",
+      "requested_procedure": "Eyrie Evening, ordered turmoil, leader recycling, all Vizier pairs/abilities",
+      "question_ids": [
+        "Q74",
+        "Q13",
+        "Q40",
+        "Q39"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "8.2.1-6",
+      "requested_procedure": "Alliance crafting/Guerrilla, supporter use/capacity, base loss, sympathy eligibility and Outrage",
+      "question_ids": [
+        "Q72",
+        "Q42",
+        "Q43",
+        "Q14",
+        "Q16",
+        "Q15"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "8.3.1-4",
+      "requested_procedure": "Alliance complete setup",
+      "question_ids": [
+        "Q34"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "8.4.1.I-III;8.4.2.I-III",
+      "requested_procedure": "Ordered repeatable Revolt and Spread, targets/payments/effects, Martial Law",
+      "question_ids": [
+        "Q15"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "8.5 preamble;8.5.1-3",
+      "requested_procedure": "Flexible Alliance Daylight, Craft/Mobilize/Train",
+      "question_ids": [
+        "Q73",
+        "Q16",
+        "Q72"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "8.6.1 preamble;8.6.1.I-IV;8.6.2",
+      "requested_procedure": "Operation allowance and menu, individual Move/Battle/Recruit/Organize procedures, then Evening cards",
+      "question_ids": [
+        "Q47",
+        "Q78",
+        "Q02",
+        "Q03",
+        "Q16"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.2.1-7",
+      "requested_procedure": "Vagabond crafting, pawn/removal/Nimble/defenseless exceptions, item routing and hits",
+      "question_ids": [
+        "Q04",
+        "Q56",
+        "Q01",
+        "Q48",
+        "Q17",
+        "Q49",
+        "Q50",
+        "Q77"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.2.8;9.2.9.I-III;9.2.10",
+      "requested_procedure": "Coalition, Aid progression, Allied/Hostile powers and exceptions, forest movement",
+      "question_ids": [
+        "Q20",
+        "Q59",
+        "Q53",
+        "Q54",
+        "Q55",
+        "Q19",
+        "Q17"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.3.1-6",
+      "requested_procedure": "Character/pawn/quest setup, conditional ruins, S items and relationships",
+      "question_ids": [
+        "Q35",
+        "Q07",
+        "Q57"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.4.1-2",
+      "requested_procedure": "Refresh and Slip timing/cost/exceptions",
+      "question_ids": [
+        "Q17",
+        "Q31"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.5 preamble;9.5.1-9",
+      "requested_procedure": "Flexible Daylight and all individual Vagabond action payments/targets/results",
+      "question_ids": [
+        "Q79",
+        "Q17",
+        "Q75",
+        "Q18",
+        "Q53",
+        "Q80",
+        "Q19",
+        "Q04",
+        "Q56",
+        "Q57"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "9.6.1-4",
+      "requested_procedure": "Rest, coin draw, hand discard, capacity timing/formula/load and permanent disposal",
+      "question_ids": [
+        "Q17",
+        "Q51"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "G.1-36 base-applicable",
+      "requested_procedure": "Strict definitions supporting requested procedures: enemy/ownership, supply and default destinations, replace/swap, spend/discard, play area, random/show/reveal and piece types",
+      "question_ids": [
+        "Q59",
+        "Q63",
+        "Q27",
+        "Q29",
+        "Q64",
+        "Q24",
+        "Q57",
+        "Q11",
+        "Q14"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "C.1",
+      "requested_procedure": "Base physical inventory as finite-component support; no new independent procedural rule is inferred from every inventory number",
+      "question_ids": [
+        "Q07",
+        "Q26",
+        "Q32",
+        "Q33",
+        "Q34",
+        "Q35",
+        "Q57"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "M.1;M.2.1",
+      "requested_procedure": "No special Fall rules; Winter river divides forests",
+      "question_ids": [
+        "Q31"
+      ],
+      "key_complete": true
+    },
+    {
+      "source_passage": "V.1.1-2;V.2.1-2;V.3.1-2",
+      "requested_procedure": "Three base character items/powers and Ranger phase end",
+      "question_ids": [
+        "Q57"
+      ],
+      "key_complete": true
+    }
+  ],
+  "novelty_accounting": {
+    "observed": {
+      "regression_questions": 80,
+      "seed_questions": 20,
+      "qualifying_expansion_questions": 53,
+      "overlapping_regressions_retained": 7,
+      "note": "Retain every frozen earlier ID, including hard Q60, but do not count overlaps as new source rules or stopping-pass additions. Historical ledger copies preserve earlier classifications."
+    },
+    "existing_rejected_overlaps_upheld": [
+      "Q38",
+      "Q41",
+      "Q44",
+      "Q45",
+      "Q52",
+      "Q60",
+      "Q61"
+    ],
+    "additional_rejected_overlap": "Q46",
+    "corrected_qualifying_expansion_questions": 52,
+    "corrected_retained_overlaps": 8,
+    "arithmetic": "20 seed + 52 qualifying additions + 8 retained overlaps = 80 frozen regression questions",
+    "q56_retained_hook": "Immediate face-up acquisition/use of the item just crafted; not the cost/repeated-pawn details now explicitly covered by Q04.",
+    "historical_pass_counts": "Original historical accepted-ID counts can remain as history only if marked reclassified, as with the existing seven overlaps. Current new-coverage totals must exclude Q46."
+  },
+  "rejections": [
+    {
+      "candidate": "New question about initial shared-deck shuffle",
+      "reason": "The existing broad deck/setup question Q07 already requests the procedure; the defect is key completion, not missing question scope.",
+      "source_references": [
+        "5.1.3"
+      ]
+    },
+    {
+      "candidate": "Additional hidden-ruin shuffle/return or Recruit quantity question",
+      "reason": "Already requested by broad Q07/Q12, with documented v8 corrections accepted; no novelty.",
+      "source_references": [
+        "9.3.4",
+        "7.5.2.I"
+      ]
+    },
+    {
+      "candidate": "Repeat Q46 with a different placement, pawn or allied warrior count",
+      "reason": "Same already-requested Outrage trigger; ordinary recombination, including the frozen Q46 itself.",
+      "source_references": [
+        "8.2.6",
+        "1.5.5"
+      ]
+    },
+    {
+      "candidate": "Further mixed-suit/pawn-activation question",
+      "reason": "Covered by corrected Q04 and explicitly reiterated in Q56; no new rule.",
+      "source_references": [
+        "9.2.1",
+        "9.5.8"
+      ]
+    },
+    {
+      "candidate": "Q65 as an alleged ban on ordinary suited-card uses for ambush cards",
+      "reason": "The key lists distinct special uses and never bans generic card use. The source gives every card a suit, and generic matching-card costs/Decree/Mobilize are already directly requested. An optional wording clarification would be harmless, but no additional rule or required correctness correction is justified.",
+      "source_references": [
+        "2.1",
+        "2.1.2",
+        "6.5.5",
+        "7.4.2",
+        "8.5.2"
+      ]
+    },
+    {
+      "candidate": "New question about face-up S-marked Satchel starting items",
+      "reason": "Q35 broadly requests marked starting-item setup and ordinary gained-item face-up/Satchel routing is the applicable default; the key does not prescribe an incorrect face. Rest/Repair/Refresh and cost eligibility are directly requested elsewhere.",
+      "source_references": [
+        "9.3.5",
+        "9.2.5.II"
+      ]
+    },
+    {
+      "candidate": "Different dice, group sizes, supplies, supporter counts, officer rounding, allied casualty totals, quest suits or item load",
+      "reason": "No new rule, outcome branch, timing, priority or exception beyond the existing corresponding questions; reject numerical/cosmetic variants."
+    },
+    {
+      "candidate": "Multiple base/sympathy loss with Outrage in battle",
+      "reason": "Q69 directly asks own-side removal-trigger ordering, while Q14/Q16 directly request the triggered effects; the example merely recombines them.",
+      "source_references": [
+        "4.3.6",
+        "8.2.4",
+        "8.2.6"
+      ]
+    },
+    {
+      "candidate": "Separate maximum take/remove rather than place question",
+      "reason": "The same general maximum-possible manipulation rule in 1.5.4, not a separate exception. No untested base-only consequential branch established.",
+      "source_references": [
+        "1.5.4"
+      ]
+    },
+    {
+      "candidate": "Handing out overview cards as desired or arbitrary faction-assignment method",
+      "reason": "Optional teaching-aid distribution and unrestricted assignment method do not create a missing core game procedure or outcome branch; no additional question is required.",
+      "source_references": [
+        "5.1.1",
+        "5.1.6"
+      ]
+    },
+    {
+      "candidate": "Quest-deck exhaustion or unavailable printed card-specific effects",
+      "reason": "No explicit exhaustion procedure or comprehensive card-text corpus supplied by this Law; do not invent a ruling.",
+      "source_references": [
+        "9.3.3",
+        "9.5.5"
+      ]
+    },
+    {
+      "candidate": "Expansion, second Vagabond, Advanced Setup, hirelings, landmarks or bots",
+      "reason": "Explicit scope exclusions; no coverage addition."
+    }
+  ],
+  "final_zero_addition_passes": {
+    "passes_reviewed": [
+      21,
+      22
+    ],
+    "new_questions_from_this_challenge": 0,
+    "zero_question_additions_upheld": true,
+    "key_completeness_claim_upheld": false,
+    "reason": "The initial deck shuffle requires a Q07 key completion, with no changed question wording and no new question. Thus passes 21/22 remain zero-addition passes, but do not establish that the present key is complete. Correct Q07, record that correction without counting it as an addition, and retain the zero-addition result. The Q46 novelty reclassification also changes no coverage and adds no question."
+  },
+  "recommendation": "Complete Q07 with the initial shared-deck shuffle, reclassify Q46 as retained overlap and narrow Q56 novelty rationale. Preserve all 80 frozen questions. No additional question is proposed."
+}

@@ -1,0 +1,1124 @@
+{
+  "review": "fresh independent original-core coverage and fixed-key challenge 06",
+  "date": "2026-11-05",
+  "benchmark": "expanded-v11",
+  "verdict": "FAIL",
+  "coverage_verdict": "FAIL",
+  "fixed_key_verdict": "PASS",
+  "stopping_verdict": "FAIL",
+  "proposed_addition_count": 1,
+  "remaining_gaps": [
+    {
+      "id": "C06-01",
+      "rule": "Choose an ~or~ option before resolving either option; information obtained by starting one option cannot be used to switch to the other option.",
+      "proposed_question": "Bringer uses Call on Midnight’s Dream in a legal target land containing both Dahan and Invaders. May Bringer first draw and inspect the four Major Power Cards from the first option, then decide to take the other option’s 2 Fear instead, or must the ~or~ option be chosen before either option begins resolving?",
+      "predetermined_answer": "The option must be chosen before either option begins resolving. Bringer cannot inspect the Major Power draw and then switch to the 2 Fear option. If the Major-gain option is chosen, resolve that option, including the ordinary draw-four/keep-one and Major Forgetting requirement; drawing the cards is already resolving that option.",
+      "source_evidence": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+          "sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+          "entry_anchor": ".9v5kcmx",
+          "linked_anchor": ".9v5kfqe",
+          "entry_range_zero_based_half_open": [
+            43501,
+            44566
+          ],
+          "entry_passage_sha256": "640a104ad14077351330d0845668c6fad30d9343045b92f3d21aab5da7c3195f",
+          "exact_clause": "~or~ choices are made before resolving either option",
+          "clause_range_zero_based_half_open": [
+            44158,
+            44210
+          ],
+          "clause_sha256": "3e532212d93c0ae326c7dde47975adec60292dc0ff7953a241b151c1bae6fdda"
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.html",
+          "sha256": "f39f9c651cc098336252c5027196fcb51267615214ce2fa51f5bacf4f8910f79",
+          "entry_anchor": ".9v5kcmx",
+          "linked_anchor": ".9v5kfqe",
+          "verified_range_zero_based_half_open": [
+            257474,
+            260474
+          ],
+          "passage_sha256": "e0497b007422f029a930a8df520026574b2b943df280b54323d2860d97565261",
+          "official_url": "https://querki.net/raw/darker/spirit-island-faq/Core+game",
+          "evidence": "Rendered raw HTML explicitly links the or-choice timing sentence to .9v5kfqe."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/call_on_midnights_dream.jpg",
+          "sha256": "54eb15af8fddb5e743563ff1fcc3602fc17df602b6401afe223041ddbd54baf1",
+          "evidence": "Full primary printed original-core face: first or option conditionally gains a Major in a land with Dahan; second conditionally generates 2 Fear if Invaders are present. Both conditions hold in the proposed question. No expansion corner symbol."
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+          "sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+          "anchor": "CORE p.18 Gaining Power Cards",
+          "evidence": "The already-covered gain procedure establishes that drawing and inspecting four cards is part of resolving the selected Major-gain instruction, rather than an earlier option-selection step."
+        }
+      ],
+      "why_existing_actual_prompts_do_not_request_it": [
+        {
+          "question_ids": [
+            "Q27"
+          ],
+          "reason": "Q27 asks whether gaining/losing Elements during earlier instructions affects later thresholds and whether earlier effects can be revised. It does not ask when an or branch is chosen. Its answer supplies an extra sentence that or-branch choice precedes branch resolution, but surplus unrequested answer text is not coverage."
+        },
+        {
+          "question_ids": [
+            "Q60"
+          ],
+          "reason": "Q60 asks whether Crops Wither and Fade’s 2 Fear is optional, testing which clauses its or line divides. It does not ask whether the player may start one branch before committing to it."
+        },
+        {
+          "question_ids": [
+            "Q16"
+          ],
+          "reason": "Q16 asks do-as-much-as-possible, skipping instructions, and foregoing an entire Power. It does not test commitment before obtaining information from one alternative branch."
+        },
+        {
+          "question_ids": [
+            "Q17"
+          ],
+          "reason": "Q17 requests the complete Power-gain procedure once the Gain instruction is being resolved. It does not ask when a choice between that procedure and a different or branch becomes committed."
+        },
+        {
+          "question_ids": [
+            "Q88",
+            "Q126"
+          ],
+          "reason": "Both use Call on Midnight’s Dream after the Major-gain branch has been selected; they test Forgetting/Repeat rules and later-entering Repeat eligibility, respectively. Neither asks branch-choice timing."
+        },
+        {
+          "question_ids": [
+            "Q05",
+            "Q24",
+            "Q74"
+          ],
+          "reason": "These ask Power targeting timing, waiting for other Spirits’ Growth results, and ordering independent Growth instructions. Those are different decision boundaries and do not ask when to select a Power’s alternative or branch."
+        }
+      ],
+      "strict_novelty_test": "A player can correctly answer every requested clause of the 127 prompts while incorrectly allowing Major draws to be inspected before selecting the or branch. This is the FAQ’s explicit choice-before-resolution temporal rule, demonstrated by an original-core card, not a changed card name, numerical variation, supply-state example, or recombination that invents a new rule.",
+      "scope": "Standard original-core Bringer Unique Power with both printed conditions satisfied. No excluded producer, adversary, scenario, expansion, promo, thematic map, optional difficulty rule, or scoring rule is imported.",
+      "recommended_action": "Add this question with its predetermined answer and source mapping in a later authorized benchmark revision. Preserve all 127 existing frozen entries."
+    }
+  ],
+  "fixed_key_audit": {
+    "question_count": 127,
+    "all_actual_question_clauses_and_fixed_answers_read": true,
+    "material_key_errors": [],
+    "material_scope_errors": [],
+    "material_question_ambiguities": [],
+    "conclusion": "All 127 fixed answers are sound for their requested clauses within the assigned current original-core source hierarchy. No edits to questions or keys are requested by this review. Printed-face and FAQ checks support the numerical outcomes, timing boundaries, targeting rules, and protection distinctions tested.",
+    "reviewed_domains": [
+      "Standard balanced setup and supplies, current +1 initial Blight erratum, hidden random Blight selection, one-Spirit solo and multi-handed scaling",
+      "Growth option choice/order/cost, Presence tracks, Add versus Move/reposition, destroyed Presence, Energy and Card Plays",
+      "Play/pay/gain/Forget/Reclaim and Elements, threshold sequencing, voluntary reduction, innate availability, Power use and targeting",
+      "Damage/Health/Defend, destruction versus removal/replacement, Dahan Ravage and protection boundaries",
+      "Fear generation/current level/reveal/order and player choices; Invader card eligibility/order/advance; Blight pools/cascades/addition units",
+      "Repeat eligibility/timing/speed/Range/Elements/use counts/targeting and non-chaining; printed original-core card rulings",
+      "All original eight Spirits’ applicable FAQ procedures, Ocean land scope/Drowning/failed Drown/cleanup, Bringer hypothetical damage and indirect destruction, triggered actions and victory/defeat action trees"
+    ],
+    "minor_wording_observations": [
+      "The printed card title is Call on Midnight’s Dream; plural Dreams in several prompts/official FAQ aliases does not create material identity ambiguity.",
+      "Q97’s Town/City wording requests the building consequence of Mists of Oblivion; the printed card also deals its 1 Damage to Explorers. The question does not state that Explorers are excluded, so this is not a material key error."
+    ]
+  },
+  "stopping_assessment": {
+    "claimed_zero_addition_passes_challenged": [
+      23,
+      24
+    ],
+    "conclusion": "The permitted map’s zero-addition/saturation claim does not survive this fresh challenge: one explicit applicable source-defined temporal choice rule remains absent from actual requested prompt clauses. No stopping PASS is warranted for the current 127-question benchmark.",
+    "historical_reports_read": false,
+    "discovery_quota_used": false
+  },
+  "novelty_notes": [
+    {
+      "topic": "Frozen non-novel regressions",
+      "decision": "Preserve Q32 and Q100. Neither is counted as a discovery or new rule in this review."
+    },
+    {
+      "topic": "Procedure coverage versus arbitrary granularity",
+      "decision": "Complete named procedures receive credit for required operational bullets. Do not demand separate draw-four/reshuffle arithmetic or every exhausted-supply state under Q17, every Add/reposition stock state under Q03/Q36, or every arrangement/count example under the complete standard setup prompts."
+    },
+    {
+      "topic": "Further retargeting, Range distances, Growth mixes and threshold quantities",
+      "decision": "No additions: Q114, Q125, Q124 and Q123 directly request their respective permission rules. Alternate numbers or presentation are not novel."
+    },
+    {
+      "topic": "Additional Ocean/Bringer/Vengeance/protection combinations",
+      "decision": "No additions from recombining already-tested rules. Q80/Q81/Q100/Q113 distinguish failed-Drown Push from illegal-state cleanup; Q82–Q89 and Q104 test the applicable hypothetical/real damage and trigger boundaries; Q115–Q118 cover the named protection source/type boundaries."
+    },
+    {
+      "topic": "Generic choice changes on Repeat",
+      "decision": "No additional question proposed merely to vary an or choice or Damage allocation on a Repeat. The ordinary Repeat choice permission is already directly instantiated by Q114’s same-or-different legal target question; substituting another kind of ordinary choice alone is not a distinct source rule."
+    },
+    {
+      "topic": "Threshold modifier timing",
+      "decision": "No separately inflated addition from the Speed/Range/target prerequisite bullets of the threshold-resolution procedure. Q27 requests changed-Element and already-resolved-effect timing, while the targeting/Repeat prompts check the relevant attributes. The accepted gap concerns or-branch commitment, which is a different choice procedure and is not requested by Q27."
+    },
+    {
+      "topic": "Set membership",
+      "decision": "Printed card corner marks, interpreted with the publisher-linked B&C p6 legend, were used instead of catalog set labels. Sky Stretches to Shore and Cast Down into the Briny Deep are excluded; the 31 unmarked named original-core faces remain within scope."
+    },
+    {
+      "topic": "Broad linked FAQ examples",
+      "decision": "Excluded adversaries, scenarios, thematic maps, optional difficulty/scoring, expansions and promos were read as required source context but did not enter gameplay scope. General applicable core procedures were retained. Explicit givens in existing questions were treated as givens rather than imported excluded producers."
+    }
+  ],
+  "checked_question_ids": [
+    "Q01",
+    "Q02",
+    "Q03",
+    "Q04",
+    "Q05",
+    "Q06",
+    "Q07",
+    "Q08",
+    "Q09",
+    "Q10",
+    "Q11",
+    "Q12",
+    "Q13",
+    "Q14",
+    "Q15",
+    "Q16",
+    "Q17",
+    "Q18",
+    "Q19",
+    "Q20",
+    "Q21",
+    "Q22",
+    "Q23",
+    "Q24",
+    "Q25",
+    "Q26",
+    "Q27",
+    "Q28",
+    "Q29",
+    "Q30",
+    "Q31",
+    "Q32",
+    "Q33",
+    "Q34",
+    "Q35",
+    "Q36",
+    "Q37",
+    "Q38",
+    "Q39",
+    "Q40",
+    "Q41",
+    "Q42",
+    "Q43",
+    "Q44",
+    "Q45",
+    "Q46",
+    "Q47",
+    "Q48",
+    "Q49",
+    "Q50",
+    "Q51",
+    "Q52",
+    "Q53",
+    "Q54",
+    "Q55",
+    "Q56",
+    "Q57",
+    "Q58",
+    "Q59",
+    "Q60",
+    "Q61",
+    "Q62",
+    "Q63",
+    "Q64",
+    "Q65",
+    "Q66",
+    "Q67",
+    "Q68",
+    "Q69",
+    "Q70",
+    "Q71",
+    "Q72",
+    "Q73",
+    "Q74",
+    "Q75",
+    "Q76",
+    "Q77",
+    "Q78",
+    "Q79",
+    "Q80",
+    "Q81",
+    "Q82",
+    "Q83",
+    "Q84",
+    "Q85",
+    "Q86",
+    "Q87",
+    "Q88",
+    "Q89",
+    "Q90",
+    "Q91",
+    "Q92",
+    "Q93",
+    "Q94",
+    "Q95",
+    "Q96",
+    "Q97",
+    "Q98",
+    "Q99",
+    "Q100",
+    "Q101",
+    "Q102",
+    "Q103",
+    "Q104",
+    "Q105",
+    "Q106",
+    "Q107",
+    "Q108",
+    "Q109",
+    "Q110",
+    "Q111",
+    "Q112",
+    "Q113",
+    "Q114",
+    "Q115",
+    "Q116",
+    "Q117",
+    "Q118",
+    "Q119",
+    "Q120",
+    "Q121",
+    "Q122",
+    "Q123",
+    "Q124",
+    "Q125",
+    "Q126",
+    "Q127"
+  ],
+  "read_evidence": {
+    "coordinate_system": "All character ranges are zero-based half-open Unicode ranges, not byte offsets.",
+    "complete_text_reads": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/coverage-review-06-input-manifest.json",
+        "unicode_character_length": 1600,
+        "byte_length": 1600,
+        "sha256": "6fda3d07471151963815c61a4997ab7edfb42805a8ee046d0a173e5390a28ff9",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            1600
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/source-manifest.json",
+        "unicode_character_length": 1397,
+        "byte_length": 1397,
+        "sha256": "78f751f4d852a444c425bc78da95156b4485a88dbc9fb1086eb03e99c69e85bb",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            1397
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/supplemental-source-manifest-v2.json",
+        "unicode_character_length": 26718,
+        "byte_length": 26718,
+        "sha256": "3875707dc79c5b9aef003da10a4e8a27c5272be050e2dfcf539a68371c1d2705",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            26718
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v11/questions.json",
+        "unicode_character_length": 33182,
+        "byte_length": 33304,
+        "sha256": "58e2b5541789f8600882654cb8eb9ad4ebf06272584e4d6572be468d04a30e23",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            30000
+          ],
+          [
+            30000,
+            33182
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v11/answer-key.json",
+        "unicode_character_length": 51772,
+        "byte_length": 51842,
+        "sha256": "52734bbda93003fe98b71f69a64b964381d85a19ca9dfdb017255c3f9235da74",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            30000
+          ],
+          [
+            30000,
+            36000
+          ],
+          [
+            36000,
+            42000
+          ],
+          [
+            42000,
+            48000
+          ],
+          [
+            48000,
+            51772
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/coverage-map-for-review-06.json",
+        "unicode_character_length": 114783,
+        "byte_length": 114817,
+        "sha256": "34798bed128262de93ec983285bcf5b0dccdd9af87a0e4f6140819159daf4436",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            30000
+          ],
+          [
+            30000,
+            36000
+          ],
+          [
+            36000,
+            42000
+          ],
+          [
+            42000,
+            48000
+          ],
+          [
+            48000,
+            54000
+          ],
+          [
+            54000,
+            60000
+          ],
+          [
+            60000,
+            66000
+          ],
+          [
+            66000,
+            72000
+          ],
+          [
+            72000,
+            78000
+          ],
+          [
+            78000,
+            84000
+          ],
+          [
+            84000,
+            90000
+          ],
+          [
+            90000,
+            96000
+          ],
+          [
+            96000,
+            102000
+          ],
+          [
+            102000,
+            108000
+          ],
+          [
+            108000,
+            114000
+          ],
+          [
+            114000,
+            114783
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+        "unicode_character_length": 90906,
+        "byte_length": 91614,
+        "sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            30000
+          ],
+          [
+            30000,
+            36000
+          ],
+          [
+            36000,
+            42000
+          ],
+          [
+            42000,
+            48000
+          ],
+          [
+            48000,
+            54000
+          ],
+          [
+            54000,
+            60000
+          ],
+          [
+            60000,
+            66000
+          ],
+          [
+            66000,
+            72000
+          ],
+          [
+            72000,
+            78000
+          ],
+          [
+            78000,
+            84000
+          ],
+          [
+            84000,
+            90000
+          ],
+          [
+            90000,
+            90906
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+        "unicode_character_length": 207859,
+        "byte_length": 208054,
+        "sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            18000
+          ],
+          [
+            18000,
+            24000
+          ],
+          [
+            24000,
+            30000
+          ],
+          [
+            30000,
+            36000
+          ],
+          [
+            36000,
+            42000
+          ],
+          [
+            42000,
+            48000
+          ],
+          [
+            48000,
+            54000
+          ],
+          [
+            54000,
+            60000
+          ],
+          [
+            60000,
+            66000
+          ],
+          [
+            66000,
+            72000
+          ],
+          [
+            72000,
+            78000
+          ],
+          [
+            78000,
+            84000
+          ],
+          [
+            84000,
+            90000
+          ],
+          [
+            90000,
+            96000
+          ],
+          [
+            96000,
+            102000
+          ],
+          [
+            102000,
+            108000
+          ],
+          [
+            108000,
+            114000
+          ],
+          [
+            114000,
+            120000
+          ],
+          [
+            120000,
+            126000
+          ],
+          [
+            126000,
+            132000
+          ],
+          [
+            132000,
+            138000
+          ],
+          [
+            138000,
+            144000
+          ],
+          [
+            144000,
+            150000
+          ],
+          [
+            150000,
+            156000
+          ],
+          [
+            156000,
+            162000
+          ],
+          [
+            162000,
+            168000
+          ],
+          [
+            168000,
+            174000
+          ],
+          [
+            174000,
+            180000
+          ],
+          [
+            180000,
+            186000
+          ],
+          [
+            186000,
+            192000
+          ],
+          [
+            192000,
+            198000
+          ],
+          [
+            198000,
+            204000
+          ],
+          [
+            204000,
+            207859
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-setup.txt",
+        "unicode_character_length": 14001,
+        "byte_length": 14023,
+        "sha256": "f71f1b8c72dddf50ebc17c8515503143fbe2e2206f70525659c8218d68a5b907",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            6000
+          ],
+          [
+            6000,
+            12000
+          ],
+          [
+            12000,
+            14001
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/what-do-range-boosts-affect.txt",
+        "unicode_character_length": 2290,
+        "byte_length": 2290,
+        "sha256": "c9a9114cedc0d39029aee6e3c84057b164c7677d1c67171326b7463f0af1abed",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            2290
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/range-in-text-of-powers-that-target-spirits.txt",
+        "unicode_character_length": 1325,
+        "byte_length": 1325,
+        "sha256": "40db541cfc2107f2eff7ade8fdbaf06b7b8d1965ed0907cc883efc6dc4fbe4b2",
+        "complete_read": true,
+        "read_ranges_zero_based_half_open": [
+          [
+            0,
+            1325
+          ]
+        ],
+        "range_units": "Unicode characters after UTF-8 decode; no newline normalization differences observed",
+        "truncation_check": "Every slice was returned separately with max_output_tokens=4000 and its matching RANGE/OF/CHARS footer. Every expected footer appeared; no output was truncated."
+      }
+    ],
+    "additional_targeted_reads": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.html",
+        "unicode_character_length": 486752,
+        "sha256": "f39f9c651cc098336252c5027196fcb51267615214ce2fa51f5bacf4f8910f79",
+        "read_range_zero_based_half_open": [
+          40256,
+          43256
+        ],
+        "passage_sha256": "c01eb61d7a0fc0363008379d43114db22ad7f7c1c4ffccf309ce85f8cb8b30fe",
+        "complete_read": false,
+        "purpose": "Targeted raw HTML verification of the ruling; second range contains the rendered official .9v5kcmx entry and its explicit .9v5kfqe anchor text. First range contains an embedded escaped duplicate that omits linked text.",
+        "truncation_check": "One contiguous 3000-character range per response, max_output_tokens=4000, matching footer, no truncation."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.html",
+        "unicode_character_length": 486752,
+        "sha256": "f39f9c651cc098336252c5027196fcb51267615214ce2fa51f5bacf4f8910f79",
+        "read_range_zero_based_half_open": [
+          257474,
+          260474
+        ],
+        "passage_sha256": "e0497b007422f029a930a8df520026574b2b943df280b54323d2860d97565261",
+        "complete_read": false,
+        "purpose": "Targeted raw HTML verification of the ruling; second range contains the rendered official .9v5kcmx entry and its explicit .9v5kfqe anchor text. First range contains an embedded escaped duplicate that omits linked text.",
+        "truncation_check": "One contiguous 3000-character range per response, max_output_tokens=4000, matching footer, no truncation."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+        "sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+        "read_range_zero_based_half_open": [
+          43501,
+          44566
+        ],
+        "passage_sha256": "640a104ad14077351330d0845668c6fad30d9343045b92f3d21aab5da7c3195f",
+        "purpose": "Complete smaller re-read of the final accepted gap’s entry, after the full source read.",
+        "truncation_check": "1065 Unicode characters, one response, max_output_tokens=4000, complete matching footer."
+      }
+    ],
+    "primary_visuals": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/sky_stretches_to_shore.jpg",
+        "sha256": "a68717425d0c13f0dc7d916072e2349ebe164234708b7d11557f297fd6d87523",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Excluded: printed B&C corner symbol visible."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/cast_down_into_the_briny_deep.jpg",
+        "sha256": "c77a4c9b6e5b9724a6fca6f1eeb694010accc59456eed91c02cebad201cb0f94",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Excluded: printed B&C corner symbol visible."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/blazing_renewal.jpg",
+        "sha256": "82c09991d598e451ff20ce7753659bb12f0e0012f73fb56b9f4db01726134e11",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/the_trees_and_stones_speak_of_war.jpg",
+        "sha256": "b20833a2cc3593701887a69c449179856b66047b8c54d704dcb5615bc1cd12e7",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/encompassing_ward.jpg",
+        "sha256": "ea6f5bf4fc2aa99e77660b083173538843c35809fbec17b03c86aac4a5c0529c",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/dahan_on_their_guard.jpg",
+        "sha256": "3459c49f72f2897d450f340d8947d74d44d4d3e32d11d51c17339366199cd310",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/wrap_in_wings_of_sunlight.jpg",
+        "sha256": "690150f0ae58f5819b746793562ab58fb9ac0c7690b99903ebbc6d939392e500",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/infinite_vitality.jpg",
+        "sha256": "a4f0f3b98a235ef5790830ae595dedf76f6906f345242a7b66b51ff9805632d6",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/harbingers_of_the_lightning.jpg",
+        "sha256": "171bacb64c5bccc5c0c32f2ffc948230d03683fbd94ded14f8d2086c15ac28d2",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/boon_of_vigor.jpg",
+        "sha256": "cf6959dc98b6723aeedf5e14088a32a9f9cab715a0ce9e731a914b941c6819f2",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/mantle_of_dread.jpg",
+        "sha256": "d45e854421c186ba97b428afb8d9c92f1d815aaa30847caad1ef256e4ca7ad9c",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/crops_wither_and_fade.jpg",
+        "sha256": "7d84fbead6b4c4bb4906c4ef3de74b8f22cd303db6c9942915a518e83f190811",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/words_of_warning.jpg",
+        "sha256": "645769e3a726502b9d71d9f114cf9395731155b86da0c8464c2d3d99940ccaa2",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/tidal_boon.jpg",
+        "sha256": "2b03b88fed0ec32c10a27b0048167c4a89beff50b0f4b1e90f858bb90c9eb761",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/dread_apparitions.jpg",
+        "sha256": "4a8523619e8f8ba4ee4791401346b5a019ce904371bff620d820ad194dff848b",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/call_on_midnights_dream.jpg",
+        "sha256": "54eb15af8fddb5e743563ff1fcc3602fc17df602b6401afe223041ddbd54baf1",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/song_of_sanctity.jpg",
+        "sha256": "d748497401e733be3b3a5310f8b7800775aa41573047bdc02846fa899b59bff0",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/veil_the_nights_hunt.jpg",
+        "sha256": "8afbe2d062d1512ffa428f9404fb25e9c170851b812421c3d4ac44197c31f0e3",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/poisoned_land.jpg",
+        "sha256": "8356eb4f28a263468334e8579ba8970fdb2c8e9d4efdc99a2489ae02631a3426",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/entwined_power.jpg",
+        "sha256": "2bb52d0c35e937676d641761ba10c33280694f2d540e8eb596889fc9f3b20325",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+        "sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/tsunami.jpg",
+        "sha256": "565e1fccbabf36cde154e38df87e1b1317af1add176abe5cefc25f9b781a3059",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/vengeance_of_the_dead.jpg",
+        "sha256": "76c73c2c5da794ee77a565368e88cae8a9a29b3863bb579f2131f1eaed4fe22f",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/indomitable_claim.jpg",
+        "sha256": "4729ff833f0b59cd361ff0c56babd8a9309fa7301325fdce6d8f10c137561499",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/mists_of_oblivion.jpg",
+        "sha256": "a51f12b72b5b881f120e5c434c0cfb4c7b8915e466f4695c3991902a8df4ce6d",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/dissolve_the_bonds_of_kinship.jpg",
+        "sha256": "92a29d653e305f8fa839c822d8b92b1298298f721c4de787ca9a017d399cedd9",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/scapegoats.jpg",
+        "sha256": "01dca7ae7c54f133542c218d531c4e8f737b51a804415bb747da1d22e0a5bfd8",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/dahan_raid.jpg",
+        "sha256": "a0e3f3994dbd61228a1302e26aabec203fdfeb34acd68d1c538a7d852bd61c8d",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/dahan_enheartened.jpg",
+        "sha256": "68ba3828e17d110acaa6e75bb3bbdcb834b97fdb4d3c85641ae08971f0fdea2f",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/overseas_trade_seem_safer.jpg",
+        "sha256": "15520a8059af1d84912d19db6879be83f199d69f7731df68f2f864170491d8ef",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/trade_suffers.jpg",
+        "sha256": "7e7fc1fcfda47dd47ed635b075c6955878acfc8ad8dc74f4d1f1fcbbc7a4245f",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/branch-claw-rulebook-p6.png",
+        "sha256": "a084156537729b13d3317b2896a4d115dfa19c56474df620b160448665eca5bc",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Publisher B&C page 6 corner-symbol legend; scope evidence only."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/concealing_shadows.jpg",
+        "sha256": "86f9d0bd182c9054632938c098575cfc1fb666932fcb4da9381beb2a9065730b",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/reaching_grasp.jpg",
+        "sha256": "def3a446b182cef25e29663e1cdb0bc7c9e1acb301950489f34ab4e0f2ff26ef",
+        "manifest_hash_matches": true,
+        "inspection": "Full image visually inspected through view_image; no catalog set label used as membership evidence.",
+        "scope_determination": "Included original-core named face: no B&C corner symbol; identity and operative text inspected."
+      }
+    ],
+    "visual_count": {
+      "primary_printed_card_faces": 33,
+      "original_core_inclusions": 31,
+      "marked_expansion_exclusions": 2,
+      "publisher_legend_page_renders": 1
+    },
+    "publisher_legend_source": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/branch-claw-rulebook.pdf",
+      "sha256": "7827216ab5f7bc1e8805d1a47adf2517d42fd88cc6961307a35f4bcccbef52ac",
+      "page": 6,
+      "render_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/branch-claw-rulebook-p6.png",
+      "render_sha256": "a084156537729b13d3317b2896a4d115dfa19c56474df620b160448665eca5bc",
+      "observed_legend": "Expansion materials are marked by the shown corner symbol so they can be removed for core-only play.",
+      "read_scope": "PDF hash verified; page 6 visually inspected using the manifest-identified render. No expansion gameplay procedure was imported."
+    },
+    "truncation_summary": "No read output truncated. All mandatory full text was read in contiguous slices no longer than 6000 Unicode characters, one range per response. Independent image results were batched only for visual inspection. All 34 inspected visual hashes match the supplemental manifest.",
+    "frozen_input_hash_recheck": "Every hash in coverage-review-06-input-manifest.json matched immediately before this report was written."
+  },
+  "independence": {
+    "fresh_reviewer": true,
+    "summary_read": false,
+    "readers_read": false,
+    "grades_read": false,
+    "previous_review_or_adjudication_reports_read": false,
+    "helper_reports_read": false,
+    "other_reviewers_or_readers_contacted": false,
+    "allowed_map_treatment": "The full permitted map contains historical claims and descriptions; they were treated as challenge targets, not independent evidence or authority. Every substantive conclusion above comes from actual current prompts, fixed keys and the identified raw sources.",
+    "tools_and_files": "Read only specifically permitted inputs and manifest-identified raw sources. No subagents were spawned. Only coverage-review-06.json was written.",
+    "authorized_edit_scope_observed": true
+  }
+}

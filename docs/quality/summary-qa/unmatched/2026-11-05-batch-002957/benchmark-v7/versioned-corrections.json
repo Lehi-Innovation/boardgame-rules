@@ -1,0 +1,123 @@
+{
+  "parent_benchmark": "v3",
+  "reason": "Independent source/scope review before expanded reader dispatch; no reader outputs used by scope reviewer.",
+  "key_corrections": [
+    {
+      "id": "KC01",
+      "question_id": "Q20",
+      "kind": "wording precision; no outcome change",
+      "before": {
+        "id": "Q20",
+        "expected_answer": "Value 2+4=6 during combat; After combat return all other Voyage cards from discard to hand; Voyage Home then goes to discard at combat end; Only Voyage Home remains there so next maneuver allowance 2+1=3 for each own fighter",
+        "required_facts": [
+          "Value 2+4=6 during combat",
+          "After combat return all other Voyage cards from discard to hand",
+          "Voyage Home then goes to discard at combat end",
+          "Only Voyage Home remains there so next maneuver allowance 2+1=3 for each own fighter"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5; sinbad-character.png; rulebook p12"
+        ]
+      },
+      "after": {
+        "id": "Q20",
+        "expected_answer": "Value 2+4=6 during combat; After combat return all other Voyage cards from discard to hand; Voyage Home then goes to discard at combat end; Voyage Home is the only Voyage card remaining in the discard pile so next maneuver allowance 2+1=3 for each own fighter",
+        "required_facts": [
+          "Value 2+4=6 during combat",
+          "After combat return all other Voyage cards from discard to hand",
+          "Voyage Home then goes to discard at combat end",
+          "Voyage Home is the only Voyage card remaining in the discard pile so next maneuver allowance 2+1=3 for each own fighter"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "sinbad-action-cards.png r1c5; sinbad-character.png; rulebook p12"
+        ]
+      },
+      "source": "Voyage Home retrieves other Voyages, not non-Voyages. Original intended answer move3 preserved."
+    },
+    {
+      "id": "KC02",
+      "question_id": "Q08",
+      "kind": "source citation completeness",
+      "change": "Added p10 for face-up discard status; ruling unchanged."
+    },
+    {
+      "id": "KC03",
+      "question_id": "Q58",
+      "kind": "source-conditioned wording precision before final readers; no played-card outcome changed",
+      "before": {
+        "id": "Q58",
+        "expected_answer": "Attack value 4+2=6 and attack damage 2; Change BIG to SMALL after combat, after damage; Next SMALL defense has +1 value",
+        "required_facts": [
+          "Attack value 4+2=6 and attack damage 2",
+          "Change BIG to SMALL after combat, after damage",
+          "Next SMALL defense has +1 value"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r1c4; rulebook p12"
+        ]
+      },
+      "after": {
+        "id": "Q58",
+        "expected_answer": "Attack value 4+2=6 and attack damage 2; Change BIG to SMALL after combat, after damage; Next SMALL defense card, if played, has +1 value",
+        "required_facts": [
+          "Attack value 4+2=6 and attack damage 2",
+          "Change BIG to SMALL after combat, after damage",
+          "Next SMALL defense card, if played, has +1 value"
+        ],
+        "contextual_background": [],
+        "source_refs": [
+          "alice-character.png; alice-action-cards.png r1c4; rulebook p12"
+        ]
+      },
+      "source": "Alice character adds1 to defense cards; absence of card tested separately Q65."
+    }
+  ],
+  "scope_corrections": [
+    "SC01 Q02",
+    "SC02 Q12",
+    "SC03 Q30",
+    "SC04 Q17",
+    "SC05 Q36",
+    "Q01 battlefield setup background",
+    "Q36 unasked scheme role",
+    "Q37 generalized ANY background; Merlin asked",
+    {
+      "review": "coverage-scope-v6-challenge.json",
+      "question_id": "Q29",
+      "kind": "explicit asked-clause scope precision only",
+      "required_after": "Only King Arthur may play The Lady of the Lake.",
+      "contextual": "The Lady of the Lake is a scheme; Q29 does not independently ask its card type."
+    },
+    {
+      "review": "coverage-scope-v6-challenge.json",
+      "question_id": "Q35",
+      "kind": "explicit asked-clause scope precision only",
+      "required_after": "Merlin is the active fighter playing Restless Spirits.",
+      "contextual": "Restless Spirits is a scheme; Q35 asks its active fighter and effects, not card type."
+    },
+    {
+      "review": "coverage-scope-v6-challenge.json",
+      "question_id": "Q03",
+      "kind": "explicit asked-clause scope precision only",
+      "required_after": "Each of your fighters may move from zero up to the character move value; choose each fighter’s distance independently.",
+      "contextual": "Each entered space must be adjacent to previous space. Q03 does not independently ask path definition; drawing/movement order, allowance, transit, occupied endpoint and interleaving remain required."
+    },
+    {
+      "review": "coverage-scope-v6-challenge.json",
+      "question_id": "Q49",
+      "kind": "explicit asked-clause scope precision only",
+      "required_after": "Normal movement blockers apply when moving the opposing fighter.",
+      "contextual": "Owner-relative transit and unoccupied endpoints are true normal rules. Q49 asks whether normal blockers apply, so a clear yes/reference to defined normal movement rules suffices; do not demand an unasked inventory. An affirmative wrong rule remains incorrect. Explicit transit actors remain required in Q36 and endpoint fact in Q03."
+    },
+    {
+      "question_id": "Q01",
+      "kind": "optional source precision only, no new grading requirement",
+      "note": "Face-down deck is source definition, but no new independent orientation enumeration required."
+    }
+  ],
+  "question_ids_wording_preserved": "Q01–Q61 unchanged",
+  "new_questions": "Q62–Q63 fill actual card-user/role coverage; reviewer Swift Strike and Winged Frenzy misreads corrected from original images, never inserted into key."
+}

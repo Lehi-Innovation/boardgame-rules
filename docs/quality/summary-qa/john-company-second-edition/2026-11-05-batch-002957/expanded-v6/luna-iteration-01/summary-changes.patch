@@ -1,0 +1,123 @@
+--- /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/luna-iteration-05/summary-snapshot.md
++++ /home/jonny/projects/boardgame-rules/rules/john-company-second-edition.md
+@@ -38,7 +38,7 @@
+ 1. Set out board and supplies. Shuffle India events. Put local alliances in their named Army boxes. Set Balance to £5, Power tokens on their indicated starting positions, family VP markers to zero, loot tokens money-side up in matching regions.
+ 2. Choose a scenario and follow its setup card for Standing, Debt, treasuries, laws, regiments, ships and the political map of India. Put the Turn marker on its date and point the PM dial's arm to the matching date. The scenario determines its final turn.
+ 3. Use that scenario's player setup cards; add three extra cards for five players or six for six players. Shuffle and deal evenly. Take all listed cash, enterprises and positions. Distribute the listed holdings using the placement table below. Take each office's matching office card as well as placing its family member. Each starting luxury gives 2 VP.
+-4. Set remaining office cards nearby, distinguishing vacant offices from offices not yet created. Shuffle prestige and blackmail together; deal three for the London Season display, prestige faceup and blackmail facedown. Shuffle remaining laws. Keep family and firm pieces near each player.
++4. Set remaining office cards nearby, distinguishing vacant offices from offices not yet created. Shuffle **prestige and blackmail together into ONE deck**; deal three for the London Season display, prestige faceup and blackmail facedown. Shuffle remaining laws. Keep family and firm pieces near each player.
+ 
+ | Listed setup holding | Placement |
+ |---|---|
+@@ -137,7 +137,7 @@
+ | Director of Trade | Chairman chooses current officeholder other than Chairman/Governor; if all offices vacant, any writer. Commanders are not officeholders. |
+ | Manager of Shipping | Chairman chooses any writer. |
+ | Military Affairs | Chairman chooses a Presidential Commander; if none, any officer; if none, any Officer-in-Training. |
+-| President | Director of Trade chooses writer or Governor associated with that Presidency. |
++| President | Director of Trade chooses **a writer OF THIS PRESIDENCY or a Governor ASSOCIATED WITH THIS PRESIDENCY**. |
+ | Governor | Associated President chooses writer or officer in the region; Commander is not an officer and is ineligible. Place member on Governor overlay. |
+ | Superintendent of Trade in China | Chairman chooses any writer; office hired immediately upon creation. |
+ | Governor General | Replaces Director of Trade and is hired the same way. |
+@@ -146,7 +146,7 @@
+ 
+ ### IV. Company Operation
+ 
+-Follow offices left to right along the ribbon, beginning with Chairman; skip vacant offices. Each office spends only its own treasury. Offices created by actions go into Vacant Offices unless immediate hiring is specified. A newly created Governorship normally awaits a later Hiring phase.
++Follow the red ribbon left to right: **Chairman → Director of Trade (or Governor General) → Manager of Shipping → Military Affairs → Bombay Presidency → Madras Presidency → Bengal Presidency → China Superintendent, if created**. Skip each vacant office. Each office spends only its own treasury. Offices created by actions go into Vacant Offices unless immediate hiring is specified. A newly created Governorship normally awaits a later Hiring phase.
+ 
+ **Success checks (p17):** First commit resources/cash: **all cash for a Company-office check comes from that acting office's treasury and is paid to the bank**. Gather dice, subtract penalties, then roll. Use lowest die: 1–2 success; 3–4 failure, retry if resources and office-specific limits allow; 5–6 catastrophic failure, no more office actions, return officeholder to supply, discard fatigue and flip card into Vacant Offices. Specific Commander/firm procedures modify this. You cannot take a dead action with no effect or chance of success: for example trade with no ship or deploy without dice to trigger possible officer losses.
+ 
+@@ -160,7 +160,7 @@
+ 
+ If deregulated, firms pay expenses/dividends first. Then Company:
+ 
+-1. **Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China. Exclude Commanders. If insufficient, take £5 emergency loans, advancing Debt one each until its track end; continue receiving emergency loans even at maximum Debt. Newly added emergency Debt causes no extra current-turn expense. After using emergency loans, set Balance to zero. One or two loans lower Standing one; three or more lower Standing two.
++1. **Expenses:** Reduce Balance £1 per existing Debt, each officer/regiment in an Army, and each ship in sea zones, including China. Exclude Commanders. If insufficient, take £5 emergency loans. Each loan advances Debt one **only while a track space remains**. **At maximum Debt, keep taking loans without advancing Debt any further.** Newly added emergency Debt causes no extra current-turn expense. After using emergency loans, set Balance to zero. One or two loans lower Standing one; three or more lower Standing two.
+ 2. **Expectations:** Compare remaining Balance to the expectations under **current** Standing; if lower, lower Standing one.
+ 3. **Dividends:** Chairman may pay any affordable number. Each dividend costs one cash per Company share; pay each owner £1 per share, including Chairman. If total cash paid as dividends is **strictly greater** than expectations, advance Standing one space.
+ 
+@@ -168,9 +168,9 @@
+ 
+ ### VII. Events in India (pp28–33)
+ 
+-Roll storm die, resolve storms, then the indicated number of event tiles. Flip each event; where the event uses a region, normally read the **back of the new top tile** in the draw stack, not the tile just drawn.
+-
+-**Storms:** In rolled sea zone(s), roll once per player-owned ship; Company and extra ships are exempt. Three storms means all zones. 1–2 nothing; 3–4 fatigue, or sink if already fatigued; 5–6 sink. Sunk ship returns to its shipyard, unfatigued. China ships count as Eastern zone. Firm ships use their strategy's zone; Hobnob ships are exempt.
++**First roll the storm die:** its face specifies affected sea zones and the **number of India events**. Resolve all required storms **before drawing any event**. Then flip and resolve **one tile at a time from the draw stack, for as many events as the number printed on that die face**. Where an event uses a region, normally read the **back of the new top tile** in the draw stack, not the tile just drawn; follow each event's specific location rule.
++
++**Storms:** In rolled sea zone(s), roll once per player-owned ship; Company and extra ships are exempt. Three storms means all zones; no storm indication means no storm checks. 1–2 nothing; 3–4 fatigue, or sink if already fatigued; 5–6 sink. Sunk ship returns to its shipyard, unfatigued. China ships count as Eastern zone. Firm ships use their strategy's zone; Hobnob ships are exempt.
+ 
+ **Closing orders and Cascades:** Return any writer on a newly closed order to its owner's supply; flip a filled token to closed. If told to close an order in an already fully closed region, Cascade: close all open orders directly connected to that region's orders. If a connected order is already closed, close that region's northernmost open order instead. If none are open, it also Cascades. A region can initiate a Cascade only once per event tile but can receive multiple Cascades' effects.
+ 
+@@ -184,6 +184,8 @@
+ | Crisis | Resolve at Elephant's location, tail attacking head, then March. Use procedures below. |
+ | Foreign Invasion | Roll storm die for target regions: West→Bombay, South→Madras, East→Bengal; all storms means each, none means top-stack region. Per target roll ordinary die for attack strength and resolve Invasion/Company attack. On success close all orders (Cascade if already all closed), remove target's flag and all matching flags if capital, restore dome if Company-controlled, and set tower strength to half attack roll rounded down. March with circle shape only if Elephant was fully inside a Company region that was invaded. |
+ 
++**Choose the ordinary Crisis procedure from the Elephant:** Its **tail is the attacker/acting region; its head is the defender**. A sovereign actor (large capital flag or unflagged dome) causes **Invasion**. A dominated actor (small flag or no dome) causes **Rebellion against its sovereign**. If Elephant is wholly inside a Company region, resolve Rebellion against the Company. This classifier concerns ordinary Elephant-located Crisis events; Foreign Invasion uses its own location rule.
++
+ **Invasion Crisis:** Sovereign attacker's whole empire strength + event modifier must be **greater than** defender's whole empire strength. On success, replace defender's flag with attacker's dominated flag; taking a capital shatters its entire empire. If attacker had no empire, use a free capital/star flag and matching small flag; if none available no new empire/flags form. On failure, attacker loses one tower.
+ 
+ **Rebellion Crisis:** Compare only rebelling region strength + modifier against its sovereign capital's strength; other empire regions do not count. Must be strictly greater. Success makes actor sovereign, removes its flag and closes all its orders (Cascade if already closed). Failure removes one tower from the capital.
+@@ -194,7 +196,16 @@
+ - **Primary Foreign Invasion:** the ordinary attack die, with no added unrest (designer ruling in FAQ).
+ - **Every secondary Rebellion:** **only the number of unrest cubes in that secondary region**; no event modifier or empire strength.
+ 
+- Associated Commander must exhaust active Army pieces totaling attack strength, or as much as possible. Use local alliances' printed strength; they cannot be split. **Printed defense test:** the Commander must exhaust Army pieces equal to Crisis strength, or as many as possible; the book says the Crisis succeeds if the newly exhausted pieces do not equal that strength. A matched defense removes all unrest in the attacked region and gives the Commander one trophy. If this successful defense defeated a normal primary Invasion, also remove one tower from the attacker if possible. **The treatment of an indivisible alliance exceeding the required strength is unresolved in the available primary sources; see the source gap below.** Vacant Commander: **Military Affairs itself acts in the Commander's stead**, or Chairman if Military Affairs is vacant; this acting player chooses defense pieces and gains/loses no trophies. This does not appoint a new Commander. If the primary Invasion succeeds against the Company, apply empire growth.
++**Mounting defense:** The associated Commander must exhaust active Army pieces equal to Crisis strength, or as many as possible. Local alliances provide printed strength usable once; **their strength cannot be split among more than one purpose**. The printed comparison has these results:
++
++| Printed strength comparison | Attack and defense result |
++|---|---|
++| Newly exhausted pieces **EQUAL** Crisis strength | **The attack FAILS; defense SUCCEEDS.** Remove all unrest in the attacked region; Commander gains one trophy. If this defeated a normal primary Invasion, also remove one attacker tower if possible. |
++| Newly exhausted pieces **DO NOT EQUAL** Crisis strength | **The attack SUCCEEDS; defense FAILS.** Perform Region Loss. If the successful primary Crisis was an Invasion, apply empire creation/growth. |
++
++**Unresolved counting boundary:** This table reproduces the printed test; it does not determine how an indivisible alliance's excess strength is counted. The strength-2-alliance versus strength-1-attack outcome remains unresolved; see the source gap below.
++
++**Vacant Commander:** Military Affairs itself acts in the Commander's stead, or Chairman if Military Affairs is vacant. This acting player chooses defense pieces and gains/loses no trophies; no new Commander is appointed.
+ 
+ **Region Loss:** Commander returns half their family's trophies rounded up, then Commander member returns to supply. Roll once per officer in associated Army: each 6 removes that officer. Eliminate Governor: return office card to unused stack, fatigue and member to supplies. Remove Governor overlay, partially built Company ship and unrest. Restore dome with one tower (or Foreign Invasion's specified strength) and appropriate invasion flag. Return control token to its region with **the £ loot side DOWN and the region-symbol side UP**. Future conquest gets no loot modifier; region loses its Presidency association. An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them. Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc. If this causes failure, finish Events in India before Final Scoring. **Losing one region does not automatically lose any other Company region: resolve each other attack and its defense separately.**
+ 
+@@ -345,7 +356,7 @@
+ - **Invest:** With manager's consent, same Company-share/workshop contribution creates one firm share and £5 bank to London. Up to ten firm shares; further investments still contribute £5 but create no shares. Cannot use Chairman share. Cannot use Company shares at all when Standing and/or Debt on lined space. Cannot use shares created this turn, even after trading them away. Invested workshops never return to uninvested: no bonus or Company-failure VP; they remain invested even if firm fails.
+ - **Ships:** To fit a ship from a shipyard, **pay £3 FROM the firm's London treasury TO the BANK**, with shipyard owner consent. May buy player-owned ship already in Company with owner's consent: unfatigued £3, fatigued £2, paid into Shipping treasury. Firms cannot acquire Company or extra ships.
+ - **Hostile takeover:** Only a player who **manages NO firm at all** may initiate one; managing a different firm also makes you ineligible. Obtain consent of holders of a majority of the target's shares, then move firm's ships, money and shares to own charter, copy both cube positions; former manager returns cubes and flips board to family side.
+-- **Merger:** Managers negotiate with **every shareholder's consent**. Highest-value firm is primary; if tied, players choose among tied. Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides. Negotiate transfers and any shares exceeding ten returned with those owners' consent. Entire agreement is one binding immediate transfer. Primary's value/dividend track remains the continuing firm's track.
++- **Merger:** Managers negotiate with **every shareholder's consent**. Highest-value firm is primary; if tied, players choose among tied. Transfer all secondary shares, ships and treasury funds to primary; secondary boards return to family sides. Players may negotiate share transfers. **If the primary would exceed ten shares, RETURN the excess shares to their OWNERS' SUPPLIES, with those owners' consent.** Entire agreement is one binding immediate transfer. Primary's value/dividend track remains the continuing firm's track.
+ - **Voluntary dissolution:** All shareholders must consent. Apply the same dissolution procedure as an insolvent firm: **shares go to Debtor's Prison (each −1 VP), ships return to their matching shipyards, and the charter flips to its family side. Workshops remain invested for the rest of the game.**
+ 
+ #### Firm strategies and competing trade (p40)
+@@ -361,7 +372,7 @@
+ 
+ At beginning of associated Presidency's operations, before any actions, matching firms reveal strategy and roll one die per committed £1, paying bid to bank. At least one 1/2 permits trade. Firm initiative = ship count minus number of successful dice (1s/2s); can be negative. President's successful Trade creates initiative the same way using Presidency ships. After that success, fill orders lowest initiative first. **The President chooses the order among tied traders; the Company does not automatically go first.** If President is vacant or never successfully trades, firms fill **after Commander/Governors had chance to act**, Chairman choosing initiative ties.
+ 
+-**Fill only OPEN orders**, as many as possible up to **ships + 1**, starting strategy home port, always tracing through its own filled route back there. Each firm fills any particular order only once. Place filled tokens; revenue goes to India treasury. Firms may refill orders others/Company filled this turn; Company may refill firms' orders. A previously filled order pays **half listed revenue, rounded down**, not repeated full value. Advance firm Value one space per full £6 added to India treasury this turn.
++**Fill only OPEN orders**, as many as possible up to **ships + 1**, starting strategy home port, always tracing through its own filled route back there. **Each firm may fill any particular order only ONCE per turn; it cannot refill its OWN earlier order.** Place filled tokens; revenue goes to India treasury. A firm may refill an order filled by a DIFFERENT firm or the Company this turn; Company may refill firms' orders. A previously filled order pays **half listed revenue, rounded down**, not repeated full value. Advance firm Value one space per full £6 added to India treasury this turn.
+ 
+ #### Firm expenses, rescue and dividends (pp41–42)
+ 
+@@ -375,11 +386,21 @@
+ 
+ The game ends after scenario's final turn or when Standing reaches failure. Normally failure is immediate; failure during Events finishes that phase, and legislation failure finishes vote before scoring. Once game over, stop negotiations, calling promises and playing blackmail unless a card explicitly permits final-scoring use. **During all of Final Scoring, no negotiations or promise calls are allowed.**
+ 
+-If deregulated, calculate firm scoring **separately for each player**: add the VP from **all that player's shares across all their firms**, then **round that player's total DOWN once**. After that, deduct **1 VP per own family piece in Debtor's Prison**. **Before either Company-outcome branch below, each shareholder may make one eligible special retirement from supply. This happens whether the Company survived OR failed; firm retirements are not replaced by the Company failure card.** Then normal Final Scoring (p9):
+-
+-1. **Power award:** Total enterprise/share power from current Power track (bottom two positions zero), +1 per passed-law token and trophy, +2 for PM, plus printed card power (blackmail faceup or down, applicable spouse). Most/second awards are **3/1 VP if final turn 1–3, 5/2 if turn 4–6, 8/4 if turn 7–8**. Tied first: only lower award to each tied player; no other award. Tied second receive none.
+-2. **Court/workshops:** If Company survived, add Court's current VP per Company share. If failed, subtract that value per share and add 1 VP per uninvested workshop. Scores may be negative.
+-3. **Survival/failure:**
++**Final Scoring order — finish each row before the next:**
++
++| Step | Procedure |
++|---|---|
++| 1. Firms, if deregulated | For **each player separately**, add VP from all their shares across all their firms, then **round that player's total DOWN once**. Deduct **1 VP per own family piece in Debtor's Prison**. |
++| 2. Firm special retirement, if deregulated | Each eligible shareholder may retire **one member from supply**, after firm scoring but **BEFORE Power or any other ordinary final scoring**. Applies whether Company survived OR failed; no display cards. |
++| 3. Power | Calculate Power and award its VP, as below. |
++| 4. Court/workshops | Score Company shares and, on failure, uninvested workshops, as below. |
++| 5. Final retirements OR failure card | Resolve the appropriate Company outcome below. Firm special retirement in step2 occurs in **either** outcome and is not replaced by the failure card. |
++
++**Power award:** Count **enterprises and Company shares**, using their current Power-track rates (bottom two positions zero), +1 per passed-law token and trophy, +2 for PM, plus printed card power (blackmail faceup or down, applicable spouse). Most/second awards are **3/1 VP if final turn 1–3, 5/2 if turn 4–6, 8/4 if turn 7–8**. Tied first: only lower award to each tied player; no other award. Tied second receive none.
++
++**Court/workshops:** If Company survived, add Court's current VP per Company share. If failed, subtract that value per share and add 1 VP per uninvested workshop. Scores may be negative.
++
++**Final retirements/failure card:**
+ 
+ | Company outcome | Final retirement or failure step |
+ |---|---|

@@ -1,0 +1,34 @@
+You are an independent rules-summary reader in a blind evaluation.
+
+Read ONLY these two input files:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-15/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-15/questions.json
+
+The two inputs have different roles. Explicit question-stated scenario facts are givens: accept them when applying the rules. Do not require the summary to repeat the scenario setup or replace a stated fact with another assumption. A proposed action still must obey the rules. The frozen summary alone is rules authority; question givens do not permit inventing rules, guessing, or using prior game knowledge.
+
+Do not read any authoritative rulebook, extracted text, answer key, manifest, prior responses, grades, reviews, other files, parent history or web links. Do not browse or communicate with other readers.
+
+First read both complete inputs. Use bounded contiguous chunks, such as consecutive 40-line ranges, with each chunk in a separate tool response. Do not combine both whole files into one large output. Check for truncation warnings and reread any missing range in smaller chunks. Establish that the complete summary and every question were delivered before answering.
+
+For each question, use this quote/apply/check process:
+1. Identify each actual requested clause from the question.
+2. Quote verbatim the complete relevant frozen-summary passages, preserving their material qualifiers. Select the paragraphs, list entries or table rows needed to resolve this question; do not replace them with a short label or omit a qualification from the quotation. Quotes must come only from the frozen summary.
+3. Write a separate application for each requested clause. For broad how/setup/procedure requests, state the complete material procedure: quantities, costs, eligibility, locations, timing, limits, results and exceptions needed to carry it out. If several actions are requested, give each its own entry. A names-only request needs all requested names. Keep each question self-contained; do not borrow another answer.
+4. Compare every written application with the quoted passages and the question. Check that every requested material fact is actually resolved in the applications, and that no application contradicts its quotation. A quotation alone does not excuse an incomplete or contradictory application. Do not merely refer to the quoted passage in place of answering the clause. Correct omissions or contradictions before saving.
+
+For calculations, show the separate rule-defined contributions and total without an unstated bonus. There is no brevity requirement. If a requested rule is absent, identify that application as unsupported rather than guessing. You may compose the assigned JSON incrementally in consecutive question groups; the final file must include every question.
+
+Compose the JSON incrementally in consecutive groups of at most five questions. Complete the quote/apply/check process for every question in a group before proceeding to the next group. For each quotation, extract the actual complete relevant text directly from the frozen summary, preserving its Markdown and punctuation. Before saving a group, programmatically check that each quotation is nonempty and an exact substring of that frozen summary; recover or replace any nonmatching quotation by rereading the allowed source. Use your written application to answer each requested clause explicitly. After all groups are complete, check that every question ID occurs exactly once and rerun the quotation-substring checks. These checks establish quotation fidelity; also perform the full semantic self-check of your applications.
+
+For each question, use a separate answer entry for each actual requested clause, action or procedural stage. Give each part a specific descriptive label. Select the complete relevant rule passages for those entries, including their material qualifiers. For a multi-step procedure, include the relevant procedural section with its nested paragraphs, list entries and table rows. A section title or introductory sentence alone does not supply the following procedures. Check the selected passage coverage against every requested clause before applying it. The exact-substring test checks quotation fidelity; separately check that the quotations and applications cover all requested material operations and outcomes.
+
+This is one full80-question blind assignment, completed over multiple reader turns. First read both complete inputs. On this first reader turn, complete the first ten questions in two consecutive groups of at most five and save valid JSON after each group; then report the completed range. Later reader turns will continue the remaining questions using these same inputs and instructions. Your own assigned output may be read only to append or validate it; it supplies no rules authority, and answers must not be borrowed across questions.
+
+For every question include:
+- id
+- source_passages: an ARRAY of objects with section and quotation
+- answer: an ARRAY of objects with part, ruling and evidence; part identifies the requested clause, ruling is its complete application, evidence identifies the supporting quoted passage/section
+- support: supported, partial or unsupported
+- evidence: the relevant summary sections
+
+Save valid JSON to /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-15/reader-a.json with top-level fields reader, inputs_read and answers (an array). Read only the two allowed inputs and write only the assigned output. Do not evaluate or improve the summary.

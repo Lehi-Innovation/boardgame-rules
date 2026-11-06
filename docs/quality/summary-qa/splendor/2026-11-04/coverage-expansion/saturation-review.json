@@ -1,0 +1,366 @@
+{
+  "review_type": "Independent adversarial question-coverage review; not a summary correctness audit",
+  "verdict": "GAPS",
+  "scope": "Only the complete 188-line 2014 core extraction and four named coverage artifacts. Novelty assessed against accepted questions 1–42, without answer material.",
+  "verdict_rationale": "One explicit setup procedure is untested: shuffle noble tiles before revealing the active set. Existing questions request noble counts and unused-tile removal; Q3 requests shuffling only development decks. Always selecting favored nobles can satisfy every accepted question while omitting this source instruction. This is a distinct random-selection procedure, not a count swap or mechanical combination.",
+  "genuinely_novel_candidates": [
+    {
+      "candidate_id": "SC01",
+      "question": "During setup, may the organizer choose which noble tiles will be revealed, or what procedure must be used to select the active noble tiles?",
+      "source_extraction_lines": "40–43",
+      "novel_source_fact": "Shuffle the noble tiles before revealing the active set.",
+      "novelty_rationale": "Q1, Q2 and Q35 constrain how many noble tiles are active or unused, not how they are selected. Q3 explicitly asks about development decks, not nobles. A mistaken chosen-nobles procedure survives all those questions. The source states an untested randomization operation.",
+      "nearest_existing_question_ids": [
+        1,
+        2,
+        3,
+        35
+      ],
+      "ledger_correction": "R07 groups noble shuffling with counts/removal and cites Q3, but Q3 never asks noble selection/shuffling. R07 is only partially exercised.",
+      "qualification": "Uncovered explicit procedural fact; no interaction is required to establish novelty."
+    }
+  ],
+  "rejected_challengers": [
+    {
+      "candidate": "Different supported player count or reduced-player market size",
+      "source_extraction_lines": "12–22,36–44",
+      "existing_question_ids": [
+        1,
+        2,
+        3
+      ],
+      "decision": "duplicate",
+      "reason": "All count branches and general four-per-level market setup are requested; no new procedure."
+    },
+    {
+      "candidate": "Ask total forty tokens or ten noble tiles separately",
+      "source_extraction_lines": "5,8,13–21,23–34",
+      "existing_question_ids": [
+        1,
+        2,
+        35,
+        36
+      ],
+      "decision": "duplicate",
+      "reason": "Exact color inventories and three-active/seven-unused noble scenario already determine these totals; summation adds no procedure."
+    },
+    {
+      "candidate": "Use exact example card cost three blue, three black and six white",
+      "source_extraction_lines": "60–63",
+      "existing_question_ids": [
+        12,
+        13,
+        21,
+        42
+      ],
+      "decision": "duplicate",
+      "reason": "Only printed numbers change; payment, bonus ownership and earned prestige are already exercised."
+    },
+    {
+      "candidate": "Buy two free cards or reserve then immediately buy",
+      "source_extraction_lines": "79–87,112–114,166–168",
+      "existing_question_ids": [
+        4,
+        12
+      ],
+      "decision": "duplicate",
+      "reason": "One action and one development per action are tested; zero payment creates no exception."
+    },
+    {
+      "candidate": "Return old tokens rather than only newly drawn, or return every new token",
+      "source_extraction_lines": "89–93",
+      "existing_question_ids": [
+        7,
+        8,
+        30
+      ],
+      "decision": "duplicate",
+      "reason": "End-turn cap, inclusion of new tokens among returns, and zero net gain are tested. No different return timing or exception."
+    },
+    {
+      "candidate": "Take two from three then return them, or restore a pile before the next player draws",
+      "source_extraction_lines": "81–84,89–95",
+      "existing_question_ids": [
+        6,
+        30
+      ],
+      "decision": "duplicate",
+      "reason": "Q6 explicitly asks when the supply threshold is checked; changed pre-action supply and later returns only apply that tested boundary."
+    },
+    {
+      "candidate": "Take singles from sparse piles including the last token",
+      "source_extraction_lines": "81–84,94–95",
+      "existing_question_ids": [
+        6,
+        38
+      ],
+      "decision": "duplicate",
+      "reason": "Q38 already tests sparse piles and isolates the minimum-four restriction to two alike."
+    },
+    {
+      "candidate": "Blind-reserve an unaffordable high-level card while gold is empty",
+      "source_extraction_lines": "97–106",
+      "existing_question_ids": [
+        8,
+        9,
+        26,
+        27
+      ],
+      "decision": "duplicate",
+      "reason": "Reservation source, affordability, level access and empty-gold exception are tested; conjunction adds no new timing or exception."
+    },
+    {
+      "candidate": "Buy one reservation to make room for another later",
+      "source_extraction_lines": "101–103,112–114",
+      "existing_question_ids": [
+        10,
+        14
+      ],
+      "decision": "duplicate",
+      "reason": "Cap and purchase-only exit directly determine the state; no new transition type."
+    },
+    {
+      "candidate": "Treat a known face-up reservation as owned for points or discounts",
+      "source_extraction_lines": "54–59,101–114,159–168",
+      "existing_question_ids": [
+        9,
+        21
+      ],
+      "decision": "duplicate",
+      "reason": "Q21 tests unpurchased reserved-card points/bonuses; reservation origin does not change ownership."
+    },
+    {
+      "candidate": "Pay gold despite matching gems, trade it directly, or count it for score",
+      "source_extraction_lines": "104–111,185–188",
+      "existing_question_ids": [
+        37,
+        39,
+        42
+      ],
+      "decision": "duplicate",
+      "reason": "All three distinctions are direct subjects of accepted questions."
+    },
+    {
+      "candidate": "Use gold returned through overflow on the following reservation",
+      "source_extraction_lines": "85,89–92,104–111",
+      "existing_question_ids": [
+        8,
+        13,
+        31
+      ],
+      "decision": "duplicate",
+      "reason": "Q31 already tests available recirculated gold on a later reserve. Overflow changes only the route to supply, with no new priority."
+    },
+    {
+      "candidate": "Refill from the last deck card or blind-reserve the last card while market remains",
+      "source_extraction_lines": "97–100,152–157",
+      "existing_question_ids": [
+        11,
+        27,
+        28
+      ],
+      "decision": "duplicate",
+      "reason": "Immediate same-level refill, blind-reservation non-trigger and exhausted-deck state are tested. No special last-card priority appears in source."
+    },
+    {
+      "candidate": "Excess bonuses pay another color or a new card pays for itself",
+      "source_extraction_lines": "159–168",
+      "existing_question_ids": [
+        23,
+        24
+      ],
+      "decision": "duplicate",
+      "reason": "These exact discount boundaries are already tested."
+    },
+    {
+      "candidate": "Receive an already-qualified noble after reserving rather than buying",
+      "source_extraction_lines": "65–72,170–178",
+      "existing_question_ids": [
+        16,
+        25
+      ],
+      "decision": "duplicate",
+      "reason": "Q25 tests persistent eligibility and a non-purchase action; swapping reservation for gem-taking adds no new end-turn exception."
+    },
+    {
+      "candidate": "Earlier eligible player takes the noble before a later eligible player",
+      "source_extraction_lines": "65–72,78,170–180",
+      "existing_question_ids": [
+        17,
+        25,
+        35
+      ],
+      "decision": "duplicate",
+      "reason": "Off-turn prohibition, placement of the acquired physical tile and removal from available display determine the result. Source adds no separate simultaneous-claim priority procedure."
+    },
+    {
+      "candidate": "Receive another noble next turn or refuse a noble when crossing fifteen",
+      "source_extraction_lines": "65–76,170–188",
+      "existing_question_ids": [
+        16,
+        25,
+        33
+      ],
+      "decision": "duplicate",
+      "reason": "Persistent bonuses, one noble per turn, compulsory visit and threshold-crossing resolution are directly tested."
+    },
+    {
+      "candidate": "Another player surpasses the triggering player, or first player triggers",
+      "source_extraction_lines": "182–188",
+      "existing_question_ids": [
+        18,
+        20,
+        34
+      ],
+      "decision": "duplicate",
+      "reason": "Q18 asks whether trigger guarantees victory and who plays on; Q20 applies highest prestige. Moving trigger creates no additional round boundary."
+    },
+    {
+      "candidate": "Count nobles, zero-point cards or reservations differently in development-count tie",
+      "source_extraction_lines": "35,64–76,185–188",
+      "existing_question_ids": [
+        20,
+        21,
+        22
+      ],
+      "decision": "duplicate",
+      "reason": "Purchased-development tie rule explicitly tested; component-name or zero-point-number substitutions add no tiebreak procedure."
+    },
+    {
+      "candidate": "Take fewer than three different gems, with or without shortage",
+      "source_extraction_lines": "79–95",
+      "existing_question_ids": [
+        4,
+        38,
+        40
+      ],
+      "decision": "source_limit",
+      "reason": "Selected extraction gives three-different action without shortage/under-taking clarification; no later rule imported."
+    },
+    {
+      "candidate": "Resolve a turn when every listed action is impossible",
+      "source_extraction_lines": "79–106",
+      "existing_question_ids": [
+        40
+      ],
+      "decision": "source_limit",
+      "reason": "Q40 covers voluntary pass with legal actions. No source fallback for impossible-action state."
+    },
+    {
+      "candidate": "Break equal prestige and equal development counts",
+      "source_extraction_lines": "185–188",
+      "existing_question_ids": [
+        20
+      ],
+      "decision": "source_limit",
+      "reason": "No further tiebreak or shared-victory rule specified."
+    },
+    {
+      "candidate": "Return tokens voluntarily below cap or decline available reservation gold below cap",
+      "source_extraction_lines": "85,89–93,104–106",
+      "existing_question_ids": [
+        8,
+        26,
+        30
+      ],
+      "decision": "source_limit",
+      "reason": "Source supplies overflow returns and reserve-plus-gold with empty-supply exception, not these optional procedures."
+    }
+  ],
+  "checked_source_passages": [
+    {
+      "lines": "1–3",
+      "assessment": "Theme; no procedure."
+    },
+    {
+      "lines": "4–10,23–35",
+      "assessment": "All component counts, levels, token names/colors checked against Q1/Q2/Q35/Q36. Covered; isolated sum questions rejected."
+    },
+    {
+      "lines": "11–22",
+      "assessment": "Two-/three-player reductions, untouched gold, noble counts and no-other-changes instruction checked against Q1/Q2/Q3. Covered."
+    },
+    {
+      "lines": "36–39",
+      "assessment": "Separate deck shuffle, increasing level order, four face-ups each: Q3. Covered."
+    },
+    {
+      "lines": "40–43",
+      "assessment": "Noble shuffle is gap SC01. Reveal counts and unused removal: Q1/Q2/Q35. R07 overstates coverage for shuffle clause."
+    },
+    {
+      "lines": "43–44",
+      "assessment": "Six sorted piles within reach: Q41. Covered."
+    },
+    {
+      "lines": "46–52",
+      "assessment": "Resource/purchase/bonus/noble overview: Q12/Q21/Q22/Q42. Detailed end rules at 182–188 clarify overview phrasing and are tested in Q18/Q33/Q34."
+    },
+    {
+      "lines": "53–63",
+      "assessment": "Public market access, holder-only reservations and card example: Q9/Q12/Q13/Q14/Q21/Q32/Q42. Covered; exact numbers add nothing."
+    },
+    {
+      "lines": "64–76",
+      "assessment": "Public nobles, bonuses-only eligibility, end-turn compulsory visit, not action, three prestige, one per turn: Q15/Q16/Q17/Q19/Q23/Q25/Q33/Q35. Covered."
+    },
+    {
+      "lines": "77–87",
+      "assessment": "Youngest first/clockwise, mandatory one action, three different versus thresholded two alike, reserve/gold, single purchase sources: Q3/Q4/Q6/Q9/Q10/Q14/Q38/Q39/Q40. Covered subject to shortage/fallback limits."
+    },
+    {
+      "lines": "88–95",
+      "assessment": "End-turn ten including gold, return choices, always-public tokens, repeated minimum four: Q5/Q6/Q7/Q8/Q30/Q38. Covered; no new timing exception."
+    },
+    {
+      "lines": "96–106",
+      "assessment": "Reservation sources, top-of-any-deck blind hidden draw, max three, no discard, purchase-only exit, exclusive gold route/empty exception: Q8/Q9/Q10/Q26/Q27/Q31. Covered."
+    },
+    {
+      "lines": "107–114",
+      "assessment": "Card cost, any-color joker, spent tokens returned, public or previously reserved single buy: Q4/Q12/Q13/Q14/Q21/Q23/Q29/Q31/Q32/Q37/Q39. Covered."
+    },
+    {
+      "lines": "115–118",
+      "assessment": "Rows sorted by color and staggered to expose points/bonuses: Q14. Covered."
+    },
+    {
+      "lines": "119–148",
+      "assessment": "Read biographies, credits, publisher and copyright; excluded as non-gameplay."
+    },
+    {
+      "lines": "149–151",
+      "assessment": "Always-visible acquired-card points/bonuses: Q14. Covered."
+    },
+    {
+      "lines": "152–157",
+      "assessment": "Immediate same-level refill after face-up purchase/reserve, exhausted-deck gaps: Q11/Q27/Q28/Q29. Covered; no special last-card priority."
+    },
+    {
+      "lines": "158–168",
+      "assessment": "Prior-acquired bonuses, per-color one-token discounts, example, zero-token purchases: Q12/Q13/Q21/Q22/Q23/Q24/Q25. Covered."
+    },
+    {
+      "lines": "169–180",
+      "assessment": "Own-turn-end check, at-least quantities/types, compulsory non-action, choose among several, face-up placement: Q15/Q16/Q17/Q23/Q25/Q33/Q35. Covered."
+    },
+    {
+      "lines": "181–188",
+      "assessment": "Fifteen trigger, complete round/equal turns, highest prestige including nobles, fewest purchased developments: Q18/Q19/Q20/Q21/Q29/Q33/Q34/Q42. Covered; equal second tiebreak unresolved."
+    }
+  ],
+  "limitations": [
+    "Coverage review only; no summary or answer correctness conclusions. No answer keys, answer bank, reader responses, grades, summary audits or unlisted files were read.",
+    "No browsing, prior game knowledge, cached PDF, later edition or reader communication used.",
+    "Complete extraction read, including non-gameplay passages. Missing diagrams cannot establish new targets.",
+    "Bounded source-relative coverage cannot prove every hypothetical case. Unstated fallback and later-edition clarifications remain source limits.",
+    "Does not certify reader-pass, exact-summary-byte or independent-summary-audit stopping conditions; those inputs were excluded."
+  ],
+  "input_sha256": {
+    "extracted/splendor-rules.txt": "441009ef496552586c58811ecf40bf287292193753c553303748c39b92b03f70",
+    "docs/quality/summary-qa/splendor/2026-11-04/coverage-expansion/question-bank.json": "4ed8a340507775a26fa5b46d02dfa2a21671cff37e99058d2c2a69e6d39014b8",
+    "docs/quality/summary-qa/splendor/2026-11-04/coverage-expansion/source-rule-coverage.json": "0fba4d82a88d71d6055cd19dec8ea5549991f6d90284b8a2516d96c510e739ca",
+    "docs/quality/summary-qa/splendor/2026-11-04/coverage-expansion/candidate-review.json": "4310fa21750ceeab6f285e0d329400f127fc6d96a9dee12a6fcd536365919180",
+    "docs/quality/summary-qa/splendor/2026-11-04/coverage-expansion/novelty-policy.json": "21b1dba5ce0d633d1c7afb42f709493df3c982c6fda6ab6a433a2c84f858a998"
+  }
+}

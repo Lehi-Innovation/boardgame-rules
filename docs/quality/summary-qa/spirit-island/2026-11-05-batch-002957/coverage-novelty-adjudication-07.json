@@ -1,0 +1,79 @@
+{
+  "review": "coverage-novelty-adjudication-07",
+  "benchmark": "expanded-v7",
+  "decision": "REJECT_AS_NON_NOVEL_DRAW_PROCEDURE_EXAMPLE",
+  "candidate": "Complete a four-card gain when the chosen shared Power deck runs out mid-draw",
+  "reason": "Q17 explicitly requests an explanation of gaining a Minor or Major Power, including the draw procedure. The source places drawing four and reshuffling that deck's discard when needed in the same procedural bullet. Unlike an unrelated optional effect or a different action's eligibility boundary, this is directly part of the named operation Q17 asks to explain. A shortage scenario makes that existing procedure concrete but does not establish an additional rule beyond the already requested Gain-a-Power-Card procedure. Requiring a separate question for every possible supply state of that procedure would inflate granularity.",
+  "actual_prompt_analysis": {
+    "question_id": "Q17",
+    "actual_question": "Explain gaining a new Minor or Major Power, including how many are drawn, where kept/unkept cards go, Major Forgetting options and the consequences of Forgetting a card already in play.",
+    "why_coverage_is_warranted": "This is an express request to explain the named operation, rather than a narrow yes/no question about one of its outputs. The listed draw clause identifies the exact source bullet containing the exhaustion instruction; including is not a limitation to only the number four. The fixed key's reshuffle sentence is responsive procedural detail here, not independent surplus explanation about a different unrequested outcome.",
+    "criterion_limit": "An explicit exhausted-deck premise is not necessary every time a prompt already asks for the full procedure that contains its handling. Conversely, this judgment does not make a broad topic label automatically cover all unrelated rules or exceptions."
+  },
+  "source_reading": {
+    "explicitly_supported": "Choose Minor or Major, draw four from that deck, reshuffle that deck's discard pile if needed; then keep one drawn card and discard the others to that deck's discard.",
+    "not_a_separate_published_rule": "The source does not introduce a distinct partial-draw action, restart/reset instruction, or separate permission for the first two cards. Holding two already drawn cards while completing a four-card selection is ordinary continuation of the same requested operation. It should not be promoted into another new rule on the strength of the numerical example.",
+    "limits": "The source excerpt does not prescribe every physical handling detail for a partially exhausted draw pile. No rule is invented about shuffling already drawn candidates back in, resetting the draw count, or discarding them before the four-card selection is complete."
+  },
+  "source_refs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p18 Gaining Power Cards; first two bullets",
+      "character_range": [
+        48149,
+        48987
+      ],
+      "length": 838,
+      "passage_sha256": "c7d5075fb76c07af3469aa16038d2b56b355683c92ff6b2b96954c497f987254",
+      "line_range_inclusive": [
+        1238,
+        1249
+      ]
+    }
+  ],
+  "other_prompt_checks": [
+    {
+      "id": "Q09",
+      "finding": "Explicitly asks Invader-deck exhaustion, a different deck with a defeat consequence. It does not supply Power-deck coverage, but its existence does not require every other complete procedure to be retested with an exhaustion example."
+    },
+    {
+      "id": "Q25",
+      "finding": "Personal Reclaim is different from recycling the shared Power deck's discard; no new personal/shared-discard rule is required because Q17 already asks where gained/unkept cards go."
+    },
+    {
+      "id": "Q37",
+      "finding": "Gain/play timing; no additional exhaustion rule."
+    },
+    {
+      "id": "Q39",
+      "finding": "Major-gain Forgetting and transfer rules; no additional exhaustion rule."
+    },
+    {
+      "id": "Q56",
+      "finding": "Optional progression replaces normal drawing and is not needed for this ordinary gain scenario."
+    }
+  ],
+  "possible_use": "May be retained as a non-novel explanatory/regression example if desired; do not count it as a newly discovered rule or use it to reset a source-saturation tally.",
+  "accepted_new_question": null,
+  "accepted_fixed_key": null,
+  "scope": "The proposed scenario is a valid explicit core given. Rejection is for novelty, not scope.",
+  "read_evidence": {
+    "source_delivery": "Exact contiguous CORE p18 range 48149:48987 was read before adjudication.",
+    "source_chunk_characters": 838,
+    "max_output_tokens_per_call": 4000,
+    "truncation_observed": false,
+    "actual_prompts_reread": [
+      "Q01",
+      "Q09",
+      "Q17",
+      "Q25",
+      "Q37",
+      "Q39",
+      "Q56"
+    ],
+    "questions_sha256": "b32bcb4aa106e08b2877e1823cf9322732604a3b50b21738c22b035e8d99ce44",
+    "answer_key_sha256": "1a22d586cf7e4e47f9d01cd3be4f75e22eab19d1bbc98242314f8492ecb15ada",
+    "summary_readers_grades_or_other_reports_read": false
+  },
+  "input_mutations": false
+}

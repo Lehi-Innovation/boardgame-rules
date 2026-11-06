@@ -1,0 +1,1128 @@
+{
+  "frozen_at_utc": "2026-11-06T10:27:55.208180+00:00",
+  "original_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T01-29-50-01a1affa-7953-7211-8d07-1448134dac48.jsonl",
+  "prefix_bytes": 5348032,
+  "prefix_sha256": "20fac895199da19a4ac20ee79c68d735e061a33a521285c19d8908d1ae678701",
+  "physical_records": 2988,
+  "prior_prefix_records": 2863,
+  "prior2863_prefix_is_exact": true,
+  "records": [
+    {
+      "physical_record_ordinal": 2864,
+      "physical_record_sha256": "6e9a5d137fb210b386d1ed437f94719df8814f8b3a2c1527256acdaa7a7510c6",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_COwEXvCuWkJmqfLj1x7xErZH",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/questions.json')\\nprint(json.dumps(json.loads(p.read_text())['questions'][115],ensure_ascii=False,indent=2))\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2867,
+      "physical_record_sha256": "4d26b86101d0ee9ee41cfe3ba2fd0bf5b8e08619257fc768cd72bcaab83cd644",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_COwEXvCuWkJmqfLj1x7xErZH",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\n  \"id\": \"Q116\",\n  \"question\": \"Who chooses whether an ordinary non-Hobnobbing firm pays dividends and how many? May the manager choose none even when India-treasury cash is available?\"\n}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2871,
+      "physical_record_sha256": "d1abb2c080482bec78a2c8705fac5aee0b6695f02b429710431f8dd439700faf",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_VMASuxURi1fXMiPpdPVYRNu9",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/summary-snapshot.md')\\na=p.read_text().splitlines(); print('\\\\n'.join(f'{i+1}: {a[i]}' for i in range(399,408)))\\nPY\",yield_time_ms:10000,max_output_tokens:2500});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2874,
+      "physical_record_sha256": "f92a254006b36a644760771757b52cb5f24e0799abf14b6d179377df580c4394",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_VMASuxURi1fXMiPpdPVYRNu9",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "400: #### Firm expenses, rescue and dividends (pp41–42)\n401: \n402: At start Revenue before Company, firms act in initiative order then other firms; ties by manager's most windows then PM clockwise order. Pay £1 per charter ship **plus higher of share count or firm value**; can use either/both treasuries.\n403: \n404: If unable to pay, dissolve unless rescued. Dissolution: shares to Debtor's Prison (each -1 VP), ships back to shipyards, charter back to family side; workshops remain invested. Emergency investments follow the Company-share/workshop eligibility rules under **Firms phase: investments**, even when ten-share cap prevents more shares: pay expenses, lose any remaining cash, lower Value one space per emergency investment. Alternatively make an **emergency negotiated merger with only ONE other firm**. The normal merger procedure still applies, including **every involved shareholder's consent**. The other firm must first pay its own expenses if not already paid, then cover the endangered firm's unpaid expenses.\n405: \n406: After expenses, manager may pay dividends **from India treasury only**. Each dividend pays £1 per firm share plus £1 manager. **Waiving a dividend requires BOTH the shareholder's choice and the MANAGER'S CONSENT**; shareholder consent alone is insufficient. With that consent, the shareholder may forgo payment for any number of shares on any dividend. Record **total actual cash paid out**, not per-share dividend, with dividend cube on Company Balance track. An active non-Hobnob firm paying none records zero; Hobnob retains prior marker. Sweep remaining India money into London.\n407: \n408: ## Scoring / Victory Conditions\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2878,
+      "physical_record_sha256": "49698a9eb0f0caa861c3418c74e9e23bd45c6cc8f9e875be916c1666e4a442b1",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_57UlJYA8wJjQVzve1fIcQXM1",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text())['questions'][115]; hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); i=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==400); m=hs[i]; e=next(h.start() for h in hs[i+1:] if len(h.group(1))<=4); t=s[m.start():e]; meta={'section_id':'T400','kind':'subtree','heading':m.group(),'level':4,'start_offset':m.start(),'end_offset':e,'start_line':400,'end_line':400+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest()}; case='The manager may choose to pay no dividend despite available India-treasury cash; an active non-Hobnob firm records zero.'; ledger=[{'requested_clause':'Who chooses whether an ordinary non-Hobnobbing firm pays dividends and how many','section_ids':['T400'],'fact_kind':'lookup'},{'requested_clause':'May the manager choose none even when India-treasury cash is available','section_ids':['T400'],'fact_kind':'lookup'}]; answer=case+'\\\\n\\\\nApplicable summary text\\\\n\\\\n<!-- qa-unit:T400:begin -->\\\\n'+t+'<!-- qa-unit:T400:end -->'; entry={'id':q['id'],'clause_ledger':ledger,'case_conclusions':[case],'operative_sections':[meta],'answer':answer,'support':'supported','evidence':[{'summary_location':'T400','quote':'#### Firm expenses, rescue and dividends'}]}; d=b/'reader-a-draft.json'; x=json.loads(d.read_text()); x['answers'].append(entry); d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c=b/'reader-a-self-check.json'; y=json.loads(c.read_text()); y['records'].append({'id':q['id'],'question':q['question'],'clause_to_unit_map':ledger,'selected_source_metadata':[meta],'case_conclusions':[case],'unsupported_clauses':[],'rechecked_contexts':['T400 complete Firm expenses, rescue and dividends subsection, including manager choice, funding and no-dividend marker rule'],'mechanical_checks':{'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}}); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('saved Q116')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2881,
+      "physical_record_sha256": "824575baea2960fbc0d2a69261667333b76a3c6a6c5c32431efd2f493037ca06",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_57UlJYA8wJjQVzve1fIcQXM1",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.3 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "saved Q116\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2885,
+      "physical_record_sha256": "eaaaaca013369fcd4c16d61e2e8f0fad4857b5ce80040c63051f43db8eb6a2aa",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_e6KL0thCofQlXcBDbVrBb5Wp",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); d=json.loads((b/'reader-a-draft.json').read_text()); c=json.loads((b/'reader-a-self-check.json').read_text()); q=json.loads((b/'questions.json').read_text())['questions']; print('answers',len(d['answers']),'records',len(c['records']),'questions',len(q),'last',d['answers'][-1]['id']); print('draft keys',list(d)); print('check keys',list(c)); print('selfcheck keys',list(c.keys()));\\nfor i,(a,qq,r) in enumerate(zip(d['answers'],q,c['records'])):\\n if a['id']!=qq['id'] or a['id']!=r['id']: print('order mismatch',i,a['id'],qq['id'],r['id'])\\n clauses=a['clause_ledger']; miss=[x['requested_clause'] for x in clauses if x['requested_clause'] not in qq['question']]\\n if miss: print(a['id'],'CLAUSE PHRASES NOT EXACT SUBSTRINGS:',miss)\\nprint('self review',json.dumps(c.get('self_review'),ensure_ascii=False))\\nPY\",yield_time_ms:10000,max_output_tokens:6000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2888,
+      "physical_record_sha256": "23bc464621de76e76974dcb3d602c1d5dbddfd01d4b172d6b18be0f982a42ba6",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_e6KL0thCofQlXcBDbVrBb5Wp",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "answers 116 records 116 questions 116 last Q116\ndraft keys ['inputs_read', 'answers']\ncheck keys ['records']\nselfcheck keys ['records']\nQ028 CLAUSE PHRASES NOT EXACT SUBSTRINGS: ['How do spouses affect transfers and restrictions']\nQ060 CLAUSE PHRASES NOT EXACT SUBSTRINGS: ['Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts']\nQ108 CLAUSE PHRASES NOT EXACT SUBSTRINGS: ['what happens to shareholders’ shares']\nself review null\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2892,
+      "physical_record_sha256": "65778279456b16c26e4148c0cdddee0a062178cf468c2801e06ef03f2a521c8a",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_oaqpYpr0mmoZYZSSM0e2znnp",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); qs=json.loads((b/'questions.json').read_text())['questions']; d=json.loads((b/'reader-a-draft.json').read_text()); c=json.loads((b/'reader-a-self-check.json').read_text())\\nfor id in ('Q028','Q060','Q108'):\\n i=int(id[1:])-1; print(id,qs[i]['question']); print(json.dumps(d['answers'][i]['clause_ledger'],ensure_ascii=False)); print(json.dumps(c['records'][i],ensure_ascii=False)[:1500])\\nPY\",yield_time_ms:10000,max_output_tokens:5000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2895,
+      "physical_record_sha256": "d3dbf2654c84b377af1467ddb7b890a6e7a92aec22fb08c6efc25a3717e2036b",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_oaqpYpr0mmoZYZSSM0e2znnp",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q028 How do spouses affect transfers, restrictions and retirement discounts, and how often can a discount be used?\n[{\"requested_clause\": \"How do spouses affect transfers and restrictions\", \"section_ids\": [\"T079\", \"I437\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"retirement discounts\", \"section_ids\": [\"T079\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"how often can a discount be used\", \"section_ids\": [\"T079\"], \"fact_kind\": \"lookup\"}]\n{\"id\": \"Q028\", \"question\": \"How do spouses affect transfers, restrictions and retirement discounts, and how often can a discount be used?\", \"clause_to_unit_map\": [{\"requested_clause\": \"How do spouses affect transfers and restrictions\", \"section_ids\": [\"T079\", \"I437\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"retirement discounts\", \"section_ids\": [\"T079\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"how often can a discount be used\", \"section_ids\": [\"T079\"], \"fact_kind\": \"lookup\"}], \"selected_source_metadata\": [{\"section_id\": \"T79\", \"kind\": \"subtree\", \"heading\": \"I. London Season (Rules pp11–12)\", \"level\": 3, \"start_offset\": 8073, \"end_offset\": 10628, \"start_line\": 79, \"end_line\": 90, \"sha256\": \"b115b437c334b5e4607e6aaeaf17d444a57c4c2f2d75959a776b5f45fe280e7a\"}, {\"section_id\": \"I437\", \"kind\": \"introduction\", \"heading\": \"Special Rules & Edge Cases\", \"level\": 2, \"start_offset\": 52506, \"end_offset\": 54269, \"start_line\": 437, \"end_line\": 457, \"sha256\": \"0eacbfd94e80ae1351de1439be0fc195a412e587cfa5e40949f76c73e7346cb8\"}], \"case_conclusions\": [], \"unsupported_clauses\": [], \"rechecked_contexts\": [\"T079 complete London Season unit reread\", \"I437 complete Special Rules introduction reread to check spouse transfer restriction\"], \"mechanical\": {\"boundary_matches\": true, \"hash_matches\": true, \"attachment_matches\": true}}\nQ060 Explain the firm special retirement limit, eligible piece, dividend cap, spouse discounts, zero-marker restriction and Final Scoring timing.\n[{\"requested_clause\": \"Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts\", \"section_ids\": [\"T364\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"zero-marker restriction and Final Scoring timing\", \"section_ids\": [\"T364\", \"I408\"], \"fact_kind\": \"lookup\"}]\n{\"id\": \"Q060\", \"question\": \"Explain the firm special retirement limit, eligible piece, dividend cap, spouse discounts, zero-marker restriction and Final Scoring timing.\", \"clause_to_unit_map\": [{\"requested_clause\": \"Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts\", \"section_ids\": [\"T364\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"zero-marker restriction and Final Scoring timing\", \"section_ids\": [\"T364\", \"I408\"], \"fact_kind\": \"lookup\"}], \"selected_source_metadata\": [{\"section_id\": \"T364\", \"kind\": \"subtree\", \"heading\": \"Firm treasuries and special retirements (p37)\", \"level\": 4, \"start_offset\": 41972, \"end_offset\": 43330, \"start_line\": 364, \"end_line\": 369, \"sha256\": \"47460c40281978fd06bd5a50c00b4c0cf6e95b7d824576afda059a2aa8baa0da\"}, {\"section_id\": \"I408\", \"kind\": \"introduction\", \"heading\": \"Scoring / Victory Conditions\", \"level\": 2, \"start_offset\": 49681, \"end_offset\": 52506, \"start_line\": 408, \"end_line\": 436, \"sha256\": \"f48aef48a261a30adba9e22bdf312b9473d85921d1e977ad9828c5a3be7fb49f\"}], \"case_conclusions\": [], \"unsupported_clauses\": [], \"rechecked_contexts\": [\"T364 firm special retirement rules reread\", \"I408 full scoring introduction reread for Final Scoring order and timing\"], \"mechanical\": {\"boundary_matches\": true, \"hash_matches\": true, \"attachment_matches\": true}}\nQ108 After a normal negotiated merger has been agreed, what happens to the secondary firms’ ships and shareholders’ shares?\n[{\"requested_clause\": \"what happens to the secondary firms’ ships\", \"section_ids\": [\"T370\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"what happens to shareholders’ shares\", \"section_ids\": [\"T370\"], \"fact_kind\": \"lookup\"}]\n{\"id\": \"Q108\", \"question\": \"After a normal negotiated merger has been agreed, what happens to the secondary firms’ ships and shareholders’ shares?\", \"clause_to_unit_map\": [{\"requested_clause\": \"what happens to the secondary firms’ ships\", \"section_ids\": [\"T370\"], \"fact_kind\": \"lookup\"}, {\"requested_clause\": \"what happens to shareholders’ shares\", \"section_ids\": [\"T370\"], \"fact_kind\": \"lookup\"}], \"selected_source_metadata\": [{\"section_id\": \"T370\", \"kind\": \"subtree\", \"heading\": \"#### Firms phase: investments (pp38–39)\", \"level\": 4, \"start_offset\": 43330, \"end_offset\": 45987, \"start_line\": 370, \"end_line\": 380, \"sha256\": \"6ede713033e8c3f5ea3abe926ebe1c949170b9de24f7d1a00bdc21a20f49c4ec\"}], \"case_conclusions\": [\"The secondary firms’ shares and ships transfer to the primary firm; excess shares beyond ten return to their owners’ supplies with those owners’ consent.\"], \"unsupported_clauses\": [], \"rechecked_contexts\": [\"T370 complete investments subsection, especially merger effect and excess-share qualifier\"], \"mechanical_checks\": {\"boundaries_recomputed\": true, \"hashes_match\": true, \"complete_attachments\": true, \"source_order_nonoverlap\": true}}\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2899,
+      "physical_record_sha256": "357c0aea8e4c7cebe60a060372a1714348cd7730b727584d448cf2bfba1b4a16",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_KWKJkSbj46a4UnRwgH6mfJ1A",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); d=b/'reader-a-draft.json'; c=b/'reader-a-self-check.json'; x=json.loads(d.read_text()); y=json.loads(c.read_text());\\n# Keep clause phrases exact substrings of the assigned question and split Q060's separate asks.\\ni=27; x['answers'][i]['clause_ledger'][0]['requested_clause']='How do spouses affect transfers, restrictions'; y['records'][i]['clause_to_unit_map'][0]['requested_clause']='How do spouses affect transfers, restrictions'\\ni=59; ledger=[{'requested_clause':'the firm special retirement limit','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'eligible piece','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'dividend cap','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'spouse discounts','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'zero-marker restriction','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'Final Scoring timing','section_ids':['T364','I408'],'fact_kind':'lookup'}]; x['answers'][i]['clause_ledger']=ledger; y['records'][i]['clause_to_unit_map']=ledger\\ni=107; x['answers'][i]['clause_ledger'][1]['requested_clause']='shareholders’ shares'; y['records'][i]['clause_to_unit_map'][1]['requested_clause']='shareholders’ shares'; d.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); c.write_text(json.dumps(y,ensure_ascii=False,indent=2)+'\\\\n'); print('repaired clause maps Q028, Q060, Q108')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2902,
+      "physical_record_sha256": "5f2938b4023b66f00f42d6d61587e873def6cc8ac5b54f1c257fa3a4b23ab6c3",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_KWKJkSbj46a4UnRwgH6mfJ1A",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "repaired clause maps Q028, Q060, Q108\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2910,
+      "physical_record_sha256": "ed246aaab971c582295403c0e0c81523f5cd31c6c2c073a30a4a16e47dd42340",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_YpOmyAPYd91OB85hjssO6c24",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); dp=b/'reader-a-draft.json'; fp=b/'reader-a.json'; draft=json.loads(dp.read_text())\\n# Restore the first complete draft's three original clause strings/maps, which were superseded during final verification.\\ni=27; draft['answers'][i]['clause_ledger'][0]['requested_clause']='How do spouses affect transfers and restrictions'\\ni=59; draft['answers'][i]['clause_ledger']=[{'requested_clause':'Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'zero-marker restriction and Final Scoring timing','section_ids':['T364','I408'],'fact_kind':'lookup'}]\\ni=107; draft['answers'][i]['clause_ledger'][1]['requested_clause']='what happens to shareholders’ shares'\\ndp.write_text(json.dumps(draft,ensure_ascii=False,indent=2)+'\\\\n')\\n# Load that preserved draft and reapply only reviewed clause-map repairs to final.\\nfinal=json.loads(dp.read_text()); final['answers'][27]['clause_ledger'][0]['requested_clause']='How do spouses affect transfers, restrictions'; final['answers'][59]['clause_ledger']=[{'requested_clause':'the firm special retirement limit','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'eligible piece','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'dividend cap','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'spouse discounts','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'zero-marker restriction','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'Final Scoring timing','section_ids':['T364','I408'],'fact_kind':'lookup'}]; final['answers'][107]['clause_ledger'][1]['requested_clause']='shareholders’ shares'\\nfinal['self_review']={'checked_ids':[f'Q{i:03d}' for i in range(1,117)],'changed_ids_and_reasons':[{'id':'Q028','reason':'Final clause phrase restored the exact conjunction in the question.'},{'id':'Q060','reason':'Split the compound question into its six separately requested clauses, each an exact question phrase.'},{'id':'Q108','reason':'Mapped the shares clause to the exact requested phrase.'}],'source_check_filename':'reader-a-self-check.json','mechanical_results':'116 answers and 116 source-check records; question order and IDs match; all selected source metadata, section boundaries, untrimmed SHA-256 hashes, complete attachments and within-entry source ordering/nonoverlap recomputed successfully; every clause phrase is an exact substring of its question; JSON types valid.'}\\nfp.write_text(json.dumps(final,ensure_ascii=False,indent=2)+'\\\\n')\\nprint('preserved draft and saved final')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2913,
+      "physical_record_sha256": "b831b688a3fd7f12e42514dc45b36daa3ebd32d2355ac52f7fd034baf81111af",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_YpOmyAPYd91OB85hjssO6c24",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "preserved draft and saved final\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2917,
+      "physical_record_sha256": "c2c3c9cd68b2f31dc21e959d3aa9bf51e4f8a299a53393775c84fa7eb8a916fa",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_HVhk1Ih6oDaz4318uBamHZdd",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); sp=b/'summary-snapshot.md'; qp=b/'questions.json'; dp=b/'reader-a-draft.json'; fp=b/'reader-a.json'; cp=b/'reader-a-self-check.json'; s=sp.read_text(); qs=json.loads(qp.read_text())['questions']; draft=json.loads(dp.read_text()); final=json.loads(fp.read_text()); check=json.loads(cp.read_text()); heads=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); problems=[]\\nfor bank,name in ((draft,'draft'),(final,'final')):\\n ans=bank['answers']\\n if len(ans)!=116: problems.append(f'{name} count {len(ans)}')\\n if bank['inputs_read'] != [str(sp),str(qp)]: problems.append(f'{name} inputs_read')\\n for ix,(a,q) in enumerate(zip(ans,qs)):\\n  if a.get('id')!=q['id']: problems.append(f'{name} order {ix}')\\n  if a.get('support') not in ('supported','partial','unsupported') or not isinstance(a.get('case_conclusions'),list) or not isinstance(a.get('clause_ledger'),list): problems.append(f'{name} schema {a.get(\\\"id\\\")}')\\n  for cl in a['clause_ledger']:\\n   if cl['requested_clause'] not in q['question']: problems.append(f'{name} phrase {a[\\\"id\\\"]}: {cl[\\\"requested_clause\\\"]}')\\n  prev=-1; seen=set(); answer=a['answer']\\n  for meta in a.get('operative_sections',[]):\\n   sid=meta['section_id']; prefix=sid[0]; n=int(sid[1:]); ids=[i for i,h in enumerate(heads) if s[:h.start()].count('\\\\n')+1==n]\\n   if not ids: problems.append(f'{name} bad ID {a[\\\"id\\\"]} {sid}'); continue\\n   i=ids[0]; m=heads[i]; lev=len(m.group(1)); line=n; start=m.start();\\n   if prefix=='I': end=heads[i+1].start() if i+1<len(heads) else len(s)\\n   else: end=next((h.start() for h in heads[i+1:] if len(h.group(1))<=lev),len(s))\\n   text=s[start:end]; endline=line+text.count('\\\\n')-(1 if text.endswith('\\\\n') else 0); digest=hashlib.sha256(text.encode()).hexdigest()\\n   expected={'kind':'introduction' if prefix=='I' else 'subtree','heading':m.group(),'level':lev,'start_offset':start,'end_offset':end,'start_line':line,'end_line':endline,'sha256':digest}\\n   for k,v in expected.items():\\n    if meta.get(k)!=v: problems.append(f'{name} meta {a[\\\"id\\\"]} {sid} {k} expected {v!r} got {meta.get(k)!r}')\\n   if start<prev: problems.append(f'{name} source order {a[\\\"id\\\"]} {sid}')\\n   if start<prev or start in seen: problems.append(f'{name} overlap {a[\\\"id\\\"]} {sid}')\\n   prev=end; seen.add(start)\\n   block='<!-- qa-unit:'+sid+':begin -->\\\\n'+text+'<!-- qa-unit:'+sid+':end -->'\\n   if answer.count(block)!=1: problems.append(f'{name} attach {a[\\\"id\\\"]} {sid}')\\n  for m in re.finditer(r'<!-- qa-unit:([^:]+):begin -->',answer):\\n   if m.group(1) not in [x['section_id'] for x in a['operative_sections']]: problems.append(f'{name} extra marker {a[\\\"id\\\"]}')\\nif len(check.get('records',[]))!=116: problems.append(f'selfcheck count {len(check.get(\\\"records\\\",[]))}')\\nfor i,r in enumerate(check.get('records',[])):\\n if r.get('id')!=qs[i]['id'] or r.get('question')!=qs[i]['question']: problems.append(f'selfcheck order/phrase {i}')\\n if r.get('clause_to_unit_map')!=final['answers'][i]['clause_ledger']: problems.append(f'selfcheck map divergence {r.get(\\\"id\\\")}')\\nprint('problems',len(problems)); print('\\\\n'.join(problems[:150]) if problems else 'none')\\nPY\",yield_time_ms:10000,max_output_tokens:7000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2920,
+      "physical_record_sha256": "84b77fc80cd0d5fbe3e6f6bb667e8e61841bfd7622f7b0fb3d861b8ec5bbe358",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_HVhk1Ih6oDaz4318uBamHZdd",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.8 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "problems 223\ndraft meta Q001 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q002 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q003 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\ndraft meta Q004 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\ndraft meta Q005 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\ndraft meta Q006 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\ndraft meta Q007 T140 heading expected '### IV. Company Operation' got 'IV. Company Operation'\ndraft meta Q008 T256 heading expected '### Chairman (p18)' got 'Chairman (p18)'\ndraft meta Q009 T264 heading expected '### Manager of Shipping (p19)' got 'Manager of Shipping (p19)'\ndraft meta Q010 T272 heading expected '### Presidency operations and Trade (pp20–21)' got 'Presidency operations and Trade (pp20–21)'\ndraft meta Q011 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\ndraft meta Q012 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\ndraft meta Q013 T317 heading expected '### Governors: Administer (p24)' got 'Governors: Administer (p24)'\ndraft meta Q014 T152 heading expected '### VI. Revenue (p27; firms pp41–42)' got 'VI. Revenue (p27; firms pp41–42)'\ndraft meta Q015 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q015 T458 heading expected '### User-supplied interpretation: defense strength' got 'User-supplied interpretation: defense strength'\ndraft meta Q016 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q017 I353 heading expected '### Deregulation (pp36–42)' got 'Deregulation (pp36–42)'\ndraft meta Q018 I364 heading expected '#### Firm treasuries and special retirements (p37)' got 'Firm treasuries and special retirements (p37)'\ndraft meta Q018 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q019 T381 heading expected '#### Firm strategies and competing trade (p40)' got 'Firm strategies and competing trade (p40)'\ndraft meta Q020 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q020 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\ndraft meta Q021 T023 heading expected '## Components' got 'Components'\ndraft meta Q022 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\ndraft meta Q023 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\ndraft meta Q024 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q025 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q026 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q027 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft phrase Q028: How do spouses affect transfers and restrictions\ndraft meta Q028 T79 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q028 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\ndraft meta Q029 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q030 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\ndraft meta Q031 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\ndraft meta Q032 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\ndraft meta Q033 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\ndraft meta Q034 T260 heading expected '### Director of Trade (p18)' got 'Director of Trade (p18)'\ndraft meta Q035 T268 heading expected '### Military Affairs (p19)' got 'Military Affairs (p19)'\ndraft meta Q036 T272 heading expected '### Presidency operations and Trade (pp20–21)' got 'Presidency operations and Trade (pp20–21)'\ndraft meta Q037 T240 heading expected '### IX. Upkeep and Refresh (p36)' got 'IX. Upkeep and Refresh (p36)'\ndraft meta Q037 T272 heading expected '### Presidency operations and Trade (pp20–21)' got 'Presidency operations and Trade (pp20–21)'\ndraft meta Q038 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\ndraft meta Q039 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\ndraft meta Q040 T317 heading expected '### Governors: Administer (p24)' got 'Governors: Administer (p24)'\ndraft meta Q041 T334 heading expected '### Superintendent of Trade in China (p25)' got 'Superintendent of Trade in China (p25)'\ndraft meta Q042 T334 heading expected '### Superintendent of Trade in China (p25)' got 'Superintendent of Trade in China (p25)'\ndraft meta Q043 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q043 T347 heading expected '### Governor General (p26)' got 'Governor General (p26)'\ndraft meta Q044 T347 heading expected '### Governor General (p26)' got 'Governor General (p26)'\ndraft meta Q045 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q046 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q047 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q048 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q049 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q050 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q051 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q052 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q053 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q054 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q055 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q056 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q057 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q058 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q059 T240 heading expected '### IX. Upkeep and Refresh (p36)' got 'IX. Upkeep and Refresh (p36)'\ndraft phrase Q060: Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts\ndraft meta Q060 T364 heading expected '#### Firm treasuries and special retirements (p37)' got 'Firm treasuries and special retirements (p37)'\ndraft meta Q060 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q061 I364 heading expected '#### Firm treasuries and special retirements (p37)' got 'Firm treasuries and special retirements (p37)'\ndraft meta Q061 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q061 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\ndraft meta Q062 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q063 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q064 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q065 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q066 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q066 T381 heading expected '#### Firm strategies and competing trade (p40)' got 'Firm strategies and competing trade (p40)'\ndraft meta Q067 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q067 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\ndraft meta Q068 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q068 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\ndraft meta Q069 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\ndraft meta Q070 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q071 T063 heading expected '### Prizes: cost, upkeep, VP and windows' got 'Prizes: cost, upkeep, VP and windows'\ndraft meta Q072 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q073 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q074 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q075 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q076 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q077 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q077 I468 heading expected '## FAQ & Rulings' got 'FAQ & Rulings'\ndraft meta Q078 I468 heading expected '## FAQ & Rulings' got 'FAQ & Rulings'\ndraft meta Q079 T036 heading expected '## Setup' got 'Setup'\ndraft meta Q080 I75 heading expected '## Turn Structure' got 'Turn Structure'\ndraft meta Q080 T79 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q081 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\ndraft meta Q082 T023 heading expected '## Components' got 'Components'\ndraft meta Q083 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\ndraft meta Q084 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\ndraft meta Q085 T140 heading expected '### IV. Company Operation' got 'IV. Company Operation'\ndraft meta Q086 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q087 T23 heading expected '## Components' got 'Components'\ndraft meta Q087 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q088 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q088 I458 heading expected '### User-supplied interpretation: defense strength' got 'User-supplied interpretation: defense strength'\ndraft meta Q089 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q090 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\ndraft meta Q091 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\ndraft meta Q092 T381 heading expected '#### Firm strategies and competing trade (p40)' got 'Firm strategies and competing trade (p40)'\ndraft meta Q092 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\ndraft meta Q093 T347 heading expected '### Governor General (p26)' got 'Governor General (p26)'\ndraft phrase Q108: what happens to shareholders’ shares\nfinal meta Q001 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\nfinal meta Q002 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\nfinal meta Q003 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\nfinal meta Q004 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\nfinal meta Q005 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\nfinal meta Q006 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\nfinal meta Q007 T140 heading expected '### IV. Company Operation' got 'IV. Company Operation'\nfinal meta Q008 T256 heading expected '### Chairman (p18)' got 'Chairman (p18)'\nfinal meta Q009 T264 heading expected '### Manager of Shipping (p19)' got 'Manager of Shipping (p19)'\nfinal meta Q010 T272 heading expected '### Presidency operations and Trade (pp20–21)' got 'Presidency operations and Trade (pp20–21)'\nfinal meta Q011 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\nfinal meta Q012 T280 heading expected '### Commanders and Deploy (pp22–23)' got 'Commanders and Deploy (pp22–23)'\nfinal meta Q013 T317 heading expected '### Governors: Administer (p24)' got 'Governors: Administer (p24)'\nfinal meta Q014 T152 heading expected '### VI. Revenue (p27; firms pp41–42)' got 'VI. Revenue (p27; firms pp41–42)'\nfinal meta Q015 T162 heading expected '### VII. Events in India (pp28–33)' got 'VII. Events in India (pp28–33)'\nfinal meta Q015 T458 heading expected '### User-supplied interpretation: defense strength' got 'User-supplied interpretation: defense strength'\nfinal meta Q016 T223 heading expected '### VIII. Parliament Meets (pp34–36)' got 'VIII. Parliament Meets (pp34–36)'\nfinal meta Q017 I353 heading expected '### Deregulation (pp36–42)' got 'Deregulation (pp36–42)'\nfinal meta Q018 I364 heading expected '#### Firm treasuries and special retirements (p37)' got 'Firm treasuries and special retirements (p37)'\nfinal meta Q018 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\nfinal meta Q019 T381 heading expected '#### Firm strategies and competing trade (p40)' got 'Firm strategies and competing trade (p40)'\nfinal meta Q020 T370 heading expected '#### Firms phase: investments (pp38–39)' got 'Firms phase: investments (pp38–39)'\nfinal meta Q020 T400 heading expected '#### Firm expenses, rescue and dividends (pp41–42)' got 'Firm expenses, rescue and dividends (pp41–42)'\nfinal meta Q021 T023 heading expected '## Components' got 'Components'\nfinal meta Q022 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\nfinal meta Q023 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\nfinal meta Q024 T036 heading expected '## Setup' got 'Setup'\nfinal meta Q025 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\nfinal meta Q026 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\nfinal meta Q027 I408 heading expected '## Scoring / Victory Conditions' got 'Scoring / Victory Conditions'\nfinal meta Q028 T79 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\nfinal meta Q028 I437 heading expected '## Special Rules & Edge Cases' got 'Special Rules & Edge Cases'\nfinal meta Q029 T079 heading expected '### I. London Season (Rules pp11–12)' got 'I. London Season (Rules pp11–12)'\nfinal meta Q030 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\nfinal meta Q031 T091 heading expected '### II. Family (Rules pp13–14)' got 'II. Family (Rules pp13–14)'\nfinal meta Q032 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\nfinal meta Q033 T113 heading expected '### III. Hiring (Rules pp14–16)' got 'III. Hiring (Rules pp14–16)'\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2924,
+      "physical_record_sha256": "ac6e08c0b97679d5016560a4d3c3902f9ebd68911b0a1572fe5cf5b9d93a2635",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_NZsbnqpFq7OcrUPGoPUfXsH0",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib,collections\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); bank=json.loads((b/'reader-a.json').read_text()); heads=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); c=collections.Counter(); ids=collections.defaultdict(set)\\nfor a in bank['answers']:\\n for mta in a['operative_sections']:\\n  sid=mta['section_id']; n=int(sid[1:]); matches=[(i,h) for i,h in enumerate(heads) if s[:h.start()].count('\\\\n')+1==n]\\n  if not matches: c['badid']+=1; ids['badid'].add(a['id']); continue\\n  i,m=matches[0]; level=len(m.group(1)); end=heads[i+1].start() if sid.startswith('I') and i+1<len(heads) else (next((h.start() for h in heads[i+1:] if len(h.group(1))<=level),len(s)) if sid.startswith('T') else len(s)); start=m.start(); t=s[start:end]; md={'heading':m.group(),'level':level,'start_offset':start,'end_offset':end,'start_line':n,'end_line':n+t.count('\\\\n')-(1 if t.endswith('\\\\n') else 0),'sha256':hashlib.sha256(t.encode()).hexdigest(),'kind':'introduction' if sid.startswith('I') else 'subtree'}\\n  for k,v in md.items():\\n   if mta.get(k)!=v: c['meta_'+k]+=1; ids['meta_'+k].add(a['id'])\\n  if sid[1:]!=str(n).zfill(3): c['unpad']+=1; ids['unpad'].add(a['id'])\\n  block='<!-- qa-unit:'+sid+':begin -->\\\\n'+t+'<!-- qa-unit:'+sid+':end -->'\\n  if a['answer'].count(block)!=1: c['attach']+=1; ids['attach'].add(a['id'])\\nfor k,v in c.items(): print(k,v,'ids',','.join(sorted(ids[k])))\\nPY\",yield_time_ms:10000,max_output_tokens:5000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2927,
+      "physical_record_sha256": "3c83da4db7a2799e67a7ec4ea39b1541d66115247123f47a7328333c44843daa",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_NZsbnqpFq7OcrUPGoPUfXsH0",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "meta_heading 110 ids Q001,Q002,Q003,Q004,Q005,Q006,Q007,Q008,Q009,Q010,Q011,Q012,Q013,Q014,Q015,Q016,Q017,Q018,Q019,Q020,Q021,Q022,Q023,Q024,Q025,Q026,Q027,Q028,Q029,Q030,Q031,Q032,Q033,Q034,Q035,Q036,Q037,Q038,Q039,Q040,Q041,Q042,Q043,Q044,Q045,Q046,Q047,Q048,Q049,Q050,Q051,Q052,Q053,Q054,Q055,Q056,Q057,Q058,Q059,Q060,Q061,Q062,Q063,Q064,Q065,Q066,Q067,Q068,Q069,Q070,Q071,Q072,Q073,Q074,Q075,Q076,Q077,Q078,Q079,Q080,Q081,Q082,Q083,Q084,Q085,Q086,Q087,Q088,Q089,Q090,Q091,Q092,Q093\nunpad 4 ids Q028,Q080,Q087\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2933,
+      "physical_record_sha256": "83dc11fb5ae1a2608f3389604d89039ba36eed4c054229a0bf789f3b69f917b9",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_GdYg0Mmrfr3Djc0CQ6U7nWrA",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); sp=b/'summary-snapshot.md'; qp=b/'questions.json'; fp=b/'reader-a.json'; cp=b/'reader-a-self-check.json'; s=sp.read_text(); qs=json.loads(qp.read_text())['questions']; final=json.loads(fp.read_text()); checks=json.loads(cp.read_text()); heads=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); changed={}\\nfor ix,a in enumerate(final['answers']):\\n q=qs[ix]; id_changed=False; old_to_new={}; newmeta=[]; prev=-1\\n for old in a['operative_sections']:\\n  prefix=old['section_id'][0]; line=int(old['section_id'][1:]); idx=next((i for i,h in enumerate(heads) if s[:h.start()].count('\\\\n')+1==line),None)\\n  if idx is None: raise RuntimeError(f'no heading at selected line {line} for {a[\\\"id\\\"]}')\\n  m=heads[idx]; level=len(m.group(1)); start=m.start()\\n  if prefix=='I': end=heads[idx+1].start() if idx+1<len(heads) else len(s)\\n  else: end=next((h.start() for h in heads[idx+1:] if len(h.group(1))<=level),len(s))\\n  text=s[start:end]; sid=prefix+str(line).zfill(3); old_to_new[old['section_id']]=sid; meta={'section_id':sid,'kind':'introduction' if prefix=='I' else 'subtree','heading':m.group(),'level':level,'start_offset':start,'end_offset':end,'start_line':line,'end_line':line+text.count('\\\\n')-(1 if text.endswith('\\\\n') else 0),'sha256':hashlib.sha256(text.encode()).hexdigest()}; newmeta.append(meta)\\n  if old != meta: id_changed=True\\n  if start < prev: raise RuntimeError(f'overlap/order {a[\\\"id\\\"]}')\\n  prev=end\\n  oldblock='<!-- qa-unit:'+old['section_id']+':begin -->\\\\n'; newblock='<!-- qa-unit:'+sid+':begin -->\\\\n'\\n  oldend='<!-- qa-unit:'+old['section_id']+':end -->'; newend='<!-- qa-unit:'+sid+':end -->'\\n  if a['answer'].count(oldblock)!=1 or a['answer'].count(oldend)!=1: raise RuntimeError(f'attachment marker missing/duplicate {a[\\\"id\\\"]} {old[\\\"section_id\\\"]}')\\n  if old['section_id']!=sid: a['answer']=a['answer'].replace(oldblock,newblock).replace(oldend,newend); id_changed=True\\n a['operative_sections']=newmeta\\n for cl in a['clause_ledger']:\\n  cl['section_ids']=[old_to_new.get(sid,sid) for sid in cl['section_ids']]\\n for ev in a.get('evidence',[]):\\n  ev['summary_location']=old_to_new.get(ev.get('summary_location'),ev.get('summary_location'))\\n # approved clause wording repairs\\n if a['id']=='Q028': a['clause_ledger'][0]['requested_clause']='How do spouses affect transfers, restrictions'; id_changed=True\\n if a['id']=='Q060':\\n  a['clause_ledger']=[{'requested_clause':'the firm special retirement limit','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'eligible piece','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'dividend cap','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'spouse discounts','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'zero-marker restriction','section_ids':['T364'],'fact_kind':'lookup'},{'requested_clause':'Final Scoring timing','section_ids':['T364','I408'],'fact_kind':'lookup'}]; id_changed=True\\n if a['id']=='Q108': a['clause_ledger'][1]['requested_clause']='shareholders’ shares'; id_changed=True\\n if id_changed:\\n  reasons=[]\\n  if any(x['heading']!=y.get('heading') for x,y in zip(newmeta,[])): reasons.append('')\\n  reasons.append('Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed.')\\n  if a['id']=='Q028': reasons.append('Restored the exact conjunction in the question clause phrase.')\\n  if a['id']=='Q060': reasons.append('Split six separately requested parts into exact question-clause phrases.')\\n  if a['id']=='Q108': reasons.append('Mapped the share question to its exact phrase.')\\n  changed[a['id']]=reasons\\n # synchronize source-check record with final map and metadata\\n checks['records'][ix]['clause_to_unit_map']=a['clause_ledger']; checks['records'][ix]['selected_source_metadata']=newmeta\\n checks['records'][ix]['mechanical_checks']={'boundaries_recomputed':True,'hashes_match':True,'complete_attachments':True,'source_order_nonoverlap':True}\\n# Every actual changed ID is recorded, grouped reason where applicable.\\nfinal['self_review']={'checked_ids':[q['id'] for q in qs],'changed_ids_and_reasons':[{'id':qid,'reasons':reasons} for qid,reasons in changed.items()],'source_check_filename':'reader-a-self-check.json','mechanical_results':'Recomputed all selected unit IDs, heading levels, exact complete introduction/subtree boundaries, offsets, line ranges, untrimmed SHA-256 hashes and attachment copies. Confirmed source ordering/nonoverlap within each answer, question order/IDs, exact clause phrase substrings, answer/record count and JSON structure.'}\\nfp.write_text(json.dumps(final,ensure_ascii=False,indent=2)+'\\\\n'); cp.write_text(json.dumps(checks,ensure_ascii=False,indent=2)+'\\\\n'); print('fixed final metadata and saved check; changed IDs:',','.join(changed))\\nPY\",yield_time_ms:10000,max_output_tokens:2000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2936,
+      "physical_record_sha256": "d7e1c277a9892cde4a27d34e1b48b94d22e68d0c73dda5e1208962d910b2ccc0",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_GdYg0Mmrfr3Djc0CQ6U7nWrA",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "fixed final metadata and saved check; changed IDs: Q001,Q002,Q003,Q004,Q005,Q006,Q007,Q008,Q009,Q010,Q011,Q012,Q013,Q014,Q015,Q016,Q017,Q018,Q019,Q020,Q021,Q022,Q023,Q024,Q025,Q026,Q027,Q028,Q029,Q030,Q031,Q032,Q033,Q034,Q035,Q036,Q037,Q038,Q039,Q040,Q041,Q042,Q043,Q044,Q045,Q046,Q047,Q048,Q049,Q050,Q051,Q052,Q053,Q054,Q055,Q056,Q057,Q058,Q059,Q060,Q061,Q062,Q063,Q064,Q065,Q066,Q067,Q068,Q069,Q070,Q071,Q072,Q073,Q074,Q075,Q076,Q077,Q078,Q079,Q080,Q081,Q082,Q083,Q084,Q085,Q086,Q087,Q088,Q089,Q090,Q091,Q092,Q093,Q108\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2940,
+      "physical_record_sha256": "71ebcc0240914b483e9d7e7170d91373df675300baf5e1e070adb9e73ff4560b",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_xaqAYkN3uHvjbgo1lJXJKKhY",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib,collections\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); sp=b/'summary-snapshot.md'; qp=b/'questions.json'; fp=b/'reader-a.json'; cp=b/'reader-a-self-check.json'; dp=b/'reader-a-draft.json'; s=sp.read_text(); qs=json.loads(qp.read_text())['questions']; bank=json.loads(fp.read_text()); draft=json.loads(dp.read_text()); check=json.loads(cp.read_text()); hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); errors=[]\\nfor name,obj in [('draft',draft),('final',bank)]:\\n ans=obj['answers']\\n if len(ans)!=116: errors.append((name,'answer_count'))\\n if obj.get('inputs_read') != [str(sp),str(qp)]: errors.append((name,'inputs_read'))\\n for i,(a,q) in enumerate(zip(ans,qs)):\\n  if a.get('id')!=q['id']: errors.append((name,a.get('id'),'order'))\\n  for cl in a.get('clause_ledger',[]):\\n   if cl['requested_clause'] not in q['question']: errors.append((name,a['id'],'clause',cl['requested_clause']))\\n  bounds=[]\\n  for mta in a.get('operative_sections',[]):\\n   sid=mta['section_id']; n=int(sid[1:]); ihead=next((i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==n),None)\\n   if ihead is None: errors.append((name,a['id'],'id',sid)); continue\\n   m=hs[ihead]; lev=len(m.group(1)); start=m.start(); end=hs[ihead+1].start() if sid.startswith('I') and ihead+1<len(hs) else (next((h.start() for h in hs[ihead+1:] if len(h.group(1))<=lev),len(s)) if sid.startswith('T') else len(s)); text=s[start:end]; endline=n+text.count('\\\\n')-(1 if text.endswith('\\\\n') else 0); meta={'kind':'introduction' if sid.startswith('I') else 'subtree','heading':m.group(),'level':lev,'start_offset':start,'end_offset':end,'start_line':n,'end_line':endline,'sha256':hashlib.sha256(text.encode()).hexdigest()}\\n   if sid[1:]!=str(n).zfill(3): errors.append((name,a['id'],'id_padding',sid))\\n   for k,v in meta.items():\\n    if mta.get(k)!=v: errors.append((name,a['id'],'meta',sid,k))\\n   block='<!-- qa-unit:'+sid+':begin -->\\\\n'+text+'<!-- qa-unit:'+sid+':end -->'\\n   if a['answer'].count(block)!=1: errors.append((name,a['id'],'attachment',sid))\\n   bounds.append((start,end,sid))\\n  bounds.sort()\\n  for x,y in zip(bounds,bounds[1:]):\\n   if x[1]>y[0]: errors.append((name,a['id'],'overlap',x[2],y[2]))\\nif len(check.get('records',[]))!=116: errors.append(('selfcheck','count'))\\nfor i,r in enumerate(check.get('records',[])):\\n if r.get('id')!=qs[i]['id'] or r.get('question')!=qs[i]['question']: errors.append(('selfcheck',i,'order'))\\n if r.get('clause_to_unit_map')!=bank['answers'][i]['clause_ledger']: errors.append(('selfcheck',r.get('id'),'map'))\\n if r.get('selected_source_metadata')!=bank['answers'][i]['operative_sections']: errors.append(('selfcheck',r.get('id'),'metadata'))\\nprint('errors',len(errors)); print(errors[:100]); print('counts',len(bank['answers']),len(draft['answers']),len(check['records'])); print('final keys',list(bank)); print('self_review',json.dumps(bank.get('self_review'),ensure_ascii=False)[:700])\\nPY\",yield_time_ms:10000,max_output_tokens:3000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2943,
+      "physical_record_sha256": "dd8265b703065dd2be8e38de62c06326305f7e098675e34073240c4b1346c381",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_xaqAYkN3uHvjbgo1lJXJKKhY",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "errors 117\n[('draft', 'Q001', 'meta', 'T079', 'heading'), ('draft', 'Q002', 'meta', 'T079', 'heading'), ('draft', 'Q003', 'meta', 'T091', 'heading'), ('draft', 'Q004', 'meta', 'T091', 'heading'), ('draft', 'Q005', 'meta', 'T113', 'heading'), ('draft', 'Q006', 'meta', 'T113', 'heading'), ('draft', 'Q007', 'meta', 'T140', 'heading'), ('draft', 'Q008', 'meta', 'T256', 'heading'), ('draft', 'Q009', 'meta', 'T264', 'heading'), ('draft', 'Q010', 'meta', 'T272', 'heading'), ('draft', 'Q011', 'meta', 'T280', 'heading'), ('draft', 'Q012', 'meta', 'T280', 'heading'), ('draft', 'Q013', 'meta', 'T317', 'heading'), ('draft', 'Q014', 'meta', 'T152', 'heading'), ('draft', 'Q015', 'meta', 'T162', 'heading'), ('draft', 'Q015', 'meta', 'T458', 'heading'), ('draft', 'Q016', 'meta', 'T223', 'heading'), ('draft', 'Q017', 'meta', 'I353', 'heading'), ('draft', 'Q018', 'meta', 'I364', 'heading'), ('draft', 'Q018', 'meta', 'T370', 'heading'), ('draft', 'Q019', 'meta', 'T381', 'heading'), ('draft', 'Q020', 'meta', 'T370', 'heading'), ('draft', 'Q020', 'meta', 'T400', 'heading'), ('draft', 'Q021', 'meta', 'T023', 'heading'), ('draft', 'Q022', 'meta', 'I437', 'heading'), ('draft', 'Q023', 'meta', 'I437', 'heading'), ('draft', 'Q024', 'meta', 'T036', 'heading'), ('draft', 'Q025', 'meta', 'I408', 'heading'), ('draft', 'Q026', 'meta', 'I408', 'heading'), ('draft', 'Q027', 'meta', 'I408', 'heading'), ('draft', 'Q028', 'clause', 'How do spouses affect transfers and restrictions'), ('draft', 'Q028', 'id_padding', 'T79'), ('draft', 'Q028', 'meta', 'T79', 'heading'), ('draft', 'Q028', 'meta', 'I437', 'heading'), ('draft', 'Q029', 'meta', 'T079', 'heading'), ('draft', 'Q030', 'meta', 'T091', 'heading'), ('draft', 'Q031', 'meta', 'T091', 'heading'), ('draft', 'Q032', 'meta', 'T113', 'heading'), ('draft', 'Q033', 'meta', 'T113', 'heading'), ('draft', 'Q034', 'meta', 'T260', 'heading'), ('draft', 'Q035', 'meta', 'T268', 'heading'), ('draft', 'Q036', 'meta', 'T272', 'heading'), ('draft', 'Q037', 'meta', 'T240', 'heading'), ('draft', 'Q037', 'meta', 'T272', 'heading'), ('draft', 'Q038', 'meta', 'T280', 'heading'), ('draft', 'Q039', 'meta', 'T280', 'heading'), ('draft', 'Q040', 'meta', 'T317', 'heading'), ('draft', 'Q041', 'meta', 'T334', 'heading'), ('draft', 'Q042', 'meta', 'T334', 'heading'), ('draft', 'Q043', 'meta', 'T162', 'heading'), ('draft', 'Q043', 'meta', 'T347', 'heading'), ('draft', 'Q044', 'meta', 'T347', 'heading'), ('draft', 'Q045', 'meta', 'T162', 'heading'), ('draft', 'Q046', 'meta', 'T162', 'heading'), ('draft', 'Q047', 'meta', 'T162', 'heading'), ('draft', 'Q048', 'meta', 'T162', 'heading'), ('draft', 'Q049', 'meta', 'T162', 'heading'), ('draft', 'Q050', 'meta', 'T162', 'heading'), ('draft', 'Q051', 'meta', 'T162', 'heading'), ('draft', 'Q052', 'meta', 'T162', 'heading'), ('draft', 'Q053', 'meta', 'T162', 'heading'), ('draft', 'Q054', 'meta', 'T162', 'heading'), ('draft', 'Q055', 'meta', 'T223', 'heading'), ('draft', 'Q056', 'meta', 'T223', 'heading'), ('draft', 'Q057', 'meta', 'T223', 'heading'), ('draft', 'Q058', 'meta', 'T223', 'heading'), ('draft', 'Q059', 'meta', 'T240', 'heading'), ('draft', 'Q060', 'clause', 'Explain the firm special retirement limit, eligible piece, dividend cap and spouse discounts'), ('draft', 'Q060', 'meta', 'T364', 'heading'), ('draft', 'Q060', 'meta', 'I408', 'heading'), ('draft', 'Q061', 'meta', 'I364', 'heading'), ('draft', 'Q061', 'meta', 'T370', 'heading'), ('draft', 'Q061', 'meta', 'T400', 'heading'), ('draft', 'Q062', 'meta', 'T370', 'heading'), ('draft', 'Q063', 'meta', 'T370', 'heading'), ('draft', 'Q064', 'meta', 'T370', 'heading'), ('draft', 'Q065', 'meta', 'T370', 'heading'), ('draft', 'Q066', 'meta', 'T162', 'heading'), ('draft', 'Q066', 'meta', 'T381', 'heading'), ('draft', 'Q067', 'meta', 'T370', 'heading'), ('draft', 'Q067', 'meta', 'T400', 'heading'), ('draft', 'Q068', 'meta', 'T370', 'heading'), ('draft', 'Q068', 'meta', 'T400', 'heading'), ('draft', 'Q069', 'meta', 'T370', 'heading'), ('draft', 'Q070', 'meta', 'I408', 'heading'), ('draft', 'Q071', 'meta', 'T063', 'heading'), ('draft', 'Q072', 'meta', 'T036', 'heading'), ('draft', 'Q073', 'meta', 'T036', 'heading'), ('draft', 'Q074', 'meta', 'T036', 'heading'), ('draft', 'Q075', 'meta', 'I408', 'heading'), ('draft', 'Q076', 'meta', 'T036', 'heading'), ('draft', 'Q077', 'meta', 'T162', 'heading'), ('draft', 'Q077', 'meta', 'I468', 'heading'), ('draft', 'Q078', 'meta', 'I468', 'heading'), ('draft', 'Q079', 'meta', 'T036', 'heading'), ('draft', 'Q080', 'id_padding', 'I75'), ('draft', 'Q080', 'meta', 'I75', 'heading'), ('draft', 'Q080', 'id_padding', 'T79'), ('draft', 'Q080', 'meta', 'T79', 'heading'), ('draft', 'Q081', 'meta', 'T079', 'heading')]\ncounts 116 116 116\nfinal keys ['inputs_read', 'answers', 'self_review']\nself_review {\"checked_ids\": [\"Q001\", \"Q002\", \"Q003\", \"Q004\", \"Q005\", \"Q006\", \"Q007\", \"Q008\", \"Q009\", \"Q010\", \"Q011\", \"Q012\", \"Q013\", \"Q014\", \"Q015\", \"Q016\", \"Q017\", \"Q018\", \"Q019\", \"Q020\", \"Q021\", \"Q022\", \"Q023\", \"Q024\", \"Q025\", \"Q026\", \"Q027\", \"Q028\", \"Q029\", \"Q030\", \"Q031\", \"Q032\", \"Q033\", \"Q034\", \"Q035\", \"Q036\", \"Q037\", \"Q038\", \"Q039\", \"Q040\", \"Q041\", \"Q042\", \"Q043\", \"Q044\", \"Q045\", \"Q046\", \"Q047\", \"Q048\", \"Q049\", \"Q050\", \"Q051\", \"Q052\", \"Q053\", \"Q054\", \"Q055\", \"Q056\", \"Q057\", \"Q058\", \"Q059\", \"Q060\", \"Q061\", \"Q062\", \"Q063\", \"Q064\", \"Q065\", \"Q066\", \"Q067\", \"Q068\", \"Q069\", \"Q070\", \"Q071\", \"Q072\", \"Q073\", \"Q074\", \"Q075\", \"Q076\", \"Q077\", \"Q078\", \"Q079\", \"Q080\", \"Q081\", \"Q082\", \"Q083\", \"Q084\", \"Q085\", \"Q0\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2947,
+      "physical_record_sha256": "10c89389c398d948b9b3835c71edfe3a628f34310ebc55ec088c61f108dd508e",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_QBIBWiPY1ugCj4qOZKznnJvs",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,re,hashlib\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); s=(b/'summary-snapshot.md').read_text(); qs=json.loads((b/'questions.json').read_text())['questions']; bank=json.loads((b/'reader-a.json').read_text()); checks=json.loads((b/'reader-a-self-check.json').read_text()); hs=list(re.finditer(r'(?m)^(#{1,6}) (.+)$',s)); e=[]\\nfor i,(a,q,r) in enumerate(zip(bank['answers'],qs,checks['records'])):\\n if a['id']!=q['id'] or r.get('id')!=q['id']: e.append((a['id'],'order'))\\n if r.get('clause_to_unit_map')!=a['clause_ledger'] or r.get('selected_source_metadata')!=a['operative_sections']: e.append((a['id'],'record mismatch'))\\n for cl in a['clause_ledger']:\\n  if cl['requested_clause'] not in q['question']: e.append((a['id'],'phrase',cl['requested_clause']))\\n bounds=[]\\n for mta in a['operative_sections']:\\n  sid=mta['section_id']; n=int(sid[1:]); ihead=next(i for i,h in enumerate(hs) if s[:h.start()].count('\\\\n')+1==n); m=hs[ihead]; lev=len(m.group(1)); start=m.start(); end=hs[ihead+1].start() if sid.startswith('I') and ihead+1<len(hs) else next((h.start() for h in hs[ihead+1:] if len(h.group(1))<=lev),len(s)); text=s[start:end]; lineend=n+text.count('\\\\n')-(1 if text.endswith('\\\\n') else 0); exp={'kind':'introduction' if sid.startswith('I') else 'subtree','heading':m.group(),'level':lev,'start_offset':start,'end_offset':end,'start_line':n,'end_line':lineend,'sha256':hashlib.sha256(text.encode()).hexdigest()}\\n  if sid[1:]!=str(n).zfill(3): e.append((a['id'],'padding',sid))\\n  for k,v in exp.items():\\n   if mta.get(k)!=v:e.append((a['id'],'metadata',sid,k))\\n  block='<!-- qa-unit:'+sid+':begin -->\\\\n'+text+'<!-- qa-unit:'+sid+':end -->'\\n  if a['answer'].count(block)!=1:e.append((a['id'],'attachment',sid))\\n  bounds.append((start,end,sid))\\n for x,y in zip(sorted(bounds),sorted(bounds)[1:]):\\n  if x[1]>y[0]:e.append((a['id'],'overlap',x[2],y[2]))\\nprint('final errors',len(e)); print(e[:100]); print('selfcheck records',len(checks['records']))\\nPY\",yield_time_ms:10000,max_output_tokens:3000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2950,
+      "physical_record_sha256": "0fc713672d58aafd26868d0382661cd98750de55ac6d00368f1a3ac7eddb40fd",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_QBIBWiPY1ugCj4qOZKznnJvs",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "final errors 0\n[]\nselfcheck records 116\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2956,
+      "physical_record_sha256": "9e2a0fce1b736cabb39deb1c694494506bdbdb5f6fc7e86360611ef76392e982",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_2hjgjCAqht6R4Je4SqrIVdlC",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/reader-a.json'); x=json.loads(p.read_text()); x['self_review']['procedural_deviations']=['An initial question lookup treated questions.json as a root array; after the KeyError, I used its questions array and continued with the required complete question reads.','The first Q094 entry-generation pass selected T079 but missed I437 due to a locator condition; I reread and replaced the entry with both correct complete units before continuing.','One Q095 metadata locator attempt failed before writing because it compared separate regex match objects; I corrected the locator and then saved the entry.','The first Q080 source-print had an overlapping heading slice; I reread the distinct complete units and the final attachment checks passed.']; p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\\\\n'); print('recorded procedural deviations')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2959,
+      "physical_record_sha256": "d31386781e231b01c5bc76bce140a44df613f1097842d87ea176e991e00c1324",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_2hjgjCAqht6R4Je4SqrIVdlC",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "recorded procedural deviations\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2963,
+      "physical_record_sha256": "4ebaf5451c9465f42534c9dc0923d347c16b5d03b1019a78f9146b1408dfd6cf",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_CURz19Fz2enDr1qa1u0VamCR",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,collections\\nfrom pathlib import Path\\nb=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02'); c=json.loads((b/'reader-a-self-check.json').read_text()); d=json.loads((b/'reader-a-draft.json').read_text()); f=json.loads((b/'reader-a.json').read_text());\\nprint('check mechanical schemas',collections.Counter(tuple(k for k in r if k in ('mechanical','mechanical_checks')) for r in c['records']))\\nprint('unsupported answers',[(a['id'],a['support']) for a in f['answers'] if a['support']!='supported'])\\nprint('draft/final IDs',len(d['answers']),len(f['answers']))\\nprint('last IDs',[a['id'] for a in f['answers'][-3:]])\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2966,
+      "physical_record_sha256": "ff8c2881f817e2347ecec60a54c3a15044fce42cda5e7cd63e763b60d103a658",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_CURz19Fz2enDr1qa1u0VamCR",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.7 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "check mechanical schemas Counter({('mechanical', 'mechanical_checks'): 93, ('mechanical_checks',): 23})\nunsupported answers []\ndraft/final IDs 116 116\nlast IDs ['Q114', 'Q115', 'Q116']\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2970,
+      "physical_record_sha256": "fd635bf34e5717823fbc0ed2969e3df5a0ac7a8e550f1a5206bd736232f0f099",
+      "record_type": "custom_tool_call",
+      "name": "exec",
+      "call_id": "call_xRfxNcoIwZKpdatYEn3PtEBb",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,collections\\nfrom pathlib import Path\\np=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/reader-a-self-check.json'); x=json.loads(p.read_text())\\nfor r in x['records']:\\n m=r.get('mechanical_checks',r.get('mechanical'))\\n if not m: print('missing',r['id']); continue\\n if not all(m.values()): print('false',r['id'],m)\\nprint('done')\\nPY\",yield_time_ms:10000,max_output_tokens:1000});\ntext(r.output);"
+    },
+    {
+      "physical_record_ordinal": 2973,
+      "physical_record_sha256": "383e1a262774011a565d81d02ae933e2782b604252561ec696aff39623416e86",
+      "record_type": "custom_tool_call_output",
+      "call_id": "call_xRfxNcoIwZKpdatYEn3PtEBb",
+      "model_visible_text_blocks": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "done\n"
+        }
+      ]
+    },
+    {
+      "physical_record_ordinal": 2977,
+      "physical_record_sha256": "0c0c82bd086b7bea5238ed987ede7f35876bafb5275a413cfcc601f3fd639c38",
+      "record_type": "function_call",
+      "name": "send_message",
+      "call_id": "call_IVfj263HiWKL7v09faFpbB9T",
+      "arguments_projection": {
+        "target": "/root"
+      },
+      "message_and_other_bodies_omitted": true
+    },
+    {
+      "physical_record_ordinal": 2980,
+      "physical_record_sha256": "de1a83d808b7daee03cd7a1d6a51eaf8c684cef066ac1bd502ba64dd9dbc74af",
+      "record_type": "function_call_output",
+      "call_id": "call_IVfj263HiWKL7v09faFpbB9T",
+      "model_visible_text_blocks": []
+    }
+  ],
+  "own_files": {
+    "reader-a-draft.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/reader-a-draft.json",
+      "bytes": 595612,
+      "sha256": "6cb04063a141ca7822f3742f41b2cca5a459b87cda664de326402723df92d230",
+      "keys": [
+        "inputs_read",
+        "answers"
+      ],
+      "array_counts": {
+        "inputs_read": 2,
+        "answers": 116
+      }
+    },
+    "reader-a-self-check.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/reader-a-self-check.json",
+      "bytes": 204892,
+      "sha256": "9c393473250a961aa2863f834aac9a58aaa79d46b8fdd80a2ffad49c3588a805",
+      "keys": [
+        "records"
+      ],
+      "array_counts": {
+        "records": 116
+      },
+      "review_metadata": {}
+    },
+    "reader-a.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v13-complete-requested-scope/luna-iteration-02/reader-a.json",
+      "bytes": 617803,
+      "sha256": "fd79f853f98cd2d861b8e9b0613556c73a6b5c4be4f39221a69c9986c7ab153c",
+      "keys": [
+        "inputs_read",
+        "answers",
+        "self_review"
+      ],
+      "array_counts": {
+        "inputs_read": 2,
+        "answers": 116,
+        "self_review": 5
+      },
+      "self_review": {
+        "checked_ids": [
+          "Q001",
+          "Q002",
+          "Q003",
+          "Q004",
+          "Q005",
+          "Q006",
+          "Q007",
+          "Q008",
+          "Q009",
+          "Q010",
+          "Q011",
+          "Q012",
+          "Q013",
+          "Q014",
+          "Q015",
+          "Q016",
+          "Q017",
+          "Q018",
+          "Q019",
+          "Q020",
+          "Q021",
+          "Q022",
+          "Q023",
+          "Q024",
+          "Q025",
+          "Q026",
+          "Q027",
+          "Q028",
+          "Q029",
+          "Q030",
+          "Q031",
+          "Q032",
+          "Q033",
+          "Q034",
+          "Q035",
+          "Q036",
+          "Q037",
+          "Q038",
+          "Q039",
+          "Q040",
+          "Q041",
+          "Q042",
+          "Q043",
+          "Q044",
+          "Q045",
+          "Q046",
+          "Q047",
+          "Q048",
+          "Q049",
+          "Q050",
+          "Q051",
+          "Q052",
+          "Q053",
+          "Q054",
+          "Q055",
+          "Q056",
+          "Q057",
+          "Q058",
+          "Q059",
+          "Q060",
+          "Q061",
+          "Q062",
+          "Q063",
+          "Q064",
+          "Q065",
+          "Q066",
+          "Q067",
+          "Q068",
+          "Q069",
+          "Q070",
+          "Q071",
+          "Q072",
+          "Q073",
+          "Q074",
+          "Q075",
+          "Q076",
+          "Q077",
+          "Q078",
+          "Q079",
+          "Q080",
+          "Q081",
+          "Q082",
+          "Q083",
+          "Q084",
+          "Q085",
+          "Q086",
+          "Q087",
+          "Q088",
+          "Q089",
+          "Q090",
+          "Q091",
+          "Q092",
+          "Q093",
+          "Q094",
+          "Q095",
+          "Q096",
+          "Q097",
+          "Q098",
+          "Q099",
+          "Q100",
+          "Q101",
+          "Q102",
+          "Q103",
+          "Q104",
+          "Q105",
+          "Q106",
+          "Q107",
+          "Q108",
+          "Q109",
+          "Q110",
+          "Q111",
+          "Q112",
+          "Q113",
+          "Q114",
+          "Q115",
+          "Q116"
+        ],
+        "changed_ids_and_reasons": [
+          {
+            "id": "Q001",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q002",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q003",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q004",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q005",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q006",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q007",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q008",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q009",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q010",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q011",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q012",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q013",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q014",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q015",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q016",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q017",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q018",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q019",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q020",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q021",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q022",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q023",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q024",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q025",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q026",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q027",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q028",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed.",
+              "Restored the exact conjunction in the question clause phrase."
+            ]
+          },
+          {
+            "id": "Q029",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q030",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q031",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q032",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q033",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q034",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q035",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q036",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q037",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q038",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q039",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q040",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q041",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q042",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q043",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q044",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q045",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q046",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q047",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q048",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q049",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q050",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q051",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q052",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q053",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q054",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q055",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q056",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q057",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q058",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q059",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q060",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed.",
+              "Split six separately requested parts into exact question-clause phrases."
+            ]
+          },
+          {
+            "id": "Q061",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q062",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q063",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q064",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q065",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q066",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q067",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q068",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q069",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q070",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q071",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q072",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q073",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q074",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q075",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q076",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q077",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q078",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q079",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q080",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q081",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q082",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q083",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q084",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q085",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q086",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q087",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q088",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q089",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q090",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q091",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q092",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q093",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed."
+            ]
+          },
+          {
+            "id": "Q108",
+            "reasons": [
+              "Corrected selected-unit heading/zero-padded section metadata and synchronized attachment markers where needed.",
+              "Mapped the share question to its exact phrase."
+            ]
+          }
+        ],
+        "source_check_filename": "reader-a-self-check.json",
+        "mechanical_results": "Recomputed all selected unit IDs, heading levels, exact complete introduction/subtree boundaries, offsets, line ranges, untrimmed SHA-256 hashes and attachment copies. Confirmed source ordering/nonoverlap within each answer, question order/IDs, exact clause phrase substrings, answer/record count and JSON structure.",
+        "procedural_deviations": [
+          "An initial question lookup treated questions.json as a root array; after the KeyError, I used its questions array and continued with the required complete question reads.",
+          "The first Q094 entry-generation pass selected T079 but missed I437 due to a locator condition; I reread and replaced the entry with both correct complete units before continuing.",
+          "One Q095 metadata locator attempt failed before writing because it compared separate regex match objects; I corrected the locator and then saved the entry.",
+          "The first Q080 source-print had an overlapping heading slice; I reread the distinct complete units and the final attachment checks passed."
+        ]
+      }
+    }
+  }
+}

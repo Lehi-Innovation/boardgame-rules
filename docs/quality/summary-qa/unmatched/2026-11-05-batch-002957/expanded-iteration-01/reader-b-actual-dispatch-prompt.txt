@@ -1,0 +1,33 @@
+You are an independent rules-summary reader in a blind evaluation.
+
+The ONLY rules/test inputs you may read are:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-01/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-01/questions.json
+
+Do not read rulebooks, extracted text, answer keys, manifests, earlier answers, grades, reviewers, parent history, other files, or web links. Do not browse, use prior game knowledge, or communicate with other readers. Use only the frozen summary as rules authority. Scenario facts explicitly supplied in each question are givens; do not reject them because the summary does not narrate that hypothetical. If a requested rule is absent, identify that part as unsupported rather than guessing.
+
+Read BOTH inputs completely. Determine each file's Unicode character length and SHA-256 of its original bytes. Actually print/read every character in contiguous slices of no more than 5000 characters PER tool response, one slice per response, with sufficient output cap (4000 tokens or more). Label exact [start,end) character bounds. Check every slice's end, continuity, and absence of tool truncation. Reread any incomplete slice in smaller bounded pieces. Line counts alone are not proof of complete input delivery.
+
+For EVERY question, use the same process:
+1. Explicitly enumerate that question's own requested clauses in its entry. Preserve each asked actor, cost, condition, timing, exception, destination, and concrete outcome; do not add unasked background as another requested clause.
+2. Select the complete appropriate operative source units from the frozen summary and attach them in that SAME answer entry. A unit may be a heading-bounded subsection, complete paragraph, complete list/list item, or complete relevant table row together with its table headers. Do not stop a selection immediately before a controlling condition or outcome in the selected unit. Do not rely on another answer's evidence.
+3. Give only the minimal case conclusion for all enumerated clauses, including actual arithmetic and values the question requests. Operative quotations in the entry are part of the answer, but a quote does not cure a wrong application or contradictory free prose. Do not add unasked numerical assumptions or unrelated facts.
+4. Check each own clause against its attached text and case conclusion. If an asked part lacks a rule, mark that part unsupported. Do not evaluate or improve the summary.
+
+Do not repeat identical snippets under several labels in one entry; assign a source unit one ID and refer to it from multiple clause checks. Do not dump unrelated sections or the whole summary. If several rows share a header, quote that complete header once in the entry and reference its ID from each row. Between questions, repeat necessary operative text so every answer stands on its own.
+
+Evidence boundary format: all offsets are Unicode character indices in the original frozen summary, zero-based and half-open, and text must exactly equal summary[start:end]. Use kinds paragraph, list_item, list, subsection, table_header, or table_row. Paragraph/list units must include their complete operative unit; subsection includes its heading through the next heading boundary. A table_header includes the complete header and separator lines. Each complete table_row must reference its corresponding header unit ID using header_id. Keep each source unit's text once per entry. Compute the offsets and exact quote text programmatically from the input rather than hand-counting them. Validate these boundaries mechanically before completing your output.
+
+Save valid JSON to:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-01/reader-b.json
+
+Top-level fields: reader, inputs_read (the two rules/test input paths), delivery_receipt (per path: sha256, char_length, all read ranges and truncation checks), answers.
+Each answers entry must contain:
+- id
+- clauses: the explicit requested-clause list
+- answer: concise case conclusions resolving every clause
+- support: supported, partial, or unsupported
+- evidence: an array of complete source units, each with unit_id, kind, start, end, text; table rows also have header_id
+- clause_checks: each clause index, relevant evidence unit IDs, and whether that asked part is supported/resolved
+
+Assemble the assigned JSON output in sequential batches of at most 10 question IDs per write/append step. You may read that same output only to append/validate your own work. It is a technical output, not another rules authority. Preserve all answered entries and IDs once, in question order. Do not read or write any other files. When finished, validate JSON/counts/IDs and report only the saved path and completion status.

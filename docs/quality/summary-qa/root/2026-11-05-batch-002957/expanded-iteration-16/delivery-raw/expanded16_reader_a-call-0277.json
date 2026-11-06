@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:00:31.394Z",
+    "ordinal": 277,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0650acc5df87738b016aec9a0af7fc87d096282ab4f52a3241",
+      "status": "completed",
+      "call_id": "call_d1BlnOQOpJI1J0AFRC8aNYXw",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16'); s=(p/'summary-snapshot.md').read_text(); o=json.loads((p/'reader-a.json').read_text())\\nids=[a['id'] for a in o['answers']]\\nassert ids==[f'Q{i:02}' for i in range(1,41)],ids\\nfor a in o['answers']:\\n assert a['answer'] and a['source_passages']\\n for x in a['source_passages']: assert x['quotation'] and x['quotation'] in s,(a['id'],x['section'])\\nprint('valid JSON; Q01-Q40 each occur once in order; all quotations are nonempty exact substrings')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":150});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac38-a35c-7543-8efe-3107b813de41",
+        "create_time": 1793890822.050522
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:00:33.020Z",
+    "ordinal": 280,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac39-d27c-74d2-91d8-fc50be91585d",
+      "call_id": "call_d1BlnOQOpJI1J0AFRC8aNYXw",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; Q01-Q40 each occur once in order; all quotations are nonempty exact substrings\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac38-a35c-7543-8efe-3107b813de41",
+        "create_time": 1793890833.0205753
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

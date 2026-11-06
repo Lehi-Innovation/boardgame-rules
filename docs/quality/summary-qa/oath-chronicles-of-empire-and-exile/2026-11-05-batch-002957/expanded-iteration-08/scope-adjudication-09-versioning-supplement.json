@@ -1,0 +1,94 @@
+{
+  "artifact_type": "supplemental_independent_scope_versioning_recommendation",
+  "date": "2026-11-05",
+  "supplements": "scope-adjudication-09.json and scope-adjudication-09.md",
+  "purpose": "Reconcile the independent requested-scope adjudication with the two existing expanded-v11 frozen fact-group rows. This supplement recommends a minimal prospective precision correction; it does not modify the frozen scope or any question, key, raw entry, snapshot, grade, or prior report.",
+  "review_boundary": "Only Q058 and Q088 rows of expanded-v11/grading-scope.json were inspected in this supplemental review. No current iteration09 readers, snapshots, grading, other question rows, or new source audit were inspected.",
+  "input": {
+    "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/oath-chronicles-of-empire-and-exile/2026-11-05-batch-002957/expanded-v11/grading-scope.json",
+    "sha256": "631dc23ede2093589dcb4c3b00cd7eae004b75d82b75d3da5b6c543622743478",
+    "bytes": 286489
+  },
+  "row_hashes": {
+    "Q058": {
+      "sha256": "28f6cecedd1e0f227070f8acc2c8952038a0188566b3026036d1e7b7f9058e54",
+      "serialization": "sorted-key compact JSON, ensure_ascii=False, UTF-8"
+    },
+    "Q088": {
+      "sha256": "05e2124de12962b6f496fb069acd89b5780c55de0ac44404c32e2e3c70d7c366",
+      "serialization": "sorted-key compact JSON, ensure_ascii=False, UTF-8"
+    }
+  },
+  "minimal_recommendations": [
+    {
+      "question_id": "Q058",
+      "required_fact_group_changes": [],
+      "conclusion": "No required fact change. Existing Q058-F01 already requires the local one-card reduction with ordinary three-to-two implication; Q058-F02 already requires remote-rule exclusion. Vision/depleted-source stopping behavior is already explicitly contextual. The initial report’s suggestion to split background from requirements is already implemented in this frozen row.",
+      "optional_semantic_note_change": {
+        "field": "semantic_notes",
+        "old": "Assess the stated requested rule in context; no exact-keyword demand, confidence-label grading, or borrowing from another answer.",
+        "new": "Assess the stated requested rule in context; no exact-keyword demand, confidence-label grading, or borrowing from another answer. A pawn-conditioned statement that Search draws one fewer card conveys the ordinary three-to-two implication and the exclusion of a remote Search triggered solely by rule; no separate arithmetic recital or separately worded “no” is required when those meanings are clear. Explicit contrary rules remain errors."
+      },
+      "unchanged": [
+        "Q058-F01 expected_fact",
+        "Q058-F02 expected_fact",
+        "asked_clause_map",
+        "contextual_exclusions",
+        "question",
+        "fixed_key_expected_answer_sha256",
+        "source_references"
+      ]
+    },
+    {
+      "question_id": "Q088",
+      "required_fact_group_changes": [
+        {
+          "fact_id": "Q088-F02",
+          "field": "expected_fact",
+          "old": "Chancellor holds title if Empire collectively meets goal and adds bonus when any Imperial player defends.",
+          "new": "In Supremacy, the Chancellor adds the held title's bonus when any Imperial player defends.",
+          "reason": "Remove only the title-allocation/goal-qualification conjunct from required scope. Keep application of the held title bonus to any Imperial defender fully required."
+        }
+      ],
+      "contextual_exclusion_change": {
+        "operation": "append",
+        "old": null,
+        "new": {
+          "key_or_source_fact": "Chancellor holds the Supremacy title if the Empire collectively meets the goal.",
+          "classification": "contextual_not_independently_required",
+          "rationale": "Title allocation and goal qualification explain who normally supplies the bonus but are not independently requested by the question about bonus amounts, modifier status, and application to Imperial defense. The requirement that the held title power applies when any Imperial player defends remains in Q088-F02.",
+          "contradiction_policy": "Absence alone is not penalized; any volunteered materially false ruling is still incorrect."
+        }
+      },
+      "conclusion": "Q088-F02 currently combines a contextual allocation fact with the materially requested Imperial-defense application. Reclassify only the allocation fact; do not delete or weaken the any-Imperial-defense requirement.",
+      "unchanged": [
+        "Q088-F01 expected_fact",
+        "Q088-F02 fact_id and basis",
+        "both asked_clause_map entries and required_fact_ids",
+        "existing non-Supremacy contextual exclusion",
+        "semantic_notes",
+        "question",
+        "fixed_key_expected_answer_sha256",
+        "source_references"
+      ]
+    }
+  ],
+  "preservation_invariants": {
+    "required_fact_group_count": 328,
+    "group_count_basis": "328 is the caller-supplied frozen total; no other rows were inspected or recounted in this supplemental review. Both submitted rows retain their same two fact IDs, so this recommendation changes no group count.",
+    "required_fact_ids_added_or_removed": [],
+    "other_fact_groups_changed": false,
+    "gold_answer_text_changed": false,
+    "question_text_changed": false,
+    "existing_grades_changed": false,
+    "original_files_modified": false
+  },
+  "versioning": "Preserve expanded-v11 unchanged. Before another grader uses the clarified scope, freeze these precise changes in a separately versioned scope artifact. Q058 may receive only the optional semantic note; Q088 receives the one expected_fact replacement plus one appended context exclusion. All other facts/groups remain unchanged, retaining 328. This is requested-scope clarification, not new full-source saturation.",
+  "independent_decisions_unchanged": {
+    "Q058": "correct",
+    "Q088": "correct"
+  },
+  "verification": {
+    "frozen_scope_hash_unchanged_after_writing": true
+  }
+}

@@ -1,0 +1,554 @@
+{
+  "reader": "reader-a",
+  "inputs_read": [
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/summary-snapshot.md",
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/questions.json"
+  ],
+  "delivery_receipt": {
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/summary-snapshot.md": {
+      "sha256": "ad658d97984a4e50890557cbb2e99505faead49d237a7654c1f1ab3881095639",
+      "char_length": 27907,
+      "all_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          10000
+        ],
+        [
+          10000,
+          15000
+        ],
+        [
+          15000,
+          20000
+        ],
+        [
+          20000,
+          25000
+        ],
+        [
+          25000,
+          27907
+        ]
+      ],
+      "truncation_checks": "Contiguous separate slices; end 27907; no truncation."
+    },
+    "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/questions.json": {
+      "sha256": "8378eda87aaf65768f8b7ee486c4ff44c45ae7996e6f0e7b73f40ed584809247",
+      "char_length": 17673,
+      "all_read_ranges": [
+        [
+          0,
+          5000
+        ],
+        [
+          5000,
+          10000
+        ],
+        [
+          10000,
+          15000
+        ],
+        [
+          15000,
+          17673
+        ]
+      ],
+      "truncation_checks": "Contiguous separate slices; end 17673; no truncation."
+    }
+  },
+  "instruction_delivery": {
+    "path": "docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-07/reader-a-prompt.txt",
+    "sha256": "a9b7924ea6cf135d7c27e94d8ed3667714091a55ea6fe2a1406539f85bce24ae",
+    "char_length": 7125,
+    "read_ranges": [
+      [
+        0,
+        5000
+      ],
+      [
+        5000,
+        7125
+      ]
+    ],
+    "truncation_checks": "Contiguous complete delivery; end 7125."
+  },
+  "answers": [
+    {
+      "id": "Q01",
+      "clauses": [
+        "Set up cards and health.",
+        "Younger player places first; order and spaces for hero and sidekicks, including multizone hero space.",
+        "When Alice’s initial size is chosen.",
+        "Who takes first turn."
+      ],
+      "answer": "Follow the numbered setup sequence; the younger player takes the first turn.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q01-setup",
+          "start": 3341,
+          "end": 4232,
+          "text": "1. Choose a battlefield and place it on the table. Each player chooses a hero and takes that hero’s components.\n2. Set the hero’s and sidekick’s dials to the starting health above; undialed sidekicks have 1 health each.\n3. Each player shuffles their **30 action cards into one separate face-down deck**, then draws **5 cards**.\n4. The **younger player** places their hero on starting space **1**, then their sidekick(s) in **separate spaces sharing a zone with that hero**. If the hero’s space belongs to several zones, use any of those zones. Make beginning-of-game decisions when placing that player’s fighters. **Alice’s controller**, whether younger or older, chooses **BIG or SMALL when placing Alice** and displays her size token.\n5. The **older player** places their hero on starting space **2**, then places sidekicks under the same rules.\n6. The younger player takes the first turn.",
+          "kind": "paragraph"
+        },
+        {
+          "unit_id": "q01-components",
+          "start": 2634,
+          "end": 2755,
+          "text": "- Each player uses only their chosen hero’s matching deck, fighters, character card, health dials and special components.",
+          "kind": "paragraph"
+        },
+        {
+          "unit_id": "q01-stats",
+          "start": 2780,
+          "end": 3329,
+          "text": "The move value applies to **each** of that player’s fighters during maneuver. Harpies have no health dials; each has 1 health. Other fighters have individual dials. Health cannot increase above the highest number on that fighter’s dial.\n\n| Hero | Starting health | Attack | Move | Sidekick(s): starting health, attack |\n|---|---:|---|---:|---|\n| Alice | 13 | Melee | 2 | Jabberwock: 8, melee |\n| King Arthur | 18 | Melee | 2 | Merlin: 7, ranged |\n| Medusa | 16 | Ranged | 3 | 3 Harpies: 1 each, melee |\n| Sinbad | 15 | Melee | 2 | Porter: 6, melee |",
+          "kind": "table"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q01-components",
+            "q01-stats"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q01-setup"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q01-setup"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 3,
+          "evidence_unit_ids": [
+            "q01-setup"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q02",
+      "clauses": [
+        "Take two actions from maneuver, scheme, attack.",
+        "May repeat; may not skip.",
+        "At end of turn enforce 7-card limit when holding 9."
+      ],
+      "answer": "Take two actions; repeating is allowed and skipping is not. If holding 9 at turn end, discard 2 to your discard pile, leaving 7.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q02-turn",
+          "start": 4554,
+          "end": 4963,
+          "text": "At the start of Medusa’s turn, her optional special ability may resolve (see below). Then take **2 actions** from **maneuver, scheme, attack**. You may repeat an action, including maneuver twice; **you cannot skip an action**.\n\nYou may hold more than 7 cards during your turn. **At the end of your turn**, discard excess cards to your own discard pile until you have **7**, then the opponent takes their turn.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q02-turn"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q02-turn"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q02-turn"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q03",
+      "clauses": [
+        "Draw before movement.",
+        "Each fighter may move up to move value plus bonuses, independently including zero; complete one before another.",
+        "Passage, occupied destination, and interleaving rules."
+      ],
+      "answer": "Draw 1 first. Move each fighter independently up to its move value, including zero, and finish one fighter before beginning another. You may pass through friendly fighters but not opponents, cannot finish on an occupied space, and cannot interleave fighters’ movement.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q03-maneuver",
+          "start": 4991,
+          "end": 5277,
+          "text": "1. **Draw 1 card first, mandatory.**\n2. **Optionally move** each of your fighters, one at a time, up to your move value (plus applicable bonuses). Each fighter chooses its own distance, including **zero**. Choose their order, but finish one fighter’s movement before starting another’s.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q03-maneuver"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q03-maneuver"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q03-maneuver"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q04",
+      "clauses": [
+        "Discard one hand card for printed BOOST during maneuver.",
+        "Ignore its effect.",
+        "Each fighter receives allowance.",
+        "Defeated fighter’s unusable card can pay?"
+      ],
+      "answer": "Discard one card from hand; its printed BOOST value increases movement for each of your fighters in this maneuver, and its effects are ignored. A card unusable because its fighter is defeated may still pay BOOST.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q04-boost",
+          "start": 5674,
+          "end": 6262,
+          "text": "**BOOST movement:** during a maneuver, discard **1 card from your hand** to add its printed **BOOST value** (the small circled number, not its combat value) to the movement value for this maneuver. Each of your fighters receives that allowance. For **any permitted BOOST**, add the discarded card’s BOOST value and **ignore that card’s effects**, whether the BOOST modifies movement or an attack. A card that cannot be played because its fighter is defeated **can still be discarded to BOOST**. Effects may separately permit boosting attacks; boosting is not otherwise a universal option.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q04-boost"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q04-boost"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q04-boost"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 3,
+          "evidence_unit_ids": [
+            "q04-boost"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q05",
+      "clauses": [
+        "Givens: empty deck; mandatory draw 2; hero and sidekick survive.",
+        "Whether reshuffle/decline; damage per fighter."
+      ],
+      "answer": "Do not reshuffle or decline: each missing draw causes each surviving fighter to take 2 damage, so the hero and sidekick each take 4 damage total.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q05-exhaustion",
+          "start": 11270,
+          "end": 11728,
+          "text": "- With an empty deck, your fighters are **exhausted**. Each time you must draw a card you cannot draw, **each of your fighters immediately takes 2 damage instead**. Do **not reshuffle** your discard pile. A mandatory draw of 2 with an empty deck therefore causes two separate 2-damage events to every surviving fighter, unless hero defeat has already ended the game. If only one card remains, draw it and take the exhaustion damage for the next missing draw.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q05-exhaustion"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q05-exhaustion"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "clauses": [
+        "Melee and ranged legality for an adjacent opponent across zone boundary.",
+        "Nonadjacent opponent in same zone, including disconnected section."
+      ],
+      "answer": "A melee fighter can attack an adjacent opponent across a zone boundary, but cannot attack a nonadjacent opponent. A ranged fighter can attack an adjacent opponent and any opponent sharing a zone, including a disconnected part of that zone.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q06-board",
+          "start": 4251,
+          "end": 4533,
+          "text": "One fighter per circular space. Spaces connected by a line are **adjacent**. A **zone** consists of all spaces with the same colored pattern, even if separated on the board. A space showing several patterns belongs to all those zones. Adjacency and shared zones are different tests.",
+          "kind": "paragraph"
+        },
+        {
+          "unit_id": "q06-targets",
+          "start": 7082,
+          "end": 7363,
+          "text": "Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q06-board",
+            "q06-targets"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q06-board",
+            "q06-targets"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q07",
+      "clauses": [
+        "When attack is illegal.",
+        "Attacker, legal cards, defender decline option.",
+        "Reveal timing.",
+        "Versatile use and effect counting."
+      ],
+      "answer": "An attack requires an attack-capable card and a valid target. Declare attacking fighter and target; attacker chooses a legal attack card, and defender may decline or choose a legal defense card. Reveal simultaneously after both choices. Versatile cards may attack or defend and count as both attack and defense cards for other effects.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q07-attack",
+          "start": 6867,
+          "end": 8103,
+          "text": "You cannot take an attack action without an attack-capable card in hand or without a valid target for one of your fighters.\n\n1. **Declare** your attacking fighter (active fighter) and the opposing fighter targeted. Any fighter may attack an **adjacent** opponent, even across zone boundaries. **Melee** fighters may attack only adjacent opponents. **Ranged** fighters may also attack any opponent sharing a zone, regardless of distance or adjacency, including another separated part of that zone.\n2. **Choose cards:** attacker plays an attack card face down that the attacking fighter is allowed to use. Defender may decline to play a card; otherwise plays a legal defense card face down for the defending fighter. **Reveal simultaneously** after both choices.\n3. **Resolve combat** in the order below, then discard played cards to their owners’ **face-up discard piles**.\n\nAttack-only cards are red, defense-only blue, and **versatile** cards purple. Versatile cards may attack or defend and **count as both attack and defense cards for other effects**. A fighter-specific card cannot be used by a different fighter; **ANY** permits any of your fighters. A pure defense card cannot initiate an attack; a pure attack card cannot defend.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q07-attack"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q07-attack"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q07-attack"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 3,
+          "evidence_unit_ids": [
+            "q07-attack"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q08",
+      "clauses": [
+        "Combat order through final played-card destinations.",
+        "Same-timing priority; optionality."
+      ],
+      "answer": "Resolve immediately effects; during-combat effects; combat damage; after-combat card effects; other after-combat game effects; then discard played cards to owners’ face-up discard piles. Same-timing effects resolve defender first; card effects are mandatory unless they say otherwise.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q08-combat",
+          "start": 8151,
+          "end": 8792,
+          "text": "1. Resolve **IMMEDIATELY** card effects.\n2. Resolve **DURING COMBAT** card effects.\n3. Determine combat result: defender takes attack value minus defense value, to a minimum of zero. If no defense card, take the attack value. Reduce the defending fighter’s health by the damage dealt. Defense does not itself deal return damage.\n4. Resolve **AFTER COMBAT card effects**. A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q08-combat"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q08-combat"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "clauses": [
+        "Givens: attack value 4 vs defense 4, then effect damage 2.",
+        "Winner and reason; attack damage against no defense."
+      ],
+      "answer": "The defender wins because the attack deals no damage; later effect damage does not change the winner. With no defense card, attack damage is 4.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q09-winner",
+          "start": 9120,
+          "end": 9409,
+          "text": "**Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q09-winner"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q09-winner"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "clauses": [
+        "Givens: sidekick reaches zero during combat; hero lives.",
+        "Token and played-card after-combat effect.",
+        "If hero reaches zero with pending healing."
+      ],
+      "answer": "Remove the defeated sidekick token; its played card’s after-combat effect still resolves while the duel continues. If the hero reaches zero, the duel ends immediately, so pending healing and later effects do not resolve.",
+      "support": "supported",
+      "evidence": [
+        {
+          "unit_id": "q10-defeat",
+          "start": 10737,
+          "end": 11104,
+          "text": "Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.\n\n**A defeated hero immediately loses the duel, and the game ends at once.** Do not continue pending effects to heal that hero or finish the turn. Defeating a sidekick alone does not win the game.",
+          "kind": "paragraph"
+        },
+        {
+          "unit_id": "q10-card",
+          "start": 8522,
+          "end": 8792,
+          "text": "A defeated fighter’s played card still resolves its after-combat effects **unless the game has already ended**.\n5. Resolve other after-combat game effects, such as a hero’s special ability.\n6. Finally place all played cards in their respective **face-up discard piles**.",
+          "kind": "paragraph"
+        }
+      ],
+      "clause_checks": [
+        {
+          "clause_index": 0,
+          "evidence_unit_ids": [
+            "q10-defeat"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 1,
+          "evidence_unit_ids": [
+            "q10-defeat",
+            "q10-card"
+          ],
+          "supported": true,
+          "resolved": true
+        },
+        {
+          "clause_index": 2,
+          "evidence_unit_ids": [
+            "q10-defeat"
+          ],
+          "supported": true,
+          "resolved": true
+        }
+      ]
+    }
+  ]
+}

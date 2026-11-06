@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:04:34.320Z",
+    "ordinal": 346,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0aae654206ae7e74016aec9b00821487d09cff4948a7440530",
+      "status": "completed",
+      "call_id": "call_vSR9vVXyMqROAlM7QEIGsXML",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"sed -n '271,289p' docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16/summary-snapshot.md && sed -n '192,210p' docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16/summary-snapshot.md\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:4500});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac3d-46b8-7ce0-b821-844b91dc6068",
+        "create_time": 1793891070.464797
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:04:35.181Z",
+    "ordinal": 349,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac3d-846c-79a3-a08a-c18084666f9a",
+      "call_id": "call_vSR9vVXyMqROAlM7QEIGsXML",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.8 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "These base-game clarifications are paraphrased from [Leder Games\u2019 Rules Library](https://rules.ledergames.com/?product=root&locale=en-US&printing=p16), English p16, consulted November 5, 2026.\n\n- **Charismatic and a supply shortage:** When a legal Decree Recruit requires two warriors but only one remains in supply, place that warrior first. Then enter Turmoil because the required two were not placed. Maximum-possible placement does not fulfill an incomplete Decree action. (FAQ under 7.7 and 7.8.2; Law 1.5.4.)\n- **Field Hospitals during an ambush at the Keep:** Marquise may spend a matching card immediately when its warriors are removed, returning them to the Keep clearing **before** checking whether the ambush left no attacking warriors or pawns. If returned warriors remain there, battle continues. Without Hospitals, battle ends if no attackers remain after the ambush. (FAQ under 4.3.1 and 6.2.3.)\n- **Allied movement and Outrage:** Forcing Allied **Woodland Alliance** warriors to accompany the Vagabond into sympathy causes **no Outrage**: resolve the move as the Alliance moving its own warriors. Warriors of another Allied faction entering sympathy do trigger Outrage for that moving faction, which pays from its own hand under the normal Outrage procedure. The Vagabond pawn alone causes no warrior-entry Outrage; removing sympathy still triggers it. (FAQ under 8.2.6 and 9.2.9; Law 1.5.5, 8.2.6.)\n- **Coalitions and dominance order:** The Vagabond cannot form a new coalition with a player who already activated dominance, because that player has no score marker on the VP track. A legally chosen coalition partner **may activate dominance afterward** under the normal activation rules; a win by that partner also wins for the Vagabond. (FAQ under 9.2.8.)\n\n## Player Reference\n\n| Faction | Crafting | Scoring engine | Important limit |\n|---|---|---|---|\n| Marquise | Workshops, before actions | Build and expose VP | Three actions plus birds; Recruit once |\n| Eyrie | Roosts, before Decree | Rightmost empty roost-track space each Evening | All Decree cards compulsory; added birds at most one |\n| Alliance | Sympathy, throughout Daylight | Place sympathy; remove enemies in revolt | Supporters five without bases; operations up to officers |\n| Vagabond | Exhaust hammers, current clearing | Explore, quests, Aid relationships, Infamy | Ready undamaged items pay; capacity checked last |\n\n**Battle order:** Ambush \u2192 before-roll effects \u2192 dice \u2192 after-roll effects \u2192 count \u2192 deal. **Normal move:** positive group, adjacent path, rule at least one end. **Turn:** Birdsong \u2192 Daylight \u2192 Evening, clockwise. **Win:** 30 immediately, dominance at start of own Birdsong, or coalition partner's win.\n\n### Vagabond (9; V.1\u20133)\n\n**Pawn and items:** Pawn is not a warrior, cannot rule or block rule, and cannot be removed. An enemy effect removing **all enemy pieces** from its clearing instead damages **three items**. Items may be face up (ready) or face down (exhausted), and independently undamaged or damaged. To exhaust for an action, choose a face-up **undamaged** item and flip it down. Damaged items cannot pay actions.\n\nFace-up tea/coins/bags in Satchel immediately move to empty matching track space if possible; each track holds at most three of its type. Exhausting an item on track sends it to Satchel. Boots/swords/crossbows/torch/hammers are gained face up in Satchel. Damaging an item sends it to Damaged box **without changing its face**. One hit damages one undamaged item of your choice; ignore excess hits when none remain.\n\n**Birdsong:**\n\n1. **Refresh:** First count tea **already face up on Refresh track**; flip two exhausted items face up per counted tea, then three more exhausted items. Tea refreshed during this step gives no extra refresh this step. Refreshing changes face, not damaged status.\n2. **Slip (optional):** Move to an adjacent clearing or forest, exhausting **no boots**, even into hostile warriors. Ignore all effects preventing movement **out of** a clearing. **Forest adjacency for Slip:** a forest is adjacent to clearings touching it without crossing a printed path, and to forests separated by one printed path. On Winter, the river also divides forests as paths do.\n\n**Daylight:** Any order/number, as ready undamaged items permit:\n\n- **Move:** Exhaust one boot, plus **one extra boot** if destination has any warriors of any Hostile faction (also for forced moves). Ignore rule. **Cannot enter a forest with this action; from a forest you may move only to an adjacent clearing.** Slip has the special free-boot exception.\n- **Battle:** Exhaust one sword to initiate. Maximum rolled hits, attacking or defending, equals **all undamaged swords in Satchel, face up or face down**. As defender you are defenseless only with no undamaged swords. Take hits as item damage.\n- **Explore:** Exhaust torch in ruin's clearing. Take one hidden item face up into Satchel or track; score one VP if an item taken. Remove ruin when its last item is taken, freeing the building slot.\n- **Aid:** Exhaust **one face-up, undamaged item of any type**, give a card matching your clearing to player with faction pieces there, even Hostile. May then take one item from their Crafted Items box face up into Satchel/track; no available item is required to Aid. **Only non-Hostile relationships can advance through Aid; a Hostile recipient stays Hostile.** Check relationship improvement below.\n- **Quest (matching clearing only):** Choose a face-up quest matching clearing; exhaust its **two listed items**, put quest in play area completed. Choose either VP equal to matching completed quests **including this one**, or draw two cards. Draw replacement quest into public display. No cards are spent to pay a quest.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac3d-46b8-7ce0-b821-844b91dc6068",
+        "create_time": 1793891075.1808906
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

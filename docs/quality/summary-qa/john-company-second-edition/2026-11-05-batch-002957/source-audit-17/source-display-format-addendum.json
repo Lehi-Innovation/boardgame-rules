@@ -1,0 +1,459 @@
+{
+  "addendum_id": "source-audit-17-source-display-format",
+  "created_utc": "2026-11-05T20:41:04.511509+00:00",
+  "purpose": "Correct display/citation convention only; original audit, manifest, read.py and source-read-record remain unchanged.",
+  "candidate_sha256": "25266d482daf6361fa2f140365306be1f90fdc0bc025b83e837d032aab8fd6f5",
+  "technical_finding": {
+    "severity": "low",
+    "category": "audit evidence display/citation metadata",
+    "location": "read.py line5; source-read-record.json original extract start_physicalLF/end_physicalLF fields and downstream extract citations",
+    "finding": "Helper used str.splitlines(), not physical LF splitting. U+001E inside original physicalLF1067 creates an additional logical line. The record incorrectly labels these splitlines indices as physicalLF.",
+    "original_physicalLF1067_repr": "'when there are \\x1e+ vacancies.'",
+    "source_LF_count": 3305,
+    "source_nonterminal_physical_line_count": 3305,
+    "splitlines_count": 3306,
+    "additional_non_LF_line_breaks": [
+      {
+        "codepoint": "U+001E",
+        "physicalLF": 1067,
+        "count": 1
+      }
+    ],
+    "content_effect": "The control character is consumed as a display line separator. Prefix and suffix are both visible; no relevant rule sentence was skipped. The extracted glyph itself is not a readable numeral.",
+    "citation_correction": "Original extract labels1–1066 equal physicalLF. Display labels1067 and1068 are both parts of physicalLF1067. From display1069 onward subtract1. Printed Rules page citations are unchanged. Use bytes split on b\"\\n\" for true LF numbering; strip only terminal empty segment."
+  },
+  "operative_rule_verification": {
+    "primary": "Original Rules printed p13, Enlist Writer; new native full-page rendering visually inspected.",
+    "native_text": "If there are four or more vacant offices, you may place an additional writer once this turn.",
+    "physicalLF_corrected": [
+      1101,
+      1104
+    ],
+    "prior_display_labels": [
+      1102,
+      1105
+    ],
+    "graphical_numeral_resolution": "The unreadable extracted U+001E in the p12 Lady Glencora illustration stands in the four-plus-vacancies reminder. The threshold4 is independently confirmed by the explicit words four or more on native p13; no claim is made that the control character itself encodes a legible4.",
+    "applicable_errata": "Full official errata physicalLF52–79 adds No Action, forced prize reuse and empty Court wording; it does not replace the four-vacancy Writer rule.",
+    "candidate": "Current candidate physicalLF102 says at least four vacancies, one additional writer once this turn and three total when doubled; correct."
+  },
+  "scope_of_numbering_effect": {
+    "original_extract": "All original-extract read-record and report indices at/after the internal U+001E need the mapping above. The complete relevant multiplayer read remains intact.",
+    "recorded_multiplayer_display_range": [
+      1,
+      3030
+    ],
+    "actual_physicalLF_range": [
+      1,
+      3029
+    ],
+    "complete_relevant_Rules_pages_1_to_42": true,
+    "candidate": "No additional splitlines separator exists in candidate; its482 numbered lines and summary locations are unaffected.",
+    "other_sources": "This followup does not retroactively recertify every supplementary text line convention. The demonstrated global one-line drift applies to the assigned original extract. Printed pages, primary claims and hashes are unaffected."
+  },
+  "corrected_original_extract_read_ranges": [
+    {
+      "recorded_start_label": 1,
+      "recorded_end_label": 50,
+      "actual_physicalLF_start": 1,
+      "actual_physicalLF_end": 50
+    },
+    {
+      "recorded_start_label": 51,
+      "recorded_end_label": 100,
+      "actual_physicalLF_start": 51,
+      "actual_physicalLF_end": 100
+    },
+    {
+      "recorded_start_label": 101,
+      "recorded_end_label": 150,
+      "actual_physicalLF_start": 101,
+      "actual_physicalLF_end": 150
+    },
+    {
+      "recorded_start_label": 151,
+      "recorded_end_label": 200,
+      "actual_physicalLF_start": 151,
+      "actual_physicalLF_end": 200
+    },
+    {
+      "recorded_start_label": 201,
+      "recorded_end_label": 250,
+      "actual_physicalLF_start": 201,
+      "actual_physicalLF_end": 250
+    },
+    {
+      "recorded_start_label": 251,
+      "recorded_end_label": 300,
+      "actual_physicalLF_start": 251,
+      "actual_physicalLF_end": 300
+    },
+    {
+      "recorded_start_label": 301,
+      "recorded_end_label": 350,
+      "actual_physicalLF_start": 301,
+      "actual_physicalLF_end": 350
+    },
+    {
+      "recorded_start_label": 351,
+      "recorded_end_label": 400,
+      "actual_physicalLF_start": 351,
+      "actual_physicalLF_end": 400
+    },
+    {
+      "recorded_start_label": 401,
+      "recorded_end_label": 450,
+      "actual_physicalLF_start": 401,
+      "actual_physicalLF_end": 450
+    },
+    {
+      "recorded_start_label": 451,
+      "recorded_end_label": 500,
+      "actual_physicalLF_start": 451,
+      "actual_physicalLF_end": 500
+    },
+    {
+      "recorded_start_label": 501,
+      "recorded_end_label": 550,
+      "actual_physicalLF_start": 501,
+      "actual_physicalLF_end": 550
+    },
+    {
+      "recorded_start_label": 551,
+      "recorded_end_label": 600,
+      "actual_physicalLF_start": 551,
+      "actual_physicalLF_end": 600
+    },
+    {
+      "recorded_start_label": 601,
+      "recorded_end_label": 650,
+      "actual_physicalLF_start": 601,
+      "actual_physicalLF_end": 650
+    },
+    {
+      "recorded_start_label": 651,
+      "recorded_end_label": 700,
+      "actual_physicalLF_start": 651,
+      "actual_physicalLF_end": 700
+    },
+    {
+      "recorded_start_label": 701,
+      "recorded_end_label": 750,
+      "actual_physicalLF_start": 701,
+      "actual_physicalLF_end": 750
+    },
+    {
+      "recorded_start_label": 751,
+      "recorded_end_label": 800,
+      "actual_physicalLF_start": 751,
+      "actual_physicalLF_end": 800
+    },
+    {
+      "recorded_start_label": 801,
+      "recorded_end_label": 850,
+      "actual_physicalLF_start": 801,
+      "actual_physicalLF_end": 850
+    },
+    {
+      "recorded_start_label": 851,
+      "recorded_end_label": 900,
+      "actual_physicalLF_start": 851,
+      "actual_physicalLF_end": 900
+    },
+    {
+      "recorded_start_label": 901,
+      "recorded_end_label": 950,
+      "actual_physicalLF_start": 901,
+      "actual_physicalLF_end": 950
+    },
+    {
+      "recorded_start_label": 951,
+      "recorded_end_label": 1000,
+      "actual_physicalLF_start": 951,
+      "actual_physicalLF_end": 1000
+    },
+    {
+      "recorded_start_label": 1001,
+      "recorded_end_label": 1050,
+      "actual_physicalLF_start": 1001,
+      "actual_physicalLF_end": 1050
+    },
+    {
+      "recorded_start_label": 1051,
+      "recorded_end_label": 1100,
+      "actual_physicalLF_start": 1051,
+      "actual_physicalLF_end": 1099
+    },
+    {
+      "recorded_start_label": 1101,
+      "recorded_end_label": 1150,
+      "actual_physicalLF_start": 1100,
+      "actual_physicalLF_end": 1149
+    },
+    {
+      "recorded_start_label": 1151,
+      "recorded_end_label": 1200,
+      "actual_physicalLF_start": 1150,
+      "actual_physicalLF_end": 1199
+    },
+    {
+      "recorded_start_label": 1201,
+      "recorded_end_label": 1250,
+      "actual_physicalLF_start": 1200,
+      "actual_physicalLF_end": 1249
+    },
+    {
+      "recorded_start_label": 1251,
+      "recorded_end_label": 1300,
+      "actual_physicalLF_start": 1250,
+      "actual_physicalLF_end": 1299
+    },
+    {
+      "recorded_start_label": 1301,
+      "recorded_end_label": 1350,
+      "actual_physicalLF_start": 1300,
+      "actual_physicalLF_end": 1349
+    },
+    {
+      "recorded_start_label": 1351,
+      "recorded_end_label": 1400,
+      "actual_physicalLF_start": 1350,
+      "actual_physicalLF_end": 1399
+    },
+    {
+      "recorded_start_label": 1401,
+      "recorded_end_label": 1450,
+      "actual_physicalLF_start": 1400,
+      "actual_physicalLF_end": 1449
+    },
+    {
+      "recorded_start_label": 1451,
+      "recorded_end_label": 1500,
+      "actual_physicalLF_start": 1450,
+      "actual_physicalLF_end": 1499
+    },
+    {
+      "recorded_start_label": 1501,
+      "recorded_end_label": 1550,
+      "actual_physicalLF_start": 1500,
+      "actual_physicalLF_end": 1549
+    },
+    {
+      "recorded_start_label": 1551,
+      "recorded_end_label": 1600,
+      "actual_physicalLF_start": 1550,
+      "actual_physicalLF_end": 1599
+    },
+    {
+      "recorded_start_label": 1601,
+      "recorded_end_label": 1650,
+      "actual_physicalLF_start": 1600,
+      "actual_physicalLF_end": 1649
+    },
+    {
+      "recorded_start_label": 1651,
+      "recorded_end_label": 1700,
+      "actual_physicalLF_start": 1650,
+      "actual_physicalLF_end": 1699
+    },
+    {
+      "recorded_start_label": 1701,
+      "recorded_end_label": 1750,
+      "actual_physicalLF_start": 1700,
+      "actual_physicalLF_end": 1749
+    },
+    {
+      "recorded_start_label": 1751,
+      "recorded_end_label": 1800,
+      "actual_physicalLF_start": 1750,
+      "actual_physicalLF_end": 1799
+    },
+    {
+      "recorded_start_label": 1801,
+      "recorded_end_label": 1850,
+      "actual_physicalLF_start": 1800,
+      "actual_physicalLF_end": 1849
+    },
+    {
+      "recorded_start_label": 1851,
+      "recorded_end_label": 1900,
+      "actual_physicalLF_start": 1850,
+      "actual_physicalLF_end": 1899
+    },
+    {
+      "recorded_start_label": 1901,
+      "recorded_end_label": 1950,
+      "actual_physicalLF_start": 1900,
+      "actual_physicalLF_end": 1949
+    },
+    {
+      "recorded_start_label": 1951,
+      "recorded_end_label": 2000,
+      "actual_physicalLF_start": 1950,
+      "actual_physicalLF_end": 1999
+    },
+    {
+      "recorded_start_label": 2001,
+      "recorded_end_label": 2050,
+      "actual_physicalLF_start": 2000,
+      "actual_physicalLF_end": 2049
+    },
+    {
+      "recorded_start_label": 2051,
+      "recorded_end_label": 2100,
+      "actual_physicalLF_start": 2050,
+      "actual_physicalLF_end": 2099
+    },
+    {
+      "recorded_start_label": 2101,
+      "recorded_end_label": 2150,
+      "actual_physicalLF_start": 2100,
+      "actual_physicalLF_end": 2149
+    },
+    {
+      "recorded_start_label": 2151,
+      "recorded_end_label": 2200,
+      "actual_physicalLF_start": 2150,
+      "actual_physicalLF_end": 2199
+    },
+    {
+      "recorded_start_label": 2201,
+      "recorded_end_label": 2250,
+      "actual_physicalLF_start": 2200,
+      "actual_physicalLF_end": 2249
+    },
+    {
+      "recorded_start_label": 2251,
+      "recorded_end_label": 2300,
+      "actual_physicalLF_start": 2250,
+      "actual_physicalLF_end": 2299
+    },
+    {
+      "recorded_start_label": 2301,
+      "recorded_end_label": 2350,
+      "actual_physicalLF_start": 2300,
+      "actual_physicalLF_end": 2349
+    },
+    {
+      "recorded_start_label": 2351,
+      "recorded_end_label": 2400,
+      "actual_physicalLF_start": 2350,
+      "actual_physicalLF_end": 2399
+    },
+    {
+      "recorded_start_label": 2401,
+      "recorded_end_label": 2450,
+      "actual_physicalLF_start": 2400,
+      "actual_physicalLF_end": 2449
+    },
+    {
+      "recorded_start_label": 2451,
+      "recorded_end_label": 2500,
+      "actual_physicalLF_start": 2450,
+      "actual_physicalLF_end": 2499
+    },
+    {
+      "recorded_start_label": 2501,
+      "recorded_end_label": 2550,
+      "actual_physicalLF_start": 2500,
+      "actual_physicalLF_end": 2549
+    },
+    {
+      "recorded_start_label": 2551,
+      "recorded_end_label": 2600,
+      "actual_physicalLF_start": 2550,
+      "actual_physicalLF_end": 2599
+    },
+    {
+      "recorded_start_label": 2601,
+      "recorded_end_label": 2650,
+      "actual_physicalLF_start": 2600,
+      "actual_physicalLF_end": 2649
+    },
+    {
+      "recorded_start_label": 2651,
+      "recorded_end_label": 2700,
+      "actual_physicalLF_start": 2650,
+      "actual_physicalLF_end": 2699
+    },
+    {
+      "recorded_start_label": 2701,
+      "recorded_end_label": 2750,
+      "actual_physicalLF_start": 2700,
+      "actual_physicalLF_end": 2749
+    },
+    {
+      "recorded_start_label": 2751,
+      "recorded_end_label": 2800,
+      "actual_physicalLF_start": 2750,
+      "actual_physicalLF_end": 2799
+    },
+    {
+      "recorded_start_label": 2801,
+      "recorded_end_label": 2850,
+      "actual_physicalLF_start": 2800,
+      "actual_physicalLF_end": 2849
+    },
+    {
+      "recorded_start_label": 2851,
+      "recorded_end_label": 2900,
+      "actual_physicalLF_start": 2850,
+      "actual_physicalLF_end": 2899
+    },
+    {
+      "recorded_start_label": 2901,
+      "recorded_end_label": 2950,
+      "actual_physicalLF_start": 2900,
+      "actual_physicalLF_end": 2949
+    },
+    {
+      "recorded_start_label": 2951,
+      "recorded_end_label": 3000,
+      "actual_physicalLF_start": 2950,
+      "actual_physicalLF_end": 2999
+    },
+    {
+      "recorded_start_label": 3001,
+      "recorded_end_label": 3030,
+      "actual_physicalLF_start": 3000,
+      "actual_physicalLF_end": 3029
+    }
+  ],
+  "substantive_source_finding_count_change": 0,
+  "substantive_source_findings_remain": 0,
+  "substantive_verdict_changed": false,
+  "overall_scoped_source_verdict": "PASS",
+  "human_interpretation_scoped_verdict_unchanged": true,
+  "unqualified_independently_verified_official_core_signoff": false,
+  "publisher_email_signoff": false,
+  "publisher_email_independently_verified": false,
+  "input_hashes": {
+    "/home/jonny/projects/boardgame-rules/extracted/john-company-second-edition-rules.txt": "105ff1bb4a774e9cc62e068567fa611947cac134f9c7c2e5bf29cc482f5bd30f",
+    "/home/jonny/projects/boardgame-rules/rules/john-company-second-edition.md": "25266d482daf6361fa2f140365306be1f90fdc0bc025b83e837d032aab8fd6f5",
+    "/home/jonny/projects/boardgame-rules/source_pdfs/john-company-second-edition-rules.pdf": "29fdc157234951b517190c82298ea578a543d25f183224e9fa86c1ca8c470dd0",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/full-official-errata.txt": "8d682c9e3dd4409ac3719289ffefab772a008454f34d6e76ddd3be4d23d3f56e",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/source-audit-17/read.py": "6350cd0ad2f14643a5ab926ee1f5ae85e5cf4b17ec76353136deb4ae64be7972",
+    "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/source-audit-17/source-read-record.json": "e4e9a0552737bcfa2ee033b8b579b3af641ea19173096c877c9260098b4c0eb7"
+  },
+  "native_derivative": {
+    "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/source-audit-17/source-display-native-rules-p13.png",
+    "sha256": "7f5040ee084656a76f9b42ab85991853a9acfb4bd1e4dc17ce0d645a28283a55",
+    "source": "/home/jonny/projects/boardgame-rules/source_pdfs/john-company-second-edition-rules.pdf",
+    "source_sha256": "29fdc157234951b517190c82298ea578a543d25f183224e9fa86c1ca8c470dd0",
+    "pdf_page_one_based": 13,
+    "printed_page": 13,
+    "method": "PyMuPDF get_pixmap Matrix(2,2), no clip",
+    "visually_inspected": true
+  },
+  "preservation_verification": {
+    "original_read_py_unchanged": true,
+    "original_source_read_record_unchanged": true,
+    "live_candidate_unchanged": true,
+    "original_audit_json_md_manifest_snapshot": "Not opened for content or written during followup.",
+    "new_files_only": [
+      "source-display-format-addendum.json",
+      "source-display-format-addendum.md",
+      "source-display-native-rules-p13.png"
+    ]
+  }
+}

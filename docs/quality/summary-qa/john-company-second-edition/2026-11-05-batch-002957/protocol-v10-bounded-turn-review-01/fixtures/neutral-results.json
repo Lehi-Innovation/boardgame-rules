@@ -1,0 +1,500 @@
+{
+  "purpose": "Review-only scheduling/schema bookkeeping, not adopted enforcement or factual QA.",
+  "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "synthetic_bank_ids": [
+    "N001",
+    "N002",
+    "N003",
+    "N004",
+    "N005",
+    "N006",
+    "N007",
+    "N008",
+    "N009",
+    "N010",
+    "N011",
+    "N012",
+    "N013",
+    "N014",
+    "N015",
+    "N016",
+    "N017",
+    "N018",
+    "N019",
+    "N020",
+    "N021",
+    "N022",
+    "N023"
+  ],
+  "generic_continuation_template": "Continue this same blind task under the unchanged protocol. Resume the next unfinished question from your own draft. Complete at most ten additional ordered questions, using only the original two inputs and your own three files. If all entries and per-ID records already exist, preserve the first complete draft and finish finalization. A partial turn is progress only; the entire original bank remains required.",
+  "count": 33,
+  "matches": 33,
+  "cases": [
+    {
+      "name": "zero_prefix_progress_not_complete",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": true,
+        "full_bank_complete": false,
+        "next_id": "N001",
+        "completed_prefix_count": 0,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "ten_prefix_progress_not_complete",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": true,
+        "full_bank_complete": false,
+        "next_id": "N011",
+        "completed_prefix_count": 10,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "twenty_prefix_progress_not_complete",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": true,
+        "full_bank_complete": false,
+        "next_id": "N021",
+        "completed_prefix_count": 20,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "full_prefix_is_complete",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": true,
+        "full_bank_complete": true,
+        "next_id": null,
+        "completed_prefix_count": 23,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "premature_final_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 10,
+        "errors": [
+          "premature final file"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "source_record_serialization_order_irrelevant",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": true,
+        "full_bank_complete": false,
+        "next_id": "N011",
+        "completed_prefix_count": 10,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "full_answer_bank_missing_last_source_record_not_final",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 23,
+        "errors": [
+          "per-ID source records do not cover completed prefix exactly",
+          "premature final file"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "duplicate_source_record_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 2,
+        "errors": [
+          "per-ID source records do not cover completed prefix exactly"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "missing_source_record_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 10,
+        "errors": [
+          "per-ID source records do not cover completed prefix exactly"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "source_record_ahead_rejected_until_reconciled",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 9,
+        "errors": [
+          "per-ID source records do not cover completed prefix exactly"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "out_of_order_prefix_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 2,
+        "errors": [
+          "not exact original ordered prefix"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "skipped_id_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 2,
+        "errors": [
+          "not exact original ordered prefix"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "duplicate_id_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 2,
+        "errors": [
+          "not exact original ordered prefix",
+          "per-ID source records do not cover completed prefix exactly"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "invented_id_rejected",
+      "category": "prefix",
+      "observed": {
+        "valid_bookkeeping": false,
+        "full_bank_complete": false,
+        "next_id": null,
+        "completed_prefix_count": 1,
+        "errors": [
+          "not exact original ordered prefix"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "eleven_additional_rejected",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": false,
+        "additional_completed": 11,
+        "errors": [
+          "turn delta outside 0..10"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "ten_additional_allowed",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": true,
+        "additional_completed": 10,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "later_ten_additional_allowed",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": true,
+        "additional_completed": 10,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "last_three_additional_allowed",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": true,
+        "additional_completed": 3,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "early_stop_three_allowed",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": true,
+        "additional_completed": 3,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "zero_progress_is_no_completion_guarantee",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": true,
+        "additional_completed": 0,
+        "errors": []
+      },
+      "matches": true
+    },
+    {
+      "name": "initial_write_before_full_receipt_rejected",
+      "category": "delivery",
+      "observed": {
+        "valid_bookkeeping": false,
+        "additional_completed": 1,
+        "errors": [
+          "write before full initial receipt"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "prefix_regression_rejected",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": false,
+        "additional_completed": -1,
+        "errors": [
+          "prior completed prefix changed",
+          "turn delta outside 0..10"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "prior_prefix_replacement_rejected",
+      "category": "turn",
+      "observed": {
+        "valid_bookkeeping": false,
+        "additional_completed": 1,
+        "errors": [
+          "prior completed prefix changed"
+        ]
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_1_1",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 1,
+            "count": 1,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "e296cef4e6dc798873986f5cead9ba7c3efc1fb6d980a77a27bca398263cdfa9"
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_10_10",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 10,
+            "count": 10,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "57d311b24d9998e21dc069f16da0c87629a2e6cab0ed7680c3b7464e36457ee1"
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_11_10_1",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 10,
+            "count": 10,
+            "complete": false,
+            "next": "N011"
+          },
+          {
+            "delta": 1,
+            "count": 11,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "e53eb3eca5a229b307d047a34c25dcf65daf265826f496bb9e43c7b2d941b052"
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_20_10_10",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 10,
+            "count": 10,
+            "complete": false,
+            "next": "N011"
+          },
+          {
+            "delta": 10,
+            "count": 20,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "5ddc0a75e57f1d8ac0dda7be951c8af4a0abcc03448d2cdb4878595f2fc636d9"
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_23_10_10_3",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 10,
+            "count": 10,
+            "complete": false,
+            "next": "N011"
+          },
+          {
+            "delta": 10,
+            "count": 20,
+            "complete": false,
+            "next": "N021"
+          },
+          {
+            "delta": 3,
+            "count": 23,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "e00612919230ef2a2851383ea9b988804f0ab350d33236d2894b8ad7a3accfb2"
+      },
+      "matches": true
+    },
+    {
+      "name": "schedule_23_3_10_10",
+      "category": "schedule",
+      "observed": {
+        "events": [
+          {
+            "delta": 3,
+            "count": 3,
+            "complete": false,
+            "next": "N004"
+          },
+          {
+            "delta": 10,
+            "count": 13,
+            "complete": false,
+            "next": "N014"
+          },
+          {
+            "delta": 10,
+            "count": 23,
+            "complete": true,
+            "next": null
+          }
+        ],
+        "first_full_sha256": "e00612919230ef2a2851383ea9b988804f0ab350d33236d2894b8ad7a3accfb2"
+      },
+      "matches": true
+    },
+    {
+      "name": "first_full_draft_frozen_final_repair_separate",
+      "category": "preservation",
+      "observed": {
+        "unchanged_draft_hash": "e00612919230ef2a2851383ea9b988804f0ab350d33236d2894b8ad7a3accfb2",
+        "final_differs": true,
+        "semantically_identical_reserialization_would_violate_byte_preservation": true
+      },
+      "matches": true
+    },
+    {
+      "name": "same_actor_constant_continuation",
+      "category": "blindness-bookkeeping",
+      "observed": {
+        "same_actor": true,
+        "continuation_is_constant_template": true
+      },
+      "matches": true
+    },
+    {
+      "name": "fresh_replacement_is_not_continuation",
+      "category": "blindness-bookkeeping",
+      "observed": {
+        "same_actor": false,
+        "continuation_is_constant_template": true
+      },
+      "matches": true
+    },
+    {
+      "name": "unchanged_checker_requires_original_bank_for_completeness",
+      "category": "checker-limitation",
+      "observed": {
+        "full_original_bank": {
+          "question_count": 23,
+          "answer_count": 10,
+          "exact_ordered_unique_ids": false,
+          "all_structure_and_declared_source_spans_valid": true
+        },
+        "incorrectly_reduced_bank": {
+          "question_count": 10,
+          "answer_count": 10,
+          "exact_ordered_unique_ids": true,
+          "all_structure_and_declared_source_spans_valid": true
+        }
+      },
+      "matches": true
+    }
+  ]
+}

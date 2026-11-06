@@ -1,0 +1,9 @@
+# Block 06 adjudication
+
+Assessed Q091–Q104 for both readers against expanded-v11 and scope-v12. Each reader has 14 correct, 0 partial, and 0 incorrect answers; all 32 required facts per reader are satisfied. No gold or scope defects were found in this packet-based assessment.
+
+The entire supplied packet and summary were read in contiguous bounded chunks before grading. Only each entry’s own restored answer quotations were used as operative factual evidence. Attached passages were restored as well, and complete restored entries and exact answer strings were compared programmatically with the corresponding 14 IDs in each raw reader file. No other questions, blocks, original sources, or online material were consulted.
+
+Q100 accepts the quoted two optional Give permissions as conveying that Exchange itself imposes no simultaneous transfer. The same quote explicitly rejects compulsory or equal reciprocal transfer and preserves actual-effect restrictions. No exact-word requirement was imposed. Q101 accepts the numbered rebuild-before-seeding/dealing sequence without demanding original Law step numbers. Q102 accepts the first-game Cradle short-edge seat and later Cradle seat from the respective same-entry setup passages. Q103’s fixed first-game Supremacy instruction resolves the absence of a free Oath choice.
+
+Every fact assessment in results.json includes literal same-entry evidence, exact summary offsets, and a rationale addressing the requested relation or application. grading-validation.json records successful raw restoration equality, fixed-text/ID checks, literal evidence and offset/hash checks, recomputed totals, and input hashes. This is an extractive fixed-regression evaluation, not an unaided or held-out evaluation; technical validation passing is distinct from answer grading.

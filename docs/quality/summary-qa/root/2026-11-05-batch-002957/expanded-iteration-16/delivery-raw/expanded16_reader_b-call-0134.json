@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T14:55:47.080Z",
+    "ordinal": 134,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0aae654206ae7e74016aec98ee29fc87d0acc2f5fb03e648c2",
+      "status": "completed",
+      "call_id": "call_4ds8UPj9xKKUNVwNlDyyavaY",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,pathlib\\nb=pathlib.Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16')\\ns=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text()); d=json.loads((b/'reader-b.json').read_text())\\nexpected=[x['id'] for x in q['questions'][:10]]\\nids=[x['id'] for x in d['answers']]\\nassert ids==expected, (ids,expected)\\nassert len(ids)==len(set(ids))\\nfor a in d['answers']:\\n    assert a['answer'] and all(x['part'] and x['ruling'] and x['evidence'] for x in a['answer'])\\n    for p in a['source_passages']:\\n        assert p['quotation'] and p['quotation'] in s, (a['id'],p['section'])\\nprint('valid JSON; IDs Q01-Q10 exactly once; all quotations match summary; application entries populated')\\nPY\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:1000});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac30-e41b-7850-b522-160e546a9ce4",
+        "create_time": 1793890538.984141
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T14:55:47.519Z",
+    "ordinal": 137,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac35-773f-7030-b6c3-58d94d8cab59",
+      "call_id": "call_4ds8UPj9xKKUNVwNlDyyavaY",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; IDs Q01-Q10 exactly once; all quotations match summary; application entries populated\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac30-e41b-7850-b522-160e546a9ce4",
+        "create_time": 1793890547.5197804
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

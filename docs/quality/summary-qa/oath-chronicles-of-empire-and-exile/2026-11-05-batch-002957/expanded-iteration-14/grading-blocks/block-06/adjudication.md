@@ -1,0 +1,9 @@
+# Block 06 adjudication
+
+This is an extractive fixed-regression assessment of Q091–Q104 in expanded-v11 under scope-v12. It is not a one-shot, unaided, or held-out assessment. The entire supplied packet and summary were read in contiguous bounded chunks before assessment.
+
+Each reader has 14 correct, 0 partial, and 0 incorrect entries, with all 32 required fact groups satisfied (28 entries and 64 fact assessments combined). Facts were evaluated from the complete restored fields and quotations attached to the same entry. No evidence was borrowed from another entry or reader, and no unquoted summary text supplied missing content.
+
+The broad attached passages count as same-entry evidence. In particular, reader-b Q092 includes the full ordered Wake procedure in its attached passage, reader-b Q095 includes the complete Wake/Rest/optional-income distinction in its Powers passage, and both Q102 entries include both first-game and later-game seating. The Q100 optional bilateral permissions resolve the non-compulsory/non-equal/non-simultaneous question semantically; the accompanying same-entry Swap definition reinforces that distinction. The Q101 setup order gives the operational rebuild-before-seeding-and-dealing requirement without demanding original Law step numbers. Q104 expressly conditions denizen discard on an actual intact-edifice flip.
+
+Every transported entry was restored and checked for complete equality against its own raw reader entry, with no unrelated entries displayed. Every original raw field and quotation was included in that equality check. Observed answers in results.json preserve the exact restored answer strings. Literal evidence offsets are Unicode half-open summary offsets and include SHA-256 checksums. No fixed-key or scope defects were identified. Technical validation is recorded separately from correctness grades in grading-validation.json.

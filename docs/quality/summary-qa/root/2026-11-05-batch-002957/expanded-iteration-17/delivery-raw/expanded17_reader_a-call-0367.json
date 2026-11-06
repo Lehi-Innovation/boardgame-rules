@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:39:02.764Z",
+    "ordinal": 367,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_08e65cdd53e559ef016aeca311b93087d0895f0e5de78d2eed",
+      "status": "completed",
+      "call_id": "call_0yxArJ9gMMU7en7aG8jZVAH8",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,pathlib\\np=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-17'); d=json.loads((p/'reader-a.json').read_text()); s=(p/'summary-snapshot.md').read_text(); q=json.loads((p/'questions.json').read_text()); ids=[x['id'] for x in d['answers']]\\nassert ids==[f'Q{i:02d}' for i in range(1,31)] and len(ids)==len(set(ids))\\nfor a in d['answers']:\\n assert a['answer'] and a['source_passages']\\n assert a['id'] in {z['id'] for z in q['questions']}\\n for z in a['source_passages']: assert z['quotation'] and z['quotation'] in s\\nprint('JSON valid; Q01\u2013Q30 each once, ordered; every quote nonempty/exact and every answer matches an input question.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac5b-5d98-7932-95ea-37c51aaf15f6",
+        "create_time": 1793893135.886963
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:39:03.490Z",
+    "ordinal": 370,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac5d-13c2-7162-a94a-9af95caf7dca",
+      "call_id": "call_0yxArJ9gMMU7en7aG8jZVAH8",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.7 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "JSON valid; Q01\u2013Q30 each once, ordered; every quote nonempty/exact and every answer matches an input question.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac5b-5d98-7932-95ea-37c51aaf15f6",
+        "create_time": 1793893143.4906027
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

@@ -1,0 +1,123 @@
+You are an independent rules-summary reader in a blind evaluation.
+
+The ONLY rules/test inputs you may read are:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-02/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-02/questions.json
+
+Do not read rulebooks, extracted text, answer keys, manifests, earlier answers, grades, reviewers, parent history, other files, or web links. Do not browse, use prior game knowledge, or communicate with other readers. Use only the frozen summary as rules authority. Scenario facts explicitly supplied in each question are givens; do not reject them because the summary does not narrate that hypothetical. If a requested rule is absent, identify that part as unsupported rather than guessing.
+
+Read BOTH inputs completely. Determine each file's Unicode character length and SHA-256 of its original bytes. Actually print/read every character in contiguous slices of no more than 5000 characters PER tool response, one slice per response, with sufficient output cap (4000 tokens or more). Label exact [start,end) character bounds. Check every slice's end, continuity, and absence of tool truncation. Reread any incomplete slice in smaller bounded pieces. Line counts alone are not proof of complete input delivery.
+
+For EVERY question, use the same process:
+1. Explicitly enumerate that question's own requested clauses in its entry. Preserve each asked actor, cost, condition, timing, exception, destination, and concrete outcome; do not add unasked background as another requested clause.
+2. Select the complete appropriate operative source units from the frozen summary and attach them in that SAME answer entry. A unit may be a heading-bounded subsection, complete paragraph, complete list/list item, or complete relevant table row together with its table headers. Do not stop a selection immediately before a controlling condition or outcome in the selected unit. Do not rely on another answer's evidence.
+Scan the frozen summary for definitions, general restrictions and exceptions that control terms in the selected units. Attach the additional complete controlling units in the same entry when the local row or paragraph does not contain them. Resolve all explicitly asked conditions in the conclusion; do not treat a local quotation as a substitute for applying another controlling rule.
+3. Give only the minimal case conclusion for all enumerated clauses, including actual arithmetic and values the question requests. Operative quotations in the entry are part of the answer, but a quote does not cure a wrong application or contradictory free prose. Do not add unasked numerical assumptions or unrelated facts.
+For every requested numerical result, write the substituted expression and evaluate it. Check the conclusion against every applicable term in the selected rules; a correct quotation alone does not replace the actual calculation.
+4. Check each own clause against its attached text and case conclusion. If an asked part lacks a rule, mark that part unsupported. Do not evaluate or improve the summary.
+
+Do not repeat identical snippets under several labels in one entry; assign a source unit one ID and refer to it from multiple clause checks. Do not dump unrelated sections or the whole summary. If several rows share a header, quote that complete header once in the entry and reference its ID from each row. Between questions, repeat necessary operative text so every answer stands on its own.
+
+Evidence boundary format: all offsets are Unicode character indices in the original frozen summary, zero-based and half-open, and text must exactly equal summary[start:end]. Use kinds paragraph, list_item, list, subsection, table_header, or table_row. Paragraph/list units must include their complete operative unit; subsection includes its heading through the next heading boundary. A table_header includes the complete header and separator lines. Each complete table_row must reference its corresponding header unit ID using header_id. Keep each source unit's text once per entry. Compute the offsets and exact quote text programmatically from the input rather than hand-counting them. Validate these boundaries mechanically before completing your output.
+
+
+MANDATORY MECHANICAL METHOD (applies identically to every question; contains no game rules):
+Execute the reference Python functions below inline in a tool command or persistent interpreter. Do not save/read a helper file. Build catalog(summary_text) from the authorized frozen summary. Select evidence only from its permitted (start,end) spans, with the matching kind. Use the actual complete header span from row_headers for each table row, with header_id equal to that header's unit_id in the same entry. Do not manually infer spans, label a list item as a paragraph, combine separate paragraphs into one paragraph, or select a sentence within a longer paragraph. The complete source unit is mandatory even when only one sentence answers the question.
+Before EACH batch write, build the same-entry lookup and call unit_error for EVERY pending evidence unit; require no error. Also assert no duplicate trimmed spans in an entry and every clause check uses existing evidence IDs. Correct your own pending technical construction before saving, without changing earlier finalized answer entries. At the end run validate(summary_path, questions_path, output_path) inline and require result['pass'] is True. This is a technical schema/boundary self-check, not an answer key or semantic grader. Do not use it to infer game answers. No other input file is authorized.
+
+BEGIN INLINE REFERENCE PYTHON
+"""Mechanical complete-unit gate. Does not grade game rulings or modify readers."""
+from pathlib import Path
+import re,json,sys,hashlib
+KINDS={'paragraph','list_item','list','subsection','table_header','table_row'}
+def trim(text,start,end):
+ while start<end and text[start].isspace():start+=1
+ while end>start and text[end-1].isspace():end-=1
+ return start,end
+
+def catalog(text):
+ valid={k:set() for k in KINDS};row_headers={};fm=re.match(r'\A---\n.*?\n---\n',text,re.S);body_start=fm.end() if fm else 0
+ heads=list(re.finditer(r'(?m)^(#{1,6})[ \t]+[^\n]+',text))
+ for i,h in enumerate(heads):
+  if len(h.group(1))<2:continue  # The title must not license a whole-summary dump.
+  next_any=heads[i+1].start() if i+1<len(heads) else len(text)
+  valid['subsection'].add(trim(text,h.start(),next_any))
+ bounds=[];start=0
+ for m in re.finditer(r'\n[ \t]*\n',text):bounds.append((start,m.start()));start=m.end()
+ bounds.append((start,len(text)))
+ for left,right in bounds:
+  left,right=trim(text,left,right)
+  if left>=right or left<body_start:continue
+  value=text[left:right];lines=[];pos=left
+  for line in text[left:right].splitlines(keepends=True):lines.append((pos,pos+len(line),line));pos+=len(line)
+  if value.startswith('|'):
+   if len(lines)<2 or not re.fullmatch(r'\|[ |:\-]+\|',lines[1][2].strip()):continue
+   header=trim(text,lines[0][0],lines[1][1]);valid['table_header'].add(header)
+   for a,b,line in lines[2:]:
+    if line.strip().startswith('|') and line.strip().endswith('|'):
+     row=trim(text,a,b);valid['table_row'].add(row);row_headers[row]=header
+  elif re.match(r'(?:[-*+]|\d+[.)])[ \t]+',value):
+   valid['list'].add((left,right));markers=[]
+   for a,b,line in lines:
+    marker=re.match(r'([ ]*)(?:[-*+]|\d+[.)])[ \t]+',line)
+    if marker:markers.append((a,len(marker.group(1))))
+   for i,(a,indent) in enumerate(markers):
+    end=next((b for b,other_indent in markers[i+1:] if other_indent<=indent),right);valid['list_item'].add(trim(text,a,end))
+  elif not value.startswith('#'):valid['paragraph'].add((left,right))
+ return valid,row_headers
+
+def unit_error(text,unit,valid,row_headers,lookup):
+ kind=unit.get('kind');start=unit.get('start');end=unit.get('end')
+ if kind not in KINDS:return 'unknown evidence kind'
+ if type(start) is not int or type(end) is not int or not 0<=start<end<=len(text):return 'invalid character bounds'
+ if unit.get('text')!=text[start:end]:return 'quote is not exact original summary[start:end]'
+ span=trim(text,start,end)
+ if span not in valid[kind]:return 'selection is not a complete permitted Markdown operative unit'
+ if kind=='table_row':
+  header=lookup.get(unit.get('header_id'))
+  if not header or header.get('kind')!='table_header':return 'table row lacks its same-entry complete header'
+  actual_header=trim(text,header['start'],header['end']);expected_header=row_headers[span]
+  # Identical complete headers may be shared across same-entry table rows;
+  # their column meaning is unchanged even when the source repeats the header.
+  if actual_header!=expected_header and text[actual_header[0]:actual_header[1]]!=text[expected_header[0]:expected_header[1]]:return 'table row references different table columns'
+ return None
+
+def validate(summary,questions,raw):
+ text=summary.read_text();valid,row_headers=catalog(text);data=json.loads(raw.read_text());q=json.loads(questions.read_text())['questions'];answers=data['answers'];ids=[x['id'] for x in q]
+ errors=[];checks=[]
+ if [a.get('id') for a in answers]!=ids:errors.append({'id':None,'reason':'Missing, duplicate or unordered question IDs'})
+ for a in answers:
+  evidence=a.get('evidence');clauses=a.get('clauses');clause_checks=a.get('clause_checks')
+  if not isinstance(evidence,list) or not isinstance(clauses,list) or not isinstance(clause_checks,list):errors.append({'id':a.get('id'),'reason':'Missing v2 evidence/clauses/clause_checks arrays'});continue
+  lookup={u.get('unit_id'):u for u in evidence};seen=set();local=[]
+  if len(lookup)!=len(evidence):local.append('duplicate evidence unit IDs')
+  for u in evidence:
+   err=unit_error(text,u,valid,row_headers,lookup)
+   if err:local.append(str(u.get('unit_id'))+': '+err);continue
+   span=trim(text,u['start'],u['end'])
+   if span in seen:local.append(str(u.get('unit_id'))+': duplicate same-entry source text under another label')
+   seen.add(span)
+  if [x.get('clause_index') for x in clause_checks]!=list(range(len(clauses))):local.append('clause check indices must cover each own clause once in order')
+  for x in clause_checks:
+   refs=x.get('evidence_unit_ids',[])
+   if any(ref not in lookup for ref in refs):local.append('clause references missing same-entry evidence')
+   if x.get('supported') is True and not refs:local.append('supported clause has no operative evidence reference')
+  checks.append({'id':a.get('id'),'clause_count':len(clauses),'unit_count':len(evidence),'complete_operative_units':not local})
+  errors.extend({'id':a.get('id'),'reason':reason} for reason in local)
+ return {'method':'Exact character spans plus complete Markdown paragraph/list/list-item/subsection/table-row-with-header boundaries. No semantic ruling grade is inferred. Raw reader file unchanged.','summary_sha256':hashlib.sha256(summary.read_bytes()).hexdigest(),'questions_sha256':hashlib.sha256(questions.read_bytes()).hexdigest(),'raw_reader_sha256':hashlib.sha256(raw.read_bytes()).hexdigest(),'expected_question_count':len(ids),'answers':checks,'errors':errors,'pass':not errors}
+
+END INLINE REFERENCE PYTHON
+
+Save valid JSON to:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/unmatched/2026-11-05-batch-002957/expanded-iteration-02/reader-a.json
+
+Top-level fields: reader, inputs_read (the two rules/test input paths), delivery_receipt (per path: sha256, char_length, all read ranges and truncation checks), answers.
+Each answers entry must contain:
+- id
+- clauses: the explicit requested-clause list
+- answer: concise case conclusions resolving every clause
+- support: supported, partial, or unsupported
+- evidence: an array of complete source units, each with unit_id, kind, start, end, text; table rows also have header_id
+- clause_checks: each clause index, relevant evidence unit IDs, and whether that asked part is supported/resolved
+
+Assemble the assigned JSON output in sequential batches of at most 10 question IDs per write/append step. You may read that same output only to append/validate your own work. It is a technical output, not another rules authority. Preserve all answered entries and IDs once, in question order. Do not read or write any other files. When finished, validate JSON/counts/IDs and report only the saved path and completion status.

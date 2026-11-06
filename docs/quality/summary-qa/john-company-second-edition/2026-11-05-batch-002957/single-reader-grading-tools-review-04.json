@@ -1,0 +1,462 @@
+{
+  "review": "single-reader-grading-tools-review-04",
+  "verdict": "PASS: separately qualified exact-command syntax equivalence",
+  "scope": "Generic static tool/method review and synthetic execution only; no actual logs, source, bank, readers, or grades.",
+  "qualification": "The frozen original strict syntax was not followed by the single-literal form. The new separate proof recognizes only two explicitly enumerated JavaScript representations of the same fixed read-only shell command. This is an equivalence proof, not retroactive original-interface compliance.",
+  "input_and_review_artifact_sha256": {
+    "single-reader-grading-tools.py": "74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb",
+    "prove-single-reader-grading-delivery-literal-equivalent.py": "07b3402017f1207c6b16513614b783f4e554cee0864637e48adc98b2adb37589",
+    "prove-single-reader-grading-delivery.py": "72face89f06420bbd65671c3fb475a04a94c100a8dc6243ca8fc72e148ecea63",
+    "block-grading-tools.py": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+    "prove-bounded-delivery.py": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318",
+    "expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template.json": "65cf97d5036f321a10b040a63c6a492b04b8ff4f73bf6189feb1037c6bb68e63",
+    "single-reader-grading-review-01/harness.py": "f6106944d401dd4d27b47c3fe129a0089253bc36c7c32cfd693374bac7715d5e",
+    "single-reader-grading-review-02/harness.py": "fe09612c7e7b5e1a4966673b88b4daadca0a3a581b318a414afcb2333f24c0f0",
+    "single-reader-grading-review-03/harness.py": "3bd81615c1afaddaf64df742d8690d03c9a06c32be93d114ebdad4f746edd74a",
+    "single-reader-grading-review-04/harness.py": "0b3cb6ccf0a5cc2c440506c4df20b59984f812e8619b30b7daccbadd6daa1d8e",
+    "single-reader-grading-review-04/synthetic-test-results.json": "faa97c26ce73bdf074e370c09f99114f4a3a7180d11b4883dc060a45ae20036c"
+  },
+  "read_record": [
+    {
+      "path": "single-reader-grading-tools.py",
+      "method": "AST function extraction and in-memory virtual execution; no top-level module imports",
+      "sha256": "74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb"
+    },
+    {
+      "path": "prove-single-reader-grading-delivery-literal-equivalent.py",
+      "method": "AST function extraction and in-memory virtual execution; no top-level module imports",
+      "sha256": "07b3402017f1207c6b16513614b783f4e554cee0864637e48adc98b2adb37589"
+    },
+    {
+      "path": "prove-single-reader-grading-delivery.py",
+      "method": "AST function extraction and in-memory virtual execution; no top-level module imports",
+      "sha256": "72face89f06420bbd65671c3fb475a04a94c100a8dc6243ca8fc72e148ecea63"
+    },
+    {
+      "path": "block-grading-tools.py",
+      "method": "AST function extraction and in-memory virtual execution; no top-level module imports",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6"
+    },
+    {
+      "path": "prove-bounded-delivery.py",
+      "method": "AST function extraction and in-memory virtual execution; no top-level module imports",
+      "sha256": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318"
+    },
+    {
+      "path": "expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template.json",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "65cf97d5036f321a10b040a63c6a492b04b8ff4f73bf6189feb1037c6bb68e63"
+    },
+    {
+      "path": "single-reader-grading-review-01/harness.py",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "f6106944d401dd4d27b47c3fe129a0089253bc36c7c32cfd693374bac7715d5e"
+    },
+    {
+      "path": "single-reader-grading-review-02/harness.py",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "fe09612c7e7b5e1a4966673b88b4daadca0a3a581b318a414afcb2333f24c0f0"
+    },
+    {
+      "path": "single-reader-grading-review-03/harness.py",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "3bd81615c1afaddaf64df742d8690d03c9a06c32be93d114ebdad4f746edd74a"
+    },
+    {
+      "path": "single-reader-grading-review-04/harness.py",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "0b3cb6ccf0a5cc2c440506c4df20b59984f812e8619b30b7daccbadd6daa1d8e"
+    },
+    {
+      "path": "single-reader-grading-review-04/synthetic-test-results.json",
+      "method": "Reviewer-owned utility/test code or unchanged generic template",
+      "sha256": "faa97c26ce73bdf074e370c09f99114f4a3a7180d11b4883dc060a45ae20036c"
+    }
+  ],
+  "static_findings": [
+    "Frozen original proof matches SHA256 72face89f06420bbd65671c3fb475a04a94c100a8dc6243ca8fc72e148ecea63.",
+    "New variant differs only by literal_read_call, three permitted-call mapping statements, and an explicit interface-equivalence qualification field.",
+    "All original function ASTs except prove are identical; removing exactly those additions from prove yields the original AST.",
+    "READ_SCRIPT and original read_call are unchanged. Both forms decode to the same shell command and shlex argument vector, including whitespace, Unicode, quoting, and literal dollar characters in paths.",
+    "No generalized JavaScript evaluation, shell normalization, broader program whitelist, or grading-policy change introduced."
+  ],
+  "synthetic_execution": {
+    "case_count": 72,
+    "all_passed": true,
+    "all_helper_and_imported_base_roots_virtual": true,
+    "physical_fixture_inputs": "None: synthetic filesystem in memory rooted at /synthetic; own harness and result artifacts only on disk.",
+    "groups": [
+      "Original and variant approve the original form; variant accepts all-literal and mixed exact forms; original rejects the literal-form format deviation.",
+      "Changed script, either input path, mode, index, extra JavaScript/shell command, output handling, and token budget rejected.",
+      "Exact call ID and expected mode/index binding, missing/duplicate/orphan call cases retained.",
+      "Consistent truncated prefixes require full approved pre-boundary retry; appended actual foreign content remains visible and rejects under both forms.",
+      "All original four SRG and two SRG2 fixes retained, including frozen tampering checks.",
+      "Unchanged adapter retains full original entries, reports, collections, and matches the original strict paired final merge exactly."
+    ],
+    "cases": [
+      {
+        "case": "static only added exact-form builder/three allowlist entries/qualification field",
+        "passed": true
+      },
+      {
+        "case": "both JSON expression forms decode to identical shell commands including quoted Unicode paths",
+        "passed": true
+      },
+      {
+        "case": "variant accepts complete all-single-literal read delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "frozen strict proof rejects single-literal interface deviation",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "variant accepts mixed exact forms",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "single literal rejects changed summary path",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed packet path",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed mode",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed index",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed script",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed extra code",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed extra shell",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed output handling",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single literal rejects changed token budget",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "single-literal nested prefix retry accepted",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "single literal cannot certify orphan outputs",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "normal frozen approved delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "frozen revision03 rejects orphan outputs",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "revision03 rejects orphan outputs without recorded read calls",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "approved nested source/metadata/original objects remain accepted",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "frozen revision03 accepts recovered nested prefix",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "revision03 accepts complete approved retry after nested original prefix",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "wrong output call ID rejects delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "missing output call ID rejects delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "missing read call ID rejects delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "duplicate read call ID rejects delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "entry output cannot fill a metadata-mode call",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "entry output under another known read ID is not credited",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "response before its recorded call is rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "entry zero output cannot satisfy entry one call",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "foreign object after a consistent prefix warning still rejects",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "wrapped foreign object after warning still rejects",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "foreign content before warning cannot use prefix exception",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "inconsistent original prefix is not hidden",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "consistent prefix alone never credits complete original entry",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "complete retry arriving after boundary cannot repair initial delivery",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "ordinary truncation recovery remains valid",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "alternate_early_write remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "alternate_stdout remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "cached_read remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "unknown_tool remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "wrong_read_call remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "changed_quantity remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "wrong_chunk_range remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "wrong_chunk_hash remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "partial_chunk remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "missing_metadata remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "wrong_metadata remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "missing_entry remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "partial_entry remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "other_role_only remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "extra_foreign_initial remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "post_foreign remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "missing_boundary remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "early_boundary remains rejected",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "later calls retained solely for separate post-boundary audit",
+        "expected_behavior_verified": true,
+        "delivery_complete": true
+      },
+      {
+        "case": "raw input changed cannot pass frozen_packets",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "summary changed cannot pass frozen_packets",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "manifest role changed cannot pass frozen_packets",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "packet original field cropped fails frozen packet hash",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "packet original field cropped fails even if packet hash is updated",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "packet block changed fails frozen packet hash",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "packet block changed fails even if packet hash is updated",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "other-role original added fails frozen packet hash",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "other-role original added fails even if packet hash is updated",
+        "rejected": true,
+        "exception": "AssertionError"
+      },
+      {
+        "case": "unchanged dispatch template retained; no semantic instruction edits",
+        "passed": true
+      },
+      {
+        "case": "unchanged adapter preserves full entries/reports/collections and equals original paired final merge",
+        "passed": true
+      },
+      {
+        "case": "literal known wrong mode binding",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "literal wrong known output ID",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "literal foreign tail after nested prefix",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "literal wrapped foreign tail after nested prefix",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      },
+      {
+        "case": "literal no complete retry before boundary",
+        "expected_behavior_verified": true,
+        "delivery_complete": false
+      }
+    ]
+  },
+  "remaining_concrete_findings": [],
+  "review_limits": [
+    "No actual runtime, reader, source, bank, question, key, grade, history, status, session, or other-agent inputs were accessed.",
+    "No actual grader was dispatched. Synthetic tool traces do not establish authenticity, attention, or content correctness of any real run.",
+    "Proof remains limited to frozen initial delivery under its declared journal and explicit mutation-boundary contract. Later arbitrary code still requires separate actual-path/isolation audit.",
+    "The original proof, adapter, base helpers, template, and all prior reports/tests remain unchanged."
+  ]
+}

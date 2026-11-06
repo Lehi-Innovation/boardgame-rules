@@ -1,0 +1,69 @@
+{
+  "review_id": "protocol-v3-independent-review",
+  "review_date": "2026-11-05",
+  "verdict": "PASS",
+  "scope": "Protocol-only comparison of the two named files; no reader answers, grades, results, failed IDs, histories, status/session information or other inputs accessed.",
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v2.txt",
+      "sha256": "922c16a290d3aacf1342e7e46978cb71fb6eee1f55fbf3b8339dee6c8f3c91d9",
+      "bytes": 3485
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v3.txt",
+      "sha256": "16c901b3f4f9e6559d66ac5a98eba185f20fdf3ce2cc86bb29140c23a42e6011",
+      "bytes": 4331
+    }
+  ],
+  "checks": [
+    {
+      "criterion": "Generic and answer-free",
+      "verdict": "pass",
+      "evidence": "V3 gives procedural and output-schema instructions only. It names no game rule, rule value, answer, failed question ID, reader result or score. The examples of prohibited placeholders are generic."
+    },
+    {
+      "criterion": "Same protocol for both readers",
+      "verdict": "pass",
+      "evidence": "V3 is a shared template with role/path substitutions and expressly states: Both readers receive the identical protocol except role/path; no answer hints or failed-ID feedback. This review checks that protocol requirement, not separately instantiated messages."
+    },
+    {
+      "criterion": "Summary-and-question-only substantive access",
+      "verdict": "pass",
+      "evidence": "The opening limits reads to the assigned frozen summary and questions, plus each reader’s own three output files. It forbids source rules, keys, scopes, earlier responses, grades, histories, web, outside game knowledge, session logs, collaboration/status tools, scratch scripts and other files."
+    },
+    {
+      "criterion": "Full bank and visible delivery preserved",
+      "verdict": "pass",
+      "evidence": "V3 requires every summary line and every complete question object, actual array length and final ID, recovery of truncation, and no writes before full initial delivery. Batches are capped at six. Final validation requires exact ordered unique IDs and count N; no question subset is authorized."
+    },
+    {
+      "criterion": "Substantive per-clause answering clarified",
+      "verdict": "pass",
+      "evidence": "Each actual requested phrase must be represented in an ordered clause_answers entry. The direct answer must supply that clause’s rule or resolved case; concrete numerical/legal/yes-no cases require an explicit result and relevant condition. Actors, conditions, exceptions, costs, quantities, destinations, timing, sequences and outcomes are retained."
+    },
+    {
+      "criterion": "Keyword matches and placeholders cannot substitute for answers",
+      "verdict": "pass",
+      "evidence": "V3 rejects keyword-frequency ranking, fixed search-hit counts and automatic paragraph selection as the substantive decision method. It requires checking whether a passage supplies the requested fact and explicitly forbids section titles or the listed placeholder phrases as direct answers. Exact copying is allowed only after identifying the rule for each request."
+    },
+    {
+      "criterion": "Evidence remains complete and tied to each clause",
+      "verdict": "pass",
+      "evidence": "Each clause receives its location and exact complete operative paragraph or relevant table header/row with all controlling qualifiers, including multiple passages when needed. The answer is assembled from every clause’s self-contained direct answer and extracts. Evidence-only text cannot supply an answer omission; a correct extract cannot erase an incorrect direct answer. Cross-answer reliance is forbidden."
+    },
+    {
+      "criterion": "Unsupported information and self-review handled without hidden-key feedback",
+      "verdict": "pass",
+      "evidence": "Absent requested facts must be explicitly marked unsupported rather than replaced or guessed. The first complete draft is preserved, every ID receives a concrete clause/fact/extract/problem self-check, repairs are recorded, and grading against an unavailable key is prohibited."
+    }
+  ],
+  "comparison_with_v2": {
+    "substantive_access_boundary_preserved": true,
+    "full_bank_preserved": true,
+    "material_clarification": "V2 already requested direct subanswers and complete extracts. V3 makes the per-clause work explicit in clause_answers, requires visible per-batch rereading of questions and full relevant text, tests actual factual relevance rather than shared terms, rejects placeholder direct answers and assembles every clause into the answer field. This clarifies execution without supplying game answers.",
+    "same_reader_treatment_required": true,
+    "score_inference_or_request": false
+  },
+  "concrete_protocol_problems": [],
+  "required_changes": []
+}

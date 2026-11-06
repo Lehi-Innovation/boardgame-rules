@@ -1,0 +1,10 @@
+# Original base Spirit panel facsimiles
+
+The coordinator located sixteen high-resolution images (front/back for each of the eight original base Spirits) using the public community Tabletop Simulator module repository `spirit-island/spirit-island-mod`, pinned at commit `2655f6104cf1d267f4dbf4b182912fbeba1a565e`. `panel-download-map.json` records each exact image URL and the unmodified module-object metadata path. `download-integrity.json` verifies all sixteen image bytes against their immutable Steam UGC SHA-1 IDs and records SHA-256, dimensions, size and format. The module is an asset locator, not rules authority: do not use scripts, setup behavior, fan prose, alternate states, aspects or exploratory changes as rules.
+
+The actual printed artwork/text visible in the images is the proposed supplemental primary component facsimile authority. The coordinator has visually inspected Lightning and River fronts and recognized the standard original panel layout; worker and fresh source auditors must independently inspect all sixteen images, verify original-base identity against the assigned CORE rulebook, publisher material and official FAQ, and record any discrepancies. Do not silently substitute an aspect or assume an unverified variant. The original assigned CORE book and official FAQ retain precedence for current rules/errata.
+
+All sixteen images are 2697 ×1797 PNGs. Their raw bytes are read-only. Additional OCR/rendering derivatives belong in the game worker's evidence directory and are navigation aids. Complete base scope needs the special-rule, Growth, Presence/innate procedure and setup text actually printed on these panels; this is not a demand for arbitrary card-combination enumeration.
+
+Failed source access: both web open and curl received public HTTP403 from spiritislandwiki.com, including its public parse API. This is a remote-server response, not an approval rejection. Public GitHub connector reads and public Steam HTTPS image downloads succeeded; no downloaded code was executed.
+

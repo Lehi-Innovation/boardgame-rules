@@ -1,0 +1,158 @@
+--- tested-iteration-03
++++ proposed-readable-card-fields-and-cancellation-examples
+@@ -99,6 +99,16 @@
+ 
+ **Winning combat is not winning the game:** the attacker wins combat only if the **attack itself** deals at least 1 damage. If it deals none, the **defender wins**, including a tie of values or a defense that prevents the attack damage. Damage from effects does **not** change this winner.
+ 
++### Worked cancellation examples
++
++Revealing cards simultaneously does not make their effects simultaneous. Resolve same-timing effects one at a time, defender first; a later effect that has already been canceled is skipped. These examples use the card values and modifiers stated.
++
++| Situation | Resolution |
++|---|---|
++| Both fighters play Feint | The **defender’s Feint resolves first** and cancels the attacking Feint’s effect. The attacking Feint **does not resolve or cancel the defender’s card**. Both cards keep their printed combat value **2**, before other modifiers. |
++| Arthur attacks with Noble Sacrifice and an ability BOOST; defender plays Feint | Feint cancels Noble Sacrifice’s printed effect. Arthur’s ability BOOST is **discarded without effect**, and the canceled during-combat effect cannot provide another BOOST. Noble Sacrifice retains printed attack value **2**, before other modifiers. The current Excalibur exception does not protect this card, which has printed effects to cancel. |
++| BIG Alice attacks with Momentous Shift; the defense is Feint 2 | Feint cancels the conditional change to value 5. Momentous Shift keeps printed value **3**, while Alice’s separate BIG ability still adds **2**: attack **3 + 2 = 5**, damage **5 − 2 = 3**. |
++
+ ## Scoring / Victory Conditions
+ 
+ There is no points score. Any fighter reduced to **zero health for any reason is defeated**. Immediately remove a defeated sidekick token. A Harpy is defeated by any damage because it has 1 health.
+@@ -129,69 +139,69 @@
+ 
+ ### Card reference
+ 
+-The following tables cover every distinct card in the four base decks. **A** = attack only; **D** = defense only; **V** = versatile; **S** = scheme. “Value” is the printed combat value (— for schemes); **B** is BOOST value; **copies** counts cards in that hero’s 30-card deck. Timing is part of the effect. Each card’s fighter label restricts who may play it. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.
++The following tables cover every distinct card in the four base decks. Card types are written out: attack-only and defense-only cards have that single combat role; versatile cards may attack or defend; schemes use the scheme action. Printed combat value excludes modifiers (— for schemes). BOOST is the separate small circled value, and copies counts cards in that hero’s 30-card deck. Each fighter label restricts who may play the card; **ANY** permits any of your fighters. Timing is part of the effect. Apply the general mandatory-effect, defender-first, movement, health-cap, and immediate-game-end rules above.
+ 
+ #### Shared cards (only in decks listed)
+ 
+-| Card | Fighter; type/value; B | Copies by deck | Effect (only while the duel continues) |
+-|---|---|---|---|
+-| Feint | ANY; V/2; B2 (Arthur and Sinbad B1) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |
+-| Regroup | ANY; V/1; B2 (Arthur and Sinbad B1) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |
+-| Momentous Shift | ANY; V/3; B1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |
+-| Skirmish | ANY; V/4; B1 | Alice 2, Arthur 3 | After combat, **if you won**, choose either fighter in that combat and move that fighter up to 2 spaces. |
++| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies by deck | Effect (only while the duel continues) |
++|---|---|---|---:|---:|---|---|
++| Feint | ANY | Versatile (attack or defense) | 2 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | Immediately cancel all effects on the opponent’s card. |
++| Regroup | ANY | Versatile (attack or defense) | 1 | 2 (1 for Arthur and Sinbad) | Alice 3, Arthur 3, Medusa 3, Sinbad 3 | After combat draw 1; if you won combat, draw **2 instead**, not 3. |
++| Momentous Shift | ANY | Versatile (attack or defense) | 3 | 1 | Alice 2, Arthur 3, Sinbad 3 | During combat, if **your fighting fighter started this turn in a different space** from its current space, the card’s value is **5 instead**. Moving away and returning to the starting space does not satisfy this test. **This turn means the current turn, including the opponent’s turn when defending.** |
++| Skirmish | ANY | Versatile (attack or defense) | 4 | 1 | Alice 2, Arthur 3 | After combat, **if you won**, choose either fighter in that combat and move that fighter up to 2 spaces. |
+ 
+ #### Alice (remaining 20 cards)
+ 
+-| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |
+-|---|---|---|
+-| Looking Glass | Alice; D/2; B4; 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |
+-| Snicker-Snack | Alice; A/3; B4; 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |
+-| O Frabjous Day! | Alice; A/4; B4; 1 | After combat change size. |
+-| The Other Side of the Mushroom | Alice; A/3; B4; 1 | After combat move Alice up to 3 spaces, then change size. |
+-| Eat Me | Alice; S/—; B3; 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |
+-| I’m Late, I’m Late | Alice; V/2; B3; 3 | After combat move Alice up to 5 spaces, then change size. |
+-| Drink Me | Alice; S/—; B2; 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |
+-| Jaws That Bite | Jabberwock; A/4; B2; 2 | After combat deal 2 damage to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |
+-| Claws That Catch | Jabberwock; A/3; B2; 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |
+-| Mad as a Hatter | Alice; V/3; B1; 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |
+-| Manxome Foe | ANY; V/3; B2; 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |
++| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |
++|---|---|---|---:|---:|---|---|
++| Looking Glass | Alice | Defense only | 2 | 4 | 2 | After combat choose **2 different** effects: draw 2 cards; Alice recovers 3 health; place Alice in **any other** space. |
++| Snicker-Snack | Alice | Attack only | 3 | 4 | 1 | After combat, if you won, look at opponent’s hand and choose 1 card for them to discard. |
++| O Frabjous Day! | Alice | Attack only | 4 | 4 | 1 | After combat change size. |
++| The Other Side of the Mushroom | Alice | Attack only | 3 | 4 | 1 | After combat move Alice up to 3 spaces, then change size. |
++| Eat Me | Alice | Scheme | — | 3 | 2 | Move Alice up to 3 spaces, then **switch BIG ↔ SMALL**; the switch is mandatory even if she moved zero. |
++| I’m Late, I’m Late | Alice | Versatile (attack or defense) | 2 | 3 | 3 | After combat move Alice up to 5 spaces, then change size. |
++| Drink Me | Alice | Scheme | — | 2 | 2 | Draw 2 cards, then **switch BIG ↔ SMALL**; the switch is mandatory. |
++| Jaws That Bite | Jabberwock | Attack only | 4 | 2 | 2 | After combat deal **2 damage** to **any one fighter adjacent to Jabberwock**, including a friendly fighter if that is the only choice. With no adjacent fighter it deals no damage. |
++| Claws That Catch | Jabberwock | Attack only | 3 | 2 | 2 | During combat, if the opposing fighter is a **hero**, this card’s value is **5 instead**. |
++| Mad as a Hatter | Alice | Versatile (attack or defense) | 3 | 1 | 2 | After combat move **each of your fighters** up to 2 spaces, then change size. |
++| Manxome Foe | ANY | Versatile (attack or defense) | 3 | 2 | 2 | During combat discard the **top card of your deck into your own face-up discard pile** and add its **BOOST value** to this card’s value. This is a discard, not a draw. |
+ 
+ **Timing example:** Jabberwock’s Jaws That Bite attacks Arthur’s Skirmish at 4 versus 4. No attack damage is dealt, so Arthur wins combat. His defender-first Skirmish may move Jabberwock away before Jaws checks adjacent fighters. If none remain adjacent, Jaws deals no damage; otherwise its damage is mandatory even if the only target is friendly.
+ 
+ #### King Arthur (remaining 18 cards)
+ 
+-| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |
+-|---|---|---|
+-| Noble Sacrifice | King Arthur; A/2; B3; 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |
+-| Excalibur | King Arthur; A/6; B3; 1 | No printed effect. |
+-| The Aid of Morgana | King Arthur; A/4; B2; 1 | After combat draw 2 cards. |
+-| Divine Intervention | King Arthur; V/3; B2; 2 | After combat move Arthur up to 5 spaces. |
+-| The Holy Grail | King Arthur; D/1; B2; 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |
+-| The Lady of the Lake | King Arthur; S/—; B2; 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |
+-| Prophecy | Merlin; S/—; B2; 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |
+-| Bewilderment | Merlin; D/0; B2; 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |
+-| Aid the Chosen One | Merlin; A/4; B2; 1 | After combat, if you won, draw 2 cards. |
+-| Restless Spirits | Merlin; S/—; B2; 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |
+-| Command the Storms | Merlin; S/—; B2; 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |
+-| Swift Strike | ANY; A/3; B2; 2 | After combat move **your fighting fighter** up to 4 spaces. |
++| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |
++|---|---|---|---:|---:|---|---|
++| Noble Sacrifice | King Arthur | Attack only | 2 | 3 | 3 | During combat you **may BOOST this attack**, in addition to any BOOST from Arthur’s ability. Discard a hand card and add its BOOST value. |
++| Excalibur | King Arthur | Attack only | 6 | 3 | 1 | No printed effect. |
++| The Aid of Morgana | King Arthur | Attack only | 4 | 2 | 1 | After combat draw 2 cards. |
++| Divine Intervention | King Arthur | Versatile (attack or defense) | 3 | 2 | 2 | After combat move Arthur up to 5 spaces. |
++| The Holy Grail | King Arthur | Defense only | 1 | 2 | 1 | After combat, if Arthur has **4 or less health but is not defeated**, set his health to **8**. At 5+ nothing happens; at 0 the duel has already ended. |
++| The Lady of the Lake | King Arthur | Scheme | — | 2 | 1 | Search your deck and discard pile for **Excalibur** and add it to hand. **If you searched your deck, shuffle it.** |
++| Prophecy | Merlin | Scheme | — | 2 | 1 | Look at top 4 cards of your deck. Add 2 to hand and put the other 2 back on top in **any order**. |
++| Bewilderment | Merlin | Defense only | 0 | 2 | 2 | During combat prevent **all damage**. After combat you **may place Merlin in any space** (unoccupied). |
++| Aid the Chosen One | Merlin | Attack only | 4 | 2 | 1 | After combat, if you won, draw 2 cards. |
++| Restless Spirits | Merlin | Scheme | — | 2 | 1 | Choose any space **in Merlin’s zone**. Deal 2 damage to each opposing fighter in that space **and in one adjacent space**. If at least one fighter is defeated this way, draw **1 card**, not one per defeat. |
++| Command the Storms | Merlin | Scheme | — | 2 | 2 | Move **each fighter**, including opposing fighters, up to 3 spaces. For opposing fighters use movement rules from their owner’s perspective. |
++| Swift Strike | ANY | Attack only | 3 | 2 | 2 | After combat move **your fighting fighter** up to 4 spaces. |
+ 
+ #### Medusa (remaining 24 cards)
+ 
+-| Card | Fighter; type/value; B; copies | Effect (only while the duel continues) |
+-|---|---|---|
+-| Gaze of Stone | Medusa; A/2; B4; 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |
+-| A Momentary Glance | Medusa; S/—; B4; 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |
+-| Hiss and Slither | Medusa; D/4; B3; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |
+-| The Hounds of Mighty Zeus | Harpy; V/4; B3; 2 | After combat move **each Harpy** up to 3 spaces. |
+-| Clutching Claws | Harpy; V/3; B2; 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |
+-| Winged Frenzy | ANY; S/—; B2; 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |
+-| Second Shot | Medusa; A/3; B3; 3 | During combat you **may BOOST this attack** by discarding a hand card and adding its BOOST value. |
+-| Dash | ANY; V/3; B1; 3 | After combat move your fighting fighter up to 3 spaces. |
+-| Snipe | ANY; V/3; B1; 3 | After combat draw 1 card. |
++| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |
++|---|---|---|---:|---:|---|---|
++| Gaze of Stone | Medusa | Attack only | 2 | 4 | 3 | After combat, **if you won**, deal **8 damage to the opposing fighter**. Blocking all attack damage prevents this win-triggered effect; merely taking effect damage does not make the attacker win. |
++| A Momentary Glance | Medusa | Scheme | — | 4 | 2 | Deal 2 damage to **any one fighter** in Medusa’s zone (not restricted to opponents). |
++| Hiss and Slither | Medusa | Defense only | 4 | 3 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |
++| The Hounds of Mighty Zeus | Harpy | Versatile (attack or defense) | 4 | 3 | 2 | After combat move **each Harpy** up to 3 spaces. |
++| Clutching Claws | Harpy | Versatile (attack or defense) | 3 | 2 | 3 | After combat your opponent discards **1 card from their own hand, of their choice**. You do not choose it, and the effect does not say random. |
++| Winged Frenzy | ANY | Scheme | — | 2 | 2 | **Medusa or a surviving Harpy may be the active fighter for this ANY scheme.** Move **each of your fighters** up to 3 spaces; they **may pass through opposing fighters**. Then return **a defeated Harpy, if any**, to any unoccupied space in **Medusa’s zone**. Return one, not all. |
++| Second Shot | Medusa | Attack only | 3 | 3 | 3 | During combat you **may BOOST this attack** by discarding a hand card and adding its BOOST value. |
++| Dash | ANY | Versatile (attack or defense) | 3 | 1 | 3 | After combat move your fighting fighter up to 3 spaces. |
++| Snipe | ANY | Versatile (attack or defense) | 3 | 1 | 3 | After combat draw 1 card. |
+ 
+ #### Sinbad (remaining 21 nonshared cards)
+ 
+-All **7 Voyage** cards are **Sinbad-only A/2, one copy each**. **Voyage Home has B1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.
++All **7 Voyage** cards are **Sinbad-only attack cards, printed combat value 2, one copy each**. **Voyage Home has BOOST 1; the other six have no printed BOOST value.** Each has: **during combat, add 1 value for every Voyage card already in your discard pile**. Thus the normal value is **2 + that existing pile count**; exclude only the card currently being played because it is not in discard yet. **Three already-discarded Voyages give value 5.** Their separate after-combat effects are below; they **do not require winning** unless an effect explicitly says so.
+ 
+ | Voyage | After combat (only while the duel continues) |
+ |---|---|
+@@ -203,14 +213,14 @@
+ | Voyage to the City of the Man-Eating Apes | Deal 2 damage to the opposing fighter. |
+ | Voyage to the City of the King of Serendib | Draw 1 card. |
+ 
+-| Other Sinbad card | Fighter; type/value; B; copies | Effect (only while the duel continues) |
+-|---|---|---|
+-| Toil and Danger | Sinbad; V/3; B1; 4 | After combat move Sinbad up to 3 spaces. |
+-| Riches Beyond Compare | Sinbad; S/—; B1; 2 | Draw 3 cards. |
+-| By Fortune and Fate | Porter; A/3; B1; 3 | After combat draw 2 cards. |
+-| Commanding Impact | ANY; A/5; B2; 1 | After combat draw 1 card. |
+-| Leap Away | ANY; V/4; B1; 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |
+-| Exploit | ANY; V/4; B1; 2 | After combat draw 1 card. |
++| Card | Permitted fighter label | Card type | Printed combat value | BOOST | Copies in this deck | Effect (only while the duel continues) |
++|---|---|---|---:|---:|---|---|
++| Toil and Danger | Sinbad | Versatile (attack or defense) | 3 | 1 | 4 | After combat move Sinbad up to 3 spaces. |
++| Riches Beyond Compare | Sinbad | Scheme | — | 1 | 2 | Draw 3 cards. |
++| By Fortune and Fate | Porter | Attack only | 3 | 1 | 3 | After combat draw 2 cards. |
++| Commanding Impact | ANY | Attack only | 5 | 2 | 1 | After combat draw 1 card. |
++| Leap Away | ANY | Versatile (attack or defense) | 4 | 1 | 2 | After combat, **if you won**, choose one of the fighters in combat and move them up to 4 spaces. |
++| Exploit | ANY | Versatile (attack or defense) | 4 | 1 | 2 | After combat draw 1 card. |
+ 
+ ## Player Reference
+ 

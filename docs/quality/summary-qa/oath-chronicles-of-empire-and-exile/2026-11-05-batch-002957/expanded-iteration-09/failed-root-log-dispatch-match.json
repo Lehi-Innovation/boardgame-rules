@@ -1,0 +1,24 @@
+{
+  "root_session": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T01-31-42-01a1aad5-d462-7b90-9cb0-ed14a110aee7.jsonl",
+  "calls": [
+    {
+      "timestamp": "2026-11-05T14:52:22.442Z",
+      "ordinal": 5359,
+      "type": "response_item",
+      "payload": {
+        "type": "custom_tool_call",
+        "id": "ctc_0b01e90ed8eb045e016aec981d20d887d0bcdff453d857c863",
+        "status": "completed",
+        "call_id": "call_H7O57hESzDtKHgkQefu1HiEl",
+        "name": "exec",
+        "input": "text(await tools.exec_command({cmd:\"python3 - <<'PY'\\nfrom pathlib import Path\\nimport json\\np=Path('docs/quality/summary-qa/oath-chronicles-of-empire-and-exile/2026-11-05-batch-002957');d=p/'expanded-iteration-09';j=json.loads((p/'progress.json').read_text());j.update(phase='iteration09-fresh-source-audit-and-readers',final_snapshot_path=str((d/'summary-snapshot.md').resolve()),source_audit='PENDING expanded-iteration-09/source-audit.json',source_audit_path='expanded-iteration-09/source-audit.json',source_audit_status='PENDING',source_pass=False,required_fact_count=328,required_fact_group_count=328,coverage_review={'verdict':'PASS_WORKING_SATURATION','report_path':str((p/'coverage-review-10.json').resolve()),'all_104_keys_checked':True},coverage_stopping_rule={'passes':[30,31],'consecutive_zero_addition_passes':2,'fresh_independent_challenge':'PASS_WORKING_SATURATION coverage-review-10.json'},final_grading='PENDING full09_grader all208/656',final_reader_scores=None,historical_iteration08_scores={'reader-a':{'correct':100,'partial':4,'incorrect':0},'reader-b':{'correct':99,'partial':5,'incorrect':0}},scope_adjudication='PENDING independent scope_adjudicator_09 Q058/Q088; original08grades preserved');j['hashes'].update(json.loads((d/'input-manifest.json').read_text())['hashes']);(p/'progress.json').write_text(json.dumps(j,indent=2)+'\\\\n')\\nfor f in Path('/mnt/c/Users/jonny/.codex/sessions/2026/11/05').glob('*.jsonl'):\\n with f.open() as h:\\n  first=json.loads(h.readline());m=first.get('payload',{})\\n  if m.get('id')!='01a1aad5-d462-7b90-9cb0-ed14a110aee7':continue\\n  hits=[]\\n  for l in h:\\n   x=json.loads(l);v=x.get('payload',{});st=json.dumps(v)\\n   if v.get('type') in ['function_call','custom_tool_call'] and 'expanded09_reader_a' in st and 'You are reader A' in st:\\n    hits.append(x)\\n  (d/'reader-a-dispatch-call-record.json').write_text(json.dumps({'root_session':str(f),'calls':hits},indent=2)+'\\\\n');print('root',f,'hits',len(hits))\\nPY\",\"max_output_tokens\":1500}));\n",
+        "internal_chat_message_metadata_passthrough": {
+          "turn_id": "01a1aad5-e389-7f33-8e3f-13a77a484953",
+          "create_time": 1793890323.970311
+        }
+      }
+    }
+  ],
+  "status": "NOT_DISPATCH_PROOF",
+  "reason": "Root log search matched the inspection shell script containing task strings, not the actual spawn call. Retained as failed diagnostic; no provenance claim."
+}

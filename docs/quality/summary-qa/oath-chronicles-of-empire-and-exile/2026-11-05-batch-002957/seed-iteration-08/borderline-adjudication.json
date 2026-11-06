@@ -1,0 +1,189 @@
+{
+  "artifact_type": "fresh independent borderline semantic adjudication",
+  "adjudicator_role": "independent adjudicator; no repairs",
+  "rubric": {
+    "correct": "Every requested fact correct, resolved and summary-supported; equivalent complete meaning accepted.",
+    "partial": "A requested fact is missing or unresolved, without a material contradiction.",
+    "incorrect": "Any material contradiction, including volunteered contextual claims."
+  },
+  "method": "Read each complete answer in isolation against the frozen established scope and first twenty entries of expanded-v5/grading-scope.json. No fact borrowed from another question, reader, or summary to complete the answer. Summary/source evidence establishes correctness and support, not omitted answer content. Confidence and support labels are not grades.",
+  "permitted_inputs": [
+    "seed-v1/questions.json",
+    "seed-v1/answer-key.json",
+    "seed-v1/grading-scope-established.json",
+    "expanded-v5/grading-scope.json (first twenty only)",
+    "seed-iteration-08/summary-snapshot.md",
+    "seed-iteration-08/reader-a.json",
+    "seed-iteration-08/reader-b.json",
+    "seed-iteration-09/summary-snapshot.md",
+    "seed-iteration-09/reader-b.json",
+    "/home/jonny/projects/boardgame-rules/extracted/oath-current-law.txt",
+    "/home/jonny/projects/boardgame-rules/extracted/oath-current-playbook.txt",
+    "errata.txt"
+  ],
+  "prohibited_inputs_read": false,
+  "iteration": "seed-iteration-08",
+  "cases": [
+    {
+      "case_id": "08A-Q010",
+      "reader": "reader-a",
+      "question_id": "Q010",
+      "grade": "correct",
+      "answer": "The adviser limit is up to 3 total cards, counting faceup and facedown. Before exceeding the limit, discard an adviser (respecting locked cards); if the incoming card changes the limit, use the new limit before playing it, and use the lowest limit if there are multiple limit-changing cards. A facedown adviser has no suit, restriction banner, or power; later it can be played faceup to a legal destination or discarded as a minor action, and it may be peeked at. A faceup adviser cannot be discarded at will, only when another rule permits or requires it. An Exile may reveal a true Vision faceup in the separate Revealed Vision space, which does not use an adviser slot; doing so replaces and discards the Exile’s previous revealed Vision. Chancellor/Citizens may hold true Visions facedown but cannot reveal them.",
+      "borderline_issue": "Whether the absence of the exact phrase any card can be held facedown leaves the permission unresolved.",
+      "decisive_answer_quotes": [
+        "A facedown adviser has no suit, restriction banner, or power",
+        "Chancellor/Citizens may hold true Visions facedown but cannot reveal them."
+      ],
+      "key_and_scope_evidence": {
+        "fixed_key": "facedown has no suit/banner/power, any card can be held thus.",
+        "frozen_fact": "Q010-F04: Facedown advisers lack suit/restriction banner/power; any card can be held facedown."
+      },
+      "source_evidence": [
+        {
+          "source": "Law 5.1.4.II",
+          "quote": "Place the card to the right of your board, faceup or facedown. (Facedown advisers have no suit, restriction banner, or power."
+        },
+        {
+          "source": "Law 7.2",
+          "quote": "These restrictions only apply to faceup cards (not facedown)."
+        },
+        {
+          "source": "Law 5.1.4.III",
+          "quote": "They can play any Visions as facedown advisers."
+        },
+        {
+          "source": "Playbook p32",
+          "quote": "You can always play a card as a facedown adviser. Doesn’t matter whether it has a tree"
+        },
+        {
+          "source": "errata.txt, 7.6.4",
+          "quote": "If you have multiple cards that change your adviser limit, your adviser limit is the lowest among them."
+        }
+      ],
+      "summary_support": "Iteration 08 Search explicitly permits any card, including site-only cards and Visions, facedown, and gives the same ordinary legality, limit, lock and Vision rules used by the answer.",
+      "meaning_alternatives": [
+        {
+          "interpretation": "No restriction banner on a facedown adviser removes the denizen placement restriction, while the explicit Imperial facedown-Vision permission covers the other possible special-card exclusion.",
+          "assessment": "Accepted. Together these state the operational permission, rather than merely naming facedown cards. Repeating any card would add wording, not a missing ruling."
+        },
+        {
+          "interpretation": "The answer permits only cards already legal as faceup advisers, because it never says any card.",
+          "assessment": "Rejected. That adds a restriction absent from the answer and conflicts with its categorical lack of a facedown restriction banner and explicit permission for otherwise faceup-ineligible Imperial Visions."
+        }
+      ],
+      "requested_fact_checks": [
+        {
+          "fact_id": "Q010-F01",
+          "status": "met",
+          "evidence": "up to 3 total cards, counting faceup and facedown; Before exceeding the limit, discard an adviser"
+        },
+        {
+          "fact_id": "Q010-F02",
+          "status": "met",
+          "evidence": "respecting locked cards; use the new limit before playing it; use the lowest limit"
+        },
+        {
+          "fact_id": "Q010-F03",
+          "status": "met",
+          "evidence": "A faceup adviser cannot be discarded at will, only when another rule permits or requires it."
+        },
+        {
+          "fact_id": "Q010-F04",
+          "status": "met by equivalent meaning",
+          "evidence": "No suit, restriction banner, or power, together with affirmative Imperial facedown-true-Vision permission."
+        },
+        {
+          "fact_id": "Q010-F05",
+          "status": "met",
+          "evidence": "later it can be played faceup to a legal destination or discarded as a minor action"
+        },
+        {
+          "fact_id": "Q010-F06",
+          "status": "met",
+          "evidence": "Exile-only faceup true Vision in separate Revealed Vision space, no adviser slot, replaces/discards previous Vision; Imperials cannot reveal."
+        }
+      ],
+      "rationale": "The full answer supplies the relevant facedown permission semantically and every other requested fact. No material contradiction or unresolved requested ruling remains. This is not a keyword test."
+    },
+    {
+      "case_id": "08B-Q008",
+      "reader": "reader-b",
+      "question_id": "Q008",
+      "grade": "partial",
+      "answer": "Search either the world deck or the discard pile for the pawn's region, never both. A discard-pile Search costs 2 Supply. World-deck Search costs 2 when zero Visions have been drawn, 3 at 1–2, and 4 at 3–5; Darkest Secret replaces that world-deck cost with 2, with other modifiers still applying. Draw up to 3, one at a time from the world deck; a world-deck Vision must be announced, immediately stops the draw, and advances Visions Drawn by 1. A Vision drawn from a discard pile neither stops drawing nor advances the track.",
+      "borderline_issue": "Whether Draw up to 3 alone conveys the prescribed three-card draw and constrained reasons for drawing fewer.",
+      "decisive_answer_quotes": [
+        "Draw up to 3, one at a time from the world deck; a world-deck Vision must be announced, immediately stops the draw, and advances Visions Drawn by 1."
+      ],
+      "key_and_scope_evidence": {
+        "fixed_key": "Draw up to three available",
+        "established_scope": "Draw three unless source exhaustion, a world Vision, or an applicable modifier stops/reduces it.",
+        "frozen_fact": "Q008-F03: Draw the prescribed three unless depletion, a world Vision or modifier changes/stops the count; draw world cards one at a time, announce that a Vision was drawn, stop immediately and advance the shared track.",
+        "precision_note": "Expanded-v5 explicitly preserves the established narrow scope while clarifying prescribed-three wording; the earlier fixed-key upper-bound phrase is not permission for elective underdrawing."
+      },
+      "source_evidence": [
+        {
+          "source": "Law 5.1.2",
+          "quote": "Step 2: Draw Three Cards."
+        },
+        {
+          "source": "Playbook p32",
+          "quote": "Whether you’re drawing from your region’s discard pile or the world deck, draw three cards."
+        },
+        {
+          "source": "Playbook p32",
+          "quote": "Stop drawing if you draw a Vision from the deck or if there are no cards left to draw"
+        },
+        {
+          "source": "Law 9.3",
+          "quote": "If you are prompted to gain or take components, but the source of that component does not have enough, gain or take as many as possible."
+        },
+        {
+          "source": "errata.txt, Glossary Draw",
+          "quote": "Take cards from the top of the prompted draw source.",
+          "relevance": "This correction removes automatic import of Search into other draw effects; it does not replace Search’s own prescribed-three procedure."
+        }
+      ],
+      "summary_support": "Iteration 08 Search states Draw 3 cards, taking fewer only for depletion, world Vision or modifier, and explicitly forbids voluntary early stopping. The reader does not retain that distinction.",
+      "meaning_alternatives": [
+        {
+          "interpretation": "Up to 3 is only a compact upper bound, with fewer cards caused by rules such as the immediately stated world-Vision stop.",
+          "assessment": "Plausible, so the phrase alone is not treated as an affirmative material contradiction. But it still leaves the compelled count and other permitted reductions unresolved."
+        },
+        {
+          "interpretation": "The player may freely choose any smaller draw count.",
+          "assessment": "Also a natural reading of up to, and it would be wrong. The answer does not explicitly grant a choice, say may stop early, or give a voluntary-under-draw example, so this reading is not imposed as the sole asserted meaning."
+        },
+        {
+          "interpretation": "The phrase unambiguously means draw exactly three whenever available unless a rule changes it.",
+          "assessment": "Rejected. Availability, depletion/modifier qualification, and the mandatory-count relation are not stated; supplying them would complete the answer from outside it."
+        }
+      ],
+      "requested_fact_checks": [
+        {
+          "fact_id": "Q008-F01",
+          "status": "met",
+          "evidence": "world deck or discard pile for the pawn’s region, never both"
+        },
+        {
+          "fact_id": "Q008-F02",
+          "status": "met",
+          "evidence": "Discard 2; world 2 at zero, 3 at 1–2, 4 at 3–5; fixed Darkest Secret 2 with other modifiers still applying."
+        },
+        {
+          "fact_id": "Q008-F03",
+          "status": "partly met; mandatory draw count unresolved",
+          "evidence": "World cards one at a time; Vision announced, immediately stops and advances track. Up to 3 does not resolve when fewer are permitted."
+        },
+        {
+          "fact_id": "Q008-F04",
+          "status": "met",
+          "evidence": "Discard Vision neither stops drawing nor advances track."
+        }
+      ],
+      "contextual_exclusions": "The absent subsequent discard/play procedure is not penalized; Q008 explicitly excludes it as contextual.",
+      "rationale": "Partial, not correct: a requested operational count remains ambiguous. Partial, not incorrect: there is no explicit voluntary-stop claim, and an upper-bound reading consistent with the rules remains possible. The omission is not cured by the summary, another answer, or the old fixed-key shorthand."
+    }
+  ]
+}

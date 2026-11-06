@@ -1,0 +1,1 @@
+Same independently source-audited summary. Raw iteration09 A reverses the explicit old-favor bank direction in Q012; this is a reader contradiction,not missing summary coverage. Generic reader instructions now explicitly request checking their own claims against the two supplied inputs before saving; no key/source/feedback is disclosed and rubric/questions/key remain fixed.

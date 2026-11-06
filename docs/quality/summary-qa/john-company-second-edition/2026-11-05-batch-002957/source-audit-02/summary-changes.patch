@@ -1,0 +1,63 @@
+--- source-audit-01/summary-snapshot.md
++++ source-audit-02/summary-snapshot.md
+@@ -99,7 +99,7 @@
+ | Purchase Luxury | Pay bank £4; gain luxury, 2 VP while owned, and its window icon; social enterprise. |
+ | Purchase Shipyard | Pay bank £2; take shipyard and put matching ship on it; shipping enterprise, one vote and £1 bonus while fitted. |
+ | Purchase Workshop | Pay bank £5; take workshop; manufacturing enterprise, two votes, £1 bonus; worth 1 VP if Company fails unless invested. |
+-| Seek Share | Place a member on an empty Stock Exchange space and pay its printed price to bank. It is an applicant, not yet a share. |
++| Seek Share | Place a member on an empty Stock Exchange space and pay bank: the five queue spaces are £2, £3, £3, £4, £5 (two distinct £3 spaces). It is an applicant, not yet a share. |
+ 
+ **New Company shares:** After all family actions, if Debt and applicants remain, move the rightmost applicant into Court and lower Debt by one. Repeat while both remain. Pieces in Court are Company shares. With no Debt, slide remaining applicants as far right as possible, preserving order. Seeking a share never pays family cash into Company treasuries.
+ 
+@@ -166,7 +166,13 @@
+ 
+ **Rebellion Crisis:** Compare only rebelling region strength + modifier against its sovereign capital's strength; other empire regions do not count. Must be strictly greater. Success makes actor sovereign, removes its flag and closes all its orders (Cascade if already closed). Failure removes one tower from the capital.
+ 
+-**Attacks on Company:** An Invasion or Rebellion against a Company region also triggers secondary Rebellions in every other Company region with unrest. Resolve primary first; then Bombay, Madras, Bengal, each Commander ordering attacks within their Presidency. Primary strength uses normal attack calculation plus local unrest; secondary strength is only that region's unrest. Associated Commander must exhaust active Army pieces totaling attack strength, or as much as possible. Use local alliances' printed strength; they cannot be split. If new exhausted strength is insufficient, lose region. Otherwise clear all unrest in it and Commander takes one trophy. Vacant Commander: **Military Affairs itself acts in the Commander's stead**, or Chairman if Military Affairs is vacant; this acting player chooses defense pieces and gains/loses no trophies. This does not appoint a new Commander. If a primary Invasion fails, remove one tower from attacker if possible; if it succeeds, apply empire growth.
++**Attacks on Company:** An Invasion or Rebellion against a Company region also triggers secondary Rebellions in every other Company region with unrest. Resolve primary first; then Bombay, Madras, Bengal, each Commander ordering attacks within their Presidency. Attack strengths are distinct:
++
++- **Primary normal Crisis:** normal Invasion/Rebellion attack strength **plus unrest in its target region**.
++- **Primary Foreign Invasion:** the ordinary attack die, with no added unrest (designer ruling in FAQ).
++- **Every secondary Rebellion:** **only the number of unrest cubes in that secondary region**; no event modifier or empire strength.
++
++ Associated Commander must exhaust active Army pieces totaling attack strength, or as much as possible. Use local alliances' printed strength; they cannot be split. If new exhausted strength is insufficient, lose region. Otherwise clear all unrest in it and Commander takes one trophy. Vacant Commander: **Military Affairs itself acts in the Commander's stead**, or Chairman if Military Affairs is vacant; this acting player chooses defense pieces and gains/loses no trophies. This does not appoint a new Commander. If a primary Invasion fails, remove one tower from attacker if possible; if it succeeds, apply empire growth.
+ 
+ **Region Loss:** Commander returns half their family's trophies rounded up, then Commander member returns to supply. Roll once per officer in associated Army: each 6 removes that officer. Eliminate Governor: return office card to unused stack, fatigue and member to supplies. Remove Governor overlay, partially built Company ship and unrest. Restore dome with one tower (or Foreign Invasion's specified strength) and appropriate invasion flag. Return control token to region, loot-side down: future conquest gets no loot modifier and region loses Presidency association. An Invasion Crisis closes all its orders, or Cascades if already closed; Rebellion/Foreign Invasion already close them. Standing loss equals number of regions lost **so far this turn**, including this one: first -1, second additional -2, etc. If this causes failure, finish Events in India before Final Scoring.
+ 
+@@ -213,9 +219,9 @@
+ 
+ Each President chooses order of its Commander, Governors and its own Trade. Must allow each position an opportunity but Commander/Governors may decline. Each position finishes all actions before next begins. Trade can go before/after Commander or any Governor but cannot interrupt another position. If President vacant, Chairman sets order only: cannot trade or approve local alliance purchases.
+ 
+-Declare regions for Trade: include home region, and only regions reachable through open orders with available ship capacity. Each £1 President's treasury buys one die; subtract one per declared nonhome region. Failure can be retried during operations if affordable; catastrophe removes President. At most **one successful Trade per President per turn**.
+-
+-Success: one order per ship in its sea zone, as many as possible within declared regions. First writer goes to home port; next orders must be adjacent to one already filled by this trading Presidency. Use actual writers while available, then filled-order tokens. No President may fill another President's home region, even if its office vacant. Increase Balance by each order's printed value. President earns bank £1 per order; writer owners earn £1 per writer placed. Separate adjacent writers from different Presidencies with dividers for correct return at Refresh.
++Declare regions for Trade: include home region, and only regions reachable through open orders with available ship capacity. Each £1 President's treasury buys one die; subtract one per declared nonhome region. Failure can be retried during operations if affordable; catastrophe removes President. At most **one successful Trade per President per turn**. Failed attempts and retries belong to that President's uninterrupted opportunity; another position cannot act between its attempts.
++
++Success: one order per ship in its sea zone, as many as possible within declared regions. First writer goes to home port; next orders must be adjacent to one already filled by this trading Presidency. Use actual writers while available, then filled-order tokens. No President may fill another President's home region, even if its office vacant. Increase Balance by each order's printed value, **or half rounded down if a firm already filled it this turn under Deregulation**. President earns bank £1 per order; writer owners earn £1 per writer placed. Separate adjacent writers from different Presidencies with dividers for correct return at Refresh.
+ 
+ ### Commanders and Deploy (pp22–23)
+ 
+@@ -229,7 +235,7 @@
+ 
+ On success: loot = £4 per target tower + faceup loot token's modifier, at least one plus number of surviving used officers. Distribute £1 Commander share plus £1 per its used surviving officer; clockwise £1 per other player's used surviving officer; then £1 bank per regiment and per alliance **piece**, irrespective of strength. Repeat cycle until cash gone. Commander receives one trophy per target tower.
+ 
+-Then establish control: remove tower/dome, **remove all matching empire flags if target was a capital**, open all orders and clear unrest. If newly Company-controlled, put loot/control token region-side above President, place Governor overlay and add office card to vacancies. **If Elephant in conquered region pointed outward, put it fully inside** for Rebellion. These capital/Elephant consequences are part of the successful Deploy procedure.
++Then establish control: remove tower/dome, **remove all matching empire flags if target was a capital**, open all orders and clear unrest. If newly Company-controlled, put loot/control token region-side above President. **Place the Governor overlay in the conquered region; put only its office card into the Vacant Offices box.** **If Elephant in conquered region pointed outward, put it fully inside** for Rebellion. These capital/Elephant consequences are part of the successful Deploy procedure.
+ 
+ On catastrophe, Commander returns half own family's trophies rounded up and Commander member to supply. Exhausted officers still check losses. Commander has no office card to vacate.
+ 
+@@ -292,11 +298,13 @@
+ 
+ The game ends after scenario's final turn or when Standing reaches failure. Normally failure is immediate; failure during Events finishes that phase, and legislation failure finishes vote before scoring. Once game over, stop negotiations, calling promises and playing blackmail unless a card explicitly permits final-scoring use.
+ 
+-If deregulated, first score/lose printed firm-track VP per firm share or piece in Debtor's Prison, summing fractional points before rounding down; then each shareholder may make one eligible special retirement even if Company failed. Debtor's Prison costs 1 VP per piece. Then normal Final Scoring (p9):
++If deregulated, first score each firm share at its firm's printed VP value and deduct **1 VP per family piece in Debtor's Prison**, summing fractional points before rounding down. Then each shareholder may make one eligible special retirement even if Company failed. Then normal Final Scoring (p9):
+ 
+ 1. **Power award:** Total enterprise/share power from current Power track (bottom two positions zero), +1 per passed-law token and trophy, +2 for PM, plus printed card power (blackmail faceup or down, applicable spouse). Most/second awards are **3/1 VP if final turn 1–3, 5/2 if turn 4–6, 8/4 if turn 7–8**. Tied first: only lower award to each tied player; no other award. Tied second receive none.
+ 2. **Court/workshops:** If Company survived, add Court's current VP per Company share. If failed, subtract that value per share and add 1 VP per uninvested workshop. Scores may be negative.
+ 3. **Survival/failure:** If survived, roll office attrition and retire pensioners, without prestige cards. If failed, draw one random Company failure card and resolve its printed consequence instead.
++
++Firm-track VP per share: Value 1 = −1 VP; 2 = 0; 3–4 = ½; 5–7 = 1; 8–9 = 1½; 10 = 2. The firm's Value number is also used for expenses; its VP rate is the symbol beneath that number.
+ 
+ Highest final VP wins. Ties: most windows, then clockwise from PM. Prizes, luxuries and spouse points are generally recorded when gained/lost, not added again at final scoring.
+ 

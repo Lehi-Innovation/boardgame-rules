@@ -1,0 +1,107 @@
+{
+  "review": "coverage-novelty-adjudication-04",
+  "benchmark": "expanded-v7",
+  "decision": "ACCEPT_RETAINED_ELEMENTS_CLAUSE_ONLY",
+  "candidate": "Foregoing a paid card's entire effect does not lose its printed Elements",
+  "reason": "CORE p17 states an explicit no-effect outcome branch: the player may forego the Power yet still use its Elements. None of the existing prompts asks whether foregone effects revoke already gained Elements. Q04 asks initial acquisition timing, Q16 asks effect skipping and Energy refund, Q29 asks whether foregoing is a use/target, and Q30 asks end-of-turn disposition. Those answers do not themselves require the player to resolve the retained-Elements branch. A model that correctly gains Elements at play, denies a refund, calls the foregone Power unused, and discards the card at Time Passes could still incorrectly revoke its Elements on foregoing; the candidate directly detects that error.",
+  "novelty_class": "Explicit source-defined outcome branch for foregoing an entire Power",
+  "novelty_limit": "Only retained Elements supplies new coverage. The no-refund clause is already requested by Q16; ordinary Time Passes disposal is already requested by Q30. They are useful consistency checks but must not be counted as additional discoveries.",
+  "recommended_question": "A Spirit paid for a Power Card during the Spirit Phase but later foregoes its entire text effect, either by choice or because it has no legal target. May the Spirit still use that card's printed Elements for an Innate this turn? Is its Energy refunded, and does merely foregoing its effects remove the card from play? Assume no separate effect Forgets or otherwise removes the card.",
+  "predetermined_answer": "Yes. The card remains in play and continues granting its printed Elements, so they may meet Innate thresholds. Foregoing its effects gives no Energy refund and does not itself remove or discard the card. With no separate removal effect, discard it normally during Time Passes, when its printed Elements cease to be available.",
+  "why_not_a_cosmetic_or_mechanical_variant": "The new test is an explicit retention condition printed in the foregoing rule, not altered numbers, names, or another arithmetic application. It establishes what remains after a particular allowed decision; initial Element gain and ordinary later cleanup leave that intermediate-state branch unasked. Combining already tested refund and cleanup clauses into the prompt does not generate the novelty.",
+  "existing_prompt_audit": [
+    {
+      "id": "Q04",
+      "finding": "Asks when Elements are gained; it does not ask whether declining the text later forfeits them."
+    },
+    {
+      "id": "Q16",
+      "finding": "Explicitly asks whether the whole Power can be foregone and whether Energy is recovered. Its fixed key additionally says played-card Elements remain, but that extra sentence is beyond the actual requested clauses and earns no coverage credit."
+    },
+    {
+      "id": "Q17",
+      "finding": "Forgetting an in-play card genuinely removes it and loses Elements. Does not ask whether foregoing effects constitutes such removal."
+    },
+    {
+      "id": "Q26",
+      "finding": "Losing Elements by Forgetting is a different branch from retaining Elements while the card stays in play."
+    },
+    {
+      "id": "Q29",
+      "finding": "Asks whether foregoing counts as targeting/using; Element retention is neither requested nor necessary to answer that classification."
+    },
+    {
+      "id": "Q30",
+      "finding": "Asks ordinary Time Passes cleanup, with a card whose effects resolved. Does not ask the intervening retained-Elements state for a foregone Power."
+    },
+    {
+      "id": "Q40",
+      "finding": "Printed Elements are not duplicated by Repeat. Does not ask revocation when effects are foregone."
+    },
+    {
+      "id": "Q107",
+      "finding": "Card-play count versus Power-use count, not Element retention."
+    },
+    {
+      "id": "Q110",
+      "finding": "Free Innate availability after meeting requirements. Does not identify whether a foregone card still supplies those requirements."
+    }
+  ],
+  "source_refs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p17 General Principle: You Can Skip Using A Power's Effect",
+      "character_range": [
+        46184,
+        46698
+      ],
+      "length": 514,
+      "passage_sha256": "7a10d502c373511ea48e2eb12a6139ec0102da2b8843f30f0cfa5369721589f9",
+      "line_range_inclusive": [
+        1203,
+        1209
+      ]
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p16 Anatomy of Powers, Elements Gained: Elements last while card is in play",
+      "character_range": [
+        42725,
+        43244
+      ],
+      "length": 519,
+      "passage_sha256": "1960fcb5b77039e77a6ef6d18d5ecdd5a6d993ddf979be763999a04306964699",
+      "line_range_inclusive": [
+        1100,
+        1111
+      ]
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p10 Time Passes: discard played cards and clear Elements",
+      "character_range": [
+        24634,
+        25063
+      ],
+      "length": 429,
+      "passage_sha256": "9b84c61642bc7ca7c049240b7715416929297c89b99f1d96499af6ae74eb8c40",
+      "line_range_inclusive": [
+        596,
+        601
+      ]
+    }
+  ],
+  "key_input_hashes": {
+    "questions_sha256": "b32bcb4aa106e08b2877e1823cf9322732604a3b50b21738c22b035e8d99ce44",
+    "answer_key_sha256": "1a22d586cf7e4e47f9d01cd3be4f75e22eab19d1bbc98242314f8492ecb15ada"
+  },
+  "read_evidence": {
+    "full_source_question_key_reads": "Completed earlier in this same source-only review. Follow-up reread p17 exact contiguous 46184:46698 and the actual Q04/Q16/Q17/Q26/Q29/Q30/Q40/Q107/Q110 prompts.",
+    "targeted_source_characters": 514,
+    "max_output_tokens_per_call": 4000,
+    "truncation_observed": false,
+    "summary_readers_grades_or_other_reports_read": false
+  },
+  "scope": "Original standard core; no new producer, expansion, adversary or optional module required.",
+  "input_mutations": false
+}

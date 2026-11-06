@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T14:59:15.897Z",
+    "ordinal": 208,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0aae654206ae7e74016aec99be894887d0ac9334d46b00e814",
+      "status": "completed",
+      "call_id": "call_DurISQWdyuUMFMazWxVMg5Fy",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,pathlib\\nb=pathlib.Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text()); d=json.loads((b/'reader-b.json').read_text())\\nids=[a['id'] for a in d['answers']]; expected=[x['id'] for x in q['questions'][:20]]\\nassert ids==expected and len(ids)==len(set(ids))\\nfor a in d['answers']:\\n assert a['answer'] and a['support'] in ('supported','partial','unsupported')\\n for part in a['answer']: assert part['part'] and part['ruling'] and part['evidence']\\n for p in a['source_passages']: assert p['quotation'] and p['quotation'] in s,(a['id'],p['section'])\\nprint('valid JSON; Q01-Q20 occur exactly once; all answer parts populated; all quotations exact substrings')\\nPY\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:1000});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac35-ea7e-7b12-bb8c-d5afae37b34e",
+        "create_time": 1793890744.967813
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T14:59:17.116Z",
+    "ordinal": 211,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac38-a9fc-77d3-9424-fa8429cfbece",
+      "call_id": "call_DurISQWdyuUMFMazWxVMg5Fy",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.2 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; Q01-Q20 occur exactly once; all answer parts populated; all quotations exact substrings\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac35-ea7e-7b12-bb8c-d5afae37b34e",
+        "create_time": 1793890757.1168628
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

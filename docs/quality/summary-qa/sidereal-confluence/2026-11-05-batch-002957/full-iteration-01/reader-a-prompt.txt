@@ -1,0 +1,137 @@
+Blind rules-summary reader. No parent context or prior knowledge. Rules DATA are ONLY /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/full-iteration-01/summary-snapshot.md and /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/full-iteration-01/questions.json. Do not read rulebooks, keys, manifests, earlier outputs/grades/reviews, other files or web. Do not browse or communicate with others. Do not call ANY collaboration, agent-status or thread tools, including list_agents; never inspect sibling status. Scenario facts stated by questions are givens, not missing rules. Summary alone is rules authority; flag genuinely absent requested rules, never guess.
+Read BOTH complete files with sequential bounded contiguous character slices <=6000 per tool response, sufficient max_output_tokens>=4500. One slice per response, never print all chunks in one output. Print and retain file/hash/start/end/total receipts; check actual output for truncation and reread smaller if needed. All questions and all summary text must be model-visible before answering.
+For each question enumerate its own clauses; search the entire summary for each named item/relevant terms; select complete operative units yourself; give direct rulings and actual requested calculations; self-check every asked clause against evidence. Include all substantive clauses in the SAME entry; no borrowing between answers. A correct quoted rule may supply ordinary lookup facts, but concrete cases need actual conclusions/calculations. Match actors, conditions, timing, destinations and exceptions to the question. Do not dump unrelated whole-summary material or duplicate identical excerpts within an entry.
+Use the EXACT generic code embedded below in your processing script: for each evidence location you choose, call extract_unit(summary,offset), then validate_record(summary,record). Attach the complete returned record, optionally with a section label; never crop its text. A Markdown parent section includes its child sections to the next same/higher heading; don't mistake its introduction for its procedure. Table records must include complete newline-bounded row through final pipe, actual header and literal column values; add controlling introductory/legend/definition context when needed. Validate every record before saving; bookkeeping/format diagnostics are separate from substantive correctness. Only the two files above are allowed reads; the generic code is supplied here as instructions, not another file or rules authority.
+Save valid JSON ONLY to /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/full-iteration-01/reader-a.json. Top-level reader, inputs_read, delivery_receipts, source_span_diagnostics, answers. Each answer: id, clauses, answer, support(supported/partial/unsupported), evidence(array of complete validated records). Answer EVERY ID once, ALL requested parts; explicitly name unsupported parts, no guessing. You may load the two allowed files in your own processing code to search and assemble output. Do not read helper files or any other files; write only your output. Record embedded-code hash/execution/validation. If output is large, construct it in batches within your own output while preserving all fields and valid final JSON. Do not evaluate/improve summary. Final response: path and count only.
+BEGIN GENERIC PYTHON CODE
+"""Generic Markdown source extraction; no rule facts or question maps."""
+import re
+
+
+def _span(text, start, end):
+    while start < end and text[start].isspace():
+        start += 1
+    while end > start and text[end - 1].isspace():
+        end -= 1
+    if not 0 <= start < end <= len(text):
+        raise ValueError("Empty or invalid source span")
+    return {"start": start, "end": end, "text": text[start:end]}
+
+
+def _lines(text):
+    result, start = [], 0
+    for line in text.splitlines(keepends=True):
+        end = start + len(line)
+        result.append((start, end, line.rstrip("\r\n")))
+        start = end
+    return result
+
+
+def _cells(line):
+    line = line.strip()
+    if not line.startswith("|") or not line.endswith("|"):
+        raise ValueError("Table row lacks an outer pipe")
+    result, current, escaped = [], [], False
+    for char in line[1:-1]:
+        if char == "|" and not escaped:
+            result.append("".join(current).strip())
+            current = []
+        else:
+            current.append(char)
+        escaped = char == "\\" and not escaped
+    result.append("".join(current).strip())
+    return result
+
+
+def _separator(line):
+    try:
+        return all(re.fullmatch(r":?-{3,}:?", c) for c in _cells(line))
+    except ValueError:
+        return False
+
+
+def _table(text, offset):
+    lines = _lines(text)
+    i = next(i for i, (a, b, _) in enumerate(lines) if a <= offset < b)
+    row = _span(text, lines[i][0], lines[i][1])
+    if _separator(row["text"]):
+        raise ValueError("Separator is not a data row")
+    first = i
+    while first > 0 and lines[first - 1][2].strip().startswith("|"):
+        first -= 1
+    separators = [j for j in range(first + 1, i) if _separator(lines[j][2])]
+    if not separators:
+        raise ValueError("No controlling header before requested row")
+    sep = separators[-1]
+    headings = _cells(lines[sep - 1][2])
+    values = _cells(row["text"])
+    if len(headings) != len(values) or len(_cells(lines[sep][2])) != len(values):
+        raise ValueError("Header, separator and row column counts differ")
+    header = _span(text, lines[sep - 1][0], lines[sep][1])
+    return {"kind": "table", "header": header, "row": row,
+            "fields": [{"column_index": n, "column": h, "value": v}
+                       for n, (h, v) in enumerate(zip(headings, values))]}
+
+
+def heading_index(text):
+    return [{"start": m.start(), "end": m.end(), "level": len(m.group(1)),
+             "title": m.group(2)}
+            for m in re.finditer(r"(?m)^(#{1,6})[ \t]+([^\n]+)", text)]
+
+
+def _paragraph(text, offset):
+    start = 0
+    for match in re.finditer(r"\n[ \t\r]*\n", text):
+        if start <= offset < match.start():
+            return _span(text, start, match.start())
+        start = match.end()
+    if start <= offset < len(text):
+        return _span(text, start, len(text))
+    raise ValueError("Offset is in blank separation")
+
+
+def extract_unit(text, offset):
+    """Public API: complete row/fields or governing section, never a bare heading."""
+    if not 0 <= offset < len(text):
+        raise ValueError("Offset outside original source")
+    line = next(line for a, b, line in _lines(text) if a <= offset < b)
+    if line.strip().startswith("|"):
+        return _table(text, offset)
+    heads = heading_index(text)
+    candidates = [h for h in heads if h["start"] <= offset and 2 <= h["level"] <= 3]
+    if not candidates:
+        raise ValueError("Select operative content below a source section heading")
+    h = candidates[-1]
+    end = next((other["start"] for other in heads
+                if other["start"] > h["start"] and other["level"] <= h["level"]), len(text))
+    whole = _span(text, h["start"], end)
+    # Complete governing procedures include peer steps and nested details.
+    # Large nonprocedural catalog chapters can use a complete paragraph instead.
+    has_steps = bool(re.search(r"(?m)^\s*(?:\d+[.)]|[-+*])[ \t]+", whole["text"]))
+    if len(whole["text"]) <= 6000 or has_steps:
+        return {"kind": "subsection", "unit": whole, "heading": h}
+    paragraph = _paragraph(text, offset)
+    if paragraph["text"].startswith("#"):
+        raise ValueError("A heading alone is not operative evidence; select a more specific section")
+    return {"kind": "paragraph", "unit": paragraph, "heading": h}
+
+
+def validate_record(text, record):
+    """Validate the complete returned structure; optional unit metadata is separate."""
+    if record["kind"] == "table":
+        expected = extract_unit(text, record["row"]["start"])
+        for key in ["header", "row"]:
+            actual = {name: record[key][name] for name in ["start", "end", "text"]}
+            if actual != expected[key]:
+                raise ValueError("Table record differs from complete literal source")
+        actual_fields = [{name: field[name] for name in ["column_index", "column", "value"]}
+                         for field in record["fields"]]
+        if actual_fields != expected["fields"]:
+            raise ValueError("Literal field values differ from source columns")
+    else:
+        expected = extract_unit(text, record["unit"]["start"])
+        actual = {name: record["unit"][name] for name in ["start", "end", "text"]}
+        if actual != expected["unit"]:
+            raise ValueError("Prose/procedure record is incomplete")
+    return True
+END GENERIC PYTHON CODE

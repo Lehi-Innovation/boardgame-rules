@@ -1,0 +1,345 @@
+{
+  "review_id": "single-reader-grading-tools-review-02",
+  "verdict": "CHANGES_REQUESTED: two delivery-proof edge cases remain",
+  "adapter_core_verdict": "PASS retained; unchanged adapter and strict paired-result equivalence reconfirmed",
+  "original_four_findings": [
+    {
+      "id": "SRG-01",
+      "status": "resolved under the newly declared read-only interface",
+      "evidence": "All pre-boundary calls must match an exact fixed-script read_call. Alternate early file-write spellings, alternate stdout helpers, cached variables, exploratory tools and altered call bodies failed. A boundary is mandatory and late data do not fill initial delivery."
+    },
+    {
+      "id": "SRG-02",
+      "status": "resolved for complete approved inputs and separately supplied foreign packet objects",
+      "evidence": "Complete approved metadata/entries/source chunks stop recursive inspection, preserving legitimate nested packet-like original content. Additional foreign packet objects before or after the boundary were rejected. A truncation-recovery false positive remains separately identified below."
+    },
+    {
+      "id": "SRG-03",
+      "status": "resolved",
+      "evidence": "Frozen input/packet hashes, raw canonical hashes, role/block identities, summary identity, original role entry equality and complete disjoint IDs are bound before certification. Source/raw/packet/canonical-hash and opposite-role-entry tampering failed, including packet-only rehashing."
+    },
+    {
+      "id": "SRG-04",
+      "status": "resolved",
+      "evidence": "The fixed script and verifier use exact tagged45-physical-LF-line chunks with complete text, ranges and SHA-256. Changed quantities, wrong ranges, wrong hashes and partial chunks failed; Unicode, blanks, tabs and EOF without newline were preserved."
+    }
+  ],
+  "remaining_concrete_findings": [
+    {
+      "id": "SRG2-01",
+      "severity": "medium; incomplete-trace acceptance",
+      "component": "prove-single-reader-grading-delivery.py: session_delivery()/prove() output provenance",
+      "problem": "Visible output records are not correlated with recorded approved read calls. session_delivery drops output call IDs, and prove accepts any approved object found before the boundary even when no approved read calls appear in the trace.",
+      "synthetic_observation": "A synthetic trace containing all correct source/metadata/entry tool outputs followed by the declared write boundary, but with every read-call event removed, still returned complete_input_delivery_confirmed=true.",
+      "impact": "An incomplete/orphaned trace can certify use of the literal read interface without proving those read calls were recorded. No actual runtime trace was inspected; this is a generic fail-closed proof gap.",
+      "recommendation": "Retain output call IDs and bind each counted value to a recorded approved pre-boundary read call and its expected mode/index. Reject orphan/unmatched output events as insufficient proof rather than crediting them. Do not convert an insufficient trace into a content grade."
+    },
+    {
+      "id": "SRG2-02",
+      "severity": "medium; valid truncation-recovery false rejection",
+      "component": "prove-single-reader-grading-delivery.py: walk_visible() on truncated expected output",
+      "problem": "A truncated approved original entry is decoded into inner objects before its outer approved entry can be recognized. A legitimate nested packet-shaped example is consequently flagged as foreign input; extra_all retains that flag even after a complete approved retry delivers the original entry.",
+      "synthetic_observation": "A frozen original A entry contained a nested opposite-role packet-shaped example as an opaque original field. A full read correctly passed. The same allowed read truncated immediately after that nested object, followed by an exact complete rerun before the boundary, failed. Ordinary truncation recovery without such nested content passed.",
+      "impact": "The protocol explicitly permits recovering truncation by rerunning the same approved call, but a valid recovered session can be rejected for data already present inside the approved original entry.",
+      "recommendation": "Using call/mode/index provenance, recognize transport fragments consistent with the exact expected serialized read response. Do not reinterpret inner objects in such an incomplete original as independent foreign inputs; leave that read uncredited until the complete approved value arrives. Continue rejecting actual additional foreign objects outside expected response content."
+    }
+  ],
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-tools.py",
+      "sha256": "74cf5e82b263576a200ba9837dcbf90844310e35194d0e789be073e39f189ccb",
+      "bytes": 10011
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-single-reader-grading-delivery.py",
+      "sha256": "fb09a0d296aca178bdc4bbc4d61f163dfe32b8ce235a45d39e8d5b231eecd65b",
+      "bytes": 10474
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/block-grading-tools.py",
+      "sha256": "f9df66b622d264975923fb85877a3c559898d0b0db4f233dc49b6c3f0f05a9f6",
+      "bytes": 10926
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/prove-bounded-delivery.py",
+      "sha256": "5f95d57189dbf3c449d47ad375e35cbf32b83bfb2bd00bb876f27f40ab857318",
+      "bytes": 6038
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template.json",
+      "sha256": "65cf97d5036f321a10b040a63c6a492b04b8ff4f73bf6189feb1037c6bb68e63",
+      "bytes": 8476
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v12-complete-requested-scope/luna-iteration-05/single-reader-grading-dispatch-template-initial.json",
+      "sha256": "70f6bb52dc209a16e3e7c11ae7af215ac7aa084d258a4fdbca806ed50a643e7b",
+      "bytes": 5964
+    }
+  ],
+  "reviewer_owned_artifacts": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-02/harness.py",
+      "sha256": "fe09612c7e7b5e1a4966673b88b4daadca0a3a581b318a414afcb2333f24c0f0"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-02/synthetic-test-results.json",
+      "sha256": "6b8cfa7f744ac5f02bfa9c79b977fdaf707a10ec2d0259ba2317933ae059fb64"
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/single-reader-grading-review-01/harness.py",
+      "sha256": "f6106944d401dd4d27b47c3fe129a0089253bc36c7c32cfd693374bac7715d5e",
+      "purpose": "Previously authorized reviewer-owned in-memory utility definitions only"
+    }
+  ],
+  "synthetic_case_count": 42,
+  "checks": [
+    {
+      "area": "Fixed read interface and first possible mutation",
+      "verdict": "pass with output-provenance edge case noted",
+      "evidence": "The reviewed program only reads approved summary/packet inputs and prints one JSON value. Literal calls use per-invocation arguments rather than cached state. Unknown pre-boundary calls, alternate write/stdout spellings and missing/early boundaries fail. Orphan outputs can still be credited without recorded calls; SRG2-01."
+    },
+    {
+      "area": "Exact source delivery",
+      "verdict": "pass",
+      "evidence": "Independent execution of the fixed script in memory matched exact45-LF-line chunks, blank lines, tabs, Unicode text, ranges, hashes and EOF. Incorrect quantities or chunk metadata/content did not satisfy expected source delivery."
+    },
+    {
+      "area": "Full original metadata/entry and foreign-input accounting",
+      "verdict": "pass for complete objects; recovery false positive remains",
+      "evidence": "Full approved nested metadata/source/entry content is accepted; wrong/partial/missing metadata or original entries and separately added foreign objects fail. Nested legitimate content exposed by a truncated prefix is still misclassified after successful recovery; SRG2-02."
+    },
+    {
+      "area": "Frozen input binding",
+      "verdict": "pass",
+      "evidence": "All tested input/raw/packet/summary/canonical-hash/role/block tampering was rejected. Opposite-role raw fields cannot be introduced into an approved per-role packet, even after updating only the packet hash."
+    },
+    {
+      "area": "Semantic grading and scheduling",
+      "verdict": "pass; unchanged",
+      "evidence": "Five semantic grading/output paragraphs exactly match the preserved initial single-reader template. The adapter hash is unchanged, A can be handled with B absent, original collections/reports are preserved, and a53-entry synthetic complete pair again produced exactly the same result as original paired prepare/merge."
+    },
+    {
+      "area": "Post-boundary scope and audit limitations",
+      "verdict": "pass with explicit qualification",
+      "evidence": "The first possible mutation call and later calls are retained in the full proof. Arbitrary later code was not falsely claimed to be path/isolation-vetted; the proof states that a separate actual-path/isolation audit remains necessary. Extra foreign packet-shaped output after the boundary is still rejected."
+    }
+  ],
+  "synthetic_cases": [
+    {
+      "case": "semantic grading paragraphs unchanged; technical delivery interface is prospectively explicit",
+      "passed": true
+    },
+    {
+      "case": "fixed READ_SCRIPT is read-only; exact45 LF chunks preserve blanks, tabs, Unicode, EOF and safe literal paths",
+      "passed": true
+    },
+    {
+      "case": "normal exact frozen input delivery",
+      "delivery_complete": true,
+      "finding": null
+    },
+    {
+      "case": "alternate_early_write",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "alternate_stdout",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "cached_read",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "unknown_tool",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "wrong_read_call",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "changed_quantity",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "wrong_chunk_range",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "wrong_chunk_hash",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "partial_chunk",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "missing_metadata",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "wrong_metadata",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "missing_entry",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "partial_entry",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "other_role_only",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "extra_foreign_initial",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "post_foreign",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "missing_boundary",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "early_boundary",
+      "delivery_complete": false,
+      "finding": null
+    },
+    {
+      "case": "standard truncated entry can be recovered by its approved retry",
+      "delivery_complete": true,
+      "finding": null
+    },
+    {
+      "case": "later arbitrary calls are retained but not certified by initial-delivery scope",
+      "delivery_complete": true,
+      "finding": null
+    },
+    {
+      "case": "boundary and post-boundary calls retained with explicit later-audit limitation",
+      "passed": true
+    },
+    {
+      "case": "nested packet-shaped content within approved source/metadata/original entry is accepted",
+      "delivery_complete": true,
+      "finding": null
+    },
+    {
+      "case": "recovered truncation exposes nested approved original example and is falsely rejected",
+      "delivery_complete": false,
+      "finding": "SRG2-02"
+    },
+    {
+      "case": "orphan approved-value outputs certify without any recorded read calls",
+      "delivery_complete": true,
+      "finding": "SRG2-01"
+    },
+    {
+      "case": "raw input change rejected by frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "summary source change rejected by frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "manifest role change rejected by frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "canonical raw-entry hash change rejected by frozen_packets",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet cropping with stale packet hash rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet cropping still rejected when only packet hash updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet role change with stale packet hash rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet role change still rejected when only packet hash updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet block change with stale packet hash rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet block change still rejected when only packet hash updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet summary hash change with stale packet hash rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "packet summary hash change still rejected when only packet hash updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "opposite raw role added to packet entry with stale packet hash rejected",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "opposite raw role added to packet entry still rejected when only packet hash updated",
+      "rejected": true,
+      "exception": "AssertionError"
+    },
+    {
+      "case": "unchanged adapter preserves original role reports/collections and equals paired full merge",
+      "passed": true
+    }
+  ],
+  "review_limits": [
+    "Only allowed current/initial generic helper/template files, prior reviewer-owned utility code and this new reviewer-owned synthetic fixture were read.",
+    "No real bank, summary, question, key, scope, reader, grade, result, provenance, runtime, history, status or session file was accessed. Every such test path referred only to an in-memory filesystem.",
+    "All mutating adapter and imported base-module ROOT/Path globals were set to the same virtual /synthetic root before operations. The actual READ_SCRIPT body was independently executed with in-memory paths and stdout, and performed no virtual writes.",
+    "These are proof-format/origin and recovery findings, not evidence that any actual grader or score is wrong. No actual grader was dispatched or inspected.",
+    "The fixed interface intentionally disallows alternate stdout/helper commands before the boundary; rejecting those now enforces its declared contract rather than misidentifying them as writes.",
+    "Later arbitrary code and permitted-path isolation still require the separately declared audit. The initial proof does not certify those later operations.",
+    "No helper/template, original report/test artifact, asked fact, gameplay rule, key or semantic grading policy was edited. All real writes were in the authorized new review02 folder or the two requested root review outputs."
+  ],
+  "required_change_scope": "Bind counted outputs to approved call provenance and make truncation recovery context-aware for the expected complete original object, while preserving foreign-input rejection and the separation between technical proof and content grades."
+}

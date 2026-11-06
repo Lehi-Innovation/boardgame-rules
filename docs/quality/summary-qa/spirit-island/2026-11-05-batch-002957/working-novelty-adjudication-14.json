@@ -1,0 +1,1544 @@
+{
+  "task": "Independent source-only working novelty adjudication14",
+  "input_packet": {
+    "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/working-novelty14-input.json",
+    "sha256": "ed119d9de1a40b91ac48ed9cf957105377cc5ad8acacd3160a14d7f81e0b64a6",
+    "character_length": 33890
+  },
+  "read_ledger_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/working-novelty-adjudication-14-read-ledger.json",
+  "complete_finding_set": {
+    "coverage_proposals": 1,
+    "scope_findings": 1,
+    "source_transcription_findings": 2,
+    "total_findings": 4
+  },
+  "decision_counts": {
+    "ACCEPT": 3,
+    "REFINE": 1,
+    "REJECT": 0
+  },
+  "coverage_decision_counts": {
+    "ACCEPT": 0,
+    "REFINE": 1,
+    "REJECT": 0
+  },
+  "coverage_decisions": [
+    {
+      "finding_id": "G11-01",
+      "category": "coverage_proposal",
+      "verdict": "REFINE",
+      "original_proposal": {
+        "gap_id": "G11-01",
+        "topic": "An explicit grant of Elements is repeated, unlike printed margin Elements",
+        "proposed_question": "A legally used Elemental Boon grants Elements through its effect text. It is then legally Repeated using Powerstorm. Does its explicit Element-grant instruction happen again, and are the card’s printed margin Elements gained again?",
+        "predetermined_answer": "The explicit Element-grant instruction happens again, so its benefit can be received twice. Repeating does not grant the card’s printed margin Elements again; those were gained when the card was played.",
+        "minimum_asked_facts": [
+          "Repeat resolves the explicit Element-grant effect again.",
+          "Printed margin Elements are not gained again."
+        ],
+        "primary_sources": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+            "file_sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+            "character_range": [
+              108509,
+              109113
+            ],
+            "passage_sha256": "c7836a4fe0083cfe5d5a077e9a3bc27702c53234eef2ad5889c8b5ba02703428",
+            "label": "Official FAQ .9v5ka9b: explicit Element-grant text repeats, printed card Elements do not"
+          },
+          {
+            "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+            "file_sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+            "character_range": [
+              59784,
+              60294
+            ],
+            "passage_sha256": "fc79c6a441290d14a41292b72fb138414151e1f7f00f5e8eec448e311bf76a8b",
+            "label": "Original CORE p22 solo rule expressly names Elemental Boon as an ordinary core Power"
+          },
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+            "file_sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+            "visual_region_xyxy": [
+              30,
+              245,
+              285,
+              400
+            ],
+            "transcription": "Once this turn, target may Repeat a Power Card by paying its cost again.",
+            "role": "Actual original-core Repeat producer; full native face/no expansion emblem inspected."
+          }
+        ],
+        "actual_prompt_overlap_assessment": [
+          {
+            "question_id": "Q40",
+            "literal_ask": "do you gain its printed Elements again?",
+            "assessment": "Only margin Elements are asked. The fixed key adds the explicit-grant exception, but the asked map expressly and correctly classifies that sentence as key_context_not_required."
+          },
+          {
+            "question_ids": [
+              "Q41",
+              "Q90",
+              "Q107",
+              "Q168"
+            ],
+            "assessment": "These ask retained modifiers/current thresholds, flexible-Element choice timing, Power-use/card-play counting, or already-owned Element eligibility. None requests the positive repeated-text grant branch."
+          }
+        ],
+        "why_novel": "The official FAQ expressly distinguishes two Element-acquisition mechanisms within the same Repeat ruling. All existing asked facts permit a mistaken blanket rule that repeating can never grant Elements. The new ask isolates the source-defined positive exception, rather than changing a number, a printed payload or adding an arbitrary interaction. Its margin clause is disclosed regression overlap, not second novelty.",
+        "scope_assessment": {
+          "status": "verified_original_core",
+          "producer_proof": "Original CORE p22 identifies Elemental Boon in ordinary solo play; the applicable official FAQ explicitly names it as an Element-grant card whose text can be repeated. The fully viewed original-core Powerstorm supplies Repeat permission. No expansion-named or invented modifier is used.",
+          "current_base_novelty_credit": 1
+        }
+      },
+      "source_correct_answer": "Yes. Repeating Elemental Boon resolves its explicit Element-grant instruction again.",
+      "literal_surviving_pretest_question": "A legally used Elemental Boon grants Elements through its effect text. It is then legally Repeated using Powerstorm. Does the Repeat grant the Elements specified by that effect text again?",
+      "minimum_new_required_facts": [
+        "The Repeat resolves Elemental Boon’s explicit Element-grant effect again."
+      ],
+      "minimum_new_required_fact_count": 1,
+      "minimal_asked_only_map": {
+        "requested_clauses": [
+          {
+            "clause_id": "G11-01.1",
+            "actual_requested_clause": "Does the repeated explicit effect-text Element grant happen again?",
+            "required_facts": [
+              "The Repeat resolves Elemental Boon’s explicit Element-grant effect again."
+            ]
+          }
+        ],
+        "key_context_not_required": [
+          {
+            "fact": "Repeating does not grant printed margin Elements again.",
+            "why_not_requested": "Already actually asked in Q40 and removed from this new stem; retain its existing regression but award no second novelty credit."
+          },
+          {
+            "fact": "Powerstorm repayment, printed costs, choice timing, target restrictions, number/types of Elements and threshold numbers.",
+            "why_not_requested": "Legality/producer context or other existing asks; none is a new recital required by this question."
+          }
+        ]
+      },
+      "refinement": "Remove the already-asked printed-margin clause. Keep only the positive repeated text-grant question, with one required fact.",
+      "source_defined_distinct_procedure": "Distinguish Elements obtained from putting a card in play from Elements obtained by resolving an instruction. The official FAQ expressly identifies a positive effect-text grant despite the ordinary no-Elements-on-Repeat statement.",
+      "why_not_just_repeated_payload": "This is the Element-specific boundary of the existing no-Elements rule, not another amount of a generic benefit. Q42’s Energy example does not require applying the positive Element-text branch; Q40 explicitly omits that branch from its asks. The answer is derivable from correct general rules, but the existing required facts do not test this source-defined qualification. No numerical payload, card combination outcome or new repeat count earns credit.",
+      "closest_actual_ask_comparisons": [
+        {
+          "id": "Q40",
+          "literal_question": "When a Fast Gift of Strength or Powerstorm grants a Repeat, must the card be chosen immediately? Can the chosen card be Slow, can it be an innate, and do you gain its printed Elements again?",
+          "all_asked_facts": [
+            "Choose a card for the granted Repeat when actually using the option, not necessarily when granted.",
+            "A Slow card can be chosen and repeated in Slow.",
+            "Gift of Strength/Powerstorm say Power Card and cannot repeat an Innate.",
+            "Repeating does not grant printed card Elements again."
+          ],
+          "assessment": "Actually asks printed card Elements only. The current full key mentions explicit grants, but its asked map expressly places that sentence in key_context_not_required. It supplies zero existing positive text-grant coverage and full existing margin regression coverage.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q40",
+              "question": "When a Fast Gift of Strength or Powerstorm grants a Repeat, must the card be chosen immediately? Can the chosen card be Slow, can it be an innate, and do you gain its printed Elements again?"
+            },
+            "key": {
+              "id": "Q40",
+              "answer": "Choose eligible Power Card when actually repeating, not necessarily at grant time. Slow cards can be repeated in Slow; these two effects specify cards and cannot repeat Innates. Printed card Elements are not granted again; explicit Elements in the repeated text are granted again.",
+              "source_refs": [
+                "CORE p.19",
+                "FAQ Core: timing-of-choosing-powers-for-once-this-turn-repeats; .7w4g8op; .3y28aex; .9v5ka9b"
+              ]
+            },
+            "asked_map": {
+              "id": "Q40",
+              "question": "When a Fast Gift of Strength or Powerstorm grants a Repeat, must the card be chosen immediately? Can the chosen card be Slow, can it be an innate, and do you gain its printed Elements again?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q40.request",
+                  "actual_requested_clause": "When a Fast Gift of Strength or Powerstorm grants a Repeat, must the card be chosen immediately? Can the chosen card be Slow, can it be an innate, and do you gain its printed Elements again?",
+                  "required_facts": [
+                    "Choose a card for the granted Repeat when actually using the option, not necessarily when granted.",
+                    "A Slow card can be chosen and repeated in Slow.",
+                    "Gift of Strength/Powerstorm say Power Card and cannot repeat an Innate.",
+                    "Repeating does not grant printed card Elements again."
+                  ]
+                }
+              ],
+              "key_context_not_required": [
+                {
+                  "fact": "Explicit Elements in repeated text are granted again.",
+                  "why_not_requested": "It asks printed Elements, not a repeated explicit grant of Elements."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Q42",
+          "literal_question": "What happens when Powerstorm itself is Repeated, and can its threshold spend all three Repeat permissions on the same Power Card?",
+          "all_asked_facts": [
+            "Ignore Repeat instructions when repeating Powerstorm; it grants no further Repeat permissions.",
+            "Its non-Repeat Energy gain still resolves.",
+            "Its threshold permits up to three different cards, not three repetitions of the same card."
+          ],
+          "assessment": "Actually requires Powerstorm’s non-Repeat Energy gain on Repeat. This tests ignoring Repeat-grant instructions while retaining an ordinary Energy effect. It never resolves the Element-specific boundary against the otherwise stated no-Elements-on-Repeat rule. It is the strongest generic-effect overlap, but it does not require distinguishing margin acquisition from explicit Element acquisition.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q42",
+              "question": "What happens when Powerstorm itself is Repeated, and can its threshold spend all three Repeat permissions on the same Power Card?"
+            },
+            "key": {
+              "id": "Q42",
+              "answer": "Repeat instructions on a repeated Power are ignored, so repeating Powerstorm grants no Repeat permissions; its non-Repeat Energy gain still happens. Its threshold allows up to three different Power Cards, not the same one three times.",
+              "source_refs": [
+                "CORE p.19",
+                "FAQ Core: repeating-power-cards-that-grant-repeats; .7w4g8q9"
+              ]
+            },
+            "asked_map": {
+              "id": "Q42",
+              "question": "What happens when Powerstorm itself is Repeated, and can its threshold spend all three Repeat permissions on the same Power Card?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q42.request",
+                  "actual_requested_clause": "What happens when Powerstorm itself is Repeated, and can its threshold spend all three Repeat permissions on the same Power Card?",
+                  "required_facts": [
+                    "Ignore Repeat instructions when repeating Powerstorm; it grants no further Repeat permissions.",
+                    "Its non-Repeat Energy gain still resolves.",
+                    "Its threshold permits up to three different cards, not three repetitions of the same card."
+                  ]
+                }
+              ],
+              "key_context_not_required": []
+            }
+          }
+        },
+        {
+          "id": "Q41",
+          "literal_question": "If a Power’s Range was increased and it was made Fast, what happens on Repeat? If Elements enabling a non-Range threshold have been lost, does the Repeat automatically retain that threshold?",
+          "all_asked_facts": [
+            "Range and Speed modifications carry over to Repeat, retaining the boosted Range and Fast Speed.",
+            "Other thresholds check current Elements and may no longer apply after Elements are lost."
+          ],
+          "assessment": "Asks retained Speed/Range and current Elements for thresholds, not whether a repeated text instruction grants new Elements.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q41",
+              "question": "If a Power’s Range was increased and it was made Fast, what happens on Repeat? If Elements enabling a non-Range threshold have been lost, does the Repeat automatically retain that threshold?"
+            },
+            "key": {
+              "id": "Q41",
+              "answer": "Range/speed modifications carry over, so Repeat retains extended Range and Fast speed. Thresholds otherwise check current Elements; losing them may mean a previously met threshold no longer applies.",
+              "source_refs": [
+                "CORE p.19",
+                "FAQ Core: .9v5kavs; Repeating-internal-range-boosts"
+              ]
+            },
+            "asked_map": {
+              "id": "Q41",
+              "question": "If a Power’s Range was increased and it was made Fast, what happens on Repeat? If Elements enabling a non-Range threshold have been lost, does the Repeat automatically retain that threshold?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q41.request",
+                  "actual_requested_clause": "If a Power’s Range was increased and it was made Fast, what happens on Repeat? If Elements enabling a non-Range threshold have been lost, does the Repeat automatically retain that threshold?",
+                  "required_facts": [
+                    "Range and Speed modifications carry over to Repeat, retaining the boosted Range and Fast Speed.",
+                    "Other thresholds check current Elements and may no longer apply after Elements are lost."
+                  ]
+                }
+              ],
+              "key_context_not_required": []
+            }
+          }
+        },
+        {
+          "id": "Q90",
+          "literal_question": "When an action directly grants a flexible Any Element, may its choice be delayed like an Any space on a Presence track?",
+          "all_asked_facts": [
+            "Choose a directly granted flexible Any Element immediately when gained.",
+            "A passive track Any may be left unchosen until later in the turn."
+          ],
+          "assessment": "Asks when directly granted flexible Elements are chosen. It presupposes a grant, rather than asking whether Repeat supplies another grant.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q90",
+              "question": "When an action directly grants a flexible Any Element, may its choice be delayed like an Any space on a Presence track?"
+            },
+            "key": {
+              "id": "Q90",
+              "answer": "No. Directly gained flexible Elements must be chosen immediately when gained; passive track Any can wait until later in turn, then is fixed for that turn.",
+              "source_refs": [
+                "FAQ Core: choosing-flexible-elements; .7w4g8p4"
+              ]
+            },
+            "asked_map": {
+              "id": "Q90",
+              "question": "When an action directly grants a flexible Any Element, may its choice be delayed like an Any space on a Presence track?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q90.request",
+                  "actual_requested_clause": "When an action directly grants a flexible Any Element, may its choice be delayed like an Any space on a Presence track?",
+                  "required_facts": [
+                    "Choose a directly granted flexible Any Element immediately when gained.",
+                    "A passive track Any may be left unchosen until later in the turn."
+                  ]
+                }
+              ],
+              "key_context_not_required": [
+                {
+                  "fact": "Once a passive track Any has been chosen, it is fixed for the remainder of that turn.",
+                  "why_not_requested": "The contrast asks whether the directly gained Element choice may be delayed, like a track Any. It does not ask whether an already chosen track Element can be changed."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Q107",
+          "literal_question": "A Spirit plays two Power Cards and later Repeats one. For an effect counting Power Cards played, such as Boon of Vigor, is the count two or three? Does the Repeat consume another ordinary Card Play, and does it nevertheless count as a new Power use?",
+          "all_asked_facts": [
+            "Count two cards played, not three; Repeat does not play another card.",
+            "Repeat consumes no extra ordinary Card Play.",
+            "It nevertheless counts as a new Power use."
+          ],
+          "assessment": "Asks whether Repeat counts as play, consumes an ordinary Card Play, and counts as a new use. It does not ask the positive Element-grant branch.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q107",
+              "question": "A Spirit plays two Power Cards and later Repeats one. For an effect counting Power Cards played, such as Boon of Vigor, is the count two or three? Does the Repeat consume another ordinary Card Play, and does it nevertheless count as a new Power use?"
+            },
+            "key": {
+              "id": "Q107",
+              "answer": "Two cards played: a Repeat does not play another Power Card and adds no card to that count. It nevertheless counts as a new Power use. It consumes no additional ordinary Card Play; any payment required by a Repeat permission is separate.",
+              "source_refs": [
+                "CORE p.19 Repeat",
+                "FAQ Core: .9v5kc30"
+              ]
+            },
+            "asked_map": {
+              "id": "Q107",
+              "question": "A Spirit plays two Power Cards and later Repeats one. For an effect counting Power Cards played, such as Boon of Vigor, is the count two or three? Does the Repeat consume another ordinary Card Play, and does it nevertheless count as a new Power use?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q107.request",
+                  "actual_requested_clause": "A Spirit plays two Power Cards and later Repeats one. For an effect counting Power Cards played, such as Boon of Vigor, is the count two or three? Does the Repeat consume another ordinary Card Play, and does it nevertheless count as a new Power use?",
+                  "required_facts": [
+                    "Count two cards played, not three; Repeat does not play another card.",
+                    "Repeat consumes no extra ordinary Card Play.",
+                    "It nevertheless counts as a new Power use."
+                  ]
+                }
+              ],
+              "key_context_not_required": [
+                {
+                  "fact": "Any Repeat payment is separate.",
+                  "why_not_requested": "It asks ordinary Card Play consumption and use/card-play counting, not the Repeat permission cost."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Q168",
+          "literal_question": "When Spirits May Yet Dream grants its target an Element, may that Spirit choose an Element it currently has none of, or must the chosen Element already be present?",
+          "all_asked_facts": [
+            "The granted Element must be a type the target already has at least one of; an absent Element cannot be chosen."
+          ],
+          "assessment": "Asks which Element is eligible for Spirits May Yet Dream. An Innate granting a restricted Element is not a Power Card repeated by Powerstorm, and no repeated text-grant permission is asked.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q168",
+              "question": "When Spirits May Yet Dream grants its target an Element, may that Spirit choose an Element it currently has none of, or must the chosen Element already be present?"
+            },
+            "key": {
+              "id": "Q168",
+              "answer": "The target must already have at least one of the chosen Element. It cannot choose an Element it currently lacks.",
+              "source_refs": [
+                "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/bringer-front.png | native original-core panel | SHA256 3e25cbd685c9988899df1c4db9369dd6e576a8e279a1de71b94d746f10660e89 | primary native printed face"
+              ]
+            },
+            "asked_map": {
+              "id": "Q168",
+              "question": "When Spirits May Yet Dream grants its target an Element, may that Spirit choose an Element it currently has none of, or must the chosen Element already be present?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q168.1",
+                  "actual_requested_clause": "The granted Element must be a type the target already has at least one of; an absent Element cannot be chosen.",
+                  "required_facts": [
+                    "The granted Element must be a type the target already has at least one of; an absent Element cannot be chosen."
+                  ]
+                }
+              ],
+              "key_context_not_required": [
+                {
+                  "fact": "The Element grant is at the printed3-Moon level. Bringer Card Plays track is2,2,2,3,3,Any.",
+                  "why_not_requested": "Threshold/track numerical payloads are not asked or novelty. Raw adjudication mislabeled that Card Plays track as Energy; exact primary-based annotation correction is preserved separately."
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "Q04",
+          "literal_question": "When are Fast and Slow Power Cards paid for and their Elements gained? Can promised Fast-phase Energy pay for the Spirit-phase cards, and do unspent Energy or unused Card Plays carry over?",
+          "all_asked_facts": [
+            "Play and pay for both Fast and Slow cards during Spirit Phase.",
+            "Their Elements become available immediately on play/payment.",
+            "Fast-phase Energy arrives too late to pay these normal Spirit-phase costs.",
+            "Energy carries over; unused Card Plays do not."
+          ],
+          "assessment": "Asks normal card-play payment and printed Element timing; no positive repeated effect-text grant.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q26",
+          "literal_question": "When a track Element is revealed after Growth, when does it become usable? When may an Any track Element be chosen and changed, and what if an in-play card is Forgotten?",
+          "all_asked_facts": [
+            "A revealed track Element is usable immediately and remains available while uncovered.",
+            "Choose a passive Any at any time during the turn; once chosen it is fixed until next turn.",
+            "Forgetting an in-play card removes that card's Elements immediately."
+          ],
+          "assessment": "Asks track Element timing/Any choice and in-play Forget, not the repeated text-grant branch.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q27",
+          "literal_question": "A Power’s earlier instruction uncovers an Element needed for a later threshold. Can that later threshold apply? What if Elements are lost instead, and can earlier resolved effects be revised?",
+          "all_asked_facts": [
+            "An Element gained earlier in a Power can satisfy a later threshold.",
+            "Losing Elements can prevent a later threshold.",
+            "Do not revise already resolved effects retroactively."
+          ],
+          "assessment": "Asks Elements gained/lost during one Power and later thresholds; does not ask whether a Repeat produces an explicit Element grant.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q15",
+          "literal_question": "Explain how Elements apply to multiple thresholds and multiple Powers. May an innate be used twice with twice the Elements, may its levels use different lands, and how does an “Instead” level work?",
+          "all_asked_facts": [
+            "Elements are checked rather than spent and can meet multiple thresholds and Powers.",
+            "Extra Elements do not give another ordinary Innate use.",
+            "An Innate's levels belong to one Power and use one target.",
+            "An Instead level replaces previous levels' effects rather than adding to them."
+          ],
+          "assessment": "Asks thresholds and ordinary Innate use, not the two mechanisms of Element acquisition on a Repeat.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q30",
+          "literal_question": "A card adds a Town in Slow and says Invaders skip Build this turn. What remains next turn? At Time Passes where do played cards go, what happens to damaged survivors and reminder markers, and do track Elements vanish?",
+          "all_asked_facts": [
+            "The added Town stays next turn as a board change.",
+            "The turn's Build-skip effect expires at Time Passes.",
+            "Discard played cards to personal discard and clear card Elements.",
+            "Heal survivor Damage and remove temporary effects/reminder markers.",
+            "Uncovered track Elements remain."
+          ],
+          "assessment": "Asks cleanup and persistence; no repeated Element-grant instruction.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q38",
+          "literal_question": "An effect explicitly allows playing a card in Fast after the Spirit used all normal Card Plays. Is this legal and when are its Elements/effects available?",
+          "all_asked_facts": [
+            "An explicit effect-granted Fast-phase play is additional to ordinary Card Plays and is legal after they are exhausted.",
+            "Gain its Elements immediately when played.",
+            "Resolve it at its Speed in the proper phase outside another action unless explicitly told otherwise."
+          ],
+          "assessment": "Asks explicit Fast card play after ordinary Card Plays; printed play Elements are a different mechanism from a Repeat text grant.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q106",
+          "literal_question": "A Power's own threshold gives it +1 Range. If the threshold is met on both the original use and its Repeat, does the Repeat get +2 Range? If that threshold is no longer met on the Repeat, is the first +1 retained?",
+          "all_asked_facts": [
+            "Do not apply the same internal +1 Range threshold again on Repeat; it retains +1 rather than becoming +2.",
+            "The original Range modification remains even if the threshold's Elements are no longer met."
+          ],
+          "assessment": "Asks the distinct retention/non-stacking rule for internal Range changes on Repeat, not a grant of Elements.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q121",
+          "literal_question": "A Spirit plays and pays for a Power Card, then foregoes its entire text because it has no legal target or the Spirit chooses not to use it. With no other effect removing the card, do its printed Elements remain available for Innates, is its Energy refunded, and does the card leave play immediately or during Time Passes?",
+          "all_asked_facts": [
+            "The card's printed Elements remain available while it stays in play despite foregoing all text.",
+            "Its Energy is not refunded.",
+            "Foregoing its text does not make it immediately leave play.",
+            "Normally discard it at Time Passes and lose its Elements then."
+          ],
+          "assessment": "Asks printed Elements persisting despite foregoing text; it does not resolve text-granted Elements on Repeat.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q126",
+          "literal_question": "Spirit A uses Powerstorm on Bringer of Dreams and Nightmares. Afterwards Bringer uses Call on Midnight’s Dream in a legal land with Dahan, gains a Fast Major Power, Forgets Call on Midnight’s Dream for the Major gain, and uses its conditional permission to play the new Major immediately. Bringer then uses that new Major normally. Assume sufficient Energy, valid targets, and no other restrictions. May Bringer spend the previously granted Powerstorm Repeat on this new Major even though it was not in play when Powerstorm resolved?",
+          "all_asked_facts": [
+            "Yes: Powerstorm's once-this-turn Repeat permission belongs to the Spirit and is not a snapshot of cards in play at grant time.",
+            "The newly played Major is eligible even though it entered play after Powerstorm resolved."
+          ],
+          "assessment": "Asks eligibility of a newly played Major for a previously granted Repeat; not repeated Element acquisition.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q154",
+          "literal_question": "If Powerstorm grants a Spirit a Repeat of a Power Card that it already paid to play, must that Spirit pay the card’s Energy cost again to use that Repeat?",
+          "all_asked_facts": [
+            "Yes; to use that Powerstorm Repeat, pay the repeated Power Card's Energy cost again, in addition to the original play payment."
+          ],
+          "assessment": "Asks payment for Powerstorm’s Repeat, not the repeated effect. Payment is a producer condition here, not new credit.",
+          "complete_current_entry": null
+        },
+        {
+          "id": "Q164",
+          "literal_question": "A Spirit with no Energy remaining receives Gift of Strength and has already used an eligible cost-1 Power Card. May it use that card's Repeat without paying its cost again, or does Gift require the same repayment as Powerstorm?",
+          "all_asked_facts": [
+            "The eligible Gift of Strength Repeat requires no additional Energy payment and may be used with zero Energy remaining."
+          ],
+          "assessment": "Asks Gift’s Repeat payment boundary. No Element grant is requested.",
+          "complete_current_entry": {
+            "question": {
+              "id": "Q164",
+              "question": "A Spirit with no Energy remaining receives Gift of Strength and has already used an eligible cost-1 Power Card. May it use that card's Repeat without paying its cost again, or does Gift require the same repayment as Powerstorm?"
+            },
+            "key": {
+              "id": "Q164",
+              "answer": "Yes. The eligible Gift of Strength Repeat can be used with no Energy remaining. Its printed cost limit is an eligibility limit, not a payment instruction. Powerstorm’s separate explicit repayment condition does not apply to Gift.",
+              "source_refs": [
+                "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/earth-front.png | native original-core panel | SHA256 024193dbfd6c6353b6e2d8dd2d0cd43b268eb323f3bd77f8a52d5ad438719a53 | primary native printed face",
+                "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt | previous complete immutable text delivery | SHA256 6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807 | chars [52877, 54145]",
+                "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg | Previously fully viewed original-core card; immutable hash reconfirmed | SHA256 ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf | primary native printed face"
+              ]
+            },
+            "asked_map": {
+              "id": "Q164",
+              "question": "A Spirit with no Energy remaining receives Gift of Strength and has already used an eligible cost-1 Power Card. May it use that card's Repeat without paying its cost again, or does Gift require the same repayment as Powerstorm?",
+              "requested_clauses": [
+                {
+                  "clause_id": "Q164.1",
+                  "actual_requested_clause": "The eligible Gift of Strength Repeat requires no additional Energy payment and may be used with zero Energy remaining.",
+                  "required_facts": [
+                    "The eligible Gift of Strength Repeat requires no additional Energy payment and may be used with zero Energy remaining."
+                  ]
+                }
+              ],
+              "key_context_not_required": [
+                {
+                  "fact": "Powerstorm separately requires repayment.",
+                  "why_not_requested": "Comparison context already directly asked by Q154; no separate restatement or new novelty credit."
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "all170_coverage_comparison": {
+        "input_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/novelty14-all170-actual-asks.jsonl",
+        "sha256": "306177be61f49eb8aaa921d77511aafc577a95a5e89886d0afea795d7602f2e7",
+        "all170_literal_prompts_and_all505_required_fact_strings_completely_read": true,
+        "all_IDs_compared": [
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10",
+          "Q11",
+          "Q12",
+          "Q13",
+          "Q14",
+          "Q15",
+          "Q16",
+          "Q17",
+          "Q18",
+          "Q19",
+          "Q20",
+          "Q21",
+          "Q22",
+          "Q23",
+          "Q24",
+          "Q25",
+          "Q26",
+          "Q27",
+          "Q28",
+          "Q29",
+          "Q30",
+          "Q31",
+          "Q32",
+          "Q33",
+          "Q34",
+          "Q35",
+          "Q36",
+          "Q37",
+          "Q38",
+          "Q39",
+          "Q40",
+          "Q41",
+          "Q42",
+          "Q43",
+          "Q44",
+          "Q45",
+          "Q46",
+          "Q47",
+          "Q48",
+          "Q49",
+          "Q50",
+          "Q51",
+          "Q52",
+          "Q53",
+          "Q54",
+          "Q55",
+          "Q56",
+          "Q57",
+          "Q58",
+          "Q59",
+          "Q60",
+          "Q61",
+          "Q62",
+          "Q63",
+          "Q64",
+          "Q65",
+          "Q66",
+          "Q67",
+          "Q68",
+          "Q69",
+          "Q70",
+          "Q71",
+          "Q72",
+          "Q73",
+          "Q74",
+          "Q75",
+          "Q76",
+          "Q77",
+          "Q78",
+          "Q79",
+          "Q80",
+          "Q81",
+          "Q82",
+          "Q83",
+          "Q84",
+          "Q85",
+          "Q86",
+          "Q87",
+          "Q88",
+          "Q89",
+          "Q90",
+          "Q91",
+          "Q92",
+          "Q93",
+          "Q94",
+          "Q95",
+          "Q96",
+          "Q97",
+          "Q98",
+          "Q99",
+          "Q100",
+          "Q101",
+          "Q102",
+          "Q103",
+          "Q104",
+          "Q105",
+          "Q106",
+          "Q107",
+          "Q108",
+          "Q109",
+          "Q110",
+          "Q111",
+          "Q112",
+          "Q113",
+          "Q114",
+          "Q115",
+          "Q116",
+          "Q117",
+          "Q118",
+          "Q119",
+          "Q120",
+          "Q121",
+          "Q122",
+          "Q123",
+          "Q124",
+          "Q125",
+          "Q126",
+          "Q127",
+          "Q128",
+          "Q129",
+          "Q130",
+          "Q131",
+          "Q132",
+          "Q133",
+          "Q134",
+          "Q135",
+          "Q136",
+          "Q137",
+          "Q138",
+          "Q139",
+          "Q140",
+          "Q141",
+          "Q142",
+          "Q143",
+          "Q144",
+          "Q145",
+          "Q146",
+          "Q147",
+          "Q148",
+          "Q149",
+          "Q150",
+          "Q151",
+          "Q152",
+          "Q153",
+          "Q154",
+          "Q155",
+          "Q156",
+          "Q157",
+          "Q158",
+          "Q159",
+          "Q160",
+          "Q161",
+          "Q162",
+          "Q163",
+          "Q164",
+          "Q165",
+          "Q166",
+          "Q167",
+          "Q168",
+          "Q169",
+          "Q170"
+        ],
+        "no_existing_required_fact_requests_positive_repeat_text_grant": true,
+        "unasked_key_context_not_credited": true
+      },
+      "source_backed_original_core_producer": {
+        "components": [
+          "Elemental Boon expressly named in original CORE p22 and named as explicit Element grant in official FAQ.9v5ka9b",
+          "Native original-core Powerstorm, explicitly granting Repeat of a Power Card"
+        ],
+        "sequence": [
+          "Use Elemental Boon legally and resolve its grant.",
+          "Powerstorm supplies a legal once-this-turn Repeat permission; obey its printed repayment instruction.",
+          "Use that permission legally on Elemental Boon. Its effect text, including the explicit Element grant, resolves again."
+        ],
+        "ordinary_legal_givens": "The legal use, resources, phase and targets are stipulated ordinary states. No extra modifier, unavailable trigger or expansion effect is granted.",
+        "membership_proof": "Original CORE p22 is affirmative original-base evidence for Elemental Boon, not a broad Core FAQ tag. Native Powerstorm and own previously viewed publisher expansion-identification legend bind the actual original-core Repeat producer.",
+        "source_refs": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+            "original_byte_sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+            "character_range": [
+              108509,
+              109113
+            ],
+            "passage_utf8_sha256": "c7836a4fe0083cfe5d5a077e9a3bc27702c53234eef2ad5889c8b5ba02703428",
+            "locator": "Complete official FAQ.9v5ka9b: printed versus explicit effect-text Elements on Repeat",
+            "complete_operative_passage": "If you Repeat a Power card with \"Powerstorm\" or \"Gift of Strength,\" do you get double the elements?\n(.9v5ka9b)\nNo, you only get the elements once, when you play the card\n(p. 19, under Repeat)\n.\nIf you Repeat a Power card that explicitly grants elements\n(like \"Elemental Boon\")\nthen you do get the benefit twice.\n(\nDiscussion elsewhere\n(https://boardgamegeek.com/thread/1838259/powerstorm-repeated-elements)\n)\nTags:\nRepeat\n(Repeat)\n,\nElements\n(Elements)\n,\nPowerstorm\n(Powerstorm)\n,\nGift of Strength (Vital Strength of the Earth)\n(Gift+of+Strength+%28Vital+Strength+of+the+Earth%29)\n,\n7 more...\n(.9v5ka9b)\n"
+          },
+          {
+            "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+            "original_byte_sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+            "character_range": [
+              59784,
+              60294
+            ],
+            "passage_utf8_sha256": "fc79c6a441290d14a41292b72fb138414151e1f7f00f5e8eec448e311bf76a8b",
+            "locator": "Original CORE p22 complete Solo Player Mode passage; expressly names Elemental Boon",
+            "complete_operative_passage": "--- Page 22 ---\nGAMEPLAY OPTIONS\nSOLO PLAYER MODE\nSolo games work much like normal games, but with a single board as the whole Island. The only \ndifference is that you can target yourself with Powers that specifically target “Another Spirit”, though \nyou do not gain extra benefits from Powers that are better when used on another Spirit, like Gift of \nConstancy or Elemental Boon. Also, the luck of the draw is high, and you have no fellow Spirits to \ncompensate for your Spirit’s weaknesses and limitations.\n"
+          },
+          {
+            "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+            "original_byte_sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+            "character_range": [
+              52877,
+              53877
+            ],
+            "passage_utf8_sha256": "d708ae1af43fabd6195bc31dc7f29bd670d06f9bba81114eb731bf31fcf3fd31",
+            "locator": "CORE p19 complete Repeat rules",
+            "complete_operative_passage": "REPEAT\nRepeating a Power lets you activate its effect again. It does not give you Elements again (you gain \nElements for putting a Power Card in play, not for using its effect) and Repeats cannot be chained \n(ignore any “Repeat” effects on a Repeated Power). The Repeated Power is Slow or Fast, whichever \nthe original Power is. Here are some additional fine points:\n•\t Changes to a Power carry over to the Repeat use. (For instance, if a Power is made Fast or   \n given additional Range, that also applies to the Repeat.)\n•\t You may make different choices when Repeating a Power.\n•\t If a Repeat specifies where to use it, obey those instructions (instead of the usual Range and  \n Target restrictions). Otherwise, you can choose any valid target by the usual rules, including the  \n same target as its first use.\n•\t Repeating a Power Card doesn’t count as playing another Power Card. (For, e.g., Boon of  \n \n Vigor.) It does count as using a new Power. (For, e.g., Bringer of Dream and Nightmares.)\n"
+          },
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+            "original_byte_sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+            "dimensions": [
+              300,
+              420
+            ],
+            "full_native_view": true,
+            "viewed_region_xyxy": [
+              0,
+              0,
+              300,
+              420
+            ],
+            "relevant_region_xyxy": [
+              0,
+              0,
+              75,
+              75
+            ],
+            "complete_native_transcription": "Cost3; Fast; target ANY Spirit. Target Spirit gains3Energy. Once this turn, target may Repeat a Power Card by paying its cost again. Threshold2Sun2Fire3Air: Target may Repeat up to2more Power Cards by paying their costs. Printed Elements: Sun, Fire, Air.",
+            "transcription_sha256": "7730629f5d5757198252701badecd0c5ba16ca28f56d6db61d5edbfb74b0ef00",
+            "printed_icon_normalization": true
+          }
+        ]
+      },
+      "current_base_novelty_credit": 1,
+      "old_margin_clause_new_credit": 0
+    }
+  ],
+  "scope_decisions": [
+    {
+      "finding_id": "S11-01",
+      "category": "scope_credit",
+      "verdict": "ACCEPT",
+      "original_finding": {
+        "finding_id": "S11-01",
+        "question_ids": [
+          "Q36"
+        ],
+        "kind": "unsupported_current_base_credit",
+        "locations": [
+          "expanded-v19/core-scope-credit.json#/questions/35",
+          "coverage-map-for-review-11.json#faq_rulings:growth-move-v-add"
+        ],
+        "exact_old_text": "\"scope_result\": \"base_supported\", \"noncredited_clauses\": [] (Q36); growth-move-v-add is included without a conditional qualifier.",
+        "correction": "Classify Q36 as mixed supported/noncredited: numeric Growth Move Presence-arrow clause is unverified for original eight and earns0 current-base novelty; Add/reposition clauses remain base-supported. Retain the full question, key and all four grading facts.",
+        "primary_sources": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+            "file_sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+            "character_range": [
+              156072,
+              157079
+            ],
+            "passage_sha256": "39b02803e2547824c6f15c0eb35d1c715e2df4166d84d3458565a3974c531309",
+            "label": "FAQ .7w4g8oq distinguishes Move arrow, Add/reposition and Ocean Gather/Push; it also tags excluded Serpent."
+          },
+          {
+            "paths": [
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/lightning-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/river-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/earth-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/shadows-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/green-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/thunderspeaker-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/ocean-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/bringer-front.png"
+            ],
+            "region": "All eight complete Growth bands, and full native fronts",
+            "observed": "No original-eight Growth choice has a numeric Move Presence arrow. Original choices have Add Presence; Ocean additionally has Gather/Push. The permitted originals therefore do not supply that numeric-arrow producer."
+          }
+        ],
+        "scope_assessment": "Unverified original-base producer, not false conditional answer and not universal absence beyond inspected original-eight Growth choices."
+      },
+      "complete_old_scope_entry": {
+        "id": "Q36",
+        "scope_result": "base_supported",
+        "noncredited_clauses": [],
+        "noncredited_primary_sources": []
+      },
+      "complete_proposed_scope_entry": {
+        "id": "Q36",
+        "scope_result": "mixed_supported_and_noncredited",
+        "noncredited_clauses": [
+          "Growth Move Presence measures up to the indicated distance from that disk's current land."
+        ],
+        "noncredited_primary_sources": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+            "sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+            "character_range": [
+              156072,
+              157079
+            ],
+            "locator": "Conditional numeric Growth Move interpretation; no named original-eight numeric-Move producer"
+          },
+          {
+            "paths": [
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/lightning-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/river-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/earth-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/shadows-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/green-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/thunderspeaker-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/ocean-front.png",
+              "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/bringer-front.png"
+            ],
+            "sha256": [
+              "ddf8d914adbe0ff62684cb65872ffe5c29193e15745e6d4bd184bfba55b44cce",
+              "5e760ad86e99e2028bfd4fc2cc0048e41c7e1f57eb419f8bc87d356662b96d2a",
+              "024193dbfd6c6353b6e2d8dd2d0cd43b268eb323f3bd77f8a52d5ad438719a53",
+              "f15aa3385fe764f2e5f33f5cd2300888226f705028a6a8ba4abf10724ce66136",
+              "c909ca5d89faeadd770b71c830351afb161db2c2c215e58ed960d82291498391",
+              "46f7657e32527738beea0b1bdc9de381c2a0b28597b4e271c12aeba789d886af",
+              "6161c759fc567cc54419845a5baf7c0df148ca98d639d5c48d6d4a0dfb69864f",
+              "3e25cbd685c9988899df1c4db9369dd6e576a8e279a1de71b94d746f10660e89"
+            ],
+            "region": "All eight complete printed Growth bands",
+            "finding": "No printed numeric Move Presence arrow; Add Presence and Ocean Gather/Push are distinct instructions."
+          }
+        ]
+      },
+      "proposed_entry_note": "Working proposed semantic entry in the four supplied fields; no unseen current scope-file schema or content imported.",
+      "complete_Q36_question_key_map": {
+        "question": {
+          "id": "Q36",
+          "question": "What is the difference between a Growth Move Presence arrow and Add Presence using an island disk? Can the latter pick up a disk outside the shown Range of the destination?"
+        },
+        "key": {
+          "id": "Q36",
+          "answer": "Move measures from that disk’s present land and moves up to the arrow’s distance. Add/reposition first picks a legal destination measured from any existing Presence, then may take any own island disk, even one far from that destination. It remains adding, not a Move instruction.",
+          "source_refs": [
+            "CORE p.14",
+            "FAQ Core: .7w4g8oq; .bu6od08"
+          ]
+        },
+        "asked_map": {
+          "id": "Q36",
+          "question": "What is the difference between a Growth Move Presence arrow and Add Presence using an island disk? Can the latter pick up a disk outside the shown Range of the destination?",
+          "requested_clauses": [
+            {
+              "clause_id": "Q36.request",
+              "actual_requested_clause": "What is the difference between a Growth Move Presence arrow and Add Presence using an island disk? Can the latter pick up a disk outside the shown Range of the destination?",
+              "required_facts": [
+                "Growth Move Presence measures up to the indicated distance from that disk's current land.",
+                "Add Presence using an island disk first selects a destination measured from existing Presence.",
+                "It may then take an island disk from anywhere, even outside the shown destination Range.",
+                "Repositioning under Add is adding rather than a Move instruction."
+              ]
+            }
+          ],
+          "key_context_not_required": []
+        }
+      },
+      "question_key_and_all_four_grading_facts_unchanged": true,
+      "unsupported_clause": {
+        "exact_asked_fact": "Growth Move Presence measures up to the indicated distance from that disk's current land.",
+        "asked_fact_zero_based_index": 0,
+        "classification": "unverified_base_reachability",
+        "current_base_novelty_credit": 0,
+        "conditional_answer_still_correct": true
+      },
+      "supported_clauses": [
+        "Add Presence using an island disk first selects a destination measured from existing Presence.",
+        "It may then take an island disk from anywhere, even outside the shown destination Range.",
+        "Repositioning under Add is adding rather than a Move instruction."
+      ],
+      "supported_producer": "Original-eight Growth choices actually print Add Presence instructions. CORE p14 and FAQ.bu6od08 permit using an existing own island disk, selecting the destination from current Presence before choosing its source, including a source anywhere. These are real core procedures.",
+      "numeric_Move_assessment": "FAQ.7w4g8oq gives the conditional interpretation of a numeric Move Presence arrow. Fresh complete views of all eight original Growth bands show no such instruction. Ocean’s explicit Gather/Push are adjacent named movements and do not produce the numeric Move-arrow instruction. Add/reposition is expressly adding rather than Move. No alternative original-base producer is verified; do not infer one from the FAQ Core category or its excluded Serpent tag.",
+      "limits": "No universal impossibility claim beyond the actual original-eight Growth choices inspected. The conditional rule remains true and fully graded. This is a narrow credit correction, not a new coverage question.",
+      "coverage_annotation_old": "growth-move-v-add is included without a conditional qualifier.",
+      "coverage_annotation_proposed": "Add/reposition branches remain base-supported. Numeric Growth Move Presence-arrow branch is conditional and has no verified original-base producer; zero current-base novelty, full regression grading retained.",
+      "source_refs": [
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+          "original_byte_sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+          "character_range": [
+            156072,
+            157079
+          ],
+          "passage_utf8_sha256": "39b02803e2547824c6f15c0eb35d1c715e2df4166d84d3458565a3974c531309",
+          "locator": "Complete FAQ.7w4g8oq: numeric Growth Move, Add/reposition, and Ocean Gather/Push",
+          "complete_operative_passage": "How does one move Presence during Growth?\n(.7w4g8oq)\nWhen a Growth choice says \"Move Presence\" (with a curved arrow), move one of your Presence up to the shown number of lands away from where it currently lies. When the Growth option says \"Add Presence\", but instead of adding from your Presence track you choose to add one already on the board\n(per the p. 14 sidebar)\n, you can take it from anywhere. (This is still considered \"adding a Presence\", not \"moving a Presence\"; later reprints of the rulebook use the term\nrepositioning\n.)\nOcean's Hungry Grasp also has Growth choices with \"Push Presence\" and \"Gather Presence\"; these work just as Gather and Push usually do\n(to/from an adjacent land)\n. They are mandatory.\n(\nDiscussion elsewhere\n(https://boardgamegeek.com/thread/1814539/how-do-you-move-presence)\n)\nTags:\nGrowth\n(Growth)\n,\nPresence\n(Presence)\n,\nOcean's Hungry Grasp\n(Ocean%27s+Hungry+Grasp)\n,\nSerpent Slumbering Beneath the Island\n(Serpent+Slumbering+Beneath+the+Island)\n,\n0 more...\n(.7w4g8oq)\n"
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/living-faq-core-game.txt",
+          "original_byte_sha256": "874741b896dd163568a7e33ee4341fe7b38db9a2834185d272d662573de3679e",
+          "character_range": [
+            154657,
+            155557
+          ],
+          "passage_utf8_sha256": "399672f9f30a5582607c59430d35f4296d5d3c9429a7f8def9b2231e46c6e954",
+          "locator": "Complete FAQ.bu6od08: choose legal destination first, then source Presence from anywhere",
+          "complete_operative_passage": "When you reposition Presence on the board rather than adding new Presence, where can you measure the range from?\n(.bu6od08)\nYou can measure the range from any Presence, including the one you are about to reposition.\nThe sequence of events for adding Presence during growth, you\nChoose a land to add Presence to. This must be measured from your Presence on the board at that moment.\nAdd a Presence to that land.\nNormally this is picked up from your Presence track, but you can pick it up from anywhere on the island instead if you want. The sequence is similar when a Power lets you add Presence.\n(\nDiscussion elsewhere\n(https://boardgamegeek.com/article/28530929#28530929)\n)\nTags:\nGrowth\n(Growth)\n,\nRepositioning Presence\n(Repositioning+Presence)\n,\nPresence\n(Presence)\n,\nGift of Proliferation (A Spread of Rampant Green)\n(Gift+of+Proliferation+%28A+Spread+of+Rampant+Green%29)\n,\n3 more...\n(.bu6od08)\n"
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+          "original_byte_sha256": "6191500cbd1c5a069bc17f1a9fe070abdf70a1cfa9b71a0fe64e22711d1da807",
+          "character_range": [
+            36910,
+            37178
+          ],
+          "passage_utf8_sha256": "b176d8c4a01ab9a3a03b104ccdfff5a215c3b0edf81d6347fbd26054bb8a1e91",
+          "locator": "CORE p14 complete Repositioning Presence sidebar",
+          "complete_operative_passage": "REPOSITIONING PRESENCE\nIt is rarely relevant, but whenever you would\nadd a Presence from your Presence Track,\nyou may instead use one of your Presence\nfrom anywhere on the Island. This is most\noften useful if all your Presence is in play:\nyou can still reposition it.\n"
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/lightning-front.png",
+          "original_byte_sha256": "ddf8d914adbe0ff62684cb65872ffe5c29193e15745e6d4bd184bfba55b44cce",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "Lightning’s Swift Strike",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card",
+              "Gain1Energy"
+            ],
+            [
+              "Add a Presence Range2",
+              "Add a Presence Range0"
+            ],
+            [
+              "Add a Presence Range1",
+              "Gain3Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/river-front.png",
+          "original_byte_sha256": "5e760ad86e99e2028bfd4fc2cc0048e41c7e1f57eb419f8bc87d356662b96d2a",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "River Surges in Sunlight",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card",
+              "Gain1Energy"
+            ],
+            [
+              "Add a Presence Range1",
+              "Add a Presence Range1"
+            ],
+            [
+              "Gain Power Card",
+              "Add a Presence Range2"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/earth-front.png",
+          "original_byte_sha256": "024193dbfd6c6353b6e2d8dd2d0cd43b268eb323f3bd77f8a52d5ad438719a53",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "Vital Strength of the Earth",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Add a Presence Range2"
+            ],
+            [
+              "Gain Power Card",
+              "Add a Presence Range0"
+            ],
+            [
+              "Add a Presence Range1",
+              "Gain2Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/shadows-front.png",
+          "original_byte_sha256": "f15aa3385fe764f2e5f33f5cd2300888226f705028a6a8ba4abf10724ce66136",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "Shadows Flicker Like Flame",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card"
+            ],
+            [
+              "Gain Power Card",
+              "Add a Presence Range1"
+            ],
+            [
+              "Add a Presence Range3",
+              "Gain3Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/green-front.png",
+          "original_byte_sha256": "c909ca5d89faeadd770b71c830351afb161db2c2c215e58ed960d82291498391",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "A Spread of Rampant Green",
+          "complete_Growth_band_transcription": [
+            [
+              "ALWAYS Add a Presence to Jungle or Wetland Range2"
+            ],
+            [
+              "PLUS PICK ONE: Reclaim Cards",
+              "Gain Power Card"
+            ],
+            [
+              "OR Add a Presence Range1",
+              "+1 Card Play This Turn"
+            ],
+            [
+              "OR Gain Power Card",
+              "Gain3Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/thunderspeaker-front.png",
+          "original_byte_sha256": "46f7657e32527738beea0b1bdc9de381c2a0b28597b4e271c12aeba789d886af",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "Thunderspeaker",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card",
+              "Gain Power Card"
+            ],
+            [
+              "Add a Presence to Land with Dahan Range2",
+              "Add a Presence to Land with Dahan Range1"
+            ],
+            [
+              "Add a Presence Range1",
+              "Gain4Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/ocean-front.png",
+          "original_byte_sha256": "6161c759fc567cc54419845a5baf7c0df148ca98d639d5c48d6d4a0dfb69864f",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            610
+          ],
+          "identity": "Ocean’s Hungry Grasp",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card",
+              "Gather1Presence into EACH Ocean",
+              "Gain2Energy"
+            ],
+            [
+              "Add a Presence in any Ocean",
+              "Add a Presence in any Ocean",
+              "Gain1Energy"
+            ],
+            [
+              "Gain Power Card",
+              "Push1Presence from EACH Ocean",
+              "Add a Presence to Coastal Land Range1"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        },
+        {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island/original-spirit-panels/bringer-front.png",
+          "original_byte_sha256": "3e25cbd685c9988899df1c4db9369dd6e576a8e279a1de71b94d746f10660e89",
+          "dimensions": [
+            2697,
+            1797
+          ],
+          "full_native_view": true,
+          "viewed_region_xyxy": [
+            0,
+            0,
+            2697,
+            1797
+          ],
+          "relevant_region_xyxy": [
+            1000,
+            0,
+            2697,
+            370
+          ],
+          "identity": "Bringer of Dreams and Nightmares",
+          "complete_Growth_band_transcription": [
+            [
+              "Reclaim Cards",
+              "Gain Power Card"
+            ],
+            [
+              "Reclaim One",
+              "Add a Presence Range0"
+            ],
+            [
+              "Gain Power Card",
+              "Add a Presence Range1"
+            ],
+            [
+              "Add a Presence to Land with Dahan or Invaders Range4",
+              "Gain2Energy"
+            ]
+          ],
+          "symbol_transcription_note": "Printed icons normalized to rules names. Straight Range arrows with Add Presence are Add instructions; Ocean’s Gather/Push are their explicit named instructions.",
+          "numeric_Move_Presence_arrow_found": false
+        }
+      ],
+      "new_question_count": 0,
+      "new_required_fact_count": 0,
+      "current_base_credit_delta_for_this_clause": -1
+    }
+  ],
+  "source_transcription_decisions": [
+    {
+      "finding_id": "E11-01",
+      "category": "source_transcription",
+      "verdict": "ACCEPT",
+      "original_finding": {
+        "finding_id": "E11-01",
+        "question_ids": [
+          "Q164"
+        ],
+        "kind": "incorrect_primary_transcription",
+        "locations": [
+          "expanded-v19/core-scope-credit.json#/questions/163/primary_sources/2/transcribed_passage",
+          "coverage-map-for-review-11.json#/faq_rulings/176/source_refs/2/transcribed_passage",
+          "coverage-map-for-review-11.json#/precise_clause_mappings/60/source_refs/2/transcribed_passage"
+        ],
+        "exact_old_text": "Cost 4; Fast; target ANY Spirit.",
+        "correction": "Cost 3; Fast; target ANY Spirit. Recompute the affected transcription hashes.",
+        "primary_sources": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+            "file_sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+            "visual_region_xyxy": [
+              0,
+              0,
+              75,
+              75
+            ],
+            "transcription": "3 in the Energy-cost circle."
+          }
+        ],
+        "effect_on_fixed_key": "None: Q164 asks Gift eligibility versus repayment, not Powerstorm printed cost. Do not add a new cost requirement or count a new gap."
+      },
+      "exact_old_fragment": "Cost 4; Fast; target ANY Spirit.",
+      "exact_corrected_fragment": "Cost 3; Fast; target ANY Spirit.",
+      "old_fragment_utf8_sha256": "75ee881d4936bd348eb362682326b31fce37edee630bb4ae722df2b274bc2a21",
+      "corrected_fragment_utf8_sha256": "23da7bbba40c9c7ef0fe3d76e4849c5ae2f4e2e19a717736c1c6c64dff29ddd4",
+      "native_source": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+        "original_byte_sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+        "dimensions": [
+          300,
+          420
+        ],
+        "full_native_view": true,
+        "viewed_region_xyxy": [
+          0,
+          0,
+          300,
+          420
+        ],
+        "relevant_region_xyxy": [
+          0,
+          0,
+          75,
+          75
+        ],
+        "complete_native_transcription": "Cost3; Fast; target ANY Spirit. Target Spirit gains3Energy. Once this turn, target may Repeat a Power Card by paying its cost again. Threshold2Sun2Fire3Air: Target may Repeat up to2more Power Cards by paying their costs. Printed Elements: Sun, Fire, Air.",
+        "transcription_sha256": "7730629f5d5757198252701badecd0c5ba16ca28f56d6db61d5edbfb74b0ef00",
+        "printed_icon_normalization": true
+      },
+      "own_prior_transcription_correction": {
+        "original_ledger_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/coverage-novelty-adjudication-11-read-ledger.json",
+        "original_ledger_sha256": "eca65d91d99ba2a1934cc6e35bed43a7de60e627335a24cf99178bd65c77a546",
+        "original_image_row": {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/powerstorm.jpg",
+          "original_byte_sha256": "ae19b1dbdc73f070f6a1e9f9973786547daae1de81a925d7db2e54da95f2e3bf",
+          "dimensions": [
+            300,
+            420
+          ],
+          "viewed_region": [
+            0,
+            0,
+            300,
+            420
+          ],
+          "fully_viewed": true,
+          "transcription": "Cost 4; Fast; target ANY Spirit. Target Spirit gains 3 Energy. Once this turn, target may Repeat a Power Card by paying its cost again. Threshold 2 Sun, 2 Fire, 3 Air: Target may Repeat up to 2 more Power Cards by paying their costs. Printed Elements: Sun, Fire, Air.",
+          "membership_note": "All seven card faces lack the B&C emblem; publisher legend viewed. Original-core use also supported by the captured CORE/FAQ and 2017 publisher account. Catalog labels not used as membership proof."
+        },
+        "exact_old_full_transcription": "Cost 4; Fast; target ANY Spirit. Target Spirit gains 3 Energy. Once this turn, target may Repeat a Power Card by paying its cost again. Threshold 2 Sun, 2 Fire, 3 Air: Target may Repeat up to 2 more Power Cards by paying their costs. Printed Elements: Sun, Fire, Air.",
+        "exact_proposed_corrected_full_transcription": "Cost 3; Fast; target ANY Spirit. Target Spirit gains 3 Energy. Once this turn, target may Repeat a Power Card by paying its cost again. Threshold 2 Sun, 2 Fire, 3 Air: Target may Repeat up to 2 more Power Cards by paying their costs. Printed Elements: Sun, Fire, Air.",
+        "old_full_transcription_utf8_sha256": "c88afb44fe9a2b635e218afb4fb34b45f1ba7b1a88c8120c784db7b96538dbcf",
+        "corrected_full_transcription_utf8_sha256": "4ebf5c75f5e5dca789ce72f81b47ed8a4f91bd34f0ed59f5248877cf66aea4d4",
+        "original_preserved": true
+      },
+      "fixed_question_key_required_facts_change": false,
+      "new_question_count": 0,
+      "new_required_fact_count": 0,
+      "actual_ask_reason": "Q164 asks Gift Repeat eligibility/payment, not Powerstorm’s printed cost. Correct3cost is evidence, not an extra answer requirement.",
+      "actual_current_ask": {
+        "id": "Q164",
+        "literal_question": "A Spirit with no Energy remaining receives Gift of Strength and has already used an eligible cost-1 Power Card. May it use that card's Repeat without paying its cost again, or does Gift require the same repayment as Powerstorm?",
+        "all_asked_facts": [
+          "The eligible Gift of Strength Repeat requires no additional Energy payment and may be used with zero Energy remaining."
+        ]
+      },
+      "target_locations_are_supplied_bindings_only": [
+        "expanded-v19/core-scope-credit.json#/questions/163/primary_sources/2/transcribed_passage",
+        "coverage-map-for-review-11.json#/faq_rulings/176/source_refs/2/transcribed_passage",
+        "coverage-map-for-review-11.json#/precise_clause_mappings/60/source_refs/2/transcribed_passage"
+      ]
+    },
+    {
+      "finding_id": "E11-02",
+      "category": "source_transcription",
+      "verdict": "ACCEPT",
+      "original_finding": {
+        "finding_id": "E11-02",
+        "question_ids": [
+          "Q150"
+        ],
+        "kind": "incorrect_primary_transcription",
+        "locations": [
+          "coverage-map-for-review-11.json#/precise_clause_mappings/46/source_refs/0/transcription"
+        ],
+        "exact_old_text": "Threshold 3 Moon: Damage from this Power may be dealt into adjacent lands.",
+        "correction": "Threshold 3 Animal: Damage from this Power may be dealt into adjacent lands.",
+        "primary_sources": [
+          {
+            "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/vengeance_of_the_dead.jpg",
+            "file_sha256": "76c73c2c5da794ee77a565368e88cae8a9a29b3863bb579f2131f1eaed4fe22f",
+            "visual_region_xyxy": [
+              110,
+              330,
+              195,
+              365
+            ],
+            "transcription": "IF YOU HAVE 3 Animal (red claw icon)."
+          }
+        ],
+        "effect_on_fixed_key": "None: Q150 stipulates threshold met and asks the adjacency/target procedure; no Element recital is required."
+      },
+      "exact_old_fragment": "Threshold 3 Moon: Damage from this Power may be dealt into adjacent lands.",
+      "exact_corrected_fragment": "Threshold 3 Animal: Damage from this Power may be dealt into adjacent lands.",
+      "old_fragment_utf8_sha256": "d64caf919a9e4cab1111efeeb83ee47b4892d8d41ff7b8260699d6a1dd260fdf",
+      "corrected_fragment_utf8_sha256": "20b50d157c8a29c6c39f40fb5ef6db51a614759d44f02937cac0cf814700bae6",
+      "native_source": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/vengeance_of_the_dead.jpg",
+        "original_byte_sha256": "76c73c2c5da794ee77a565368e88cae8a9a29b3863bb579f2131f1eaed4fe22f",
+        "dimensions": [
+          300,
+          420
+        ],
+        "full_native_view": true,
+        "viewed_region_xyxy": [
+          0,
+          0,
+          300,
+          420
+        ],
+        "relevant_region_xyxy": [
+          110,
+          330,
+          195,
+          365
+        ],
+        "complete_native_transcription": "Cost3; Fast; Range3; target ANY land. 3Fear. After each effect that destroys Town/City/Dahan in target land,1Damage per Town/City/Dahan destroyed. Threshold3Animal: Damage from this Power may be dealt into adjacent lands. Printed Elements: Moon, Fire, Animal.",
+        "transcription_sha256": "387d2f4bc7631339dab1041065297e8b2d64692a35f08a0f1c0701c80adb88e4",
+        "printed_icon_normalization": true
+      },
+      "own_prior_transcription_correction": {
+        "original_ledger_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/coverage-novelty-adjudication-11-read-ledger.json",
+        "original_ledger_sha256": "eca65d91d99ba2a1934cc6e35bed43a7de60e627335a24cf99178bd65c77a546",
+        "original_image_row": {
+          "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/card-scope-source/vengeance_of_the_dead.jpg",
+          "original_byte_sha256": "76c73c2c5da794ee77a565368e88cae8a9a29b3863bb579f2131f1eaed4fe22f",
+          "dimensions": [
+            300,
+            420
+          ],
+          "viewed_region": [
+            0,
+            0,
+            300,
+            420
+          ],
+          "fully_viewed": true,
+          "transcription": "Cost 3; Fast; Range 3; ANY land. 3 Fear. After each effect that destroys Town/City/Dahan in target land, 1 Damage per Town/City/Dahan destroyed. Threshold 3 Moon: Damage from this Power may be dealt into adjacent lands. Printed Elements: Moon, Fire, Animal.",
+          "membership_note": "All seven card faces lack the B&C emblem; publisher legend viewed. Original-core use also supported by the captured CORE/FAQ and 2017 publisher account. Catalog labels not used as membership proof."
+        },
+        "exact_old_full_transcription": "Cost 3; Fast; Range 3; ANY land. 3 Fear. After each effect that destroys Town/City/Dahan in target land, 1 Damage per Town/City/Dahan destroyed. Threshold 3 Moon: Damage from this Power may be dealt into adjacent lands. Printed Elements: Moon, Fire, Animal.",
+        "exact_proposed_corrected_full_transcription": "Cost 3; Fast; Range 3; ANY land. 3 Fear. After each effect that destroys Town/City/Dahan in target land, 1 Damage per Town/City/Dahan destroyed. Threshold 3 Animal: Damage from this Power may be dealt into adjacent lands. Printed Elements: Moon, Fire, Animal.",
+        "old_full_transcription_utf8_sha256": "ad669a0c8f36b38be481dbce1a0de608520c68dac68d6cac7879dc7d4a32712c",
+        "corrected_full_transcription_utf8_sha256": "8f61b2e6d248261dd5072a9fc1da839bd6b7845a25de25f32c13a7ef1dad492e",
+        "original_preserved": true
+      },
+      "fixed_question_key_required_facts_change": false,
+      "new_question_count": 0,
+      "new_required_fact_count": 0,
+      "actual_ask_reason": "Q150 stipulates the threshold met and asks adjacent Damage/unchanged target. Correct3Animal is evidence, not a new Element recital.",
+      "actual_current_ask": {
+        "id": "Q150",
+        "literal_question": "When Vengeance of the Dead meets its threshold, may its triggered Damage be dealt to Invaders in a land adjacent to the target, and does that change the card’s target land?",
+        "all_asked_facts": [
+          "With its threshold, Vengeance of the Dead may deal its triggered Damage to Invaders in lands adjacent to its target.",
+          "The original target remains unchanged; qualifying destruction there still supplies the trigger."
+        ]
+      },
+      "target_locations_are_supplied_bindings_only": [
+        "coverage-map-for-review-11.json#/precise_clause_mappings/46/source_refs/0/transcription"
+      ]
+    }
+  ],
+  "required_fact_accounting": {
+    "current_questions": 170,
+    "current_required_facts": 505,
+    "new_distinct_coverage_questions": 1,
+    "new_distinct_required_facts": 1,
+    "repeated_margin_clause_new_facts": 0,
+    "scope_correction_new_grading_facts": 0,
+    "transcription_corrections_new_grading_facts": 0,
+    "proposed_questions_if_consolidated": 171,
+    "proposed_required_facts_if_consolidated": 506,
+    "current_frozen_bank_mutated": false
+  },
+  "input_delivery": {
+    "complete_new_text_file_count": 3,
+    "successful_slice_count": 28,
+    "fresh_native_full_views": 10,
+    "prior_source_reuse_bound_to_actual_own_ledger_rows": true,
+    "all170_prompts_all505_required_facts_read": true,
+    "selected_keys_maps_and_Q36_credit_entry_completely_read": true,
+    "whole_v19_key_map_credit_delivery_claim": false,
+    "sourcebank_hash_bindings": {
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v19/questions.json": "ad9065e9c817b110a5e3af50ca55c5e2fa59d00be4bf4c9f06b40b3cf7be70d0",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v19/answer-key.json": "1e1ec9944988051b047007d6ab321174d5a007048b3ab5a6002e0df901428bae",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v19/asked-fact-map.json": "2af755fe28efebcd578103985e23f0770e39bc3bcc2b3c628e23c00767a95a22",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-v19/core-scope-credit.json": "42b6fa386ac0362fb8de19717cfc399e7195494995516be59ab8be6bb5e551fc"
+    }
+  },
+  "scope_policy": {
+    "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/scope-reachability-steering-2026-11-05.txt",
+    "sha256": "765251475b1b2d0e0f9bea5ec8ca7d6f7d4e50e5ba7100b3d2568d41e7ba0e78",
+    "character_length": 1626,
+    "role": "Task scope authority only; not game-rule source."
+  },
+  "forbidden_access_declarations": {
+    "canonical": false,
+    "candidate_summaries": false,
+    "reader_prompts_outputs": false,
+    "grades_performance": false,
+    "coordinator_inspections": false,
+    "runtime": false,
+    "other_agent_reports": false,
+    "source_audits": false,
+    "raw_finding_report": false,
+    "whole_current_v19_bank_files": false,
+    "module_scripts": false,
+    "delegation": false
+  },
+  "preservation": "All existing170 question IDs, fixed keys and grading facts remain unchanged, including conditional noncredited regressions. Prior reports/ledgers are preserved. Only the two assigned14 artifacts and /tmp scratch written.",
+  "input_delivery_limitations": [],
+  "global_saturation_verdict": "NOT ISSUED; adjudication of the complete supplied finding set only."
+}

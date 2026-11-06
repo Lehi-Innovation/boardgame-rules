@@ -1,0 +1,15 @@
+# Unmatched QA complete — coordinator accepted
+
+Both NEW final Luna/high/none readers scored **67 correct,0 partial,0 incorrect**, satisfying all216 required facts each with zero unresolved asked facts or unsupported correct guesses. Four fresh independent Sol/high graders assessed every134 complete raw entries/432 facts. A single fresh neutral Sol/high/none reviewer independently confirmed the borderline Q63B answer Correct; the coordinator accepted that reasoning. All primary reports, raw answers and the full-bank aggregate remain unchanged.
+
+The canonical, tested snapshot and pure source-audit07 snapshot are byte-identical, SHA256 `ad658d97984a4e50890557cbb2e99505faead49d237a7654c1f1ab3881095639`. The independent source audit is PASS with zero findings, including complete normative text and native four-character/all120-action-cell coverage. The coordinator independently checked all9 final actors’ requested models, fresh contexts and actual complete input delivery before their first factual writes.
+
+Coordinator acceptance, actual audit recording, real stamping and targeted catalog publication are complete. The real stamper retained the truthful tested2026-11-05 verification date and changed no summary bytes. The selected catalog/index entries match regeneration; unselected entries, including Cobble & Fog, are preserved. Explicit goal-completion authorization and all requirement-by-requirement evidence are bound in [completion-audit.json](completion-audit.json).
+
+All nine bank versions, original20 seed questions, final67 questions/key/scope and authoritative source hashes remain intact. Coverage passes15/16 added zero questions; the fresh independent complete coverage/key/scope challenge passed. Relevant repository validation and diff checks pass. History retains14 fully scored paired iterations, plus1 separately retained unscored abort:15 dispatched pairs and30 distinct reader sessions. [Complete history and evidence](README.md).
+
+Method deviations remain explicit: B used renamed whole-section extraction functions and /tmp Python scripts instead of the supplied public API; A revised Q01 clause_checks and Q58 answer/evidence during its own pre-completion assembly. All observed versions and original runtime traces remain retained, with no parent factual feedback or raw repairs. Optional metadata findings remain separate from correct whole-entry factual content. Thirteen synthetic neutral tests preceded the same generic method supplied to both readers.
+
+This is a known fixed-set, tool-assisted regression, not held-out accuracy or proof of every conceivable scenario. Isolation is by fresh contexts/instructions, with no OS-level sandbox claim. Ancillary catalog metadata remains outside authenticated normative source scope. The worker made no shared catalog/audit/stamp or commit/branch changes.
+
+The persistent goal was closed through the actual update_goal tool after the coordinator’s explicit authorization. [Actual completion receipt](goal-completion-receipt.json).

@@ -1,0 +1,600 @@
+{
+  "purpose": "Characterization only. Matching a known unsafe behavior is evidence of a limitation, not approval.",
+  "cases": [
+    {
+      "name": "unicode_codepoints_crlf",
+      "claim": "Original Python Unicode offsets survive emoji, combining marks, CRLF and trimming.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "header": {
+            "start": 8,
+            "end": 17,
+            "text": "| A | B |"
+          },
+          "row": {
+            "start": 30,
+            "end": 43,
+            "text": "| one | two |"
+          },
+          "cell_count": 2
+        }
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "exact_trim_contract",
+      "claim": "unit strips all Python isspace at both ends, including NBSP and em-space.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 2,
+          "end": 7,
+          "text": "alpha"
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L1"
+    },
+    {
+      "name": "invalid_unit_negative",
+      "claim": "Negative unit bounds are checked after trimming/indexing.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Empty or invalid unit"
+      },
+      "characterization_matched": true,
+      "finding": "F5"
+    },
+    {
+      "name": "invalid_unit_oversize",
+      "claim": "Oversized end can leak IndexError instead of ValueError.",
+      "observed": {
+        "status": "raised",
+        "type": "IndexError",
+        "message": "string index out of range"
+      },
+      "characterization_matched": true,
+      "finding": "F5"
+    },
+    {
+      "name": "table_negative_offset",
+      "claim": "High-level table rejects negative offset.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Offset outside original text"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "table_end_offset",
+      "claim": "High-level table rejects offset equal to len(text).",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Offset outside original text"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "paragraph_negative_offset",
+      "claim": "Paragraph rejects negative offset.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Offset outside original text"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "list_end_offset",
+      "claim": "List rejects out-of-range offset.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Offset is not inside a complete list item"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "cropped_row",
+      "claim": "Row cropped but exact to its substring fails complete-line validation.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Quote is not the complete original table line"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "partial_header_accepted",
+      "claim": "A header substring with fewer source columns can pass if it matches row column count.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "F1"
+    },
+    {
+      "name": "unrelated_header_accepted",
+      "claim": "Low-level header can come from an unrelated distant table.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "F1"
+    },
+    {
+      "name": "same_count_wrong_header_accepted",
+      "claim": "Low-level validator accepts a data row as the claimed header.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "F1"
+    },
+    {
+      "name": "separator_as_row_accepted",
+      "claim": "Low-level row validator does not reject separator lines.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "F1"
+    },
+    {
+      "name": "header_negative_offsets_accepted",
+      "claim": "Header offsets may use Python negative indexing and still validate.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "F1"
+    },
+    {
+      "name": "high_level_column_mismatch",
+      "claim": "High-level rejects row/header/separator column mismatch.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Row/header/separator column count differs"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "high_level_malformed_intervening_row",
+      "claim": "High-level ignores malformed intervening pipe-start rows.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "header": {
+            "start": 0,
+            "end": 9,
+            "text": "| A | B |"
+          },
+          "row": {
+            "start": 29,
+            "end": 42,
+            "text": "| one | two |"
+          },
+          "cell_count": 2
+        }
+      },
+      "characterization_matched": true,
+      "finding": "F2"
+    },
+    {
+      "name": "high_level_separator_as_header",
+      "claim": "Consecutive separators cause nearest separator's preceding separator to be labeled header.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "header": {
+            "start": 10,
+            "end": 19,
+            "text": "|---|---|"
+          },
+          "row": {
+            "start": 30,
+            "end": 43,
+            "text": "| one | two |"
+          },
+          "cell_count": 2
+        }
+      },
+      "characterization_matched": true,
+      "finding": "F2"
+    },
+    {
+      "name": "high_level_missing_outer_pipes",
+      "claim": "Optional-outer-pipe Markdown tables are outside supported format.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "A complete table row needs both outer pipes"
+      },
+      "characterization_matched": true,
+      "finding": "L2"
+    },
+    {
+      "name": "escaped_pipe_odd",
+      "claim": "Odd backslash run escapes a pipe without changing the original text.",
+      "observed": {
+        "status": "returned",
+        "value": [
+          "a \\| b",
+          "c"
+        ]
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "escaped_pipe_even",
+      "claim": "Even backslash run leaves the pipe a delimiter.",
+      "observed": {
+        "status": "returned",
+        "value": [
+          "a \\\\",
+          "b",
+          "c"
+        ]
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "escaped_final_outer_pipe",
+      "claim": "An escaped final pipe is still treated as a complete outer boundary.",
+      "observed": {
+        "status": "returned",
+        "value": [
+          "a",
+          "b \\"
+        ]
+      },
+      "characterization_matched": true,
+      "finding": "F3"
+    },
+    {
+      "name": "table_in_fence",
+      "claim": "Table-like lines inside fenced code are accepted as a table.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "header": {
+            "start": 4,
+            "end": 13,
+            "text": "| A | B |"
+          },
+          "row": {
+            "start": 24,
+            "end": 37,
+            "text": "| one | two |"
+          },
+          "cell_count": 2
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L2"
+    },
+    {
+      "name": "paragraph_heading_swallowed",
+      "claim": "Paragraph helper groups ATX heading and following text without blank line.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 23,
+          "text": "# Section\nAlpha detail."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L3"
+    },
+    {
+      "name": "paragraph_cr_only",
+      "claim": "CR-only paragraphs are not blank-line delimited by the LF regex.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 11,
+          "text": "Alpha\r\rBeta"
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L3"
+    },
+    {
+      "name": "paragraph_blank_offset",
+      "claim": "Offset in LF blank separation rejects.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Offset selects blank separation rather than content"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "paragraph_crlf",
+      "claim": "CRLF blank separation works and trims line endings.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 9,
+          "end": 13,
+          "text": "Beta"
+        }
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "list_child_omits_parent",
+      "claim": "Nested child selection contains no governing parent text.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 22,
+          "end": 37,
+          "text": "- Child detail."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "F4"
+    },
+    {
+      "name": "list_indented_heading_swallowed",
+      "claim": "Indented ATX heading without blank line does not terminate list selection.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 34,
+          "text": "- Alpha.\n  # Next section\nOutside."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L4"
+    },
+    {
+      "name": "list_setext_swallowed",
+      "claim": "Setext heading without blank line does not terminate list selection.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 43,
+          "text": "- Alpha.\nNext section\n============\nOutside."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L4"
+    },
+    {
+      "name": "list_tab_nested_unsupported",
+      "claim": "Tab-indented nested item is not recognized as a child item.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 19,
+          "text": "- Parent.\n\t- Child."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L4"
+    },
+    {
+      "name": "list_fenced_bullet_selected_as_child",
+      "claim": "A bullet-like line inside an indented fenced block is selected as a nested child.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 18,
+          "end": 53,
+          "text": "- literal code\n  ```\n  Parent tail."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L4"
+    },
+    {
+      "name": "list_blank_then_outside",
+      "claim": "Blank line followed by unindented prose terminates item.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 8,
+          "text": "- Alpha."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "text_validator_mirrors_extractor",
+      "claim": "Text validator accepts the same heading-containing paragraph as its extractor.",
+      "observed": {
+        "status": "returned",
+        "value": true
+      },
+      "characterization_matched": true,
+      "finding": "L3"
+    },
+    {
+      "name": "unicode_line_separators",
+      "claim": "splitlines recognizes Unicode line separators although paragraph regex recognizes LF only.",
+      "observed": {
+        "status": "returned",
+        "value": [
+          [
+            0,
+            6,
+            "Alpha "
+          ],
+          [
+            6,
+            10,
+            "Beta"
+          ]
+        ]
+      },
+      "characterization_matched": true,
+      "finding": "L3"
+    },
+    {
+      "name": "unit_negative_bounds_can_be_normalized",
+      "claim": "Invalid negative start can be silently normalized when final character is whitespace.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 3,
+          "text": "abc"
+        }
+      },
+      "characterization_matched": true,
+      "finding": "F5"
+    },
+    {
+      "name": "wrong_header_count_rejected",
+      "claim": "Low-level count check catches a header with a different number of cells.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Row/header column count differs"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "mutated_quote_rejected",
+      "claim": "Exact span matching rejects changed row text.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Quote differs from original Unicode span"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "table_gap_blocks_unrelated_header",
+      "claim": "Blank separation prevents high-level reuse of an earlier table header.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "No preceding complete table header/separator"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "table_newline_offset_returns_row",
+      "claim": "A source offset on a row's newline selects the row even though trimmed span excludes offset.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "header": {
+            "start": 0,
+            "end": 9,
+            "text": "| A | B |"
+          },
+          "row": {
+            "start": 20,
+            "end": 33,
+            "text": "| one | two |"
+          },
+          "cell_count": 2
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L1"
+    },
+    {
+      "name": "paragraph_absorbs_adjacent_list",
+      "claim": "Blank-line paragraph selection absorbs an adjacent list without blank separation.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 23,
+          "text": "Intro.\n- Alpha.\n- Beta."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "L3"
+    },
+    {
+      "name": "nested_parent_continuation_excluded_from_child",
+      "claim": "A blank line and dedented parent continuation ends a child item, while parent retains it.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 12,
+          "end": 20,
+          "text": "- Child."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "ordered_item_continuation",
+      "claim": "Ordered items with parenthesized markers retain indented continuation and stop at sibling.",
+      "observed": {
+        "status": "returned",
+        "value": {
+          "start": 0,
+          "end": 23,
+          "text": "1) Alpha.\n   Continued."
+        }
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "no_separator_rejected",
+      "claim": "High-level extractor rejects pipe rows without a preceding separator.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "No preceding complete table header/separator"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    },
+    {
+      "name": "high_level_separator_target_rejected",
+      "claim": "High-level extractor rejects a separator as selected row.",
+      "observed": {
+        "status": "raised",
+        "type": "ValueError",
+        "message": "Separator is not a data row"
+      },
+      "characterization_matched": true,
+      "finding": "S1"
+    }
+  ],
+  "count": 44,
+  "characterization_matches": 44,
+  "probe_sha256": "b872bdd0829d07fc829dfdc50dbbb911afde41758ede58904c069b78f4775481"
+}

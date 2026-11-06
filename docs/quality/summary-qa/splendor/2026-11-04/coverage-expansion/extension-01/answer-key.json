@@ -1,0 +1,382 @@
+{
+  "game": "Splendor",
+  "benchmark_version": "extension-01-v1",
+  "scope": "Splendor core game, 1st edition (2014), complete authoritative extracted/splendor-rules.txt. No expansions or later-edition additions.",
+  "prepared_before_readers": true,
+  "question_design": "Source-first extension; evaluator already saw original benchmark, summary and earlier reader outputs. New readers see only frozen summary and new questions.",
+  "grading_standard": {
+    "correct": "All requested material facts correct, no unresolved part or contradiction.",
+    "partial": "Missing or explicitly unresolved requested fact, without material contradiction.",
+    "incorrect": "Any material contradiction of source.",
+    "coverage": "Correct claims need summary support; unsupported guesses cannot establish pass."
+  },
+  "answers": [
+    {
+      "id": 21,
+      "question": "You have reserved cards showing a total of eight prestige points and two white bonuses, but have not bought them. Do those printed points count toward your score or the 15-point trigger, and do those bonuses reduce purchase costs or satisfy nobles?",
+      "expected_answer": "No reserved-card prestige counts before purchase, including for the end-game trigger. Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses.",
+      "material_facts": [
+        "No reserved-card prestige counts before purchase, including for the end-game trigger.",
+        "Reserved-card bonuses do not discount purchases or satisfy nobles; only acquired cards provide bonuses."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "47-59"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "101-103"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "159-173"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "182-188"
+        }
+      ],
+      "novelty": "Distinguishes reserved-card state from acquired-card state for scoring and bonuses, not merely the tiebreaker exclusion in Q20."
+    },
+    {
+      "id": 22,
+      "question": "You buy a development card with a blue bonus and zero prestige. Do you receive a physical blue token from the supply, does its bonus work for future purchases, and can it help qualify you for a noble despite being worth zero prestige?",
+      "expected_answer": "Do not receive a physical blue token; a bonus is a purchase discount. The acquired blue bonus discounts future purchases. A zero-prestige acquired card still contributes its bonus to noble qualification.",
+      "material_facts": [
+        "Do not receive a physical blue token; a bonus is a purchase discount.",
+        "The acquired blue bonus discounts future purchases.",
+        "A zero-prestige acquired card still contributes its bonus to noble qualification."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "47-50"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "65-76"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "159-173"
+        }
+      ],
+      "novelty": "Tests zero-point developments and the distinction between a discount and generating physical currency."
+    },
+    {
+      "id": 23,
+      "question": "A face-up development costs one blue and grants a blue bonus. You have no blue bonus, no blue token and no gold. Can its own bonus make this purchase free? Separately, suppose you can pay for a white-bonus development and it gives you the final bonus needed by a noble: does that new bonus count for the noble at the end of this turn, or only next turn?",
+      "expected_answer": "The unpurchased card cannot discount its own cost; the first purchase is unaffordable. Bonuses used to discount purchases come from previously acquired cards. A bonus acquired by the paid purchase counts for the end-of-this-turn noble check.",
+      "material_facts": [
+        "The unpurchased card cannot discount its own cost; the first purchase is unaffordable.",
+        "Bonuses used to discount purchases come from previously acquired cards.",
+        "A bonus acquired by the paid purchase counts for the end-of-this-turn noble check."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "108-118"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "159-173"
+        }
+      ],
+      "novelty": "Contrasts two timing boundaries for a newly acquired bonus: paying for itself versus same-turn noble qualification."
+    },
+    {
+      "id": 24,
+      "question": "A card costs one blue and two green. You have four blue bonuses and no green bonuses. Can the three excess blue bonuses pay any green cost or give you blue tokens as change? What payment is still needed?",
+      "expected_answer": "Excess blue bonuses cannot pay green costs. No physical tokens or change are generated. Two green tokens, or gold substituting for them, are still needed.",
+      "material_facts": [
+        "Excess blue bonuses cannot pay green costs.",
+        "No physical tokens or change are generated.",
+        "Two green tokens, or gold substituting for them, are still needed."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "108-111"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "159-168"
+        }
+      ],
+      "novelty": "Tests colored discounts exceeding a cost and cross-color leakage, rather than just exact or fully covered costs."
+    },
+    {
+      "id": 25,
+      "question": "You qualify for two nobles and receive one. Before your next turn nobody acquires the other noble and your purchased cards stay unchanged. Were the bonuses used up by the first noble, and can taking gems on your next turn still lead to receiving the other noble? Can you collect that other noble during an opponent’s intervening turn?",
+      "expected_answer": "Bonuses are not used up by receiving a noble. Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then. Cannot collect the second noble during an opponent’s turn.",
+      "material_facts": [
+        "Bonuses are not used up by receiving a noble.",
+        "Taking gems is an action after which the end-of-own-turn noble check still occurs; receive the remaining qualifying noble then.",
+        "Cannot collect the second noble during an opponent’s turn."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "65-72"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "159-178"
+        }
+      ],
+      "novelty": "Tests persistent eligibility across turns and checking after a non-purchase action, including the off-turn boundary."
+    },
+    {
+      "id": 26,
+      "question": "You have no tokens, no purchased developments and no reserved cards. A face-up level-3 development is far too expensive for you to buy. May you reserve it anyway? Do you pay its printed cost when reserving, and do you take gold if available?",
+      "expected_answer": "May reserve the face-up level-3 card despite not affording a purchase. Do not pay its printed purchase cost to reserve. Take one gold if available.",
+      "material_facts": [
+        "May reserve the face-up level-3 card despite not affording a purchase.",
+        "Do not pay its printed purchase cost to reserve.",
+        "Take one gold if available."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "79-87"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "97-111"
+        }
+      ],
+      "novelty": "Tests reserve affordability and level access independently of the purchase action."
+    },
+    {
+      "id": 27,
+      "question": "Instead of reserving a face-up card, you reserve the top card of the level-2 deck while twelve face-up market cards remain. Must any market card be removed or refilled because of that blind reservation, how many market cards remain, and can you take a second card as a replacement in your hand?",
+      "expected_answer": "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain. The reserve action gives only one reserved card, not a second replacement card.",
+      "material_facts": [
+        "No face-up card was removed, so no market removal or refill occurs; twelve market cards remain.",
+        "The reserve action gives only one reserved card, not a second replacement card."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "79-87"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "97-103"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "152-157"
+        }
+      ],
+      "novelty": "Tests the replacement trigger for a blind draw, distinct from face-up reservation and hand purchase."
+    },
+    {
+      "id": 28,
+      "question": "A level deck has run out, but its four face-up cards are still in the market. Must those cards be removed, or may they still be purchased or reserved? If one is purchased, what happens to that space and to the other three cards?",
+      "expected_answer": "Keep the four remaining face-up cards available to purchase or reserve. After one is purchased its gap stays empty because the same-level deck is empty. Other three face-up cards remain available.",
+      "material_facts": [
+        "Keep the four remaining face-up cards available to purchase or reserve.",
+        "After one is purchased its gap stays empty because the same-level deck is empty.",
+        "Other three face-up cards remain available."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "97-100"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "112-114"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "152-157"
+        }
+      ],
+      "novelty": "Tests the deck-exhaustion transition without discarding or disabling the remaining market."
+    },
+    {
+      "id": 29,
+      "question": "All development decks and face-up market cards have been exhausted; nobody has reached fifteen prestige. A player still has an affordable reserved card and gems are available in at least three colors. Does exhaustion itself end the game? May that player buy the reserved card or choose the three-different-gems action?",
+      "expected_answer": "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round. May buy the affordable own reserved card. May instead take three different gems under the stated available supply; still only one action.",
+      "material_facts": [
+        "Exhausting cards is not the game-end trigger; the source trigger is fifteen prestige followed by completing the round.",
+        "May buy the affordable own reserved card.",
+        "May instead take three different gems under the stated available supply; still only one action."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "79-87"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "112-114"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "152-157"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "182-188"
+        }
+      ],
+      "novelty": "Tests global depletion versus the end condition and continued use of remaining legal actions."
+    },
+    {
+      "id": 30,
+      "question": "You already own ten tokens. Three different gem colors are available. Can you take one of each and then return all three newly taken tokens, ending with exactly the same token holdings? Is a net gain of tokens required?",
+      "expected_answer": "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens. End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement.",
+      "material_facts": [
+        "May perform the three-different-gems action, temporarily hold thirteen, then return all three drawn tokens.",
+        "End with ten; the source explicitly allows returning all newly drawn tokens and imposes no net-gain requirement."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "79-93"
+        }
+      ],
+      "novelty": "Tests the zero-net-gain boundary, rather than returning only part of a draw."
+    },
+    {
+      "id": 31,
+      "question": "The gold supply is empty. On A’s turn, A pays two gold while purchasing a card. B then reserves a card with fewer than three cards reserved. Are A’s spent gold tokens removed from the game, or can B take one, and how many gold tokens are left in the supply immediately after B’s reservation before any token-limit returns?",
+      "expected_answer": "A returns both gold tokens to the central supply, not out of the game. B takes one available gold with the reservation. One gold remains in supply before any limit returns.",
+      "material_facts": [
+        "A returns both gold tokens to the central supply, not out of the game.",
+        "B takes one available gold with the reservation.",
+        "One gold remains in supply before any limit returns."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "85"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "104-111"
+        }
+      ],
+      "novelty": "Tests circulation of spent gold into the next player’s reserve action, not just the spent-token destination."
+    },
+    {
+      "id": 32,
+      "question": "You have bought no level-1 or level-2 developments, but can pay for a face-up level-3 card. May you purchase that level-3 card now, or must you unlock its level by buying lower-level cards first?",
+      "expected_answer": "May purchase the affordable face-up level-3 card. The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market.",
+      "material_facts": [
+        "May purchase the affordable face-up level-3 card.",
+        "The purchase rule imposes no lower-level-card prerequisite; it allows a face-up development from the market."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "54-56"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "86-87"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "108-114"
+        }
+      ],
+      "novelty": "Tests purchase access to higher levels without a progression requirement."
+    },
+    {
+      "id": 33,
+      "question": "You have twelve prestige, then purchase a three-prestige development whose bonus also makes you qualify for a noble. May you stop at fifteen and skip the noble visit? What is your total after your turn, and can the other players who still have a turn in the round continue playing?",
+      "expected_answer": "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen. Total is eighteen after the three-prestige card and three-prestige noble. Complete the current round for equal turns; players with remaining turns still play.",
+      "material_facts": [
+        "Cannot refuse the qualifying end-of-turn noble even though the purchase reaches fifteen.",
+        "Total is eighteen after the three-prestige card and three-prestige noble.",
+        "Complete the current round for equal turns; players with remaining turns still play."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "65-72"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "170-188"
+        }
+      ],
+      "novelty": "Tests completing mandatory end-of-turn resolution after the threshold is crossed by a purchase."
+    },
+    {
+      "id": 34,
+      "question": "Four players act A, B, C, D, with A first. D is the first player to reach fifteen prestige on D’s turn. Does A start another round, does everyone get one more turn, or is the game over after D completes this turn? Explain using equal turn counts.",
+      "expected_answer": "The current round is already complete when D finishes. End after D finishes the turn; A does not start another round and no player gets an extra turn. All players have had equal turn counts.",
+      "material_facts": [
+        "The current round is already complete when D finishes.",
+        "End after D finishes the turn; A does not start another round and no player gets an extra turn.",
+        "All players have had equal turn counts."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "78"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "182-184"
+        }
+      ],
+      "novelty": "Tests the last-player boundary of finish-current-round, not a trigger in the middle of a round."
+    },
+    {
+      "id": 35,
+      "question": "In a two-player game, three nobles were revealed and the other seven removed during setup. After someone receives one noble, do you reveal a new tile from those seven to restore the display to three? Where does the acquired tile go and how many nobles remain available in the middle?",
+      "expected_answer": "Do not replenish nobles from the seven tiles removed during setup. The acquired noble goes face-up in front of its recipient. Two nobles remain available in the middle.",
+      "material_facts": [
+        "Do not replenish nobles from the seven tiles removed during setup.",
+        "The acquired noble goes face-up in front of its recipient.",
+        "Two nobles remain available in the middle."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "12-16"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "40-43"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "65-72"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "179-180"
+        }
+      ],
+      "novelty": "Tests noble-display depletion versus development-market replenishment."
+    },
+    {
+      "id": 36,
+      "question": "Match each component name to its color: emerald, diamond, sapphire, onyx, ruby and gold joker. How many development cards are in the box in total and at each of the three levels?",
+      "expected_answer": "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow. Ninety developments: forty level 1, thirty level 2, twenty level 3.",
+      "material_facts": [
+        "Emerald green; diamond white; sapphire blue; onyx black; ruby red; gold joker yellow.",
+        "Ninety developments: forty level 1, thirty level 2, twenty level 3."
+      ],
+      "source_references": [
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "5-10"
+        },
+        {
+          "path": "extracted/splendor-rules.txt",
+          "extraction_lines": "23-35"
+        }
+      ],
+      "novelty": "Adds source component identities and development inventory counts not requested by the original setup questions."
+    }
+  ]
+}

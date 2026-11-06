@@ -1,0 +1,4077 @@
+{
+  "review_type": "clean independent original-source / exact asked scope / procedural coverage stopping review",
+  "benchmark_version": "expanded-v6",
+  "review_date": "2026-11-06",
+  "reviewer": "clean_coverage_review_v6",
+  "scope": "Original 2017 WizKids booklet (all ten pages), all nine original species fronts and Faderan reverse, accepted original printed phase/relic imagery and its allowed provenance, and contemporaneous direct designer official clarifications. Remastered, expansions, optional rules, module behavior, unsupported hypothetical rules and ordinary per-card quantity memorization excluded.",
+  "independence": {
+    "summary_text_read": false,
+    "reader_answers_or_grades_read": false,
+    "earlier_reviews_or_findings_read": false,
+    "scope_corrections_or_coverage_history_read": false,
+    "siblings_or_agent_status_inspected": false,
+    "collaboration_or_thread_tools_used": false,
+    "substantive_evidence": "Only the four assigned current-bank files, source-manifest, original authorities and explicitly allowed provenance. Runtime/tool availability checks and temporary PDF rendering supplied no substantive game evidence."
+  },
+  "counts": {
+    "questions_reviewed": 80,
+    "key_entries_reviewed": 80,
+    "asked_fact_entries_reviewed": 80,
+    "required_facts_reviewed": 249,
+    "source_true_required_facts": 248,
+    "source_false_required_facts": 1,
+    "scope_over_required_facts": 1,
+    "native_pdf_pages_viewed": 10,
+    "original_species_fronts_viewed": 9,
+    "faderan_reverse_viewed": true
+  },
+  "verdicts": {
+    "source_key": "NEEDS_FIX",
+    "exact_asked_scope": "NEEDS_FIX",
+    "coverage_stopping": "REOPEN",
+    "overall": "NEEDS_FIX"
+  },
+  "source_key_findings": [
+    {
+      "finding_id": "SOURCE-Q77-01",
+      "question_id": "Q77",
+      "fact_ids": [
+        "Q77.F01"
+      ],
+      "verdict": "NEEDS_FIX",
+      "severity": "material contradiction",
+      "confidence": "high",
+      "finding": "The key turns the token bundled with Envoys output into a prerequisite that its recipient already possess an envoy token. The original sheet does not impose that eligibility restriction. Its first Envoys paragraph says the resources must go to the same player along with an envoy token.",
+      "source": {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-09-front.png",
+        "section": "Envoys, first sentence; also complete 2017 nine-sheet corroborating photo",
+        "native_receipt": "NATIVE-COMPONENT-10"
+      },
+      "source_text": "The “Envoys” factory produces many resources, which must be traded or gifted to the same player along with an envoy token.",
+      "current_key": "The single recipient of Envoys factory output must have an envoy token; a player without one is ineligible.",
+      "necessary_correction": "A player need not already hold an envoy token to receive the output. The entire output goes to one player together with an envoy token. Keep the existing question; answer its eligibility clause accurately.",
+      "replacement_expected_answer": "A player without an envoy token is eligible; the recipient need not already hold one. Zeth sends an envoy token together with the complete output.",
+      "replacement_required_facts": [
+        {
+          "id": "Q77.F01",
+          "fact": "The recipient need not already hold an envoy token; a player currently without one may receive the complete output."
+        }
+      ],
+      "replacement_contextual_background": [
+        "An envoy token must accompany the resources to that same recipient. This accompaniment is a separate procedure, not an additional omission gate for the eligibility-only wording."
+      ],
+      "other_locations_to_reconcile": [
+        "asked-facts.json Q77.F01",
+        "current-coverage-map.json factory-recipient-eligibility units and Q77 novelty"
+      ],
+      "related_wording": "Q49 expected_answer says “to one player with envoy token.” Its required facts and explicit contextual accompaniment are correct, but change that shorthand to “to one player together with an envoy token” while correcting Q77 so it cannot perpetuate the same preexisting-eligibility interpretation."
+    }
+  ],
+  "exact_asked_scope_findings": [
+    {
+      "finding_id": "SCOPE-Q78-01",
+      "question_id": "Q78",
+      "fact_ids": [
+        "Q78.F02"
+      ],
+      "verdict": "NEEDS_FIX",
+      "confidence": "medium-high",
+      "finding": "Q78 directly asks whether Zeth may trade a spare stash token. “As distinct from gifting” identifies the action under inquiry; it does not separately ask whether gifting is legal. A fully supported affirmative answer to trading resolves the requested permission without independently reciting the gift prohibition. The latter is already directly asked by Q49.",
+      "question_text": "May Zeth trade a spare envoy token from its stash to another player during Trade, as distinct from gifting that spare token?",
+      "necessary_correction": "Move Q78.F02 to contextual_background in answer-key.json and asked-facts.json. Do not expand the question merely to retain this extra gate. Q78.F01 remains required; Q49.F03 retains actual coverage of the gifting prohibition.",
+      "source_truth_of_removed_gate": "Correct source context: Zeth may trade, not gift, stash envoy tokens.",
+      "coverage_effect": "No source coverage is lost: Q49.F03 directly tests the negative gift permission; Q78.F01 directly tests the positive trade permission."
+    }
+  ],
+  "coverage_stopping_findings": [
+    {
+      "finding_id": "COVERAGE-ENVOY-DISTRIBUTION-01",
+      "verdict": "REOPEN",
+      "source_unit": "Zeth Envoys output must be delivered together with an envoy token to the same recipient",
+      "related_question_ids": [
+        "Q49",
+        "Q77",
+        "Q78"
+      ],
+      "finding": "Mandatory token accompaniment is currently only Q49 contextual_background. Q49 asks grouping/refusal/stash gifting/onward circulation. Q77 asks recipient eligibility and currently misreads this procedure as preexisting token eligibility. Q78 asks separate stash trading. No actual asked clause correctly tests whether an envoy token must accompany factory output. This token distribution changes future theft-input eligibility and is a consequential procedure, not an ordinary per-card quantity or a cosmetic physical recital.",
+      "map_change": "Remove the unsupported “recipient must already have a token” eligibility coverage. Distinguish same-recipient grouping from mandatory token accompaniment. Give accompaniment coverage only to an actual question that asks it.",
+      "proposed_new_question": {
+        "id": "PROPOSED-Q81",
+        "question": "When Zeth trades or gifts the complete output of its Envoys factory to one player, must an envoy token accompany those resources to that same player?",
+        "expected_answer": "Yes. An envoy token must go to that same recipient along with the entire factory output.",
+        "required_facts": [
+          {
+            "id": "PROPOSED-Q81.F01",
+            "fact": "An envoy token must accompany the complete Envoys factory output to its single recipient."
+          }
+        ],
+        "contextual_background": [
+          "This distributes a token with factory output; it does not require the recipient to have held one beforehand."
+        ],
+        "source_references": [
+          "Original Zeth front, Envoys first sentence"
+        ],
+        "novelty": "Mandatory factory-triggered envoy-token distribution; distinct from output grouping, prior holdings, stash trade/gift permissions, and later theft discounts."
+      }
+    }
+  ],
+  "stopping_assessment": {
+    "claimed_consecutive_zero_addition_passes": 2,
+    "independent_challenge_result": "Not justified yet. One consequential original source procedure remains contextual rather than actually asked, and the related new eligibility key is false. Correct Q77 and Q78 scope, actually test mandatory Envoys-token accompaniment, then rewalk current asked clauses. No target N or quota was used.",
+    "new_procedural_question_proposals": 1,
+    "cosmetic_expansions_rejected": [
+      "Different failed-promise counts: Q02/Q24 already exercise tariff branches.",
+      "Different scoring amounts or a standalone all-groups recital: Q10/Q55 apply the formula to multiple groups.",
+      "Different Eni gray/ordinary color: Q12/Q35/Q52 exercise matching/passthrough/all-gray branches.",
+      "Another Zeth-versus-Unity wild-input mixture: booklet p7 expressly gives both the same nonmatching-color rule; Q18 already exercises it.",
+      "Another Transmutive Decomposer/Economy-chaining example: Q06 governing rule and Q43 point-specific boundary already asked.",
+      "Other plain relic entry/output quantities, large rather than small Cache cubes, different Kjas splits, and physical Safe/Vulnerable marker narration.",
+      "Optional variants, unsupported final-envoy-token rules, later editions and expansion procedures."
+    ]
+  },
+  "independent_source_order_rewalk": [
+    {
+      "source_unit": "Booklet p1",
+      "procedures_challenged": "Six-turn objective; hidden points; ships interchangeable/tradable; resource sizes/shapes and nominal values",
+      "actual_question_ids": [
+        "Q23",
+        "Q25",
+        "Q58",
+        "Q72"
+      ],
+      "verdict": "PASS",
+      "reason": "Nominal values are trade guidance, not an extra converter exchange. No added color/name/count memorization."
+    },
+    {
+      "source_unit": "Booklet p2",
+      "procedures_challenged": "Card ownership/loans; ordinary entry types; converter/free output; colony flip/climate and support; privacy and shortages",
+      "actual_question_ids": [
+        "Q03",
+        "Q04",
+        "Q06",
+        "Q21",
+        "Q23",
+        "Q26",
+        "Q27",
+        "Q36",
+        "Q57"
+      ],
+      "verdict": "PASS",
+      "reason": "Named basic entry mechanisms are actually exercised by setup/invention/violet-entry/relic draw questions. Climate-specific input is exercised by Q36; no separate wrong-climate reskin needed."
+    },
+    {
+      "source_unit": "Booklet p3",
+      "procedures_challenged": "Species selection; starred cards; inspectable unshuffled library; initial printed resources/ships; randomized front-up colonies and era-I research deal",
+      "actual_question_ids": [
+        "Q21",
+        "Q69",
+        "Q79"
+      ],
+      "verdict": "PASS",
+      "reason": "All consequential setup instructions asked; physical piles/reach/component counts are not additional essential questions."
+    },
+    {
+      "source_unit": "Booklet pp4–5",
+      "procedures_challenged": "Player-count tracks; Kjas exception; six Confluence cards; era ordering/shuffling; lowest-minimum-first initial deal; visible tiebreak/support; first Trade",
+      "actual_question_ids": [
+        "Q22",
+        "Q69"
+      ],
+      "verdict": "PASS",
+      "reason": "Initial colony/research track filling is the same procedure; research application covers the ordered-fill rule. Table layout adds no independent rule."
+    },
+    {
+      "source_unit": "Booklet p6",
+      "procedures_challenged": "Phase order; simultaneous action; Trade ending and immediate abilities; binding/future/multilateral trades; compensation/penalties; loans",
+      "actual_question_ids": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q24",
+        "Q30",
+        "Q56",
+        "Q68"
+      ],
+      "verdict": "PASS",
+      "reason": "Concrete failed-delivery total exercises the tariff. General tariff and physical narration are not separate omission gates. Accepted-compensation branch is independently asked."
+    },
+    {
+      "source_unit": "Booklet pp6–7",
+      "procedures_challenged": "Research-team invention; input alternatives; immediate/later matching cards; violet entry; two upgrade routes, ownership, spent-card destination/reuse and changed names",
+      "actual_question_ids": [
+        "Q04",
+        "Q05",
+        "Q26",
+        "Q27",
+        "Q29",
+        "Q51",
+        "Q57",
+        "Q66",
+        "Q67"
+      ],
+      "verdict": "PASS",
+      "reason": "Ownership sentence belongs to named-card route. Q67 resource-paid borrower permission is supported by the separate violet route. Printed invention awards are genuinely tested in Q66, even though context in Q04."
+    },
+    {
+      "source_unit": "Booklet p7",
+      "procedures_challenged": "Economy-start support; optional once-per-turn white converters; simultaneous no chaining; donation marks/storage/disposal/refusal/VP exception; wild matching; consumed-colony deck cycling; shortages",
+      "actual_question_ids": [
+        "Q06",
+        "Q07",
+        "Q18",
+        "Q23",
+        "Q26",
+        "Q28",
+        "Q31",
+        "Q35",
+        "Q43",
+        "Q50",
+        "Q52",
+        "Q56",
+        "Q65",
+        "Q76"
+      ],
+      "verdict": "PASS",
+      "reason": "White/violet timing and donation symbols are expressly asked. Q06 covers ship/resource no chaining including Decomposer. Zeth/Unity nonmatching-color wild inputs are one governing permission; another Zeth-only color substitution would be a cosmetic actor change, not a new branch."
+    },
+    {
+      "source_unit": "Booklet p8",
+      "procedures_challenged": "Sharing/public record/per-invention bonus/era-IV exception; both secret bids; total ships/empty piles; simultaneous reveals; descending buy/pass/full bid/minimum; ties; no transfers; cleanup/refill",
+      "actual_question_ids": [
+        "Q04",
+        "Q08",
+        "Q09",
+        "Q19",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q46",
+        "Q48",
+        "Q66",
+        "Q70"
+      ],
+      "verdict": "PASS",
+      "reason": "Q70 supplies actual central-splay coverage; background in Q04 does not. Holding bids in fists is a physical method, not a separate gate after hidden commitment/reveal is tested."
+    },
+    {
+      "source_unit": "Booklet p9",
+      "procedures_challenged": "Return loans; advance Confluence card; remaining phase count; final donations; all leftover scoring groups/half points/no tiebreak/reveal/winner",
+      "actual_question_ids": [
+        "Q03",
+        "Q10",
+        "Q55",
+        "Q58",
+        "Q60",
+        "Q71",
+        "Q72"
+      ],
+      "verdict": "PASS",
+      "reason": "Concrete Q10 total exceeds a single conversion and exercises repeated all-group scoring; Q55 exercises mixed small/ships and size separation. New arithmetic or scoring-card physical recitals would add no rule. Optional variants excluded."
+    },
+    {
+      "source_unit": "Booklet p10",
+      "procedures_challenged": "Resource identities and species introductions",
+      "actual_question_ids": [],
+      "verdict": "PASS",
+      "reason": "Descriptions/flavor/strategy do not add procedures beyond the operative booklet and species-sheet rules."
+    },
+    {
+      "source_unit": "Caylion front",
+      "procedures_challenged": "Halved colony bid, fractions/minimum, research exception; seedling acquisition/setup/non-grant, persistence/removal, doubled economy/nonchaining/undoubled upgrades; Trade-produced yellow",
+      "actual_question_ids": [
+        "Q11",
+        "Q32",
+        "Q33",
+        "Q34",
+        "Q63"
+      ],
+      "verdict": "PASS",
+      "reason": "All special branches actually asked. No further even/odd arithmetic or alternative colony names."
+    },
+    {
+      "source_unit": "Eni Et front",
+      "procedures_challenged": "Single-color input/output; cannot run own interest but may upgrade; upgraded no-growth converters; Unity gray preserved/no multiplication/mixed ordinary color/all-gray output choice",
+      "actual_question_ids": [
+        "Q12",
+        "Q35",
+        "Q52"
+      ],
+      "verdict": "PASS",
+      "reason": "Concrete blue+gray output exercises matching color and wild preservation without requiring a second general explanation."
+    },
+    {
+      "source_unit": "Faderan front",
+      "procedures_challenged": "Faderan-only token trade; non-Faderan noncirculation; mandatory one/invention return/common-pool award; shuffled hidden relic deck; single shared Trade draw; ordinary relic loans",
+      "actual_question_ids": [
+        "Q03",
+        "Q13",
+        "Q14",
+        "Q36",
+        "Q39",
+        "Q62",
+        "Q74"
+      ],
+      "verdict": "PASS",
+      "reason": "All consequential special procedures covered including Detector exception through its printed card. Unmoved acknowledgment remainder is not an additional asked requirement."
+    },
+    {
+      "source_unit": "Faderan reverse",
+      "procedures_challenged": "Network entry/transferable support/Imdril exception; Cache entry count/rounding/loan invariance/mandatory cube discount/octagon exception; Paradise Trade once; Stars Ruin; Gift first/repeat/Faderan/no-return; Grindstone preexisting-point cost; Detector additional draw; Decomposer simultaneity",
+      "actual_question_ids": [
+        "Q06",
+        "Q14",
+        "Q37",
+        "Q38",
+        "Q39",
+        "Q40",
+        "Q41",
+        "Q42",
+        "Q43",
+        "Q62"
+      ],
+      "verdict": "PASS",
+      "reason": "All special rule branches exercised. Cache large versus small cubes is the same discount, and other ordinary relic entry quantities are not independent procedures."
+    },
+    {
+      "source_unit": "Imdril front",
+      "procedures_challenged": "Required Fleet Support/matching/split/combine/loan; no support for ordinary borrowed cards; discover fleet/point/Trade/star; no ordinary colonies",
+      "actual_question_ids": [
+        "Q15",
+        "Q21",
+        "Q37",
+        "Q44"
+      ],
+      "verdict": "PASS",
+      "reason": "Support/no-support borrowing conditions and exceptional Network support are tested."
+    },
+    {
+      "source_unit": "Kjasjavikalimm front",
+      "procedures_challenged": "Choose split at buy/pass; nearly equal halves; later ranks; per-half minimum/payment/pass; no resplit; updated tie count; expansion setup; territory start/entry/flip/card/loan",
+      "actual_question_ids": [
+        "Q16",
+        "Q21",
+        "Q22",
+        "Q45",
+        "Q53",
+        "Q80"
+      ],
+      "verdict": "PASS",
+      "reason": "Q80 genuinely asks later half-rank timing; it is not credited merely from Q16 context. Ordinary multiple converter outputs on a territory add no separate generic production rule."
+    },
+    {
+      "source_unit": "Kt front",
+      "procedures_challenged": "Fixed paired arrangement; independent upgrade; intact loan; nullspace top/Trade/no extra output/permanent/removed when consumed; infinite colony support/colony ties/research normal count/infinity final priority",
+      "actual_question_ids": [
+        "Q17",
+        "Q46",
+        "Q64"
+      ],
+      "verdict": "PASS",
+      "reason": "All special procedures asked. Another colony-name/cost example would be cosmetic."
+    },
+    {
+      "source_unit": "Unity front",
+      "procedures_challenged": "Same-size gray substitutions; anti-theft; Eni passthrough; mixed matching-size inputs/gray eligibility; any-climate entry/flip/excess disposal; four computer-world top entry",
+      "actual_question_ids": [
+        "Q12",
+        "Q18",
+        "Q35",
+        "Q47",
+        "Q65"
+      ],
+      "verdict": "PASS",
+      "reason": "Starting out-of-play computer worlds and extra printed payment may explain entry; not extra omission gates for Q47 wording."
+    },
+    {
+      "source_unit": "Yengii front",
+      "procedures_challenged": "No outgoing auto sharing; ordinary incoming sharing; reduced bonus/private splay; invented teams excluded in bid count; licensing own card/permanent/sameTrade/no spent restoration",
+      "actual_question_ids": [
+        "Q19",
+        "Q48",
+        "Q59"
+      ],
+      "verdict": "PASS",
+      "reason": "All meaningful restrictions, positive permissions, and timing covered. No unsupported unique-era license speculation."
+    },
+    {
+      "source_unit": "Zeth front: Envoys",
+      "procedures_challenged": "Whole output one recipient; accompanying envoy token; gift no refusal; stash trade not gift; other-player no circulation",
+      "actual_question_ids": [
+        "Q49",
+        "Q77",
+        "Q78"
+      ],
+      "verdict": "REOPEN",
+      "reason": "Whole-output grouping is asked; accompanying-token procedure is context only. Q77 key invents a preexisting-token eligibility restriction. See SOURCE-Q77-01 and COVERAGE-ENVOY-DISTRIBUTION-01."
+    },
+    {
+      "source_unit": "Zeth front: Theft",
+      "procedures_challenged": "Extra final phase/red converter; size/shape not color; shortage; one target/converter, no repeated target; target envoy discount/nonconsumption; gray immunity",
+      "actual_question_ids": [
+        "Q20",
+        "Q50",
+        "Q61",
+        "Q73",
+        "Q75"
+      ],
+      "verdict": "PASS",
+      "reason": "All operative theft branches asked; underlying wild-input color permission already exercised under shared booklet rule. Safe/Vulnerable markers are a tracking aid, not a new outcome gate."
+    },
+    {
+      "source_unit": "Zeth front: Protection Racket",
+      "procedures_challenged": "Previous Trade protection; gifts do not protect; donation accepted-trade branch/refusal",
+      "actual_question_ids": [
+        "Q20",
+        "Q54"
+      ],
+      "verdict": "PASS",
+      "reason": "No extra factory-recipient token prerequisite follows from this section."
+    },
+    {
+      "source_unit": "Accepted original phase components",
+      "procedures_challenged": "Turn6 remaining phases; final ordinary/Yengii player-count bonuses; scoring reminder",
+      "actual_question_ids": [
+        "Q10",
+        "Q55",
+        "Q58",
+        "Q59",
+        "Q71"
+      ],
+      "verdict": "PASS",
+      "reason": "Native fronts/reverses and author clarification support no seventh Trade or final bids. Ordinary intermediate card bonus quantities introduce no independent procedure."
+    },
+    {
+      "source_unit": "Accepted original relic components",
+      "procedures_challenged": "Network entry point/support; Detector entry point/nontrade; Stars Ruin sharing terminology; ordinary Grindstone/Decomposer printed mechanics",
+      "actual_question_ids": [
+        "Q06",
+        "Q14",
+        "Q37",
+        "Q41",
+        "Q43",
+        "Q62"
+      ],
+      "verdict": "PASS",
+      "reason": "Ordinary extra relic entry/output quantities are excluded from novelty. The nontrade exception is expressly asked."
+    },
+    {
+      "source_unit": "Designer direct 2017 posts",
+      "procedures_challenged": "Final Economy ordinary except output colors/retained donations; correct inputs; final sharing then no bidding; formula reminder; final Zeth theft last/correct input colors",
+      "actual_question_ids": [
+        "Q06",
+        "Q10",
+        "Q55",
+        "Q58",
+        "Q60",
+        "Q61"
+      ],
+      "verdict": "PASS",
+      "reason": "Only author1220373 direct official statements used. Other users, quoted interpretations, strategy, and optional house-rule suggestion excluded."
+    }
+  ],
+  "per_question_review": [
+    {
+      "id": "Q01",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 Phases and Trade Phase"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q01.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q01.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q01.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q02",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 Trade Phase, failed promises"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q02.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q02.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q03",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp2,6 Cards and Trade Phase; p9 Ending the Turn"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q03.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q03.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q03.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q04",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 Invention; p8 Confluence",
+        "Yengii front Secretive"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q04.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q04.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q04.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q04.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q04.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q04.F06",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q05",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp6–7 Upgrading, Genetic Resynthesis example"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q05.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q05.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q05.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q06",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p7 Economy Phase"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q06.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q06.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q06.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q06.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q06.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q07",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p7 donation goods"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q07.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q07.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q07.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q07.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q08",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p8 Bidding"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q08.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F06",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q08.F07",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q09",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp8–9 Bidding cleanup"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q09.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q09.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q09.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q09.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q10",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p9 Ending the Game, excluding Precise Resource Scoring variant"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q10.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q10.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q10.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q11",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Caylion sheet front: Halved Colonization Bids; Seedling Tokens"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q11.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q11.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q11.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q12",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Eni Et sheet front: Interest Converters; Unity Wild Resources"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q12.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q12.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q12.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q13",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan front and complete 2019 photo: Acknowledgements"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q13.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q13.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q13.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q13.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q14",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan front: Relic Worlds; back: Relic Detector"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q14.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q14.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q14.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q14.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q14.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q15",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Im’dril sheet front: Fleet Support"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q15.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q15.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q15.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q15.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q15.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q16",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kjasjavikalimm front: Military Might"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q16.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q16.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q16.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q16.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q17",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kt’Zr’Kt’Rtl front: Nonlinear Thinking; Nullspace Drive"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q17.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q17.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q17.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q17.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q17.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q17.F06",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q18",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Unity front: Flexible Output; Flexible Input; rulebook p7 Wilds"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q18.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q18.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q18.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q18.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q19",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Yengii front: Secretive; Licensing"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q19.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q19.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q19.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q19.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q20",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth front: Theft; Protection Racket"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q20.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q20.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q20.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q20.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q20.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q21",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p3 Setup"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q21.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q21.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q21.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q21.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q22",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p4 Track Setup; Kjas sheet Expansionist"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q22.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q22.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q22.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q22.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q22.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q23",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp1–2 Components; p7 shortages"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q23.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q23.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q23.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q24",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 Trade Phase"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q24.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q24.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q24.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q24.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q25",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp1–2 Components; p6 research input; p7 printed values and donations"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q25.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q25.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q25.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q26",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp2,6–7 card entry and Economy"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q26.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q26.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q26.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q27",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp2,6–7 upgrading, Deep Hunting example"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q27.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q27.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q27.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q28",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p7 consuming colonies"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q28.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q28.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q29",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 invention; p8 era IV"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q29.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q29.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q30",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p8 Bidding negotiation"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q30.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q30.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q30.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q31",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp7–8 Colony Support"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q31.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q31.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q32",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Caylion front Halved Colonization Bids; Rulebook p8 full bid payment"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q32.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q32.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q32.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q33",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Caylion front Seedling Tokens"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q33.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q33.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q33.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q33.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q34",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Caylion front Upgrading the Caylion Economy"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q34.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q34.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q35",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Eni Et front Unity Wild Resources"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q35.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q35.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q35.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q36",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p2 illustrated relic deck converter; p7 colony consumption; Faderan front Relic Worlds"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q36.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q36.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q36.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q37",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Automated Transport Network",
+        "Original Automated Transport Network printed card61/396"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q37.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q37.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q37.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q37.F05",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q38",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Contextual Integrator Cache"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q38.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q38.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q38.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q39",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Contextual Integrator Cache; front Acknowledgements"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q39.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q39.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q39.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q39.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q40",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Paradise Converter; rulebook p7 colony consumption"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q40.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q40.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q40.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q41",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Star’s Ruin",
+        "Original Star’s Ruin printed card66/396 identifies Sharing Bonus as sheet’s Invention Bonus"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q41.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q41.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q42",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Gift of the Duruntai"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q42.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q42.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q42.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q42.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q43",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan back Nalgorian Grindstone"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q43.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q43.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q43.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q43.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q44",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Im’dril front Fleets; No Colonies"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q44.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q44.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q44.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q45",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kjas front Territory Tiles"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q45.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q45.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q45.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q45.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q46",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kt front Boundless Expansion; Dangerously Fast"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q46.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q46.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q46.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q46.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q47",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Unity front Flexible Colonization; Computer Worlds"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q47.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q47.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q47.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q48",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Yengii front Secretive"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q48.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q48.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q48.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q48.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q49",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth front Envoys"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q49.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q49.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q49.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q49.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "Required facts are source-correct and asked. Accompanying envoy is context only. Clarify expected-answer shorthand “with envoy token” as “together with an envoy token”; no prior token eligibility condition exists."
+    },
+    {
+      "id": "Q50",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth front Theft"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q50.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q50.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q50.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q51",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 named-card upgrading"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q51.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q51.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q52",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Eni Et front Interest Converters; Unity Wild Resources"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q52.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q52.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q53",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kjas front Military Might"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q53.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q53.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q53.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q53.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q54",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth front Protection Racket"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q54.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q54.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q55",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p9 Ending the Game"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q55.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q55.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q55.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q56",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp6–7 Trade restriction; Economy silence"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q56.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q56.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q57",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 invention diagram"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q57.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q57.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q58",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook pp1,4,9 including Turn2 reverse; original Turn6 reverse386/396 and FinalConfluence fronts"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q58.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q58.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q58.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q58.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q59",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Original FinalConfluence fronts:3–4,5–6,7+ players"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q59.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q59.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q60",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Designer TauCeti Deichmann direct author post26690049,2017-08-20; booklet p9"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q60.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q60.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q60.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q61",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth sheet Theft; designer TauCeti Deichmann direct author post26803262,2017-09-01"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q61.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q61.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q62",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Original Relic Detector printed card62/396"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q62.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q62.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q63",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Caylion front Seedling Tokens"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q63.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q63.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q64",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kt front Nullspace Drive; Rulebook Economy timing"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q64.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q65",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Unity front Flexible Input; Rulebook p7 wild sizes"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q65.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q65.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q66",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 invention points; p8 sharing and Bidding"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q66.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q66.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q66.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q66.F04",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q67",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Rulebook p6 violet converters and two upgrade routes, reading the ownership sentence in its named-card-route context; p7 upgrade example"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q67.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q67.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q68",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p6 complete impossible-promise paragraph"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q68.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q68.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q68.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q69",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p3 Player Setup; p4 final setup"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q69.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q69.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q70",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p8 Confluence announcement/splay paragraph and p9 diagram"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q70.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q70.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q70.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q71",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p9 Ending the Turn; original remaining-phase cards"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q71.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q71.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q71.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q72",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p9 Ending the Game"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q72.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q72.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q73",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth original front Theft, first paragraph final sentence"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q73.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q73.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q74",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Faderan original front Acknowledgements, first two sentences; Booklet Trade phase"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q74.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q75",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth original front Theft, paragraph beginning All stealing converters"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q75.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q75.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q76",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p6 violet converters; p7 Economy and donation-output marking diagrams/paragraphs"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q76.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q76.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q76.F03",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q77",
+      "source_key_verdict": "NEEDS_FIX",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth original front Envoys"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q77.F01",
+          "source_truth": "NEEDS_FIX",
+          "actually_asked": "PASS"
+        }
+      ],
+      "finding_ids": [
+        "SOURCE-Q77-01",
+        "COVERAGE-ENVOY-DISTRIBUTION-01"
+      ]
+    },
+    {
+      "id": "Q78",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "NEEDS_FIX",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Zeth original front Envoys and Trade Phase"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q78.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q78.F02",
+          "source_truth": "PASS",
+          "actually_asked": "CONTEXT_ONLY"
+        }
+      ],
+      "finding_ids": [
+        "SCOPE-Q78-01"
+      ]
+    },
+    {
+      "id": "Q79",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Booklet p3 Preparing the Play Area and Player Setup; p4 diagram"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q79.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        },
+        {
+          "id": "Q79.F02",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    },
+    {
+      "id": "Q80",
+      "source_key_verdict": "PASS",
+      "exact_asked_scope_verdict": "PASS",
+      "all_substantive_entry_fields_reviewed": true,
+      "source_references_checked": [
+        "Kjasjavikalimm original front Military Might"
+      ],
+      "required_fact_reviews": [
+        {
+          "id": "Q80.F01",
+          "source_truth": "PASS",
+          "actually_asked": "PASS"
+        }
+      ],
+      "note": "All actually asked outcomes/eligibility/procedure match original authorities. Correct contextual explanation is not an additional omission gate."
+    }
+  ],
+  "integrity_checks": {
+    "question_ids_and_question_text_match_asked_facts": true,
+    "key_and_asked_required_facts_and_context_match": true,
+    "all_manifest_sources_match_hash_and_bytes": true
+  },
+  "receipts": {
+    "text_read_method": "Full raw text was displayed and read in contiguous slices no longer than 6000 Unicode characters. Endpoints and per-slice hashes below bind all displayed text. A truncated combined authority output was repaired by bounded rereads of the raw threads. No truncated segment is claimed complete without rereading.",
+    "text_ranges": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/expanded-v6/questions.json",
+        "bytes": 20111,
+        "sha256": "ff86c20da38d8f00de7648cc67c96d7dc1eea4e6c76f27a68935b2adeee35e39",
+        "character_length": 20071,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "7f892bd871236fb5870d0ea0fefec48d6a2c14e79ce67c0673be1d9efb2b46d7"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "112c713e0f0ec6f88c0a64b5e4ff7016da970cd346fb8cb2422427746f129c91"
+          },
+          {
+            "start": 12000,
+            "end": 18000,
+            "sha256_utf8_slice": "3da6dd46cc88e5a927ed9a674344970a499771ea36f4fa17f6ce02ce68b9e3b6"
+          },
+          {
+            "start": 18000,
+            "end": 20071,
+            "sha256_utf8_slice": "9a828c4173c26d6df5ff163879c5d9a1b7a931451c7d9916e8c3dbadb389e830"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/expanded-v6/answer-key.json",
+        "bytes": 78923,
+        "sha256": "31ad18a136d3b8e1eefa715d70ff790cb434312114332e958d20979db9542cd4",
+        "character_length": 78849,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "ff460ac388e921e09bd10a2e4728fba9b26b7a156b62157669d43181cfcc5559"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "3713e9e812a55a5bc220ff2b8c99d60e2a3f414480bf24a7a4cfec1ad6ba9773"
+          },
+          {
+            "start": 12000,
+            "end": 18000,
+            "sha256_utf8_slice": "4b67cfa1e32e203eb9ba572d537bba9e5e983bd3fdc126199f147297c530157c"
+          },
+          {
+            "start": 18000,
+            "end": 24000,
+            "sha256_utf8_slice": "d372d3dfa611e1673a1ddd1864299f321b41b01b84ad7308dd848f1839a27852"
+          },
+          {
+            "start": 24000,
+            "end": 30000,
+            "sha256_utf8_slice": "ef7114b5a9a41fdcd4a38ca1d82c82042acaffd0932143a2f4b24016cdcbb31b"
+          },
+          {
+            "start": 30000,
+            "end": 36000,
+            "sha256_utf8_slice": "ffc0f7f3da3335882832e57deb18be498533ed9c31624f5056a49a3e512bd4ea"
+          },
+          {
+            "start": 36000,
+            "end": 42000,
+            "sha256_utf8_slice": "4a28b67ec0b9312581b55a69972bfca3a2776c9a1cc939d69a02aaaca313d6c4"
+          },
+          {
+            "start": 42000,
+            "end": 48000,
+            "sha256_utf8_slice": "82c496330a1604fb9ea6159e45403526f4ae1131c7b6f1e8f97d6e0f72220c9f"
+          },
+          {
+            "start": 48000,
+            "end": 54000,
+            "sha256_utf8_slice": "32540652f8da3aeba3eff148982046a65001442995bb9b6845ad597b695e7e53"
+          },
+          {
+            "start": 54000,
+            "end": 60000,
+            "sha256_utf8_slice": "0cace0dd315c63d18239ec3055995ce450fff5a3a86de4e756415b00593047d1"
+          },
+          {
+            "start": 60000,
+            "end": 66000,
+            "sha256_utf8_slice": "5e9ca0dece35c803575f607a117f63455434333ada276102d5e1a0326a75119d"
+          },
+          {
+            "start": 66000,
+            "end": 72000,
+            "sha256_utf8_slice": "0ea098ab1f4ffd0bbefd7addeb09c9fe2656a1a18ea9d6b6d60d88fc740a88c6"
+          },
+          {
+            "start": 72000,
+            "end": 78000,
+            "sha256_utf8_slice": "481da35883a23c50983d896e5ea25af3f2bdb0f3f37a55837b86ec738661b788"
+          },
+          {
+            "start": 78000,
+            "end": 78849,
+            "sha256_utf8_slice": "17473a5cc1ac3f445b7319916707480ff5e170d629bf70c0be16775ba7ba53b5"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/expanded-v6/asked-facts.json",
+        "bytes": 64813,
+        "sha256": "2c377c99e347708a0d75283a27929dee2b2a0ea8383d6f1ae4d275f0083730f7",
+        "character_length": 64751,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "71c5f3115e67f155884d0af49a4f2d396cfa3d5789d96fc8e2703daae635a1ad"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "7b03cfa5555894d8cff30d94109eef659781760f169aa3faff663b725abbb3eb"
+          },
+          {
+            "start": 12000,
+            "end": 18000,
+            "sha256_utf8_slice": "722eeedda6a313b5338cf8b891d3751e3a0b9f42eca6f051fb513627884a4a81"
+          },
+          {
+            "start": 18000,
+            "end": 24000,
+            "sha256_utf8_slice": "e93adc8633a29ee1045115a35a089e35bc5c48941605c9362db1c5c4e3fc5de3"
+          },
+          {
+            "start": 24000,
+            "end": 30000,
+            "sha256_utf8_slice": "618018cd868a7ee277fd477608dafae5f65b9cf32d93ff0e062eaa60181e551b"
+          },
+          {
+            "start": 30000,
+            "end": 36000,
+            "sha256_utf8_slice": "fe226f0dfdc17089589bcddd4f457672e11badb17cc56b525511936f8b70b790"
+          },
+          {
+            "start": 36000,
+            "end": 42000,
+            "sha256_utf8_slice": "acbcec20ff2c3fa915614cf42d08a4b7ffe39f9065349ba29309a9283b887326"
+          },
+          {
+            "start": 42000,
+            "end": 48000,
+            "sha256_utf8_slice": "70da0afebc57b12ab6ba973b69056bc1f3534f4142d962ab913c83c0c534d8ea"
+          },
+          {
+            "start": 48000,
+            "end": 54000,
+            "sha256_utf8_slice": "482cf365e4d365453e21d128a30ed5f061823abf8ea9b0c7e42bcc0844822e97"
+          },
+          {
+            "start": 54000,
+            "end": 60000,
+            "sha256_utf8_slice": "d512ad887528414a0df0325586018989c733f13507987160db6d331262652f91"
+          },
+          {
+            "start": 60000,
+            "end": 64751,
+            "sha256_utf8_slice": "afb8212c4604ea3e0400028eb2b13dd7d2db4ede8b6775d22bf39008b8ec8669"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/expanded-v6/current-coverage-map.json",
+        "bytes": 80951,
+        "sha256": "b125e37e3a5a0a899d53870507178be66388359e0aa86cd39ee62f57dc08b86c",
+        "character_length": 80837,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "666b761e585d0ca29923210ce491e7a04078a6316e4180d104df8cc47aec44a8"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "8b9c86997609464a5a39c023b040edb38524663206063d4744f8af83e6a58864"
+          },
+          {
+            "start": 12000,
+            "end": 18000,
+            "sha256_utf8_slice": "7f01e7b7e6bf8ea1c3793f8b19dba238e884cb9d37d874d946d69c8341b28230"
+          },
+          {
+            "start": 18000,
+            "end": 24000,
+            "sha256_utf8_slice": "15c5e390856eae0314a4b95fe4abd980167128f587918eb4efa817bacadeea12"
+          },
+          {
+            "start": 24000,
+            "end": 30000,
+            "sha256_utf8_slice": "ee1b03c2a109dd851ae9060c2910e5c111b907e390adefe560873232668d7bd6"
+          },
+          {
+            "start": 30000,
+            "end": 36000,
+            "sha256_utf8_slice": "c36ad873b686398d79510c159844d2f22b206ab7f175155b205613b5a333907c"
+          },
+          {
+            "start": 36000,
+            "end": 42000,
+            "sha256_utf8_slice": "6c449948058996ff8c010b05a5c3425524ac1871c94799c0cc2363da162eccd9"
+          },
+          {
+            "start": 42000,
+            "end": 48000,
+            "sha256_utf8_slice": "fd648a10b71176ea756cb8995eafef221d2e5baf9b8fab287bb6d7e259aa7bbe"
+          },
+          {
+            "start": 48000,
+            "end": 54000,
+            "sha256_utf8_slice": "4f56b65c3c11f6d7b9fb72a79cef67c4fdce441b7c49e007d486a63fbf16e221"
+          },
+          {
+            "start": 54000,
+            "end": 60000,
+            "sha256_utf8_slice": "0851cdfaf11e8d31bdff39c8c0acd71fdca139f90d85c43cd4b223694b4638e4"
+          },
+          {
+            "start": 60000,
+            "end": 66000,
+            "sha256_utf8_slice": "fe93bbc68837bb3b7801613f08f83d762b6ec2a05a6c290913e9c957eecf2d87"
+          },
+          {
+            "start": 66000,
+            "end": 72000,
+            "sha256_utf8_slice": "58e8cd0eaa71901f521adbd9b7194c4dfce0e0ce2de9c1fefff4310acb937a3d"
+          },
+          {
+            "start": 72000,
+            "end": 78000,
+            "sha256_utf8_slice": "8e22565b091629c3de8adcd081749082a684e79b384b058f05d266844316a85a"
+          },
+          {
+            "start": 78000,
+            "end": 80837,
+            "sha256_utf8_slice": "08bda69440bc2e111f39898da761aae50c940ff180240cbb680a675560b22e86"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-manifest.json",
+        "bytes": 13842,
+        "sha256": "fdba14d45b107001c1972667d2aa0531ffe2a45084e197f9ae61984eda9ba92a",
+        "character_length": 13842,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "86786718f2c534ae5c2cb066641534f6d61a2138f5cae5f3b28715caba5cacd5"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "4716d2a256838a6bb661d829b354d7207496f336e54e94aa2d03692cd9363238"
+          },
+          {
+            "start": 12000,
+            "end": 13842,
+            "sha256_utf8_slice": "4cda671fbf2b2c9476ca7736528b8ac4670df962b58882658b39d2646f44699f"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/extracted/sidereal-confluence-rules.txt",
+        "bytes": 29418,
+        "sha256": "d1fdc87fc12b886539c1e723f8df0833dac70fc22ad2bafa37cf001c1dbd28cb",
+        "character_length": 29268,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "aa205fa6df012881c3697f4e6a0c8444c6ec7250292e33b1bf4ce3a0f1354381"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "13e2d5b63c9391602640f7d1b99b684cb5d04463a854c373c623074267736876"
+          },
+          {
+            "start": 12000,
+            "end": 18000,
+            "sha256_utf8_slice": "e39e7a501134675973540f9072359b81c54ce0f166273791ffa10528345227b8"
+          },
+          {
+            "start": 18000,
+            "end": 24000,
+            "sha256_utf8_slice": "3911ed42573cf3a0ed7691901cbac1ce39e27866b048201f1f6849086d4ae23b"
+          },
+          {
+            "start": 24000,
+            "end": 29268,
+            "sha256_utf8_slice": "8138c70b494e12d275bc5922730e1e75809f79beb985ec46769c14ad8e856b3d"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/recovered-confluence-provenance.json",
+        "bytes": 1954,
+        "sha256": "5d727d65c60ac27b9ada354e07124af3b809a37246e7f8af6f6fa8dac7162f45",
+        "character_length": 1954,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 1954,
+            "sha256_utf8_slice": "5d727d65c60ac27b9ada354e07124af3b809a37246e7f8af6f6fa8dac7162f45"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/recovered-component-provenance.json",
+        "bytes": 11310,
+        "sha256": "f9d03ed1e691525e40e2a45324ba7da355f7c50f83320540a25d0b8a399fb0e0",
+        "character_length": 11310,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "54228fea02da4381c26c76333aa025d170e72002f33402b4d32a3ccd60b5d58e"
+          },
+          {
+            "start": 6000,
+            "end": 11310,
+            "sha256_utf8_slice": "75494a61216ad6ffb028733a7631ae9a04d27e95d451f383a61228694b5a79b3"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/confluence-crop-provenance.json",
+        "bytes": 8623,
+        "sha256": "539b747b7d5d47d51f7d67042260d407a713e2a1a0bc8cc226f9dc854bdde6f9",
+        "character_length": 8623,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "757984aa72b01e7f890eceb1709b0ad6fb2ed3f3bc1907723b7a279b8cbfc876"
+          },
+          {
+            "start": 6000,
+            "end": 8623,
+            "sha256_utf8_slice": "353749215238d5cc3dcc9df72a6f49cfd8924347abd014db1b1fdd36d9dfba16"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/stars-ruin-crop-provenance.json",
+        "bytes": 783,
+        "sha256": "39cbbcbbeeeecbf441f766839ef398e2c36a282be418074ceb3cbb07b136fb89",
+        "character_length": 783,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 783,
+            "sha256_utf8_slice": "39cbbcbbeeeecbf441f766839ef398e2c36a282be418074ceb3cbb07b136fb89"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/additional-card-crop-provenance.json",
+        "bytes": 2757,
+        "sha256": "68744ea607c5cd1c6ae2abfa8262dcbc6157a0aa709ae11058e159b82ccfd664",
+        "character_length": 2757,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 2757,
+            "sha256_utf8_slice": "68744ea607c5cd1c6ae2abfa8262dcbc6157a0aa709ae11058e159b82ccfd664"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/provenance.json",
+        "bytes": 5024,
+        "sha256": "02640a4b6b28aec648e6e25c2c355c66063a33781040b99e9b2e1c14d9c48f5d",
+        "character_length": 5024,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 5024,
+            "sha256_utf8_slice": "02640a4b6b28aec648e6e25c2c355c66063a33781040b99e9b2e1c14d9c48f5d"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/thread-1833405-articles.json",
+        "bytes": 15879,
+        "sha256": "29d9172adee333ef4306d255f6cee24dba54828a0e4d4db75dd600e465319aab",
+        "character_length": 15879,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "92cdc9951c4d6ac9d516dd9bec3cbde76790c2a08aaef23ea52976d7fa298b01"
+          },
+          {
+            "start": 6000,
+            "end": 12000,
+            "sha256_utf8_slice": "5773aece192c171642e2bb0e997828ab5f628c43aad97ded7907e9e7c17bfae1"
+          },
+          {
+            "start": 12000,
+            "end": 15879,
+            "sha256_utf8_slice": "da1f8d5d421e21e03c596cbf4a912187e8787cd3d4623d5070aa0e518a72ee2d"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/thread-1840710-articles.json",
+        "bytes": 11543,
+        "sha256": "ff42f8a5b1ee98efc7d60b120370161606acd74913b1d19818d659831812b04f",
+        "character_length": 11543,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 6000,
+            "sha256_utf8_slice": "9a6d241f983ace1c9188573651620b2c82d5adfc53c0b23d0d7968a5eebf7946"
+          },
+          {
+            "start": 6000,
+            "end": 11543,
+            "sha256_utf8_slice": "23e0f56cb602ebde791d87bc77a2b0190ff86fbf6684eba6842ab7e84dd70df9"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/author-1220373.json",
+        "bytes": 983,
+        "sha256": "5b48b942e572292a0f43548dd0f67df5d43e2f0bcaaa8a4742710fb2f18f742a",
+        "character_length": 983,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 983,
+            "sha256_utf8_slice": "5b48b942e572292a0f43548dd0f67df5d43e2f0bcaaa8a4742710fb2f18f742a"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/designer-article-26690049.txt",
+        "bytes": 2740,
+        "sha256": "1640c79bf84ae4d0131e3e091b0ee094331b7739078fab67146653e00f431c8e",
+        "character_length": 2728,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 2728,
+            "sha256_utf8_slice": "1640c79bf84ae4d0131e3e091b0ee094331b7739078fab67146653e00f431c8e"
+          }
+        ]
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/designer-article-26803262.txt",
+        "bytes": 1048,
+        "sha256": "9d5c2c7da05e5210b893eb4b8efa5d3870993efe8765e0de690eded1dce71d8e",
+        "character_length": 1044,
+        "range_convention": "zero-based Unicode characters, end-exclusive",
+        "complete": true,
+        "slices": [
+          {
+            "start": 0,
+            "end": 1044,
+            "sha256_utf8_slice": "9d5c2c7da05e5210b893eb4b8efa5d3870993efe8765e0de690eded1dce71d8e"
+          }
+        ]
+      }
+    ],
+    "binary_source_bindings": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "bytes": 13598939,
+        "sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "manifest_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "manifest_bytes": 13598939,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/extracted/sidereal-confluence-rules.txt",
+        "bytes": 29418,
+        "sha256": "d1fdc87fc12b886539c1e723f8df0833dac70fc22ad2bafa37cf001c1dbd28cb",
+        "manifest_sha256": "d1fdc87fc12b886539c1e723f8df0833dac70fc22ad2bafa37cf001c1dbd28cb",
+        "manifest_bytes": 29418,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-01-front.png",
+        "bytes": 2672981,
+        "sha256": "87dcdb39158429787bae191ea1bbf6999170aceb31fcf7dde7bfb640c9451487",
+        "manifest_sha256": "87dcdb39158429787bae191ea1bbf6999170aceb31fcf7dde7bfb640c9451487",
+        "manifest_bytes": 2672981,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-02-front.png",
+        "bytes": 2754382,
+        "sha256": "41798dfdf7a89a83d7c7a35f6fa171b6a3e6942b4f0cb59ec82d452c4cb58e0f",
+        "manifest_sha256": "41798dfdf7a89a83d7c7a35f6fa171b6a3e6942b4f0cb59ec82d452c4cb58e0f",
+        "manifest_bytes": 2754382,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-03-back.png",
+        "bytes": 3240154,
+        "sha256": "ac178349e85112b13b28af89385bf28241ed48ab2509b1c8c522fcc5052c3b21",
+        "manifest_sha256": "ac178349e85112b13b28af89385bf28241ed48ab2509b1c8c522fcc5052c3b21",
+        "manifest_bytes": 3240154,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-03-front.png",
+        "bytes": 3113133,
+        "sha256": "5dec1a07e8b12fae80284a67092fc3114947c39cfc440cce6553cedd51834ec3",
+        "manifest_sha256": "5dec1a07e8b12fae80284a67092fc3114947c39cfc440cce6553cedd51834ec3",
+        "manifest_bytes": 3113133,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-04-front.png",
+        "bytes": 2604592,
+        "sha256": "56b75bda3a9c10c7535f73758435d7159d01cbab0e2e40b58b7dffa292ebaacd",
+        "manifest_sha256": "56b75bda3a9c10c7535f73758435d7159d01cbab0e2e40b58b7dffa292ebaacd",
+        "manifest_bytes": 2604592,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-05-front.png",
+        "bytes": 2870668,
+        "sha256": "6b0d63cdcc0529e93caa441f14b1b830b1222ae6a83440a804531febde271671",
+        "manifest_sha256": "6b0d63cdcc0529e93caa441f14b1b830b1222ae6a83440a804531febde271671",
+        "manifest_bytes": 2870668,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-06-front.png",
+        "bytes": 2990156,
+        "sha256": "69f1fe452880364fdf2ee4ee4ff2bf13317aa3e77f7a912f7f4aaf8b2ec25e95",
+        "manifest_sha256": "69f1fe452880364fdf2ee4ee4ff2bf13317aa3e77f7a912f7f4aaf8b2ec25e95",
+        "manifest_bytes": 2990156,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-07-front.png",
+        "bytes": 2837077,
+        "sha256": "d239439e40e96bdd90fa2e3dfaf75295253752ba7f6d1d25e5c141d9b1568ea8",
+        "manifest_sha256": "d239439e40e96bdd90fa2e3dfaf75295253752ba7f6d1d25e5c141d9b1568ea8",
+        "manifest_bytes": 2837077,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-08-front.png",
+        "bytes": 2819116,
+        "sha256": "6c88e58cfc6d9631571bfba233eff429c1dfb78a68fbb71729eb01844c8d92db",
+        "manifest_sha256": "6c88e58cfc6d9631571bfba233eff429c1dfb78a68fbb71729eb01844c8d92db",
+        "manifest_bytes": 2819116,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-09-front.png",
+        "bytes": 2249353,
+        "sha256": "a1f71a4200159d787ffebf1949aaabf1037faf2ca3d172c12f22e20ec9144cb1",
+        "manifest_sha256": "a1f71a4200159d787ffebf1949aaabf1037faf2ca3d172c12f22e20ec9144cb1",
+        "manifest_bytes": 2249353,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/corroborating-faderan-2019.jpg",
+        "bytes": 1774120,
+        "sha256": "08d3dea70311bfad7d58ba390e426cdfeb3449aa920dad662633232a7b94e5a6",
+        "manifest_sha256": "08d3dea70311bfad7d58ba390e426cdfeb3449aa920dad662633232a7b94e5a6",
+        "manifest_bytes": 1774120,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/corroborating-nine-sheets-2017.jpg",
+        "bytes": 806762,
+        "sha256": "803fd00d51597ab99dc9d4945a45f098054d449273079cda3b2731be8fe3803c",
+        "manifest_sha256": "803fd00d51597ab99dc9d4945a45f098054d449273079cda3b2731be8fe3803c",
+        "manifest_bytes": 806762,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-3-4-back-crop.png",
+        "bytes": 325054,
+        "sha256": "8614781a1da4d54d0845631e27b10c8a0caf05e089b9d6a3c9563b40adb6a16a",
+        "manifest_sha256": "8614781a1da4d54d0845631e27b10c8a0caf05e089b9d6a3c9563b40adb6a16a",
+        "manifest_bytes": 325054,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-3-4-front-crop.png",
+        "bytes": 327966,
+        "sha256": "5083759813c9ed140c81f72b69c2c028c9cf4125b72da3dc095509152e0073bd",
+        "manifest_sha256": "5083759813c9ed140c81f72b69c2c028c9cf4125b72da3dc095509152e0073bd",
+        "manifest_bytes": 327966,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-5-6-back-crop.png",
+        "bytes": 333704,
+        "sha256": "af907dfb44fb709e4fa4ea6f35bb4869da90e45205655d7e7f3a2af8b4ace0e4",
+        "manifest_sha256": "af907dfb44fb709e4fa4ea6f35bb4869da90e45205655d7e7f3a2af8b4ace0e4",
+        "manifest_bytes": 333704,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-5-6-front-crop.png",
+        "bytes": 338922,
+        "sha256": "8cb36c1cb37b61528f806be809b12a6785995e71665bb5c5e9098554cf4e3c1a",
+        "manifest_sha256": "8cb36c1cb37b61528f806be809b12a6785995e71665bb5c5e9098554cf4e3c1a",
+        "manifest_bytes": 338922,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-7-plus-back-crop.png",
+        "bytes": 328094,
+        "sha256": "42ebb6ecaf8d990f6d1adc552943dc5901db5e4d5deaa04dcfb156f8584ec909",
+        "manifest_sha256": "42ebb6ecaf8d990f6d1adc552943dc5901db5e4d5deaa04dcfb156f8584ec909",
+        "manifest_bytes": 328094,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-7-plus-front-crop.png",
+        "bytes": 339346,
+        "sha256": "b76b43e84a5d9b71d84698dc7b15af01515bab2b86e66974151128dd0fcfaceb",
+        "manifest_sha256": "b76b43e84a5d9b71d84698dc7b15af01515bab2b86e66974151128dd0fcfaceb",
+        "manifest_bytes": 339346,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/stars-ruin-card-crop.png",
+        "bytes": 510730,
+        "sha256": "92718b5f3d18c75c24510671684e6c25191cfa96495e1cfa1329aab02b4d4acc",
+        "manifest_sha256": "92718b5f3d18c75c24510671684e6c25191cfa96495e1cfa1329aab02b4d4acc",
+        "manifest_bytes": 510730,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-6-3-5-back-crop.png",
+        "bytes": 343781,
+        "sha256": "82b645ca8facd019ff827cb7d84c38214b3260dbf6df73111b32ce0b0f1eec2b",
+        "manifest_sha256": "82b645ca8facd019ff827cb7d84c38214b3260dbf6df73111b32ce0b0f1eec2b",
+        "manifest_bytes": 343781,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-6-6-plus-back-crop.png",
+        "bytes": 343857,
+        "sha256": "08b68a6c87e1edd96e80f4deaf50a060df5e54befaaffb93df4a1e25b01281f8",
+        "manifest_sha256": "08b68a6c87e1edd96e80f4deaf50a060df5e54befaaffb93df4a1e25b01281f8",
+        "manifest_bytes": 343857,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/automated-transport-network-card-crop.png",
+        "bytes": 501943,
+        "sha256": "cefafb11b8ab9198a7d14a11d5125231007789786af7ae65f724f2bdd1f9b7b4",
+        "manifest_sha256": "cefafb11b8ab9198a7d14a11d5125231007789786af7ae65f724f2bdd1f9b7b4",
+        "manifest_bytes": 501943,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/nalgorian-grindstone-card-crop.png",
+        "bytes": 491821,
+        "sha256": "be16184cd0961af01c37c862f1aec4eea3c91f149c32ae1690ee0f1c65e6a80b",
+        "manifest_sha256": "be16184cd0961af01c37c862f1aec4eea3c91f149c32ae1690ee0f1c65e6a80b",
+        "manifest_bytes": 491821,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/relic-detector-card-crop.png",
+        "bytes": 495869,
+        "sha256": "0567f1128cd6872b2ad123636cccd5d4d66c03ed8407e6429975f8e861160205",
+        "manifest_sha256": "0567f1128cd6872b2ad123636cccd5d4d66c03ed8407e6429975f8e861160205",
+        "manifest_bytes": 495869,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/transmutive-decomposer-card-crop.png",
+        "bytes": 493466,
+        "sha256": "089383d2cdfbea2153fc14cc33d88d931b77a25c28d5218e31d40126e9b8d617",
+        "manifest_sha256": "089383d2cdfbea2153fc14cc33d88d931b77a25c28d5218e31d40126e9b8d617",
+        "manifest_bytes": 493466,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/provenance.json",
+        "bytes": 5024,
+        "sha256": "02640a4b6b28aec648e6e25c2c355c66063a33781040b99e9b2e1c14d9c48f5d",
+        "manifest_sha256": "02640a4b6b28aec648e6e25c2c355c66063a33781040b99e9b2e1c14d9c48f5d",
+        "manifest_bytes": 5024,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/thread-1833405-articles.json",
+        "bytes": 15879,
+        "sha256": "29d9172adee333ef4306d255f6cee24dba54828a0e4d4db75dd600e465319aab",
+        "manifest_sha256": "29d9172adee333ef4306d255f6cee24dba54828a0e4d4db75dd600e465319aab",
+        "manifest_bytes": 15879,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/thread-1840710-articles.json",
+        "bytes": 11543,
+        "sha256": "ff42f8a5b1ee98efc7d60b120370161606acd74913b1d19818d659831812b04f",
+        "manifest_sha256": "ff42f8a5b1ee98efc7d60b120370161606acd74913b1d19818d659831812b04f",
+        "manifest_bytes": 11543,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/author-1220373.json",
+        "bytes": 983,
+        "sha256": "5b48b942e572292a0f43548dd0f67df5d43e2f0bcaaa8a4742710fb2f18f742a",
+        "manifest_sha256": "5b48b942e572292a0f43548dd0f67df5d43e2f0bcaaa8a4742710fb2f18f742a",
+        "manifest_bytes": 983,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/designer-article-26690049.txt",
+        "bytes": 2740,
+        "sha256": "1640c79bf84ae4d0131e3e091b0ee094331b7739078fab67146653e00f431c8e",
+        "manifest_sha256": "1640c79bf84ae4d0131e3e091b0ee094331b7739078fab67146653e00f431c8e",
+        "manifest_bytes": 2740,
+        "matches_manifest": true
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/designer-2017-final-turn/designer-article-26803262.txt",
+        "bytes": 1048,
+        "sha256": "9d5c2c7da05e5210b893eb4b8efa5d3870993efe8765e0de690eded1dce71d8e",
+        "manifest_sha256": "9d5c2c7da05e5210b893eb4b8efa5d3870993efe8765e0de690eded1dce71d8e",
+        "manifest_bytes": 1048,
+        "matches_manifest": true
+      }
+    ],
+    "provenance_bindings": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/recovered-confluence-provenance.json",
+        "bytes": 1954,
+        "sha256": "5d727d65c60ac27b9ada354e07124af3b809a37246e7f8af6f6fa8dac7162f45"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/recovered-component-provenance.json",
+        "bytes": 11310,
+        "sha256": "f9d03ed1e691525e40e2a45324ba7da355f7c50f83320540a25d0b8a399fb0e0"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/confluence-crop-provenance.json",
+        "bytes": 8623,
+        "sha256": "539b747b7d5d47d51f7d67042260d407a713e2a1a0bc8cc226f9dc854bdde6f9"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/stars-ruin-crop-provenance.json",
+        "bytes": 783,
+        "sha256": "39cbbcbbeeeecbf441f766839ef398e2c36a282be418074ceb3cbb07b136fb89"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/additional-card-crop-provenance.json",
+        "bytes": 2757,
+        "sha256": "68744ea607c5cd1c6ae2abfa8262dcbc6157a0aa709ae11058e159b82ccfd664"
+      }
+    ],
+    "native_view_method": "All listed images were emitted as native tool image content through view_image; original PDF pages were rendered then viewed as complete page rasters. Native receipts bind exact image bytes and PDF parent hash. No OCR substitutes for visual inspection.",
+    "native_views": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-01-front.png",
+        "bytes": 2672981,
+        "sha256": "87dcdb39158429787bae191ea1bbf6999170aceb31fcf7dde7bfb640c9451487",
+        "receipt_id": "NATIVE-COMPONENT-01",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3268
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-02-front.png",
+        "bytes": 2754382,
+        "sha256": "41798dfdf7a89a83d7c7a35f6fa171b6a3e6942b4f0cb59ec82d452c4cb58e0f",
+        "receipt_id": "NATIVE-COMPONENT-02",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2479,
+          3261
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-03-back.png",
+        "bytes": 3240154,
+        "sha256": "ac178349e85112b13b28af89385bf28241ed48ab2509b1c8c522fcc5052c3b21",
+        "receipt_id": "NATIVE-COMPONENT-03",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3270
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-03-front.png",
+        "bytes": 3113133,
+        "sha256": "5dec1a07e8b12fae80284a67092fc3114947c39cfc440cce6553cedd51834ec3",
+        "receipt_id": "NATIVE-COMPONENT-04",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3275
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-04-front.png",
+        "bytes": 2604592,
+        "sha256": "56b75bda3a9c10c7535f73758435d7159d01cbab0e2e40b58b7dffa292ebaacd",
+        "receipt_id": "NATIVE-COMPONENT-05",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3268
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-05-front.png",
+        "bytes": 2870668,
+        "sha256": "6b0d63cdcc0529e93caa441f14b1b830b1222ae6a83440a804531febde271671",
+        "receipt_id": "NATIVE-COMPONENT-06",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3261
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-06-front.png",
+        "bytes": 2990156,
+        "sha256": "69f1fe452880364fdf2ee4ee4ff2bf13317aa3e77f7a912f7f4aaf8b2ec25e95",
+        "receipt_id": "NATIVE-COMPONENT-07",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3276
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-07-front.png",
+        "bytes": 2837077,
+        "sha256": "d239439e40e96bdd90fa2e3dfaf75295253752ba7f6d1d25e5c141d9b1568ea8",
+        "receipt_id": "NATIVE-COMPONENT-08",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3268
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-08-front.png",
+        "bytes": 2819116,
+        "sha256": "6c88e58cfc6d9631571bfba233eff429c1dfb78a68fbb71729eb01844c8d92db",
+        "receipt_id": "NATIVE-COMPONENT-09",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3278
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/species-sheet-09-front.png",
+        "bytes": 2249353,
+        "sha256": "a1f71a4200159d787ffebf1949aaabf1037faf2ca3d172c12f22e20ec9144cb1",
+        "receipt_id": "NATIVE-COMPONENT-10",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          2480,
+          3268
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/corroborating-faderan-2019.jpg",
+        "bytes": 1774120,
+        "sha256": "08d3dea70311bfad7d58ba390e426cdfeb3449aa920dad662633232a7b94e5a6",
+        "receipt_id": "NATIVE-COMPONENT-11",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          3024,
+          4032
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/sidereal-confluence/corroborating-nine-sheets-2017.jpg",
+        "bytes": 806762,
+        "sha256": "803fd00d51597ab99dc9d4945a45f098054d449273079cda3b2731be8fe3803c",
+        "receipt_id": "NATIVE-COMPONENT-12",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          1476,
+          1900
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-3-4-back-crop.png",
+        "bytes": 325054,
+        "sha256": "8614781a1da4d54d0845631e27b10c8a0caf05e089b9d6a3c9563b40adb6a16a",
+        "receipt_id": "NATIVE-COMPONENT-13",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          416
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-3-4-front-crop.png",
+        "bytes": 327966,
+        "sha256": "5083759813c9ed140c81f72b69c2c028c9cf4125b72da3dc095509152e0073bd",
+        "receipt_id": "NATIVE-COMPONENT-14",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          412,
+          585
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-5-6-back-crop.png",
+        "bytes": 333704,
+        "sha256": "af907dfb44fb709e4fa4ea6f35bb4869da90e45205655d7e7f3a2af8b4ace0e4",
+        "receipt_id": "NATIVE-COMPONENT-15",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          416
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-5-6-front-crop.png",
+        "bytes": 338922,
+        "sha256": "8cb36c1cb37b61528f806be809b12a6785995e71665bb5c5e9098554cf4e3c1a",
+        "receipt_id": "NATIVE-COMPONENT-16",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          412,
+          585
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-7-plus-back-crop.png",
+        "bytes": 328094,
+        "sha256": "42ebb6ecaf8d990f6d1adc552943dc5901db5e4d5deaa04dcfb156f8584ec909",
+        "receipt_id": "NATIVE-COMPONENT-17",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          586,
+          416
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/final-confluence-7-plus-front-crop.png",
+        "bytes": 339346,
+        "sha256": "b76b43e84a5d9b71d84698dc7b15af01515bab2b86e66974151128dd0fcfaceb",
+        "receipt_id": "NATIVE-COMPONENT-18",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          412,
+          586
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/stars-ruin-card-crop.png",
+        "bytes": 510730,
+        "sha256": "92718b5f3d18c75c24510671684e6c25191cfa96495e1cfa1329aab02b4d4acc",
+        "receipt_id": "NATIVE-COMPONENT-19",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          414
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-6-3-5-back-crop.png",
+        "bytes": 343781,
+        "sha256": "82b645ca8facd019ff827cb7d84c38214b3260dbf6df73111b32ce0b0f1eec2b",
+        "receipt_id": "NATIVE-COMPONENT-20",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          416
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-6-6-plus-back-crop.png",
+        "bytes": 343857,
+        "sha256": "08b68a6c87e1edd96e80f4deaf50a060df5e54befaaffb93df4a1e25b01281f8",
+        "receipt_id": "NATIVE-COMPONENT-21",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          416
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/automated-transport-network-card-crop.png",
+        "bytes": 501943,
+        "sha256": "cefafb11b8ab9198a7d14a11d5125231007789786af7ae65f724f2bdd1f9b7b4",
+        "receipt_id": "NATIVE-COMPONENT-22",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          414
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/nalgorian-grindstone-card-crop.png",
+        "bytes": 491821,
+        "sha256": "be16184cd0961af01c37c862f1aec4eea3c91f149c32ae1690ee0f1c65e6a80b",
+        "receipt_id": "NATIVE-COMPONENT-23",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          414
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/relic-detector-card-crop.png",
+        "bytes": 495869,
+        "sha256": "0567f1128cd6872b2ad123636cccd5d4d66c03ed8407e6429975f8e861160205",
+        "receipt_id": "NATIVE-COMPONENT-24",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          414
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/transmutive-decomposer-card-crop.png",
+        "bytes": 493466,
+        "sha256": "089383d2cdfbea2153fc14cc33d88d931b77a25c28d5218e31d40126e9b8d617",
+        "receipt_id": "NATIVE-COMPONENT-25",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          585,
+          414
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-16-front.jpg",
+        "bytes": 955725,
+        "sha256": "a54ffd7f5d81683934c64cdd19215e85e39eaac21a1ee46c0a2ae212c7da1bb0",
+        "receipt_id": "NATIVE-COMPONENT-26",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          4096,
+          2472
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-16-back.jpg",
+        "bytes": 890040,
+        "sha256": "86fd6582be6a0e376c0c0a2564d4ebb5bb1e3b1da9263fc9dd5c6edaac85a7e9",
+        "receipt_id": "NATIVE-COMPONENT-27",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          4096,
+          2498
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-9-front.jpg",
+        "bytes": 1739540,
+        "sha256": "bf6acb1f21ae936c0a49a55c45d82d772cb323f9e7f6f583c651b68f01b996d9",
+        "receipt_id": "NATIVE-COMPONENT-28",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          4096,
+          2488
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-5-3-5-front-crop.png",
+        "bytes": 335223,
+        "sha256": "7cccc90c47ca19a8b579aefdf6773599fa91702a823eee0da46393444afaf8d0",
+        "receipt_id": "NATIVE-COMPONENT-29",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          412,
+          585
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-5-6-plus-front-crop.png",
+        "bytes": 340244,
+        "sha256": "ceb5e8915faec7a0430bc708b851051f85f298388c3be25244fa10bb6b959720",
+        "receipt_id": "NATIVE-COMPONENT-30",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_image": true,
+        "dimensions": [
+          412,
+          585
+        ],
+        "interpretation": "Original printed visual authority or direct component derivative; no module behavior, OCR, or prior review used."
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-01.png",
+        "bytes": 2052163,
+        "sha256": "0ac124e43d4ceeafbc7bebc55b80bdfd1cdc4804fdd22446a17dbcbdb9bb0a2e",
+        "receipt_id": "NATIVE-PDF-PAGE-01",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 1,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-02.png",
+        "bytes": 1351702,
+        "sha256": "6cea502ab6711645c298b5228fa8e3e97f4bf42a5df6fd91dcac06ed3f7a00a2",
+        "receipt_id": "NATIVE-PDF-PAGE-02",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 2,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-03.png",
+        "bytes": 1150239,
+        "sha256": "1ac90f92f8077fd1163525de70ac729f72306fb984368581d8a866b6145ce298",
+        "receipt_id": "NATIVE-PDF-PAGE-03",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 3,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-04.png",
+        "bytes": 1642371,
+        "sha256": "48975641c01de5fe8cfc8e76a50995a9e71a04a2ca42b9a18c28870f345873bd",
+        "receipt_id": "NATIVE-PDF-PAGE-04",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 4,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-05.png",
+        "bytes": 2173454,
+        "sha256": "3c34e0c8e18427cdf9e0b9dc95acaefe84271bfeb33f42d1ac231a49c8b80571",
+        "receipt_id": "NATIVE-PDF-PAGE-05",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 5,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-06.png",
+        "bytes": 843252,
+        "sha256": "35959522fdc5540a6babedf97a540d1bbd773a8b73129b8bc53154f37093ac19",
+        "receipt_id": "NATIVE-PDF-PAGE-06",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 6,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-07.png",
+        "bytes": 1094167,
+        "sha256": "b9c038a02b882c6311d8de3bfa1195fff72dd4fa4c66d5d19e593c4fe7eb7899",
+        "receipt_id": "NATIVE-PDF-PAGE-07",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 7,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-08.png",
+        "bytes": 1091210,
+        "sha256": "03dc0e70f70ec9295e1f8017569c41f03c811ad248e9fc01ea2e2c0b6fa087bc",
+        "receipt_id": "NATIVE-PDF-PAGE-08",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 8,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-09.png",
+        "bytes": 883022,
+        "sha256": "eafeaddb2d58e8dd2a2f5a821e60ac0a3bb88c66bfc768c494f970b77e319d3f",
+        "receipt_id": "NATIVE-PDF-PAGE-09",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 9,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      },
+      {
+        "path": "/tmp/clean-coverage-native-pages/page-10.png",
+        "bytes": 537742,
+        "sha256": "b4dd0bc8b0eb0f6a306d32461030d84005e2de15f61b73e91aac0ae66c5f0f8a",
+        "receipt_id": "NATIVE-PDF-PAGE-10",
+        "tool": "functions.exec -> tools.view_image -> image(image_url)",
+        "viewed_full_page": true,
+        "page": 10,
+        "parent_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/sidereal-confluence-rules.pdf",
+        "parent_pdf_sha256": "a32b81acf8116ddda76275b0f92f2f358e3c68295ce3683e740bbf0c616c8d06",
+        "render": "PyMuPDF 1.28.2, original page raster at matrix 1.7 x 1.7, no content edits",
+        "dimensions": [
+          1350,
+          1350
+        ]
+      }
+    ],
+    "accepted_parent_bindings": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-16-front.jpg",
+        "bytes": 955725,
+        "sha256": "a54ffd7f5d81683934c64cdd19215e85e39eaac21a1ee46c0a2ae212c7da1bb0"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-16-back.jpg",
+        "bytes": 890040,
+        "sha256": "86fd6582be6a0e376c0c0a2564d4ebb5bb1e3b1da9263fc9dd5c6edaac85a7e9"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/component-9-front.jpg",
+        "bytes": 1739540,
+        "sha256": "bf6acb1f21ae936c0a49a55c45d82d772cb323f9e7f6f583c651b68f01b996d9"
+      }
+    ],
+    "additional_accepted_crop_bindings": [
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-5-3-5-front-crop.png",
+        "bytes": 335223,
+        "sha256": "7cccc90c47ca19a8b579aefdf6773599fa91702a823eee0da46393444afaf8d0"
+      },
+      {
+        "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/sidereal-confluence/2026-11-05-batch-002957/source-review/timing-specialist/turn-5-6-plus-front-crop.png",
+        "bytes": 340244,
+        "sha256": "ceb5e8915faec7a0430bc708b851051f85f298388c3be25244fa10bb6b959720"
+      }
+    ]
+  }
+}

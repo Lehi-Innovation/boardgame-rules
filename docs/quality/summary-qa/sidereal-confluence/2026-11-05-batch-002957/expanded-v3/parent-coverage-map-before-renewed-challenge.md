@@ -1,0 +1,66 @@
+# Sidereal Confluence source coverage
+
+Current expanded-v3 contains 73 questions. The first independent challenge reopened the earlier67-question stopping claim. Six additions and five explicit scope/key corrections are versioned; passes7 and8 then added zero. A new independent challenge is pending.
+
+- Resource types, point privacy, ship interchangeability and physical shortages: Q18, Q23, Q25.
+- Card ownership, one-turn loans and permanent cards: Q03.
+- Printed card entry symbols and actual output previews: Q21, Q26, Q57.
+- Species selection and starting player/table setup: Q21, Q22.
+- Ordinary phases and Trade-end boundary: Q01, Q66.
+- Binding future/multilateral contingent agreements and failed delivery: Q02, Q24.
+- Trade-only exchanges, Economy silence, permitted bid negotiations: Q30, Q56.
+- Invention alternatives, team flip, access timing and actual awards: Q04, Q29, Q57, Q66.
+- Violet entry exception and free converters: Q26.
+- Two upgrade routes, owner restriction, spent-card destination/use limit and renamed cards: Q05, Q27, Q51, Q67.
+- Colony flips, climate-specific consumption, discard orientation and ordered cycling: Q27, Q28.
+- Economy support check, acquisition above support and white-converter operation: Q06, Q26, Q31.
+- Simultaneous production forbids chaining all goods: Q06, Q43, Q60.
+- Donation storage, next-Trade disposal, gift refusal and donation points: Q07, Q10.
+- Wild input/output size and matching-color exceptions: Q12, Q18, Q35, Q50, Q52, Q65.
+- Technology sharing, central splay, per-invention bonus and unique era IV: Q04, Q29, Q66.
+- Secret bid allocation, total announcement, empty piles, simultaneous reveals, purchase/pass and rank: Q08.
+- Bid tie comparison by relevant card type then species number: Q08, Q46, Q48.
+- Track cleanup, minimum-one aging, slide/refill front-up: Q09.
+- End-of-turn loans and Confluence advancement/remaining phase counters: Q03, Q58.
+- Final donation retention, leftover groups, all-group scoring, no score tiebreak: Q10, Q55, Q59, Q60.
+- Exact final-turn sequence, current final bonus and no extra round/bidding: Q58, Q59, Q60, Q61.
+- Final input versus output colors, no post-Economy invention and final Zeth exception: Q60, Q61.
+- Caylion colony bid halving/fractions/minimum boundary; research exception: Q11, Q32.
+- Caylion seedling starting/acquisition/non-grant/upgrade/trade/discard/production exceptions: Q11, Q33, Q63.
+- Caylion violet-upgrade resource available immediately: Q34.
+- Eni Et cannot run own interest, may upgrade, upgraded cards retain rules even without growth: Q12, Q52.
+- Eni Et all-wild versus mixed colored/wild inputs, intact gray passage and no gray multiplication: Q12, Q35, Q52.
+- Faderan Acknowledgments cannot circulate, mandatory per-invention return and common-pool reward: Q13, Q39.
+- Faderan shuffled hidden deck, one shared converter once, printed4-white/jungle cost, ordinary loans: Q03, Q14, Q36.
+- Automated Transport Network entry and transferable support including Im’dril: Q37.
+- Contextual Integrator Cache entry count/ceiling and unchanged behavior on trade: Q38.
+- Cache mandatory cube-cost reduction versus octagon no-discount, usual token point: Q39.
+- Paradise Converter any-climate cost, two points, Trade-once and destination: Q40.
+- Star’s Ruin one-time current bonus reward; terminology resolved by actual card: Q41.
+- Gift first trade beneficiaries, repeat-trade zero, Faderan-first and no automatic return: Q42.
+- Nalgorian Grindstone preexisting point payment/inability and simultaneous production: Q43.
+- Relic Detector additional any-climate/three-green converter may coexist with deck; nontrade exception: Q14, Q62.
+- Transmutive Decomposer may not use freshly produced ships: Q06.
+- Im’dril support matching, splitting, combining and cross-species loans: Q15.
+- Im’dril fleet discovery/starred start and no ordinary colony support: Q21, Q37, Q44.
+- Kjas split only at own opportunity, near-even halves, reinsert rank, no re-split, per-half buy/pass and updated count: Q16, Q53.
+- Kjas counts twice only colony setup; starts two colonies: Q21, Q22.
+- Kjas three territory tiles, card status, top entry, bottom upgrade, Trade and loan: Q45.
+- Kt fixed starting card pairs, independent upgrades and pair loans: Q17.
+- Kt nullspace entry has no extra output, permanent transfer, consumed removed not deck: Q17, Q64.
+- Kt unlimited colonies, always wins colony ties, normal research count then infinity tiebreak: Q46.
+- Unity gray-size substitution, mixed inputs including gray and Zeth immunity: Q18, Q65.
+- Unity any-climate entry/upgrade, one support and four out-of-play computer worlds: Q47.
+- Yengii private inventions, incoming shared tech, separate splay, reduced bonus, invented cards not counted as research teams: Q19, Q48.
+- Yengii licensed own matching card permanent/same Trade and cannot restore spent card: Q19.
+- Zeth Envoys output to same recipient with token, cannot refuse gift, stash trade-only and no token circulation: Q49.
+- Zeth last-of-turn red converters, one target each/no twice at one, shortage,size not color, envoy discount not consumed,wild immunity: Q20, Q50, Q61, Q73.
+- Zeth protection from actual trade versus gifts and explicit donation-trade acceptance/refusal: Q20, Q54.
+- Accepted substitute compensation and agreement before penalty branch: Q68.
+- Starting resources and ships from printed species card; first Trade: Q69.
+- Ordinary shared technology announcement and center face-down readable splay: Q70.
+- Current Confluence card flipped into shared splay and reverse remaining phases: Q71.
+- Reveal hidden points and highest-total winner: Q72.
+- Theft color independence is now expressly asked: Q73.
+
+See coverage-ledger.json for exact source references, actual asked-fact IDs, acceptance/rejection reasons and preserved pass history. Contextual key background receives no coverage credit.

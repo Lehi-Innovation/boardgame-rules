@@ -1,0 +1,1 @@
+Same audited text. Seed08 raw reader B omitted final Campaign effects in Q016 under the established fixed procedural scope. A new blind pair retains the complete procedure requirement and precise terminology; no source/key/summary changes.

@@ -1,0 +1,47 @@
+--- before-coverage-additions
++++ canonical-coverage-additions
+@@ -61,7 +61,7 @@
+ 1. **People's Favor**, if held: either put 1 favor from your board on it or return 1 from it to the least-full suit bank (choose among tied banks). Never remove its last favor: at 1, you must add if able; if you have none, nothing happens. If banner is already Mob-side, repeat this choice once. Afterwards, if it has 6+ favor, flip to Mob. A banner becoming Mob at this last step does not retroactively repeat the payment that Wake.
+ 2. If Exile, check Usurper and Visionary wins.
+ 3. If Exile holding Oathkeeper title, flip it to Usurper. Victory was checked **before** this flip.
+-4. At Salt Flats, Mine or Drowned City, optionally take 1 favor or secret from that site.
++4. At Salt Flats, Mine or Drowned City, optionally take 1 favor **or** 1 secret from that site: one token total, only if your pawn is there. Remote rule gives no income; an empty site gives nothing, with no bank substitute.
+ 
+ ### Act
+ 
+@@ -120,7 +120,7 @@
+ Resolve all steps in order. Your **force** normally means board warbands for attacker, and all warbands contributing to defense for defender.
+ 
+ 1. **Choose defender:** any other player who rules your site or whose pawn is there. If no player rules your site, you may choose bandits. A Citizen attacking Chancellor/another Citizen is non-Imperial for that Campaign. If Chancellor attacks Citizen, that Citizen is non-Imperial for it.
+-2. **Declare targets, form pools:** at least one target must be at your pawn's site; if defender rules that site you **must** target it. May target any of defender's sites anywhere on map (1 defense die each). If defender's pawn is at your site, may also target any of their relics (printed defense dice), banners (dice equal resources on banner), or pawn-and-favor together (2 dice). A co-located defender's relic target satisfies the local-target requirement. Attacker chooses up to as many attack dice as warbands in attacking force. Apply relevant modifiers and mandatory title defense bonus: Oathkeeper +1 defense die, Usurper +2.
++2. **Declare targets, form pools:** at least one target must be at your pawn's site; if defender rules that site you **must** target it. May target any of defender's sites anywhere on map (1 defense die each). If defender's pawn is at your site, may also target any of their relics (printed defense dice), banners (dice equal resources on banner), or pawn-and-favor together (2 dice). A co-located defender's relic target satisfies the local-target requirement. Attacker chooses up to as many attack dice as warbands in attacking force. Apply relevant modifiers and mandatory title defense bonus: Oathkeeper +1 defense die, Usurper +2. The mandatory title bonus is itself a Campaign modifier.
+ 3. **Battle plans:** red boxes are attacker-only, blue defender-only, gradient either. Attacker chooses eligible ruled plans once each, then defender chooses eligible ruled plans. Plans at a site require rule, not merely pawn presence; bandits use all ruled plans with no cost. A plan can be paid for even with resources on it, but still only used once per Campaign. If an attack die must be removed from an empty attack pool, add a defense die instead.
+ 4. **Roll defense:** shields rolled, doubled for each double-symbol (multipliers stack ×2, ×4, ×8...), **plus** all defending warbands at targeted sites, **plus** defender's board force if their pawn is at attacker site or any targeted site. Doubles multiply shields only, not warbands. Bandits add 1 per targeted bandit site.
+ 5. **Roll attack:** each skull immediately kills 1 own force warband. Count full swords; each pair of hollow swords adds 1, leftover single adds zero. May sacrifice own surviving force warbands for +1 attack each, but if sacrificing must sacrifice **exactly enough to win**, never excess. Attacker wins only if attack **strictly exceeds** defense; tie or lower means defender wins.
+@@ -162,7 +162,7 @@
+ 
+ **Offer:** the Grand Scepter cannot make an offer on the turn its current holder took it. In later turns it may offer any Exile, including itself. Must promise **exactly one Reliquary relic**; may additionally negotiate a binding exchange of favor, secrets, banners and non-Reliquary relics. May let recipient peek at Reliquary relics. Other binding-deal powers cannot trade Reliquary relics.
+ 
+-**Acceptance:** flip to Citizen; replace all own warbands on board/map with purple. If insufficient purple, new Citizen chooses which to remove and which to replace. Discard revealed Vision, flip own Usurper title to Oathkeeper, end Act if own turn, and refresh to full leftmost Supply. Exchange promised pieces; Chancellor gains the newly uncovered **mandatory** Reliquary modifier. Forced Citizenship powers apply acceptance without a negotiated offer. All Imperials rule purple sites; Citizenship does not itself grant a separate shared victory.
++**Acceptance:** flip to Citizen; replace all own warbands on board/map with purple. If insufficient purple, new Citizen chooses which to remove and which to replace. Discard revealed Vision, flip own Usurper title to Oathkeeper, end Act if own turn, and refresh to full leftmost Supply. Exchange promised pieces; Chancellor gains the newly uncovered **mandatory** Reliquary modifier. **Forced Citizenship** powers apply the same status-conversion steps without a negotiated offer: no required Scepter offer or Reliquary relic gift, and no invented promised exchange. Only an actual removal of a Reliquary relic uncovers its modifier. All Imperials rule purple sites; Citizenship does not itself grant a separate shared victory.
+ 
+ **Uncovered Reliquary modifiers, mandatory for Chancellor:** Brutal makes the defeated player kill their entire force when Chancellor attacks, even if Chancellor loses. Decadent makes Provinces/Hinterland-to-Cradle Travel cost no Supply, but Travel to Hinterland costs +1. Careless gives 1 additional favor on every Trade, even when trading for secrets, but 1 fewer secret when trading for secrets. Greedy draws 2 additional Search cards (still stopping at a world Vision) but prohibits Search costing more than 2 Supply.
+ 
+@@ -211,6 +211,8 @@
+ Faceup **tree** cards are site-only; **person** cards adviser-only; restrictions also govern moves/swaps. **Locked** cards cannot be discarded, moved or swapped once faceup except in Chronicle. Cards reducing adviser limit require discard based on **new limit before playing**; with multiple limit-changers use lowest, not sum. Respect locks.
+ 
+ Ordinary major-action modifiers are chosen at action start, used once per action, in any order; cannot discard an active modifier during that action. No-cost modifier may be used on multiple distinct actions. Must/cannot modifiers are mandatory. Battle plans instead occur in Campaign step 3, attacker first; each once per Campaign. Wake/Rest powers occur once at their stated phase; When Played is mandatory after site favor, Homeland effects and modifiers.
++
++**Moving and swapping cards:** Move follows capacity, placement and restriction rules; Swap moves the two pieces to each other’s location, obeying those rules for both. A move or swap alone is not playing: it grants no site-play favor and triggers no When Played power. An instruction explicitly saying to play does trigger ordinary play effects.
+ 
+ **Draw outside Search:** the corrected Draw keyword means take from the top of the prompted source; it does not import Search’s entire draw-three/stop procedure into other powers. Whenever a Vision is drawn from world deck, always advance Visions Drawn, including with Oracle. The Search action itself still stops at its first world-deck Vision.
+ 
+@@ -240,7 +242,7 @@
+ 
+ ### Writing the Chronicle (Law §8, with base errata)
+ 
+-Winner performs these steps in order. After first game open Archive packet: place 8 dividers; put edifices in matching sections; separately shuffle each suit's denizens into its Archive section.
++Winner performs these steps in order. After first game open Archive packet: place 8 cardboard dividers in the small box compartment; put edifices in matching sections; separately shuffle each suit's denizens into its Archive section.
+ 
+ 1. **Vow an Oath:** won by Vision alone → next Oath matches that Vision. Any other way or multiple victory methods → choose any Oath **except current one**. Save goal in World Box.
+ 2. **Citizenship:** if winner Exile, flip **all** Citizen boards, including boxed, to Exile. May offer Citizenship to other Exiles except those just flipped. **Chronicle offers ignore all normal in-play offering rules: no required Reliquary relic, resource payment or Scepter permission.** Each accepting Exile must do both: **flip their board to Citizen** and **replace every garrison at each site they rule with exactly one winner-color warband at that site**, regardless of the old garrison size. Winner cannot offer themself Chronicle Citizenship.

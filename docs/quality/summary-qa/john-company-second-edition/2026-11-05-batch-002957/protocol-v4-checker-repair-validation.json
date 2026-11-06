@@ -1,0 +1,54 @@
+{
+  "created_at_utc": "2026-11-05T20:08:34.438948+00:00",
+  "independent_review": "protocol-v4-independent-review.json",
+  "checker_sha256": "60d4c7b0768041e2ad735d5cbec71871516b4fa47fd7dc5a3a4dbb19298242fc",
+  "repairs": [
+    "Reject a full operative section copied more than once",
+    "Report unknown question IDs without KeyError"
+  ],
+  "validation_cases": [
+    {
+      "case": "complete_once",
+      "expected_structural_acceptance": true,
+      "actual": true,
+      "passed": true,
+      "errors": []
+    },
+    {
+      "case": "duplicate_copy",
+      "expected_structural_acceptance": false,
+      "actual": false,
+      "passed": true,
+      "errors": [
+        "H001 complete section copy count 2 instead of one"
+      ]
+    },
+    {
+      "case": "unknown_question",
+      "expected_structural_acceptance": false,
+      "actual": false,
+      "passed": true,
+      "errors": [
+        "unknown question ID",
+        "requested_clause is not literal question phrase"
+      ]
+    },
+    {
+      "case": "cropped_section",
+      "expected_structural_acceptance": false,
+      "actual": false,
+      "passed": true,
+      "errors": [
+        "H001 complete section copy count 0 instead of one"
+      ]
+    },
+    {
+      "case": "explicit_unsupported_without_section",
+      "expected_structural_acceptance": true,
+      "actual": true,
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "game_question_key_scope_or_grades_changed": false
+}

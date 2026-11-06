@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:52:49.723Z",
+    "ordinal": 814,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_08e65cdd53e559ef016aeca64c9f9487d0886157a323ed2882",
+      "status": "completed",
+      "call_id": "call_vVm4ifbxzv1RzydzJrj7IRFM",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,pathlib\\np=pathlib.Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-17'); d=json.loads((p/'reader-a.json').read_text()); s=(p/'summary-snapshot.md').read_text(); q=json.loads((p/'questions.json').read_text()); ids=[a['id'] for a in d['answers']]\\nassert ids==[f'Q{i:02d}' for i in range(1,82)] and len(ids)==len(set(ids)) and len(q['questions'])==81\\nfor a in d['answers']:\\n assert a['answer'] and a['source_passages'] and a['support'] in {'supported','partial','unsupported'}\\n assert a['id'] in {z['id'] for z in q['questions']}\\n for z in a['source_passages']: assert z['quotation'] and z['quotation'] in s\\nprint('Final JSON valid; Q01\u2013Q81 each occur once in order; all quotations are nonempty exact summary substrings and IDs match the 81 input questions.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output)\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac68-d213-7f40-9046-41fb91603b0f",
+        "create_time": 1793893962.595108
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:52:50.319Z",
+    "ordinal": 817,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac69-b18f-7613-aaec-f330bb099ee4",
+      "call_id": "call_vVm4ifbxzv1RzydzJrj7IRFM",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Final JSON valid; Q01\u2013Q81 each occur once in order; all quotations are nonempty exact summary substrings and IDs match the 81 input questions.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac68-d213-7f40-9046-41fb91603b0f",
+        "create_time": 1793893970.3196476
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

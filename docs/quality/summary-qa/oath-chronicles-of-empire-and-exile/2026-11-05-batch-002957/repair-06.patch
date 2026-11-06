@@ -1,0 +1,73 @@
+--- seed06
++++ canonical-repair06
+@@ -24,7 +24,7 @@
+ 
+ Your **board** holds resources and your mobile warband force. Your **personal bank** beside it holds unused warbands and held relics/banners. Your **advisers** are up to three cards to its right, counting both faceup and facedown. A revealed true Vision occupies an Exile's separate Revealed Vision space and does not use an adviser slot.
+ 
+-A player's pawn determines **your site** and **your region**. A pawn does not rule a site. You rule each faceup site containing your warbands, the cards at those sites, and your advisers. Sites hold only one color of warbands. All Imperial players rule every purple-garrisoned site. Bandits rule faceup sites without physical warbands; they are enemies to all players and do not compete for victory. Facedown sites cannot hold cards or be ruled.
++A player's pawn determines **your site** and **your region**. A pawn does not rule a site, and warbands on your board do not garrison its site. Even one of your warbands physically on a faceup site is sufficient to rule it, regardless of where your pawn is. You rule each faceup site containing your warbands, the cards at those sites, and your advisers. Sites hold only one color of warbands. All Imperial players rule every purple-garrisoned site. Bandits rule faceup sites without physical warbands; they are enemies to all players and do not compete for victory. Facedown sites cannot hold cards or be ruled.
+ 
+ Denizen suits are Discord, Arcane, Order, Hearth, Beast, Nomad, in that clockwise favor-bank order. A site shows its denizen/edifice card capacity, reveal prompt, relic Recover cost and special power. Both intact and ruined edifices use capacity; a ruin has no suit and cannot be used for Muster or Trade. Relics beside sites do not use their denizen/edifice capacity.
+ 
+@@ -91,7 +91,16 @@
+ 
+ **Discard destinations:** facedown atop next region's pile: Cradle → Provinces → Hinterland → Cradle, ordering multiple discards as you choose. For cards in hand/advisers, discard based on your pawn’s region: pawn in Cradle means Provinces pile; pawn in Provinces means Hinterland pile; pawn in Hinterland means Cradle pile. Never use the same-region pile. When discarding a card at a site in another region, apply that cycle to the card’s region instead of your pawn’s. Favor on discarded cards immediately returns to matching bank; their secrets go to acting player's board **facedown**.
+ 
+-**Conspiracy:** anyone may play it faceup; it does not replace a true Vision. You may burn 1 secret to take 1 relic or banner from a player whose pawn is at your site, if at least 2 of your faceup advisers match the suit of any of their advisers. Both of yours can match the same single adviser of theirs. Apply banner seizure penalty. Then return Conspiracy to box, even if no theft was made.
++Adviser retention depends on its state:
++
++| Adviser state | Later voluntary options |
++|---|---|
++| Facedown | Minor action to play faceup legally or discard; may peek |
++| Faceup | Cannot discard at will; discard only when a rule requires/allows it, respecting locks |
++
++Both states count toward the adviser limit. Playing over the limit permits the required discard before the new card is played; merely wanting an empty slot does not.
++
++**Conspiracy:** anyone may play it faceup; it does not replace a true Vision. You may burn 1 secret to take 1 relic or banner from any player whose pawn is at your site, including a fellow Imperial player, if at least 2 of your faceup advisers match the suit of any of their advisers. Both of yours can match the same single adviser of theirs. Apply banner seizure penalty. Then return Conspiracy to box, even if no theft was made.
+ 
+ ### Muster — 1 Supply
+ 
+@@ -130,11 +139,11 @@
+ 
+ **Imperial defense:** apply every relevant change below.
+ 
+-- When an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site. 
+-- Activate all Campaign modifiers ruled by defender/Allies. **Share powers as one defending side:** their “you,” “your enemy,” and “defender” mean the whole side, while “your site”/“your board” still mean each user’s own location/board. This shares the Oathkeeper defense bonus even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site. 
+-- Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. Each shared battle plan may be used **once total per Campaign by one user, who pays its cost**. The same user cannot activate it twice, and a second Ally cannot activate it again. 
++- When an Imperial player defends, Chancellor automatically joins as Ally. Other non-attacking Citizens may join with defender's permission if their pawn is at attacker site or any targeted site.
++- Activate all Campaign modifiers ruled by defender/Allies. **Share powers as one defending side:** their “you,” “your enemy,” and “defender” mean the whole side, while “your site”/“your board” still mean each user’s own location/board. This shares the Oathkeeper defense bonus even outside Supremacy. Allied board warbands add defense only if pawn at attacker site or targeted site.
++- Defender/Allies may use plans at Imperial sites and their own advisers, **not other players' advisers**. Each shared battle plan may be used **once total per Campaign by one user, who pays its cost**. The same user cannot activate it twice, and a second Ally cannot activate it again.
+ - On powers, “you,” “your enemy,” “the defender,” etc. refer to the entire side, but **your site/your board** still mean that player's own pawn site/board. **Declared defender chooses order, timing and priority** when Allies disagree, including which player uses a shared plan and whether a restrictive plan must be declared first.
+-- Chancellor chooses which Imperial defending warbands die. Surviving warbands from sites return to Chancellor’s board; surviving Citizens’ board warbands stay on those Citizens’ boards. 
++- Chancellor chooses which Imperial defending warbands die. Surviving warbands from sites return to Chancellor’s board; surviving Citizens’ board warbands stay on those Citizens’ boards.
+ - An intra-Empire Campaign does not make all Citizens non-Imperial; only the specified attacker/defender loses that status temporarily.
+ 
+ ### Travel — 1–4 Supply before modifiers
+@@ -211,6 +220,12 @@
+ Faceup **tree** cards are site-only; **person** cards adviser-only; restrictions also govern moves/swaps. **Locked** cards cannot be discarded, moved or swapped once faceup except in Chronicle. Cards reducing adviser limit require discard based on **new limit before playing**; with multiple limit-changers use lowest, not sum. Respect locks.
+ 
+ Ordinary major-action modifiers are chosen at action start, used once per action, in any order; cannot discard an active modifier during that action. No-cost modifier may be used on multiple distinct actions. Must/cannot modifiers are mandatory. Battle plans instead occur in Campaign step 3, attacker first; each once per Campaign. A ± symbol permits its user to choose to add or remove the shown die type; it does not change attack dice into defense dice. Either eligible role can choose either sign; role permission comes from the plan’s red/blue/gradient box, not the sign. Ordinary Wake powers happen once during Wake and must resolve as much as possible; explicit “may” parts remain optional. Rest powers are optional once each at the end of Rest. Opportunity-site income is explicitly optional. When Played is mandatory after site favor, Homeland effects and modifiers.
++
++**Default transfer words:** Burn sends favor/secrets from your board to shared bank, unless a different source is explicitly prompted. Take favor/secrets from another player means their board to your board, not their banner or resources on cards; Give is the reverse. Take adviser cards moves theirs to your advisers; Take a relic from the prompted player’s personal bank, site or draw source puts it in your personal bank, respecting the prompt and placement restrictions. Exchange permits you to Give to the prompted player and them to Give to you; these are optional permissions unless the actual effect or binding agreement imposes more specific requirements. Do not assume an equal or compulsory reciprocal transfer from the word alone.
++
++**After** means immediately following, with nothing between. You cannot insert another normal action, including a minor action, between an event and its “after” effect.
++
++**Peek and Reveal:** Peek lets the acting player look at a card front; Reveal means show its front to everyone. A generic reveal-only instruction is not itself playing that card, so it does not award site-play favor or trigger When Played. Revealing a true Vision by the normal minor action is specifically a play to the Revealed Vision space, with its own rules.
+ 
+ **Moving and swapping cards:** Move follows capacity, placement and restriction rules; Swap moves the two pieces to each other’s location, obeying those rules for both. A move or swap alone is not playing: it grants no site-play favor and triggers no When Played power. An instruction explicitly saying to play does trigger ordinary play effects.
+ 
+@@ -244,6 +259,14 @@
+ 
+ Winner performs these steps in order. After first game open Archive packet: place 8 cardboard dividers in the small box compartment; put edifices in matching sections; separately shuffle each suit's denizens into its Archive section.
+ 
++Chronicle Citizenship is a separate permission from an in-play offer:
++
++| Requirement | In-play offer | Chronicle offer |
++|---|---|---|
++| Who authorizes it | Grand Scepter holder, after the turn taken | Exile winner |
++| Required gift | Exactly 1 Reliquary relic | None |
++| Other ordinary offer prerequisites | Apply | Ignored; no Scepter permission or resource payment |
++
+ 1. **Vow an Oath:** won by Vision alone → next Oath matches that Vision. Any other way or multiple victory methods → choose any Oath **except current one**. Save goal in World Box.
+ 2. **Free Chronicle Citizenship (ignore normal offers):** no Reliquary relic, resource payment or Scepter permission is required. If winner Exile, flip **all** Citizen boards, including boxed, to Exile, then may offer Citizenship to other Exiles except those just flipped. Each accepting Exile must do both: **flip their board to Citizen** and **replace every garrison at each site they rule with exactly one winner-color warband at that site**, regardless of the old garrison size. Winner cannot offer themself Chronicle Citizenship.
+ 3. **Map and edifices:** Imperial winner may build **or** repair **one** edifice. At ruled site with no intact or ruined edifice, replace denizen with matching intact Archive edifice, returning denizen to world deck; or flip a ruled ruin intact. Discard all sites except those winner rules or with an intact edifice; shuffle discarded sites into site deck, discard their denizens, return relics to relic deck and ruined edifices to Archive. At retained sites winner does not rule, flip intact edifice to ruin and discard all denizens there. Set aside **all sites with ruins**, with attached ruins, remaining denizens and relics, in map order top Cradle to bottom Hinterland. Remove pawns/favor/secrets/warbands from map.

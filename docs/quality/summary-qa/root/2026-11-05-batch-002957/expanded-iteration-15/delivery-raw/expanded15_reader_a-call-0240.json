@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T13:31:03.478Z",
+    "ordinal": 240,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_01eccaf95e1901d8016aec8511e08087d0aa3d249eda3ef612",
+      "status": "completed",
+      "call_id": "call_QcOSyowXNlzCasjTRuWnhZDI",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom collections import Counter\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-15')\\ndoc=json.loads((base/'reader-a.json').read_text())\\ns=(base/'summary-snapshot.md').read_text()\\nids=[a['id'] for a in doc['answers']]\\nassert ids==[f'Q{i:02d}' for i in range(1,21)], ids\\nassert all(v==1 for v in Counter(ids).values())\\nfor a in doc['answers']:\\n    assert a['source_passages'] and a['answer'] and a['support'] in {'supported','partial','unsupported'}\\n    for sp in a['source_passages']:\\n        assert sp['quotation'] and sp['quotation'] in s, (a['id'],sp['section'])\\n    for entry in a['answer']:\\n        assert entry['part'] and entry['ruling'] and entry['evidence']\\nprint('valid JSON; Q01\u2013Q20 each occur once; all',sum(len(a['source_passages']) for a in doc['answers']),'quotes are nonempty exact summary substrings; answer entries complete')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":300});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abe3-9644-7371-bc77-0c0599690a51",
+        "create_time": 1793885447.479387
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T13:31:05.524Z",
+    "ordinal": 243,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1abe7-ebb4-7501-9355-1dfaafb1e667",
+      "call_id": "call_QcOSyowXNlzCasjTRuWnhZDI",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; Q01\u2013Q20 each occur once; all 32 quotes are nonempty exact summary substrings; answer entries complete\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abe3-9644-7371-bc77-0c0599690a51",
+        "create_time": 1793885465.524505
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

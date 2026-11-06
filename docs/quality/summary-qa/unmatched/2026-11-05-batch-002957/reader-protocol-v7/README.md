@@ -1,0 +1,1 @@
+Generic source dependency/completeness revision. Complete operative units remain the actual lookup answer. Include shared introductory definitions when a row does not itself contain a requested field. This is an instruction change only; no question, key, scope, source or summary bytes change. No game facts, failed IDs, prior answers or grades are supplied.

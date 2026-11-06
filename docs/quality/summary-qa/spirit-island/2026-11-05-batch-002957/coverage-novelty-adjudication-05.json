@@ -1,0 +1,111 @@
+{
+  "review": "coverage-novelty-adjudication-05",
+  "benchmark": "expanded-v7",
+  "decision": "ACCEPT",
+  "candidate": "Repeated application of Defend and nonaccumulation of subthreshold land Damage",
+  "reason": "The candidate isolates two explicit temporal units in the core rules. Defend is a standing rule applying whenever the Invaders deal Damage during the entire turn, rather than a consumable block. Separately, a land does not retain subthreshold Damage between Ravages: partial land Damage is ignored. The bank asks one defended Ravage and same-turn Damage accumulation for pieces, but does not ask either whether Defend is exhausted or whether ignored land Damage carries into another action. The second outcome in particular distinguishes lands from the piece-Damage accumulation already tested.",
+  "novelty_class": [
+    "Persistent per-occurrence mitigation instead of expendable prevention",
+    "Land-Damage nonaccumulation between distinct actions"
+  ],
+  "recommended_question": "Assume a land legally Ravages twice during one turn. Each Ravage has 4 total Invader Damage before the same Defend 3 is applied, and that Defend remains in effect. Is Defend used up by the first Ravage, or does it apply again? How much Damage reaches the land and Dahan in each Ravage, and do the two subthreshold amounts of land Damage combine to add Blight?",
+  "predetermined_answer": "Defend applies in full to both Ravages; it is not spent on the first one. Each Ravage deals 1 Damage to the land and 1 Damage to the Dahan. Neither 1-Damage land result adds Blight, and the two results do not combine: partial Damage to the land is ignored after each Ravage. Damage to individual Dahan is tracked normally; the question does not specify enough Dahan information to determine final casualties.",
+  "strict_novelty_reasoning": "The repeated 4-minus-3 arithmetic itself adds no coverage and would be a mechanical variant if that were the only task. The new clauses expressly ask whether prevention is consumable and whether the land stores the first result. Those are source-defined state/temporal rules, not a demand to recalculate an already tested single Ravage with changed numbers. Correct arithmetic for Q31 and correct piece healing at Time Passes in Q30 do not resolve either requested intermediate-state question.",
+  "existing_prompt_audit": [
+    {
+      "id": "Q06",
+      "why_not_covering": "One Ravage producing 3 Damage, one Blight, and Dahan casualties; no second land-Damage instance."
+    },
+    {
+      "id": "Q07",
+      "why_not_covering": "Counterattack after a zero-Damage Ravage versus no counterattack after a skipped Ravage; no mitigation depletion or stored land Damage."
+    },
+    {
+      "id": "Q18",
+      "why_not_covering": "Asks accumulation of Damage from separate normal Powers, which ordinarily damages Invaders. It does not ask if land Damage is retained, and extending that accumulation answer to land would be wrong."
+    },
+    {
+      "id": "Q30",
+      "why_not_covering": "Asks damaged survivors and other Time Passes cleanup. Lands are not damaged survivors carrying marked Damage until that phase; no intermediate multiple-Ravage condition is asked."
+    },
+    {
+      "id": "Q31",
+      "why_not_covering": "Combines two Defend amounts for a single Invader Damage total. It never asks whether the same Defend can be applied to another occurrence or if 1 land Damage persists."
+    },
+    {
+      "id": "Q47",
+      "why_not_covering": "Tests which lands and Invaders are queued for a Ravage Card, not repeated Damage in a single land."
+    },
+    {
+      "id": "Q59",
+      "why_not_covering": "Tests whether a standing Defend value follows current land contents/Presence; no repeat consumption or land-Damage storage question."
+    },
+    {
+      "id": "Q94",
+      "why_not_covering": "Simultaneous multiple Blight addition is given directly; asks pool-flip timing, not Damage-to-land thresholds."
+    },
+    {
+      "id": "Q101",
+      "why_not_covering": "One Ravage and simultaneous land/Dahan Damage while a site is lost. No later Damage occurrence."
+    },
+    {
+      "id": "Q115",
+      "why_not_covering": "One Ravage with Dahan-only protection; does not test Defend or partial land-Damage accumulation."
+    }
+  ],
+  "source_refs": [
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p18 Defend: Whenever Invaders deal Damage; Defend effects last for the entire turn",
+      "character_range": [
+        49962,
+        50411
+      ],
+      "length": 449,
+      "passage_sha256": "899d689900ca278c185073cf908d1f6ce341619ec5d82bb53688acbeb42ca297",
+      "line_range_inclusive": [
+        1262,
+        1267
+      ]
+    },
+    {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "CORE p9 Ravage: Damage reduction, simultaneous recipients, and Partial Damage to the land is ignored",
+      "character_range": [
+        20572,
+        20979
+      ],
+      "length": 407,
+      "passage_sha256": "a771fa6903923d4d9ca1ab2760bd7c740b820ef4538690a17e9d272059a48568",
+      "line_range_inclusive": [
+        500,
+        509
+      ]
+    }
+  ],
+  "scope_adjudication": "Treat the two separate Ravages and their stipulated pre-Defend totals as explicit givens. No rule for creating an additional Ravage is requested or imported. Optional modules or expansion producers are not required to adjudicate the core resolution rule.",
+  "coverage_credit_limit": "Do not claim new credit for 4-minus-3 arithmetic, Defend stacking, basic Dahan Damage tracking, or particular Dahan casualties. The accepted novelty is limited to per-occurrence Defend reuse and nonaccumulation of subthreshold land Damage.",
+  "read_evidence": {
+    "full_source_and_frozen_bank_reads": "Completed earlier in this same source-only review. This follow-up reread the exact p9 Ravage passage and actual Q06/Q07/Q18/Q30/Q31/Q47/Q59/Q94/Q101/Q115 prompts. The exact p18 Defend passage was also reread in the immediately prior source-only candidate review.",
+    "targeted_source_delivery": {
+      "file": "/home/jonny/projects/boardgame-rules/extracted/spirit-island-rules.txt",
+      "label": "Contiguous p9 targeted reread",
+      "character_range": [
+        20572,
+        20979
+      ],
+      "length": 407,
+      "passage_sha256": "a771fa6903923d4d9ca1ab2760bd7c740b820ef4538690a17e9d272059a48568",
+      "line_range_inclusive": [
+        500,
+        509
+      ]
+    },
+    "max_output_tokens_per_call": 4000,
+    "truncation_observed": false,
+    "forbidden_summary_readers_grades_or_other_reports_read": false,
+    "questions_sha256": "b32bcb4aa106e08b2877e1823cf9322732604a3b50b21738c22b035e8d99ce44",
+    "answer_key_sha256": "1a22d586cf7e4e47f9d01cd3be4f75e22eab19d1bbc98242314f8492ecb15ada"
+  },
+  "input_mutations": false
+}

@@ -1,0 +1,243 @@
+{
+  "scope": "Fresh independent semantic adjudication of Q013 reader B and Q020 reader A in seed-iteration-05. No grades or other adjudication evidence consulted.",
+  "evidence_files_read": [
+    "seed-v1/questions.json",
+    "seed-v1/answer-key.json",
+    "seed-iteration-05/reader-b.json (Q013)",
+    "seed-iteration-05/reader-a.json (Q020)",
+    "seed-iteration-05/summary-snapshot.md",
+    "extracted/oath-current-law.txt",
+    "errata.txt (batch root; official base-game errata)"
+  ],
+  "adjudications": [
+    {
+      "question_id": "Q013",
+      "reader": "B",
+      "question": "When is another player’s Darkest Secret safe or recoverable? Include no advisers, no cards, and a ruin-only site.",
+      "verdict": "incorrect",
+      "classification": "material universal condition",
+      "reader_quote": "To Recover another player's Darkest Secret, the suited card(s) at their pawn's site must match none of their faceup advisers.",
+      "source_evidence": [
+        {
+          "id": "law_5_4_1",
+          "source": "extracted/oath-current-law.txt:831-836",
+          "quote": "You can only recover the Darkest Secret if any card at the holder’s site does not match any of their advisers, or if you are recovering it from yourself. (Ignore ruined edifices and facedown advisers, since they have no suit. You cannot recover the Darkest Secret from another player if their site has no cards or if they have no faceup advisers.)",
+          "interpretation": "The main condition is existential over site cards and negative over adviser matches. The last no-faceup-advisers prohibition is the erroneous parenthetical corrected by the errata."
+        },
+        {
+          "id": "errata_no_cards",
+          "source": "errata.txt:35-37",
+          "quote": "Can I recover the Banner of the Darkest Secret if the holder’s site has no cards?\nNope! Likewise, you cannot do so if there is only a ruin at the site, since ruins do not have suits."
+        },
+        {
+          "id": "errata_no_advisers",
+          "source": "errata.txt:40-41",
+          "quote": "Can I recover the Banner of the Darkest Secret if there is a suited card at the holder’s site, but the holder has no advisers?\nYes!"
+        },
+        {
+          "id": "summary_protection",
+          "source": "seed-iteration-05/summary-snapshot.md:116",
+          "quote": "to recover from another player, there must be a **suited card at their pawn's site matching none of their faceup advisers**. Empty sites and ruin-only sites protect it. Ruins and facedown advisers have no suit. If holder has no faceup advisers but a suited site card exists, it **is recoverable**; the printed Law's contrary parenthetical is erroneous. Recovering from self or shared bank ignores this protection."
+        },
+        {
+          "id": "recover_cost",
+          "source": "extracted/oath-current-law.txt:829,841-842",
+          "quote": "Step 1: Spend 1 Supply and Choose Target.\nThe Darkest Secret costs any amount of secrets greater than its current value."
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "At least one suited card at the holder pawn site matches none of the holder faceup advisers",
+          "assessment": "incorrect",
+          "reader_evidence": "the suited card(s) at their pawn's site must match none of their faceup advisers",
+          "reason": "The definite plural/card(s) subject plus must makes nonmatching a requirement on the suited cards present. It does not select at least one qualifying card. The Law and summary require existence of one unmatched site card, not absence of every matching site card."
+        },
+        {
+          "condition": "An empty/no-suited-card site protects the banner",
+          "assessment": "correct",
+          "reader_evidence": "If there are no suited cards there (including an empty site or a ruin-only site), it is protected.",
+          "source_evidence": [
+            "errata_no_cards"
+          ]
+        },
+        {
+          "condition": "A ruin-only site protects the banner because ruins have no suit",
+          "assessment": "correct",
+          "reader_evidence": "including an empty site or a ruin-only site",
+          "source_evidence": [
+            "errata_no_cards"
+          ]
+        },
+        {
+          "condition": "Ruins and facedown advisers are ignored for suit matching",
+          "assessment": "correct",
+          "reader_evidence": "A ruin has no suit and facedown advisers have no suit.",
+          "source_evidence": [
+            "law_5_4_1"
+          ]
+        },
+        {
+          "condition": "No faceup advisers does not protect the banner if a suited site card exists",
+          "assessment": "correct",
+          "reader_evidence": "If the holder has no faceup advisers but there is a suited site card, that card matches none of their advisers, so the Secret is recoverable.",
+          "source_evidence": [
+            "errata_no_advisers"
+          ]
+        },
+        {
+          "condition": "Self/shared-bank recovery ignores the protection",
+          "assessment": "correct",
+          "reader_evidence": "Recovering it from yourself or the shared bank ignores this protection.",
+          "source_evidence": [
+            "law_5_4_1",
+            "summary_protection"
+          ]
+        },
+        {
+          "condition": "Ordinary Recover costs still apply",
+          "assessment": "not stated, but no contrary claim",
+          "reader_evidence": "ignores this protection",
+          "reason": "The answer limits the exception to protection; it does not claim cost-free recovery. The fixed key mentions still paying cost, but the question explicitly asks protection/recoverability cases, not the full cost procedure. This omission is not the basis of the incorrect verdict.",
+          "source_evidence": [
+            "recover_cost"
+          ]
+        }
+      ],
+      "quantifier_analysis": {
+        "source_rule": "There exists a suited site card c such that no faceup adviser matches c.",
+        "answer_ordinary_reading": "The suited site card(s) must each match no faceup adviser.",
+        "counterexample": "The holder has an Arcane faceup adviser and two site cards, one Arcane and one Beast. The Beast card matches none of the advisers, so the source permits recovery. The reader sentence requires the site cards to match none and fails on the Arcane card, falsely protecting the banner.",
+        "charitable_alternative": "A reader might mentally supply a selected qualifying card or read card(s) as an informal existential reference. Neither selection nor an existential word appears in the sentence. The later no-adviser/empty-site examples do not resolve the mixed matching/unmatched site case.",
+        "why_not_partial_ambiguous": "The answer correctly covers the special cases but states a materially stronger general prerequisite. On strict semantic grading this changes legality in a real mixed-site state, so the entire answer is incorrect rather than equivalent. Its correct subconditions are recorded separately."
+      }
+    },
+    {
+      "question_id": "Q020",
+      "reader": "A",
+      "question": "Describe the Chronicle’s new Oath choice, Citizenship turnover, and world-deck rebuilding, including why the top stack is not 14 cards.",
+      "verdict": "correct",
+      "classification": "equivalent wording; normal-offer exception conveyed in context",
+      "reader_quote": "For free Chronicle Citizenship, if the winner is an Exile, flip all Citizen boards (including boxed ones) to Exile, then the winner may offer Citizenship to other Exiles except those just flipped; each accepting Exile flips to Citizen and replaces every garrison at every site they rule with exactly one winner-color warband.",
+      "source_evidence": [
+        {
+          "id": "oath_choice",
+          "source": "extracted/oath-current-law.txt:1216-1221",
+          "quote": "If you won with a Vision alone, use the goal reference whose Oathkeeper goal is the same as this Vision goal. If you won in any other way, or won in multiple ways, choose any goal reference except the one used in the current game. Put this goal reference in the World Box."
+        },
+        {
+          "id": "chronicle_citizenship",
+          "source": "extracted/oath-current-law.txt:1223-1229",
+          "quote": "If you are an Exile, flip all Citizen boards (even in the box) to their Exile side, then you may offer Citizenship to any Exiles except those whose boards just flipped to Exile. Ignore the normal rules for offering Citizenship (6.6.1). Each Exile who accepts your offer flips their board to its Citizen side and replaces all of their warbands at sites they rule with one of your warbands."
+        },
+        {
+          "id": "normal_offer",
+          "source": "extracted/oath-current-law.txt:1030-1035",
+          "quote": "If you hold the Grand Scepter, you can offer Citizenship to any Exile (including yourself). You must offer to give them exactly one relic from the Reliquary, and you may also negotiate a binding exchange of any number of favor, secrets, banners, and non-Reliquary relics."
+        },
+        {
+          "id": "errata_other",
+          "source": "errata.txt, Law 8.2",
+          "quote": "8.2 Offer Citizenship. Add “other” to “any other Exiles”"
+        },
+        {
+          "id": "rebuild",
+          "source": "extracted/oath-current-law.txt:1309-1319",
+          "quote": "Shuffle all denizen cards remaining in play into a stack, then rebuild the world deck as follows:\n•\t Take 10 denizen cards facedown from the stack and shuffle in 2 Vision cards at random, forming a pile of 12 cards.\n•\t Take 15 denizen cards facedown from the stack and shuffle in the other 3 Vision cards, forming a pile of 18 cards.\n•\t Stack the pile of 12 cards on top of the pile of 18 cards, and stack this combined pile on top of the remaining denizen cards in the stack."
+        },
+        {
+          "id": "errata_aid",
+          "source": "errata.txt, Chronicle Aid",
+          "quote": "The Rebuild Deck step says to shuffle 2 Visions and 12 denizens together to form the top stack. This is incorrect—the top stack should contain 2 Visions and 10 denizens for a total stack size of 12. The Law setup, Chronicle rules, and reference on the World Deck space of the map are all correct."
+        },
+        {
+          "id": "summary_exception",
+          "source": "seed-iteration-05/summary-snapshot.md:248",
+          "quote": "**Free Chronicle Citizenship (ignore normal offers):** no Reliquary relic, resource payment or Scepter permission is required."
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "Vision-only winner chooses matching Oath",
+          "assessment": "correct",
+          "reader_evidence": "if the winner won solely by Vision, use the Oath matching that Vision",
+          "source_evidence": [
+            "oath_choice"
+          ]
+        },
+        {
+          "condition": "Other/multiple-method winner chooses an Oath other than current and saves it",
+          "assessment": "correct",
+          "reader_evidence": "for any other or multiple victory method, choose any Oath except the current one and save its goal",
+          "source_evidence": [
+            "oath_choice"
+          ]
+        },
+        {
+          "condition": "Exile winner resets all Citizens including boxed boards",
+          "assessment": "correct",
+          "reader_evidence": "if the winner is an Exile, flip all Citizen boards (including boxed ones) to Exile",
+          "source_evidence": [
+            "chronicle_citizenship"
+          ]
+        },
+        {
+          "condition": "May offer other Exiles except those just reset; cannot offer self",
+          "assessment": "correct",
+          "reader_evidence": "the winner may offer Citizenship to other Exiles except those just flipped ... The winner cannot offer to themself.",
+          "source_evidence": [
+            "chronicle_citizenship",
+            "errata_other"
+          ]
+        },
+        {
+          "condition": "Ignore normal offer permissions and required Reliquary gift",
+          "assessment": "correct by contextual equivalence",
+          "reader_evidence": "For free Chronicle Citizenship, if the winner is an Exile ... then the winner may offer Citizenship to other Exiles except those just flipped",
+          "reason": "The answer supplies its own affirmative Chronicle permission based on being the Exile winner and labels this procedure free. In this complete procedure, the offer is available without adding a Scepter condition and without a mandatory paid/gift transfer. This conveys the operative exception without repeating no Scepter/no Reliquary gift.",
+          "source_evidence": [
+            "chronicle_citizenship",
+            "normal_offer",
+            "summary_exception"
+          ]
+        },
+        {
+          "condition": "Acceptors flip Citizen and replace each ruled-site garrison with exactly one winner-color warband",
+          "assessment": "correct",
+          "reader_evidence": "each accepting Exile flips to Citizen and replaces every garrison at every site they rule with exactly one winner-color warband",
+          "source_evidence": [
+            "chronicle_citizenship"
+          ]
+        },
+        {
+          "condition": "Rebuild from remaining in-play denizens",
+          "assessment": "correct",
+          "reader_evidence": "Rebuild the world deck from denizens remaining in play",
+          "source_evidence": [
+            "rebuild"
+          ]
+        },
+        {
+          "condition": "Top 10 denizens + 2 random Visions = 12; middle 15 + remaining 3 = 18; remaining denizens below",
+          "assessment": "correct",
+          "reader_evidence": "top stack is 10 denizens plus 2 random Visions (12 cards); middle is 15 denizens plus remaining 3 Visions (18 cards); remaining denizens go below",
+          "source_evidence": [
+            "rebuild"
+          ]
+        },
+        {
+          "condition": "Explain 14-card top stack as erroneous aid instruction",
+          "assessment": "correct",
+          "reader_evidence": "The aid's ‘12 denizens + 2’ instruction is incorrect; 12 denizens plus 2 Visions would be 14, but the summary specifies 10 denizens plus 2 Visions.",
+          "source_evidence": [
+            "errata_aid"
+          ]
+        }
+      ],
+      "exception_analysis": {
+        "distinction": "The word free alone would not logically establish who has permission to offer, and in isolation could be ambiguous about whether a recipient gets a free gift. The affirmative offer permission and its Chronicle context must also be read.",
+        "determination": "Here the answer explicitly grants the Exile winner permission to offer and describes free Chronicle Citizenship with its own acceptance procedure. It does not refer the reader back to an ordinary Scepter offer. Adding a Scepter prerequisite or compulsory Reliquary transfer would impose an unmentioned condition on the stated free permission.",
+        "why_no_material_omission": "The question asks for Chronicle turnover, not an explicit enumeration of every ordinary-offer rule being waived. The fixed key says ignore normal offer; the reader conveys that effect in operationally equivalent terms. Requiring the exact no-Scepter/no-Reliquary-gift phrases would demand keyword repetition instead of equivalent meaning."
+      }
+    }
+  ]
+}

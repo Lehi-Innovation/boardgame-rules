@@ -1,0 +1,29 @@
+{
+  "changes": [
+    {
+      "check": "prospective protocol bindings",
+      "change": "Validate v5 template and protocol-change-note hashes in each manifest in addition to per-reader prompt hashes.",
+      "effect": "Additional integrity gate."
+    },
+    {
+      "check": "unlaunched prepared round",
+      "change": "Keep iteration11 frozen prospective inputs but skip runtime/answer/grade gates only when manifest explicitly says prepared_not_dispatched, no reader outputs exist, no matching reader dispatch occurs in actual runtime dispatch manifest, and it is not the selected final iteration.",
+      "effect": "Does not skip any completed/started reader evaluation; all frozen hashes remain checked."
+    },
+    {
+      "check": "contextual checklist status spelling",
+      "change": "Accept context-not-requested alongside context_not_requested as the same scope disposition.",
+      "effect": "No unresolved, missing, unsupported, or incorrect requested fact is accepted."
+    }
+  ],
+  "trial_validation": {
+    "iteration": "expanded-iteration-10",
+    "passed": 2452,
+    "total": 2454,
+    "remaining_failures": [
+      "final:a:N_of_N",
+      "final:a:all_requested_facts_resolved"
+    ]
+  },
+  "purpose": "Correct validator schema handling without changing questions, key, summary, raw reader responses or semantic grade decisions."
+}

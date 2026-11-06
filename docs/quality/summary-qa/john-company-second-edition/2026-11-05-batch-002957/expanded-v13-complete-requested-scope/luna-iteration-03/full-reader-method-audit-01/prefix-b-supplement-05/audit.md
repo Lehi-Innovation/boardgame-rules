@@ -1,0 +1,9 @@
+Reader B is frozen at 100 ordered unique answers and 100 aligned source records. Its last event is a normal partial-turn completion (physical record 3506); no final file exists in this freeze. The whole 116-question task is therefore unfinished and no full-final grading admission is issued.
+
+The freeze is 2026-11-06 13:35:23 UTC: runtime prefix 6457667 bytes, SHA-256 `ab32d3b14988652985f22bc8cdeb38b8a741da8852e311668bb34fbf35bde1aa`; draft SHA-256 `ac4a4d8c7a3d0f06657a76a22d830811ba73dfa4d83ecbdfb768984b58824a5b`. Files and runtime record hashes are bound in `prefix-freeze-manifest.json`.
+
+All 100 exact questions and complete selected source units were visibly received before their individual compositions. Individual source maps/metadata align with the saved source records; case arrays are plain strings and conclusions occur at the beginning of answers, allowing the explicit `Case conclusion: ` label. All actual contexts remain Luna/high with the original identity/parent. No turn adds more than ten entries. Current literal attachments/metadata/phrase/reference checks pass for the entire available prefix; the previously observed Q094 literal-map defect was repaired before this freeze.
+
+The earlier Q066 complete 61-line unchunked source block and failed outside-path attempt remain recorded, together with every initial/repair/history-note qualification. There is no source-unit content-receipt gap in this prefix. No routing/ranking, prefilled bank map, default source, semantic grading or unsupported fallback is observed. These method findings impose no factual score cap and do not decide any gameplay answer.
+
+Exact per-entry and call evidence is in the adjacent JSON files. Earlier supplements are preserved. A later terminal supplement must independently bind all 116 entries, the immutable first complete draft, actual draft/final changes, self_review, final case fields and whole-task termination.

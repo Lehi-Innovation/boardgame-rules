@@ -1,0 +1,45 @@
+# Independent source-only audit 15
+
+**Overall scoped verdict: PASS. Scoped signoff: true.** No material source, fidelity or attribution issue found.
+
+Frozen candidate SHA-256: `2060a7965d422e2ecfcf20b5201dadb52cf5efb135c2df0f6be0ceb2cb72d316`.
+
+Independent official-claims verdict: **PASS within the declared procedural/component scope**. User-interpretation fidelity: **PASS**. Unqualified independently verified official-core signoff: **false**. Publisher email independently verified: **false**; no additional public citation is required for the accepted human interpretation.
+
+The scope is standard multiplayer for 3–6 players, every standard scenario and firms, plus the exact attributed human defense comparator. Crown and optional draft are excluded. Individual component powers/restrictions, holdings, printed values and India configurations remain component-authoritative.
+
+The full 482-line candidate and all assigned rulebook text through page 42 (logical lines 1–3015) were read without gaps. Twenty-two native original PDF views covered rulebook/action/map/event/firm diagrams, both player-aid faces, the board, scenario fronts/backs, law cards and firm charter. Applicable errata, both designer rulings and original publisher provenance were inspected. All source hashes are in manifest.json. No previous review, repair, answer key, reader, grade or history artifact was consulted; the candidate was not edited.
+
+There are **no findings** at any severity. The following checks document the evidence supporting the verdict.
+
+| Candidate lines | Original source anchor | Result |
+|---|---|---|
+| 21–61 | Scenario cards 74–76, native PDF p9; original board turn/Standing/Debt tracks | All four scenario scopes, initial treasuries/laws/military/Company ships, corrected control/share-value tokens, final turn marks, Power rates, prize costs/upkeep/windows and lined/starred thresholds agree. Exact starting personal holdings and India configurations are explicitly delegated to the components. |
+| 75–87 | Rules pp10–12, London Season / Prestige Cards, logical lines 897–1042 | Phase order, first-turn skip, attrition modifiers, retirement payment timing, display priority, no immediate replacements, full end-step discard/refill and spouse/blackmail limits agree. |
+| 91–136 | Rules pp13–16, Family / New Company Shares / Hiring, logical lines 1076–1255 | Opportunity-marker timing, once-per-turn vacancy bonus, costs, stock queue, forced prize reuse, ascending promotion order, vacancy behavior, Chairman election/empty Court and normal Commander exemption agree. Office cards remain the source for printed candidate pools. |
+| 140–158 | Rules p17 Success Checks and p27 Revenue, logical lines 1331–1366 and 1894–1935 | Office treasury ownership, no dead actions, check outcomes, normal catastrophe, Revenue costs, emergency loans at maximum Debt, Standing penalties and strict dividend enthusiasm threshold agree. |
+| 252–274 | Rules pp18–21, office operations / Trade, logical lines 1403–1613 | Chairman debt/allocation, envoy-before-transfers, Shipping costs/bank recipient/mandatory spending, Military Affairs order and Presidency interruption boundaries agree. Trade uses its own connected route, writers before tokens, one order per ship and Presidency home privileges. |
+| 276–311 | Rules pp22–23, Commanders / Deploy / successful control, logical lines 1617–1711 | Alliance purchase/consent and whole-piece exhaustion, legal deployment targets, full empire penalty, officer loss checks per attempt, loot minimum/cycling/bank shares, trophies and ordered destinations of control token/overlay/card agree. Reopening an already controlled region retains minimum loot and no tower trophies. |
+| 313–347 | Rules pp24–26, Governors / China / Governor General, logical lines 1739–1890 | Governor shrinking pools, unrest and bonus timing, two separate shipbuilding successes, regiment/Tax destinations; China creation/immediate hiring/single attempt/export scaling; and Governor General conversion/check/benefit limits agree. |
+| 160–198 | Rules pp28–33, Storms / Cascades / Events / Crisis / Foreign Invasion | Storm eligibility/results, event draw and location rules, Cascade receiving/initiation distinction, every event type, normal Invasion/Rebellion strict comparisons, empire destruction/decline and separate primary/secondary Company attack strengths agree. |
+| 200–219 | Rules p29 Region Loss; p30 Elephant’s March; p33 Vacant Commander | Commander/Military Affairs/Chairman substitution, trophy consequences, rout, Governor removal, spent loot token orientation, loss of association, cumulative Standing losses, phase completion on failure and Elephant routing agree. The defense comparator itself is separately judged against the accepted human source. |
+| 221–248 | Rules pp34–36, Parliament / Voting / Upkeep and Refresh | Law draw/dilemma stopping, pre-vote policy selection, card votes once across rounds, opposition/coalitions/PM restrictions, zero-pass threshold, policy-before-law order, tax/bonus recipients and complete upkeep/refresh timing agree. |
+| 349–396 | Rules pp36–42, Deregulation / Firms | Deregulation timing/result boundaries; London versus India funds; shareholder special retirement; investment restrictions, takeover/merger/dissolution; one trade attempt, secret strategy/revealed bid, initiative/ties, route/ship+1/repeated-order revenues; expenses/emergency rescue/dividends/marker/Hobnob/storms agree. |
+| 398–425 | Rules p9 Final Scoring; p37 Firms in Final Scoring; p42 charter diagram | Firm scoring with per-player final rounding and Debtor’s Prison precedes special firm retirement, then ordinary power/Court/outcome scoring. Board and charter confirm rates and tie awards. Company success/failure, final attrition versus random failure card, windows and PM-order ties agree. |
+| 429–446 | Rules p8 Negotiation; p9 Game End | Transferable assets, family-piece replacement on share trades, private blackmail peeks, no repeated activation, promise timing/conflicts and no negotiations/promises at Final Scoring agree. |
+| 460–464 | Official internal errata, core/setup/card corrections; original official post; allowed original ruling thread articles 40850873 and 42192767 | Applicable procedural and setup errata are incorporated. Company Fraud cap and corrected Revenue timing, Foreign Invasion unrest/tower and single-closure ruling, impeachment destinations and former-Commander eligibility are accurate. Dates and article attribution match the retained originals. |
+| 208–215 | Exact human messages and normative authority, lines 5–11 | Total newly exhausted defense strength at least attack defeats the Crisis, including full alliance strength. The strength-2 versus strength-1 example applies it correctly, preserves normal successful-defense consequences and does not reuse an exhausted alliance. |
+| 448–454 | Human normative authority and provenance, lines 10–11 | The candidate expressly labels this user-supplied interpretation and never claims independently verified publisher/designer/email authority for it. The reported private email is provenance only and creates no citation blocker in this scoped audit. |
+
+The JSON audit retains exact supporting quotes and source paths for these checks. Its absence of findings does not claim that the private email was inspected. The rulebook’s printed equality wording and the user’s adopted strength comparison remain distinctly attributed.
+
+Source precedence and printed exceptions:
+
+- The assigned Second Printing rulebook and applicable official errata/rulings govern over abbreviated or older component-aid wording, including Region Loss closing only for a normal Invasion Crisis.
+- The human source is accepted normative for the defense-strength comparator. Rules p33 literally uses equality language; the summary makes the user-attributed >= interpretation explicit. This difference is intentional and is not scored as a defect.
+- Individual printed law/card exceptions remain operative under the explicit component-authoritative boundary. In particular Military Oversight uses its printed hiring/Nepotism procedure, Royal Protection can cancel emergency loans, and Deregulation uses its printed support icons. The general ordinary procedures do not displace those printed effects.
+- Company Fraud ruling article 40850873 selects alternative 2 from the original question (Balance 10, doubled roll 12 => payout 10); the retained 2023 Foreign Invasion ruling excludes unrest from its primary roll and resulting towers.
+
+Read limits and completeness: all displayed text outputs stayed within safe token caps. No output was truncated; no recovery was required. The read record documents every text range and each viewed native derivative. Text line numbers use Python str.splitlines(); page and section names are the primary human anchors.
+
+Native rendering used PyMuPDF 1.28.2 installed temporarily inside this audit folder. No web-source research was performed. The original candidate and frozen snapshot hashes still match at audit completion.

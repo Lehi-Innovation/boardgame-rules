@@ -1,0 +1,172 @@
+{
+  "review_type": "Independent generic technical review only; no factual QA verdict or adoption decision",
+  "created_at_utc": "2026-11-06T07:57:27.375753+00:00",
+  "shared_code_edited": false,
+  "actual_game_or_qa_data_accessed": false,
+  "procedural_deviation": "Initial permitted manifest display included metadata beyond hash fields; no referenced file was accessed.",
+  "provided_tests": {
+    "count": 6,
+    "passed": 6,
+    "exit_code": 0
+  },
+  "neutral_characterization": {
+    "count": 44,
+    "matches": 44,
+    "exit_code": 0,
+    "meaning": "Known limitations are intentionally characterized; matches do not mean safety approval."
+  },
+  "upstream_hashes": {
+    "source_units.py": {
+      "declared": "c3d73d720ffdfbe805875357c569171b18fb7b7113e10f68c6fd51f75f672280",
+      "actual": "c3d73d720ffdfbe805875357c569171b18fb7b7113e10f68c6fd51f75f672280",
+      "matches": true
+    },
+    "test_source_units.py": {
+      "declared": "845228007d214b4a89e29997a33782b0a962d6bd477bc17e9aea41d84c2a8d16",
+      "actual": "845228007d214b4a89e29997a33782b0a962d6bd477bc17e9aea41d84c2a8d16",
+      "matches": true
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity_or_class": "high",
+      "description": "Low-level validator does not establish a complete/local/controlling header.",
+      "evidence_cases": [
+        "partial_header_accepted",
+        "unrelated_header_accepted",
+        "same_count_wrong_header_accepted",
+        "separator_as_row_accepted",
+        "header_negative_offsets_accepted"
+      ]
+    },
+    {
+      "id": "F2",
+      "severity_or_class": "high",
+      "description": "High-level separator/header heuristic accepts malformed table blocks and separator headers.",
+      "evidence_cases": [
+        "high_level_malformed_intervening_row",
+        "high_level_separator_as_header"
+      ]
+    },
+    {
+      "id": "F3",
+      "severity_or_class": "medium",
+      "description": "Escaped terminal pipe is treated as a complete outer boundary.",
+      "evidence_cases": [
+        "escaped_final_outer_pipe"
+      ]
+    },
+    {
+      "id": "F4",
+      "severity_or_class": "high",
+      "description": "Nested child extraction omits governing parent and other external context.",
+      "evidence_cases": [
+        "list_child_omits_parent"
+      ]
+    },
+    {
+      "id": "F5",
+      "severity_or_class": "medium",
+      "description": "Bounds can be normalized or raise IndexError before validation.",
+      "evidence_cases": [
+        "invalid_unit_negative",
+        "invalid_unit_oversize",
+        "unit_negative_bounds_can_be_normalized"
+      ]
+    },
+    {
+      "id": "L1",
+      "severity_or_class": "contract",
+      "description": "Exactness applies to whitespace-trimmed Unicode spans in supplied text.",
+      "evidence_cases": [
+        "exact_trim_contract",
+        "table_newline_offset_returns_row"
+      ]
+    },
+    {
+      "id": "L2",
+      "severity_or_class": "limitation",
+      "description": "Restricted table grammar; no fenced-code/container interpretation.",
+      "evidence_cases": [
+        "high_level_missing_outer_pipes",
+        "table_in_fence"
+      ]
+    },
+    {
+      "id": "L3",
+      "severity_or_class": "limitation",
+      "description": "Paragraphs are LF/CRLF blank-delimited chunks, not Markdown syntax nodes.",
+      "evidence_cases": [
+        "paragraph_heading_swallowed",
+        "paragraph_cr_only",
+        "text_validator_mirrors_extractor",
+        "unicode_line_separators",
+        "paragraph_absorbs_adjacent_list"
+      ]
+    },
+    {
+      "id": "L4",
+      "severity_or_class": "limitation",
+      "description": "List boundaries do not implement full Markdown syntax or parent-context collection.",
+      "evidence_cases": [
+        "list_indented_heading_swallowed",
+        "list_setext_swallowed",
+        "list_tab_nested_unsupported",
+        "list_fenced_bullet_selected_as_child"
+      ]
+    },
+    {
+      "id": "S1",
+      "severity_or_class": "observed-support",
+      "description": "Restricted-format successes are backed by neutral fixtures, not semantic evidence.",
+      "evidence_cases": [
+        "unicode_codepoints_crlf",
+        "table_negative_offset",
+        "table_end_offset",
+        "paragraph_negative_offset",
+        "list_end_offset",
+        "cropped_row",
+        "high_level_column_mismatch",
+        "escaped_pipe_odd",
+        "escaped_pipe_even",
+        "paragraph_blank_offset",
+        "paragraph_crlf",
+        "list_blank_then_outside",
+        "wrong_header_count_rejected",
+        "mutated_quote_rejected",
+        "table_gap_blocks_unrelated_header",
+        "nested_parent_continuation_excluded_from_child",
+        "ordered_item_continuation",
+        "no_separator_rejected",
+        "high_level_separator_target_rejected"
+      ]
+    }
+  ],
+  "required_usage": [
+    "Treat high-level extractors as restricted-format aids only after independent source-format checks.",
+    "Do not use low-level table validator to prove complete or controlling headers.",
+    "Check actual header/separator/intervening block, unescaped outer pipes, source containers and selected fact relevance independently.",
+    "Inspect and include governing parents, headings, definitions, exceptions and external conditions when relevant.",
+    "Preserve original decoded Unicode text and record byte hash, decoding and newline policy; use Python code-point offsets.",
+    "Grade every asked fact independently from its same entry; exact span matching supplies no semantic or case verdict."
+  ],
+  "changes_needed_for_stronger_claims": [
+    "Validate bounds before indexing and explicitly validate optional header spans.",
+    "Validate complete local non-separator headers and the intervening table block.",
+    "Validate escape-aware terminal boundary pipes.",
+    "Reject unsupported structures or use source-position-preserving Markdown parsing."
+  ],
+  "detailed_review": "review.md",
+  "artifact_sha256": {
+    "fixtures/probe-results.json": "7658b8795dfd33d732f57d7269594f255137b4d7644ba3fea86fce76114b3574",
+    "fixtures/probe_source_units.py": "b872bdd0829d07fc829dfdc50dbbb911afde41758ede58904c069b78f4775481",
+    "fixtures/probes-execution.json": "b0b21dd8821790cd2edc25e6cb8bb07d2b8cc66aab1012f53af002fcd027c6c9",
+    "fixtures/provided-tests-execution.json": "f2e549b6f1cf7fa16bda4c373cd356f43dcc18322f148f6b5195d8c977e05a88",
+    "fixtures/source_units.py": "c3d73d720ffdfbe805875357c569171b18fb7b7113e10f68c6fd51f75f672280",
+    "fixtures/test_source_units.py": "845228007d214b4a89e29997a33782b0a962d6bd477bc17e9aea41d84c2a8d16",
+    "input-hashes.json": "47083b163c26c1afd892c492e99b5a986b43598476ef55748cc5572cba1491da",
+    "read-record.json": "addb38517b6963b5c4a3299a59772336277cd4511edd781ff56a5d1ab5b2e606",
+    "review.md": "3842128a3eaf0055b5149e42ee554ea0480385f540457891c246725bbaef3492"
+  }
+}

@@ -1,0 +1,5 @@
+Generic source extraction, version10.
+
+The single extract_unit(text, offset) API returns a complete literal table row with actual header/column values, or its complete governing procedural section. Heading and individual-step selections retain opening and peer steps. The code contains no game facts, question IDs, expected answers, old responses, grader findings or question-specific maps. Thirteen neutral synthetic tests passed before the first reader dispatch; the coordinator reviewed the code and tests and corroborated actual pre-dispatch tool outputs.
+
+Optional for future fresh pairs: review and embed this exact generic code identically for both readers. Only the frozen summary and questions remain rules DATA. Do not send this README, test results, provenance or surrounding game QA history to blind readers. Readers select their own relevant source content and supply necessary case conclusions. This is a method aid, not game authority or an additional format-only factual scoring gate. Preserve all genuine asked omissions and wrong or contradictory claims. Prior shared helper versions remain unchanged.

@@ -1,0 +1,145 @@
+{
+  "audit_id": "source-audit-final-05-visual-supplement",
+  "verdict": "MINOR",
+  "candidate": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/source-candidate-09.md",
+  "candidate_sha256": "3c8cfd16c7dc14488aef8822d69a71ce9fe4f542f571585ec2057b4d1ad217e6",
+  "primary_pdf": "/home/jonny/projects/boardgame-rules/source_pdfs/spirit-island-rules.pdf",
+  "primary_pdf_sha256": "64012c21460d3aee0f5c2c0d1048811a4dd4b4aebd03284ee4706a6a1f8e630e",
+  "pdf_page_count": 32,
+  "render_method": {
+    "implementation": "PyMuPDF / fitz",
+    "version": "1.27.2",
+    "interpreter": "/home/jonny/projects/boardgame-rules/.venv/bin/python",
+    "method": "Open assigned primary PDF directly, render document[page_number-1].get_pixmap(matrix=fitz.Matrix(1.5,1.5), alpha=False), save PNG under /tmp. Independently generated fresh images; did not rely on existing prepared renders.",
+    "pages": [
+      {
+        "pdf_page_one_based": 6,
+        "temporary_render": "/tmp/source-audit-final-05-core-page-6.png",
+        "image_sha256": "2afc7da08ca27715848b4d6ddbb17f6563431b32259f36e8413ea05650e4c307",
+        "pixel_dimensions": [
+          1214,
+          1214
+        ],
+        "visually_inspected": true
+      },
+      {
+        "pdf_page_one_based": 7,
+        "temporary_render": "/tmp/source-audit-final-05-core-page-7.png",
+        "image_sha256": "be2c560ea67498cd11679ab19694138419e2d3367497e95197edea0e90074dc7",
+        "pixel_dimensions": [
+          1214,
+          1214
+        ],
+        "visually_inspected": true
+      },
+      {
+        "pdf_page_one_based": 17,
+        "temporary_render": "/tmp/source-audit-final-05-core-page-17.png",
+        "image_sha256": "89421398b04e4dc783f2ff41ba91a26f42e14fa0ca8b8994ce83f795ef1b2145",
+        "pixel_dimensions": [
+          1214,
+          1214
+        ],
+        "visually_inspected": true
+      },
+      {
+        "pdf_page_one_based": 32,
+        "temporary_render": "/tmp/source-audit-final-05-core-page-32.png",
+        "image_sha256": "7ca55770632b3048a2aafa1bf59915b7b6e7be03ace09145e0072cb746ec3a84",
+        "pixel_dimensions": [
+          1214,
+          1214
+        ],
+        "visually_inspected": true
+      }
+    ]
+  },
+  "findings": [
+    {
+      "severity": "MINOR",
+      "candidate_section": "Setup, step 1 (Island)",
+      "candidate_quote": "for four the roughly square layout illustrated in CORE pp.6\u20137",
+      "source_reference": "CORE p.7, central four-player balanced-board map diagram",
+      "source_visual_fact": "The four boards form a two-by-two arrangement with an elongated parallelogram outline and slanted sides; the outline is visibly longer than it is wide.",
+      "issue": "Calling the overall layout roughly square is imprecise. The explicit instruction to use the standard layout and the citation to the correct diagram still constrain assembly correctly, so this is a minor descriptive issue rather than a wrong board-count, island-population or rules procedure.",
+      "scope": "Only this shape descriptor; no change to previous text/face evidence and no summary repair authored."
+    }
+  ],
+  "visual_facts_checked": [
+    {
+      "pages": [
+        6,
+        7
+      ],
+      "candidate_sections": [
+        "Setup 1: Island",
+        "Setup 2: Invader deck",
+        "Setup 3: Fear",
+        "Setup 6: Spirits",
+        "Setup 7: Initial Explore"
+      ],
+      "result": "Supported except the minor four-player shape descriptor above.",
+      "facts": [
+        "Page6 two-board map joins balanced boards bottom-to-bottom, with printed Oceans at opposite outer corners. Page6 three-board illustration is triangular. Page7 four-board illustration uses two rows of two boards in the standard arrangement. One board per Spirit and the use of balanced sides are consistent.",
+        "Page6 Fear-deck graphic has three groups of three cards separated by Terror II and III in the order stated. Invader-deck sidebar shows 3 Stage I, 4 Stage II, 5 Stage III.",
+        "Page7 displays separate Minor/Major decks and discards, each Spirit personal hand/play/discard areas, a distinct Spirit on each board, and remaining disks on track spaces with initial leftmost benefits uncovered.",
+        "Page7 Invader board shows initial Explore card in Build, deck in Explore, and empty Ravage. Board setup icons correspond to Invader/Dahan/Blight population, and Oceans are printed peripheral areas."
+      ]
+    },
+    {
+      "pages": [
+        17
+      ],
+      "candidate_sections": [
+        "Actions: Using Powers and Elements",
+        "Special Rules: Geography and Presence"
+      ],
+      "result": "Supported.",
+      "facts": [
+        "Upper example has Sacred Site source icon before Range1 and ANY in Target Land; its effects include Destroy1 Dahan. The Dahan effect icon is not an implicit requirement to target a Dahan land.",
+        "Lower example has Range1 and Dahan silhouette in the Target Land box, making Dahan a target requirement. Source icons belong in the Range box independently of target icons.",
+        "Printed explanation confirms do-as-much-as-possible applies to effects, not extra targeting constraints; using a Power is all-or-nothing apart from consistently treating Elements as fewer.",
+        "Element legend visibly distinguishes Sun, Moon, Fire, Air, Water, Earth, Plant and Animal; the thresholds do not spend them, and Instead replaces preceding effects."
+      ]
+    },
+    {
+      "pages": [
+        32
+      ],
+      "candidate_sections": [
+        "Components piece table",
+        "Actions: Using Powers and Elements",
+        "Actions: Gather, Push and other movement",
+        "Setup 6: Spirits",
+        "Spirit Phase",
+        "Solo and decisions",
+        "Player Reference"
+      ],
+      "result": "Supported.",
+      "facts": [
+        "Presence spiral and Sacred Site stacked-presence icon are distinct; Sacred Site legend says 2 or more Presence. Range0 means land with own Presence; terrain-Presence icon plus Range1 means origin must be Mountain Presence; Sacred Site plus Range2 requires a Sacred Site origin. +3 over arrow is a range increase.",
+        "Explorer/Town slash example Push2 allows two Explorers, one of each, or two Towns: one total allowance, not two of each. Town/City slash land requirement allows at least one of either or both.",
+        "Target reference distinguishes any one land, Coastal touching printed Ocean, Inland not touching Ocean, with/without Invaders, with Dahan, with/without Blight, Mountain-or-Wetland, any Spirit and another Spirit (solo exception).",
+        "Track icons show highest uncovered Energy number, highest uncovered Card Plays number, Reclaim One returning one discard each Spirit Phase, and a bonus Element for as long as uncovered. No additive numeric-track income/plays is indicated.",
+        "Fast red bird/Slow blue turtle timing, printed unit health/damage/Fear values, and turn-order reference support the candidate. Living FAQ referral is visibly printed at the bottom."
+      ]
+    }
+  ],
+  "independence": {
+    "source_only": true,
+    "other_reports_or_question_material_read": false,
+    "existing_audit_content_read": false,
+    "existing_audit_hashed_only_to_verify_preservation": true,
+    "existing_prepared_pngs_used": false,
+    "browsing": false,
+    "other_agent_communication": false,
+    "summary_or_source_edits": false
+  },
+  "original_report_preserved": {
+    "file": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/source-audit-final-05.json",
+    "sha256_before": "7b3ee79b89c89c45fc6055bd22467a8bf41f048f8d10d6049c3ec2ed0c5f56a5",
+    "sha256_after": "7b3ee79b89c89c45fc6055bd22467a8bf41f048f8d10d6049c3ec2ed0c5f56a5",
+    "unchanged": true
+  },
+  "write_scope": "Only this JSON supplement and the four temporary PNGs under /tmp were written. Original audit remains byte-for-byte unchanged."
+}

@@ -1,0 +1,1706 @@
+{
+  "purpose": "Unadopted proposal neutral syntax/guard tests only; no actual runtimes, proof(), shell or JavaScript evaluation.",
+  "python_version": "3.10.12 (main, Aug 31 2026, 10:18:17) [GCC 11.4.0]",
+  "count": 112,
+  "matches": 112,
+  "cases": [
+    {
+      "name": "original_single_literal",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "original_two_literals",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "compact_outer_format",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "outer_whitespace_spaces",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "outer_whitespace_tabs",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "outer_whitespace_newlines",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "outer_whitespace_crlf",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "outer_whitespace_mixed",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "quoted_exact_keys",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "mixed_quoted_keys",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "escaped_slash_same_command",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "alternate_unicode_escape_same_command",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "arbitrary_static_literal_split",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "empty_first_static_literal",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_code_like",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"\\\"}); text(r.output); /* comment */ // QA_ARTIFACT_WRITE_V1\\n\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_interpolation_like",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"${throw new Error(\\\"not executed\\\")}\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_shell_like",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"$(touch SHOULD_NOT_EXIST); `not executed`; & | >\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_escaped_controls",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"one\\ntwo\\tthree\\r\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_unicode",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"Caf\\u00e9 e\\u0301 \\ud83d\\ude00\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "literal_data_unicode_line_separator",
+      "category": "data-not-code",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"before\\u2028after\\u2029end\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "reject_single_quote_literal",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_template_literal",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_template_interpolation",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_dynamic_identifier",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_dynamic_concat",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_three_literals",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_parenthesized_literal",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_json_parse_expression",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_function_value",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_string_raw",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_malformed_escape",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_malformed_unicode",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_unterminated_string",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_raw_newline_string",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_raw_control_string",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_raw_unicode_separator",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_lone_high_surrogate",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_lone_low_surrogate",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_ordinary_leading_comment",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_block_comment",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_inline_comment",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_comment_between_statements",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_extra_statement_before",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_extra_statement_after",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_second_exec_call",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_extra_object_field",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_prototype_field",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_duplicate_cmd_field",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_computed_key",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_spread_object",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_object_getter",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_keys_reordered",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_escaped_key",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_other_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_string_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_float_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_expression_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_leading_zero_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_numeric_separator_budget",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_extra_exec_argument",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_trailing_object_comma",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_wrong_variable",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_let_binding",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_missing_const_separator",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_missing_await_separator",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_different_output",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_optional_chaining",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_missing_semicolon",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_extra_semicolon",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_unicode_syntax_whitespace",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_async_wrapper",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "reject_return_prefix",
+      "category": "negative-syntax",
+      "matches": true,
+      "observed": {
+        "returned": null
+      }
+    },
+    {
+      "name": "escaped_valid_surrogate_pair",
+      "category": "positive",
+      "matches": true,
+      "observed": {
+        "returned": "const r = await tools.exec_command({cmd: \"\\ud83d\\ude00\", max_output_tokens: 24000});\ntext(r.output);"
+      }
+    },
+    {
+      "name": "original_rejects_format_variant",
+      "category": "session",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "proposal_accepts_static_same_command",
+      "category": "session",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "raw_call_preserved_for_audit",
+      "category": "session",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_different_path",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/other.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/other.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_different_mode",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json entry 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json entry 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_different_index",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 1\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 1\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_different_script",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_extra_shell_command",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0; touch SHOULD_NOT_EXIST\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0; touch SHOULD_NOT_EXIST\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_shell_token_equivalent_spacing",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3  -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3  -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_trailing_shell_whitespace",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0 \" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0 \" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unapproved_command_nul_byte",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\\u0000\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools . exec_command ( { cmd : \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\\u0000\" , max_output_tokens : 24000 } ) ; text ( r . output ) ;"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "syntax_rejection_remains_unknown",
+      "category": "session",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);text(\"extra\");"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);text(\"extra\");"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "ordinary_comment_stays_unknown",
+      "category": "session",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "// ordinary comment\nconst r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "// ordinary comment\nconst r = await tools.exec_command({cmd: \"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\", max_output_tokens: 24000});\ntext(r.output);"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "inherited_exec_pragma_preserved",
+      "category": "legacy-preprocessing",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "// @exec: {\"yield_time_ms\":10000}\nconst\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "write_marker_preserved_exactly",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+      }
+    },
+    {
+      "name": "postwrite_read_uncredited",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": false,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "late_output_after_write_not_initial",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": false,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unknown_before_marker_retained",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "unknown",
+              "input": "text(\"unknown\")"
+            },
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "unknown",
+              "input": "text(\"unknown\")"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "status_call_retained",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [],
+          "calls": [
+            {
+              "name": "list_agents",
+              "call_id": "status",
+              "input": "{}"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "list_agents",
+              "call_id": "status",
+              "input": "{}"
+            }
+          ],
+          "status": [
+            "list_agents"
+          ],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "duplicate_call_id_retained",
+      "category": "call-binding",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            },
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;",
+              "trace_error": "Missing or duplicate call ID"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "missing_call_id_retained",
+      "category": "call-binding",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": null,
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": null,
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [
+            {
+              "name": "exec",
+              "call_id": null,
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;",
+              "trace_error": "Missing or duplicate call ID"
+            }
+          ],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "unmatched_output_retained",
+      "category": "call-binding",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "unknown",
+              "approved_read": false,
+              "expected_value": null,
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": [
+            {
+              "call_id": "unknown",
+              "before_boundary": true
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "missing_write_boundary_retained",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": null,
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "allowlisted_code_like_path_remains_literal_data",
+      "category": "exact-command",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "outputs": [
+            {
+              "before_boundary": true,
+              "call_id": "read",
+              "approved_read": true,
+              "expected_value": {
+                "qa_delivery": "summary-chunk-v1",
+                "start_line": 1,
+                "end_line": 2,
+                "text": "## Neutral\nA neutral line.\n",
+                "sha256": "d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0"
+              },
+              "value": "{\"qa_delivery\": \"summary-chunk-v1\", \"start_line\": 1, \"end_line\": 2, \"text\": \"## Neutral\\nA neutral line.\\n\", \"sha256\": \"d26ec6ff1b91786ac5d1803e275c0eb52ca2fcdc4452fadbeba74ef334e872d0\"}"
+            }
+          ],
+          "calls": [
+            {
+              "name": "exec",
+              "call_id": "read",
+              "input": "const\tr\t=\tawait\ttools\t.\texec_command\t(\t{\tcmd\t:\t\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' '/neutral-only/\\\"}); // ${not_executed} $(not_executed) `data` \\ud83d\\ude00.md' '/neutral-only/packet with spaces.json' entry 2\"\t,\tmax_output_tokens\t:\t24000\t}\t)\t;\ttext\t(\tr\t.\toutput\t)\t;"
+            }
+          ],
+          "unknown": [],
+          "status": [],
+          "boundary": {
+            "name": "exec",
+            "call_id": "write",
+            "input": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");"
+          },
+          "post_calls": [],
+          "unmatched": []
+        }
+      }
+    },
+    {
+      "name": "marker_plus_extra_read_remains_write_boundary",
+      "category": "boundary",
+      "matches": true,
+      "observed": {
+        "returned": "// QA_ARTIFACT_WRITE_V1\ntext(\"neutral marker only; never executed\");\nconst\nr\n=\nawait\ntools\n.\nexec_command\n(\n{\n\"cmd\"\n:\n\"python3 -c 'from pathlib import Path\\nimport hashlib,json,sys\\nsummary_path,packet_path,mode,index=sys.argv[1:]\\nindex=int(index)\\nif mode==\\\"summary\\\":\\n text=Path(summary_path).read_text()\\n pieces=text.split(\\\"\\\\n\\\")\\n lines=[line+\\\"\\\\n\\\" for line in pieces[:-1]]\\n if pieces[-1]: lines.append(pieces[-1])\\n chunk=\\\"\\\".join(lines[index:index+45])\\n value={\\\"qa_delivery\\\":\\\"summary-chunk-v1\\\",\\\"start_line\\\":index+1,\\\"end_line\\\":min(index+45,len(lines)),\\\"text\\\":chunk,\\\"sha256\\\":hashlib.sha256(chunk.encode()).hexdigest()}\\nelif mode==\\\"metadata\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value={key:item for key,item in packet.items() if key!=\\\"entries\\\"}\\nelif mode==\\\"entry\\\":\\n packet=json.loads(Path(packet_path).read_text())\\n value=packet[\\\"entries\\\"][index]\\nelse: raise ValueError(\\\"unknown read mode\\\")\\nprint(json.dumps(value,ensure_ascii=False))' /neutral-only/source.md /neutral-only/packet.json summary 0\"\n,\nmax_output_tokens\n:\n24000\n}\n)\n;\ntext\n(\nr\n.\noutput\n)\n;"
+      }
+    },
+    {
+      "name": "exact_source_value_required",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": true,
+          "unexpected": [],
+          "fragments": []
+        }
+      }
+    },
+    {
+      "name": "altered_source_value_not_credited",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": false,
+          "unexpected": [],
+          "fragments": []
+        }
+      }
+    },
+    {
+      "name": "exact_neutral_entry_equality_required",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": true,
+          "unexpected": [],
+          "fragments": []
+        }
+      }
+    },
+    {
+      "name": "altered_neutral_entry_flagged",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": false,
+          "unexpected": [
+            {
+              "id": "NEUTRAL-1",
+              "question_entry": {
+                "neutral": "question-shaped fixture"
+              },
+              "key_entry": {
+                "neutral": "synthetic reference"
+              },
+              "reader_a_entry": {
+                "neutral": "altered"
+              }
+            }
+          ],
+          "fragments": []
+        }
+      }
+    },
+    {
+      "name": "consistent_truncated_prefix_not_credited",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": false,
+          "unexpected": [],
+          "fragments": [
+            {
+              "prefix_characters": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "exact_recovery_after_truncation_credited",
+      "category": "output-equality",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "credited_expected": true,
+          "unexpected": [],
+          "fragments": [
+            {
+              "prefix_characters": 30
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "only_call_body_is_overridden",
+      "category": "guard-preservation",
+      "matches": true,
+      "observed": {
+        "returned": [
+          "call_body"
+        ]
+      }
+    },
+    {
+      "name": "changed_generic_source_hash_fails_closed",
+      "category": "version-binding",
+      "matches": true,
+      "observed": {
+        "exception": "ValueError",
+        "message": "Generic proof source differs from reviewed frozen hash: prove-single-reader-grading-delivery-literal-equivalent.py"
+      }
+    },
+    {
+      "name": "future_wrapper_forwards_to_frozen_prove_stub_only",
+      "category": "future-api",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "value": "stub-only",
+          "captured": [
+            {
+              "args": [
+                "neutral-bank",
+                "neutral-iteration",
+                "a",
+                "neutral-prefix"
+              ],
+              "kwargs": {
+                "output_name": "neutral-js-format-proposal-proof.json"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "reject_output_name_grading-reader-a-input-delivery-proof.json",
+      "category": "future-api",
+      "matches": true,
+      "observed": {
+        "exception": "ValueError",
+        "message": "Require an explicit new *-js-format-proposal-proof.json basename"
+      }
+    },
+    {
+      "name": "reject_output_name_../neutral-js-format-proposal-proof.json",
+      "category": "future-api",
+      "matches": true,
+      "observed": {
+        "exception": "ValueError",
+        "message": "Require an explicit new *-js-format-proposal-proof.json basename"
+      }
+    },
+    {
+      "name": "reject_output_name_/tmp/neutral-js-format-proposal-proof.json",
+      "category": "future-api",
+      "matches": true,
+      "observed": {
+        "exception": "ValueError",
+        "message": "Require an explicit new *-js-format-proposal-proof.json basename"
+      }
+    },
+    {
+      "name": "reject_output_name_neutral.json",
+      "category": "future-api",
+      "matches": true,
+      "observed": {
+        "exception": "ValueError",
+        "message": "Require an explicit new *-js-format-proposal-proof.json basename"
+      }
+    },
+    {
+      "name": "deterministic_literal_data_properties",
+      "category": "generated-neutral",
+      "matches": true,
+      "observed": {
+        "returned": {
+          "seed": 41027,
+          "static_literal_cases": 256,
+          "extra_syntax_rejections": 512
+        }
+      }
+    }
+  ]
+}

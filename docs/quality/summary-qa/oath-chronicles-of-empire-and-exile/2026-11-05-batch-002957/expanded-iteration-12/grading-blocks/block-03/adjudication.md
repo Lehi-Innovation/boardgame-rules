@@ -1,0 +1,11 @@
+# Block 03 adjudication
+
+This is bounded extractive fixed-regression grading, not an unaided or held-out evaluation. Only the assigned packet and full supplied summary informed substantive grading. Raw reader files were accessed solely for assigned-entry restoration equality and file hashes.
+
+Both readers: **18 correct, 0 partial, 0 incorrect**. All **59 required fact groups per reader** are satisfied (36 entries and 118 fact assessments overall). No gold or scope defect was identified.
+
+All raw fields and same-entry attached passages were operative. No fact was borrowed from another question or reader, and no unquoted summary content supplemented an answer. Conditional statements were accepted when they resolve the nonnumeric case without requiring an explicit restatement. In particular, Q039 excludes board force when the pawn is away by an express location condition; Q054 requires travel from one Coast to another, which excludes a destination-only Coast. The ordinary Travel passage attached to Q054 supplies the default cost/restriction framework.
+
+Q038 has concrete substituted results in both entries: two casualties and three survivors on the attacker’s board. Q040’s prompted-cost rule and prohibition on extra resource transfers/burning/sacrifice satisfy the cost ceiling. Q042’s must-if-able conditional plus inability exception resolves both ability cases. Q044 includes mandatory application and all four uncovered modifiers. Q046 expressly restricts denizen discards during ruining to sites where an intact edifice actually flipped. Q047 combines saved top-to-bottom map order with bottom-up ruin placement. Q048 accepts the stated successive clockwise suit order without requiring a redundant memorized list.
+
+All same-entry additional quoted claims were reviewed; none materially contradicts the fixed key or supplied controlling passages. Contextual exclusions were not imposed as independent requirements. Evidence excerpts and their source quote bounds are recorded for every fact; validation confirms literal membership, Unicode half-open offsets, span hashes, exact restored raw answers and other fields, fact IDs/text, totals, and input hashes within permitted access.

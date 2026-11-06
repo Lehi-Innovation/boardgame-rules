@@ -1,0 +1,86 @@
+--- /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/seed-v3/luna-iteration-02/summary-snapshot.md
++++ /home/jonny/projects/boardgame-rules/rules/john-company-second-edition.md
+@@ -88,7 +88,12 @@
+ 
+ ### II. Family (Rules pp13–14)
+ 
+-Starting with the Chairman title holder, clockwise, take one chosen family action and put your opportunity marker on it. If your marker was already on that action at phase start, you may take that action twice. It begins off the board. If laws grant extra actions, only the latest passed extra-action law is usable: its extra action receives no opportunity-marker doubling and does not move the marker.
++Starting with the Chairman title holder, clockwise, each player resolves their family action:
++
++1. Check where your opportunity marker was **at phase start** (it begins off the board).
++2. Choose a main family action: take it once, or **may take it twice if the marker already matched it**.
++3. **Place/move the opportunity marker onto your chosen main action.**
++4. After the main action, only the latest passed extra-action law may grant its extra action. This extra action is never doubled by the marker and never moves the marker.
+ 
+ If placing a family piece with none in supply, take one from any of your prizes and lose that prize's printed VP. This applies to firm-share creation too. If no family action is possible, take none and return opportunity marker to supply.
+ 
+@@ -233,7 +238,15 @@
+ 2. Exhaust chosen officers/regiments to bottom for one die each and local alliances for printed dice. Subtract the combined strength of target and **all other regions in its empire, counting target only once**. Company-controlled defense strength is zero. Roll normal check; a noncatastrophic failure can retry using remaining resources.
+ 3. After **each attempt**, owners roll one die per officer exhausted in attempt; each 6 returns an officer to supply. Regiments never roll officer losses.
+ 
+-On success: loot = £4 per target tower + faceup loot token's modifier, at least one plus number of surviving used officers. Distribute £1 Commander share plus £1 per its used surviving officer; clockwise £1 per other player's used surviving officer; then £1 bank per regiment and per alliance **piece**, irrespective of strength. Repeat cycle until cash gone. Commander receives one trophy per target tower.
++On success, take loot from the bank: **£4 per target tower + faceup loot modifier, with a minimum of (surviving officers used in this attempt + 1)**. The extra £1 guarantees the Commander's minimum share even if no officers survive. Count only this attempt's surviving participating officers and used regiments/alliances.
++
++| Each payout cycle | Pay in this order, stopping when cash runs out |
++|---|---|
++| Commander family first | £1 for Commander **plus £1 for each of their used surviving officers**. |
++| Other families clockwise | £1 per used surviving officer of that family. |
++| Bank last | £1 per used regiment and per used local-alliance **piece**, regardless of strength. |
++
++**Repeat that entire cycle from the Commander until all loot is distributed.** The Commander also receives one trophy per target tower.
+ 
+ Then establish control: remove tower/dome, **remove all matching empire flags if target was a capital**, open all orders and clear unrest. If newly Company-controlled, put loot/control token region-side above President. **Place the Governor overlay in the conquered region; put only its office card into the Vacant Offices box.** **If Elephant in conquered region pointed outward, put it fully inside** for Rebellion. These capital/Elephant consequences are part of the successful Deploy procedure.
+ 
+@@ -241,13 +254,20 @@
+ 
+ ### Governors: Administer (p24)
+ 
+-Take printed dice pool. Each attempt rolls current pool with no penalty; reduce pool one after every result. Success pays Governor £1, plus another £1 if previous roll was unsuccessful, and choose:
+-
+-- **Build Company ship in two successes:** first place a partially built Company ship in the Governor's region; if already one there, a subsequent successful Build completes it into the sea zone associated with the Governor's President. The partially built ship has no other effect.
+-- **Commission regiment:** add it to the Army associated with the Governor's President. It functions as officer for strength, pays loot to bank and does not roll officer losses.
+-- Tax: add unsplit £2 to Balance or President's treasury. Each Tax after first this turn adds unrest in region.
+-
+-Every unsuccessful check adds unrest. May continue until choosing stop, no dice, or catastrophe (normal office removal applies).
++Take the printed dice pool. Each attempt rolls the current pool without penalty, then reduces the pool by one **regardless of result**.
++
++| Result | Governor procedure |
++|---|---|
++| Success | Take £1, or **£2 if the immediately preceding roll was unsuccessful**; then choose exactly one option below. |
++| Any unsuccessful roll | Add one unrest in the region. Catastrophe also removes the officeholder under the normal rule. |
++
++| Option on success | Effect and destination |
++|---|---|
++| Build Company ship | **Two successful Build actions:** if none in region, put a partially built Company ship in the Governor's region; otherwise complete that ship into **the sea zone associated with the Governor's President**. Partially built ship has no other effect. |
++| Commission regiment | Place it in **the Army associated with the Governor's President**. Officer-like strength, loot paid to bank, no officer-loss rolls. |
++| Tax | Add an **unsplit £2** to Company Balance or the Governor's President's treasury. Each Tax after the first this turn adds regional unrest. |
++
++Repeat using the shrinking pool until choosing to stop, no dice remaining, or catastrophe.
+ 
+ ### Superintendent of Trade in China (p25)
+ 
+@@ -280,7 +300,14 @@
+ 
+ #### Firm strategies and competing trade (p40)
+ 
+-Each manager secretly selects a sea zone/home port and London cash bid. Must have at least one ship to select a zone; closed home port does not bar choosing it. Or select **Hobnob**, with no bid: no trade or dividends, still expenses, retain previous dividend marker for retirement. **Reveal the cash bids simultaneously, but leave strategy cards facedown** until the relevant Presidency begins. A firm may select its zone even while its chosen home port is closed. There is only **one trade attempt per firm per turn**.
++**Each firm gets exactly one trade attempt per turn.** Managers select their strategy simultaneously and secretly:
++
++| Choice | Eligibility and commitment |
++|---|---|
++| Trade zone/home port | Must have at least one ship. **A closed home port is allowed when selecting the strategy.** Commit a secret cash bid from London treasury. |
++| Hobnob | No bid, trade or dividends. Still pay expenses; retain previous dividend marker for retirement. |
++
++**Reveal cash bids simultaneously, but keep strategy cards facedown until their matching Presidency begins.**
+ 
+ At beginning of associated Presidency's operations, before any actions, matching firms reveal strategy and roll one die per committed £1, paying bid to bank. At least one 1/2 permits trade. Firm initiative = ship count minus number of successful dice (1s/2s); can be negative. President's successful Trade creates initiative the same way using Presidency ships. After that success, fill orders lowest initiative first. **The President chooses the order among tied traders; the Company does not automatically go first.** If President is vacant or never successfully trades, firms fill **after Commander/Governors had chance to act**, Chairman choosing initiative ties.
+ 
+@@ -322,7 +349,7 @@
+ 
+ **Foreign Invasion and unrest:** Cole Wehrle clarified on April 30, 2023 that unrest does **not** add to a Foreign Invasion's primary attack strength or determine its resulting tower levels. Use the ordinary die roll for both attack strength and halving to create towers; the event still uses the Company-defense procedure and its secondary unrest attacks. Do not apply the normal primary Crisis's added unrest to this special event. [Designer ruling](https://boardgamegeek.com/thread/2962161/article/42192767#42192767). The rules already avoid closing Foreign Invasion orders twice: Region Loss's additional closure is only for an Invasion Crisis.
+ 
+-**Applicable official errata:** The publisher links the [official errata discussion](https://boardgamegeek.com/thread/2936700/official-errata), whose original designer post links the full internal correction list. The assigned Second Printing rulebook incorporates the core procedural corrections, including forced prize-piece reuse, empty Court, deployment boundaries, Region Loss and Elephant priority. Corrected setup cards supply Bengal's 1758 control token and 1813 control/share-value tokens. Printed card corrections also specify: Mercantile/Diplomatic Connection reducing a check to zero dice means failure; Company Fraud is played at start of Revenue, rolls one die per officeholder and takes twice the highest roll from Balance to a minimum of zero; Public Demands Impeachment returns member to supply and office card to vacancies; Military Oversight's demoted Commander is eligible as an officer for reappointment. These are card-specific effects, not changes to the normal check/hiring procedures.
++**Applicable official errata:** The publisher links the [official errata discussion](https://boardgamegeek.com/thread/2936700/official-errata), whose original designer post links the full internal correction list. The assigned Second Printing rulebook incorporates the core procedural corrections, including forced prize-piece reuse, empty Court, deployment boundaries, Region Loss and Elephant priority. Corrected setup cards supply Bengal's 1758 control token and 1813 control/share-value tokens. Printed card corrections also specify: Mercantile/Diplomatic Connection reducing a check to zero dice means failure; Company Fraud is played at start of Revenue: roll one die per your officeholder, reduce Balance by twice the highest roll (minimum zero), and take that much cash from the bank; Public Demands Impeachment returns member to supply and office card to vacancies; Military Oversight's demoted Commander is eligible as an officer for reappointment. These are card-specific effects, not changes to the normal check/hiring procedures.
+ 
+ ## Player Reference
+ 

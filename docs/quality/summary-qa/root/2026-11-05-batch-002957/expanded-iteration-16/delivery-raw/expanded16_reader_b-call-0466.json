@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:12:22.880Z",
+    "ordinal": 466,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0aae654206ae7e74016aec9cd273f487d0954a532ae5241660",
+      "status": "completed",
+      "call_id": "call_RRbTVZhpSpdLH7gXiDykwj2c",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,pathlib\\nb=pathlib.Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16'); s=(b/'summary-snapshot.md').read_text(); q=json.loads((b/'questions.json').read_text()); d=json.loads((b/'reader-b.json').read_text())\\nids=[a['id'] for a in d['answers']]; expected=[x['id'] for x in q['questions'][:70]]\\nassert ids==expected and len(ids)==len(set(ids))\\nfor a in d['answers']:\\n assert a['answer'] and all(x['part'] and x['ruling'] and x['evidence'] for x in a['answer'])\\n for p in a['source_passages']: assert p['quotation'] and p['quotation'] in s,(a['id'],p['section'])\\nprint('valid JSON; Q01-Q70 exactly once; all answer parts complete; exact quotation checks passed')\\nPY\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:1000});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac43-231d-7931-9104-5887c585dfe2",
+        "create_time": 1793891532.131808
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:12:23.801Z",
+    "ordinal": 469,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac44-aaf9-7150-af92-0c6fdba2bed6",
+      "call_id": "call_RRbTVZhpSpdLH7gXiDykwj2c",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.9 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; Q01-Q70 exactly once; all answer parts complete; exact quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac43-231d-7931-9104-5887c585dfe2",
+        "create_time": 1793891543.8012145
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

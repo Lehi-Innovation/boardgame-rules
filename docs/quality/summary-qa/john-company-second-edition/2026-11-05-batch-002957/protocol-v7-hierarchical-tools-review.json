@@ -1,0 +1,149 @@
+{
+  "review_id": "protocol-v7-hierarchical-tools-review",
+  "verdict": "CHANGES_REQUESTED",
+  "protocol_text_verdict": "PASS: generic/blind/manual-selection/full-bank hierarchy contract is clear",
+  "index_and_core_declared_attachment_verdict": "PASS on nested hierarchy, exact slices/hashes, nonoverlap, selected ID blocks and declared fact spans",
+  "remaining_concrete_findings": [
+    {
+      "id": "V7-H01",
+      "severity": "medium",
+      "component": "summary-hierarchical-section-check.py: check_data attachment loop",
+      "problem": "The checker validates markers only for metadata-selected IDs. It never scans all reserved attachment markers in answer. An extra unknown block, a complete known-but-unselected unit block, or an unmatched undeclared begin marker is ignored while all_structure_and_declared_source_spans_valid remains true. Their body content and order are therefore not covered by the apparent attachment-format proof.",
+      "synthetic_observation": [
+        "A valid selected subtree plus an unselected T999 block containing unverified text passed.",
+        "A valid selected subtree plus a complete known but unselected unit block passed.",
+        "A valid selected subtree plus a dangling unselected begin marker passed."
+      ],
+      "required_fix": "Parse the answer’s reserved marker namespace globally. Require well-formed, nonnested begin/end pairs whose ID multiset exactly matches selected metadata, once per selected ID. Validate all block bodies and their global source order. Unknown, extra, dangling or malformed reserved markers should be technical/structural errors, never content-score caps."
+    },
+    {
+      "id": "V7-H02",
+      "severity": "medium",
+      "component": "summary-hierarchical-section-check.py: exact identified attachment checks",
+      "problem": "Exactly one identified block does not prove that the same long source slice was not duplicated elsewhere in answer. Appending an unmarked Direct Answer copy of the complete selected subtree passes the checker, although the protocol explicitly forbids that duplicate-extract volume pattern.",
+      "synthetic_observation": "A valid selected subtree attachment followed by Direct Answer and the same complete source slice was accepted with no structural errors.",
+      "required_fix": "Either extend mechanical validation to detect complete selected-source copies outside the validated blocks, or explicitly leave the no-unmarked-duplicate requirement to a separately recorded protocol check. Do not claim identified-block uniqueness certifies all-copy uniqueness. Preserve valid distinct disjoint source units with identical text; avoid reverting to global substring counts that would reject those legitimate ID-distinct attachments."
+    },
+    {
+      "id": "V7-H03",
+      "severity": "low",
+      "component": "summary-hierarchical-section-check.py: selected IDs and fact_source_section validation",
+      "problem": "Some malformed nontext IDs cause uncontrolled TypeError rather than a recorded structural error or deliberate format-review exception. A selected section_id=None reaches string concatenation; a list-valued fact_source_section reaches an unhashable dictionary lookup.",
+      "synthetic_observation": [
+        "Nontext selected ID None raised TypeError: can only concatenate str (not NoneType) to str.",
+        "List-valued fact_source_section raised TypeError: unhashable type: list.",
+        "Malformed bare ID strings and unknown question-ID strings correctly returned structured errors."
+      ],
+      "required_fix": "Validate expected container and ID types before lookup, set construction or string concatenation. Return a structured format diagnostic or intentional ValueError preserving raw input. Do not guess a source, silently coerce IDs, mutate raw entries or convert format errors into grading caps."
+    }
+  ],
+  "inputs_read": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/blind-reader-protocol-user-scope-v7.txt",
+      "sha256": "02f4adf3a1e9ca4655964014f711a35dbd55a651f2e65842748de1406645ca25",
+      "bytes": 12260
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/summary-hierarchical-section-check.py",
+      "sha256": "2703d81b2aa6d538ab83d3f574b9f77eb28944aa3be856c66c5953f5964566d6",
+      "bytes": 6580
+    }
+  ],
+  "checks": [
+    {
+      "criterion": "Generic, identical and blind full-bank method",
+      "verdict": "pass",
+      "finding": "V7 contains only generic source-unit and reader-workflow instructions, no game rule/answer, actual failed ID or per-question hint. It retains full initial delivery, the actual final ID and ordered bank, own-input/output access restrictions and identical instructions except role/path."
+    },
+    {
+      "criterion": "One question at a time with manual semantic selection",
+      "verdict": "pass",
+      "finding": "Exactly one question is completed semantically after initial full delivery, with visible rereads of that question and complete chosen units. The model chooses governing procedure, sections and short facts. Code is confined to generic indexing/copying/serialization/literal checks; default routing and lookup-failure unsupported fallbacks are prohibited."
+    },
+    {
+      "criterion": "Hierarchical source-only index",
+      "verdict": "pass",
+      "finding": "Selectable levels2–6 receive separate I introduction and T subtree IDs based on physical LF start lines. Level1 headings close lower-level subtrees but are not selectable. A subtree stops at the next recognized equal/higher-level heading; an intro stops at the next recognized heading of any level. Nested/skipped/repeated headings, ancestry and root closure matched independent synthetic expectations."
+    },
+    {
+      "criterion": "Exact offsets, lines, hashes and whitespace",
+      "verdict": "pass",
+      "finding": "Offsets are Unicode character offsets, not UTF-8 bytes. Physical LF line ranges and SHA-256 of the complete untrimmed encoded slice matched independent calculations, including Unicode before a heading and EOF without newline. V7 intentionally rejects trimming trailing source whitespace."
+    },
+    {
+      "criterion": "Smallest sufficient nonoverlapping unions and shared context",
+      "verdict": "pass within structural/semantic separation",
+      "finding": "Parent/descendant overlap and duplicate leaf aliases are rejected mechanically; adjacent intro/child units are accepted. The protocol requires the model to include shared ancestor conditions, external definitions and exceptions and forbids calling an omitted-sibling union a full parent. Minimality, relevance and semantic sufficiency remain separate from range proof."
+    },
+    {
+      "criterion": "ID-aware selected attachments and source order",
+      "verdict": "pass for declared selected blocks; broader format gaps remain",
+      "finding": "A selected ID’s exact begin/end markers must each occur once, and their interior must equal the full source slice. Cropping, wrong labels, duplicate identified blocks and wrong order were rejected. Distinct disjoint IDs with identical text were accepted correctly. Extra/unregistered markers and unmarked duplicate copies are not checked; see V7-H01/H02."
+    },
+    {
+      "criterion": "Reserved source syntax and unsupported lexer cases",
+      "verdict": "pass",
+      "finding": "Reserved marker text in the source, and recognized backtick/tilde fence starts, raise deliberate ValueError for method review rather than being silently indexed. This verifies the declared narrow lexer; no actual source snapshot was inspected."
+    },
+    {
+      "criterion": "Short exact facts, bare references and honest unsupported clauses",
+      "verdict": "pass for valid string schemas; malformed-type handling needs hardening",
+      "finding": "Facts must be nonempty text in a declared selected/referenced unit; fabricated/wrong-unit spans and whole-unit facts are rejected. The protocol requires bare T/I IDs and individual actual requests, while honest unsupported clauses may have no source selection. Some malformed nontext IDs crash, as V7-H03 records."
+    },
+    {
+      "criterion": "No structural content-score cap or substantive grading relaxation",
+      "verdict": "pass",
+      "finding": "The checker returns only structural/literal flags and explicitly disclaims relevance, completeness, calculations and factual correctness. It states that it never creates a content-score cap. The protocol retains actual per-clause semantic checks, exact ordinary facts, minimal requested case conclusions and all substantive same-entry content. No real grade or key was inspected or changed."
+    }
+  ],
+  "independent_synthetic_tests": {
+    "method": "Only the allowed checker source was executed in an isolated namespace. Synthetic source strings, question phrases and answer entries were built in memory; check_data was called directly. No real source/bank/reader/grade/result file or fixture file was read or written.",
+    "index_assertions": [
+      "Levels2/4/6 nested headings produce the expected ancestor chain",
+      "Repeated heading titles produce distinct line-based IDs",
+      "A later level1 heading closes prior subtrees and resets selectable ancestry",
+      "Level1 headings receive no selectable I/T units",
+      "Unicode prefix changes byte length without changing Python-character offset semantics",
+      "Physical LF line ranges and untrimmed UTF-8 hashes match exact source slices",
+      "Final selected section preserves EOF without a newline"
+    ],
+    "cases_with_expected_behavior": [
+      "valid complete subtree",
+      "valid nonoverlapping parent-intro/child-subtree union",
+      "valid Unicode EOF without trailing LF",
+      "parent/descendant overlap rejected",
+      "leaf introduction/subtree aliases rejected for overlap",
+      "reverse attachment source order rejected",
+      "cropped subtree outcome rejected",
+      "trimmed trailing source whitespace rejected",
+      "mislabeled required block rejected",
+      "duplicate identified block rejected",
+      "false source hash rejected",
+      "invented source quote rejected",
+      "unselected fact source reference rejected",
+      "fact belonging to a different selected unit rejected",
+      "whole subtree substituted as short fact rejected",
+      "explicit unsupported clause without selected units accepted structurally",
+      "unknown question ID returned as structural error",
+      "malformed bare source-ID string returned as structural error",
+      "reserved source marker rejected deliberately",
+      "backtick fence rejected deliberately",
+      "tilde fence rejected deliberately",
+      "distinct disjoint source IDs with identical literal text accepted"
+    ],
+    "reproduced_gaps": [
+      "Unknown/unselected/dangling answer-body markers ignored",
+      "Unmarked duplicate whole-source copy outside the valid identified block accepted",
+      "Two malformed nontext ID shapes raise uncontrolled TypeError"
+    ],
+    "no_real_scores_accessed_or_inferred": true
+  },
+  "repair_scope": "Generic attachment-format completeness and safe malformed-ID reporting only. Preserve existing files/reviews. No question mappings, answer facts, keys, requested-fact changes, guessed support or grading relaxation are proposed. Structural errors must remain format/method diagnostics, not automatic content-score caps.",
+  "isolation": {
+    "only_two_named_inputs_read": true,
+    "optional_v6_or_old_checker_not_read": true,
+    "no_real_candidate_questions_keys_scopes_readers_grades_results_history_status_session_or_agent_tools": true,
+    "only_two_requested_review_outputs_written": true,
+    "old_protocols_checkers_and_reviews_not_modified": true
+  }
+}

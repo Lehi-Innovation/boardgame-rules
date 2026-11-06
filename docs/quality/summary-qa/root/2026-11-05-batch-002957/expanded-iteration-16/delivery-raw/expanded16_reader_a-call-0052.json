@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T14:51:09.854Z",
+    "ordinal": 52,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0650acc5df87738b016aec97dcd9a087d0a26cce6742932ce9",
+      "status": "completed",
+      "call_id": "call_XDCMrxpj0Bxtd4rro0zMMZ3A",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"sed -n '241,280p' docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-16/summary-snapshot.md\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":4000});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac30-7ddc-7bc1-821d-3abe53cfd2b6",
+        "create_time": 1793890266.771042
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T14:51:12.430Z",
+    "ordinal": 55,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac31-44ae-7453-ace9-a7f38fc2364d",
+      "call_id": "call_XDCMrxpj0Bxtd4rro0zMMZ3A",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 2.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "\n## Scoring / Victory Conditions\n\n**30 VP:** First to 30 wins immediately, on any player's turn. If multiple reach 30 simultaneously, tied player closest clockwise to current player wins, including current player. Removing enemy buildings/tokens gives one VP each regardless of phase or whether attacker/defender. Crafting items scores printed VP except Eyrie's Disdain. Faction scoring is described above. (3.1\u20132.)\n\n**Ordinary removal VP (3.2.1):**\n\n| Removed enemy piece | Ordinary removal VP |\n|---|---|\n| Warrior | **0 VP** |\n| Building | **1 VP** |\n| Token | **1 VP** |\n\nFaction/card scoring can add to these ordinary points. In particular, Vagabond Infamy is an **additional** point per eligible Hostile piece in battle on his own turn, except the warrior that first caused Hostile status. Do not add an ordinary removal point for a warrior.\n\n**Dominance (3.3):** In own Daylight at **at least 10 VP**, activate a dominance card from hand into play area; remove score marker and stop scoring VP. Cannot remove/replace activated card. At **start of own Birdsong**, win if ruling **three clearings of matching mouse/rabbit/fox suit**, or for **bird dominance, two diagonally opposite corner clearings**. Meeting condition earlier does not immediately win. Dominance cards cannot be crafted, but can be spent for suit. Whenever one would enter discard, put it near map available instead. During own Daylight, spend matching card to take available dominance into hand. Available **bird dominance remains bird**, so payment must be bird; a bird hand card can pay for non-bird dominance. Activation and taking are separate, neither requires a faction action allowance.\n\n**Vagabond coalition (9.2.8):** Cannot activate normal dominance win. With **four or more players**, during own Daylight at **at least 10 VP**, activate dominance to coalition with another player **not already in coalition**, whose VP is lowest among players other than you (choose among ties). **An already-activated dominance player cannot be chosen:** they have no score marker on the track (publisher clarification in **FAQ & Rulings**). Compare eligible players still on the score track. Put your score marker on partner's faction board and stop scoring. If partner wins, you also win, including if partner later activates and wins through dominance. Coalition partners are not enemies. A Hostile partner becomes Indifferent. Coalition does not by itself grant Allied relationship powers.\n\n## Special Rules & Edge Cases\n\n- **Precedence:** Card overrides Law; Law overrides Learning to Play. Follow general and faction rules together when possible; if incompatible, faction rule wins. **Cannot is absolute** unless explicitly overridden. (1.1.)\n- **Cards:** Birds substitute for any non-bird suit, even for multiple same-suit payments. **If prompted to give or discard cards of a non-bird suit, you must treat your birds as that suit**; the instruction determines how many cards to give or discard. **Only a bird card can pay an explicit bird-card requirement; fox, rabbit and mouse cards cannot pay it.** Draw from shared deck top; when deck empties, immediately shuffle discard into new deck. (2.1.)\n- Hand size is public, contents private: reveal/show only if explicitly instructed. Face-up piles may be searched/inspected; deck cannot. Agreements are non-binding; cards may be transferred only as instructed; actions require no consent. (1.2\u20133.)\n- **Force:** Resolve forced actions as if affected player chose them, retaining their abilities and restrictions. A player forced to battle makes its battle decisions. (1.5.5.)\n- **Place/remove/replace:** Place normally from supply/leftmost track; remove normally to supply/rightmost **empty** track space, items permanently. Replace requires both removal and placement possible; the keep's placement ban cannot be bypassed by replacing an enemy piece. Swap ignores move/place restrictions. Spending a card means discarding it, with dominance's special destination. (G.5, G.20, G.23\u201324, G.31, G.33.)\n- The faction boards provide track costs, VP and draw bonuses; use the newly exposed spaces after placing/removing pieces. An officer is a warrior in Officers box and is unavailable in supply until removed.\n\n## FAQ & Rulings\n\nThese base-game clarifications are paraphrased from [Leder Games\u2019 Rules Library](https://rules.ledergames.com/?product=root&locale=en-US&printing=p16), English p16, consulted November 5, 2026.\n\n- **Charismatic and a supply shortage:** When a legal Decree Recruit requires two warriors but only one remains in supply, place that warrior first. Then enter Turmoil because the required two were not placed. Maximum-possible placement does not fulfill an incomplete Decree action. (FAQ under 7.7 and 7.8.2; Law 1.5.4.)\n- **Field Hospitals during an ambush at the Keep:** Marquise may spend a matching card immediately when its warriors are removed, returning them to the Keep clearing **before** checking whether the ambush left no attacking warriors or pawns. If returned warriors remain there, battle continues. Without Hospitals, battle ends if no attackers remain after the ambush. (FAQ under 4.3.1 and 6.2.3.)\n- **Allied movement and Outrage:** Forcing Allied **Woodland Alliance** warriors to accompany the Vagabond into sympathy causes **no Outrage**: resolve the move as the Alliance moving its own warriors. Warriors of another Allied faction entering sympathy do trigger Outrage for that moving faction, which pays from its own hand under the normal Outrage procedure. The Vagabond pawn alone causes no warrior-entry Outrage; removing sympathy still triggers it. (FAQ under 8.2.6 and 9.2.9; Law 1.5.5, 8.2.6.)\n- **Coalitions and dominance order:** The Vagabond cannot form a new coalition with a player who already activated dominance, because that player has no score marker on the VP track. A legally chosen coalition partner **may activate dominance afterward** under the normal activation rules; a win by that partner also wins for the Vagabond. (FAQ under 9.2.8.)\n\n## Player Reference\n\n| Faction | Crafting | Scoring engine | Important limit |\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac30-7ddc-7bc1-821d-3abe53cfd2b6",
+        "create_time": 1793890272.4307022
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

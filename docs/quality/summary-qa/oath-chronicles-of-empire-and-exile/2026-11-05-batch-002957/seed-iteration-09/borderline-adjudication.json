@@ -1,0 +1,113 @@
+{
+  "artifact_type": "fresh independent borderline semantic adjudication",
+  "adjudicator_role": "independent adjudicator; no repairs",
+  "rubric": {
+    "correct": "Every requested fact correct, resolved and summary-supported; equivalent complete meaning accepted.",
+    "partial": "A requested fact is missing or unresolved, without a material contradiction.",
+    "incorrect": "Any material contradiction, including volunteered contextual claims."
+  },
+  "method": "Read each complete answer in isolation against the frozen established scope and first twenty entries of expanded-v5/grading-scope.json. No fact borrowed from another question, reader, or summary to complete the answer. Summary/source evidence establishes correctness and support, not omitted answer content. Confidence and support labels are not grades.",
+  "permitted_inputs": [
+    "seed-v1/questions.json",
+    "seed-v1/answer-key.json",
+    "seed-v1/grading-scope-established.json",
+    "expanded-v5/grading-scope.json (first twenty only)",
+    "seed-iteration-08/summary-snapshot.md",
+    "seed-iteration-08/reader-a.json",
+    "seed-iteration-08/reader-b.json",
+    "seed-iteration-09/summary-snapshot.md",
+    "seed-iteration-09/reader-b.json",
+    "/home/jonny/projects/boardgame-rules/extracted/oath-current-law.txt",
+    "/home/jonny/projects/boardgame-rules/extracted/oath-current-playbook.txt",
+    "errata.txt"
+  ],
+  "prohibited_inputs_read": false,
+  "iteration": "seed-iteration-09",
+  "cases": [
+    {
+      "case_id": "09B-Q015",
+      "reader": "reader-b",
+      "question_id": "Q015",
+      "grade": "incorrect",
+      "answer": "Attacker chooses up to as many attack dice as warbands in their attacking force; apply modifiers. Defense includes defense dice (including mandatory title bonus: Oathkeeper +1, Usurper +2), plus shields rolled, with each double-symbol doubling shields (multipliers stack), plus warbands at targeted sites and defender board force if defender's pawn is at attacker site or any targeted site. Doubles multiply shields only. Bandits add 1 defense per targeted bandit site. Each attack skull immediately kills one warband from the attacker's own force. Count full swords, plus one attack for each pair of hollow swords; an odd leftover hollow sword adds zero. The attacker may sacrifice surviving force warbands for +1 attack each, but if sacrificing must sacrifice exactly enough to win, never excess. Attacker wins only when attack strictly exceeds defense; tie or lower is defender victory.",
+      "borderline_issue": "Whether defense dice are merely mentioned as the pool or are added to the numerical defense alongside the rolled shields.",
+      "decisive_answer_quotes": [
+        "Defense includes defense dice (including mandatory title bonus: Oathkeeper +1, Usurper +2), plus shields rolled, with each double-symbol doubling shields (multipliers stack), plus warbands at targeted sites and defender board force if defender's pawn is at attacker site or any targeted site.",
+        "Doubles multiply shields only."
+      ],
+      "key_and_scope_evidence": {
+        "fixed_key": "Defense shields multiplied by each double (x2,x4,...), plus warbands at targeted sites and defender board if pawn at attacker or targeted site",
+        "frozen_fact": "Q015-F02: Defense is shields multiplied exponentially by doubles plus defending site warbands and board warbands only with pawn at attacker/targeted site; bandits one per targeted bandit site."
+      },
+      "source_evidence": [
+        {
+          "source": "Law 5.5.2",
+          "quote": "Each target adds the defense dice shown on the target’s shield to the defense pool:"
+        },
+        {
+          "source": "Law 5.5.4",
+          "quote": "The defender rolls their defense pool, then calculates their defense by adding the...",
+          "relevance": "The ensuing exhaustive terms are rolled shields and eligible warbands, not dice count."
+        },
+        {
+          "source": "Law 5.5.4",
+          "quote": "Each ^# roll doubles the total number of ^$ shields rolled."
+        },
+        {
+          "source": "Playbook p14",
+          "quote": "The defender rolls their pool of defense dice, then counts up their defense by adding up the following:"
+        },
+        {
+          "source": "Playbook p24 worked Campaign example",
+          "quote": "Their total defense is eight—four shields ^$ plus their four warbands at the targeted sites.",
+          "relevance": "The example rolled three defense dice; those dice are not an additional three points."
+        },
+        {
+          "source": "errata.txt, 2.11",
+          "quote": "Is the defense die added from the Oathkeeper title considered a campaign modifier?\nYes!",
+          "relevance": "The title adds a die to the pool; it does not also grant a separate point in the final defense sum."
+        }
+      ],
+      "summary_support": "Iteration 09 separately forms the dice pools in Campaign step 2 and gives the final defense formula in step 4 as doubled rolled shields plus eligible warbands. It never adds pool size directly to final defense.",
+      "meaning_alternatives": [
+        {
+          "interpretation": "Defense dice, rolled shields and eligible warbands are three additive contributions to defense.",
+          "assessment": "Accepted as the actual calculation asserted by the sentence. Defense includes X, plus Y, plus Z links dice to the same sum as shields and warbands. This materially overstates defense by the number of dice."
+        },
+        {
+          "interpretation": "The sentence first identifies the dice pool, then switches to the final shields-plus-warbands formula.",
+          "assessment": "Rejected as a repair requiring an unstated operation or transition. The answer does not say roll those dice to get shields or distinguish pool size from defense value, and the repeated plus joins all terms. Correctly saying doubles affect only shields does not remove the separate dice addend."
+        }
+      ],
+      "requested_fact_checks": [
+        {
+          "fact_id": "Q015-F01",
+          "status": "met",
+          "evidence": "Attacker chooses dice up to warbands in attacking force; apply modifiers."
+        },
+        {
+          "fact_id": "Q015-F02",
+          "status": "material contradiction",
+          "evidence": "The doubled-shields, eligible-warband and bandit terms are correct, but defense dice are added as a separate contribution."
+        },
+        {
+          "fact_id": "Q015-F03",
+          "status": "met",
+          "evidence": "Immediate own-force skull losses; full swords; paired hollow swords one, odd leftover zero."
+        },
+        {
+          "fact_id": "Q015-F04",
+          "status": "met",
+          "evidence": "Strictly exceed; tie or lower defender victory."
+        },
+        {
+          "fact_id": "Q015-F05",
+          "status": "met",
+          "evidence": "Surviving-force sacrifices +1 each, exactly enough to win, never excess; failed comparison means defender wins."
+        }
+      ],
+      "materiality_example": "With three defense dice yielding four shields and four eligible defending warbands, the rules give eight defense (the Playbook worked example). Adding dice count as the answer states gives eleven; that changes the winning attack and sacrifices required.",
+      "rationale": "Incorrect because the actual full sentence materially adds dice themselves to the numerical defense. Other requested facts are supplied, but they do not negate this contradiction. A clearer pool-then-roll explanation would be correct; inserting that explanation into this answer would repair it rather than grade it."
+    }
+  ]
+}

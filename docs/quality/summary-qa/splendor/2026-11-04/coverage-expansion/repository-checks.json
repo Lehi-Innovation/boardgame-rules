@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-11-05T06:12:54.570356+00:00",
+  "checks": [
+    {
+      "command": ".venv/bin/python -m scripts.validate rules/splendor.md",
+      "exit_code": 0,
+      "stdout": "rules/splendor.md: OK\n\nAll 1 file(s) valid.\n",
+      "stderr": ""
+    },
+    {
+      "command": ".venv/bin/python -m scripts.stamp_verification rules/splendor.md",
+      "exit_code": 0,
+      "stdout": "Stamped 1 files (0 skipped): {'verified': 1}\n",
+      "stderr": "",
+      "summary_bytes_unchanged": true
+    },
+    {
+      "command": ".venv/bin/python -m scripts.generate_index",
+      "exit_code": 0,
+      "stdout": "Wrote index.md with 1665 game entries\n",
+      "note": "Temporary dry-run comparison before regeneration found only stdout print newline; generated index itself unchanged."
+    },
+    {
+      "command": ".venv/bin/python -m scripts.generate_manifest",
+      "exit_code": 0,
+      "stdout": "Wrote games.json: 1665 games\n",
+      "note": "Temporary generated JSON was byte-identical to live JSON before regeneration; no unrelated shared-worktree replacement changes."
+    },
+    {
+      "command": ".venv/bin/python -m scripts.catalog",
+      "exit_code": 0,
+      "stdout": "Catalog consistent: 1665 summaries; published links, metadata, manifest, and URL paths checked.\n"
+    },
+    {
+      "command": "git diff --check -- rules/splendor.md docs/quality/summary-qa/splendor/2026-11-04 docs/quality/semantic-audit-results.yaml docs/quality/semantic-audit-manifest.json games.json index.md",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 0,
+      "diagnostic_count": 0,
+      "diagnostic_counts_by_file": {},
+      "sample_diagnostics": [],
+      "scope_note": "These unrelated extraction changes were not modified by this task."
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T15:23:54.007Z",
+    "ordinal": 205,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0a07ea5e18487e25016aec9f86455887d0aa837bc24ce247fa",
+      "status": "completed",
+      "call_id": "call_oBu46CBe7k9iV97M0hIXWkkr",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\".venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport json\\nsource=Path('docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/root/publisher-rules-library-p16.json')\\nparsed=json.loads(source.read_text())\\nprint(json.dumps({k:v for k,v in parsed['results'][0].items() if k not in ('text','links')},indent=2))\\nprint('TOP_LEVEL_ERRORS',json.dumps(parsed['errors']))\\nprint('EXACT_PARSED_TEXT_PLUS_NEWLINE_EQUALS_TXT',parsed['results'][0]['text']+'\\\\n'==source.with_suffix('.txt').read_text())\\nPY\",\"max_output_tokens\":2500}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac40-eac8-7280-aaac-2b78d9a2d01c",
+        "create_time": 1793892227.711395
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T15:23:54.646Z",
+    "ordinal": 208,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1ac4f-3596-74d3-a337-130b674597ea",
+      "call_id": "call_oBu46CBe7k9iV97M0hIXWkkr",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.6 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"ea7e2b\",\"wall_time_seconds\":0.247452904,\"exit_code\":0,\"original_token_count\":336,\"output\":\"{\\n  \\\"url\\\": \\\"https://rules.ledergames.com/?product=root&locale=en-US&printing=p16\\\",\\n  \\\"final_url\\\": \\\"https://rules.ledergames.com/?product=root&locale=en-US&printing=p16\\\",\\n  \\\"title\\\": \\\"Leder Rules\\\",\\n  \\\"description\\\": \\\"A codex of all Leder Games Rules.\\\",\\n  \\\"language\\\": \\\"en\\\",\\n  \\\"author\\\": null,\\n  \\\"published_date\\\": null,\\n  \\\"latency_ms\\\": 8598.364698998921,\\n  \\\"format\\\": \\\"markdown\\\",\\n  \\\"page_metadata\\\": {\\n    \\\"favicon\\\": \\\"https://rules.ledergames.com/icon/favicon-32x32.png\\\",\\n    \\\"viewport\\\": \\\"viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no\\\",\\n    \\\"theme_color\\\": \\\"#e1192d\\\",\\n    \\\"color_scheme\\\": \\\"light dark\\\",\\n    \\\"og\\\": {\\n      \\\"site_name\\\": \\\"Leder Rules\\\",\\n      \\\"type\\\": \\\"website\\\",\\n      \\\"title\\\": \\\"Leder Rules\\\",\\n      \\\"description\\\": \\\"A codex of all Leder Games Rules.\\\",\\n      \\\"image\\\": [\\n        \\\"https://rules.ledergames.com/icon/android-chrome-512x512.png\\\"\\n      ],\\n      \\\"url\\\": \\\"https://rules.ledergames.com/\\\"\\n    },\\n    \\\"other\\\": {\\n      \\\"format-detection\\\": \\\"telephone=no\\\",\\n      \\\"msapplication-tap-highlight\\\": \\\"no\\\",\\n      \\\"msapplication-tilecolor\\\": \\\"#e1192d\\\",\\n      \\\"msapplication-config\\\": \\\"icon/browserconfig.xml\\\",\\n      \\\"mobile-web-app-capable\\\": \\\"yes\\\",\\n      \\\"apple-mobile-web-app-status-bar-style\\\": \\\"black\\\"\\n    }\\n  }\\n}\\nTOP_LEVEL_ERRORS []\\nEXACT_PARSED_TEXT_PLUS_NEWLINE_EQUALS_TXT True\\n\"}"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1ac40-eac8-7280-aaac-2b78d9a2d01c",
+        "create_time": 1793892234.6467843
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "checked_at": "2026-11-05T05:33:56.829305+00:00",
+  "checks": [
+    {
+      "command": ".venv/bin/python -m scripts.validate rules/splendor.md",
+      "exit_code": 0,
+      "stdout": "rules/splendor.md: OK\n\nAll 1 file(s) valid.\n",
+      "stderr": ""
+    },
+    {
+      "command": ".venv/bin/python -m scripts.stamp_verification rules/splendor.md",
+      "exit_code": 0,
+      "stdout": "Stamped 1 files (0 skipped): {'verified': 1}\n",
+      "stderr": "",
+      "summary_bytes_unchanged": true
+    },
+    {
+      "command": ".venv/bin/python -m scripts.generate_index",
+      "exit_code": 0,
+      "stdout": "Wrote index.md with 1665 game entries\n",
+      "note": "Ran after inspecting temporary generated output; no Splendor-specific index-row change."
+    },
+    {
+      "command": ".venv/bin/python -m scripts.generate_manifest",
+      "exit_code": 0,
+      "stdout": "Wrote games.json: 1665 games\n",
+      "note": "Temporary comparison against live generated artifact showed only Splendor verification minor_issues -> verified. Existing unrelated shared-worktree entries preserved."
+    },
+    {
+      "command": ".venv/bin/python -m scripts.catalog",
+      "exit_code": 0,
+      "stdout": "Catalog consistent: 1665 summaries; published links, metadata, manifest, and URL paths checked.\n",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check -- rules/splendor.md docs/quality/summary-qa/splendor/2026-11-04 docs/quality/semantic-audit-results.yaml docs/quality/semantic-audit-manifest.json games.json index.md",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "git diff --check",
+      "exit_code": 2,
+      "diagnostic_count": 562,
+      "diagnostic_counts_by_file": {
+        "extracted/13-dead-end-drive-rules.txt": 173,
+        "extracted/cluedo-rules.txt": 347,
+        "extracted/mexican-train-rules.txt": 42
+      },
+      "sample_diagnostics": [
+        "extracted/13-dead-end-drive-rules.txt:8: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:9: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:10: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:11: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:12: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:13: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:14: trailing whitespace.",
+        "extracted/13-dead-end-drive-rules.txt:15: trailing whitespace."
+      ],
+      "scope_note": "Failures are in unrelated extraction edits present in shared worktree. These files were not changed by this Splendor task."
+    }
+  ]
+}

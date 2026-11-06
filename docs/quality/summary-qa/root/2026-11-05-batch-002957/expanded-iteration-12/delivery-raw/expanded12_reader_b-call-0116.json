@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-05T12:30:29.602Z",
+    "ordinal": 116,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_04bac2938771d485016aec76e27ad887d083b6e69173333c33",
+      "status": "completed",
+      "call_id": "call_11zDdK2JlMoUOmv4OOnmGbWL",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\np='docs/quality/summary-qa/root/2026-11-05-batch-002957/expanded-iteration-12/reader-b.json'\\nd=json.load(open(p))\\nprint('valid JSON; answers:',len(d['answers']))\\nprint('ids:',d['answers'][0]['id'],'through',d['answers'][-1]['id'])\\nprint('missing answer fields:',[a['id'] for a in d['answers'] if set(a)!={'id','source_passages','answer','support','evidence'} or not a['source_passages'] or not a['answer']])\\nPY\",workdir:\"/home/jonny/projects/boardgame-rules\",max_output_tokens:300});\ntext(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abaa-e6c1-7820-afa8-4da34c9ce872",
+        "create_time": 1793881823.106402
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-05T12:30:31.144Z",
+    "ordinal": 119,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1abb0-76e8-7492-a46e-30e2e99f0a6c",
+      "call_id": "call_11zDdK2JlMoUOmv4OOnmGbWL",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "valid JSON; answers: 80\nids: Q01 through Q80\nmissing answer fields: []\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1abaa-e6c1-7820-afa8-4da34c9ce872",
+        "create_time": 1793881831.1445625
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

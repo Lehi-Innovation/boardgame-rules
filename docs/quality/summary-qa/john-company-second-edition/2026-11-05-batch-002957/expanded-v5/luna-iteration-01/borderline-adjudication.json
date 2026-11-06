@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "task": "Independent semantic adjudication of eight specified borderline answer cases",
+  "scope": "Grades address the specified borderline ruling in each listed answer, treating each answer as self-contained. Support/confidence labels are not grades and were not used to decide correctness. Equivalent or implicit wording is accepted when its operational meaning is unambiguous; materially ambiguous directions or rates remain Partial.",
+  "input_hash_algorithm": "sha256",
+  "input_hashes": {
+    "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/questions.json": "5fadf361a254ab17bd6698b51c20acdcbd60052d6398efcd56284138314b22f2",
+    "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/answer-key.json": "3d540508d3244ed425d4ed04728dce06b140b14ea35a5c9991e62b86c4d1f903",
+    "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/luna-iteration-01/summary-snapshot.md": "3f6bd37a7290fed38baa7b073aa1a7aef2e42a4b6612b5714fe836af005add58",
+    "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/luna-iteration-01/reader-a.json": "689f19fcda23a886b6f98a21b813b053f1fc37e873da1faee3a9bf09d1efd50c",
+    "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/expanded-v5/luna-iteration-01/reader-b.json": "cf0e5902614d31fd83f5b9389e1033cfc4f7c270891a98bcfc1ff64f6186d264",
+    "extracted/john-company-second-edition-rules.txt": "105ff1bb4a774e9cc62e068567fa611947cac134f9c7c2e5bf29cc482f5bd30f"
+  },
+  "cases": [
+    {
+      "reader": "A",
+      "question_id": "Q010",
+      "question": "For a President’s Trade action, explain declared regions, dice penalty, routes and capacity, insufficient writers, protected home regions, bonuses and successful-trade limit.",
+      "grade": "Correct",
+      "actual_quoted_wording": "A President declares regions including its home region and only regions reachable through open orders with available ship capacity. Each £1 from that President's treasury buys one die; subtract one die per declared nonhome region. Failure may be retried during the President's uninterrupted opportunity if affordable; catastrophe removes the President; at most one successful Trade per President per turn. On success, fill one order per ship in its sea zone as possible within declared regions: first writer to home port, then adjacent orders, using actual writers before filled-order tokens. A President cannot fill another President's home region, even if that office is vacant. A successful trade adds each order's printed value to Balance, or half rounded down if a firm filled it this turn; President gets £1/order and writer owners £1/placed writer. The summary does not state a separate trade bonus beyond those payments.",
+      "rationale": "The sequence 'first writer to home port, then adjacent orders' describes the current President's own filling sequence, anchored at its home port. In the context of that single Trade action, the natural referent for adjacency is the orders just filled in this route; it does not authorize using another Presidency's isolated writers as a bridge. This is adequate implicit expression of the connected-route requirement, despite omitting the longer phrase 'to a writer you already placed'.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "1540–1582",
+          "fact": "Trade starts at the acting Presidency home port and continues through open orders it fills. Each additional writer must be adjacent to a writer already placed in this trade; other Presidencies cannot supply the route. One order per ship, declared reachable regions, actual writers before filled tokens, protected other home regions, listed revenue and personal bonuses, and one successful Trade per President per turn apply."
+        }
+      ]
+    },
+    {
+      "reader": "B",
+      "question_id": "Q010",
+      "question": "For a President’s Trade action, explain declared regions, dice penalty, routes and capacity, insufficient writers, protected home regions, bonuses and successful-trade limit.",
+      "grade": "Correct",
+      "actual_quoted_wording": "President declares regions including its home region and only regions reachable through open orders with available ship capacity. Each £1 of its treasury buys a die; subtract one die per declared nonhome region. On success fill one order per ship in its sea zone, as possible within declared regions, starting with a writer in home port and then adjacent orders; use actual writers before filled tokens. No President may fill another President’s home region, even if vacant. For each order add its printed revenue to Balance, or half rounded down if a firm already filled it this turn; President gets £1 per order and writer owners £1 per writer. One successful Trade maximum per President per turn; failed attempts can retry during the same uninterrupted opportunity if affordable. The summary gives no separate rule for a protected “home region” beyond home port inclusion and the no-other-President-home restriction.",
+      "rationale": "'Starting with a writer in home port and then adjacent orders' gives an anchored sequence for this President's own Trade. Read together with this answer's open-route declaration requirement, it reasonably instructs continuing the home-connected route through the orders this action fills. It does not posit an alternative disconnected route through another Presidency's writers. The compressed phrasing adequately resolves the route requirement.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "1540–1582",
+          "fact": "Trade starts at the acting Presidency home port and continues through open orders it fills. Each additional writer must be adjacent to a writer already placed in this trade; other Presidencies cannot supply the route. One order per ship, declared reachable regions, actual writers before filled tokens, protected other home regions, listed revenue and personal bonuses, and one successful Trade per President per turn apply."
+        }
+      ]
+    },
+    {
+      "reader": "A",
+      "question_id": "Q042",
+      "question": "Can China repeat a failed trade check, trade with no export icons, or earn revenue from non-Company export icons? Give its dice, revenue and bonus.",
+      "grade": "Partial",
+      "actual_quoted_wording": "China may attempt Trade once after Bengal, with one die per ship, only if Company regions contain at least one export icon; it has no retry stated. On success Balance gets £4 and Superintendent gets £1 per export icon across all Company-controlled regions. Thus if there are no Company-region export icons, it cannot attempt, and non-Company icons do not count. The summary does not give a special rule for a zero-dice check.",
+      "rationale": "The answer supplies the attempt restriction, export prerequisite, dice, controlled-region scope and Superintendent's per-export payment. However, 'Balance gets £4 and Superintendent gets £1 per export icon' admits two materially different readings: a shared terminal per-export modifier applying to both payments, or a flat £4 to Balance with only Superintendent's payment multiplied. The repeated 'gets' makes the flat Company payment a natural reading, and the answer never independently states £4 for EACH export. The correct scalable Company revenue is therefore not unambiguous. This is ambiguity in the actual payment rule, rather than a penalty for its support label.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "1817–1823",
+          "fact": "One China check only, one die per ship, and at least one export icon in Company-controlled regions are required. On success every such export icon gives Company Balance £4 and Superintendent £1. Both amounts scale with the same controlled-export count; non-Company export icons count for neither."
+        }
+      ]
+    },
+    {
+      "reader": "B",
+      "question_id": "Q042",
+      "question": "Can China repeat a failed trade check, trade with no export icons, or earn revenue from non-Company export icons? Give its dice, revenue and bonus.",
+      "grade": "Partial",
+      "actual_quoted_wording": "China may make only one Trade attempt per turn, so a failed check is not repeated that turn. It requires at least one export icon among Company regions and rolls one die per ship. On success add £4 to Balance and £1 per export icon across Company-controlled regions to Superintendent; non-Company-region export icons do not count toward that bonus.",
+      "rationale": "The rule for attempts, prerequisite, dice and Superintendent payout is correct. The actual payment sentence separates 'add £4 to Balance' from '£1 per export icon ... to Superintendent', and its following scope sentence restricts non-Company icons only 'toward that bonus'. Taken on its own, it asserts a flat Company £4 rather than £4 per controlled export icon. That material Company-revenue error prevents Correct, while the other requested facts are resolved.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "1817–1823",
+          "fact": "One China check only, one die per ship, and at least one export icon in Company-controlled regions are required. On success every such export icon gives Company Balance £4 and Superintendent £1. Both amounts scale with the same controlled-export count; non-Company export icons count for neither."
+        }
+      ]
+    },
+    {
+      "reader": "A",
+      "question_id": "Q056",
+      "question": "How do normal taxes, window taxes, bonuses and power policies work, including target already highest in Power track?",
+      "grade": "Partial",
+      "actual_quoted_wording": "Tax policy charges bank £1 per owned target; each unpaid target returns to supply, including Chairman if taxed. Fitted ships of lost shipyards remain in play, and shipyard cannot be purchased until ship returns; losing prize/luxury removes its VP. Window tax additionally charges each window on enterprises and each family member's prize, returning enterprise/prize member if unpaid. Bonus gives bank £1 per owned target. Power swaps target Power marker with next higher marker; if target is already highest, swap any other pair. The summary doesn't define a finer order among the ‘any other pair’ choice.",
+      "rationale": "The window tax, unpaid-target consequences and Power exception are resolved. The bank-direction wording is not: 'Tax policy charges bank £1' can make the bank the party charged, and 'Bonus gives bank £1' naturally makes the bank the recipient. Although 'bank £1' might be intended as telegraphic identification of money from/to the bank, this answer supplies no explicit player recipient or 'from' for the Bonus. The required opposite flows—players pay tax to bank and receive Bonus from bank—are therefore not unambiguously expressed. Inferring the flows from the policy names alone would repair a material ambiguity rather than accept equivalent clear wording.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "2344–2364",
+          "fact": "Tax: each player pays the bank £1 per owned target, returning unpaid targets to supply (including Chairman). Window tax additionally charges owned enterprise/prize windows and returns unaffordable enterprise/prize members. Bonus: each player takes £1 FROM the bank per owned target. Power swaps the target with the next higher marker, or any two other markers when the target is highest."
+        }
+      ]
+    },
+    {
+      "reader": "B",
+      "question_id": "Q056",
+      "question": "How do normal taxes, window taxes, bonuses and power policies work, including target already highest in Power track?",
+      "grade": "Partial",
+      "actual_quoted_wording": "Tax pays bank £1 per owned target; unpaid target returns to supply, including Chairman if taxed. Window tax additionally charges each window on enterprises and each family member’s prize; return enterprise/prize member if unable. Bonus pays bank £1 per owned target. Power swaps target marker with next higher marker; if target already highest, swap any other pair.",
+      "rationale": "'Tax pays bank £1' adequately gives bank as tax payee, and the window tax, unpaid-target consequences and Power exception are clear. But 'Bonus pays bank £1' uses the same bank-as-payee construction for the Bonus. It does not clearly state the necessary payout from bank to players and naturally directs money to the bank instead. A possible compressed 'pays bank money' reading leaves a genuine direction ambiguity; the rest of the answer does not settle it.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "2344–2364",
+          "fact": "Tax: each player pays the bank £1 per owned target, returning unpaid targets to supply (including Chairman). Window tax additionally charges owned enterprise/prize windows and returns unaffordable enterprise/prize members. Bonus: each player takes £1 FROM the bank per owned target. Power swaps the target with the next higher marker, or any two other markers when the target is highest."
+        }
+      ]
+    },
+    {
+      "reader": "B",
+      "question_id": "Q052",
+      "question": "List Region Loss destinations, officer checks, loot status and Standing loss escalation. Do these losses remove other Company regions automatically?",
+      "grade": "Correct",
+      "actual_quoted_wording": "On Region Loss, Commander returns half family trophies rounded up and member to supply; roll one die per officer in associated Army, each 6 removes officer. Eliminate Governor: return office card to unused stack and fatigue/member to supply; remove Governor overlay, partial ship and unrest. Restore dome with one tower (or Foreign Invasion’s specified strength) and appropriate invasion flag. Return control token to region loot-side down, so future conquest has no loot modifier and region loses Presidency association. Invasion Crisis closes all orders (or Cascades if already closed); Rebellion/Foreign Invasion already close them. Standing drops by number of regions lost so far this turn (first −1, second additional −2, etc.). The summary does not say these losses automatically remove other Company regions.",
+      "rationale": "The final sentence expressly denies that the summary specifies automatic removal of other Company regions. In this procedural answer, after listing cleanup of the particular lost region, 'does not say these losses automatically remove other Company regions' is an adequate hedged operational No: it supplies no automatic cross-region removal instruction and explicitly rejects such an inference. A categorical first-word 'No' is not necessary. The support label 'partial' is not used as evidence against this substantive answer.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "1987–2012; 2262–2296",
+          "fact": "Region Loss cleans up the lost region and its associated officers/Commander/Governor, and Standing losses escalate by regions lost this turn. Other Company regions with unrest receive separately resolved secondary Rebellion attacks; they are not automatically lost because another region was lost."
+        }
+      ]
+    },
+    {
+      "reader": "A",
+      "question_id": "Q082",
+      "question": "An empire loses its last dominated region while its capital remains. Does the capital keep its starred flag, and does the answer depend on whether the dominated region was lost to Rebellion or Company conquest?",
+      "grade": "Correct",
+      "actual_quoted_wording": "Yes. An empire's capital flag is removed if only the capital remains. Region Loss says that when an empire loses its capital, remove matching flags; it does not give a different rule for losing the last dominated region by Rebellion versus Company conquest. Therefore under the stated general rule the capital does not keep its starred flag once it is the sole remaining region; summary does not specify a cause-based exception.",
+      "rationale": "The opening isolated 'Yes' is a polarity slip, but the actual ruling is stated twice and explicitly concluded: the capital flag is removed when only its capital remains, the capital does not keep its starred flag, and no cause-based exception applies. The final 'Therefore' resolves both requested facts rather than leaving competing substantive procedures. The answer's mention of capital-loss cleanup is unnecessary to the scenario but does not change its explicit sole-capital ruling. The bare opening particle does not outweigh this unambiguous final operational answer.",
+      "source_facts": [
+        {
+          "source": "extracted/john-company-second-edition-rules.txt",
+          "lines": "707–714",
+          "fact": "An empire needs one capital and at least one dominated region. Whenever it is reduced to its capital alone, return its capital flag to supply. The general trigger has no exception for Rebellion versus Company conquest of the last dominated region."
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "Correct": 4,
+    "Partial": 4,
+    "Incorrect": 0
+  }
+}

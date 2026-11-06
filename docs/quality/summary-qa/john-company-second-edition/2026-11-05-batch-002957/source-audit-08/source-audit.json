@@ -1,0 +1,1263 @@
+{
+  "audit_role": "independent canonical source auditor, revision 08",
+  "game": "John Company: Second Edition",
+  "verdict": "MAJOR",
+  "summary_snapshot": "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/source-audit-08/summary-snapshot.md",
+  "summary_sha256": "638b98f26851531c372f1c129705ab7ea15a3bc66f87e8eeab16179260543365",
+  "scope": {
+    "included": [
+      "standard multiplayer 3–6",
+      "1710",
+      "1758",
+      "1813",
+      "Long 1710",
+      "Deregulation and firms"
+    ],
+    "explicitly_excluded": [
+      "Crown solo/two-player rules and Handbook",
+      "Crown difficulty settings",
+      "optional setup-card Draft variant"
+    ],
+    "component_reference_boundary": "Summary is used with the physical board and cards; exact individual card effects, setup holdings and scenario India diagrams are explicitly delegated to their components."
+  },
+  "independence": {
+    "summary_edited": false,
+    "repair_author": false,
+    "read_questions_or_keys": false,
+    "read_reader_outputs_or_grades": false,
+    "read_coverage_reports": false,
+    "inputs_read": "Latest canonical/frozen summary, previous audit07 summary and own source audits, full original rules/official component sources, own session_meta/turn_context. No evaluation question banks/keys, reader outputs, grades or repair notes."
+  },
+  "runtime_evidence": {
+    "file": "/mnt/c/Users/jonny/.codex/sessions/2026/11/05/rollout-2026-11-05T01-10-57-01a1aac2-d2f7-7c61-8918-dd0518bfabf5.jsonl",
+    "session_meta_line": 1,
+    "session_id": "01a1aac2-d2f7-7c61-8918-dd0518bfabf5",
+    "agent_path": "/root/source_audit",
+    "turn_context_line": 487,
+    "actual_model": "gpt-6.1-sol",
+    "actual_effort": "high",
+    "method": "Only session_meta/turn_context records examined; minimal runtime evidence retained."
+  },
+  "authoritative_sources": [
+    "extracted/john-company-second-edition-rules.txt — complete 48-page Second Printing 2023 text; multiplayer procedural scope pp1–42",
+    "source_pdfs/john-company-second-edition-rules.pdf — visually inspected rendered pp7,22,23,30,33,42 for diagrams/icons",
+    "supplements/research-notes.md — provenance and component/source locations",
+    "supplements/pnp/Board/John Company Game Board.pdf p1 — inspected official rendered board-left/company-track/India details",
+    "supplements/pnp/Cards/John Company Cards (Bridge, Fronts).pdf p9 cards74–76 and matching Bridge Backs situation-in-India diagrams — inspected official rendered images",
+    "supplements/full-official-errata.txt and official-errata-original-post.txt — full linked corrections and author linkage",
+    "supplements/foreign-invasion-designer-ruling.json — direct Cole Wehrle article42192767, 2023-04-30",
+    "supplements/ruling-thread-2938749.json — original Company Fraud alternatives article40838655 and Cole author11406 reply article40850873, September24,2022",
+    "supplements/pnp/Rulebooks/John Company Player Aid (Front and Back).pdf p2 — Crisis/Company defense comparison table; extracted text and PDF text positions checked",
+    "supplements/official-errata-thread-all-posts.txt and official Letter to Player — searched for explicit alliance-defense excess clarification"
+  ],
+  "authority_resolution": "No coordinator FAQ was treated as authoritative. The supplied direct designer ruling controls Foreign Invasion primary unrest, while the Company-defense and secondary attack procedures remain those of Rules p33. First-print errata already present in the assigned Second Printing were not applied a second time.",
+  "findings": [
+    {
+      "id": "SA04-CORE-01",
+      "severity": "MAJOR",
+      "category": "unresolved_core_procedural_branch_source_sufficiency_gap",
+      "summary_lines": [
+        199,
+        206,
+        439
+      ],
+      "is_summary_factual_error": false,
+      "title": "Company-defense outcome remains unresolved when an active alliance exceeds attack strength",
+      "finding": "A standard Events in India defense can have attack strength1 and only one active, bought strength2 alliance available. The summary reproduces the printed equality test and explicitly declines to decide this case. The supplied rules do not explicitly say whether excess alliance strength may be wasted/capped, whether full exhaustion succeeds, or whether literal non-equality forces Region Loss. This leaves an in-scope core outcome without a complete adjudication.",
+      "source_refs": [
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 22,
+          "lines": [
+            1622,
+            1626
+          ],
+          "section": "Local Alliances",
+          "evidence": "Alliance strength is available for defense; each piece is usable once and strength cannot be split among more than one purpose."
+        },
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 33,
+          "lines": [
+            2285,
+            2291
+          ],
+          "section": "Mounting Defense",
+          "evidence": "The printed instruction requires equal strength or as many pieces as possible, and says a non-equal result causes Crisis success/Region Loss."
+        },
+        {
+          "file": "supplements/pnp/Rulebooks/John Company Player Aid (Front and Back).pdf",
+          "page": 2,
+          "section": "Crisis table, Attack on the Company row and result header",
+          "evidence": "Defender strength is exhausted Regiments, Officers and Local Alliances; result header says defender wins ties. This supports a comparative-defense reading but gives no concrete excess-alliance example or explicit cap/discard rule."
+        }
+      ],
+      "independent_source_assessment": "Literal p33 non-equality wording could be read to make an exhausted strength2 alliance fail against attack1. Alternatively, p22 use-for-one-purpose language and the official aid’s strength-comparison table support wasting excess on a single defense. Neither is asserted here as a definitive designer ruling. The aid is relevant contrary/contextual evidence, so the question cannot honestly be closed merely by assuming greater-or-equal defense or merely by quoting p33 equality without addressing alliance counting.",
+      "impact": "The unresolved branch determines unrest clearance/trophies versus Region Loss, officer rout and Company Standing loss, potentially ending the game; it is core multiplayer procedure and not an excluded optional mode.",
+      "repair_advice": "Obtain a publisher/designer clarification of this concrete case: Company region faces attack strength1; only active Army resource is a bought strength2 alliance. Must it be exhausted, does it defend successfully, and is any excess strength discarded while the whole piece becomes unavailable? Cite that ruling, encode the procedure and re-audit. Until then retain the explicit source-gap disclosure and unverified status; do not award complete core signoff.",
+      "reader_test_status": "Not inspected; this is a source-completeness finding independent of question coverage or reader results.",
+      "resolution_status": "needs_authoritative_clarification",
+      "stable_gap_id": "GAP-DEFENSE-OVERSHOOT"
+    }
+  ],
+  "checked_claims": [
+    {
+      "id": "01",
+      "claim_group": "Scope includes all four standard multiplayer scenarios and firms; Crown/solo/two-player and optional draft explicitly excluded",
+      "summary_lines": [
+        21,
+        435
+      ],
+      "source_refs": [
+        "Rules pp4–5,37,43–46"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "02",
+      "claim_group": "Family pieces, enterprise/card/office counts and India/military component descriptions",
+      "summary_lines": [
+        25,
+        28
+      ],
+      "source_refs": [
+        "Rules pp2–4"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "03",
+      "claim_group": "Component limitations, permitted proxies, unlimited tracks, public information and concealed blackmail/strategy",
+      "summary_lines": [
+        30,
+        30
+      ],
+      "source_refs": [
+        "Rules p6 Component Limits and Your Play Area; p40 Firm Strategy"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "04",
+      "claim_group": "India/Elephant concepts; Empire Decline applies whenever only capital remains, including loss of last dominated region to Rebellion or Company conquest",
+      "summary_lines": [
+        32,
+        34
+      ],
+      "source_refs": [
+        "Rules pp6–7; p30 Elephant’s March; PDF p7 diagram",
+        "Rules p7 Empires/Empire Decline; p32 Rebellion; p23 conquest"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "05",
+      "claim_group": "General setup, Balance £5, powers, loot faces, local alliances, scenario date/dial",
+      "summary_lines": [
+        38,
+        39
+      ],
+      "source_refs": [
+        "Rules p4 Setup steps1–10"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "06",
+      "claim_group": "Player setup placements/card ownership and one combined prestige/blackmail deck/display",
+      "summary_lines": [
+        40,
+        50
+      ],
+      "source_refs": [
+        "Rules p5 Setup and setup-icon diagram",
+        "Rules p5 setup and icon explanations"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "07",
+      "claim_group": "Scenario starts/end turns and 1710/1758/1813/Long 1710 distinctions",
+      "summary_lines": [
+        52,
+        68
+      ],
+      "source_refs": [
+        "Rules p4 scenarios; official Board p1 Turn track; Bridge Fronts p9 cards74–76"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "08",
+      "claim_group": "Scenario Standing/Debt/treasuries/laws/regiments/Company ships and corrected control tokens",
+      "summary_lines": [
+        59,
+        68
+      ],
+      "source_refs": [
+        "Official Bridge Fronts p9 cards74–76; Bridge Backs p9 (internal sheet20) situation-in-India diagrams; full-official-errata.txt 1758/1813 Setup entries"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "09",
+      "claim_group": "1813 China/Governor General, share value ±2, absence of Governors; scenario map explicitly deferred to card reverse",
+      "summary_lines": [
+        68,
+        68
+      ],
+      "source_refs": [
+        "Official Bridge Fronts p9 card76; Bridge Backs p9 situation-in-India diagrams; Rules p26"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "10",
+      "claim_group": "Initial power values, Standing expectations/reset, lined/starred trigger spaces",
+      "summary_lines": [
+        70,
+        70
+      ],
+      "source_refs": [
+        "Official Board p1 Power/Standing/Debt tracks (board-company-track-details.png)"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "11",
+      "claim_group": "All five prize costs, per-piece upkeep, VP and windows",
+      "summary_lines": [
+        72,
+        80
+      ],
+      "source_refs": [
+        "Official Board p1 prizes (board-left-details.png)"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "12",
+      "claim_group": "Turn sequence, skipping first London, Firms timing, early Deregulation vote",
+      "summary_lines": [
+        84,
+        84
+      ],
+      "source_refs": [
+        "Rules pp10–11,36,38"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "13",
+      "claim_group": "Simultaneous attrition, die/fatigue/Chairman modifiers, pensioner and vacancy destinations, Commander exclusion",
+      "summary_lines": [
+        88,
+        88
+      ],
+      "source_refs": [
+        "Rules p11 Attrition; p5 Commander setup icon; p15 structure diagram"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "14",
+      "claim_group": "Retirement order, costs/points/upkeep/windows and actual spending held for display priority",
+      "summary_lines": [
+        90,
+        90
+      ],
+      "source_refs": [
+        "Rules p11 Retirements"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "15",
+      "claim_group": "Prestige eligibility/order/ties/peeking, no card replacement during selection, remaining players skipped when empty, full display refill and pensioner returns",
+      "summary_lines": [
+        92,
+        92
+      ],
+      "source_refs": [
+        "Rules p12 Prestige Cards"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "16",
+      "claim_group": "Spouses/discounts/enterprise/blackmail rules; returned shipyards from Violet or unpaid tax keep fitted ships in play and cannot be purchased until matching ship returns",
+      "summary_lines": [
+        94,
+        96
+      ],
+      "source_refs": [
+        "Rules p12 Prestige and Blackmail Cards in Detail; p9 power",
+        "Rules p12 Prestige and Blackmail Cards in Detail; p34 Tax; p28 sunk ship return"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "17",
+      "claim_group": "Family main-action order, phase-start opportunity matching/doubling, marker on chosen main action, latest extra action without doubling/marker movement, forced prize-piece reuse and no-action reset",
+      "summary_lines": [
+        100,
+        107
+      ],
+      "source_refs": [
+        "Rules p13 Family Action; full-official-errata.txt Rulebook p13 entries"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "18",
+      "claim_group": "Six family actions/costs/votes/bonuses/VP/extra writer; bought ship placed unfitted on its shipyard; exact five Stock Exchange queue costs",
+      "summary_lines": [
+        104,
+        116
+      ],
+      "source_refs": [
+        "Rules pp13–14 family actions; official enterprise cards/Rules p3 card anatomy",
+        "Official Board p1 Court of Directors/Stock Exchange graphic, two £3 spaces; Rules p14 Seek Share",
+        "Rules pp13–14; official Board p1 Stock Exchange"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "19",
+      "claim_group": "Company shares issue from rightmost applicant while Debt remains; Debt falls; applicants slide only with zero Debt",
+      "summary_lines": [
+        118,
+        118
+      ],
+      "source_refs": [
+        "Rules p14 New Company Shares"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "20",
+      "claim_group": "Ascending hiring/fatigue/vacancy rules; Nepotism requires all other candidate-family consent, with Chairman election/deadlock and Commander appointment exceptions",
+      "summary_lines": [
+        122,
+        132
+      ],
+      "source_refs": [
+        "Rules p14 General Hiring Procedure; p15 Chairman; p19 appointment example"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "21",
+      "claim_group": "All office hirers/candidate priorities including President writer and Governor affiliation with that Presidency",
+      "summary_lines": [
+        134,
+        143
+      ],
+      "source_refs": [
+        "Rules pp15–16; p25 China; p26 Governor General"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "22",
+      "claim_group": "Chairman announces share number for pure majority, election/fallback, restricted Chairman share, empty Court compulsory piece/prize reuse and no-Chairman case",
+      "summary_lines": [
+        145,
+        145
+      ],
+      "source_refs": [
+        "Rules p15 Chairman including An Empty Court; errata original post Rules Clarifications"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "23",
+      "claim_group": "Explicit ribbon office sequence/vacancies, own treasuries, general check results/no dead actions and created-office timing",
+      "summary_lines": [
+        149,
+        153
+      ],
+      "source_refs": [
+        "Rules p17 Company Operation and Success Checks; pp24–26"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "24",
+      "claim_group": "Bonuses include fitted shipyards and uninvested workshops; transfers cannot trigger twice",
+      "summary_lines": [
+        157,
+        157
+      ],
+      "source_refs": [
+        "Rules p27 Bonuses; p38 Invested Workshops; p8 golden rule"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "25",
+      "claim_group": "Company expenses and emergency loan size, Debt advance only if track space remains, loans continue at maximum, no current extra debt expense and zero Balance/Standing effects",
+      "summary_lines": [
+        163,
+        163
+      ],
+      "source_refs": [
+        "Rules p27 Expenses/Emergency Loans/Public Embarrassment; p25 China counts East"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "26",
+      "claim_group": "Expectations under current Standing, Company dividends including Chairman, strictly greater enthusiasm and immediate Revenue failure",
+      "summary_lines": [
+        164,
+        167
+      ],
+      "source_refs": [
+        "Rules p27 Check Expectations/Pay Dividends/Public Enthusiasm"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "27",
+      "claim_group": "Storm die sets zones/count; storms before one-at-a-time event tiles; top remaining tile locations; storm outcomes/immunities and no checks absent storm indication",
+      "summary_lines": [
+        171,
+        173
+      ],
+      "source_refs": [
+        "Rules p28 The Storm Die; p25 China; p42 Firms and Storms"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "28",
+      "claim_group": "Writer loss and filled-token flip on closure; Cascade adjacency/substitute closure, once initiation but multiple incoming effects",
+      "summary_lines": [
+        175,
+        175
+      ],
+      "source_refs": [
+        "Rules p28 Writer Loss and Cascade"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "29",
+      "claim_group": "Turmoil, Windfall, Shuffle including empty-stack exception, Leader and Peace exact effects and march timing",
+      "summary_lines": [
+        179,
+        184
+      ],
+      "source_refs": [
+        "Rules p31 Events Described"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "30",
+      "claim_group": "Foreign Invasion targeting, die strength, closure, flags/dome/towers and circle redirect",
+      "summary_lines": [
+        185,
+        185
+      ],
+      "source_refs": [
+        "Rules p33 Foreign Invasion; direct PDF p33 circle glyph; Cole ruling article42192767"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "31",
+      "claim_group": "Ordinary Elephant classifier and sovereign Invasion attack/defense empire strengths, strict comparison, empire flags/failure tower loss",
+      "summary_lines": [
+        187,
+        189
+      ],
+      "source_refs": [
+        "Rules p32 Invasion"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "32",
+      "claim_group": "Rebellion only actor/capital, strict greater, sovereignty/closure/cascade and failed capital tower loss",
+      "summary_lines": [
+        191,
+        191
+      ],
+      "source_refs": [
+        "Rules p32 Rebellion"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "33",
+      "claim_group": "Company primary/secondary attacks and strength; literal printed equal/not-equal defense results and effects, explicit unresolved excess-alliance counting boundary, vacancy proxy chain",
+      "summary_lines": [
+        193,
+        208
+      ],
+      "source_refs": [
+        "extracted/john-company-second-edition-rules.txt pp22,33; lines1622–1626 and2285–2296",
+        "Official PNP John Company Player Aid (Front and Back).pdf p2 Crisis table: defender strength includes Local Alliances, and header says defender wins ties",
+        "Rules p33 Order of Resolution/Attack Strength/Mounting Defense; p22 Local Alliances; direct Foreign Invasion ruling"
+      ],
+      "result": "literal_printed_results_verified; core_excess_alliance_counting_unresolved"
+    },
+    {
+      "id": "34",
+      "claim_group": "Region Loss steps, returned control token loot-side down/region-symbol up, no future loot modifier or affiliation, cumulative Standing; other Company regions resolve attacks separately",
+      "summary_lines": [
+        210,
+        210
+      ],
+      "source_refs": [
+        "Rules p29 Region Loss; p33 Foreign Invasion override; full-official-errata.txt p29 entries",
+        "Rules p29 Region Loss and p33 Order of Resolution/Mounting Defense"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "35",
+      "claim_group": "Elephant March Imperial Ambitions, Company/dominated/sovereign placements, clockwise priority and fully formed empire",
+      "summary_lines": [
+        212,
+        212
+      ],
+      "source_refs": [
+        "Rules p30 Elephant’s March and direct PDF diagram"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "36",
+      "claim_group": "Law selection must draw one, may stop after one/two ordinary laws, max three, forced dilemma; select any revealed law and discard rest; policy before voting first matching icon",
+      "summary_lines": [
+        216,
+        216
+      ],
+      "source_refs": [
+        "Rules p34 Parliament Meets",
+        "Rules p34 Parliament Meets"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "37",
+      "claim_group": "Voting rounds, family cash/card votes, cards used once across entire vote and not restored until resolution; opposition/leader/coalitions/PM exceptions",
+      "summary_lines": [
+        218,
+        218
+      ],
+      "source_refs": [
+        "Rules p35 Voting/The Opposition",
+        "Rules p35 Voting; p36 cards restored after vote; p8 no transferred resource activates twice"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "38",
+      "claim_group": "Pass/fail zero threshold, dilemma resolution, PM transfer/adjacent policy, policy before immediate law, card restoration and legislative failure timing",
+      "summary_lines": [
+        220,
+        220
+      ],
+      "source_refs": [
+        "Rules p36 Resolving the Vote"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "39",
+      "claim_group": "Tax family pays bank per target; Bonus bank pays family per target; unpaid target/window consequences; Power marker swap",
+      "summary_lines": [
+        224,
+        227
+      ],
+      "source_refs": [
+        "Rules p34 policy consequences; p13 luxury VP ownership; p36 prize VP loss",
+        "Rules p34 Tax/Window Tax/Bonus/Power"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "40",
+      "claim_group": "Per-prize upkeep and final-turn refresh skip; refresh destinations for writers/tokens/dividers/extras, Army reactivation, alliance exhaustion and retained ship fatigue",
+      "summary_lines": [
+        230,
+        243
+      ],
+      "source_refs": [
+        "Rules p36 Upkeep and Refresh; p28 ships only fatigue/sink specified"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "41",
+      "claim_group": "Chairman debt three freely then majority approval each, cap, allocate all Balance and interleave",
+      "summary_lines": [
+        248,
+        248
+      ],
+      "source_refs": [
+        "Rules p18 Chairman"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "42",
+      "claim_group": "Director repeated Special Envoy costs/outcomes/China hire, two transfers only after envoys",
+      "summary_lines": [
+        252,
+        252
+      ],
+      "source_refs": [
+        "Rules p18 Director of Trade; p25 China treated sea zone"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "43",
+      "claim_group": "Shipping compulsory spend to ≤£2, lease/fit/buy prices, no owner consent, Company-ship condition, China",
+      "summary_lines": [
+        256,
+        256
+      ],
+      "source_refs": [
+        "Rules p19 Manager of Shipping; p25 China"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "44",
+      "claim_group": "Military Affairs two transfers/top half, mandatory trainees, Commander selection totals/incumbent tie and Nepotism exemption",
+      "summary_lines": [
+        260,
+        260
+      ],
+      "source_refs": [
+        "Rules p19 Military Affairs and Assigning Commanders example"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "45",
+      "claim_group": "Presidency operation order, uninterrupted positions, vacant-President limits; Trade declarations/checks/retries/one success",
+      "summary_lines": [
+        264,
+        266
+      ],
+      "source_refs": [
+        "Rules p20 Presidency Operations/Trade",
+        "Rules p20 Presidency Operations: each position must finish all its actions before the next begins; Trade may be taken before/after Commander/Governor, and may retry with sufficient resources"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "46",
+      "claim_group": "Company Trade ships give capacity without exhaustion; own current Presidency route, writer shortage filled-token continuation, home-region restriction/full-half revenue/bonuses/dividers",
+      "summary_lines": [
+        268,
+        268
+      ],
+      "source_refs": [
+        "Rules pp20–21 Trade/Association of Writers; p40 previously-filled revenue exception",
+        "Rules pp20–21 Trade/Out of Writers/Association of Writers; p40 Previously-Filled Orders"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "47",
+      "claim_group": "Commander begins with alliance purchases before Deploy; approval/treasury/top and bottom states, once-only indivisible use/Refresh; Deploy eligibility/check/officer loss",
+      "summary_lines": [
+        272,
+        278
+      ],
+      "source_refs": [
+        "Rules p22 Commanders/Deploy and direct PDF example",
+        "Rules p22 Local Alliances/Deploy; p33 compulsory defense exhaustion; p36 Refresh"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "48",
+      "claim_group": "Loot cycles/minimum; successful control table preserves capital shattering, orders/unrest, conditional token/overlay/card placements, Governor General exception and Elephant; zero-tower Company re-deploy and catastrophe",
+      "summary_lines": [
+        280,
+        305
+      ],
+      "source_refs": [
+        "Rules p23 Divide Loot/Loot Minimum/Take Trophies/Impose Order/Form Governorship/Elephant Redirect, including worked payout example",
+        "Rules p22 Deploy check/loss procedure",
+        "Rules p26 Governor General no new Governors/overlays",
+        "Rules pp22–23 Deploy/Loot Minimum/Take Trophies/Form Governorship; p26 Governor General"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "49",
+      "claim_group": "Governor result/options preserve shrinking pool, recovery bonus, unrest/catastrophe, and one shipbuilding stage per success: first success places partial ship, next completes into associated Presidency sea zone; regiment and tax destinations/stopping conditions",
+      "summary_lines": [
+        309,
+        322
+      ],
+      "source_refs": [
+        "Rules p24 Governors/Administer"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "50",
+      "claim_group": "China creation and immediate Chairman hire; one ship-based attempt with no failure retry and Company-export prerequisite; £4 Balance and £1 family per Company export",
+      "summary_lines": [
+        326,
+        335
+      ],
+      "source_refs": [
+        "Rules p25 Superintendent of Trade in China",
+        "Rules p25 Superintendent of Trade in China/Trade in China"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "51",
+      "claim_group": "Governor General transition including Governors as pensioners, cards/overlays/ships/fatigue/treasury/hiring; no further Governors and loss exception",
+      "summary_lines": [
+        339,
+        339
+      ],
+      "source_refs": [
+        "Rules p26 Governor General"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "52",
+      "claim_group": "Governor General fixed revenue, paid checks, every-six unrest, failure unrest, compulsory benefit each region, tax destination/unrest differences/one success",
+      "summary_lines": [
+        341,
+        341
+      ],
+      "source_refs": [
+        "Rules p26 Govern"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "53",
+      "claim_group": "Special Deregulation eligibility/mandatory trigger, ordinary voting and support threshold except listed special rules, Debt reduction/Standing reset/token, failed share-value cap and no-policy/retained PM/law/PM opposing exceptions",
+      "summary_lines": [
+        345,
+        345
+      ],
+      "source_refs": [
+        "Rules pp35–36 Voting/Resolving the Vote/The Vote to Deregulate",
+        "Official Board p1 Standing/Debt trigger tracks"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "54",
+      "claim_group": "Firm London/India cash uses and investment origin/contribution rules; special retirement actual spending after discounts, marker limit and eligibility/final timing",
+      "summary_lines": [
+        347,
+        349
+      ],
+      "source_refs": [
+        "Rules p37 Firms/The Two Firm Treasuries/Special Retirement/Firms in Final Scoring; p40 bid; p42 dividends"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "55",
+      "claim_group": "Firm formation only while managing none, flip family board to charter, first share/value/£5 London investment; share qualifications/cap and invested workshops",
+      "summary_lines": [
+        353,
+        356
+      ],
+      "source_refs": [
+        "Rules p38 Firms Phase/Firm Investments; p15 Chairman investment restriction",
+        "Rules p38 Forming a Firm/Court and Workshop Investment"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "56",
+      "claim_group": "Firm shipyard fitting costs £3 from London to bank with owner consent; Company player-ship buyback prices and Shipping treasury destination; no Company/extra ships",
+      "summary_lines": [
+        357,
+        357
+      ],
+      "source_refs": [
+        "Rules p39 Acquiring Ships as a Firm",
+        "Rules p39 Acquiring Ships as a Firm"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "57",
+      "claim_group": "Hostile takeover eligibility; negotiated merger primary/consent/consolidation, excess shares returned to owners supplies with consent; voluntary dissolution",
+      "summary_lines": [
+        358,
+        360
+      ],
+      "source_refs": [
+        "Rules p39 Hostile Takeovers/Mergers; p37 Dissolving a Firm",
+        "Rules p39 Hostile Takeovers/Mergers; p37 Dissolving a Firm"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "58",
+      "claim_group": "Firm strategies secret/simultaneous, one trading attempt, one-ship and closed-port selection permission but open port at filling; Hobnob exception; bids revealed with delayed strategy cards",
+      "summary_lines": [
+        364,
+        371
+      ],
+      "source_refs": [
+        "Rules p40 Firm Strategy, including explicit Hobnob exception to trade/dividends and single-attempt reminder"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "59",
+      "claim_group": "Firm reveal/check before Presidency, single trade attempt, initiative/negative values, President ties and vacant/failed-President fallback",
+      "summary_lines": [
+        373,
+        373
+      ],
+      "source_refs": [
+        "Rules p40 Filling Orders as a Firm"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "60",
+      "claim_group": "Firm open own-route orders up to ships+1, each particular order once per turn, other-firm/Company refills only, half revenues/India/£6 Value",
+      "summary_lines": [
+        375,
+        375
+      ],
+      "source_refs": [
+        "Rules p40 Filling Orders as a Firm/Previously-Filled Orders; p41 worked example; Board p1 half values"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "61",
+      "claim_group": "Firm expenses/order/ties, dissolution destinations, emergency investments and one-other-firm negotiated merger with full shareholder consent and expense prerequisites",
+      "summary_lines": [
+        379,
+        381
+      ],
+      "source_refs": [
+        "Rules p41 Firm Expenses and Dividends/Firm Expenses and Dissolution"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "62",
+      "claim_group": "Firm dividends from India only, per-share plus manager payment, shareholder choice AND manager consent for any waiver; actual total marker/zero/Hobnob/sweep/storms",
+      "summary_lines": [
+        383,
+        383
+      ],
+      "source_refs": [
+        "Rules p42 Firm Dividends/Optional Dividends/Hobnobbing Firms/Firms and Storms",
+        "Rules p42 Firm Dividends/Optional Dividends/Hobnobbing/Firms and Storms"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "63",
+      "claim_group": "End timing and phase exceptions; Final Scoring negotiation and promise-call bans, with explicit-card-use exception retained in general end statement",
+      "summary_lines": [
+        387,
+        387
+      ],
+      "source_refs": [
+        "Rules p9 Game End; p29 Company Humiliation; p36 Legislated Company Failure",
+        "Rules p9 Game End; p8 Promise Cards; p29 Company Humiliation; p36 legislated failure"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "64",
+      "claim_group": "Firm points summed/rounded per player, prison penalties, eligible special retirement before Power and normal final scoring regardless of Company outcome",
+      "summary_lines": [
+        393,
+        397
+      ],
+      "source_refs": [
+        "Rules p37 Firms in Final Scoring; p41 Dissolution; firm charter diagram p42",
+        "Rules p37 Firms in Final Scoring; p41 dissolution; firm charter p42"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "65",
+      "claim_group": "Power counts enterprises and Company shares plus specified other sources/turn awards/ties; Court/workshops and final retirement or random failure card; final ties",
+      "summary_lines": [
+        399,
+        412
+      ],
+      "source_refs": [
+        "Rules p9 Final Scoring; official Board p1 Power Award; p38 invested workshops"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "66",
+      "claim_group": "Negotiation tables preserve tradable/prohibited assets, receiving-family share replacement, blackmail/luxury conditions, binding transfers/printed guarantees/timing/conflicting calls and no double activation",
+      "summary_lines": [
+        416,
+        433
+      ],
+      "source_refs": [
+        "Rules p8 Negotiation; p9 Game End"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "67",
+      "claim_group": "Foreign Invasion direct Cole ruling: primary unrest excluded, resulting towers based on die, Company secondary unrest attacks retained; closure once only/Region Loss no duplicate",
+      "summary_lines": [
+        443,
+        443
+      ],
+      "source_refs": [
+        "foreign-invasion-designer-ruling.json article42192767, author11406, 2023-04-30; Rules p33 Company attack/Foreign Invasion"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "68",
+      "claim_group": "Official errata provenance and incorporated corrections; Company Fraud at start of Revenue, one die per own officeholder, reduction capped at zero and bank payout equal to actual reduction; other cited card corrections",
+      "summary_lines": [
+        445,
+        445
+      ],
+      "source_refs": [
+        "supplements/official-errata-original-post.txt article40817208 linking full errata",
+        "supplements/full-official-errata.txt Company Fraud entry lines227–232 and other corresponding card/Rulebook entries",
+        "supplements/ruling-thread-2938749.json original article40838655 option2 and Cole author11406 article40850873, 2022-09-24"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "69",
+      "claim_group": "Player reference agrees with full procedures and exceptions remain described in detailed sections",
+      "summary_lines": [
+        449,
+        461
+      ],
+      "source_refs": [
+        "Rules pp10–42; detailed summary sections audited above"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "70",
+      "claim_group": "Exact firm VP table: Value1=-1, Value2=0, Values3–4=½, Values5–7=1, Values8–9=1½, Value10=2; value number is used for expenses, VP rate is symbol beneath",
+      "summary_lines": [
+        410,
+        410
+      ],
+      "source_refs": [
+        "Rules PDF p42 Firm Charter figure (visual inspection)",
+        "Rules p41 Firm Expenses and Dissolution; p37 Firms in Final Scoring"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "71",
+      "claim_group": "Company Fraud example: Balance £10, highest die6 -> Balance0, bank payout£10; Cole explicitly selected original option2 on 2022-09-24, corrected timing still start Revenue",
+      "summary_lines": [
+        441,
+        441
+      ],
+      "source_refs": [
+        "supplements/ruling-thread-2938749.json articles40838655 and40850873, latter author11406",
+        "supplements/full-official-errata.txt Company Fraud entry lines227–232"
+      ],
+      "result": "verified"
+    },
+    {
+      "id": "72",
+      "claim_group": "Summary discloses excess-alliance defense counting remains unresolved; printed result table does not settle concrete strength2 versus attack1",
+      "summary_lines": [
+        206,
+        439
+      ],
+      "source_refs": [
+        "Rules p22 Local Alliances, extracted lines1622–1626",
+        "Rules p33 Mounting Defense, extracted lines2285–2291",
+        "Official PNP Player Aid p2 Crisis table, extracted lines170–215",
+        "Full official errata, supplied official-errata thread and Letter to Player searched for explicit defense/excess/alliance clarification; none located"
+      ],
+      "result": "disclosure_verified; unresolved_core_source_branch"
+    }
+  ],
+  "coverage_conclusion": "All independently identified changes audited against primary sources, with12 explicit changed/affected claim groups and72 retained claim groups. Source-supported accuracy passes with no new findings. The explicit final-scoring sequence, hiring affiliation, event order, merger share destination and firm per-order limit agree with sources. Literal defense result wording is accurate but does not close the retained core counting gap. All unaffected source work remains complete.",
+  "limitations": [
+    "GAP-DEFENSE-OVERSHOOT still needs authoritative clarification; complete-core signoff is false.",
+    "No reader tests or grades were inspected.",
+    "Individual component text and scenario maps remain the summary’s stated component-reference boundary."
+  ],
+  "revision_evidence": {
+    "prior_snapshot_sha256": "4ab0ede94ba480ea5bc537683f3e443f357e2b0943e41df81069c928b239c268",
+    "change_patch": "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/source-audit-08/summary-changes.patch",
+    "change_patch_sha256": "19181125fdea4c3c01a60147b139f80d30e4be7507c82e9600173fc73b9acd3f",
+    "source_hashes": {
+      "extracted/john-company-second-edition-rules.txt": "105ff1bb4a774e9cc62e068567fa611947cac134f9c7c2e5bf29cc482f5bd30f",
+      "source_pdfs/john-company-second-edition-rules.pdf": "29fdc157234951b517190c82298ea578a543d25f183224e9fa86c1ca8c470dd0",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/full-official-errata.txt": "8d682c9e3dd4409ac3719289ffefab772a008454f34d6e76ddd3be4d23d3f56e",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/official-errata-original-post.txt": "b1080b561106fffc38971648c60fdb0df07e1fef45f5d86b0d238afa3266efd7",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/foreign-invasion-designer-ruling.json": "55df441a4622ac8b0a6dadddccf1b215edb00bc9cb82205057f032f7f7efa200",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/ruling-thread-2938749.json": "37797fe3cbeb79b23cce3d6faf7dd5b7a5a175e93824ae338da0164bc838eef5",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/pnp/Rulebooks/John Company Player Aid (Front and Back).pdf": "f8b12d0c7e7203ff7a38fcda5b41959bde7b05449710709dd6716652587a00fd",
+      "docs/quality/summary-qa/john-company-second-edition/2026-11-05-batch-002957/supplements/pnp/Board/John Company Game Board.pdf": "e6436e4a5a2a993a9993bda785396e8048207bbd75000171457386918d0cf88d"
+    },
+    "source_hashes_unchanged_from_audit07": true,
+    "method": "Canonical exact-byte snapshot and independent full diff from audit07. Every changed phrase and affected section compared to complete original rules and official components. Special attention to literal defense result predicates versus unresolved excess-alliance counting. Identical text inherits same auditor’s prior full-source review. No questions/keys/readers/grades/repair notes."
+  },
+  "delta_checked_claims": [
+    {
+      "id": "SA08-C01",
+      "summary_lines": [
+        41,
+        41
+      ],
+      "claim": "Prestige and blackmail are shuffled together as one deck before three-card London display",
+      "source_refs": [
+        "Rules p5 setup step12, extracted lines427–431"
+      ],
+      "support_type": "explicit",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C02",
+      "summary_lines": [
+        140,
+        140
+      ],
+      "claim": "President candidate must be a writer of that Presidency or Governor associated with that Presidency",
+      "source_refs": [
+        "Rules p16 Presidents, extracted lines1244–1246"
+      ],
+      "support_type": "explicit affiliation restriction",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C03",
+      "summary_lines": [
+        149,
+        149
+      ],
+      "claim": "Explicit office operation sequence follows ribbon: Chairman, Director/Governor General, Shipping, Military Affairs, Bombay, Madras, Bengal, China if created; vacancies skipped",
+      "source_refs": [
+        "Rules p17 Company Operation",
+        "Official Board p1 ribbon",
+        "Rules pp20,25–26 Presidency order/China after Bengal/Governor General Director replacement"
+      ],
+      "support_type": "explicit sequence from board/procedures",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C04",
+      "summary_lines": [
+        163,
+        163
+      ],
+      "claim": "Emergency loans add £5 each, advance Debt only when another space exists, continue at Debt maximum without marker advance",
+      "source_refs": [
+        "Rules p27 Emergency Loans, extracted lines1908–1918"
+      ],
+      "support_type": "explicit",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C05",
+      "summary_lines": [
+        171,
+        173
+      ],
+      "claim": "Storm die determines affected zones/event count; storms resolved before event draws; one tile at a time; top remaining tile location; no storms when face indicates none",
+      "source_refs": [
+        "Rules p28 The Storm Die/Storms/Events in India, extracted lines1940–1971"
+      ],
+      "support_type": "explicit ordering/count and conditional storm checks",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C06",
+      "summary_lines": [
+        187,
+        191
+      ],
+      "claim": "Ordinary Elephant Crisis classifies tail/head and sovereign Invasion versus dominated Rebellion; Company-centered Elephant is Rebellion; Foreign Invasion uses separate location rule",
+      "source_refs": [
+        "Rules pp6–7 political alignment/Elephant",
+        "Rules p32 Crisis/Invasion/Rebellion, extracted lines2188–2225",
+        "Rules p33 Foreign Invasion"
+      ],
+      "support_type": "explicit",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C07",
+      "summary_lines": [
+        199,
+        206
+      ],
+      "claim": "Printed Company-defense predicate: newly exhausted pieces equal Crisis strength means attack fails/defense succeeds; not equal means attack succeeds/Region Loss; matched-defense unrest/trophy and primary Invasion consequences retained",
+      "source_refs": [
+        "Rules p33 Mounting Defense/Failed and Successful Invasions, extracted lines2285–2296"
+      ],
+      "support_type": "literal printed conditional and logical complement, not an excess-alliance counting rule",
+      "result": "printed_claims_verified; excess_alliance_outcome_unresolved"
+    },
+    {
+      "id": "SA08-C08",
+      "summary_lines": [
+        206,
+        208
+      ],
+      "claim": "Defense table does not define excess-alliance counting; vacant Commander uses Military Affairs then Chairman and awards/removes no acting-player trophies",
+      "source_refs": [
+        "Rules p22 Local Alliances, extracted lines1622–1626",
+        "Rules p33 Vacant Commander, extracted lines2274–2277",
+        "Unresolved gap evidence retained from official player aid versus rulebook test"
+      ],
+      "support_type": "explicit proxy chain; accurate source-limit disclosure",
+      "result": "known_rules_verified; core_gap_retained"
+    },
+    {
+      "id": "SA08-C09",
+      "summary_lines": [
+        359,
+        359
+      ],
+      "claim": "Negotiated merger excess above ten shares goes back to affected owners’ supplies with their consent; normal primary/all-shareholder/binding rules unchanged",
+      "source_refs": [
+        "Rules p39 Mergers, extracted lines2750–2770"
+      ],
+      "support_type": "explicit",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C10",
+      "summary_lines": [
+        375,
+        375
+      ],
+      "claim": "Each firm fills particular order only once per turn, cannot refill its own order, but can refill another firm/Company order at half rounded-down revenue",
+      "source_refs": [
+        "Rules p40 Filling Orders as a Firm/Previously-Filled Orders, extracted lines2810–2827",
+        "Rules p40 single trading attempt per turn"
+      ],
+      "support_type": "explicit once-per-order rule and other-trader refill exception",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C11",
+      "summary_lines": [
+        389,
+        397
+      ],
+      "claim": "Final Scoring rows require firm VP then firm special retirement before normal Power/Court/final-retirement-or-failure sequence, including Company failure",
+      "source_refs": [
+        "Rules p37 Firms in Final Scoring, extracted lines2666–2675",
+        "Rules p9 Final Scoring, extracted lines812–836"
+      ],
+      "support_type": "explicit order and regardless-of-outcome special-retirement clause",
+      "result": "verified"
+    },
+    {
+      "id": "SA08-C12",
+      "summary_lines": [
+        399,
+        410
+      ],
+      "claim": "Power-track contributions are enterprises and Company shares, not firm shares; remaining power sources/awards, Court/workshops and survival/failure branches retained",
+      "source_refs": [
+        "Rules p9 Final Scoring/Power Track",
+        "Official Board p1 Power awards",
+        "Rules p38 invested workshop exception",
+        "Rules p3 random failure card"
+      ],
+      "support_type": "explicit",
+      "result": "verified"
+    }
+  ],
+  "complete_core_signoff": false,
+  "sourced_claims_accuracy_verdict": "PASS",
+  "completeness_verdict": "INCOMPLETE_CORE_PROCEDURE",
+  "verdict_basis": "All twelve changed/affected source claim groups pass. In particular, the defense table accurately reproduces the printed equal/not-equal result condition, while its following boundary explicitly declines to define how alliance excess is counted. No new unsupported inference or material sourced omission found. Overall MAJOR remains solely unresolved GAP-DEFENSE-OVERSHOOT; complete core signoff is false.",
+  "known_sourced_claims_verdict": "PASS",
+  "known_sourced_claims_findings": [],
+  "unresolved_core_findings": [
+    {
+      "id": "SA04-CORE-01",
+      "severity": "MAJOR",
+      "category": "unresolved_core_procedural_branch_source_sufficiency_gap",
+      "summary_lines": [
+        199,
+        206,
+        439
+      ],
+      "is_summary_factual_error": false,
+      "title": "Company-defense outcome remains unresolved when an active alliance exceeds attack strength",
+      "finding": "A standard Events in India defense can have attack strength1 and only one active, bought strength2 alliance available. The summary reproduces the printed equality test and explicitly declines to decide this case. The supplied rules do not explicitly say whether excess alliance strength may be wasted/capped, whether full exhaustion succeeds, or whether literal non-equality forces Region Loss. This leaves an in-scope core outcome without a complete adjudication.",
+      "source_refs": [
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 22,
+          "lines": [
+            1622,
+            1626
+          ],
+          "section": "Local Alliances",
+          "evidence": "Alliance strength is available for defense; each piece is usable once and strength cannot be split among more than one purpose."
+        },
+        {
+          "file": "extracted/john-company-second-edition-rules.txt",
+          "page": 33,
+          "lines": [
+            2285,
+            2291
+          ],
+          "section": "Mounting Defense",
+          "evidence": "The printed instruction requires equal strength or as many pieces as possible, and says a non-equal result causes Crisis success/Region Loss."
+        },
+        {
+          "file": "supplements/pnp/Rulebooks/John Company Player Aid (Front and Back).pdf",
+          "page": 2,
+          "section": "Crisis table, Attack on the Company row and result header",
+          "evidence": "Defender strength is exhausted Regiments, Officers and Local Alliances; result header says defender wins ties. This supports a comparative-defense reading but gives no concrete excess-alliance example or explicit cap/discard rule."
+        }
+      ],
+      "independent_source_assessment": "Literal p33 non-equality wording could be read to make an exhausted strength2 alliance fail against attack1. Alternatively, p22 use-for-one-purpose language and the official aid’s strength-comparison table support wasting excess on a single defense. Neither is asserted here as a definitive designer ruling. The aid is relevant contrary/contextual evidence, so the question cannot honestly be closed merely by assuming greater-or-equal defense or merely by quoting p33 equality without addressing alliance counting.",
+      "impact": "The unresolved branch determines unrest clearance/trophies versus Region Loss, officer rout and Company Standing loss, potentially ending the game; it is core multiplayer procedure and not an excluded optional mode.",
+      "repair_advice": "Obtain a publisher/designer clarification of this concrete case: Company region faces attack strength1; only active Army resource is a bought strength2 alliance. Must it be exhausted, does it defend successfully, and is any excess strength discarded while the whole piece becomes unavailable? Cite that ruling, encode the procedure and re-audit. Until then retain the explicit source-gap disclosure and unverified status; do not award complete core signoff.",
+      "reader_test_status": "Not inspected; this is a source-completeness finding independent of question coverage or reader results.",
+      "resolution_status": "needs_authoritative_clarification",
+      "stable_gap_id": "GAP-DEFENSE-OVERSHOOT"
+    }
+  ],
+  "interpretation_notes": [
+    {
+      "summary_lines": [
+        199,
+        206
+      ],
+      "note": "The printed predicate/result is supported independently of its inputs. Confirming equal=>attack fails and not-equal=>attack succeeds does not establish whether excess alliance strength must be counted in full, capped/wasted, or otherwise treated; no strength2-versus-attack1 outcome is inferred."
+    },
+    {
+      "summary_line": 399,
+      "note": "Only Company shares use the share Power marker; firm shares remain governed by firm VP and dividend rules."
+    }
+  ],
+  "canonical_summary": "rules/john-company-second-edition.md",
+  "canonical_matches_snapshot": true
+}
