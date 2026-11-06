@@ -45,8 +45,12 @@ def objects(value):
 
 
 audit = load(FOLDER / 'audit.json')
-assert audit['all_six_actual_input_receipts_confirmed']
-assert audit['all_six_original_report_copies_and_isolated_replay_bytes_match']
+if role == 'a':
+    assert audit['all_six_actual_input_receipts_confirmed']
+    assert audit['all_six_original_report_copies_and_isolated_replay_bytes_match']
+else:
+    assert audit['all_six_technical_audit_complete'] and audit['originals_unchanged']
+    assert all(run['complete_actual_inputs_received_before_mutation'] and run['report_copy_and_replay_byte_equality'] for run in audit['runs'].values())
 summary_path = IT / 'summary-snapshot.md'
 summary_lines = summary_path.read_text().splitlines(keepends=True)
 assert summary_path.read_bytes() == (REPO / 'rules/john-company-second-edition.md').read_bytes()
@@ -102,9 +106,13 @@ for index in range(1, 7):
         'runtime_prefix_sha256': projection['prefix_sha256'], 'physical_records': len(physical),
         'summary_chunks_before_first_write': len(expected_chunks), 'complete_original_packet_entries_before_first_write': len(packet['entries']),
         'metadata_before_first_write': True, 'first_write_record': boundary, 'actual_model_contexts': len(contexts),
-        'grade_report_sha256': H(report.read_bytes()), 'retained_extra_calls': len(run['noncanonical_extra_calls_preserved']),
-        'in_place_resumption_qualification': run['in_place_resumption_qualification']})
-proof.update(verified=True, qualifications=audit['qualifications'], limits='Complete actual pre-write input delivery and original report bindings only. Independent gameplay grades, initial fresh-spawn verification, source audit, coverage and final publication remain separate gates. Original strict false flags and technical deviations remain unchanged.')
+        'grade_report_sha256': H(report.read_bytes()), 'retained_extra_calls': len(run.get('noncanonical_extra_calls_preserved', run.get('noncanonical_extra_calls', []))),
+        'in_place_resumption_qualification': run.get('in_place_resumption_qualification', False)})
+qualifications = audit.get('qualifications', [
+    'B technical audit was staged while the sixth report was pending; both initial and terminal sixth-run prefixes are retained. All six terminal reports are now verified against original records.',
+    'The staged scope header and original strict/normalized flags remain preserved; this proof independently checks actual complete input values.',
+    'No private incoming-task plaintext or stronger fork isolation is certified by the child trace. Initial fresh-spawn settings are checked separately.'])
+proof.update(verified=True, qualifications=qualifications, limits='Complete actual pre-write input delivery and original report bindings only. Independent gameplay grades, initial fresh-spawn verification, source audit, coverage and final publication remain separate gates. Original strict false flags and technical deviations remain unchanged.')
 out = BASE / f'coordinator-checks/john-stamped-i1-reader-{role}-actual-grader-inputs.json'
 assert not out.exists()
 out.write_text(json.dumps(proof, indent=2) + '\n')

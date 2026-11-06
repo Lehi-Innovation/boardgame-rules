@@ -1,3 +1,12 @@
+# Current status — corrected body audit and86-question bank closed
+
+- Canonical body SHA256 `f57ad40285701ca8652d87e22273007761604b2e1a50cf65051281ff1c189332`. Source-only [audit05](source-audit-05/source-audit.json) PASS, with actual15fulltexts/36slices/41nativeviews verified before report. Audit04 certifies historical old bytes only.
+- [expanded-v12 review](expanded-v12/clean-coverage-scope-review.json): source/key PASS, exact asked scope PASS, whole-source coverage stopping PASS;86questions/256atoms, actual18fulltexts/39nativeviews before report proved. Two root zero-addition rewalks34/35. Q36 corrected original ice/snowflake colony cost; Q86 expressly asks both Kjas territory economic converters. Historical jungle keys/results retained without silent regrading.
+- [full-iteration-02](full-iteration-02/input-manifest.json) frozen exact body+bank. A completed86answers, actualinput/model and96complete helper units PASS. B2 completing saved batches; initial B technical incomplete attempt retained. Full independent grading pending; no final reader PASS claimed.
+- [candidate validation05](candidate-validation-05.json) and [bank/source integrity](expanded-v12-integrity.json) PASS for their checks. Goal ACTIVE pending complete paired QA and coordinator exact-byte stamping authorization.
+
+The index below preserves prior evidence and historical status; the current entries above take precedence.
+
 # Sidereal Confluence QA evidence
 
 The assigned canonical file is `rules/sidereal-confluence.md`. Scope is the original 2017 WizKids ten-page `SC_Rule Book_061017_Web5`, all nine original species including the Faderan reverse, accepted original printed components, and separately labeled contemporaneous designer clarifications. Remastered, expansions and optional variants are excluded.

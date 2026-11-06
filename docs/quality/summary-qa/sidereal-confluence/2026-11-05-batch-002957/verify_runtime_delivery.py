@@ -42,6 +42,8 @@ def verify(iteration,reader,task):
  supplied_receipts=result['delivery_receipts']
  if isinstance(supplied_receipts,dict) and 'summary_slices' in supplied_receipts:
   supplied_receipts=[{'file':'summary-snapshot.md','ranges':supplied_receipts['summary_slices']},{'file':'questions.json','ranges':supplied_receipts['questions_slices']}]
+ if isinstance(supplied_receipts,dict) and isinstance(result.get('inputs_read'),list) and all(isinstance(z,dict) and 'slices' in z for z in result['inputs_read']):
+  supplied_receipts=result['inputs_read']
  metadata_diagnostics=[]
  if isinstance(supplied_receipts,list) and supplied_receipts and all(isinstance(z,dict) and 'start' in z and 'end' in z for z in supplied_receipts):
   grouped={}
@@ -80,5 +82,6 @@ def verify(iteration,reader,task):
  assert all(x['literal'] for x in spanchecks)
  assert turns and all(t['actual_model']=='gpt-6-luna' and t['actual_effort']=='high' for t in turns)
  payload={'reader':reader,'requested_model':'gpt-6-luna','requested_effort':'high','fork_turns':'none','runtime_source_path':str(log),'identity':identity,'model_records':turns,'input_delivery':receipts,'raw_receipt_metadata_diagnostics':metadata_diagnostics,'first_answer_file_write_record_ordinal':first_answer_write,'all_inputs_delivered_before_first_answer_file_write':True,'all_expected_ids_exactly_once':True,'evidence_literal_span_checks':spanchecks,'raw_response_sha256':sha(p.read_bytes()),'validation':'PASS','scope':'Technical input/output integrity separate from factual grades. Opaque original-record hashes retained, no internal instructions/account/permissions copied.'}
- (d/f'reader-{reader}-runtime-delivery.json').write_text(json.dumps(payload,indent=2)+'\n');print(iteration,reader,'runtime and delivery PASS',len(actual))
+ outpath=d/f'reader-{reader}-runtime-delivery.json';assert not outpath.exists(),'Refusing historical runtime proof overwrite'
+ outpath.write_text(json.dumps(payload,indent=2)+'\n');print(iteration,reader,'runtime and delivery PASS',len(actual))
 if __name__=='__main__':verify(*sys.argv[1:])
