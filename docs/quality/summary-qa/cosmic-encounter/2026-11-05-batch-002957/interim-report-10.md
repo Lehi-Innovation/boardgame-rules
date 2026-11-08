@@ -1,0 +1,13 @@
+# Cosmic Encounter QA — interim10
+
+Active. Expanded iteration02 complete corrected grades fail: A94 correct/73 partial/0 incorrect; B163 correct/3 partial/1 incorrect. Q167B remains Correct with its original unresolved summary-support flag. All167 IDs/544 raw key records per reader are covered exactly once. A correct quote does not cancel B’s materially contradictory Observer/Void Wild ruling. No key/scope change or grade resampling was used.
+
+The parent packet defect omitted B’s explicitly referenced top-level evidence dictionary. Every defective initial packet and all six provisional reports remain intact. Same original graders01–06 continued with exact same-answer referents; fresh07–09 received complete packets. Independent technical auditor17 executed8,946 checks with no bookkeeping diagnostics: all334 original raw entries, character/UTF8 byte spans/hashes,220 same-entry referenced-unit occurrences, dictionary raw spans/JSON pointers/values, report coverage/totals, nine actualSol/high identities and complete visible summary/packet delivery. It separately verifies first-six identity continuity and last-three requested fork:none. No peer-grade feedback or desired verdict was supplied.
+
+Graders07–09 initially received their complete6211-character process instructions in oversized single blocks. Their later bounded rereads are separately recorded, never relabeled as original bounded chunks. Data delivery was complete/bounded before grading. This transport diagnostic does not cap factual grades or independently require reader replacement.
+
+Freeze14 repairs the original p12 self-designating-special conditional and explicitly states FAQ card-back permission; it also makes existing Observer permission, physical Oracle/Sorcerer swap states and common tie/deal/immediate-win context clearer. Exact source-only audit15 continuation is pending. Source corrections14 distinguish explicit primary clauses from derived physical exchange states. Original question/key/scope and seed20 remain unchanged; source hashes and targeted repository checks pass.
+
+A generic method update and a preplanned ten-question-per-turn continuation schedule are in preparation for two NEW blind readers. They will receive identical generic process/code in their initial prompt and open only two frozen rule-data files plus their own partial output. No old answers, failures, keys or question-specific hints will be supplied. The entire fixed167-question bank will be completed before grading.
+
+Four original human clarification topics remain unanswered; only two independently established essential authority gaps are reported. No pending interpretation is adopted. No final global scope freeze, clean pair, publication stamp or completion is claimed.

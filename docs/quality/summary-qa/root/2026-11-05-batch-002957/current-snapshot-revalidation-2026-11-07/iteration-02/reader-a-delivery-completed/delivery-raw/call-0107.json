@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:12:55.086Z",
+    "ordinal": 107,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_058e2b81b468db9e016aef31e1d10487d09c845fbbac164b89",
+      "status": "completed",
+      "call_id": "call_8900c639b2124f199f06a8f8a25eff11",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom collections import Counter\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nguide=(base/'summary-snapshot.md').read_text()\\nexpected=[q['id'] for q in json.loads((base/'questions.json').read_text())['questions'][:10]]\\ndata=json.loads((base/'reader-a.json').read_text())\\nids=[a['id'] for a in data['answers']]\\nassert ids==expected and all(Counter(ids)[x]==1 for x in expected)\\nfor a in data['answers']:\\n    for p in a['source_passages']:\\n        assert p['quotation'] and p['quotation'] in guide, a['id']\\nprint('Final check passed: Q01-Q10 in expected order, each exactly once; valid JSON; every saved quotation is nonempty and an exact substring of the frozen guide.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":500}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-0d73-7452-8eae-cf2d9c8e1de8",
+        "create_time": 1794060769.8187878
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:12:55.630Z",
+    "ordinal": 110,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b65a-f0ce-7dc1-9753-c422ca0835f9",
+      "call_id": "call_8900c639b2124f199f06a8f8a25eff11",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Final check passed: Q01-Q10 in expected order, each exactly once; valid JSON; every saved quotation is nonempty and an exact substring of the frozen guide.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-0d73-7452-8eae-cf2d9c8e1de8",
+        "create_time": 1794060775.630069
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

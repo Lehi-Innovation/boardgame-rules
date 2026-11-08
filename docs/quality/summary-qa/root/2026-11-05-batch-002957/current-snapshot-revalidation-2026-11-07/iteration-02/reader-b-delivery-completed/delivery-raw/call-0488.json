@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:36:23.529Z",
+    "ordinal": 488,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef375ec30c87d0b184b95f80412a20",
+      "status": "completed",
+      "call_id": "call_b7a69d85789645d0b3d1254a4793e9fd",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q61':['Hostile buildings only','Hostile warriors from multiple factions'],'Q62':['Taking versus activating','Marquise action allowance'],'Q63':['Faction-piece ownership','Items'],'Q64':['Immediate-effect crafting cards','Persistent-effect crafting cards','Spending a card from play area'],'Q65':['Ambush crafting and permitted uses','Dominance crafting and permitted uses']}\\nchecks={'Q61':['one boot','do not require the extra boot','two boots total','not one extra per hostile faction'],'Q62':['does not activate','requires a faction action allowance','neither uses a Marquise action'],'Q63':['cannot change','apart from items','not faction pieces or enemy pieces','does not make it faction-owned'],'Q64':['resolve an immediate effect','discard the crafting card','item token remains','play area','outside your hand','cannot be spent, discarded or used'],'Q65':['cannot be crafted','two immediate hits','foil a defending Ambush','activated to change the victory condition','spent for suit']}\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]: assert phrase.lower() in joined.lower(),(a['id'],phrase)\\n for s in a['source_passages']: assert s['quotation'] and s['quotation'] in g,(a['id'],s['section'])\\nprint('Q61\u2013Q65 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66e-ef66-7290-940f-35c2726f20cb",
+        "create_time": 1794062174.800148
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:36:23.918Z",
+    "ordinal": 491,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b670-6dee-7993-97fd-ec75c42b4cee",
+      "call_id": "call_b7a69d85789645d0b3d1254a4793e9fd",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q61\u2013Q65 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66e-ef66-7290-940f-35c2726f20cb",
+        "create_time": 1794062183.9186707
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

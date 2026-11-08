@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:21:11.433Z",
+    "ordinal": 250,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef33cb35a887d09cdca4f5d7c4eb93",
+      "status": "completed",
+      "call_id": "call_369f7a70001a4c479ed7ca97e60d0dbc",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json')\\nd=json.loads(p.read_text()); guide=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q16':['Train officers','Organize','Operations and officer use','Losing a base'],'Q17':['Refresh','Slip','Normal Daylight Move','Forest Rest and Evening draw'],'Q18':['Explore','Quest','Repair'],'Q19':['Becoming Hostile','Infamy','Aid and Hostility','Strike target'],'Q20':['Eligibility, timing and VP threshold','Partner selection and prior dominance','Coalition and victory result','Hostility and Allied status']}\\nchecks={'Q16':['matching a clearing with an Alliance base','Supporters cannot pay','does not consume','unsympathetic clearing','no sympathy-adjacency','discard all supporters matching its clearing','half the officers rounded up','five remain'],'Q17':['tea already face up','two exhausted items','without exhausting boots','hostile warriors','one extra boot','cannot enter a forest','damaged items to Satchel','does not refresh undamaged exhausted items','Always draw one card'],'Q18':['exhaust a torch','one hidden item face up','one VP','last item is taken','two listed items','matching completed quests including this one','draw two cards','replacement quest','Exhaust a hammer','keeping its current face'],'Q19':['immediately moves its relationship marker to Hostile','one extra VP for each Hostile piece','first made the faction Hostile','two VP total','not scored on another player','Aid cannot move a marker out of Hostile','crafted item','no warriors there','not battle and gives no Infamy'],'Q20':['four or more players','own Daylight','10 or more VP','must not already be in a coalition','lowest VP','already activated dominance cannot be chosen','score marker on the partner','partner wins','becomes Indifferent','does not itself grant Allied']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,21)]\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']], (a['id'],'coverage parts')\\n assert a['support']=='supported'\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]: assert phrase.lower() in joined.lower(), (a['id'],phrase)\\n for passage in a['source_passages']: assert passage['quotation'] and passage['quotation'] in guide, (a['id'],passage['section'])\\nprint('Q16\u2013Q20 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b65d-34bd-7360-aa2e-b9c1c016169c",
+        "create_time": 1794061259.220115
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:21:12.463Z",
+    "ordinal": 253,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b662-858f-74b2-ab1c-3dfcc72b1db1",
+      "call_id": "call_369f7a70001a4c479ed7ca97e60d0dbc",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q16\u2013Q20 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b65d-34bd-7360-aa2e-b9c1c016169c",
+        "create_time": 1794061272.4631894
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

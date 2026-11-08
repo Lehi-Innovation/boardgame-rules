@@ -15,6 +15,11 @@ for n,size in enumerate(sizes,1):
  blockids=ids[start:start+size];d=base/f'block-{n:02}';d.mkdir(exist_ok=True);allids+=blockids
  q={**Q,'full_bank_question_count':len(ids),'questions':[x for x in Q['questions'] if x['id'] in blockids]};k={**K,'full_bank_question_count':len(ids),'answers':[x for x in K['answers'] if x['id'] in blockids]};raw={'full_bank_question_count':len(ids),'expected_ids':blockids,'readers':{f'reader-{r}':{'reader_metadata':R[r].get('reader'),'answers':[x for x in R[r]['answers'] if x['id'] in blockids]} for r in 'ab'},'full_raw_output_hashes':{r:H(D/f'reader-{r}.json') for r in 'ab'}}
  facts={**F,'full_bank_question_count':len(ids),'questions':[x for x in F['questions'] if x['id'] in blockids]}
+ # Forward-only annotation: original canonical map rows and every fact string remain exact.
+ if D.name not in ['expanded-iteration-01','expanded-iteration-02','expanded-iteration-03','expanded-iteration-04','expanded-iteration-05','expanded-iteration-06']:
+  annotation_path=B/'evaluator-map-context-annotations-v1.json';annotation=json.loads(annotation_path.read_text());assert annotation['base_map_sha256']==H(D/'asked-fact-map.json') and annotation['base_questions_sha256']==H(D/'questions.json') and annotation['predetermined_key_sha256']==H(bank/'answer-key.json')
+  selected=[x for x in annotation['annotations'] if x['id'] in blockids]
+  facts['evaluator_context_annotation']={'schema':annotation['schema'],'complete_annotation_sha256':H(annotation_path),'base_map_sha256':annotation['base_map_sha256'],'all_original_map_fact_strings_preserved':True,'annotations':selected}
  for filename,value in [('questions.json',q),('answer-key.json',k),('asked-facts.json',facts),('raw-answers.json',raw)]:
   p=d/filename
   if p.exists():assert json.loads(p.read_text())==value

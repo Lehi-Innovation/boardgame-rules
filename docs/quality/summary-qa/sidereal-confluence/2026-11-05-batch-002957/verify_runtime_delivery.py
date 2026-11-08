@@ -39,12 +39,17 @@ def verify(iteration,reader,task):
  assert answer_writes,'No answer-file write located for input-before-write proof'
  first_answer_write=min(answer_writes)
  receipts=[]
- supplied_receipts=result['delivery_receipts']
+ supplied_receipts=result['delivery_receipts'];original_receipt_metadata=supplied_receipts;receipt_source_field='delivery_receipts'
  if isinstance(supplied_receipts,dict) and 'summary_slices' in supplied_receipts:
   supplied_receipts=[{'file':'summary-snapshot.md','ranges':supplied_receipts['summary_slices']},{'file':'questions.json','ranges':supplied_receipts['questions_slices']}]
- if isinstance(supplied_receipts,dict) and isinstance(result.get('inputs_read'),list) and all(isinstance(z,dict) and 'slices' in z for z in result['inputs_read']):
-  supplied_receipts=result['inputs_read']
+ range_fields={'summary_slices','ranges','slices','contiguous_ranges','delivered_ranges_0_based_half_open','read_spans','read_as_complete_contiguous_slices','read_as_contiguous_slices','start'}
+ has_input_range_records=isinstance(supplied_receipts,list) and bool(supplied_receipts) and all(isinstance(z,dict) and range_fields.intersection(z) for z in supplied_receipts)
+ input_candidates=result.get('inputs_read');candidate_field='inputs_read'
+ if isinstance(input_candidates,dict):input_candidates=input_candidates.get('rules_input_receipts');candidate_field='inputs_read.rules_input_receipts'
+ if not has_input_range_records and isinstance(input_candidates,list) and input_candidates and all(isinstance(z,dict) and range_fields.intersection(z) for z in input_candidates):
+  supplied_receipts=input_candidates;receipt_source_field=candidate_field
  metadata_diagnostics=[]
+ if receipt_source_field!='delivery_receipts':metadata_diagnostics.append({'selected_raw_metadata_field':receipt_source_field,'unselected_delivery_receipts_metadata':original_receipt_metadata,'note':'Use the original raw input-slice declarations when delivery_receipts contains no input-range records. Every source range still must match actual complete model-visible output before the first answer write; raw answers remain unchanged.'})
  if isinstance(supplied_receipts,list) and supplied_receipts and all(isinstance(z,dict) and 'start' in z and 'end' in z for z in supplied_receipts):
   grouped={}
   for z in supplied_receipts:grouped.setdefault(z.get('file',z.get('path')),[]).append(z)
@@ -55,8 +60,10 @@ def verify(iteration,reader,task):
    normalized.append({'file':filename,'ranges':ranges})
    metadata_diagnostics.append({'file':filename,'raw_receipts':items,'actual_source_characters':length,'note':'Raw receipt end/total fields may be metadata errors; parent derives candidate intervals from recorded starts and actual source length, then independently requires exact full-slice presence in model-visible runtime outputs. No missing delivery is assumed or excused.'})
   supplied_receipts=normalized
+ assert isinstance(supplied_receipts,list) and len(supplied_receipts)==2,'Need both rules-data receipts; empty/partial lists cannot establish delivery'
+ assert {Path(z.get('file',z.get('path'))).name for z in supplied_receipts}=={'summary-snapshot.md','questions.json'},'Need exactly the two frozen rules-data files'
  for inp in supplied_receipts:
-  source=d/Path(inp.get('file',inp.get('path'))).name;text=source.read_text();ranges=inp.get('contiguous_ranges',inp.get('ranges',inp.get('slices',inp.get('delivered_ranges_0_based_half_open'))))
+  source=d/Path(inp.get('file',inp.get('path'))).name;text=source.read_text();ranges=inp.get('contiguous_ranges',inp.get('ranges',inp.get('slices',inp.get('delivered_ranges_0_based_half_open',inp.get('read_spans',inp.get('read_as_complete_contiguous_slices',inp.get('read_as_contiguous_slices')))))))
   if ranges and isinstance(ranges[0],dict): ranges=[[v['start'],v['end']] for v in ranges]
   assert ranges and ranges[0][0]==0 and ranges[-1][1]==len(text)
   checked=[]

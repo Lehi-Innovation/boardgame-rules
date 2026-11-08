@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:40:39.735Z",
+    "ordinal": 573,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef385a705087d0b3a1e6be47b8b911",
+      "status": "completed",
+      "call_id": "call_a728918307eb4274b738ecafef0fba4e",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q71':['Item token source and destination','VP reward'],'Q72':['Eyrie and Alliance crafting pieces','Crafting-piece suit','Three-color question-mark icon'],'Q73':['Mobilize','Order of Daylight actions'],'Q74':['Ordinary Evening scoring and draw','After Turmoil'],'Q75':['Cost to initiate Battle','Exhausted undamaged sword','Damaged sword'],'Q76':['Phases','Next player'],'Q77':['Item chosen and destination','Item face','Already damaged items and excess hits'],'Q78':['Number of Evening operations','One Recruit operation'],'Q79':['Number of Daylight actions','Order and repeated action types'],'Q80':['Strike item and quantity','Exhausted or damaged crossbow']}\\nchecks={'Q71':['map item supply','Crafted Items box','printed VP','Eyrie exception'],'Q72':['one roost','one sympathy','suit from the clearing','card\\\\'s own suit','accepts any suit'],'Q73':['one card from hand','no base on the map','at most five','any base','any order and number','finish all crafting'],'Q74':['rightmost empty roost-track space','one card plus uncovered draw bonuses','discard down to five','full normal Evening'],'Q75':['Exhaust one sword','No.','already face down','all undamaged swords count','face-up, undamaged item','cannot pay for an action'],'Q76':['Birdsong, then Daylight, then Evening','clockwise','next player clockwise'],'Q77':['one undamaged item','Damaged box','does not change','already-damaged item cannot','ignore excess hits'],'Q78':['up to as many military operations as it has officers','any order and repetition','does not consume officers','one warrior','one clearing with an Alliance base'],'Q79':['any order and number','ready undamaged items permit','no fixed action allowance','need not follow a fixed order','repeat the same action type'],'Q80':['one crossbow','face-up item to exhaust','damaged crossbow cannot pay','undamaged item']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,81)]\\nfor a in d['answers'][-10:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]:assert phrase.lower() in joined.lower(),(a['id'],phrase)\\n for s in a['source_passages']:assert s['quotation'] and s['quotation'] in g,(a['id'],s['section'])\\nprint('Q71\u2013Q80 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b671-7438-74c1-bfb3-7c72ab20f1d5",
+        "create_time": 1794062426.4411943
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:40:40.151Z",
+    "ordinal": 576,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b674-56d7-78a0-8362-59096fbd3aa7",
+      "call_id": "call_a728918307eb4274b738ecafef0fba4e",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q71\u2013Q80 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b671-7438-74c1-bfb3-7c72ab20f1d5",
+        "create_time": 1794062440.151198
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

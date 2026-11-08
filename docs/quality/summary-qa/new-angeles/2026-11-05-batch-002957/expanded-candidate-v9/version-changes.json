@@ -1,0 +1,313 @@
+{
+  "from": "candidate-v8",
+  "to": "candidate-v9",
+  "question_count": 93,
+  "all_question_entries_unchanged": true,
+  "all_expected_answers_unchanged": true,
+  "changed_scope_ids": [
+    "Q74",
+    "Q11",
+    "Q42",
+    "Q63",
+    "Q76"
+  ],
+  "source_outcomes_changed": false,
+  "source_only_report": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/full-bank-scope-validator/revision-06/binary-scope-review.json",
+  "source_only_report_sha256": "d632de624d84604d5cbb99c312f78d82b121af5f6f9c615fc51e91a6e443377b",
+  "prior93_and68binary_category_checks": {
+    "all_question_records_screened": 93,
+    "binary_and_related_candidate_records_fully_checked": 68,
+    "nonbinary_records_screened_out": 25,
+    "checked_ordinals": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      11,
+      13,
+      14,
+      16,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      30,
+      32,
+      33,
+      34,
+      35,
+      37,
+      38,
+      39,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      49,
+      51,
+      53,
+      54,
+      55,
+      58,
+      59,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      69,
+      71,
+      73,
+      74,
+      76,
+      77,
+      78,
+      79,
+      81,
+      83,
+      84,
+      85,
+      86,
+      87,
+      89,
+      90,
+      91,
+      92,
+      93
+    ],
+    "screened_out_ordinals": [
+      1,
+      2,
+      10,
+      12,
+      15,
+      17,
+      18,
+      29,
+      31,
+      36,
+      40,
+      47,
+      48,
+      50,
+      52,
+      56,
+      57,
+      60,
+      68,
+      70,
+      72,
+      75,
+      80,
+      82,
+      88
+    ],
+    "unreviewed_questions_for_classification": 0,
+    "primary_binary_applicability_defects": 1,
+    "adjacent_actual_clause_scope_refinements_in_checked_records": 4,
+    "new_scope_corrections_total": 5,
+    "new_source_rules_or_changed_fixed_outcomes": 0
+  },
+  "old_required_facts": {
+    "Q74": [
+      "Resolve Human First from the highest-numbered district first; apply two movement instructions per unit, subject to the Root returning it to the reserve.",
+      "Ordinary duplicate/prisec blocking cascades apply; entering the Root returns the unit to the reserve and adds two threat."
+    ],
+    "Q11": [
+      "An action involves chosen districts, component placements/removals and moves into/out of districts, including blocked attempted destinations or component shortage.",
+      "One or more involved ill districts adds two threat total, not per district.",
+      "Chosen unrest districts qualify.",
+      "Production and events do not trigger illness's action effect.",
+      "Illness entering Root returns to reserve and separately adds two threat."
+    ],
+    "Q42": [
+      "Choose and swap two assets in play; if either is yours lose two capital before swap.",
+      "Alex himself may be selected; swapped assets are not claimed."
+    ],
+    "Q63": [
+      "Supporter gains four capital; nonsupporter two.",
+      "Then discard one of chosen player's assets if possible; no asset does not block grant."
+    ],
+    "Q76": [
+      "Count existing Human First, orgcrime, or outaged districts respectively, at one threat each.",
+      "Do not retroactively include later lower-half placements in earlier count."
+    ]
+  },
+  "new_required_facts": {
+    "Q74": [
+      "Resolve highest-numbered district first; apply two movement instructions per Human First, subject to normal Root removal rather than guaranteeing two successful moves.",
+      "Normal duplicate/prisec blocking and Root handling still apply."
+    ],
+    "Q11": [
+      "An action involves chosen districts, component placements/removals and moves into/out of districts, including blocked attempted destinations or component shortage.",
+      "One or more involved ill districts triggers the ordinary illness action effect once for the action, not once per ill district.",
+      "Chosen unrest districts qualify.",
+      "Production and events do not trigger illness's action effect.",
+      "Illness entering Root returns to reserve and separately adds two threat."
+    ],
+    "Q42": [
+      "Choose two in-play assets to swap; if either is yours, pay the capital cost before the swap.",
+      "Alex himself may be selected; swapped assets are not claimed."
+    ],
+    "Q63": [
+      "Supporter gains four capital; nonsupporter two.",
+      "Having no asset to discard does not block the grant; no asset is discarded in the given assetless case."
+    ],
+    "Q76": [
+      "Count existing Human First units, orgcrime units, or outaged districts respectively, before lower-half placements.",
+      "Do not retroactively include later lower-half placements in earlier count."
+    ]
+  },
+  "findings": [
+    {
+      "issue_id": "SC17",
+      "ordinal": 74,
+      "kind": "primary_binary_applicability_overreach",
+      "status": "REQUIRES_VERSIONED_SCOPE_CORRECTION",
+      "literal_scope": "What is the movement order and how many moves per unit, and do duplicate/prisec blocking and the Root still apply?",
+      "finding": "The first question asks highest-first order and two movement instructions. The final coordinate asks whether normal duplicate/prisec blocking and Root handling apply. It does not independently ask for full blocker routing, a reserve destination, or a numerical Root threat amount. The map incorrectly promotes the reserve destination and two-threat amount into required facts.",
+      "key_pointers": [
+        "answer-key.json#/answers/73/required_facts/0",
+        "answer-key.json#/answers/73/required_facts/1"
+      ],
+      "map_pointers": [
+        "asked-clause-map.json#/73/asked_facts/0",
+        "asked-clause-map.json#/73/asked_facts/1"
+      ],
+      "must_preserve": [
+        "Highest-numbered district first.",
+        "Two movement instructions per unit.",
+        "Normal duplicate/prisec blocking and Root rules still apply.",
+        "Do not assert two guaranteed successful on-board moves after a unit has already left play. Count qualification may be expressed by incorporating normal Root removal; no special wording is mandatory."
+      ],
+      "not_independently_required": [
+        "A full step-by-step duplicate/prisec blocking or arrow/cascade procedure.",
+        "The reserve as the post-Root destination.",
+        "Two threat per Root entry.",
+        "Final positions, number of Root entries, or total threat without supplied locations."
+      ],
+      "minimal_complete_example": "Highest-numbered first; two movement instructions per unit, subject to normal removal at the Root. Yes, normal duplicate/prisec blocking and the Root still apply.",
+      "context_from_fixed_key": "The supplied fixed rule returns a Root-entering unit to the reserve and adds two threat. These are true context; removal is relevant to preserving the conditional move count, but naming the reserve and amount are not extra completeness requirements.",
+      "proposed_asked_facts": [
+        "Resolve highest-numbered district first; apply two movement instructions per Human First, subject to normal Root removal rather than guaranteeing two successful moves.",
+        "Normal duplicate/prisec blocking and Root handling still apply."
+      ],
+      "proposed_context": [
+        "Normal Root entry returns the unit to reserve and adds two threat; full blocker-routing details and these destination/amount details are correct background, not separately asked consequences."
+      ],
+      "prior_miss": "The earlier count-qualification correction properly prevented guaranteed successful moves but retained unasked Root destination and amount as required. Earlier signoffs missed that remaining overreach."
+    },
+    {
+      "issue_id": "SC18",
+      "ordinal": 11,
+      "kind": "adjacent_when_and_multiplicity_versus_amount_overreach",
+      "status": "REQUIRES_VERSIONED_SCOPE_CORRECTION",
+      "finding": "The action portion asks when illness triggers and whether multiple ill districts multiply its increase. It does not independently ask the ordinary action-effect amount. The map makes two threat total a numeric completeness requirement. In contrast, the final what-does-an-illness-token-entering-Root-do clause independently requests the full Root consequence, including reserve return and two threat; those must remain required.",
+      "key_pointers": [
+        "answer-key.json#/answers/10/required_facts/2"
+      ],
+      "map_pointers": [
+        "asked-clause-map.json#/10/asked_facts/1"
+      ],
+      "must_preserve": [
+        "All chosen/component-movement/placement/removal and failed-attempt involvement criteria.",
+        "One ordinary illness-effect increment for the action, not multiplied by ill-district count.",
+        "No illness action-effect trigger from production or events.",
+        "Illness entering Root returns to reserve and adds two threat, because that outcome is separately asked."
+      ],
+      "proposed_asked_fact": "One or more involved ill districts triggers the ordinary illness action effect once for the action, not once per ill district.",
+      "proposed_context": "The ordinary action-effect increment is two threat. This amount is correct context for the timing/multiplicity clauses; the separate Root two-threat outcome stays explicitly required.",
+      "prior_miss": "Earlier reviews did not separate the ordinary-action amount from the independently asked Root outcome."
+    },
+    {
+      "issue_id": "SC19",
+      "ordinal": 42,
+      "kind": "adjacent_cost_timing_versus_amount_overreach",
+      "status": "REQUIRES_VERSIONED_SCOPE_CORRECTION",
+      "finding": "The question asks when the capital cost is paid if a selected asset is owned, not its amount. Binary self-selection and claim status do not introduce a numerical cost requirement. Two-capital payment is extra context, while the two-asset target and before-swap timing remain asked.",
+      "key_pointers": [
+        "answer-key.json#/answers/41/required_facts/1"
+      ],
+      "map_pointers": [
+        "asked-clause-map.json#/41/asked_facts/0"
+      ],
+      "must_preserve": [
+        "Choose and swap two in-play assets.",
+        "If a selected asset is yours, pay the capital cost before swapping.",
+        "Alex himself is selectable.",
+        "Swapped assets are not claimed."
+      ],
+      "proposed_asked_fact": "Choose two in-play assets to swap; if either is yours, pay the capital cost before the swap.",
+      "proposed_context": "The cost is two capital. That true amount is not separately asked by when the cost is paid.",
+      "prior_miss": "Earlier reviews treated the amount as part of the timing requirement."
+    },
+    {
+      "issue_id": "SC20",
+      "ordinal": 63,
+      "kind": "binary_grant_applicability_versus_generic_followon_procedure",
+      "status": "REQUIRES_VERSIONED_SCOPE_CORRECTION",
+      "finding": "The given player has no assets. The actual asks are supporter grant, whether no asset blocks it, and nonsupporter grant. A recitation of the generic later discard-one-asset procedure is not an independent requirement for resolving this given no-assets case.",
+      "key_pointers": [
+        "answer-key.json#/answers/62/required_facts/1"
+      ],
+      "map_pointers": [
+        "asked-clause-map.json#/62/asked_facts/1"
+      ],
+      "must_preserve": [
+        "Assetless supporter gains four capital.",
+        "Lack of an asset to discard does not prevent the grant; no successful discard occurs in the given case.",
+        "Nonsupporter would gain two."
+      ],
+      "proposed_asked_fact": "Having no asset does not block the grant: supporter gains four, whereas nonsupporter gains two.",
+      "proposed_context": "The generic card instruction then discards one asset if possible. Its precise discard count/order is true background here, not a new requirement to describe a different case with an asset.",
+      "prior_miss": "Prior prose already recognized this given/no-discard distinction, but earlier map signoffs did not require versioning the compound asked fact."
+    },
+    {
+      "issue_id": "SC21",
+      "ordinal": 76,
+      "kind": "adjacent_count_basis_versus_threat_rate_overreach",
+      "status": "REQUIRES_VERSIONED_SCOPE_CORRECTION",
+      "finding": "The first clause asks what the named events count, and the binary clause asks whether later placements are included. Neither separately asks the numerical threat rate. The map promotes one threat each into a completeness requirement beyond identifying the counted existing units/districts and timing.",
+      "key_pointers": [
+        "answer-key.json#/answers/75/required_facts/0",
+        "answer-key.json#/answers/75/required_facts/1",
+        "answer-key.json#/answers/75/required_facts/2"
+      ],
+      "map_pointers": [
+        "asked-clause-map.json#/75/asked_facts/0"
+      ],
+      "must_preserve": [
+        "Human First units for Humanity Labor; orgcrime units for Gang Wars/Tri-Maf; outaged districts for Crumbling/Rolling.",
+        "Count existing components/districts before lower-half placements.",
+        "Do not retroactively include new lower-half placements."
+      ],
+      "proposed_asked_fact": "Count existing Human First, orgcrime, or outaged districts respectively, before lower placements; new lower placements are not included in that earlier count.",
+      "proposed_context": "The supplied upper effects add one threat per counted unit/district. That true rate and separate later Root spillover threat are not independently asked quantities.",
+      "prior_miss": "Earlier reviews separated later Root spillovers but retained the unasked numerical upper-threat rate."
+    }
+  ],
+  "after_expanded01_grading": true,
+  "source_scope_validator_never_saw_answers_or_grades": true,
+  "original_v7_inputs_primary_and_one_neutral_preserved": true,
+  "new_full_pair_required": true,
+  "no_frozen_history_rewritten": true,
+  "reference_only_zero_novelty": [
+    "Q68",
+    "Q73",
+    "Q76"
+  ],
+  "no_new_novelty_credit": true
+}

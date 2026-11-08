@@ -1,0 +1,222 @@
+You are an independent blind rules-summary reader.
+
+Your ONLY game-rule data files are:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-03/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-03/questions.json
+
+Use only those files and question-given facts. Do not read rules sources, keys, manifests, other answers, grades, audits, prior chats or web pages. Do not browse, use prior game knowledge, delegate or communicate with other readers. The process/code is supplied entirely in this initial prompt. You may read your own partial output for continuation. Open no external instruction/helper files; the two frozen data files are your sole rule data. Keep any extracted generic code in memory. Write only /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-03/reader-a.json.
+
+Read these complete initial instructions, then both entire data files before saving any answers. Deliver one actual source-text block per tool response, at most 5800 Unicode characters, including the final remainder. Use the embedded chunk_record function for data-file blocks and display its text as plain text with brief range/hash metadata. Record the actual delivered ranges and UTF8 hashes; never subdivide a larger actual display afterward to claim smaller deliveries. Verify contiguous coverage from zero through each file's EOF and repair truncation. Record full paths, bytes, characters and SHA256. The embedded generic code has SHA256 b91c6d25b542ca6f44b1432eb320cf290ff06ab23df9e1c5c27c65dbae3f5be4; extract it from the fenced block, append its final LF and verify before use. It contains no game facts or question map.
+
+Use a fixed schedule: each turn completes exactly the next ten question records in original bank order, or all remaining records when fewer than ten remain. Save the cumulative checked JSON, then end that turn with a brief next-record position. Do not continue into another batch until the parent sends the generic continuation message. This schedule is fixed before any answer is produced; it supplies no rule feedback. Across turns remain the same blind reader and preserve earlier original entries. For each question, first separate every actually asked part into distinct clauses; do not use the whole multipart question as its single clause. Select controlling passages for EACH clause by meaning. Use heading_paths and exact-title extract_heading_unit when locating a named section; do not select the first incidental occurrence of its name in unrelated prose. Ambiguous headings require their full path. This lookup locates text only; it does not determine relevance. Shared words alone do not establish relevance. Search the whole summary for each named item, requested concept and governing common procedure. Keep the owner of a role, phase, quantity or condition attached to the entity it actually describes.
+
+Use extract_unit for complete relevant Markdown units, including deep headings and final qualifications. A table needs its header and controlling introduction/legend. Combine relevant units where a rule spans sections; do not substitute a parent introduction for its whole procedure or dump an unrelated chapter. validate_record checks literal completeness, not whether a unit answers the clause: you must make that semantic check yourself.
+
+For ordinary lookups, link each clause to complete operative evidence; no duplicate paraphrase is required. A directly operative rule can identify a requested result through question-given identities without repeating proper names. Supply genuinely needed case conclusions and actual requested calculations. For each concrete requested outcome, state the result and calculation or decision; a quotation alone cannot replace an unperformed application. Keep unspecified quantities/ownership unspecified. Prepare one checked result per clause and reuse it consistently. Do not invent extra examples. Before saving each batch, verify that its evidence and results actually answer every clause; continue lookup for missing parts. If the summary truly lacks a requested rule, mark that part unsupported without guessing. Support labels are not substitutes for answers. Every substantive field must remain consistent; a correct quote cannot cancel a false ruling. Check each result against all its linked qualifications: permission versus prohibition, protected costs, whose quantity and where a ship/card moves. If a result would contradict the quote, resolve it from the complete summary before saving. Do not assert a rule merely from familiar game knowledge.
+
+Save valid JSON with reader, instructions_read, inputs_read, method_code_sha256, excerpt_integrity_check and answers. instructions_read records initial_prompt_process_only and no_external_instruction_file; inputs_read contains exactly the two game-data records. Each record has path, bytes, characters, sha256, complete and chunks; each chunk has start,end,sha256 for the actual delivered [start,end) text. In a partial output, answers contains exactly the completed prefix in bank order, with no placeholders for later questions. Include continuation with completed_count, next_record_index_zero_based and bank_complete. At final completion every expected question ID appears exactly once in order.
+
+Each answer has id, clauses (distinct asked parts), answer (clause-to-evidence links plus necessary results/calculations), support and evidence (numbered exact complete units with heading/text and source spans where available). Evidence may be inline or in one exact top-level evidence_units dictionary, with unique number IDs and explicit same-answer evidence references. Never depend on an unreferenced unit or another answer. Preserve all fields and exact units in this raw file. You may reread your own partial output to continue, retaining earlier checked entries. Complete the full bank before reporting completion. Do not grade or repair the summary.
+
+Generic process code:
+```python
+"""Generic Markdown source extraction; no rule facts or question maps."""
+import re
+import hashlib
+
+
+def chunk_record(text, start, limit=5800):
+    """One bounded actual text block; the final remainder is also clamped."""
+    if not isinstance(limit, int) or not 0 < limit <= 6000:
+        raise ValueError("Invalid chunk limit")
+    if not isinstance(start, int) or not 0 <= start < len(text):
+        raise ValueError("Invalid chunk start")
+    end = min(start + limit, len(text))
+    piece = text[start:end]
+    return {"start": start, "end": end, "characters": len(piece),
+            "sha256": hashlib.sha256(piece.encode("utf-8")).hexdigest(),
+            "text": piece}
+
+
+def _span(text, start, end):
+    while start < end and text[start].isspace():
+        start += 1
+    while end > start and text[end - 1].isspace():
+        end -= 1
+    if not 0 <= start < end <= len(text):
+        raise ValueError("Empty or invalid source span")
+    return {"start": start, "end": end, "text": text[start:end]}
+
+
+def _lines(text):
+    result, start = [], 0
+    for line in text.splitlines(keepends=True):
+        end = start + len(line)
+        result.append((start, end, line.rstrip("\r\n")))
+        start = end
+    return result
+
+
+def _cells(line):
+    line = line.strip()
+    if not line.startswith("|") or not line.endswith("|"):
+        raise ValueError("Table row lacks an outer pipe")
+    result, current, escaped = [], [], False
+    for char in line[1:-1]:
+        if char == "|" and not escaped:
+            result.append("".join(current).strip())
+            current = []
+        else:
+            current.append(char)
+        escaped = char == "\\" and not escaped
+    result.append("".join(current).strip())
+    return result
+
+
+def _separator(line):
+    try:
+        return all(re.fullmatch(r":?-{3,}:?", c) for c in _cells(line))
+    except ValueError:
+        return False
+
+
+def _table(text, offset):
+    lines = _lines(text)
+    i = next(i for i, (a, b, _) in enumerate(lines) if a <= offset < b)
+    row = _span(text, lines[i][0], lines[i][1])
+    if _separator(row["text"]):
+        raise ValueError("Separator is not a data row")
+    first = i
+    while first > 0 and lines[first - 1][2].strip().startswith("|"):
+        first -= 1
+    separators = [j for j in range(first + 1, i) if _separator(lines[j][2])]
+    if not separators:
+        raise ValueError("No controlling header before requested row")
+    sep = separators[-1]
+    headings = _cells(lines[sep - 1][2])
+    values = _cells(row["text"])
+    if len(headings) != len(values) or len(_cells(lines[sep][2])) != len(values):
+        raise ValueError("Header, separator and row column counts differ")
+    header = _span(text, lines[sep - 1][0], lines[sep][1])
+    result = {"kind": "table", "header": header, "row": row,
+            "fields": [{"column_index": n, "column": h, "value": v}
+                       for n, (h, v) in enumerate(zip(headings, values))]}
+    prior = [h for h in heading_index(text) if h["start"] < lines[first][0]]
+    if prior and prior[-1]["level"] >= 2:
+        result["introduction"] = _span(text, prior[-1]["start"], lines[first][0])
+    return result
+
+
+def heading_index(text):
+    return [{"start": m.start(), "end": m.end(), "level": len(m.group(1)),
+             "title": m.group(2)}
+            for m in re.finditer(r"(?m)^(#{1,6})[ \t]+([^\n]+)", text)]
+
+
+def heading_paths(text):
+    """Index actual headings with ancestors; prose mentions are never headings."""
+    result, ancestors = [], []
+    for h in heading_index(text):
+        while ancestors and ancestors[-1]["level"] >= h["level"]:
+            ancestors.pop()
+        result.append({**h, "path": [a["title"] for a in ancestors] + [h["title"]]})
+        ancestors.append(h)
+    return result
+
+
+def extract_heading_unit(text, title, path=None):
+    """Exact-title lookup, rejecting missing/ambiguous names and bare headings.
+
+    This locates a complete unit; the caller must still judge its relevance and
+    retrieve every other controlling rule needed for each asked clause.
+    """
+    def norm(s):
+        return " ".join(s.split()).casefold()
+    matches = [h for h in heading_paths(text) if norm(h["title"]) == norm(title)]
+    if path is not None:
+        wanted = [norm(part) for part in path]
+        matches = [h for h in matches if [norm(part) for part in h["path"]] == wanted]
+    if len(matches) != 1:
+        raise ValueError("Exact heading lookup requires one unambiguous title/path")
+    unit = extract_unit(text, matches[0]["start"])
+    content = unit.get("unit", unit.get("row", {})).get("text", "")
+    operative_lines = [line for line in content.splitlines()
+                       if line.strip() and not re.match(r"^#{1,6}[ \t]+", line)]
+    if not operative_lines:
+        raise ValueError("Heading has no operative body")
+    return unit
+
+
+def _paragraph(text, offset):
+    start = 0
+    for match in re.finditer(r"\n[ \t\r]*\n", text):
+        if start <= offset < match.start():
+            return _span(text, start, match.start())
+        start = match.end()
+    if start <= offset < len(text):
+        return _span(text, start, len(text))
+    raise ValueError("Offset is in blank separation")
+
+
+def extract_unit(text, offset):
+    """Public API: complete row/fields or governing section, never a bare heading."""
+    if not 0 <= offset < len(text):
+        raise ValueError("Offset outside original source")
+    line = next(line for a, b, line in _lines(text) if a <= offset < b)
+    if line.strip().startswith("|"):
+        return _table(text, offset)
+    heads = heading_index(text)
+    ancestors = []
+    for item in heads:
+        if item["start"] > offset:
+            break
+        while ancestors and ancestors[-1]["level"] >= item["level"]:
+            ancestors.pop()
+        ancestors.append(item)
+    candidates = [h for h in ancestors if 2 <= h["level"] <= 6]
+    if not candidates:
+        raise ValueError("Select operative content below a source section heading")
+    h = candidates[-1]
+    # A nested detail can belong to a numbered procedure. Independent catalog
+    # entries otherwise keep their own headings, including levels four to six.
+    for parent in reversed(candidates[:-1]):
+        first_child = next((other["start"] for other in heads
+                            if other["start"] > parent["start"]), len(text))
+        intro = text[parent["start"]:first_child]
+        if re.search(r"(?m)^\s*\d+[.)][ \t]+", intro):
+            h = parent
+    end = next((other["start"] for other in heads
+                if other["start"] > h["start"] and other["level"] <= h["level"]), len(text))
+    whole = _span(text, h["start"], end)
+    # Complete governing procedures include peer steps and nested details.
+    # Large nonprocedural catalog chapters can use a complete paragraph instead.
+    has_steps = bool(re.search(r"(?m)^\s*(?:\d+[.)]|[-+*])[ \t]+", whole["text"]))
+    if len(whole["text"]) <= 6000 or has_steps:
+        return {"kind": "subsection", "unit": whole, "heading": h}
+    paragraph = _paragraph(text, offset)
+    if paragraph["text"].startswith("#"):
+        raise ValueError("A heading alone is not operative evidence; select a more specific section")
+    return {"kind": "paragraph", "unit": paragraph, "heading": h}
+
+
+def validate_record(text, record):
+    """Validate the complete returned structure; optional unit metadata is separate."""
+    if record["kind"] == "table":
+        expected = extract_unit(text, record["row"]["start"])
+        for key in ["header", "row"]:
+            actual = {name: record[key][name] for name in ["start", "end", "text"]}
+            if actual != expected[key]:
+                raise ValueError("Table record differs from complete literal source")
+        if record.get("introduction") != expected.get("introduction"):
+            raise ValueError("Table introduction differs from governing context")
+        actual_fields = [{name: field[name] for name in ["column_index", "column", "value"]}
+                         for field in record["fields"]]
+        if actual_fields != expected["fields"]:
+            raise ValueError("Literal field values differ from source columns")
+    else:
+        expected = extract_unit(text, record["unit"]["start"])
+        actual = {name: record["unit"][name] for name in ["start", "end", "text"]}
+        if actual != expected["unit"]:
+            raise ValueError("Prose/procedure record is incomplete")
+    return True
+```

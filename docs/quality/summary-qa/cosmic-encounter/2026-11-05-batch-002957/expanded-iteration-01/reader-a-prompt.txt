@@ -1,0 +1,23 @@
+You are an independent rules-summary reader in a blind evaluation.
+
+Read ONLY these two files:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-01/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-01/questions.json
+
+Do not read authoritative rules, extracted source, answer keys, manifests, earlier answers, grades, audits, other files, parent history or web links. Do not browse, use prior game knowledge, or communicate with other readers. The supplied frozen summary is your sole rules authority. Facts explicitly supplied by a question are givens.
+
+Read the ENTIRE summary and ALL questions in contiguous character ranges no larger than 6000 characters per delivered text block. Ensure the outer tool output cap preserves every block completely; using one block per response is safest. Repair truncated ranges. Before answering, verify complete contiguous delivery from zero through each file's final character. Record the actual delivered ranges, their SHA256 values, each full file's SHA256, character count and byte count. Use UTF8 bytes for hashes and character offsets for ranges. Do not substitute line counts for delivered text.
+
+For each question, identify all its actual asked clauses. Search the entire frozen summary for relevant named items and terms before declaring a fact missing. Select complete controlling evidence units: a whole paragraph or list, a complete relevant leaf subsection, or a union of such units; table rows must include their headers and governing introduction or legend. Preserve each selected unit's exact text. Do not cut a paragraph, list or table cell midway. Choose the units yourself from the two permitted files. Do not dump an unrelated enclosing section merely because it contains a relevant child. Check excerpt boundaries mechanically before saving.
+
+Complete operative quotations can directly answer ordinary lookup clauses. Link each lookup clause to its numbered operative evidence instead of writing an independent duplicate paraphrase. For a concrete case, provide the necessary direct ruling or requested calculated value. Keep amounts and ownership left unspecified by the question unspecified, using a formula or conditional result when necessary. Do not invent extra examples or participant allocations. A phrase such as 'apply the cited rules' does not answer a requested concrete decision. Prepare one checked result for each clause and reuse it if repeated. All substantive fields must be consistent; a correct quotation does not cancel a wrong ruling elsewhere.
+
+If the summary omits a requested rule, explicitly identify that clause as unsupported and do not guess. A support label records your confidence in the supplied evidence and does not replace answering every requested part. Keep format diagnostics separate from substantive rules support.
+
+Save valid JSON to /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/expanded-iteration-01/reader-a.json with these fields:
+- reader: derive from the output filename
+- inputs_read: an array, exactly one record per allowed input, each containing path, bytes, characters, sha256, complete, and chunks; each chunk contains start, end and sha256 for the actual delivered [start,end) character range
+- excerpt_integrity_check: your checked method and result
+- answers: every expected question ID exactly once, in the question file's order
+
+Each answer must contain id, clauses (the actual asked clauses), answer (clause-to-evidence references for ordinary lookups and necessary concrete conclusions/calculations), support (supported, partial or unsupported), and evidence (numbered complete operative units, each with its heading and exact quoted text). Preserve all substantive output fields in this one raw file. You may incrementally construct the assigned output and reread your own partial output solely to continue your own work. Keep that continuation bookkeeping separate from the two rules inputs and do not treat it as independent source evidence. Complete every question before reporting completion. You may write only the assigned output. Do not evaluate or improve the summary.

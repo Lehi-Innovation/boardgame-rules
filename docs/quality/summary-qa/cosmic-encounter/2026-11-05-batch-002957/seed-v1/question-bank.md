@@ -1,0 +1,211 @@
+# Seed bank v1 — 20 questions
+
+## Q001
+
+For a three-player standard game, how are aliens selected, which flares enter the cosmic deck, how many cards does each player receive, and how is the first player selected?
+
+- Deal two shuffled flares to each player; secretly choose one corresponding alien, return other sheet.
+- Include all six dealt flares plus four random extra flares: ten total.
+- Eight-card hands.
+- Draw destiny until a player color appears, that player starts; shuffle drawn card back into destiny.
+
+Sources: Rulebook p6 Setup steps4–7
+
+## Q002
+
+What counts as one colony, can several players have colonies on one planet, and do five foreign colonies have to be in different systems?
+
+- One or more same-color ships on a planet are one colony.
+- Different colors can coexist, one colony per color per planet.
+- Five planets outside own system; may all be in same system.
+
+Sources: Rulebook p2 What is a Colony/Game Overview
+
+## Q003
+
+At the start of an encounter, must the offense retrieve a warp ship if available, and where does the original rulebook place it when the offense has colonies or has none?
+
+- Must retrieve one if available.
+- Any existing own home or foreign colony.
+- If no colonies, original rulebook places it directly in hyperspace gate.
+
+Sources: Rulebook p7 Regroup; FAQ p5 mandatory regroup
+
+## Q004
+
+What happens when destiny has only one card left, and what choices does drawing your own color offer if your home system contains a foreign colony or a completely empty planet?
+
+- Do not draw last card; shuffle with destiny discards then draw.
+- May redraw own color or attack one selected foreign colony in own system.
+- May reclaim completely ship-empty home planet with up to four ships from other colonies, a successful winning encounter through Launch only.
+
+Sources: Rulebook p7 Destiny,p12 Driving Out Foreign Colonies; FAQ p3 reclaim counts as win,p4 through Launch
+
+## Q005
+
+Without a special power, may offense attack Blue’s foreign colony in Red’s home system after drawing Blue, and who defends Red’s empty home planet if foreign bystanders are present?
+
+- No: Blue draw targets Blue in Blue home system.
+- Red defends own planet with zero ships.
+- Foreign colonies are bystanders: no defensive contribution, unaffected by outcome.
+
+Sources: Rulebook p8 Can Macron Attack/Defending with Nothing/Bystanders
+
+## Q006
+
+From where and how many ships may the offense launch, may it strip a colony, and can the defense move ships onto or off the targeted planet during Launch?
+
+- One to four offense ships from any own colonies, same or several.
+- May strip but last ship removed immediately loses colony.
+- Defense cannot add or subtract ships on target.
+
+Sources: Rulebook p8 Launch,p13 Stripping a Planet
+
+## Q007
+
+In what order are allies invited and committed, can someone invited by both sides join both, and where do defensive allies put their ships?
+
+- Offense invites then defense; invitees wait until both invitations.
+- Starting left of offense clockwise each accepts/declines and commits before next player.
+- One side only or neither; only invited side normally.
+- Each ally one to four ships from own colonies; defensive ships next to, not on target.
+
+Sources: Rulebook p9 Alliance
+
+## Q008
+
+An attacking side has an attack 10 and six ships; defense has attack 12 and four ships. Who wins, and what happens to offense, offensive allies, defense, defensive allies and bystanders?
+
+- Totals16 each; defense wins ties.
+- Offense and offensive ally ships to warp.
+- Defense colony and bystanders remain.
+- Defensive allies return ships to any own colonies, no new colony on defended planet; receive one reward per committed ship.
+
+Sources: Rulebook p9 Reveal,p11 If Defense Won
+
+## Q009
+
+When offense wins an attack, where do ships on each side go, do existing bystander colonies survive, and does reinforcing an existing colony earn another colony?
+
+- Offense and offensive allies land on target, establish or reinforce colonies.
+- Defense and defensive allies to warp.
+- Bystanders survive.
+- Reinforcement of existing same-color colony is not new colony.
+
+Sources: Rulebook p2 colony definition,p11 If Offense Won
+
+## Q010
+
+A defensive ally contributes three ships to a winning defense. May they combine cards and warp retrieval as rewards, and where do the allied and retrieved ships go?
+
+- Three rewards, each one deck card or one own warp ship, may combine.
+- Allied ships return to any existing own colonies, even different origin.
+- Retrieved ships to any own colonies; no right to land on defended planet without existing colony.
+
+Sources: Rulebook p11 If Defense Won
+
+## Q011
+
+If a main player’s negotiate loses to attack and that player loses three ships to warp while two allied ships also go there, how much compensation is collected, from where, and what if opponent holds fewer cards?
+
+- Three random cards from opponent hand, not five; allied losses excluded.
+- Take entire hand if fewer than three.
+- Allies get no compensation.
+
+Sources: Rulebook p11 Compensation
+
+## Q012
+
+When both reveal negotiate, what happens to allies, what may the main players exchange, where may a new colony be granted, what makes a valid deal, and what is the failure penalty/time limit?
+
+- Allies return to own colonies and get nothing, excluded from deal.
+- One minute; exchange hand cards and/or at most one colony per player on planet giver already occupies, own or foreign.
+- Use any recipient ships not in warp; coexist.
+- At least one card or colony changes hands, may be one-sided; promises unenforceable and tangible card terms must be honored.
+- Failure: each main player loses three chosen ships to warp; no second encounter.
+
+Sources: Rulebook p10 negotiates,p11 resolution; FAQ p6 Deal Questions
+
+## Q013
+
+What does Morph copy and when, does it track later changes to the opponent’s card, and what happens after the encounter?
+
+- Exact opponent encounter card initially revealed.
+- Later changes do not automatically alter Morph; it can be separately modified.
+- Returns to Morph identity after resolution and normally discarded with encounter cards.
+
+Sources: Rulebook pp10–11 Morph; FAQ p4 Morph modifications
+
+## Q014
+
+Who may play reinforcements, when, on which side, and when is the reinforcement response window finished?
+
+- Offense, defense or allies only.
+- Reveal after encounter cards revealed.
+- Either side, including opposing side.
+- Continue responses until all pass then resolve totals.
+
+Sources: Rulebook p13 Reinforcement Cards
+
+## Q015
+
+What are the ordinary per-player and per-card flare limits, when does a played flare return to hand, and when does an alien use its own Wild instead of Super?
+
+- Player at most one flare per encounter; given flare once per encounter even transferred.
+- Immediately after effect resolves returns to hand.
+- Own matching alien must use Super normally; power lost or zapped allows only Wild until restored.
+- Cancellation targeting flare counts toward player limit.
+
+Sources: Rulebook p13 Flare Cards; FAQ p6 Flare Questions
+
+## Q016
+
+When offense lacks encounter cards at start of turn, when defense lacks them at Planning, and when offense loses its last one later, what are the hand replacement and ship-return rules? Is playing other cards before replacement compulsory?
+
+- Offense start: reveal/discard remaining hand, eight new cards.
+- Defense when required: reveal/discard, eight new, repeat until encounter card.
+- Other cards may legally be played beforehand but not compulsory.
+- Offense later when needs encounter card: turn ends, no new hand; gate offense and allies return to own colonies.
+- No automatic draw at encounter/turn end.
+
+Sources: Rulebook p7 Starting Turn,p9 Planning,p13 Drawing New Cards; FAQ p5 non-encounter play optional
+
+## Q017
+
+After a successful first encounter may offense start a second with no encounter card, hoping to obtain one later? What ends an ordinary turn after first or second encounter?
+
+- No, need at least one encounter card in hand to start second.
+- First win or deal allows optional second; first loss or failed deal ends turn.
+- After second ends regardless outcome, pass left.
+
+Sources: Rulebook p7 The Turn,p11 After Resolving; FAQ p5 second encounter
+
+## Q018
+
+Exactly when is an ordinary alien power lost and regained for home colony count, can it be used one last time upon loss, and does a Cosmic Zap stop every printed part of the sheet?
+
+- Fewer than three home colonies: immediately lose, turn sheet down; no last use.
+- Regain at least three home colonies: restore faceup.
+- Zap cancels use and further uses current encounter; clauses not requiring use still function, e.g. Warrior experience and Zombie deal liberation.
+
+Sources: Rulebook p12 Losing Alien Powers/Zapping Powers; FAQ p6 Cosmic Zap
+
+## Q019
+
+When contradictory effects really occur simultaneously, what player order resolves them? Can a player generally interrupt a resolving effect with another non-Zap action, and may a power be preemptively Cosmic Zapped?
+
+- Offense, defense, other players clockwise from left of offense.
+- Complete effect before another except Zap or specific interruption permission.
+- No preemptive Cosmic Zap; must power use.
+
+Sources: Rulebook p12 Timing Conflicts; FAQ p3 interruption,p7 Cosmic Zap
+
+## Q020
+
+When are ordinary five-foreign-colony victories checked, can wins be shared, and what happens when Tick-Tock removes its last token because two main players make a deal that gives both their fifth foreign colony?
+
+- Ordinary win checked at very end of Resolution; opportunity to stop it until then.
+- Simultaneous five foreign colonies share win.
+- Tick-Tock last token on successful deal shares three-way win with both main players.
+
+Sources: Rulebook p12 Shared Wins; FAQ p5 game end,p21 Tick-Tock; Printed Tick-Tock sheet

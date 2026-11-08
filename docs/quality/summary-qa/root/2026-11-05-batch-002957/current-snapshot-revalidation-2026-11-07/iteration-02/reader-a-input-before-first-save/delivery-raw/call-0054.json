@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:10:21.258Z",
+    "ordinal": 54,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_058e2b81b468db9e016aef314753dc87d09049ef8bb9ae3c72",
+      "status": "completed",
+      "call_id": "call_94d624194fb242dcbb91edf95a347276",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nguide=(base/'summary-snapshot.md').read_text()\\ndata=json.loads((base/'reader-a.json').read_text())\\nexpected=['Q01','Q02','Q03','Q04','Q05']\\nassert [a['id'] for a in data['answers']]==expected\\nfor a in data['answers']:\\n    assert a['source_passages'] and a['answer'] and a['evidence']\\n    for p in a['source_passages']:\\n        assert p['quotation'] and p['quotation'] in guide, (a['id'],p['section'])\\n    for app in a['answer']:\\n        assert app['part'] and app['ruling'] and app['evidence']\\nprint('Group 1: valid JSON; Q01-Q05 each once; all quotations are nonempty exact guide substrings; every answer has labeled applications and evidence.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-0d73-7452-8eae-cf2d9c8e1de8",
+        "create_time": 1794060615.4383748
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:10:22.507Z",
+    "ordinal": 57,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b658-9aab-7db0-a4b7-33b2d48fc5d2",
+      "call_id": "call_94d624194fb242dcbb91edf95a347276",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.2 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Group 1: valid JSON; Q01-Q05 each once; all quotations are nonempty exact guide substrings; every answer has labeled applications and evidence.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-0d73-7452-8eae-cf2d9c8e1de8",
+        "create_time": 1794060622.5078592
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

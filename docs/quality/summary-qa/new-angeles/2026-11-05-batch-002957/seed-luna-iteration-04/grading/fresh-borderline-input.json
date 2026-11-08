@@ -1,0 +1,132 @@
+[
+  {
+    "question": {
+      "id": "Q08",
+      "question": "An exploited district prints primary2 credits and secondary1 entertainment, has a development, an orgcrime unit and is in protest. What does it produce and what is its resulting unrest? How would starting in strike or outage change production, and do non-android districts produce in the normal Production Phase?"
+    },
+    "key": {
+      "id": "Q08",
+      "expected_answer": "Produces0credits and1entertainment: development adds1 to primary but orgcrime blocks primary entirely; protest allows production. After producing, protest becomes strike. Starting strike or outage produces nothing but still exploited if android; strike remains strike and outage remains stable/outage absent Human First. Only districts with androids normally exploited, lowest-numbered first.",
+      "required_facts": [
+        "0credits1entertainment orgcrime overrides primary development",
+        "protest produces before increasing to strike",
+        "strike/outage no resources but still exploited with android",
+        "ordinary strike remains strike outage remains stable/outage",
+        "only android districts lowest-first"
+      ],
+      "source_refs": [
+        "RR19,27,38,39,43–44,68"
+      ],
+      "contextual_background": []
+    },
+    "scope": {
+      "id": "Q08",
+      "question": "An exploited district prints primary2 credits and secondary1 entertainment, has a development, an orgcrime unit and is in protest. What does it produce and what is its resulting unrest? How would starting in strike or outage change production, and do non-android districts produce in the normal Production Phase?",
+      "asked_facts": [
+        "Produces zero credits and one entertainment: orgcrime blocks developed primary, protest permits production.",
+        "Produce before protest rises to strike.",
+        "Starting strike or outage produces no resources.",
+        "Only android districts produce in ordinary Production."
+      ],
+      "contextual_background": [
+        "Alternate starting unrest outcomes and ascending district order are not additional asked facts."
+      ],
+      "source_refs": [
+        "RR19,27,38,39,43–44,68"
+      ],
+      "candidate_scope_verdict": "accepted",
+      "key_source_verdict": "correct asked outcomes; preserve listed context distinction",
+      "finding_ids": []
+    },
+    "raw_answer": {
+      "id": "Q08",
+      "clauses": [
+        "Production and resulting unrest",
+        "Strike/outage/non-android"
+      ],
+      "answer": "Produces 0 credits: orgcrime blocks primary even with development. Produces 1 entertainment as secondary; development does not add to secondary. Human First is unspecified: without it protest rises one stage to strike; with it, protest cannot increase two stages, so place outage and unrest becomes stable. Strike/outage means zero resources. Non-android districts are not exploited in normal Production.",
+      "support": "partial",
+      "evidence": [
+        {
+          "kind": "subsection",
+          "unit": {
+            "start": 30232,
+            "end": 33059,
+            "text": "### Production, unrest and outages\n\nThe primary resource is the leftmost, circled icon; a second uncircled icon is secondary. A district with just one resource has a primary and no secondary. Produce the quantities printed below those icons, with these modifiers whenever a district produces, including card-directed production:\n\n| Condition | Production / exploitation effect |\n|---|---|\n| Stable or protest | Can produce normally. |\n| Strike | Produces no resources. Ordinary unrest increases cannot go beyond strike. |\n| Outage | Produces no resources. Treat unrest as stable and unable to increase while the outage remains. |\n| Development | Add 1 to the primary quantity only; never changes secondary. |\n| Orgcrime | Produces no primary, even if developed. Secondary is still available. A one-resource district with orgcrime produces nothing. |\n| Human First | Changes the unrest increase upon exploitation from 1 to 2 stages; does not itself prevent that exploitation's initial production. |\n\nFor ordinary production, calculate the result in this order:\n\n1. If the district is in strike or outage, every resource contribution is zero.\n2. Otherwise, its primary contribution is zero if orgcrime is present. Without orgcrime, use the printed primary quantity plus 1 if developed.\n3. Its secondary contribution, if any, is the printed secondary quantity; development never adds to it. Human First affects the later unrest step, not this calculation.\n\nThese are the ordinary modifiers. Apply an explicitly different card instruction, such as Liquidation ignoring orgcrime, when that card is resolved.\n\nSupply tracks cap at their last numbered space: if more would be produced, leave the resource token on that final space; the excess does not raise the supply further. Resources at 0 cannot be reduced further. Production is resolved before exploitation's unrest increase: a district starting in protest can produce and then go on strike. A district with an android is still exploited if strike, outage or orgcrime prevents production.\n\nUnrest progresses **stable → protest → strike**, and decreases in reverse order. Stable has no unrest token; protest uses its protest side; strike its strike side. A decrease from protest to stable removes the token. Stable cannot decrease; strike cannot normally increase. Unrest and development tokens never move along paths.\n\nHuman First is a specific exception upon exploitation. From stable, its two-stage increase reaches strike. From protest, strike or outage, unrest cannot increase by two, so place an outage. A newly placed outage removes any unrest token and leaves the district stable; this is **not** an NBN contract decrease. If already in outage, the new outage must move. No other ordinary capped unrest increase creates an outage. Removing an outage leaves stable unrest."
+          },
+          "heading": {
+            "start": 30232,
+            "end": 30266,
+            "level": 3,
+            "title": "Production, unrest and outages"
+          }
+        }
+      ]
+    }
+  },
+  {
+    "question": {
+      "id": "Q09",
+      "question": "When an android district with Human First is exploited, what happens from stable, protest, strike, and already-outage starting states? Is an ordinary failed unrest increase without Human First enough to cause an outage?"
+    },
+    "key": {
+      "id": "Q09",
+      "expected_answer": "Produce first under existing modifiers. Human First adds2 unrest stages: stable becomes strike; from protest or strike cannot rise2, place outage and remove unrest to stable. Already outage still exploited and new outage must move. Ordinary unrest at strike cannot increase but causes no outage; only exploited Human First has this overflow rule.",
+      "required_facts": [
+        "production before unrest",
+        "stable goes strike",
+        "protest/strike places outage removes unrest stable",
+        "already outage new outage moves",
+        "ordinary capped increase no outage"
+      ],
+      "source_refs": [
+        "RR27.1–27.3,31.1,39,68.6–68.10"
+      ],
+      "contextual_background": []
+    },
+    "scope": {
+      "id": "Q09",
+      "question": "When an android district with Human First is exploited, what happens from stable, protest, strike, and already-outage starting states? Is an ordinary failed unrest increase without Human First enough to cause an outage?",
+      "asked_facts": [
+        "From stable, Human First exploitation raises unrest two stages to strike.",
+        "From protest or strike, inability to rise two places outage and clears unrest to stable.",
+        "Already-outage district is still exploited; newly generated duplicate outage must move.",
+        "Ordinary capped unrest increase without Human First exploitation does not place outage."
+      ],
+      "contextual_background": [
+        "Production occurs before unrest, but no production quantity is requested by the state-branch question."
+      ],
+      "source_refs": [
+        "RR27.1–27.3,31.1,39,68.6–68.10"
+      ],
+      "candidate_scope_verdict": "accepted",
+      "key_source_verdict": "correct asked outcomes; preserve listed context distinction",
+      "finding_ids": []
+    },
+    "raw_answer": {
+      "id": "Q09",
+      "clauses": [
+        "Human First result from stable, protest, strike and outage",
+        "Whether ordinary failed unrest increase causes outage"
+      ],
+      "answer": "With Human First, from stable unrest rises two stages to strike. From protest, strike or outage it cannot rise two stages, so place an outage. If already in outage, the new outage moves. Ordinary failed unrest increase without Human First does not create outage.",
+      "support": "supported",
+      "evidence": [
+        {
+          "kind": "subsection",
+          "unit": {
+            "start": 30232,
+            "end": 33059,
+            "text": "### Production, unrest and outages\n\nThe primary resource is the leftmost, circled icon; a second uncircled icon is secondary. A district with just one resource has a primary and no secondary. Produce the quantities printed below those icons, with these modifiers whenever a district produces, including card-directed production:\n\n| Condition | Production / exploitation effect |\n|---|---|\n| Stable or protest | Can produce normally. |\n| Strike | Produces no resources. Ordinary unrest increases cannot go beyond strike. |\n| Outage | Produces no resources. Treat unrest as stable and unable to increase while the outage remains. |\n| Development | Add 1 to the primary quantity only; never changes secondary. |\n| Orgcrime | Produces no primary, even if developed. Secondary is still available. A one-resource district with orgcrime produces nothing. |\n| Human First | Changes the unrest increase upon exploitation from 1 to 2 stages; does not itself prevent that exploitation's initial production. |\n\nFor ordinary production, calculate the result in this order:\n\n1. If the district is in strike or outage, every resource contribution is zero.\n2. Otherwise, its primary contribution is zero if orgcrime is present. Without orgcrime, use the printed primary quantity plus 1 if developed.\n3. Its secondary contribution, if any, is the printed secondary quantity; development never adds to it. Human First affects the later unrest step, not this calculation.\n\nThese are the ordinary modifiers. Apply an explicitly different card instruction, such as Liquidation ignoring orgcrime, when that card is resolved.\n\nSupply tracks cap at their last numbered space: if more would be produced, leave the resource token on that final space; the excess does not raise the supply further. Resources at 0 cannot be reduced further. Production is resolved before exploitation's unrest increase: a district starting in protest can produce and then go on strike. A district with an android is still exploited if strike, outage or orgcrime prevents production.\n\nUnrest progresses **stable → protest → strike**, and decreases in reverse order. Stable has no unrest token; protest uses its protest side; strike its strike side. A decrease from protest to stable removes the token. Stable cannot decrease; strike cannot normally increase. Unrest and development tokens never move along paths.\n\nHuman First is a specific exception upon exploitation. From stable, its two-stage increase reaches strike. From protest, strike or outage, unrest cannot increase by two, so place an outage. A newly placed outage removes any unrest token and leaves the district stable; this is **not** an NBN contract decrease. If already in outage, the new outage must move. No other ordinary capped unrest increase creates an outage. Removing an outage leaves stable unrest."
+          },
+          "heading": {
+            "start": 30232,
+            "end": 30266,
+            "level": 3,
+            "title": "Production, unrest and outages"
+          }
+        }
+      ]
+    }
+  }
+]

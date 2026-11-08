@@ -669,7 +669,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Cootie](rules/cootie/) | 2-4 | 15 min | William Schaper | ⚠️ |
 | [CoraQuest](rules/coraquest/) | 1-4 | 45-75 min | Dan Hughes | ✅ |
 | [Cosmic Coasters](rules/cosmic-coasters/) | 2-4 | 15-30 min | Andrew Looney | ✅ |
-| [Cosmic Encounter](rules/cosmic-encounter/) | 3-5 | 60-120 min | Bill Eberle, Jack Kittredge, Bill Norton, Peter Olotka, Kevin Wilson | ✅ |
+| [Cosmic Encounter](rules/cosmic-encounter/) | 3-5 | 60-120 min | Bill Eberle, Jack Kittredge, Bill Norton, Peter Olotka | ✅ |
 | [Cosmic Wimpout](rules/cosmic-wimpout/) | 2-10 | 30 min | Unknown | ⚠️ |
 | [Cottage Garden](rules/cottage-garden/) | 1-4 | 60 min | Uwe Rosenberg | ⚠️ |
 | [Coup](rules/coup/) | 3-6 | 15 min | Rikki Tahta | ⚠️ |
@@ -1318,6 +1318,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Loopin' Louie](rules/loopin-louie/) | 2-4 | 10 min |  | ⚠️ |
 | [Lord of the Fries](rules/lord-of-the-fries/) | 3-8 | 30 min | James Ernest | ✅ |
 | [Lord of the Rings: The Confrontation](rules/lord-of-the-rings-the-confrontation/) | 2 | 30 min | Reiner Knizia | ❗ |
+| [Lords of Vegas](rules/lords-of-vegas/) | 2-4 | Not stated in the source rulebook | James Ernest & Mike Selinker | ✅ |
 | [Lords of Waterdeep](rules/lords-of-waterdeep/) | 2-5 | 60-120 min | Peter Lee, Rodney Thompson | ✅ |
 | [Lost Ruins of Arnak](rules/lost-ruins-of-arnak/) | 1-4 | 30-120 min | Min, Elwen | ❗ |
 | [Lost Treasure](rules/lost-treasure/) | 2-4 | 30-60 min |  | ⚠️ |
@@ -1484,6 +1485,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Nemesis](rules/nemesis/) | 1-5 | 90-180 min | Adam Kwapiński | ✅ |
 | [Nemesis: Lockdown](rules/nemesis-lockdown/) | 1-5 | 90-180 min | Adam Kwapiński | ✅ |
 | [Neuroshima Hex!](rules/neuroshima-hex/) | 2-4 | 30 min | Michal Oracz | ✅ |
+| [New Angeles](rules/new-angeles/) | 4–6 | Not specified in the supplied rulebooks | James Kniffen | ⚠️ |
 | [Newton](rules/newton/) | 1-4 | 90 min | Simone Luciani, Nestore Mangone | ✅ |
 | [Next Station: London](rules/next-station-london/) | 1-4 | 25 min | Matthew Dunstan | ✅ |
 | [Nexus Ops](rules/nexus-ops/) | 2-4 | 90 min | Charlie Catino, Steven Kimball | ❗ |
@@ -1776,7 +1778,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [Sheriff of Nottingham](rules/sheriff-of-nottingham/) | 3-5 | 60 min | Sergio Halaban, Andre Zatz | ⚠️ |
 | [Sherlock Holmes: Consulting Detective](rules/sherlock-holmes-consulting-detective/) | 1-8 | 60-120 min | Raymond Edwards, Suzanne Goldberg, Gary Grady | ⚠️ |
 | [Sid Meier's Civilization: The Card Game](rules/civilization-the-card-game/) | 2-4 | 30-60 min | Uncredited | ⚠️ |
-| [Sidereal Confluence: Trading and Negotiation in the Elysian Quadrant](rules/sidereal-confluence/) | 4–9 | 120 minutes | Tauceti Deichmann | ⚠️ |
+| [Sidereal Confluence: Trading and Negotiation in the Elysian Quadrant](rules/sidereal-confluence/) | 4–9 | 120 minutes | Tauceti Deichmann | ✅ |
 | [Sky Team](rules/sky-team/) | 2 | 20 min | Luc Remond | ⚠️ |
 | [Sleeping Gods](rules/sleeping-gods/) | 1-4 | 60-1200 min (campaign) | Ryan Laukat | ⚠️ |
 | [So Clover!](rules/so-clover/) | 3-6 | 30 min | François Romain | ✅ |

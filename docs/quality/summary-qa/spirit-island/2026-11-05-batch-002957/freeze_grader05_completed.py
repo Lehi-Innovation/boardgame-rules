@@ -1,0 +1,6 @@
+"""Preserve each entire completed block output before parent semantic review."""
+from pathlib import Path
+import json,hashlib,shutil,sys,collections
+B=Path(__file__).resolve().parent;D=B/'expanded-iteration-05';H=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
+for arg in sys.argv[1:]:
+ n=int(arg);assert 1<=n<=9;p=D/'grading'/f'block-{n:02}';raw=p/'grades.json';d=json.loads(raw.read_text());expected=json.loads((p/'input-manifest.json').read_text())['expected_ids'];assert d['expected_ids']==expected;grades=d['grades'];assert isinstance(grades,list);counts=collections.Counter((x['reader'],x['id']) for x in grades);assert set(counts)=={(r,i) for r in ['reader-a','reader-b'] for i in expected} and all(v==1 for v in counts.values());copy=p/'grades-original-completed.json';receipt=p/'original-freeze.json';assert not copy.exists() and not receipt.exists();shutil.copyfile(raw,copy);assert raw.read_bytes()==copy.read_bytes();receipt.write_text(json.dumps({'path':str(raw),'sha256':H(raw),'immutable_copy':str(copy),'immutable_copy_sha256':H(copy),'characters':len(raw.read_text()),'complete_grade_entries':len(grades),'question_count':len(expected),'parent_semantic_review_not_yet_started':True,'entire_original_fields_preserved':True},indent=2)+'\n');print(json.dumps({'block':n,'raw_sha256':H(raw),'grade_entries':len(grades)}))

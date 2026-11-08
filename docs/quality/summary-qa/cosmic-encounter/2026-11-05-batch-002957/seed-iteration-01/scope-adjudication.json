@@ -1,0 +1,867 @@
+{
+  "game": "Cosmic Encounter",
+  "baseline": "seed20 / seed-iteration-01",
+  "benchmark_version": "seed-v1",
+  "role": "Fresh independent question-scope and factual adjudicator",
+  "independence": {
+    "prior_grader_results_read": false,
+    "other_iterations_read": false,
+    "live_summary_read": false,
+    "reader_entries_read": "Only Q002,Q007,Q015,Q016,Q017 from reader-a and reader-b",
+    "communications_with_readers_or_graders": false
+  },
+  "method": {
+    "scope": "Read literal questions first; the fixed key is authoritative fact support, not permission to add unasked standalone clauses. Every requested actor, timing, outcome, cost, and exception remains required.",
+    "evidence": "Assess answer and all complete same-entry evidence, ignoring support labels. same_entry preserves the complete entry and every full quote; evidence indices are zero-based indices in that entry's evidence array. Inferential facts are explicitly distinguished.",
+    "grades": {
+      "correct": "All asked facts supplied accurately with demonstrated summary support.",
+      "partial": "Some requested information or separable components supplied, but asked facts remain missing; no material false rule within the asked scope.",
+      "incorrect": "No requested fact supplied (background alone is insufficient), or an affirmative material false rule changes an asked actor, condition, timing, exception, or outcome."
+    },
+    "unrelated_gaps": "Do not cap a question because of unasked key background or unrelated source gaps. A false statement is a failing contradiction only if materially applied to the asked question. Unsupported true assertions cannot demonstrate summary coverage.",
+    "formatting": "Nonmaterial wording or formatting alone does not fail an answer."
+  },
+  "question_scope": [
+    {
+      "question_id": "Q002",
+      "question": "What counts as one colony, can several players have colonies on one planet, and do five foreign colonies have to be in different systems?",
+      "required_asked_facts": [
+        {
+          "id": "colony_unit",
+          "fact": "One or more same-color ships on one planet count as one colony; extra ships do not create extra colonies."
+        },
+        {
+          "id": "coexistence",
+          "fact": "Several players may each have one colony on the same planet."
+        },
+        {
+          "id": "foreign_systems",
+          "fact": "Five foreign colonies are five planets outside the player's home system; different systems are not required."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "Five foreign colonies win, and the definition of foreign as outside the home system, alone do not answer the colony counting unit, coexistence, or different-system question."
+      ]
+    },
+    {
+      "question_id": "Q007",
+      "question": "In what order are allies invited and committed, can someone invited by both sides join both, and where do defensive allies put their ships?",
+      "required_asked_facts": [
+        {
+          "id": "invitations",
+          "fact": "Offense invites first, then defense; invitees wait for both invitations before responding."
+        },
+        {
+          "id": "commitment",
+          "fact": "Starting left of offense and proceeding clockwise, each invitee decides and commits ships before the next player decides."
+        },
+        {
+          "id": "both_sides",
+          "fact": "A double invitee may join one side or neither, never both."
+        },
+        {
+          "id": "defensive_placement",
+          "fact": "Defensive allies put ships next to, not on, the targeted planet."
+        }
+      ],
+      "unasked_key_background": [
+        "Each ally contributes one to four ships taken from its own colonies.",
+        "The general rule restricting alliances to invited sides is background to the hypothetical double invitee."
+      ],
+      "other_unasked_background": []
+    },
+    {
+      "question_id": "Q015",
+      "question": "What are the ordinary per-player and per-card flare limits, when does a played flare return to hand, and when does an alien use its own Wild instead of Super?",
+      "required_asked_facts": [
+        {
+          "id": "player_limit",
+          "fact": "Ordinarily each player may use at most one flare per encounter."
+        },
+        {
+          "id": "card_limit",
+          "fact": "Each specific flare may be used at most once per encounter, including if it changes owners."
+        },
+        {
+          "id": "return_timing",
+          "fact": "The played flare returns to hand immediately after its effect resolves."
+        },
+        {
+          "id": "own_wild",
+          "fact": "An alien uses its own Wild rather than Super when its power is lost or zapped, until access to that power is restored."
+        }
+      ],
+      "unasked_key_background": [
+        "A cancellation targeting the flare counts against the player limit. This is a useful special application of the limit, not a separately requested cancellation scenario."
+      ],
+      "other_unasked_background": [
+        "Normally a matching alien uses Super, while another alien uses Wild. That baseline is relevant context, but it does not supply the requested own-Wild exception."
+      ]
+    },
+    {
+      "question_id": "Q016",
+      "question": "When offense lacks encounter cards at start of turn, when defense lacks them at Planning, and when offense loses its last one later, what are the hand replacement and ship-return rules? Is playing other cards before replacement compulsory?",
+      "required_asked_facts": [
+        {
+          "id": "offense_start",
+          "fact": "At the start of turn, offense without an encounter card reveals/discards its remaining hand and draws eight new cards."
+        },
+        {
+          "id": "defense_planning",
+          "fact": "Defense without an encounter card when required reveals/discards its hand, draws eight, and repeats if still lacking an encounter card."
+        },
+        {
+          "id": "offense_later_timing",
+          "fact": "Later in the turn, offense without an encounter card ends the turn when required to play one; loss of the last card alone does not immediately abort an earlier phase."
+        },
+        {
+          "id": "offense_later_replacement",
+          "fact": "There is no replacement hand for this later offense case."
+        },
+        {
+          "id": "ship_returns",
+          "fact": "Offense ships in the gate and allied committed ships return to their owners' existing colonies."
+        },
+        {
+          "id": "other_cards_optional",
+          "fact": "Appropriate other cards may be played before replacement, but doing so is optional; discarding the remaining hand suffices."
+        }
+      ],
+      "unasked_key_background": [
+        "The independent reminder that there is no automatic draw at encounter/turn end is not an extra standalone clause beyond the asked replacement situations."
+      ],
+      "other_unasked_background": []
+    },
+    {
+      "question_id": "Q017",
+      "question": "After a successful first encounter may offense start a second with no encounter card, hoping to obtain one later? What ends an ordinary turn after first or second encounter?",
+      "required_asked_facts": [
+        {
+          "id": "second_needs_card",
+          "fact": "No: offense must already have an encounter card to start its second encounter."
+        },
+        {
+          "id": "first_encounter",
+          "fact": "A first win or successful deal permits an optional second encounter; first loss or failed deal ends the turn, and offense can also stop after success."
+        },
+        {
+          "id": "second_encounter",
+          "fact": "The turn ends after the second encounter regardless of its result."
+        },
+        {
+          "id": "pass_left",
+          "fact": "Play passes to the left when the turn ends."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "An extra statement about exhausting cards before Planning concerns an interrupted encounter, not the requested eligibility to start encounter two or ordinary termination after completed encounters. It does not claim permission to start encounter two without a card. It is factually wrong but is not a material application or caveat to these answers, which expressly leave that eligibility unresolved."
+      ]
+    }
+  ],
+  "adjudications": [
+    {
+      "reader": "reader-a",
+      "question_id": "Q002",
+      "question": "What counts as one colony, can several players have colonies on one planet, and do five foreign colonies have to be in different systems?",
+      "grade": "partial",
+      "reason": "Partial: same-entry evidence supports coexistence at least by a direct outcome inference, but the counting unit and same-system eligibility are missing. Foreign-colony definition and victory threshold alone are unasked background, not substitute answers.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "colony_unit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The response expressly declines the counting definition; no quoted passage defines one-or-more same-color ships as one colony."
+        },
+        {
+          "fact_id": "coexistence",
+          "coverage": "inferable",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The full reference table has offense ships and offensive allied ships both landing on the planet. This supplies a limited coexistence inference even though the answer says sharing is unstated."
+        },
+        {
+          "fact_id": "foreign_systems",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Outside the home system is stated, but whether all five may be in one foreign system is left unanswered."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "Five foreign colonies win, and the definition of foreign as outside the home system, alone do not answer the colony counting unit, coexistence, or different-system question."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q002",
+        "clauses": [
+          "colony meaning/count",
+          "multiple players on one planet",
+          "whether five foreign colonies require different systems"
+        ],
+        "answer": "A foreign colony is a colony on a planet outside the player's home system; five such colonies win. The summary does not define counting multiple colonies on one planet, whether players can share one planet, or whether the five must span different systems.",
+        "support": "partial",
+        "evidence": [
+          {
+            "quote": "## Overview\n\nCosmic Encounter is a social negotiation and hand-management game where each player is a unique alien species attempting to colonize foreign planets. Players use diplomacy, alliances, and force to establish colonies outside their home system. The first player to have 5 foreign colonies wins. If multiple players reach 5 foreign colonies simultaneously, they share the victory."
+          },
+          {
+            "quote": "## Player Reference\n\n| Phase | Action |\n|-------|--------|\n| Start Turn | Draw new hand if offense has no encounter cards |\n| Regroup | Retrieve 1 ship from Warp to any home or foreign colony |\n| Destiny | Draw destiny card to determine opponent |\n| Launch | Aim gate, place 1-4 ships |\n| Alliance | Invite allies; allies commit 1-4 ships |\n| Planning | Select 1 encounter card face down |\n| Reveal | Flip cards simultaneously |\n| Resolution | Determine winner; place/remove ships |\n\n| Encounter Result | Offense Wins | Defense Wins |\n|-----------------|-------------|-------------|\n| Ships | Land on planet | Go to Warp |\n| Allies (offense) | Land on planet | Go to Warp |\n| Allies (defense) | Go to Warp | Defender rewards |\n\n- Attack total = card value + ships on your side\n- 5 foreign colonies = victory\n- Second encounter allowed only if offense wins or deals"
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "4665c1c8eefceae09b3731d39e94242a471570763614532422d99aec7df3873e"
+    },
+    {
+      "reader": "reader-a",
+      "question_id": "Q007",
+      "question": "In what order are allies invited and committed, can someone invited by both sides join both, and where do defensive allies put their ships?",
+      "grade": "partial",
+      "reason": "Partial: the entry supplies limited parts of invitation/commitment structure and the ability to decline, but the requested precise ordering, ban on joining both sides, and defensive location remain unanswered. Ship counts and invitation-only background do not repair those omissions.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "invitations",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The quoted sequence supplies the broad invitation-then-commitment structure, but neither the answer nor quote establishes offense first, defense second, or waiting for both."
+        },
+        {
+          "fact_id": "commitment",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "No left-of-offense clockwise order or decision-and-commit-before-next rule is supplied."
+        },
+        {
+          "fact_id": "both_sides",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The voluntary-alliance quote permits declining invitations, supplying the neither option. It does not establish the ban on joining both."
+        },
+        {
+          "fact_id": "defensive_placement",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Placement is expressly left unstated; the full quotes do not provide next-to-not-on."
+        }
+      ],
+      "unasked_key_background": [
+        "Each ally contributes one to four ships taken from its own colonies.",
+        "The general rule restricting alliances to invited sides is background to the hypothetical double invitee."
+      ],
+      "other_unasked_background": [],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q007",
+        "clauses": [
+          "invitation/commitment order",
+          "double-invited player joining both sides",
+          "defensive ally ship placement"
+        ],
+        "answer": "Offense and defense each invite other players, and allies commit 1–4 ships; only invited players may ally and alliances are voluntary. The precise invitation order, joining both sides, and defensive allies' ship placement are unstated.",
+        "support": "partial",
+        "evidence": [
+          {
+            "quote": "## Turn Structure\n\nThe active player (offense) takes a turn consisting of these phases:\n\n1. **Start Turn:** If the offense has no encounter cards, discard hand and draw 8 new cards; repeat until they have at least one encounter card.\n2. **Regroup:** Retrieve 1 ship from the Warp to any of your home or foreign colonies.\n3. **Destiny:** Draw the top card of the destiny deck. The color shown determines the defense player (whose system you must encounter). Wild and Special cards have unique effects.\n4. **Launch:** Place the hyperspace gate aimed at any planet in the defense player's system. Place 1-4 ships from any of your colonies onto the gate.\n5. **Alliance:** Offense and defense each invite other players to ally. Allies commit 1-4 ships.\n6. **Planning:** Offense and defense each select 1 card from hand and place it face down.\n7. **Reveal:** Both encounter cards are revealed simultaneously and resolved.\n8. **Resolution:** Determine the outcome based on the revealed cards.\n\nIf the offense wins or makes a successful deal, they may have a second encounter (max 2 encounters per turn)."
+          },
+          {
+            "quote": "## Special Rules & Edge Cases\n\n- **Alien Powers:** Each alien has a unique game-breaking power. Powers are used at specific times as stated on the alien sheet. Some powers are mandatory; others are optional.\n- **The Warp:** Ships sent to the Warp are out of play until retrieved through Regroup, deals, or card effects.\n- **Home System Defense:** If you lose all ships from a home planet, you lose that colony. If you ever have fewer than three home colonies, you lose your alien power; you regain it immediately if you reach three or more home colonies again.\n- **Cosmic Zap:** An artifact that cancels one use of any alien's power (including your own). That power cannot be used again for the rest of the current encounter.\n- **Card Zap:** Negates a flare or artifact card as a player attempts to use it.\n- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies. **Empty Hand (Defense):** If the defense has no encounter cards when they must play one, they reveal their remaining hand, discard it, and draw 8 new cards, repeating until they have an encounter card.\n- **Destiny Deck Exhausted:** Shuffle the discard pile to form a new destiny deck.\n- **Alliances are voluntary:** Players may decline invitations. Only invited players may ally."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "e1c5859616b3be39df0c1f31e37795efa17242026f7d7bda49f0f38062d7772e"
+    },
+    {
+      "reader": "reader-a",
+      "question_id": "Q015",
+      "question": "What are the ordinary per-player and per-card flare limits, when does a played flare return to hand, and when does an alien use its own Wild instead of Super?",
+      "grade": "incorrect",
+      "reason": "Incorrect: none of the requested limits, return timing, or matching-alien Wild exception is answered or supplied by the complete same-entry evidence. Correct ordinary Super/Wild background does not earn coverage for an unprovided exception.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "player_limit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Ordinary per-player use limit is expressly unstated."
+        },
+        {
+          "fact_id": "card_limit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Ordinary per-card use limit is expressly unstated."
+        },
+        {
+          "fact_id": "return_timing",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "No return-to-hand timing appears anywhere in this entry."
+        },
+        {
+          "fact_id": "own_wild",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The matching-alien Super baseline is supplied, but power loss and Cosmic Zap as own-Wild conditions are not."
+        }
+      ],
+      "unasked_key_background": [
+        "A cancellation targeting the flare counts against the player limit. This is a useful special application of the limit, not a separately requested cancellation scenario."
+      ],
+      "other_unasked_background": [
+        "Normally a matching alien uses Super, while another alien uses Wild. That baseline is relevant context, but it does not supply the requested own-Wild exception."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q015",
+        "clauses": [
+          "per-player/per-card flare limits",
+          "return to hand timing",
+          "alien own Wild versus Super"
+        ],
+        "answer": "Flares have a Super effect when used by their matching alien and a Wild effect otherwise. Limits and return-to-hand timing are not stated. The summary does not say when a matching alien uses Wild rather than Super.",
+        "support": "partial",
+        "evidence": [
+          {
+            "quote": "## Actions\n\n**Encounter Cards:**\n- **Attack Cards (value 00-40):** Each side totals their attack card value + number of their ships (including allies). Higher total wins. Ties go to the defense.\n- **Negotiate Cards:** If both sides play Negotiate, they have one minute to make a deal (exchange cards, colonies, etc.). If no deal, both lose 3 ships to the Warp. If one side plays Negotiate against an Attack, the Negotiate loses but collects compensation (draws cards from the winner's hand equal to ships lost).\n- **Morph Card:** Copies the opponent's encounter card.\n\n**Winning an Encounter (Offense):** Offense and allied ships land on the targeted planet, establishing colonies. Defense and allied ships go to the Warp.\n\n**Winning an Encounter (Defense):** Offense and allied ships go to the Warp. Defense ships remain. Defensive allies receive defender rewards (draw 1 card from deck or retrieve 1 ship from Warp per ship committed).\n\n**Artifacts:** Played at specified times to create special effects. Discarded after use.\n\n**Reinforcement Cards:** Played after encounter cards are revealed to add to either side's total.\n\n**Flare Cards (Advanced Game):** Unique cards tied to each alien. Each has a \"super\" effect (if you are that alien) and a \"wild\" effect (if you are not)."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "90ecfd8bde214024fec5616579c3820c7f4bb83845345686845a396d35930c15"
+    },
+    {
+      "reader": "reader-a",
+      "question_id": "Q016",
+      "question": "When offense lacks encounter cards at start of turn, when defense lacks them at Planning, and when offense loses its last one later, what are the hand replacement and ship-return rules? Is playing other cards before replacement compulsory?",
+      "grade": "incorrect",
+      "reason": "Incorrect: replacement and return details are partly present, but the answer affirmatively gives a materially wrong timing rule for the later offense case expressly asked. It also omits the offense reveal and optional-play answer.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "offense_start",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "Discard and eight-card replacement are correct; offense revealing the remaining hand is missing. The defense reveal does not supply an offense reveal."
+        },
+        {
+          "fact_id": "defense_planning",
+          "coverage": "supported",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The answer and complete quote provide reveal, discard, eight cards, and repetition until an encounter card is drawn."
+        },
+        {
+          "fact_id": "offense_later_timing",
+          "coverage": "contradicted",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The answer says running out before Planning ends the turn then. The correct trigger is needing to play an encounter card while lacking one."
+        },
+        {
+          "fact_id": "offense_later_replacement",
+          "coverage": "implicit",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The answer contrasts replacement cases with the later turn-end case and gives no later replacement; this supplies the intended no-replacement outcome only implicitly."
+        },
+        {
+          "fact_id": "ship_returns",
+          "coverage": "supported",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "All committed ships return to colonies; in this scenario that includes offense and allies. No need to restate every owner when the common rule is clear."
+        },
+        {
+          "fact_id": "other_cards_optional",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer expressly leaves the obligation unanswered; silence about a compulsory play is not the affirmative optional-play rule."
+        }
+      ],
+      "unasked_key_background": [
+        "The independent reminder that there is no automatic draw at encounter/turn end is not an extra standalone clause beyond the asked replacement situations."
+      ],
+      "other_unasked_background": [],
+      "material_contradictions": [
+        {
+          "assertion": "If offense runs out before Planning, its turn ends and all committed ships return to colonies.",
+          "reason": "Immediate turn termination upon exhaustion before Planning is a wrong trigger. Source requires later exhaustion AND needing to play an encounter card. This changes the timing explicitly asked in Q016.",
+          "source": "Rulebook p13 Drawing New Cards; p9 Planning",
+          "material": true
+        }
+      ],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q016",
+        "clauses": [
+          "offense empty at start",
+          "defense empty at Planning",
+          "offense loses last card later",
+          "other-card obligation"
+        ],
+        "answer": "At Start Turn, an offense with no encounter cards discards its hand and draws 8 repeatedly until it has one. A defense with no encounter card when required reveals and discards its remaining hand, then draws 8 repeatedly until it has one. If offense runs out before Planning, its turn ends and all committed ships return to colonies. Whether playing other cards before replacement is compulsory is unstated.",
+        "support": "partial",
+        "evidence": [
+          {
+            "quote": "## Special Rules & Edge Cases\n\n- **Alien Powers:** Each alien has a unique game-breaking power. Powers are used at specific times as stated on the alien sheet. Some powers are mandatory; others are optional.\n- **The Warp:** Ships sent to the Warp are out of play until retrieved through Regroup, deals, or card effects.\n- **Home System Defense:** If you lose all ships from a home planet, you lose that colony. If you ever have fewer than three home colonies, you lose your alien power; you regain it immediately if you reach three or more home colonies again.\n- **Cosmic Zap:** An artifact that cancels one use of any alien's power (including your own). That power cannot be used again for the rest of the current encounter.\n- **Card Zap:** Negates a flare or artifact card as a player attempts to use it.\n- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies. **Empty Hand (Defense):** If the defense has no encounter cards when they must play one, they reveal their remaining hand, discard it, and draw 8 new cards, repeating until they have an encounter card.\n- **Destiny Deck Exhausted:** Shuffle the discard pile to form a new destiny deck.\n- **Alliances are voluntary:** Players may decline invitations. Only invited players may ally."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "e68c7ac179884e4713b2bd7ad2ab79554eabe257b5ec8bb0a035f928627922f3"
+    },
+    {
+      "reader": "reader-a",
+      "question_id": "Q017",
+      "question": "After a successful first encounter may offense start a second with no encounter card, hoping to obtain one later? What ends an ordinary turn after first or second encounter?",
+      "grade": "partial",
+      "reason": "Partial: optional success-based continuation and the two-encounter limit are present, but the key initial-card requirement and passing left are missing. Its false statement about interruption before Planning is extra context, not an answer or limiting caveat to the asked start-eligibility and post-encounter termination rules, so it does not force an incorrect grade.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "second_needs_card",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer explicitly leaves the initial encounter-card requirement unresolved; the false pre-Planning sentence does not answer permission to start the second encounter."
+        },
+        {
+          "fact_id": "first_encounter",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "A successful win or deal permits an optional second. Termination on first loss/failed deal is not clearly supplied; the answer itself leaves ordinary conditions unresolved."
+        },
+        {
+          "fact_id": "second_encounter",
+          "coverage": "inferable",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "Maximum two encounters per turn necessarily supplies the turn-end boundary after encounter two, despite the answer's general uncertainty. No extra explicit wording is required."
+        },
+        {
+          "fact_id": "pass_left",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "No quoted passage or answer states passing left."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "An extra statement about exhausting cards before Planning concerns an interrupted encounter, not the requested eligibility to start encounter two or ordinary termination after completed encounters. It does not claim permission to start encounter two without a card. It is factually wrong but is not a material application or caveat to these answers, which expressly leave that eligibility unresolved."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [
+        {
+          "assertion": "Running out before Planning ends the turn and returns committed ships.",
+          "factually_correct": false,
+          "reason": "Wrong immediate timing as explained under Q016. Here it is explicitly extra context about an interrupted encounter; the answer still withholds the asked permission to start encounter two. It neither claims that permission nor conditions the correct success/two-encounter rules on that timing. No automatic grade cap from this unrelated timing defect."
+        }
+      ],
+      "same_entry": {
+        "id": "Q017",
+        "clauses": [
+          "second encounter without encounter card",
+          "ordinary turn end after first or second encounter"
+        ],
+        "answer": "A successful win or deal allows a second encounter, with at most two per turn. The summary does not say whether offense may begin that encounter without an encounter card, or fully state the ordinary end-of-turn conditions after either encounter. If offense runs out before Planning, the turn ends and committed ships return.",
+        "support": "partial",
+        "evidence": [
+          {
+            "quote": "## Turn Structure\n\nThe active player (offense) takes a turn consisting of these phases:\n\n1. **Start Turn:** If the offense has no encounter cards, discard hand and draw 8 new cards; repeat until they have at least one encounter card.\n2. **Regroup:** Retrieve 1 ship from the Warp to any of your home or foreign colonies.\n3. **Destiny:** Draw the top card of the destiny deck. The color shown determines the defense player (whose system you must encounter). Wild and Special cards have unique effects.\n4. **Launch:** Place the hyperspace gate aimed at any planet in the defense player's system. Place 1-4 ships from any of your colonies onto the gate.\n5. **Alliance:** Offense and defense each invite other players to ally. Allies commit 1-4 ships.\n6. **Planning:** Offense and defense each select 1 card from hand and place it face down.\n7. **Reveal:** Both encounter cards are revealed simultaneously and resolved.\n8. **Resolution:** Determine the outcome based on the revealed cards.\n\nIf the offense wins or makes a successful deal, they may have a second encounter (max 2 encounters per turn)."
+          },
+          {
+            "quote": "## Special Rules & Edge Cases\n\n- **Alien Powers:** Each alien has a unique game-breaking power. Powers are used at specific times as stated on the alien sheet. Some powers are mandatory; others are optional.\n- **The Warp:** Ships sent to the Warp are out of play until retrieved through Regroup, deals, or card effects.\n- **Home System Defense:** If you lose all ships from a home planet, you lose that colony. If you ever have fewer than three home colonies, you lose your alien power; you regain it immediately if you reach three or more home colonies again.\n- **Cosmic Zap:** An artifact that cancels one use of any alien's power (including your own). That power cannot be used again for the rest of the current encounter.\n- **Card Zap:** Negates a flare or artifact card as a player attempts to use it.\n- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies. **Empty Hand (Defense):** If the defense has no encounter cards when they must play one, they reveal their remaining hand, discard it, and draw 8 new cards, repeating until they have an encounter card.\n- **Destiny Deck Exhausted:** Shuffle the discard pile to form a new destiny deck.\n- **Alliances are voluntary:** Players may decline invitations. Only invited players may ally."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "eba738e2554bd30e8c3aada84beb4a8e7b1ca17fd82c14f806f0b52f87fdadeb"
+    },
+    {
+      "reader": "reader-b",
+      "question_id": "Q002",
+      "question": "What counts as one colony, can several players have colonies on one planet, and do five foreign colonies have to be in different systems?",
+      "grade": "partial",
+      "reason": "Partial: same-entry evidence supports coexistence at least by a direct outcome inference, but the counting unit and same-system eligibility are missing. Foreign-colony definition and victory threshold alone are unasked background, not substitute answers.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "colony_unit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer expressly leaves the exact counting unit unsupported."
+        },
+        {
+          "fact_id": "coexistence",
+          "coverage": "inferable",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "Offense and allied ships land on the same targeted planet, establishing colonies. This complete quote supplies coexistence despite the answer's stated uncertainty."
+        },
+        {
+          "fact_id": "foreign_systems",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The quote defines foreign colonies but does not answer the different-systems restriction."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "Five foreign colonies win, and the definition of foreign as outside the home system, alone do not answer the colony counting unit, coexistence, or different-system question."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [
+        {
+          "assertion": "The summary identifies colonies as colonies on planets outside a player's home system.",
+          "factually_correct": "imprecise wording",
+          "reason": "The complete quote explicitly defines foreign colonies, and the answer immediately declines the exact unit. I do not read this compressed description as a new exclusive rule denying home colonies. No material contradiction is inferred from wording alone."
+        }
+      ],
+      "same_entry": {
+        "id": "Q002",
+        "clauses": [
+          "what counts as one colony",
+          "whether several players can have colonies on one planet",
+          "whether five foreign colonies must be in different systems"
+        ],
+        "answer": "The summary identifies colonies as colonies on planets outside a player's home system and says an offense win establishes a colony on the targeted planet. It does not define the exact counting unit, whether multiple players can simultaneously have colonies on one planet, or whether the five must occupy different systems; those details are unsupported here.",
+        "support": "partial",
+        "evidence": [
+          {
+            "heading": "Overview",
+            "quote": "Cosmic Encounter is a social negotiation and hand-management game where each player is a unique alien species attempting to colonize foreign planets. Players use diplomacy, alliances, and force to establish colonies outside their home system. The first player to have 5 foreign colonies wins. If multiple players reach 5 foreign colonies simultaneously, they share the victory."
+          },
+          {
+            "heading": "Winning an Encounter (Offense)",
+            "quote": "**Winning an Encounter (Offense):** Offense and allied ships land on the targeted planet, establishing colonies."
+          },
+          {
+            "heading": "Scoring / Victory Conditions",
+            "quote": "- The first player to have 5 foreign colonies (colonies on planets outside their home system) wins.\n- If multiple players reach 5 foreign colonies at the same time, they share the victory.\n- Colony markers on the Warp track help track each player's foreign colony count."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "1e41ddcb41ed476a8f36555ff2a807ac5551d25aa41eec95ebad091991d1988f"
+    },
+    {
+      "reader": "reader-b",
+      "question_id": "Q007",
+      "question": "In what order are allies invited and committed, can someone invited by both sides join both, and where do defensive allies put their ships?",
+      "grade": "partial",
+      "reason": "Partial: the entry supplies limited parts of invitation/commitment structure and the ability to decline, but the requested precise ordering, ban on joining both sides, and defensive location remain unanswered. Ship counts and invitation-only background do not repair those omissions.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "invitations",
+          "coverage": "unsupported_true_assertion",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "Offense first then defense is factually right, but the quote only lists both as inviting and does not establish order or waiting; it is not demonstrated summary coverage."
+        },
+        {
+          "fact_id": "commitment",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "No clockwise order or per-player commitment-before-next decision appears."
+        },
+        {
+          "fact_id": "both_sides",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The complete voluntary-alliance quote establishes the possibility of declining; whether joining both is prohibited is explicitly unanswered."
+        },
+        {
+          "fact_id": "defensive_placement",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer explicitly says placement is unspecified, and the complete quotes do not supply it."
+        }
+      ],
+      "unasked_key_background": [
+        "Each ally contributes one to four ships taken from its own colonies.",
+        "The general rule restricting alliances to invited sides is background to the hypothetical double invitee."
+      ],
+      "other_unasked_background": [],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [
+        {
+          "assertion": "Offense invites first and defense invites next",
+          "factually_true": true,
+          "reason": "This order is not established by the frozen summary or the full same-entry quotes. A true guess is not demonstrated summary coverage."
+        }
+      ],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q007",
+        "clauses": [
+          "invitation and commitment order",
+          "whether an invitee invited by both may join both",
+          "where defensive allies place ships"
+        ],
+        "answer": "Offense invites first and defense invites next; each side's allies commit 1–4 ships. The summary says alliances are voluntary and only invited players may ally. Whether one player may join both sides and where defensive allies place committed ships are not specified.",
+        "support": "partial",
+        "evidence": [
+          {
+            "heading": "Turn Structure — Alliance",
+            "quote": "5. **Alliance:** Offense and defense each invite other players to ally. Allies commit 1-4 ships."
+          },
+          {
+            "heading": "Special Rules & Edge Cases — Alliances are voluntary",
+            "quote": "- **Alliances are voluntary:** Players may decline invitations. Only invited players may ally."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "6e08e5275faede2ce0b7ddcd6510095d557ce679e5824bcc3b61c1d6899a91fe"
+    },
+    {
+      "reader": "reader-b",
+      "question_id": "Q015",
+      "question": "What are the ordinary per-player and per-card flare limits, when does a played flare return to hand, and when does an alien use its own Wild instead of Super?",
+      "grade": "incorrect",
+      "reason": "Incorrect: none of the requested limits, return timing, or matching-alien Wild exception is answered or supplied by the complete same-entry evidence. Correct ordinary Super/Wild background does not earn coverage for an unprovided exception.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "player_limit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Ordinary per-player use limit is expressly missing."
+        },
+        {
+          "fact_id": "card_limit",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Ordinary per-card use limit is expressly missing."
+        },
+        {
+          "fact_id": "return_timing",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Return-to-hand timing is expressly missing."
+        },
+        {
+          "fact_id": "own_wild",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer gives normal ownership effects, but explicitly cannot supply when the matching alien uses Wild."
+        }
+      ],
+      "unasked_key_background": [
+        "A cancellation targeting the flare counts against the player limit. This is a useful special application of the limit, not a separately requested cancellation scenario."
+      ],
+      "other_unasked_background": [
+        "Normally a matching alien uses Super, while another alien uses Wild. That baseline is relevant context, but it does not supply the requested own-Wild exception."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q015",
+        "clauses": [
+          "ordinary per-player flare limit",
+          "ordinary per-card flare limit",
+          "when a played flare returns to hand",
+          "when an alien uses its own Wild instead of Super"
+        ],
+        "answer": "The summary says each flare has a Super effect if its player is that alien and a Wild effect if not. It gives no ordinary use limits or return-to-hand timing, and does not say when an alien would use its own Wild instead of Super.",
+        "support": "partial",
+        "evidence": [
+          {
+            "heading": "Flare Cards",
+            "quote": "**Flare Cards (Advanced Game):** Unique cards tied to each alien. Each has a \"super\" effect (if you are that alien) and a \"wild\" effect (if you are not)."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "51a9f621ebe09ef312f0c920bd801fed50e8d7e8dd57ac56c3da1e70cd7528e3"
+    },
+    {
+      "reader": "reader-b",
+      "question_id": "Q016",
+      "question": "When offense lacks encounter cards at start of turn, when defense lacks them at Planning, and when offense loses its last one later, what are the hand replacement and ship-return rules? Is playing other cards before replacement compulsory?",
+      "grade": "incorrect",
+      "reason": "Incorrect: replacement and return details are partly present, but the answer affirmatively gives a materially wrong timing rule for the later offense case expressly asked. It also omits the offense reveal and optional-play answer.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "offense_start",
+          "coverage": "incomplete",
+          "complete_same_entry_evidence_indices": [
+            0,
+            1
+          ],
+          "reason": "Discard and eight-card replacement are present, but neither quote says offense reveals its remaining hand."
+        },
+        {
+          "fact_id": "defense_planning",
+          "coverage": "supported",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The answer and complete quoted rule supply the complete defense replacement procedure."
+        },
+        {
+          "fact_id": "offense_later_timing",
+          "coverage": "contradicted",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "Immediate termination on running out before Planning because of a power or card effect is wrong; the later termination trigger is needing to play a card while lacking one."
+        },
+        {
+          "fact_id": "offense_later_replacement",
+          "coverage": "implicit",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The contrast with the replacement cases implies no replacement when the later turn ends."
+        },
+        {
+          "fact_id": "ship_returns",
+          "coverage": "supported",
+          "complete_same_entry_evidence_indices": [
+            1
+          ],
+          "reason": "The complete entry says all committed ships return to colonies, covering offense and allied ships."
+        },
+        {
+          "fact_id": "other_cards_optional",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Saying the summary does not impose an obligation does not supply the actual optional-play rule or show coverage for it."
+        }
+      ],
+      "unasked_key_background": [
+        "The independent reminder that there is no automatic draw at encounter/turn end is not an extra standalone clause beyond the asked replacement situations."
+      ],
+      "other_unasked_background": [],
+      "material_contradictions": [
+        {
+          "assertion": "If offense runs out before Planning because of a power or card effect, its turn ends immediately and all committed ships return to colonies.",
+          "reason": "Immediate turn termination upon exhaustion before Planning is a wrong trigger. Source requires later exhaustion AND needing to play an encounter card. This changes the timing explicitly asked in Q016.",
+          "source": "Rulebook p13 Drawing New Cards; p9 Planning",
+          "material": true
+        }
+      ],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [],
+      "same_entry": {
+        "id": "Q016",
+        "clauses": [
+          "offense without encounter cards at Start Turn",
+          "defense without encounter cards at Planning",
+          "offense losing its last encounter card later",
+          "whether other cards must be played before replacement"
+        ],
+        "answer": "At Start Turn, an offense with no encounter cards discards its hand and draws 8, repeating until it has an encounter card. A defense without encounter cards when required reveals and discards its remaining hand and draws 8, repeating until it has one. If offense runs out before Planning because of a power or card effect, its turn ends immediately and all committed ships return to colonies. The summary does not say that other cards must be played before replacement.",
+        "support": "partial",
+        "evidence": [
+          {
+            "heading": "Turn Structure — Start Turn",
+            "quote": "1. **Start Turn:** If the offense has no encounter cards, discard hand and draw 8 new cards; repeat until they have at least one encounter card."
+          },
+          {
+            "heading": "Special Rules & Edge Cases — Empty Hand (Offense and Defense)",
+            "quote": "- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies. **Empty Hand (Defense):** If the defense has no encounter cards when they must play one, they reveal their remaining hand, discard it, and draw 8 new cards, repeating until they have an encounter card."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "a19a28e910a4c627ded9fbebd1e7caf1e6d50c63e6e360c387cbeda0068d8b57"
+    },
+    {
+      "reader": "reader-b",
+      "question_id": "Q017",
+      "question": "After a successful first encounter may offense start a second with no encounter card, hoping to obtain one later? What ends an ordinary turn after first or second encounter?",
+      "grade": "partial",
+      "reason": "Partial: optional success-based continuation and the two-encounter limit are present, but the key initial-card requirement and passing left are missing. Its false statement about interruption before Planning is extra context, not an answer or limiting caveat to the asked start-eligibility and post-encounter termination rules, so it does not force an incorrect grade.",
+      "required_asked_facts_with_evidence": [
+        {
+          "fact_id": "second_needs_card",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "The answer explicitly says the starting-card eligibility question is unanswered."
+        },
+        {
+          "fact_id": "first_encounter",
+          "coverage": "supported",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The answer's only-if win/successful-deal restriction plus may supplies optional continuation after success and termination after first loss/failed deal, despite its subsequent comment that termination is not separately described."
+        },
+        {
+          "fact_id": "second_encounter",
+          "coverage": "inferable",
+          "complete_same_entry_evidence_indices": [
+            0
+          ],
+          "reason": "The maximum of two logically supplies the end after encounter two, even though the answer later says this is not separately described."
+        },
+        {
+          "fact_id": "pass_left",
+          "coverage": "missing",
+          "complete_same_entry_evidence_indices": [],
+          "reason": "Passing left is not supplied."
+        }
+      ],
+      "unasked_key_background": [],
+      "other_unasked_background": [
+        "An extra statement about exhausting cards before Planning concerns an interrupted encounter, not the requested eligibility to start encounter two or ordinary termination after completed encounters. It does not claim permission to start encounter two without a card. It is factually wrong but is not a material application or caveat to these answers, which expressly leave that eligibility unresolved."
+      ],
+      "material_contradictions": [],
+      "unsupported_true_guesses": [],
+      "nonmaterial_context_or_wording": [
+        {
+          "assertion": "Running out before Planning ends the turn and returns committed ships.",
+          "factually_correct": false,
+          "reason": "Wrong immediate timing as explained under Q016. Here it is explicitly extra context about an interrupted encounter; the answer still withholds the asked permission to start encounter two. It neither claims that permission nor conditions the correct success/two-encounter rules on that timing. No automatic grade cap from this unrelated timing defect."
+        }
+      ],
+      "same_entry": {
+        "id": "Q017",
+        "clauses": [
+          "starting a second encounter with no encounter card",
+          "what ends an ordinary turn after the first or second encounter"
+        ],
+        "answer": "A second encounter is allowed only if offense wins or makes a successful deal, with a maximum of two encounters per turn. The summary does not state whether an offense lacking an encounter card may begin that second encounter hoping to draw one later. It says running out before Planning due to a power or card effect ends the turn and returns committed ships; otherwise it does not separately describe ordinary turn termination after the first loss or after the second encounter.",
+        "support": "partial",
+        "evidence": [
+          {
+            "heading": "Turn Structure — second encounter",
+            "quote": "If the offense wins or makes a successful deal, they may have a second encounter (max 2 encounters per turn)."
+          },
+          {
+            "heading": "Special Rules & Edge Cases — Empty Hand (Offense)",
+            "quote": "- **Empty Hand (Offense):** If the offense has no encounter cards at the Start Turn phase, they discard their hand and draw 8 new cards, repeating until they have an encounter card. If the offense runs out of encounter cards before Planning (due to alien power or card effect), their turn ends immediately and all committed ships return to colonies."
+          }
+        ]
+      },
+      "raw_same_entry_sha256": "ad6ed8d0b587b5018bb858964a47ef80fd58d7ab222d6cea5da308554f3f16b9"
+    }
+  ],
+  "totals": {
+    "correct": 0,
+    "partial": 6,
+    "incorrect": 4,
+    "entries": 10
+  },
+  "canonical_references_consulted": [
+    "Rulebook pp2,7,9,11,13; FAQ p5 general second-encounter and optional-card-play questions; FAQ p6 Flare Questions"
+  ],
+  "output_scope": "Only scope-adjudication.json and scope-adjudication-delivery.json created; original readers, summary, questions, key, prior artifacts unchanged."
+}

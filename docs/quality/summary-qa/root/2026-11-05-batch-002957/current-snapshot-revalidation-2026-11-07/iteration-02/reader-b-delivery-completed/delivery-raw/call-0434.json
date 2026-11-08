@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:32:55.149Z",
+    "ordinal": 434,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef368db43487d0843b628a43bb9772",
+      "status": "completed",
+      "call_id": "call_8bb34f76d1b94854818ff72a704bf781",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpect={'Q51':['Capacity amount and counted items','Timing and excess items'],'Q52':['Forest Rest','Refresh comparison','Repair comparison'],'Q53':['Aid cost and target','Crafted item availability','Repeated Aid and relationship improvement'],'Q54':['Aid after Allied status','Moving Allied warriors','Attacking with Allied warriors'],'Q55':['Battle hits absorbed by Allied warriors','Hostility test and timing']}\\nchecks={'Q51':['six items plus two','Satchel and the Damaged box','items on tracks do not count toward load','last step of Evening','Permanently remove','Do not check capacity'],'Q52':['does not refresh undamaged exhausted items','two exhausted items face up per counted tea','three additional exhausted items','exhausting a hammer','keeping its current face'],'Q53':['one face-up, undamaged item of any type','card matching','may be Hostile','not required','same turn','only one improvement','two VP'],'Q54':['two VP','one Allied faction','own movement restrictions','as attacker','add them to all undamaged swords','cannot use them to attack their own faction'],'Q55':['removing those warriors or by damaging its items','battle end','more of that ally\\\\'s warriors than items','Equal numbers do not','overrides ordinary hostility timing']}\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expect[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]: assert phrase.lower() in joined.lower(),(a['id'],phrase)\\n for s in a['source_passages']:assert s['quotation'] and s['quotation'] in g,(a['id'],s['section'])\\nprint('Q51\u2013Q55 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66b-92e0-72e3-ad06-5b05757e51be",
+        "create_time": 1794061966.1941607
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:32:55.603Z",
+    "ordinal": 437,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b66d-4033-7fe0-8c25-ec74d8ab4ca0",
+      "call_id": "call_8bb34f76d1b94854818ff72a704bf781",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q51\u2013Q55 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66b-92e0-72e3-ad06-5b05757e51be",
+        "create_time": 1794061975.6038933
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

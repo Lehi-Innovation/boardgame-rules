@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "id": "planning-delivery-correction-06",
+  "correction_recorded_at_utc": "2026-11-07T04:50:46.088499+00:00",
+  "purpose": "Delivery/provenance correction to this adjudicator’s own narrow source review; no new source-scope adjudication.",
+  "original_artifacts_and_failed_validation_preserved": {
+    "planning-source-scope-adjudication-06.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/source-review/planning-source-scope-adjudication-06.json",
+      "sha256": "da72220cb6848831696654e3be9f82bc3930e08c6c6cad4f17ecfc60e21c5eaf",
+      "bytes": 87716
+    },
+    "planning-source-scope-delivery-06.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/source-review/planning-source-scope-delivery-06.json",
+      "sha256": "52e498291bbda5efd535fbc8bff4c966d81ec8c43127408e413926c658b2f94f",
+      "bytes": 1604
+    },
+    "planning-runtime-delivery-validation-06.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/source-review/planning-runtime-delivery-validation-06.json",
+      "sha256": "25474d2942f2249413e40ee283d580390642c7f39760f98ee1a6056893898599",
+      "bytes": 94039
+    },
+    "planning-primary-evidence-delivery-check-06.json": {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/source-review/planning-primary-evidence-delivery-check-06.json",
+      "sha256": "93d72e373800219c44185d0230be9301122bca17231ba4dbb2f8686d2e55307d",
+      "bytes": 5128
+    }
+  },
+  "issue": {
+    "description": "The original receipt placed 56 optional FAQ keyword-preview ranges in its chunks list although their exact complete raw strings were not found in actual original model-visible output. Their raw source-range hashes were correct; that is insufficient delivery proof.",
+    "affected_file": "/home/jonny/projects/boardgame-rules/extracted/cosmic-encounter-faq.txt",
+    "affected_chunk_count": 56,
+    "original_runtime_validation_pass": false,
+    "affected_spans_location": "partial_previews in planning-delivery-corrected-06.json, including original chunk index, start, end_exclusive, and original raw-range SHA-256"
+  },
+  "chosen_correction": "Explicitly reclassify the 56 spans as partial, non-authoritative keyword previews. Preserve their failed original claims and source-range metadata separately. Do not late-deliver unrelated source text and do not describe the original full receipt as complete.",
+  "counts_by_source": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/cosmic-encounter-rules.txt",
+      "original_declared_chunks": 66,
+      "original_exact_chunks_retained": 66,
+      "full_context_blocks_retained": 12,
+      "exact_keyword_fragments_retained": 54,
+      "partial_previews_reclassified": 0,
+      "new_raw_source_chunks_delivered": 0
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/cosmic-encounter-faq.txt",
+      "original_declared_chunks": 128,
+      "original_exact_chunks_retained": 72,
+      "full_context_blocks_retained": 11,
+      "exact_keyword_fragments_retained": 61,
+      "partial_previews_reclassified": 56,
+      "new_raw_source_chunks_delivered": 0
+    }
+  ],
+  "totals": {
+    "original_declared_chunks": 194,
+    "original_exact_chunks_retained": 138,
+    "full_context_blocks_retained": 23,
+    "exact_keyword_fragments_retained": 115,
+    "partial_previews_reclassified": 56,
+    "new_raw_source_chunks_delivered": 0,
+    "primary_evidence_passages_covered": 15
+  },
+  "timeline": [
+    {
+      "phase": "original adjudication and original receipt",
+      "result": "Partial source review and deferred scope conclusion; 194 source chunks declared. Exact delivery of 56 optional preview ranges was overclaimed. Original files remain unchanged."
+    },
+    {
+      "phase": "subsequent actual-runtime delivery validation",
+      "result": "Original selected-range validation failed. 138 declared ranges had exact actual model-visible matches; 56 FAQ preview ranges did not. All source hashes matched."
+    },
+    {
+      "phase": "primary cited-evidence check",
+      "result": "All 15 quoted evidence passages matched the source and were fully covered by exact original source blocks. This did not approve the full original receipt."
+    },
+    {
+      "phase": "this correction",
+      "recorded_at_utc": "2026-11-07T04:50:46.088499+00:00",
+      "result": "Retain 138 truly full original declared chunks as reused delivery, separate 56 partial previews, add zero new primary-text chunks. Source files and all original artifacts remain unchanged."
+    }
+  ],
+  "disposition_impact": {
+    "original_disposition": "defer-for-source-ambiguity",
+    "current_disposition": "defer-for-source-ambiguity",
+    "changed": false,
+    "reason": "All 15 operative primary evidence passages and all 23 source-context blocks supporting the original narrow analysis have exact original delivery. This correction changes provenance classifications only. No new rule, source-scope vote, table ruling, or case fact is introduced."
+  },
+  "limitations": [
+    "Corrected selected-range manifest is prepared for a new independent runtime check; this artifact does not claim that check has passed.",
+    "Original failed validation remains failed and is preserved. Reuse of verified original chunks does not retroactively make the original receipt fully delivered.",
+    "Retained exact keyword fragments remain isolated search fragments; exact delivery does not make them full-context authority. The 56 failed previews are not authoritative evidence.",
+    "Source files were opened at correction time only to recheck hashes, sizes and range hashes. No new raw source text was emitted or claimed delivered.",
+    "No full-file/EOF, whole-source, native-image, complete-bank, summary, freeze, or semantic signoff/PASS claim. No new browsing or delegation.",
+    "An initial broad rendering of process metadata was truncated; the counts and failed spans were then obtained in an untruncated bounded metadata extraction. No primary source text was re-delivered through that process output."
+  ],
+  "corrected_receipt_path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/cosmic-encounter/2026-11-05-batch-002957/source-review/planning-delivery-corrected-06.json"
+}

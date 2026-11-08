@@ -1,0 +1,42 @@
+--- reader-method-v13/source_units.py
++++ reader-method-v14/source_units.py
+@@ -46,6 +46,39 @@
+     for answer, record in zip(answers, records):
+         if answer.get('id') != record['id'] or answer.get('literal_question') != record['question']:
+             raise ValueError('Answer is not bound to its exact original question record')
++    return True
++
++
++def new_clause_record(answer_record, start, end):
++    """Bind one asked span to the current literal question before rule lookup.
++
++    This records text association only. It neither divides the question into
++    semantic requirements nor supplies or validates any rule answer.
++    """
++    literal = answer_record.get('literal_question')
++    if not isinstance(literal, str) or not isinstance(answer_record.get('id'), str):
++        raise ValueError('Start with the current original answer record')
++    if type(start) is not int or type(end) is not int or not 0 <= start < end <= len(literal):
++        raise ValueError('Invalid literal-question span')
++    piece = literal[start:end]
++    if not piece.strip():
++        raise ValueError('Empty asked span')
++    return {'literal_ask': piece, 'question_start': start, 'question_end': end}
++
++
++def validate_clause_bindings(document, answers, complete=False):
++    """Check exact current-question clause spans; semantic checks remain reader's."""
++    validate_question_bindings(document, answers, complete=complete)
++    for answer in answers:
++        clauses = answer.get('clauses')
++        if not isinstance(clauses, list) or not clauses:
++            raise ValueError('Each answer needs its actual asked spans')
++        for clause in clauses:
++            if not isinstance(clause, dict):
++                raise ValueError('A clause must retain its literal-question span')
++            expected = new_clause_record(answer, clause.get('question_start'), clause.get('question_end'))
++            if any(clause.get(key) != value for key, value in expected.items()):
++                raise ValueError('Clause is not the exact span of this current question')
+     return True
+ 
+ 

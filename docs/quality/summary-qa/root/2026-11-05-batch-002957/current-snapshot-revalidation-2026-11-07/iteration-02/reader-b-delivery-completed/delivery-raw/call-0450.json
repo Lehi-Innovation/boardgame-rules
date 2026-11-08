@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:34:17.639Z",
+    "ordinal": 450,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef36df05c087d0acef00cdfec36f0e",
+      "status": "completed",
+      "call_id": "call_6c2b40396ea643b8b6324c0c5a611af6",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q56':['Mixed fox and rabbit icons','Repeated pawn use and hammer cost','Immediate use of crafted item'],'Q57':['Thief','Tinker','Ranger'],'Q58':['Last ruin item','Ordinary building placement'],'Q59':['Coalition partner as an enemy','Allied relationship powers'],'Q60':['First warrior causing Hostility','Second warrior','Building','Total']}\\nchecks={'Q56':['cannot pay mixed fox/rabbit/mouse','may activate repeatedly','each icon still requires','immediately take that item face up','use it for another Daylight action immediately','supply as usual'],'Q57':['boot, torch, tea and sword','exhausts the torch','random hand card','boot, torch, bag and hammer','discard pile matching','bird card always qualifies','boot, torch, crossbow and sword','repair three items','begins Evening'],'Q58':['last item is taken','free its building slot','Ruins block their slots','only when explicitly allowed','does not itself remove a ruin'],'Q59':['not enemies','does not by itself grant Allied relationship powers'],'Q60':['first of the two warriors','exempt from Infamy','0 VP','1 Infamy VP','1 VP','1 ordinary removal VP plus 1 Infamy VP','2 VP','0 + 1 + 2 = 3 VP','own turn']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,61)]\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]:assert phrase.lower() in joined.lower(),(a['id'],phrase)\\n for x in a['source_passages']:assert x['quotation'] and x['quotation'] in g,(a['id'],x['section'])\\nprint('Q56\u2013Q60 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66b-92e0-72e3-ad06-5b05757e51be",
+        "create_time": 1794062047.024273
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:34:18.088Z",
+    "ordinal": 453,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b66e-8268-7230-9b38-7b3c036323d4",
+      "call_id": "call_6c2b40396ea643b8b6324c0c5a611af6",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q56\u2013Q60 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66b-92e0-72e3-ad06-5b05757e51be",
+        "create_time": 1794062058.0885339
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

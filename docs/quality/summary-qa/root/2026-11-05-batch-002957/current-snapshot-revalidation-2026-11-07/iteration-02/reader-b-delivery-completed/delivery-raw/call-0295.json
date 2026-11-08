@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:24:26.569Z",
+    "ordinal": 295,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef348d476487d083bc7d69df42b921",
+      "status": "completed",
+      "call_id": "call_1f01967535d243aa98923958f5ed9cde",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpect={'Q21':['Precedence order','Cannot and card overrides'],'Q22':['Unclear simultaneous effects','Interrupting March'],'Q23':['At-start timing','At-end timing',\\\"Actions after the turn's last step begins\\\"],'Q24':['Hand information','Piles and deck','Deals, card transfers and consent'],'Q25':['Empty shared deck','Birds for non-bird suits and forced discards','Explicit bird-card requirement'],'Q26':['Proxies and maximum placement','Costs and prerequisites','Eyrie Decree obligations'],'Q27':['Normal placement source','Normal removal destination and items','Simultaneous removal effects'],'Q28':['Forced move or other action','Forced battle decisions'],'Q29':['Replacement in Keep clearing','Swap versus move or place'],'Q30':['Simultaneous 30-VP tie']}\\nchecks={'Q21':['Card overrides the Law','faction rule wins','explicitly overridden','ordinary card does not implicitly cancel'],'Q22':['player taking the turn chooses','attacker chooses','two moves','Do not interrupt','spend a bird card'],'Q23':['before all other effects','after everything else','no other actions are allowed','Ordinary Daylight actions cannot'],'Q24':['Hand size is public','contents are private','Face-up piles','deck cannot','non-binding','only as instructed','actions do not require consent'],'Q25':['immediately shuffle the discard','Bird cards substitute','multiple payments','treat bird cards as that suit','Only a bird card'],'Q26':['proxies cannot be used','maximum possible','cannot voluntarily place fewer','does not waive costs or prerequisites','obligation to complete','enter Turmoil','does not satisfy the two-warrior requirement'],'Q27':['from supply','leftmost space of a track','rightmost empty track space','permanently','remove all pieces before triggering'],'Q28':['as if the affected player chose','abilities and restrictions','player forced to battle makes'],'Q29':['only Marquise may place','cannot be bypassed','Other players may move','Swap ignores move and place restrictions','separate procedures'],'Q30':['closest clockwise','current player is included']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,31)]\\nfor a in d['answers'][-10:]:\\n assert [x['part'] for x in a['answer']]==expect[a['id']], (a['id'],'coverage parts')\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for s in checks[a['id']]: assert s.lower() in joined.lower(),(a['id'],s)\\n for x in a['source_passages']: assert x['quotation'] and x['quotation'] in g,(a['id'],x['section'])\\nprint('Q21\u2013Q30 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b663-0198-7e52-9448-5716b1690a69",
+        "create_time": 1794061453.2812297
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:24:27.005Z",
+    "ordinal": 298,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b665-7d7d-7370-9e31-978aedacda72",
+      "call_id": "call_1f01967535d243aa98923958f5ed9cde",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q21\u2013Q30 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b663-0198-7e52-9448-5716b1690a69",
+        "create_time": 1794061467.0055306
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

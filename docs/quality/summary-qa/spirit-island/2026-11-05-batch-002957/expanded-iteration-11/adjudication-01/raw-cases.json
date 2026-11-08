@@ -1,0 +1,723 @@
+{
+  "benchmark": "expanded-v24",
+  "requested_cases": [
+    {
+      "reader": "reader-a",
+      "id": "Q101"
+    },
+    {
+      "reader": "reader-a",
+      "id": "Q115"
+    },
+    {
+      "reader": "reader-b",
+      "id": "Q36"
+    },
+    {
+      "reader": "reader-b",
+      "id": "Q78"
+    }
+  ],
+  "readers": {
+    "reader-a": {
+      "reader": "reader-a",
+      "answers": [
+        {
+          "id": "Q36",
+          "requested_parts": [
+            "Add versus Move",
+            "Range versus pickup location"
+          ],
+          "answer": "Move Presence uses a curved movement arrow to move a specified disk from its current location up to the shown distance. Add Presence instead measures a legal destination from existing Presence (including the disk being repositioned), then takes a disk from anywhere on the island. The disk may be picked up from outside the destination’s shown Range; the destination itself must pass the range test.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "list_item",
+              "start": 6973,
+              "end": 7639,
+              "text": "- **Add Presence:** Choose a legal land within the shown maximum Range of your existing Presence. Take the leftmost remaining disk from either Presence track and add it there. With multiple placements, resolve them sequentially: a newly placed disk may be the origin for the next. You may instead **reposition any of your island Presence**, even with track disks remaining: first measure range and select the destination using existing Presence, including the disk about to be repositioned, then take a disk from anywhere on the island. This is still an Add Presence instruction, not a Move instruction. Destroyed Presence cannot be used unless explicitly permitted."
+            },
+            {
+              "unit_type": "list_item",
+              "start": 7641,
+              "end": 7927,
+              "text": "- **Move Presence:** A curved movement arrow moves the specified Presence from its present location up to the shown distance; this differs from Add/reposition. Push/Gather Presence uses normal adjacency rules. Instructions are mandatory where possible; a move up to a Range can be zero."
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Add versus Move",
+              "ruling": "Add/reposition differs from curved-arrow Move",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            },
+            {
+              "clause": "Range versus pickup location",
+              "ruling": "measure destination from existing Presence; then take disk anywhere",
+              "evidence_unit_indices": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q78",
+          "requested_parts": [
+            "Cascade into Ocean",
+            "Normal Growth from Ocean Presence",
+            "Any Ocean and Inland"
+          ],
+          "answer": "Blight can cascade into the Ocean on a board with Ocean’s Presence. Ordinary Growth may measure placement Range from existing Ocean Presence, but cannot add to the Ocean merely by treating it as a Coastal Wetland. Ocean’s Growth group explicitly placing two Presence in any Ocean may use any board’s Ocean without a Range requirement; an explicit rule such as Indomitable Claim is needed to place Inland.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "list_item",
+              "start": 49581,
+              "end": 50807,
+              "text": "- **Ocean's Hungry Grasp:** On a board with any of Ocean's Presence, the Ocean is a Coastal Wetland for **Powers and Blight**, not for normal Growth, Invader actions or Fear Cards. Powers and Special Rules can measure Range through it as a land. [Core: range-through-ocean] Powers can target it and move Invaders/Dahan into it; Blight can cascade into it. Other Spirits' Presence may end up there via a legal Power, including Thunderspeaker accompanying moved Dahan. You can measure Growth placement Range **from existing Ocean Presence**, although normal Growth cannot add to the Ocean just by treating it as a Coastal Wetland. The Growth group explicitly adding two Presence in **any Ocean** can place them in any board's Ocean, even a board where Ocean has no Presence, without a numeric Range requirement. This Growth group places in Oceans only; it does not place Presence Inland. Its other group's Range-1 **Coastal land** placement does not permit placing in the Ocean. Other placement must respect Ocean's land-type restriction unless expressly ignored (e.g., **Indomitable Claim** for Inland Presence). [Core: .bu6odcf, .7w4gef8, .9v5kf36, .9v5ka9o, .9v5kc4i, When-OHG-is-in-play-can-other-pieces-end-up-in-the-Ocean]"
+            },
+            {
+              "unit_type": "paragraph",
+              "start": 30165,
+              "end": 30461,
+              "text": "Destroyed Presence stays beside the island, not back on tracks, and only an explicit destroyed-Presence effect can return it. Adding or moving Presence into a land with existing Blight is legal and does not itself destroy it; **adding Blight**, not the mere presence of Blight, destroys Presence."
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Cascade into Ocean",
+              "ruling": "allowed",
+              "evidence_unit_indices": [
+                0
+              ]
+            },
+            {
+              "clause": "Normal Growth from Ocean Presence",
+              "ruling": "may measure from it; cannot add there merely as Wetland",
+              "evidence_unit_indices": [
+                0
+              ]
+            },
+            {
+              "clause": "Any Ocean and Inland",
+              "ruling": "explicit Ocean placement group; Inland needs explicit exception such as Indomitable Claim",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q101",
+          "requested_parts": [
+            "Defend retroactivity"
+          ],
+          "answer": "Yes. Losing Earth’s defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "paragraph",
+              "start": 13132,
+              "end": 14081,
+              "text": "Dahan do not shield the land; Damage to them is not subtracted from land Damage. **After Invader damage is fully resolved**, surviving Dahan each deal **2 Damage** to Invaders in that land, allocated by the players. A damaged surviving Dahan still deals 2. Surviving Dahan counterattack even when Invader Damage was reduced to zero by Defend, but not when the entire Ravage was skipped. Presence never counterattacks. If a Power changes Dahan Ravage Damage timing, that replaces their usual counterattack timing; each Dahan deals Ravage Damage only once. **Words of Warning** makes Dahan and Invader Ravage Damage simultaneous, so Dahan killed in that exchange still deal their Damage, with no second later counterattack. Losing Earth's defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage. [FAQ number-of-counterattacks-when-dahan-counterattack-early; .bu6oc8y]"
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Defend retroactivity",
+              "ruling": "not removed; applies to simultaneous Dahan Damage",
+              "evidence_unit_indices": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q115",
+          "requested_parts": [
+            "Land/Dahan result",
+            "Counterattack",
+            "Fear"
+          ],
+          "answer": "The Invaders deal 3 Damage to the land, adding one Blight. Concealing Shadows prevents Damage to the two Dahan, so both survive and counterattack for 4 total Damage. The players may assign 2 to the City and 2 to the Town, destroying both; this gains 2 Fear for the City and 1 for the Town, 3 Fear total.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "paragraph",
+              "start": 23372,
+              "end": 24057,
+              "text": "**Defend N** reduces each occurrence of Invader Damage to both land and Dahan by N for this turn, to a minimum of zero. Multiple Defend effects add. It does not reduce Spirit Damage or make Dahan do less counterattack Damage. Land and Dahan receive the reduction separately, not by splitting a shared allowance. A protection explicitly limited to Dahan is different: **Concealing Shadows** makes Dahan take no Damage from Ravaging Invaders this turn, while land still takes its normal Damage and can Blight. Protected surviving Dahan then counterattack normally. It does not protect them from direct Destroy instructions or Damage from other sources. [FAQ .7w4g8nu; original card text]"
+            },
+            {
+              "unit_type": "paragraph",
+              "start": 13132,
+              "end": 14081,
+              "text": "Dahan do not shield the land; Damage to them is not subtracted from land Damage. **After Invader damage is fully resolved**, surviving Dahan each deal **2 Damage** to Invaders in that land, allocated by the players. A damaged surviving Dahan still deals 2. Surviving Dahan counterattack even when Invader Damage was reduced to zero by Defend, but not when the entire Ravage was skipped. Presence never counterattacks. If a Power changes Dahan Ravage Damage timing, that replaces their usual counterattack timing; each Dahan deals Ravage Damage only once. **Words of Warning** makes Dahan and Invader Ravage Damage simultaneous, so Dahan killed in that exchange still deal their Damage, with no second later counterattack. Losing Earth's defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage. [FAQ number-of-counterattacks-when-dahan-counterattack-early; .bu6oc8y]"
+            },
+            {
+              "unit_type": "paragraph",
+              "start": 22318,
+              "end": 23370,
+              "text": "**Destroy** returns pieces to supply regardless of Health when directly instructed. Every destroyed Town generates **1 Fear** and every destroyed City **2 Fear**, in addition to explicit Fear from the effect. Explorers generate none automatically. **Remove** returns the specified pieces without requiring Damage to reach their Health and without destruction Fear. Within the effect's count and piece-type restrictions, its decision-maker may choose any eligible pieces; there is no Explorer-first priority unless stated. **Replace** removes a piece and adds another, retaining its marked Damage: the replacement itself produces no Fear, but if the retained Damage destroys the new piece, destruction Fear applies normally. For simultaneous replacements, select all pieces before replacing any: the same original City cannot become a Town and then an Explorer within that one simultaneous instruction. Separate completed instructions or actions may replace the resulting piece again (e.g., successive players resolving **Trade Suffers** at Terror III)."
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Land/Dahan result",
+              "ruling": "3 land Damage and one Blight; Dahan protected and survive",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            },
+            {
+              "clause": "Counterattack",
+              "ruling": "2 Dahan x 2 = 4 Damage; can destroy City and Town",
+              "evidence_unit_indices": [
+                1
+              ]
+            },
+            {
+              "clause": "Fear",
+              "ruling": "City 2 + Town 1 = 3",
+              "evidence_unit_indices": [
+                2
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "reader-b": {
+      "reader": "reader-b",
+      "answers": [
+        {
+          "id": "Q36",
+          "requested_parts": [
+            "Difference between Move Presence and Add Presence using island disks",
+            "Whether repositioning range is measured from the destination"
+          ],
+          "answer": "Move Presence moves the specified disk from where it is, up to the shown distance. Repositioning as Add Presence measures range to choose the destination using existing Presence, including the disk being repositioned; it is not a pickup from outside the displayed Range.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "list_item",
+              "start": 7641,
+              "end": 7927,
+              "text": "- **Move Presence:** A curved movement arrow moves the specified Presence from its present location up to the shown distance; this differs from Add/reposition. Push/Gather Presence uses normal adjacency rules. Instructions are mandatory where possible; a move up to a Range can be zero."
+            },
+            {
+              "unit_type": "list_item",
+              "start": 6973,
+              "end": 7639,
+              "text": "- **Add Presence:** Choose a legal land within the shown maximum Range of your existing Presence. Take the leftmost remaining disk from either Presence track and add it there. With multiple placements, resolve them sequentially: a newly placed disk may be the origin for the next. You may instead **reposition any of your island Presence**, even with track disks remaining: first measure range and select the destination using existing Presence, including the disk about to be repositioned, then take a disk from anywhere on the island. This is still an Add Presence instruction, not a Move instruction. Destroyed Presence cannot be used unless explicitly permitted."
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Difference between Move Presence and Add Presence using island disks",
+              "ruling": "Move Presence moves the specified disk from where it is, up to the shown distance. Repositioning as Add Presence measures range to choose the destination using existing Presence, including the disk being repositioned; it is not a pickup from outside the displayed Range.",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            },
+            {
+              "clause": "Whether repositioning range is measured from the destination",
+              "ruling": "Move Presence moves the specified disk from where it is, up to the shown distance. Repositioning as Add Presence measures range to choose the destination using existing Presence, including the disk being repositioned; it is not a pickup from outside the displayed Range.",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q78",
+          "requested_parts": [
+            "Whether Blight can cascade into Ocean with Ocean Presence",
+            "Normal Growth placement into Ocean versus measuring from Ocean Presence",
+            "How Ocean can place Presence Inland"
+          ],
+          "answer": "Blight can cascade into the Ocean on a board with Ocean Presence. Normal Growth cannot add to the Ocean merely because it is treated as Coastal Wetland, though Range may be measured from existing Ocean Presence. Ocean’s Growth group explicitly placing two Presence in any Ocean does not place Inland; its other Range-1 Coastal-land group also cannot place Ocean Presence. Ocean can place Presence Inland only when an effect expressly permits it, such as Indomitable Claim.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "list_item",
+              "start": 49581,
+              "end": 50807,
+              "text": "- **Ocean's Hungry Grasp:** On a board with any of Ocean's Presence, the Ocean is a Coastal Wetland for **Powers and Blight**, not for normal Growth, Invader actions or Fear Cards. Powers and Special Rules can measure Range through it as a land. [Core: range-through-ocean] Powers can target it and move Invaders/Dahan into it; Blight can cascade into it. Other Spirits' Presence may end up there via a legal Power, including Thunderspeaker accompanying moved Dahan. You can measure Growth placement Range **from existing Ocean Presence**, although normal Growth cannot add to the Ocean just by treating it as a Coastal Wetland. The Growth group explicitly adding two Presence in **any Ocean** can place them in any board's Ocean, even a board where Ocean has no Presence, without a numeric Range requirement. This Growth group places in Oceans only; it does not place Presence Inland. Its other group's Range-1 **Coastal land** placement does not permit placing in the Ocean. Other placement must respect Ocean's land-type restriction unless expressly ignored (e.g., **Indomitable Claim** for Inland Presence). [Core: .bu6odcf, .7w4gef8, .9v5kf36, .9v5ka9o, .9v5kc4i, When-OHG-is-in-play-can-other-pieces-end-up-in-the-Ocean]"
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Whether Blight can cascade into Ocean with Ocean Presence",
+              "ruling": "Blight can cascade into the Ocean on a board with Ocean Presence. Normal Growth cannot add to the Ocean merely because it is treated as Coastal Wetland, though Range may be measured from existing Ocean Presence. Ocean’s Growth group explicitly placing two Presence in any Ocean does not place Inland; its other Range-1 Coastal-land group also cannot place Ocean Presence. Ocean can place Presence Inland only when an effect expressly permits it, such as Indomitable Claim.",
+              "evidence_unit_indices": [
+                0
+              ]
+            },
+            {
+              "clause": "Normal Growth placement into Ocean versus measuring from Ocean Presence",
+              "ruling": "Blight can cascade into the Ocean on a board with Ocean Presence. Normal Growth cannot add to the Ocean merely because it is treated as Coastal Wetland, though Range may be measured from existing Ocean Presence. Ocean’s Growth group explicitly placing two Presence in any Ocean does not place Inland; its other Range-1 Coastal-land group also cannot place Ocean Presence. Ocean can place Presence Inland only when an effect expressly permits it, such as Indomitable Claim.",
+              "evidence_unit_indices": [
+                0
+              ]
+            },
+            {
+              "clause": "How Ocean can place Presence Inland",
+              "ruling": "Blight can cascade into the Ocean on a board with Ocean Presence. Normal Growth cannot add to the Ocean merely because it is treated as Coastal Wetland, though Range may be measured from existing Ocean Presence. Ocean’s Growth group explicitly placing two Presence in any Ocean does not place Inland; its other Range-1 Coastal-land group also cannot place Ocean Presence. Ocean can place Presence Inland only when an effect expressly permits it, such as Indomitable Claim.",
+              "evidence_unit_indices": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q101",
+          "requested_parts": [
+            "Whether losing Sacred Site retroactively removes Defend from simultaneous Dahan Damage"
+          ],
+          "answer": "No. Losing Earth’s defending Sacred Site to the Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "paragraph",
+              "start": 13132,
+              "end": 14081,
+              "text": "Dahan do not shield the land; Damage to them is not subtracted from land Damage. **After Invader damage is fully resolved**, surviving Dahan each deal **2 Damage** to Invaders in that land, allocated by the players. A damaged surviving Dahan still deals 2. Surviving Dahan counterattack even when Invader Damage was reduced to zero by Defend, but not when the entire Ravage was skipped. Presence never counterattacks. If a Power changes Dahan Ravage Damage timing, that replaces their usual counterattack timing; each Dahan deals Ravage Damage only once. **Words of Warning** makes Dahan and Invader Ravage Damage simultaneous, so Dahan killed in that exchange still deal their Damage, with no second later counterattack. Losing Earth's defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage. [FAQ number-of-counterattacks-when-dahan-counterattack-early; .bu6oc8y]"
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Whether losing Sacred Site retroactively removes Defend from simultaneous Dahan Damage",
+              "ruling": "No. Losing Earth’s defending Sacred Site to the Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage.",
+              "evidence_unit_indices": [
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q115",
+          "requested_parts": [
+            "Land and Dahan Damage under Concealing Shadows Ravage",
+            "Available counterattack Damage",
+            "Whether counterattack can destroy Town and Explorer and Fear amount"
+          ],
+          "answer": "Invaders deal 3 Damage total to the land, adding one Blight. Concealing Shadows protects Dahan from Ravage Damage, so both survive and counterattack for 4 total. They can destroy the Town (2 Damage) and Explorer (1 Damage), generating 1 Fear from the Town.",
+          "support": "supported",
+          "evidence": [
+            {
+              "unit_type": "paragraph",
+              "start": 23372,
+              "end": 24057,
+              "text": "**Defend N** reduces each occurrence of Invader Damage to both land and Dahan by N for this turn, to a minimum of zero. Multiple Defend effects add. It does not reduce Spirit Damage or make Dahan do less counterattack Damage. Land and Dahan receive the reduction separately, not by splitting a shared allowance. A protection explicitly limited to Dahan is different: **Concealing Shadows** makes Dahan take no Damage from Ravaging Invaders this turn, while land still takes its normal Damage and can Blight. Protected surviving Dahan then counterattack normally. It does not protect them from direct Destroy instructions or Damage from other sources. [FAQ .7w4g8nu; original card text]"
+            },
+            {
+              "unit_type": "paragraph",
+              "start": 14161,
+              "end": 14369,
+              "text": "Example: A Town, Explorer and two Dahan with no Defend cause 3 land Damage (one Blight), and simultaneously 3 Dahan Damage (one dead, one damaged). The survivor can destroy the Town for 1 Fear. [CORE pp.9,11]"
+            },
+            {
+              "unit_type": "paragraph",
+              "start": 13132,
+              "end": 14081,
+              "text": "Dahan do not shield the land; Damage to them is not subtracted from land Damage. **After Invader damage is fully resolved**, surviving Dahan each deal **2 Damage** to Invaders in that land, allocated by the players. A damaged surviving Dahan still deals 2. Surviving Dahan counterattack even when Invader Damage was reduced to zero by Defend, but not when the entire Ravage was skipped. Presence never counterattacks. If a Power changes Dahan Ravage Damage timing, that replaces their usual counterattack timing; each Dahan deals Ravage Damage only once. **Words of Warning** makes Dahan and Invader Ravage Damage simultaneous, so Dahan killed in that exchange still deal their Damage, with no second later counterattack. Losing Earth's defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage. [FAQ number-of-counterattacks-when-dahan-counterattack-early; .bu6oc8y]"
+            }
+          ],
+          "clause_coverage_check": [
+            {
+              "clause": "Land and Dahan Damage under Concealing Shadows Ravage",
+              "ruling": "Invaders deal 3 Damage total to the land, adding one Blight. Concealing Shadows protects Dahan from Ravage Damage, so both survive and counterattack for 4 total. They can destroy the Town (2 Damage) and Explorer (1 Damage), generating 1 Fear from the Town.",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            },
+            {
+              "clause": "Available counterattack Damage",
+              "ruling": "Invaders deal 3 Damage total to the land, adding one Blight. Concealing Shadows protects Dahan from Ravage Damage, so both survive and counterattack for 4 total. They can destroy the Town (2 Damage) and Explorer (1 Damage), generating 1 Fear from the Town.",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            },
+            {
+              "clause": "Whether counterattack can destroy Town and Explorer and Fear amount",
+              "ruling": "Invaders deal 3 Damage total to the land, adding one Blight. Concealing Shadows protects Dahan from Ravage Damage, so both survive and counterattack for 4 total. They can destroy the Town (2 Damage) and Explorer (1 Damage), generating 1 Fear from the Town.",
+              "evidence_unit_indices": [
+                0,
+                1
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "original_grader_proposals": [
+    {
+      "grader_output": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/grading/block-02/grades.json",
+      "grader_output_sha256": "905f0c6bd8d96408602b9e9abc39878d8ef7dc7a23f20ee860efa9ddfdf5a13a",
+      "complete_original_proposal": {
+        "id": "Q36",
+        "reader": "reader-b",
+        "grade": "incorrect",
+        "requested_part_assessment": [
+          {
+            "clause_id": "Q36.request",
+            "assessment": "incorrect",
+            "fact_assessments": [
+              {
+                "fact_index": 1,
+                "expected": "Growth Move Presence measures up to the indicated distance from that disk's current land.",
+                "observed": "Move takes the specified disk from its current location up to the shown distance.",
+                "summary_support": {
+                  "status": "supported",
+                  "extracts": [
+                    {
+                      "start": 7662,
+                      "end": 7800,
+                      "text": "A curved movement arrow moves the specified Presence from its present location up to the shown distance; this differs from Add/reposition."
+                    }
+                  ],
+                  "interpretation": "The frozen summary supports this expected rule."
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 2,
+                "expected": "Add Presence using an island disk first selects a destination measured from existing Presence.",
+                "observed": "Add/reposition first selects a legal destination using existing Presence, including the repositioned disk.",
+                "summary_support": {
+                  "status": "supported",
+                  "extracts": [
+                    {
+                      "start": 7347,
+                      "end": 7509,
+                      "text": "first measure range and select the destination using existing Presence, including the disk about to be repositioned, then take a disk from anywhere on the island."
+                    }
+                  ],
+                  "interpretation": "The frozen summary supports this expected rule."
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 3,
+                "expected": "It may then take an island disk from anywhere, even outside the shown destination Range.",
+                "observed": "Prose (also repeated in clause_coverage_check) says “it is not a pickup from outside the displayed Range,” although its attached quotation correctly permits taking a disk from anywhere on the island.",
+                "summary_support": {
+                  "status": "supported",
+                  "extracts": [
+                    {
+                      "start": 7464,
+                      "end": 7509,
+                      "text": "then take a disk from anywhere on the island."
+                    }
+                  ],
+                  "interpretation": "The frozen summary supports this expected rule."
+                },
+                "outcome": "contradictory"
+              },
+              {
+                "fact_index": 4,
+                "expected": "Repositioning under Add is adding rather than a Move instruction.",
+                "observed": "Attached Add Presence quotation explicitly says this remains Add, not a Move instruction.",
+                "summary_support": {
+                  "status": "supported",
+                  "extracts": [
+                    {
+                      "start": 7510,
+                      "end": 7576,
+                      "text": "This is still an Add Presence instruction, not a Move instruction."
+                    }
+                  ],
+                  "interpretation": "The frozen summary supports this expected rule."
+                },
+                "outcome": "correct"
+              }
+            ]
+          }
+        ],
+        "reason": "The outside-Range pickup denial in the operative prose is a material contradictory ruling on an explicitly asked permission. Its correct attached quotation supplies the permission but does not remove the contradictory caveat. Other requested facts are covered, including Add rather than Move in the quotation.",
+        "missing_requested_material_facts": [],
+        "contradictions": [
+          {
+            "clause_id": "Q36.request",
+            "fact_index": 3,
+            "claim": "it is not a pickup from outside the displayed Range",
+            "expected": "After legally selecting the destination using existing Presence, the Spirit may take its island disk from anywhere, including outside the displayed Range.",
+            "why_material": "The question expressly asks whether that outside-Range pickup is permitted; denying it changes legal Growth choices. The same entry’s correct quote does not cancel its contradictory prose."
+          }
+        ],
+        "unsupported_guesses": [],
+        "contextual_extra_observations": [],
+        "borderline_adjudication_needed": false,
+        "format_diagnostics": []
+      }
+    },
+    {
+      "grader_output": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/grading/block-04/grades.json",
+      "grader_output_sha256": "a6ce42519e51727795af4d09602484c7425bfd6ccc4771a4e69c14ad8a63c24e",
+      "complete_original_proposal": {
+        "id": "Q78",
+        "reader": "reader-b",
+        "grade": "incorrect",
+        "requested_part_assessment": [
+          {
+            "clause_id": "Q78.request",
+            "fact_assessments": [
+              {
+                "fact_index": 1,
+                "expected": "An active Ocean is a legal cascade destination.",
+                "observed": "The answer permits Blight to cascade into the active Ocean.",
+                "summary_support": {
+                  "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/summary-snapshot.md",
+                  "unicode_range": [
+                    49909,
+                    49936
+                  ],
+                  "text": "Blight can cascade into it.",
+                  "assessment": "supported; direct statement or straightforward application to the stipulated case"
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 2,
+                "expected": "Ordinary Growth cannot treat it as a Coastal Wetland for adding Presence.",
+                "observed": "The answer denies ordinary Growth permission to add there merely by treating the Ocean as Coastal Wetland.",
+                "summary_support": {
+                  "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/summary-snapshot.md",
+                  "unicode_range": [
+                    50130,
+                    50209
+                  ],
+                  "text": "normal Growth cannot add to the Ocean just by treating it as a Coastal Wetland.",
+                  "assessment": "supported; direct statement or straightforward application to the stipulated case"
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 3,
+                "expected": "Existing Ocean Presence can nevertheless originate Growth Range.",
+                "observed": "The answer permits measuring Growth Range from existing Presence in the Ocean.",
+                "summary_support": {
+                  "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/summary-snapshot.md",
+                  "unicode_range": [
+                    50048,
+                    50119
+                  ],
+                  "text": "You can measure Growth placement Range **from existing Ocean Presence**",
+                  "assessment": "supported; direct statement or straightforward application to the stipulated case"
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 4,
+                "expected": "In core, Indomitable Claim can add Ocean's Presence Inland because it explicitly ignores land-type restrictions; generic adding Powers do not.",
+                "observed": "The answer names Indomitable Claim as an explicit Inland-placement exception; its attached quotation explains that land-type restrictions must otherwise be obeyed.",
+                "summary_support": {
+                  "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/summary-snapshot.md",
+                  "unicode_range": [
+                    50558,
+                    50692
+                  ],
+                  "text": "Other placement must respect Ocean's land-type restriction unless expressly ignored (e.g., **Indomitable Claim** for Inland Presence).",
+                  "assessment": "supported; direct statement or straightforward application to the stipulated case"
+                },
+                "outcome": "correct"
+              }
+            ],
+            "outcome": "correct"
+          }
+        ],
+        "reason": "All mapped requested facts are supplied correctly, including the complete attached quotation. Provisional incorrect because an additional prose claim literally denies that the Coastal-land Growth group can place Ocean's Presence at all. The likely intended meaning is that it cannot place Presence in the Ocean, as the attached quotation correctly states. This wording ambiguity requires fresh independent adjudication; it is not an omission or a source-format issue.",
+        "missing_requested_material_facts": [],
+        "contradictions": [],
+        "unsupported_guesses": [],
+        "contextual_extra_observations": [
+          {
+            "claim": "its other Range-1 Coastal-land group also cannot place Ocean Presence",
+            "assessment": "Materially false if Ocean Presence means the Spirit's disks; that group adds its Presence to Coastal land. The complete attached quotation correctly narrows the prohibition to placing in the Ocean. The prose may be an imprecise equivalent of that narrower rule.",
+            "summary_support": "Its other group's Range-1 **Coastal land** placement does not permit placing in the Ocean.",
+            "materiality": "A literal reading incorrectly prevents a legal Growth placement; the intended location reading would remove this finding.",
+            "adjudication_needed": true
+          }
+        ],
+        "borderline_adjudication_needed": true
+      }
+    },
+    {
+      "grader_output": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/grading/block-06/grades.json",
+      "grader_output_sha256": "91a55262f8ee995b5c962be690e0e61e782520d430e92f7fe735f6fdfb2760d7",
+      "complete_original_proposal": {
+        "id": "Q101",
+        "reader": "reader-a",
+        "grade": "incorrect",
+        "requested_part_assessment": [
+          {
+            "clause_id": "Q101.request",
+            "fact_assessments": [
+              {
+                "fact_index": 1,
+                "expected": "Losing Earth's Sacred Site to the resulting Blight does not retroactively remove its Defend from the Dahan Damage in that Ravage.",
+                "observed": "Opening “Yes.” answers the literal retroactive-removal question affirmatively, but immediately says Defend is not retroactively removed; quotation and coverage check also state not removed.",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "Losing Earth's defending Sacred Site to the resulting Blight does not retroactively remove its Defend from the simultaneous Damage to Dahan in that Ravage.",
+                  "range": [
+                    13854,
+                    14009
+                  ],
+                  "interpretation": "The frozen summary supplies this requested rule."
+                },
+                "outcome": "contradicted_pending_adjudication"
+              }
+            ]
+          }
+        ],
+        "reason": "Provisionally incorrect for contradictory polarity on the requested ruling. The detailed operative statement and quotation are correct, so a fresh adjudicator should decide whether the isolated opening “Yes.” is merely a nonoperative typo.",
+        "missing_requested_material_facts": [],
+        "contradictions": [
+          "The opening “Yes.” affirms the literal question whether losing the site retroactively removes Defend, while the next sentence, operative quotation, and coverage check say it does not. This unresolved polarity conflict concerns the sole asked ruling."
+        ],
+        "unsupported_guesses": [],
+        "contextual_extra_observations": [],
+        "borderline_adjudication_needed": true
+      }
+    },
+    {
+      "grader_output": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957/expanded-iteration-11/grading/block-06/grades.json",
+      "grader_output_sha256": "91a55262f8ee995b5c962be690e0e61e782520d430e92f7fe735f6fdfb2760d7",
+      "complete_original_proposal": {
+        "id": "Q115",
+        "reader": "reader-a",
+        "grade": "incorrect",
+        "requested_part_assessment": [
+          {
+            "clause_id": "Q115.request",
+            "fact_assessments": [
+              {
+                "fact_index": 1,
+                "expected": "Invaders deal 3 Damage to land, causing one Blight.",
+                "observed": "3 Damage to land, adding one Blight.",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "Example: A Town, Explorer and two Dahan with no Defend cause 3 land Damage (one Blight)",
+                  "range": [
+                    14161,
+                    14248
+                  ],
+                  "interpretation": "The printed piece Health, Ravage Damage, and destruction Fear rules resolve the concrete calculation."
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 2,
+                "expected": "Concealing Shadows prevents Dahan Damage only; both Dahan survive healthy.",
+                "observed": "Concealing Shadows prevents Damage to both Dahan; both survive (so remain healthy).",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "**Concealing Shadows** makes Dahan take no Damage from Ravaging Invaders this turn, while land still takes its normal Damage and can Blight. Protected surviving Dahan then counterattack normally.",
+                  "range": [
+                    23739,
+                    23934
+                  ],
+                  "interpretation": "The printed piece Health, Ravage Damage, and destruction Fear rules resolve the concrete calculation."
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 3,
+                "expected": "They counterattack for 4 total Damage.",
+                "observed": "Both counterattack for 4 total Damage.",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "surviving Dahan each deal **2 Damage** to Invaders in that land, allocated by the players.",
+                  "range": [
+                    13257,
+                    13347
+                  ],
+                  "interpretation": "The printed piece Health, Ravage Damage, and destruction Fear rules resolve the concrete calculation."
+                },
+                "outcome": "correct"
+              },
+              {
+                "fact_index": 4,
+                "expected": "They can destroy both Town and Explorer with excess unused.",
+                "observed": "Instead of the stipulated Town and Explorer, says allocate 2 to City and 2 to Town, destroying both.",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "| Explorer | 1 | 1 | 0 |\n| Town | 2 | 2 | 1 |\n| City | 3 | 3 | 2 |",
+                  "range": [
+                    2173,
+                    2239
+                  ],
+                  "interpretation": "The printed piece Health, Ravage Damage, and destruction Fear rules resolve the concrete calculation."
+                },
+                "outcome": "contradicted"
+              },
+              {
+                "fact_index": 5,
+                "expected": "This Ravage generates 1 Fear from the Town.",
+                "observed": "Says City 2 Fear plus Town 1 Fear = 3 total, rather than 1 from stipulated Town/Explorer.",
+                "summary_support": {
+                  "status": "supported",
+                  "quote": "Every destroyed Town generates **1 Fear** and every destroyed City **2 Fear**, in addition to explicit Fear from the effect. Explorers generate none automatically.",
+                  "range": [
+                    22402,
+                    22565
+                  ],
+                  "interpretation": "The printed piece Health, Ravage Damage, and destruction Fear rules resolve the concrete calculation."
+                },
+                "outcome": "contradicted"
+              }
+            ]
+          }
+        ],
+        "reason": "Land damage, Blight, Dahan survival, and 4 counterattack Damage are right. The actual case result is wrong: the answer invents a City, omits the Explorer result, treats 2 Damage as enough for a City, and gives 3 Fear instead of 1. Attached general rules do not correct these contradictory concrete rulings.",
+        "missing_requested_material_facts": [],
+        "contradictions": [
+          "The case contains Town and Explorer, but the answer substitutes City and Town as the destroyed Invaders.",
+          "The requested Ravage-generated Fear is 1 from the Town; the answer and its coverage check give 3 from a nonexistent City plus Town."
+        ],
+        "unsupported_guesses": [],
+        "contextual_extra_observations": [
+          "The volunteered claim that assigning 2 Damage destroys a City is materially false: the summary gives City Health 3. This also requires fresh review under the contextual-extra rule."
+        ],
+        "borderline_adjudication_needed": true
+      }
+    }
+  ],
+  "all_original_borderline_notes": [
+    {
+      "id": "Q78",
+      "reader": "reader-b",
+      "issue": "Whether the volunteered phrase cannot place Ocean Presence is a material false denial of Coastal Growth placement or an imprecise reference to placement in the Ocean.",
+      "provisional_grade": "incorrect",
+      "all_mapped_requested_facts_correct": true,
+      "fresh_independent_adjudicator_required": true,
+      "possible_resolution": "If the phrase is read in context as cannot place Presence in the Ocean, mark correct and remove the extra-claim finding. If read as denying all Ocean-spirit Presence placement by that Growth group, retain incorrect."
+    },
+    {
+      "id": "Q101",
+      "reader": "reader-a",
+      "issue": "Whether bare opening Yes is an operative material contradiction despite the immediately explicit correct no-retroactivity statement and same-entry quotation. Provisional grade incorrect; fresh independent adjudication requested."
+    },
+    {
+      "id": "Q115",
+      "reader": "reader-a",
+      "issue": "Asked case/Fear contradictions are definite; fresh independent review flagged for additional volunteered false City-health ruling, as instructed."
+    }
+  ],
+  "original_raw_output_sha256": {
+    "reader-a": "d774d2314ae468e1968375694f80c8e5128583f2e34d7016c045c279a5ac9a38",
+    "reader-b": "1ea7b47d9e6b2dcb31851d3571a889c73150019be52d95270ba1a762629c2181"
+  },
+  "purpose": "Complete non-correct/flagged/fact-finding/nonempty-extra-observation set; both entire original same-question entries and every original proposal retained. No desired verdict."
+}

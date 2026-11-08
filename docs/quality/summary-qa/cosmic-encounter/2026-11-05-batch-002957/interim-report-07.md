@@ -1,0 +1,15 @@
+# Cosmic Encounter QA — interim07
+
+Active. Candidate15 is167 questions/544 raw key records, Q001–Q168 except withdrawn Q086. Original twenty question/key objects are unchanged. No expanded blind reader has yet been dispatched.
+
+Complete source-field challenges accepted five unique reachable procedure groups: per-event optional choices for Mind/Reserve (grouped once), compensation selection without seeing faces, HumanSuper replacement and optional post-bonus discard, VulchSuper simultaneous eligible-group cardinality, and first-player destiny restoration/ordinary leftward turn flow. Q054 also explicitly describes the full original printed copying conditional without assuming an original-base copying enabler or receiving reachable novelty credit. Four existing questions were extended and Q167/Q168 added; every prior version remains preserved.
+
+The new groups follow full16-page/14-component, whole applicableFAQ/retainedhistory1867-fragment/707-mention and all50native/267-unit source rechecks. Earlier over-credit from entire paragraphs or unasked key background is expressly corrected. Independent reviewers are now checking the current clean deltas and unchanged bindings; none sees the summary or reader results. Fresh literal reviewer14 is producing the complete v4 asked/background map for167/544 from its own complete original inputs and authorized deltas. Parent passes24/25 added no further groups; current independent closure remains pending.
+
+Canonical equals freeze12, SHA25606ba4636268efbf5ea63841f6540e59981e82ae3ea84314d9d4c5569723d4af3. Freeze11 fixed the source-only auditor's MindWild per-draw optionality finding; freeze12 also states the later event's deck origin explicitly. The source-only auditor15 passed exactfreeze11 with two honestly documented source gaps. That exact PASS remains bound to11; a full exact12 continuation remains required. Auditor15 has never seen questions/keys/maps/readers/grades or authored a repair.
+
+Runtime proof verifies auditor15's five full text inputs/55chunks and all50 originalJPEG payload hashes/bytes/dimensions/original detail, plus full newfreeze11 delivery10chunks. The book/FAQ/native narrow checks likewise have separately verified selected-source and native-image proof, explicitly distinguished from reused complete readings. No continuation is called another fresh vote.
+
+Validation-in-progress-08.json passes original source hashes, baseline and seed-entry preservation across all fifteen candidates, canonical/freeze12 byte equality and targeted repository checks. Global files/stamping remain coordinator-owned.
+
+Four human choices remain pending and no proposal has been adopted. A preliminary full current-bank test may proceed only after current source/scope gates and explicit actual-question dependency review. It cannot establish final complete-source readiness while those choices remain pending. Every substantive field of each eventual raw answer remains subject to strict grading; unasked context, optional format and confidence labels are separate. The persistent goal stays active through coordinator authorization after stamping checks.

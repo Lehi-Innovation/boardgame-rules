@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:23:54.022Z",
+    "ordinal": 345,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_058e2b81b468db9e016aef346dc2d487d099fdacb2b61474ad",
+      "status": "completed",
+      "call_id": "call_c397627fe984483db76194edf73fb2a8",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nguide=(base/'summary-snapshot.md').read_text(); qset={q['id'] for q in json.loads((base/'questions.json').read_text())['questions']}\\ndata=json.loads((base/'reader-a.json').read_text()); assert [a['id'] for a in data['answers']]==[f'Q{i:02d}' for i in range(1,36)]\\nfor a in data['answers'][30:]:\\n assert a['id'] in qset and a['support'] in {'supported','partial','unsupported'}\\n for x in a['source_passages']: assert x['quotation'] and x['quotation'] in guide,(a['id'],x['section'])\\n for x in a['answer']: assert x['part'] and x['ruling'] and x['evidence']\\napps={a['id']:' '.join(x['ruling'] for x in a['answer']).lower() for a in data['answers'][30:]}\\nchecks={\\n'Q31':['adjacent to clearings touching it without crossing a printed path','forests separated by one printed path','winter\\\\'s river also divides forests','fall has no special rules','rivers otherwise are not paths'],\\n'Q32':['25 warriors','8 wood','any corner','one warrior in every clearing except','diagonally opposite corner','one sawmill','one workshop','one recruiter','adjacent clearings','remaining five buildings of each type','right to left','leftmost space empty'],\\n'Q33':['20 warriors','one roost and six warriors','not another player\\\\'s starting corner','diagonally opposite','choose a leader','other leaders face up','two bird loyal viziers','columns listed','other six roosts','right to left'],\\n'Q34':['10 warriors','three bases','ten sympathy','three additional cards','face down into supporters','separate from the three-card hand','no pieces on the map','no officers'],\\n'Q35':['choose thief, tinker or ranger','any forest','shuffle the quests','three face up','s-marked starting items','tea, coins and bags','matching tracks','other starting items face up in satchel','unused s-marked items','relationship marker at indifferent']}\\nfor q,terms in checks.items():\\n miss=[t for t in terms if t not in apps[q]]\\n assert not miss,(q,miss)\\nprint('Group 7 check passed: Q31-Q35 have labeled applications; quotations are nonempty exact guide substrings; requested facts checked.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":800}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b663-c013-7242-bbe2-ad457b677bba",
+        "create_time": 1794061421.7632883
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:23:55.096Z",
+    "ordinal": 348,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b665-00d8-7d01-bb98-25131537c252",
+      "call_id": "call_c397627fe984483db76194edf73fb2a8",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Group 7 check passed: Q31-Q35 have labeled applications; quotations are nonempty exact guide substrings; requested facts checked.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b663-c013-7242-bbe2-ad457b677bba",
+        "create_time": 1794061435.0965033
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "raw_audit_artifacts_never_changed": true,
+  "technical_validator_corrections": [
+    {
+      "failure_chunk": "972395",
+      "issue": "Parent derivation initially appended a newline not present in the independent complete visible prose.",
+      "resolution_chunk": "2b28c4",
+      "evidence": "Only difference was one parent-added trailing newline; original 4329-character prose equals BeautifulSoup get_text newline-strip output exactly. No omitted prose."
+    },
+    {
+      "failure_chunk": "7d2ff1",
+      "issue": "Parent PDF check opened a fresh CORE document for each page, instead of reproducing recorded shared-document render sequence.",
+      "resolution_public_method_chunk": "973e50",
+      "resolution_pixel_chunks": [
+        "265624",
+        "9df935"
+      ],
+      "evidence": "Recorded method renders pages6,7,17,32 sequentially at1.5 in the same document. This sequence exactly reproduces every source pixel. Opening pages individually alters a small cached-font raster on p7; wrong-scale diagnostics were not source judgments."
+    },
+    {
+      "failure_chunk": "b0579a",
+      "issue": "Parent initially required pixel rerendering of the supplied legacy legend PNG as though it was a new independently generated audit11 render.",
+      "resolution": "Audit11 actually independently generated all four required CORE pages and original B&C p6. All five new direct renders exactly reproduce their recorded renderer pixels. The supplied legacy legend remains full-viewed, original-byte/hash bound to the manifest; it is additionally corroborated by the independently rendered complete original p6. No required independent render check is omitted.",
+      "successful_exact_five_render_chunk": "edfacb"
+    }
+  ],
+  "no_source_finding_waived": true,
+  "no_pixel_tolerance_or_factual_score_exception_added": true,
+  "successful_source11_validation_chunk": "edfacb"
+}

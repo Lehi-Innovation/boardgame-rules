@@ -1,0 +1,54 @@
+--- source-candidate-28.md
++++ source-candidate-29-proposed-not-applied.md
+@@ -182,12 +182,12 @@
+ 
+ Use the named operation to determine what happens to the piece:
+ 
+-| Instruction | Effect on the piece |
+-| --- | --- |
+-| **Damage** | Mark Damage; reaching Health destroys the piece immediately. |
+-| **Destroy** | Return the specified piece to supply regardless of Health or marked Damage. |
+-| **Remove** | Take the specified piece off the board without a Damage-to-Health test. |
+-| **Replace** | Remove the original piece and put the specified new piece in its place, retaining marked Damage. |
++| Instruction | Effect on the piece | Destruction Fear |
++| --- | --- | --- |
++| **Damage** | Mark Damage; reaching Health destroys the piece immediately. | If this destroys a Town/City, gain 1/2 Fear respectively, in addition to explicit Fear. |
++| **Destroy** | Return the specified piece to supply regardless of Health or marked Damage. | A Town/City generates 1/2 Fear respectively, in addition to explicit Fear. |
++| **Remove** | Take the specified piece off the board without a Damage-to-Health test. | None from removal; explicit Fear still applies. |
++| **Replace** | Remove the original piece and put the specified new piece in its place, retaining marked Damage. | None from replacement itself. If retained Damage destroys the new Town/City, gain 1/2 Fear respectively, in addition to explicit Fear. |
+ 
+ “Damage” means **Damage to Invaders** unless explicitly stated otherwise. Normal Spirit Damage does not harm Dahan or the land. Distribute Damage among Invaders in the target land however you wish; Explorers need not be hit first. Damage from separate normal Powers and counterattacks can accumulate within a turn. A piece is destroyed immediately when its marked Damage reaches/exceeds its Health. Reduced Health can also destroy a previously damaged piece; Damage does not itself reduce Health. Marked Damage does not reduce the Health counted by a Health-worth removal allowance. If a damaged piece moves out of a Health bonus or into a Health penalty and is thereby destroyed, destruction occurs in its destination land, never in an in-between location. [FAQ if-an-invader-with-health-bonus-and-damage-is-moved-where-is-it-destroyed]
+ 
+@@ -252,7 +252,13 @@
+ 
+ ### Fear procedure
+ 
+-Fear is island-wide. For each Fear, move one marker from the Fear Pool to Generated Fear. When all **4 per Spirit** markers have moved, earn the top Fear Card face-down, return all markers to the pool and continue with any leftover Fear toward the next card. If earning a card exposes a Terror divider, the new Terror Level applies immediately; its victory condition can end the game at the outcome check. Earning the final card reveals Victory; its text never needs resolving.
++Fear is island-wide. Process generated Fear **one point at a time**:
++
++1. Move one marker from the Fear Pool to Generated Fear.
++2. As soon as Generated Fear holds all **4 per Spirit** markers, earn the top Fear Card face-down. Apply any newly exposed Terror Level immediately, then return all markers to the Fear Pool **before processing the next point**.
++3. Repeat for every remaining point of Fear, continuing toward the next card after each refill.
++
++A newly exposed Terror Level changes the victory condition immediately; the game can end at the outcome check. Earning the final card reveals Victory; its text never needs resolving.
+ 
+ Fear effects are not Spirit Powers. For “each player,” one player follows all instructions, then the next; choices can affect anywhere allowed by the card without the player's own Presence or Power Range. Generic Presence/Sacred Site requirements can use any Spirit's; wording explicitly counting each Spirit's own sites is individual. The same piece can be chosen or moved by multiple players unless the card requires different choices. Fear effects last for the turn unless they change the board. For outcome timing, a card containing **only “each” instructions** creates one action per “each” (e.g., per player). A card mixing a global instruction with “each” instructions is one overall action with nested actions per “each”; complete that whole action tree before checking outcomes. [FAQ actions-for-fear-and-event-cards-with-both-each-and-non-each-instructions]
+ 
+@@ -316,7 +322,7 @@
+ 
+ - **A Spread of Rampant Green:** **Choke the Land with Green** is optional (some printings omit “may”). Each use skips just that Ravage or Build action and costs one of Green's Presence in its Sacred Site there. A later Build needs a fresh decision and another disk: starting with three, Green may skip the Ravage, retain a two-disk Sacred Site, then skip the Build and end with one disk. **Steady Regeneration**'s Healthy/Blighted test refers to the Blight Card, not Blight in the destination land. When adding Presence via Growth, Green may use destroyed disks instead of track disks even while disks remain on tracks: this is free while Healthy, or costs 1 Energy per destroyed disk while Blighted. This permission applies only to Growth; an ordinary Power needs its own explicit destroyed-Presence permission. Green's separate **Always** Range-2 Jungle/Wetland placement is additional to its one chosen Growth group, including when it chooses Reclaim/gain a Power. It still chooses only one of the optional groups. Growth instructions from multiple options can be ordered together, so a gained Power may inform the mandatory placement. Its explicit regeneration can use destroyed Presence; ordinary placement cannot. [Core: .9v5kc2v, .7w4g8r1, .bu6oegz, .7w4g8nv]
+ 
+-- **Thunderspeaker:** Presence may accompany each moved Dahan, including generic Move as well as Gather/Push; two Dahan can carry two Presence. **Sworn to Victory** triggers after an entire single-land Ravage for each Dahan destroyed there: destroy one of Thunderspeaker's Presence within Range 1 per Dahan, even if no Blight was added. Finish the Ravage, cascades and counterattack before this triggered loss. [Core: .bu6oc6l, .bu6oc73, .bu6ofsi]
++- **Thunderspeaker:** Presence may accompany each moved Dahan, including generic Move as well as Gather/Push; two Dahan can carry two Presence. **Sworn to Victory:** finish the entire single-land Ravage, including Blight, cascades and counterattack, then count every Dahan destroyed in that Ravage. **For each destroyed Dahan, Thunderspeaker destroys one of its own Presence within Range 1 of the Ravaged land**, even if no Blight was added. [Core: .bu6oc6l, .bu6oc73, .bu6ofsi]
+ 
+ - **Ocean's Hungry Grasp:** On a board with any of Ocean's Presence, the Ocean is a Coastal Wetland for **Powers and Blight**, not for normal Growth, Invader actions or Fear Cards. Powers and Special Rules can measure Range through it as a land. [Core: range-through-ocean] Powers can target it and move Invaders/Dahan into it; Blight can cascade into it. Other Spirits' Presence may end up there via a legal Power, including Thunderspeaker accompanying moved Dahan. You can measure Growth placement Range **from existing Ocean Presence**, although normal Growth cannot add to the Ocean just by treating it as a Coastal Wetland. The Growth group explicitly adding two Presence in **any Ocean** can place them in any board's Ocean, even a board where Ocean has no Presence, without a numeric Range requirement. This Growth group places in Oceans only; it does not place Presence Inland. Its other group's Range-1 **Coastal land** placement does not permit placing in the Ocean. Other placement must respect Ocean's land-type restriction unless expressly ignored (e.g., **Indomitable Claim** for Inland Presence). [Core: .bu6odcf, .7w4gef8, .9v5kf36, .9v5ka9o, .9v5kc4i, When-OHG-is-in-play-can-other-pieces-end-up-in-the-Ocean]
+ 
+@@ -330,7 +336,7 @@
+   | Town | 2 | Push it. |
+   | City | 5 | No Push. |
+ 
+-  No real Damage is marked, so different Powers or a Repeat cannot combine their hypothetical Damage; multiple instructions **within one Power** can. Existing real Damage from others helps its hypothetical destruction and remains unchanged afterward. Within a single Power use, a given Invader can be pretend-destroyed only once. Repeats can “destroy” the same piece again for Fear. It does not get bonuses conditional on **actual** destruction (e.g., Mists of Oblivion or Vengeance of the Dead) from these pretend destructions. [Core: .7w4g9jv, .7w4g7yx, .7w4g7yu, .7w4g8pj, .9v5kfh3, .9v5katc, .bu6oc6g]
++  For each Invader that this Power use would destroy, gain **0/2/5 Fear for an Explorer/Town/City**, respectively; Push only the Explorer or Town. No real Damage is marked, so different Powers or a Repeat cannot combine their hypothetical Damage; multiple instructions **within one Power** can. Existing real Damage from others helps its hypothetical destruction and remains unchanged afterward. Within a single Power use, a given Invader can be pretend-destroyed only once. Repeats can “destroy” the same piece again for Fear. It does not get bonuses conditional on **actual** destruction (e.g., Mists of Oblivion or Vengeance of the Dead) from these pretend destructions. [Core: .7w4g9jv, .7w4g7yx, .7w4g7yu, .7w4g8pj, .9v5kfh3, .9v5katc, .bu6oc6g]
+ 
+ - **Bringer's exceptions:** Fear Cards and Dahan counterattacks after its Defend deal real Damage, because they are not its Power's Damage. Bringer can Remove/Replace, add real Blight (destroying Presence normally), modify Invader actions or cause actual Ravage. Reducing Health or replacing a damaged piece with a lower-Health one can cause real destruction by core Health rules. If Bringer Pushes a “destroyed” Town into Ocean, Ocean's separate Drowning destroys it: **3 total Fear** (2 from Bringer, 1 from Ocean). **Spirits May Yet Dream** may turn any face-down Fear Card face-up, whether already earned or anywhere in the deck. This only previews the card: turning it face-up neither earns it nor resolves its Fear effect early; normal earning and resolution still apply. Its Element-granting level gives the target Spirit one Element of a type it already has at least one of; it cannot grant a currently absent Element type. [Core: .9v5ka92, .7w4g9jv, .9v5kf34, can-bringer-destroy-things-indirectly, .7w4g8pf, .7w4g8rd]
+ 

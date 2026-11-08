@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:11:46.191Z",
+    "ordinal": 93,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef319dc99c87d0948e698c9012a045",
+      "status": "completed",
+      "call_id": "call_f52313d49e334758998936c70a3f07d9",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nb=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nq=json.loads((b/'reader-b.json').read_text())['answers'][3]['source_passages'][0]['quotation']\\ng=(b/'summary-snapshot.md').read_text()\\nfor term in ['**Craft (4.1):**','**Personal duplicate check:**','- **Marquise, Eyrie and Alliance cost:**','- **Vagabond cost and reuse:**','- A **three-color question-mark icon**','- Immediate effect (paper box):']:\\n print('TERM',term, 'guide',g.find(term),'quote',q.find(term))\\nprint(repr(q))\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":3000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060701.7893968
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:11:46.928Z",
+    "ordinal": 96,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b659-e470-72e2-91c5-d78ac5408f15",
+      "call_id": "call_f52313d49e334758998936c70a3f07d9",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.7 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "TERM **Craft (4.1):** guide 8194 quote 0\nTERM **Personal duplicate check:** guide 8462 quote 268\nTERM - **Marquise, Eyrie and Alliance cost:** guide 8668 quote 474\nTERM - **Vagabond cost and reuse:** guide 8965 quote 771\nTERM - A **three-color question-mark icon** guide 9320 quote 1127\nTERM - Immediate effect (paper box): guide 9378 quote 1185\n\"**Craft (4.1):** **Every crafting piece gets its suit from the clearing containing it.** The card's **bottom-left crafting icons** require pieces of those clearing suits; the card's own suit does not define the cost. Craft a card from hand when your faction permits.\\n\\n**Personal duplicate check:** Only an identical persistent effect **in your own play area** prevents you from crafting that effect again. Other players' copies do not count for this duplicate restriction.\\n\\n- **Marquise, Eyrie and Alliance cost:** For **each icon**, activate **one workshop, roost or sympathy in a clearing matching that icon's suit**, respectively. A crafting piece gets its suit from its clearing. Combine eligible pieces as needed, but **each piece may activate only once per turn**.\\n- **Vagabond cost and reuse:** The pawn **may activate repeatedly in a turn**. For each icon, **pay by exhausting one face-up, undamaged hammer: flip that hammer face down**. The pawn's **current clearing must match every icon on the card**. Reusing the pawn never waives the hammer payment per icon. One clearing cannot pay mixed fox/rabbit/mouse icons.\\n\\n- A **three-color question-mark icon** accepts any suit.\\n\\n- Immediate effect (paper box): resolve, then discard the **crafting card**. An item card requires the corresponding **item token** in the map supply, or it cannot be crafted. Take the item token into Crafted Items and score the VP printed on the card, subject to Eyrie exception. The item token stays; the crafting card is discarded. Ordinary factions do not exhaust crafted items as Vagabond does.\"\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060706.928464
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

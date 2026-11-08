@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:11:38.107Z",
+    "ordinal": 86,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef31951f1887d0a61f2233e9b6d351",
+      "status": "completed",
+      "call_id": "call_26f515bbd6174c8fb3501eec6899cf57",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\ng=(base/'summary-snapshot.md').read_text(); d=json.loads((base/'reader-b.json').read_text())\\nfor a in d['answers']:\\n for p in a['source_passages']:\\n  q=p['quotation']\\n  print(a['id'],len(q),q in g)\\n  if q not in g:\\n   j=0\\n   while j<min(len(q),len(g)) and q[j]==g[j]: j+=1\\n   import difflib\\n   m=difflib.SequenceMatcher(None,q,g).find_longest_match(0,len(q),0,len(g))\\n   print('quote repr',repr(q[:300]),'longest',m,repr(q[m.a:m.a+100]),repr(g[m.b:m.b+100]))\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":3000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060693.1232955
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:11:38.837Z",
+    "ordinal": 89,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b659-c4d5-7810-b3e4-05b432e2ee16",
+      "call_id": "call_26f515bbd6174c8fb3501eec6899cf57",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.7 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q01 299 True\nQ02 448 True\nQ03 1756 True\nQ04 1584 False\nquote repr \"**Craft (4.1):** **Every crafting piece gets its suit from the clearing containing it.** The card's **bottom-left crafting icons** require pieces of those clearing suits; the card's own suit does not define the cost. Craft a card from hand when your faction permits.\\n\\n**Personal duplicate check:** On\" longest Match(a=10, b=2340, size=4) \".1):** **Every crafting piece gets its suit from the clearing containing it.** The card's **bottom-l\" '.1):\\n\\n1. Choose factions; determine starting player and seating randomly. Take faction boards and th'\nQ05 819 True\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060698.8372152
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

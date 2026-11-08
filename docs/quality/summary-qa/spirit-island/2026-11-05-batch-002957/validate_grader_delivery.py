@@ -10,9 +10,11 @@ for block in sorted((D/'grading').glob('block-*')):
   complete=bool(pairs) and pairs[0][0]==0 and pairs[-1][1]==len(s) and all(a[1]==b[0] for a,b in zip(pairs,pairs[1:]))
   bounded=all(isinstance(a,int) and isinstance(z,int) and 0<z-a<=6000 for a,z in pairs)
   cap=next((x[k] for k in ['output_cap_tokens','max_output_tokens_per_call','per_call_output_cap_tokens','tool_output_cap_tokens'] if k in x),None)
+  # A scalar cap applies to all ranges; a vector declares one cap per range.
+  cap_valid=(isinstance(cap,int) and not isinstance(cap,bool) and cap>=4000) or (isinstance(cap,list) and len(cap)==len(pairs) and all(isinstance(c,int) and not isinstance(c,bool) and c>=4000 for c in cap))
   truncated=any(x.get(k,False) for k in ['truncated','truncation_observed','source_output_truncated'])
   match=name in allowed and H(p)==allowed[name]['sha256']==x['sha256']
-  rows.append({'path':name,'sha256':H(p),'characters':len(s),'ranges':pairs,'complete':complete,'bounded':bounded,'input_hash_match':match,'output_cap_when_declared':cap,'truncation':truncated,'pass':match and complete and bounded and not truncated and (isinstance(cap,int) and cap>=4000)})
+  rows.append({'path':name,'sha256':H(p),'characters':len(s),'ranges':pairs,'complete':complete,'bounded':bounded,'input_hash_match':match,'output_cap_when_declared':cap,'truncation':truncated,'pass':match and complete and bounded and not truncated and cap_valid})
  exact=set(seen)==set(allowed) and len(seen)==len(allowed)==5
  checks.append({'block':block.name,'grades_sha256':H(block/'grades.json'),'manifest_sha256':H(block/'input-manifest.json'),'exact_five_input_set':exact,'inputs':rows,'pass':exact and all(x['pass'] for x in rows)})
 out={'checks':checks,'all_passed':bool(checks) and all(x['pass'] for x in checks),'scope':'Verifies declared complete input delivery, exact frozen hashes, bounded ranges and declared caps. Actual tool-call transcripts and actual-model records are retained independently; declarations alone are not proof of permitted filesystem enforcement.'};p=D/'grader-delivery-validation.json';p.write_text(json.dumps(out,indent=2)+'\n');print(json.dumps({'blocks':len(checks),'all_passed':out['all_passed'],'failures':[x['block'] for x in checks if not x['pass']]}))

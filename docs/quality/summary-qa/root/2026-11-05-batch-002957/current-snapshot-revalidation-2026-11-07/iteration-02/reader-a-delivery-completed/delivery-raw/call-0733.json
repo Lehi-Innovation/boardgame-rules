@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:41:12.318Z",
+    "ordinal": 733,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_058e2b81b468db9e016aef388326a487d08134e18fae5b0790",
+      "status": "completed",
+      "call_id": "call_dd29be0cd3984f788c192249f6b5fba1",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom collections import Counter\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nguide=(base/'summary-snapshot.md').read_text(); expected=[q['id'] for q in json.loads((base/'questions.json').read_text())['questions'][:80]]\\ndata=json.loads((base/'reader-a.json').read_text()); ids=[a['id'] for a in data['answers']]\\nassert ids==expected and all(Counter(ids)[x]==1 for x in expected)\\nfor a in data['answers']:\\n for x in a['source_passages']: assert x['quotation'] and x['quotation'] in guide,(a['id'],x['section'])\\nprint('Final check passed: Q01-Q80 expected order and uniqueness; valid JSON; all quotations are nonempty exact guide substrings.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":500}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b671-5649-7543-942e-5a967933730c",
+        "create_time": 1794062467.426843
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:41:12.728Z",
+    "ordinal": 736,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b674-d618-79d0-bc94-c64a8bbb013c",
+      "call_id": "call_dd29be0cd3984f788c192249f6b5fba1",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Final check passed: Q01-Q80 expected order and uniqueness; valid JSON; all quotations are nonempty exact guide substrings.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b671-5649-7543-942e-5a967933730c",
+        "create_time": 1794062472.7285616
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

@@ -1,0 +1,44 @@
+from pathlib import Path
+import json,hashlib,fitz
+from bs4 import BeautifulSoup
+from PIL import Image
+R=Path('/home/jonny/projects/boardgame-rules');B=R/'docs/quality/summary-qa/spirit-island/2026-11-05-batch-002957';F=R/'docs/quality/summary-qa/batches/2026-11-05-batch-002957/source-preflight/spirit-island';P=F/'original-spirit-panels';C=B/'card-scope-source';sha=lambda p:hashlib.sha256(Path(p).read_bytes()).hexdigest();at=lambda p:Path(p) if Path(p).is_absolute() else R/p
+names=[B/f'source-audit-final-09-completed{x}.json' for x in ['', '-read-ledger','-visual-manifest']];frozen={str(p):sha(p) for p in names};a,l,v=[json.loads(p.read_text()) for p in names];checks=[];errors=[]
+def ck(n,b):
+ checks.append({'check':n,'pass':bool(b)})
+ if not b:errors.append(n)
+old_l=json.loads((B/'source-audit-final-09-read-ledger.json').read_text());old_v=json.loads((B/'source-audit-final-09-visual-manifest.json').read_text());rows=l['source_delivery'];ck('90 historical rows reused losslessly;1 new publisher row',rows[:90]==old_l['source_delivery'] and len(rows)==91 and rows[90:]==l['newly_received_source_delivery']);ck('57 earlier visual observations reused losslessly; none newly claimed',v['images']==old_v['images'] and len(v['images'])==57 and not v['new_visual_observations'])
+ck('merged flat delivery matches completed report',a['source_delivery']==[{k:r[k] for k in ['path','start','end','source_sha256','slice_sha256','truncated']} for r in rows])
+required=[B/'final-source-audit-09-prompt.txt',B/'source-manifest.json',B/'supplemental-source-manifest-v4.json',B/'source-candidate-20.md',R/'extracted/spirit-island-rules.txt',F/'living-faq-core-game.txt',F/'living-faq-setup.txt',C/'what-do-range-boosts-affect.txt',C/'range-in-text-of-powers-that-target-spirits.txt',C/'core-second-printing.txt',B/'novelty11-source-scratch/novelty11-publisher-updates.txt']+[P/x for x in ['README.md','panel-download-map.json','download-integrity.json','independent-printed-photo-corroboration.json']]+[Path('/tmp/audit09-completed-publisher-branch-claw-visible.txt')]
+actual={at(r['path']).resolve() for r in rows};ck('complete independently specified mandatory16-input text inventory',actual=={p.resolve() for p in required})
+for p in sorted(actual):
+ rs=sorted([r for r in rows if at(r['path']).resolve()==p],key=lambda r:r['start']);s=p.read_text();pos=0
+ for r in rs:
+  ck(f'{p.name} [{r["start"]},{r["end"]}) hash/range/cap',r['start']==pos and 0<r['end']-r['start']<=6000 and r['end']<=len(s) and r['source_sha256']==sha(p) and r['slice_sha256']==hashlib.sha256(s[r['start']:r['end']].encode()).hexdigest() and r['character_length']==len(s) and r['bytes']==p.stat().st_size and r['output_cap']>=4000 and r['truncated'] is False);pos=r['end']
+ ck(p.name+' complete EOF',pos==len(s))
+cand=B/'source-candidate-20.md';ck('candidate fixed identity',sha(cand)==a['candidate_sha256']=='63da3a8f472025ad10028eba03c11ec1ad00b2455cb3e70a08bafa6ae90bdb24' and len(cand.read_text())==52388 and cand.stat().st_size==52590)
+prov=l['publisher_prose_derivation'];html=at(prov['original_html_path']);soup=BeautifulSoup(html.read_bytes(),'html.parser')
+for node in soup(['script','style']):node.decompose()
+derived=soup.get_text('\n',strip=True).encode('utf-8');deriv=Path(prov['derivative_path']);ck('publisher original HTML identity',sha(html)==prov['original_html_sha256']=='f214e861d7d03f8bf863f7149712d20f55f67fa42b7367f59a2e9bc0e2d3447b');ck('full visible prose derivative exact reproduction',derived==deriv.read_bytes() and sha(deriv)==prov['derivative_sha256']=='73e15164ca9975c3ce8ed36d3a58174d61f545bd3e5156dfd3b8c92ec87b957a' and len(derived.decode())==4329 and len(derived)==4332)
+m=json.loads((B/'supplemental-source-manifest-v4.json').read_text());ds=l['mandatory_inventory_reconciliation']['records'];ck('all72 supplemental source records individually reconciled',len(ds)==len(m['source_records'])==72 and all(d['path']==x['path'] and d['sha256']==x['sha256'] and bool(d['required_reading_disposition']) for d,x in zip(ds,m['source_records'])))
+# Byte hashes are machine checks only, not claims that optional transports/scripts were prose-read.
+for x in m['source_records']:ck('supplement actual hash '+Path(x['path']).name,sha(x['path'])==x['sha256'])
+base=json.loads((B/'source-manifest.json').read_text())
+for p,h in base['paths_and_sha256'].items():ck('base source actual hash '+Path(p).name,sha(at(p))==h)
+observed={at(x['path']).resolve():x for x in v['images']};faces=[x for x in m['source_records'] if x.get('role')=='primary printed card face'];panels=[x for x in m['source_records'] if x.get('role')=='primary printed original-base Spirit panel facsimile'];ck('33 faces/16 full native panels',len(faces)==33 and len(panels)==16)
+for x in faces+panels:
+ p=at(x['path']);ck(p.name+' visual inventory identity',p.resolve() in observed and observed[p.resolve()]['sha256']==x['sha256']==sha(p))
+ if x in panels:ck(p.name+' native dimensions',Image.open(p).size==(2697,1797))
+for x in v['images']:
+ p=at(x['path']);ck(p.name+' recorded image bytes/dimensions/hash',sha(p)==x['sha256'] and p.stat().st_size==x['bytes'] and list(Image.open(p).size)==x['dimensions'])
+for f in ['corroborating-all-spirits-2017.jpg','corroborating-2017-bringer-track-crop.png','corroborating-river-2018.jpg']:ck(f+' mandatory identity image present',(P/f).resolve() in observed)
+renders=[];scratch=Path('/tmp/audit09-completed-proof-rerenders');scratch.mkdir(exist_ok=True)
+for src,pgs,prefix in [(R/'source_pdfs/spirit-island-rules.pdf',[6,7,17,32],'audit09-core'),(C/'branch-claw-rulebook.pdf',[6],'audit09-bc')]:
+ d=fitz.open(src)
+ for pg in pgs:
+  orig=B/f'pdf-inspection/audit09/{prefix}-p{pg}.png';dest=scratch/orig.name;d[pg-1].get_pixmap(matrix=fitz.Matrix(1.5,1.5)).save(dest);ck(orig.name+' exact original render reproduced',sha(orig)==sha(dest));renders.append({'source_pdf':str(src),'source_sha256':sha(src),'printed_page':pg,'zero_based_index':pg-1,'matrix':[1.5,1.5],'fitz_version':fitz.VersionBind,'original_render':str(orig),'original_sha256':sha(orig),'proof_render':str(dest),'proof_sha256':sha(dest),'parameters_basis':'Actual original audit09 tool command; native views retained as historical observations, not new views.'})
+for p,h in a['preserved_original_artifact_hashes'].items():ck('preserved historical artifact '+Path(p).name,sha(at(p))==h)
+for p,h in frozen.items():ck('preserved completed artifact '+Path(p).name,sha(p)==h)
+canon=R/'rules/spirit-island.md';canonical={'method':'bytes only; no canonical prose delivered as rules input','equal':canon.read_bytes()==cand.read_bytes(),'canonical_sha256':sha(canon),'candidate_sha256':sha(cand)}
+proof={'kind':'evidence-only validator; no new semantic source verdict','passed':not errors,'checks':checks,'errors':errors,'completed_artifact_sha256':frozen,'preserved_initial_artifact_sha256':a['preserved_original_artifact_hashes'],'counts':{'merged_source_delivery_rows':91,'required_text_inputs':16,'earlier_reused_images':57,'new_images':0,'new_prose_slices':1},'publisher_prose_derivation':prov,'render_provenance':renders,'canonical_bytes_only':canonical,'historical_receipt_perception_attestation':{'earlier':'90 required source/candidate text slices and57 full image observations were actually delivered/read/viewed by this same auditor before completion and reused losslessly. They are not new reads/views.','new':'Complete publisher visible prose actually received/read in [0,4329), explicit5000-token cap; response1170 tokens and no truncation. Source includes product body, navigation and footer; no content selectors omitted prose.','initial_omission':'Original15-input PASS lacked this required publisher prose; it is retained unchanged as incomplete initial gate. Completion does not erase or relabel initial omission.','distinction':'Filesystem hash/range/reproduction checks do not independently establish historical receipt or visual perception; attestations come from actual auditor tool history.'},'inventory_scope':'All required membership authorities now covered: full publisher prose, complete designer corrections, printed faces, publisher symbol legend. Both focused Range derivatives fully read; general Range index only locator/navigation, not independent primary membership prose. Full expansion gameplay and optional locator/transport duplicates not required.','validator_path':'/tmp/audit09-completed-evidence-validator.py','validator_sha256':sha('/tmp/audit09-completed-evidence-validator.py')}
+p=Path('/tmp/audit09-completed-evidence-proof.json');assert not p.exists();p.write_text(json.dumps(proof,indent=2)+'\n');print(json.dumps({'passed':not errors,'checks':len(checks),'errors':errors,'completed_artifacts':frozen,'validator_sha256':sha('/tmp/audit09-completed-evidence-validator.py'),'proof_path':str(p),'proof_sha256':sha(p),'canonical_bytes_equal':canonical['equal']},indent=2))

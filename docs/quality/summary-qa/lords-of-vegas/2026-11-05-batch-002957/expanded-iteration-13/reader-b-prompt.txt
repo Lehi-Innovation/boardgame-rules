@@ -1,0 +1,43 @@
+You are an independent rules-summary reader in a blind evaluation. Read ONLY these two rules-data files:
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/lords-of-vegas/2026-11-05-batch-002957/expanded-iteration-13/summary-snapshot.md
+/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/lords-of-vegas/2026-11-05-batch-002957/expanded-iteration-13/questions.json
+Write ONLY /home/jonny/projects/boardgame-rules/docs/quality/summary-qa/lords-of-vegas/2026-11-05-batch-002957/expanded-iteration-13/reader-b.json.
+Do not read sources, answer keys, manifests, earlier answers/grades/reviews, other files, parent history, chats, agent/runtime metadata or web links. Do not browse, use prior game knowledge, communicate with other readers, or evaluate/edit the summary. The summary is your sole rules authority.
+
+Deliver EVERY character of BOTH inputs before answering. Use read_text() and contiguous Unicode string slices <=5000 characters, with one separate model-visible tool result per slice and cap >=4000 tokens. Print file path, character start/end/total, chunk SHA256 and exact full text. Separately hash the UTF-8 file bytes. Preserve complete delivery_receipt ranges/hashes in your output. Recover any truncated range in smaller pieces; do not rely on line counts, byte offsets, silent loading or cropped output.
+
+For each question independently:
+1. Enumerate every actually requested clause. Treat the stated scenario as given; do not reject a hypothetical merely because the summary does not narrate it.
+2. Search the whole summary for every relevant item and term. Read the complete governing units and controlling earlier definitions before declaring anything absent. If a requested rule is absent or expressly unspecified, state the exact limit and never invent an official ruling.
+3. Separate stated case facts, rule-based consequences and unspecified facts. Preserve all stated role/eligibility constraints. Do not arbitrarily assign an unspecified owner, value, participant, sequence, role or outcome. Keep it unidentified or conditional when necessary; do not fill unknowns merely to complete a table or inventory.
+4. Give direct decisions for every asked clause. Concrete cases need actual resulting actors/objects/outcomes and requested numeric results, rather than only a selection rule or formula. For multiple requested participants/results, provide labeled rows/columns including requested zero/no-change outcomes. Calculate the requested total as well as any useful components, with an evaluated expression.
+5. Check only the facts and transformations needed to answer the question. For an explicit state change, track the stated original objects once through removal/replacement/addition, then identify affected surviving objects. Use neutral IDs and preserve unspecified attributes. Do not construct extra hypothetical ownerships, rolls or events. A pure permission/lookup question needs no invented initial/final case.
+6. Reuse the verified structured result programmatically in the answer and relevant clause rulings rather than independently paraphrasing checked numbers/states. Structured objects/tables are valid direct rulings. Retain all asked timing, eligibility, destination and source-limit conclusions. Do not add redundant prose that can contradict the checked result.
+
+Source-unit integrity: mechanically index Markdown headings. For each relevant level-2 or level-3 unit, quote its heading and ALL content through the next heading of the same or higher level, including child details, peer steps and exceptions. A union of complete relevant leaf units is permitted. Include controlling parent introductions/earlier definitions when needed. Do not crop the first paragraph of a multi-paragraph procedure. Keep full actual table rows, all cells, header/legend and governing context. Before saving, verify each quote is verbatim and complete at its true heading boundary, allowing only boundary whitespace trimming. Avoid unrelated whole-summary dumping and duplicate quotes.
+
+Save valid JSON with top-level reader, inputs_read, delivery_receipt, source_unit_checks and answers. There must be exactly one answer for every question. Each entry must contain id, clauses, operative_quotes, answer, support, evidence and case_check. clauses is an array of objects containing the requested clause, a direct ruling, and operative-unit references; labels alone are insufficient. operative_quotes contains the complete selected units. support is supported/partial/unsupported; evidence names summary sections. case_check records minimal stated inputs and the needed evaluated calculation or explicit state update, or not_applicable for pure lookup. Do not populate checks with assumptions or additional case facts not established by the question/rules.
+
+Before saving, independently compare every asked clause, answer, clause ruling and case_check against the question's exact givens and full selected rules. Verify all requested results are present and consistent; each asserted case fact must be a stated fact or a justified consequence, with unknowns preserved. Mechanically verify repeated structured results match their shared source. All substantive same-entry fields will be graded, so an unasked invented detail or contradictory caveat can invalidate an otherwise correct answer. Complete same-entry quotations may supply ordinary lookup rules; actual case results/calculations must still be resolved. Keep format diagnostics separate from factual rulings.
+
+Use this exact generic rendering function when constructing EVERY answer. It supplies no game facts; you independently derive checked_result, checked_inputs and the complete quotations from the permitted files. Set checked_inputs to minimal literal givens and justified calculations, preserving unknowns. Put all asked conclusions in checked_result. Do not invent concrete inputs to evaluate a quantity whose needed inputs are unspecified. Clause references enumerate the actual asked clauses and governing units. Call the function in your writing code; do not hand-author or subsequently overwrite answer/ruling/case_check result copies. This mechanically enforces the shared-result method rather than relying on an assertion that separate prose agrees.
+
+```python
+from copy import deepcopy
+
+def render_answer(question_id, clause_refs, checked_result, operative_quotes, support, evidence, checked_inputs="not_applicable"):
+    entry = dict(
+        id=question_id,
+        clauses=[dict(clause=c["clause"], ruling=deepcopy(checked_result), operative_unit_refs=c["operative_unit_refs"]) for c in clause_refs],
+        operative_quotes=operative_quotes,
+        answer=deepcopy(checked_result),
+        support=support,
+        evidence=evidence,
+        case_check=dict(checked_inputs=checked_inputs, checked_result=deepcopy(checked_result)),
+    )
+    assert entry["answer"] == entry["case_check"]["checked_result"]
+    assert all(c["ruling"] == entry["answer"] for c in entry["clauses"])
+    return entry
+```
+
+For each question verify the checked_result itself against the exact question and full rules before passing it to the function. The helper does not establish correctness or permit omitted asked facts. All checked_inputs and result contents remain subject to strict factual grading. Save the rendered entries as the answers array with the required top-level receipts and source checks.

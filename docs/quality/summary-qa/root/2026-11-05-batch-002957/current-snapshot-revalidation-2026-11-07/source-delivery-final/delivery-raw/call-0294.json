@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T13:48:49.465Z",
+    "ordinal": 294,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_0c482983b42364d9016aef2c3e995487d0800190351f889ade",
+      "status": "completed",
+      "call_id": "call_072bea21da4e48d0a72eba8ae04482f4",
+      "name": "exec",
+      "input": "text(await tools.exec_command({cmd:\".venv/bin/python - <<'PY'\\nfrom pathlib import Path\\nimport json, hashlib\\nout=Path('/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/source-only-audit')\\nr=json.loads((out/'source-audit.json').read_text())\\nassert r['verdict']=='PASS' and not r['findings']\\nassert len(r['checked_claims'])==64\\nassert len(r['inspection']['native_pdf']['render_lineage']['all_native_page_texts'])==32\\nassert len(r['inspection']['native_pdf']['render_lineage']['pages'])==16\\nfor path,info in r['input_hashes'].items():\\n assert hashlib.sha256(Path(path).read_bytes()).hexdigest()==info['sha256'],path\\nfor p in r['inspection']['native_pdf']['render_lineage']['pages']:\\n assert p['actually_opened_with_view_image']\\n assert hashlib.sha256(Path(p['render']).read_bytes()).hexdigest()==p['png_sha256']\\nprint('Audit JSON validated; all six input hashes unchanged; 32 page texts and 16 viewed-render hashes recorded. No candidate edits.')\\nPY\",\"max_output_tokens\":1000}));\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b63c-1d4c-7da2-8741-81905c995da5",
+        "create_time": 1794059326.6051931
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T13:48:50.674Z",
+    "ordinal": 297,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b644-e472-7033-9ee8-ad73b6462d94",
+      "call_id": "call_072bea21da4e48d0a72eba8ae04482f4",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.2 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "{\"chunk_id\":\"11c218\",\"wall_time_seconds\":0.596733663,\"exit_code\":0,\"original_token_count\":32,\"output\":\"Audit JSON validated; all six input hashes unchanged; 32 page texts and 16 viewed-render hashes recorded. No candidate edits.\\n\"}"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b63c-1d4c-7da2-8741-81905c995da5",
+        "create_time": 1794059330.6743333
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

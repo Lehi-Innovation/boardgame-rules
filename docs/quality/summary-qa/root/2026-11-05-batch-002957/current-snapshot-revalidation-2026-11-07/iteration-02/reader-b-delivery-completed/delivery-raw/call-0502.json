@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:37:13.456Z",
+    "ordinal": 502,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef379094f087d0a4d771b2838f3245",
+      "status": "completed",
+      "call_id": "call_3e4401a52cdc46c18e5f660cddb58f66",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q66':['Starting player and seating','Score markers','Dice','Faction setup order and turn order'],'Q67':['Ordinary victory timing'],'Q68':['Pieces and defender','Rule requirement'],'Q69':['Before-roll effects','After-roll effects','Effects from piece removal'],'Q70':['Ignored hits','Other parts of Count Hits']}\\nchecks={'Q66':['randomly','at 0','battle dice nearby','Marquise, Eyrie, Alliance, Vagabond','distinct from turn order'],'Q67':['immediately','any player\\\\'s turn','do not wait to finish'],'Q68':['your warriors or pawn','enemy there','defender','do not need to rule'],'Q69':['attacker chooses their order','side taking hits','effects triggered by its own pieces'],'Q70':['subtract ignored hits','after adding extra hits','extra hits are uncapped','one additional defenseless hit','no undamaged swords']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,71)]\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]:assert phrase.lower() in joined.lower(),(a['id'],phrase)\\n for s in a['source_passages']:assert s['quotation'] and s['quotation'] in g,(a['id'],s['section'])\\nprint('Q66\u2013Q70 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66e-ef66-7290-940f-35c2726f20cb",
+        "create_time": 1794062224.5836515
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:37:13.867Z",
+    "ordinal": 505,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b671-310b-7533-ac20-c8262ed07530",
+      "call_id": "call_3e4401a52cdc46c18e5f660cddb58f66",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q66\u2013Q70 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b66e-ef66-7290-940f-35c2726f20cb",
+        "create_time": 1794062233.867288
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

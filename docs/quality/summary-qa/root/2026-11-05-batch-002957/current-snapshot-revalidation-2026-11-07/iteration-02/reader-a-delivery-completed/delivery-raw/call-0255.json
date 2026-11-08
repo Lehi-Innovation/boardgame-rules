@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:20:06.781Z",
+    "ordinal": 255,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_058e2b81b468db9e016aef338bd17887d09012ff1302d9808c",
+      "status": "completed",
+      "call_id": "call_03baf087ca164824abb89a73bffc3212",
+      "name": "exec",
+      "input": "const r=await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nguide=(base/'summary-snapshot.md').read_text(); qset={q['id'] for q in json.loads((base/'questions.json').read_text())['questions']}\\ndata=json.loads((base/'reader-a.json').read_text()); assert [a['id'] for a in data['answers']]==[f'Q{i:02d}' for i in range(1,26)]\\nfor a in data['answers'][20:]:\\n assert a['id'] in qset and a['support'] in {'supported','partial','unsupported'}\\n for x in a['source_passages']: assert x['quotation'] and x['quotation'] in guide,(a['id'],x['section'])\\n for x in a['answer']: assert x['part'] and x['ruling'] and x['evidence']\\napps={a['id']:' '.join(x['ruling'] for x in a['answer']).lower() for a in data['answers'][20:]}\\nchecks={\\n'Q21':['card over law over learning to play','faction rule takes precedence','cannot','unless explicitly overridden','ordinary card'],\\n'Q22':['player taking the turn chooses','attacker chooses their order','two moves are one compound action','cannot be interrupted','another action or spend a bird card'],\\n'Q23':['at start','before all other effects','at end','after everything else','before the next phase','last step of a turn begins','no other actions','ordinary daylight actions cannot'],\\n'Q24':['hand size is public','contents are private','shown only when explicitly instructed','face-up piles','deck may not','agreements are non-binding','cards may be transferred only','do not require another player\\\\'s consent'],\\n'Q25':['immediately shuffle the discard pile','bird cards substitute for any non-bird suit','multiple payments','give or discard cards of a non-bird suit','explicit bird-card requirement','only be paid with a bird card']}\\nfor q,terms in checks.items():\\n miss=[t for t in terms if t not in apps[q]]\\n assert not miss,(q,miss)\\nprint('Group 5 check passed: Q21-Q25 have labeled applications; quotations are nonempty exact guide substrings; requested clauses checked.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":700}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b660-7a36-77d0-8975-cc45f7255405",
+        "create_time": 1794061195.8206263
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:20:07.200Z",
+    "ordinal": 258,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b661-86a0-75f3-b7e5-1c6cc3692258",
+      "call_id": "call_03baf087ca164824abb89a73bffc3212",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Group 5 check passed: Q21-Q25 have labeled applications; quotations are nonempty exact guide substrings; requested clauses checked.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b660-7a36-77d0-8975-cc45f7255405",
+        "create_time": 1794061207.2002547
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

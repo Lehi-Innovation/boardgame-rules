@@ -1,0 +1,17 @@
+--- iteration02
++++ iteration03
+@@ -286,6 +286,14 @@
+ | Orgcrime | Produces no primary, even if developed. Secondary is still available. A one-resource district with orgcrime produces nothing. |
+ | Human First | Changes the unrest increase upon exploitation from 1 to 2 stages; does not itself prevent that exploitation's initial production. |
+ 
++For ordinary production, calculate the result in this order:
++
++1. If the district is in strike or outage, every resource contribution is zero.
++2. Otherwise, its primary contribution is zero if orgcrime is present. Without orgcrime, use the printed primary quantity plus 1 if developed.
++3. Its secondary contribution, if any, is the printed secondary quantity; development never adds to it. Human First affects the later unrest step, not this calculation.
++
++These are the ordinary modifiers. Apply an explicitly different card instruction, such as Liquidation ignoring orgcrime, when that card is resolved.
++
+ Supply tracks cap at their last numbered space: if more would be produced, leave the resource token on that final space; the excess does not raise the supply further. Resources at 0 cannot be reduced further. Production is resolved before exploitation's unrest increase: a district starting in protest can produce and then go on strike. A district with an android is still exploited if strike, outage or orgcrime prevents production.
+ 
+ Unrest progresses **stable → protest → strike**, and decreases in reverse order. Stable has no unrest token; protest uses its protest side; strike its strike side. A decrease from protest to stable removes the token. Stable cannot decrease; strike cannot normally increase. Unrest and development tokens never move along paths.

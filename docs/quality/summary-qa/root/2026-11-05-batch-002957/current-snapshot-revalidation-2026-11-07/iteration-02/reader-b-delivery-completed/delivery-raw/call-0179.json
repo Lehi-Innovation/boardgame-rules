@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:17:07.810Z",
+    "ordinal": 179,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef32dea9c087d0b089cfd055d2adcb",
+      "status": "completed",
+      "call_id": "call_bba49240c40447e1ae401573e8a2c65b",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json,difflib\\nfrom pathlib import Path\\nbase=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02')\\nd=json.loads((base/'reader-b.json').read_text());g=(base/'summary-snapshot.md').read_text();q=next(a for a in d['answers'] if a['id']=='Q14')['source_passages'][0]['quotation']\\nm=difflib.SequenceMatcher(None,q,g).find_longest_match(0,len(q),0,len(g))\\nprint(m,repr(q[m.a:m.a+140]),repr(g[m.b:m.b+140]))\\nprint(repr(q))\\nPY\\nsed -n '162,172p' docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/summary-snapshot.md\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":3000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b65d-34bd-7360-aa2e-b9c1c016169c",
+        "create_time": 1794061022.6656146
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:17:08.803Z",
+    "ordinal": 182,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b65e-cdc3-76b3-b064-9258be88a2a4",
+      "call_id": "call_bba49240c40447e1ae401573e8a2c65b",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 1.0 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Match(a=2, b=224, size=1) 'Outrage:** Each time another player **removes sympathy** or **moves any warriors into a sympathetic clearing**, that player adds one matchin' 'October 13, 2025\"\\nsource_url: \"https://cdn.shopify.com/s/files/1/0106/0162/7706/files/Root_Base_Law_Oct_2025.pdf?v=1774903756\"\\nsource_type: '\n'**Outrage:** Each time another player **removes sympathy** or **moves any warriors into a sympathetic clearing**, that player adds one matching hand card (birds count) to Supporters. Moving a group costs one card per affected move, rather than one per warrior. If no matching cards including birds, show hand to Alliance, then Alliance draws one deck card into Supporters. **If Supporters is full, discard the incoming Outrage card; payment or the no-match draw still occurs.** Merely battling there is not a trigger unless sympathy is removed; placing warriors there and moving only Vagabond pawn do not trigger it.'\n\n### Woodland Alliance (8)\n\n**Guerrilla War:** When Alliance defends, Alliance uses higher die and attacker lower; warrior caps still apply. **Supporters** are a separate face-down stack, inspectable by Alliance. They can be spent only for suit; they do not count as hand cards or toward hand limit. With no bases on map, maximum **five supporters**; incoming cards beyond capacity are discarded. With any base, unlimited supporters.\n\n**Outrage:** Each time another player **removes sympathy** or **moves any warriors into a sympathetic clearing**, that player adds one matching hand card (birds count) to Supporters. Moving a group costs one card per affected move, rather than one per warrior. If no matching cards including birds, show hand to Alliance, then Alliance draws one deck card into Supporters. **If Supporters is full, discard the incoming Outrage card; payment or the no-match draw still occurs.** Merely battling there is no trigger unless sympathy is removed; placing warriors there and moving only Vagabond pawn do not trigger it.\n\n**Losing a base:** Discard all supporters matching its clearing **including birds**, remove half officers **rounded up**. If no bases remain, discard excess supporters down to five. Do this whenever a base is removed.\n\n**Birdsong:** Both Revolt and Spread Sympathy take place **during Birdsong**. Complete **all Revolts before starting any Spread Sympathy**; each may be performed any number of times. **For both actions, every supporter spent must match the target clearing; birds are wild.** Once spreading starts, you cannot return to Revolt this Birdsong, so newly spread sympathy cannot support a same-Birdsong Revolt:\n\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b65d-34bd-7360-aa2e-b9c1c016169c",
+        "create_time": 1794061028.8030412
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

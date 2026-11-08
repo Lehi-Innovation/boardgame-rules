@@ -17,6 +17,9 @@ for g in m['games']:
  if g['status']=='complete':continue
  for k in ['question_count','iterations','final_reader_scores','source_audit','report_path','blocking_reason','final_snapshot_path','coverage_review','coverage_stopping_rule','phase']:
   if k in d and (d[k] is not None or k in ['blocking_reason','final_reader_scores']):g[k]=d[k]
+ if g.get('blocking_reason') in g.get('coordinator_resolved_worker_blocking_reasons', []):
+  g['superseded_worker_blocking_reason']=g['blocking_reason']
+  g['blocking_reason']=None
  g['worker_status']=d.get('status')
  if g.get('coordinator_source_gap',{}).get('status')=='open':
   if not g.get('blocking_reason'):g['blocking_reason']=g['coordinator_source_gap']['blocking_reason']
@@ -33,17 +36,34 @@ for g in m['games']:
   g['source_audit']=g['coordinator_pending_source_audit']
  if g['status'] not in ['complete','awaiting-stamp-retest','ready-for-publication']:
   if d.get('status') in ['complete','ready-for-coordinator','ready_for_coordinator','ready-for-publication','ready-for-review']:g['status']='ready-for-coordinator-review'
-  elif d.get('status') in ['blocked','awaiting-source','awaiting-user','awaiting-external-input','incomplete-awaiting-source','incomplete-awaiting-external-source','blocked-awaiting-authoritative-source']:g['status']='awaiting-external-input'
+  elif str(d.get('status','')).replace('_','-') in ['blocked','awaiting-source','awaiting-user','awaiting-external-input','incomplete-awaiting-source','incomplete-awaiting-external-source','blocked-awaiting-authoritative-source','blocked-awaiting-authority','blocked-awaiting-external-input']:g['status']='awaiting-external-input'
   elif g.get('thread_id'):g['status']='active'
  if g.get('reassessment_queue_status')=='queued':
   g['status']='queued-for-source-reassessment'
   g['blocking_reason']=g['coordinator_source_gap']['blocking_reason']
+ if g.get('coordinator_pending_metadata_drift',{}).get('status')=='QUEUED_FINAL_REVALIDATION':
+  g['status']='queued-for-final-byte-revalidation'
+  g['phase']='coordinator-queued-date-only-current-snapshot-revalidation'
+  g['blocking_reason']='Current rules text matches the earlier81/81 tested snapshot; extracted_date was later updated. Fresh exact-current81-question pair/source audit is queued until an active slot becomes available. Earlier passing evidence is preserved; the date update is retained.'
+ if g.get('coordinator_pending_metadata_drift',{}).get('status')=='ACTIVE_FINAL_REVALIDATION' and not g.get('coordinator_approved'):
+  g['status']='active'
+  if d.get('status')=='complete':g['phase']='coordinator-current81-exact-byte-revalidation-dispatched'
+ if g['status']=='awaiting-external-input' and g.get('coordinator_final_external_blocker'):
+  g['blocking_reason']=g['coordinator_final_external_blocker']
+ if g['status']=='active' and g.get('coordinator_current_phase'):
+  g['phase']=g['coordinator_current_phase']
+ if g.get('coordinator_user_stop'):
+  g['status']='stopped-incomplete'
+  g['phase']='user-commit-checkpoint-incomplete'
+  g['blocking_reason']=g['coordinator_user_stop']['reason']
+  g['report_path']=g['coordinator_user_stop']['notes_path']
 m['updated_at']=datetime.now(ZoneInfo('America/Phoenix')).isoformat();p.write_text(json.dumps(m,indent=2)+'\n')
 lines=['# Ten-game rules-summary QA batch','',f"Run: {m['run_id']}. Updated: {m['updated_at']}.",'','This batch uses the existing local checkout, three game chats at a time, Sol/high game workers and reviewers, and fresh Luna/high blind reader pairs. No commits or pushes are authorized. Game completion requires coordinator inspection of the full saved evidence and exact final stamped summary.','', '| Game | Questions | Iterations | Reader scores | Source audit | Status | Evidence |', '|---|---:|---:|---|---|---|---|']
 for g in m['games']:
  a=g.get('source_audit');audit=a.get('verdict','Pending') if isinstance(a,dict) else a or 'Pending';it=g.get('iterations',[]);n=len(it) if isinstance(it,list) else it
  if g['status']=='complete' and g.get('iteration_count') is not None:n=g['iteration_count']
  if g['status']!='complete' and g.get('observed_recorded_reader_pairs') is not None:n=g['observed_recorded_reader_pairs']
+ if g.get('checkpoint_scored_iteration_count') is not None:n=g['checkpoint_scored_iteration_count']
  if g['status']!='complete':
   audit='Pending on current text'
   proof_path=g.get('coordinator_source_delivery_checkpoint',{}).get('path')
@@ -52,6 +72,15 @@ for g in m['games']:
    if proof.get('verified') is True and proof.get('summary_sha256',g.get('coordinator_source_delivery_checkpoint',{}).get('summary_sha256'))==current_hash and hashlib.sha256(ap.read_bytes()).hexdigest()==proof['audit_sha256']:
     audit='PASS'
  if g.get('coordinator_pending_scope_choice',{}).get('status')=='awaiting-human-clarification':audit='Scope choice pending; historical candidate only'
+ if g['status']!='complete' and (g.get('coordinator_pending_scope_choice',{}).get('status')=='awaiting-human-clarification' or g.get('coordinator_source_gap',{}).get('status')=='open'):
+  interim=g.get('coordinator_interim_source_checkpoint',{})
+  interim_path=interim.get('proof_path')
+  if str(interim.get('status','')).startswith('PASS') and interim.get('summary_sha256')==hashlib.sha256(Path(g['summary_path']).read_bytes()).hexdigest() and interim_path:
+   try:
+    interim_file=Path(interim_path);interim_proof=json.loads(interim_file.read_text());interim_audit=Path(interim_proof['audit_path'])
+    if hashlib.sha256(interim_file.read_bytes()).hexdigest()==interim['proof_sha256'] and hashlib.sha256(interim_audit.read_bytes()).hexdigest()==interim_proof['audit_sha256']:
+     audit='Accuracy PASS; authority gap'
+   except (OSError,ValueError,KeyError):pass
  if g.get('user_authority_override') and audit=='PASS':audit='PASS (user scope)'
  scores=g.get('final_reader_scores') if g['status']=='complete' else None;checkpoint_scores=False
  checkpoint=g.get('coordinator_latest_reader_checkpoint',{})
@@ -70,12 +99,17 @@ for g in m['games']:
    if isinstance(graded,int) and graded<g['question_count']:parts.append(f"{correct}/{graded} graded ({g['question_count']} required)")
    else:parts.append(str(correct)+'/'+str(g.get('question_count')))
  st='; '.join(chr(65+i)+' '+value for i,value in enumerate(parts)) if parts else scores if isinstance(scores,str) else 'Pending'
- if checkpoint_scores:st+=' (incomplete checkpoint'+(', '+checkpoint['iteration'].rsplit('/',1)[-1] if checkpoint.get('iteration') else '')+')'
+ if checkpoint_scores:
+  qualifier={'complete-supported-bank-pass-awaiting-authority':'supported bank; authority pending','complete-failed-pair':'failed pair'}.get(checkpoint.get('kind'),'incomplete checkpoint')
+  st+=' ('+qualifier+(', '+checkpoint['iteration'].rsplit('/',1)[-1] if checkpoint.get('iteration') else '')+')'
  chat=f"[chat](codex://threads/{g['thread_id']})" if g.get('thread_id') else 'Queued'
  g['report_path']=g.get('report_path') or str(Path(g['output_directory'])/'README.md')
  report=Path(g['report_path']);rel=report.relative_to(base.parents[4]) if report.is_absolute() else report
  evidence=f"{chat}; [report](../../../../../{rel})" if report.exists() else chat
- lines.append(f"| {g['game']} | {g.get('question_count') or 'Pending'} | {n} | {st} | {audit} | {g['status']} | {evidence} |")
+ question_label=str(g.get('question_count') or 'Pending')
+ working_N=g.get('working_expanded_candidate',{}).get('question_count')
+ if g['status']!='complete' and isinstance(working_N,int) and working_N>(g.get('question_count') or 0):question_label+=f" seed; {working_N} draft"
+ lines.append(f"| {g['game']} | {question_label} | {n} | {st} | {audit} | {g['status']} | {evidence} |")
 lines+=['','Completed iteration counts are coordinator-reconciled scored reader pairs. Active counts show folders with both saved raw reader files and may still await grading. Separately retained unscored dispatched attempts are documented in each final report. Unmatched has 14 scored pairs and 1 aborted unscored pair (15 dispatched pairs). Coverage is working saturation within each documented edition and source scope. A passing fixed bank does not establish exhaustive scenario coverage or general model accuracy.','','## Assignments and ownership','']
 if m.get('concurrency_events'):
  lines[lines.index('## Assignments and ownership'):lines.index('## Assignments and ownership')]=['A human continuation temporarily reactivated John Company while the three coordinator-assigned slots were occupied. The overlap is recorded in the manifest; the coordinator dispatched no additional game during it. Normal three-slot coordination resumed afterward.','']

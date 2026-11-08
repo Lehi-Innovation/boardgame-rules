@@ -8,11 +8,17 @@ source_pdf: "https://eadn-wc03-13179282.nxedge.io/posters/repository/wizkids/SC_
 extracted_date: "2026-11-05"
 summarized_date: "2026-11-06"
 rulebook_version: "Original 2017 WizKids edition, SC_Rule Book_061017_Web5 (10 pages), with original nine-species fact sheets"
-verification: unverified
-verification_date: null
+verification: "verified"
+verification_date: "2026-11-06"
 ---
 
 # Sidereal Confluence: Trading and Negotiation in the Elysian Quadrant
+
+<!-- verification:begin -->
+> ✅ **Verified** — this summary was fact-checked against the rulebook text and no significant issues were found.
+>
+> 📄 [Full rulebook text](https://lehi-innovation.github.io/boardgame-rules/extracted/sidereal-confluence-rules.txt) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Sidereal%20Confluence%3A%20Trading%20and%20Negotiation%20in%20the%20Elysian%20Quadrant&game=sidereal-confluence)
+<!-- verification:end -->
 
 ## Overview
 
@@ -39,9 +45,11 @@ A card's top indicates how it enters play: a star starts in play; a technology s
 1. Put common resources and points within reach. Beginning with the least experienced player, choose different species by preferred play style. Take your species' fact sheet, starting card, cards/tiles, ships and special pieces.
 2. Collect exactly the starting resources and ships printed on your species card. Put starred cards in play. Keep your other species cards as an accessible, unshuffled library that you may inspect at any time. Follow the depicted fixed starting pairs for Kt’Zr’Kt’Rtl.
 3. Shuffle the colony deck without inspecting its cards, front side up. Deal one colony to each player whose starting-resource box shows a colony; Kjasjavikalimm starts with two. Caylion's starting colony receives a seedling token. Shuffle era-I research cards research-team side up, without looking, and deal one to each player with the research symbol in their starting box.
-4. Select the six Confluence cards and both bid tracks marked for your player count; box unused track/Confluence cards. Each ordinary track has as many spaces as players, except Kjasjavikalimm counts as two players for the colony track only. Deal colonies to their track from lowest minimum bid upward.
+4. Select six Confluence cards using the **actual number of players**, and select the research-team track for that same actual player count. Select the colony track separately: **count Kjasjavikalimm as two players for the colony track only**; otherwise use the actual player count. Each track has **one space for each player counted for that track**. Thus Kjas adds one colony-track space, but no research-track space and no change to the Confluence-card player count. Box unused track/Confluence cards. Deal colonies to their track from lowest minimum bid upward.
 5. Shuffle technology eras separately; stack I above II above III above IV. Deal research teams to their track from lowest minimum bid upward. Keep each deck beside its track, front/research-team side up.
 6. Flip each species card to show its bid tiebreak and Colony Support. Place species pieces within reach. Faderan shuffles its relic-world deck face down; Kjas territory tiles and Unity computer worlds start out of play; the starred Im’dril fleet starts in play. Begin with Trade.
+
+For example, with **five actual players including Kjasjavikalimm**, prepare **six colony spaces, five research-team spaces, and six Confluence cards for the five-player count**.
 
 Use the species card's printed quantities and track cards' printed minimums/bonuses for this player count. For example, the booklet's Faderan setup starts four starred cards, one colony, one research team, two ships, one octagon, one blue, one yellow, three white and one brown.
 
@@ -80,9 +88,9 @@ A card with its owner's species background is loaned only until the end of the t
 
 ### Inventing technology
 
-During Trade, run the violet converter on a research team you control. Pay **one complete alternative input set** shown to the left of its arrow (not all alternatives together). Take its printed invention points, flip the research team to its invented side, and immediately put your matching species card from your library into play. Do not yet take the Sharing Bonus. The converter preview on a research card shows the general effect; actual resource colors can differ by species.
+During Trade, run the violet converter on a research team you control. Pay **one complete alternative input set** shown to the left of its arrow (not all alternatives together). Take its printed invention points, flip the research team to its invented side, and immediately put your matching species card from your library into play. **The inventor takes the Sharing Bonus later, at Confluence.** The converter preview on a research card shows the general effect; actual resource colors can differ by species.
 
-Other players normally receive matching species cards at Confluence, after this Economy, rather than immediately. Yengii inventions are private and era-IV inventions are unique; see their exceptions.
+Other players normally receive matching species cards at Confluence, after this Economy, rather than immediately. Yengii inventions are private, but Yengii may license them in the **same Trade Phase in which they are invented**, before that Economy; see Yengii Licensing. Era-IV inventions are unique and are not shared.
 
 ### Violet converters and upgrades
 
@@ -106,7 +114,7 @@ The hand symbol with a violet outline marks donation resources, ships or points.
 
 ### Sharing inventions
 
-At Confluence, announce every technology invented during the preceding Trade. Place invented technology cards face down in the central splay with names readable. Gain the current Confluence card's **upper-left Sharing Bonus for each invention**; Yengii instead uses its upper-right Yengii bonus. Other players find their matching species cards in their libraries and put them in play now. **Era-IV technologies are unique and are not shared.** Yengii retains its inventions separately and licenses access instead of automatically sharing.
+At Confluence, announce every technology invented during the preceding Trade. Place invented technology cards face down in the central splay with names readable. **The inventor gains** the current Confluence card's **upper-left Sharing Bonus for each invention**; Yengii instead uses its upper-right Yengii bonus. Other players find their matching species cards in their libraries and put them in play now. **Era-IV technologies are unique and are not shared.** Yengii retains its inventions separately and licenses access instead of automatically sharing.
 
 ### Committing and resolving bids
 
@@ -130,6 +138,8 @@ Calculate each resource category separately, then add all three category totals 
 | Each complete group of 2 large cubes | ½ point |
 | Each complete group of 3 small cubes and/or ships, combined | ½ point |
 
+An incomplete group contributes **zero points**. Keep the resource categories separate: do not combine or round their leftover remainders together.
+
 Track the result down to half points. Reveal hidden points; highest total wins. **There is no tiebreaker.** This is standard scoring; do not use the excluded Precise Resource Scoring variant's twelfths.
 
 ## Special Rules & Edge Cases
@@ -138,107 +148,155 @@ The following are the original printed species-sheet rules. Apply them along wit
 
 ### Caylion Plutocracy
 
-**Halved colonization bids.** Halve Caylion's colony bid without rounding; research bids are unchanged. One ship gives an effective ½, below the minimum possible purchase. Odd ship counts create fractional bids that can avoid ties. When buying, spend the actual committed ships.
+#### Halved colonization bids
 
-**Seedlings.** Put a ×2 seedling token on Caylion's starting colony and on any colony Caylion takes from the colony bid track. Do not add one merely because another player trades a colony to Caylion. A seeded colony's economic converter may run twice each Economy, with both uses simultaneous with all other converters. The token does not double upgrade costs or upgrade-converter uses. It stays through flipping, doubles the new economic converter, and stays on a traded colony for its new holder. Remove the token from play when its colony is discarded beneath the colony deck.
+Halve Caylion's colony bid without rounding; research bids are unchanged. One ship gives an effective ½, below the minimum possible purchase. Odd ship counts create fractional bids that can avoid ties. When buying, spend the actual committed ships.
 
-**Upgrade output.** Some Caylion starting-card violet upgrades produce a point and yellow cube; because this happens in Trade, the yellow can immediately be traded.
+#### Seedlings
+
+Caylion's starting colony receives a ×2 seedling token. Add a new seedling when **Caylion itself takes a colony from the colony bid track**. A **tokenless colony received by trade gains no new seedling**, regardless of which player took it from the bid track earlier. A seeded colony's economic converter may run twice each Economy, with both uses simultaneous with all other converters. The token does not double upgrade costs or upgrade-converter uses. It stays through flipping, doubles the new economic converter, and stays on a traded colony for its new holder. Remove the token from play when its colony is discarded beneath the colony deck.
+
+#### Upgrade output
+
+Some Caylion starting-card violet upgrades produce a point and yellow cube; because this happens in Trade, the yellow can immediately be traded.
 
 ### Eni Et Ascendancy
 
-**Interest converters.** An interest converter accepts a single color and outputs that same color, within the printed sizes/quantities. **Eni Et cannot run their own interest converters**, including upgraded ones, but may upgrade the cards and loan them to others. Upgraded interest converters retain these rules even when their output does not exceed input. Unlike Unity or Zeth wild selections, Eni Et's wild resources on a card must match.
+#### Interest converters
 
-**Unity wild inputs.** Gray wilds can be included with same-sized input cubes of one color. They are not destroyed: move those exact wilds from input to output, then fill the remainder of the printed output with cubes of that one matching color/size. With only wild input, choose a single appropriate-sized ordinary color for the remaining output. Interest converters never create additional wilds. For a 2-to-4 large-cube interest converter fed one blue and one large wild, output is that same wild plus three blue cubes.
+An interest converter accepts a single color and outputs that same color, within the printed sizes/quantities. **Eni Et cannot run their own interest converters**, including upgraded ones, but may upgrade the cards and loan them to others. Upgraded interest converters retain these rules even when their output does not exceed input. Unlike Unity or Zeth wild selections, Eni Et's wild resources on a card must match.
+
+#### Unity wild inputs
+
+Gray wilds can be included with same-sized input cubes of one color. They are not destroyed: move those exact wilds from input to output, then fill the remainder of the printed output with cubes of that one matching color/size. With only wild input, choose a single appropriate-sized ordinary color for the remaining output. Interest converters never create additional wilds. For a 2-to-4 large-cube interest converter fed one blue and one large wild, output is that same wild plus three blue cubes.
 
 ### Faderan Conclave
 
-**Acknowledgments.** Token-transfer permissions depend on the holder:
+#### Acknowledgments
+
+Token-transfer permissions depend on the holder:
 
 - **Faderan may trade** Acknowledgment tokens to other players during Trade.
 - **A non-Faderan holder cannot trade Acknowledgments away.**
 - Whenever a non-Faderan holding one invents a technology, they **must return one token to Faderan**, and Faderan gains **one point from the common pool**. Repeat per invention while the inventor holds tokens, including multiple inventions in one turn.
 
-**Relic worlds.** Shuffle the relic deck before play and keep it face down. Its back-of-deck violet converter plays the top relic during Trade. Although printed on every back, it is **one converter, at most once per turn**, not a separate activation per back. The illustrated deck converter costs four small white cubes and one **ice (snowflake-symbol) colony**. Unless specified otherwise, relics may be loaned and return at turn end like Faderan-background cards. Apply each relic's printed entry rewards, if any, when it enters from the deck, in addition to its other effects. Its ordinary economic converters use the normal Economy rules and printed inputs/outputs. The named exceptions below refer to the original sheet's reverse and the printed relic cards.
+#### Relic worlds
 
-#### Automated Transport Network
+Shuffle the relic deck before play and keep it face down. Its back-of-deck violet converter plays the top relic during Trade. Although printed on every back, it is **one converter, at most once per turn**, not a separate activation per back. The illustrated deck converter costs four small white cubes and one **ice (snowflake-symbol) colony**. Unless specified otherwise, relics may be loaned and return at turn end like Faderan-background cards. Apply each relic's printed entry rewards, if any, when it enters from the deck, in addition to its other effects. Its ordinary economic converters use the normal Economy rules and printed inputs/outputs. The named exceptions below refer to the original sheet's reverse and the printed relic cards.
+
+##### Automated Transport Network
 
 When played from the deck, gain one point and take the top two colonies. The holder gets **two additional Colony Support**; loaning the card transfers that support for the turn. Im’dril may use it to hold colonies into Economy despite normally having no support.
 
-#### Contextual Integrator Cache
+##### Contextual Integrator Cache
 
 When played from the deck, count all Acknowledgments then held by players other than Faderan. Faderan gains **one point per three, rounded up**. Trading the Cache does not change its behavior.
 
 While active, a player with an Acknowledgment inventing with small or large cubes pays **one cube less**. Octagon costs are unaffected. The reduction is mandatory; the player cannot save the token for a later invention. Return the Acknowledgment and award Faderan its normal point as usual.
 
-#### Paradise Converter
+##### Paradise Converter
 
 During Trade, at most once per turn, exchange **one colony of any climate for two points**. Put the consumed colony beneath the colony deck (ordinary-colony destination; nullspace colonies leave the game).
 
-#### Star’s Ruin
+##### Star’s Ruin
 
 When played from the deck, gain **two points plus the current Sharing Bonus**. The original sheet calls this the “Invention Bonus”; the printed Star’s Ruin card explicitly identifies the **Sharing Bonus**, rather than a research team's invention-point output. It has no further effect after being played, so a later trade does not repeat this reward.
 
-#### Gift of the Duruntai
+##### Gift of the Duruntai
 
 The **first trade of the Gift in each turn** gives the player trading it away its listed resources, and gives Faderan one blue cube. A second trade that turn gives nobody resources. If Faderan makes the first trade away, Faderan receives all depicted resources. The Gift has no Faderan background and **does not return at turn end**.
 
-#### Nalgorian Grindstone
+##### Nalgorian Grindstone
 
 Nalgorian Grindstone gains one point when it enters play. To run its economic converter, the holder must return **one point to the common pool** as its input. With no points, they cannot run it. Points produced by other economic converters this same turn cannot fund it.
 
-#### Relic Detector
+##### Relic Detector
 
 Relic Detector gains one point when it enters play and **may not be traded**, as printed on its card. Its additional Trade converter consumes **one colony of any climate** to the colony-deck bottom and **three green cubes** to draw one relic. It can run in the same turn as the deck-back converter, letting Faderan get two relics that turn. Nullspace-colony consumption removes that colony from the game instead.
 
-#### Transmutive Decomposer
+##### Transmutive Decomposer
 
 Transmutive Decomposer gains one point when it enters play. Its ship input cannot use ships produced by another converter during that same Economy. This is the normal simultaneous-production restriction, including this relic.
 
 ### Im’dril Nomads
 
-**Fleet Support.** Each support symbol required to the left of an economic converter must be matched by available support to the right of fleet cards. You may divide one fleet's support among several cards and combine support from several fleets on one card. A loan of a support-requiring card needs sufficient fleet support loaned with it for the borrower to run it. Conversely, Im’dril needs no fleet support for borrowed cards that have no support symbols.
+#### Fleet Support
 
-**Discovering fleets.** During Trade, run a fleet card's printed entry converter to put that fleet in play and gain one point. The starred fleet starts in play.
+Each support symbol required to the left of an economic converter must be matched by available support to the right of fleet cards. You may divide one fleet's support among several cards and combine support from several fleets on one card. A loan of a support-requiring card needs sufficient fleet support loaned with it for the borrower to run it. Conversely, Im’dril needs no fleet support for borrowed cards that have no support symbols.
 
-**No ordinary Colony Support.** Im’dril may bid for colonies, but normally must trade them away or consume them before Economy; any still held at Economy's start go beneath the colony deck. Automated Transport Network is an explicit exception: it grants Im’dril support too.
+#### Discovering fleets
+
+During Trade, run a fleet card's printed entry converter to put that fleet in play and gain one point. The starred fleet starts in play.
+
+#### No ordinary Colony Support
+
+Im’dril may bid for colonies, but normally must trade them away or consume them before Economy; any still held at Economy's start go beneath the colony deck. Automated Transport Network is an explicit exception: it grants Im’dril support too.
 
 ### Kjasjavikalimm Directorate
 
-**Military Might.** When its normal colony-bid opportunity arrives, Kjas may buy, pass, or split its bid as evenly as possible and act twice later at the resulting bid ranks. Five ships split into three and two; four split into two and two. Each half may buy one colony with minimum no higher than that half, spending that half's ships, or pass and retain that half. No second split is allowed in that turn. Recalculate current colony count between halves for tiebreaking; a colony bought with the first half can change priority for the second.
+#### Military Might
 
-**Expansionist setup.** Kjas counts twice for colony-track player count only: five actual players including Kjas use the six-player colony track. Kjas starts with two colonies as directed by the booklet.
+When its normal colony-bid opportunity arrives, Kjas may buy, pass, or split its bid as evenly as possible and act twice later at the resulting bid ranks. Five ships split into three and two; four split into two and two. Each half may buy one colony with minimum no higher than that half, spending that half's ships, or pass and retain that half. No second split is allowed in that turn. Recalculate current colony count between halves for tiebreaking; a colony bought with the first half can change priority for the second.
 
-**Territory tiles.** The three tiles are treated as cards for all purposes. They start out of play; run the top converter to enter and the bottom converter to flip/upgrade, both during Trade, paying the displayed colony/resource costs. In play, they can be loaned for a turn. A tile with two economic converters allows both as printed.
+#### Expansionist setup
+
+Kjas counts twice for colony-track player count only: five actual players including Kjas use the six-player colony track. Kjas starts with two colonies as directed by the booklet.
+
+#### Territory tiles
+
+The three tiles are treated as cards for all purposes. They start out of play; run the top converter to enter and the bottom converter to flip/upgrade, both during Trade, paying the displayed colony/resource costs. In play, they can be loaned for a turn. A tile with two economic converters allows both as printed.
 
 ### Kt’Zr’Kt’Rtl Adhocracy
 
-**Nonlinear Thinking.** Kt’Zr’Kt’Rtl starting economic converters span fixed pairs: Hand Crafted + Polyutility Components; Anarchic Sacrifical + High-Risk Laboratories; Expansive Social + Diffusion. Keep their depicted arrangement; never split or rearrange the two cards. Each half upgrades independently. A pair may be loaned as if one card and returns at turn end.
+#### Nonlinear Thinking
 
-**Nullspace Drive.** Put a nullspace colony in play during Trade by running its top converter. That converter has no output beyond entering the colony. These colonies have no species background and may be traded permanently. If consumed by a converter taking worlds as input, **remove them from the game**, rather than putting them beneath the colony deck.
+Kt’Zr’Kt’Rtl starting economic converters span fixed pairs: Hand Crafted + Polyutility Components; Anarchic Sacrifical + High-Risk Laboratories; Expansive Social + Diffusion. Keep their depicted arrangement; never split or rearrange the two cards. Each half upgrades independently. A pair may be loaned as if one card and returns at turn end.
 
-**Boundless Expansion and Dangerously Fast.** Kt’Zr’Kt’Rtl supports any number of colonies and **always wins tied colony bids as though it had fewer colonies than everyone else**. This special colony-count priority does not apply to research bids. Its printed final tiebreak value is infinity, so after equal research bids and equal research-team counts it wins the final tie as well.
+#### Nullspace Drive
+
+Put a nullspace colony in play during Trade by running its top converter. That converter has no output beyond entering the colony. These colonies have no species background and may be traded permanently. If consumed by a converter taking worlds as input, **remove them from the game**, rather than putting them beneath the colony deck.
+
+#### Boundless Expansion and Dangerously Fast
+
+Kt’Zr’Kt’Rtl supports any number of colonies and **always wins tied colony bids as though it had fewer colonies than everyone else**. This special colony-count priority does not apply to research bids. Its printed final tiebreak value is infinity, so after equal research bids and equal research-team counts it wins the final tie as well.
 
 ### Unity
 
-**Flexible output.** Gray wild cubes can pay any same-sized color: large = black, blue or yellow; small = green, white or brown. Different wilds may stand for different colors. They remain gray until spent; do not exchange output wilds for colored cubes immediately. Unity wild resources are immune to Zeth theft. Eni Et interest converters preserve input wilds but cannot make additional ones.
+#### Flexible output
 
-**Flexible input.** Wild input symbols accept any cubes of the depicted size, including different colors and Unity gray cubes. Sizes must match; large cubes cannot replace small ones or vice versa.
+Gray wild cubes can pay any same-sized color: large = black, blue or yellow; small = green, white or brown. Different wilds may stand for different colors. They remain gray until spent; do not exchange output wilds for colored cubes immediately. Unity wild resources are immune to Zeth theft. Eni Et interest converters preserve input wilds but cannot make additional ones.
 
-**Colonization and computer worlds.** Several Unity cards enter or flip during Trade by consuming a colony of **any climate** plus printed resources. Four computer-world cards start out of play and enter using their top converters. Unity normally supports **one colony**: acquiring a second is allowed, but trade or consume excess before Economy or discard excess beneath the deck at that check.
+#### Flexible input
+
+Wild input symbols accept any cubes of the depicted size, including different colors and Unity gray cubes. Sizes must match; large cubes cannot replace small ones or vice versa.
+
+#### Colonization and computer worlds
+
+Several Unity cards enter or flip during Trade by consuming a colony of **any climate** plus printed resources. Four computer-world cards start out of play and enter using their top converters. Unity normally supports **one colony**: acquiring a second is allowed, but trade or consume excess before Economy or discard excess beneath the deck at that check.
 
 ### Yengii Society
 
-**Secretive.** Yengii inventions are not automatically shared; other players cannot play matching cards without a license. Yengii still benefits normally from other species' shared inventions. Flip Yengii's invented research cards as normal, but keep them splayed in front of Yengii rather than in the central splay. Receive the reduced **upper-right Yengii Sharing Bonus** at Confluence. Invented technologies do **not** count against Yengii for research-team bid tiebreaks.
+#### Secretive
 
-**Licensing.** As part of a trade, Yengii may let another player play their own matching species card as if Yengii's technology were shared. That recipient's card enters **permanently**. This can happen in the same Trade in which Yengii invents, before the coming Economy. Licensing cannot restore a card hidden underneath another card as upgrade payment.
+Yengii inventions are not automatically shared; other players cannot play matching cards without a license. Yengii still benefits normally from other species' shared inventions. Flip Yengii's invented research cards as normal, but keep them splayed in front of Yengii rather than in the central splay. Receive the reduced **upper-right Yengii Sharing Bonus** at Confluence. For Yengii’s research-team bid tiebreaks, count **only its uncompleted research teams**. Its invented technologies contribute zero to that count, even though their cards stay splayed in front of Yengii.
+
+#### Licensing
+
+As part of a trade, Yengii may let another player play their own matching species card as if Yengii's technology were shared. That recipient's card enters **permanently**. This can happen in the same Trade in which Yengii invents, before the coming Economy. Licensing cannot restore a card hidden underneath another card as upgrade payment.
 
 ### Zeth Anocracy
 
-**Envoys.** All resources produced by the Envoys factory must be traded or gifted together **along with an envoy token to the same player**; a player cannot refuse that gift. Separately, Zeth may **trade, but not gift, envoy tokens from its stash**. Other players cannot trade envoy tokens among themselves or back to Zeth.
+#### Envoys
 
-**Theft.** Add a Zeth Steal Phase **after Confluence, at each turn's end**. Zeth runs red stealing converters then, paying one of their printed input alternatives. Each steals a depicted set of resource sizes/shapes, ignoring color, from **exactly one player**. If that target lacks enough, take as much as possible. Zeth may not use two stealing converters against the same player in one turn. Envoy tokens on a target unlock cheaper input options; this does **not consume** the tokens. Gray Unity wild resources cannot be stolen.
+All resources produced by the Envoys factory must be traded or gifted together **along with an envoy token to the same player**; a player cannot refuse that gift. Separately, Zeth may **trade, but not gift, envoy tokens from its stash**. Other players cannot trade envoy tokens among themselves or back to Zeth.
 
-**Protection Racket.** Zeth cannot steal from anyone it traded with during the previous Trade Phase. Use Safe/Vulnerable markers to track this. Gifts do not establish this protection: forced donation gifts to a player, gifts of donations to Zeth, and receiving Envoys output as a gift do not count as trades. Donation goods **can** be offered in an explicitly declared trade to Zeth, who may accept or refuse it; an accepted trade provides protection.
+#### Theft
+
+Add a Zeth Steal Phase **after Confluence, at each turn's end**. Zeth runs red stealing converters then, paying one of their printed input alternatives. Each steals a depicted set of resource sizes/shapes, ignoring color, from **exactly one player**. If that target lacks enough, take as much as possible. Zeth may not use two stealing converters against the same player in one turn. Envoy tokens on a target unlock cheaper input options; this does **not consume** the tokens. Gray Unity wild resources cannot be stolen.
+
+#### Protection Racket
+
+Zeth cannot steal from anyone it traded with during the previous Trade Phase. Use Safe/Vulnerable markers to track this. Gifts do not establish this protection: forced donation gifts to a player, gifts of donations to Zeth, and receiving Envoys output as a gift do not count as trades. Donation goods **can** be offered in an explicitly declared trade to Zeth, who may accept or refuse it; an accepted trade provides protection.
 
 ## FAQ & Rulings
 

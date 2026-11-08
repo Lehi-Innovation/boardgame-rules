@@ -21,7 +21,7 @@ def verify(report_rel,task,output_rel):
  checked=[]
  receipts=x.get('delivery_receipts')
  if 'text_read_receipts' in x:
-  receipts=[{'file':z['path'],'ranges':z.get('read_ranges_zero_based_half_open_characters',z.get('read_ranges',z.get('ranges',z.get('contiguous_half_open_ranges'))))} for z in x['text_read_receipts']]
+  receipts=[{'file':z['path'],'ranges':z.get('read_ranges_zero_based_half_open_characters',z.get('read_ranges',z.get('ranges',z.get('contiguous_half_open_ranges',z.get('half_open_ranges',z.get('ranges_half_open'))))))} for z in x['text_read_receipts']]
  if receipts is None and 'text_range_receipts' in x:
   receipts=[{'file':z['path'],'ranges':z['ranges']} for z in x['text_range_receipts']]
  if receipts is None and 'receipts' in x and 'text_range_receipts' in x['receipts']:
@@ -36,7 +36,22 @@ def verify(report_rel,task,output_rel):
   for i,(a,b) in enumerate(ranges):
    assert 0<=a<b<=len(s) and b-a<=6000
    if i:assert a==ranges[i-1][1]
-   matches=[{k:o[k] for k in ['ordinal','record_sha256']} for o in outs if any(s[a:b] in v for v in o['text'])]
+   needle=s[a:b];matches=[]
+   for o in outs:
+    if any(needle in v for v in o['text']):
+     matches.append({**{k:o[k] for k in ['ordinal','record_sha256']},'transport':'literal or completely decoded JSON tool output'})
+     continue
+    # A truncated outer result wrapper can still preserve a complete escaped
+    # source segment. Require EVERY encoded character and an exact roundtrip;
+    # this never infers or reconstructs an omitted/truncated source segment.
+    for ascii_only in [False,True]:
+     encoded=json.dumps(needle,ensure_ascii=ascii_only)[1:-1]
+     original=next((v for v in o['text'] if encoded in v),None)
+     if original is not None:
+      start=original.index(encoded);observed=original[start:start+len(encoded)]
+      assert json.loads('"'+observed+'"')==needle
+      matches.append({**{k:o[k] for k in ['ordinal','record_sha256']},'transport':'complete JSON-escaped literal segment preserved in actual output','encoded_slice_sha256':sha(observed.encode()),'decoded_roundtrip_exact':True})
+      break
    assert matches,(str(p),a,b,'No exact actual model-visible full slice')
    assert any(o['ordinal']<cut for o in matches),(str(p),a,b,'Not delivered before report write')
    units.append({'start':a,'end':b,'sha256':sha(s[a:b].encode()),'matching_runtime_outputs':matches})

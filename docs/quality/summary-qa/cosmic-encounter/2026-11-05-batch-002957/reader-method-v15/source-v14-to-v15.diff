@@ -1,0 +1,117 @@
+--- reader-method-v14/source_units.py
++++ reader-method-v15/source_units.py
+@@ -1,6 +1,7 @@
+ """Generic Markdown source extraction; no rule facts or question maps."""
+ import re
+ import hashlib
++import json
+ 
+ 
+ def question_records(document):
+@@ -300,3 +301,106 @@
+         if actual != expected["unit"]:
+             raise ValueError("Prose/procedure record is incomplete")
+     return True
++
++
++def review_display_record(original_question_record, original_answer_record, evidence_units=None):
++    """Snapshot the complete bound records and only their explicit shared units.
++
++    References are primitive strings/numbers in evidence_refs, evidence_ids or
++    evidence lists, including nested lists on clauses. Literal evidence objects
++    are retained in the answer, without interpreting their IDs/text as refs.
++    List pools use each unit's number (or id when number is absent); dictionary
++    pools use their keys. Lookup equates a numeric ID with its string spelling,
++    but never rewrites original IDs, references, Unicode, text or unknown fields.
++    Duplicate matching pool entries and missing references raise ValueError.
++
++    Return payload, canonical JSON text, UTF-8 SHA-256, characters and utf8_bytes.
++    Pass this returned record to unit_display_blocks(..., limit=2900). This
++    performs no IO, answer generation, relevance selection or quote validation.
++    """
++    def canonical(value):
++        # Refuse lossy Python-to-JSON coercions such as tuple or non-string keys.
++        def check(item):
++            if type(item) is dict:
++                for key, child in item.items():
++                    if type(key) is not str:
++                        raise ValueError('JSON object keys must be strings')
++                    check(child)
++            elif type(item) is list:
++                for child in item:
++                    check(child)
++            elif item is not None and type(item) not in (str, int, float, bool):
++                raise ValueError('Records must contain only JSON values')
++        check(value)
++        return json.dumps(value, ensure_ascii=False, sort_keys=True,
++                          separators=(',', ':'), allow_nan=False)
++
++    def primitive(value):
++        return type(value) in (str, int, float)
++
++    def lookup_key(value):
++        if not primitive(value):
++            raise ValueError('Evidence IDs must be primitive strings or numbers')
++        # Numeric and string spellings can match; originals remain untouched.
++        if type(value) is float:
++            canonical(value)  # Reject non-finite numbers, including in pool IDs.
++        return str(value)
++
++    def pointer_part(value):
++        return str(value).replace('~', '~0').replace('/', '~1')
++
++    def references(value, pointer=''):
++        if isinstance(value, dict):
++            for key, item in value.items():
++                child = pointer + '/' + pointer_part(key)
++                if key in ('evidence_refs', 'evidence_ids') and not isinstance(item, list):
++                    raise ValueError('Explicit evidence reference fields must be lists')
++                if key in ('evidence', 'evidence_refs', 'evidence_ids') and isinstance(item, list):
++                    for index, ref in enumerate(item):
++                        if primitive(ref):
++                            yield ref, child + '/' + str(index)
++                        elif key != 'evidence':
++                            raise ValueError('Explicit evidence reference lists require primitive IDs')
++                yield from references(item, child)
++        elif isinstance(value, list):
++            for index, item in enumerate(value):
++                yield from references(item, pointer + '/' + str(index))
++
++    if not isinstance(original_answer_record, dict):
++        raise ValueError('The complete original answer record must be an object')
++    validate_question_bindings([original_question_record], [original_answer_record], complete=True)
++    question = json.loads(canonical(original_question_record))
++    answer = json.loads(canonical(original_answer_record))
++    occurrences = list(references(answer))
++    if evidence_units is None:
++        evidence_units = []
++    if not isinstance(evidence_units, (dict, list)):
++        raise ValueError('Shared evidence pool must be a dictionary or list')
++    candidates = {}
++    for key, unit in (evidence_units.items() if isinstance(evidence_units, dict)
++                      else enumerate(evidence_units)):
++        reference = key if isinstance(evidence_units, dict) else (
++            unit.get('number', unit.get('id')) if isinstance(unit, dict) else None)
++        if reference is None:
++            continue
++        normalized = lookup_key(reference)
++        candidates.setdefault(normalized, []).append((key, reference, unit))
++    resolved, locations = [], {}
++    for value, path in occurrences:
++        matches = candidates.get(lookup_key(value), [])
++        if len(matches) != 1:
++            raise ValueError('Explicit evidence reference must resolve to exactly one unit: ' + path)
++        key, pool_reference, unit = matches[0]
++        pool_path = '/evidence_units/' + pointer_part(key)
++        if pool_path not in locations:
++            locations[pool_path] = len(resolved)
++            resolved.append({'pool_reference': pool_reference, 'pool_path': pool_path,
++                             'original_unit': json.loads(canonical(unit)), 'references': []})
++        resolved[locations[pool_path]]['references'].append({'value': value, 'path': path})
++    payload = {'complete_original_question': question, 'complete_original_answer': answer,
++               'explicitly_referenced_shared_evidence': resolved}
++    text = canonical(payload)
++    encoded = text.encode('utf-8')
++    return {'payload': payload, 'text': text,
++            'sha256': hashlib.sha256(encoded).hexdigest(),
++            'characters': len(text), 'utf8_bytes': len(encoded)}

@@ -1,0 +1,782 @@
+{
+  "report_type": "independent_question_wording_scope_adjudication",
+  "game": "New Angeles",
+  "benchmark_version": "seed-v2",
+  "questions_reviewed": [
+    "Q09",
+    "Q18",
+    "Q05"
+  ],
+  "method": "Determine requested outputs from the question wording first. Use authoritative rules/FAQ to identify the correct facts answering each clause. Map key facts to those clauses without treating their presence in required_facts as evidence that they were asked. No reader response, summary, score, or past adjudication is inferred or evaluated.",
+  "source_boundary": {
+    "content_inputs": [
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/seed-v2/questions.json",
+      "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/seed-v2/answer-key.json",
+      "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "/home/jonny/projects/boardgame-rules/extracted/new-angeles-faq.txt"
+    ],
+    "excluded_content": "No summary, reader answers, grades, inventory reports, other history, or browsing consulted. Runtime logs were filtered solely for the requested launch/identity/model/effort provenance."
+  },
+  "scope_conclusions": {
+    "Q09": "Production before unrest is correct contextual background, not an independently asked material clause; the requested outcomes are the four Human First unrest/outage branches and ordinary-failed-increase comparison.",
+    "Q18": "The final-space production cap is asked; the zero floor is contextual background.",
+    "Q05": "Costs, counter/support eligibility, and one-circuit limit are asked; an explicit general topmost-only-operation statement is additional context."
+  },
+  "adjudications": [
+    {
+      "id": "Q09",
+      "question_verbatim": "When an android district with Human First is exploited, what happens from stable, protest, strike, and already-outage starting states? Is an ordinary failed unrest increase without Human First enough to cause an outage?",
+      "determination": {
+        "production_before_unrest_independently_required": false,
+        "requested_focus": "The Human First unrest/outage result from each named starting state, plus whether an ordinary failed unrest increase causes outage.",
+        "rationale": "The first sentence supplies an exploitation trigger and varies four unrest/outage starting states. Those are precisely the states that select the Human First two-stage/overflow branches. It does not separately ask what resources are produced or when production happens relative to unrest. The second sentence explicitly identifies the failed-increase/outage distinction. Although “what happens” can invite helpful elaboration, it does not independently turn the trigger into a request for every step of exploitation. A complete branch answer can state all four requested outcomes without stating the production-before-unrest sequence.",
+        "scope_ambiguity": "The broad phrase “what happens” makes a fuller exploitation explanation reasonable, but does not establish production timing as a separately requested material clause."
+      },
+      "asked_material_clauses": [
+        {
+          "clause_id": "Q09-A",
+          "wording": "from stable",
+          "requested_fact": "For stable without an existing outage, Human First increases unrest two stages to strike.",
+          "source_refs": [
+            "RR31",
+            "RR68"
+          ]
+        },
+        {
+          "clause_id": "Q09-B",
+          "wording": "from ... protest",
+          "requested_fact": "It cannot increase by two stages, so place an outage token; remove the unrest token and return unrest to stable.",
+          "source_refs": [
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        },
+        {
+          "clause_id": "Q09-C",
+          "wording": "from ... strike",
+          "requested_fact": "It cannot increase by two stages, so place an outage token; remove the unrest token and return unrest to stable.",
+          "source_refs": [
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        },
+        {
+          "clause_id": "Q09-D",
+          "wording": "already-outage starting states",
+          "requested_fact": "The android district is still exploited; Human First calls for a new outage, and the new token must move because one is already present. The original district remains in outage with stable unrest.",
+          "source_refs": [
+            "RR27",
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        },
+        {
+          "clause_id": "Q09-E",
+          "wording": "Is an ordinary failed unrest increase without Human First enough to cause an outage?",
+          "requested_fact": "No. A capped ordinary increase does not itself cause outage; the exploited-Human-First exception is required for this overflow result.",
+          "source_refs": [
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        }
+      ],
+      "key_fact_mapping": [
+        {
+          "key_fact": "production before unrest",
+          "classification": "contextual_background",
+          "maps_to": [],
+          "reason": "Correct exploitation sequence, but no separate timing or resource-production request occurs in the question.",
+          "source_refs": [
+            "RR27"
+          ]
+        },
+        {
+          "key_fact": "stable goes strike",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q09-A"
+          ],
+          "source_refs": [
+            "RR31",
+            "RR68"
+          ]
+        },
+        {
+          "key_fact": "protest/strike places outage removes unrest stable",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q09-B",
+            "Q09-C"
+          ],
+          "source_refs": [
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        },
+        {
+          "key_fact": "already outage new outage moves",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q09-D"
+          ],
+          "source_refs": [
+            "RR27",
+            "RR31",
+            "RR39"
+          ]
+        },
+        {
+          "key_fact": "ordinary capped increase no outage",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q09-E"
+          ],
+          "source_refs": [
+            "RR31",
+            "RR39",
+            "RR68"
+          ]
+        }
+      ],
+      "additional_context": "Normal production under the starting state and modifiers, including no production from strike/outage, may help explain the sequence. It must remain accurate if supplied, but it is not an independently requested output in this wording.",
+      "minimal_scope_complete_answer": "With Human First, a stable district goes to strike. From protest or strike, place an outage and remove its unrest token, leaving stable unrest. An already-outage android district is still exploited: the extra outage token moves, while the existing outage remains. An ordinary failed unrest increase without Human First does not cause an outage."
+    },
+    {
+      "id": "Q18",
+      "question_verbatim": "Where do discarded action cards, assets and removed components go? What happens if an action deck is empty when a card must be drawn, a reserve component runs out, or production would pass the track end?",
+      "determination": {
+        "zero_floor_independently_required": false,
+        "rationale": "“Production would pass the track end” asks about an increase exceeding the final space. It supplies neither a resource-reduction effect nor a zero starting quantity, and does not request both endpoints or the full supply rules. The zero floor is a separate true rule about reduction, so proximity to the cap in the rules/key does not make it independently asked."
+      },
+      "asked_material_clauses": [
+        {
+          "clause_id": "Q18-A",
+          "wording": "Where do discarded action cards ... go?",
+          "requested_fact": "Facedown to the shared action-card discard pile.",
+          "source_refs": [
+            "RR2"
+          ]
+        },
+        {
+          "clause_id": "Q18-B",
+          "wording": "Where do discarded ... assets ... go?",
+          "requested_fact": "Facedown on the bottom of the asset deck.",
+          "source_refs": [
+            "RR6"
+          ]
+        },
+        {
+          "clause_id": "Q18-C",
+          "wording": "Where do ... removed components go?",
+          "requested_fact": "Removed units/tokens return to the reserve for reuse.",
+          "source_refs": [
+            "RR47_48"
+          ]
+        },
+        {
+          "clause_id": "Q18-D",
+          "wording": "if an action deck is empty when a card must be drawn",
+          "requested_fact": "Shuffle the entire shared discard, reveal and sort by type, then shuffle each type into its respective action deck.",
+          "source_refs": [
+            "RR2"
+          ]
+        },
+        {
+          "clause_id": "Q18-E",
+          "wording": "a reserve component runs out",
+          "requested_fact": "Do not place a component when no copy of that type remains in the reserve.",
+          "source_refs": [
+            "RR10"
+          ]
+        },
+        {
+          "clause_id": "Q18-F",
+          "wording": "production would pass the track end",
+          "requested_fact": "Resource quantity is capped at the final track space; further production leaves its token there.",
+          "source_refs": [
+            "RR43",
+            "RR58"
+          ]
+        }
+      ],
+      "key_fact_mapping": [
+        {
+          "key_fact": "actions facedown shared discard",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-A"
+          ],
+          "source_refs": [
+            "RR2"
+          ]
+        },
+        {
+          "key_fact": "cannot inspect facedown discard",
+          "classification": "additional_unasked_claim",
+          "maps_to": [],
+          "reason": "The wording asks discard destination/handling, not permission to inspect. This scope determination does not independently adjudicate the key’s inspection claim."
+        },
+        {
+          "key_fact": "assets facedown bottom",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-B"
+          ],
+          "source_refs": [
+            "RR6"
+          ]
+        },
+        {
+          "key_fact": "removed reserve reusable",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-C"
+          ],
+          "source_refs": [
+            "RR47_48"
+          ]
+        },
+        {
+          "key_fact": "empty deck shuffle whole discard reveal sort types shuffle into respective decks",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-D"
+          ],
+          "source_refs": [
+            "RR2"
+          ]
+        },
+        {
+          "key_fact": "reserve empty no placement",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-E"
+          ],
+          "source_refs": [
+            "RR10"
+          ]
+        },
+        {
+          "key_fact": "supply final cap",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q18-F"
+          ],
+          "source_refs": [
+            "RR43",
+            "RR58"
+          ]
+        },
+        {
+          "key_fact": "zero floor",
+          "classification": "contextual_background",
+          "maps_to": [],
+          "reason": "A different endpoint and direction of change from the production-overflow scenario.",
+          "source_refs": [
+            "RR58"
+          ]
+        }
+      ],
+      "minimal_scope_complete_answer": "Discard actions facedown to the shared pile and assets facedown to the bottom of their deck; removed units/tokens return to the reserve for reuse. When a required action deck is empty, shuffle the whole discard, reveal and sort it by type, then shuffle each type into its corresponding deck. If the reserve lacks a required component, do not place it. Production stops at the final resource-track space."
+    },
+    {
+      "id": "Q05",
+      "question_verbatim": "The first, second and third counteroffers are proposed in one deal. How many hand cards must each proposer discard in addition to their offer? Can the active player counter, can an earlier proposer later support, and is there another circuit of counteroffers?",
+      "determination": {
+        "explicit_topmost_only_operation_independently_required": false,
+        "rationale": "The question enumerates additional discard amounts, active-player eligibility, earlier-proposer support eligibility, and a possible further counteroffer circuit. It does not ask which counteroffer resolves or whether earlier effects remain operative. Displacement of countering-player status is relevant to the support answer; stating the broader topmost-card-only operation rule explicitly is additional explanation, not a separate requested clause.",
+        "important_distinction": "A later proposer replacing the earlier player as current countering player explains why the earlier proposer can support. That necessary eligibility distinction does not require a separate general declaration that every covered counteroffer card is ignored except for discard costs."
+      },
+      "asked_material_clauses": [
+        {
+          "clause_id": "Q05-A",
+          "wording": "The first, second and third counteroffers ... How many hand cards must each proposer discard in addition to their offer?",
+          "requested_fact": "Respectively 0, 1, and 2 additional hand cards.",
+          "source_refs": [
+            "RR15",
+            "RR16"
+          ]
+        },
+        {
+          "clause_id": "Q05-B",
+          "wording": "Can the active player counter",
+          "requested_fact": "No, unless a card ability explicitly permits it.",
+          "source_refs": [
+            "RR16"
+          ]
+        },
+        {
+          "clause_id": "Q05-C",
+          "wording": "can an earlier proposer later support",
+          "requested_fact": "Yes, after being displaced as current countering player; the active player and current countering player cannot ordinarily support.",
+          "source_refs": [
+            "RR15",
+            "RR16",
+            "RR60"
+          ]
+        },
+        {
+          "clause_id": "Q05-D",
+          "wording": "is there another circuit of counteroffers",
+          "requested_fact": "No. Each nonactive player has only one opportunity, proceeding clockwise.",
+          "source_refs": [
+            "RR15",
+            "RR16",
+            "FAQDeals"
+          ]
+        }
+      ],
+      "key_fact_mapping": [
+        {
+          "key_fact": "additional costs0,1,2",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q05-A"
+          ],
+          "source_refs": [
+            "RR15",
+            "RR16"
+          ]
+        },
+        {
+          "key_fact": "topmost only operative",
+          "classification": "contextual_background",
+          "maps_to": [],
+          "reason": "A true rule about which counteroffer remains operative, beyond the explicit cost/eligibility/circuit requests.",
+          "source_refs": [
+            "RR15"
+          ]
+        },
+        {
+          "key_fact": "earlier count costs",
+          "classification": "supporting_explanation",
+          "maps_to": [
+            "Q05-A"
+          ],
+          "reason": "Explains the requested 0/1/2 amounts; explicitly describing the count mechanism is not a further independent request.",
+          "source_refs": [
+            "RR15",
+            "RR16"
+          ]
+        },
+        {
+          "key_fact": "active cannot counter absent explicit ability",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q05-B"
+          ],
+          "source_refs": [
+            "RR16"
+          ]
+        },
+        {
+          "key_fact": "displaced proposer eligible supporter",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q05-C"
+          ],
+          "source_refs": [
+            "RR15",
+            "RR16",
+            "RR60"
+          ]
+        },
+        {
+          "key_fact": "one chance each no second circuit",
+          "classification": "asked_material_fact",
+          "maps_to": [
+            "Q05-D"
+          ],
+          "source_refs": [
+            "RR16",
+            "FAQDeals"
+          ]
+        }
+      ],
+      "minimal_scope_complete_answer": "The first, second, and third proposers discard 0, 1, and 2 additional hand cards. The active player cannot counter unless a card explicitly allows it. An earlier proposer can support after a later counteroffer displaces them; the current countering player cannot ordinarily support. There is no second circuit: each nonactive player gets one clockwise opportunity."
+    }
+  ],
+  "source_references": {
+    "RR27": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 9,
+      "rules": [
+        "27",
+        "27.1",
+        "27.2",
+        "27.3"
+      ],
+      "basis": "Exploitation produces resources, then unrest increases; android districts remain exploited when unable to produce."
+    },
+    "RR31": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 10,
+      "rules": [
+        "31",
+        "31.1",
+        "31.5"
+      ],
+      "basis": "Human First increases unrest by two; protest, strike, or outage instead causes placement of an outage; an additional outage moves; only Human First causes outage for failed unrest increase."
+    },
+    "RR39": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 12,
+      "rules": [
+        "39",
+        "39.1",
+        "39.2",
+        "39.3",
+        "39.5"
+      ],
+      "basis": "Outage prevents production, removes unrest to stable, prevents increases, and forces a duplicate outage to move."
+    },
+    "RR68": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_pages": [
+        16,
+        17
+      ],
+      "rules": [
+        "68",
+        "68.1",
+        "68.4",
+        "68.6",
+        "68.7",
+        "68.8",
+        "68.9"
+      ],
+      "basis": "Three unrest stages; stable-to-strike spans two; Human First overflow exception; placing outage removes unrest; an outage district is stable."
+    },
+    "RR15": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 6,
+      "rules": [
+        "14",
+        "14.1",
+        "15.3",
+        "15.4",
+        "15.5",
+        "15.6"
+      ],
+      "basis": "Latest proposer becomes countering player; incremental extra discards; only topmost is counteroffer; previous cards otherwise ignored."
+    },
+    "RR16": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 7,
+      "rules": [
+        "16.3",
+        "16.4",
+        "16.7"
+      ],
+      "basis": "One clockwise opportunity for each nonactive player; displaced countering status; all except active/current countering player become supporting players; active cannot counter absent explicit ability."
+    },
+    "RR60": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 15,
+      "rules": [
+        "60"
+      ],
+      "basis": "Supporting players are all players other than active/current countering player."
+    },
+    "FAQDeals": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-faq.txt",
+      "printed_page": 1,
+      "section": "Deals",
+      "basis": "Each nonactive player has only one chance to propose; no repeated circuit."
+    },
+    "RR2": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 4,
+      "rules": [
+        "2.2",
+        "2.4"
+      ],
+      "basis": "Empty requested action deck: shuffle whole discard, reveal/sort, shuffle types into respective decks; actions discard facedown to shared pile."
+    },
+    "RR6": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 5,
+      "rules": [
+        "6.7"
+      ],
+      "basis": "Discarded asset goes facedown to bottom of asset deck."
+    },
+    "RR10": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 5,
+      "rules": [
+        "10"
+      ],
+      "basis": "Do not place a component when none of that type remain in reserve."
+    },
+    "RR47_48": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 13,
+      "rules": [
+        "47.1",
+        "48.1",
+        "48.2"
+      ],
+      "basis": "Removed tokens/units return to reserve and may be placed again."
+    },
+    "RR43": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 12,
+      "rules": [
+        "43.5"
+      ],
+      "basis": "Resource tokens cannot move beyond final track space."
+    },
+    "RR58": {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "printed_page": 15,
+      "rules": [
+        "58.2",
+        "58.3"
+      ],
+      "basis": "Production caps at final track space; separate rule prohibits reducing a resource at zero."
+    }
+  },
+  "input_delivery_receipts": [
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/seed-v2/questions.json",
+      "byte_count": 5639,
+      "character_count": 5627,
+      "sha256": "034567cc7785fd8eae9e764e581bf2428fbefa02bf848b6b724b5a27632cd10e",
+      "range_convention": "zero-based Unicode character offsets; end exclusive",
+      "complete_contiguous_delivery": true,
+      "chunks": [
+        {
+          "char_start_inclusive": 0,
+          "char_end_exclusive": 5627,
+          "char_count": 5627,
+          "sha256_utf8": "034567cc7785fd8eae9e764e581bf2428fbefa02bf848b6b724b5a27632cd10e",
+          "exec_command_chunk_id": "8fa70b",
+          "call_output_cap_tokens": 4500,
+          "delivery": "full text returned; no output truncation reported"
+        }
+      ]
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/seed-v2/answer-key.json",
+      "byte_count": 19148,
+      "character_count": 19096,
+      "sha256": "eb2b2e0d298b81749cedd326d01aed3706f2298c8e3fc8c31c4f201646e10a73",
+      "range_convention": "zero-based Unicode character offsets; end exclusive",
+      "complete_contiguous_delivery": true,
+      "chunks": [
+        {
+          "char_start_inclusive": 0,
+          "char_end_exclusive": 6000,
+          "char_count": 6000,
+          "sha256_utf8": "dd33ae3161bfe0a73063f5a3eb3a2893b587b8374b6926eceb2b7221c0fd92f2",
+          "exec_command_chunk_id": "993f22",
+          "call_output_cap_tokens": 7000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 6000,
+          "char_end_exclusive": 12000,
+          "char_count": 6000,
+          "sha256_utf8": "cfe755cb10bbf189fdab49756595b331de5e128aa5e84f3548b79562f02e7777",
+          "exec_command_chunk_id": "993f22",
+          "call_output_cap_tokens": 7000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 12000,
+          "char_end_exclusive": 18000,
+          "char_count": 6000,
+          "sha256_utf8": "3639f0437066f83ff615c51c9b11047ff5fb903eeef2b70f99fb3783e92bafdb",
+          "exec_command_chunk_id": "9b12ec",
+          "call_output_cap_tokens": 5000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 18000,
+          "char_end_exclusive": 19096,
+          "char_count": 1096,
+          "sha256_utf8": "0186acf0bcfe494ad1505137ac87215c8b88c5c4bf364381e4859e912efd72cd",
+          "exec_command_chunk_id": "9b12ec",
+          "call_output_cap_tokens": 5000,
+          "delivery": "full text returned; no output truncation reported"
+        }
+      ]
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-rules.txt",
+      "byte_count": 74419,
+      "character_count": 73771,
+      "sha256": "9f942b99d49d4575c885738e0e9836af2ec5d9a5a7193890327fa070edcffe6f",
+      "range_convention": "zero-based Unicode character offsets; end exclusive",
+      "complete_contiguous_delivery": true,
+      "chunks": [
+        {
+          "char_start_inclusive": 0,
+          "char_end_exclusive": 6000,
+          "char_count": 6000,
+          "sha256_utf8": "8cb9fd609df6518d60d107827e5f653ad3e1f47dce598649e8bb37c625deb7d8",
+          "exec_command_chunk_id": "d2d426",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 6000,
+          "char_end_exclusive": 12000,
+          "char_count": 6000,
+          "sha256_utf8": "6bd09f19dde359f1c9e1db5120052f2d1d37e6703d2438ca3e25a47ae418899f",
+          "exec_command_chunk_id": "d2d426",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 12000,
+          "char_end_exclusive": 18000,
+          "char_count": 6000,
+          "sha256_utf8": "6a38ab238711de20af83fbfa2f1aa163efeaa2ca9122b928f67eb46532c896a7",
+          "exec_command_chunk_id": "d2d426",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 18000,
+          "char_end_exclusive": 24000,
+          "char_count": 6000,
+          "sha256_utf8": "ca923ed95afedb410403fec10381903b4712863c94ead30b1c11cc5214a577fd",
+          "exec_command_chunk_id": "929300",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 24000,
+          "char_end_exclusive": 30000,
+          "char_count": 6000,
+          "sha256_utf8": "ef154b0d381b1c78ef1fc44c46e2297d32196875e0491f51a710c8c66cc15356",
+          "exec_command_chunk_id": "929300",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 30000,
+          "char_end_exclusive": 36000,
+          "char_count": 6000,
+          "sha256_utf8": "7de0f8c683f449a4bc270e9cccb4858caa1bf9cbc55438e9c63cc19a403ba91e",
+          "exec_command_chunk_id": "929300",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 36000,
+          "char_end_exclusive": 42000,
+          "char_count": 6000,
+          "sha256_utf8": "76ac1946abc980a0f22b59576269b79336e014bc5b8087175a22af428abfaa9f",
+          "exec_command_chunk_id": "c54738",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 42000,
+          "char_end_exclusive": 48000,
+          "char_count": 6000,
+          "sha256_utf8": "efdb905f89142bcdb6508e0fe189efc08279c7672ce5b58bf398accccf8f22e2",
+          "exec_command_chunk_id": "c54738",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 48000,
+          "char_end_exclusive": 54000,
+          "char_count": 6000,
+          "sha256_utf8": "c6327e1304a01c7844001d41ac2267dc8ddd02aa8e13ee63d4fed3162b5db894",
+          "exec_command_chunk_id": "c54738",
+          "call_output_cap_tokens": 10000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 54000,
+          "char_end_exclusive": 60000,
+          "char_count": 6000,
+          "sha256_utf8": "39d4c2dcb8b37dfa46cddf3aaba697ff9d7a797b743ae83298de4f12a8d00e5a",
+          "exec_command_chunk_id": "f65298",
+          "call_output_cap_tokens": 11000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 60000,
+          "char_end_exclusive": 66000,
+          "char_count": 6000,
+          "sha256_utf8": "34d381cc63cc7c41f79dc7868834adb6bda90d1a655afe773ce9460a7b319a05",
+          "exec_command_chunk_id": "f65298",
+          "call_output_cap_tokens": 11000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 66000,
+          "char_end_exclusive": 72000,
+          "char_count": 6000,
+          "sha256_utf8": "1c95497949daa85349167f8727ca5ba9c00b107544109ce810b8eadee7ea7363",
+          "exec_command_chunk_id": "f65298",
+          "call_output_cap_tokens": 11000,
+          "delivery": "full text returned; no output truncation reported"
+        },
+        {
+          "char_start_inclusive": 72000,
+          "char_end_exclusive": 73771,
+          "char_count": 1771,
+          "sha256_utf8": "fc186351bd559c07fdf9d5f63e58681ec8c10e967fa5624b1847a0cc5c9161f7",
+          "exec_command_chunk_id": "f65298",
+          "call_output_cap_tokens": 11000,
+          "delivery": "full text returned; no output truncation reported"
+        }
+      ]
+    },
+    {
+      "path": "/home/jonny/projects/boardgame-rules/extracted/new-angeles-faq.txt",
+      "byte_count": 4038,
+      "character_count": 3966,
+      "sha256": "195ee06834fc7dd6dde2b3abb09a24d5d937064cc3237ebb86ca4628ea63b25e",
+      "range_convention": "zero-based Unicode character offsets; end exclusive",
+      "complete_contiguous_delivery": true,
+      "chunks": [
+        {
+          "char_start_inclusive": 0,
+          "char_end_exclusive": 3966,
+          "char_count": 3966,
+          "sha256_utf8": "195ee06834fc7dd6dde2b3abb09a24d5d937064cc3237ebb86ca4628ea63b25e",
+          "exec_command_chunk_id": "a93a23",
+          "call_output_cap_tokens": 4000,
+          "delivery": "full text returned; no output truncation reported"
+        }
+      ]
+    }
+  ],
+  "runtime_provenance": {
+    "requested": {
+      "log_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T20-10-17-01a1b3fc-466c-7322-8413-9e59ff041286.jsonl",
+      "record_ordinal_1_based": 452,
+      "record_sha256": "e0a0322eb55a0415080a9dab8db18980fd8c21f990d104ddef18044c9d35060c",
+      "identity": "seed_scope_adjudication",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    },
+    "identity": {
+      "log_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T20-28-24-01a1b40c-dc74-7db1-a69d-9a976141b9a8.jsonl",
+      "record_ordinal_1_based": 1,
+      "record_sha256": "c279af6f0eeb746186e4f44d9000c3310dd46f5621bfd0ecf9e328325f50bc13",
+      "identity": "01a1b40c-dc74-7db1-a69d-9a976141b9a8"
+    },
+    "actual": {
+      "log_path": "/mnt/c/Users/jonny/.codex/sessions/2026/11/06/rollout-2026-11-06T20-28-24-01a1b40c-dc74-7db1-a69d-9a976141b9a8.jsonl",
+      "record_ordinal_1_based": 10,
+      "record_sha256": "593079ad524f23d9526c1256a825fd519e1ae8554cec25647f3af77da446495f",
+      "identity": "01a1b40c-ddd5-7252-97cc-db1488c238a5",
+      "model": "gpt-6.1-sol",
+      "effort": "high"
+    }
+  }
+}

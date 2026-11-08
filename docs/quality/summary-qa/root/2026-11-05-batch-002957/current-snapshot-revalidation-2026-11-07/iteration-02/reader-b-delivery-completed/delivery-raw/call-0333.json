@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:26:56.779Z",
+    "ordinal": 333,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef35229b4487d093e2fd526848624b",
+      "status": "completed",
+      "call_id": "call_efb04354466f4bb5b6ce42489bfe7b9e",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpect={'Q31':['Forest adjacency for Slip','Winter river','Fall map'],'Q32':['Supply and Keep','Starting warriors and unoccupied corner','Starting buildings and tracks'],'Q33':['Starting pieces and corner','Leader and Viziers','Remaining roosts'],'Q34':['Supply','Board','Hand and Supporters','Map and Officers box'],'Q35':['Character and pawn','Quests','Starting items','Relationships'],'Q36':['Recommended Reach totals','Base faction Reach values','Law allowance'],'Q37':['Birdsong production','Daylight Overwork production','Evening draw'],'Q38':['Recruit placement during a shortage'],'Q39':['Eyrie item VP','Builder exception'],'Q40':['Builder','Charismatic','Commander','Despot']}\\nchecks={'Q31':['touching it without crossing a printed path','forests separated by one printed path','Winter map','Fall has no special rules'],'Q32':['25 warriors and 8 wood','every clearing except','diagonally opposite','one sawmill, one workshop and one recruiter','five of each building type','leftmost space empty'],'Q33':['20 warriors','one roost and six warriors','not another player','diagonally opposite','two bird Loyal Viziers','other six roosts'],'Q34':['10 warriors','three bases','ten sympathy','three-card hand','three additional cards','separate from its hand','no map pieces and no officers'],'Q35':['Thief, Tinker or Ranger','any forest','three face up','S-marked starting items','matching tracks','Indifferent'],'Q36':['17 for two','18 for three','21 for four','Marquise: 10','Eyrie: 7','Vagabond: 5','Alliance: 3','at least 17 Reach'],'Q37':['one wood at each sawmill','eight tokens','spend a card matching','same finite eight-wood supply','one card plus one per uncovered draw bonus','discard the hand down to five'],'Q38':['once per turn','maximum available','choose which eligible recruiters'],'Q39':['one VP instead of the printed VP','extra crafting-point effects still apply','Builder leader ignores Disdain'],'Q40':['Recruit and Move','Recruit and Battle','Move and Battle','Move and Build','two warriors','one extra hit','one extra VP']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,41)]\\nfor a in d['answers'][-10:]:\\n assert [x['part'] for x in a['answer']]==expect[a['id']],(a['id'],'coverage parts')\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for s in checks[a['id']]:assert s.lower() in joined.lower(),(a['id'],s)\\n for x in a['source_passages']:assert x['quotation'] and x['quotation'] in g,(a['id'],x['section'])\\nprint('Q31\u2013Q40 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b665-b6d9-7a91-bbe2-5cc74149ad1c",
+        "create_time": 1794061602.6332307
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:26:57.238Z",
+    "ordinal": 336,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b667-c856-7f50-a8b0-bb0f1df55e88",
+      "call_id": "call_efb04354466f4bb5b6ce42489bfe7b9e",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.4 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q31\u2013Q40 clause coverage and exact-quotation checks passed\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b665-b6d9-7a91-bbe2-5cc74149ad1c",
+        "create_time": 1794061617.2382696
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

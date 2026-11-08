@@ -1,0 +1,111 @@
+--- docs/quality/summary-qa/new-angeles/2026-11-05-batch-002957/current-text-source-auditor/revision-02/snapshot-new-angeles.md
++++ rules/new-angeles.md
+@@ -44,7 +44,7 @@
+ 
+ ### Corporation draws and contracts
+ 
+-Draw panels below are in their operative top-to-bottom order. Each General entry is a separate draw: choose one action type not already drawn during this Refresh step, before seeing its cards. A multiple-card General entry would all come from one chosen type. Melange's three separate General entries therefore use three different types.
++Draw panels below are in their operative top-to-bottom order. Each General entry is a separate draw: choose one action type not already drawn during this Refresh step, before seeing its cards. Draw every card in a multiple-card General entry from that one chosen type. An effect that doubles the quantities on your sheet doubles cards within each entry; it does not create more entries or more type choices. Melange's three separate General entries therefore use three different types.
+ 
+ Contract capital always goes to the corporation that owns that contract, regardless of which player resolves the triggering action. Except for Melange, a contract triggers only through resolving an action card; any player may resolve that action. Movement out of a district does not count as removal. Returning something to the reserve at the Root does not count as removing it from a district, and triggers no district-removal contract.
+ 
+@@ -95,6 +95,8 @@
+ 
+ The upper-half instructions below resolve before the lower-half placements printed on the actual card. Still follow those placement lists and the printed next-turn count. Equivalent formulas on different cards do not create different general procedures.
+ 
++Enemy movement still follows the ordinary paths and cascades: an incoming duplicate or an enemy entering prisec protection continues along the next path until it can remain or reaches the Root. Each enemy entering the Root returns to the reserve and adds 2 threat; an enemy returned to the reserve has no further on-board movement, even if the event instructed it to move twice.
++
+ | Event | Upper-half procedure |
+ |---|---|
+ | Report: Record Unemployment | If 6 or more districts are in protest or strike, add 4 threat. |
+@@ -105,7 +107,7 @@
+ | Gang Wars at All-Time High! / Tri-Maf Leaders Unite! | Add 1 threat per orgcrime in the city. |
+ | Welfare Programs Slashed | Add 1 threat per district in strike. |
+ | Crumbling Infrastructure / Rolling Outages Increase | Add 1 threat per district in outage. |
+-| Activist Cells Awaken | Starting with the highest-numbered district, each Human First moves twice. Apply normal movement/blocking/Root rules. |
++| Activist Cells Awaken | Starting with the highest-numbered district, move each Human First twice, stopping its movement if it reaches the Root and returns to the reserve. Apply normal blocking and Root threat. |
+ | Beanstalk Owned by Mob? | If a tier-3 district contains orgcrime, add 4 threat. Otherwise each orgcrime moves, highest-numbered district first. |
+ | Earthquake Rocks City | If 3 or more districts are in outage, add 5 threat. |
+ | Beanstalk Beset by Protesters | If a tier-3 district contains Human First, add 4 threat. Otherwise each Human First moves, highest-numbered district first. |
+@@ -136,6 +138,8 @@
+ 3. **Counteroffer:** Starting left of the active player, each other player gets exactly one clockwise chance to pass or propose one hand action or faceup emergency faceup in Counteroffer. Before adding it, discard hand actions equal to the faceup cards already in that box: first counteroffer costs 0 additional cards, second 1, third 2, etc. Place the new offer on top. Only the topmost is the current counteroffer; previous offers only affect this escalation cost. Its proposer becomes the countering player, replacing the prior one. Another copy of an already offered action is legal. The active player cannot counter unless an ability explicitly permits it. There is no second circuit around the table.
+ 4. **Support:** With no counteroffer, skip this step. Otherwise, everyone except the active player and current countering player is a supporting player, including a displaced earlier counterer. Starting with the first supporter left of the active player, each gets exactly one clockwise chance to support or abstain. Support uses one or more hand actions facedown beside either offer. A player cannot support both offers or get a later second opportunity to add cards. Active/countering players cannot support without explicit ability permission. Emergencies cannot support.
+ 5. **Resolution:** The offer with more facedown support cards wins. A tie, including 0–0, goes to the active player's main offer. The winning proposer (active or countering player) resolves their offer and **then** claims the revealed asset faceup in their own play area. All played ordinary actions, including superseded/losing offers and support, go facedown to the shared discard. Return every proposed emergency to its original logo corporation: face down if it won, face up otherwise.
++
++Proposal-cost discards are separate from support cleanup. Aaron Marrón redirects only **another player's** proposal-cost cards to his owner; his owner's own proposal payments and support-cleanup cards still go to the shared facedown discard. Deal cleanup does not itself check anyone's hand size. Only the active player makes the normal hand-size check, after their End of Turn asset abilities.
+ 
+ ### Negotiation and trading
+ 
+@@ -163,6 +167,8 @@
+ ### Ordinary action reference
+ 
+ Each type contains five copies of each of these four printed actions. Resolve the winning card in its printed order; a card's explicit exemption is local to that card. These instructions supplement the general deal and district rules.
++
++Units are the plastic Human First, orgcrime and prisec components. Androids, illness and outages are tokens; removing units does not remove those tokens. Keep a card's number of districts separate from its number of stages per district: changes cannot be pooled into one district unless the card permits that allocation. An outage leaves unrest stable; removing it does not restore an earlier unrest token.
+ 
+ | Type / card | Printed procedure |
+ |---|---|
+@@ -191,42 +197,42 @@
+ 
+ ### Asset reference
+ 
+-Asset effects below retain their printed timing and costs. “End of Turn” means the owner's end-of-turn opportunity, once per ability. “When claimed” means an actual claim, not a trade, theft or swap. Use the general same-timing order, exhaustion and discard rules. The official exceptions in FAQ & Rulings remain controlling.
++Asset effects below retain their printed timing and costs. “End of Turn” means the owner's end-of-turn opportunity, once per ability. “When claimed” means an actual claim, not a trade, theft or swap; it names timing and is not itself a discard cost. Claiming does not discard the asset unless an instruction requires it. Use the general same-timing order, exhaustion and discard rules. The official exceptions in FAQ & Rulings remain controlling.
+ 
+ | Asset | Procedure |
+ |---|---|
+ | Aaron Marrón | When another player discards one or more cards to propose a counteroffer, they give those cards to you instead of the discard pile. |
+-| Alex Westlund | End of Turn: choose 2 assets in play and swap them. If either is yours, lose 2 capital before the swap. They are not claimed. |
+-| Bernice Mai | End of Turn: give up to 2 hand cards to another player and gain capital equal to the number given. |
++| Alex Westlund | Your End of Turn (once): choose 2 assets in play and swap them. If either is yours, lose 2 capital before the swap. They are not claimed. |
++| Bernice Mai | Your End of Turn (once): give up to 2 hand cards to another player and gain capital equal to the number given. |
+ | Braintrust | Double the quantity of each action-card type on your corporation sheet; reduce your hand size by 1. |
+ | Bryan Stinson | When claimed, discard him to steal 2 emergencies from other participating players, retaining their faceup/facedown state. |
+ | Caprice Nisei | When a player proposes an offer, you may exhaust her to require that player to declare exactly how they will resolve that action and bind them to the declaration. Unorthodox Knowledge is exempt. |
+ | Chief Gorman | After a counteroffer is proposed, you may exhaust him to return it to its proposer's hand unless they give you 2 capital. They cannot propose another counteroffer this turn; proposal-cost discards are not refunded. Does not cancel The Fall Guy's counteroffer. |
+ | Coach Walden | When the player to your right wins a deal, gain 1 capital. This trigger has no exhaust cost. |
+ | Eiko | When a player abstains during Support, you may exhaust her: that player must play 1 card supporting the main offer or lose 1 capital. |
+-| Elizabeth Mills | End of Turn: give her to another player; then choose whether that player must discard 3 actions or draw 3 actions of their sheet's topmost type. |
++| Elizabeth Mills | Your End of Turn (once): give her to another player; then you, the player who used her, choose whether that recipient must discard 3 actions or draw 3 actions of their sheet's topmost type. |
+ | The Fall Guy | After you propose a main offer, you may discard him to propose a counteroffer too. Then proceed immediately to Support. |
+-| Floyd 2X3A7C | When claimed, draw 5 actions of any types. Your hand size is increased by 5 while you have him. |
+-| Fumiko Yamamori | End of Turn: choose a nonzero supply resource and reduce it by 1 to gain 2 capital. |
++| Floyd 2X3A7C | When claimed, draw 5 actions of any types; this has no discard cost, so you keep him. Your hand size is increased by 5 while you have him. |
++| Fumiko Yamamori | Your End of Turn (once): choose a nonzero supply resource and reduce it by 1 to gain 2 capital. |
+ | Gurren Imaishi | When claimed, discard him to gain 5 capital. |
+ | Hernando Cortez | When claimed, discard him to steal 1 asset from another player or gain 2 capital. |
+ | Isabel McGuire | At the start of Support, you may exhaust her to put the top card of any action deck in support of either offer. This does not make you that offer's supporting player; if eligible, your normal support can go to either offer. |
+ | Jackson Howard | When an asset is revealed, you may exhaust him to choose another player. Gain 2 capital if that player wins the deal. |
+-| Lily Lockwell | At the start of a player's turn, if they have more capital than you, you may steal 1 random hand card from them. |
++| Lily Lockwell | At the start of a player's turn, before Refresh, compare their capital to yours. If theirs is strictly greater, you may steal 1 random hand card from them; equal capital does not qualify. |
+ | Locust Company | At the start of Support, you may exhaust it to choose a player who cannot play hand cards supporting the counteroffer. It does not prevent Isabel's support from a deck. |
+-| Marco Cubrero | End of Turn: steal 1 capital from any player, or 2 from the player with most capital; if tied for most, choose one of those players. |
++| Marco Cubrero | Your End of Turn (once): steal 1 capital from any player, or 2 from the player with most capital; if tied for most, choose one of those players. |
+ | Mark Yale | After a player proposes an offer, you may exhaust her: that player cannot trade capital or assets until the deal ends. |
+ | Midori | When determining the winner in Resolution, if offers are tied in support, you may exhaust her to decide which player wins. |
+ | Monica Singh | When you lose a deal as active player, you may steal 2 capital from the countering player. This optional ability has no exhaust cost. |
+-| Mr. Li | End of Turn: choose any player, who loses 1 capital and draws 2 actions of any types. |
+-| “Mr. White” | End of Turn: look at another player's hand; you may steal 1 of those actions. |
++| Mr. Li | Your End of Turn (once): choose any player, who loses 1 capital and draws 2 actions of any types. |
++| “Mr. White” | Your End of Turn (once): look at another player's hand; you may steal 1 of those actions. |
+ | Naoko Watanabe | When claimed, discard her to claim the top 2 assets one at a time. Resolve the first asset's when-claimed effect before claiming the second. |
+ | Rachel Beckmann | At the end of each deal, if your hand is empty, you may draw 1 action of your sheet's topmost type. |
+ | Saul Eustecio | When the countering player wins a deal, you may exhaust him to gain 1 capital; then the active player gains 1 capital. |
+ | Sunny LeBeau | Whenever threat increases by 1 or more, you may draw 2 actions of your sheet's topmost type. Each separate threat-increase instance triggers separately. |
+-| Susan Chen | End of Turn: gain 2 capital, then give her to another player. |
++| Susan Chen | Your End of Turn (once): gain 2 capital, then give her to another player. |
+ | Tanaka | At the start of Resolution, you may discard him to choose the active or countering player as winner. |
+-| Thomas Haas | End of Turn: look at the under-board rival. You may swap it with your own, keeping both facedown; openly announce whether a swap happens. This ability has no exhaust or discard cost. |
++| Thomas Haas | Your End of Turn (once): look at the under-board rival. You may swap it with your own, keeping both facedown; openly announce whether a swap happens. This ability has no exhaust or discard cost. |
+ | Toshiyuki Sakai | When claimed, discard him to draw 2 actions of each type. You do not discard down to hand size this turn. |
+ | Wong Ya Ching | When an illness token's effect increases threat, gain 2 capital. |
+ 
+@@ -296,7 +302,7 @@
+ 
+ Supply tracks cap at their last numbered space: if more would be produced, leave the resource token on that final space; the excess does not raise the supply further. Resources at 0 cannot be reduced further. Production is resolved before exploitation's unrest increase: a district starting in protest can produce and then go on strike. A district with an android is still exploited if strike, outage or orgcrime prevents production.
+ 
+-Unrest progresses **stable → protest → strike**, and decreases in reverse order. Stable has no unrest token; protest uses its protest side; strike its strike side. A decrease from protest to stable removes the token. Stable cannot decrease; strike cannot normally increase. Unrest and development tokens never move along paths.
++Unrest progresses **stable → protest → strike**, and decreases in reverse order. Count one position along this track for each stage changed. Stable has no unrest token; protest uses its protest side; strike its strike side. A decrease from protest to stable removes the token. Stable cannot decrease; strike cannot normally increase. Unrest and development tokens never move along paths.
+ 
+ Human First is a specific exception upon exploitation. From stable, its two-stage increase reaches strike. From protest, strike or outage, unrest cannot increase by two, so place an outage. A newly placed outage removes any unrest token and leaves the district stable; this is **not** an NBN contract decrease. If already in outage, the new outage must move. No other ordinary capped unrest increase creates an outage. Removing an outage leaves stable unrest.
+ 

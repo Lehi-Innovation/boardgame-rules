@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:14:55.387Z",
+    "ordinal": 148,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef324ff7bc87d085e5b21a8f5b138b",
+      "status": "completed",
+      "call_id": "call_b157812c59624a9f8658ec98ba33fb8d",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json')\\nd=json.loads(p.read_text()); guide=p.with_name('summary-snapshot.md').read_text()\\nexpected={\\n'Q01':['Rule determination and ordinary ties','Tokens and Vagabond pawn','Eyrie ties'],\\n'Q02':['Requirements for a normal move','Repeated movement','Rivers'],\\n'Q03':['Battle initiation and Ambush','Before-roll effects, dice and after-roll effects','Count hits and defenseless bonus','Deal hits, removal priorities and scoring'],\\n'Q04':['Crafting costs and suit matching','Use limits and Vagabond reuse','Missing item supply','Duplicate persistent effect'],\\n'Q05':['Activation timing and VP threshold','Victory conditions','Activated card replacement or discard'],\\n'Q06':['Spent dominance card','Taking an available dominance card'],\\n'Q07':['Two-player deck and hand','Ruins and map item supply','Faction setup order'],\\n'Q08':['Keep placement and entry','Field Hospitals','Ambush at the Keep','Rebuilding the Keep'],\\n'Q09':['Daylight order and action allowance','March','Recruit','Overwork'],\\n'Q10':['Legal clearing and building selection','Wood cost and network','Placement and scoring']}\\nchecks={\\n'Q01':['warriors and buildings','ordinary tie','Tokens and pawns','Eyrie'],\\n'Q02':['positive number','rule is rechecked','repeatedly','Rivers do not count'],\\n'Q03':['foiled Ambush','two immediate hits','ends immediately','capped','extra hits','all its warriors','one VP'],\\n'Q04':['once per turn','exhausting one face-up, undamaged hammer','cannot be crafted','Only an identical persistent effect'],\\n'Q05':['10 or more VP','start of your own Birdsong','three clearings','two diagonally opposite','cannot be removed or replaced'],\\n'Q06':['near the map as an available','bird card; a bird card can pay for a non-bird'],\\n'Q07':['remove all four dominance cards','three cards','one under each','Marquise, Eyrie, Alliance, then Vagabond'],\\n'Q08':['Only the Marquise','matching that clearing','before checking whether no attackers remain','cannot be placed again'],\\n'Q09':['up to three actions','up to two moves','once per turn','matching a sawmill'],\\n'Q10':['clearing you rule','leftmost building','unbroken chain of ruled clearings','score the VP']}\\nassert [a['id'] for a in d['answers']]==[f'Q{i:02}' for i in range(1,11)]\\nfor a in d['answers']:\\n assert [x['part'] for x in a['answer']]==expected[a['id']], (a['id'],'coverage parts')\\n assert all(x['ruling'].strip() and x['evidence'] for x in a['answer'])\\n for passage in a['source_passages']:\\n  assert passage['quotation'] and passage['quotation'] in guide, (a['id'],passage['section'])\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for phrase in checks[a['id']]: assert phrase.lower() in joined.lower(), (a['id'],phrase)\\nprint('Q01\u2013Q10 coverage and contradiction checks passed; quotations remain exact substrings.')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060879.9698
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:14:56.146Z",
+    "ordinal": 151,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b65c-c792-7e52-ab10-f4e6da6ef6ef",
+      "call_id": "call_b157812c59624a9f8658ec98ba33fb8d",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.7 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Q01\u2013Q10 coverage and contradiction checks passed; quotations remain exact substrings.\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b657-5fc0-7601-9c9d-45a6c15d3549",
+        "create_time": 1794060896.1468048
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}

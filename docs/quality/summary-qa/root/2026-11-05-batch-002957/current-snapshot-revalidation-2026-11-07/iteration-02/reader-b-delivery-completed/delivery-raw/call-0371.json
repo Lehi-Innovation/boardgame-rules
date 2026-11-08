@@ -1,0 +1,47 @@
+{
+  "actual_call": {
+    "timestamp": "2026-11-07T14:28:55.048Z",
+    "ordinal": 371,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call",
+      "id": "ctc_000458a36bae3f80016aef359eafb887d08ed2ae9486279d76",
+      "status": "completed",
+      "call_id": "call_0bc65a5b6eb14ca19701c64fd1402d1a",
+      "name": "exec",
+      "input": "const r = await tools.exec_command({cmd:\"python3 - <<'PY'\\nimport json\\nfrom pathlib import Path\\np=Path('docs/quality/summary-qa/root/2026-11-05-batch-002957/current-snapshot-revalidation-2026-11-07/iteration-02/reader-b.json');d=json.loads(p.read_text());g=p.with_name('summary-snapshot.md').read_text()\\nexpected={'Q41':['One warrior remaining for Charismatic Recruit'],'Q42':['Defending dice assignment','Warrior limits'],'Q43':['Crafting from Supporters','Inspecting Supporters','Hand size and limit'],'Q44':['Order within Birdsong','Same-Birdsong spread then revolt'],'Q45':['Martial Law with warriors split between players','Organize cost']}\\nchecks={'Q41':['No.','place that warrior first','enter Turmoil','does not fulfill'],'Q42':['higher die','lower die','warrior caps still apply'],'Q43':['only for suit','cannot be used as crafting cards','inspected by the Alliance','do not count toward the hand limit'],'Q44':['all Revolts must be completed','any number of times','once spreading begins','newly spread sympathy cannot support'],'Q45':['at least three warriors belonging to one other player','Two warriors from each of two enemy players','no Martial Law cost','no supporters']}\\nfor a in d['answers'][-5:]:\\n assert [x['part'] for x in a['answer']]==expected[a['id']]\\n joined=' '.join(x['ruling'] for x in a['answer'])\\n for x in checks[a['id']]: assert x.lower() in joined.lower(), (a['id'],x)\\n for s in a['source_passages']: assert s['quotation'] and s['quotation'] in g,(a['id'],s['section'])\\nprint('Q41\u2013Q45 clause coverage and exact-quotation checks passed')\\nPY\",\"workdir\":\"/home/jonny/projects/boardgame-rules\",\"max_output_tokens\":1000}); text(r.output);\n",
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b667-f81a-7e82-a72c-9a1679ab24ed",
+        "create_time": 1794061726.7422798
+      }
+    }
+  },
+  "actual_output": {
+    "timestamp": "2026-11-07T14:28:55.538Z",
+    "ordinal": 374,
+    "type": "response_item",
+    "payload": {
+      "type": "custom_tool_call_output",
+      "id": "ctco_01a1b669-9672-7571-8369-a3b4b79583db",
+      "call_id": "call_0bc65a5b6eb14ca19701c64fd1402d1a",
+      "output": [
+        {
+          "type": "input_text",
+          "text": "Script completed\nWall time 0.5 seconds\nOutput:\n"
+        },
+        {
+          "type": "input_text",
+          "text": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\nAssertionError: ('Q45', 'no Martial Law cost')\n"
+        }
+      ],
+      "internal_chat_message_metadata_passthrough": {
+        "turn_id": "01a1b667-f81a-7e82-a72c-9a1679ab24ed",
+        "create_time": 1794061735.5388846
+      }
+    },
+    "metadata": {
+      "client_authored": false,
+      "fallback_token_limit_override": 12000
+    }
+  }
+}
