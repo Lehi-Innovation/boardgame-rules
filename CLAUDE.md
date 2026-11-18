@@ -21,10 +21,10 @@
 - [ ] Download the rulebook PDF manually. Check these sources in order: 1j1ju.com (good coverage of manuals), BGG's files page, or the publisher's site. Save it to `source_pdfs/<slug>-rules.pdf`. Tip: create the empty file first with `touch source_pdfs/<slug>-rules.pdf` so the user can "Save As" directly over it with the correct name.
 - [ ] Run `python -m scripts.extract_pdf source_pdfs/<slug>-rules.pdf` to extract text. Use `--method pdfplumber` if tables are mangled. Review `extracted/<slug>-rules.txt` for quality.
 - [ ] If extracted text has gaps or garbled tables, render the PDF pages to images for visual inspection: `python -c "import fitz; doc=fitz.open('source_pdfs/<slug>-rules.pdf'); [doc[i].get_pixmap(matrix=fitz.Matrix(2,2)).save(f'/tmp/<slug>-p{i+1}.png') for i in range(len(doc))]"` then use the Read tool on the resulting PNGs to read tables and diagrams directly.
-- [ ] Summarize interactively with Claude Code: read the extracted text, produce `rules/<slug>.md` following the template format. Precision over brevity — keep all edge cases and exact numbers.
+- [ ] Summarize interactively with Claude Code: read the extracted text, produce `rules/<letter>/<slug>.md` (`rules/0-9/` for numeric titles) following the template format. Set `permalink: /rules/<slug>/` in frontmatter. Precision over brevity — keep all edge cases and exact numbers.
 - [ ] Run `python -m scripts.validate` to check the rules file has all required frontmatter and sections.
-- [ ] Run `python -m scripts.verify_summary rules/<slug>.md` to semantically fact-check the summary against the extracted text (requires ANTHROPIC_API_KEY). Fix MAJOR findings before publishing, or run the batch form with repair: `python -m scripts.verify_summary --batch`.
-- [ ] Run `python -m scripts.stamp_verification rules/<slug>.md` to stamp the verification banner and feedback links into the page.
+- [ ] Run `python -m scripts.verify_summary rules/<letter>/<slug>.md` to semantically fact-check the summary against the extracted text (requires ANTHROPIC_API_KEY). Fix MAJOR findings before publishing, or run the batch form with repair: `python -m scripts.verify_summary --batch`.
+- [ ] Run `python -m scripts.stamp_verification rules/<letter>/<slug>.md` to stamp the verification banner and feedback links into the page.
 - [ ] Run `python -m scripts.generate_index` to rebuild `index.md` and `python -m scripts.generate_manifest` to rebuild `games.json`.
 - [ ] Commit the extracted text, rules file, updated `games.yaml`, `index.md`, and `games.json`.
 

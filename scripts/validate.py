@@ -134,7 +134,7 @@ def validate_all(rules_dir: str = RULES_DIR) -> dict[str, list[str]]:
     if not rules_path.exists():
         return {}
 
-    for md_file in sorted(rules_path.glob("*.md")):
+    for md_file in sorted(rules_path.rglob("*.md")):
         errors = validate_rules_file(str(md_file))
         results[md_file.name] = errors
 

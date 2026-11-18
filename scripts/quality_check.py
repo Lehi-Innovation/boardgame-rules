@@ -97,7 +97,9 @@ def check_games(
     for game in games:
         name = game["name"]
         slug = game.get("slug") or slugify(name)
-        rules_path = os.path.join(rules_dir, f"{slug}.md")
+        from scripts.rule_paths import rule_path
+
+        rules_path = rule_path(rules_dir, slug, name)
 
         if not os.path.exists(rules_path):
             print(f"  SKIP {name}: rules file not found ({rules_path})")

@@ -3,7 +3,7 @@
  *
  * Copies from the repo root:
  *   games.json           -> public/games.json
- *   rules/*.md           -> public/rules/
+ *   rules/<letter>/*.md  -> public/rules/ (flat asset URLs)
  *   extracted/*.txt      -> public/extracted/
  *
  * public/ is gitignored and rebuilt from scratch on every run, so a deploy
@@ -23,9 +23,13 @@ async function copyByExtension(srcDir, destDir, extension) {
   const entries = await readdir(srcDir);
   let count = 0;
   for (const entry of entries) {
-    if (!entry.endsWith(extension)) continue;
-    await cp(path.join(srcDir, entry), path.join(destDir, entry));
-    count += 1;
+    const source = path.join(srcDir, entry);
+    if ((await stat(source)).isDirectory()) {
+      count += await copyByExtension(source, destDir, extension);
+    } else if (entry.endsWith(extension)) {
+      await cp(source, path.join(destDir, entry));
+      count += 1;
+    }
   }
   return count;
 }

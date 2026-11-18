@@ -69,6 +69,7 @@ def build_prompt(
 
     frontmatter_lines = [
         f'title: "{game_name}"',
+        f'permalink: /rules/{slugify(game_name)}/',
         f"bgg_id: {bgg_id}" if bgg_id else 'bgg_id: ""',
         f'player_count: "{player_count}"' if player_count else 'player_count: ""',
         f'play_time: "{play_time}"' if play_time else 'play_time: ""',
@@ -216,8 +217,10 @@ def summarize_game(
             update_status(registry_path, name, restore_status)
         return False
 
-    os.makedirs(rules_dir, exist_ok=True)
-    rules_path = os.path.join(rules_dir, f"{slug}.md")
+    from scripts.rule_paths import rule_path
+
+    rules_path = rule_path(rules_dir, slug, name)
+    rules_path.parent.mkdir(parents=True, exist_ok=True)
     with open(rules_path, "w") as f:
         f.write(result)
     print(f"  Saved to {rules_path}")
@@ -297,9 +300,11 @@ def main():
             bgg_id=args.bgg_id,
         )
 
-        os.makedirs(args.rules_dir, exist_ok=True)
+        from scripts.rule_paths import rule_path
+
         slug = slugify(args.game)
-        rules_path = os.path.join(args.rules_dir, f"{slug}.md")
+        rules_path = rule_path(args.rules_dir, slug, args.game)
+        rules_path.parent.mkdir(parents=True, exist_ok=True)
         with open(rules_path, "w") as f:
             f.write(result)
         print(f"Saved to {rules_path}")

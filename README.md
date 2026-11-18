@@ -11,7 +11,7 @@ Every game ships as two artifacts plus metadata:
 
 | Artifact | Path | Role |
 |---|---|---|
-| Rules summary | `rules/<slug>.md` | Structured, LLM-friendly summary with YAML frontmatter |
+| Rules summary | `rules/<letter>/<slug>.md` (`0-9` for numeric titles) | Structured, LLM-friendly summary with YAML frontmatter |
 | Extracted rulebook text | `extracted/<slug>-rules.txt` | The authoritative source the summary was written from |
 | Catalog manifest | `games.json` | Machine-readable index: titles, slugs, URLs, verification status |
 

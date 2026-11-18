@@ -33,6 +33,8 @@ from datetime import datetime, timezone
 
 import yaml
 
+from scripts.rule_paths import rule_path
+
 from scripts.registry import load_registry
 from scripts.summarize import parse_frontmatter
 from scripts.verify_summary import RESULTS_PATH, verify_game
@@ -86,7 +88,7 @@ def select_candidates(
         slug = slugify(g["name"])
         if results.get(slug, {}).get("verdict") != "MAJOR":
             continue
-        if not os.path.exists(os.path.join(rules_dir, f"{slug}.md")):
+        if not rule_path(rules_dir, slug, g["name"]).exists():
             continue
         if not has_source(slug, extracted_dir):
             continue
@@ -96,7 +98,7 @@ def select_candidates(
 
 
 def read_state(slug: str, rules_dir: str = RULES_DIR) -> str:
-    fm = parse_frontmatter(open(os.path.join(rules_dir, f"{slug}.md")).read())
+    fm = parse_frontmatter(rule_path(rules_dir, slug).read_text())
     return fm.get("verification", "")
 
 

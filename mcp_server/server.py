@@ -47,7 +47,7 @@ def _load_manifest() -> list[dict]:
     # Fallback: build a minimal catalog from the rules directory
     return [
         {"title": p.stem.replace("-", " ").title(), "slug": p.stem}
-        for p in sorted(RULES_DIR.glob("*.md"))
+        for p in sorted(RULES_DIR.rglob("*.md"))
     ]
 
 
@@ -112,7 +112,9 @@ def get_rules(game: str) -> str:
             names = ", ".join(g["slug"] for g in candidates)
             return f"Ambiguous game name {game!r}. Candidates: {names}"
         return f"No game matching {game!r} in the catalog. Use list_games to search."
-    path = RULES_DIR / f"{slug}.md"
+    from scripts.rule_paths import rule_path
+
+    path = rule_path(RULES_DIR, slug)
     if not path.exists():
         return f"Game {slug} is in the catalog but has no rules summary yet."
     return path.read_text()

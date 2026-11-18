@@ -1,6 +1,6 @@
 """Regenerate index.md with alphabetical sections and a jump bar.
 
-Reads all rules/*.md frontmatter, groups games by first letter,
+Reads all rules/*/*.md frontmatter, groups games by first letter,
 nests expansions under their base game, and writes a navigable index.
 
 Usage:
@@ -30,9 +30,9 @@ def parse_frontmatter(content: str) -> dict:
 
 
 def load_games(rules_dir: Path) -> list[dict]:
-    """Load game metadata from all rules/*.md files."""
+    """Load game metadata from all letter folders."""
     games = []
-    for path in sorted(rules_dir.glob("*.md")):
+    for path in sorted(rules_dir.rglob("*.md")):
         content = path.read_text(encoding="utf-8")
         fm = parse_frontmatter(content)
         if not fm.get("title"):

@@ -35,7 +35,7 @@ def validate_catalog(root: str | Path = ".", *, strict_registry: bool = False) -
     config = yaml.safe_load(config_path.read_text()) if config_path.exists() else {}
     base_url = str(config.get("url", "")).rstrip("/") + config.get("baseurl", "")
 
-    for path in sorted((root / "rules").glob("*.md")):
+    for path in sorted((root / "rules").rglob("*.md")):
         file_errors = validate_rules_file(str(path))
         errors.extend(file_errors)
         if file_errors:
@@ -149,7 +149,7 @@ def main():
         for error in errors:
             print(f"ERROR: {error}")
         raise SystemExit(1)
-    count = len(list((Path(args.root) / "rules").glob("*.md")))
+    count = len(list((Path(args.root) / "rules").rglob("*.md")))
     print(f"Catalog consistent: {count} summaries; published links, metadata, manifest, and URL paths checked.")
 
 

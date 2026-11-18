@@ -32,6 +32,7 @@ import os
 import re
 import sys
 from datetime import date
+from pathlib import Path
 from urllib.parse import quote, urlsplit
 
 import yaml
@@ -263,11 +264,7 @@ def main():
     if args.files:
         paths = args.files
     else:
-        paths = sorted(
-            os.path.join(args.rules_dir, f)
-            for f in os.listdir(args.rules_dir)
-            if f.endswith(".md")
-        )
+        paths = sorted(str(p) for p in Path(args.rules_dir).rglob("*.md"))
 
     base_url = site_base_url()
     counts: dict[str, int] = {}

@@ -229,7 +229,9 @@ def verify_game(
     """Verify (and optionally repair) one game's summary. Returns True on success."""
     name = game["name"]
     slug = re.sub(r"[^a-z0-9]+", "-", name.lower()).strip("-")
-    rules_path = os.path.join(rules_dir, f"{slug}.md")
+    from scripts.rule_paths import rule_path
+
+    rules_path = rule_path(rules_dir, slug, name)
     extracted_path = _find_extracted_file(slug, extracted_dir)
 
     if not os.path.exists(rules_path):

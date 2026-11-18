@@ -1,0 +1,81 @@
+---
+permalink: /rules/hyper-battle/
+title: "Hyper Battle"
+bgg_id: 7042
+player_count: "2"
+play_time: "60 min"
+designer: "Uncredited"
+extracted_date: "2026-11-06"
+summarized_date: "2026-03-20"
+source_pdf: "hyper-battle-selection-677b38124867.pdf"
+source_url: "https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/tabletop-gaming-magazines/Space%20Gamer/Space%20Gamer%20%2345.pdf"
+source_type: "rules_reference_pdf"
+source_language: "English"
+verification: "inaccurate"
+verification_date: "2026-11-05"
+---
+<!-- verification:begin -->
+> ❗ **Known errors** — an audit found inaccuracies in this summary that could mislead players: The summary gives initiative, a movement phase and then a separate combat phase. The matching 1981 W.G.Armintrout reference instead describes a player’s move-and-fight phase: ships move one at a time and conduct attacks during movement. This is followed by damage-control rolls to return face-down ships to action, then the opponent’s turn. Defenders also fire when an attacker enters their hex. Moving every ship before attacking and omitting the repair step changes tactical timing and which ships return to play. Specific MAJOR against the scoped contemporary reference; exact initiative/repair thresholds/full CRTs remain missing. No full audit or body repair. Until corrections pass a new audit, prefer the linked rules source.
+>
+> 📄 [Rules reference text](https://lehi-innovation.github.io/boardgame-rules/extracted/hyper-battle-rules.txt) · 🌐 [Rules reference PDF (English)](https://files.spawningpool.net/docs/Tabletop%20Gamez/Vault%202.0/tabletop-gaming-magazines/Space%20Gamer/Space%20Gamer%20%2345.pdf) · 🚩 [Report a rules error](https://github.com/Lehi-Innovation/boardgame-rules/issues/new?template=rule-error.yml&labels=rule-error&title=%5BRule%20error%5D%20Hyper%20Battle&game=hyper-battle)
+<!-- verification:end -->
+
+
+## Overview
+
+Hyper Battle is a science fiction wargame about ship-to-ship combat in hyperspace during the Alpha Centaurian Revolution. Players command opposing fleets navigating and fighting in the distorted physics of hyperspace, where traditional combat rules are altered by the environment. The game features tactical maneuvering and combat between spacecraft.
+
+## Components
+
+- Game board/map (hyperspace grid)
+- Ship counters for both factions
+- Combat resolution tables
+- Die/dice
+- Rules booklet
+
+## Setup
+
+1. Place the hyperspace game board.
+2. Each player selects their fleet.
+3. Deploy ships at designated starting positions.
+4. Reference combat tables are available.
+
+## Turn Structure
+
+Each turn:
+1. **Initiative Phase** — Determine who acts first.
+2. **Movement Phase** — Players move their ships.
+3. **Combat Phase** — Resolve attacks between ships in range.
+
+## Actions
+
+### Movement
+- Ships move through hyperspace according to their movement values.
+- Hyperspace physics may affect movement differently than normal space.
+
+### Combat
+- Ships in range of enemy vessels may attack.
+- Compare attack values versus defense values.
+- Roll dice and consult the combat results table.
+- Damage is applied to hit ships.
+
+### Special Maneuvers
+- Hyperspace may allow special movement or combat options not available in normal space.
+
+## Scoring / Victory Conditions
+
+- Victory is achieved by destroying the opposing fleet or accomplishing scenario-specific objectives related to the Alpha Centaurian Revolution.
+
+## Special Rules & Edge Cases
+
+- **Hyperspace physics:** Combat and movement in hyperspace operate under modified rules compared to normal space games.
+- **Alpha Centaurian Revolution:** The political backdrop provides context for the opposing factions.
+- **Ship variety:** Different ship classes have different capabilities in movement, attack, and defense.
+
+## Player Reference
+
+| Phase | Action |
+|-------|--------|
+| Initiative | Determine acting order |
+| Movement | Move ships through hyperspace |
+| Combat | Attack enemy ships in range |
