@@ -1802,6 +1802,7 @@ Every game page has a **Report a rules error** link. Reports are verified agains
 | [The Crew: The Quest for Planet Nine](rules/the-crew-the-quest-for-planet-nine/) | 2-5 | 20 min | Thomas Sing | ⚠️ |
 | [The Gallerist](rules/the-gallerist/) | 1-4 | 120 min | Vital Lacerda | ⚠️ |
 | [The Guild of Merchant Explorers](rules/the-guild-of-merchant-explorers/) | 1-4 | 45 min | Matthew Dunstan, Brett J. Gilbert | ⚠️ |
+| [The King Is Dead: Second Edition](rules/the-king-is-dead-second-edition/) | 2-4 | 30-45 min | Peer Sylvester | ⚠️ |
 | [The Omega Virus](rules/the-omega-virus/) | 1-4 | 60 minutes | Joe Huber | ⚠️ |
 | [The Oregon Trail Card Game](rules/the-oregon-trail-card-game/) | 2-6 | 30 minutes | Pressman Toy | ✅ |
 | [The Princes of Florence](rules/the-princes-of-florence/) | 3-5 | 75-100 minutes | Richard Ulrich, Wolfgang Kramer | ❗ |
